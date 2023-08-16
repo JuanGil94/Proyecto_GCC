@@ -1,0 +1,864 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Procesos add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_Procesos SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Procesos SeccionalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos SeccionalId }		</div>
+	</div>
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN AbogadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
+	data-signal-error-for="AbogadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
+		{BEGIN AbogadoId_label}{$label dbo_Procesos AbogadoId }{END AbogadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$AbogadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_Procesos AbogadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos AbogadoId }		</div>
+	</div>
+</div>
+
+
+{END AbogadoId_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-vertical-field" 
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Fecha}">
+		{BEGIN Fecha_label}{$label dbo_Procesos Fecha }{END Fecha_label}
+	</label>
+	<div class="r-edit-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Fecha" {$tooltipAttr dbo_Procesos Fecha } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Fecha }		</div>
+	</div>
+</div>
+
+
+{END Fecha_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-vertical-field" 
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Numero}">
+		{BEGIN Numero_label}{$label dbo_Procesos Numero }{END Numero_label}
+	</label>
+	<div class="r-edit-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Numero" {$tooltipAttr dbo_Procesos Numero } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Numero }		</div>
+	</div>
+</div>
+
+
+{END Numero_fieldblock}
+											
+{BEGIN SancionadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-vertical-field" 
+	data-signal-error-for="SancionadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="SancionadoId" data-fieldname="SancionadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SancionadoId}">
+		{BEGIN SancionadoId_label}{$label dbo_Procesos SancionadoId }{END SancionadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SancionadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SancionadoId" {$tooltipAttr dbo_Procesos SancionadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos SancionadoId }		</div>
+	</div>
+</div>
+
+
+{END SancionadoId_fieldblock}
+											
+{BEGIN Providencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-vertical-field" 
+	data-signal-error-for="Providencia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Providencia}">
+		{BEGIN Providencia_label}{$label dbo_Procesos Providencia }{END Providencia_label}
+	</label>
+	<div class="r-edit-field">
+		{$Providencia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Providencia" {$tooltipAttr dbo_Procesos Providencia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Providencia }		</div>
+	</div>
+</div>
+
+
+{END Providencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-vertical-field" 
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Ejecutoria}">
+		{BEGIN Ejecutoria_label}{$label dbo_Procesos Ejecutoria }{END Ejecutoria_label}
+	</label>
+	<div class="r-edit-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ejecutoria" {$tooltipAttr dbo_Procesos Ejecutoria } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Ejecutoria }		</div>
+	</div>
+</div>
+
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-vertical-field" 
+	data-signal-error-for="ConceptoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ConceptoId}">
+		{BEGIN ConceptoId_label}{$label dbo_Procesos ConceptoId }{END ConceptoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ConceptoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ConceptoId" {$tooltipAttr dbo_Procesos ConceptoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos ConceptoId }		</div>
+	</div>
+</div>
+
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN EstadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EstadoId}  r-vertical-field" 
+	data-signal-error-for="EstadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="EstadoId" data-fieldname="EstadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_EstadoId}">
+		{BEGIN EstadoId_label}{$label dbo_Procesos EstadoId }{END EstadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$EstadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="EstadoId" {$tooltipAttr dbo_Procesos EstadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos EstadoId }		</div>
+	</div>
+</div>
+
+
+{END EstadoId_fieldblock}
+											
+{BEGIN EtapaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EtapaId}  r-vertical-field" 
+	data-signal-error-for="EtapaId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="EtapaId" data-fieldname="EtapaId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_EtapaId}">
+		{BEGIN EtapaId_label}{$label dbo_Procesos EtapaId }{END EtapaId_label}
+	</label>
+	<div class="r-edit-field">
+		{$EtapaId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="EtapaId" {$tooltipAttr dbo_Procesos EtapaId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos EtapaId }		</div>
+	</div>
+</div>
+
+
+{END EtapaId_fieldblock}
+											
+{BEGIN Folios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Folios}  r-vertical-field" 
+	data-signal-error-for="Folios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Folios" data-fieldname="Folios" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Folios}">
+		{BEGIN Folios_label}{$label dbo_Procesos Folios }{END Folios_label}
+	</label>
+	<div class="r-edit-field">
+		{$Folios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Folios" {$tooltipAttr dbo_Procesos Folios } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Folios }		</div>
+	</div>
+</div>
+
+
+{END Folios_fieldblock}
+											
+{BEGIN Recaudo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recaudo}  r-vertical-field" 
+	data-signal-error-for="Recaudo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="Recaudo" data-fieldname="Recaudo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Recaudo}">
+		{BEGIN Recaudo_label}{$label dbo_Procesos Recaudo }{END Recaudo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Recaudo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Recaudo" {$tooltipAttr dbo_Procesos Recaudo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Recaudo }		</div>
+	</div>
+</div>
+
+
+{END Recaudo_fieldblock}
+											
+{BEGIN MotivoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MotivoId}  r-vertical-field" 
+	data-signal-error-for="MotivoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="MotivoId" data-fieldname="MotivoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MotivoId}">
+		{BEGIN MotivoId_label}{$label dbo_Procesos MotivoId }{END MotivoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$MotivoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MotivoId" {$tooltipAttr dbo_Procesos MotivoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos MotivoId }		</div>
+	</div>
+</div>
+
+
+{END MotivoId_fieldblock}
+											
+{BEGIN CarteraTipoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" 
+	data-signal-error-for="CarteraTipoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CarteraTipoId}">
+		{BEGIN CarteraTipoId_label}{$label dbo_Procesos CarteraTipoId }{END CarteraTipoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CarteraTipoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarteraTipoId" {$tooltipAttr dbo_Procesos CarteraTipoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos CarteraTipoId }		</div>
+	</div>
+</div>
+
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN Origen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Origen}  r-vertical-field" 
+	data-signal-error-for="Origen{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field40" {$item_integrated_edit_field40} data-pageid="{$pageid}" data-field="Origen" data-fieldname="Origen" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Origen}">
+		{BEGIN Origen_label}{$label dbo_Procesos Origen }{END Origen_label}
+	</label>
+	<div class="r-edit-field">
+		{$Origen_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Origen" {$tooltipAttr dbo_Procesos Origen } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Origen }		</div>
+	</div>
+</div>
+
+
+{END Origen_fieldblock}
+											
+{BEGIN MinJusticia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MinJusticia}  r-vertical-field" 
+	data-signal-error-for="MinJusticia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field47" {$item_integrated_edit_field47} data-pageid="{$pageid}" data-field="MinJusticia" data-fieldname="MinJusticia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MinJusticia}">
+		{BEGIN MinJusticia_label}{$label dbo_Procesos MinJusticia }{END MinJusticia_label}
+	</label>
+	<div class="r-edit-field">
+		{$MinJusticia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MinJusticia" {$tooltipAttr dbo_Procesos MinJusticia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos MinJusticia }		</div>
+	</div>
+</div>
+
+
+{END MinJusticia_fieldblock}
+											
+{BEGIN MinjusticiaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MinjusticiaId}  r-vertical-field" 
+	data-signal-error-for="MinjusticiaId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field54" {$item_integrated_edit_field54} data-pageid="{$pageid}" data-field="MinjusticiaId" data-fieldname="MinjusticiaId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MinjusticiaId}">
+		{BEGIN MinjusticiaId_label}{$label dbo_Procesos MinjusticiaId }{END MinjusticiaId_label}
+	</label>
+	<div class="r-edit-field">
+		{$MinjusticiaId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MinjusticiaId" {$tooltipAttr dbo_Procesos MinjusticiaId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos MinjusticiaId }		</div>
+	</div>
+</div>
+
+
+{END MinjusticiaId_fieldblock}
+											
+{BEGIN NaturalezaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NaturalezaId}  r-vertical-field" 
+	data-signal-error-for="NaturalezaId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field70" {$item_integrated_edit_field70} data-pageid="{$pageid}" data-field="NaturalezaId" data-fieldname="NaturalezaId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_NaturalezaId}">
+		{BEGIN NaturalezaId_label}{$label dbo_Procesos NaturalezaId }{END NaturalezaId_label}
+	</label>
+	<div class="r-edit-field">
+		{$NaturalezaId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="NaturalezaId" {$tooltipAttr dbo_Procesos NaturalezaId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos NaturalezaId }		</div>
+	</div>
+</div>
+
+
+{END NaturalezaId_fieldblock}
+											
+{BEGIN Acuerdo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Acuerdo}  r-vertical-field" 
+	data-signal-error-for="Acuerdo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Acuerdo" data-fieldname="Acuerdo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Acuerdo}">
+		{BEGIN Acuerdo_label}{$label dbo_Procesos Acuerdo }{END Acuerdo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Acuerdo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Acuerdo" {$tooltipAttr dbo_Procesos Acuerdo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Acuerdo }		</div>
+	</div>
+</div>
+
+
+{END Acuerdo_fieldblock}
+											
+{BEGIN Notificacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Notificacion}  r-vertical-field" 
+	data-signal-error-for="Notificacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Notificacion" data-fieldname="Notificacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Notificacion}">
+		{BEGIN Notificacion_label}{$label dbo_Procesos Notificacion }{END Notificacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Notificacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Notificacion" {$tooltipAttr dbo_Procesos Notificacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Notificacion }		</div>
+	</div>
+</div>
+
+
+{END Notificacion_fieldblock}
+											
+{BEGIN Plazo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Plazo}  r-vertical-field" 
+	data-signal-error-for="Plazo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Plazo" data-fieldname="Plazo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Plazo}">
+		{BEGIN Plazo_label}{$label dbo_Procesos Plazo }{END Plazo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Plazo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Plazo" {$tooltipAttr dbo_Procesos Plazo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Plazo }		</div>
+	</div>
+</div>
+
+
+{END Plazo_fieldblock}
+											
+{BEGIN Terminacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terminacion}  r-vertical-field" 
+	data-signal-error-for="Terminacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Terminacion" data-fieldname="Terminacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Terminacion}">
+		{BEGIN Terminacion_label}{$label dbo_Procesos Terminacion }{END Terminacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Terminacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Terminacion" {$tooltipAttr dbo_Procesos Terminacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Terminacion }		</div>
+	</div>
+</div>
+
+
+{END Terminacion_fieldblock}
+											
+{BEGIN Incumplimiento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Incumplimiento}  r-vertical-field" 
+	data-signal-error-for="Incumplimiento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Incumplimiento" data-fieldname="Incumplimiento" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Incumplimiento}">
+		{BEGIN Incumplimiento_label}{$label dbo_Procesos Incumplimiento }{END Incumplimiento_label}
+	</label>
+	<div class="r-edit-field">
+		{$Incumplimiento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Incumplimiento" {$tooltipAttr dbo_Procesos Incumplimiento } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Incumplimiento }		</div>
+	</div>
+</div>
+
+
+{END Incumplimiento_fieldblock}
+											
+{BEGIN ObligacionInicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObligacionInicial}  r-vertical-field" 
+	data-signal-error-for="ObligacionInicial{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="ObligacionInicial" data-fieldname="ObligacionInicial" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ObligacionInicial}">
+		{BEGIN ObligacionInicial_label}{$label dbo_Procesos ObligacionInicial }{END ObligacionInicial_label}
+	</label>
+	<div class="r-edit-field">
+		{$ObligacionInicial_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ObligacionInicial" {$tooltipAttr dbo_Procesos ObligacionInicial } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos ObligacionInicial }		</div>
+	</div>
+</div>
+
+
+{END ObligacionInicial_fieldblock}
+											
+{BEGIN CostasInicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CostasInicial}  r-vertical-field" 
+	data-signal-error-for="CostasInicial{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="CostasInicial" data-fieldname="CostasInicial" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CostasInicial}">
+		{BEGIN CostasInicial_label}{$label dbo_Procesos CostasInicial }{END CostasInicial_label}
+	</label>
+	<div class="r-edit-field">
+		{$CostasInicial_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CostasInicial" {$tooltipAttr dbo_Procesos CostasInicial } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos CostasInicial }		</div>
+	</div>
+</div>
+
+
+{END CostasInicial_fieldblock}
+											
+{BEGIN InteresesInicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteresesInicial}  r-vertical-field" 
+	data-signal-error-for="InteresesInicial{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="InteresesInicial" data-fieldname="InteresesInicial" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_InteresesInicial}">
+		{BEGIN InteresesInicial_label}{$label dbo_Procesos InteresesInicial }{END InteresesInicial_label}
+	</label>
+	<div class="r-edit-field">
+		{$InteresesInicial_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="InteresesInicial" {$tooltipAttr dbo_Procesos InteresesInicial } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos InteresesInicial }		</div>
+	</div>
+</div>
+
+
+{END InteresesInicial_fieldblock}
+											
+{BEGIN DespachoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DespachoId}  r-vertical-field" 
+	data-signal-error-for="DespachoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="DespachoId" data-fieldname="DespachoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DespachoId}">
+		{BEGIN DespachoId_label}{$label dbo_Procesos DespachoId }{END DespachoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$DespachoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DespachoId" {$tooltipAttr dbo_Procesos DespachoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos DespachoId }		</div>
+	</div>
+</div>
+
+
+{END DespachoId_fieldblock}
+											
+{BEGIN Obligacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-vertical-field" 
+	data-signal-error-for="Obligacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Obligacion}">
+		{BEGIN Obligacion_label}{$label dbo_Procesos Obligacion }{END Obligacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Obligacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Obligacion" {$tooltipAttr dbo_Procesos Obligacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Obligacion }		</div>
+	</div>
+</div>
+
+
+{END Obligacion_fieldblock}
+											
+{BEGIN Costas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Costas}  r-vertical-field" 
+	data-signal-error-for="Costas{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="Costas" data-fieldname="Costas" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Costas}">
+		{BEGIN Costas_label}{$label dbo_Procesos Costas }{END Costas_label}
+	</label>
+	<div class="r-edit-field">
+		{$Costas_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Costas" {$tooltipAttr dbo_Procesos Costas } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Costas }		</div>
+	</div>
+</div>
+
+
+{END Costas_fieldblock}
+											
+{BEGIN InteresesCalculados_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteresesCalculados}  r-vertical-field" 
+	data-signal-error-for="InteresesCalculados{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="InteresesCalculados" data-fieldname="InteresesCalculados" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_InteresesCalculados}">
+		{BEGIN InteresesCalculados_label}{$label dbo_Procesos InteresesCalculados }{END InteresesCalculados_label}
+	</label>
+	<div class="r-edit-field">
+		{$InteresesCalculados_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="InteresesCalculados" {$tooltipAttr dbo_Procesos InteresesCalculados } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos InteresesCalculados }		</div>
+	</div>
+</div>
+
+
+{END InteresesCalculados_fieldblock}
+											
+{BEGIN ObligacionCreacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObligacionCreacion}  r-vertical-field" 
+	data-signal-error-for="ObligacionCreacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ObligacionCreacion}">
+		{BEGIN ObligacionCreacion_label}{$label dbo_Procesos ObligacionCreacion }{END ObligacionCreacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$ObligacionCreacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ObligacionCreacion" {$tooltipAttr dbo_Procesos ObligacionCreacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos ObligacionCreacion }		</div>
+	</div>
+</div>
+
+
+{END ObligacionCreacion_fieldblock}
+											
+{BEGIN ActuacionId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ActuacionId}  r-vertical-field" 
+	data-signal-error-for="ActuacionId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="ActuacionId" data-fieldname="ActuacionId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ActuacionId}">
+		{BEGIN ActuacionId_label}{$label dbo_Procesos ActuacionId }{END ActuacionId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ActuacionId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ActuacionId" {$tooltipAttr dbo_Procesos ActuacionId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos ActuacionId }		</div>
+	</div>
+</div>
+
+
+{END ActuacionId_fieldblock}
+											
+{BEGIN Dias_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Dias}  r-vertical-field" 
+	data-signal-error-for="Dias{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="Dias" data-fieldname="Dias" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Dias}">
+		{BEGIN Dias_label}{$label dbo_Procesos Dias }{END Dias_label}
+	</label>
+	<div class="r-edit-field">
+		{$Dias_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Dias" {$tooltipAttr dbo_Procesos Dias } >
+		<div class="text-muted" >
+		{$tooltip dbo_Procesos Dias }		</div>
+	</div>
+</div>
+
+
+{END Dias_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Reliquidaciones view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Fecha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-vertical-field" data-fieldname="Fecha" data-signal-error-for="Fecha{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Fecha}">
+		
+		{BEGIN Fecha_label}{$label dbo_Reliquidaciones Fecha }{END Fecha_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Fecha_value}	</div>
+
+		
+</div>
+
+
+{END Fecha_fieldblock}
+											
+{BEGIN Dias_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Dias}  r-vertical-field" data-fieldname="Dias" data-signal-error-for="Dias{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Dias" data-fieldname="Dias" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Dias}">
+		
+		{BEGIN Dias_label}{$label dbo_Reliquidaciones Dias }{END Dias_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Dias_value}	</div>
+
+		
+</div>
+
+
+{END Dias_fieldblock}
+											
+{BEGIN Tasa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tasa}  r-vertical-field" data-fieldname="Tasa" data-signal-error-for="Tasa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Tasa" data-fieldname="Tasa" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Tasa}">
+		
+		{BEGIN Tasa_label}{$label dbo_Reliquidaciones Tasa }{END Tasa_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Tasa_value}	</div>
+
+		
+</div>
+
+
+{END Tasa_fieldblock}
+											
+{BEGIN Intereses_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Intereses}  r-vertical-field" data-fieldname="Intereses" data-signal-error-for="Intereses{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Intereses}">
+		
+		{BEGIN Intereses_label}{$label dbo_Reliquidaciones Intereses }{END Intereses_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Intereses_value}	</div>
+
+		
+</div>
+
+
+{END Intereses_fieldblock}
+											
+{BEGIN ObliReca_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObliReca}  r-vertical-field" data-fieldname="ObliReca" data-signal-error-for="ObliReca{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="ObliReca" data-fieldname="ObliReca" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ObliReca}">
+		
+		{BEGIN ObliReca_label}{$label dbo_Reliquidaciones ObliReca }{END ObliReca_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ObliReca_value}	</div>
+
+		
+</div>
+
+
+{END ObliReca_fieldblock}
+											
+{BEGIN ObliNove_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObliNove}  r-vertical-field" data-fieldname="ObliNove" data-signal-error-for="ObliNove{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="ObliNove" data-fieldname="ObliNove" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ObliNove}">
+		
+		{BEGIN ObliNove_label}{$label dbo_Reliquidaciones ObliNove }{END ObliNove_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ObliNove_value}	</div>
+
+		
+</div>
+
+
+{END ObliNove_fieldblock}
+											
+{BEGIN ObliSald_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObliSald}  r-vertical-field" data-fieldname="ObliSald" data-signal-error-for="ObliSald{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="ObliSald" data-fieldname="ObliSald" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ObliSald}">
+		
+		{BEGIN ObliSald_label}{$label dbo_Reliquidaciones ObliSald }{END ObliSald_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ObliSald_value}	</div>
+
+		
+</div>
+
+
+{END ObliSald_fieldblock}
+											
+{BEGIN InteReca_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteReca}  r-vertical-field" data-fieldname="InteReca" data-signal-error-for="InteReca{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="InteReca" data-fieldname="InteReca" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_InteReca}">
+		
+		{BEGIN InteReca_label}{$label dbo_Reliquidaciones InteReca }{END InteReca_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$InteReca_value}	</div>
+
+		
+</div>
+
+
+{END InteReca_fieldblock}
+											
+{BEGIN InteNove_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteNove}  r-vertical-field" data-fieldname="InteNove" data-signal-error-for="InteNove{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="InteNove" data-fieldname="InteNove" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_InteNove}">
+		
+		{BEGIN InteNove_label}{$label dbo_Reliquidaciones InteNove }{END InteNove_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$InteNove_value}	</div>
+
+		
+</div>
+
+
+{END InteNove_fieldblock}
+											
+{BEGIN InteSald_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteSald}  r-vertical-field" data-fieldname="InteSald" data-signal-error-for="InteSald{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="InteSald" data-fieldname="InteSald" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_InteSald}">
+		
+		{BEGIN InteSald_label}{$label dbo_Reliquidaciones InteSald }{END InteSald_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$InteSald_value}	</div>
+
+		
+</div>
+
+
+{END InteSald_fieldblock}
+											
+{BEGIN CostReca_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CostReca}  r-vertical-field" data-fieldname="CostReca" data-signal-error-for="CostReca{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="CostReca" data-fieldname="CostReca" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CostReca}">
+		
+		{BEGIN CostReca_label}{$label dbo_Reliquidaciones CostReca }{END CostReca_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CostReca_value}	</div>
+
+		
+</div>
+
+
+{END CostReca_fieldblock}
+											
+{BEGIN CostNove_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CostNove}  r-vertical-field" data-fieldname="CostNove" data-signal-error-for="CostNove{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="CostNove" data-fieldname="CostNove" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CostNove}">
+		
+		{BEGIN CostNove_label}{$label dbo_Reliquidaciones CostNove }{END CostNove_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CostNove_value}	</div>
+
+		
+</div>
+
+
+{END CostNove_fieldblock}
+											
+{BEGIN CostSald_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CostSald}  r-vertical-field" data-fieldname="CostSald" data-signal-error-for="CostSald{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="CostSald" data-fieldname="CostSald" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CostSald}">
+		
+		{BEGIN CostSald_label}{$label dbo_Reliquidaciones CostSald }{END CostSald_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CostSald_value}	</div>
+
+		
+</div>
+
+
+{END CostSald_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Cerrar ventana			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="reliquidaciones_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Editar		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,171 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Operaciones export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$OperacionId_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Columna_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$ConcCodi_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Operacion_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$DebiCodi_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$DebiAux1_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$DebiAux2_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$DebiAux3_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$AcreCodi_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$AcreAux1_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$AcreAux2_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$AcreAux3_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

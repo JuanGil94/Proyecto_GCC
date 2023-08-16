@@ -1,0 +1,48 @@
+<?php
+$dalTableChequeos = array();
+$dalTableChequeos["ChequeoId"] = array("type"=>3,"varname"=>"ChequeoId", "name" => "ChequeoId", "autoInc" => "1");
+$dalTableChequeos["ConceptoId"] = array("type"=>3,"varname"=>"ConceptoId", "name" => "ConceptoId", "autoInc" => "0");
+$dalTableChequeos["AbogadoId"] = array("type"=>3,"varname"=>"AbogadoId", "name" => "AbogadoId", "autoInc" => "0");
+$dalTableChequeos["Fecha"] = array("type"=>7,"varname"=>"Fecha", "name" => "Fecha", "autoInc" => "0");
+$dalTableChequeos["DespachoId"] = array("type"=>3,"varname"=>"DespachoId", "name" => "DespachoId", "autoInc" => "0");
+$dalTableChequeos["Origen"] = array("type"=>200,"varname"=>"Origen", "name" => "Origen", "autoInc" => "0");
+$dalTableChequeos["Providencia"] = array("type"=>7,"varname"=>"Providencia", "name" => "Providencia", "autoInc" => "0");
+$dalTableChequeos["Ejecutoria"] = array("type"=>7,"varname"=>"Ejecutoria", "name" => "Ejecutoria", "autoInc" => "0");
+$dalTableChequeos["PrimeraCopia"] = array("type"=>11,"varname"=>"PrimeraCopia", "name" => "PrimeraCopia", "autoInc" => "0");
+$dalTableChequeos["Autentica"] = array("type"=>11,"varname"=>"Autentica", "name" => "Autentica", "autoInc" => "0");
+$dalTableChequeos["PrestaMeritoEjecutivo"] = array("type"=>11,"varname"=>"PrestaMeritoEjecutivo", "name" => "PrestaMeritoEjecutivo", "autoInc" => "0");
+$dalTableChequeos["Clara"] = array("type"=>11,"varname"=>"Clara", "name" => "Clara", "autoInc" => "0");
+$dalTableChequeos["Expresa"] = array("type"=>11,"varname"=>"Expresa", "name" => "Expresa", "autoInc" => "0");
+$dalTableChequeos["ActualmenteExigible"] = array("type"=>11,"varname"=>"ActualmenteExigible", "name" => "ActualmenteExigible", "autoInc" => "0");
+$dalTableChequeos["CompetenciaDEAJ"] = array("type"=>11,"varname"=>"CompetenciaDEAJ", "name" => "CompetenciaDEAJ", "autoInc" => "0");
+$dalTableChequeos["FaltaRequisitos"] = array("type"=>11,"varname"=>"FaltaRequisitos", "name" => "FaltaRequisitos", "autoInc" => "0");
+$dalTableChequeos["FaltaCompetencia"] = array("type"=>11,"varname"=>"FaltaCompetencia", "name" => "FaltaCompetencia", "autoInc" => "0");
+$dalTableChequeos["PorPrescripcion"] = array("type"=>11,"varname"=>"PorPrescripcion", "name" => "PorPrescripcion", "autoInc" => "0");
+$dalTableChequeos["SeccionalId"] = array("type"=>3,"varname"=>"SeccionalId", "name" => "SeccionalId", "autoInc" => "0");
+$dalTableChequeos["Folios"] = array("type"=>3,"varname"=>"Folios", "name" => "Folios", "autoInc" => "0");
+$dalTableChequeos["SeccionalIdDestino"] = array("type"=>3,"varname"=>"SeccionalIdDestino", "name" => "SeccionalIdDestino", "autoInc" => "0");
+$dalTableChequeos["Observaciones"] = array("type"=>200,"varname"=>"Observaciones", "name" => "Observaciones", "autoInc" => "0");
+$dalTableChequeos["Procesado"] = array("type"=>11,"varname"=>"Procesado", "name" => "Procesado", "autoInc" => "0");
+$dalTableChequeos["Tipo"] = array("type"=>3,"varname"=>"Tipo", "name" => "Tipo", "autoInc" => "0");
+$dalTableChequeos["FechaSancion"] = array("type"=>7,"varname"=>"FechaSancion", "name" => "FechaSancion", "autoInc" => "0");
+$dalTableChequeos["Cantidad"] = array("type"=>131,"varname"=>"Cantidad", "name" => "Cantidad", "autoInc" => "0");
+$dalTableChequeos["Obligacion"] = array("type"=>6,"varname"=>"Obligacion", "name" => "Obligacion", "autoInc" => "0");
+$dalTableChequeos["Costas"] = array("type"=>6,"varname"=>"Costas", "name" => "Costas", "autoInc" => "0");
+$dalTableChequeos["Remisorio"] = array("type"=>200,"varname"=>"Remisorio", "name" => "Remisorio", "autoInc" => "0");
+$dalTableChequeos["CarteraTipoId"] = array("type"=>3,"varname"=>"CarteraTipoId", "name" => "CarteraTipoId", "autoInc" => "0");
+$dalTableChequeos["MinJusticia"] = array("type"=>11,"varname"=>"MinJusticia", "name" => "MinJusticia", "autoInc" => "0");
+$dalTableChequeos["Aprobado"] = array("type"=>11,"varname"=>"Aprobado", "name" => "Aprobado", "autoInc" => "0");
+$dalTableChequeos["AprobadoPor"] = array("type"=>200,"varname"=>"AprobadoPor", "name" => "AprobadoPor", "autoInc" => "0");
+$dalTableChequeos["FechaAprobacion"] = array("type"=>135,"varname"=>"FechaAprobacion", "name" => "FechaAprobacion", "autoInc" => "0");
+$dalTableChequeos["Plazo"] = array("type"=>7,"varname"=>"Plazo", "name" => "Plazo", "autoInc" => "0");
+$dalTableChequeos["NaturalezaId"] = array("type"=>3,"varname"=>"NaturalezaId", "name" => "NaturalezaId", "autoInc" => "0");
+$dalTableChequeos["Sigobius"] = array("type"=>200,"varname"=>"Sigobius", "name" => "Sigobius", "autoInc" => "0");
+$dalTableChequeos["Monto"] = array("type"=>6,"varname"=>"Monto", "name" => "Monto", "autoInc" => "0");
+$dalTableChequeos["TramiteId"] = array("type"=>3,"varname"=>"TramiteId", "name" => "TramiteId", "autoInc" => "0");
+$dalTableChequeos["Fisico"] = array("type"=>11,"varname"=>"Fisico", "name" => "Fisico", "autoInc" => "0");
+$dalTableChequeos["Digital"] = array("type"=>11,"varname"=>"Digital", "name" => "Digital", "autoInc" => "0");
+$dalTableChequeos["order"] = array("type"=>3,"varname"=>"order", "name" => "order", "autoInc" => "0");
+$dalTableChequeos["ChequeoId"]["key"]=true;
+
+$dal_info["GCC_at_S00001_CCAD01_dbo_Chequeos"] = &$dalTableChequeos;
+?>

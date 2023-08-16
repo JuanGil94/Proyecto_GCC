@@ -1,0 +1,440 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Empresas add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Empresa}  r-vertical-field" 
+	data-signal-error-for="Empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Empresa" data-fieldname="Empresa" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Empresa}">
+		{BEGIN Empresa_label}{$label dbo_Empresas Empresa }{END Empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$Empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Empresa" {$tooltipAttr dbo_Empresas Empresa } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas Empresa }		</div>
+	</div>
+</div>
+
+
+{END Empresa_fieldblock}
+											
+{BEGIN Cierre_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cierre}  r-vertical-field" 
+	data-signal-error-for="Cierre{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Cierre" data-fieldname="Cierre" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cierre}">
+		{BEGIN Cierre_label}{$label dbo_Empresas Cierre }{END Cierre_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cierre_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cierre" {$tooltipAttr dbo_Empresas Cierre } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas Cierre }		</div>
+	</div>
+</div>
+
+
+{END Cierre_fieldblock}
+											
+{BEGIN ValorMaximo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ValorMaximo}  r-vertical-field" 
+	data-signal-error-for="ValorMaximo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="ValorMaximo" data-fieldname="ValorMaximo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ValorMaximo}">
+		{BEGIN ValorMaximo_label}{$label dbo_Empresas ValorMaximo }{END ValorMaximo_label}
+	</label>
+	<div class="r-edit-field">
+		{$ValorMaximo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ValorMaximo" {$tooltipAttr dbo_Empresas ValorMaximo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas ValorMaximo }		</div>
+	</div>
+</div>
+
+
+{END ValorMaximo_fieldblock}
+											
+{BEGIN MaximoPesos_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MaximoPesos}  r-vertical-field" 
+	data-signal-error-for="MaximoPesos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="MaximoPesos" data-fieldname="MaximoPesos" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MaximoPesos}">
+		{BEGIN MaximoPesos_label}{$label dbo_Empresas MaximoPesos }{END MaximoPesos_label}
+	</label>
+	<div class="r-edit-field">
+		{$MaximoPesos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MaximoPesos" {$tooltipAttr dbo_Empresas MaximoPesos } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas MaximoPesos }		</div>
+	</div>
+</div>
+
+
+{END MaximoPesos_fieldblock}
+											
+{BEGIN MaximoSalarios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MaximoSalarios}  r-vertical-field" 
+	data-signal-error-for="MaximoSalarios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="MaximoSalarios" data-fieldname="MaximoSalarios" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MaximoSalarios}">
+		{BEGIN MaximoSalarios_label}{$label dbo_Empresas MaximoSalarios }{END MaximoSalarios_label}
+	</label>
+	<div class="r-edit-field">
+		{$MaximoSalarios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MaximoSalarios" {$tooltipAttr dbo_Empresas MaximoSalarios } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas MaximoSalarios }		</div>
+	</div>
+</div>
+
+
+{END MaximoSalarios_fieldblock}
+											
+{BEGIN MaximoUvt_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MaximoUvt}  r-vertical-field" 
+	data-signal-error-for="MaximoUvt{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="MaximoUvt" data-fieldname="MaximoUvt" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MaximoUvt}">
+		{BEGIN MaximoUvt_label}{$label dbo_Empresas MaximoUvt }{END MaximoUvt_label}
+	</label>
+	<div class="r-edit-field">
+		{$MaximoUvt_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MaximoUvt" {$tooltipAttr dbo_Empresas MaximoUvt } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas MaximoUvt }		</div>
+	</div>
+</div>
+
+
+{END MaximoUvt_fieldblock}
+											
+{BEGIN EmailAprobador_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EmailAprobador}  r-vertical-field" 
+	data-signal-error-for="EmailAprobador{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="EmailAprobador" data-fieldname="EmailAprobador" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_EmailAprobador}">
+		{BEGIN EmailAprobador_label}{$label dbo_Empresas EmailAprobador }{END EmailAprobador_label}
+	</label>
+	<div class="r-edit-field">
+		{$EmailAprobador_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="EmailAprobador" {$tooltipAttr dbo_Empresas EmailAprobador } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas EmailAprobador }		</div>
+	</div>
+</div>
+
+
+{END EmailAprobador_fieldblock}
+											
+{BEGIN Tope_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tope}  r-vertical-field" 
+	data-signal-error-for="Tope{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Tope" data-fieldname="Tope" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tope}">
+		{BEGIN Tope_label}{$label dbo_Empresas Tope }{END Tope_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tope_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tope" {$tooltipAttr dbo_Empresas Tope } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas Tope }		</div>
+	</div>
+</div>
+
+
+{END Tope_fieldblock}
+											
+{BEGIN DiasPersuasivo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DiasPersuasivo}  r-vertical-field" 
+	data-signal-error-for="DiasPersuasivo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="DiasPersuasivo" data-fieldname="DiasPersuasivo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DiasPersuasivo}">
+		{BEGIN DiasPersuasivo_label}{$label dbo_Empresas DiasPersuasivo }{END DiasPersuasivo_label}
+	</label>
+	<div class="r-edit-field">
+		{$DiasPersuasivo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DiasPersuasivo" {$tooltipAttr dbo_Empresas DiasPersuasivo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas DiasPersuasivo }		</div>
+	</div>
+</div>
+
+
+{END DiasPersuasivo_fieldblock}
+											
+{BEGIN CarteraEspecialUvt_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraEspecialUvt}  r-vertical-field" 
+	data-signal-error-for="CarteraEspecialUvt{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="CarteraEspecialUvt" data-fieldname="CarteraEspecialUvt" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CarteraEspecialUvt}">
+		{BEGIN CarteraEspecialUvt_label}{$label dbo_Empresas CarteraEspecialUvt }{END CarteraEspecialUvt_label}
+	</label>
+	<div class="r-edit-field">
+		{$CarteraEspecialUvt_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarteraEspecialUvt" {$tooltipAttr dbo_Empresas CarteraEspecialUvt } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas CarteraEspecialUvt }		</div>
+	</div>
+</div>
+
+
+{END CarteraEspecialUvt_fieldblock}
+											
+{BEGIN TasaDTN_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TasaDTN}  r-vertical-field" 
+	data-signal-error-for="TasaDTN{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="TasaDTN" data-fieldname="TasaDTN" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_TasaDTN}">
+		{BEGIN TasaDTN_label}{$label dbo_Empresas TasaDTN }{END TasaDTN_label}
+	</label>
+	<div class="r-edit-field">
+		{$TasaDTN_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="TasaDTN" {$tooltipAttr dbo_Empresas TasaDTN } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas TasaDTN }		</div>
+	</div>
+</div>
+
+
+{END TasaDTN_fieldblock}
+											
+{BEGIN TasaCivil_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TasaCivil}  r-vertical-field" 
+	data-signal-error-for="TasaCivil{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="TasaCivil" data-fieldname="TasaCivil" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_TasaCivil}">
+		{BEGIN TasaCivil_label}{$label dbo_Empresas TasaCivil }{END TasaCivil_label}
+	</label>
+	<div class="r-edit-field">
+		{$TasaCivil_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="TasaCivil" {$tooltipAttr dbo_Empresas TasaCivil } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas TasaCivil }		</div>
+	</div>
+</div>
+
+
+{END TasaCivil_fieldblock}
+											
+{BEGIN InteresesPlazo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteresesPlazo}  r-vertical-field" 
+	data-signal-error-for="InteresesPlazo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="InteresesPlazo" data-fieldname="InteresesPlazo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_InteresesPlazo}">
+		{BEGIN InteresesPlazo_label}{$label dbo_Empresas InteresesPlazo }{END InteresesPlazo_label}
+	</label>
+	<div class="r-edit-field">
+		{$InteresesPlazo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="InteresesPlazo" {$tooltipAttr dbo_Empresas InteresesPlazo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas InteresesPlazo }		</div>
+	</div>
+</div>
+
+
+{END InteresesPlazo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

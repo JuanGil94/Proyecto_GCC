@@ -1,0 +1,257 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Naturalezas view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN NaturalezaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NaturalezaId}  r-vertical-field" data-fieldname="NaturalezaId" data-signal-error-for="NaturalezaId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="NaturalezaId" data-fieldname="NaturalezaId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_NaturalezaId}">
+		
+		{BEGIN NaturalezaId_label}{$label dbo_Naturalezas NaturalezaId }{END NaturalezaId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$NaturalezaId_value}	</div>
+
+		
+</div>
+
+
+{END NaturalezaId_fieldblock}
+											
+{BEGIN Naturaleza_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Naturaleza}  r-vertical-field" data-fieldname="Naturaleza" data-signal-error-for="Naturaleza{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Naturaleza" data-fieldname="Naturaleza" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Naturaleza}">
+		
+		{BEGIN Naturaleza_label}{$label dbo_Naturalezas Naturaleza }{END Naturaleza_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Naturaleza_value}	</div>
+
+		
+</div>
+
+
+{END Naturaleza_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-vertical-field" data-fieldname="ConceptoId" data-signal-error-for="ConceptoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ConceptoId}">
+		
+		{BEGIN ConceptoId_label}{$label dbo_Naturalezas ConceptoId }{END ConceptoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ConceptoId_value}	</div>
+
+		
+</div>
+
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN TasaTipo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TasaTipo}  r-vertical-field" data-fieldname="TasaTipo" data-signal-error-for="TasaTipo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="TasaTipo" data-fieldname="TasaTipo" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_TasaTipo}">
+		
+		{BEGIN TasaTipo_label}{$label dbo_Naturalezas TasaTipo }{END TasaTipo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$TasaTipo_value}	</div>
+
+		
+</div>
+
+
+{END TasaTipo_fieldblock}
+											
+{BEGIN Activa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Activa}  r-vertical-field" data-fieldname="Activa" data-signal-error-for="Activa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Activa" data-fieldname="Activa" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Activa}">
+		
+		{BEGIN Activa_label}{$label dbo_Naturalezas Activa }{END Activa_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Activa_value}	</div>
+
+		
+</div>
+
+
+{END Activa_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Cerrar ventana			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="naturalezas_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Editar		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

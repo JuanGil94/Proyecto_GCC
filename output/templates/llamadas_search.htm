@@ -1,0 +1,282 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Llamadas search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN LlamadaId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_LlamadaId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="LlamadaId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="LlamadaId" data-fieldname="LlamadaId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_LlamadaId}">
+		{$label dbo_Llamadas LlamadaId }	</label>
+	<div class="r-search-option">
+		{$searchtype_LlamadaId}
+	</div>
+	<div class="r-search-field">
+		{$LlamadaId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$LlamadaId_editcontrol1}
+	</div>
+	
+</div>
+
+{END LlamadaId_fieldblock}
+											
+{BEGIN ProcesoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ProcesoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ProcesoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ProcesoId" data-fieldname="ProcesoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ProcesoId}">
+		{$label dbo_Llamadas ProcesoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_ProcesoId}
+	</div>
+	<div class="r-search-field">
+		{$ProcesoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ProcesoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END ProcesoId_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
+		{$label dbo_Llamadas Fecha }	</label>
+	<div class="r-search-option">
+		{$searchtype_Fecha}
+	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol1}
+	</div>
+	
+</div>
+
+{END Fecha_fieldblock}
+											
+{BEGIN Telefono_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Telefono}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Telefono{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Telefono" data-fieldname="Telefono" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Telefono}">
+		{$label dbo_Llamadas Telefono }	</label>
+	<div class="r-search-option">
+		{$searchtype_Telefono}
+	</div>
+	<div class="r-search-field">
+		{$Telefono_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Telefono_editcontrol1}
+	</div>
+	
+</div>
+
+{END Telefono_fieldblock}
+											
+{BEGIN Contesto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Contesto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Contesto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Contesto" data-fieldname="Contesto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Contesto}">
+		{$label dbo_Llamadas Contesto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Contesto}
+	</div>
+	<div class="r-search-field">
+		{$Contesto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Contesto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Contesto_fieldblock}
+											
+{BEGIN Mensaje_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Mensaje}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Mensaje{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Mensaje" data-fieldname="Mensaje" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Mensaje}">
+		{$label dbo_Llamadas Mensaje }	</label>
+	<div class="r-search-option">
+		{$searchtype_Mensaje}
+	</div>
+	<div class="r-search-field">
+		{$Mensaje_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Mensaje_editcontrol1}
+	</div>
+	
+</div>
+
+{END Mensaje_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

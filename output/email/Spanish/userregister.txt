@@ -1,0 +1,14 @@
+Notificación de registro
+
+Te has registrado como usuario en %url%
+
+Haga click para confirmar su cuenta y finalizar el registro:
+%activateurl%
+Si no puedes hacer click en el link, copialo y pegalo en una ventana de navegador
+
+ID: %ID_value%
+Username: %username_value%
+Email: %email_value%
+Fullname: %fullname_value%
+Groupid: %groupid_value%
+Ext Security Id: %ext_security_id_value%

@@ -1,0 +1,461 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Operaciones add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Columna_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Columna}  r-vertical-field" 
+	data-signal-error-for="Columna{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Columna" data-fieldname="Columna" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Columna}">
+		{BEGIN Columna_label}{$label dbo_Operaciones Columna }{END Columna_label}
+	</label>
+	<div class="r-edit-field">
+		{$Columna_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Columna" {$tooltipAttr dbo_Operaciones Columna } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones Columna }		</div>
+	</div>
+</div>
+
+
+{END Columna_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-vertical-field" 
+	data-signal-error-for="ConceptoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ConceptoId}">
+		{BEGIN ConceptoId_label}{$label dbo_Operaciones ConceptoId }{END ConceptoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ConceptoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ConceptoId" {$tooltipAttr dbo_Operaciones ConceptoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones ConceptoId }		</div>
+	</div>
+</div>
+
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN ConcCodi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConcCodi}  r-vertical-field" 
+	data-signal-error-for="ConcCodi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="ConcCodi" data-fieldname="ConcCodi" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ConcCodi}">
+		{BEGIN ConcCodi_label}{$label dbo_Operaciones ConcCodi }{END ConcCodi_label}
+	</label>
+	<div class="r-edit-field">
+		{$ConcCodi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ConcCodi" {$tooltipAttr dbo_Operaciones ConcCodi } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones ConcCodi }		</div>
+	</div>
+</div>
+
+
+{END ConcCodi_fieldblock}
+											
+{BEGIN Operacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Operacion}  r-vertical-field" 
+	data-signal-error-for="Operacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Operacion" data-fieldname="Operacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Operacion}">
+		{BEGIN Operacion_label}{$label dbo_Operaciones Operacion }{END Operacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Operacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Operacion" {$tooltipAttr dbo_Operaciones Operacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones Operacion }		</div>
+	</div>
+</div>
+
+
+{END Operacion_fieldblock}
+											
+{BEGIN DebiCodi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DebiCodi}  r-vertical-field" 
+	data-signal-error-for="DebiCodi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="DebiCodi" data-fieldname="DebiCodi" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DebiCodi}">
+		{BEGIN DebiCodi_label}{$label dbo_Operaciones DebiCodi }{END DebiCodi_label}
+	</label>
+	<div class="r-edit-field">
+		{$DebiCodi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DebiCodi" {$tooltipAttr dbo_Operaciones DebiCodi } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones DebiCodi }		</div>
+	</div>
+</div>
+
+
+{END DebiCodi_fieldblock}
+											
+{BEGIN DebiAux1_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DebiAux1}  r-vertical-field" 
+	data-signal-error-for="DebiAux1{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="DebiAux1" data-fieldname="DebiAux1" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DebiAux1}">
+		{BEGIN DebiAux1_label}{$label dbo_Operaciones DebiAux1 }{END DebiAux1_label}
+	</label>
+	<div class="r-edit-field">
+		{$DebiAux1_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DebiAux1" {$tooltipAttr dbo_Operaciones DebiAux1 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones DebiAux1 }		</div>
+	</div>
+</div>
+
+
+{END DebiAux1_fieldblock}
+											
+{BEGIN DebiAux2_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DebiAux2}  r-vertical-field" 
+	data-signal-error-for="DebiAux2{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="DebiAux2" data-fieldname="DebiAux2" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DebiAux2}">
+		{BEGIN DebiAux2_label}{$label dbo_Operaciones DebiAux2 }{END DebiAux2_label}
+	</label>
+	<div class="r-edit-field">
+		{$DebiAux2_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DebiAux2" {$tooltipAttr dbo_Operaciones DebiAux2 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones DebiAux2 }		</div>
+	</div>
+</div>
+
+
+{END DebiAux2_fieldblock}
+											
+{BEGIN DebiAux3_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DebiAux3}  r-vertical-field" 
+	data-signal-error-for="DebiAux3{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="DebiAux3" data-fieldname="DebiAux3" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DebiAux3}">
+		{BEGIN DebiAux3_label}{$label dbo_Operaciones DebiAux3 }{END DebiAux3_label}
+	</label>
+	<div class="r-edit-field">
+		{$DebiAux3_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DebiAux3" {$tooltipAttr dbo_Operaciones DebiAux3 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones DebiAux3 }		</div>
+	</div>
+</div>
+
+
+{END DebiAux3_fieldblock}
+											
+{BEGIN AcreCodi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AcreCodi}  r-vertical-field" 
+	data-signal-error-for="AcreCodi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="AcreCodi" data-fieldname="AcreCodi" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AcreCodi}">
+		{BEGIN AcreCodi_label}{$label dbo_Operaciones AcreCodi }{END AcreCodi_label}
+	</label>
+	<div class="r-edit-field">
+		{$AcreCodi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AcreCodi" {$tooltipAttr dbo_Operaciones AcreCodi } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones AcreCodi }		</div>
+	</div>
+</div>
+
+
+{END AcreCodi_fieldblock}
+											
+{BEGIN AcreAux1_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AcreAux1}  r-vertical-field" 
+	data-signal-error-for="AcreAux1{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="AcreAux1" data-fieldname="AcreAux1" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AcreAux1}">
+		{BEGIN AcreAux1_label}{$label dbo_Operaciones AcreAux1 }{END AcreAux1_label}
+	</label>
+	<div class="r-edit-field">
+		{$AcreAux1_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AcreAux1" {$tooltipAttr dbo_Operaciones AcreAux1 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones AcreAux1 }		</div>
+	</div>
+</div>
+
+
+{END AcreAux1_fieldblock}
+											
+{BEGIN AcreAux2_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AcreAux2}  r-vertical-field" 
+	data-signal-error-for="AcreAux2{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="AcreAux2" data-fieldname="AcreAux2" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AcreAux2}">
+		{BEGIN AcreAux2_label}{$label dbo_Operaciones AcreAux2 }{END AcreAux2_label}
+	</label>
+	<div class="r-edit-field">
+		{$AcreAux2_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AcreAux2" {$tooltipAttr dbo_Operaciones AcreAux2 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones AcreAux2 }		</div>
+	</div>
+</div>
+
+
+{END AcreAux2_fieldblock}
+											
+{BEGIN AcreAux3_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AcreAux3}  r-vertical-field" 
+	data-signal-error-for="AcreAux3{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="AcreAux3" data-fieldname="AcreAux3" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AcreAux3}">
+		{BEGIN AcreAux3_label}{$label dbo_Operaciones AcreAux3 }{END AcreAux3_label}
+	</label>
+	<div class="r-edit-field">
+		{$AcreAux3_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AcreAux3" {$tooltipAttr dbo_Operaciones AcreAux3 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones AcreAux3 }		</div>
+	</div>
+</div>
+
+
+{END AcreAux3_fieldblock}
+											
+{BEGIN CarteraTipoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" 
+	data-signal-error-for="CarteraTipoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CarteraTipoId}">
+		{BEGIN CarteraTipoId_label}{$label dbo_Operaciones CarteraTipoId }{END CarteraTipoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CarteraTipoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarteraTipoId" {$tooltipAttr dbo_Operaciones CarteraTipoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones CarteraTipoId }		</div>
+	</div>
+</div>
+
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN Tipo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tipo}  r-vertical-field" 
+	data-signal-error-for="Tipo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Tipo" data-fieldname="Tipo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tipo}">
+		{BEGIN Tipo_label}{$label dbo_Operaciones Tipo }{END Tipo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tipo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tipo" {$tooltipAttr dbo_Operaciones Tipo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Operaciones Tipo }		</div>
+	</div>
+</div>
+
+
+{END Tipo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

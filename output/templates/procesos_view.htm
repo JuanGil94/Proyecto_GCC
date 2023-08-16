@@ -1,0 +1,793 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Procesos view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" data-fieldname="SeccionalId" data-signal-error-for="SeccionalId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_SeccionalId}">
+		
+		{BEGIN SeccionalId_label}{$label dbo_Procesos SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$SeccionalId_value}	</div>
+
+		
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN AbogadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" data-fieldname="AbogadoId" data-signal-error-for="AbogadoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_AbogadoId}">
+		
+		{BEGIN AbogadoId_label}{$label dbo_Procesos AbogadoId }{END AbogadoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$AbogadoId_value}	</div>
+
+		
+</div>
+
+
+{END AbogadoId_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-vertical-field" data-fieldname="Fecha" data-signal-error-for="Fecha{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Fecha}">
+		
+		{BEGIN Fecha_label}{$label dbo_Procesos Fecha }{END Fecha_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Fecha_value}	</div>
+
+		
+</div>
+
+
+{END Fecha_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-vertical-field" data-fieldname="Numero" data-signal-error-for="Numero{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Numero}">
+		
+		{BEGIN Numero_label}{$label dbo_Procesos Numero }{END Numero_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Numero_value}	</div>
+
+		
+</div>
+
+
+{END Numero_fieldblock}
+											
+{BEGIN SancionadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-vertical-field" data-fieldname="SancionadoId" data-signal-error-for="SancionadoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="SancionadoId" data-fieldname="SancionadoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_SancionadoId}">
+		
+		{BEGIN SancionadoId_label}{$label dbo_Procesos SancionadoId }{END SancionadoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$SancionadoId_value}	</div>
+
+		
+</div>
+
+
+{END SancionadoId_fieldblock}
+											
+{BEGIN Providencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-vertical-field" data-fieldname="Providencia" data-signal-error-for="Providencia{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Providencia}">
+		
+		{BEGIN Providencia_label}{$label dbo_Procesos Providencia }{END Providencia_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Providencia_value}	</div>
+
+		
+</div>
+
+
+{END Providencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-vertical-field" data-fieldname="Ejecutoria" data-signal-error-for="Ejecutoria{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Ejecutoria}">
+		
+		{BEGIN Ejecutoria_label}{$label dbo_Procesos Ejecutoria }{END Ejecutoria_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Ejecutoria_value}	</div>
+
+		
+</div>
+
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-vertical-field" data-fieldname="ConceptoId" data-signal-error-for="ConceptoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ConceptoId}">
+		
+		{BEGIN ConceptoId_label}{$label dbo_Procesos ConceptoId }{END ConceptoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ConceptoId_value}	</div>
+
+		
+</div>
+
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN EstadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EstadoId}  r-vertical-field" data-fieldname="EstadoId" data-signal-error-for="EstadoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="EstadoId" data-fieldname="EstadoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_EstadoId}">
+		
+		{BEGIN EstadoId_label}{$label dbo_Procesos EstadoId }{END EstadoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$EstadoId_value}	</div>
+
+		
+</div>
+
+
+{END EstadoId_fieldblock}
+											
+{BEGIN EtapaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EtapaId}  r-vertical-field" data-fieldname="EtapaId" data-signal-error-for="EtapaId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="EtapaId" data-fieldname="EtapaId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_EtapaId}">
+		
+		{BEGIN EtapaId_label}{$label dbo_Procesos EtapaId }{END EtapaId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$EtapaId_value}	</div>
+
+		
+</div>
+
+
+{END EtapaId_fieldblock}
+											
+{BEGIN Folios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Folios}  r-vertical-field" data-fieldname="Folios" data-signal-error-for="Folios{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Folios" data-fieldname="Folios" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Folios}">
+		
+		{BEGIN Folios_label}{$label dbo_Procesos Folios }{END Folios_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Folios_value}	</div>
+
+		
+</div>
+
+
+{END Folios_fieldblock}
+											
+{BEGIN Recaudo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recaudo}  r-vertical-field" data-fieldname="Recaudo" data-signal-error-for="Recaudo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="Recaudo" data-fieldname="Recaudo" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Recaudo}">
+		
+		{BEGIN Recaudo_label}{$label dbo_Procesos Recaudo }{END Recaudo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Recaudo_value}	</div>
+
+		
+</div>
+
+
+{END Recaudo_fieldblock}
+											
+{BEGIN MotivoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MotivoId}  r-vertical-field" data-fieldname="MotivoId" data-signal-error-for="MotivoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="MotivoId" data-fieldname="MotivoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_MotivoId}">
+		
+		{BEGIN MotivoId_label}{$label dbo_Procesos MotivoId }{END MotivoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$MotivoId_value}	</div>
+
+		
+</div>
+
+
+{END MotivoId_fieldblock}
+											
+{BEGIN CarteraTipoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" data-fieldname="CarteraTipoId" data-signal-error-for="CarteraTipoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CarteraTipoId}">
+		
+		{BEGIN CarteraTipoId_label}{$label dbo_Procesos CarteraTipoId }{END CarteraTipoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CarteraTipoId_value}	</div>
+
+		
+</div>
+
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN Origen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Origen}  r-vertical-field" data-fieldname="Origen" data-signal-error-for="Origen{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field41" {$item_integrated_edit_field41} data-pageid="{$pageid}" data-field="Origen" data-fieldname="Origen" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Origen}">
+		
+		{BEGIN Origen_label}{$label dbo_Procesos Origen }{END Origen_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Origen_value}	</div>
+
+		
+</div>
+
+
+{END Origen_fieldblock}
+											
+{BEGIN MinJusticia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MinJusticia}  r-vertical-field" data-fieldname="MinJusticia" data-signal-error-for="MinJusticia{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field48" {$item_integrated_edit_field48} data-pageid="{$pageid}" data-field="MinJusticia" data-fieldname="MinJusticia" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_MinJusticia}">
+		
+		{BEGIN MinJusticia_label}{$label dbo_Procesos MinJusticia }{END MinJusticia_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$MinJusticia_value}	</div>
+
+		
+</div>
+
+
+{END MinJusticia_fieldblock}
+											
+{BEGIN MinjusticiaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MinjusticiaId}  r-vertical-field" data-fieldname="MinjusticiaId" data-signal-error-for="MinjusticiaId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field55" {$item_integrated_edit_field55} data-pageid="{$pageid}" data-field="MinjusticiaId" data-fieldname="MinjusticiaId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_MinjusticiaId}">
+		
+		{BEGIN MinjusticiaId_label}{$label dbo_Procesos MinjusticiaId }{END MinjusticiaId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$MinjusticiaId_value}	</div>
+
+		
+</div>
+
+
+{END MinjusticiaId_fieldblock}
+											
+{BEGIN NaturalezaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NaturalezaId}  r-vertical-field" data-fieldname="NaturalezaId" data-signal-error-for="NaturalezaId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field71" {$item_integrated_edit_field71} data-pageid="{$pageid}" data-field="NaturalezaId" data-fieldname="NaturalezaId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_NaturalezaId}">
+		
+		{BEGIN NaturalezaId_label}{$label dbo_Procesos NaturalezaId }{END NaturalezaId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$NaturalezaId_value}	</div>
+
+		
+</div>
+
+
+{END NaturalezaId_fieldblock}
+											
+{BEGIN Acuerdo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Acuerdo}  r-vertical-field" data-fieldname="Acuerdo" data-signal-error-for="Acuerdo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Acuerdo" data-fieldname="Acuerdo" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Acuerdo}">
+		
+		{BEGIN Acuerdo_label}{$label dbo_Procesos Acuerdo }{END Acuerdo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Acuerdo_value}	</div>
+
+		
+</div>
+
+
+{END Acuerdo_fieldblock}
+											
+{BEGIN Notificacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Notificacion}  r-vertical-field" data-fieldname="Notificacion" data-signal-error-for="Notificacion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Notificacion" data-fieldname="Notificacion" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Notificacion}">
+		
+		{BEGIN Notificacion_label}{$label dbo_Procesos Notificacion }{END Notificacion_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Notificacion_value}	</div>
+
+		
+</div>
+
+
+{END Notificacion_fieldblock}
+											
+{BEGIN Plazo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Plazo}  r-vertical-field" data-fieldname="Plazo" data-signal-error-for="Plazo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Plazo" data-fieldname="Plazo" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Plazo}">
+		
+		{BEGIN Plazo_label}{$label dbo_Procesos Plazo }{END Plazo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Plazo_value}	</div>
+
+		
+</div>
+
+
+{END Plazo_fieldblock}
+											
+{BEGIN Terminacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terminacion}  r-vertical-field" data-fieldname="Terminacion" data-signal-error-for="Terminacion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Terminacion" data-fieldname="Terminacion" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Terminacion}">
+		
+		{BEGIN Terminacion_label}{$label dbo_Procesos Terminacion }{END Terminacion_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Terminacion_value}	</div>
+
+		
+</div>
+
+
+{END Terminacion_fieldblock}
+											
+{BEGIN Incumplimiento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Incumplimiento}  r-vertical-field" data-fieldname="Incumplimiento" data-signal-error-for="Incumplimiento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Incumplimiento" data-fieldname="Incumplimiento" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Incumplimiento}">
+		
+		{BEGIN Incumplimiento_label}{$label dbo_Procesos Incumplimiento }{END Incumplimiento_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Incumplimiento_value}	</div>
+
+		
+</div>
+
+
+{END Incumplimiento_fieldblock}
+											
+{BEGIN ObligacionInicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObligacionInicial}  r-vertical-field" data-fieldname="ObligacionInicial" data-signal-error-for="ObligacionInicial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="ObligacionInicial" data-fieldname="ObligacionInicial" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ObligacionInicial}">
+		
+		{BEGIN ObligacionInicial_label}{$label dbo_Procesos ObligacionInicial }{END ObligacionInicial_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ObligacionInicial_value}	</div>
+
+		
+</div>
+
+
+{END ObligacionInicial_fieldblock}
+											
+{BEGIN CostasInicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CostasInicial}  r-vertical-field" data-fieldname="CostasInicial" data-signal-error-for="CostasInicial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="CostasInicial" data-fieldname="CostasInicial" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CostasInicial}">
+		
+		{BEGIN CostasInicial_label}{$label dbo_Procesos CostasInicial }{END CostasInicial_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CostasInicial_value}	</div>
+
+		
+</div>
+
+
+{END CostasInicial_fieldblock}
+											
+{BEGIN InteresesInicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteresesInicial}  r-vertical-field" data-fieldname="InteresesInicial" data-signal-error-for="InteresesInicial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="InteresesInicial" data-fieldname="InteresesInicial" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_InteresesInicial}">
+		
+		{BEGIN InteresesInicial_label}{$label dbo_Procesos InteresesInicial }{END InteresesInicial_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$InteresesInicial_value}	</div>
+
+		
+</div>
+
+
+{END InteresesInicial_fieldblock}
+											
+{BEGIN DespachoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DespachoId}  r-vertical-field" data-fieldname="DespachoId" data-signal-error-for="DespachoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="DespachoId" data-fieldname="DespachoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_DespachoId}">
+		
+		{BEGIN DespachoId_label}{$label dbo_Procesos DespachoId }{END DespachoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$DespachoId_value}	</div>
+
+		
+</div>
+
+
+{END DespachoId_fieldblock}
+											
+{BEGIN Obligacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-vertical-field" data-fieldname="Obligacion" data-signal-error-for="Obligacion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Obligacion}">
+		
+		{BEGIN Obligacion_label}{$label dbo_Procesos Obligacion }{END Obligacion_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Obligacion_value}	</div>
+
+		
+</div>
+
+
+{END Obligacion_fieldblock}
+											
+{BEGIN Costas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Costas}  r-vertical-field" data-fieldname="Costas" data-signal-error-for="Costas{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="Costas" data-fieldname="Costas" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Costas}">
+		
+		{BEGIN Costas_label}{$label dbo_Procesos Costas }{END Costas_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Costas_value}	</div>
+
+		
+</div>
+
+
+{END Costas_fieldblock}
+											
+{BEGIN InteresesCalculados_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_InteresesCalculados}  r-vertical-field" data-fieldname="InteresesCalculados" data-signal-error-for="InteresesCalculados{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="InteresesCalculados" data-fieldname="InteresesCalculados" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_InteresesCalculados}">
+		
+		{BEGIN InteresesCalculados_label}{$label dbo_Procesos InteresesCalculados }{END InteresesCalculados_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$InteresesCalculados_value}	</div>
+
+		
+</div>
+
+
+{END InteresesCalculados_fieldblock}
+											
+{BEGIN ObligacionCreacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObligacionCreacion}  r-vertical-field" data-fieldname="ObligacionCreacion" data-signal-error-for="ObligacionCreacion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ObligacionCreacion}">
+		
+		{BEGIN ObligacionCreacion_label}{$label dbo_Procesos ObligacionCreacion }{END ObligacionCreacion_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ObligacionCreacion_value}	</div>
+
+		
+</div>
+
+
+{END ObligacionCreacion_fieldblock}
+											
+{BEGIN ActuacionId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ActuacionId}  r-vertical-field" data-fieldname="ActuacionId" data-signal-error-for="ActuacionId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="ActuacionId" data-fieldname="ActuacionId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ActuacionId}">
+		
+		{BEGIN ActuacionId_label}{$label dbo_Procesos ActuacionId }{END ActuacionId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ActuacionId_value}	</div>
+
+		
+</div>
+
+
+{END ActuacionId_fieldblock}
+											
+{BEGIN Dias_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Dias}  r-vertical-field" data-fieldname="Dias" data-signal-error-for="Dias{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="Dias" data-fieldname="Dias" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Dias}">
+		
+		{BEGIN Dias_label}{$label dbo_Procesos Dias }{END Dias_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Dias_value}	</div>
+
+		
+</div>
+
+
+{END Dias_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Cerrar ventana			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="procesos_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Editar		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

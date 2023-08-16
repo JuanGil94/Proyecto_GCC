@@ -1,0 +1,458 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Pagos1 search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN PagoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="PagoId" data-fieldname="PagoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoId}">
+		{$label dbo_Pagos1 PagoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoId}
+	</div>
+	<div class="r-search-field">
+		{$PagoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoId_fieldblock}
+											
+{BEGIN ProcesoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ProcesoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ProcesoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="ProcesoId" data-fieldname="ProcesoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ProcesoId}">
+		{$label dbo_Pagos1 ProcesoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_ProcesoId}
+	</div>
+	<div class="r-search-field">
+		{$ProcesoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ProcesoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END ProcesoId_fieldblock}
+											
+{BEGIN CuentaId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CuentaId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="CuentaId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="CuentaId" data-fieldname="CuentaId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_CuentaId}">
+		{$label dbo_Pagos1 CuentaId }	</label>
+	<div class="r-search-option">
+		{$searchtype_CuentaId}
+	</div>
+	<div class="r-search-field">
+		{$CuentaId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$CuentaId_editcontrol1}
+	</div>
+	
+</div>
+
+{END CuentaId_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
+		{$label dbo_Pagos1 Fecha }	</label>
+	<div class="r-search-option">
+		{$searchtype_Fecha}
+	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol1}
+	</div>
+	
+</div>
+
+{END Fecha_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label dbo_Pagos1 Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Pago_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pago}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Pago{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Pago" data-fieldname="Pago" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Pago}">
+		{$label dbo_Pagos1 Pago }	</label>
+	<div class="r-search-option">
+		{$searchtype_Pago}
+	</div>
+	<div class="r-search-field">
+		{$Pago_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Pago_editcontrol1}
+	</div>
+	
+</div>
+
+{END Pago_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Observaciones}">
+		{$label dbo_Pagos1 Observaciones }	</label>
+	<div class="r-search-option">
+		{$searchtype_Observaciones}
+	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol1}
+	</div>
+	
+</div>
+
+{END Observaciones_fieldblock}
+											
+{BEGIN Registro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Registro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Registro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Registro" data-fieldname="Registro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Registro}">
+		{$label dbo_Pagos1 Registro }	</label>
+	<div class="r-search-option">
+		{$searchtype_Registro}
+	</div>
+	<div class="r-search-field">
+		{$Registro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Registro_editcontrol1}
+	</div>
+	
+</div>
+
+{END Registro_fieldblock}
+											
+{BEGIN PagoObli_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoObli}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoObli{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="PagoObli" data-fieldname="PagoObli" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoObli}">
+		{$label dbo_Pagos1 PagoObli }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoObli}
+	</div>
+	<div class="r-search-field">
+		{$PagoObli_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoObli_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoObli_fieldblock}
+											
+{BEGIN PagoCost_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoCost}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoCost{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="PagoCost" data-fieldname="PagoCost" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoCost}">
+		{$label dbo_Pagos1 PagoCost }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoCost}
+	</div>
+	<div class="r-search-field">
+		{$PagoCost_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoCost_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoCost_fieldblock}
+											
+{BEGIN PagoInte_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoInte}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoInte{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="PagoInte" data-fieldname="PagoInte" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoInte}">
+		{$label dbo_Pagos1 PagoInte }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoInte}
+	</div>
+	<div class="r-search-field">
+		{$PagoInte_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoInte_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoInte_fieldblock}
+											
+{BEGIN PagoMayo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoMayo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoMayo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="PagoMayo" data-fieldname="PagoMayo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoMayo}">
+		{$label dbo_Pagos1 PagoMayo }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoMayo}
+	</div>
+	<div class="r-search-field">
+		{$PagoMayo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoMayo_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoMayo_fieldblock}
+											
+{BEGIN PagoTerm_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoTerm}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoTerm{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="PagoTerm" data-fieldname="PagoTerm" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoTerm}">
+		{$label dbo_Pagos1 PagoTerm }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoTerm}
+	</div>
+	<div class="r-search-field">
+		{$PagoTerm_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoTerm_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoTerm_fieldblock}
+											
+{BEGIN PagoIdOrig_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoIdOrig}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoIdOrig{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="PagoIdOrig" data-fieldname="PagoIdOrig" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoIdOrig}">
+		{$label dbo_Pagos1 PagoIdOrig }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoIdOrig}
+	</div>
+	<div class="r-search-field">
+		{$PagoIdOrig_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoIdOrig_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoIdOrig_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

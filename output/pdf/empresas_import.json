@@ -1,0 +1,168 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Empresas import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$EmpresaId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Empresa_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Cierre_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$ValorMaximo_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$MaximoPesos_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$MaximoSalarios_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$MaximoUvt_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$EmailAprobador_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Tope_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$DiasPersuasivo_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$CarteraEspecialUvt_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$TasaDTN_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$TasaCivil_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$InteresesPlazo_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  
