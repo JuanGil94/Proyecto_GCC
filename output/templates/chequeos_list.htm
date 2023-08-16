@@ -1942,7 +1942,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"		data-control-cell
@@ -1961,63 +1961,6 @@
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
-	 
-		
-		
-	{BEGIN chequeosoficios_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="details_link" {$item_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$chequeosoficios_link_attrs} data-short-details="chequeosoficios"
-		class="{$chequeosoficios_dlink_class}" 
-		title="{$caption dbo_ChequeosOficios }"			>
-								
-									{BEGIN chequeosoficios_childcount}
-				<span class="details-badge badge chequeosoficios_badge" {$chequeosoficios_childnumber_attr}>
-					{$chequeosoficios_childnumber}				
-				</span>
-				{END chequeosoficios_childcount}
-						</a>
-	</span>
-	{END chequeosoficios_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN chequeossancionados_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$chequeossancionados_link_attrs} data-short-details="chequeossancionados"
-		class="{$chequeossancionados_dlink_class}" 
-		title="{$caption dbo_ChequeosSancionados }"			>
-								
-									{BEGIN chequeossancionados_childcount}
-				<span class="details-badge badge chequeossancionados_badge" {$chequeossancionados_childnumber_attr}>
-					{$chequeossancionados_childnumber}				
-				</span>
-				{END chequeossancionados_childcount}
-						</a>
-	</span>
-	{END chequeossancionados_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN devoluciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$devoluciones_link_attrs} data-short-details="devoluciones"
-		class="{$devoluciones_dlink_class}" 
-		title="{$caption dbo_Devoluciones }"			>
-								
-									{BEGIN devoluciones_childcount}
-				<span class="details-badge badge devoluciones_badge" {$devoluciones_childnumber_attr}>
-					{$devoluciones_childnumber}				
-				</span>
-				{END devoluciones_childcount}
-						</a>
-	</span>
-	{END devoluciones_dtable_link}
-
-
 	
 	</td>
 	{END cellblock_grid_cell_details}
