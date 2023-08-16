@@ -64,7 +64,7 @@ $tdatatemas[".listAjax"] = false;
 //	temporary
 //$tdatatemas[".listAjax"] = false;
 
-	$tdatatemas[".audit"] = false;
+	$tdatatemas[".audit"] = true;
 
 	$tdatatemas[".locking"] = false;
 

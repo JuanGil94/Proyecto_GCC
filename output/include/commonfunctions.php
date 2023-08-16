@@ -283,8 +283,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("tiposdocumentos" == $shortTName )
 		return true;
-	if ("auditorias" == $shortTName )
-		return true;
 	if ("tiposancion" == $shortTName )
 		return true;
 	if ("tramites" == $shortTName )
@@ -326,6 +324,8 @@ function checkTableName($shortTName )
 	if ("temas" == $shortTName )
 		return true;
 	if ("correspondencias" == $shortTName )
+		return true;
+	if ("usugcc__audit" == $shortTName )
 		return true;
 	return false;
 }
@@ -739,15 +739,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Auditorias");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Auditorias";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.TipoSancion");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -935,6 +926,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Correspondencias";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.usugcc-_audit");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.usugcc-_audit";
+	}
 	return $arr;
 }
 
@@ -984,7 +984,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.IPsRestringidas";
 	$arr[]="dbo.Sancionados";
 	$arr[]="dbo.TiposDocumentos";
-	$arr[]="dbo.Auditorias";
 	$arr[]="dbo.TipoSancion";
 	$arr[]="dbo.Tramites";
 	$arr[]="dbo.Conceptos1";
@@ -1006,6 +1005,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Ayudas";
 	$arr[]="dbo.Temas";
 	$arr[]="dbo.Correspondencias";
+	$arr[]="dbo.usugcc-_audit";
 	return $arr;
 }
 
@@ -1833,11 +1833,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Auditorias" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.TipoSancion" )
 	{
 //	default permissions
@@ -1939,6 +1934,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Correspondencias" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.usugcc-_audit" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

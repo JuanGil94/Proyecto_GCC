@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "199_1691786889";
+$projectBuildKey = "195_1691786889";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "199";
+$projectBuildNumber = "195";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -805,7 +805,6 @@ $tableCaptions["Spanish"]["dbo_UsuGCC_uggroups"] = "Usu GCC-uggroups";
 $tableCaptions["Spanish"]["dbo_IPsRestringidas"] = "IPs Restringidas";
 $tableCaptions["Spanish"]["dbo_Sancionados"] = "Sancionados";
 $tableCaptions["Spanish"]["dbo_TiposDocumentos"] = "Tipos Documentos";
-$tableCaptions["Spanish"]["dbo_Auditorias"] = "Auditorias";
 $tableCaptions["Spanish"]["dbo_TipoSancion"] = "Tipo Sancion";
 $tableCaptions["Spanish"]["dbo_Tramites"] = "Tramites";
 $tableCaptions["Spanish"]["dbo_Conceptos1"] = "Conceptos1";
@@ -827,6 +826,7 @@ $tableCaptions["Spanish"]["dbo_Reliquidaciones"] = "Reliquidaciones";
 $tableCaptions["Spanish"]["dbo_Ayudas"] = "Ayudas";
 $tableCaptions["Spanish"]["dbo_Temas"] = "Temas";
 $tableCaptions["Spanish"]["dbo_Correspondencias"] = "Correspondencias";
+$tableCaptions["Spanish"]["dbo_usugcc__audit"] = "Usugcc- Audit";
 
 
 $globalEvents = new class_GlobalEvents;

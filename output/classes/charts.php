@@ -458,8 +458,6 @@ class Chart
 			return true;
 		if("dbo.TiposDocumentos" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Auditorias" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.TipoSancion" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Tramites" == $this->chrt_array['tables'][0])
@@ -501,6 +499,8 @@ class Chart
 		if("dbo.Temas" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Correspondencias" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.usugcc-_audit" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

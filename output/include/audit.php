@@ -516,10 +516,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Auditorias")
-		{
-			return true;
-		}
 		if($table=="dbo.TipoSancion")
 		{
 			return true;
@@ -601,6 +597,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.Correspondencias")
+		{
+			return false;
+		}
+		if($table=="dbo.usugcc-_audit")
 		{
 			return false;
 		}
@@ -1072,10 +1072,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Auditorias")
-		{
-			return true;
-		}
 		if($table=="dbo.TipoSancion")
 		{
 			return true;
@@ -1157,6 +1153,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.Correspondencias")
+		{
+			return false;
+		}
+		if($table=="dbo.usugcc-_audit")
 		{
 			return false;
 		}
