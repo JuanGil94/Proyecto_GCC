@@ -619,7 +619,7 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["Spanish"] = "UsuGCC-";
+$globalSettings["ProjectLogo"]["Spanish"] = "GCC";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "198_1691786889";
+$projectBuildKey = "195_1691786889";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "198";
+$projectBuildNumber = "195";
 
 $mlang_messages = array();
 $mlang_charsets = array();

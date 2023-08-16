@@ -123,11 +123,14 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-12
+	class="r-align-center r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	<h2 class="ql-align-center">BIENVENIDO AL PORTAL GESTION COBRO ACTIVO</h2></span>
+			{END firstAboveGridCell}	
 	</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -496,6 +499,16 @@
 
  
 
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item44" {$item_welcome_item44} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="auditorias_list.php"  > 
+							Auditorias					</a>
+	</div>
+
+	</div>
+
+ 
+
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="tiposancion_list.php"  > 
@@ -660,16 +673,6 @@
 	<div class="bs-welcome-header">
 		<a id="itemlink" href="correspondencias_list.php"  > 
 							Correspondencias					</a>
-	</div>
-
-	</div>
-
- 
-
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item44" {$item_welcome_item44} data-pageid="{$pageid}" data-page=".global_menu" data-comment-len="0">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="usugcc__audit_list.php"  > 
-							Usugcc- Audit					</a>
 	</div>
 
 	</div>
