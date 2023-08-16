@@ -972,32 +972,6 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "dbo.Auditorias";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
-	$menuNode["pageId"] = "";
-	$menuNode["openType"] = "None";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Auditorias";
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "39";
-	$menuNode["name"] = "";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.TipoSancion";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
@@ -1020,7 +994,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "40";
+	$menuNode["id"] = "39";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1046,7 +1020,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "41";
+	$menuNode["id"] = "40";
 	$menuNode["name"] = "Deudores";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1072,7 +1046,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "42";
+	$menuNode["id"] = "41";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1098,7 +1072,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "43";
+	$menuNode["id"] = "42";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1119,6 +1093,32 @@ function getMenuNodes_main($menuNodesObject)
 		$menuNode["color"] = "";
 
 	$menuNode["title"] = "Correspondencias";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "43";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.usugcc-_audit";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Usugcc- Audit";
 
 
 

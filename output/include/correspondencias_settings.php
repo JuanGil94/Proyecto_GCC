@@ -91,7 +91,7 @@ $tdatacorrespondencias[".listAjax"] = false;
 //	temporary
 //$tdatacorrespondencias[".listAjax"] = false;
 
-	$tdatacorrespondencias[".audit"] = false;
+	$tdatacorrespondencias[".audit"] = true;
 
 	$tdatacorrespondencias[".locking"] = false;
 

@@ -68,7 +68,7 @@ $tdatareasignaciones[".listAjax"] = false;
 //	temporary
 //$tdatareasignaciones[".listAjax"] = false;
 
-	$tdatareasignaciones[".audit"] = false;
+	$tdatareasignaciones[".audit"] = true;
 
 	$tdatareasignaciones[".locking"] = false;
 
