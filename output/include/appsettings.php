@@ -619,7 +619,7 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["Spanish"] = "UsuGCC-";
+$globalSettings["ProjectLogo"]["Spanish"] = "GCC";
 
 $globalSettings["CookieBanner"] = array();
 
