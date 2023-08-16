@@ -201,13 +201,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] = array();
 		}
 		$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"]["edit"] = array("table" => "dbo.Sancionados", "field" => "TipoDocumentoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
-			$lookupTableLinks["dbo.UserProfile"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.UserProfile"]["auditorias.UserId"] )) {
-			$lookupTableLinks["dbo.UserProfile"]["auditorias.UserId"] = array();
-		}
-		$lookupTableLinks["dbo.UserProfile"]["auditorias.UserId"]["edit"] = array("table" => "dbo.Auditorias", "field" => "UserId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
 			$lookupTableLinks["dbo.Seccionales"] = array();
 		}

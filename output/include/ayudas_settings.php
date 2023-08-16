@@ -76,7 +76,7 @@ $tdataayudas[".listAjax"] = false;
 //	temporary
 //$tdataayudas[".listAjax"] = false;
 
-	$tdataayudas[".audit"] = false;
+	$tdataayudas[".audit"] = true;
 
 	$tdataayudas[".locking"] = false;
 

@@ -55,7 +55,6 @@ $nonAdminTablesArr[] = "dbo.UsuGCC-uggroups";
 $nonAdminTablesArr[] = "dbo.IPsRestringidas";
 $nonAdminTablesArr[] = "dbo.Sancionados";
 $nonAdminTablesArr[] = "dbo.TiposDocumentos";
-$nonAdminTablesArr[] = "dbo.Auditorias";
 $nonAdminTablesArr[] = "dbo.TipoSancion";
 $nonAdminTablesArr[] = "dbo.Tramites";
 $nonAdminTablesArr[] = "dbo.Conceptos1";
@@ -77,6 +76,7 @@ $nonAdminTablesArr[] = "dbo.Reliquidaciones";
 $nonAdminTablesArr[] = "dbo.Ayudas";
 $nonAdminTablesArr[] = "dbo.Temas";
 $nonAdminTablesArr[] = "dbo.Correspondencias";
+$nonAdminTablesArr[] = "dbo.usugcc-_audit";
 
 $ug_connection = $cman->getForUserGroups();
 

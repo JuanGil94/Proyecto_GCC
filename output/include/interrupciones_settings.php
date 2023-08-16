@@ -73,7 +73,7 @@ $tdatainterrupciones[".listAjax"] = false;
 //	temporary
 //$tdatainterrupciones[".listAjax"] = false;
 
-	$tdatainterrupciones[".audit"] = false;
+	$tdatainterrupciones[".audit"] = true;
 
 	$tdatainterrupciones[".locking"] = false;
 

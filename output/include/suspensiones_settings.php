@@ -76,7 +76,7 @@ $tdatasuspensiones[".listAjax"] = false;
 //	temporary
 //$tdatasuspensiones[".listAjax"] = false;
 
-	$tdatasuspensiones[".audit"] = false;
+	$tdatasuspensiones[".audit"] = true;
 
 	$tdatasuspensiones[".locking"] = false;
 

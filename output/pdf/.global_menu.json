@@ -206,9 +206,6 @@ pdfDocument = {
 			{"text":"","background":"#BC8F8F","hidden":"{$item_hide_welcome_item39}"},
 				
 				
-			{"text":"","background":"#3CB371","hidden":"{$item_hide_welcome_item44}"},
-				
-				
 			{"text":"","background":"#E67349","hidden":"{$item_hide_welcome_item3}"},
 				
 				
@@ -258,6 +255,9 @@ pdfDocument = {
 				
 				
 			{"text":"","background":"#E8926F","hidden":"{$item_hide_welcome_item4}"},
+				
+				
+			{"text":"","background":"#DB7093","hidden":"{$item_hide_welcome_item44}"},
 				
 		  ],
   "border": [ false, false, false, false ],

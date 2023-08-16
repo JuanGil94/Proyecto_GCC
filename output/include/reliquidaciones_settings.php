@@ -103,7 +103,7 @@ $tdatareliquidaciones[".listAjax"] = false;
 //	temporary
 //$tdatareliquidaciones[".listAjax"] = false;
 
-	$tdatareliquidaciones[".audit"] = false;
+	$tdatareliquidaciones[".audit"] = true;
 
 	$tdatareliquidaciones[".locking"] = false;
 
