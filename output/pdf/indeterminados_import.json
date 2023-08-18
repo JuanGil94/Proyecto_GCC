@@ -1,0 +1,159 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Indeterminados import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$FechaRegistro_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$FechaRecaudo_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$NumeroConsecutivo_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$NumeroExpediente_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Valor_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$UserId_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$Demandante_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

@@ -6,11 +6,11 @@ $tdatacuentas[".OwnerID"] = "";
 $tdatacuentas[".OriginalTable"] = "dbo.Cuentas";
 
 
-$tdatacuentas[".pagesByType"] = my_json_decode( "{}" );
+$tdatacuentas[".pagesByType"] = my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
 $tdatacuentas[".originalPagesByType"] = $tdatacuentas[".pagesByType"];
-$tdatacuentas[".pages"] = types2pages( my_json_decode( "{}" ) );
+$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
 $tdatacuentas[".originalPages"] = $tdatacuentas[".pages"];
-$tdatacuentas[".defaultPages"] = my_json_decode( "{}" );
+$tdatacuentas[".defaultPages"] = my_json_decode( "{\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
 $tdatacuentas[".originalDefaultPages"] = $tdatacuentas[".defaultPages"];
 
 //	field labels

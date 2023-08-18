@@ -747,6 +747,41 @@
 					Procesos				</label>
 			</div>
 			{END print_details_procesos}
+														{BEGIN print_details_importaciones}
+			<div>
+				<label for="printDetailsimportaciones{$id}">
+					<input type="checkbox" value="importaciones" id="printDetailsimportaciones{$id}" checked>
+					Importaciones				</label>
+			</div>
+			{END print_details_importaciones}
+														{BEGIN print_details_indeterminados}
+			<div>
+				<label for="printDetailsindeterminados{$id}">
+					<input type="checkbox" value="indeterminados" id="printDetailsindeterminados{$id}" checked>
+					Indeterminados				</label>
+			</div>
+			{END print_details_indeterminados}
+														{BEGIN print_details_minjusticia}
+			<div>
+				<label for="printDetailsminjusticia{$id}">
+					<input type="checkbox" value="minjusticia" id="printDetailsminjusticia{$id}" checked>
+					Minjusticia				</label>
+			</div>
+			{END print_details_minjusticia}
+														{BEGIN print_details_minjusticia2}
+			<div>
+				<label for="printDetailsminjusticia2{$id}">
+					<input type="checkbox" value="minjusticia2" id="printDetailsminjusticia2{$id}" checked>
+					Minjusticia2				</label>
+			</div>
+			{END print_details_minjusticia2}
+														{BEGIN print_details_minjusticia3}
+			<div>
+				<label for="printDetailsminjusticia3{$id}">
+					<input type="checkbox" value="minjusticia3" id="printDetailsminjusticia3{$id}" checked>
+					Minjusticia3				</label>
+			</div>
+			{END print_details_minjusticia3}
 						</div>
 </div>
 {END print_details}
@@ -1680,6 +1715,101 @@
 	{END procesos_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN importaciones_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$importaciones_link_attrs} data-short-details="importaciones"
+		class="{$importaciones_dlink_class}" 
+		title="{$caption dbo_Importaciones }"			>
+								
+									{BEGIN importaciones_childcount}
+				<span class="details-badge badge importaciones_badge" {$importaciones_childnumber_attr}>
+					{$importaciones_childnumber}				
+				</span>
+				{END importaciones_childcount}
+						</a>
+	</span>
+	{END importaciones_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN indeterminados_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$indeterminados_link_attrs} data-short-details="indeterminados"
+		class="{$indeterminados_dlink_class}" 
+		title="{$caption dbo_Indeterminados }"			>
+								
+									{BEGIN indeterminados_childcount}
+				<span class="details-badge badge indeterminados_badge" {$indeterminados_childnumber_attr}>
+					{$indeterminados_childnumber}				
+				</span>
+				{END indeterminados_childcount}
+						</a>
+	</span>
+	{END indeterminados_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link6" {$item_grid_details_link6} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia_link_attrs} data-short-details="minjusticia"
+		class="{$minjusticia_dlink_class}" 
+		title="{$caption dbo_Minjusticia }"			>
+								
+									{BEGIN minjusticia_childcount}
+				<span class="details-badge badge minjusticia_badge" {$minjusticia_childnumber_attr}>
+					{$minjusticia_childnumber}				
+				</span>
+				{END minjusticia_childcount}
+						</a>
+	</span>
+	{END minjusticia_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia2_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link7" {$item_grid_details_link7} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia2_link_attrs} data-short-details="minjusticia2"
+		class="{$minjusticia2_dlink_class}" 
+		title="{$caption dbo_Minjusticia2 }"			>
+								
+									{BEGIN minjusticia2_childcount}
+				<span class="details-badge badge minjusticia2_badge" {$minjusticia2_childnumber_attr}>
+					{$minjusticia2_childnumber}				
+				</span>
+				{END minjusticia2_childcount}
+						</a>
+	</span>
+	{END minjusticia2_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia3_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link8" {$item_grid_details_link8} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia3_link_attrs} data-short-details="minjusticia3"
+		class="{$minjusticia3_dlink_class}" 
+		title="{$caption dbo_Minjusticia3 }"			>
+								
+									{BEGIN minjusticia3_childcount}
+				<span class="details-badge badge minjusticia3_badge" {$minjusticia3_childnumber_attr}>
+					{$minjusticia3_childnumber}				
+				</span>
+				{END minjusticia3_childcount}
+						</a>
+	</span>
+	{END minjusticia3_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -2183,9 +2313,9 @@
 	>
 
 	 
-						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="abogados,presupuestos,chequeos,procesos"
-			data-details-abogados			data-details-presupuestos			data-details-chequeos			data-details-procesos	>
+											<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="abogados,presupuestos,chequeos,procesos,importaciones,indeterminados,minjusticia,minjusticia2,minjusticia3"
+			data-details-abogados			data-details-presupuestos			data-details-chequeos			data-details-procesos			data-details-importaciones			data-details-indeterminados			data-details-minjusticia			data-details-minjusticia2			data-details-minjusticia3	>
 		<span data-details-inside data-short-table="abogados">
 			</span>
 		<span data-details-inside data-short-table="presupuestos">
@@ -2194,10 +2324,25 @@
 			</span>
 		<span data-details-inside data-short-table="procesos">
 			</span>
+		<span data-details-inside data-short-table="importaciones">
+			</span>
+		<span data-details-inside data-short-table="indeterminados">
+			</span>
+		<span data-details-inside data-short-table="minjusticia">
+			</span>
+		<span data-details-inside data-short-table="minjusticia2">
+			</span>
+		<span data-details-inside data-short-table="minjusticia3">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
+			 
+			 
+			 
+			 
 			 
 			 
 			

@@ -218,6 +218,17 @@ $tdatausugcc__users[".sqlFrom"] = "FROM dbo.[UsuGCC-_users]";
 $tdatausugcc__users[".sqlWhereExpr"] = "";
 $tdatausugcc__users[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatausugcc__users[".arrGridTabs"] = $arrGridTabs;
 
 
 

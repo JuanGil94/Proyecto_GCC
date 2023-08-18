@@ -115,19 +115,110 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_CuentaId}</span>
 						</div>
 		{END searchCtrlBlock_CuentaId}
-																{BEGIN searchCtrlBlock_PagoId}
+																{BEGIN searchCtrlBlock_PagoIdOrig}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_PagoId}" {$filterRow_attrs_PagoId}>
-			<label>{$label dbo_Pagos1 PagoId }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_PagoIdOrig}" {$filterRow_attrs_PagoIdOrig}>
+			<label>{$label dbo_Pagos1 PagoIdOrig }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_PagoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PagoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PagoId}</span>
+								<span class="rnr-searchtype">{$searchtype_PagoIdOrig}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoIdOrig}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoIdOrig}</span>
 						</div>
-		{END searchCtrlBlock_PagoId}
+		{END searchCtrlBlock_PagoIdOrig}
+																{BEGIN searchCtrlBlock_PagoTerm}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoTerm}" {$filterRow_attrs_PagoTerm}>
+			<label>{$label dbo_Pagos1 PagoTerm }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoTerm}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoTerm}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoTerm}</span>
+						</div>
+		{END searchCtrlBlock_PagoTerm}
+																{BEGIN searchCtrlBlock_PagoMayo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoMayo}" {$filterRow_attrs_PagoMayo}>
+			<label>{$label dbo_Pagos1 PagoMayo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoMayo}</span>
+						</div>
+		{END searchCtrlBlock_PagoMayo}
+																{BEGIN searchCtrlBlock_PagoInte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoInte}" {$filterRow_attrs_PagoInte}>
+			<label>{$label dbo_Pagos1 PagoInte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoInte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoInte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoInte}</span>
+						</div>
+		{END searchCtrlBlock_PagoInte}
+																{BEGIN searchCtrlBlock_PagoCost}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoCost}" {$filterRow_attrs_PagoCost}>
+			<label>{$label dbo_Pagos1 PagoCost }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoCost}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoCost}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoCost}</span>
+						</div>
+		{END searchCtrlBlock_PagoCost}
+																{BEGIN searchCtrlBlock_PagoObli}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoObli}" {$filterRow_attrs_PagoObli}>
+			<label>{$label dbo_Pagos1 PagoObli }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoObli}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoObli}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoObli}</span>
+						</div>
+		{END searchCtrlBlock_PagoObli}
+																{BEGIN searchCtrlBlock_Registro}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Registro}" {$filterRow_attrs_Registro}>
+			<label>{$label dbo_Pagos1 Registro }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Registro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Registro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Registro}</span>
+						</div>
+		{END searchCtrlBlock_Registro}
+																{BEGIN searchCtrlBlock_ProcesoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcesoId}" {$filterRow_attrs_ProcesoId}>
+			<label>{$label dbo_Pagos1 ProcesoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcesoId}</span>
+						</div>
+		{END searchCtrlBlock_ProcesoId}
 																{BEGIN searchCtrlBlock_Pago}
 
 
@@ -428,7 +519,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="pagos1_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="pagos1_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -460,84 +551,7 @@
 {$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
 		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
 		{$recsPerPage}
-</span>	 
-		{BEGIN print_friendly}
-<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-print"></span>
-				<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu pull-right">
-										 
-				 
-					<li class="container-fluid 
-										">
-									<div id="print_friendly_scope{$id}">
-	<div class="row">
-		<div class="col-md-4">
-			Rango:		</div>
-
-			 
-		{BEGIN print_friendly_all}
-		<div class="col-md-8">
-			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="pagos1_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
-									Imprimir todas las páginas							</label>
-		</div>
-		{END print_friendly_all}
-		</div>
-		<div class="row">
-		<div class="col-md-4">&nbsp;</div>
-		<div class="col-md-8">
-			<label for="printPage{$id}">
-				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="pagos1_print.php?{$crosstable_attrs}">
-				Imprimir esta página			</label>
-		</div>
-	</div>
-		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Imprimir la selección			</label>
-		</div>
-	</div>
-	</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-										">
-									<div>
-	<label for="printPerPage{$id}">
-					Resultados por página							
-	</label>
-	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
-</div>
-				 
-					</li>
-											<li class="divider" role="separator"></li>
-																				 
-				 
-					<li class="container-fluid 
-					 text-center 					">
-									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" id="print_friendly_button{$id}" >
-							Imprimir			</a>
-</span>
-				 
-					</li>
-															</ul>
-</span>
-{END print_friendly}
-		</div>					</div>
+</span>		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -552,10 +566,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoId"]:before {
-		content: "{$label dbo_Pagos1 PagoId}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcesoId"]:before {
+		content: "{$label dbo_Pagos1 ProcesoId}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CuentaId"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CuentaId"]:before {
 		content: "{$label dbo_Pagos1 CuentaId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
@@ -570,7 +584,28 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Observaciones"]:before {
 		content: "{$label dbo_Pagos1 Observaciones}";
 	}
-								}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Registro"]:before {
+		content: "{$label dbo_Pagos1 Registro}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoObli"]:before {
+		content: "{$label dbo_Pagos1 PagoObli}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoCost"]:before {
+		content: "{$label dbo_Pagos1 PagoCost}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoInte"]:before {
+		content: "{$label dbo_Pagos1 PagoInte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoMayo"]:before {
+		content: "{$label dbo_Pagos1 PagoMayo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoTerm"]:before {
+		content: "{$label dbo_Pagos1 PagoTerm}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoIdOrig"]:before {
+		content: "{$label dbo_Pagos1 PagoIdOrig}";
+	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -628,21 +663,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PagoId_class}	"
+		 r-ori-vert		 {$CuentaId_class}	"
 
-			data-field="PagoId"
+			data-field="CuentaId"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN PagoId_fieldheadercolumn}
-	{BEGIN PagoId_fieldheader}
-	<SPAN {$PagoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoId" data-fieldname="PagoId">
-	{$label dbo_Pagos1 PagoId }	{$arrow_icon_PagoId}
+		{BEGIN CuentaId_fieldheadercolumn}
+	{BEGIN CuentaId_fieldheader}
+	<SPAN {$CuentaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CuentaId" data-fieldname="CuentaId">
+	{$label dbo_Pagos1 CuentaId }	{$arrow_icon_CuentaId}
 	</SPAN>
-	{END PagoId_fieldheader}
-{END PagoId_fieldheadercolumn}
+	{END CuentaId_fieldheader}
+{END CuentaId_fieldheadercolumn}
 
 	
 	</th>
@@ -653,21 +688,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CuentaId_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="CuentaId"
+			data-field="Fecha"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN CuentaId_fieldheadercolumn}
-	{BEGIN CuentaId_fieldheader}
-	<SPAN {$CuentaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CuentaId" data-fieldname="CuentaId">
-	{$label dbo_Pagos1 CuentaId }	{$arrow_icon_CuentaId}
+		{BEGIN Fecha_fieldheadercolumn}
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label dbo_Pagos1 Fecha }	{$arrow_icon_Fecha}
 	</SPAN>
-	{END CuentaId_fieldheader}
-{END CuentaId_fieldheadercolumn}
+	{END Fecha_fieldheader}
+{END Fecha_fieldheadercolumn}
 
 	
 	</th>
@@ -678,21 +713,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fecha_class}	"
+		 r-ori-vert		 {$Numero_class}	"
 
-			data-field="Fecha"
+			data-field="Numero"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Fecha_fieldheadercolumn}
-	{BEGIN Fecha_fieldheader}
-	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
-	{$label dbo_Pagos1 Fecha }	{$arrow_icon_Fecha}
+		{BEGIN Numero_fieldheadercolumn}
+	{BEGIN Numero_fieldheader}
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	{$label dbo_Pagos1 Numero }	{$arrow_icon_Numero}
 	</SPAN>
-	{END Fecha_fieldheader}
-{END Fecha_fieldheadercolumn}
+	{END Numero_fieldheader}
+{END Numero_fieldheadercolumn}
 
 	
 	</th>
@@ -703,21 +738,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Numero_class}	"
+		 r-ori-vert		 {$Pago_class}	"
 
-			data-field="Numero"
+			data-field="Pago"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Numero_fieldheadercolumn}
-	{BEGIN Numero_fieldheader}
-	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
-	{$label dbo_Pagos1 Numero }	{$arrow_icon_Numero}
+		{BEGIN Pago_fieldheadercolumn}
+	{BEGIN Pago_fieldheader}
+	<SPAN {$Pago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pago" data-fieldname="Pago">
+	{$label dbo_Pagos1 Pago }	{$arrow_icon_Pago}
 	</SPAN>
-	{END Numero_fieldheader}
-{END Numero_fieldheadercolumn}
+	{END Pago_fieldheader}
+{END Pago_fieldheadercolumn}
 
 	
 	</th>
@@ -728,21 +763,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Pago_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
-			data-field="Pago"
+			data-field="Observaciones"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Pago_fieldheadercolumn}
-	{BEGIN Pago_fieldheader}
-	<SPAN {$Pago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pago" data-fieldname="Pago">
-	{$label dbo_Pagos1 Pago }	{$arrow_icon_Pago}
+		{BEGIN Observaciones_fieldheadercolumn}
+	{BEGIN Observaciones_fieldheader}
+	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
+	{$label dbo_Pagos1 Observaciones }	{$arrow_icon_Observaciones}
 	</SPAN>
-	{END Pago_fieldheader}
-{END Pago_fieldheadercolumn}
+	{END Observaciones_fieldheader}
+{END Observaciones_fieldheadercolumn}
 
 	
 	</th>
@@ -753,25 +788,200 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Observaciones_class}	"
+		 r-ori-vert		 {$ProcesoId_class}	"
 
-			data-field="Observaciones"
+			data-field="ProcesoId"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Observaciones_fieldheadercolumn}
-	{BEGIN Observaciones_fieldheader}
-	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
-	{$label dbo_Pagos1 Observaciones }	{$arrow_icon_Observaciones}
+		{BEGIN ProcesoId_fieldheadercolumn}
+	{BEGIN ProcesoId_fieldheader}
+	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
+	{$label dbo_Pagos1 ProcesoId }	{$arrow_icon_ProcesoId}
 	</SPAN>
-	{END Observaciones_fieldheader}
-{END Observaciones_fieldheadercolumn}
+	{END ProcesoId_fieldheader}
+{END ProcesoId_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+			data-field="Registro"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Registro_fieldheadercolumn}
+	{BEGIN Registro_fieldheader}
+	<SPAN {$Registro_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Registro" data-fieldname="Registro">
+	{$label dbo_Pagos1 Registro }	{$arrow_icon_Registro}
+	</SPAN>
+	{END Registro_fieldheader}
+{END Registro_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoObli_class}	"
+
+			data-field="PagoObli"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoObli_fieldheadercolumn}
+	{BEGIN PagoObli_fieldheader}
+	<SPAN {$PagoObli_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoObli" data-fieldname="PagoObli">
+	{$label dbo_Pagos1 PagoObli }	{$arrow_icon_PagoObli}
+	</SPAN>
+	{END PagoObli_fieldheader}
+{END PagoObli_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoCost_class}	"
+
+			data-field="PagoCost"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoCost_fieldheadercolumn}
+	{BEGIN PagoCost_fieldheader}
+	<SPAN {$PagoCost_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoCost" data-fieldname="PagoCost">
+	{$label dbo_Pagos1 PagoCost }	{$arrow_icon_PagoCost}
+	</SPAN>
+	{END PagoCost_fieldheader}
+{END PagoCost_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoInte_class}	"
+
+			data-field="PagoInte"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoInte_fieldheadercolumn}
+	{BEGIN PagoInte_fieldheader}
+	<SPAN {$PagoInte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoInte" data-fieldname="PagoInte">
+	{$label dbo_Pagos1 PagoInte }	{$arrow_icon_PagoInte}
+	</SPAN>
+	{END PagoInte_fieldheader}
+{END PagoInte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoMayo_class}	"
+
+			data-field="PagoMayo"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoMayo_fieldheadercolumn}
+	{BEGIN PagoMayo_fieldheader}
+	<SPAN {$PagoMayo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoMayo" data-fieldname="PagoMayo">
+	{$label dbo_Pagos1 PagoMayo }	{$arrow_icon_PagoMayo}
+	</SPAN>
+	{END PagoMayo_fieldheader}
+{END PagoMayo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoTerm_class}	"
+
+			data-field="PagoTerm"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoTerm_fieldheadercolumn}
+	{BEGIN PagoTerm_fieldheader}
+	<SPAN {$PagoTerm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoTerm" data-fieldname="PagoTerm">
+	{$label dbo_Pagos1 PagoTerm }	{$arrow_icon_PagoTerm}
+	</SPAN>
+	{END PagoTerm_fieldheader}
+{END PagoTerm_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoIdOrig_class}	"
+
+			data-field="PagoIdOrig"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoIdOrig_fieldheadercolumn}
+	{BEGIN PagoIdOrig_fieldheader}
+	<SPAN {$PagoIdOrig_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoIdOrig" data-fieldname="PagoIdOrig">
+	{$label dbo_Pagos1 PagoIdOrig }	{$arrow_icon_PagoIdOrig}
+	</SPAN>
+	{END PagoIdOrig_fieldheader}
+{END PagoIdOrig_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
 							</tr>
 															
 					{END grid_header}
@@ -816,17 +1026,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="pagos1_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -860,32 +1059,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PagoId_class}	"
-
-			data-field="PagoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PagoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoId" data-fieldname="PagoId" data-default-width >
-{$PagoId_value}
-</span>
-{END PagoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$CuentaId_class}	"
 
 			data-field="CuentaId"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -895,18 +1073,18 @@
 </span>
 {END CuentaId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Fecha_class}	"
 
 			data-field="Fecha"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -916,18 +1094,18 @@
 </span>
 {END Fecha_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Numero_class}	"
 
 			data-field="Numero"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -937,18 +1115,18 @@
 </span>
 {END Numero_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Pago_class}	"
 
 			data-field="Pago"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -958,18 +1136,18 @@
 </span>
 {END Pago_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Observaciones_class}	"
 
 			data-field="Observaciones"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -979,7 +1157,175 @@
 </span>
 {END Observaciones_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+			data-field="ProcesoId"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcesoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId" data-default-width >
+{$ProcesoId_value}
+</span>
+{END ProcesoId_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+			data-field="Registro"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Registro_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Registro" data-fieldname="Registro" data-default-width >
+{$Registro_value}
+</span>
+{END Registro_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoObli_class}	"
+
+			data-field="PagoObli"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoObli_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoObli" data-fieldname="PagoObli" data-default-width >
+{$PagoObli_value}
+</span>
+{END PagoObli_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoCost_class}	"
+
+			data-field="PagoCost"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoCost_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoCost" data-fieldname="PagoCost" data-default-width >
+{$PagoCost_value}
+</span>
+{END PagoCost_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoInte_class}	"
+
+			data-field="PagoInte"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoInte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoInte" data-fieldname="PagoInte" data-default-width >
+{$PagoInte_value}
+</span>
+{END PagoInte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoMayo_class}	"
+
+			data-field="PagoMayo"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoMayo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoMayo" data-fieldname="PagoMayo" data-default-width >
+{$PagoMayo_value}
+</span>
+{END PagoMayo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoTerm_class}	"
+
+			data-field="PagoTerm"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoTerm_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoTerm" data-fieldname="PagoTerm" data-default-width >
+{$PagoTerm_value}
+</span>
+{END PagoTerm_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoIdOrig_class}	"
+
+			data-field="PagoIdOrig"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoIdOrig_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoIdOrig" data-fieldname="PagoIdOrig" data-default-width >
+{$PagoIdOrig_value}
+</span>
+{END PagoIdOrig_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
 							</tr>
 										
 											{END grid_row}
@@ -1027,7 +1373,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PagoId_class}	"
+		 r-ori-vert		 {$CuentaId_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
@@ -1042,7 +1388,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CuentaId_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
@@ -1057,7 +1403,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fecha_class}	"
+		 r-ori-vert		 {$Numero_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
@@ -1072,7 +1418,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Numero_class}	"
+		 r-ori-vert		 {$Pago_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
@@ -1087,7 +1433,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Pago_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
@@ -1102,7 +1448,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Observaciones_class}	"
+		 r-ori-vert		 {$ProcesoId_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
@@ -1111,6 +1457,111 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoObli_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoCost_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoInte_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoMayo_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoTerm_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoIdOrig_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
 							</tr>
 					
 					</tfoot>

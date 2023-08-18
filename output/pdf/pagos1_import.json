@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$CuentaId_pdfvalue},"hidden":"{$item_hide_import_field2}"},
 				
 				
@@ -122,6 +119,30 @@ pdfDocument = {
 				
 				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$PagoObli_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$PagoCost_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$PagoInte_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$PagoMayo_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$PagoTerm_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$PagoIdOrig_pdfvalue},"hidden":"{$item_hide_import_field13}"},
 				
 		  ],
   "border": [ false, false, false, false ],

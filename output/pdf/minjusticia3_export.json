@@ -1,0 +1,279 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Minjusticia3 export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$MinjusticiaId_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Minjusticia_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Nombre_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Sentencia_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Recaudo_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Recaudo_Val_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Intereses_Val_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Caja_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Cuadernillos_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$Hechos_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$Salarios_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$Obligacion_Val_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$TipoDocumentoId_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field22}"},
+				
+				
+			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_export_field23}"},
+				
+				
+			{"text":{$Aprobacion_pdfvalue},"hidden":"{$item_hide_export_field24}"},
+				
+				
+			{"text":{$Sentencia_Val_pdfvalue},"hidden":"{$item_hide_export_field25}"},
+				
+				
+			{"text":{$Ejecutoria_Val_pdfvalue},"hidden":"{$item_hide_export_field26}"},
+				
+				
+			{"text":{$Notificacion_pdfvalue},"hidden":"{$item_hide_export_field27}"},
+				
+				
+			{"text":{$AcuerdoPago_pdfvalue},"hidden":"{$item_hide_export_field28}"},
+				
+				
+			{"text":{$ValorAcuerdopago_pdfvalue},"hidden":"{$item_hide_export_field29}"},
+				
+				
+			{"text":{$NumeroCuotas_pdfvalue},"hidden":"{$item_hide_export_field30}"},
+				
+				
+			{"text":{$ValorCuota_pdfvalue},"hidden":"{$item_hide_export_field31}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field32}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field33}"},
+				
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field34}"},
+				
+				
+			{"text":{$Nombre_Val_pdfvalue},"hidden":"{$item_hide_export_field35}"},
+				
+				
+			{"text":{$Documento_Val_pdfvalue},"hidden":"{$item_hide_export_field36}"},
+				
+				
+			{"text":{$ActaIndividual_pdfvalue},"hidden":"{$item_hide_export_field37}"},
+				
+				
+			{"text":{$ActaConsolidada_pdfvalue},"hidden":"{$item_hide_export_field38}"},
+				
+				
+			{"text":{$Autorizacion_pdfvalue},"hidden":"{$item_hide_export_field39}"},
+				
+				
+			{"text":{$Autorizado_pdfvalue},"hidden":"{$item_hide_export_field40}"},
+				
+				
+			{"text":{$CausalId_pdfvalue},"hidden":"{$item_hide_export_field41}"},
+				
+				
+			{"text":{$Numero_Val_pdfvalue},"hidden":"{$item_hide_export_field42}"},
+				
+				
+			{"text":{$Minjusticia_Val_pdfvalue},"hidden":"{$item_hide_export_field43}"},
+				
+				
+			{"text":{$Pesos_pdfvalue},"hidden":"{$item_hide_export_field44}"},
+				
+				
+			{"text":{$UserId_pdfvalue},"hidden":"{$item_hide_export_field45}"},
+				
+				
+			{"text":{$Digitalizado_pdfvalue},"hidden":"{$item_hide_export_field46}"},
+				
+				
+			{"text":{$Procesado_pdfvalue},"hidden":"{$item_hide_export_field47}"},
+				
+				
+			{"text":{$ActaAnterior_pdfvalue},"hidden":"{$item_hide_export_field48}"},
+				
+				
+			{"text":{$ActaActual_pdfvalue},"hidden":"{$item_hide_export_field49}"},
+				
+				
+			{"text":{$Subsanar_pdfvalue},"hidden":"{$item_hide_export_field50}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

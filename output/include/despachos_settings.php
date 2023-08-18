@@ -1829,6 +1829,96 @@ $detailsTablesData["dbo.Despachos"] = array();
 				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
+//	dbo.Minjusticia
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Despachos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"][]="DespachoId";
+
+				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
+//	dbo.Minjusticia2
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia2";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia2";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia2";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia2");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Despachos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"][]="DespachoId";
+
+				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
+//	dbo.Minjusticia3
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia3";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia3";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia3";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Despachos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"][]="DespachoId";
+
+				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
 //endif
 
 // tables which are master tables for current table (detail)

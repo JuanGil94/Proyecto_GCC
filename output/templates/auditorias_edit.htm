@@ -66,7 +66,7 @@
 			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
 	{END message_back_button}
 {BEGIN message_view_page_button}
-		<a class="btn btn-sm btn-default" href="auditorias_view.php?{$editlink}" {$view_page_button_attrs}>Ver</a>
+		<a class="btn btn-sm btn-default" href="" {$view_page_button_attrs}>Ver</a>
 {END message_view_page_button}
 </div>
 </div>
@@ -277,8 +277,22 @@
 	</div>			 
 				<div 
 	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
-	class="r-align-right r-ori-vert			col-md-6
+	class="r-align-right			col-md-6
 	">
+	 
+		<span data-itemtype="prev" data-itemid="prev" {$item_prev} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$prevbutton_class}" {$prevbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-left"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="next" data-itemid="next" {$item_next} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$nextbutton_class}" {$nextbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-right"></span>
+										</a>
+</span>
 	 
 		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown dropup">
@@ -293,14 +307,6 @@
 		Reiniciar		
 		</a>
 	</li>
-							{BEGIN view_page_button}
-	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
-				<a  href="auditorias_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
-				
-		Ver		
-		</a>
-	</li>
-{END view_page_button}
 					</ul>
 	</span>
 </span>

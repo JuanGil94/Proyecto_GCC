@@ -77,6 +77,15 @@ $nonAdminTablesArr[] = "dbo.Ayudas";
 $nonAdminTablesArr[] = "dbo.Temas";
 $nonAdminTablesArr[] = "dbo.Correspondencias";
 $nonAdminTablesArr[] = "dbo.usugcc-_audit";
+$nonAdminTablesArr[] = "dbo.Importaciones";
+$nonAdminTablesArr[] = "dbo.Indeterminados";
+$nonAdminTablesArr[] = "dbo.UserProfile";
+$nonAdminTablesArr[] = "dbo.Auditorias";
+$nonAdminTablesArr[] = "dbo.Menus";
+$nonAdminTablesArr[] = "dbo.Minjusticia";
+$nonAdminTablesArr[] = "dbo.Minjusticia2";
+$nonAdminTablesArr[] = "dbo.Minjusticia3";
+$nonAdminTablesArr[] = "dbo.Actas";
 
 $ug_connection = $cman->getForUserGroups();
 

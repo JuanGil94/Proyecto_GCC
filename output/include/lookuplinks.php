@@ -362,6 +362,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Cuentas"]["pagos1.CuentaId"] = array();
 		}
 		$lookupTableLinks["dbo.Cuentas"]["pagos1.CuentaId"]["edit"] = array("table" => "dbo.Pagos1", "field" => "CuentaId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Pagos1"] ) ) {
+			$lookupTableLinks["dbo.Pagos1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Pagos1"]["pagos1.PagoId"] )) {
+			$lookupTableLinks["dbo.Pagos1"]["pagos1.PagoId"] = array();
+		}
+		$lookupTableLinks["dbo.Pagos1"]["pagos1.PagoId"]["edit"] = array("table" => "dbo.Pagos1", "field" => "PagoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Bancos"] ) ) {
 			$lookupTableLinks["dbo.Bancos"] = array();
 		}
@@ -446,6 +453,195 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Abogados"]["correspondencias.AbogadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Abogados"]["correspondencias.AbogadoId"]["edit"] = array("table" => "dbo.Correspondencias", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["importaciones.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["importaciones.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["importaciones.CarteraTipoId"]["edit"] = array("table" => "dbo.Importaciones", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["importaciones.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["importaciones.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["importaciones.SeccionalId"]["edit"] = array("table" => "dbo.Importaciones", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["importaciones.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["importaciones.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["importaciones.ConceptoId"]["edit"] = array("table" => "dbo.Importaciones", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["indeterminados.UserId"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["indeterminados.UserId"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["indeterminados.UserId"]["edit"] = array("table" => "dbo.Indeterminados", "field" => "UserId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["indeterminados.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["indeterminados.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["indeterminados.SeccionalId"]["edit"] = array("table" => "dbo.Indeterminados", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Horarios"] ) ) {
+			$lookupTableLinks["dbo.Horarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Horarios"]["userprofile.HorarioId"] )) {
+			$lookupTableLinks["dbo.Horarios"]["userprofile.HorarioId"] = array();
+		}
+		$lookupTableLinks["dbo.Horarios"]["userprofile.HorarioId"]["edit"] = array("table" => "dbo.UserProfile", "field" => "HorarioId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["userprofile.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["userprofile.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["userprofile.SeccionalId"]["edit"] = array("table" => "dbo.UserProfile", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"]["edit"] = array("table" => "dbo.UserProfile", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["auditorias.UserId"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["auditorias.UserId"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["auditorias.UserId"]["edit"] = array("table" => "dbo.Auditorias", "field" => "UserId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["minjusticia.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["minjusticia.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["minjusticia.AbogadoId"]["edit"] = array("table" => "dbo.Minjusticia", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["minjusticia.DespachoId"] )) {
+			$lookupTableLinks["dbo.Despachos"]["minjusticia.DespachoId"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["minjusticia.DespachoId"]["edit"] = array("table" => "dbo.Minjusticia", "field" => "DespachoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"] ) ) {
+			$lookupTableLinks["dbo.TiposDocumentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"]["minjusticia.TipoDocumentoId"] )) {
+			$lookupTableLinks["dbo.TiposDocumentos"]["minjusticia.TipoDocumentoId"] = array();
+		}
+		$lookupTableLinks["dbo.TiposDocumentos"]["minjusticia.TipoDocumentoId"]["edit"] = array("table" => "dbo.Minjusticia", "field" => "TipoDocumentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["minjusticia.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["minjusticia.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["minjusticia.SeccionalId"]["edit"] = array("table" => "dbo.Minjusticia", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["minjusticia.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["minjusticia.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["minjusticia.CarteraTipoId"]["edit"] = array("table" => "dbo.Minjusticia", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Causales"] ) ) {
+			$lookupTableLinks["dbo.Causales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Causales"]["minjusticia.CausalId"] )) {
+			$lookupTableLinks["dbo.Causales"]["minjusticia.CausalId"] = array();
+		}
+		$lookupTableLinks["dbo.Causales"]["minjusticia.CausalId"]["edit"] = array("table" => "dbo.Minjusticia", "field" => "CausalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Parejas"] ) ) {
+			$lookupTableLinks["dbo.Parejas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Parejas"]["minjusticia2.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Parejas"]["minjusticia2.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Parejas"]["minjusticia2.AbogadoId"]["edit"] = array("table" => "dbo.Minjusticia2", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["minjusticia2.DespachoId"] )) {
+			$lookupTableLinks["dbo.Despachos"]["minjusticia2.DespachoId"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["minjusticia2.DespachoId"]["edit"] = array("table" => "dbo.Minjusticia2", "field" => "DespachoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"] ) ) {
+			$lookupTableLinks["dbo.TiposDocumentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"]["minjusticia2.TipoDocumentoId"] )) {
+			$lookupTableLinks["dbo.TiposDocumentos"]["minjusticia2.TipoDocumentoId"] = array();
+		}
+		$lookupTableLinks["dbo.TiposDocumentos"]["minjusticia2.TipoDocumentoId"]["edit"] = array("table" => "dbo.Minjusticia2", "field" => "TipoDocumentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["minjusticia2.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["minjusticia2.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["minjusticia2.SeccionalId"]["edit"] = array("table" => "dbo.Minjusticia2", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["minjusticia2.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["minjusticia2.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["minjusticia2.CarteraTipoId"]["edit"] = array("table" => "dbo.Minjusticia2", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Causales"] ) ) {
+			$lookupTableLinks["dbo.Causales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Causales"]["minjusticia2.CausalId"] )) {
+			$lookupTableLinks["dbo.Causales"]["minjusticia2.CausalId"] = array();
+		}
+		$lookupTableLinks["dbo.Causales"]["minjusticia2.CausalId"]["edit"] = array("table" => "dbo.Minjusticia2", "field" => "CausalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Parejas"] ) ) {
+			$lookupTableLinks["dbo.Parejas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Parejas"]["minjusticia3.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Parejas"]["minjusticia3.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Parejas"]["minjusticia3.AbogadoId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["minjusticia3.DespachoId"] )) {
+			$lookupTableLinks["dbo.Despachos"]["minjusticia3.DespachoId"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["minjusticia3.DespachoId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "DespachoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"] ) ) {
+			$lookupTableLinks["dbo.TiposDocumentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"]["minjusticia3.TipoDocumentoId"] )) {
+			$lookupTableLinks["dbo.TiposDocumentos"]["minjusticia3.TipoDocumentoId"] = array();
+		}
+		$lookupTableLinks["dbo.TiposDocumentos"]["minjusticia3.TipoDocumentoId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "TipoDocumentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["minjusticia3.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["minjusticia3.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["minjusticia3.SeccionalId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["minjusticia3.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["minjusticia3.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["minjusticia3.CarteraTipoId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Causales"] ) ) {
+			$lookupTableLinks["dbo.Causales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Causales"]["minjusticia3.CausalId"] )) {
+			$lookupTableLinks["dbo.Causales"]["minjusticia3.CausalId"] = array();
+		}
+		$lookupTableLinks["dbo.Causales"]["minjusticia3.CausalId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "CausalId", "page" => "edit");
 }
 
 ?>

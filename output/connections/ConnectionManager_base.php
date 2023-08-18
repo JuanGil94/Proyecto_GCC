@@ -305,6 +305,15 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Temas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Correspondencias"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.usugcc-_audit"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Importaciones"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Indeterminados"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.UserProfile"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Auditorias"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Menus"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Minjusticia"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Minjusticia2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Minjusticia3"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Actas"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

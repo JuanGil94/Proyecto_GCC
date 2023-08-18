@@ -1,0 +1,407 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Minjusticia2 edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_message}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Minjusticia }","bold":true},{"text":{$Minjusticia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Numero }","bold":true},{"text":{$Numero_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Nombre }","bold":true},{"text":{$Nombre_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Documento }","bold":true},{"text":{$Documento_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Sentencia }","bold":true},{"text":{$Sentencia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Ejecutoria }","bold":true},{"text":{$Ejecutoria_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Obligacion }","bold":true},{"text":{$Obligacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Recaudo }","bold":true},{"text":{$Recaudo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Recaudo_Val }","bold":true},{"text":{$Recaudo_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Saldo }","bold":true},{"text":{$Saldo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Intereses }","bold":true},{"text":{$Intereses_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Intereses_Val }","bold":true},{"text":{$Intereses_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel dbo_Minjusticia2 AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Caja }","bold":true},{"text":{$Caja_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Cuadernillos }","bold":true},{"text":{$Cuadernillos_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Folios }","bold":true},{"text":{$Folios_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Hechos }","bold":true},{"text":{$Hechos_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Salarios }","bold":true},{"text":{$Salarios_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Obligacion_Val }","bold":true},{"text":{$Obligacion_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel dbo_Minjusticia2 DespachoId }","bold":true},{"text":{$DespachoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field20}","stack":[{"text":"{$jslabel dbo_Minjusticia2 TipoDocumentoId }","bold":true},{"text":{$TipoDocumentoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel dbo_Minjusticia2 SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Registro }","bold":true},{"text":{$Registro_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Aprobacion }","bold":true},{"text":{$Aprobacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Sentencia_Val }","bold":true},{"text":{$Sentencia_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field25}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Ejecutoria_Val }","bold":true},{"text":{$Ejecutoria_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Notificacion }","bold":true},{"text":{$Notificacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel dbo_Minjusticia2 AcuerdoPago }","bold":true},{"text":{$AcuerdoPago_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ValorAcuerdopago }","bold":true},{"text":{$ValorAcuerdopago_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field29}","stack":[{"text":"{$jslabel dbo_Minjusticia2 NumeroCuotas }","bold":true},{"text":{$NumeroCuotas_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ValorCuota }","bold":true},{"text":{$ValorCuota_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field31}","stack":[{"text":"{$jslabel dbo_Minjusticia2 CarteraTipoId }","bold":true},{"text":{$CarteraTipoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field32}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Observaciones }","bold":true},{"text":{$Observaciones_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field33}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ProcesoId }","bold":true},{"text":{$ProcesoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field34}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Nombre_Val }","bold":true},{"text":{$Nombre_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field35}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Documento_Val }","bold":true},{"text":{$Documento_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field36}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ActaIndividual }","bold":true},{"text":{$ActaIndividual_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ActaConsolidada }","bold":true},{"text":{$ActaConsolidada_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field38}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Autorizacion }","bold":true},{"text":{$Autorizacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field39}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Autorizado }","bold":true},{"text":{$Autorizado_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field40}","stack":[{"text":"{$jslabel dbo_Minjusticia2 CausalId }","bold":true},{"text":{$CausalId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field41}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Numero_Val }","bold":true},{"text":{$Numero_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field42}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Minjusticia_Val }","bold":true},{"text":{$Minjusticia_Val_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field43}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Pesos }","bold":true},{"text":{$Pesos_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field44}","stack":[{"text":"{$jslabel dbo_Minjusticia2 UserId }","bold":true},{"text":{$UserId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field45}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Digitalizado }","bold":true},{"text":{$Digitalizado_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field46}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Procesado }","bold":true},{"text":{$Procesado_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field47}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ActaAnterior }","bold":true},{"text":{$ActaAnterior_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field48}","stack":[{"text":"{$jslabel dbo_Minjusticia2 ActaActual }","bold":true},{"text":{$ActaActual_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field49}","stack":[{"text":"{$jslabel dbo_Minjusticia2 Subsanar }","bold":true},{"text":{$Subsanar_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_save}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_close}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+};
+
+pdfFonts = {$pdfFonts};
+  

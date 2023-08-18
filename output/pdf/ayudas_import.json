@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$AyudaId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$Ayuda_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				

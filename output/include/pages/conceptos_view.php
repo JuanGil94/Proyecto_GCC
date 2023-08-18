@@ -3,6 +3,8 @@
 'details' => array( 'dbo.Naturalezas' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Procesos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Importaciones' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'ConceptoId',
 'Concepto',

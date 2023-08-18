@@ -1,0 +1,608 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Importaciones add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN CarteraTipoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" 
+	data-signal-error-for="CarteraTipoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CarteraTipoId}">
+		{BEGIN CarteraTipoId_label}{$label dbo_Importaciones CarteraTipoId }{END CarteraTipoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CarteraTipoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarteraTipoId" {$tooltipAttr dbo_Importaciones CarteraTipoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones CarteraTipoId }		</div>
+	</div>
+</div>
+
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_Importaciones SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Importaciones SeccionalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones SeccionalId }		</div>
+	</div>
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-vertical-field" 
+	data-signal-error-for="ConceptoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ConceptoId}">
+		{BEGIN ConceptoId_label}{$label dbo_Importaciones ConceptoId }{END ConceptoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ConceptoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ConceptoId" {$tooltipAttr dbo_Importaciones ConceptoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones ConceptoId }		</div>
+	</div>
+</div>
+
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN Archivo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Archivo}  r-vertical-field" 
+	data-signal-error-for="Archivo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Archivo" data-fieldname="Archivo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Archivo}">
+		{BEGIN Archivo_label}{$label dbo_Importaciones Archivo }{END Archivo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Archivo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Archivo" {$tooltipAttr dbo_Importaciones Archivo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Archivo }		</div>
+	</div>
+</div>
+
+
+{END Archivo_fieldblock}
+											
+{BEGIN Radicado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Radicado}  r-vertical-field" 
+	data-signal-error-for="Radicado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Radicado" data-fieldname="Radicado" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Radicado}">
+		{BEGIN Radicado_label}{$label dbo_Importaciones Radicado }{END Radicado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Radicado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Radicado" {$tooltipAttr dbo_Importaciones Radicado } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Radicado }		</div>
+	</div>
+</div>
+
+
+{END Radicado_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-vertical-field" 
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Fecha}">
+		{BEGIN Fecha_label}{$label dbo_Importaciones Fecha }{END Fecha_label}
+	</label>
+	<div class="r-edit-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Fecha" {$tooltipAttr dbo_Importaciones Fecha } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Fecha }		</div>
+	</div>
+</div>
+
+
+{END Fecha_fieldblock}
+											
+{BEGIN Despacho_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Despacho}  r-vertical-field" 
+	data-signal-error-for="Despacho{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Despacho" data-fieldname="Despacho" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Despacho}">
+		{BEGIN Despacho_label}{$label dbo_Importaciones Despacho }{END Despacho_label}
+	</label>
+	<div class="r-edit-field">
+		{$Despacho_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Despacho" {$tooltipAttr dbo_Importaciones Despacho } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Despacho }		</div>
+	</div>
+</div>
+
+
+{END Despacho_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-vertical-field" 
+	data-signal-error-for="Sancionado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Sancionado}">
+		{BEGIN Sancionado_label}{$label dbo_Importaciones Sancionado }{END Sancionado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Sancionado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Sancionado" {$tooltipAttr dbo_Importaciones Sancionado } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Sancionado }		</div>
+	</div>
+</div>
+
+
+{END Sancionado_fieldblock}
+											
+{BEGIN Documento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento}  r-vertical-field" 
+	data-signal-error-for="Documento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Documento" data-fieldname="Documento" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Documento}">
+		{BEGIN Documento_label}{$label dbo_Importaciones Documento }{END Documento_label}
+	</label>
+	<div class="r-edit-field">
+		{$Documento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Documento" {$tooltipAttr dbo_Importaciones Documento } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Documento }		</div>
+	</div>
+</div>
+
+
+{END Documento_fieldblock}
+											
+{BEGIN Direccion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-vertical-field" 
+	data-signal-error-for="Direccion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Direccion}">
+		{BEGIN Direccion_label}{$label dbo_Importaciones Direccion }{END Direccion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Direccion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Direccion" {$tooltipAttr dbo_Importaciones Direccion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Direccion }		</div>
+	</div>
+</div>
+
+
+{END Direccion_fieldblock}
+											
+{BEGIN Telefono_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Telefono}  r-vertical-field" 
+	data-signal-error-for="Telefono{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Telefono" data-fieldname="Telefono" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Telefono}">
+		{BEGIN Telefono_label}{$label dbo_Importaciones Telefono }{END Telefono_label}
+	</label>
+	<div class="r-edit-field">
+		{$Telefono_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Telefono" {$tooltipAttr dbo_Importaciones Telefono } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Telefono }		</div>
+	</div>
+</div>
+
+
+{END Telefono_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-vertical-field" 
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Numero}">
+		{BEGIN Numero_label}{$label dbo_Importaciones Numero }{END Numero_label}
+	</label>
+	<div class="r-edit-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Numero" {$tooltipAttr dbo_Importaciones Numero } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Numero }		</div>
+	</div>
+</div>
+
+
+{END Numero_fieldblock}
+											
+{BEGIN Providencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-vertical-field" 
+	data-signal-error-for="Providencia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Providencia}">
+		{BEGIN Providencia_label}{$label dbo_Importaciones Providencia }{END Providencia_label}
+	</label>
+	<div class="r-edit-field">
+		{$Providencia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Providencia" {$tooltipAttr dbo_Importaciones Providencia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Providencia }		</div>
+	</div>
+</div>
+
+
+{END Providencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-vertical-field" 
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Ejecutoria}">
+		{BEGIN Ejecutoria_label}{$label dbo_Importaciones Ejecutoria }{END Ejecutoria_label}
+	</label>
+	<div class="r-edit-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ejecutoria" {$tooltipAttr dbo_Importaciones Ejecutoria } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Ejecutoria }		</div>
+	</div>
+</div>
+
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN Obligacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-vertical-field" 
+	data-signal-error-for="Obligacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Obligacion}">
+		{BEGIN Obligacion_label}{$label dbo_Importaciones Obligacion }{END Obligacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Obligacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Obligacion" {$tooltipAttr dbo_Importaciones Obligacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Obligacion }		</div>
+	</div>
+</div>
+
+
+{END Obligacion_fieldblock}
+											
+{BEGIN Intereses_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Intereses}  r-vertical-field" 
+	data-signal-error-for="Intereses{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Intereses}">
+		{BEGIN Intereses_label}{$label dbo_Importaciones Intereses }{END Intereses_label}
+	</label>
+	<div class="r-edit-field">
+		{$Intereses_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Intereses" {$tooltipAttr dbo_Importaciones Intereses } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Intereses }		</div>
+	</div>
+</div>
+
+
+{END Intereses_fieldblock}
+											
+{BEGIN Recaudo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recaudo}  r-vertical-field" 
+	data-signal-error-for="Recaudo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="Recaudo" data-fieldname="Recaudo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Recaudo}">
+		{BEGIN Recaudo_label}{$label dbo_Importaciones Recaudo }{END Recaudo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Recaudo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Recaudo" {$tooltipAttr dbo_Importaciones Recaudo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Recaudo }		</div>
+	</div>
+</div>
+
+
+{END Recaudo_fieldblock}
+											
+{BEGIN Carpeta_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Carpeta}  r-vertical-field" 
+	data-signal-error-for="Carpeta{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Carpeta" data-fieldname="Carpeta" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Carpeta}">
+		{BEGIN Carpeta_label}{$label dbo_Importaciones Carpeta }{END Carpeta_label}
+	</label>
+	<div class="r-edit-field">
+		{$Carpeta_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Carpeta" {$tooltipAttr dbo_Importaciones Carpeta } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Carpeta }		</div>
+	</div>
+</div>
+
+
+{END Carpeta_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
+		{BEGIN Observaciones_label}{$label dbo_Importaciones Observaciones }{END Observaciones_label}
+	</label>
+	<div class="r-edit-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Observaciones" {$tooltipAttr dbo_Importaciones Observaciones } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Observaciones }		</div>
+	</div>
+</div>
+
+
+{END Observaciones_fieldblock}
+											
+{BEGIN Registro_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Registro}  r-vertical-field" 
+	data-signal-error-for="Registro{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="Registro" data-fieldname="Registro" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Registro}">
+		{BEGIN Registro_label}{$label dbo_Importaciones Registro }{END Registro_label}
+	</label>
+	<div class="r-edit-field">
+		{$Registro_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Registro" {$tooltipAttr dbo_Importaciones Registro } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Registro }		</div>
+	</div>
+</div>
+
+
+{END Registro_fieldblock}
+											
+{BEGIN Aprobada_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Aprobada}  r-vertical-field" 
+	data-signal-error-for="Aprobada{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="Aprobada" data-fieldname="Aprobada" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Aprobada}">
+		{BEGIN Aprobada_label}{$label dbo_Importaciones Aprobada }{END Aprobada_label}
+	</label>
+	<div class="r-edit-field">
+		{$Aprobada_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Aprobada" {$tooltipAttr dbo_Importaciones Aprobada } >
+		<div class="text-muted" >
+		{$tooltip dbo_Importaciones Aprobada }		</div>
+	</div>
+</div>
+
+
+{END Aprobada_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

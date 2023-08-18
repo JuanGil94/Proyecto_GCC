@@ -6,11 +6,11 @@ $tdataparejas[".OwnerID"] = "";
 $tdataparejas[".OriginalTable"] = "dbo.Parejas";
 
 
-$tdataparejas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataparejas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataparejas[".originalPagesByType"] = $tdataparejas[".pagesByType"];
-$tdataparejas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataparejas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataparejas[".originalPages"] = $tdataparejas[".pages"];
-$tdataparejas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataparejas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataparejas[".originalDefaultPages"] = $tdataparejas[".defaultPages"];
 
 //	field labels
@@ -668,6 +668,96 @@ changeTextControlsToDate( "dbo.Parejas" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Parejas"] = array();
+//	dbo.Minjusticia
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Parejas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Parejas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Parejas"][$dIndex]["masterKeys"][]="AbogadoId";
+
+				$detailsTablesData["dbo.Parejas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Parejas"][$dIndex]["detailKeys"][]="AbogadoId";
+//	dbo.Minjusticia2
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia2";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia2";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia2";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia2");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Parejas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Parejas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Parejas"][$dIndex]["masterKeys"][]="AbogadoId";
+
+				$detailsTablesData["dbo.Parejas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Parejas"][$dIndex]["detailKeys"][]="AbogadoId";
+//	dbo.Minjusticia3
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia3";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia3";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia3";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Parejas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Parejas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Parejas"][$dIndex]["masterKeys"][]="AbogadoId";
+
+				$detailsTablesData["dbo.Parejas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Parejas"][$dIndex]["detailKeys"][]="AbogadoId";
 //endif
 
 // tables which are master tables for current table (detail)

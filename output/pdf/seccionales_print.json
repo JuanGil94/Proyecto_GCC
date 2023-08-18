@@ -1651,6 +1651,31 @@ pdfDocument = {
 			{$displayDetailTable_procesos }
 		{END details_procesos},
 				
+				
+			 {BEGIN details_importaciones}
+			{$displayDetailTable_importaciones }
+		{END details_importaciones},
+				
+				
+			 {BEGIN details_indeterminados}
+			{$displayDetailTable_indeterminados }
+		{END details_indeterminados},
+				
+				
+			 {BEGIN details_minjusticia}
+			{$displayDetailTable_minjusticia }
+		{END details_minjusticia},
+				
+				
+			 {BEGIN details_minjusticia2}
+			{$displayDetailTable_minjusticia2 }
+		{END details_minjusticia2},
+				
+				
+			 {BEGIN details_minjusticia3}
+			{$displayDetailTable_minjusticia3 }
+		{END details_minjusticia3},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

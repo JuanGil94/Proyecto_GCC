@@ -453,6 +453,43 @@
 				 
 					<li class="container-fluid 
 										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Detalles de impresión	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_minjusticia}
+			<div>
+				<label for="printDetailsminjusticia{$id}">
+					<input type="checkbox" value="minjusticia" id="printDetailsminjusticia{$id}" checked>
+					Minjusticia				</label>
+			</div>
+			{END print_details_minjusticia}
+														{BEGIN print_details_minjusticia2}
+			<div>
+				<label for="printDetailsminjusticia2{$id}">
+					<input type="checkbox" value="minjusticia2" id="printDetailsminjusticia2{$id}" checked>
+					Minjusticia2				</label>
+			</div>
+			{END print_details_minjusticia2}
+														{BEGIN print_details_minjusticia3}
+			<div>
+				<label for="printDetailsminjusticia3{$id}">
+					<input type="checkbox" value="minjusticia3" id="printDetailsminjusticia3{$id}" checked>
+					Minjusticia3				</label>
+			</div>
+			{END print_details_minjusticia3}
+						</div>
+</div>
+{END print_details}
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
 									<div>
 	<label for="printPerPage{$id}">
 					Resultados por página							
@@ -504,12 +541,12 @@
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="1"
+	data-body-height="2"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -552,6 +589,21 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_details}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -628,13 +680,13 @@
 	</th>
 	{END cellblock_grid_headcell_field2}
 							</tr>
-															
+																				
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -700,6 +752,91 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="parejas_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
+		
+		
+	{BEGIN minjusticia_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia_link_attrs} data-short-details="minjusticia"
+		class="{$minjusticia_dlink_class}" 
+		title="{$caption dbo_Minjusticia }"			>
+								
+									{BEGIN minjusticia_childcount}
+				<span class="details-badge badge minjusticia_badge" {$minjusticia_childnumber_attr}>
+					{$minjusticia_childnumber}				
+				</span>
+				{END minjusticia_childcount}
+						</a>
+	</span>
+	{END minjusticia_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia2_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia2_link_attrs} data-short-details="minjusticia2"
+		class="{$minjusticia2_dlink_class}" 
+		title="{$caption dbo_Minjusticia2 }"			>
+								
+									{BEGIN minjusticia2_childcount}
+				<span class="details-badge badge minjusticia2_badge" {$minjusticia2_childnumber_attr}>
+					{$minjusticia2_childnumber}				
+				</span>
+				{END minjusticia2_childcount}
+						</a>
+	</span>
+	{END minjusticia2_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia3_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia3_link_attrs} data-short-details="minjusticia3"
+		class="{$minjusticia3_dlink_class}" 
+		title="{$caption dbo_Minjusticia3 }"			>
+								
+									{BEGIN minjusticia3_childcount}
+				<span class="details-badge badge minjusticia3_badge" {$minjusticia3_childnumber_attr}>
+					{$minjusticia3_childnumber}				
+				</span>
+				{END minjusticia3_childcount}
+						</a>
+	</span>
+	{END minjusticia3_dtable_link}
+
+
+	
+	</td>
+	{END cellblock_grid_cell_details}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -764,12 +901,46 @@
 	</td>
 	{END cellblock_grid_cell_field2}
 							</tr>
+											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+				
+							">
+									{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="minjusticia,minjusticia2,minjusticia3"
+			data-details-minjusticia			data-details-minjusticia2			data-details-minjusticia3	>
+		<span data-details-inside data-short-table="minjusticia">
+			</span>
+		<span data-details-inside data-short-table="minjusticia2">
+			</span>
+		<span data-details-inside data-short-table="minjusticia3">
+			</span>
+		<div data-details-preview>
+	</div>
+</div>
+	 
+			 
+			
+	</td>
+	{END cellblock_grid_cell_dpreview}
+							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow
@@ -804,6 +975,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	

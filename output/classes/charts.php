@@ -502,6 +502,24 @@ class Chart
 			return true;
 		if("dbo.usugcc-_audit" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.Importaciones" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Indeterminados" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.UserProfile" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Auditorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Menus" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Minjusticia" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Minjusticia2" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Minjusticia3" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Actas" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

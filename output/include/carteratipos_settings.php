@@ -805,6 +805,126 @@ changeTextControlsToDate( "dbo.CarteraTipos" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.CarteraTipos"] = array();
+//	dbo.Importaciones
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Importaciones";
+		$detailsParam["dOriginalTable"] = "dbo.Importaciones";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "importaciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Importaciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"][]="CarteraTipoId";
+
+				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
+//	dbo.Minjusticia
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"][]="CarteraTipoId";
+
+				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
+//	dbo.Minjusticia2
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia2";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia2";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia2";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia2");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"][]="CarteraTipoId";
+
+				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
+//	dbo.Minjusticia3
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Minjusticia3";
+		$detailsParam["dOriginalTable"] = "dbo.Minjusticia3";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "minjusticia3";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"][]="CarteraTipoId";
+
+				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
 //endif
 
 // tables which are master tables for current table (detail)
