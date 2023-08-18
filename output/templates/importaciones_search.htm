@@ -1,0 +1,634 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Importaciones search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN ImportacionId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ImportacionId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ImportacionId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="ImportacionId" data-fieldname="ImportacionId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ImportacionId}">
+		{$label dbo_Importaciones ImportacionId }	</label>
+	<div class="r-search-option">
+		{$searchtype_ImportacionId}
+	</div>
+	<div class="r-search-field">
+		{$ImportacionId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ImportacionId_editcontrol1}
+	</div>
+	
+</div>
+
+{END ImportacionId_fieldblock}
+											
+{BEGIN CarteraTipoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="CarteraTipoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_CarteraTipoId}">
+		{$label dbo_Importaciones CarteraTipoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_CarteraTipoId}
+	</div>
+	<div class="r-search-field">
+		{$CarteraTipoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$CarteraTipoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN SeccionalId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SeccionalId}">
+		{$label dbo_Importaciones SeccionalId }	</label>
+	<div class="r-search-option">
+		{$searchtype_SeccionalId}
+	</div>
+	<div class="r-search-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SeccionalId_editcontrol1}
+	</div>
+	
+</div>
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ConceptoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ConceptoId}">
+		{$label dbo_Importaciones ConceptoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_ConceptoId}
+	</div>
+	<div class="r-search-field">
+		{$ConceptoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ConceptoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN Archivo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Archivo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Archivo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Archivo" data-fieldname="Archivo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Archivo}">
+		{$label dbo_Importaciones Archivo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Archivo}
+	</div>
+	<div class="r-search-field">
+		{$Archivo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Archivo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Archivo_fieldblock}
+											
+{BEGIN Radicado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Radicado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Radicado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Radicado" data-fieldname="Radicado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Radicado}">
+		{$label dbo_Importaciones Radicado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Radicado}
+	</div>
+	<div class="r-search-field">
+		{$Radicado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Radicado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Radicado_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
+		{$label dbo_Importaciones Fecha }	</label>
+	<div class="r-search-option">
+		{$searchtype_Fecha}
+	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol1}
+	</div>
+	
+</div>
+
+{END Fecha_fieldblock}
+											
+{BEGIN Despacho_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Despacho}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Despacho{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Despacho" data-fieldname="Despacho" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Despacho}">
+		{$label dbo_Importaciones Despacho }	</label>
+	<div class="r-search-option">
+		{$searchtype_Despacho}
+	</div>
+	<div class="r-search-field">
+		{$Despacho_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Despacho_editcontrol1}
+	</div>
+	
+</div>
+
+{END Despacho_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Sancionado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Sancionado}">
+		{$label dbo_Importaciones Sancionado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Sancionado}
+	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Sancionado_fieldblock}
+											
+{BEGIN Documento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Documento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Documento" data-fieldname="Documento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Documento}">
+		{$label dbo_Importaciones Documento }	</label>
+	<div class="r-search-option">
+		{$searchtype_Documento}
+	</div>
+	<div class="r-search-field">
+		{$Documento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Documento_editcontrol1}
+	</div>
+	
+</div>
+
+{END Documento_fieldblock}
+											
+{BEGIN Direccion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Direccion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Direccion}">
+		{$label dbo_Importaciones Direccion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Direccion}
+	</div>
+	<div class="r-search-field">
+		{$Direccion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Direccion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Direccion_fieldblock}
+											
+{BEGIN Telefono_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Telefono}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Telefono{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Telefono" data-fieldname="Telefono" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Telefono}">
+		{$label dbo_Importaciones Telefono }	</label>
+	<div class="r-search-option">
+		{$searchtype_Telefono}
+	</div>
+	<div class="r-search-field">
+		{$Telefono_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Telefono_editcontrol1}
+	</div>
+	
+</div>
+
+{END Telefono_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label dbo_Importaciones Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Providencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Providencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Providencia}">
+		{$label dbo_Importaciones Providencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_Providencia}
+	</div>
+	<div class="r-search-field">
+		{$Providencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Providencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END Providencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Ejecutoria}">
+		{$label dbo_Importaciones Ejecutoria }	</label>
+	<div class="r-search-option">
+		{$searchtype_Ejecutoria}
+	</div>
+	<div class="r-search-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Ejecutoria_editcontrol1}
+	</div>
+	
+</div>
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN Obligacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Obligacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Obligacion}">
+		{$label dbo_Importaciones Obligacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Obligacion}
+	</div>
+	<div class="r-search-field">
+		{$Obligacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Obligacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Obligacion_fieldblock}
+											
+{BEGIN Intereses_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Intereses}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Intereses{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Intereses}">
+		{$label dbo_Importaciones Intereses }	</label>
+	<div class="r-search-option">
+		{$searchtype_Intereses}
+	</div>
+	<div class="r-search-field">
+		{$Intereses_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Intereses_editcontrol1}
+	</div>
+	
+</div>
+
+{END Intereses_fieldblock}
+											
+{BEGIN Recaudo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recaudo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Recaudo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="Recaudo" data-fieldname="Recaudo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Recaudo}">
+		{$label dbo_Importaciones Recaudo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Recaudo}
+	</div>
+	<div class="r-search-field">
+		{$Recaudo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Recaudo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Recaudo_fieldblock}
+											
+{BEGIN Carpeta_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Carpeta}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Carpeta{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="Carpeta" data-fieldname="Carpeta" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Carpeta}">
+		{$label dbo_Importaciones Carpeta }	</label>
+	<div class="r-search-option">
+		{$searchtype_Carpeta}
+	</div>
+	<div class="r-search-field">
+		{$Carpeta_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Carpeta_editcontrol1}
+	</div>
+	
+</div>
+
+{END Carpeta_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Observaciones}">
+		{$label dbo_Importaciones Observaciones }	</label>
+	<div class="r-search-option">
+		{$searchtype_Observaciones}
+	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol1}
+	</div>
+	
+</div>
+
+{END Observaciones_fieldblock}
+											
+{BEGIN Registro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Registro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Registro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="Registro" data-fieldname="Registro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Registro}">
+		{$label dbo_Importaciones Registro }	</label>
+	<div class="r-search-option">
+		{$searchtype_Registro}
+	</div>
+	<div class="r-search-field">
+		{$Registro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Registro_editcontrol1}
+	</div>
+	
+</div>
+
+{END Registro_fieldblock}
+											
+{BEGIN Aprobada_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Aprobada}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Aprobada{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="Aprobada" data-fieldname="Aprobada" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Aprobada}">
+		{$label dbo_Importaciones Aprobada }	</label>
+	<div class="r-search-option">
+		{$searchtype_Aprobada}
+	</div>
+	<div class="r-search-field">
+		{$Aprobada_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Aprobada_editcontrol1}
+	</div>
+	
+</div>
+
+{END Aprobada_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

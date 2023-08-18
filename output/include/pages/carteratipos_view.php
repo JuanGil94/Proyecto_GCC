@@ -1,5 +1,13 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'dbo.Importaciones' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia2' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'CarteraTipoId',
 'CarteraTipo',
 'Color',

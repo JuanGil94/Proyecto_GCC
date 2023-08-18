@@ -1,5 +1,11 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'dbo.Minjusticia' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia2' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'AbogadoId',
 'Pareja',
 'AbogadoMinjusticia' ),

@@ -3660,6 +3660,24 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "correspondencias" ] = "dbo.Correspondencias";
 	$projectEntities[ "dbo.usugcc-_audit" ] = array( "url" => "usugcc__audit", "type" => 0 );
 	$projectEntitiesReverse[ "usugcc__audit" ] = "dbo.usugcc-_audit";
+	$projectEntities[ "dbo.Importaciones" ] = array( "url" => "importaciones", "type" => 0 );
+	$projectEntitiesReverse[ "importaciones" ] = "dbo.Importaciones";
+	$projectEntities[ "dbo.Indeterminados" ] = array( "url" => "indeterminados", "type" => 0 );
+	$projectEntitiesReverse[ "indeterminados" ] = "dbo.Indeterminados";
+	$projectEntities[ "dbo.UserProfile" ] = array( "url" => "userprofile", "type" => 0 );
+	$projectEntitiesReverse[ "userprofile" ] = "dbo.UserProfile";
+	$projectEntities[ "dbo.Auditorias" ] = array( "url" => "auditorias", "type" => 0 );
+	$projectEntitiesReverse[ "auditorias" ] = "dbo.Auditorias";
+	$projectEntities[ "dbo.Menus" ] = array( "url" => "menus", "type" => 0 );
+	$projectEntitiesReverse[ "menus" ] = "dbo.Menus";
+	$projectEntities[ "dbo.Minjusticia" ] = array( "url" => "minjusticia", "type" => 0 );
+	$projectEntitiesReverse[ "minjusticia" ] = "dbo.Minjusticia";
+	$projectEntities[ "dbo.Minjusticia2" ] = array( "url" => "minjusticia2", "type" => 0 );
+	$projectEntitiesReverse[ "minjusticia2" ] = "dbo.Minjusticia2";
+	$projectEntities[ "dbo.Minjusticia3" ] = array( "url" => "minjusticia3", "type" => 0 );
+	$projectEntitiesReverse[ "minjusticia3" ] = "dbo.Minjusticia3";
+	$projectEntities[ "dbo.Actas" ] = array( "url" => "actas", "type" => 0 );
+	$projectEntitiesReverse[ "actas" ] = "dbo.Actas";
 }
 
 function findTable( $table ) {

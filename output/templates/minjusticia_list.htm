@@ -1,0 +1,4464 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_AbogadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_AbogadoId}" {$filterRow_attrs_AbogadoId}>
+			<label>{$label dbo_Minjusticia AbogadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_AbogadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_AbogadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
+						</div>
+		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_ValorCuota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ValorCuota}" {$filterRow_attrs_ValorCuota}>
+			<label>{$label dbo_Minjusticia ValorCuota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ValorCuota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ValorCuota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ValorCuota}</span>
+						</div>
+		{END searchCtrlBlock_ValorCuota}
+																{BEGIN searchCtrlBlock_ValorAcuerdopago}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ValorAcuerdopago}" {$filterRow_attrs_ValorAcuerdopago}>
+			<label>{$label dbo_Minjusticia ValorAcuerdopago }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ValorAcuerdopago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ValorAcuerdopago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ValorAcuerdopago}</span>
+						</div>
+		{END searchCtrlBlock_ValorAcuerdopago}
+																{BEGIN searchCtrlBlock_UserId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_UserId}" {$filterRow_attrs_UserId}>
+			<label>{$label dbo_Minjusticia UserId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_UserId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_UserId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_UserId}</span>
+						</div>
+		{END searchCtrlBlock_UserId}
+																{BEGIN searchCtrlBlock_TipoDocumentoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_TipoDocumentoId}" {$filterRow_attrs_TipoDocumentoId}>
+			<label>{$label dbo_Minjusticia TipoDocumentoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_TipoDocumentoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_TipoDocumentoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_TipoDocumentoId}</span>
+						</div>
+		{END searchCtrlBlock_TipoDocumentoId}
+																{BEGIN searchCtrlBlock_Sentencia_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sentencia_Val}" {$filterRow_attrs_Sentencia_Val}>
+			<label>{$label dbo_Minjusticia Sentencia_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sentencia_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sentencia_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sentencia_Val}</span>
+						</div>
+		{END searchCtrlBlock_Sentencia_Val}
+																{BEGIN searchCtrlBlock_Sentencia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sentencia}" {$filterRow_attrs_Sentencia}>
+			<label>{$label dbo_Minjusticia Sentencia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sentencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sentencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sentencia}</span>
+						</div>
+		{END searchCtrlBlock_Sentencia}
+																{BEGIN searchCtrlBlock_SeccionalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
+			<label>{$label dbo_Minjusticia SeccionalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
+						</div>
+		{END searchCtrlBlock_SeccionalId}
+																{BEGIN searchCtrlBlock_Saldo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Saldo}" {$filterRow_attrs_Saldo}>
+			<label>{$label dbo_Minjusticia Saldo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Saldo}</span>
+						</div>
+		{END searchCtrlBlock_Saldo}
+																{BEGIN searchCtrlBlock_Salarios}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Salarios}" {$filterRow_attrs_Salarios}>
+			<label>{$label dbo_Minjusticia Salarios }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Salarios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Salarios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Salarios}</span>
+						</div>
+		{END searchCtrlBlock_Salarios}
+																{BEGIN searchCtrlBlock_Registro}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Registro}" {$filterRow_attrs_Registro}>
+			<label>{$label dbo_Minjusticia Registro }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Registro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Registro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Registro}</span>
+						</div>
+		{END searchCtrlBlock_Registro}
+																{BEGIN searchCtrlBlock_Recaudo_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Recaudo_Val}" {$filterRow_attrs_Recaudo_Val}>
+			<label>{$label dbo_Minjusticia Recaudo_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Recaudo_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Recaudo_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Recaudo_Val}</span>
+						</div>
+		{END searchCtrlBlock_Recaudo_Val}
+																{BEGIN searchCtrlBlock_Recaudo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Recaudo}" {$filterRow_attrs_Recaudo}>
+			<label>{$label dbo_Minjusticia Recaudo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Recaudo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Recaudo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Recaudo}</span>
+						</div>
+		{END searchCtrlBlock_Recaudo}
+																{BEGIN searchCtrlBlock_ProcesoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcesoId}" {$filterRow_attrs_ProcesoId}>
+			<label>{$label dbo_Minjusticia ProcesoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcesoId}</span>
+						</div>
+		{END searchCtrlBlock_ProcesoId}
+																{BEGIN searchCtrlBlock_Procesado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Procesado}" {$filterRow_attrs_Procesado}>
+			<label>{$label dbo_Minjusticia Procesado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Procesado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Procesado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Procesado}</span>
+						</div>
+		{END searchCtrlBlock_Procesado}
+																{BEGIN searchCtrlBlock_Pesos}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Pesos}" {$filterRow_attrs_Pesos}>
+			<label>{$label dbo_Minjusticia Pesos }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Pesos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Pesos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Pesos}</span>
+						</div>
+		{END searchCtrlBlock_Pesos}
+																{BEGIN searchCtrlBlock_Observaciones}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Observaciones}" {$filterRow_attrs_Observaciones}>
+			<label>{$label dbo_Minjusticia Observaciones }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Observaciones}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Observaciones}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
+						</div>
+		{END searchCtrlBlock_Observaciones}
+																{BEGIN searchCtrlBlock_Obligacion_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Obligacion_Val}" {$filterRow_attrs_Obligacion_Val}>
+			<label>{$label dbo_Minjusticia Obligacion_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Obligacion_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion_Val}</span>
+						</div>
+		{END searchCtrlBlock_Obligacion_Val}
+																{BEGIN searchCtrlBlock_Obligacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Obligacion}" {$filterRow_attrs_Obligacion}>
+			<label>{$label dbo_Minjusticia Obligacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
+						</div>
+		{END searchCtrlBlock_Obligacion}
+																{BEGIN searchCtrlBlock_Numero_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero_Val}" {$filterRow_attrs_Numero_Val}>
+			<label>{$label dbo_Minjusticia Numero_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero_Val}</span>
+						</div>
+		{END searchCtrlBlock_Numero_Val}
+																{BEGIN searchCtrlBlock_NumeroCuotas}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_NumeroCuotas}" {$filterRow_attrs_NumeroCuotas}>
+			<label>{$label dbo_Minjusticia NumeroCuotas }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_NumeroCuotas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_NumeroCuotas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_NumeroCuotas}</span>
+						</div>
+		{END searchCtrlBlock_NumeroCuotas}
+																{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label dbo_Minjusticia Numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_Notificacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Notificacion}" {$filterRow_attrs_Notificacion}>
+			<label>{$label dbo_Minjusticia Notificacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Notificacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Notificacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Notificacion}</span>
+						</div>
+		{END searchCtrlBlock_Notificacion}
+																{BEGIN searchCtrlBlock_Nombre_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Nombre_Val}" {$filterRow_attrs_Nombre_Val}>
+			<label>{$label dbo_Minjusticia Nombre_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Nombre_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Nombre_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Nombre_Val}</span>
+						</div>
+		{END searchCtrlBlock_Nombre_Val}
+																{BEGIN searchCtrlBlock_Nombre}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Nombre}" {$filterRow_attrs_Nombre}>
+			<label>{$label dbo_Minjusticia Nombre }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Nombre}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Nombre}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Nombre}</span>
+						</div>
+		{END searchCtrlBlock_Nombre}
+																{BEGIN searchCtrlBlock_Minjusticia_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Minjusticia_Val}" {$filterRow_attrs_Minjusticia_Val}>
+			<label>{$label dbo_Minjusticia Minjusticia_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Minjusticia_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Minjusticia_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Minjusticia_Val}</span>
+						</div>
+		{END searchCtrlBlock_Minjusticia_Val}
+																{BEGIN searchCtrlBlock_MinjusticiaId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_MinjusticiaId}" {$filterRow_attrs_MinjusticiaId}>
+			<label>{$label dbo_Minjusticia MinjusticiaId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_MinjusticiaId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_MinjusticiaId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_MinjusticiaId}</span>
+						</div>
+		{END searchCtrlBlock_MinjusticiaId}
+																{BEGIN searchCtrlBlock_Minjusticia2}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Minjusticia2}" {$filterRow_attrs_Minjusticia2}>
+			<label>{$label dbo_Minjusticia Minjusticia2 }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Minjusticia2}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Minjusticia2}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Minjusticia2}</span>
+						</div>
+		{END searchCtrlBlock_Minjusticia2}
+																{BEGIN searchCtrlBlock_Minjusticia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Minjusticia}" {$filterRow_attrs_Minjusticia}>
+			<label>{$label dbo_Minjusticia Minjusticia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Minjusticia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Minjusticia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Minjusticia}</span>
+						</div>
+		{END searchCtrlBlock_Minjusticia}
+																{BEGIN searchCtrlBlock_Intereses_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Intereses_Val}" {$filterRow_attrs_Intereses_Val}>
+			<label>{$label dbo_Minjusticia Intereses_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Intereses_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Intereses_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Intereses_Val}</span>
+						</div>
+		{END searchCtrlBlock_Intereses_Val}
+																{BEGIN searchCtrlBlock_Intereses}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Intereses}" {$filterRow_attrs_Intereses}>
+			<label>{$label dbo_Minjusticia Intereses }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Intereses}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Intereses}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Intereses}</span>
+						</div>
+		{END searchCtrlBlock_Intereses}
+																{BEGIN searchCtrlBlock_Hechos}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Hechos}" {$filterRow_attrs_Hechos}>
+			<label>{$label dbo_Minjusticia Hechos }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Hechos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Hechos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Hechos}</span>
+						</div>
+		{END searchCtrlBlock_Hechos}
+																{BEGIN searchCtrlBlock_Folios}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Folios}" {$filterRow_attrs_Folios}>
+			<label>{$label dbo_Minjusticia Folios }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Folios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Folios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Folios}</span>
+						</div>
+		{END searchCtrlBlock_Folios}
+																{BEGIN searchCtrlBlock_Ejecutoria_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Ejecutoria_Val}" {$filterRow_attrs_Ejecutoria_Val}>
+			<label>{$label dbo_Minjusticia Ejecutoria_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Ejecutoria_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Ejecutoria_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Ejecutoria_Val}</span>
+						</div>
+		{END searchCtrlBlock_Ejecutoria_Val}
+																{BEGIN searchCtrlBlock_Ejecutoria}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Ejecutoria}" {$filterRow_attrs_Ejecutoria}>
+			<label>{$label dbo_Minjusticia Ejecutoria }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Ejecutoria}</span>
+						</div>
+		{END searchCtrlBlock_Ejecutoria}
+																{BEGIN searchCtrlBlock_Documento_Val}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Documento_Val}" {$filterRow_attrs_Documento_Val}>
+			<label>{$label dbo_Minjusticia Documento_Val }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Documento_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Documento_Val}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Documento_Val}</span>
+						</div>
+		{END searchCtrlBlock_Documento_Val}
+																{BEGIN searchCtrlBlock_Documento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Documento}" {$filterRow_attrs_Documento}>
+			<label>{$label dbo_Minjusticia Documento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Documento}</span>
+						</div>
+		{END searchCtrlBlock_Documento}
+																{BEGIN searchCtrlBlock_Digitalizado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Digitalizado}" {$filterRow_attrs_Digitalizado}>
+			<label>{$label dbo_Minjusticia Digitalizado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Digitalizado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Digitalizado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Digitalizado}</span>
+						</div>
+		{END searchCtrlBlock_Digitalizado}
+																{BEGIN searchCtrlBlock_DespachoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DespachoId}" {$filterRow_attrs_DespachoId}>
+			<label>{$label dbo_Minjusticia DespachoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DespachoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DespachoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DespachoId}</span>
+						</div>
+		{END searchCtrlBlock_DespachoId}
+																{BEGIN searchCtrlBlock_Cuadernillos}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Cuadernillos}" {$filterRow_attrs_Cuadernillos}>
+			<label>{$label dbo_Minjusticia Cuadernillos }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Cuadernillos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Cuadernillos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Cuadernillos}</span>
+						</div>
+		{END searchCtrlBlock_Cuadernillos}
+																{BEGIN searchCtrlBlock_CausalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CausalId}" {$filterRow_attrs_CausalId}>
+			<label>{$label dbo_Minjusticia CausalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CausalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CausalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CausalId}</span>
+						</div>
+		{END searchCtrlBlock_CausalId}
+																{BEGIN searchCtrlBlock_CarteraTipoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
+			<label>{$label dbo_Minjusticia CarteraTipoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipoId}
+																{BEGIN searchCtrlBlock_Caja}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Caja}" {$filterRow_attrs_Caja}>
+			<label>{$label dbo_Minjusticia Caja }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Caja}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Caja}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Caja}</span>
+						</div>
+		{END searchCtrlBlock_Caja}
+																{BEGIN searchCtrlBlock_Autorizado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Autorizado}" {$filterRow_attrs_Autorizado}>
+			<label>{$label dbo_Minjusticia Autorizado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Autorizado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Autorizado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Autorizado}</span>
+						</div>
+		{END searchCtrlBlock_Autorizado}
+																{BEGIN searchCtrlBlock_Autorizacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Autorizacion}" {$filterRow_attrs_Autorizacion}>
+			<label>{$label dbo_Minjusticia Autorizacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Autorizacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Autorizacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Autorizacion}</span>
+						</div>
+		{END searchCtrlBlock_Autorizacion}
+																{BEGIN searchCtrlBlock_Aprobacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Aprobacion}" {$filterRow_attrs_Aprobacion}>
+			<label>{$label dbo_Minjusticia Aprobacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Aprobacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Aprobacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Aprobacion}</span>
+						</div>
+		{END searchCtrlBlock_Aprobacion}
+																{BEGIN searchCtrlBlock_AcuerdoPago}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_AcuerdoPago}" {$filterRow_attrs_AcuerdoPago}>
+			<label>{$label dbo_Minjusticia AcuerdoPago }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_AcuerdoPago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_AcuerdoPago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_AcuerdoPago}</span>
+						</div>
+		{END searchCtrlBlock_AcuerdoPago}
+																{BEGIN searchCtrlBlock_ActaIndividual}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ActaIndividual}" {$filterRow_attrs_ActaIndividual}>
+			<label>{$label dbo_Minjusticia ActaIndividual }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ActaIndividual}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ActaIndividual}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ActaIndividual}</span>
+						</div>
+		{END searchCtrlBlock_ActaIndividual}
+																{BEGIN searchCtrlBlock_ActaConsolidada}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ActaConsolidada}" {$filterRow_attrs_ActaConsolidada}>
+			<label>{$label dbo_Minjusticia ActaConsolidada }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ActaConsolidada}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ActaConsolidada}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ActaConsolidada}</span>
+						</div>
+		{END searchCtrlBlock_ActaConsolidada}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		Exportar seleccionados		
+		</a>
+	</li>
+{END exportselected_link}
+							{BEGIN deleteselected_link}
+	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
+				
+		Borrar articulos seleccionados		
+		</a>
+	</li>
+{END deleteselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="minjusticia_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="minjusticia_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		{BEGIN add_link}
+<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$addlink_attrs} href="minjusticia_add.php{$stateLink_full}" >
+							Añadir nuevo			</a>
+</span>
+{END add_link}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Añadir nuevo			</a>
+</span>
+{END inlineadd_link}
+	 
+		{BEGIN deleteselected_link}
+<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
+							Borrar artículos seleccionados			</a>
+</span>
+{END deleteselected_link}
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="minjusticia_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir todas las páginas							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="minjusticia_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+		 
+	<div class="row">
+		<div class="col-md-4">
+			&nbsp;
+		</div>
+		<div class="col-md-8">
+			<label style="color: gray;" for="printSelection{$id}">
+			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
+			Imprimir la selección			</label>
+		</div>
+	</div>
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Resultados por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MinjusticiaId"]:before {
+		content: "{$label dbo_Minjusticia MinjusticiaId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Minjusticia"]:before {
+		content: "{$label dbo_Minjusticia Minjusticia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
+		content: "{$label dbo_Minjusticia Numero}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Nombre"]:before {
+		content: "{$label dbo_Minjusticia Nombre}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Documento"]:before {
+		content: "{$label dbo_Minjusticia Documento}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sentencia"]:before {
+		content: "{$label dbo_Minjusticia Sentencia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ejecutoria"]:before {
+		content: "{$label dbo_Minjusticia Ejecutoria}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion"]:before {
+		content: "{$label dbo_Minjusticia Obligacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo"]:before {
+		content: "{$label dbo_Minjusticia Recaudo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo_Val"]:before {
+		content: "{$label dbo_Minjusticia Recaudo_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Saldo"]:before {
+		content: "{$label dbo_Minjusticia Saldo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Intereses"]:before {
+		content: "{$label dbo_Minjusticia Intereses}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Intereses_Val"]:before {
+		content: "{$label dbo_Minjusticia Intereses_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoId"]:before {
+		content: "{$label dbo_Minjusticia AbogadoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Caja"]:before {
+		content: "{$label dbo_Minjusticia Caja}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cuadernillos"]:before {
+		content: "{$label dbo_Minjusticia Cuadernillos}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Folios"]:before {
+		content: "{$label dbo_Minjusticia Folios}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Hechos"]:before {
+		content: "{$label dbo_Minjusticia Hechos}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Salarios"]:before {
+		content: "{$label dbo_Minjusticia Salarios}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion_Val"]:before {
+		content: "{$label dbo_Minjusticia Obligacion_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DespachoId"]:before {
+		content: "{$label dbo_Minjusticia DespachoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="TipoDocumentoId"]:before {
+		content: "{$label dbo_Minjusticia TipoDocumentoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalId"]:before {
+		content: "{$label dbo_Minjusticia SeccionalId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Registro"]:before {
+		content: "{$label dbo_Minjusticia Registro}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Aprobacion"]:before {
+		content: "{$label dbo_Minjusticia Aprobacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sentencia_Val"]:before {
+		content: "{$label dbo_Minjusticia Sentencia_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ejecutoria_Val"]:before {
+		content: "{$label dbo_Minjusticia Ejecutoria_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Notificacion"]:before {
+		content: "{$label dbo_Minjusticia Notificacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AcuerdoPago"]:before {
+		content: "{$label dbo_Minjusticia AcuerdoPago}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ValorAcuerdopago"]:before {
+		content: "{$label dbo_Minjusticia ValorAcuerdopago}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="NumeroCuotas"]:before {
+		content: "{$label dbo_Minjusticia NumeroCuotas}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ValorCuota"]:before {
+		content: "{$label dbo_Minjusticia ValorCuota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipoId"]:before {
+		content: "{$label dbo_Minjusticia CarteraTipoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Observaciones"]:before {
+		content: "{$label dbo_Minjusticia Observaciones}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcesoId"]:before {
+		content: "{$label dbo_Minjusticia ProcesoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Nombre_Val"]:before {
+		content: "{$label dbo_Minjusticia Nombre_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Documento_Val"]:before {
+		content: "{$label dbo_Minjusticia Documento_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ActaIndividual"]:before {
+		content: "{$label dbo_Minjusticia ActaIndividual}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ActaConsolidada"]:before {
+		content: "{$label dbo_Minjusticia ActaConsolidada}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Autorizacion"]:before {
+		content: "{$label dbo_Minjusticia Autorizacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Autorizado"]:before {
+		content: "{$label dbo_Minjusticia Autorizado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CausalId"]:before {
+		content: "{$label dbo_Minjusticia CausalId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero_Val"]:before {
+		content: "{$label dbo_Minjusticia Numero_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Minjusticia_Val"]:before {
+		content: "{$label dbo_Minjusticia Minjusticia_Val}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Pesos"]:before {
+		content: "{$label dbo_Minjusticia Pesos}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="UserId"]:before {
+		content: "{$label dbo_Minjusticia UserId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Digitalizado"]:before {
+		content: "{$label dbo_Minjusticia Digitalizado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Procesado"]:before {
+		content: "{$label dbo_Minjusticia Procesado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Minjusticia2"]:before {
+		content: "{$label dbo_Minjusticia Minjusticia2}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MinjusticiaId_class}	"
+
+			data-field="MinjusticiaId"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MinjusticiaId_fieldheadercolumn}
+	{BEGIN MinjusticiaId_fieldheader}
+	<SPAN {$MinjusticiaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MinjusticiaId" data-fieldname="MinjusticiaId">
+	{$label dbo_Minjusticia MinjusticiaId }	{$arrow_icon_MinjusticiaId}
+	</SPAN>
+	{END MinjusticiaId_fieldheader}
+{END MinjusticiaId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia_class}	"
+
+			data-field="Minjusticia"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Minjusticia_fieldheadercolumn}
+	{BEGIN Minjusticia_fieldheader}
+	<SPAN {$Minjusticia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minjusticia" data-fieldname="Minjusticia">
+	{$label dbo_Minjusticia Minjusticia }	{$arrow_icon_Minjusticia}
+	</SPAN>
+	{END Minjusticia_fieldheader}
+{END Minjusticia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldheadercolumn}
+	{BEGIN Numero_fieldheader}
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	{$label dbo_Minjusticia Numero }	{$arrow_icon_Numero}
+	</SPAN>
+	{END Numero_fieldheader}
+{END Numero_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_class}	"
+
+			data-field="Nombre"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nombre_fieldheadercolumn}
+	{BEGIN Nombre_fieldheader}
+	<SPAN {$Nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre">
+	{$label dbo_Minjusticia Nombre }	{$arrow_icon_Nombre}
+	</SPAN>
+	{END Nombre_fieldheader}
+{END Nombre_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_fieldheadercolumn}
+	{BEGIN Documento_fieldheader}
+	<SPAN {$Documento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento">
+	{$label dbo_Minjusticia Documento }	{$arrow_icon_Documento}
+	</SPAN>
+	{END Documento_fieldheader}
+{END Documento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sentencia_class}	"
+
+			data-field="Sentencia"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sentencia_fieldheadercolumn}
+	{BEGIN Sentencia_fieldheader}
+	<SPAN {$Sentencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sentencia" data-fieldname="Sentencia">
+	{$label dbo_Minjusticia Sentencia }	{$arrow_icon_Sentencia}
+	</SPAN>
+	{END Sentencia_fieldheader}
+{END Sentencia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+			data-field="Ejecutoria"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_fieldheadercolumn}
+	{BEGIN Ejecutoria_fieldheader}
+	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+	{$label dbo_Minjusticia Ejecutoria }	{$arrow_icon_Ejecutoria}
+	</SPAN>
+	{END Ejecutoria_fieldheader}
+{END Ejecutoria_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_fieldheadercolumn}
+	{BEGIN Obligacion_fieldheader}
+	<SPAN {$Obligacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+	{$label dbo_Minjusticia Obligacion }	{$arrow_icon_Obligacion}
+	</SPAN>
+	{END Obligacion_fieldheader}
+{END Obligacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_class}	"
+
+			data-field="Recaudo"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Recaudo_fieldheadercolumn}
+	{BEGIN Recaudo_fieldheader}
+	<SPAN {$Recaudo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo">
+	{$label dbo_Minjusticia Recaudo }	{$arrow_icon_Recaudo}
+	</SPAN>
+	{END Recaudo_fieldheader}
+{END Recaudo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_Val_class}	"
+
+			data-field="Recaudo_Val"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Recaudo_Val_fieldheadercolumn}
+	{BEGIN Recaudo_Val_fieldheader}
+	<SPAN {$Recaudo_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo_Val" data-fieldname="Recaudo_Val">
+	{$label dbo_Minjusticia Recaudo_Val }	{$arrow_icon_Recaudo_Val}
+	</SPAN>
+	{END Recaudo_Val_fieldheader}
+{END Recaudo_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldheadercolumn}
+	{BEGIN Saldo_fieldheader}
+	<SPAN {$Saldo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo">
+	{$label dbo_Minjusticia Saldo }	{$arrow_icon_Saldo}
+	</SPAN>
+	{END Saldo_fieldheader}
+{END Saldo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_fieldheadercolumn}
+	{BEGIN Intereses_fieldheader}
+	<SPAN {$Intereses_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+	{$label dbo_Minjusticia Intereses }	{$arrow_icon_Intereses}
+	</SPAN>
+	{END Intereses_fieldheader}
+{END Intereses_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_Val_class}	"
+
+			data-field="Intereses_Val"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_Val_fieldheadercolumn}
+	{BEGIN Intereses_Val_fieldheader}
+	<SPAN {$Intereses_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses_Val" data-fieldname="Intereses_Val">
+	{$label dbo_Minjusticia Intereses_Val }	{$arrow_icon_Intereses_Val}
+	</SPAN>
+	{END Intereses_Val_fieldheader}
+{END Intereses_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoId_class}	"
+
+			data-field="AbogadoId"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AbogadoId_fieldheadercolumn}
+	{BEGIN AbogadoId_fieldheader}
+	<SPAN {$AbogadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
+	{$label dbo_Minjusticia AbogadoId }	{$arrow_icon_AbogadoId}
+	</SPAN>
+	{END AbogadoId_fieldheader}
+{END AbogadoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Caja_class}	"
+
+			data-field="Caja"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Caja_fieldheadercolumn}
+	{BEGIN Caja_fieldheader}
+	<SPAN {$Caja_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Caja" data-fieldname="Caja">
+	{$label dbo_Minjusticia Caja }	{$arrow_icon_Caja}
+	</SPAN>
+	{END Caja_fieldheader}
+{END Caja_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cuadernillos_class}	"
+
+			data-field="Cuadernillos"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cuadernillos_fieldheadercolumn}
+	{BEGIN Cuadernillos_fieldheader}
+	<SPAN {$Cuadernillos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuadernillos" data-fieldname="Cuadernillos">
+	{$label dbo_Minjusticia Cuadernillos }	{$arrow_icon_Cuadernillos}
+	</SPAN>
+	{END Cuadernillos_fieldheader}
+{END Cuadernillos_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Folios_class}	"
+
+			data-field="Folios"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Folios_fieldheadercolumn}
+	{BEGIN Folios_fieldheader}
+	<SPAN {$Folios_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Folios" data-fieldname="Folios">
+	{$label dbo_Minjusticia Folios }	{$arrow_icon_Folios}
+	</SPAN>
+	{END Folios_fieldheader}
+{END Folios_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Hechos_class}	"
+
+			data-field="Hechos"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hechos_fieldheadercolumn}
+	{BEGIN Hechos_fieldheader}
+	<SPAN {$Hechos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field66" {$item_simple_grid_field66} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hechos" data-fieldname="Hechos">
+	{$label dbo_Minjusticia Hechos }	{$arrow_icon_Hechos}
+	</SPAN>
+	{END Hechos_fieldheader}
+{END Hechos_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Salarios_class}	"
+
+			data-field="Salarios"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Salarios_fieldheadercolumn}
+	{BEGIN Salarios_fieldheader}
+	<SPAN {$Salarios_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field67" {$item_simple_grid_field67} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Salarios" data-fieldname="Salarios">
+	{$label dbo_Minjusticia Salarios }	{$arrow_icon_Salarios}
+	</SPAN>
+	{END Salarios_fieldheader}
+{END Salarios_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_Val_class}	"
+
+			data-field="Obligacion_Val"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_Val_fieldheadercolumn}
+	{BEGIN Obligacion_Val_fieldheader}
+	<SPAN {$Obligacion_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field68" {$item_simple_grid_field68} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion_Val" data-fieldname="Obligacion_Val">
+	{$label dbo_Minjusticia Obligacion_Val }	{$arrow_icon_Obligacion_Val}
+	</SPAN>
+	{END Obligacion_Val_fieldheader}
+{END Obligacion_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DespachoId_class}	"
+
+			data-field="DespachoId"
+	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DespachoId_fieldheadercolumn}
+	{BEGIN DespachoId_fieldheader}
+	<SPAN {$DespachoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field69" {$item_simple_grid_field69} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
+	{$label dbo_Minjusticia DespachoId }	{$arrow_icon_DespachoId}
+	</SPAN>
+	{END DespachoId_fieldheader}
+{END DespachoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field20}
+									{BEGIN cellblock_grid_headcell_field21}
+	<th
+	
+	{$cell_grid_headcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$TipoDocumentoId_class}	"
+
+			data-field="TipoDocumentoId"
+	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN TipoDocumentoId_fieldheadercolumn}
+	{BEGIN TipoDocumentoId_fieldheader}
+	<SPAN {$TipoDocumentoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field70" {$item_simple_grid_field70} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TipoDocumentoId" data-fieldname="TipoDocumentoId">
+	{$label dbo_Minjusticia TipoDocumentoId }	{$arrow_icon_TipoDocumentoId}
+	</SPAN>
+	{END TipoDocumentoId_fieldheader}
+{END TipoDocumentoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field21}
+									{BEGIN cellblock_grid_headcell_field22}
+	<th
+	
+	{$cell_grid_headcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldheadercolumn}
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field71" {$item_simple_grid_field71} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label dbo_Minjusticia SeccionalId }	{$arrow_icon_SeccionalId}
+	</SPAN>
+	{END SeccionalId_fieldheader}
+{END SeccionalId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+			data-field="Registro"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Registro_fieldheadercolumn}
+	{BEGIN Registro_fieldheader}
+	<SPAN {$Registro_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field72" {$item_simple_grid_field72} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Registro" data-fieldname="Registro">
+	{$label dbo_Minjusticia Registro }	{$arrow_icon_Registro}
+	</SPAN>
+	{END Registro_fieldheader}
+{END Registro_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
+	<th
+	
+	{$cell_grid_headcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Aprobacion_class}	"
+
+			data-field="Aprobacion"
+	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Aprobacion_fieldheadercolumn}
+	{BEGIN Aprobacion_fieldheader}
+	<SPAN {$Aprobacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field73" {$item_simple_grid_field73} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Aprobacion" data-fieldname="Aprobacion">
+	{$label dbo_Minjusticia Aprobacion }	{$arrow_icon_Aprobacion}
+	</SPAN>
+	{END Aprobacion_fieldheader}
+{END Aprobacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
+	<th
+	
+	{$cell_grid_headcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sentencia_Val_class}	"
+
+			data-field="Sentencia_Val"
+	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sentencia_Val_fieldheadercolumn}
+	{BEGIN Sentencia_Val_fieldheader}
+	<SPAN {$Sentencia_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field74" {$item_simple_grid_field74} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sentencia_Val" data-fieldname="Sentencia_Val">
+	{$label dbo_Minjusticia Sentencia_Val }	{$arrow_icon_Sentencia_Val}
+	</SPAN>
+	{END Sentencia_Val_fieldheader}
+{END Sentencia_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
+	<th
+	
+	{$cell_grid_headcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_Val_class}	"
+
+			data-field="Ejecutoria_Val"
+	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_Val_fieldheadercolumn}
+	{BEGIN Ejecutoria_Val_fieldheader}
+	<SPAN {$Ejecutoria_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field75" {$item_simple_grid_field75} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria_Val" data-fieldname="Ejecutoria_Val">
+	{$label dbo_Minjusticia Ejecutoria_Val }	{$arrow_icon_Ejecutoria_Val}
+	</SPAN>
+	{END Ejecutoria_Val_fieldheader}
+{END Ejecutoria_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
+	<th
+	
+	{$cell_grid_headcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Notificacion_class}	"
+
+			data-field="Notificacion"
+	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Notificacion_fieldheadercolumn}
+	{BEGIN Notificacion_fieldheader}
+	<SPAN {$Notificacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field76" {$item_simple_grid_field76} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Notificacion" data-fieldname="Notificacion">
+	{$label dbo_Minjusticia Notificacion }	{$arrow_icon_Notificacion}
+	</SPAN>
+	{END Notificacion_fieldheader}
+{END Notificacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field27}
+									{BEGIN cellblock_grid_headcell_field28}
+	<th
+	
+	{$cell_grid_headcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcuerdoPago_class}	"
+
+			data-field="AcuerdoPago"
+	
+	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AcuerdoPago_fieldheadercolumn}
+	{BEGIN AcuerdoPago_fieldheader}
+	<SPAN {$AcuerdoPago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field77" {$item_simple_grid_field77} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcuerdoPago" data-fieldname="AcuerdoPago">
+	{$label dbo_Minjusticia AcuerdoPago }	{$arrow_icon_AcuerdoPago}
+	</SPAN>
+	{END AcuerdoPago_fieldheader}
+{END AcuerdoPago_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field28}
+									{BEGIN cellblock_grid_headcell_field29}
+	<th
+	
+	{$cell_grid_headcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ValorAcuerdopago_class}	"
+
+			data-field="ValorAcuerdopago"
+	
+	data-cellId="grid_headcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ValorAcuerdopago_fieldheadercolumn}
+	{BEGIN ValorAcuerdopago_fieldheader}
+	<SPAN {$ValorAcuerdopago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field78" {$item_simple_grid_field78} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ValorAcuerdopago" data-fieldname="ValorAcuerdopago">
+	{$label dbo_Minjusticia ValorAcuerdopago }	{$arrow_icon_ValorAcuerdopago}
+	</SPAN>
+	{END ValorAcuerdopago_fieldheader}
+{END ValorAcuerdopago_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field29}
+									{BEGIN cellblock_grid_headcell_field30}
+	<th
+	
+	{$cell_grid_headcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NumeroCuotas_class}	"
+
+			data-field="NumeroCuotas"
+	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NumeroCuotas_fieldheadercolumn}
+	{BEGIN NumeroCuotas_fieldheader}
+	<SPAN {$NumeroCuotas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field79" {$item_simple_grid_field79} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NumeroCuotas" data-fieldname="NumeroCuotas">
+	{$label dbo_Minjusticia NumeroCuotas }	{$arrow_icon_NumeroCuotas}
+	</SPAN>
+	{END NumeroCuotas_fieldheader}
+{END NumeroCuotas_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field30}
+									{BEGIN cellblock_grid_headcell_field31}
+	<th
+	
+	{$cell_grid_headcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ValorCuota_class}	"
+
+			data-field="ValorCuota"
+	
+	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ValorCuota_fieldheadercolumn}
+	{BEGIN ValorCuota_fieldheader}
+	<SPAN {$ValorCuota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field80" {$item_simple_grid_field80} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ValorCuota" data-fieldname="ValorCuota">
+	{$label dbo_Minjusticia ValorCuota }	{$arrow_icon_ValorCuota}
+	</SPAN>
+	{END ValorCuota_fieldheader}
+{END ValorCuota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field31}
+									{BEGIN cellblock_grid_headcell_field32}
+	<th
+	
+	{$cell_grid_headcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_headcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldheadercolumn}
+	{BEGIN CarteraTipoId_fieldheader}
+	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field81" {$item_simple_grid_field81} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+	{$label dbo_Minjusticia CarteraTipoId }	{$arrow_icon_CarteraTipoId}
+	</SPAN>
+	{END CarteraTipoId_fieldheader}
+{END CarteraTipoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field32}
+									{BEGIN cellblock_grid_headcell_field33}
+	<th
+	
+	{$cell_grid_headcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Observaciones_class}	"
+
+			data-field="Observaciones"
+	
+	data-cellId="grid_headcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Observaciones_fieldheadercolumn}
+	{BEGIN Observaciones_fieldheader}
+	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field82" {$item_simple_grid_field82} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
+	{$label dbo_Minjusticia Observaciones }	{$arrow_icon_Observaciones}
+	</SPAN>
+	{END Observaciones_fieldheader}
+{END Observaciones_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field33}
+									{BEGIN cellblock_grid_headcell_field34}
+	<th
+	
+	{$cell_grid_headcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+			data-field="ProcesoId"
+	
+	data-cellId="grid_headcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcesoId_fieldheadercolumn}
+	{BEGIN ProcesoId_fieldheader}
+	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field83" {$item_simple_grid_field83} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
+	{$label dbo_Minjusticia ProcesoId }	{$arrow_icon_ProcesoId}
+	</SPAN>
+	{END ProcesoId_fieldheader}
+{END ProcesoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field34}
+									{BEGIN cellblock_grid_headcell_field35}
+	<th
+	
+	{$cell_grid_headcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_Val_class}	"
+
+			data-field="Nombre_Val"
+	
+	data-cellId="grid_headcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nombre_Val_fieldheadercolumn}
+	{BEGIN Nombre_Val_fieldheader}
+	<SPAN {$Nombre_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field84" {$item_simple_grid_field84} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre_Val" data-fieldname="Nombre_Val">
+	{$label dbo_Minjusticia Nombre_Val }	{$arrow_icon_Nombre_Val}
+	</SPAN>
+	{END Nombre_Val_fieldheader}
+{END Nombre_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field35}
+									{BEGIN cellblock_grid_headcell_field36}
+	<th
+	
+	{$cell_grid_headcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_Val_class}	"
+
+			data-field="Documento_Val"
+	
+	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_Val_fieldheadercolumn}
+	{BEGIN Documento_Val_fieldheader}
+	<SPAN {$Documento_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field85" {$item_simple_grid_field85} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento_Val" data-fieldname="Documento_Val">
+	{$label dbo_Minjusticia Documento_Val }	{$arrow_icon_Documento_Val}
+	</SPAN>
+	{END Documento_Val_fieldheader}
+{END Documento_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field36}
+									{BEGIN cellblock_grid_headcell_field37}
+	<th
+	
+	{$cell_grid_headcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActaIndividual_class}	"
+
+			data-field="ActaIndividual"
+	
+	data-cellId="grid_headcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ActaIndividual_fieldheadercolumn}
+	{BEGIN ActaIndividual_fieldheader}
+	<SPAN {$ActaIndividual_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field86" {$item_simple_grid_field86} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActaIndividual" data-fieldname="ActaIndividual">
+	{$label dbo_Minjusticia ActaIndividual }	{$arrow_icon_ActaIndividual}
+	</SPAN>
+	{END ActaIndividual_fieldheader}
+{END ActaIndividual_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field37}
+									{BEGIN cellblock_grid_headcell_field38}
+	<th
+	
+	{$cell_grid_headcell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActaConsolidada_class}	"
+
+			data-field="ActaConsolidada"
+	
+	data-cellId="grid_headcell_field38" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ActaConsolidada_fieldheadercolumn}
+	{BEGIN ActaConsolidada_fieldheader}
+	<SPAN {$ActaConsolidada_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field87" {$item_simple_grid_field87} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActaConsolidada" data-fieldname="ActaConsolidada">
+	{$label dbo_Minjusticia ActaConsolidada }	{$arrow_icon_ActaConsolidada}
+	</SPAN>
+	{END ActaConsolidada_fieldheader}
+{END ActaConsolidada_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field38}
+									{BEGIN cellblock_grid_headcell_field39}
+	<th
+	
+	{$cell_grid_headcell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Autorizacion_class}	"
+
+			data-field="Autorizacion"
+	
+	data-cellId="grid_headcell_field39" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Autorizacion_fieldheadercolumn}
+	{BEGIN Autorizacion_fieldheader}
+	<SPAN {$Autorizacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field88" {$item_simple_grid_field88} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autorizacion" data-fieldname="Autorizacion">
+	{$label dbo_Minjusticia Autorizacion }	{$arrow_icon_Autorizacion}
+	</SPAN>
+	{END Autorizacion_fieldheader}
+{END Autorizacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field39}
+									{BEGIN cellblock_grid_headcell_field40}
+	<th
+	
+	{$cell_grid_headcell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Autorizado_class}	"
+
+			data-field="Autorizado"
+	
+	data-cellId="grid_headcell_field40" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Autorizado_fieldheadercolumn}
+	{BEGIN Autorizado_fieldheader}
+	<SPAN {$Autorizado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field89" {$item_simple_grid_field89} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autorizado" data-fieldname="Autorizado">
+	{$label dbo_Minjusticia Autorizado }	{$arrow_icon_Autorizado}
+	</SPAN>
+	{END Autorizado_fieldheader}
+{END Autorizado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field40}
+									{BEGIN cellblock_grid_headcell_field41}
+	<th
+	
+	{$cell_grid_headcell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CausalId_class}	"
+
+			data-field="CausalId"
+	
+	data-cellId="grid_headcell_field41" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CausalId_fieldheadercolumn}
+	{BEGIN CausalId_fieldheader}
+	<SPAN {$CausalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field90" {$item_simple_grid_field90} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CausalId" data-fieldname="CausalId">
+	{$label dbo_Minjusticia CausalId }	{$arrow_icon_CausalId}
+	</SPAN>
+	{END CausalId_fieldheader}
+{END CausalId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field41}
+									{BEGIN cellblock_grid_headcell_field42}
+	<th
+	
+	{$cell_grid_headcell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_Val_class}	"
+
+			data-field="Numero_Val"
+	
+	data-cellId="grid_headcell_field42" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_Val_fieldheadercolumn}
+	{BEGIN Numero_Val_fieldheader}
+	<SPAN {$Numero_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field91" {$item_simple_grid_field91} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero_Val" data-fieldname="Numero_Val">
+	{$label dbo_Minjusticia Numero_Val }	{$arrow_icon_Numero_Val}
+	</SPAN>
+	{END Numero_Val_fieldheader}
+{END Numero_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field42}
+									{BEGIN cellblock_grid_headcell_field43}
+	<th
+	
+	{$cell_grid_headcell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia_Val_class}	"
+
+			data-field="Minjusticia_Val"
+	
+	data-cellId="grid_headcell_field43" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Minjusticia_Val_fieldheadercolumn}
+	{BEGIN Minjusticia_Val_fieldheader}
+	<SPAN {$Minjusticia_Val_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field92" {$item_simple_grid_field92} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minjusticia_Val" data-fieldname="Minjusticia_Val">
+	{$label dbo_Minjusticia Minjusticia_Val }	{$arrow_icon_Minjusticia_Val}
+	</SPAN>
+	{END Minjusticia_Val_fieldheader}
+{END Minjusticia_Val_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field43}
+									{BEGIN cellblock_grid_headcell_field44}
+	<th
+	
+	{$cell_grid_headcell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Pesos_class}	"
+
+			data-field="Pesos"
+	
+	data-cellId="grid_headcell_field44" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pesos_fieldheadercolumn}
+	{BEGIN Pesos_fieldheader}
+	<SPAN {$Pesos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field93" {$item_simple_grid_field93} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pesos" data-fieldname="Pesos">
+	{$label dbo_Minjusticia Pesos }	{$arrow_icon_Pesos}
+	</SPAN>
+	{END Pesos_fieldheader}
+{END Pesos_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field44}
+									{BEGIN cellblock_grid_headcell_field45}
+	<th
+	
+	{$cell_grid_headcell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$UserId_class}	"
+
+			data-field="UserId"
+	
+	data-cellId="grid_headcell_field45" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN UserId_fieldheadercolumn}
+	{BEGIN UserId_fieldheader}
+	<SPAN {$UserId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field94" {$item_simple_grid_field94} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UserId" data-fieldname="UserId">
+	{$label dbo_Minjusticia UserId }	{$arrow_icon_UserId}
+	</SPAN>
+	{END UserId_fieldheader}
+{END UserId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field45}
+									{BEGIN cellblock_grid_headcell_field46}
+	<th
+	
+	{$cell_grid_headcell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Digitalizado_class}	"
+
+			data-field="Digitalizado"
+	
+	data-cellId="grid_headcell_field46" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Digitalizado_fieldheadercolumn}
+	{BEGIN Digitalizado_fieldheader}
+	<SPAN {$Digitalizado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field95" {$item_simple_grid_field95} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Digitalizado" data-fieldname="Digitalizado">
+	{$label dbo_Minjusticia Digitalizado }	{$arrow_icon_Digitalizado}
+	</SPAN>
+	{END Digitalizado_fieldheader}
+{END Digitalizado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field46}
+									{BEGIN cellblock_grid_headcell_field47}
+	<th
+	
+	{$cell_grid_headcell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Procesado_class}	"
+
+			data-field="Procesado"
+	
+	data-cellId="grid_headcell_field47" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Procesado_fieldheadercolumn}
+	{BEGIN Procesado_fieldheader}
+	<SPAN {$Procesado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field96" {$item_simple_grid_field96} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Procesado" data-fieldname="Procesado">
+	{$label dbo_Minjusticia Procesado }	{$arrow_icon_Procesado}
+	</SPAN>
+	{END Procesado_fieldheader}
+{END Procesado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field47}
+									{BEGIN cellblock_grid_headcell_field48}
+	<th
+	
+	{$cell_grid_headcell_field48}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia2_class}	"
+
+			data-field="Minjusticia2"
+	
+	data-cellId="grid_headcell_field48" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Minjusticia2_fieldheadercolumn}
+	{BEGIN Minjusticia2_fieldheader}
+	<SPAN {$Minjusticia2_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field97" {$item_simple_grid_field97} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minjusticia2" data-fieldname="Minjusticia2">
+	{$label dbo_Minjusticia Minjusticia2 }	{$arrow_icon_Minjusticia2}
+	</SPAN>
+	{END Minjusticia2_fieldheader}
+{END Minjusticia2_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field48}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_icons}
+	<td
+	
+	{$cell_grid_cell_icons}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN edit_column}
+{BEGIN edit_link}
+<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Editar" class="btn-link   
+	 glyphicon glyphicon-pencil" href="minjusticia_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+				
+								</a>
+</span>
+{END edit_link}
+{END edit_column}
+	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	 
+		{BEGIN view_column}
+{BEGIN view_link}
+<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Ver registro" class="btn-link   
+	 glyphicon glyphicon-search" href="minjusticia_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
+				
+								</a>
+</span>
+{END view_link}
+{END view_column}
+	
+	</td>
+	{END cellblock_grid_cell_icons}
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MinjusticiaId_class}	"
+
+			data-field="MinjusticiaId"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MinjusticiaId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MinjusticiaId" data-fieldname="MinjusticiaId" data-default-width >
+{$MinjusticiaId_value}
+</span>
+{END MinjusticiaId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia_class}	"
+
+			data-field="Minjusticia"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Minjusticia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minjusticia" data-fieldname="Minjusticia" data-default-width >
+{$Minjusticia_value}
+</span>
+{END Minjusticia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero" data-default-width >
+{$Numero_value}
+</span>
+{END Numero_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_class}	"
+
+			data-field="Nombre"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nombre_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre" data-default-width >
+{$Nombre_value}
+</span>
+{END Nombre_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento" data-default-width >
+{$Documento_value}
+</span>
+{END Documento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sentencia_class}	"
+
+			data-field="Sentencia"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sentencia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sentencia" data-fieldname="Sentencia" data-default-width >
+{$Sentencia_value}
+</span>
+{END Sentencia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+			data-field="Ejecutoria"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria" data-default-width >
+{$Ejecutoria_value}
+</span>
+{END Ejecutoria_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" data-default-width >
+{$Obligacion_value}
+</span>
+{END Obligacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_class}	"
+
+			data-field="Recaudo"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Recaudo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo" data-default-width >
+{$Recaudo_value}
+</span>
+{END Recaudo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_Val_class}	"
+
+			data-field="Recaudo_Val"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Recaudo_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo_Val" data-fieldname="Recaudo_Val" data-default-width >
+{$Recaudo_Val_value}
+</span>
+{END Recaudo_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo" data-default-width >
+{$Saldo_value}
+</span>
+{END Saldo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" data-default-width >
+{$Intereses_value}
+</span>
+{END Intereses_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_Val_class}	"
+
+			data-field="Intereses_Val"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses_Val" data-fieldname="Intereses_Val" data-default-width >
+{$Intereses_Val_value}
+</span>
+{END Intereses_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoId_class}	"
+
+			data-field="AbogadoId"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AbogadoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId" data-default-width >
+{$AbogadoId_value}
+</span>
+{END AbogadoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Caja_class}	"
+
+			data-field="Caja"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Caja_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Caja" data-fieldname="Caja" data-default-width >
+{$Caja_value}
+</span>
+{END Caja_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cuadernillos_class}	"
+
+			data-field="Cuadernillos"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cuadernillos_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuadernillos" data-fieldname="Cuadernillos" data-default-width >
+{$Cuadernillos_value}
+</span>
+{END Cuadernillos_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Folios_class}	"
+
+			data-field="Folios"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Folios_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Folios" data-fieldname="Folios" data-default-width >
+{$Folios_value}
+</span>
+{END Folios_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Hechos_class}	"
+
+			data-field="Hechos"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hechos_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hechos" data-fieldname="Hechos" data-default-width >
+{$Hechos_value}
+</span>
+{END Hechos_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Salarios_class}	"
+
+			data-field="Salarios"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Salarios_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Salarios" data-fieldname="Salarios" data-default-width >
+{$Salarios_value}
+</span>
+{END Salarios_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_Val_class}	"
+
+			data-field="Obligacion_Val"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion_Val" data-fieldname="Obligacion_Val" data-default-width >
+{$Obligacion_Val_value}
+</span>
+{END Obligacion_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DespachoId_class}	"
+
+			data-field="DespachoId"
+	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DespachoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId" data-default-width >
+{$DespachoId_value}
+</span>
+{END DespachoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field20}
+									{BEGIN cellblock_grid_cell_field21}
+	<td
+	
+	{$cell_grid_cell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$TipoDocumentoId_class}	"
+
+			data-field="TipoDocumentoId"
+	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN TipoDocumentoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TipoDocumentoId" data-fieldname="TipoDocumentoId" data-default-width >
+{$TipoDocumentoId_value}
+</span>
+{END TipoDocumentoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field21}
+									{BEGIN cellblock_grid_cell_field22}
+	<td
+	
+	{$cell_grid_cell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
+{$SeccionalId_value}
+</span>
+{END SeccionalId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+			data-field="Registro"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Registro_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Registro" data-fieldname="Registro" data-default-width >
+{$Registro_value}
+</span>
+{END Registro_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
+	<td
+	
+	{$cell_grid_cell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Aprobacion_class}	"
+
+			data-field="Aprobacion"
+	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Aprobacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Aprobacion" data-fieldname="Aprobacion" data-default-width >
+{$Aprobacion_value}
+</span>
+{END Aprobacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
+	<td
+	
+	{$cell_grid_cell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sentencia_Val_class}	"
+
+			data-field="Sentencia_Val"
+	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sentencia_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sentencia_Val" data-fieldname="Sentencia_Val" data-default-width >
+{$Sentencia_Val_value}
+</span>
+{END Sentencia_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
+	<td
+	
+	{$cell_grid_cell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_Val_class}	"
+
+			data-field="Ejecutoria_Val"
+	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria_Val" data-fieldname="Ejecutoria_Val" data-default-width >
+{$Ejecutoria_Val_value}
+</span>
+{END Ejecutoria_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
+	<td
+	
+	{$cell_grid_cell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Notificacion_class}	"
+
+			data-field="Notificacion"
+	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Notificacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Notificacion" data-fieldname="Notificacion" data-default-width >
+{$Notificacion_value}
+</span>
+{END Notificacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field27}
+									{BEGIN cellblock_grid_cell_field28}
+	<td
+	
+	{$cell_grid_cell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcuerdoPago_class}	"
+
+			data-field="AcuerdoPago"
+	
+	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AcuerdoPago_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcuerdoPago" data-fieldname="AcuerdoPago" data-default-width >
+{$AcuerdoPago_value}
+</span>
+{END AcuerdoPago_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field28}
+									{BEGIN cellblock_grid_cell_field29}
+	<td
+	
+	{$cell_grid_cell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ValorAcuerdopago_class}	"
+
+			data-field="ValorAcuerdopago"
+	
+	data-cellId="grid_cell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ValorAcuerdopago_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ValorAcuerdopago" data-fieldname="ValorAcuerdopago" data-default-width >
+{$ValorAcuerdopago_value}
+</span>
+{END ValorAcuerdopago_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field29}
+									{BEGIN cellblock_grid_cell_field30}
+	<td
+	
+	{$cell_grid_cell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NumeroCuotas_class}	"
+
+			data-field="NumeroCuotas"
+	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NumeroCuotas_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NumeroCuotas" data-fieldname="NumeroCuotas" data-default-width >
+{$NumeroCuotas_value}
+</span>
+{END NumeroCuotas_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field30}
+									{BEGIN cellblock_grid_cell_field31}
+	<td
+	
+	{$cell_grid_cell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ValorCuota_class}	"
+
+			data-field="ValorCuota"
+	
+	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ValorCuota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ValorCuota" data-fieldname="ValorCuota" data-default-width >
+{$ValorCuota_value}
+</span>
+{END ValorCuota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field31}
+									{BEGIN cellblock_grid_cell_field32}
+	<td
+	
+	{$cell_grid_cell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_cell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-default-width >
+{$CarteraTipoId_value}
+</span>
+{END CarteraTipoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field32}
+									{BEGIN cellblock_grid_cell_field33}
+	<td
+	
+	{$cell_grid_cell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Observaciones_class}	"
+
+			data-field="Observaciones"
+	
+	data-cellId="grid_cell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Observaciones_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones" data-default-width >
+{$Observaciones_value}
+</span>
+{END Observaciones_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field33}
+									{BEGIN cellblock_grid_cell_field34}
+	<td
+	
+	{$cell_grid_cell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+			data-field="ProcesoId"
+	
+	data-cellId="grid_cell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcesoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId" data-default-width >
+{$ProcesoId_value}
+</span>
+{END ProcesoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field34}
+									{BEGIN cellblock_grid_cell_field35}
+	<td
+	
+	{$cell_grid_cell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_Val_class}	"
+
+			data-field="Nombre_Val"
+	
+	data-cellId="grid_cell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nombre_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre_Val" data-fieldname="Nombre_Val" data-default-width >
+{$Nombre_Val_value}
+</span>
+{END Nombre_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field35}
+									{BEGIN cellblock_grid_cell_field36}
+	<td
+	
+	{$cell_grid_cell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_Val_class}	"
+
+			data-field="Documento_Val"
+	
+	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento_Val" data-fieldname="Documento_Val" data-default-width >
+{$Documento_Val_value}
+</span>
+{END Documento_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field36}
+									{BEGIN cellblock_grid_cell_field37}
+	<td
+	
+	{$cell_grid_cell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActaIndividual_class}	"
+
+			data-field="ActaIndividual"
+	
+	data-cellId="grid_cell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ActaIndividual_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActaIndividual" data-fieldname="ActaIndividual" data-default-width >
+{$ActaIndividual_value}
+</span>
+{END ActaIndividual_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field37}
+									{BEGIN cellblock_grid_cell_field38}
+	<td
+	
+	{$cell_grid_cell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActaConsolidada_class}	"
+
+			data-field="ActaConsolidada"
+	
+	data-cellId="grid_cell_field38" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ActaConsolidada_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActaConsolidada" data-fieldname="ActaConsolidada" data-default-width >
+{$ActaConsolidada_value}
+</span>
+{END ActaConsolidada_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field38}
+									{BEGIN cellblock_grid_cell_field39}
+	<td
+	
+	{$cell_grid_cell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Autorizacion_class}	"
+
+			data-field="Autorizacion"
+	
+	data-cellId="grid_cell_field39" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Autorizacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autorizacion" data-fieldname="Autorizacion" data-default-width >
+{$Autorizacion_value}
+</span>
+{END Autorizacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field39}
+									{BEGIN cellblock_grid_cell_field40}
+	<td
+	
+	{$cell_grid_cell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Autorizado_class}	"
+
+			data-field="Autorizado"
+	
+	data-cellId="grid_cell_field40" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Autorizado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autorizado" data-fieldname="Autorizado" data-default-width >
+{$Autorizado_value}
+</span>
+{END Autorizado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field40}
+									{BEGIN cellblock_grid_cell_field41}
+	<td
+	
+	{$cell_grid_cell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CausalId_class}	"
+
+			data-field="CausalId"
+	
+	data-cellId="grid_cell_field41" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CausalId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CausalId" data-fieldname="CausalId" data-default-width >
+{$CausalId_value}
+</span>
+{END CausalId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field41}
+									{BEGIN cellblock_grid_cell_field42}
+	<td
+	
+	{$cell_grid_cell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_Val_class}	"
+
+			data-field="Numero_Val"
+	
+	data-cellId="grid_cell_field42" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero_Val" data-fieldname="Numero_Val" data-default-width >
+{$Numero_Val_value}
+</span>
+{END Numero_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field42}
+									{BEGIN cellblock_grid_cell_field43}
+	<td
+	
+	{$cell_grid_cell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia_Val_class}	"
+
+			data-field="Minjusticia_Val"
+	
+	data-cellId="grid_cell_field43" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Minjusticia_Val_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minjusticia_Val" data-fieldname="Minjusticia_Val" data-default-width >
+{$Minjusticia_Val_value}
+</span>
+{END Minjusticia_Val_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field43}
+									{BEGIN cellblock_grid_cell_field44}
+	<td
+	
+	{$cell_grid_cell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Pesos_class}	"
+
+			data-field="Pesos"
+	
+	data-cellId="grid_cell_field44" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pesos_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pesos" data-fieldname="Pesos" data-default-width >
+{$Pesos_value}
+</span>
+{END Pesos_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field44}
+									{BEGIN cellblock_grid_cell_field45}
+	<td
+	
+	{$cell_grid_cell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$UserId_class}	"
+
+			data-field="UserId"
+	
+	data-cellId="grid_cell_field45" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN UserId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UserId" data-fieldname="UserId" data-default-width >
+{$UserId_value}
+</span>
+{END UserId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field45}
+									{BEGIN cellblock_grid_cell_field46}
+	<td
+	
+	{$cell_grid_cell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Digitalizado_class}	"
+
+			data-field="Digitalizado"
+	
+	data-cellId="grid_cell_field46" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Digitalizado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Digitalizado" data-fieldname="Digitalizado" data-default-width >
+{$Digitalizado_value}
+</span>
+{END Digitalizado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field46}
+									{BEGIN cellblock_grid_cell_field47}
+	<td
+	
+	{$cell_grid_cell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Procesado_class}	"
+
+			data-field="Procesado"
+	
+	data-cellId="grid_cell_field47" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Procesado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Procesado" data-fieldname="Procesado" data-default-width >
+{$Procesado_value}
+</span>
+{END Procesado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field47}
+									{BEGIN cellblock_grid_cell_field48}
+	<td
+	
+	{$cell_grid_cell_field48}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia2_class}	"
+
+			data-field="Minjusticia2"
+	
+	data-cellId="grid_cell_field48" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Minjusticia2_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minjusticia2" data-fieldname="Minjusticia2" data-default-width >
+{$Minjusticia2_value}
+</span>
+{END Minjusticia2_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field48}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_icons}
+	<td
+	
+	{$cell_grid_footcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_icons}
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MinjusticiaId_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sentencia_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoId_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Caja_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cuadernillos_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Folios_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Hechos_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Salarios_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+									{BEGIN cellblock_grid_footcell_field20}
+	<td
+	
+	{$cell_grid_footcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DespachoId_class}	"
+
+	
+	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field20}
+									{BEGIN cellblock_grid_footcell_field21}
+	<td
+	
+	{$cell_grid_footcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$TipoDocumentoId_class}	"
+
+	
+	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field21}
+									{BEGIN cellblock_grid_footcell_field22}
+	<td
+	
+	{$cell_grid_footcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+	
+	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field22}
+									{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+									{BEGIN cellblock_grid_footcell_field24}
+	<td
+	
+	{$cell_grid_footcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Aprobacion_class}	"
+
+	
+	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field24}
+									{BEGIN cellblock_grid_footcell_field25}
+	<td
+	
+	{$cell_grid_footcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sentencia_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field25}
+									{BEGIN cellblock_grid_footcell_field26}
+	<td
+	
+	{$cell_grid_footcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field26}
+									{BEGIN cellblock_grid_footcell_field27}
+	<td
+	
+	{$cell_grid_footcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Notificacion_class}	"
+
+	
+	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field27}
+									{BEGIN cellblock_grid_footcell_field28}
+	<td
+	
+	{$cell_grid_footcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcuerdoPago_class}	"
+
+	
+	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field28}
+									{BEGIN cellblock_grid_footcell_field29}
+	<td
+	
+	{$cell_grid_footcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ValorAcuerdopago_class}	"
+
+	
+	data-cellId="grid_footcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field29}
+									{BEGIN cellblock_grid_footcell_field30}
+	<td
+	
+	{$cell_grid_footcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NumeroCuotas_class}	"
+
+	
+	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field30}
+									{BEGIN cellblock_grid_footcell_field31}
+	<td
+	
+	{$cell_grid_footcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ValorCuota_class}	"
+
+	
+	data-cellId="grid_footcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field31}
+									{BEGIN cellblock_grid_footcell_field32}
+	<td
+	
+	{$cell_grid_footcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+	
+	data-cellId="grid_footcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field32}
+									{BEGIN cellblock_grid_footcell_field33}
+	<td
+	
+	{$cell_grid_footcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Observaciones_class}	"
+
+	
+	data-cellId="grid_footcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field33}
+									{BEGIN cellblock_grid_footcell_field34}
+	<td
+	
+	{$cell_grid_footcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+	
+	data-cellId="grid_footcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field34}
+									{BEGIN cellblock_grid_footcell_field35}
+	<td
+	
+	{$cell_grid_footcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field35}
+									{BEGIN cellblock_grid_footcell_field36}
+	<td
+	
+	{$cell_grid_footcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field36}
+									{BEGIN cellblock_grid_footcell_field37}
+	<td
+	
+	{$cell_grid_footcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActaIndividual_class}	"
+
+	
+	data-cellId="grid_footcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field37}
+									{BEGIN cellblock_grid_footcell_field38}
+	<td
+	
+	{$cell_grid_footcell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActaConsolidada_class}	"
+
+	
+	data-cellId="grid_footcell_field38" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field38}
+									{BEGIN cellblock_grid_footcell_field39}
+	<td
+	
+	{$cell_grid_footcell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Autorizacion_class}	"
+
+	
+	data-cellId="grid_footcell_field39" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field39}
+									{BEGIN cellblock_grid_footcell_field40}
+	<td
+	
+	{$cell_grid_footcell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Autorizado_class}	"
+
+	
+	data-cellId="grid_footcell_field40" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field40}
+									{BEGIN cellblock_grid_footcell_field41}
+	<td
+	
+	{$cell_grid_footcell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CausalId_class}	"
+
+	
+	data-cellId="grid_footcell_field41" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field41}
+									{BEGIN cellblock_grid_footcell_field42}
+	<td
+	
+	{$cell_grid_footcell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field42" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field42}
+									{BEGIN cellblock_grid_footcell_field43}
+	<td
+	
+	{$cell_grid_footcell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia_Val_class}	"
+
+	
+	data-cellId="grid_footcell_field43" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field43}
+									{BEGIN cellblock_grid_footcell_field44}
+	<td
+	
+	{$cell_grid_footcell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Pesos_class}	"
+
+	
+	data-cellId="grid_footcell_field44" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field44}
+									{BEGIN cellblock_grid_footcell_field45}
+	<td
+	
+	{$cell_grid_footcell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$UserId_class}	"
+
+	
+	data-cellId="grid_footcell_field45" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field45}
+									{BEGIN cellblock_grid_footcell_field46}
+	<td
+	
+	{$cell_grid_footcell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Digitalizado_class}	"
+
+	
+	data-cellId="grid_footcell_field46" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field46}
+									{BEGIN cellblock_grid_footcell_field47}
+	<td
+	
+	{$cell_grid_footcell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Procesado_class}	"
+
+	
+	data-cellId="grid_footcell_field47" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field47}
+									{BEGIN cellblock_grid_footcell_field48}
+	<td
+	
+	{$cell_grid_footcell_field48}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Minjusticia2_class}	"
+
+	
+	data-cellId="grid_footcell_field48" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="minjusticia_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field48}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

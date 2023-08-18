@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Ayudas AyudaId }","bold":true},{"text":{$AyudaId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Ayudas Ayuda }","bold":true},{"text":{$Ayuda_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

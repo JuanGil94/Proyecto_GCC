@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "196_1691786889";
+$projectBuildKey = "257_1692373717";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "196";
+$projectBuildNumber = "257";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -827,6 +827,15 @@ $tableCaptions["Spanish"]["dbo_Ayudas"] = "Ayudas";
 $tableCaptions["Spanish"]["dbo_Temas"] = "Temas";
 $tableCaptions["Spanish"]["dbo_Correspondencias"] = "Correspondencias";
 $tableCaptions["Spanish"]["dbo_usugcc__audit"] = "Usugcc- Audit";
+$tableCaptions["Spanish"]["dbo_Importaciones"] = "Importaciones";
+$tableCaptions["Spanish"]["dbo_Indeterminados"] = "Indeterminados";
+$tableCaptions["Spanish"]["dbo_UserProfile"] = "User Profile";
+$tableCaptions["Spanish"]["dbo_Auditorias"] = "Auditorias";
+$tableCaptions["Spanish"]["dbo_Menus"] = "Menus";
+$tableCaptions["Spanish"]["dbo_Minjusticia"] = "Minjusticia";
+$tableCaptions["Spanish"]["dbo_Minjusticia2"] = "Minjusticia2";
+$tableCaptions["Spanish"]["dbo_Minjusticia3"] = "Minjusticia3";
+$tableCaptions["Spanish"]["dbo_Actas"] = "Actas";
 
 
 $globalEvents = new class_GlobalEvents;

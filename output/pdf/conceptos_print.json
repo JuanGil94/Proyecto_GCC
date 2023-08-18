@@ -482,6 +482,11 @@ pdfDocument = {
 			{$displayDetailTable_procesos }
 		{END details_procesos},
 				
+				
+			 {BEGIN details_importaciones}
+			{$displayDetailTable_importaciones }
+		{END details_importaciones},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

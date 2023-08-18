@@ -6,11 +6,11 @@ $tdatausugcc__audit[".OwnerID"] = "";
 $tdatausugcc__audit[".OriginalTable"] = "dbo.usugcc-_audit";
 
 
-$tdatausugcc__audit[".pagesByType"] = my_json_decode( "{}" );
+$tdatausugcc__audit[".pagesByType"] = my_json_decode( "{\"list\":[\"list\"],\"view\":[\"view\"]}" );
 $tdatausugcc__audit[".originalPagesByType"] = $tdatausugcc__audit[".pagesByType"];
-$tdatausugcc__audit[".pages"] = types2pages( my_json_decode( "{}" ) );
+$tdatausugcc__audit[".pages"] = types2pages( my_json_decode( "{\"list\":[\"list\"],\"view\":[\"view\"]}" ) );
 $tdatausugcc__audit[".originalPages"] = $tdatausugcc__audit[".pages"];
-$tdatausugcc__audit[".defaultPages"] = my_json_decode( "{}" );
+$tdatausugcc__audit[".defaultPages"] = my_json_decode( "{\"list\":\"list\",\"view\":\"view\"}" );
 $tdatausugcc__audit[".originalDefaultPages"] = $tdatausugcc__audit[".defaultPages"];
 
 //	field labels

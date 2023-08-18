@@ -832,6 +832,15 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1250,6 +1259,21 @@ pdfDocument = {
 			 {BEGIN details_reasignaciones}
 			{$displayDetailTable_reasignaciones }
 		{END details_reasignaciones},
+				
+				
+			 {BEGIN details_minjusticia}
+			{$displayDetailTable_minjusticia }
+		{END details_minjusticia},
+				
+				
+			 {BEGIN details_minjusticia2}
+			{$displayDetailTable_minjusticia2 }
+		{END details_minjusticia2},
+				
+				
+			 {BEGIN details_minjusticia3}
+			{$displayDetailTable_minjusticia3 }
+		{END details_minjusticia3},
 				
 		  ],
   "border": [ true, true, true, true ],

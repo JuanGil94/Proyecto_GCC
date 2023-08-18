@@ -1,5 +1,11 @@
 <?php
-			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'details' => array( 'dbo.Minjusticia' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia2' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Minjusticia3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'AbogadoId',
 'Pareja',
 'AbogadoMinjusticia' ),

@@ -6,11 +6,11 @@ $tdataauditorias[".OwnerID"] = "";
 $tdataauditorias[".OriginalTable"] = "dbo.Auditorias";
 
 
-$tdataauditorias[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataauditorias[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataauditorias[".originalPagesByType"] = $tdataauditorias[".pagesByType"];
-$tdataauditorias[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataauditorias[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataauditorias[".originalPages"] = $tdataauditorias[".pages"];
-$tdataauditorias[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataauditorias[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataauditorias[".originalDefaultPages"] = $tdataauditorias[".defaultPages"];
 
 //	field labels
@@ -79,7 +79,7 @@ $tdataauditorias[".listAjax"] = false;
 //	temporary
 //$tdataauditorias[".listAjax"] = false;
 
-	$tdataauditorias[".audit"] = true;
+	$tdataauditorias[".audit"] = false;
 
 	$tdataauditorias[".locking"] = false;
 
@@ -155,7 +155,7 @@ $tdataauditorias[".addPageEvents"] = false;
 $tdataauditorias[".isUseTimeForSearch"] = false;
 
 
-$tdataauditorias[".badgeColor"] = "3CB371";
+$tdataauditorias[".badgeColor"] = "4169E1";
 
 
 $tdataauditorias[".allSearchFields"] = array();
@@ -868,9 +868,8 @@ $tdataauditorias[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
+				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.UserProfile";
-	$edata["LookupConnId"] = "GCC_at_S00001_CCAD01";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -889,8 +888,7 @@ $tdataauditorias[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	
@@ -1265,6 +1263,24 @@ $masterTablesData["dbo.Auditorias"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.UserProfile";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.UserProfile";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "userprofile";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Auditorias"][0] = $masterParams;
+				$masterTablesData["dbo.Auditorias"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Auditorias"][0]["masterKeys"][]="UserId";
+				$masterTablesData["dbo.Auditorias"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Auditorias"][0]["detailKeys"][]="UserId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

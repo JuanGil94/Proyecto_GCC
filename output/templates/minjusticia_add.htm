@@ -1,0 +1,1175 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Minjusticia add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Minjusticia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Minjusticia}  r-vertical-field" 
+	data-signal-error-for="Minjusticia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Minjusticia" data-fieldname="Minjusticia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Minjusticia}">
+		{BEGIN Minjusticia_label}{$label dbo_Minjusticia Minjusticia }{END Minjusticia_label}
+	</label>
+	<div class="r-edit-field">
+		{$Minjusticia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Minjusticia" {$tooltipAttr dbo_Minjusticia Minjusticia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Minjusticia }		</div>
+	</div>
+</div>
+
+
+{END Minjusticia_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-vertical-field" 
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Numero}">
+		{BEGIN Numero_label}{$label dbo_Minjusticia Numero }{END Numero_label}
+	</label>
+	<div class="r-edit-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Numero" {$tooltipAttr dbo_Minjusticia Numero } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Numero }		</div>
+	</div>
+</div>
+
+
+{END Numero_fieldblock}
+											
+{BEGIN Nombre_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nombre}  r-vertical-field" 
+	data-signal-error-for="Nombre{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Nombre" data-fieldname="Nombre" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Nombre}">
+		{BEGIN Nombre_label}{$label dbo_Minjusticia Nombre }{END Nombre_label}
+	</label>
+	<div class="r-edit-field">
+		{$Nombre_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Nombre" {$tooltipAttr dbo_Minjusticia Nombre } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Nombre }		</div>
+	</div>
+</div>
+
+
+{END Nombre_fieldblock}
+											
+{BEGIN Documento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento}  r-vertical-field" 
+	data-signal-error-for="Documento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Documento" data-fieldname="Documento" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Documento}">
+		{BEGIN Documento_label}{$label dbo_Minjusticia Documento }{END Documento_label}
+	</label>
+	<div class="r-edit-field">
+		{$Documento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Documento" {$tooltipAttr dbo_Minjusticia Documento } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Documento }		</div>
+	</div>
+</div>
+
+
+{END Documento_fieldblock}
+											
+{BEGIN Sentencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sentencia}  r-vertical-field" 
+	data-signal-error-for="Sentencia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Sentencia" data-fieldname="Sentencia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Sentencia}">
+		{BEGIN Sentencia_label}{$label dbo_Minjusticia Sentencia }{END Sentencia_label}
+	</label>
+	<div class="r-edit-field">
+		{$Sentencia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Sentencia" {$tooltipAttr dbo_Minjusticia Sentencia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Sentencia }		</div>
+	</div>
+</div>
+
+
+{END Sentencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-vertical-field" 
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Ejecutoria}">
+		{BEGIN Ejecutoria_label}{$label dbo_Minjusticia Ejecutoria }{END Ejecutoria_label}
+	</label>
+	<div class="r-edit-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ejecutoria" {$tooltipAttr dbo_Minjusticia Ejecutoria } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Ejecutoria }		</div>
+	</div>
+</div>
+
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN Obligacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-vertical-field" 
+	data-signal-error-for="Obligacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Obligacion}">
+		{BEGIN Obligacion_label}{$label dbo_Minjusticia Obligacion }{END Obligacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Obligacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Obligacion" {$tooltipAttr dbo_Minjusticia Obligacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Obligacion }		</div>
+	</div>
+</div>
+
+
+{END Obligacion_fieldblock}
+											
+{BEGIN Recaudo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recaudo}  r-vertical-field" 
+	data-signal-error-for="Recaudo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Recaudo" data-fieldname="Recaudo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Recaudo}">
+		{BEGIN Recaudo_label}{$label dbo_Minjusticia Recaudo }{END Recaudo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Recaudo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Recaudo" {$tooltipAttr dbo_Minjusticia Recaudo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Recaudo }		</div>
+	</div>
+</div>
+
+
+{END Recaudo_fieldblock}
+											
+{BEGIN Recaudo_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recaudo_Val}  r-vertical-field" 
+	data-signal-error-for="Recaudo_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Recaudo_Val" data-fieldname="Recaudo_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Recaudo_Val}">
+		{BEGIN Recaudo_Val_label}{$label dbo_Minjusticia Recaudo_Val }{END Recaudo_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Recaudo_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Recaudo_Val" {$tooltipAttr dbo_Minjusticia Recaudo_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Recaudo_Val }		</div>
+	</div>
+</div>
+
+
+{END Recaudo_Val_fieldblock}
+											
+{BEGIN Saldo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Saldo}  r-vertical-field" 
+	data-signal-error-for="Saldo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Saldo" data-fieldname="Saldo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Saldo}">
+		{BEGIN Saldo_label}{$label dbo_Minjusticia Saldo }{END Saldo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Saldo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Saldo" {$tooltipAttr dbo_Minjusticia Saldo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Saldo }		</div>
+	</div>
+</div>
+
+
+{END Saldo_fieldblock}
+											
+{BEGIN Intereses_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Intereses}  r-vertical-field" 
+	data-signal-error-for="Intereses{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Intereses}">
+		{BEGIN Intereses_label}{$label dbo_Minjusticia Intereses }{END Intereses_label}
+	</label>
+	<div class="r-edit-field">
+		{$Intereses_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Intereses" {$tooltipAttr dbo_Minjusticia Intereses } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Intereses }		</div>
+	</div>
+</div>
+
+
+{END Intereses_fieldblock}
+											
+{BEGIN Intereses_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Intereses_Val}  r-vertical-field" 
+	data-signal-error-for="Intereses_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Intereses_Val" data-fieldname="Intereses_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Intereses_Val}">
+		{BEGIN Intereses_Val_label}{$label dbo_Minjusticia Intereses_Val }{END Intereses_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Intereses_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Intereses_Val" {$tooltipAttr dbo_Minjusticia Intereses_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Intereses_Val }		</div>
+	</div>
+</div>
+
+
+{END Intereses_Val_fieldblock}
+											
+{BEGIN AbogadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
+	data-signal-error-for="AbogadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
+		{BEGIN AbogadoId_label}{$label dbo_Minjusticia AbogadoId }{END AbogadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$AbogadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_Minjusticia AbogadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia AbogadoId }		</div>
+	</div>
+</div>
+
+
+{END AbogadoId_fieldblock}
+											
+{BEGIN Caja_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Caja}  r-vertical-field" 
+	data-signal-error-for="Caja{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Caja" data-fieldname="Caja" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Caja}">
+		{BEGIN Caja_label}{$label dbo_Minjusticia Caja }{END Caja_label}
+	</label>
+	<div class="r-edit-field">
+		{$Caja_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Caja" {$tooltipAttr dbo_Minjusticia Caja } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Caja }		</div>
+	</div>
+</div>
+
+
+{END Caja_fieldblock}
+											
+{BEGIN Cuadernillos_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cuadernillos}  r-vertical-field" 
+	data-signal-error-for="Cuadernillos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Cuadernillos" data-fieldname="Cuadernillos" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cuadernillos}">
+		{BEGIN Cuadernillos_label}{$label dbo_Minjusticia Cuadernillos }{END Cuadernillos_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cuadernillos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cuadernillos" {$tooltipAttr dbo_Minjusticia Cuadernillos } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Cuadernillos }		</div>
+	</div>
+</div>
+
+
+{END Cuadernillos_fieldblock}
+											
+{BEGIN Folios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Folios}  r-vertical-field" 
+	data-signal-error-for="Folios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Folios" data-fieldname="Folios" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Folios}">
+		{BEGIN Folios_label}{$label dbo_Minjusticia Folios }{END Folios_label}
+	</label>
+	<div class="r-edit-field">
+		{$Folios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Folios" {$tooltipAttr dbo_Minjusticia Folios } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Folios }		</div>
+	</div>
+</div>
+
+
+{END Folios_fieldblock}
+											
+{BEGIN Hechos_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hechos}  r-vertical-field" 
+	data-signal-error-for="Hechos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="Hechos" data-fieldname="Hechos" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Hechos}">
+		{BEGIN Hechos_label}{$label dbo_Minjusticia Hechos }{END Hechos_label}
+	</label>
+	<div class="r-edit-field">
+		{$Hechos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Hechos" {$tooltipAttr dbo_Minjusticia Hechos } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Hechos }		</div>
+	</div>
+</div>
+
+
+{END Hechos_fieldblock}
+											
+{BEGIN Salarios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Salarios}  r-vertical-field" 
+	data-signal-error-for="Salarios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Salarios" data-fieldname="Salarios" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Salarios}">
+		{BEGIN Salarios_label}{$label dbo_Minjusticia Salarios }{END Salarios_label}
+	</label>
+	<div class="r-edit-field">
+		{$Salarios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Salarios" {$tooltipAttr dbo_Minjusticia Salarios } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Salarios }		</div>
+	</div>
+</div>
+
+
+{END Salarios_fieldblock}
+											
+{BEGIN Obligacion_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion_Val}  r-vertical-field" 
+	data-signal-error-for="Obligacion_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Obligacion_Val" data-fieldname="Obligacion_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Obligacion_Val}">
+		{BEGIN Obligacion_Val_label}{$label dbo_Minjusticia Obligacion_Val }{END Obligacion_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Obligacion_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Obligacion_Val" {$tooltipAttr dbo_Minjusticia Obligacion_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Obligacion_Val }		</div>
+	</div>
+</div>
+
+
+{END Obligacion_Val_fieldblock}
+											
+{BEGIN DespachoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DespachoId}  r-vertical-field" 
+	data-signal-error-for="DespachoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="DespachoId" data-fieldname="DespachoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DespachoId}">
+		{BEGIN DespachoId_label}{$label dbo_Minjusticia DespachoId }{END DespachoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$DespachoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DespachoId" {$tooltipAttr dbo_Minjusticia DespachoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia DespachoId }		</div>
+	</div>
+</div>
+
+
+{END DespachoId_fieldblock}
+											
+{BEGIN TipoDocumentoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TipoDocumentoId}  r-vertical-field" 
+	data-signal-error-for="TipoDocumentoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="TipoDocumentoId" data-fieldname="TipoDocumentoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_TipoDocumentoId}">
+		{BEGIN TipoDocumentoId_label}{$label dbo_Minjusticia TipoDocumentoId }{END TipoDocumentoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$TipoDocumentoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="TipoDocumentoId" {$tooltipAttr dbo_Minjusticia TipoDocumentoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia TipoDocumentoId }		</div>
+	</div>
+</div>
+
+
+{END TipoDocumentoId_fieldblock}
+											
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_Minjusticia SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Minjusticia SeccionalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia SeccionalId }		</div>
+	</div>
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN Registro_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Registro}  r-vertical-field" 
+	data-signal-error-for="Registro{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="Registro" data-fieldname="Registro" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Registro}">
+		{BEGIN Registro_label}{$label dbo_Minjusticia Registro }{END Registro_label}
+	</label>
+	<div class="r-edit-field">
+		{$Registro_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Registro" {$tooltipAttr dbo_Minjusticia Registro } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Registro }		</div>
+	</div>
+</div>
+
+
+{END Registro_fieldblock}
+											
+{BEGIN Aprobacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Aprobacion}  r-vertical-field" 
+	data-signal-error-for="Aprobacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="Aprobacion" data-fieldname="Aprobacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Aprobacion}">
+		{BEGIN Aprobacion_label}{$label dbo_Minjusticia Aprobacion }{END Aprobacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Aprobacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Aprobacion" {$tooltipAttr dbo_Minjusticia Aprobacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Aprobacion }		</div>
+	</div>
+</div>
+
+
+{END Aprobacion_fieldblock}
+											
+{BEGIN Sentencia_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sentencia_Val}  r-vertical-field" 
+	data-signal-error-for="Sentencia_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Sentencia_Val" data-fieldname="Sentencia_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Sentencia_Val}">
+		{BEGIN Sentencia_Val_label}{$label dbo_Minjusticia Sentencia_Val }{END Sentencia_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Sentencia_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Sentencia_Val" {$tooltipAttr dbo_Minjusticia Sentencia_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Sentencia_Val }		</div>
+	</div>
+</div>
+
+
+{END Sentencia_Val_fieldblock}
+											
+{BEGIN Ejecutoria_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria_Val}  r-vertical-field" 
+	data-signal-error-for="Ejecutoria_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="Ejecutoria_Val" data-fieldname="Ejecutoria_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Ejecutoria_Val}">
+		{BEGIN Ejecutoria_Val_label}{$label dbo_Minjusticia Ejecutoria_Val }{END Ejecutoria_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Ejecutoria_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ejecutoria_Val" {$tooltipAttr dbo_Minjusticia Ejecutoria_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Ejecutoria_Val }		</div>
+	</div>
+</div>
+
+
+{END Ejecutoria_Val_fieldblock}
+											
+{BEGIN Notificacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Notificacion}  r-vertical-field" 
+	data-signal-error-for="Notificacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="Notificacion" data-fieldname="Notificacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Notificacion}">
+		{BEGIN Notificacion_label}{$label dbo_Minjusticia Notificacion }{END Notificacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Notificacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Notificacion" {$tooltipAttr dbo_Minjusticia Notificacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Notificacion }		</div>
+	</div>
+</div>
+
+
+{END Notificacion_fieldblock}
+											
+{BEGIN AcuerdoPago_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AcuerdoPago}  r-vertical-field" 
+	data-signal-error-for="AcuerdoPago{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="AcuerdoPago" data-fieldname="AcuerdoPago" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AcuerdoPago}">
+		{BEGIN AcuerdoPago_label}{$label dbo_Minjusticia AcuerdoPago }{END AcuerdoPago_label}
+	</label>
+	<div class="r-edit-field">
+		{$AcuerdoPago_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AcuerdoPago" {$tooltipAttr dbo_Minjusticia AcuerdoPago } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia AcuerdoPago }		</div>
+	</div>
+</div>
+
+
+{END AcuerdoPago_fieldblock}
+											
+{BEGIN ValorAcuerdopago_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ValorAcuerdopago}  r-vertical-field" 
+	data-signal-error-for="ValorAcuerdopago{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="ValorAcuerdopago" data-fieldname="ValorAcuerdopago" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ValorAcuerdopago}">
+		{BEGIN ValorAcuerdopago_label}{$label dbo_Minjusticia ValorAcuerdopago }{END ValorAcuerdopago_label}
+	</label>
+	<div class="r-edit-field">
+		{$ValorAcuerdopago_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ValorAcuerdopago" {$tooltipAttr dbo_Minjusticia ValorAcuerdopago } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia ValorAcuerdopago }		</div>
+	</div>
+</div>
+
+
+{END ValorAcuerdopago_fieldblock}
+											
+{BEGIN NumeroCuotas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NumeroCuotas}  r-vertical-field" 
+	data-signal-error-for="NumeroCuotas{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="NumeroCuotas" data-fieldname="NumeroCuotas" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_NumeroCuotas}">
+		{BEGIN NumeroCuotas_label}{$label dbo_Minjusticia NumeroCuotas }{END NumeroCuotas_label}
+	</label>
+	<div class="r-edit-field">
+		{$NumeroCuotas_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="NumeroCuotas" {$tooltipAttr dbo_Minjusticia NumeroCuotas } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia NumeroCuotas }		</div>
+	</div>
+</div>
+
+
+{END NumeroCuotas_fieldblock}
+											
+{BEGIN ValorCuota_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ValorCuota}  r-vertical-field" 
+	data-signal-error-for="ValorCuota{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="ValorCuota" data-fieldname="ValorCuota" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ValorCuota}">
+		{BEGIN ValorCuota_label}{$label dbo_Minjusticia ValorCuota }{END ValorCuota_label}
+	</label>
+	<div class="r-edit-field">
+		{$ValorCuota_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ValorCuota" {$tooltipAttr dbo_Minjusticia ValorCuota } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia ValorCuota }		</div>
+	</div>
+</div>
+
+
+{END ValorCuota_fieldblock}
+											
+{BEGIN CarteraTipoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" 
+	data-signal-error-for="CarteraTipoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CarteraTipoId}">
+		{BEGIN CarteraTipoId_label}{$label dbo_Minjusticia CarteraTipoId }{END CarteraTipoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CarteraTipoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarteraTipoId" {$tooltipAttr dbo_Minjusticia CarteraTipoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia CarteraTipoId }		</div>
+	</div>
+</div>
+
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
+		{BEGIN Observaciones_label}{$label dbo_Minjusticia Observaciones }{END Observaciones_label}
+	</label>
+	<div class="r-edit-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Observaciones" {$tooltipAttr dbo_Minjusticia Observaciones } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Observaciones }		</div>
+	</div>
+</div>
+
+
+{END Observaciones_fieldblock}
+											
+{BEGIN ProcesoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ProcesoId}  r-vertical-field" 
+	data-signal-error-for="ProcesoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="ProcesoId" data-fieldname="ProcesoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ProcesoId}">
+		{BEGIN ProcesoId_label}{$label dbo_Minjusticia ProcesoId }{END ProcesoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ProcesoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ProcesoId" {$tooltipAttr dbo_Minjusticia ProcesoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia ProcesoId }		</div>
+	</div>
+</div>
+
+
+{END ProcesoId_fieldblock}
+											
+{BEGIN Nombre_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nombre_Val}  r-vertical-field" 
+	data-signal-error-for="Nombre_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field34" {$item_integrated_edit_field34} data-pageid="{$pageid}" data-field="Nombre_Val" data-fieldname="Nombre_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Nombre_Val}">
+		{BEGIN Nombre_Val_label}{$label dbo_Minjusticia Nombre_Val }{END Nombre_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Nombre_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Nombre_Val" {$tooltipAttr dbo_Minjusticia Nombre_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Nombre_Val }		</div>
+	</div>
+</div>
+
+
+{END Nombre_Val_fieldblock}
+											
+{BEGIN Documento_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento_Val}  r-vertical-field" 
+	data-signal-error-for="Documento_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field35" {$item_integrated_edit_field35} data-pageid="{$pageid}" data-field="Documento_Val" data-fieldname="Documento_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Documento_Val}">
+		{BEGIN Documento_Val_label}{$label dbo_Minjusticia Documento_Val }{END Documento_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Documento_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Documento_Val" {$tooltipAttr dbo_Minjusticia Documento_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Documento_Val }		</div>
+	</div>
+</div>
+
+
+{END Documento_Val_fieldblock}
+											
+{BEGIN ActaIndividual_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ActaIndividual}  r-vertical-field" 
+	data-signal-error-for="ActaIndividual{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field36" {$item_integrated_edit_field36} data-pageid="{$pageid}" data-field="ActaIndividual" data-fieldname="ActaIndividual" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ActaIndividual}">
+		{BEGIN ActaIndividual_label}{$label dbo_Minjusticia ActaIndividual }{END ActaIndividual_label}
+	</label>
+	<div class="r-edit-field">
+		{$ActaIndividual_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ActaIndividual" {$tooltipAttr dbo_Minjusticia ActaIndividual } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia ActaIndividual }		</div>
+	</div>
+</div>
+
+
+{END ActaIndividual_fieldblock}
+											
+{BEGIN ActaConsolidada_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ActaConsolidada}  r-vertical-field" 
+	data-signal-error-for="ActaConsolidada{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="ActaConsolidada" data-fieldname="ActaConsolidada" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ActaConsolidada}">
+		{BEGIN ActaConsolidada_label}{$label dbo_Minjusticia ActaConsolidada }{END ActaConsolidada_label}
+	</label>
+	<div class="r-edit-field">
+		{$ActaConsolidada_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ActaConsolidada" {$tooltipAttr dbo_Minjusticia ActaConsolidada } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia ActaConsolidada }		</div>
+	</div>
+</div>
+
+
+{END ActaConsolidada_fieldblock}
+											
+{BEGIN Autorizacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Autorizacion}  r-vertical-field" 
+	data-signal-error-for="Autorizacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="Autorizacion" data-fieldname="Autorizacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Autorizacion}">
+		{BEGIN Autorizacion_label}{$label dbo_Minjusticia Autorizacion }{END Autorizacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Autorizacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Autorizacion" {$tooltipAttr dbo_Minjusticia Autorizacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Autorizacion }		</div>
+	</div>
+</div>
+
+
+{END Autorizacion_fieldblock}
+											
+{BEGIN Autorizado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Autorizado}  r-vertical-field" 
+	data-signal-error-for="Autorizado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="Autorizado" data-fieldname="Autorizado" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Autorizado}">
+		{BEGIN Autorizado_label}{$label dbo_Minjusticia Autorizado }{END Autorizado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Autorizado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Autorizado" {$tooltipAttr dbo_Minjusticia Autorizado } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Autorizado }		</div>
+	</div>
+</div>
+
+
+{END Autorizado_fieldblock}
+											
+{BEGIN CausalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CausalId}  r-vertical-field" 
+	data-signal-error-for="CausalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field40" {$item_integrated_edit_field40} data-pageid="{$pageid}" data-field="CausalId" data-fieldname="CausalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CausalId}">
+		{BEGIN CausalId_label}{$label dbo_Minjusticia CausalId }{END CausalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CausalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CausalId" {$tooltipAttr dbo_Minjusticia CausalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia CausalId }		</div>
+	</div>
+</div>
+
+
+{END CausalId_fieldblock}
+											
+{BEGIN Numero_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero_Val}  r-vertical-field" 
+	data-signal-error-for="Numero_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field41" {$item_integrated_edit_field41} data-pageid="{$pageid}" data-field="Numero_Val" data-fieldname="Numero_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Numero_Val}">
+		{BEGIN Numero_Val_label}{$label dbo_Minjusticia Numero_Val }{END Numero_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Numero_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Numero_Val" {$tooltipAttr dbo_Minjusticia Numero_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Numero_Val }		</div>
+	</div>
+</div>
+
+
+{END Numero_Val_fieldblock}
+											
+{BEGIN Minjusticia_Val_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Minjusticia_Val}  r-vertical-field" 
+	data-signal-error-for="Minjusticia_Val{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field42" {$item_integrated_edit_field42} data-pageid="{$pageid}" data-field="Minjusticia_Val" data-fieldname="Minjusticia_Val" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Minjusticia_Val}">
+		{BEGIN Minjusticia_Val_label}{$label dbo_Minjusticia Minjusticia_Val }{END Minjusticia_Val_label}
+	</label>
+	<div class="r-edit-field">
+		{$Minjusticia_Val_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Minjusticia_Val" {$tooltipAttr dbo_Minjusticia Minjusticia_Val } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Minjusticia_Val }		</div>
+	</div>
+</div>
+
+
+{END Minjusticia_Val_fieldblock}
+											
+{BEGIN Pesos_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pesos}  r-vertical-field" 
+	data-signal-error-for="Pesos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field43" {$item_integrated_edit_field43} data-pageid="{$pageid}" data-field="Pesos" data-fieldname="Pesos" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Pesos}">
+		{BEGIN Pesos_label}{$label dbo_Minjusticia Pesos }{END Pesos_label}
+	</label>
+	<div class="r-edit-field">
+		{$Pesos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Pesos" {$tooltipAttr dbo_Minjusticia Pesos } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Pesos }		</div>
+	</div>
+</div>
+
+
+{END Pesos_fieldblock}
+											
+{BEGIN UserId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_UserId}  r-vertical-field" 
+	data-signal-error-for="UserId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field44" {$item_integrated_edit_field44} data-pageid="{$pageid}" data-field="UserId" data-fieldname="UserId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_UserId}">
+		{BEGIN UserId_label}{$label dbo_Minjusticia UserId }{END UserId_label}
+	</label>
+	<div class="r-edit-field">
+		{$UserId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="UserId" {$tooltipAttr dbo_Minjusticia UserId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia UserId }		</div>
+	</div>
+</div>
+
+
+{END UserId_fieldblock}
+											
+{BEGIN Digitalizado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Digitalizado}  r-vertical-field" 
+	data-signal-error-for="Digitalizado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field45" {$item_integrated_edit_field45} data-pageid="{$pageid}" data-field="Digitalizado" data-fieldname="Digitalizado" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Digitalizado}">
+		{BEGIN Digitalizado_label}{$label dbo_Minjusticia Digitalizado }{END Digitalizado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Digitalizado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Digitalizado" {$tooltipAttr dbo_Minjusticia Digitalizado } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Digitalizado }		</div>
+	</div>
+</div>
+
+
+{END Digitalizado_fieldblock}
+											
+{BEGIN Procesado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Procesado}  r-vertical-field" 
+	data-signal-error-for="Procesado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field46" {$item_integrated_edit_field46} data-pageid="{$pageid}" data-field="Procesado" data-fieldname="Procesado" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Procesado}">
+		{BEGIN Procesado_label}{$label dbo_Minjusticia Procesado }{END Procesado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Procesado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Procesado" {$tooltipAttr dbo_Minjusticia Procesado } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Procesado }		</div>
+	</div>
+</div>
+
+
+{END Procesado_fieldblock}
+											
+{BEGIN Minjusticia2_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Minjusticia2}  r-vertical-field" 
+	data-signal-error-for="Minjusticia2{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field47" {$item_integrated_edit_field47} data-pageid="{$pageid}" data-field="Minjusticia2" data-fieldname="Minjusticia2" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Minjusticia2}">
+		{BEGIN Minjusticia2_label}{$label dbo_Minjusticia Minjusticia2 }{END Minjusticia2_label}
+	</label>
+	<div class="r-edit-field">
+		{$Minjusticia2_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Minjusticia2" {$tooltipAttr dbo_Minjusticia Minjusticia2 } >
+		<div class="text-muted" >
+		{$tooltip dbo_Minjusticia Minjusticia2 }		</div>
+	</div>
+</div>
+
+
+{END Minjusticia2_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -486,6 +486,13 @@
 					Procesos				</label>
 			</div>
 			{END print_details_procesos}
+														{BEGIN print_details_importaciones}
+			<div>
+				<label for="printDetailsimportaciones{$id}">
+					<input type="checkbox" value="importaciones" id="printDetailsimportaciones{$id}" checked>
+					Importaciones				</label>
+			</div>
+			{END print_details_importaciones}
 						</div>
 </div>
 {END print_details}
@@ -849,6 +856,25 @@
 	{END procesos_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN importaciones_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$importaciones_link_attrs} data-short-details="importaciones"
+		class="{$importaciones_dlink_class}" 
+		title="{$caption dbo_Importaciones }"			>
+								
+									{BEGIN importaciones_childcount}
+				<span class="details-badge badge importaciones_badge" {$importaciones_childnumber_attr}>
+					{$importaciones_childnumber}				
+				</span>
+				{END importaciones_childcount}
+						</a>
+	</span>
+	{END importaciones_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -953,17 +979,20 @@
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="naturalezas,procesos"
-			data-details-naturalezas			data-details-procesos	>
+					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="naturalezas,procesos,importaciones"
+			data-details-naturalezas			data-details-procesos			data-details-importaciones	>
 		<span data-details-inside data-short-table="naturalezas">
 			</span>
 		<span data-details-inside data-short-table="procesos">
+			</span>
+		<span data-details-inside data-short-table="importaciones">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			
 	</td>
 	{END cellblock_grid_cell_dpreview}

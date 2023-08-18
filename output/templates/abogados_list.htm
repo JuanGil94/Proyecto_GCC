@@ -625,6 +625,27 @@
 					Reasignaciones				</label>
 			</div>
 			{END print_details_reasignaciones}
+														{BEGIN print_details_minjusticia}
+			<div>
+				<label for="printDetailsminjusticia{$id}">
+					<input type="checkbox" value="minjusticia" id="printDetailsminjusticia{$id}" checked>
+					Minjusticia				</label>
+			</div>
+			{END print_details_minjusticia}
+														{BEGIN print_details_minjusticia2}
+			<div>
+				<label for="printDetailsminjusticia2{$id}">
+					<input type="checkbox" value="minjusticia2" id="printDetailsminjusticia2{$id}" checked>
+					Minjusticia2				</label>
+			</div>
+			{END print_details_minjusticia2}
+														{BEGIN print_details_minjusticia3}
+			<div>
+				<label for="printDetailsminjusticia3{$id}">
+					<input type="checkbox" value="minjusticia3" id="printDetailsminjusticia3{$id}" checked>
+					Minjusticia3				</label>
+			</div>
+			{END print_details_minjusticia3}
 						</div>
 </div>
 {END print_details}
@@ -1249,6 +1270,63 @@
 	{END reasignaciones_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN minjusticia_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia_link_attrs} data-short-details="minjusticia"
+		class="{$minjusticia_dlink_class}" 
+		title="{$caption dbo_Minjusticia }"			>
+								
+									{BEGIN minjusticia_childcount}
+				<span class="details-badge badge minjusticia_badge" {$minjusticia_childnumber_attr}>
+					{$minjusticia_childnumber}				
+				</span>
+				{END minjusticia_childcount}
+						</a>
+	</span>
+	{END minjusticia_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia2_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia2_link_attrs} data-short-details="minjusticia2"
+		class="{$minjusticia2_dlink_class}" 
+		title="{$caption dbo_Minjusticia2 }"			>
+								
+									{BEGIN minjusticia2_childcount}
+				<span class="details-badge badge minjusticia2_badge" {$minjusticia2_childnumber_attr}>
+					{$minjusticia2_childnumber}				
+				</span>
+				{END minjusticia2_childcount}
+						</a>
+	</span>
+	{END minjusticia2_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN minjusticia3_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$minjusticia3_link_attrs} data-short-details="minjusticia3"
+		class="{$minjusticia3_dlink_class}" 
+		title="{$caption dbo_Minjusticia3 }"			>
+								
+									{BEGIN minjusticia3_childcount}
+				<span class="details-badge badge minjusticia3_badge" {$minjusticia3_childnumber_attr}>
+					{$minjusticia3_childnumber}				
+				</span>
+				{END minjusticia3_childcount}
+						</a>
+	</span>
+	{END minjusticia3_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1542,17 +1620,26 @@
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesos,reasignaciones"
-			data-details-procesos			data-details-reasignaciones	>
+							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="procesos,reasignaciones,minjusticia,minjusticia2,minjusticia3"
+			data-details-procesos			data-details-reasignaciones			data-details-minjusticia			data-details-minjusticia2			data-details-minjusticia3	>
 		<span data-details-inside data-short-table="procesos">
 			</span>
 		<span data-details-inside data-short-table="reasignaciones">
+			</span>
+		<span data-details-inside data-short-table="minjusticia">
+			</span>
+		<span data-details-inside data-short-table="minjusticia2">
+			</span>
+		<span data-details-inside data-short-table="minjusticia3">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
+			 
+			 
 			
 	</td>
 	{END cellblock_grid_cell_dpreview}

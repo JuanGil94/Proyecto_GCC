@@ -6,11 +6,11 @@ $tdatatemas[".OwnerID"] = "";
 $tdatatemas[".OriginalTable"] = "dbo.Temas";
 
 
-$tdatatemas[".pagesByType"] = my_json_decode( "{}" );
+$tdatatemas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"]}" );
 $tdatatemas[".originalPagesByType"] = $tdatatemas[".pagesByType"];
-$tdatatemas[".pages"] = types2pages( my_json_decode( "{}" ) );
+$tdatatemas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"]}" ) );
 $tdatatemas[".originalPages"] = $tdatatemas[".pages"];
-$tdatatemas[".defaultPages"] = my_json_decode( "{}" );
+$tdatatemas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"list\":\"list\"}" );
 $tdatatemas[".originalDefaultPages"] = $tdatatemas[".defaultPages"];
 
 //	field labels

@@ -165,31 +165,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"text":{$ID_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
-			{"text":{$username_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$password_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
-			{"text":{$email_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$fullname_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$groupid_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$active_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$ext_security_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

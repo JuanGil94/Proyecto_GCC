@@ -1,0 +1,419 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-edit" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Indeterminados edit}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN message_view_page_button}
+		<a class="btn btn-sm btn-default" href="indeterminados_view.php?{$editlink}" {$view_page_button_attrs}>Ver</a>
+{END message_view_page_button}
+</div>
+</div>
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN FechaRegistro_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FechaRegistro}  r-vertical-field" 
+	data-signal-error-for="FechaRegistro{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="FechaRegistro" data-fieldname="FechaRegistro" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_FechaRegistro}">
+		{BEGIN FechaRegistro_label}{$label dbo_Indeterminados FechaRegistro }{END FechaRegistro_label}
+	</label>
+	<div class="r-edit-field">
+		{$FechaRegistro_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="FechaRegistro" {$tooltipAttr dbo_Indeterminados FechaRegistro } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados FechaRegistro }		</div>
+	</div>
+</div>
+
+
+{END FechaRegistro_fieldblock}
+											
+{BEGIN FechaRecaudo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FechaRecaudo}  r-vertical-field" 
+	data-signal-error-for="FechaRecaudo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="FechaRecaudo" data-fieldname="FechaRecaudo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_FechaRecaudo}">
+		{BEGIN FechaRecaudo_label}{$label dbo_Indeterminados FechaRecaudo }{END FechaRecaudo_label}
+	</label>
+	<div class="r-edit-field">
+		{$FechaRecaudo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="FechaRecaudo" {$tooltipAttr dbo_Indeterminados FechaRecaudo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados FechaRecaudo }		</div>
+	</div>
+</div>
+
+
+{END FechaRecaudo_fieldblock}
+											
+{BEGIN NumeroConsecutivo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NumeroConsecutivo}  r-vertical-field" 
+	data-signal-error-for="NumeroConsecutivo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="NumeroConsecutivo" data-fieldname="NumeroConsecutivo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_NumeroConsecutivo}">
+		{BEGIN NumeroConsecutivo_label}{$label dbo_Indeterminados NumeroConsecutivo }{END NumeroConsecutivo_label}
+	</label>
+	<div class="r-edit-field">
+		{$NumeroConsecutivo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="NumeroConsecutivo" {$tooltipAttr dbo_Indeterminados NumeroConsecutivo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados NumeroConsecutivo }		</div>
+	</div>
+</div>
+
+
+{END NumeroConsecutivo_fieldblock}
+											
+{BEGIN NumeroExpediente_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NumeroExpediente}  r-vertical-field" 
+	data-signal-error-for="NumeroExpediente{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="NumeroExpediente" data-fieldname="NumeroExpediente" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_NumeroExpediente}">
+		{BEGIN NumeroExpediente_label}{$label dbo_Indeterminados NumeroExpediente }{END NumeroExpediente_label}
+	</label>
+	<div class="r-edit-field">
+		{$NumeroExpediente_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="NumeroExpediente" {$tooltipAttr dbo_Indeterminados NumeroExpediente } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados NumeroExpediente }		</div>
+	</div>
+</div>
+
+
+{END NumeroExpediente_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-vertical-field" 
+	data-signal-error-for="Sancionado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Sancionado}">
+		{BEGIN Sancionado_label}{$label dbo_Indeterminados Sancionado }{END Sancionado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Sancionado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Sancionado" {$tooltipAttr dbo_Indeterminados Sancionado } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados Sancionado }		</div>
+	</div>
+</div>
+
+
+{END Sancionado_fieldblock}
+											
+{BEGIN Documento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento}  r-vertical-field" 
+	data-signal-error-for="Documento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Documento" data-fieldname="Documento" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Documento}">
+		{BEGIN Documento_label}{$label dbo_Indeterminados Documento }{END Documento_label}
+	</label>
+	<div class="r-edit-field">
+		{$Documento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Documento" {$tooltipAttr dbo_Indeterminados Documento } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados Documento }		</div>
+	</div>
+</div>
+
+
+{END Documento_fieldblock}
+											
+{BEGIN Valor_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Valor}  r-vertical-field" 
+	data-signal-error-for="Valor{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Valor" data-fieldname="Valor" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Valor}">
+		{BEGIN Valor_label}{$label dbo_Indeterminados Valor }{END Valor_label}
+	</label>
+	<div class="r-edit-field">
+		{$Valor_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Valor" {$tooltipAttr dbo_Indeterminados Valor } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados Valor }		</div>
+	</div>
+</div>
+
+
+{END Valor_fieldblock}
+											
+{BEGIN UserId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_UserId}  r-vertical-field" 
+	data-signal-error-for="UserId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="UserId" data-fieldname="UserId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_UserId}">
+		{BEGIN UserId_label}{$label dbo_Indeterminados UserId }{END UserId_label}
+	</label>
+	<div class="r-edit-field">
+		{$UserId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="UserId" {$tooltipAttr dbo_Indeterminados UserId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados UserId }		</div>
+	</div>
+</div>
+
+
+{END UserId_fieldblock}
+											
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_Indeterminados SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Indeterminados SeccionalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados SeccionalId }		</div>
+	</div>
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN Demandante_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Demandante}  r-vertical-field" 
+	data-signal-error-for="Demandante{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Demandante" data-fieldname="Demandante" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Demandante}">
+		{BEGIN Demandante_label}{$label dbo_Indeterminados Demandante }{END Demandante_label}
+	</label>
+	<div class="r-edit-field">
+		{$Demandante_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Demandante" {$tooltipAttr dbo_Indeterminados Demandante } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados Demandante }		</div>
+	</div>
+</div>
+
+
+{END Demandante_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
+		{BEGIN Observaciones_label}{$label dbo_Indeterminados Observaciones }{END Observaciones_label}
+	</label>
+	<div class="r-edit-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Observaciones" {$tooltipAttr dbo_Indeterminados Observaciones } >
+		<div class="text-muted" >
+		{$tooltip dbo_Indeterminados Observaciones }		</div>
+	</div>
+</div>
+
+
+{END Observaciones_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancelar			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
+				<a  {$resetbutton_attrs}  title="" >
+				
+		Reiniciar		
+		</a>
+	</li>
+							{BEGIN view_page_button}
+	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
+				<a  href="indeterminados_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
+				
+		Ver		
+		</a>
+	</li>
+{END view_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

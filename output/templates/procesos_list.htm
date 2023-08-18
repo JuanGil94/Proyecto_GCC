@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_Fecha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
+			<label>{$label dbo_Procesos Fecha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
+						</div>
+		{END searchCtrlBlock_Fecha}
 																{BEGIN searchCtrlBlock_Dias}
 
 
@@ -453,19 +466,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Folios}</span>
 						</div>
 		{END searchCtrlBlock_Folios}
-																{BEGIN searchCtrlBlock_Fecha}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
-			<label>{$label dbo_Procesos Fecha }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
-						</div>
-		{END searchCtrlBlock_Fecha}
 																{BEGIN searchCtrlBlock_EtapaId}
 
 
@@ -544,6 +544,104 @@
 <!-- End Search panel content -->
 			</div>
 		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_SeccionalId}
+
+	<div class="panel panel-info filter-field filter-SeccionalId-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_SeccionalId}
+			<a href="#" class="filter-clear filter-clear-SeccionalId" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_SeccionalId}
+			{$label dbo_Procesos SeccionalId }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_SeccionalId}
+		<li class="list-group-item filter-values filter-values-SeccionalId {$collapsedClass_SeccionalId} {$visibilityClass_SeccionalId}">
+			{$SeccionalId_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_SeccionalId}
+
+			{BEGIN filter_button_showmore_SeccionalId}
+		<li class="list-group-item filter-show-more {$collapsedClass_SeccionalId} {$showMoreBtnClass_SeccionalId}">
+			<a class="filter-show-more-link filterShowMore_SeccionalId" href="#">{$show_n_more_SeccionalId}</a>
+		</li>
+		{END filter_button_showmore_SeccionalId}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_SeccionalId}
+
+
+
+
+
+
+{BEGIN filter_control_CarteraTipoId}
+
+	<div class="panel panel-info filter-field filter-CarteraTipoId-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_CarteraTipoId}
+			<a href="#" class="filter-clear filter-clear-CarteraTipoId" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_CarteraTipoId}
+			{$label dbo_Procesos CarteraTipoId }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_CarteraTipoId}
+		<li class="list-group-item filter-values filter-values-CarteraTipoId {$collapsedClass_CarteraTipoId} {$visibilityClass_CarteraTipoId}">
+			{$CarteraTipoId_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_CarteraTipoId}
+
+			{BEGIN filter_button_showmore_CarteraTipoId}
+		<li class="list-group-item filter-show-more {$collapsedClass_CarteraTipoId} {$showMoreBtnClass_CarteraTipoId}">
+			<a class="filter-show-more-link filterShowMore_CarteraTipoId" href="#">{$show_n_more_CarteraTipoId}</a>
+		</li>
+		{END filter_button_showmore_CarteraTipoId}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_CarteraTipoId}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
+		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -590,6 +688,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -630,14 +734,6 @@
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="procesos_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -771,19 +867,11 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="procesos_add.php{$stateLink_full}" data-popup >
-							Añadir nuevo			</a>
-</span>
-{END add_link}
-	 
 		{BEGIN inlineadd_link}
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
@@ -791,14 +879,6 @@
 							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
-</span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -2018,17 +2098,6 @@
 	
 	>
 
-	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="procesos_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>

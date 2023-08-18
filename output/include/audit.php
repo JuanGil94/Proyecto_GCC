@@ -604,6 +604,42 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Importaciones")
+		{
+			return false;
+		}
+		if($table=="dbo.Indeterminados")
+		{
+			return false;
+		}
+		if($table=="dbo.UserProfile")
+		{
+			return false;
+		}
+		if($table=="dbo.Auditorias")
+		{
+			return false;
+		}
+		if($table=="dbo.Menus")
+		{
+			return false;
+		}
+		if($table=="dbo.Minjusticia")
+		{
+			return false;
+		}
+		if($table=="dbo.Minjusticia2")
+		{
+			return false;
+		}
+		if($table=="dbo.Minjusticia3")
+		{
+			return false;
+		}
+		if($table=="dbo.Actas")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1157,6 +1193,42 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.usugcc-_audit")
+		{
+			return false;
+		}
+		if($table=="dbo.Importaciones")
+		{
+			return false;
+		}
+		if($table=="dbo.Indeterminados")
+		{
+			return false;
+		}
+		if($table=="dbo.UserProfile")
+		{
+			return false;
+		}
+		if($table=="dbo.Auditorias")
+		{
+			return false;
+		}
+		if($table=="dbo.Menus")
+		{
+			return false;
+		}
+		if($table=="dbo.Minjusticia")
+		{
+			return false;
+		}
+		if($table=="dbo.Minjusticia2")
+		{
+			return false;
+		}
+		if($table=="dbo.Minjusticia3")
+		{
+			return false;
+		}
+		if($table=="dbo.Actas")
 		{
 			return false;
 		}
