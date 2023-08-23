@@ -1,0 +1,10 @@
+Modified tables ("-" means deleted field, "+" means new field):
+	● dbo.Propiedades:
+		 - Avaluo
+		 - CiudadId
+		 - Direccion
+		 - Matricula
+		 - Propiedad
+		 - PropiedadId
+		 - SancionadoId
+		 - TipoPropiedad

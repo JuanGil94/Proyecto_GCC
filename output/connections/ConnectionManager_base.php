@@ -291,7 +291,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Actuaciones1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Llamadas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Medidas"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Propiedades"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Acuerdos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Pagos1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Cuentas"] = "GCC_at_S00001_CCAD01";
@@ -314,6 +313,11 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Minjusticia2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Minjusticia3"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Actas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.AlertasTipos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Direcciones"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Propiedades"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Propiedades1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Propiedades3"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

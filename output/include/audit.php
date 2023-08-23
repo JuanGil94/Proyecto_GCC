@@ -548,10 +548,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Propiedades")
-		{
-			return true;
-		}
 		if($table=="dbo.Acuerdos")
 		{
 			return true;
@@ -637,6 +633,26 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.Actas")
+		{
+			return false;
+		}
+		if($table=="dbo.AlertasTipos")
+		{
+			return false;
+		}
+		if($table=="dbo.Direcciones")
+		{
+			return false;
+		}
+		if($table=="dbo.Propiedades")
+		{
+			return false;
+		}
+		if($table=="dbo.Propiedades1")
+		{
+			return false;
+		}
+		if($table=="dbo.Propiedades3")
 		{
 			return false;
 		}
@@ -1140,10 +1156,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Propiedades")
-		{
-			return true;
-		}
 		if($table=="dbo.Acuerdos")
 		{
 			return true;
@@ -1229,6 +1241,26 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.Actas")
+		{
+			return false;
+		}
+		if($table=="dbo.AlertasTipos")
+		{
+			return false;
+		}
+		if($table=="dbo.Direcciones")
+		{
+			return false;
+		}
+		if($table=="dbo.Propiedades")
+		{
+			return false;
+		}
+		if($table=="dbo.Propiedades1")
+		{
+			return false;
+		}
+		if($table=="dbo.Propiedades3")
 		{
 			return false;
 		}

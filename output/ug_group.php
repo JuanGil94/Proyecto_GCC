@@ -63,7 +63,6 @@ $nonAdminTablesArr[] = "dbo.Solidarios";
 $nonAdminTablesArr[] = "dbo.Actuaciones1";
 $nonAdminTablesArr[] = "dbo.Llamadas";
 $nonAdminTablesArr[] = "dbo.Medidas";
-$nonAdminTablesArr[] = "dbo.Propiedades";
 $nonAdminTablesArr[] = "dbo.Acuerdos";
 $nonAdminTablesArr[] = "dbo.Pagos1";
 $nonAdminTablesArr[] = "dbo.Cuentas";
@@ -86,6 +85,11 @@ $nonAdminTablesArr[] = "dbo.Minjusticia";
 $nonAdminTablesArr[] = "dbo.Minjusticia2";
 $nonAdminTablesArr[] = "dbo.Minjusticia3";
 $nonAdminTablesArr[] = "dbo.Actas";
+$nonAdminTablesArr[] = "dbo.AlertasTipos";
+$nonAdminTablesArr[] = "dbo.Direcciones";
+$nonAdminTablesArr[] = "dbo.Propiedades";
+$nonAdminTablesArr[] = "dbo.Propiedades1";
+$nonAdminTablesArr[] = "dbo.Propiedades3";
 
 $ug_connection = $cman->getForUserGroups();
 

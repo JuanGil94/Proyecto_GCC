@@ -250,9 +250,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="TemaId"]:before {
-		content: "{$label dbo_Temas TemaId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Tema"]:before {
 		content: "{$label dbo_Temas Tema}";
 	}
@@ -314,42 +311,17 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TemaId_class}	"
+		 r-ori-vert		 {$Tema_class}	"
 
-			data-field="TemaId"
+			data-field="Tema"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN TemaId_fieldheadercolumn}
-	{BEGIN TemaId_fieldheader}
-	<SPAN {$TemaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TemaId" data-fieldname="TemaId">
-	{$label dbo_Temas TemaId }	{$arrow_icon_TemaId}
-	</SPAN>
-	{END TemaId_fieldheader}
-{END TemaId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tema_class}	"
-
-			data-field="Tema"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Tema_fieldheadercolumn}
 	{BEGIN Tema_fieldheader}
-	<SPAN {$Tema_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tema" data-fieldname="Tema">
+	<SPAN {$Tema_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tema" data-fieldname="Tema">
 	{$label dbo_Temas Tema }	{$arrow_icon_Tema}
 	</SPAN>
 	{END Tema_fieldheader}
@@ -357,7 +329,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field}
 							</tr>
 															
 					{END grid_header}
@@ -387,7 +359,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="temas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="temas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>
@@ -426,32 +398,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TemaId_class}	"
-
-			data-field="TemaId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN TemaId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TemaId" data-fieldname="TemaId" data-default-width >
-{$TemaId_value}
-</span>
-{END TemaId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Tema_class}	"
 
 			data-field="Tema"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -461,7 +412,7 @@
 </span>
 {END Tema_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 							</tr>
 										
 											{END grid_row}
@@ -509,7 +460,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TemaId_class}	"
+		 r-ori-vert		 {$Tema_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="temas_list"	
@@ -518,21 +469,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tema_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="temas_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

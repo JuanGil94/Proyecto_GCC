@@ -541,6 +541,12 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -693,6 +699,16 @@ pdfDocument = {
 			 {BEGIN details_chequeossancionados}
 			{$displayDetailTable_chequeossancionados }
 		{END details_chequeossancionados},
+				
+				
+			 {BEGIN details_direcciones}
+			{$displayDetailTable_direcciones }
+		{END details_direcciones},
+				
+				
+			 {BEGIN details_propiedades}
+			{$displayDetailTable_propiedades }
+		{END details_propiedades},
 				
 		  ],
   "border": [ true, true, true, true ],

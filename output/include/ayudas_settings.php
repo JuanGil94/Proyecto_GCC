@@ -31,7 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsayudas["Spanish"]["Ayuda"] = "Ayuda";
 	$fieldToolTipsayudas["Spanish"]["Ayuda"] = "";
 	$placeHoldersayudas["Spanish"]["Ayuda"] = "";
-	$fieldLabelsayudas["Spanish"]["TemaId"] = "Tema Id";
+	$fieldLabelsayudas["Spanish"]["TemaId"] = "Tema";
 	$fieldToolTipsayudas["Spanish"]["TemaId"] = "";
 	$placeHoldersayudas["Spanish"]["TemaId"] = "";
 	$fieldLabelsayudas["Spanish"]["Respuesta"] = "Respuesta";

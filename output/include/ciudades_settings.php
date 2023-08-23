@@ -866,6 +866,36 @@ $detailsTablesData["dbo.Ciudades"] = array();
 				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
+//	dbo.Direcciones
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Direcciones";
+		$detailsParam["dOriginalTable"] = "dbo.Direcciones";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "direcciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Direcciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
+
+				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
 //endif
 
 // tables which are master tables for current table (detail)

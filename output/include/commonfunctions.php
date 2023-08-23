@@ -299,8 +299,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("medidas" == $shortTName )
 		return true;
-	if ("propiedades" == $shortTName )
-		return true;
 	if ("acuerdos" == $shortTName )
 		return true;
 	if ("pagos1" == $shortTName )
@@ -344,6 +342,16 @@ function checkTableName($shortTName )
 	if ("minjusticia3" == $shortTName )
 		return true;
 	if ("actas" == $shortTName )
+		return true;
+	if ("alertastipos" == $shortTName )
+		return true;
+	if ("direcciones" == $shortTName )
+		return true;
+	if ("propiedades" == $shortTName )
+		return true;
+	if ("propiedades1" == $shortTName )
+		return true;
+	if ("propiedades3" == $shortTName )
 		return true;
 	return false;
 }
@@ -829,15 +837,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Propiedades");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Propiedades";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.Acuerdos");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1034,6 +1033,51 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Actas";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.AlertasTipos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.AlertasTipos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Direcciones");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Direcciones";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Propiedades");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Propiedades";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Propiedades1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Propiedades1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Propiedades3");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Propiedades3";
+	}
 	return $arr;
 }
 
@@ -1091,7 +1135,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Actuaciones1";
 	$arr[]="dbo.Llamadas";
 	$arr[]="dbo.Medidas";
-	$arr[]="dbo.Propiedades";
 	$arr[]="dbo.Acuerdos";
 	$arr[]="dbo.Pagos1";
 	$arr[]="dbo.Cuentas";
@@ -1114,6 +1157,11 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Minjusticia2";
 	$arr[]="dbo.Minjusticia3";
 	$arr[]="dbo.Actas";
+	$arr[]="dbo.AlertasTipos";
+	$arr[]="dbo.Direcciones";
+	$arr[]="dbo.Propiedades";
+	$arr[]="dbo.Propiedades1";
+	$arr[]="dbo.Propiedades3";
 	return $arr;
 }
 
@@ -1981,11 +2029,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Propiedades" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Acuerdos" )
 	{
 //	default permissions
@@ -2092,6 +2135,31 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Actas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.AlertasTipos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Direcciones" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Propiedades" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Propiedades1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Propiedades3" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

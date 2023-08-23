@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.ChequeosSancionados' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Direcciones' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Departamentos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
