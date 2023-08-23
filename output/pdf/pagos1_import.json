@@ -144,6 +144,9 @@ pdfDocument = {
 				
 			{"text":{$PagoIdOrig_pdfvalue},"hidden":"{$item_hide_import_field13}"},
 				
+				
+			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

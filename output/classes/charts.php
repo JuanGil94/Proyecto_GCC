@@ -474,8 +474,6 @@ class Chart
 			return true;
 		if("dbo.Medidas" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Acuerdos" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Pagos1" == $this->chrt_array['tables'][0])
@@ -519,6 +517,16 @@ class Chart
 		if("dbo.Minjusticia3" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Actas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.AlertasTipos" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Direcciones" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

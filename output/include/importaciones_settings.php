@@ -28,13 +28,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsimportaciones["Spanish"]["ImportacionId"] = "Importacion Id";
 	$fieldToolTipsimportaciones["Spanish"]["ImportacionId"] = "";
 	$placeHoldersimportaciones["Spanish"]["ImportacionId"] = "";
-	$fieldLabelsimportaciones["Spanish"]["CarteraTipoId"] = "Cartera Tipo Id";
+	$fieldLabelsimportaciones["Spanish"]["CarteraTipoId"] = "Tipo de Cartera";
 	$fieldToolTipsimportaciones["Spanish"]["CarteraTipoId"] = "";
 	$placeHoldersimportaciones["Spanish"]["CarteraTipoId"] = "";
-	$fieldLabelsimportaciones["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelsimportaciones["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipsimportaciones["Spanish"]["SeccionalId"] = "";
 	$placeHoldersimportaciones["Spanish"]["SeccionalId"] = "";
-	$fieldLabelsimportaciones["Spanish"]["ConceptoId"] = "Concepto Id";
+	$fieldLabelsimportaciones["Spanish"]["ConceptoId"] = "Concepto";
 	$fieldToolTipsimportaciones["Spanish"]["ConceptoId"] = "";
 	$placeHoldersimportaciones["Spanish"]["ConceptoId"] = "";
 	$fieldLabelsimportaciones["Spanish"]["Archivo"] = "Archivo";

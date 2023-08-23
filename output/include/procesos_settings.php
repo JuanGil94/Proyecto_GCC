@@ -127,7 +127,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsprocesos["Spanish"]["Acuerdo"] = "F. Acuerdo Pago";
 	$fieldToolTipsprocesos["Spanish"]["Acuerdo"] = "";
 	$placeHoldersprocesos["Spanish"]["Acuerdo"] = "";
-	$fieldLabelsprocesos["Spanish"]["Incumplimiento"] = "Incumplimiento";
+	$fieldLabelsprocesos["Spanish"]["Incumplimiento"] = "F.Incumplimiento";
 	$fieldToolTipsprocesos["Spanish"]["Incumplimiento"] = "";
 	$placeHoldersprocesos["Spanish"]["Incumplimiento"] = "";
 	$fieldLabelsprocesos["Spanish"]["Notificacion"] = "F. Notificación";
@@ -157,7 +157,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsprocesos["Spanish"]["ImportacionId"] = "Importacion Id";
 	$fieldToolTipsprocesos["Spanish"]["ImportacionId"] = "";
 	$placeHoldersprocesos["Spanish"]["ImportacionId"] = "";
-	$fieldLabelsprocesos["Spanish"]["ActuacionId"] = "Actuacion";
+	$fieldLabelsprocesos["Spanish"]["ActuacionId"] = "Ult.Actuacion";
 	$fieldToolTipsprocesos["Spanish"]["ActuacionId"] = "";
 	$placeHoldersprocesos["Spanish"]["ActuacionId"] = "";
 	$fieldLabelsprocesos["Spanish"]["ObligacionInicial"] = "Obli.Inicial";

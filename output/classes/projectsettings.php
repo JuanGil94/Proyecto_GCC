@@ -3632,8 +3632,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "llamadas" ] = "dbo.Llamadas";
 	$projectEntities[ "dbo.Medidas" ] = array( "url" => "medidas", "type" => 0 );
 	$projectEntitiesReverse[ "medidas" ] = "dbo.Medidas";
-	$projectEntities[ "dbo.Propiedades" ] = array( "url" => "propiedades", "type" => 0 );
-	$projectEntitiesReverse[ "propiedades" ] = "dbo.Propiedades";
 	$projectEntities[ "dbo.Acuerdos" ] = array( "url" => "acuerdos", "type" => 0 );
 	$projectEntitiesReverse[ "acuerdos" ] = "dbo.Acuerdos";
 	$projectEntities[ "dbo.Pagos1" ] = array( "url" => "pagos1", "type" => 0 );
@@ -3678,6 +3676,16 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "minjusticia3" ] = "dbo.Minjusticia3";
 	$projectEntities[ "dbo.Actas" ] = array( "url" => "actas", "type" => 0 );
 	$projectEntitiesReverse[ "actas" ] = "dbo.Actas";
+	$projectEntities[ "dbo.AlertasTipos" ] = array( "url" => "alertastipos", "type" => 0 );
+	$projectEntitiesReverse[ "alertastipos" ] = "dbo.AlertasTipos";
+	$projectEntities[ "dbo.Direcciones" ] = array( "url" => "direcciones", "type" => 0 );
+	$projectEntitiesReverse[ "direcciones" ] = "dbo.Direcciones";
+	$projectEntities[ "dbo.Propiedades" ] = array( "url" => "propiedades", "type" => 0 );
+	$projectEntitiesReverse[ "propiedades" ] = "dbo.Propiedades";
+	$projectEntities[ "dbo.Propiedades1" ] = array( "url" => "propiedades1", "type" => 1 );
+	$projectEntitiesReverse[ "propiedades1" ] = "dbo.Propiedades1";
+	$projectEntities[ "dbo.Propiedades3" ] = array( "url" => "propiedades3", "type" => 1 );
+	$projectEntitiesReverse[ "propiedades3" ] = "dbo.Propiedades3";
 }
 
 function findTable( $table ) {

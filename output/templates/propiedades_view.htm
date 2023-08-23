@@ -1,0 +1,333 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Propiedades view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN PropiedadId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PropiedadId}  r-vertical-field" data-fieldname="PropiedadId" data-signal-error-for="PropiedadId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="PropiedadId" data-fieldname="PropiedadId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_PropiedadId}">
+		
+		{BEGIN PropiedadId_label}{$label dbo_Propiedades PropiedadId }{END PropiedadId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$PropiedadId_value}	</div>
+
+		
+</div>
+
+
+{END PropiedadId_fieldblock}
+											
+{BEGIN SancionadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-vertical-field" data-fieldname="SancionadoId" data-signal-error-for="SancionadoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="SancionadoId" data-fieldname="SancionadoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_SancionadoId}">
+		
+		{BEGIN SancionadoId_label}{$label dbo_Propiedades SancionadoId }{END SancionadoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$SancionadoId_value}	</div>
+
+		
+</div>
+
+
+{END SancionadoId_fieldblock}
+											
+{BEGIN TipoPropiedad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TipoPropiedad}  r-vertical-field" data-fieldname="TipoPropiedad" data-signal-error-for="TipoPropiedad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="TipoPropiedad" data-fieldname="TipoPropiedad" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_TipoPropiedad}">
+		
+		{BEGIN TipoPropiedad_label}{$label dbo_Propiedades TipoPropiedad }{END TipoPropiedad_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$TipoPropiedad_value}	</div>
+
+		
+</div>
+
+
+{END TipoPropiedad_fieldblock}
+											
+{BEGIN Propiedad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Propiedad}  r-vertical-field" data-fieldname="Propiedad" data-signal-error-for="Propiedad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Propiedad" data-fieldname="Propiedad" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Propiedad}">
+		
+		{BEGIN Propiedad_label}{$label dbo_Propiedades Propiedad }{END Propiedad_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Propiedad_value}	</div>
+
+		
+</div>
+
+
+{END Propiedad_fieldblock}
+											
+{BEGIN Matricula_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Matricula}  r-vertical-field" data-fieldname="Matricula" data-signal-error-for="Matricula{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Matricula" data-fieldname="Matricula" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Matricula}">
+		
+		{BEGIN Matricula_label}{$label dbo_Propiedades Matricula }{END Matricula_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Matricula_value}	</div>
+
+		
+</div>
+
+
+{END Matricula_fieldblock}
+											
+{BEGIN Avaluo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Avaluo}  r-vertical-field" data-fieldname="Avaluo" data-signal-error-for="Avaluo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Avaluo" data-fieldname="Avaluo" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Avaluo}">
+		
+		{BEGIN Avaluo_label}{$label dbo_Propiedades Avaluo }{END Avaluo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Avaluo_value}	</div>
+
+		
+</div>
+
+
+{END Avaluo_fieldblock}
+											
+{BEGIN CiudadId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CiudadId}  r-vertical-field" data-fieldname="CiudadId" data-signal-error-for="CiudadId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="CiudadId" data-fieldname="CiudadId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CiudadId}">
+		
+		{BEGIN CiudadId_label}{$label dbo_Propiedades CiudadId }{END CiudadId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CiudadId_value}	</div>
+
+		
+</div>
+
+
+{END CiudadId_fieldblock}
+											
+{BEGIN Direccion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-vertical-field" data-fieldname="Direccion" data-signal-error-for="Direccion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Direccion}">
+		
+		{BEGIN Direccion_label}{$label dbo_Propiedades Direccion }{END Direccion_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Direccion_value}	</div>
+
+		
+</div>
+
+
+{END Direccion_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" data-fieldname="Observaciones" data-signal-error-for="Observaciones{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Observaciones}">
+		
+		{BEGIN Observaciones_label}{$label dbo_Propiedades Observaciones }{END Observaciones_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Observaciones_value}	</div>
+
+		
+</div>
+
+
+{END Observaciones_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Cerrar ventana			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="propiedades_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Editar		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

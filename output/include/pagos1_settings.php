@@ -25,7 +25,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipspagos1["Spanish"] = array();
 	$placeHolderspagos1["Spanish"] = array();
 	$pageTitlespagos1["Spanish"] = array();
-	$fieldLabelspagos1["Spanish"]["PagoId"] = "Pago Id";
+	$fieldLabelspagos1["Spanish"]["PagoId"] = "Pago";
 	$fieldToolTipspagos1["Spanish"]["PagoId"] = "";
 	$placeHolderspagos1["Spanish"]["PagoId"] = "";
 	$fieldLabelspagos1["Spanish"]["ProcesoId"] = "No.Proceso";

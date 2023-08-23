@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'dbo.ChequeosSancionados' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Direcciones' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Departamentos' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'CiudadId',

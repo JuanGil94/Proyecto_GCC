@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "257_1692373717";
+$projectBuildKey = "303_1692803674";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "257";
+$projectBuildNumber = "303";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -813,7 +813,6 @@ $tableCaptions["Spanish"]["dbo_Solidarios"] = "Solidarios";
 $tableCaptions["Spanish"]["dbo_Actuaciones1"] = "Actuaciones1";
 $tableCaptions["Spanish"]["dbo_Llamadas"] = "Llamadas";
 $tableCaptions["Spanish"]["dbo_Medidas"] = "Medidas";
-$tableCaptions["Spanish"]["dbo_Propiedades"] = "Propiedades";
 $tableCaptions["Spanish"]["dbo_Acuerdos"] = "Acuerdos";
 $tableCaptions["Spanish"]["dbo_Pagos1"] = "Pagos1";
 $tableCaptions["Spanish"]["dbo_Cuentas"] = "Cuentas";
@@ -836,6 +835,11 @@ $tableCaptions["Spanish"]["dbo_Minjusticia"] = "Minjusticia";
 $tableCaptions["Spanish"]["dbo_Minjusticia2"] = "Minjusticia2";
 $tableCaptions["Spanish"]["dbo_Minjusticia3"] = "Minjusticia3";
 $tableCaptions["Spanish"]["dbo_Actas"] = "Actas";
+$tableCaptions["Spanish"]["dbo_AlertasTipos"] = "Alertas Tipos";
+$tableCaptions["Spanish"]["dbo_Direcciones"] = "Direcciones";
+$tableCaptions["Spanish"]["dbo_Propiedades"] = "Propiedades";
+$tableCaptions["Spanish"]["dbo_Propiedades1"] = "Propiedades1";
+$tableCaptions["Spanish"]["dbo_Propiedades3"] = "Propiedades3";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -309,6 +309,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_columns_control}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
@@ -417,7 +420,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'SeccionalId',
+			fieldName: 'ConceptoId',
 				style: 'headcell',
 		
 		
@@ -431,11 +434,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos SeccionalId }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ConceptoId }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$SeccionalId_align}',
+              "alignment": '{$ConceptoId_align}',
      
       
       },
@@ -444,64 +447,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'AbogadoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos AbogadoId }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$AbogadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
-	col:0,
-	row:0,
-			fieldName: 'Fecha',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Fecha }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Fecha_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Numero',
@@ -527,10 +472,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'SancionadoId',
@@ -556,532 +501,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field5',
-	col:0,
-	row:0,
-			fieldName: 'Providencia',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Providencia }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Providencia_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
-{
-	cellId: 'headcell_field6',
-	col:0,
-	row:0,
-			fieldName: 'Ejecutoria',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Ejecutoria }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Ejecutoria_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
-{
-	cellId: 'headcell_field7',
-	col:0,
-	row:0,
-			fieldName: 'ConceptoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos ConceptoId }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
-{
-	cellId: 'headcell_field8',
-	col:0,
-	row:0,
-			fieldName: 'EstadoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos EstadoId }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EstadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
-{
-	cellId: 'headcell_field9',
-	col:0,
-	row:0,
-			fieldName: 'EtapaId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos EtapaId }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EtapaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
-{
-	cellId: 'headcell_field10',
-	col:0,
-	row:0,
-			fieldName: 'Folios',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Folios }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Folios_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
-{
-	cellId: 'headcell_field11',
-	col:0,
-	row:0,
-			fieldName: 'Recaudo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Recaudo }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Recaudo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
-{
-	cellId: 'headcell_field12',
-	col:0,
-	row:0,
-			fieldName: 'MotivoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos MotivoId }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MotivoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
-{
-	cellId: 'headcell_field13',
-	col:0,
-	row:0,
-			fieldName: 'CarteraTipoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$CarteraTipoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
-{
-	cellId: 'headcell_field14',
-	col:0,
-	row:0,
-			fieldName: 'Origen',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Origen }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Origen_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
-{
-	cellId: 'headcell_field15',
-	col:0,
-	row:0,
-			fieldName: 'MinJusticia',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos MinJusticia }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MinJusticia_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
-{
-	cellId: 'headcell_field16',
-	col:0,
-	row:0,
-			fieldName: 'MinjusticiaId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos MinjusticiaId }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MinjusticiaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
-{
-	cellId: 'headcell_field17',
-	col:0,
-	row:0,
-			fieldName: 'NaturalezaId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos NaturalezaId }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$NaturalezaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
-{
-	cellId: 'headcell_field18',
-	col:0,
-	row:0,
-			fieldName: 'Acuerdo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Acuerdo }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Acuerdo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field19}
-{
-	cellId: 'headcell_field19',
-	col:0,
-	row:0,
-			fieldName: 'Notificacion',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Notificacion }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Notificacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field19}
-																							{BEGIN cellblock_grid_headcell_field20}
-{
-	cellId: 'headcell_field20',
-	col:0,
-	row:0,
-			fieldName: 'Plazo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Plazo }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Plazo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field20}
-																							{BEGIN cellblock_grid_headcell_field21}
-{
-	cellId: 'headcell_field21',
-	col:0,
-	row:0,
-			fieldName: 'Terminacion',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Terminacion }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Terminacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field21}
-																							{BEGIN cellblock_grid_headcell_field22}
-{
-	cellId: 'headcell_field22',
-	col:0,
-	row:0,
-			fieldName: 'Incumplimiento',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Procesos Incumplimiento }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Incumplimiento_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field22}
-																							{BEGIN cellblock_grid_headcell_field23}
-{
-	cellId: 'headcell_field23',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ObligacionInicial',
@@ -1107,10 +530,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field23}
-																							{BEGIN cellblock_grid_headcell_field24}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field24',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'CostasInicial',
@@ -1136,10 +559,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field24}
-																							{BEGIN cellblock_grid_headcell_field25}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field25',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'InteresesInicial',
@@ -1161,6 +584,586 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$InteresesInicial_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Recaudo',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Recaudo }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Recaudo_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'ObligacionCreacion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos ObligacionCreacion }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ObligacionCreacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Costas }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'InteresesCalculados',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos InteresesCalculados }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$InteresesCalculados_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Obligacion }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			fieldName: 'MinjusticiaId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos MinjusticiaId }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$MinjusticiaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
+{
+	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Fecha }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Fecha_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Providencia',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Providencia }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Providencia_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
+{
+	cellId: 'headcell_field14',
+	col:0,
+	row:0,
+			fieldName: 'Ejecutoria',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Ejecutoria }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Ejecutoria_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
+{
+	cellId: 'headcell_field15',
+	col:0,
+	row:0,
+			fieldName: 'Plazo',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Plazo }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Plazo_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
+{
+	cellId: 'headcell_field16',
+	col:0,
+	row:0,
+			fieldName: 'Notificacion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Notificacion }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Notificacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
+{
+	cellId: 'headcell_field17',
+	col:0,
+	row:0,
+			fieldName: 'Acuerdo',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Acuerdo }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Acuerdo_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
+{
+	cellId: 'headcell_field18',
+	col:0,
+	row:0,
+			fieldName: 'Incumplimiento',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Incumplimiento }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Incumplimiento_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field19}
+{
+	cellId: 'headcell_field19',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Dias }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field19}
+																							{BEGIN cellblock_grid_headcell_field20}
+{
+	cellId: 'headcell_field20',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos EstadoId }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field20}
+																							{BEGIN cellblock_grid_headcell_field21}
+{
+	cellId: 'headcell_field21',
+	col:0,
+	row:0,
+			fieldName: 'EtapaId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos EtapaId }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EtapaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field21}
+																							{BEGIN cellblock_grid_headcell_field22}
+{
+	cellId: 'headcell_field22',
+	col:0,
+	row:0,
+			fieldName: 'Terminacion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Terminacion }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Terminacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field22}
+																							{BEGIN cellblock_grid_headcell_field23}
+{
+	cellId: 'headcell_field23',
+	col:0,
+	row:0,
+			fieldName: 'MotivoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos MotivoId }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$MotivoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field23}
+																							{BEGIN cellblock_grid_headcell_field24}
+{
+	cellId: 'headcell_field24',
+	col:0,
+	row:0,
+			fieldName: 'ActuacionId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos ActuacionId }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ActuacionId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field24}
+																							{BEGIN cellblock_grid_headcell_field25}
+{
+	cellId: 'headcell_field25',
+	col:0,
+	row:0,
+			fieldName: 'Origen',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Origen }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Origen_align}',
      
       
       },
@@ -1200,7 +1203,7 @@ pdfDocument = {
 	cellId: 'headcell_field27',
 	col:0,
 	row:0,
-			fieldName: 'Obligacion',
+			fieldName: 'Folios',
 				style: 'headcell',
 		
 		
@@ -1214,11 +1217,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Obligacion }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Folios }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Obligacion_align}',
+              "alignment": '{$Folios_align}',
      
       
       },
@@ -1229,7 +1232,7 @@ pdfDocument = {
 	cellId: 'headcell_field28',
 	col:0,
 	row:0,
-			fieldName: 'Costas',
+			fieldName: 'MinJusticia',
 				style: 'headcell',
 		
 		
@@ -1243,11 +1246,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Costas }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
+			{"text":"{$jslabel dbo_Procesos MinJusticia }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Costas_align}',
+              "alignment": '{$MinJusticia_align}',
      
       
       },
@@ -1258,7 +1261,7 @@ pdfDocument = {
 	cellId: 'headcell_field29',
 	col:0,
 	row:0,
-			fieldName: 'InteresesCalculados',
+			fieldName: 'NaturalezaId',
 				style: 'headcell',
 		
 		
@@ -1272,11 +1275,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos InteresesCalculados }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
+			{"text":"{$jslabel dbo_Procesos NaturalezaId }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteresesCalculados_align}',
+              "alignment": '{$NaturalezaId_align}',
      
       
       },
@@ -1287,7 +1290,7 @@ pdfDocument = {
 	cellId: 'headcell_field30',
 	col:0,
 	row:0,
-			fieldName: 'ObligacionCreacion',
+			fieldName: 'AbogadoId',
 				style: 'headcell',
 		
 		
@@ -1301,11 +1304,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ObligacionCreacion }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
+			{"text":"{$jslabel dbo_Procesos AbogadoId }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObligacionCreacion_align}',
+              "alignment": '{$AbogadoId_align}',
      
       
       },
@@ -1316,7 +1319,7 @@ pdfDocument = {
 	cellId: 'headcell_field31',
 	col:0,
 	row:0,
-			fieldName: 'ActuacionId',
+			fieldName: 'CarteraTipoId',
 				style: 'headcell',
 		
 		
@@ -1330,11 +1333,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ActuacionId }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ActuacionId_align}',
+              "alignment": '{$CarteraTipoId_align}',
      
       
       },
@@ -1345,7 +1348,7 @@ pdfDocument = {
 	cellId: 'headcell_field32',
 	col:0,
 	row:0,
-			fieldName: 'Dias',
+			fieldName: 'SeccionalId',
 				style: 'headcell',
 		
 		
@@ -1359,11 +1362,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Dias }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
+			{"text":"{$jslabel dbo_Procesos SeccionalId }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Dias_align}',
+              "alignment": '{$SeccionalId_align}',
      
       
       },
@@ -1470,7 +1473,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'SeccionalId',
+			fieldName: 'ConceptoId',
 				style: 'bodycell',
 		
 		
@@ -1484,11 +1487,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$SeccionalId_align}',
+              "alignment": '{$ConceptoId_align}',
      
       
       },
@@ -1497,64 +1500,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'AbogadoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$AbogadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
-	col:0,
-	row:0,
-			fieldName: 'Fecha',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Fecha_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Numero',
@@ -1580,10 +1525,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'SancionadoId',
@@ -1609,532 +1554,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field5',
-	col:0,
-	row:0,
-			fieldName: 'Providencia',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Providencia_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
-{
-	cellId: 'cell_field6',
-	col:0,
-	row:0,
-			fieldName: 'Ejecutoria',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Ejecutoria_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
-{
-	cellId: 'cell_field7',
-	col:0,
-	row:0,
-			fieldName: 'ConceptoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
-{
-	cellId: 'cell_field8',
-	col:0,
-	row:0,
-			fieldName: 'EstadoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$EstadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EstadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
-{
-	cellId: 'cell_field9',
-	col:0,
-	row:0,
-			fieldName: 'EtapaId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$EtapaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EtapaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
-{
-	cellId: 'cell_field10',
-	col:0,
-	row:0,
-			fieldName: 'Folios',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Folios_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
-{
-	cellId: 'cell_field11',
-	col:0,
-	row:0,
-			fieldName: 'Recaudo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Recaudo_pdfvalue},"hidden":"{$item_hide_simple_grid_field20}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Recaudo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
-{
-	cellId: 'cell_field12',
-	col:0,
-	row:0,
-			fieldName: 'MotivoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$MotivoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field23}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MotivoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
-{
-	cellId: 'cell_field13',
-	col:0,
-	row:0,
-			fieldName: 'CarteraTipoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field39}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$CarteraTipoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
-{
-	cellId: 'cell_field14',
-	col:0,
-	row:0,
-			fieldName: 'Origen',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_simple_grid_field41}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Origen_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
-{
-	cellId: 'cell_field15',
-	col:0,
-	row:0,
-			fieldName: 'MinJusticia',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_simple_grid_field48}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MinJusticia_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
-{
-	cellId: 'cell_field16',
-	col:0,
-	row:0,
-			fieldName: 'MinjusticiaId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$MinjusticiaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field55}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MinjusticiaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
-{
-	cellId: 'cell_field17',
-	col:0,
-	row:0,
-			fieldName: 'NaturalezaId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field71}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$NaturalezaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
-{
-	cellId: 'cell_field18',
-	col:0,
-	row:0,
-			fieldName: 'Acuerdo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Acuerdo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field19}
-{
-	cellId: 'cell_field19',
-	col:0,
-	row:0,
-			fieldName: 'Notificacion',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Notificacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Notificacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field19}
-																							{BEGIN cellblock_grid_cell_field20}
-{
-	cellId: 'cell_field20',
-	col:0,
-	row:0,
-			fieldName: 'Plazo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Plazo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field20}
-																							{BEGIN cellblock_grid_cell_field21}
-{
-	cellId: 'cell_field21',
-	col:0,
-	row:0,
-			fieldName: 'Terminacion',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Terminacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field21}
-																							{BEGIN cellblock_grid_cell_field22}
-{
-	cellId: 'cell_field22',
-	col:0,
-	row:0,
-			fieldName: 'Incumplimiento',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Incumplimiento_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Incumplimiento_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field22}
-																							{BEGIN cellblock_grid_cell_field23}
-{
-	cellId: 'cell_field23',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ObligacionInicial',
@@ -2160,10 +1583,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field23}
-																							{BEGIN cellblock_grid_cell_field24}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field24',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'CostasInicial',
@@ -2189,10 +1612,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field24}
-																							{BEGIN cellblock_grid_cell_field25}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field25',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'InteresesInicial',
@@ -2214,6 +1637,586 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$InteresesInicial_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Recaudo',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Recaudo_pdfvalue},"hidden":"{$item_hide_simple_grid_field20}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Recaudo_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field21}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_simple_grid_field22}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'InteresesCalculados',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$InteresesCalculados_pdfvalue},"hidden":"{$item_hide_simple_grid_field24}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$InteresesCalculados_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'ObligacionCreacion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ObligacionCreacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field25}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ObligacionCreacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+			fieldName: 'MinjusticiaId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$MinjusticiaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field55}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$MinjusticiaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
+{
+	cellId: 'cell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Fecha_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Providencia',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Providencia_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
+{
+	cellId: 'cell_field14',
+	col:0,
+	row:0,
+			fieldName: 'Ejecutoria',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Ejecutoria_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
+{
+	cellId: 'cell_field15',
+	col:0,
+	row:0,
+			fieldName: 'Plazo',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Plazo_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
+{
+	cellId: 'cell_field16',
+	col:0,
+	row:0,
+			fieldName: 'Notificacion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Notificacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Notificacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
+{
+	cellId: 'cell_field17',
+	col:0,
+	row:0,
+			fieldName: 'Acuerdo',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Acuerdo_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
+{
+	cellId: 'cell_field18',
+	col:0,
+	row:0,
+			fieldName: 'Incumplimiento',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Incumplimiento_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Incumplimiento_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field19}
+{
+	cellId: 'cell_field19',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_simple_grid_field27}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field19}
+																							{BEGIN cellblock_grid_cell_field20}
+{
+	cellId: 'cell_field20',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EstadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field20}
+																							{BEGIN cellblock_grid_cell_field21}
+{
+	cellId: 'cell_field21',
+	col:0,
+	row:0,
+			fieldName: 'EtapaId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EtapaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EtapaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field21}
+																							{BEGIN cellblock_grid_cell_field22}
+{
+	cellId: 'cell_field22',
+	col:0,
+	row:0,
+			fieldName: 'Terminacion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Terminacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field22}
+																							{BEGIN cellblock_grid_cell_field23}
+{
+	cellId: 'cell_field23',
+	col:0,
+	row:0,
+			fieldName: 'MotivoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$MotivoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field23}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$MotivoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field23}
+																							{BEGIN cellblock_grid_cell_field24}
+{
+	cellId: 'cell_field24',
+	col:0,
+	row:0,
+			fieldName: 'ActuacionId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ActuacionId_pdfvalue},"hidden":"{$item_hide_simple_grid_field26}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ActuacionId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field24}
+																							{BEGIN cellblock_grid_cell_field25}
+{
+	cellId: 'cell_field25',
+	col:0,
+	row:0,
+			fieldName: 'Origen',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_simple_grid_field41}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Origen_align}',
      
       
       },
@@ -2253,7 +2256,7 @@ pdfDocument = {
 	cellId: 'cell_field27',
 	col:0,
 	row:0,
-			fieldName: 'Obligacion',
+			fieldName: 'Folios',
 				style: 'bodycell',
 		
 		
@@ -2267,11 +2270,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field21}"},
+			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Obligacion_align}',
+              "alignment": '{$Folios_align}',
      
       
       },
@@ -2282,7 +2285,7 @@ pdfDocument = {
 	cellId: 'cell_field28',
 	col:0,
 	row:0,
-			fieldName: 'Costas',
+			fieldName: 'MinJusticia',
 				style: 'bodycell',
 		
 		
@@ -2296,11 +2299,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_simple_grid_field22}"},
+			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_simple_grid_field48}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Costas_align}',
+              "alignment": '{$MinJusticia_align}',
      
       
       },
@@ -2311,7 +2314,7 @@ pdfDocument = {
 	cellId: 'cell_field29',
 	col:0,
 	row:0,
-			fieldName: 'InteresesCalculados',
+			fieldName: 'NaturalezaId',
 				style: 'bodycell',
 		
 		
@@ -2325,11 +2328,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$InteresesCalculados_pdfvalue},"hidden":"{$item_hide_simple_grid_field24}"},
+			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field71}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteresesCalculados_align}',
+              "alignment": '{$NaturalezaId_align}',
      
       
       },
@@ -2340,7 +2343,7 @@ pdfDocument = {
 	cellId: 'cell_field30',
 	col:0,
 	row:0,
-			fieldName: 'ObligacionCreacion',
+			fieldName: 'AbogadoId',
 				style: 'bodycell',
 		
 		
@@ -2354,11 +2357,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObligacionCreacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field25}"},
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObligacionCreacion_align}',
+              "alignment": '{$AbogadoId_align}',
      
       
       },
@@ -2369,7 +2372,7 @@ pdfDocument = {
 	cellId: 'cell_field31',
 	col:0,
 	row:0,
-			fieldName: 'ActuacionId',
+			fieldName: 'CarteraTipoId',
 				style: 'bodycell',
 		
 		
@@ -2383,11 +2386,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ActuacionId_pdfvalue},"hidden":"{$item_hide_simple_grid_field26}"},
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field39}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ActuacionId_align}',
+              "alignment": '{$CarteraTipoId_align}',
      
       
       },
@@ -2398,7 +2401,7 @@ pdfDocument = {
 	cellId: 'cell_field32',
 	col:0,
 	row:0,
-			fieldName: 'Dias',
+			fieldName: 'SeccionalId',
 				style: 'bodycell',
 		
 		
@@ -2412,11 +2415,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_simple_grid_field27}"},
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Dias_align}',
+              "alignment": '{$SeccionalId_align}',
      
       
       },

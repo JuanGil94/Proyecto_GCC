@@ -309,7 +309,7 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
@@ -319,6 +319,14 @@
 		{BEGIN details_chequeossancionados}
 {$displayDetailTable_chequeossancionados}
 {END details_chequeossancionados}
+	 
+		{BEGIN details_direcciones}
+{$displayDetailTable_direcciones}
+{END details_direcciones}
+	 
+		{BEGIN details_propiedades}
+{$displayDetailTable_propiedades}
+{END details_propiedades}
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}

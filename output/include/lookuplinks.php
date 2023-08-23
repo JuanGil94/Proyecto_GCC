@@ -320,27 +320,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Procesos"]["medidas.ProcesoId"] = array();
 		}
 		$lookupTableLinks["dbo.Procesos"]["medidas.ProcesoId"]["edit"] = array("table" => "dbo.Medidas", "field" => "ProcesoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Propiedades"] ) ) {
-			$lookupTableLinks["dbo.Propiedades"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Propiedades"]["medidas.PropiedadId"] )) {
-			$lookupTableLinks["dbo.Propiedades"]["medidas.PropiedadId"] = array();
-		}
-		$lookupTableLinks["dbo.Propiedades"]["medidas.PropiedadId"]["edit"] = array("table" => "dbo.Medidas", "field" => "PropiedadId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
-			$lookupTableLinks["dbo.Sancionados"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Sancionados"]["propiedades.SancionadoId"] )) {
-			$lookupTableLinks["dbo.Sancionados"]["propiedades.SancionadoId"] = array();
-		}
-		$lookupTableLinks["dbo.Sancionados"]["propiedades.SancionadoId"]["edit"] = array("table" => "dbo.Propiedades", "field" => "SancionadoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Ciudades"] ) ) {
-			$lookupTableLinks["dbo.Ciudades"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Ciudades"]["propiedades.CiudadId"] )) {
-			$lookupTableLinks["dbo.Ciudades"]["propiedades.CiudadId"] = array();
-		}
-		$lookupTableLinks["dbo.Ciudades"]["propiedades.CiudadId"]["edit"] = array("table" => "dbo.Propiedades", "field" => "CiudadId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
 			$lookupTableLinks["dbo.Procesos"] = array();
 		}
@@ -642,6 +621,48 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Causales"]["minjusticia3.CausalId"] = array();
 		}
 		$lookupTableLinks["dbo.Causales"]["minjusticia3.CausalId"]["edit"] = array("table" => "dbo.Minjusticia3", "field" => "CausalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["direcciones.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["direcciones.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["direcciones.SancionadoId"]["edit"] = array("table" => "dbo.Direcciones", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["direcciones.CarcelId"] )) {
+			$lookupTableLinks["dbo.Carceles"]["direcciones.CarcelId"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["direcciones.CarcelId"]["edit"] = array("table" => "dbo.Direcciones", "field" => "CarcelId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades"] ) ) {
+			$lookupTableLinks["dbo.Ciudades"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades"]["direcciones.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades"]["direcciones.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades"]["direcciones.CiudadId"]["edit"] = array("table" => "dbo.Direcciones", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["propiedades.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["propiedades.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["propiedades.SancionadoId"]["edit"] = array("table" => "dbo.Propiedades", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["propiedades1.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["propiedades1.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["propiedades1.SancionadoId"]["edit"] = array("table" => "dbo.Propiedades1", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["propiedades3.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["propiedades3.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["propiedades3.SancionadoId"]["edit"] = array("table" => "dbo.Propiedades3", "field" => "SancionadoId", "page" => "edit");
 }
 
 ?>

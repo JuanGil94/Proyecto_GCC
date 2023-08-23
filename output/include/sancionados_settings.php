@@ -31,7 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssancionados["Spanish"]["Sancionado"] = "Sancionado";
 	$fieldToolTipssancionados["Spanish"]["Sancionado"] = "";
 	$placeHolderssancionados["Spanish"]["Sancionado"] = "";
-	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento Id";
+	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento";
 	$fieldToolTipssancionados["Spanish"]["TipoDocumentoId"] = "";
 	$placeHolderssancionados["Spanish"]["TipoDocumentoId"] = "";
 	$fieldLabelssancionados["Spanish"]["Documento"] = "Documento";
@@ -1708,21 +1708,111 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Solidarios
+//	dbo.Direcciones
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Solidarios";
-		$detailsParam["dOriginalTable"] = "dbo.Solidarios";
+	$detailsParam["dDataSourceTable"]="dbo.Direcciones";
+		$detailsParam["dOriginalTable"] = "dbo.Direcciones";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "solidarios";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Solidarios");
+	$detailsParam["dShortTable"] = "direcciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Direcciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.Propiedades
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Propiedades";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedades";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.Propiedades1
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Propiedades1";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedades1";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades1");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.Propiedades3
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Propiedades3";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedades3";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades3");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

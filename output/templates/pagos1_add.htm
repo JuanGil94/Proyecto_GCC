@@ -383,6 +383,27 @@
 
 
 {END PagoIdOrig_fieldblock}
+											
+{BEGIN PagoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoId}  r-vertical-field" 
+	data-signal-error-for="PagoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="PagoId" data-fieldname="PagoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_PagoId}">
+		{BEGIN PagoId_label}{$label dbo_Pagos1 PagoId }{END PagoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$PagoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PagoId" {$tooltipAttr dbo_Pagos1 PagoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Pagos1 PagoId }		</div>
+	</div>
+</div>
+
+
+{END PagoId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
