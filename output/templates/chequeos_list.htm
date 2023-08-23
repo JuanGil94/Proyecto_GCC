@@ -1936,17 +1936,15 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_details}
-	<td
+										<td
 	
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
-	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"		data-control-cell
-	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
 	>
 
 	 
@@ -1961,10 +1959,15 @@
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
+	 
+		<span data-itemtype="custom_button" data-itemid="button_crear" {$item_button_crear} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="New_Button" href="javascript:void(0)" typeid="ib" >
+							Crear			</a>
+</span>
 	
 	</td>
-	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
+										{BEGIN cellblock_grid_cell_field}
 	<td
 	
 	{$cell_grid_cell_field}
