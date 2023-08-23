@@ -1335,6 +1335,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
 				
+				
+			{"text":""},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

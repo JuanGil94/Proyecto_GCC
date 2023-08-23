@@ -248,7 +248,7 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 
 
 
-
+						
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 
@@ -7653,6 +7653,7 @@ $tdatachequeos[".sqlquery"] = $queryData_chequeos;
 
 
 
-$tdatachequeos[".hasEvents"] = false;
+include_once(getabspath("include/chequeos_events.php"));
+$tdatachequeos[".hasEvents"] = true;
 
 ?>
