@@ -101,4 +101,11 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-page="chequeos_list"][data-itemid="button_crear"] {
+  color: red;
+}
+ocultar{
+    display:none;
+}

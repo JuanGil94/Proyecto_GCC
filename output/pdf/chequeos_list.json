@@ -269,9 +269,6 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_add}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 		  ],
@@ -1274,9 +1271,6 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
 		  ],
@@ -1334,6 +1328,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":""},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2506,6 +2503,7 @@ pdfDocument = {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
+			fieldName: 'ChequeoId',
 				style: 'footcell',
 		
 		
@@ -2521,7 +2519,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$ChequeoId_align}',
      
       
       },
@@ -2532,6 +2530,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Fecha',
 				style: 'footcell',
 		
 		
@@ -2547,7 +2546,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Fecha_align}',
      
       
       },
@@ -2558,6 +2557,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'DespachoId',
 				style: 'footcell',
 		
 		
@@ -2573,7 +2573,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$DespachoId_align}',
      
       
       },
@@ -2584,6 +2584,7 @@ pdfDocument = {
 	cellId: 'footcell_field3',
 	col:0,
 	row:0,
+			fieldName: 'ConceptoId',
 				style: 'footcell',
 		
 		
@@ -2599,7 +2600,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$ConceptoId_align}',
      
       
       },
@@ -2610,6 +2611,7 @@ pdfDocument = {
 	cellId: 'footcell_field4',
 	col:0,
 	row:0,
+			fieldName: 'Origen',
 				style: 'footcell',
 		
 		
@@ -2625,7 +2627,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Origen_align}',
      
       
       },
@@ -2636,6 +2638,7 @@ pdfDocument = {
 	cellId: 'footcell_field5',
 	col:0,
 	row:0,
+			fieldName: 'Providencia',
 				style: 'footcell',
 		
 		
@@ -2651,7 +2654,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Providencia_align}',
      
       
       },
@@ -2662,6 +2665,7 @@ pdfDocument = {
 	cellId: 'footcell_field6',
 	col:0,
 	row:0,
+			fieldName: 'Ejecutoria',
 				style: 'footcell',
 		
 		
@@ -2677,7 +2681,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Ejecutoria_align}',
      
       
       },
@@ -2688,6 +2692,7 @@ pdfDocument = {
 	cellId: 'footcell_field7',
 	col:0,
 	row:0,
+			fieldName: 'Tipo',
 				style: 'footcell',
 		
 		
@@ -2703,7 +2708,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Tipo_align}',
      
       
       },
@@ -2714,6 +2719,7 @@ pdfDocument = {
 	cellId: 'footcell_field8',
 	col:0,
 	row:0,
+			fieldName: 'Cantidad',
 				style: 'footcell',
 		
 		
@@ -2729,7 +2735,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Cantidad_align}',
      
       
       },
@@ -2740,6 +2746,7 @@ pdfDocument = {
 	cellId: 'footcell_field9',
 	col:0,
 	row:0,
+			fieldName: 'Obligacion',
 				style: 'footcell',
 		
 		
@@ -2755,7 +2762,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Obligacion_align}',
      
       
       },
@@ -2766,6 +2773,7 @@ pdfDocument = {
 	cellId: 'footcell_field10',
 	col:0,
 	row:0,
+			fieldName: 'Costas',
 				style: 'footcell',
 		
 		
@@ -2781,7 +2789,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Costas_align}',
      
       
       },
@@ -2792,6 +2800,7 @@ pdfDocument = {
 	cellId: 'footcell_field11',
 	col:0,
 	row:0,
+			fieldName: 'PrimeraCopia',
 				style: 'footcell',
 		
 		
@@ -2807,7 +2816,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$PrimeraCopia_align}',
      
       
       },
@@ -2818,6 +2827,7 @@ pdfDocument = {
 	cellId: 'footcell_field12',
 	col:0,
 	row:0,
+			fieldName: 'Autentica',
 				style: 'footcell',
 		
 		
@@ -2833,7 +2843,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Autentica_align}',
      
       
       },
@@ -2844,6 +2854,7 @@ pdfDocument = {
 	cellId: 'footcell_field13',
 	col:0,
 	row:0,
+			fieldName: 'PrestaMeritoEjecutivo',
 				style: 'footcell',
 		
 		
@@ -2859,7 +2870,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$PrestaMeritoEjecutivo_align}',
      
       
       },
@@ -2870,6 +2881,7 @@ pdfDocument = {
 	cellId: 'footcell_field14',
 	col:0,
 	row:0,
+			fieldName: 'Clara',
 				style: 'footcell',
 		
 		
@@ -2885,7 +2897,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Clara_align}',
      
       
       },
@@ -2896,6 +2908,7 @@ pdfDocument = {
 	cellId: 'footcell_field15',
 	col:0,
 	row:0,
+			fieldName: 'Expresa',
 				style: 'footcell',
 		
 		
@@ -2911,7 +2924,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Expresa_align}',
      
       
       },
@@ -2922,6 +2935,7 @@ pdfDocument = {
 	cellId: 'footcell_field16',
 	col:0,
 	row:0,
+			fieldName: 'ActualmenteExigible',
 				style: 'footcell',
 		
 		
@@ -2937,7 +2951,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$ActualmenteExigible_align}',
      
       
       },
@@ -2948,6 +2962,7 @@ pdfDocument = {
 	cellId: 'footcell_field17',
 	col:0,
 	row:0,
+			fieldName: 'CompetenciaDEAJ',
 				style: 'footcell',
 		
 		
@@ -2963,7 +2978,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$CompetenciaDEAJ_align}',
      
       
       },
@@ -2974,6 +2989,7 @@ pdfDocument = {
 	cellId: 'footcell_field18',
 	col:0,
 	row:0,
+			fieldName: 'FaltaRequisitos',
 				style: 'footcell',
 		
 		
@@ -2989,7 +3005,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$FaltaRequisitos_align}',
      
       
       },
@@ -3000,6 +3016,7 @@ pdfDocument = {
 	cellId: 'footcell_field19',
 	col:0,
 	row:0,
+			fieldName: 'FaltaCompetencia',
 				style: 'footcell',
 		
 		
@@ -3015,7 +3032,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$FaltaCompetencia_align}',
      
       
       },
@@ -3026,6 +3043,7 @@ pdfDocument = {
 	cellId: 'footcell_field20',
 	col:0,
 	row:0,
+			fieldName: 'PorPrescripcion',
 				style: 'footcell',
 		
 		
@@ -3041,7 +3059,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$PorPrescripcion_align}',
      
       
       },
@@ -3052,6 +3070,7 @@ pdfDocument = {
 	cellId: 'footcell_field21',
 	col:0,
 	row:0,
+			fieldName: 'SeccionalIdDestino',
 				style: 'footcell',
 		
 		
@@ -3067,7 +3086,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$SeccionalIdDestino_align}',
      
       
       },
@@ -3078,6 +3097,7 @@ pdfDocument = {
 	cellId: 'footcell_field22',
 	col:0,
 	row:0,
+			fieldName: 'AprobadoPor',
 				style: 'footcell',
 		
 		
@@ -3093,7 +3113,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$AprobadoPor_align}',
      
       
       },
@@ -3104,6 +3124,7 @@ pdfDocument = {
 	cellId: 'footcell_field23',
 	col:0,
 	row:0,
+			fieldName: 'FechaAprobacion',
 				style: 'footcell',
 		
 		
@@ -3119,7 +3140,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$FechaAprobacion_align}',
      
       
       },
@@ -3130,6 +3151,7 @@ pdfDocument = {
 	cellId: 'footcell_field24',
 	col:0,
 	row:0,
+			fieldName: 'TramiteId',
 				style: 'footcell',
 		
 		
@@ -3145,7 +3167,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$TramiteId_align}',
      
       
       },
@@ -3156,6 +3178,7 @@ pdfDocument = {
 	cellId: 'footcell_field29',
 	col:0,
 	row:0,
+			fieldName: 'AbogadoId',
 				style: 'footcell',
 		
 		
@@ -3171,7 +3194,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$AbogadoId_align}',
      
       
       },
@@ -3182,6 +3205,7 @@ pdfDocument = {
 	cellId: 'footcell_field38',
 	col:0,
 	row:0,
+			fieldName: 'Fisico',
 				style: 'footcell',
 		
 		
@@ -3197,7 +3221,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Fisico_align}',
      
       
       },
@@ -3208,6 +3232,7 @@ pdfDocument = {
 	cellId: 'footcell_field39',
 	col:0,
 	row:0,
+			fieldName: 'Digital',
 				style: 'footcell',
 		
 		
@@ -3223,7 +3248,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Digital_align}',
      
       
       },

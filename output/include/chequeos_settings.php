@@ -248,13 +248,13 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 
 
 
-
+						
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 
 $tdatachequeos[".buttonsAdded"] = false;
 
-$tdatachequeos[".addPageEvents"] = false;
+$tdatachequeos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatachequeos[".isUseTimeForSearch"] = false;
@@ -7653,6 +7653,7 @@ $tdatachequeos[".sqlquery"] = $queryData_chequeos;
 
 
 
-$tdatachequeos[".hasEvents"] = false;
+include_once(getabspath("include/chequeos_events.php"));
+$tdatachequeos[".hasEvents"] = true;
 
 ?>
