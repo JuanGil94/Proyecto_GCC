@@ -55,7 +55,7 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 {
 
 		if ($data["Procesado"]==1){ 
-  $record["ChequeoId_css"].='background:yellow';
+  //$record["ChequeoId_css"].='background:yellow';
 	$pageObject->hideItem("button_crear", $recordId);
 }
 // Place event code here.
