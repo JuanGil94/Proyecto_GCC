@@ -336,10 +336,12 @@ $tdatachequeos[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY ChequeoId DESC";
 $tdatachequeos[".strOrderBy"] = $tstrOrderBy;
 
 $tdatachequeos[".orderindexes"] = array();
+	$tdatachequeos[".orderindexes"][] = array(41, (0 ? "ASC" : "DESC"), "ChequeoId");
+
 
 
 $tdatachequeos[".sqlHead"] = "SELECT ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId,  [order]";
@@ -6473,7 +6475,7 @@ $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId,  [order]";
 $proto0["m_strFrom"] = "FROM dbo.Chequeos";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY ChequeoId DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -7636,6 +7638,19 @@ $obj = new SQLGroupByItem($proto176);
 
 $proto0["m_groupby"][]=$obj;
 $proto0["m_orderby"] = array();
+												$proto178=array();
+						$obj = new SQLField(array(
+	"m_strName" => "ChequeoId",
+	"m_strTable" => "dbo.Chequeos",
+	"m_srcTableName" => "dbo.Chequeos"
+));
+
+$proto178["m_column"]=$obj;
+$proto178["m_bAsc"] = 0;
+$proto178["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto178);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Chequeos";		
 $obj = new SQLQuery($proto0);
 
