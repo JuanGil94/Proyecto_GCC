@@ -988,6 +988,11 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
+	{
+		;
+		return $value;
+	}
 	return $value;
 }
 
@@ -1023,6 +1028,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
+	{
+		return $_SESSION["UserName"];
+	}
 	return "";
 }
 
@@ -1034,6 +1043,10 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
+	{
+		return $_SESSION["UserName"];
+	}
 	return "";
 }
 

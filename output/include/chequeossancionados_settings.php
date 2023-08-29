@@ -158,13 +158,14 @@ $tdatachequeossancionados[".isUseAjaxSuggest"] = true;
 
 
 
-									
+											
+								
 
 $tdatachequeossancionados[".ajaxCodeSnippetAdded"] = false;
 
-$tdatachequeossancionados[".buttonsAdded"] = false;
+$tdatachequeossancionados[".buttonsAdded"] = true;
 
-$tdatachequeossancionados[".addPageEvents"] = false;
+$tdatachequeossancionados[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatachequeossancionados[".isUseTimeForSearch"] = false;
@@ -766,7 +767,7 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "TipoDocumentoId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Codigo";
+	$edata["DisplayField"] = "TipoDocumento";
 
 	
 
@@ -824,7 +825,7 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1760,7 +1761,7 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Checkbox");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1787,7 +1788,7 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Checkbox");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1795,11 +1796,31 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 
 
 	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Masculino_event", "type" => "click" );
+	$edata["fieldEvents"] = $eventsData;
+
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
 	
-
-
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "FEMENINO";
+	$edata["LookupValues"][] = "MASCULINO";
 
 	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1819,8 +1840,10 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+		$edata["autoUpdatable"] = true;
+
 //	End validation
 
 	
@@ -1847,17 +1870,20 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
+		$fdata["filterMultiSelect"] = 0;
+		$fdata["filterTotalFields"] = "ChequeoSancionadoId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
 
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
 //end of Filters settings
 
 

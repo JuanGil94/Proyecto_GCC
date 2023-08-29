@@ -57,6 +57,12 @@ if($buttId=='New_Button')
 	buttonHandler_New_Button($params);
 }
 
+if( $eventId == 'Masculino_event' && "dbo.ChequeosSancionados" == $table )
+{
+	require_once("include/chequeossancionados_variables.php");
+	$cipherer = new RunnerCipherer("dbo.ChequeosSancionados");
+	fieldEventHandler_Masculino_event( $params );
+}
 
 
 
@@ -111,69 +117,64 @@ function buttonHandler_New_Button($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$result["total"]= DB::Exec("select * from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
-//echo $result;
-if ($result["total"]){
+	$result["total"]= DB::DBLookup("select ChequeoId from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
+$contador=0;
+if ($result["total"]!=null){
+	$array=array();
 	$rs = DB::Query("select * from Chequeos where ChequeoId=".$params["ChequeoId"]);
 	while( $data = $rs->fetchAssoc() )
 	{
 		$seccionalId=$data['SeccionalId'];
+	}
+	$rs = DB::Select("ChequeosSancionados", "ChequeoId=".$params["ChequeoId"] );
+	while( $data = $rs->fetchAssoc() )
+	{
+		//echo "Ingresa correctamente";
+		$sancionadoId=0;
+		$array[].=$data['ChequeoSancionadoId']; // se llena arreglo si son mas de un sancionado
+		$documento=$data['Documento'];
+		$rs1 = DB::Query("SELECT * FROM Sancionados WHERE Documento='".$documento."'");
+		while( $data = $rs1->fetchAssoc() )
+		{
+			$sancionadoId=$data['SancionadoId'];
+		}
 		
-		//echo "SeccionalId: ".$seccionalId;
-		//echo $data["make"];
-	}
-	$rs = DB::Query("select * from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
-	while( $data = $rs->fetchAssoc() )
-	{
-		$documentoSancionadoC=$data['Documento'];
-		//echo $documentoSancionadoC;
-		//echo $data["make"];
-	}
-	$rs = DB::Query("SELECT * FROM Sancionados WHERE Documento='".$documentoSancionadoC."'");
-	while( $data = $rs->fetchAssoc() )
-	{
-		$sancionadoId=$data['SancionadoId'];
-		//echo $sancionadoId;
-		//echo $data["make"];
-	}
-	if ($sancionadoId){
-    //echo ("El sancionado ya se encuentra registrado");
-        }
-  else {
-    //echo ("El sancionado no se encuentra registrado");
-		DB::Exec("INSERT INTO Sancionados (Sancionado,TipoDocumentoId,Documento,Email,Celular,Masculino,Observaciones,Fallecimiento,PrivadoLibertad) SELECT Sancionado,TipoDocumentoId,Documento,Email,NULL,Masculino,Observaciones,NULL,0 FROM ChequeosSancionados WHERE ChequeoId=".$params["ChequeoId"]);
-		if ($result) {
-    // La consulta se ejecutó con éxito
+		if ($sancionadoId)
+		{
+    //echo ("El sancionado ya se encuentra registrado".$sancionadoId);
+			$sancionadoId=$sancionadoId;
+    }
+		else {
+		//echo ("El sancionado no se encuentra registrado");
+		
+		$rs2=DB::Exec("INSERT INTO Sancionados (Sancionado,TipoDocumentoId,Documento,Email,Celular,Masculino,Observaciones,Fallecimiento,PrivadoLibertad) SELECT Sancionado,TipoDocumentoId,Documento,Email,NULL,Masculino,Observaciones,NULL,0 FROM ChequeosSancionados WHERE Documento='".$documento."'");
+		if ($rs2) {
 			 //echo "La consulta se realizó correctamente.";
-		} else {
+		} 
+		else {
 			 // Hubo un error en la ejecución de la consulta
 			 echo "Error al ejecutar la consulta: " . DB::LastError();
 			 exit();
 		}
-		$rs = DB::Query("SELECT * FROM Sancionados WHERE Documento='".$documentoSancionadoC."'");
-		while( $data = $rs->fetchAssoc() )
-		{
-			$sancionadoId=$data['SancionadoId'];
-		//echo $data["id"];
-		//echo $data["make"];
 		}
-				}
-	$rs = DB::Query("SELECT MAX(Numero) AS Numero FROM Procesos WHERE SeccionalId=".$seccionalId." AND Fecha>'2023-01-01'");//se pone la fecha ya que hay numero de los años antiguos los caules son diferentes
-	$rs1 = DB::Query("SELECT year(getdate())AS Fecha");
-	$rs2 = DB::Query("SELECT S.Codigo AS Codigo FROM Seccionales S INNER JOIN Chequeos C ON C.SeccionalId=S.SeccionalId WHERE C.ChequeoId=".$params["ChequeoId"]);
-	while( $data = $rs2->fetchAssoc() )
+	}
+	//print_r ($array);
+	//echo "SancionadoID para insertar:".$sancionadoId;
+	$rs3 = DB::Query("SELECT MAX(Numero) AS Numero FROM Procesos WHERE SeccionalId=".$seccionalId." AND Fecha>'2023-01-01'");//se pone la fecha ya que hay numero de los años antiguos los caules son diferentes
+	$rs4 = DB::Query("SELECT year(getdate())AS Fecha");
+	$rs5 = DB::Query("SELECT S.Codigo AS Codigo FROM Seccionales S INNER JOIN Chequeos C ON C.SeccionalId=S.SeccionalId WHERE C.ChequeoId=".$params["ChequeoId"]);
+	while( $data = $rs5->fetchAssoc() )
 		{
 			$seccionalChequeo=$data['Codigo'];
 		}
-	while( $data = $rs1->fetchAssoc() )
+	while( $data = $rs4->fetchAssoc() )
 		{
 			$anoFecha=$data['Fecha'];
 		}
-	while( $data = $rs->fetchAssoc() )
+	while( $data = $rs3->fetchAssoc() )
 		{
 			$numProceso=$data['Numero'];
 		}
-	//echo "Array Number antes de procesar".$arrayNum=str_split($numProceso);
 	$arrayNum=str_split($numProceso);
 	for ($i=0;$i<strlen($numProceso);$i++){
             //echo("El valor".$i." es \n".$arrayNum[$i]); 
@@ -193,26 +194,61 @@ if ($result["total"]){
                 $valorNum=$valorNum.$arrayNum[$i];
             }
         }
-  //echo "numero creciente: ".$valorNum=$valorNum+1;
-	$valorNum=$valorNum+1;
-  $numberFormat = str_pad($valorNum, 5, "0", STR_PAD_LEFT); //funcion para llenar con 0 a la izquierda si faltan digitos
-  $numProcesoFinal=$seccionalChequeo.$anoFecha.$numberFormat."00";
-	//$numProcesoFinal=intval($numProcesoFinal);
-	//$sancionadoId=intval($sancionadoId);
-	//echo "Valor de SancionadoID " . $sancionadoId;
-	$resultado["response"]=DB::Exec("INSERT INTO Procesos (SeccionalId,AbogadoId,Fecha,Numero,DespachoId,SancionadoId,Providencia,Ejecutoria,ConceptoId,EstadoId,EtapaId,Folios,Tipo,Cantidad,Obligacion,Costas,Liquidacion,Dias,Intereses,Recaudo,CalificacionId,Terminacion,MotivoId,Observaciones,Cuotas,Abono,Inicio,VlrCuota,VlrIntereses,Garantia,Radicado,Remisorio,Acuerdo,Incumplimiento,Notificacion,Suspension,Traslado,Error,CarteraTipoId,ConceptoAbogado,Origen,Carpeta,ImportacionId,ActuacionId,ObligacionInicial,CostasInicial,InteresesInicial,MinJusticia,Revocatoria,Mayor,NotificacionValidada,Validado,Seleccionado,CompetenciaId,MinjusticiaId,SeleccionadoPor,Subsanar,NumeroMinjusticia,ProcesoIdOrigen,SeleccionadoFecha,InteresesIniciales,InteresesCalculados,ProcesoIdDestino,RecaudoMinjusticia,RecaudoTerminado,Persuasivo,ObligacionCreacion,InteresesCreacion,CostasCreacion,Plazo,NaturalezaId,TrasladoCartera,CarteraTipoIdOrigen,TrasladoConcepto,ConceptoIdOrigen,AutorizadoPlazo,AutorizadoFecha,AutorizadoPor,Reliquidacion,ChequeoId,VlrCostas,VlrInteresesPlazo) SELECT SeccionalId,AbogadoId,Fecha,".$numProcesoFinal.",DespachoId,".$sancionadoId.",Providencia,Ejecutoria,ConceptoId,2,1,Folios,Tipo,Cantidad,Obligacion,Costas,NULL,0,0,0,1,NULL,NULL,Observaciones,0,0,NULL,0,0,NULL,Origen,Remisorio,NULL,NULL,NULL,NULL,NULL,NULL,CarteraTipoId,NULL,NULL,NULL,NULL,NULL,Obligacion,Costas,0,MinJusticia,NULL,0,0,0,0,NULL,NULL,NULL,0,NULL,NULL,NULL,0,0,NULL,NULL,0,NULL,Obligacion,0,Costas,Plazo,NaturalezaId,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,ChequeoId,0,0 FROM Chequeos WHERE ChequeoId=".$params["ChequeoId"]);
+		$valorNum=$valorNum+1;
+		$numberFormat = str_pad($valorNum, 5, "0", STR_PAD_LEFT); //funcion para llenar con 0 a la izquierda si faltan digitos
+		$numProcesoFinal=$seccionalChequeo.$anoFecha.$numberFormat."00";
+		$rs6 = DB::Select("ChequeosSancionados", "ChequeoSancionadoId=".min($array));
+		while( $data = $rs6->fetchAssoc() )
+		{
+			$documentoFinal=$data["Documento"];
+		}
+		$rs7 = DB::Select("Sancionados", "Documento='".$documentoFinal."'");
+		while( $data = $rs7->fetchAssoc() )
+		{
+			$SancionadoIdFinal=$data["SancionadoId"];
+		}
+		//echo "Sancionado Finissshhhhh:".$SancionadoIdFinal;
+		$resultado["response"]=DB::Exec("INSERT INTO Procesos (SeccionalId,AbogadoId,Fecha,Numero,DespachoId,SancionadoId,Providencia,Ejecutoria,ConceptoId,EstadoId,EtapaId,Folios,Tipo,Cantidad,Obligacion,Costas,Liquidacion,Dias,Intereses,Recaudo,CalificacionId,Terminacion,MotivoId,Observaciones,Cuotas,Abono,Inicio,VlrCuota,VlrIntereses,Garantia,Radicado,Remisorio,Acuerdo,Incumplimiento,Notificacion,Suspension,Traslado,Error,CarteraTipoId,ConceptoAbogado,Origen,Carpeta,ImportacionId,ActuacionId,ObligacionInicial,CostasInicial,InteresesInicial,MinJusticia,Revocatoria,Mayor,NotificacionValidada,Validado,Seleccionado,CompetenciaId,MinjusticiaId,SeleccionadoPor,Subsanar,NumeroMinjusticia,ProcesoIdOrigen,SeleccionadoFecha,InteresesIniciales,InteresesCalculados,ProcesoIdDestino,RecaudoMinjusticia,RecaudoTerminado,Persuasivo,ObligacionCreacion,InteresesCreacion,CostasCreacion,Plazo,NaturalezaId,TrasladoCartera,CarteraTipoIdOrigen,TrasladoConcepto,ConceptoIdOrigen,AutorizadoPlazo,AutorizadoFecha,AutorizadoPor,Reliquidacion,ChequeoId,VlrCostas,VlrInteresesPlazo) SELECT SeccionalId,AbogadoId,Fecha,".$numProcesoFinal.",DespachoId,".$SancionadoIdFinal.",Providencia,Ejecutoria,ConceptoId,2,1,Folios,Tipo,Cantidad,Obligacion,Costas,NULL,0,0,0,1,NULL,NULL,Observaciones,0,0,NULL,0,0,NULL,Origen,Remisorio,NULL,NULL,NULL,NULL,NULL,NULL,CarteraTipoId,NULL,NULL,NULL,NULL,NULL,Obligacion,Costas,0,MinJusticia,NULL,0,0,0,0,NULL,NULL,NULL,0,NULL,NULL,NULL,0,0,NULL,NULL,0,NULL,Obligacion,0,Costas,Plazo,NaturalezaId,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,ChequeoId,0,0 FROM Chequeos WHERE ChequeoId=".$params["ChequeoId"]);
 	//echo "Valor de la insercion es: " . $resultado["response"];
-	if ($resultado["response"]) {
-	//$result["total"]= DB::Exec("select * from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
-	//echo $result;
+		if ($resultado["response"]) {
+				DB::Exec("UPDATE Chequeos SET Procesado=1 WHERE ChequeoId=".$params["ChequeoId"]);
+				//echo ("<script>alert('Proceso insertado correctamnete')</script>");
+			//echo "Se realiza la insercion del Proceso con exito";
 		} else {
 			 // Hubo un error en la ejecución de la consulta
 			 echo "Error al ejecutar la consulta: " . DB::LastError();
 			 exit();
 		}
-		DB::Exec("UPDATE Chequeos SET Procesado=1 WHERE ChequeoId=".$params["ChequeoId"]);
-		//echo ("<script>alert('Proceso insertado correctamnete')</script>");
-};
+		$rs8 = DB::Select("Procesos", "ChequeoId=".$params["ChequeoId"]);
+		while( $data = $rs8->fetchAssoc() )
+		{
+			$procesoId=$data["ProcesoId"];
+		}
+		foreach($array as $chequeoF){
+			$rs9 = DB::Select("ChequeosSancionados", "ChequeoSancionadoId=".$chequeoF);
+			while( $data = $rs9->fetchAssoc() )
+			{
+				$documentoVal=$data["Documento"];
+			}
+			$rs10=DB::Select("Sancionados", "Documento='".$documentoVal."'");
+			while( $data = $rs10->fetchAssoc() )
+			{
+				$SancionadoSol=$data["SancionadoId"];
+			}
+			if ($SancionadoSol!=$SancionadoIdFinal){
+					$insertSol=DB::Exec("INSERT INTO Solidarios values(".$procesoId.",".$SancionadoSol.")");
+					if ($insertSol) {
+				//DB::Exec("UPDATE Chequeos SET Procesado=1 WHERE ChequeoId=".$params["ChequeoId"]);
+				//echo ("<script>alert('Proceso insertado correctamnete')</script>");
+			//echo "Se realiza la insercion del Proceso con exito";
+					} else {
+							// Hubo un error en la ejecución de la consulta
+							echo "Error al ejecutar la consulta: " . DB::LastError();
+								exit();
+						}
+			}
+		}
+}   ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -220,4 +256,33 @@ if ($result["total"]){
 
 
 		
+function fieldEventHandler_Masculino_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+$result["upper"] = strtoupper( $params["value"] );
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
 ?>
