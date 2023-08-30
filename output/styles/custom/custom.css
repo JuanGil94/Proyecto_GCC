@@ -1,0 +1,5 @@
+#obligacionLetras{
+    width:380px;
+    display: block; /* Cambia el comportamiento del input a bloque */
+    margin: 0 auto;
+}
