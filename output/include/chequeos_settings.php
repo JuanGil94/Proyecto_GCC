@@ -248,13 +248,16 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 
 
 
-												
+								
+							
+							
+					
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatachequeos[".buttonsAdded"] = false;
+$tdatachequeos[".buttonsAdded"] = true;
 
-$tdatachequeos[".addPageEvents"] = false;
+$tdatachequeos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatachequeos[".isUseTimeForSearch"] = false;
@@ -3594,7 +3597,10 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Tipo_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
@@ -3896,7 +3902,10 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Tipo_event1", "type" => "editing" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -4034,7 +4043,12 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "cantidadLetras", "type" => "editing" );
+	$eventsData[] = array( "name" => "cantidadLetras", "type" => "change" );
+	$eventsData[] = array( "name" => "cantidadLetras", "type" => "blur" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

@@ -57,11 +57,23 @@ if($buttId=='New_Button')
 	buttonHandler_New_Button($params);
 }
 
-if( $eventId == 'Masculino_event' && "dbo.ChequeosSancionados" == $table )
+if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
-	require_once("include/chequeossancionados_variables.php");
-	$cipherer = new RunnerCipherer("dbo.ChequeosSancionados");
-	fieldEventHandler_Masculino_event( $params );
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_Tipo_event( $params );
+}
+if( $eventId == 'Tipo_event1' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_Tipo_event1( $params );
+}
+if( $eventId == 'cantidadLetras' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_cantidadLetras( $params );
 }
 
 
@@ -256,7 +268,111 @@ if ($result["total"]!=null){
 
 
 		
-function fieldEventHandler_Masculino_event( $params )
+function fieldEventHandler_Tipo_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+$result["upper"] = strtoupper( $params["value"] );
+if ($result["upper"]==1){
+	$valorF=1;
+	//echo ("La seleccion es pesos");
+}
+elseif($result["upper"]==2){
+	//echo ("La seleccion es Salaraios");
+	//echo "El valor del año es: ".$params["valorAnno"];
+	$rs = DB::Select("Salarios", "Ano=".$params["valorAnno"]);
+	while( $data = $rs->fetchAssoc() )
+		{
+			$valorF=$data["Salario"];
+		}
+	//echo "valor del salario: ".$valorFinal;
+	//$record->setValue("CampoA", $nuevoValor);
+}
+else{
+	//echo ("La seleccion es UVTs");
+	$rs = DB::Select("Uvts", "Ano=".$params["valorAnno"]);
+	while( $data = $rs->fetchAssoc() )
+		{
+			$valorF=$data["Uvt"];
+		}
+}
+$result["valor"]=$params["cantidad"]*$valorF;
+//echo "valor de la obligacion".$valorFinal;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Tipo_event1( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+$result["upper"] = strtoupper( $params["cantidad"] );
+if ($params["tipo"]==1){
+	$valorF=1;
+	//echo ("La seleccion es pesos");
+}
+elseif($params["tipo"]==2){
+	//echo ("La seleccion es Salaraios");
+	//echo "El valor del año es: ".$params["valorAnno"];
+	$rs = DB::Select("Salarios", "Ano=".$params["valorAnno"]);
+	while( $data = $rs->fetchAssoc() )
+		{
+			$valorF=$data["Salario"];
+		}
+	//echo "valor del salario: ".$valorFinal;
+	//$record->setValue("CampoA", $nuevoValor);
+}
+else{
+	//echo ("La seleccion es UVTs");
+	$rs = DB::Select("Uvts", "Ano=".$params["valorAnno"]);
+	while( $data = $rs->fetchAssoc() )
+		{
+			$valorF=$data["Uvt"];
+		}
+}
+$result["valor"]=$result["upper"]*$valorF;
+//echo "valor de la obligacion".$valorFinal;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_cantidadLetras( $params )
 {
 	$params["keys"] = (array)my_json_decode(postvalue('keys'));
 	$params["isManyKeys"] = false;
@@ -278,7 +394,7 @@ function fieldEventHandler_Masculino_event( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	
 // Sample:
-$result["upper"] = strtoupper( $params["value"] );
+$result["valor"]=$params["value"];
 ;
 	RunnerContext::pop();
 	

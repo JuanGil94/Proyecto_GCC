@@ -158,14 +158,13 @@ $tdatachequeossancionados[".isUseAjaxSuggest"] = true;
 
 
 
-											
-								
+																																				
 
 $tdatachequeossancionados[".ajaxCodeSnippetAdded"] = false;
 
-$tdatachequeossancionados[".buttonsAdded"] = true;
+$tdatachequeossancionados[".buttonsAdded"] = false;
 
-$tdatachequeossancionados[".addPageEvents"] = true;
+$tdatachequeossancionados[".addPageEvents"] = false;
 
 // use timepicker for search panel
 $tdatachequeossancionados[".isUseTimeForSearch"] = false;
@@ -1796,10 +1795,7 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 
 
 	
-		$eventsData = array();
-	$eventsData[] = array( "name" => "Masculino_event", "type" => "click" );
-	$edata["fieldEvents"] = $eventsData;
-
+	
 
 // Begin Lookup settings
 		$edata["LookupType"] = 0;
