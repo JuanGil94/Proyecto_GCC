@@ -356,6 +356,7 @@ function fieldEventHandler_Tipo_event( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	
 $result["upper"] = strtoupper( $params["value"] );
+$result["cantidad"] = $params["cantidad"];
 if ($result["upper"]==1){
 	$valorF=1;
 	//echo ("La seleccion es pesos");
@@ -408,6 +409,7 @@ function fieldEventHandler_Tipo_event1( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	
 $result["upper"] = strtoupper( $params["cantidad"] );
+$result["tipo"] = $params["tipo"];
 if ($params["tipo"]==1){
 	$valorF=1;
 	//echo ("La seleccion es pesos");

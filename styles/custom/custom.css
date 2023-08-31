@@ -1,7 +1,15 @@
 #obligacionLetras{
-    width:380px;
+    width:350.5px;
     display: block; /* Cambia el comportamiento del input a bloque */
     margin: 0 auto;
     background-color: #71B98A;
 	color: #FFFFFF;
 }
+#cantidadLetras{
+    width:350.5px;
+    display: block; /* Cambia el comportamiento del input a bloque */
+    margin: 0 auto;
+    background-color: #71B98A;
+	color: #FFFFFF;
+}
+
