@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Generar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Generar';if(!pageObj.buttonEventBefore['Generar']){pageObj.buttonEventBefore['Generar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Generar']){pageObj.buttonEventAfter['Generar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Generar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Generar"+"_"+Runner.genId();var button_Generar=new Runner.form.Button({id:this.id,btnName:"Generar"});button_Generar.init({args:[pageObj,proxy,pageid]});});};

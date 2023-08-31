@@ -211,9 +211,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
-				
-			{"text":"{$event dbo_Correspondencias_snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
