@@ -497,7 +497,10 @@
 							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
-			{END firstAboveGridCell}	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event dbo_Correspondencias_snippet}
+</span>			{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
