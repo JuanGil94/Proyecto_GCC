@@ -43,7 +43,7 @@ echo "Your message";
 	function event_dbo_Correspondencias_snippet(&$params)
 	{
 	// Put your code here.
-$str= "<select style='width: 150px; display: inline-block;' class='form-control'>";
+$str= "<select style='width: 450px; display: inline-block;' class='form-control'>";
 //select values from the database
 $strSQL = "select * from Oficios";
 $rs = db_query($strSQL);
