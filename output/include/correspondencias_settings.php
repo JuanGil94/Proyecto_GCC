@@ -2184,6 +2184,8 @@ $proto29["m_columns"][] = "Codigo";
 $proto29["m_columns"][] = "Radicado";
 $proto29["m_columns"][] = "UserId";
 $proto29["m_columns"][] = "AbogadoId";
+$proto29["m_columns"][] = "Lat";
+$proto29["m_columns"][] = "Lng";
 $obj = new SQLTable($proto29);
 
 $proto28["m_table"] = $obj;

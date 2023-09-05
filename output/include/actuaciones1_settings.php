@@ -1290,6 +1290,8 @@ $proto19["m_columns"][] = "Codigo";
 $proto19["m_columns"][] = "Radicado";
 $proto19["m_columns"][] = "UserId";
 $proto19["m_columns"][] = "AbogadoId";
+$proto19["m_columns"][] = "Lat";
+$proto19["m_columns"][] = "Lng";
 $obj = new SQLTable($proto19);
 
 $proto18["m_table"] = $obj;
