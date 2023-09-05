@@ -830,81 +830,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN chequeossancionados_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$chequeossancionados_link_attrs} data-short-details="chequeossancionados"
-		class="{$chequeossancionados_dlink_class}" 
-		title="{$caption dbo_ChequeosSancionados }"			>
-								
-									{BEGIN chequeossancionados_childcount}
-				<span class="details-badge badge chequeossancionados_badge" {$chequeossancionados_childnumber_attr}>
-					{$chequeossancionados_childnumber}				
-				</span>
-				{END chequeossancionados_childcount}
-						</a>
-	</span>
-	{END chequeossancionados_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN direcciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$direcciones_link_attrs} data-short-details="direcciones"
-		class="{$direcciones_dlink_class}" 
-		title="{$caption dbo_Direcciones }"			>
-								
-									{BEGIN direcciones_childcount}
-				<span class="details-badge badge direcciones_badge" {$direcciones_childnumber_attr}>
-					{$direcciones_childnumber}				
-				</span>
-				{END direcciones_childcount}
-						</a>
-	</span>
-	{END direcciones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN propiedades_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$propiedades_link_attrs} data-short-details="propiedades"
-		class="{$propiedades_dlink_class}" 
-		title="{$caption dbo_Propiedades }"			>
-								
-									{BEGIN propiedades_childcount}
-				<span class="details-badge badge propiedades_badge" {$propiedades_childnumber_attr}>
-					{$propiedades_childnumber}				
-				</span>
-				{END propiedades_childcount}
-						</a>
-	</span>
-	{END propiedades_dtable_link}
-
 
 	
 	</td>

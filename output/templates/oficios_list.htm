@@ -1124,100 +1124,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN chequeosoficios_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$chequeosoficios_link_attrs} data-short-details="chequeosoficios"
-		class="{$chequeosoficios_dlink_class}" 
-		title="{$caption dbo_ChequeosOficios }"			>
-								
-									{BEGIN chequeosoficios_childcount}
-				<span class="details-badge badge chequeosoficios_badge" {$chequeosoficios_childnumber_attr}>
-					{$chequeosoficios_childnumber}				
-				</span>
-				{END chequeosoficios_childcount}
-						</a>
-	</span>
-	{END chequeosoficios_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN suspensiones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$suspensiones_link_attrs} data-short-details="suspensiones"
-		class="{$suspensiones_dlink_class}" 
-		title="{$caption dbo_Suspensiones }"			>
-								
-									{BEGIN suspensiones_childcount}
-				<span class="details-badge badge suspensiones_badge" {$suspensiones_childnumber_attr}>
-					{$suspensiones_childnumber}				
-				</span>
-				{END suspensiones_childcount}
-						</a>
-	</span>
-	{END suspensiones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN suspensiones1_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$suspensiones1_link_attrs} data-short-details="suspensiones1"
-		class="{$suspensiones1_dlink_class}" 
-		title="{$caption dbo_Suspensiones1 }"			>
-								
-									{BEGIN suspensiones1_childcount}
-				<span class="details-badge badge suspensiones1_badge" {$suspensiones1_childnumber_attr}>
-					{$suspensiones1_childnumber}				
-				</span>
-				{END suspensiones1_childcount}
-						</a>
-	</span>
-	{END suspensiones1_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN correspondencias_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$correspondencias_link_attrs} data-short-details="correspondencias"
-		class="{$correspondencias_dlink_class}" 
-		title="{$caption dbo_Correspondencias }"			>
-								
-									{BEGIN correspondencias_childcount}
-				<span class="details-badge badge correspondencias_badge" {$correspondencias_childnumber_attr}>
-					{$correspondencias_childnumber}				
-				</span>
-				{END correspondencias_childcount}
-						</a>
-	</span>
-	{END correspondencias_dtable_link}
-
 
 	
 	</td>

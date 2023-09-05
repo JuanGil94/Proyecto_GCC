@@ -131,6 +131,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["presupuestos.SeccionalId"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["presupuestos.SeccionalId"]["edit"] = array("table" => "dbo.Presupuestos", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades"] ) ) {
+			$lookupTableLinks["dbo.Ciudades"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades"]["seccionales.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades"]["seccionales.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades"]["seccionales.CiudadId"]["edit"] = array("table" => "dbo.Seccionales", "field" => "CiudadId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Conceptos1"] ) ) {
 			$lookupTableLinks["dbo.Conceptos1"] = array();
 		}

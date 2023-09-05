@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsuvts["Spanish"]["UvtId"] = "Uvt Id";
 	$fieldToolTipsuvts["Spanish"]["UvtId"] = "";
 	$placeHoldersuvts["Spanish"]["UvtId"] = "";
-	$fieldLabelsuvts["Spanish"]["Ano"] = "Ano";
+	$fieldLabelsuvts["Spanish"]["Ano"] = "Año";
 	$fieldToolTipsuvts["Spanish"]["Ano"] = "";
 	$placeHoldersuvts["Spanish"]["Ano"] = "";
 	$fieldLabelsuvts["Spanish"]["Uvt"] = "Uvt";

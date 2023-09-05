@@ -85,7 +85,7 @@ if( $pages[PAGE_ADD] ) {
 $tdatasolidarios[".add"] = true;
 $tdatasolidarios[".afterAddAction"] = 1;
 $tdatasolidarios[".closePopupAfterAdd"] = 1;
-$tdatasolidarios[".afterAddActionDetTable"] = "";
+$tdatasolidarios[".afterAddActionDetTable"] = "Detail tables not found!";
 }
 
 if( $pages[PAGE_LIST] ) {
@@ -192,6 +192,17 @@ $tdatasolidarios[".sqlFrom"] = "FROM dbo.Solidarios";
 $tdatasolidarios[".sqlWhereExpr"] = "";
 $tdatasolidarios[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatasolidarios[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -512,7 +523,7 @@ $tdatasolidarios[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
