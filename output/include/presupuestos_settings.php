@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspresupuestos["Spanish"]["PresupuestoId"] = "Presupuesto Id";
 	$fieldToolTipspresupuestos["Spanish"]["PresupuestoId"] = "";
 	$placeHolderspresupuestos["Spanish"]["PresupuestoId"] = "";
-	$fieldLabelspresupuestos["Spanish"]["Ano"] = "Ano";
+	$fieldLabelspresupuestos["Spanish"]["Ano"] = "Año";
 	$fieldToolTipspresupuestos["Spanish"]["Ano"] = "";
 	$placeHolderspresupuestos["Spanish"]["Ano"] = "";
 	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional Id";
@@ -600,7 +600,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "SeccionalId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Codigo";
+	$edata["DisplayField"] = "Seccional";
 
 	
 
@@ -658,7 +658,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
