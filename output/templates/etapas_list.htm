@@ -710,62 +710,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="etapas_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN actuaciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$actuaciones_link_attrs} data-short-details="actuaciones"
-		class="{$actuaciones_dlink_class}" 
-		title="{$caption dbo_Actuaciones }"			>
-								
-									{BEGIN actuaciones_childcount}
-				<span class="details-badge badge actuaciones_badge" {$actuaciones_childnumber_attr}>
-					{$actuaciones_childnumber}				
-				</span>
-				{END actuaciones_childcount}
-						</a>
-	</span>
-	{END actuaciones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN actuaciones1_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$actuaciones1_link_attrs} data-short-details="actuaciones1"
-		class="{$actuaciones1_dlink_class}" 
-		title="{$caption dbo_Actuaciones1 }"			>
-								
-									{BEGIN actuaciones1_childcount}
-				<span class="details-badge badge actuaciones1_badge" {$actuaciones1_childnumber_attr}>
-					{$actuaciones1_childnumber}				
-				</span>
-				{END actuaciones1_childcount}
-						</a>
-	</span>
-	{END actuaciones1_dtable_link}
-
 
 	
 	</td>

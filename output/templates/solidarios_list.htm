@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
 						</div>
 		{END searchCtrlBlock_SancionadoId}
+																{BEGIN searchCtrlBlock_ProcesoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcesoId}" {$filterRow_attrs_ProcesoId}>
+			<label>{$label dbo_Solidarios ProcesoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcesoId}</span>
+						</div>
+		{END searchCtrlBlock_ProcesoId}
 		
 
 	</div>
@@ -363,7 +376,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="solidarios_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="solidarios_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -487,7 +500,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcesoId"]:before {
+		content: "{$label dbo_Solidarios ProcesoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
 		content: "{$label dbo_Solidarios SancionadoId}";
 	}
 	}
@@ -558,7 +574,7 @@
 	 
 		{BEGIN SancionadoId_fieldheadercolumn}
 	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
+	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
 	{$label dbo_Solidarios SancionadoId }	{$arrow_icon_SancionadoId}
 	</SPAN>
 	{END SancionadoId_fieldheader}
@@ -567,6 +583,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+			data-field="ProcesoId"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcesoId_fieldheadercolumn}
+	{BEGIN ProcesoId_fieldheader}
+	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
+	{$label dbo_Solidarios ProcesoId }	{$arrow_icon_ProcesoId}
+	</SPAN>
+	{END ProcesoId_fieldheader}
+{END ProcesoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -596,7 +637,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="solidarios_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="solidarios_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>
@@ -616,7 +657,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="solidarios_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
+	 glyphicon glyphicon-search" href="solidarios_view.php?{$editlink}" {$viewlink_attrs} title="Ver" data-popup >		
 				
 								</a>
 </span>
@@ -670,6 +711,27 @@
 {END SancionadoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+			data-field="ProcesoId"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcesoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId" data-default-width >
+{$ProcesoId_value}
+</span>
+{END ProcesoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -726,6 +788,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="solidarios_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>
