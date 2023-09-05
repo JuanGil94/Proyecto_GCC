@@ -166,6 +166,9 @@ pdfDocument = {
 										{BEGIN col_grid_33}
 					"%",
 					{END col_grid_33}
+										{BEGIN col_grid_34}
+					"%",
+					{END col_grid_34}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1311,6 +1314,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field26}
+																							{BEGIN cellblock_grid_headcell_field27}
+{
+	cellId: 'headcell_field27',
+	col:0,
+	row:0,
+			fieldName: 'ObligacionLetras',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ObligacionLetras_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field27}
 											],
 				{END row_grid_0}
 		
@@ -2309,6 +2341,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field26}
+																							{BEGIN cellblock_grid_cell_field27}
+{
+	cellId: 'cell_field27',
+	col:0,
+	row:0,
+			fieldName: 'ObligacionLetras',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ObligacionLetras_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field27}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2552,6 +2613,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  33,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  34,
 				text: ''
 			},
 							],
@@ -3447,6 +3514,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field26}
+																							{BEGIN cellblock_grid_footcell_field27}
+{
+	cellId: 'footcell_field27',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field27}
 											],
 				{END row_grid_3}
 		

@@ -30,7 +30,7 @@
 							{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -48,7 +48,7 @@
 									{BEGIN above-grid_block}
 <div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
@@ -913,12 +913,98 @@
 	</div>
 </div>
 {END details_chequeosoficios}
+											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
 	
-				{END grid_block}
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Concepto_Naturaleza_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto_Naturaleza}  r-vertical-field" data-fieldname="Concepto-Naturaleza" data-signal-error-for="Concepto_Naturaleza{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field42" {$item_integrated_edit_field42} data-pageid="{$pageid}" data-field="Concepto_Naturaleza" data-fieldname="Concepto-Naturaleza" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Concepto_Naturaleza}">
+		
+		{BEGIN Concepto_Naturaleza_label}{$label dbo_Chequeos Concepto_Naturaleza }{END Concepto_Naturaleza_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Concepto_Naturaleza_value}	</div>
+
+		
+</div>
+
+
+{END Concepto_Naturaleza_fieldblock}
+											
+{BEGIN CantidadLetras_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CantidadLetras}  r-vertical-field" data-fieldname="CantidadLetras" data-signal-error-for="CantidadLetras{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field43" {$item_integrated_edit_field43} data-pageid="{$pageid}" data-field="CantidadLetras" data-fieldname="CantidadLetras" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_CantidadLetras}">
+		
+		{BEGIN CantidadLetras_label}{$label dbo_Chequeos CantidadLetras }{END CantidadLetras_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$CantidadLetras_value}	</div>
+
+		
+</div>
+
+
+{END CantidadLetras_fieldblock}
+											
+{BEGIN ObligacionLetras_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ObligacionLetras}  r-vertical-field" data-fieldname="ObligacionLetras" data-signal-error-for="ObligacionLetras{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field44" {$item_integrated_edit_field44} data-pageid="{$pageid}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ObligacionLetras}">
+		
+		{BEGIN ObligacionLetras_label}{$label dbo_Chequeos ObligacionLetras }{END ObligacionLetras_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ObligacionLetras_value}	</div>
+
+		
+</div>
+
+
+{END ObligacionLetras_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
 									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
-	data-v-margin="0"
+	data-v-margin="1"
 	
 >		
 	 
