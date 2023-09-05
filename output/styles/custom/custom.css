@@ -1,15 +1,21 @@
-#obligacionLetras{
+#value_ObligacionLetras_46{
+    width:500px;
+    display: block; /* Cambia el comportamiento del input a bloque */
+    margin: 0 auto;
+    background-color: #71B98A;
+	color: #FFFFFF;
+	pointer-events: none;
+}
+#value_CantidadLetras_46{
     width:350.5px;
     display: block; /* Cambia el comportamiento del input a bloque */
     margin: 0 auto;
     background-color: #71B98A;
 	color: #FFFFFF;
+	pointer-events: none;
 }
-#cantidadLetras{
-    width:350.5px;
+#value_Obligacion_46{
+    pointer-events: none;
     display: block; /* Cambia el comportamiento del input a bloque */
     margin: 0 auto;
-    background-color: #71B98A;
-	color: #FFFFFF;
 }
-
