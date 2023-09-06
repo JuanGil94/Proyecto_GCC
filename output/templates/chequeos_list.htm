@@ -141,19 +141,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_CantidadLetras}</span>
 						</div>
 		{END searchCtrlBlock_CantidadLetras}
-																{BEGIN searchCtrlBlock_Concepto_Naturaleza}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Concepto_Naturaleza}" {$filterRow_attrs_Concepto_Naturaleza}>
-			<label>{$label dbo_Chequeos Concepto_Naturaleza }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Concepto_Naturaleza}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Concepto_Naturaleza}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto_Naturaleza}</span>
-						</div>
-		{END searchCtrlBlock_Concepto_Naturaleza}
 																{BEGIN searchCtrlBlock_ChequeoId}
 
 
@@ -1184,13 +1171,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObligacionLetras"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObligacionLetras"]:before {
 		content: "{$label dbo_Chequeos ObligacionLetras}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
-		content: "{$label dbo_Chequeos ConceptoId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoId"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoId"]:before {
 		content: "{$label dbo_Chequeos AbogadoId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
@@ -1413,29 +1397,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-			data-field="ConceptoId"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConceptoId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
-	{$label dbo_Chequeos ConceptoId }	</span>
-{END ConceptoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
 									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
@@ -2053,17 +2014,17 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field26}
-									{BEGIN cellblock_grid_headcell_field27}
+									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
-	{$cell_grid_headcell_field27}
+	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ObligacionLetras_class}	"
 
 			data-field="ObligacionLetras"
 	
-	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2077,7 +2038,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field27}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 																				
 					{END grid_header}
@@ -2254,27 +2215,6 @@
 {END DespachoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-			data-field="ConceptoId"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConceptoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId" data-default-width >
-{$ConceptoId_value}
-</span>
-{END ConceptoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
 									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
@@ -2836,17 +2776,17 @@
 {END CarteraTipoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field26}
-									{BEGIN cellblock_grid_cell_field27}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field27}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ObligacionLetras_class}	"
 
 			data-field="ObligacionLetras"
 	
-	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2856,7 +2796,7 @@
 </span>
 {END ObligacionLetras_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field27}
+	{END cellblock_grid_cell_field3}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -2992,21 +2932,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
 	<td
 	
@@ -3412,21 +3337,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field26}
-									{BEGIN cellblock_grid_footcell_field27}
+									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	
-	{$cell_grid_footcell_field27}
+	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ObligacionLetras_class}	"
 
 	
-	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
 	>
 
 	
 	</td>
-	{END cellblock_grid_footcell_field27}
+	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

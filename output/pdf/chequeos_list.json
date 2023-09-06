@@ -166,9 +166,6 @@ pdfDocument = {
 										{BEGIN col_grid_33}
 					"%",
 					{END col_grid_33}
-										{BEGIN col_grid_34}
-					"%",
-					{END col_grid_34}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -505,35 +502,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
-	col:0,
-	row:0,
-			fieldName: 'ConceptoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Chequeos ConceptoId }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field3}
 																							{BEGIN cellblock_grid_headcell_field4}
 {
 	cellId: 'headcell_field4',
@@ -1314,9 +1282,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field26}
-																							{BEGIN cellblock_grid_headcell_field27}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field27',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ObligacionLetras',
@@ -1342,7 +1310,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field27}
+{END cellblock_grid_headcell_field3}
 											],
 				{END row_grid_0}
 		
@@ -1532,35 +1500,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
-	col:0,
-	row:0,
-			fieldName: 'ConceptoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field3}
 																							{BEGIN cellblock_grid_cell_field4}
 {
 	cellId: 'cell_field4',
@@ -2341,9 +2280,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field26}
-																							{BEGIN cellblock_grid_cell_field27}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field27',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ObligacionLetras',
@@ -2369,7 +2308,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field27}
+{END cellblock_grid_cell_field3}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2615,12 +2554,6 @@ pdfDocument = {
 				col:  33,
 				text: ''
 			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  34,
-				text: ''
-			},
 							],
 				{END row_grid_2}
 		
@@ -2786,32 +2719,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
-																							{BEGIN cellblock_grid_footcell_field3}
-{
-	cellId: 'footcell_field3',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field3}
 																							{BEGIN cellblock_grid_footcell_field4}
 {
 	cellId: 'footcell_field4',
@@ -3514,9 +3421,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field26}
-																							{BEGIN cellblock_grid_footcell_field27}
+																							{BEGIN cellblock_grid_footcell_field3}
 {
-	cellId: 'footcell_field27',
+	cellId: 'footcell_field3',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -3539,7 +3446,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field27}
+{END cellblock_grid_footcell_field3}
 											],
 				{END row_grid_3}
 		
