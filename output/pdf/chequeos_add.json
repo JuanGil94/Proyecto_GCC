@@ -155,16 +155,6 @@ pdfDocument = {
 			"%",
 						{END row_grid_3}
 			 
-								{BEGIN row_grid_4}
-						
-			"%",
-						{END row_grid_4}
-			 
-								{BEGIN row_grid_5}
-						
-			"%",
-						{END row_grid_5}
-			 
 				],
 	
 		body: [
@@ -194,10 +184,13 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel dbo_Chequeos TramiteId }","bold":true},{"text":{$TramiteId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel dbo_Chequeos Concepto_Naturaleza }","bold":true},{"text":{$Concepto_Naturaleza_pdfvalue}}],"margin":[0,0,0,15]},
+			{"text":"{$event dbo_Chequeos_snippet1}","hidden":"{$item_hide_snippet}","isHtml":true},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Chequeos Fecha }","bold":true},{"text":{$Fecha_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel dbo_Chequeos Cantidad }","bold":true},{"text":{$Cantidad_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -235,6 +228,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel dbo_Chequeos Tipo }","bold":true},{"text":{$Tipo_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel dbo_Chequeos CantidadLetras }","bold":true},{"text":{$CantidadLetras_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -246,64 +242,6 @@ pdfDocument = {
 											],
 				{END row_grid_0}
 						{BEGIN row_grid_1}
-				[
-																{BEGIN cellblock_grid_c4}
-{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel dbo_Chequeos Cantidad }","bold":true},{"text":{$Cantidad_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c4}
-																							{BEGIN cellblock_grid_c8}
-{
-	cellId: 'c8',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_CantidadLetras}","stack":[{"text":"{$jslabel dbo_Chequeos CantidadLetras }","bold":true},{"text":{$CantidadLetras_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c8}
-											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_c5}
 {
@@ -327,6 +265,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field25}","stack":[{"text":"{$jslabel dbo_Chequeos Obligacion }","bold":true},{"text":{$Obligacion_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","bold":true},{"text":{$ObligacionLetras_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
@@ -342,48 +283,8 @@ pdfDocument = {
 				text: ''
 			},
 							],
-				{END row_grid_2}
-						{BEGIN row_grid_3}
-				[
-																{BEGIN cellblock_grid_c10}
-{
-	cellId: 'c10',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-					{BEGIN colspan_grid_c10}
-			colSpan: {$colspan_grid_c10},
-			{END colspan_grid_c10}
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","bold":true},{"text":{$ObligacionLetras_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-     
-      
-      },
-
-{END cellblock_grid_c10}
-																		{ 
-				cellId: 'c10',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
-				{END row_grid_3}
-						{BEGIN row_grid_4}
+				{END row_grid_1}
+						{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_c6}
 {
@@ -494,8 +395,8 @@ pdfDocument = {
 
 {END cellblock_grid_c7}
 											],
-				{END row_grid_4}
-						{BEGIN row_grid_5}
+				{END row_grid_2}
+						{BEGIN row_grid_3}
 				[
 																{BEGIN cellblock_grid_c9}
 {
@@ -534,7 +435,7 @@ pdfDocument = {
 				text: ''
 			},
 							],
-				{END row_grid_5}
+				{END row_grid_3}
 		
 		]
 	}

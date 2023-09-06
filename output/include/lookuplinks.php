@@ -173,13 +173,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["chequeos.SeccionalIdDestino"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["chequeos.SeccionalIdDestino"]["edit"] = array("table" => "dbo.Chequeos", "field" => "SeccionalIdDestino", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
-			$lookupTableLinks["dbo.Despachos"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Despachos"]["chequeos.Observaciones"] )) {
-			$lookupTableLinks["dbo.Despachos"]["chequeos.Observaciones"] = array();
-		}
-		$lookupTableLinks["dbo.Despachos"]["chequeos.Observaciones"]["edit"] = array("table" => "dbo.Chequeos", "field" => "Observaciones", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.TipoSancion"] ) ) {
 			$lookupTableLinks["dbo.TipoSancion"] = array();
 		}

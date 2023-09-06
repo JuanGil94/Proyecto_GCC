@@ -229,13 +229,10 @@ pdfDocument = {
 			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
 				
 				
-			{"text":{$Concepto_Naturaleza_pdfvalue},"hidden":"{$item_hide_import_field41}"},
+			{"text":{$CantidadLetras_pdfvalue},"hidden":"{$item_hide_import_field41}"},
 				
 				
-			{"text":{$CantidadLetras_pdfvalue},"hidden":"{$item_hide_import_field42}"},
-				
-				
-			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_import_field43}"},
+			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_import_field42}"},
 				
 		  ],
   "border": [ false, false, false, false ],

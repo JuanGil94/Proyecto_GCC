@@ -151,28 +151,9 @@
 
 
 {END TramiteId_fieldblock}
-											
-{BEGIN Concepto_Naturaleza_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto_Naturaleza}  r-vertical-field" 
-	data-signal-error-for="Concepto_Naturaleza{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Concepto_Naturaleza" data-fieldname="Concepto-Naturaleza" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Concepto_Naturaleza}">
-		{BEGIN Concepto_Naturaleza_label}{$label dbo_Chequeos Concepto_Naturaleza }{END Concepto_Naturaleza_label}
-	</label>
-	<div class="r-edit-field">
-		{$Concepto_Naturaleza_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Concepto_Naturaleza" {$tooltipAttr dbo_Chequeos Concepto_Naturaleza } >
-		<div class="text-muted" >
-		{$tooltip dbo_Chequeos Concepto_Naturaleza }		</div>
-	</div>
-</div>
-
-
-{END Concepto_Naturaleza_fieldblock}
-											
+											<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event dbo_Chequeos_snippet1}
+</span>											
 {BEGIN Fecha_fieldblock}
 
 
@@ -193,6 +174,27 @@
 
 
 {END Fecha_fieldblock}
+											
+{BEGIN Cantidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cantidad}  r-vertical-field" 
+	data-signal-error-for="Cantidad{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Cantidad" data-fieldname="Cantidad" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cantidad}">
+		{BEGIN Cantidad_label}{$label dbo_Chequeos Cantidad }{END Cantidad_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cantidad_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cantidad" {$tooltipAttr dbo_Chequeos Cantidad } >
+		<div class="text-muted" >
+		{$tooltip dbo_Chequeos Cantidad }		</div>
+	</div>
+</div>
+
+
+{END Cantidad_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -294,73 +296,13 @@
 
 
 {END Tipo_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c}
-								</tr>
-	 
-	 
-														<tr {$row_grid_1} >
-										
-
-{BEGIN cellblock_grid_c4}
-<td
-	{$cell_grid_c4}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c4" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-				
-{BEGIN Cantidad_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Cantidad}  r-vertical-field" 
-	data-signal-error-for="Cantidad{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Cantidad" data-fieldname="Cantidad" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Cantidad}">
-		{BEGIN Cantidad_label}{$label dbo_Chequeos Cantidad }{END Cantidad_label}
-	</label>
-	<div class="r-edit-field">
-		{$Cantidad_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Cantidad" {$tooltipAttr dbo_Chequeos Cantidad } >
-		<div class="text-muted" >
-		{$tooltip dbo_Chequeos Cantidad }		</div>
-	</div>
-</div>
-
-
-{END Cantidad_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c4}
-			 
-																
-
-{BEGIN cellblock_grid_c8}
-<td
-	{$cell_grid_c8}
-	class=" r-ori-vert"
-	
-			data-single
-			
-			data-cellId="grid_c8" data-pageid="{$pageid}"
-		data-v-cell="2"
-		
->
-	<div edit-form-cell class="clearfix">
-				
+											
 {BEGIN CantidadLetras_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_CantidadLetras}  r-vertical-field" 
 	data-signal-error-for="CantidadLetras{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="CantidadLetras" {$item_CantidadLetras} data-pageid="{$pageid}" data-field="CantidadLetras" data-fieldname="CantidadLetras" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="CantidadLetras" data-fieldname="CantidadLetras" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_CantidadLetras}">
 		{BEGIN CantidadLetras_label}{$label dbo_Chequeos CantidadLetras }{END CantidadLetras_label}
@@ -377,11 +319,11 @@
 {END CantidadLetras_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c8}
+			{END cellblock_grid_c}
 								</tr>
 	 
 	 
-														<tr {$row_grid_2} >
+														<tr {$row_grid_1} >
 										
 
 {BEGIN cellblock_grid_c5}
@@ -389,7 +331,6 @@
 	{$cell_grid_c5}
 	class="r-align-center r-ori-vert"
 	
-			data-single
 				data-fullwidth
 		
 	ocolspan="2"		data-cellId="grid_c5" data-pageid="{$pageid}"
@@ -418,35 +359,13 @@
 
 
 {END Obligacion_fieldblock}
-	
-								</td>
-			{END cellblock_grid_c5}
-								</tr>
-	 
-	 
-														<tr {$row_grid_3} >
-										
-
-{BEGIN cellblock_grid_c10}
-<td
-	{$cell_grid_c10}
-	class="r-align-center r-ori-vert"
-	
-			data-single
-				data-fullwidth
-		
-	ocolspan="2"		data-cellId="grid_c10" data-pageid="{$pageid}"
-		data-v-cell="4"
-		
->
-	<div edit-form-cell class="clearfix">
-				
+											
 {BEGIN ObligacionLetras_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_ObligacionLetras}  r-vertical-field" 
 	data-signal-error-for="ObligacionLetras{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_ObligacionLetras}">
 		{BEGIN ObligacionLetras_label}{$label dbo_Chequeos ObligacionLetras }{END ObligacionLetras_label}
@@ -463,11 +382,11 @@
 {END ObligacionLetras_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c10}
+			{END cellblock_grid_c5}
 								</tr>
 	 
 	 
-														<tr {$row_grid_4} >
+														<tr {$row_grid_2} >
 										
 
 {BEGIN cellblock_grid_c6}
@@ -924,7 +843,7 @@
 								</tr>
 	 
 	 
-														<tr {$row_grid_5} >
+														<tr {$row_grid_3} >
 										
 
 {BEGIN cellblock_grid_c9}
