@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeMoveNextList"]=true;
 
+		$this->events["CustomAdd"]=true;
+
 
 	}
 
@@ -63,6 +65,83 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 ;
 } // function BeforeMoveNextList
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Custom add
+function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
+{
+
+		print_r ($values);
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function CustomAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

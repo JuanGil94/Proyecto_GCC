@@ -26,6 +26,7 @@ class class_GlobalEvents extends eventsBase
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
 		$this->events["dbo_Correspondencias_snippet"] = true;
+		$this->events["dbo_Chequeos_snippet1"] = true;
 
 
 
@@ -70,6 +71,32 @@ echo "<option value='".$date['OficioId']."'>".$date['Oficio']."</option>";
                         ?>
                     </select>
 */
+	;
+}
+	function event_dbo_Chequeos_snippet1(&$params)
+	{
+	$str='<div class="r-integrated-field form-group clearfix   r-vertical-field" data-signal-error-for="conceptoNaturaleza46" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" data-pageid="46" data-field="conceptoNaturaleza" data-fieldname="conceptoNaturaleza">
+';
+$str.="<label class='r-edit-label control-label' for='value_SeccionalId_46'>
+		Concepto-Naturaleza
+	</label>";
+$str.= '<div class="r-edit-field">
+		<span id="edit46_SeccionalId_0" class="bs-ctrlspan ">';
+$str.= "<select id='value_conceptoNaturaleza' sisze=1 class='form-control' style='width: 350.5px;'>";
+//select values from the database
+//$strSQL = "select * from Oficios";
+$strSQL1="SELECT C.ConceptoId AS ConceptoId ,N.NaturalezaId AS NaturalezaId ,C.Concepto + ' - ' + N.Naturaleza AS 'Concepto-Naturaleza' FROM Naturalezas N
+        LEFT OUTER JOIN Conceptos C ON C.ConceptoId = N.ConceptoId
+        ORDER BY 'Concepto-Naturaleza' ASC";
+$rs = db_query($strSQL1);
+while ($date = db_fetch_array($rs)){
+$str.="<option value='".$date['NaturalezaId'].",".$date['ConceptoId']."'>".$date['Concepto-Naturaleza']."</option>";
+}
+$str.="</select>
+				</span>	
+    </div>";
+$str.="</div>";
+echo $str;
 	;
 }
 

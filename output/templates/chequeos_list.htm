@@ -115,6 +115,45 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_ObligacionLetras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObligacionLetras}" {$filterRow_attrs_ObligacionLetras}>
+			<label>{$label dbo_Chequeos ObligacionLetras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObligacionLetras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObligacionLetras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObligacionLetras}</span>
+						</div>
+		{END searchCtrlBlock_ObligacionLetras}
+																{BEGIN searchCtrlBlock_CantidadLetras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CantidadLetras}" {$filterRow_attrs_CantidadLetras}>
+			<label>{$label dbo_Chequeos CantidadLetras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CantidadLetras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CantidadLetras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CantidadLetras}</span>
+						</div>
+		{END searchCtrlBlock_CantidadLetras}
+																{BEGIN searchCtrlBlock_Concepto_Naturaleza}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto_Naturaleza}" {$filterRow_attrs_Concepto_Naturaleza}>
+			<label>{$label dbo_Chequeos Concepto_Naturaleza }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto_Naturaleza}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto_Naturaleza}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto_Naturaleza}</span>
+						</div>
+		{END searchCtrlBlock_Concepto_Naturaleza}
 																{BEGIN searchCtrlBlock_ChequeoId}
 
 
@@ -1145,7 +1184,16 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto_Naturaleza"]:before {
+		content: "{$label dbo_Chequeos Concepto_Naturaleza}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CantidadLetras"]:before {
+		content: "{$label dbo_Chequeos CantidadLetras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObligacionLetras"]:before {
+		content: "{$label dbo_Chequeos ObligacionLetras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
 		content: "{$label dbo_Chequeos ConceptoId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoId"]:before {
@@ -2011,6 +2059,81 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
+	<th
+	
+	{$cell_grid_headcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_Naturaleza_class}	"
+
+			data-field="Concepto_Naturaleza"
+	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_Naturaleza_fieldheadercolumn}
+	{BEGIN Concepto_Naturaleza_fieldheader}
+	<SPAN {$Concepto_Naturaleza_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto_Naturaleza" data-fieldname="Concepto-Naturaleza">
+	{$label dbo_Chequeos Concepto_Naturaleza }	{$arrow_icon_Concepto_Naturaleza}
+	</SPAN>
+	{END Concepto_Naturaleza_fieldheader}
+{END Concepto_Naturaleza_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field27}
+									{BEGIN cellblock_grid_headcell_field28}
+	<th
+	
+	{$cell_grid_headcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CantidadLetras_class}	"
+
+			data-field="CantidadLetras"
+	
+	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CantidadLetras_fieldheadercolumn}
+	{BEGIN CantidadLetras_fieldheader}
+	<SPAN {$CantidadLetras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CantidadLetras" data-fieldname="CantidadLetras">
+	{$label dbo_Chequeos CantidadLetras }	{$arrow_icon_CantidadLetras}
+	</SPAN>
+	{END CantidadLetras_fieldheader}
+{END CantidadLetras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field28}
+									{BEGIN cellblock_grid_headcell_field30}
+	<th
+	
+	{$cell_grid_headcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObligacionLetras_class}	"
+
+			data-field="ObligacionLetras"
+	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObligacionLetras_fieldheadercolumn}
+	{BEGIN ObligacionLetras_fieldheader}
+	<SPAN {$ObligacionLetras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label4" {$item_grid_field_label4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras">
+	{$label dbo_Chequeos ObligacionLetras }	{$arrow_icon_ObligacionLetras}
+	</SPAN>
+	{END ObligacionLetras_fieldheader}
+{END ObligacionLetras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field30}
 							</tr>
 																				
 					{END grid_header}
@@ -2769,6 +2892,69 @@
 {END CarteraTipoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
+	<td
+	
+	{$cell_grid_cell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_Naturaleza_class}	"
+
+			data-field="Concepto_Naturaleza"
+	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_Naturaleza_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto_Naturaleza" data-fieldname="Concepto-Naturaleza" data-default-width >
+{$Concepto_Naturaleza_value}
+</span>
+{END Concepto_Naturaleza_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field27}
+									{BEGIN cellblock_grid_cell_field28}
+	<td
+	
+	{$cell_grid_cell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CantidadLetras_class}	"
+
+			data-field="CantidadLetras"
+	
+	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CantidadLetras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CantidadLetras" data-fieldname="CantidadLetras" data-default-width >
+{$CantidadLetras_value}
+</span>
+{END CantidadLetras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field28}
+									{BEGIN cellblock_grid_cell_field30}
+	<td
+	
+	{$cell_grid_cell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObligacionLetras_class}	"
+
+			data-field="ObligacionLetras"
+	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObligacionLetras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras" data-default-width >
+{$ObligacionLetras_value}
+</span>
+{END ObligacionLetras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field30}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -3324,6 +3510,51 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field26}
+									{BEGIN cellblock_grid_footcell_field27}
+	<td
+	
+	{$cell_grid_footcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_Naturaleza_class}	"
+
+	
+	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field27}
+									{BEGIN cellblock_grid_footcell_field28}
+	<td
+	
+	{$cell_grid_footcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CantidadLetras_class}	"
+
+	
+	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field28}
+									{BEGIN cellblock_grid_footcell_field30}
+	<td
+	
+	{$cell_grid_footcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObligacionLetras_class}	"
+
+	
+	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field30}
 							</tr>
 					
 					</tfoot>
