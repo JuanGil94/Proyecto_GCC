@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$EntidadId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Entidad_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 		  ],

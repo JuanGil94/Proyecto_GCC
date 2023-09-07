@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
@@ -143,6 +140,9 @@ pdfDocument = {
 				
 				
 			{"text":{$Codificador_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Firma_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

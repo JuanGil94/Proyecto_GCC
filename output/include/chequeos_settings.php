@@ -94,7 +94,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeos["Spanish"]["Tipo"] = "Tipo";
 	$fieldToolTipschequeos["Spanish"]["Tipo"] = "";
 	$placeHolderschequeos["Spanish"]["Tipo"] = "";
-	$fieldLabelschequeos["Spanish"]["FechaSancion"] = "Fecha Sancion";
+	$fieldLabelschequeos["Spanish"]["FechaSancion"] = "Fecha Liquidación";
 	$fieldToolTipschequeos["Spanish"]["FechaSancion"] = "";
 	$placeHolderschequeos["Spanish"]["FechaSancion"] = "";
 	$fieldLabelschequeos["Spanish"]["Cantidad"] = "Cantidad";

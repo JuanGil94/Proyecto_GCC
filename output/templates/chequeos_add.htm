@@ -175,26 +175,26 @@
 											<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
 {$event dbo_Chequeos_snippet1}
 </span>											
-{BEGIN Fecha_fieldblock}
+{BEGIN FechaSancion_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-vertical-field" 
-	data-signal-error-for="Fecha{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FechaSancion}  r-vertical-field" 
+	data-signal-error-for="FechaSancion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="FechaSancion" data-fieldname="FechaSancion" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Fecha}">
-		{BEGIN Fecha_label}{$label dbo_Chequeos Fecha }{END Fecha_label}
+	<label class="r-edit-label control-label" for="{$labelfor_FechaSancion}">
+		{BEGIN FechaSancion_label}{$label dbo_Chequeos FechaSancion }{END FechaSancion_label}
 	</label>
 	<div class="r-edit-field">
-		{$Fecha_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Fecha" {$tooltipAttr dbo_Chequeos Fecha } >
+		{$FechaSancion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="FechaSancion" {$tooltipAttr dbo_Chequeos FechaSancion } >
 		<div class="text-muted" >
-		{$tooltip dbo_Chequeos Fecha }		</div>
+		{$tooltip dbo_Chequeos FechaSancion }		</div>
 	</div>
 </div>
 
 
-{END Fecha_fieldblock}
+{END FechaSancion_fieldblock}
 											
 {BEGIN Cantidad_fieldblock}
 

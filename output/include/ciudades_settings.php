@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsciudades["Spanish"]["Ciudad"] = "Ciudad";
 	$fieldToolTipsciudades["Spanish"]["Ciudad"] = "";
 	$placeHoldersciudades["Spanish"]["Ciudad"] = "";
-	$fieldLabelsciudades["Spanish"]["DepartamentoId"] = "Departamento Id";
+	$fieldLabelsciudades["Spanish"]["DepartamentoId"] = "Departamento";
 	$fieldToolTipsciudades["Spanish"]["DepartamentoId"] = "";
 	$placeHoldersciudades["Spanish"]["DepartamentoId"] = "";
 	if (count($fieldToolTipsciudades["Spanish"]))

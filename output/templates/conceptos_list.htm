@@ -115,32 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Activo}</span>
 						</div>
 		{END searchCtrlBlock_Activo}
-																{BEGIN searchCtrlBlock_Cuenta}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Cuenta}" {$filterRow_attrs_Cuenta}>
-			<label>{$label dbo_Conceptos Cuenta }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Cuenta}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Cuenta}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Cuenta}</span>
-						</div>
-		{END searchCtrlBlock_Cuenta}
-																{BEGIN searchCtrlBlock_ConceptoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ConceptoId}" {$filterRow_attrs_ConceptoId}>
-			<label>{$label dbo_Conceptos ConceptoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ConceptoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ConceptoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
-						</div>
-		{END searchCtrlBlock_ConceptoId}
 																{BEGIN searchCtrlBlock_Concepto}
 
 
@@ -541,19 +515,13 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
-		content: "{$label dbo_Conceptos ConceptoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
 		content: "{$label dbo_Conceptos Concepto}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
 		content: "{$label dbo_Conceptos Activo}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cuenta"]:before {
-		content: "{$label dbo_Conceptos Cuenta}";
-	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -620,31 +588,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-			data-field="ConceptoId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConceptoId_fieldheadercolumn}
-	{BEGIN ConceptoId_fieldheader}
-	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
-	{$label dbo_Conceptos ConceptoId }	{$arrow_icon_ConceptoId}
-	</SPAN>
-	{END ConceptoId_fieldheader}
-{END ConceptoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -695,31 +638,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuenta_class}	"
-
-			data-field="Cuenta"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cuenta_fieldheadercolumn}
-	{BEGIN Cuenta_fieldheader}
-	<SPAN {$Cuenta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta">
-	{$label dbo_Conceptos Cuenta }	{$arrow_icon_Cuenta}
-	</SPAN>
-	{END Cuenta_fieldheader}
-{END Cuenta_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
 							</tr>
 																				
 					{END grid_header}
@@ -809,27 +727,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-			data-field="ConceptoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConceptoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId" data-default-width >
-{$ConceptoId_value}
-</span>
-{END ConceptoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -872,27 +769,6 @@
 {END Activo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuenta_class}	"
-
-			data-field="Cuenta"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cuenta_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta" data-default-width >
-{$Cuenta_value}
-</span>
-{END Cuenta_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -983,21 +859,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="conceptos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
@@ -1028,21 +889,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuenta_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="conceptos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

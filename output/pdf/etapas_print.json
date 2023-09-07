@@ -67,9 +67,6 @@ pdfDocument = {
 														{BEGIN col_grid_0}
 					"%",
 					{END col_grid_0}
-										{BEGIN col_grid_1}
-					"%",
-					{END col_grid_1}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -206,35 +203,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'EtapaId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Etapas EtapaId }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EtapaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Etapa',
 				style: 'headcell',
 		
@@ -249,7 +217,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Etapas Etapa }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel dbo_Etapas Etapa }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -258,7 +226,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
+{END cellblock_grid_headcell_field}
 											],
 				{END row_grid_0}
 		
@@ -271,35 +239,6 @@ pdfDocument = {
 																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'EtapaId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$EtapaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EtapaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Etapa',
@@ -325,7 +264,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
+{END cellblock_grid_cell_field}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -340,9 +279,6 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
-					{BEGIN colspan_grid_cell_dpreview}
-			colSpan: {$colspan_grid_cell_dpreview},
-			{END colspan_grid_cell_dpreview}
 		
 		
 	
@@ -368,13 +304,7 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_dpreview}
-																		{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
+											],
 				{END row_grid_2}
 		
 		{END grid_record}
@@ -409,32 +339,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
-{
-	cellId: 'footcell_field1',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field1}
 											],
 				{END row_grid_3}
 		

@@ -76,9 +76,6 @@ pdfDocument = {
 										{BEGIN col_grid_3}
 					"%",
 					{END col_grid_3}
-										{BEGIN col_grid_4}
-					"%",
-					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -278,35 +275,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_details}
-																							{BEGIN cellblock_grid_headcell_field}
-{
-	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'EtapaId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Etapas EtapaId }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EtapaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
 																							{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
@@ -430,35 +398,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_details}
-																							{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'EtapaId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$EtapaId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EtapaId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
@@ -548,12 +487,6 @@ pdfDocument = {
 				col:  3,
 				text: ''
 			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  4,
-				text: ''
-			},
 							],
 				{END row_grid_2}
 		
@@ -641,32 +574,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_details}
-																							{BEGIN cellblock_grid_footcell_field}
-{
-	cellId: 'footcell_field',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field}
 																							{BEGIN cellblock_grid_footcell_field1}
 {
 	cellId: 'footcell_field1',

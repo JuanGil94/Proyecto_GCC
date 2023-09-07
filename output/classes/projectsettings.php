@@ -3688,6 +3688,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "propiedades3" ] = "dbo.Propiedades3";
 	$projectEntities[ "dbo.Correspondencias1" ] = array( "url" => "correspondencias1", "type" => 1 );
 	$projectEntitiesReverse[ "correspondencias1" ] = "dbo.Correspondencias1";
+	$projectEntities[ "dbo.Bancos" ] = array( "url" => "bancos", "type" => 0 );
+	$projectEntitiesReverse[ "bancos" ] = "dbo.Bancos";
 }
 
 function findTable( $table ) {

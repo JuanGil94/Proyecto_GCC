@@ -106,13 +106,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$EstadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Estado_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
-			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 		  ],
   "border": [ false, false, false, false ],

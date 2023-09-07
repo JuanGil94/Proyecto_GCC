@@ -46,7 +46,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsempresas["Spanish"]["MaximoUvt"] = "Maximo Uvt";
 	$fieldToolTipsempresas["Spanish"]["MaximoUvt"] = "";
 	$placeHoldersempresas["Spanish"]["MaximoUvt"] = "";
-	$fieldLabelsempresas["Spanish"]["EmailAprobador"] = "Email Aprobador";
+	$fieldLabelsempresas["Spanish"]["EmailAprobador"] = "Email";
 	$fieldToolTipsempresas["Spanish"]["EmailAprobador"] = "";
 	$placeHoldersempresas["Spanish"]["EmailAprobador"] = "";
 	$fieldLabelsempresas["Spanish"]["Tope"] = "Tope";

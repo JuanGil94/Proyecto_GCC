@@ -6,11 +6,11 @@ $tdatacuentas[".OwnerID"] = "";
 $tdatacuentas[".OriginalTable"] = "dbo.Cuentas";
 
 
-$tdatacuentas[".pagesByType"] = my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
+$tdatacuentas[".pagesByType"] = my_json_decode( "{\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
 $tdatacuentas[".originalPagesByType"] = $tdatacuentas[".pagesByType"];
-$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
+$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
 $tdatacuentas[".originalPages"] = $tdatacuentas[".pages"];
-$tdatacuentas[".defaultPages"] = my_json_decode( "{\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
+$tdatacuentas[".defaultPages"] = my_json_decode( "{\"list\":\"list1\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
 $tdatacuentas[".originalDefaultPages"] = $tdatacuentas[".defaultPages"];
 
 //	field labels
@@ -143,7 +143,7 @@ $tdatacuentas[".isUseAjaxSuggest"] = true;
 
 
 
-															
+																														
 
 $tdatacuentas[".ajaxCodeSnippetAdded"] = false;
 
@@ -598,9 +598,8 @@ $tdatacuentas[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
+				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Bancos";
-	$edata["LookupConnId"] = "GCC_at_S00001_CCAD01";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -619,8 +618,7 @@ $tdatacuentas[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	
@@ -1290,6 +1288,24 @@ $masterTablesData["dbo.Cuentas"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Bancos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Bancos";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "bancos";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Cuentas"][0] = $masterParams;
+				$masterTablesData["dbo.Cuentas"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Cuentas"][0]["masterKeys"][]="BancoId";
+				$masterTablesData["dbo.Cuentas"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Cuentas"][0]["detailKeys"][]="BancoId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
