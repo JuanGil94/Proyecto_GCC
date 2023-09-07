@@ -91,6 +91,7 @@ $nonAdminTablesArr[] = "dbo.Propiedades";
 $nonAdminTablesArr[] = "dbo.Propiedades1";
 $nonAdminTablesArr[] = "dbo.Propiedades3";
 $nonAdminTablesArr[] = "dbo.Correspondencias1";
+$nonAdminTablesArr[] = "dbo.Bancos";
 
 $ug_connection = $cman->getForUserGroups();
 

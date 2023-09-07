@@ -115,32 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Estado}</span>
 						</div>
 		{END searchCtrlBlock_Estado}
-																{BEGIN searchCtrlBlock_Tipo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Tipo}" {$filterRow_attrs_Tipo}>
-			<label>{$label dbo_Estados Tipo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Tipo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Tipo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Tipo}</span>
-						</div>
-		{END searchCtrlBlock_Tipo}
-																{BEGIN searchCtrlBlock_EstadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_EstadoId}" {$filterRow_attrs_EstadoId}>
-			<label>{$label dbo_Estados EstadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_EstadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_EstadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_EstadoId}</span>
-						</div>
-		{END searchCtrlBlock_EstadoId}
 		
 
 	</div>
@@ -514,16 +488,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EstadoId"]:before {
-		content: "{$label dbo_Estados EstadoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Estado"]:before {
 		content: "{$label dbo_Estados Estado}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Tipo"]:before {
-		content: "{$label dbo_Estados Tipo}";
-	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -590,31 +558,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$EstadoId_class}	"
-
-			data-field="EstadoId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN EstadoId_fieldheadercolumn}
-	{BEGIN EstadoId_fieldheader}
-	<SPAN {$EstadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoId" data-fieldname="EstadoId">
-	{$label dbo_Estados EstadoId }	{$arrow_icon_EstadoId}
-	</SPAN>
-	{END EstadoId_fieldheader}
-{END EstadoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -640,31 +583,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tipo_class}	"
-
-			data-field="Tipo"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Tipo_fieldheadercolumn}
-	{BEGIN Tipo_fieldheader}
-	<SPAN {$Tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tipo" data-fieldname="Tipo">
-	{$label dbo_Estados Tipo }	{$arrow_icon_Tipo}
-	</SPAN>
-	{END Tipo_fieldheader}
-{END Tipo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 							</tr>
 																				
 					{END grid_header}
@@ -682,7 +600,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="estados_list"		data-control-cell
@@ -700,17 +618,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="estados_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -754,27 +661,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$EstadoId_class}	"
-
-			data-field="EstadoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN EstadoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoId" data-fieldname="EstadoId" data-default-width >
-{$EstadoId_value}
-</span>
-{END EstadoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -796,27 +682,6 @@
 {END Estado_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tipo_class}	"
-
-			data-field="Tipo"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Tipo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tipo" data-fieldname="Tipo" data-default-width >
-{$Tipo_value}
-</span>
-{END Tipo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -901,21 +766,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$EstadoId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="estados_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
@@ -931,21 +781,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tipo_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="estados_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>

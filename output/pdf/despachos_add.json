@@ -169,12 +169,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Despachos CiudadId }","bold":true},{"text":{$CiudadId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Despachos Especialidad }","bold":true},{"text":{$Especialidad_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Despachos Subespecialidad }","bold":true},{"text":{$Subespecialidad_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Despachos Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

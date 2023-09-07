@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Abogados AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Abogados Abogado }","bold":true},{"text":{$Abogado_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -203,6 +200,9 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel dbo_Abogados Codificador }","bold":true},{"text":{$Codificador_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Abogados Firma }","bold":true},{"text":{$Firma_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

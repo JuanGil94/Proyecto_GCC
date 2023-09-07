@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$DepartamentoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				

@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Ano}</span>
 						</div>
 		{END searchCtrlBlock_Ano}
-																{BEGIN searchCtrlBlock_UvtId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_UvtId}" {$filterRow_attrs_UvtId}>
-			<label>{$label dbo_Uvts UvtId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_UvtId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_UvtId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_UvtId}</span>
-						</div>
-		{END searchCtrlBlock_UvtId}
 																{BEGIN searchCtrlBlock_Uvt}
 
 
@@ -491,9 +478,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="UvtId"]:before {
-		content: "{$label dbo_Uvts UvtId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ano"]:before {
 		content: "{$label dbo_Uvts Ano}";
 	}
@@ -558,21 +542,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UvtId_class}	"
+		 r-ori-vert		 {$Ano_class}	"
 
-			data-field="UvtId"
+			data-field="Ano"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN UvtId_fieldheadercolumn}
-	{BEGIN UvtId_fieldheader}
-	<SPAN {$UvtId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UvtId" data-fieldname="UvtId">
-	{$label dbo_Uvts UvtId }	{$arrow_icon_UvtId}
+		{BEGIN Ano_fieldheadercolumn}
+	{BEGIN Ano_fieldheader}
+	<SPAN {$Ano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ano" data-fieldname="Ano">
+	{$label dbo_Uvts Ano }	{$arrow_icon_Ano}
 	</SPAN>
-	{END UvtId_fieldheader}
-{END UvtId_fieldheadercolumn}
+	{END Ano_fieldheader}
+{END Ano_fieldheadercolumn}
 
 	
 	</th>
@@ -583,42 +567,17 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Ano_class}	"
+		 r-ori-vert		 {$Uvt_class}	"
 
-			data-field="Ano"
+			data-field="Uvt"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Ano_fieldheadercolumn}
-	{BEGIN Ano_fieldheader}
-	<SPAN {$Ano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ano" data-fieldname="Ano">
-	{$label dbo_Uvts Ano }	{$arrow_icon_Ano}
-	</SPAN>
-	{END Ano_fieldheader}
-{END Ano_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Uvt_class}	"
-
-			data-field="Uvt"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Uvt_fieldheadercolumn}
 	{BEGIN Uvt_fieldheader}
-	<SPAN {$Uvt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Uvt" data-fieldname="Uvt">
+	<SPAN {$Uvt_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Uvt" data-fieldname="Uvt">
 	{$label dbo_Uvts Uvt }	{$arrow_icon_Uvt}
 	</SPAN>
 	{END Uvt_fieldheader}
@@ -626,7 +585,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -706,32 +665,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UvtId_class}	"
-
-			data-field="UvtId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN UvtId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UvtId" data-fieldname="UvtId" data-default-width >
-{$UvtId_value}
-</span>
-{END UvtId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Ano_class}	"
 
 			data-field="Ano"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -741,18 +679,18 @@
 </span>
 {END Ano_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Uvt_class}	"
 
 			data-field="Uvt"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -762,7 +700,7 @@
 </span>
 {END Uvt_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -810,7 +748,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UvtId_class}	"
+		 r-ori-vert		 {$Ano_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="uvts_list"	
@@ -825,7 +763,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Ano_class}	"
+		 r-ori-vert		 {$Uvt_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="uvts_list"	
@@ -834,21 +772,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Uvt_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="uvts_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>

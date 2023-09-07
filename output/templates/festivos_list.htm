@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
 						</div>
 		{END searchCtrlBlock_Fecha}
-																{BEGIN searchCtrlBlock_FestivoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_FestivoId}" {$filterRow_attrs_FestivoId}>
-			<label>{$label dbo_Festivos FestivoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_FestivoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_FestivoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_FestivoId}</span>
-						</div>
-		{END searchCtrlBlock_FestivoId}
 																{BEGIN searchCtrlBlock_Festivo}
 
 
@@ -491,9 +478,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="FestivoId"]:before {
-		content: "{$label dbo_Festivos FestivoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Festivo"]:before {
 		content: "{$label dbo_Festivos Festivo}";
 	}
@@ -558,21 +542,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$FestivoId_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="FestivoId"
+			data-field="Fecha"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN FestivoId_fieldheadercolumn}
-	{BEGIN FestivoId_fieldheader}
-	<SPAN {$FestivoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FestivoId" data-fieldname="FestivoId">
-	{$label dbo_Festivos FestivoId }	{$arrow_icon_FestivoId}
+		{BEGIN Fecha_fieldheadercolumn}
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label dbo_Festivos Fecha }	{$arrow_icon_Fecha}
 	</SPAN>
-	{END FestivoId_fieldheader}
-{END FestivoId_fieldheadercolumn}
+	{END Fecha_fieldheader}
+{END Fecha_fieldheadercolumn}
 
 	
 	</th>
@@ -593,7 +577,7 @@
 	 
 		{BEGIN Festivo_fieldheadercolumn}
 	{BEGIN Festivo_fieldheader}
-	<SPAN {$Festivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Festivo" data-fieldname="Festivo">
+	<SPAN {$Festivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Festivo" data-fieldname="Festivo">
 	{$label dbo_Festivos Festivo }	{$arrow_icon_Festivo}
 	</SPAN>
 	{END Festivo_fieldheader}
@@ -602,31 +586,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-			data-field="Fecha"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Fecha_fieldheadercolumn}
-	{BEGIN Fecha_fieldheader}
-	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
-	{$label dbo_Festivos Fecha }	{$arrow_icon_Fecha}
-	</SPAN>
-	{END Fecha_fieldheader}
-{END Fecha_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 							</tr>
 															
 					{END grid_header}
@@ -644,7 +603,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="festivos_list"		data-control-cell
@@ -662,17 +621,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="festivos_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -706,19 +654,19 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$FestivoId_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="FestivoId"
+			data-field="Fecha"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN FestivoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FestivoId" data-fieldname="FestivoId" data-default-width >
-{$FestivoId_value}
+		{BEGIN Fecha_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
+{$Fecha_value}
 </span>
-{END FestivoId_fieldcolumn}	
+{END Fecha_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -742,27 +690,6 @@
 {END Festivo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-			data-field="Fecha"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Fecha_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
-{$Fecha_value}
-</span>
-{END Fecha_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 							</tr>
 										
 											{END grid_row}
@@ -810,7 +737,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$FestivoId_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="festivos_list"	
@@ -834,21 +761,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="festivos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>

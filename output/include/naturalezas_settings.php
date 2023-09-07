@@ -31,7 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsnaturalezas["Spanish"]["Naturaleza"] = "Naturaleza";
 	$fieldToolTipsnaturalezas["Spanish"]["Naturaleza"] = "";
 	$placeHoldersnaturalezas["Spanish"]["Naturaleza"] = "";
-	$fieldLabelsnaturalezas["Spanish"]["ConceptoId"] = "Concepto Id";
+	$fieldLabelsnaturalezas["Spanish"]["ConceptoId"] = "Concepto ";
 	$fieldToolTipsnaturalezas["Spanish"]["ConceptoId"] = "";
 	$placeHoldersnaturalezas["Spanish"]["ConceptoId"] = "";
 	$fieldLabelsnaturalezas["Spanish"]["TasaTipo"] = "Tasa Tipo";

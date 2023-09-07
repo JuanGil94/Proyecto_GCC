@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Despacho"] = "Despacho";
 	$fieldToolTipsdespachos["Spanish"]["Despacho"] = "";
 	$placeHoldersdespachos["Spanish"]["Despacho"] = "";
-	$fieldLabelsdespachos["Spanish"]["CiudadId"] = "Ciudad Id";
+	$fieldLabelsdespachos["Spanish"]["CiudadId"] = "Ciudad ";
 	$fieldToolTipsdespachos["Spanish"]["CiudadId"] = "";
 	$placeHoldersdespachos["Spanish"]["CiudadId"] = "";
 	$fieldLabelsdespachos["Spanish"]["Especialidad"] = "Especialidad";
@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Juez"] = "Juez";
 	$fieldToolTipsdespachos["Spanish"]["Juez"] = "";
 	$placeHoldersdespachos["Spanish"]["Juez"] = "";
-	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo";
+	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo Electronico";
 	$fieldToolTipsdespachos["Spanish"]["Correo"] = "";
 	$placeHoldersdespachos["Spanish"]["Correo"] = "";
 	$fieldLabelsdespachos["Spanish"]["Telefonos"] = "Telefonos";

@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Etapa}</span>
 						</div>
 		{END searchCtrlBlock_Etapa}
-																{BEGIN searchCtrlBlock_EtapaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_EtapaId}" {$filterRow_attrs_EtapaId}>
-			<label>{$label dbo_Etapas EtapaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_EtapaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_EtapaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_EtapaId}</span>
-						</div>
-		{END searchCtrlBlock_EtapaId}
 		
 
 	</div>
@@ -508,9 +495,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EtapaId"]:before {
-		content: "{$label dbo_Etapas EtapaId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Etapa"]:before {
 		content: "{$label dbo_Etapas Etapa}";
 	}
@@ -581,31 +565,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$EtapaId_class}	"
-
-			data-field="EtapaId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN EtapaId_fieldheadercolumn}
-	{BEGIN EtapaId_fieldheader}
-	<SPAN {$EtapaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId">
-	{$label dbo_Etapas EtapaId }	{$arrow_icon_EtapaId}
-	</SPAN>
-	{END EtapaId_fieldheader}
-{END EtapaId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -648,7 +607,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="etapas_list"		data-control-cell
@@ -666,17 +625,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="etapas_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -720,27 +668,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$EtapaId_class}	"
-
-			data-field="EtapaId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN EtapaId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId" data-default-width >
-{$EtapaId_value}
-</span>
-{END EtapaId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -849,21 +776,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$EtapaId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="etapas_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	

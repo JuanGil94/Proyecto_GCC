@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Entidad}</span>
 						</div>
 		{END searchCtrlBlock_Entidad}
-																{BEGIN searchCtrlBlock_EntidadId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_EntidadId}" {$filterRow_attrs_EntidadId}>
-			<label>{$label dbo_Entidades EntidadId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_EntidadId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_EntidadId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_EntidadId}</span>
-						</div>
-		{END searchCtrlBlock_EntidadId}
 		
 
 	</div>
@@ -478,9 +465,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EntidadId"]:before {
-		content: "{$label dbo_Entidades EntidadId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Entidad"]:before {
 		content: "{$label dbo_Entidades Entidad}";
 	}
@@ -542,42 +526,17 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EntidadId_class}	"
+		 r-ori-vert		 {$Entidad_class}	"
 
-			data-field="EntidadId"
+			data-field="Entidad"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN EntidadId_fieldheadercolumn}
-	{BEGIN EntidadId_fieldheader}
-	<SPAN {$EntidadId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EntidadId" data-fieldname="EntidadId">
-	{$label dbo_Entidades EntidadId }	{$arrow_icon_EntidadId}
-	</SPAN>
-	{END EntidadId_fieldheader}
-{END EntidadId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Entidad_class}	"
-
-			data-field="Entidad"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Entidad_fieldheadercolumn}
 	{BEGIN Entidad_fieldheader}
-	<SPAN {$Entidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Entidad" data-fieldname="Entidad">
+	<SPAN {$Entidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Entidad" data-fieldname="Entidad">
 	{$label dbo_Entidades Entidad }	{$arrow_icon_Entidad}
 	</SPAN>
 	{END Entidad_fieldheader}
@@ -585,7 +544,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field}
 							</tr>
 															
 					{END grid_header}
@@ -603,7 +562,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="entidades_list"		data-control-cell
@@ -621,17 +580,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="entidades_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -665,32 +613,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EntidadId_class}	"
-
-			data-field="EntidadId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN EntidadId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EntidadId" data-fieldname="EntidadId" data-default-width >
-{$EntidadId_value}
-</span>
-{END EntidadId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Entidad_class}	"
 
 			data-field="Entidad"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -700,7 +627,7 @@
 </span>
 {END Entidad_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 							</tr>
 										
 											{END grid_row}
@@ -748,7 +675,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EntidadId_class}	"
+		 r-ori-vert		 {$Entidad_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="entidades_list"	
@@ -757,21 +684,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Entidad_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="entidades_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

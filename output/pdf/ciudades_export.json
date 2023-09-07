@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$CiudadId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				

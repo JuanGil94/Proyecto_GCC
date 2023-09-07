@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Uvts UvtId }","bold":true},{"text":{$UvtId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Uvts Ano }","bold":true},{"text":{$Ano_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
