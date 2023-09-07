@@ -70,12 +70,6 @@ pdfDocument = {
 										{BEGIN col_grid_1}
 					"%",
 					{END col_grid_1}
-										{BEGIN col_grid_2}
-					"%",
-					{END col_grid_2}
-										{BEGIN col_grid_3}
-					"%",
-					{END col_grid_3}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -212,35 +206,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'ConceptoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Conceptos ConceptoId }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Concepto',
 				style: 'headcell',
 		
@@ -255,7 +220,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Conceptos Concepto }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel dbo_Conceptos Concepto }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -264,10 +229,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Activo',
@@ -284,7 +249,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Conceptos Activo }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel dbo_Conceptos Activo }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -293,36 +258,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
-	col:0,
-	row:0,
-			fieldName: 'Cuenta',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Conceptos Cuenta }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Cuenta_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
 											],
 				{END row_grid_0}
 		
@@ -335,35 +271,6 @@ pdfDocument = {
 																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'ConceptoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Concepto',
@@ -389,10 +296,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Activo',
@@ -418,36 +325,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
-	col:0,
-	row:0,
-			fieldName: 'Cuenta',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Cuenta_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Cuenta_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -499,18 +377,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  1,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  2,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  3,
 				text: ''
 			},
 							],
@@ -574,58 +440,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
-																							{BEGIN cellblock_grid_footcell_field2}
-{
-	cellId: 'footcell_field2',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field2}
-																							{BEGIN cellblock_grid_footcell_field3}
-{
-	cellId: 'footcell_field3',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field3}
 											],
 				{END row_grid_3}
 		

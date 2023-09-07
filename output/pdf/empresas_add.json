@@ -166,9 +166,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Empresas Cierre }","bold":true},{"text":{$Cierre_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Empresas ValorMaximo }","bold":true},{"text":{$ValorMaximo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Empresas MaximoPesos }","bold":true},{"text":{$MaximoPesos_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -185,15 +182,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Empresas DiasPersuasivo }","bold":true},{"text":{$DiasPersuasivo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Empresas CarteraEspecialUvt }","bold":true},{"text":{$CarteraEspecialUvt_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel dbo_Empresas TasaDTN }","bold":true},{"text":{$TasaDTN_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel dbo_Empresas TasaCivil }","bold":true},{"text":{$TasaCivil_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel dbo_Empresas InteresesPlazo }","bold":true},{"text":{$InteresesPlazo_pdfvalue}}],"margin":[0,0,0,15]},

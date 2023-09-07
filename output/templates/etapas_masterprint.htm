@@ -51,46 +51,23 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EtapaId_class}	"
+		 r-ori-vert		 {$Etapa_class}	"
 
-			data-field="EtapaId"
+			data-field="Etapa"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN EtapaId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId">
-	{$label dbo_Etapas EtapaId }	</span>
-{END EtapaId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Etapa_class}	"
-
-			data-field="Etapa"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Etapa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Etapa" data-fieldname="Etapa">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Etapa" data-fieldname="Etapa">
 	{$label dbo_Etapas Etapa }	</span>
 {END Etapa_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field}
 							</tr>
 															
 					{END grid_header}
@@ -108,32 +85,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EtapaId_class}	"
-
-			data-field="EtapaId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN EtapaId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId" data-default-width >
-{$EtapaId_value}
-</span>
-{END EtapaId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Etapa_class}	"
 
 			data-field="Etapa"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -143,7 +99,7 @@
 </span>
 {END Etapa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 							</tr>
 										
 											{END grid_row}
@@ -161,7 +117,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EtapaId_class}	"
+		 r-ori-vert		 {$Etapa_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="etapas_masterprint"	
@@ -170,21 +126,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Etapa_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="etapas_masterprint"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

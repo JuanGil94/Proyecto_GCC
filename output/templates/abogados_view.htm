@@ -94,25 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN AbogadoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" data-fieldname="AbogadoId" data-signal-error-for="AbogadoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" data-compact >
-
-	
-	<label class="col-md-offset-3 col-md-6" for="{$labelfor_AbogadoId}">
-		
-		{BEGIN AbogadoId_label}{$label dbo_Abogados AbogadoId }{END AbogadoId_label}
-	</label>
-	<div class="col-md-offset-3 col-md-6" >
-		{$AbogadoId_value}	</div>
-
-		
-</div>
-
-
-{END AbogadoId_fieldblock}
-											
 {BEGIN Abogado_fieldblock}
 
 
@@ -340,6 +321,25 @@
 
 
 {END Codificador_fieldblock}
+											
+{BEGIN Firma_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Firma}  r-vertical-field" data-fieldname="Firma" data-signal-error-for="Firma{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Firma" data-fieldname="Firma" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Firma}">
+		
+		{BEGIN Firma_label}{$label dbo_Abogados Firma }{END Firma_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Firma_value}	</div>
+
+		
+</div>
+
+
+{END Firma_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

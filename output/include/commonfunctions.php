@@ -355,6 +355,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("correspondencias1" == $shortTName )
 		return true;
+	if ("bancos" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1089,6 +1091,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Correspondencias1";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Bancos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Bancos";
+	}
 	return $arr;
 }
 
@@ -1174,6 +1185,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Propiedades1";
 	$arr[]="dbo.Propiedades3";
 	$arr[]="dbo.Correspondencias1";
+	$arr[]="dbo.Bancos";
 	return $arr;
 }
 
@@ -2177,6 +2189,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Correspondencias1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Bancos" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeMoveNextList"]=true;
 
+		$this->events["CustomAdd"]=true;
+
 
 	}
 
@@ -63,6 +65,85 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 ;
 } // function BeforeMoveNextList
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Custom add
+function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
+{
+
+		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
+unset($values["CantidadLetras"]);
+$values["Fecha"]=now();
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function CustomAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

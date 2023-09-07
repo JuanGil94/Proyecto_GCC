@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$MotivoDevolucionId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$MotivoDevolucion_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				

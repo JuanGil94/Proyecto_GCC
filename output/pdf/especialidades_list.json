@@ -76,9 +76,6 @@ pdfDocument = {
 										{BEGIN col_grid_3}
 					"%",
 					{END col_grid_3}
-										{BEGIN col_grid_4}
-					"%",
-					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -254,35 +251,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'EspecialidadId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Especialidades EspecialidadId }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EspecialidadId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Codigo',
 				style: 'headcell',
 		
@@ -297,7 +265,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Especialidades Codigo }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel dbo_Especialidades Codigo }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -306,10 +274,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Especialidad',
@@ -326,7 +294,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Especialidades Especialidad }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel dbo_Especialidades Especialidad }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -335,7 +303,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field1}
 											],
 				{END row_grid_0}
 		
@@ -409,35 +377,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'EspecialidadId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$EspecialidadId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$EspecialidadId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Codigo',
 				style: 'bodycell',
 		
@@ -461,10 +400,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Especialidad',
@@ -490,7 +429,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field1}
 											],
 				{END row_grid_1}
 		
@@ -604,32 +543,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
-																							{BEGIN cellblock_grid_footcell_field2}
-{
-	cellId: 'footcell_field2',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_2}
 		

@@ -357,6 +357,27 @@
 
 
 {END Codificador_fieldblock}
+											
+{BEGIN Firma_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Firma}  r-vertical-field" 
+	data-signal-error-for="Firma{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Firma" data-fieldname="Firma" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Firma}">
+		{BEGIN Firma_label}{$label dbo_Abogados Firma }{END Firma_label}
+	</label>
+	<div class="r-edit-field">
+		{$Firma_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Firma" {$tooltipAttr dbo_Abogados Firma } >
+		<div class="text-muted" >
+		{$tooltip dbo_Abogados Firma }		</div>
+	</div>
+</div>
+
+
+{END Firma_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

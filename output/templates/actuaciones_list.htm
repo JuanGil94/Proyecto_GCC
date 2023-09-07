@@ -877,62 +877,12 @@ Ordenar por&nbsp;{$sortByDropdown}
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="actuaciones_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN oficios_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$oficios_link_attrs} data-short-details="oficios"
-		class="{$oficios_dlink_class}" 
-		title="{$caption dbo_Oficios }"			>
-								
-									{BEGIN oficios_childcount}
-				<span class="details-badge badge oficios_badge" {$oficios_childnumber_attr}>
-					{$oficios_childnumber}				
-				</span>
-				{END oficios_childcount}
-						</a>
-	</span>
-	{END oficios_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesos_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesos_link_attrs} data-short-details="procesos"
-		class="{$procesos_dlink_class}" 
-		title="{$caption dbo_Procesos }"			>
-								
-									{BEGIN procesos_childcount}
-				<span class="details-badge badge procesos_badge" {$procesos_childnumber_attr}>
-					{$procesos_childnumber}				
-				</span>
-				{END procesos_childcount}
-						</a>
-	</span>
-	{END procesos_dtable_link}
-
 
 	
 	</td>

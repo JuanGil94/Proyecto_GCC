@@ -319,6 +319,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Propiedades1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Propiedades3"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Correspondencias1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Bancos"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

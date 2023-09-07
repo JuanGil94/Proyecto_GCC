@@ -82,9 +82,6 @@ pdfDocument = {
 										{BEGIN col_grid_5}
 					"%",
 					{END col_grid_5}
-										{BEGIN col_grid_6}
-					"%",
-					{END col_grid_6}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -331,12 +328,12 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_details}
-																							{BEGIN cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'CiudadId',
+			fieldName: 'DepartamentoId',
 				style: 'headcell',
 		
 		
@@ -350,19 +347,19 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Ciudades CiudadId }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel dbo_Ciudades DepartamentoId }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CiudadId_align}',
+              "alignment": '{$DepartamentoId_align}',
      
       
       },
 
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field1',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Codigo',
@@ -388,10 +385,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Ciudad',
@@ -413,35 +410,6 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Ciudad_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
-	col:0,
-	row:0,
-			fieldName: 'DepartamentoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Ciudades DepartamentoId }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DepartamentoId_align}',
      
       
       },
@@ -544,12 +512,12 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_details}
-																							{BEGIN cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
-			fieldName: 'CiudadId',
+			fieldName: 'DepartamentoId',
 				style: 'bodycell',
 		
 		
@@ -563,19 +531,19 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$CiudadId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$DepartamentoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CiudadId_align}',
+              "alignment": '{$DepartamentoId_align}',
      
       
       },
 
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field1',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Codigo',
@@ -601,10 +569,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Ciudad',
@@ -626,35 +594,6 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Ciudad_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
-	col:0,
-	row:0,
-			fieldName: 'DepartamentoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$DepartamentoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DepartamentoId_align}',
      
       
       },
@@ -735,12 +674,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  5,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  6,
 				text: ''
 			},
 							],
@@ -830,32 +763,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_details}
-																							{BEGIN cellblock_grid_footcell_field}
-{
-	cellId: 'footcell_field',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field}
 																							{BEGIN cellblock_grid_footcell_field1}
 {
 	cellId: 'footcell_field1',

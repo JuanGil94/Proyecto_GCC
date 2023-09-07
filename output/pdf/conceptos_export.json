@@ -106,16 +106,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
 			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
-			{"text":{$Cuenta_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 		  ],
   "border": [ false, false, false, false ],
