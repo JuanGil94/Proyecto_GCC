@@ -181,6 +181,9 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel dbo_Chequeos ConceptoId }","bold":true},{"text":{$ConceptoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel dbo_Chequeos TramiteId }","bold":true},{"text":{$TramiteId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -218,6 +221,9 @@ pdfDocument = {
 		
 				
 			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel dbo_Chequeos CarteraTipoId }","bold":true},{"text":{$CarteraTipoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel dbo_Chequeos NaturalezaId }","bold":true},{"text":{$NaturalezaId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Chequeos DespachoId }","bold":true},{"text":{$DespachoId_pdfvalue}}],"margin":[0,0,0,15]},
