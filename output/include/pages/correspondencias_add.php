@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
-'dbo.Oficios' => array( 'preview' => false ) ),
+'dbo.Oficios' => array( 'preview' => false ),
+'dbo.Oficios Sigobius' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'ProcesoId',
 'OficioId',

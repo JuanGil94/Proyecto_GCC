@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$OficioId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$Oficio_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				
@@ -125,12 +122,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Direcciones_pdfvalue},"hidden":"{$item_hide_import_field6}"},
-				
-				
-			{"text":{$Edicion_pdfvalue},"hidden":"{$item_hide_import_field7}"},
-				
-				
-			{"text":{$Abierto_pdfvalue},"hidden":"{$item_hide_import_field8}"},
 				
 				
 			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_import_field9}"},

@@ -1235,6 +1235,36 @@ $detailsTablesData["dbo.Actuaciones"] = array();
 				$detailsTablesData["dbo.Actuaciones"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Actuaciones"][$dIndex]["detailKeys"][]="ActuacionId";
+//	dbo.Oficios Sigobius
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Oficios Sigobius";
+		$detailsParam["dOriginalTable"] = "dbo.Oficios";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "oficios_sigobius";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Oficios_Sigobius");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Actuaciones"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Actuaciones"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Actuaciones"][$dIndex]["masterKeys"][]="ActuacionId";
+
+				$detailsTablesData["dbo.Actuaciones"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Actuaciones"][$dIndex]["detailKeys"][]="ActuacionId";
 //endif
 
 // tables which are master tables for current table (detail)

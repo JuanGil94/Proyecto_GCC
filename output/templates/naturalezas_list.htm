@@ -128,19 +128,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_TasaTipo}</span>
 						</div>
 		{END searchCtrlBlock_TasaTipo}
-																{BEGIN searchCtrlBlock_NaturalezaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_NaturalezaId}" {$filterRow_attrs_NaturalezaId}>
-			<label>{$label dbo_Naturalezas NaturalezaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_NaturalezaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_NaturalezaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_NaturalezaId}</span>
-						</div>
-		{END searchCtrlBlock_NaturalezaId}
 																{BEGIN searchCtrlBlock_Naturaleza}
 
 
@@ -562,19 +549,13 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="NaturalezaId"]:before {
-		content: "{$label dbo_Naturalezas NaturalezaId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Naturaleza"]:before {
 		content: "{$label dbo_Naturalezas Naturaleza}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
 		content: "{$label dbo_Naturalezas ConceptoId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="TasaTipo"]:before {
-		content: "{$label dbo_Naturalezas TasaTipo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activa"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activa"]:before {
 		content: "{$label dbo_Naturalezas Activa}";
 	}
 	}
@@ -644,31 +625,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$NaturalezaId_class}	"
-
-			data-field="NaturalezaId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN NaturalezaId_fieldheadercolumn}
-	{BEGIN NaturalezaId_fieldheader}
-	<SPAN {$NaturalezaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NaturalezaId" data-fieldname="NaturalezaId">
-	{$label dbo_Naturalezas NaturalezaId }	{$arrow_icon_NaturalezaId}
-	</SPAN>
-	{END NaturalezaId_fieldheader}
-{END NaturalezaId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -719,31 +675,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$TasaTipo_class}	"
-
-			data-field="TasaTipo"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN TasaTipo_fieldheadercolumn}
-	{BEGIN TasaTipo_fieldheader}
-	<SPAN {$TasaTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TasaTipo" data-fieldname="TasaTipo">
-	{$label dbo_Naturalezas TasaTipo }	{$arrow_icon_TasaTipo}
-	</SPAN>
-	{END TasaTipo_fieldheader}
-{END TasaTipo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
 									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
@@ -867,27 +798,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$NaturalezaId_class}	"
-
-			data-field="NaturalezaId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN NaturalezaId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NaturalezaId" data-fieldname="NaturalezaId" data-default-width >
-{$NaturalezaId_value}
-</span>
-{END NaturalezaId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -930,27 +840,6 @@
 {END ConceptoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$TasaTipo_class}	"
-
-			data-field="TasaTipo"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN TasaTipo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TasaTipo" data-fieldname="TasaTipo" data-default-width >
-{$TasaTipo_value}
-</span>
-{END TasaTipo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
 									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
@@ -1056,21 +945,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$NaturalezaId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="naturalezas_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
@@ -1101,21 +975,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$TasaTipo_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="naturalezas_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
 	<td
 	

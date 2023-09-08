@@ -140,7 +140,7 @@ $tdatasuspensiones[".isUseAjaxSuggest"] = true;
 
 
 
-																														
+																																													
 
 $tdatasuspensiones[".ajaxCodeSnippetAdded"] = false;
 
@@ -1145,6 +1145,24 @@ $masterTablesData["dbo.Suspensiones"] = array();
 	$masterTablesData["dbo.Suspensiones"][0]["masterKeys"][]="OficioId";
 				$masterTablesData["dbo.Suspensiones"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Suspensiones"][0]["detailKeys"][]="OficioId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Oficios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Oficios Sigobius";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "oficios_sigobius";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Suspensiones"][1] = $masterParams;
+				$masterTablesData["dbo.Suspensiones"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Suspensiones"][1]["masterKeys"][]="OficioId";
+				$masterTablesData["dbo.Suspensiones"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Suspensiones"][1]["detailKeys"][]="OficioId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

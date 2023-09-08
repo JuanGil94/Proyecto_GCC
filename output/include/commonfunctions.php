@@ -263,8 +263,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("carteratipos" == $shortTName )
 		return true;
-	if ("motivos" == $shortTName )
-		return true;
 	if ("chequeos" == $shortTName )
 		return true;
 	if ("chequeosoficios" == $shortTName )
@@ -356,6 +354,10 @@ function checkTableName($shortTName )
 	if ("correspondencias1" == $shortTName )
 		return true;
 	if ("bancos" == $shortTName )
+		return true;
+	if ("motivos" == $shortTName )
+		return true;
+	if ("oficios_sigobius" == $shortTName )
 		return true;
 	return false;
 }
@@ -676,15 +678,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.CarteraTipos";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Motivos");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Motivos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -1100,6 +1093,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Bancos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Motivos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Motivos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Oficios Sigobius");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Oficios Sigobius";
+	}
 	return $arr;
 }
 
@@ -1139,7 +1150,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Test";
 	$arr[]="dbo.Uvts";
 	$arr[]="dbo.CarteraTipos";
-	$arr[]="dbo.Motivos";
 	$arr[]="dbo.Chequeos";
 	$arr[]="dbo.ChequeosOficios";
 	$arr[]="dbo.ChequeosSancionados";
@@ -1186,6 +1196,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Propiedades3";
 	$arr[]="dbo.Correspondencias1";
 	$arr[]="dbo.Bancos";
+	$arr[]="dbo.Motivos";
+	$arr[]="dbo.Oficios Sigobius";
 	return $arr;
 }
 
@@ -1963,11 +1975,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Motivos" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Chequeos" )
 	{
 //	default permissions
@@ -2194,6 +2201,16 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Bancos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Motivos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Oficios Sigobius" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

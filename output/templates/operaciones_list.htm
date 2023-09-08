@@ -128,19 +128,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Tipo}</span>
 						</div>
 		{END searchCtrlBlock_Tipo}
-																{BEGIN searchCtrlBlock_OperacionId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_OperacionId}" {$filterRow_attrs_OperacionId}>
-			<label>{$label dbo_Operaciones OperacionId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_OperacionId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_OperacionId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_OperacionId}</span>
-						</div>
-		{END searchCtrlBlock_OperacionId}
 																{BEGIN searchCtrlBlock_Operacion}
 
 
@@ -232,19 +219,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ConcCodi}</span>
 						</div>
 		{END searchCtrlBlock_ConcCodi}
-																{BEGIN searchCtrlBlock_Columna}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Columna}" {$filterRow_attrs_Columna}>
-			<label>{$label dbo_Operaciones Columna }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Columna}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Columna}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Columna}</span>
-						</div>
-		{END searchCtrlBlock_Columna}
 																{BEGIN searchCtrlBlock_CarteraTipoId}
 
 
@@ -396,14 +370,6 @@
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="operaciones_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -523,27 +489,11 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="operaciones_add.php{$stateLink_full}" data-popup >
-							Añadir nuevo			</a>
-</span>
-{END add_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
-</span>
-{END deleteselected_link}
-			{END firstAboveGridCell}	
+				{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -647,13 +597,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="OperacionId"]:before {
-		content: "{$label dbo_Operaciones OperacionId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Columna"]:before {
-		content: "{$label dbo_Operaciones Columna}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
 		content: "{$label dbo_Operaciones ConceptoId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConcCodi"]:before {
@@ -750,21 +694,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OperacionId_class}	"
+		 r-ori-vert		 {$ConceptoId_class}	"
 
-			data-field="OperacionId"
+			data-field="ConceptoId"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN OperacionId_fieldheadercolumn}
-	{BEGIN OperacionId_fieldheader}
-	<SPAN {$OperacionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OperacionId" data-fieldname="OperacionId">
-	{$label dbo_Operaciones OperacionId }	{$arrow_icon_OperacionId}
+		{BEGIN ConceptoId_fieldheadercolumn}
+	{BEGIN ConceptoId_fieldheader}
+	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
+	{$label dbo_Operaciones ConceptoId }	{$arrow_icon_ConceptoId}
 	</SPAN>
-	{END OperacionId_fieldheader}
-{END OperacionId_fieldheadercolumn}
+	{END ConceptoId_fieldheader}
+{END ConceptoId_fieldheadercolumn}
 
 	
 	</th>
@@ -775,21 +719,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Columna_class}	"
+		 r-ori-vert		 {$Tipo_class}	"
 
-			data-field="Columna"
+			data-field="Tipo"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Columna_fieldheadercolumn}
-	{BEGIN Columna_fieldheader}
-	<SPAN {$Columna_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Columna" data-fieldname="Columna">
-	{$label dbo_Operaciones Columna }	{$arrow_icon_Columna}
+		{BEGIN Tipo_fieldheadercolumn}
+	{BEGIN Tipo_fieldheader}
+	<SPAN {$Tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tipo" data-fieldname="Tipo">
+	{$label dbo_Operaciones Tipo }	{$arrow_icon_Tipo}
 	</SPAN>
-	{END Columna_fieldheader}
-{END Columna_fieldheadercolumn}
+	{END Tipo_fieldheader}
+{END Tipo_fieldheadercolumn}
 
 	
 	</th>
@@ -800,21 +744,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
+		 r-ori-vert		 {$ConcCodi_class}	"
 
-			data-field="ConceptoId"
+			data-field="ConcCodi"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ConceptoId_fieldheadercolumn}
-	{BEGIN ConceptoId_fieldheader}
-	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
-	{$label dbo_Operaciones ConceptoId }	{$arrow_icon_ConceptoId}
+		{BEGIN ConcCodi_fieldheadercolumn}
+	{BEGIN ConcCodi_fieldheader}
+	<SPAN {$ConcCodi_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConcCodi" data-fieldname="ConcCodi">
+	{$label dbo_Operaciones ConcCodi }	{$arrow_icon_ConcCodi}
 	</SPAN>
-	{END ConceptoId_fieldheader}
-{END ConceptoId_fieldheadercolumn}
+	{END ConcCodi_fieldheader}
+{END ConcCodi_fieldheadercolumn}
 
 	
 	</th>
@@ -825,21 +769,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ConcCodi_class}	"
+		 r-ori-vert		 {$Operacion_class}	"
 
-			data-field="ConcCodi"
+			data-field="Operacion"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ConcCodi_fieldheadercolumn}
-	{BEGIN ConcCodi_fieldheader}
-	<SPAN {$ConcCodi_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConcCodi" data-fieldname="ConcCodi">
-	{$label dbo_Operaciones ConcCodi }	{$arrow_icon_ConcCodi}
+		{BEGIN Operacion_fieldheadercolumn}
+	{BEGIN Operacion_fieldheader}
+	<SPAN {$Operacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Operacion" data-fieldname="Operacion">
+	{$label dbo_Operaciones Operacion }	{$arrow_icon_Operacion}
 	</SPAN>
-	{END ConcCodi_fieldheader}
-{END ConcCodi_fieldheadercolumn}
+	{END Operacion_fieldheader}
+{END Operacion_fieldheadercolumn}
 
 	
 	</th>
@@ -850,21 +794,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Operacion_class}	"
+		 r-ori-vert		 {$DebiCodi_class}	"
 
-			data-field="Operacion"
+			data-field="DebiCodi"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Operacion_fieldheadercolumn}
-	{BEGIN Operacion_fieldheader}
-	<SPAN {$Operacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Operacion" data-fieldname="Operacion">
-	{$label dbo_Operaciones Operacion }	{$arrow_icon_Operacion}
+		{BEGIN DebiCodi_fieldheadercolumn}
+	{BEGIN DebiCodi_fieldheader}
+	<SPAN {$DebiCodi_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiCodi" data-fieldname="DebiCodi">
+	{$label dbo_Operaciones DebiCodi }	{$arrow_icon_DebiCodi}
 	</SPAN>
-	{END Operacion_fieldheader}
-{END Operacion_fieldheadercolumn}
+	{END DebiCodi_fieldheader}
+{END DebiCodi_fieldheadercolumn}
 
 	
 	</th>
@@ -875,21 +819,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiCodi_class}	"
+		 r-ori-vert		 {$DebiAux1_class}	"
 
-			data-field="DebiCodi"
+			data-field="DebiAux1"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN DebiCodi_fieldheadercolumn}
-	{BEGIN DebiCodi_fieldheader}
-	<SPAN {$DebiCodi_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiCodi" data-fieldname="DebiCodi">
-	{$label dbo_Operaciones DebiCodi }	{$arrow_icon_DebiCodi}
+		{BEGIN DebiAux1_fieldheadercolumn}
+	{BEGIN DebiAux1_fieldheader}
+	<SPAN {$DebiAux1_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux1" data-fieldname="DebiAux1">
+	{$label dbo_Operaciones DebiAux1 }	{$arrow_icon_DebiAux1}
 	</SPAN>
-	{END DebiCodi_fieldheader}
-{END DebiCodi_fieldheadercolumn}
+	{END DebiAux1_fieldheader}
+{END DebiAux1_fieldheadercolumn}
 
 	
 	</th>
@@ -900,21 +844,21 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiAux1_class}	"
+		 r-ori-vert		 {$DebiAux2_class}	"
 
-			data-field="DebiAux1"
+			data-field="DebiAux2"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN DebiAux1_fieldheadercolumn}
-	{BEGIN DebiAux1_fieldheader}
-	<SPAN {$DebiAux1_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux1" data-fieldname="DebiAux1">
-	{$label dbo_Operaciones DebiAux1 }	{$arrow_icon_DebiAux1}
+		{BEGIN DebiAux2_fieldheadercolumn}
+	{BEGIN DebiAux2_fieldheader}
+	<SPAN {$DebiAux2_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux2" data-fieldname="DebiAux2">
+	{$label dbo_Operaciones DebiAux2 }	{$arrow_icon_DebiAux2}
 	</SPAN>
-	{END DebiAux1_fieldheader}
-{END DebiAux1_fieldheadercolumn}
+	{END DebiAux2_fieldheader}
+{END DebiAux2_fieldheadercolumn}
 
 	
 	</th>
@@ -925,21 +869,21 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiAux2_class}	"
+		 r-ori-vert		 {$DebiAux3_class}	"
 
-			data-field="DebiAux2"
+			data-field="DebiAux3"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN DebiAux2_fieldheadercolumn}
-	{BEGIN DebiAux2_fieldheader}
-	<SPAN {$DebiAux2_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux2" data-fieldname="DebiAux2">
-	{$label dbo_Operaciones DebiAux2 }	{$arrow_icon_DebiAux2}
+		{BEGIN DebiAux3_fieldheadercolumn}
+	{BEGIN DebiAux3_fieldheader}
+	<SPAN {$DebiAux3_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux3" data-fieldname="DebiAux3">
+	{$label dbo_Operaciones DebiAux3 }	{$arrow_icon_DebiAux3}
 	</SPAN>
-	{END DebiAux2_fieldheader}
-{END DebiAux2_fieldheadercolumn}
+	{END DebiAux3_fieldheader}
+{END DebiAux3_fieldheadercolumn}
 
 	
 	</th>
@@ -950,21 +894,21 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiAux3_class}	"
+		 r-ori-vert		 {$AcreCodi_class}	"
 
-			data-field="DebiAux3"
+			data-field="AcreCodi"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN DebiAux3_fieldheadercolumn}
-	{BEGIN DebiAux3_fieldheader}
-	<SPAN {$DebiAux3_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux3" data-fieldname="DebiAux3">
-	{$label dbo_Operaciones DebiAux3 }	{$arrow_icon_DebiAux3}
+		{BEGIN AcreCodi_fieldheadercolumn}
+	{BEGIN AcreCodi_fieldheader}
+	<SPAN {$AcreCodi_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreCodi" data-fieldname="AcreCodi">
+	{$label dbo_Operaciones AcreCodi }	{$arrow_icon_AcreCodi}
 	</SPAN>
-	{END DebiAux3_fieldheader}
-{END DebiAux3_fieldheadercolumn}
+	{END AcreCodi_fieldheader}
+{END AcreCodi_fieldheadercolumn}
 
 	
 	</th>
@@ -975,21 +919,21 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreCodi_class}	"
+		 r-ori-vert		 {$AcreAux1_class}	"
 
-			data-field="AcreCodi"
+			data-field="AcreAux1"
 	
 	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AcreCodi_fieldheadercolumn}
-	{BEGIN AcreCodi_fieldheader}
-	<SPAN {$AcreCodi_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreCodi" data-fieldname="AcreCodi">
-	{$label dbo_Operaciones AcreCodi }	{$arrow_icon_AcreCodi}
+		{BEGIN AcreAux1_fieldheadercolumn}
+	{BEGIN AcreAux1_fieldheader}
+	<SPAN {$AcreAux1_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux1" data-fieldname="AcreAux1">
+	{$label dbo_Operaciones AcreAux1 }	{$arrow_icon_AcreAux1}
 	</SPAN>
-	{END AcreCodi_fieldheader}
-{END AcreCodi_fieldheadercolumn}
+	{END AcreAux1_fieldheader}
+{END AcreAux1_fieldheadercolumn}
 
 	
 	</th>
@@ -1000,21 +944,21 @@
 	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreAux1_class}	"
+		 r-ori-vert		 {$AcreAux2_class}	"
 
-			data-field="AcreAux1"
+			data-field="AcreAux2"
 	
 	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AcreAux1_fieldheadercolumn}
-	{BEGIN AcreAux1_fieldheader}
-	<SPAN {$AcreAux1_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux1" data-fieldname="AcreAux1">
-	{$label dbo_Operaciones AcreAux1 }	{$arrow_icon_AcreAux1}
+		{BEGIN AcreAux2_fieldheadercolumn}
+	{BEGIN AcreAux2_fieldheader}
+	<SPAN {$AcreAux2_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux2" data-fieldname="AcreAux2">
+	{$label dbo_Operaciones AcreAux2 }	{$arrow_icon_AcreAux2}
 	</SPAN>
-	{END AcreAux1_fieldheader}
-{END AcreAux1_fieldheadercolumn}
+	{END AcreAux2_fieldheader}
+{END AcreAux2_fieldheadercolumn}
 
 	
 	</th>
@@ -1025,21 +969,21 @@
 	{$cell_grid_headcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreAux2_class}	"
+		 r-ori-vert		 {$AcreAux3_class}	"
 
-			data-field="AcreAux2"
+			data-field="AcreAux3"
 	
 	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AcreAux2_fieldheadercolumn}
-	{BEGIN AcreAux2_fieldheader}
-	<SPAN {$AcreAux2_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux2" data-fieldname="AcreAux2">
-	{$label dbo_Operaciones AcreAux2 }	{$arrow_icon_AcreAux2}
+		{BEGIN AcreAux3_fieldheadercolumn}
+	{BEGIN AcreAux3_fieldheader}
+	<SPAN {$AcreAux3_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux3" data-fieldname="AcreAux3">
+	{$label dbo_Operaciones AcreAux3 }	{$arrow_icon_AcreAux3}
 	</SPAN>
-	{END AcreAux2_fieldheader}
-{END AcreAux2_fieldheadercolumn}
+	{END AcreAux3_fieldheader}
+{END AcreAux3_fieldheadercolumn}
 
 	
 	</th>
@@ -1050,42 +994,17 @@
 	{$cell_grid_headcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreAux3_class}	"
+		 r-ori-vert		 {$CarteraTipoId_class}	"
 
-			data-field="AcreAux3"
+			data-field="CarteraTipoId"
 	
 	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AcreAux3_fieldheadercolumn}
-	{BEGIN AcreAux3_fieldheader}
-	<SPAN {$AcreAux3_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux3" data-fieldname="AcreAux3">
-	{$label dbo_Operaciones AcreAux3 }	{$arrow_icon_AcreAux3}
-	</SPAN>
-	{END AcreAux3_fieldheader}
-{END AcreAux3_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field12}
-									{BEGIN cellblock_grid_headcell_field13}
-	<th
-	
-	{$cell_grid_headcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
-
-			data-field="CarteraTipoId"
-	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN CarteraTipoId_fieldheadercolumn}
 	{BEGIN CarteraTipoId_fieldheader}
-	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
 	{$label dbo_Operaciones CarteraTipoId }	{$arrow_icon_CarteraTipoId}
 	</SPAN>
 	{END CarteraTipoId_fieldheader}
@@ -1093,32 +1012,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field13}
-									{BEGIN cellblock_grid_headcell_field14}
-	<th
-	
-	{$cell_grid_headcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tipo_class}	"
-
-			data-field="Tipo"
-	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Tipo_fieldheadercolumn}
-	{BEGIN Tipo_fieldheader}
-	<SPAN {$Tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tipo" data-fieldname="Tipo">
-	{$label dbo_Operaciones Tipo }	{$arrow_icon_Tipo}
-	</SPAN>
-	{END Tipo_fieldheader}
-{END Tipo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field14}
+	{END cellblock_grid_headcell_field12}
 							</tr>
 															
 					{END grid_header}
@@ -1198,53 +1092,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OperacionId_class}	"
-
-			data-field="OperacionId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN OperacionId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OperacionId" data-fieldname="OperacionId" data-default-width >
-{$OperacionId_value}
-</span>
-{END OperacionId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Columna_class}	"
-
-			data-field="Columna"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Columna_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Columna" data-fieldname="Columna" data-default-width >
-{$Columna_value}
-</span>
-{END Columna_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$ConceptoId_class}	"
 
 			data-field="ConceptoId"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1254,249 +1106,18 @@
 </span>
 {END ConceptoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConcCodi_class}	"
-
-			data-field="ConcCodi"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConcCodi_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConcCodi" data-fieldname="ConcCodi" data-default-width >
-{$ConcCodi_value}
-</span>
-{END ConcCodi_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Operacion_class}	"
-
-			data-field="Operacion"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Operacion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Operacion" data-fieldname="Operacion" data-default-width >
-{$Operacion_value}
-</span>
-{END Operacion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DebiCodi_class}	"
-
-			data-field="DebiCodi"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DebiCodi_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiCodi" data-fieldname="DebiCodi" data-default-width >
-{$DebiCodi_value}
-</span>
-{END DebiCodi_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DebiAux1_class}	"
-
-			data-field="DebiAux1"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DebiAux1_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux1" data-fieldname="DebiAux1" data-default-width >
-{$DebiAux1_value}
-</span>
-{END DebiAux1_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DebiAux2_class}	"
-
-			data-field="DebiAux2"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DebiAux2_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux2" data-fieldname="DebiAux2" data-default-width >
-{$DebiAux2_value}
-</span>
-{END DebiAux2_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DebiAux3_class}	"
-
-			data-field="DebiAux3"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DebiAux3_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux3" data-fieldname="DebiAux3" data-default-width >
-{$DebiAux3_value}
-</span>
-{END DebiAux3_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AcreCodi_class}	"
-
-			data-field="AcreCodi"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AcreCodi_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreCodi" data-fieldname="AcreCodi" data-default-width >
-{$AcreCodi_value}
-</span>
-{END AcreCodi_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AcreAux1_class}	"
-
-			data-field="AcreAux1"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AcreAux1_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux1" data-fieldname="AcreAux1" data-default-width >
-{$AcreAux1_value}
-</span>
-{END AcreAux1_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
-									{BEGIN cellblock_grid_cell_field11}
-	<td
-	
-	{$cell_grid_cell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AcreAux2_class}	"
-
-			data-field="AcreAux2"
-	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AcreAux2_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux2" data-fieldname="AcreAux2" data-default-width >
-{$AcreAux2_value}
-</span>
-{END AcreAux2_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AcreAux3_class}	"
-
-			data-field="AcreAux3"
-	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AcreAux3_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux3" data-fieldname="AcreAux3" data-default-width >
-{$AcreAux3_value}
-</span>
-{END AcreAux3_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
-	<td
-	
-	{$cell_grid_cell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
-
-			data-field="CarteraTipoId"
-	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN CarteraTipoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-default-width >
-{$CarteraTipoId_value}
-</span>
-{END CarteraTipoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
-	<td
-	
-	{$cell_grid_cell_field14}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Tipo_class}	"
 
 			data-field="Tipo"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1506,7 +1127,238 @@
 </span>
 {END Tipo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConcCodi_class}	"
+
+			data-field="ConcCodi"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ConcCodi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConcCodi" data-fieldname="ConcCodi" data-default-width >
+{$ConcCodi_value}
+</span>
+{END ConcCodi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Operacion_class}	"
+
+			data-field="Operacion"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Operacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Operacion" data-fieldname="Operacion" data-default-width >
+{$Operacion_value}
+</span>
+{END Operacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DebiCodi_class}	"
+
+			data-field="DebiCodi"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DebiCodi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiCodi" data-fieldname="DebiCodi" data-default-width >
+{$DebiCodi_value}
+</span>
+{END DebiCodi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DebiAux1_class}	"
+
+			data-field="DebiAux1"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DebiAux1_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux1" data-fieldname="DebiAux1" data-default-width >
+{$DebiAux1_value}
+</span>
+{END DebiAux1_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DebiAux2_class}	"
+
+			data-field="DebiAux2"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DebiAux2_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux2" data-fieldname="DebiAux2" data-default-width >
+{$DebiAux2_value}
+</span>
+{END DebiAux2_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DebiAux3_class}	"
+
+			data-field="DebiAux3"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DebiAux3_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DebiAux3" data-fieldname="DebiAux3" data-default-width >
+{$DebiAux3_value}
+</span>
+{END DebiAux3_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcreCodi_class}	"
+
+			data-field="AcreCodi"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AcreCodi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreCodi" data-fieldname="AcreCodi" data-default-width >
+{$AcreCodi_value}
+</span>
+{END AcreCodi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcreAux1_class}	"
+
+			data-field="AcreAux1"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AcreAux1_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux1" data-fieldname="AcreAux1" data-default-width >
+{$AcreAux1_value}
+</span>
+{END AcreAux1_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcreAux2_class}	"
+
+			data-field="AcreAux2"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AcreAux2_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux2" data-fieldname="AcreAux2" data-default-width >
+{$AcreAux2_value}
+</span>
+{END AcreAux2_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AcreAux3_class}	"
+
+			data-field="AcreAux3"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AcreAux3_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcreAux3" data-fieldname="AcreAux3" data-default-width >
+{$AcreAux3_value}
+</span>
+{END AcreAux3_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-default-width >
+{$CarteraTipoId_value}
+</span>
+{END CarteraTipoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
 							</tr>
 										
 											{END grid_row}
@@ -1554,7 +1406,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OperacionId_class}	"
+		 r-ori-vert		 {$ConceptoId_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1569,7 +1421,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Columna_class}	"
+		 r-ori-vert		 {$Tipo_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1584,7 +1436,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
+		 r-ori-vert		 {$ConcCodi_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1599,7 +1451,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ConcCodi_class}	"
+		 r-ori-vert		 {$Operacion_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1614,7 +1466,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Operacion_class}	"
+		 r-ori-vert		 {$DebiCodi_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1629,7 +1481,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiCodi_class}	"
+		 r-ori-vert		 {$DebiAux1_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1644,7 +1496,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiAux1_class}	"
+		 r-ori-vert		 {$DebiAux2_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1659,7 +1511,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiAux2_class}	"
+		 r-ori-vert		 {$DebiAux3_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1674,7 +1526,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DebiAux3_class}	"
+		 r-ori-vert		 {$AcreCodi_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1689,7 +1541,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreCodi_class}	"
+		 r-ori-vert		 {$AcreAux1_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1704,7 +1556,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreAux1_class}	"
+		 r-ori-vert		 {$AcreAux2_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1719,7 +1571,7 @@
 	{$cell_grid_footcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreAux2_class}	"
+		 r-ori-vert		 {$AcreAux3_class}	"
 
 	
 	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1734,7 +1586,7 @@
 	{$cell_grid_footcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcreAux3_class}	"
+		 r-ori-vert		 {$CarteraTipoId_class}	"
 
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
@@ -1743,36 +1595,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field12}
-									{BEGIN cellblock_grid_footcell_field13}
-	<td
-	
-	{$cell_grid_footcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
-
-	
-	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field13}
-									{BEGIN cellblock_grid_footcell_field14}
-	<td
-	
-	{$cell_grid_footcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Tipo_class}	"
-
-	
-	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="operaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field14}
 							</tr>
 					
 					</tfoot>

@@ -3596,8 +3596,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "uvts" ] = "dbo.Uvts";
 	$projectEntities[ "dbo.CarteraTipos" ] = array( "url" => "carteratipos", "type" => 0 );
 	$projectEntitiesReverse[ "carteratipos" ] = "dbo.CarteraTipos";
-	$projectEntities[ "dbo.Motivos" ] = array( "url" => "motivos", "type" => 0 );
-	$projectEntitiesReverse[ "motivos" ] = "dbo.Motivos";
 	$projectEntities[ "dbo.Chequeos" ] = array( "url" => "chequeos", "type" => 0 );
 	$projectEntitiesReverse[ "chequeos" ] = "dbo.Chequeos";
 	$projectEntities[ "dbo.ChequeosOficios" ] = array( "url" => "chequeosoficios", "type" => 0 );
@@ -3690,6 +3688,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "correspondencias1" ] = "dbo.Correspondencias1";
 	$projectEntities[ "dbo.Bancos" ] = array( "url" => "bancos", "type" => 0 );
 	$projectEntitiesReverse[ "bancos" ] = "dbo.Bancos";
+	$projectEntities[ "dbo.Motivos" ] = array( "url" => "motivos", "type" => 0 );
+	$projectEntitiesReverse[ "motivos" ] = "dbo.Motivos";
+	$projectEntities[ "dbo.Oficios Sigobius" ] = array( "url" => "oficios_sigobius", "type" => 1 );
+	$projectEntitiesReverse[ "oficios_sigobius" ] = "dbo.Oficios Sigobius";
 }
 
 function findTable( $table ) {

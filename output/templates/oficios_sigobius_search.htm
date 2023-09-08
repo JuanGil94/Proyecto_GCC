@@ -1,0 +1,392 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Oficios_Sigobius search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN OficioId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_OficioId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="OficioId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="OficioId" data-fieldname="OficioId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_OficioId}">
+		{$label dbo_Oficios_Sigobius OficioId }	</label>
+	<div class="r-search-option">
+		{$searchtype_OficioId}
+	</div>
+	<div class="r-search-field">
+		{$OficioId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$OficioId_editcontrol1}
+	</div>
+	
+</div>
+
+{END OficioId_fieldblock}
+											
+{BEGIN Oficio_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Oficio}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Oficio{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Oficio" data-fieldname="Oficio" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Oficio}">
+		{$label dbo_Oficios_Sigobius Oficio }	</label>
+	<div class="r-search-option">
+		{$searchtype_Oficio}
+	</div>
+	<div class="r-search-field">
+		{$Oficio_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Oficio_editcontrol1}
+	</div>
+	
+</div>
+
+{END Oficio_fieldblock}
+											
+{BEGIN Archivo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Archivo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Archivo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Archivo" data-fieldname="Archivo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Archivo}">
+		{$label dbo_Oficios_Sigobius Archivo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Archivo}
+	</div>
+	<div class="r-search-field">
+		{$Archivo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Archivo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Archivo_fieldblock}
+											
+{BEGIN Activo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Activo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Activo}">
+		{$label dbo_Oficios_Sigobius Activo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Activo}
+	</div>
+	<div class="r-search-field">
+		{$Activo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Activo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Activo_fieldblock}
+											
+{BEGIN ActuacionId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ActuacionId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ActuacionId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="ActuacionId" data-fieldname="ActuacionId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ActuacionId}">
+		{$label dbo_Oficios_Sigobius ActuacionId }	</label>
+	<div class="r-search-option">
+		{$searchtype_ActuacionId}
+	</div>
+	<div class="r-search-field">
+		{$ActuacionId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ActuacionId_editcontrol1}
+	</div>
+	
+</div>
+
+{END ActuacionId_fieldblock}
+											
+{BEGIN OficioIdRequisito_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_OficioIdRequisito}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="OficioIdRequisito{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="OficioIdRequisito" data-fieldname="OficioIdRequisito" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_OficioIdRequisito}">
+		{$label dbo_Oficios_Sigobius OficioIdRequisito }	</label>
+	<div class="r-search-option">
+		{$searchtype_OficioIdRequisito}
+	</div>
+	<div class="r-search-field">
+		{$OficioIdRequisito_editcontrol}	</div>
+	<div class="r-search-field">
+		{$OficioIdRequisito_editcontrol1}
+	</div>
+	
+</div>
+
+{END OficioIdRequisito_fieldblock}
+											
+{BEGIN Direcciones_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direcciones}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Direcciones{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Direcciones" data-fieldname="Direcciones" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Direcciones}">
+		{$label dbo_Oficios_Sigobius Direcciones }	</label>
+	<div class="r-search-option">
+		{$searchtype_Direcciones}
+	</div>
+	<div class="r-search-field">
+		{$Direcciones_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Direcciones_editcontrol1}
+	</div>
+	
+</div>
+
+{END Direcciones_fieldblock}
+											
+{BEGIN Edicion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Edicion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Edicion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Edicion" data-fieldname="Edicion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Edicion}">
+		{$label dbo_Oficios_Sigobius Edicion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Edicion}
+	</div>
+	<div class="r-search-field">
+		{$Edicion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Edicion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Edicion_fieldblock}
+											
+{BEGIN Abierto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Abierto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Abierto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Abierto" data-fieldname="Abierto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Abierto}">
+		{$label dbo_Oficios_Sigobius Abierto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Abierto}
+	</div>
+	<div class="r-search-field">
+		{$Abierto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Abierto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Abierto_fieldblock}
+											
+{BEGIN Sigobius_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sigobius}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Sigobius{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Sigobius" data-fieldname="Sigobius" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Sigobius}">
+		{$label dbo_Oficios_Sigobius Sigobius }	</label>
+	<div class="r-search-option">
+		{$searchtype_Sigobius}
+	</div>
+	<div class="r-search-field">
+		{$Sigobius_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Sigobius_editcontrol1}
+	</div>
+	
+</div>
+
+{END Sigobius_fieldblock}
+											
+{BEGIN Devolucion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Devolucion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Devolucion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Devolucion" data-fieldname="Devolucion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Devolucion}">
+		{$label dbo_Oficios_Sigobius Devolucion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Devolucion}
+	</div>
+	<div class="r-search-field">
+		{$Devolucion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Devolucion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Devolucion_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

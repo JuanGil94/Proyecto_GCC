@@ -6,11 +6,11 @@ $tdatamotivos[".OwnerID"] = "";
 $tdatamotivos[".OriginalTable"] = "dbo.Motivos";
 
 
-$tdatamotivos[".pagesByType"] = my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
+$tdatamotivos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatamotivos[".originalPagesByType"] = $tdatamotivos[".pagesByType"];
-$tdatamotivos[".pages"] = types2pages( my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
+$tdatamotivos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatamotivos[".originalPages"] = $tdatamotivos[".pages"];
-$tdatamotivos[".defaultPages"] = my_json_decode( "{\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
+$tdatamotivos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatamotivos[".originalDefaultPages"] = $tdatamotivos[".defaultPages"];
 
 //	field labels
@@ -64,7 +64,7 @@ $tdatamotivos[".listAjax"] = false;
 //	temporary
 //$tdatamotivos[".listAjax"] = false;
 
-	$tdatamotivos[".audit"] = true;
+	$tdatamotivos[".audit"] = false;
 
 	$tdatamotivos[".locking"] = false;
 
@@ -140,7 +140,7 @@ $tdatamotivos[".addPageEvents"] = false;
 $tdatamotivos[".isUseTimeForSearch"] = false;
 
 
-$tdatamotivos[".badgeColor"] = "DB7093";
+$tdatamotivos[".badgeColor"] = "CFAE83";
 
 
 $tdatamotivos[".allSearchFields"] = array();
