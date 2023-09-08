@@ -705,6 +705,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Sancionados"]["propiedades3.SancionadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Sancionados"]["propiedades3.SancionadoId"]["edit"] = array("table" => "dbo.Propiedades3", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Actuaciones"] ) ) {
+			$lookupTableLinks["dbo.Actuaciones"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Actuaciones"]["oficios_sigobius.ActuacionId"] )) {
+			$lookupTableLinks["dbo.Actuaciones"]["oficios_sigobius.ActuacionId"] = array();
+		}
+		$lookupTableLinks["dbo.Actuaciones"]["oficios_sigobius.ActuacionId"]["edit"] = array("table" => "dbo.Oficios Sigobius", "field" => "ActuacionId", "page" => "edit");
 }
 
 ?>

@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "642_1693929659";
+$projectBuildKey = "664_1693929659";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "642";
+$projectBuildNumber = "664";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -795,7 +795,6 @@ $tableCaptions["Spanish"]["dbo_Tasas"] = "Tasas";
 $tableCaptions["Spanish"]["dbo_Test"] = "Test";
 $tableCaptions["Spanish"]["dbo_Uvts"] = "Uvts";
 $tableCaptions["Spanish"]["dbo_CarteraTipos"] = "Cartera Tipos";
-$tableCaptions["Spanish"]["dbo_Motivos"] = "Motivos";
 $tableCaptions["Spanish"]["dbo_Chequeos"] = "Chequeos";
 $tableCaptions["Spanish"]["dbo_ChequeosOficios"] = "Chequeos Oficios";
 $tableCaptions["Spanish"]["dbo_ChequeosSancionados"] = "Chequeos Sancionados";
@@ -842,6 +841,8 @@ $tableCaptions["Spanish"]["dbo_Propiedades1"] = "Propiedades1";
 $tableCaptions["Spanish"]["dbo_Propiedades3"] = "Propiedades3";
 $tableCaptions["Spanish"]["dbo_Correspondencias1"] = "Correspondencias1";
 $tableCaptions["Spanish"]["dbo_Bancos"] = "Bancos";
+$tableCaptions["Spanish"]["dbo_Motivos"] = "Motivos";
+$tableCaptions["Spanish"]["dbo_Oficios_Sigobius"] = "Oficios Sigobius";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -4053,7 +4053,7 @@ $tdataprocesos[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "MotivoId";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "Motivo";
 
 	
@@ -12922,24 +12922,6 @@ $masterTablesData["dbo.Procesos"] = array();
 	//endif
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Motivos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Motivos";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "motivos";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Procesos"][6] = $masterParams;
-				$masterTablesData["dbo.Procesos"][6]["masterKeys"] = array();
-	$masterTablesData["dbo.Procesos"][6]["masterKeys"][]="MotivoId";
-				$masterTablesData["dbo.Procesos"][6]["detailKeys"] = array();
-	$masterTablesData["dbo.Procesos"][6]["detailKeys"][]="MotivoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
 			$strOriginalDetailsTable="dbo.Actuaciones";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="dbo.Actuaciones";
@@ -12949,11 +12931,11 @@ $masterTablesData["dbo.Procesos"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Procesos"][7] = $masterParams;
-				$masterTablesData["dbo.Procesos"][7]["masterKeys"] = array();
-	$masterTablesData["dbo.Procesos"][7]["masterKeys"][]="ActuacionId";
-				$masterTablesData["dbo.Procesos"][7]["detailKeys"] = array();
-	$masterTablesData["dbo.Procesos"][7]["detailKeys"][]="ActuacionId";
+					$masterTablesData["dbo.Procesos"][6] = $masterParams;
+				$masterTablesData["dbo.Procesos"][6]["masterKeys"] = array();
+	$masterTablesData["dbo.Procesos"][6]["masterKeys"][]="ActuacionId";
+				$masterTablesData["dbo.Procesos"][6]["detailKeys"] = array();
+	$masterTablesData["dbo.Procesos"][6]["detailKeys"][]="ActuacionId";
 		
 	//endif
 	
@@ -12967,11 +12949,11 @@ $masterTablesData["dbo.Procesos"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Procesos"][8] = $masterParams;
-				$masterTablesData["dbo.Procesos"][8]["masterKeys"] = array();
-	$masterTablesData["dbo.Procesos"][8]["masterKeys"][]="NaturalezaId";
-				$masterTablesData["dbo.Procesos"][8]["detailKeys"] = array();
-	$masterTablesData["dbo.Procesos"][8]["detailKeys"][]="NaturalezaId";
+					$masterTablesData["dbo.Procesos"][7] = $masterParams;
+				$masterTablesData["dbo.Procesos"][7]["masterKeys"] = array();
+	$masterTablesData["dbo.Procesos"][7]["masterKeys"][]="NaturalezaId";
+				$masterTablesData["dbo.Procesos"][7]["detailKeys"] = array();
+	$masterTablesData["dbo.Procesos"][7]["detailKeys"][]="NaturalezaId";
 		
 	//endif
 	
@@ -12985,11 +12967,29 @@ $masterTablesData["dbo.Procesos"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Procesos"][8] = $masterParams;
+				$masterTablesData["dbo.Procesos"][8]["masterKeys"] = array();
+	$masterTablesData["dbo.Procesos"][8]["masterKeys"][]="ImportacionId";
+				$masterTablesData["dbo.Procesos"][8]["detailKeys"] = array();
+	$masterTablesData["dbo.Procesos"][8]["detailKeys"][]="ImportacionId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Motivos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Motivos";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "motivos";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["dbo.Procesos"][9] = $masterParams;
 				$masterTablesData["dbo.Procesos"][9]["masterKeys"] = array();
-	$masterTablesData["dbo.Procesos"][9]["masterKeys"][]="ImportacionId";
+	$masterTablesData["dbo.Procesos"][9]["masterKeys"][]="MotivoId";
 				$masterTablesData["dbo.Procesos"][9]["detailKeys"] = array();
-	$masterTablesData["dbo.Procesos"][9]["detailKeys"][]="ImportacionId";
+	$masterTablesData["dbo.Procesos"][9]["detailKeys"][]="MotivoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

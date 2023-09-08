@@ -1,0 +1,156 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Oficios_Sigobius import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Oficio_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Archivo_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$ActuacionId_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$OficioIdRequisito_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Direcciones_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$Devolucion_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$Edicion_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Abierto_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

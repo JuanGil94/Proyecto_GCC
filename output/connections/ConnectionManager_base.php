@@ -273,7 +273,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Test"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Uvts"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.CarteraTipos"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Motivos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Chequeos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ChequeosOficios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ChequeosSancionados"] = "GCC_at_S00001_CCAD01";
@@ -320,6 +319,8 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Propiedades3"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Correspondencias1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Bancos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Motivos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Oficios Sigobius"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

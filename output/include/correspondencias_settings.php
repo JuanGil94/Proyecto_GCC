@@ -155,7 +155,7 @@ $tdatacorrespondencias[".isUseAjaxSuggest"] = true;
 
 
 
-																																													
+																																																												
 
 $tdatacorrespondencias[".ajaxCodeSnippetAdded"] = false;
 
@@ -1950,6 +1950,24 @@ $masterTablesData["dbo.Correspondencias"] = array();
 	$masterTablesData["dbo.Correspondencias"][1]["masterKeys"][]="OficioId";
 				$masterTablesData["dbo.Correspondencias"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Correspondencias"][1]["detailKeys"][]="OficioId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Oficios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Oficios Sigobius";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "oficios_sigobius";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Correspondencias"][2] = $masterParams;
+				$masterTablesData["dbo.Correspondencias"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][2]["masterKeys"][]="OficioId";
+				$masterTablesData["dbo.Correspondencias"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][2]["detailKeys"][]="OficioId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

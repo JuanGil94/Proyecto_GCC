@@ -793,6 +793,11 @@ pdfDocument = {
 			{$displayDetailTable_procesos }
 		{END details_procesos},
 				
+				
+			 {BEGIN details_oficios_sigobius}
+			{$displayDetailTable_oficios_sigobius }
+		{END details_oficios_sigobius},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

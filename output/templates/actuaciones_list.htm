@@ -527,6 +527,13 @@
 					Procesos				</label>
 			</div>
 			{END print_details_procesos}
+														{BEGIN print_details_oficios_sigobius}
+			<div>
+				<label for="printDetailsoficios_sigobius{$id}">
+					<input type="checkbox" value="oficios_sigobius" id="printDetailsoficios_sigobius{$id}" checked>
+					Oficios Sigobius				</label>
+			</div>
+			{END print_details_oficios_sigobius}
 						</div>
 </div>
 {END print_details}
@@ -1002,22 +1009,25 @@ Ordenar por&nbsp;{$sortByDropdown}
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesos"
-			data-details-procesos	>
+				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="procesos,oficios_sigobius"
+			data-details-procesos			data-details-oficios_sigobius	>
 		<span data-details-inside data-short-table="procesos">
+			</span>
+		<span data-details-inside data-short-table="oficios_sigobius">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

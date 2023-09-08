@@ -1,7 +1,9 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.Oficios' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'dbo.Procesos' => array( 'displayPreview' => 1 ) ),
+'dbo.Procesos' => array( 'displayPreview' => 1 ),
+'dbo.Oficios Sigobius' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'master' => array( 'dbo.Etapas' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Actuacion',

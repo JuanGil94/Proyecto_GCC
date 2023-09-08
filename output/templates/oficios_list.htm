@@ -102,20 +102,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Abierto}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Abierto}" {$filterRow_attrs_Abierto}>
-			<label>{$label dbo_Oficios Abierto }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Abierto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Abierto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Abierto}</span>
-						</div>
-		{END searchCtrlBlock_Abierto}
-																{BEGIN searchCtrlBlock_Sigobius}
+																		{BEGIN searchCtrlBlock_Sigobius}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_Sigobius}" {$filterRow_attrs_Sigobius}>
@@ -141,19 +128,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_OficioIdRequisito}</span>
 						</div>
 		{END searchCtrlBlock_OficioIdRequisito}
-																{BEGIN searchCtrlBlock_OficioId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_OficioId}" {$filterRow_attrs_OficioId}>
-			<label>{$label dbo_Oficios OficioId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_OficioId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_OficioId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_OficioId}</span>
-						</div>
-		{END searchCtrlBlock_OficioId}
 																{BEGIN searchCtrlBlock_Oficio}
 
 
@@ -167,19 +141,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Oficio}</span>
 						</div>
 		{END searchCtrlBlock_Oficio}
-																{BEGIN searchCtrlBlock_Edicion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Edicion}" {$filterRow_attrs_Edicion}>
-			<label>{$label dbo_Oficios Edicion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Edicion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Edicion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Edicion}</span>
-						</div>
-		{END searchCtrlBlock_Edicion}
 																{BEGIN searchCtrlBlock_Direcciones}
 
 
@@ -661,16 +622,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="OficioId"]:before {
-		content: "{$label dbo_Oficios OficioId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Oficio"]:before {
 		content: "{$label dbo_Oficios Oficio}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Archivo"]:before {
-		content: "{$label dbo_Oficios Archivo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
 		content: "{$label dbo_Oficios Activo}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ActuacionId"]:before {
@@ -682,13 +637,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Direcciones"]:before {
 		content: "{$label dbo_Oficios Direcciones}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Edicion"]:before {
-		content: "{$label dbo_Oficios Edicion}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abierto"]:before {
-		content: "{$label dbo_Oficios Abierto}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sigobius"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sigobius"]:before {
 		content: "{$label dbo_Oficios Sigobius}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Devolucion"]:before {
@@ -761,31 +710,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$OficioId_class}	"
-
-			data-field="OficioId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN OficioId_fieldheadercolumn}
-	{BEGIN OficioId_fieldheader}
-	<SPAN {$OficioId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioId" data-fieldname="OficioId">
-	{$label dbo_Oficios OficioId }	{$arrow_icon_OficioId}
-	</SPAN>
-	{END OficioId_fieldheader}
-{END OficioId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -811,67 +735,17 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Archivo_class}	"
-
-			data-field="Archivo"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Archivo_fieldheadercolumn}
-	{BEGIN Archivo_fieldheader}
-	<SPAN {$Archivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Archivo" data-fieldname="Archivo">
-	{$label dbo_Oficios Archivo }	{$arrow_icon_Archivo}
-	</SPAN>
-	{END Archivo_fieldheader}
-{END Archivo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-			data-field="Activo"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Activo_fieldheadercolumn}
-	{BEGIN Activo_fieldheader}
-	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
-	{$label dbo_Oficios Activo }	{$arrow_icon_Activo}
-	</SPAN>
-	{END Activo_fieldheader}
-{END Activo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$ActuacionId_class}	"
 
 			data-field="ActuacionId"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -882,6 +756,31 @@
 	</SPAN>
 	{END ActuacionId_fieldheader}
 {END ActuacionId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Direcciones_class}	"
+
+			data-field="Direcciones"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Direcciones_fieldheadercolumn}
+	{BEGIN Direcciones_fieldheader}
+	<SPAN {$Direcciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcciones" data-fieldname="Direcciones">
+	{$label dbo_Oficios Direcciones }	{$arrow_icon_Direcciones}
+	</SPAN>
+	{END Direcciones_fieldheader}
+{END Direcciones_fieldheadercolumn}
 
 	
 	</th>
@@ -917,86 +816,11 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direcciones_class}	"
-
-			data-field="Direcciones"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Direcciones_fieldheadercolumn}
-	{BEGIN Direcciones_fieldheader}
-	<SPAN {$Direcciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcciones" data-fieldname="Direcciones">
-	{$label dbo_Oficios Direcciones }	{$arrow_icon_Direcciones}
-	</SPAN>
-	{END Direcciones_fieldheader}
-{END Direcciones_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Edicion_class}	"
-
-			data-field="Edicion"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Edicion_fieldheadercolumn}
-	{BEGIN Edicion_fieldheader}
-	<SPAN {$Edicion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Edicion" data-fieldname="Edicion">
-	{$label dbo_Oficios Edicion }	{$arrow_icon_Edicion}
-	</SPAN>
-	{END Edicion_fieldheader}
-{END Edicion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Abierto_class}	"
-
-			data-field="Abierto"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Abierto_fieldheadercolumn}
-	{BEGIN Abierto_fieldheader}
-	<SPAN {$Abierto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abierto" data-fieldname="Abierto">
-	{$label dbo_Oficios Abierto }	{$arrow_icon_Abierto}
-	</SPAN>
-	{END Abierto_fieldheader}
-{END Abierto_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Sigobius_class}	"
 
 			data-field="Sigobius"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1010,18 +834,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field9}
 	<th
 	
-	{$cell_grid_headcell_field10}
+	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Devolucion_class}	"
 
 			data-field="Devolucion"
 	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1032,6 +856,31 @@
 	</SPAN>
 	{END Devolucion_fieldheader}
 {END Devolucion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Activo_class}	"
+
+			data-field="Activo"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Activo_fieldheadercolumn}
+	{BEGIN Activo_fieldheader}
+	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
+	{$label dbo_Oficios Activo }	{$arrow_icon_Activo}
+	</SPAN>
+	{END Activo_fieldheader}
+{END Activo_fieldheadercolumn}
 
 	
 	</th>
@@ -1134,27 +983,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$OficioId_class}	"
-
-			data-field="OficioId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN OficioId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioId" data-fieldname="OficioId" data-default-width >
-{$OficioId_value}
-</span>
-{END OficioId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -1176,59 +1004,17 @@
 {END Oficio_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Archivo_class}	"
-
-			data-field="Archivo"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Archivo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Archivo" data-fieldname="Archivo" data-default-width >
-{$Archivo_value}
-</span>
-{END Archivo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-			data-field="Activo"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Activo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo" data-default-width >
-{$Activo_value}
-</span>
-{END Activo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$ActuacionId_class}	"
 
 			data-field="ActuacionId"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1237,6 +1023,27 @@
 {$ActuacionId_value}
 </span>
 {END ActuacionId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Direcciones_class}	"
+
+			data-field="Direcciones"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Direcciones_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcciones" data-fieldname="Direcciones" data-default-width >
+{$Direcciones_value}
+</span>
+{END Direcciones_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field4}
 									{BEGIN cellblock_grid_cell_field5}
@@ -1266,74 +1073,11 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direcciones_class}	"
-
-			data-field="Direcciones"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Direcciones_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcciones" data-fieldname="Direcciones" data-default-width >
-{$Direcciones_value}
-</span>
-{END Direcciones_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Edicion_class}	"
-
-			data-field="Edicion"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Edicion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Edicion" data-fieldname="Edicion" data-default-width >
-{$Edicion_value}
-</span>
-{END Edicion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Abierto_class}	"
-
-			data-field="Abierto"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Abierto_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abierto" data-fieldname="Abierto" data-default-width >
-{$Abierto_value}
-</span>
-{END Abierto_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Sigobius_class}	"
 
 			data-field="Sigobius"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1343,18 +1087,18 @@
 </span>
 {END Sigobius_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field9}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Devolucion_class}	"
 
 			data-field="Devolucion"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1363,6 +1107,27 @@
 {$Devolucion_value}
 </span>
 {END Devolucion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Activo_class}	"
+
+			data-field="Activo"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Activo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo" data-default-width >
+{$Activo_value}
+</span>
+{END Activo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field10}
 							</tr>
@@ -1458,21 +1223,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$OficioId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
@@ -1488,28 +1238,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Archivo_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field3}
 	<td
 	
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
+		 r-ori-vert		 {$ActuacionId_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
@@ -1524,7 +1259,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ActuacionId_class}	"
+		 r-ori-vert		 {$Direcciones_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
@@ -1554,7 +1289,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direcciones_class}	"
+		 r-ori-vert		 {$Sigobius_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
@@ -1563,43 +1298,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Edicion_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-									{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Abierto_class}	"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
 									{BEGIN cellblock_grid_footcell_field9}
 	<td
 	
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Sigobius_class}	"
+		 r-ori-vert		 {$Devolucion_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	
@@ -1614,7 +1319,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Devolucion_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"	

@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Naturaleza_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				

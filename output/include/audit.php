@@ -476,10 +476,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Motivos")
-		{
-			return true;
-		}
 		if($table=="dbo.Chequeos")
 		{
 			return true;
@@ -663,6 +659,14 @@ class AuditTrailTable
 		if($table=="dbo.Bancos")
 		{
 			return false;
+		}
+		if($table=="dbo.Motivos")
+		{
+			return false;
+		}
+		if($table=="dbo.Oficios Sigobius")
+		{
+			return true;
 		}
 	}
 
@@ -1092,10 +1096,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Motivos")
-		{
-			return true;
-		}
 		if($table=="dbo.Chequeos")
 		{
 			return true;
@@ -1279,6 +1279,14 @@ class AuditTrailFile
 		if($table=="dbo.Bancos")
 		{
 			return false;
+		}
+		if($table=="dbo.Motivos")
+		{
+			return false;
+		}
+		if($table=="dbo.Oficios Sigobius")
+		{
+			return true;
 		}
 	}
 

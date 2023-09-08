@@ -31,19 +31,19 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsoficios["Spanish"]["Oficio"] = "Oficio";
 	$fieldToolTipsoficios["Spanish"]["Oficio"] = "";
 	$placeHoldersoficios["Spanish"]["Oficio"] = "";
-	$fieldLabelsoficios["Spanish"]["Archivo"] = "Archivo";
+	$fieldLabelsoficios["Spanish"]["Archivo"] = "Plantilla";
 	$fieldToolTipsoficios["Spanish"]["Archivo"] = "";
 	$placeHoldersoficios["Spanish"]["Archivo"] = "";
 	$fieldLabelsoficios["Spanish"]["Activo"] = "Activo";
 	$fieldToolTipsoficios["Spanish"]["Activo"] = "";
 	$placeHoldersoficios["Spanish"]["Activo"] = "";
-	$fieldLabelsoficios["Spanish"]["ActuacionId"] = "Actuacion Id";
+	$fieldLabelsoficios["Spanish"]["ActuacionId"] = "Actuacion";
 	$fieldToolTipsoficios["Spanish"]["ActuacionId"] = "";
 	$placeHoldersoficios["Spanish"]["ActuacionId"] = "";
-	$fieldLabelsoficios["Spanish"]["OficioIdRequisito"] = "Oficio Id Requisito";
+	$fieldLabelsoficios["Spanish"]["OficioIdRequisito"] = "Oficio Pre-requisito";
 	$fieldToolTipsoficios["Spanish"]["OficioIdRequisito"] = "";
 	$placeHoldersoficios["Spanish"]["OficioIdRequisito"] = "";
-	$fieldLabelsoficios["Spanish"]["Direcciones"] = "Direcciones";
+	$fieldLabelsoficios["Spanish"]["Direcciones"] = "Direccion Sancionado";
 	$fieldToolTipsoficios["Spanish"]["Direcciones"] = "";
 	$placeHoldersoficios["Spanish"]["Direcciones"] = "";
 	$fieldLabelsoficios["Spanish"]["Edicion"] = "Edicion";
@@ -219,9 +219,9 @@ $tdataoficios[".strOrderBy"] = $tstrOrderBy;
 $tdataoficios[".orderindexes"] = array();
 
 
-$tdataoficios[".sqlHead"] = "SELECT OficioId,  	Oficio,  	Archivo,  	Activo,  	ActuacionId,  	OficioIdRequisito,  	Direcciones,  	Edicion,  	Abierto,  	Sigobius,  	Devolucion";
+$tdataoficios[".sqlHead"] = "SELECT OficioId,  Oficio,  Archivo,  Activo,  ActuacionId,  OficioIdRequisito,  Direcciones,  Edicion,  Abierto,  Sigobius,  Devolucion";
 $tdataoficios[".sqlFrom"] = "FROM dbo.Oficios";
-$tdataoficios[".sqlWhereExpr"] = "";
+$tdataoficios[".sqlWhereExpr"] = "Sigobius = 0";
 $tdataoficios[".sqlTail"] = "";
 
 
@@ -1931,23 +1931,25 @@ function createSqlQuery_oficios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "OficioId,  	Oficio,  	Archivo,  	Activo,  	ActuacionId,  	OficioIdRequisito,  	Direcciones,  	Edicion,  	Abierto,  	Sigobius,  	Devolucion";
+$proto0["m_strFieldList"] = "OficioId,  Oficio,  Archivo,  Activo,  ActuacionId,  OficioIdRequisito,  Direcciones,  Edicion,  Abierto,  Sigobius,  Devolucion";
 $proto0["m_strFrom"] = "FROM dbo.Oficios";
-$proto0["m_strWhere"] = "";
+$proto0["m_strWhere"] = "Sigobius = 0";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "";
+$proto2["m_sql"] = "Sigobius = 0";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
+						$obj = new SQLField(array(
+	"m_strName" => "Sigobius",
+	"m_strTable" => "dbo.Oficios",
+	"m_srcTableName" => "dbo.Oficios"
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "";
+$proto2["m_strCase"] = "= 0";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;

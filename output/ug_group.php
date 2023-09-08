@@ -45,7 +45,6 @@ $nonAdminTablesArr[] = "dbo.Tasas";
 $nonAdminTablesArr[] = "dbo.Test";
 $nonAdminTablesArr[] = "dbo.Uvts";
 $nonAdminTablesArr[] = "dbo.CarteraTipos";
-$nonAdminTablesArr[] = "dbo.Motivos";
 $nonAdminTablesArr[] = "dbo.Chequeos";
 $nonAdminTablesArr[] = "dbo.ChequeosOficios";
 $nonAdminTablesArr[] = "dbo.ChequeosSancionados";
@@ -92,6 +91,8 @@ $nonAdminTablesArr[] = "dbo.Propiedades1";
 $nonAdminTablesArr[] = "dbo.Propiedades3";
 $nonAdminTablesArr[] = "dbo.Correspondencias1";
 $nonAdminTablesArr[] = "dbo.Bancos";
+$nonAdminTablesArr[] = "dbo.Motivos";
+$nonAdminTablesArr[] = "dbo.Oficios Sigobius";
 
 $ug_connection = $cman->getForUserGroups();
 
