@@ -336,6 +336,7 @@ $tdatachequeos[".geocodingEnabled"] = false;
 
 
 
+$tdatachequeos[".isResizeColumns"] = true;
 
 
 

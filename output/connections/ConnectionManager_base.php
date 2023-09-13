@@ -269,7 +269,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Reportes"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Salarios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Seccionales"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Tasas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Test"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Uvts"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.CarteraTipos"] = "GCC_at_S00001_CCAD01";
@@ -321,6 +320,10 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Bancos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Motivos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Oficios Sigobius"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Tasas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Tasas Tributarias"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Tasas Comerciales"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Tasas TES (Deterioro de Cartera)"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

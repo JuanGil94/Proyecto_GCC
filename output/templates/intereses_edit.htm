@@ -147,6 +147,27 @@
 
 
 {END Intereses_fieldblock}
+											
+{BEGIN order_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_order}  r-vertical-field" 
+	data-signal-error-for="order{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="order" data-fieldname="order" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_order}">
+		{BEGIN order_label}{$label dbo_Intereses order }{END order_label}
+	</label>
+	<div class="r-edit-field">
+		{$order_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="order" {$tooltipAttr dbo_Intereses order } >
+		<div class="text-muted" >
+		{$tooltip dbo_Intereses order }		</div>
+	</div>
+</div>
+
+
+{END order_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

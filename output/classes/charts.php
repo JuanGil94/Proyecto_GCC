@@ -430,8 +430,6 @@ class Chart
 			return true;
 		if("dbo.Seccionales" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Tasas" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Test" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Uvts" == $this->chrt_array['tables'][0])
@@ -533,6 +531,14 @@ class Chart
 		if("dbo.Motivos" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Oficios" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Tasas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Tasas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Tasas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Tasas" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}
