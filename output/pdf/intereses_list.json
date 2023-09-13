@@ -76,6 +76,9 @@ pdfDocument = {
 										{BEGIN col_grid_3}
 					"%",
 					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -182,9 +185,6 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_add}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 		  ],
@@ -215,6 +215,9 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -312,11 +315,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Intereses Fecha }","hidden":"{$item_hide_simple_grid_field}","bold":true},
+			{"text":"{$jslabel dbo_Intereses Fecha }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Fecha_align}',
+              "alignment": 'left',
      
       
       },
@@ -341,16 +344,45 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Intereses Intereses }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel dbo_Intereses Intereses }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Intereses_align}',
+              "alignment": 'left',
      
       
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'order',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Intereses order }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
 											],
 				{END row_grid_0}
 		
@@ -379,9 +411,6 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
@@ -445,7 +474,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Fecha_align}',
+              "alignment": 'left',
      
       
       },
@@ -474,12 +503,41 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Intereses_align}',
+              "alignment": 'left',
      
       
       },
 
 {END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'order',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$order_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
 		
@@ -546,6 +604,7 @@ pdfDocument = {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
+			fieldName: 'Fecha',
 				style: 'footcell',
 		
 		
@@ -572,6 +631,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Intereses',
 				style: 'footcell',
 		
 		
@@ -593,6 +653,33 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'order',
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_2}
 		

@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "664_1693929659";
+$projectBuildKey = "698_1694607780";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "664";
+$projectBuildNumber = "698";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -791,7 +791,6 @@ $tableCaptions["Spanish"]["dbo_Presupuestos"] = "Presupuestos";
 $tableCaptions["Spanish"]["dbo_Reportes"] = "Reportes";
 $tableCaptions["Spanish"]["dbo_Salarios"] = "Salarios";
 $tableCaptions["Spanish"]["dbo_Seccionales"] = "Seccionales";
-$tableCaptions["Spanish"]["dbo_Tasas"] = "Tasas";
 $tableCaptions["Spanish"]["dbo_Test"] = "Test";
 $tableCaptions["Spanish"]["dbo_Uvts"] = "Uvts";
 $tableCaptions["Spanish"]["dbo_CarteraTipos"] = "Cartera Tipos";
@@ -843,6 +842,10 @@ $tableCaptions["Spanish"]["dbo_Correspondencias1"] = "Correspondencias1";
 $tableCaptions["Spanish"]["dbo_Bancos"] = "Bancos";
 $tableCaptions["Spanish"]["dbo_Motivos"] = "Motivos";
 $tableCaptions["Spanish"]["dbo_Oficios_Sigobius"] = "Oficios Sigobius";
+$tableCaptions["Spanish"]["dbo_Tasas"] = "Tasas";
+$tableCaptions["Spanish"]["Tasas_Tributarias"] = "Tasas Tributarias";
+$tableCaptions["Spanish"]["Tasas_Comerciales"] = "Tasas Comerciales";
+$tableCaptions["Spanish"]["Tasas_TES__Deterioro_de_Cartera_"] = "Tasas TES (Deterioro de Cartera)";
 
 
 $globalEvents = new class_GlobalEvents;

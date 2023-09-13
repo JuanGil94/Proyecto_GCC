@@ -70,6 +70,9 @@ pdfDocument = {
 										{BEGIN col_grid_1}
 					"%",
 					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -250,7 +253,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Intereses Fecha }","hidden":"{$item_hide_simple_grid_field}","bold":true},
+			{"text":"{$jslabel dbo_Intereses Fecha }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -279,7 +282,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Intereses Intereses }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel dbo_Intereses Intereses }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -289,6 +292,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'order',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Intereses order }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$order_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
 											],
 				{END row_grid_0}
 		
@@ -356,6 +388,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'order',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$order_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$order_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
 		
@@ -417,6 +478,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_2}
 		

@@ -460,10 +460,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Tasas")
-		{
-			return true;
-		}
 		if($table=="dbo.Test")
 		{
 			return true;
@@ -667,6 +663,22 @@ class AuditTrailTable
 		if($table=="dbo.Oficios Sigobius")
 		{
 			return true;
+		}
+		if($table=="dbo.Tasas")
+		{
+			return false;
+		}
+		if($table=="Tasas Tributarias")
+		{
+			return false;
+		}
+		if($table=="Tasas Comerciales")
+		{
+			return false;
+		}
+		if($table=="Tasas TES (Deterioro de Cartera)")
+		{
+			return false;
 		}
 	}
 
@@ -1080,10 +1092,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Tasas")
-		{
-			return true;
-		}
 		if($table=="dbo.Test")
 		{
 			return true;
@@ -1287,6 +1295,22 @@ class AuditTrailFile
 		if($table=="dbo.Oficios Sigobius")
 		{
 			return true;
+		}
+		if($table=="dbo.Tasas")
+		{
+			return false;
+		}
+		if($table=="Tasas Tributarias")
+		{
+			return false;
+		}
+		if($table=="Tasas Comerciales")
+		{
+			return false;
+		}
+		if($table=="Tasas TES (Deterioro de Cartera)")
+		{
+			return false;
 		}
 	}
 

@@ -41,7 +41,6 @@ $nonAdminTablesArr[] = "dbo.Presupuestos";
 $nonAdminTablesArr[] = "dbo.Reportes";
 $nonAdminTablesArr[] = "dbo.Salarios";
 $nonAdminTablesArr[] = "dbo.Seccionales";
-$nonAdminTablesArr[] = "dbo.Tasas";
 $nonAdminTablesArr[] = "dbo.Test";
 $nonAdminTablesArr[] = "dbo.Uvts";
 $nonAdminTablesArr[] = "dbo.CarteraTipos";
@@ -93,6 +92,10 @@ $nonAdminTablesArr[] = "dbo.Correspondencias1";
 $nonAdminTablesArr[] = "dbo.Bancos";
 $nonAdminTablesArr[] = "dbo.Motivos";
 $nonAdminTablesArr[] = "dbo.Oficios Sigobius";
+$nonAdminTablesArr[] = "dbo.Tasas";
+$nonAdminTablesArr[] = "Tasas Tributarias";
+$nonAdminTablesArr[] = "Tasas Comerciales";
+$nonAdminTablesArr[] = "Tasas TES (Deterioro de Cartera)";
 
 $ug_connection = $cman->getForUserGroups();
 

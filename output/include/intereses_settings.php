@@ -46,6 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsintereses["Spanish"]["PagoId"] = "Pago Id";
 	$fieldToolTipsintereses["Spanish"]["PagoId"] = "";
 	$placeHoldersintereses["Spanish"]["PagoId"] = "";
+	$fieldLabelsintereses["Spanish"]["order"] = "Order";
+	$fieldToolTipsintereses["Spanish"]["order"] = "";
+	$placeHoldersintereses["Spanish"]["order"] = "";
 	if (count($fieldToolTipsintereses["Spanish"]))
 		$tdataintereses[".isUseToolTips"] = true;
 }
@@ -170,6 +173,7 @@ $tdataintereses[".googleLikeFields"][] = "Intereses";
 $tdataintereses[".googleLikeFields"][] = "SeccionalId";
 $tdataintereses[".googleLikeFields"][] = "Liquidacion";
 $tdataintereses[".googleLikeFields"][] = "PagoId";
+$tdataintereses[".googleLikeFields"][] = "order";
 
 
 
@@ -186,6 +190,7 @@ $tdataintereses[".geocodingEnabled"] = false;
 
 
 
+$tdataintereses[".isResizeColumns"] = true;
 
 
 
@@ -203,7 +208,7 @@ $tdataintereses[".strOrderBy"] = $tstrOrderBy;
 $tdataintereses[".orderindexes"] = array();
 
 
-$tdataintereses[".sqlHead"] = "SELECT InteresId,  	ProcesoId,  	Fecha,  	Intereses,  	SeccionalId,  	Liquidacion,  	PagoId";
+$tdataintereses[".sqlHead"] = "SELECT InteresId,  	ProcesoId,  	Fecha,  	Intereses,  	SeccionalId,  	Liquidacion,  	PagoId,  	[order]";
 $tdataintereses[".sqlFrom"] = "FROM dbo.Intereses";
 $tdataintereses[".sqlWhereExpr"] = "";
 $tdataintereses[".sqlTail"] = "";
@@ -1244,6 +1249,144 @@ $tdataintereses[".hideMobileList"] = array();
 
 	$tdataintereses["PagoId"] = $fdata;
 		$tdataintereses[".searchableFields"][] = "PagoId";
+//	order
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "order";
+	$fdata["GoodName"] = "order";
+	$fdata["ownerTable"] = "dbo.Intereses";
+	$fdata["Label"] = GetFieldLabel("dbo_Intereses","order");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "order";
+
+		$fdata["sourceSingle"] = "order";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "[order]";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataintereses["order"] = $fdata;
+		$tdataintereses[".searchableFields"][] = "order";
 
 
 $tables_data["dbo.Intereses"]=&$tdataintereses;
@@ -1306,7 +1449,7 @@ function createSqlQuery_intereses()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "InteresId,  	ProcesoId,  	Fecha,  	Intereses,  	SeccionalId,  	Liquidacion,  	PagoId";
+$proto0["m_strFieldList"] = "InteresId,  	ProcesoId,  	Fecha,  	Intereses,  	SeccionalId,  	Liquidacion,  	PagoId,  	[order]";
 $proto0["m_strFrom"] = "FROM dbo.Intereses";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1444,43 +1587,58 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "dbo.Intereses";
-$proto21["m_srcTableName"] = "dbo.Intereses";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "InteresId";
-$proto21["m_columns"][] = "ProcesoId";
-$proto21["m_columns"][] = "Fecha";
-$proto21["m_columns"][] = "Intereses";
-$proto21["m_columns"][] = "SeccionalId";
-$proto21["m_columns"][] = "Liquidacion";
-$proto21["m_columns"][] = "PagoId";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "order",
+	"m_strTable" => "dbo.Intereses",
+	"m_srcTableName" => "dbo.Intereses"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "dbo.Intereses";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "[order]";
 $proto20["m_srcTableName"] = "dbo.Intereses";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "dbo.Intereses";
+$proto23["m_srcTableName"] = "dbo.Intereses";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "InteresId";
+$proto23["m_columns"][] = "ProcesoId";
+$proto23["m_columns"][] = "Fecha";
+$proto23["m_columns"][] = "Intereses";
+$proto23["m_columns"][] = "SeccionalId";
+$proto23["m_columns"][] = "Liquidacion";
+$proto23["m_columns"][] = "PagoId";
+$proto23["m_columns"][] = "order";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "dbo.Intereses";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "dbo.Intereses";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1496,7 +1654,7 @@ $queryData_intereses = createSqlQuery_intereses();
 	
 		;
 
-							
+								
 
 $tdataintereses[".sqlquery"] = $queryData_intereses;
 

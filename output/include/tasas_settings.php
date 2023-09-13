@@ -73,7 +73,7 @@ $tdatatasas[".listAjax"] = false;
 //	temporary
 //$tdatatasas[".listAjax"] = false;
 
-	$tdatatasas[".audit"] = true;
+	$tdatatasas[".audit"] = false;
 
 	$tdatatasas[".locking"] = false;
 
@@ -149,7 +149,7 @@ $tdatatasas[".addPageEvents"] = false;
 $tdatatasas[".isUseTimeForSearch"] = false;
 
 
-$tdatatasas[".badgeColor"] = "8FBC8B";
+$tdatatasas[".badgeColor"] = "4682B4";
 
 
 $tdatatasas[".allSearchFields"] = array();
@@ -200,6 +200,17 @@ $tdatatasas[".sqlFrom"] = "FROM dbo.Tasas";
 $tdatatasas[".sqlWhereExpr"] = "";
 $tdatatasas[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatatasas[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -689,7 +700,7 @@ $tdatatasas[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -698,7 +709,8 @@ $tdatatasas[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 14;
+
 	
 	
 	
@@ -779,20 +791,19 @@ $tdatatasas[".hideMobileList"] = array();
 
 
 //Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+	$fdata["filterTotals"] = 3;
+			$fdata["filterTotalFields"] = "TasaId";
+		$fdata["filterFormat"] = "Options list";
 		$fdata["showCollapsed"] = false;
 
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
 	
 	
+	
+		$fdata["filterCheckedMessageType"] = "Text";
+	$fdata["filterCheckedMessageText"] = "Checked";
+	$fdata["filterUncheckedMessageType"] = "Text";
+	$fdata["filterUncheckedMessageText"] = "Unchecked";
+
 //end of Filters settings
 
 

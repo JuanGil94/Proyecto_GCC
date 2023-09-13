@@ -255,8 +255,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("seccionales" == $shortTName )
 		return true;
-	if ("tasas" == $shortTName )
-		return true;
 	if ("test" == $shortTName )
 		return true;
 	if ("uvts" == $shortTName )
@@ -358,6 +356,14 @@ function checkTableName($shortTName )
 	if ("motivos" == $shortTName )
 		return true;
 	if ("oficios_sigobius" == $shortTName )
+		return true;
+	if ("tasas" == $shortTName )
+		return true;
+	if ("tasas_tributarias" == $shortTName )
+		return true;
+	if ("tasas_comerciales" == $shortTName )
+		return true;
+	if ("tasas_tes__deterioro_de_cartera_" == $shortTName )
 		return true;
 	return false;
 }
@@ -642,15 +648,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Seccionales";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Tasas");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Tasas";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -1111,6 +1108,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Oficios Sigobius";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Tasas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Tasas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tasas Tributarias");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tasas Tributarias";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tasas Comerciales");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tasas Comerciales";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tasas TES (Deterioro de Cartera)");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tasas TES (Deterioro de Cartera)";
+	}
 	return $arr;
 }
 
@@ -1146,7 +1179,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Reportes";
 	$arr[]="dbo.Salarios";
 	$arr[]="dbo.Seccionales";
-	$arr[]="dbo.Tasas";
 	$arr[]="dbo.Test";
 	$arr[]="dbo.Uvts";
 	$arr[]="dbo.CarteraTipos";
@@ -1198,6 +1230,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Bancos";
 	$arr[]="dbo.Motivos";
 	$arr[]="dbo.Oficios Sigobius";
+	$arr[]="dbo.Tasas";
+	$arr[]="Tasas Tributarias";
+	$arr[]="Tasas Comerciales";
+	$arr[]="Tasas TES (Deterioro de Cartera)";
 	return $arr;
 }
 
@@ -1955,11 +1991,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Tasas" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Test" )
 	{
 //	default permissions
@@ -2211,6 +2242,26 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Oficios Sigobius" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Tasas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Tasas Tributarias" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Tasas Comerciales" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Tasas TES (Deterioro de Cartera)" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

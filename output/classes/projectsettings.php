@@ -3588,8 +3588,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "salarios" ] = "dbo.Salarios";
 	$projectEntities[ "dbo.Seccionales" ] = array( "url" => "seccionales", "type" => 0 );
 	$projectEntitiesReverse[ "seccionales" ] = "dbo.Seccionales";
-	$projectEntities[ "dbo.Tasas" ] = array( "url" => "tasas", "type" => 0 );
-	$projectEntitiesReverse[ "tasas" ] = "dbo.Tasas";
 	$projectEntities[ "dbo.Test" ] = array( "url" => "test", "type" => 0 );
 	$projectEntitiesReverse[ "test" ] = "dbo.Test";
 	$projectEntities[ "dbo.Uvts" ] = array( "url" => "uvts", "type" => 0 );
@@ -3692,6 +3690,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "motivos" ] = "dbo.Motivos";
 	$projectEntities[ "dbo.Oficios Sigobius" ] = array( "url" => "oficios_sigobius", "type" => 1 );
 	$projectEntitiesReverse[ "oficios_sigobius" ] = "dbo.Oficios Sigobius";
+	$projectEntities[ "dbo.Tasas" ] = array( "url" => "tasas", "type" => 0 );
+	$projectEntitiesReverse[ "tasas" ] = "dbo.Tasas";
+	$projectEntities[ "Tasas Tributarias" ] = array( "url" => "tasas_tributarias", "type" => 1 );
+	$projectEntitiesReverse[ "tasas_tributarias" ] = "Tasas Tributarias";
+	$projectEntities[ "Tasas Comerciales" ] = array( "url" => "tasas_comerciales", "type" => 1 );
+	$projectEntitiesReverse[ "tasas_comerciales" ] = "Tasas Comerciales";
+	$projectEntities[ "Tasas TES (Deterioro de Cartera)" ] = array( "url" => "tasas_tes__deterioro_de_cartera_", "type" => 1 );
+	$projectEntitiesReverse[ "tasas_tes__deterioro_de_cartera_" ] = "Tasas TES (Deterioro de Cartera)";
 }
 
 function findTable( $table ) {
