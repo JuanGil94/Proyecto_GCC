@@ -1,6 +1,11 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Ciudades' => array( 'preview' => false ),
-'dbo.Chequeos' => array( 'preview' => false ) ),
+'dbo.Chequeos' => array( 'preview' => false ),
+'dbo.Carceles' => array( 'preview' => false ),
+'dbo.Carceles1' => array( 'preview' => false ),
+'dbo.Carceles2' => array( 'preview' => false ),
+'dbo.Carceles3' => array( 'preview' => false ),
+'dbo.Carceles4' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'ChequeoId',
 'Sancionado',

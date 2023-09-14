@@ -6,11 +6,11 @@ $tdataconceptos[".OwnerID"] = "";
 $tdataconceptos[".OriginalTable"] = "dbo.Conceptos";
 
 
-$tdataconceptos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataconceptos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataconceptos[".originalPagesByType"] = $tdataconceptos[".pagesByType"];
-$tdataconceptos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataconceptos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataconceptos[".originalPages"] = $tdataconceptos[".pages"];
-$tdataconceptos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataconceptos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataconceptos[".originalDefaultPages"] = $tdataconceptos[".defaultPages"];
 
 //	field labels
@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsconceptos["Spanish"]["Activo"] = "Activo";
 	$fieldToolTipsconceptos["Spanish"]["Activo"] = "";
 	$placeHoldersconceptos["Spanish"]["Activo"] = "";
-	$fieldLabelsconceptos["Spanish"]["Cuenta"] = "Cuenta";
+	$fieldLabelsconceptos["Spanish"]["Cuenta"] = "Numero de Cuenta";
 	$fieldToolTipsconceptos["Spanish"]["Cuenta"] = "";
 	$placeHoldersconceptos["Spanish"]["Cuenta"] = "";
 	if (count($fieldToolTipsconceptos["Spanish"]))

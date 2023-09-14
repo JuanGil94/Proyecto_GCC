@@ -357,13 +357,23 @@ function checkTableName($shortTName )
 		return true;
 	if ("oficios_sigobius" == $shortTName )
 		return true;
-	if ("tasas" == $shortTName )
-		return true;
 	if ("tasas_tributarias" == $shortTName )
 		return true;
 	if ("tasas_comerciales" == $shortTName )
 		return true;
 	if ("tasas_tes__deterioro_de_cartera_" == $shortTName )
+		return true;
+	if ("carceles" == $shortTName )
+		return true;
+	if ("carceles1" == $shortTName )
+		return true;
+	if ("carceles2" == $shortTName )
+		return true;
+	if ("carceles3" == $shortTName )
+		return true;
+	if ("carceles4" == $shortTName )
+		return true;
+	if ("alertas" == $shortTName )
 		return true;
 	return false;
 }
@@ -1110,15 +1120,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Tasas");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Tasas";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("Tasas Tributarias");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1143,6 +1144,60 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="Tasas TES (Deterioro de Cartera)";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Carceles");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Carceles";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Carceles1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Carceles1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Carceles2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Carceles2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Carceles3");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Carceles3";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Carceles4");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Carceles4";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Alertas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Alertas";
 	}
 	return $arr;
 }
@@ -1230,10 +1285,15 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Bancos";
 	$arr[]="dbo.Motivos";
 	$arr[]="dbo.Oficios Sigobius";
-	$arr[]="dbo.Tasas";
 	$arr[]="Tasas Tributarias";
 	$arr[]="Tasas Comerciales";
 	$arr[]="Tasas TES (Deterioro de Cartera)";
+	$arr[]="dbo.Carceles";
+	$arr[]="dbo.Carceles1";
+	$arr[]="dbo.Carceles2";
+	$arr[]="dbo.Carceles3";
+	$arr[]="dbo.Carceles4";
+	$arr[]="dbo.Alertas";
 	return $arr;
 }
 
@@ -2246,11 +2306,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Tasas" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="Tasas Tributarias" )
 	{
 //	default permissions
@@ -2262,6 +2317,36 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tasas TES (Deterioro de Cartera)" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Carceles" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Carceles1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Carceles2" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Carceles3" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Carceles4" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Alertas" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -111,6 +111,27 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN DepartamentoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DepartamentoId}  r-vertical-field" 
+	data-signal-error-for="DepartamentoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="DepartamentoId" data-fieldname="DepartamentoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DepartamentoId}">
+		{BEGIN DepartamentoId_label}{$label dbo_Ciudades DepartamentoId }{END DepartamentoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$DepartamentoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DepartamentoId" {$tooltipAttr dbo_Ciudades DepartamentoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Ciudades DepartamentoId }		</div>
+	</div>
+</div>
+
+
+{END DepartamentoId_fieldblock}
+											
 {BEGIN Codigo_fieldblock}
 
 
@@ -152,27 +173,6 @@
 
 
 {END Ciudad_fieldblock}
-											
-{BEGIN DepartamentoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_DepartamentoId}  r-vertical-field" 
-	data-signal-error-for="DepartamentoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="DepartamentoId" data-fieldname="DepartamentoId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_DepartamentoId}">
-		{BEGIN DepartamentoId_label}{$label dbo_Ciudades DepartamentoId }{END DepartamentoId_label}
-	</label>
-	<div class="r-edit-field">
-		{$DepartamentoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="DepartamentoId" {$tooltipAttr dbo_Ciudades DepartamentoId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Ciudades DepartamentoId }		</div>
-	</div>
-</div>
-
-
-{END DepartamentoId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

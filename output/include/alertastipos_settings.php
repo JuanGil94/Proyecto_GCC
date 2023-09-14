@@ -6,11 +6,11 @@ $tdataalertastipos[".OwnerID"] = "";
 $tdataalertastipos[".OriginalTable"] = "dbo.AlertasTipos";
 
 
-$tdataalertastipos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataalertastipos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataalertastipos[".originalPagesByType"] = $tdataalertastipos[".pagesByType"];
-$tdataalertastipos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataalertastipos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataalertastipos[".originalPages"] = $tdataalertastipos[".pages"];
-$tdataalertastipos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataalertastipos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataalertastipos[".originalDefaultPages"] = $tdataalertastipos[".defaultPages"];
 
 //	field labels
@@ -527,6 +527,36 @@ changeTextControlsToDate( "dbo.AlertasTipos" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.AlertasTipos"] = array();
+//	dbo.Alertas
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Alertas";
+		$detailsParam["dOriginalTable"] = "dbo.Alertas";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "alertas";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Alertas");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.AlertasTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.AlertasTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.AlertasTipos"][$dIndex]["masterKeys"][]="AlertaTipoId";
+
+				$detailsTablesData["dbo.AlertasTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.AlertasTipos"][$dIndex]["detailKeys"][]="AlertaTipoId";
 //endif
 
 // tables which are master tables for current table (detail)

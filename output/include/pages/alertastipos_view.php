@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'dbo.Alertas' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'AlertaTipoId',
 'AlertaTipo' ),
 'searchRequiredFields' => array(  ),

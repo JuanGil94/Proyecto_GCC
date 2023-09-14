@@ -17,6 +17,7 @@
 'previewPageId' => '' ),
 'dbo.Minjusticia3' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
+'master' => array( 'dbo.Cuentas' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Codigo',
 'Seccional',

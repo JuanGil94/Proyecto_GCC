@@ -664,10 +664,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Tasas")
-		{
-			return false;
-		}
 		if($table=="Tasas Tributarias")
 		{
 			return false;
@@ -677,6 +673,30 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="Tasas TES (Deterioro de Cartera)")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles1")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles2")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles3")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles4")
+		{
+			return false;
+		}
+		if($table=="dbo.Alertas")
 		{
 			return false;
 		}
@@ -1296,10 +1316,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Tasas")
-		{
-			return false;
-		}
 		if($table=="Tasas Tributarias")
 		{
 			return false;
@@ -1309,6 +1325,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Tasas TES (Deterioro de Cartera)")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles1")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles2")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles3")
+		{
+			return false;
+		}
+		if($table=="dbo.Carceles4")
+		{
+			return false;
+		}
+		if($table=="dbo.Alertas")
 		{
 			return false;
 		}

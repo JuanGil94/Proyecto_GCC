@@ -6,11 +6,11 @@ $tdatacuentas[".OwnerID"] = "";
 $tdatacuentas[".OriginalTable"] = "dbo.Cuentas";
 
 
-$tdatacuentas[".pagesByType"] = my_json_decode( "{\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
+$tdatacuentas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
 $tdatacuentas[".originalPagesByType"] = $tdatacuentas[".pagesByType"];
-$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
+$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
 $tdatacuentas[".originalPages"] = $tdatacuentas[".pages"];
-$tdatacuentas[".defaultPages"] = my_json_decode( "{\"list\":\"list1\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
+$tdatacuentas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list1\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
 $tdatacuentas[".originalDefaultPages"] = $tdatacuentas[".defaultPages"];
 
 //	field labels
@@ -28,19 +28,19 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscuentas["Spanish"]["CuentaId"] = "Cuenta Id";
 	$fieldToolTipscuentas["Spanish"]["CuentaId"] = "";
 	$placeHolderscuentas["Spanish"]["CuentaId"] = "";
-	$fieldLabelscuentas["Spanish"]["Cuenta"] = "Cuenta";
+	$fieldLabelscuentas["Spanish"]["Cuenta"] = " Nombre de la Cuenta";
 	$fieldToolTipscuentas["Spanish"]["Cuenta"] = "";
 	$placeHolderscuentas["Spanish"]["Cuenta"] = "";
 	$fieldLabelscuentas["Spanish"]["BancoId"] = "Banco Id";
 	$fieldToolTipscuentas["Spanish"]["BancoId"] = "";
 	$placeHolderscuentas["Spanish"]["BancoId"] = "";
-	$fieldLabelscuentas["Spanish"]["Numero"] = "Numero";
+	$fieldLabelscuentas["Spanish"]["Numero"] = "Número de Cuenta";
 	$fieldToolTipscuentas["Spanish"]["Numero"] = "";
 	$placeHolderscuentas["Spanish"]["Numero"] = "";
-	$fieldLabelscuentas["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelscuentas["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipscuentas["Spanish"]["SeccionalId"] = "";
 	$placeHolderscuentas["Spanish"]["SeccionalId"] = "";
-	$fieldLabelscuentas["Spanish"]["ConceptoId"] = "Concepto Id";
+	$fieldLabelscuentas["Spanish"]["ConceptoId"] = "Concepto";
 	$fieldToolTipscuentas["Spanish"]["ConceptoId"] = "";
 	$placeHolderscuentas["Spanish"]["ConceptoId"] = "";
 	$fieldLabelscuentas["Spanish"]["Activa"] = "Activa";
@@ -155,7 +155,7 @@ $tdatacuentas[".addPageEvents"] = false;
 $tdatacuentas[".isUseTimeForSearch"] = false;
 
 
-$tdatacuentas[".badgeColor"] = "BC8F8F";
+$tdatacuentas[".badgeColor"] = "bc8f8f";
 
 
 $tdatacuentas[".allSearchFields"] = array();
@@ -191,7 +191,7 @@ $tdatacuentas[".geocodingEnabled"] = false;
 
 
 
-$tdatacuentas[".pageSize"] = 20;
+$tdatacuentas[".pageSize"] = 5;
 
 $tdatacuentas[".warnLeavingPages"] = true;
 
@@ -208,6 +208,17 @@ $tdatacuentas[".sqlFrom"] = "FROM dbo.Cuentas";
 $tdatacuentas[".sqlWhereExpr"] = "";
 $tdatacuentas[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatacuentas[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -909,7 +920,7 @@ $tdatacuentas[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "SeccionalId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Codigo";
+	$edata["DisplayField"] = "Seccional";
 
 	
 
@@ -967,7 +978,7 @@ $tdatacuentas[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1051,7 +1062,7 @@ $tdatacuentas[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1061,6 +1072,34 @@ $tdatacuentas[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "ConceptoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1075,17 +1114,14 @@ $tdatacuentas[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -1105,7 +1141,7 @@ $tdatacuentas[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1281,6 +1317,36 @@ changeTextControlsToDate( "dbo.Cuentas" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Cuentas"] = array();
+//	dbo.Seccionales
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Seccionales";
+		$detailsParam["dOriginalTable"] = "dbo.Seccionales";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "seccionales";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Seccionales");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Cuentas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Cuentas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Cuentas"][$dIndex]["masterKeys"][]="SeccionalId";
+
+				$detailsTablesData["dbo.Cuentas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Cuentas"][$dIndex]["detailKeys"][]="SeccionalId";
 //endif
 
 // tables which are master tables for current table (detail)

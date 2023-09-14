@@ -174,11 +174,6 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Actuaciones EtapaId }","bold":true},{"text":{$EtapaId_pdfvalue}}],"margin":[0,0,0,15]},
 				
-				
-			 {BEGIN details_procesos}
-			{$displayDetailTable_procesos }
-		{END details_procesos},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

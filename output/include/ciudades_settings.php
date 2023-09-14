@@ -6,11 +6,11 @@ $tdataciudades[".OwnerID"] = "";
 $tdataciudades[".OriginalTable"] = "dbo.Ciudades";
 
 
-$tdataciudades[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataciudades[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataciudades[".originalPagesByType"] = $tdataciudades[".pagesByType"];
-$tdataciudades[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataciudades[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataciudades[".originalPages"] = $tdataciudades[".pages"];
-$tdataciudades[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataciudades[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataciudades[".originalDefaultPages"] = $tdataciudades[".defaultPages"];
 
 //	field labels
@@ -881,6 +881,156 @@ $detailsTablesData["dbo.Ciudades"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "direcciones";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Direcciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
+
+				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
+//	dbo.Carceles
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Carceles";
+		$detailsParam["dOriginalTable"] = "dbo.Carceles";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "carceles";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
+
+				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
+//	dbo.Carceles1
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Carceles1";
+		$detailsParam["dOriginalTable"] = "dbo.Carceles";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "carceles1";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles1");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
+
+				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
+//	dbo.Carceles2
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Carceles2";
+		$detailsParam["dOriginalTable"] = "dbo.Carceles";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "carceles2";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles2");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
+
+				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
+//	dbo.Carceles3
+	
+	
+
+		$dIndex = 5;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Carceles3";
+		$detailsParam["dOriginalTable"] = "dbo.Carceles";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "carceles3";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
+
+				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
+//	dbo.Carceles4
+	
+	
+
+		$dIndex = 6;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Carceles4";
+		$detailsParam["dOriginalTable"] = "dbo.Carceles";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "carceles4";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles4");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -637,6 +637,11 @@ pdfDocument = {
 			{$displayDetailTable_oficios_sigobius }
 		{END details_oficios_sigobius},
 				
+				
+			 {BEGIN details_alertas}
+			{$displayDetailTable_alertas }
+		{END details_alertas},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

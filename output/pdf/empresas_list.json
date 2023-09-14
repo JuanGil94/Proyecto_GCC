@@ -161,9 +161,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_add}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_delete}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -585,9 +582,6 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
 		  ],
   "border": [ true, true, true, true ],
