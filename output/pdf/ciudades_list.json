@@ -447,9 +447,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
-				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -503,8 +500,28 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link5}"},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -637,6 +654,31 @@ pdfDocument = {
 			 {BEGIN details_propiedades}
 			{$displayDetailTable_propiedades }
 		{END details_propiedades},
+				
+				
+			 {BEGIN details_carceles}
+			{$displayDetailTable_carceles }
+		{END details_carceles},
+				
+				
+			 {BEGIN details_carceles1}
+			{$displayDetailTable_carceles1 }
+		{END details_carceles1},
+				
+				
+			 {BEGIN details_carceles2}
+			{$displayDetailTable_carceles2 }
+		{END details_carceles2},
+				
+				
+			 {BEGIN details_carceles3}
+			{$displayDetailTable_carceles3 }
+		{END details_carceles3},
+				
+				
+			 {BEGIN details_carceles4}
+			{$displayDetailTable_carceles4 }
+		{END details_carceles4},
 				
 		  ],
   "border": [ true, true, true, true ],

@@ -166,18 +166,13 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Actuaciones EstadoId }","bold":true},{"text":{$EstadoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Actuaciones EtapaId }","bold":true},{"text":{$EtapaId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Actuaciones MotivoId }","bold":true},{"text":{$MotivoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Actuaciones Intereses }","bold":true},{"text":{$Intereses_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Actuaciones EtapaId }","bold":true},{"text":{$EtapaId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			 {BEGIN details_procesos}
-			{$displayDetailTable_procesos }
-		{END details_procesos},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -191,7 +191,7 @@ $tdataseccionales[".isUseAjaxSuggest"] = true;
 
 
 
-															
+																														
 
 $tdataseccionales[".ajaxCodeSnippetAdded"] = false;
 
@@ -203,7 +203,7 @@ $tdataseccionales[".addPageEvents"] = false;
 $tdataseccionales[".isUseTimeForSearch"] = false;
 
 
-$tdataseccionales[".badgeColor"] = "6DA5C8";
+$tdataseccionales[".badgeColor"] = "6da5c8";
 
 
 $tdataseccionales[".allSearchFields"] = array();
@@ -3805,6 +3805,24 @@ $masterTablesData["dbo.Seccionales"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Cuentas";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Cuentas";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "cuentas";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Seccionales"][0] = $masterParams;
+				$masterTablesData["dbo.Seccionales"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Seccionales"][0]["masterKeys"][]="SeccionalId";
+				$masterTablesData["dbo.Seccionales"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Seccionales"][0]["detailKeys"][]="SeccionalId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

@@ -92,10 +92,15 @@ $nonAdminTablesArr[] = "dbo.Correspondencias1";
 $nonAdminTablesArr[] = "dbo.Bancos";
 $nonAdminTablesArr[] = "dbo.Motivos";
 $nonAdminTablesArr[] = "dbo.Oficios Sigobius";
-$nonAdminTablesArr[] = "dbo.Tasas";
 $nonAdminTablesArr[] = "Tasas Tributarias";
 $nonAdminTablesArr[] = "Tasas Comerciales";
 $nonAdminTablesArr[] = "Tasas TES (Deterioro de Cartera)";
+$nonAdminTablesArr[] = "dbo.Carceles";
+$nonAdminTablesArr[] = "dbo.Carceles1";
+$nonAdminTablesArr[] = "dbo.Carceles2";
+$nonAdminTablesArr[] = "dbo.Carceles3";
+$nonAdminTablesArr[] = "dbo.Carceles4";
+$nonAdminTablesArr[] = "dbo.Alertas";
 
 $ug_connection = $cman->getForUserGroups();
 

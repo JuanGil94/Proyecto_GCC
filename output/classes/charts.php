@@ -538,7 +538,17 @@ class Chart
 			return true;
 		if("dbo.Tasas" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Tasas" == $this->chrt_array['tables'][0])
+		if("dbo.Carceles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Carceles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Carceles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Carceles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Carceles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Alertas" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

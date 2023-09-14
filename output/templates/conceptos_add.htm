@@ -152,6 +152,27 @@
 
 
 {END Activo_fieldblock}
+											
+{BEGIN Cuenta_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cuenta}  r-vertical-field" 
+	data-signal-error-for="Cuenta{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Cuenta" data-fieldname="Cuenta" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cuenta}">
+		{BEGIN Cuenta_label}{$label dbo_Conceptos Cuenta }{END Cuenta_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cuenta_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cuenta" {$tooltipAttr dbo_Conceptos Cuenta } >
+		<div class="text-muted" >
+		{$tooltip dbo_Conceptos Cuenta }		</div>
+	</div>
+</div>
+
+
+{END Cuenta_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

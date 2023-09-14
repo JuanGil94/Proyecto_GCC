@@ -502,6 +502,41 @@
 					Propiedades				</label>
 			</div>
 			{END print_details_propiedades}
+														{BEGIN print_details_carceles}
+			<div>
+				<label for="printDetailscarceles{$id}">
+					<input type="checkbox" value="carceles" id="printDetailscarceles{$id}" checked>
+					Carceles				</label>
+			</div>
+			{END print_details_carceles}
+														{BEGIN print_details_carceles1}
+			<div>
+				<label for="printDetailscarceles1{$id}">
+					<input type="checkbox" value="carceles1" id="printDetailscarceles1{$id}" checked>
+					Carceles1				</label>
+			</div>
+			{END print_details_carceles1}
+														{BEGIN print_details_carceles2}
+			<div>
+				<label for="printDetailscarceles2{$id}">
+					<input type="checkbox" value="carceles2" id="printDetailscarceles2{$id}" checked>
+					Carceles2				</label>
+			</div>
+			{END print_details_carceles2}
+														{BEGIN print_details_carceles3}
+			<div>
+				<label for="printDetailscarceles3{$id}">
+					<input type="checkbox" value="carceles3" id="printDetailscarceles3{$id}" checked>
+					Carceles3				</label>
+			</div>
+			{END print_details_carceles3}
+														{BEGIN print_details_carceles4}
+			<div>
+				<label for="printDetailscarceles4{$id}">
+					<input type="checkbox" value="carceles4" id="printDetailscarceles4{$id}" checked>
+					Carceles4				</label>
+			</div>
+			{END print_details_carceles4}
 						</div>
 </div>
 {END print_details}
@@ -745,17 +780,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="ciudades_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -789,12 +813,138 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades_list"		data-control-cell
 	
 	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
+		
+		
+	{BEGIN chequeossancionados_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$chequeossancionados_link_attrs} data-short-details="chequeossancionados"
+		class="{$chequeossancionados_dlink_class}" 
+		title="{$caption dbo_ChequeosSancionados }"			>
+								
+									{BEGIN chequeossancionados_childcount}
+				<span class="details-badge badge chequeossancionados_badge" {$chequeossancionados_childnumber_attr}>
+					{$chequeossancionados_childnumber}				
+				</span>
+				{END chequeossancionados_childcount}
+						</a>
+	</span>
+	{END chequeossancionados_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN carceles_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$carceles_link_attrs} data-short-details="carceles"
+		class="{$carceles_dlink_class}" 
+		title="{$caption dbo_Carceles }"			>
+								
+									{BEGIN carceles_childcount}
+				<span class="details-badge badge carceles_badge" {$carceles_childnumber_attr}>
+					{$carceles_childnumber}				
+				</span>
+				{END carceles_childcount}
+						</a>
+	</span>
+	{END carceles_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN carceles1_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$carceles1_link_attrs} data-short-details="carceles1"
+		class="{$carceles1_dlink_class}" 
+		title="{$caption dbo_Carceles1 }"			>
+								
+									{BEGIN carceles1_childcount}
+				<span class="details-badge badge carceles1_badge" {$carceles1_childnumber_attr}>
+					{$carceles1_childnumber}				
+				</span>
+				{END carceles1_childcount}
+						</a>
+	</span>
+	{END carceles1_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN carceles2_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$carceles2_link_attrs} data-short-details="carceles2"
+		class="{$carceles2_dlink_class}" 
+		title="{$caption dbo_Carceles2 }"			>
+								
+									{BEGIN carceles2_childcount}
+				<span class="details-badge badge carceles2_badge" {$carceles2_childnumber_attr}>
+					{$carceles2_childnumber}				
+				</span>
+				{END carceles2_childcount}
+						</a>
+	</span>
+	{END carceles2_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN carceles3_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$carceles3_link_attrs} data-short-details="carceles3"
+		class="{$carceles3_dlink_class}" 
+		title="{$caption dbo_Carceles3 }"			>
+								
+									{BEGIN carceles3_childcount}
+				<span class="details-badge badge carceles3_badge" {$carceles3_childnumber_attr}>
+					{$carceles3_childnumber}				
+				</span>
+				{END carceles3_childcount}
+						</a>
+	</span>
+	{END carceles3_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN carceles4_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$carceles4_link_attrs} data-short-details="carceles4"
+		class="{$carceles4_dlink_class}" 
+		title="{$caption dbo_Carceles4 }"			>
+								
+									{BEGIN carceles4_childcount}
+				<span class="details-badge badge carceles4_badge" {$carceles4_childnumber_attr}>
+					{$carceles4_childnumber}				
+				</span>
+				{END carceles4_childcount}
+						</a>
+	</span>
+	{END carceles4_dtable_link}
+
 
 	
 	</td>
@@ -879,19 +1029,34 @@
 	>
 
 	 
-					<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="chequeossancionados,direcciones,propiedades"
-			data-details-chequeossancionados			data-details-direcciones			data-details-propiedades	>
+										<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="chequeossancionados,direcciones,propiedades,carceles,carceles1,carceles2,carceles3,carceles4"
+			data-details-chequeossancionados			data-details-direcciones			data-details-propiedades			data-details-carceles			data-details-carceles1			data-details-carceles2			data-details-carceles3			data-details-carceles4	>
 		<span data-details-inside data-short-table="chequeossancionados">
 			</span>
 		<span data-details-inside data-short-table="direcciones">
 			</span>
 		<span data-details-inside data-short-table="propiedades">
 			</span>
+		<span data-details-inside data-short-table="carceles">
+			</span>
+		<span data-details-inside data-short-table="carceles1">
+			</span>
+		<span data-details-inside data-short-table="carceles2">
+			</span>
+		<span data-details-inside data-short-table="carceles3">
+			</span>
+		<span data-details-inside data-short-table="carceles4">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
+			 
+			 
+			 
+			 
 			 
 			
 	</td>

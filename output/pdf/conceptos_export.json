@@ -111,6 +111,9 @@ pdfDocument = {
 				
 			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
+				
+			{"text":{$Cuenta_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

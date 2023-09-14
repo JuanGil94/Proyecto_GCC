@@ -320,10 +320,15 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Bancos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Motivos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Oficios Sigobius"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Tasas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Tasas Tributarias"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Tasas Comerciales"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Tasas TES (Deterioro de Cartera)"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Carceles"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Carceles1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Carceles2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Carceles3"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Carceles4"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Alertas"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

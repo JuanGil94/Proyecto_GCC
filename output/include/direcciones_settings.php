@@ -146,7 +146,7 @@ $tdatadirecciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																													
+																																																																																																																								
 
 $tdatadirecciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -627,9 +627,8 @@ $tdatadirecciones[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
+				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Carceles";
-	$edata["LookupConnId"] = "GCC_at_S00001_CCAD01";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -648,8 +647,7 @@ $tdatadirecciones[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	
@@ -1491,6 +1489,96 @@ $masterTablesData["dbo.Direcciones"] = array();
 	$masterTablesData["dbo.Direcciones"][1]["masterKeys"][]="SancionadoId";
 				$masterTablesData["dbo.Direcciones"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Direcciones"][1]["detailKeys"][]="SancionadoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Carceles";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Carceles";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "carceles";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Direcciones"][2] = $masterParams;
+				$masterTablesData["dbo.Direcciones"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][2]["masterKeys"][]="CarcelId";
+				$masterTablesData["dbo.Direcciones"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][2]["detailKeys"][]="CarcelId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Carceles";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Carceles1";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "carceles1";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Direcciones"][3] = $masterParams;
+				$masterTablesData["dbo.Direcciones"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][3]["masterKeys"][]="CarcelId";
+				$masterTablesData["dbo.Direcciones"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][3]["detailKeys"][]="CarcelId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Carceles";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Carceles2";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "carceles2";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Direcciones"][4] = $masterParams;
+				$masterTablesData["dbo.Direcciones"][4]["masterKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][4]["masterKeys"][]="CarcelId";
+				$masterTablesData["dbo.Direcciones"][4]["detailKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][4]["detailKeys"][]="CarcelId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Carceles";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Carceles3";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "carceles3";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Direcciones"][5] = $masterParams;
+				$masterTablesData["dbo.Direcciones"][5]["masterKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][5]["masterKeys"][]="CarcelId";
+				$masterTablesData["dbo.Direcciones"][5]["detailKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][5]["detailKeys"][]="CarcelId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Carceles";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Carceles4";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "carceles4";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Direcciones"][6] = $masterParams;
+				$masterTablesData["dbo.Direcciones"][6]["masterKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][6]["masterKeys"][]="CarcelId";
+				$masterTablesData["dbo.Direcciones"][6]["detailKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][6]["detailKeys"][]="CarcelId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

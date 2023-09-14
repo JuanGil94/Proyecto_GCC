@@ -1,5 +1,7 @@
 <?php
-			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'details' => array( 'dbo.Alertas' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'AlertaTipo' ),
 'searchRequiredFields' => array(  ),
 'searchPanelFields' => array(  ),

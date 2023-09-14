@@ -1,7 +1,12 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'master' => array( 'dbo.Ciudades' => array( 'preview' => false ),
-'dbo.Chequeos' => array( 'preview' => false ) ),
+'dbo.Chequeos' => array( 'preview' => false ),
+'dbo.Carceles' => array( 'preview' => false ),
+'dbo.Carceles1' => array( 'preview' => false ),
+'dbo.Carceles2' => array( 'preview' => false ),
+'dbo.Carceles3' => array( 'preview' => false ),
+'dbo.Carceles4' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'ChequeoSancionadoId',
 'ChequeoId',
 'Sancionado',

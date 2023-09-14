@@ -3690,14 +3690,24 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "motivos" ] = "dbo.Motivos";
 	$projectEntities[ "dbo.Oficios Sigobius" ] = array( "url" => "oficios_sigobius", "type" => 1 );
 	$projectEntitiesReverse[ "oficios_sigobius" ] = "dbo.Oficios Sigobius";
-	$projectEntities[ "dbo.Tasas" ] = array( "url" => "tasas", "type" => 0 );
-	$projectEntitiesReverse[ "tasas" ] = "dbo.Tasas";
 	$projectEntities[ "Tasas Tributarias" ] = array( "url" => "tasas_tributarias", "type" => 1 );
 	$projectEntitiesReverse[ "tasas_tributarias" ] = "Tasas Tributarias";
 	$projectEntities[ "Tasas Comerciales" ] = array( "url" => "tasas_comerciales", "type" => 1 );
 	$projectEntitiesReverse[ "tasas_comerciales" ] = "Tasas Comerciales";
 	$projectEntities[ "Tasas TES (Deterioro de Cartera)" ] = array( "url" => "tasas_tes__deterioro_de_cartera_", "type" => 1 );
 	$projectEntitiesReverse[ "tasas_tes__deterioro_de_cartera_" ] = "Tasas TES (Deterioro de Cartera)";
+	$projectEntities[ "dbo.Carceles" ] = array( "url" => "carceles", "type" => 0 );
+	$projectEntitiesReverse[ "carceles" ] = "dbo.Carceles";
+	$projectEntities[ "dbo.Carceles1" ] = array( "url" => "carceles1", "type" => 1 );
+	$projectEntitiesReverse[ "carceles1" ] = "dbo.Carceles1";
+	$projectEntities[ "dbo.Carceles2" ] = array( "url" => "carceles2", "type" => 1 );
+	$projectEntitiesReverse[ "carceles2" ] = "dbo.Carceles2";
+	$projectEntities[ "dbo.Carceles3" ] = array( "url" => "carceles3", "type" => 1 );
+	$projectEntitiesReverse[ "carceles3" ] = "dbo.Carceles3";
+	$projectEntities[ "dbo.Carceles4" ] = array( "url" => "carceles4", "type" => 1 );
+	$projectEntitiesReverse[ "carceles4" ] = "dbo.Carceles4";
+	$projectEntities[ "dbo.Alertas" ] = array( "url" => "alertas", "type" => 0 );
+	$projectEntitiesReverse[ "alertas" ] = "dbo.Alertas";
 }
 
 function findTable( $table ) {

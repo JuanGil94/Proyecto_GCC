@@ -365,9 +365,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
-				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -510,14 +507,10 @@ pdfDocument = {
 	
 			
 	
-			"stack": [
+			"text": [
 		
-				
-			 {BEGIN details_ciudades}
-			{$displayDetailTable_ciudades }
-		{END details_ciudades},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
