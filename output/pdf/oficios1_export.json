@@ -129,6 +129,12 @@ pdfDocument = {
 				
 			{"text":{$Devolucion_pdfvalue},"hidden":"{$item_hide_export_field10}"},
 				
+				
+			{"text":{$Edicion_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Abierto_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

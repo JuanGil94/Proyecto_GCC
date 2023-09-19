@@ -508,10 +508,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.TipoSancion")
-		{
-			return true;
-		}
 		if($table=="dbo.Tramites")
 		{
 			return true;
@@ -1157,10 +1153,6 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.TiposDocumentos")
-		{
-			return true;
-		}
-		if($table=="dbo.TipoSancion")
 		{
 			return true;
 		}

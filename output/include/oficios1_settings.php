@@ -6,11 +6,11 @@ $tdataoficios1[".OwnerID"] = "";
 $tdataoficios1[".OriginalTable"] = "dbo.Oficios";
 
 
-$tdataoficios1[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataoficios1[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataoficios1[".originalPagesByType"] = $tdataoficios1[".pagesByType"];
-$tdataoficios1[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataoficios1[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataoficios1[".originalPages"] = $tdataoficios1[".pages"];
-$tdataoficios1[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataoficios1[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataoficios1[".originalDefaultPages"] = $tdataoficios1[".defaultPages"];
 
 //	field labels
@@ -31,25 +31,25 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsoficios1["Spanish"]["Oficio"] = "Oficio";
 	$fieldToolTipsoficios1["Spanish"]["Oficio"] = "";
 	$placeHoldersoficios1["Spanish"]["Oficio"] = "";
-	$fieldLabelsoficios1["Spanish"]["Archivo"] = "Archivo";
+	$fieldLabelsoficios1["Spanish"]["Archivo"] = "Plantilla";
 	$fieldToolTipsoficios1["Spanish"]["Archivo"] = "";
 	$placeHoldersoficios1["Spanish"]["Archivo"] = "";
 	$fieldLabelsoficios1["Spanish"]["Activo"] = "Activo";
 	$fieldToolTipsoficios1["Spanish"]["Activo"] = "";
 	$placeHoldersoficios1["Spanish"]["Activo"] = "";
-	$fieldLabelsoficios1["Spanish"]["ActuacionId"] = "Actuacion Id";
+	$fieldLabelsoficios1["Spanish"]["ActuacionId"] = "Actuacion";
 	$fieldToolTipsoficios1["Spanish"]["ActuacionId"] = "";
 	$placeHoldersoficios1["Spanish"]["ActuacionId"] = "";
-	$fieldLabelsoficios1["Spanish"]["OficioIdRequisito"] = "Oficio Id Requisito";
+	$fieldLabelsoficios1["Spanish"]["OficioIdRequisito"] = "Oficio Pre-requisito";
 	$fieldToolTipsoficios1["Spanish"]["OficioIdRequisito"] = "";
 	$placeHoldersoficios1["Spanish"]["OficioIdRequisito"] = "";
-	$fieldLabelsoficios1["Spanish"]["Direcciones"] = "Direcciones";
+	$fieldLabelsoficios1["Spanish"]["Direcciones"] = "Direccion Sancionado";
 	$fieldToolTipsoficios1["Spanish"]["Direcciones"] = "";
 	$placeHoldersoficios1["Spanish"]["Direcciones"] = "";
-	$fieldLabelsoficios1["Spanish"]["Edicion"] = "Edicion";
+	$fieldLabelsoficios1["Spanish"]["Edicion"] = "Permitir Edicion";
 	$fieldToolTipsoficios1["Spanish"]["Edicion"] = "";
 	$placeHoldersoficios1["Spanish"]["Edicion"] = "";
-	$fieldLabelsoficios1["Spanish"]["Abierto"] = "Abierto";
+	$fieldLabelsoficios1["Spanish"]["Abierto"] = "Publicar Abierto";
 	$fieldToolTipsoficios1["Spanish"]["Abierto"] = "";
 	$placeHoldersoficios1["Spanish"]["Abierto"] = "";
 	$fieldLabelsoficios1["Spanish"]["Sigobius"] = "Sigobius";
@@ -155,7 +155,7 @@ $tdataoficios1[".isUseAjaxSuggest"] = true;
 
 
 
-															
+																														
 
 $tdataoficios1[".ajaxCodeSnippetAdded"] = false;
 
@@ -1038,7 +1038,7 @@ $tdataoficios1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1048,6 +1048,34 @@ $tdataoficios1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Oficios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "OficioId";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Oficio";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1062,17 +1090,14 @@ $tdataoficios1[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -1092,7 +1117,7 @@ $tdataoficios1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1796,6 +1821,96 @@ changeTextControlsToDate( "dbo.Oficios1" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Oficios1"] = array();
+//	dbo.ChequeosOficios
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ChequeosOficios";
+		$detailsParam["dOriginalTable"] = "dbo.ChequeosOficios";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "chequeosoficios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ChequeosOficios");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Oficios1"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Oficios1"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios1"][$dIndex]["masterKeys"][]="OficioId";
+
+				$detailsTablesData["dbo.Oficios1"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios1"][$dIndex]["detailKeys"][]="OficioId";
+//	dbo.Correspondencias
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Correspondencias";
+		$detailsParam["dOriginalTable"] = "dbo.Correspondencias";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "correspondencias";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Correspondencias");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Oficios1"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Oficios1"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios1"][$dIndex]["masterKeys"][]="OficioId";
+
+				$detailsTablesData["dbo.Oficios1"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios1"][$dIndex]["detailKeys"][]="OficioId";
+//	dbo.Suspensiones
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Suspensiones";
+		$detailsParam["dOriginalTable"] = "dbo.Suspensiones";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "suspensiones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Suspensiones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Oficios1"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Oficios1"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios1"][$dIndex]["masterKeys"][]="OficioId";
+
+				$detailsTablesData["dbo.Oficios1"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios1"][$dIndex]["detailKeys"][]="OficioId";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1803,6 +1918,24 @@ $masterTablesData["dbo.Oficios1"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Actuaciones";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Actuaciones";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "actuaciones";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Oficios1"][0] = $masterParams;
+				$masterTablesData["dbo.Oficios1"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Oficios1"][0]["masterKeys"][]="ActuacionId";
+				$masterTablesData["dbo.Oficios1"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Oficios1"][0]["detailKeys"][]="ActuacionId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

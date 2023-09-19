@@ -3612,8 +3612,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "sancionados" ] = "dbo.Sancionados";
 	$projectEntities[ "dbo.TiposDocumentos" ] = array( "url" => "tiposdocumentos", "type" => 0 );
 	$projectEntitiesReverse[ "tiposdocumentos" ] = "dbo.TiposDocumentos";
-	$projectEntities[ "dbo.TipoSancion" ] = array( "url" => "tiposancion", "type" => 0 );
-	$projectEntitiesReverse[ "tiposancion" ] = "dbo.TipoSancion";
 	$projectEntities[ "dbo.Tramites" ] = array( "url" => "tramites", "type" => 0 );
 	$projectEntitiesReverse[ "tramites" ] = "dbo.Tramites";
 	$projectEntities[ "dbo.Conceptos1" ] = array( "url" => "conceptos1", "type" => 1 );

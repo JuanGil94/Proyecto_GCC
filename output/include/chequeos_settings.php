@@ -3857,8 +3857,9 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.TipoSancion";
+				$edata["LookupType"] = 1;
+	$edata["LookupTable"] = "";
+	$edata["LookupConnId"] = "";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -3877,7 +3878,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	
