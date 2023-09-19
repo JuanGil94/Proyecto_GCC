@@ -281,7 +281,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.IPsRestringidas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Sancionados"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.TiposDocumentos"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.TipoSancion"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Tramites"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Conceptos1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Procesos"] = "GCC_at_S00001_CCAD01";

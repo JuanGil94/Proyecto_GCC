@@ -111,7 +111,6 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Tasas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Temas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Test;
-	var $tblGCC_at_S00001_CCAD01_dbo_TipoSancion;
 	var $tblGCC_at_S00001_CCAD01_dbo_TiposDocumentos;
 	var $tblGCC_at_S00001_CCAD01_dbo_Tramites;
 	var $tblGCC_at_S00001_CCAD01_dbo_UserProfile;
@@ -193,7 +192,6 @@ class tDAL
 		$this->lstTables[] = array("name" => "Tasas", "varname" => "GCC_at_S00001_CCAD01_dbo_Tasas", "altvarname" => "Tasas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Temas", "varname" => "GCC_at_S00001_CCAD01_dbo_Temas", "altvarname" => "Temas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Test", "varname" => "GCC_at_S00001_CCAD01_dbo_Test", "altvarname" => "Test", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-		$this->lstTables[] = array("name" => "TipoSancion", "varname" => "GCC_at_S00001_CCAD01_dbo_TipoSancion", "altvarname" => "TipoSancion", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "TiposDocumentos", "varname" => "GCC_at_S00001_CCAD01_dbo_TiposDocumentos", "altvarname" => "TiposDocumentos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Tramites", "varname" => "GCC_at_S00001_CCAD01_dbo_Tramites", "altvarname" => "Tramites", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UserProfile", "varname" => "GCC_at_S00001_CCAD01_dbo_UserProfile", "altvarname" => "UserProfile", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

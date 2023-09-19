@@ -454,8 +454,6 @@ class Chart
 			return true;
 		if("dbo.TiposDocumentos" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.TipoSancion" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Tramites" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Conceptos" == $this->chrt_array['tables'][0])

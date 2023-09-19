@@ -279,8 +279,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("tiposdocumentos" == $shortTName )
 		return true;
-	if ("tiposancion" == $shortTName )
-		return true;
 	if ("tramites" == $shortTName )
 		return true;
 	if ("conceptos1" == $shortTName )
@@ -769,15 +767,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.TipoSancion");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.TipoSancion";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.Tramites");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1246,7 +1235,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.IPsRestringidas";
 	$arr[]="dbo.Sancionados";
 	$arr[]="dbo.TiposDocumentos";
-	$arr[]="dbo.TipoSancion";
 	$arr[]="dbo.Tramites";
 	$arr[]="dbo.Conceptos1";
 	$arr[]="dbo.Procesos";
@@ -2107,11 +2095,6 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.TiposDocumentos" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.TipoSancion" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

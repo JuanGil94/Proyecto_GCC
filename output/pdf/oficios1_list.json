@@ -94,6 +94,12 @@ pdfDocument = {
 										{BEGIN col_grid_9}
 					"%",
 					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -201,6 +207,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_add}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
@@ -458,35 +467,6 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Sigobius',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Oficios1 Sigobius }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Sigobius_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field9}
-{
-	cellId: 'headcell_field9',
-	col:0,
-	row:0,
 			fieldName: 'Devolucion',
 				style: 'headcell',
 		
@@ -506,6 +486,35 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Devolucion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Sigobius',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Oficios1 Sigobius }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Sigobius_align}',
      
       
       },
@@ -540,6 +549,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'Edicion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Oficios1 Edicion }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Edicion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Abierto',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Oficios1 Abierto }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Abierto_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
 											],
 				{END row_grid_0}
 		
@@ -570,7 +637,7 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -755,35 +822,6 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Sigobius',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Sigobius_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field9}
-{
-	cellId: 'cell_field9',
-	col:0,
-	row:0,
 			fieldName: 'Devolucion',
 				style: 'bodycell',
 		
@@ -803,6 +841,35 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Devolucion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Sigobius',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Sigobius_align}',
      
       
       },
@@ -837,6 +904,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'Edicion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Edicion_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Edicion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Abierto',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Abierto_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Abierto_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -859,29 +984,10 @@ pdfDocument = {
 	
 			
 	
-			"stack": [
+			"text": [
 		
-				
-			 {BEGIN details_chequeosoficios}
-			{$displayDetailTable_chequeosoficios }
-		{END details_chequeosoficios},
-				
-				
-			 {BEGIN details_suspensiones}
-			{$displayDetailTable_suspensiones }
-		{END details_suspensiones},
-				
-				
-			 {BEGIN details_suspensiones1}
-			{$displayDetailTable_suspensiones1 }
-		{END details_suspensiones1},
-				
-				
-			 {BEGIN details_correspondencias}
-			{$displayDetailTable_correspondencias }
-		{END details_correspondencias},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -941,6 +1047,18 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  11,
 				text: ''
 			},
 							],
@@ -1212,6 +1330,58 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field10}
+																							{BEGIN cellblock_grid_footcell_field}
+{
+	cellId: 'footcell_field',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field}
+																							{BEGIN cellblock_grid_footcell_field2}
+{
+	cellId: 'footcell_field2',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_3}
 		

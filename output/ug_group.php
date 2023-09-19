@@ -53,7 +53,6 @@ $nonAdminTablesArr[] = "dbo.UsuGCC-uggroups";
 $nonAdminTablesArr[] = "dbo.IPsRestringidas";
 $nonAdminTablesArr[] = "dbo.Sancionados";
 $nonAdminTablesArr[] = "dbo.TiposDocumentos";
-$nonAdminTablesArr[] = "dbo.TipoSancion";
 $nonAdminTablesArr[] = "dbo.Tramites";
 $nonAdminTablesArr[] = "dbo.Conceptos1";
 $nonAdminTablesArr[] = "dbo.Procesos";
