@@ -769,6 +769,11 @@ pdfDocument = {
 			{$displayDetailTable_correspondencias }
 		{END details_correspondencias},
 				
+				
+			 {BEGIN details_aplazamientos}
+			{$displayDetailTable_aplazamientos }
+		{END details_aplazamientos},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

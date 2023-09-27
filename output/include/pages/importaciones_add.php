@@ -1,9 +1,9 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.Procesos' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
-'master' => array( 'dbo.CarteraTipos' => array( 'preview' => false ),
-'dbo.Seccionales' => array( 'preview' => false ),
-'dbo.Conceptos' => array( 'preview' => false ) ),
+'master' => array( 'dbo.Seccionales' => array( 'preview' => false ),
+'dbo.Conceptos' => array( 'preview' => false ),
+'dbo.CarteraTipos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'CarteraTipoId',
 'SeccionalId',

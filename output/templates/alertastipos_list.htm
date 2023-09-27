@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AlertaTipo}</span>
 						</div>
 		{END searchCtrlBlock_AlertaTipo}
-																{BEGIN searchCtrlBlock_AlertaTipoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_AlertaTipoId}" {$filterRow_attrs_AlertaTipoId}>
-			<label>{$label dbo_AlertasTipos AlertaTipoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_AlertaTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_AlertaTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_AlertaTipoId}</span>
-						</div>
-		{END searchCtrlBlock_AlertaTipoId}
 		
 
 	</div>
@@ -362,7 +349,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="alertastipos_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="alertastipos_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -501,9 +488,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AlertaTipoId"]:before {
-		content: "{$label dbo_AlertasTipos AlertaTipoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AlertaTipo"]:before {
 		content: "{$label dbo_AlertasTipos AlertaTipo}";
 	}
@@ -580,42 +564,17 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AlertaTipoId_class}	"
+		 r-ori-vert		 {$AlertaTipo_class}	"
 
-			data-field="AlertaTipoId"
+			data-field="AlertaTipo"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AlertaTipoId_fieldheadercolumn}
-	{BEGIN AlertaTipoId_fieldheader}
-	<SPAN {$AlertaTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AlertaTipoId" data-fieldname="AlertaTipoId">
-	{$label dbo_AlertasTipos AlertaTipoId }	{$arrow_icon_AlertaTipoId}
-	</SPAN>
-	{END AlertaTipoId_fieldheader}
-{END AlertaTipoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AlertaTipo_class}	"
-
-			data-field="AlertaTipo"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN AlertaTipo_fieldheadercolumn}
 	{BEGIN AlertaTipo_fieldheader}
-	<SPAN {$AlertaTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AlertaTipo" data-fieldname="AlertaTipo">
+	<SPAN {$AlertaTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AlertaTipo" data-fieldname="AlertaTipo">
 	{$label dbo_AlertasTipos AlertaTipo }	{$arrow_icon_AlertaTipo}
 	</SPAN>
 	{END AlertaTipo_fieldheader}
@@ -623,7 +582,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field1}
+	{END cellblock_grid_headcell_field}
 							</tr>
 																				
 					{END grid_header}
@@ -641,7 +600,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="alertastipos_list"		data-control-cell
@@ -653,23 +612,12 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="alertastipos_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="alertastipos_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="alertastipos_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -703,31 +651,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="alertastipos_list"		data-control-cell
 	
 	>
-
-	 
-			 
-		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$alertas_link_attrs} 
-			class="{$dtables_link_class} details-badge badge alertas_badge" 
-			title="Mostrar detalles"
-						
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$alertas_cntspan_class}" {$alertas_childnumber_attr}>
-				{$alertas_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
 
 	
 	</td>
@@ -738,32 +667,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AlertaTipoId_class}	"
-
-			data-field="AlertaTipoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AlertaTipoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AlertaTipoId" data-fieldname="AlertaTipoId" data-default-width >
-{$AlertaTipoId_value}
-</span>
-{END AlertaTipoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$AlertaTipo_class}	"
 
 			data-field="AlertaTipo"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -773,7 +681,7 @@
 </span>
 {END AlertaTipo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_field}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -790,15 +698,6 @@
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="alertas"
-			data-details-alertas	>
-		<span data-details-inside data-short-table="alertas">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}
@@ -864,7 +763,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AlertaTipoId_class}	"
+		 r-ori-vert		 {$AlertaTipo_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="alertastipos_list"	
@@ -873,21 +772,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AlertaTipo_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="alertastipos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

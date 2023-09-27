@@ -109,9 +109,6 @@ pdfDocument = {
 			{"text":{$Oficio_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$Archivo_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
 			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				

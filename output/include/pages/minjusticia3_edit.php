@@ -1,10 +1,10 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Abogados' => array( 'preview' => false ),
 'dbo.Parejas' => array( 'preview' => false ),
-'dbo.Despachos' => array( 'preview' => false ),
 'dbo.TiposDocumentos' => array( 'preview' => false ),
 'dbo.Seccionales' => array( 'preview' => false ),
-'dbo.CarteraTipos' => array( 'preview' => false ) ),
+'dbo.CarteraTipos' => array( 'preview' => false ),
+'dbo.Despachos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Minjusticia',
 'Numero',

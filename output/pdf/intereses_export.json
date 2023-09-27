@@ -111,9 +111,6 @@ pdfDocument = {
 				
 			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
-				
-			{"text":{$order_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

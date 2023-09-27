@@ -6,11 +6,11 @@ $tdataseccionales[".OwnerID"] = "";
 $tdataseccionales[".OriginalTable"] = "dbo.Seccionales";
 
 
-$tdataseccionales[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataseccionales[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataseccionales[".originalPagesByType"] = $tdataseccionales[".pagesByType"];
-$tdataseccionales[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataseccionales[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataseccionales[".originalPages"] = $tdataseccionales[".pages"];
-$tdataseccionales[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataseccionales[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataseccionales[".originalDefaultPages"] = $tdataseccionales[".defaultPages"];
 
 //	field labels
@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["SeccionalId"] = "Seccional Id";
 	$fieldToolTipsseccionales["Spanish"]["SeccionalId"] = "";
 	$placeHoldersseccionales["Spanish"]["SeccionalId"] = "";
-	$fieldLabelsseccionales["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsseccionales["Spanish"]["Codigo"] = "Código";
 	$fieldToolTipsseccionales["Spanish"]["Codigo"] = "";
 	$placeHoldersseccionales["Spanish"]["Codigo"] = "";
 	$fieldLabelsseccionales["Spanish"]["Seccional"] = "Seccional";
@@ -37,7 +37,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["NIT"] = "NIT";
 	$fieldToolTipsseccionales["Spanish"]["NIT"] = "";
 	$placeHoldersseccionales["Spanish"]["NIT"] = "";
-	$fieldLabelsseccionales["Spanish"]["CiudadId"] = "Ciudad Id";
+	$fieldLabelsseccionales["Spanish"]["CiudadId"] = "Ciudad";
 	$fieldToolTipsseccionales["Spanish"]["CiudadId"] = "";
 	$placeHoldersseccionales["Spanish"]["CiudadId"] = "";
 	$fieldLabelsseccionales["Spanish"]["PiePagina"] = "Pie Pagina";
@@ -46,13 +46,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["Sigobius"] = "Sigobius";
 	$fieldToolTipsseccionales["Spanish"]["Sigobius"] = "";
 	$placeHoldersseccionales["Spanish"]["Sigobius"] = "";
-	$fieldLabelsseccionales["Spanish"]["Email"] = "Email";
+	$fieldLabelsseccionales["Spanish"]["Email"] = "E-mail";
 	$fieldToolTipsseccionales["Spanish"]["Email"] = "";
 	$placeHoldersseccionales["Spanish"]["Email"] = "";
-	$fieldLabelsseccionales["Spanish"]["Direccion"] = "Direccion";
+	$fieldLabelsseccionales["Spanish"]["Direccion"] = "Dirección";
 	$fieldToolTipsseccionales["Spanish"]["Direccion"] = "";
 	$placeHoldersseccionales["Spanish"]["Direccion"] = "";
-	$fieldLabelsseccionales["Spanish"]["Telefonos"] = "Telefonos";
+	$fieldLabelsseccionales["Spanish"]["Telefonos"] = "Teléfonos";
 	$fieldToolTipsseccionales["Spanish"]["Telefonos"] = "";
 	$placeHoldersseccionales["Spanish"]["Telefonos"] = "";
 	$fieldLabelsseccionales["Spanish"]["PCI"] = "PCI";
@@ -61,31 +61,31 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["Contador"] = "Contador";
 	$fieldToolTipsseccionales["Spanish"]["Contador"] = "";
 	$placeHoldersseccionales["Spanish"]["Contador"] = "";
-	$fieldLabelsseccionales["Spanish"]["ContadorCargo"] = "Contador Cargo";
+	$fieldLabelsseccionales["Spanish"]["ContadorCargo"] = "Cargo Contador";
 	$fieldToolTipsseccionales["Spanish"]["ContadorCargo"] = "";
 	$placeHoldersseccionales["Spanish"]["ContadorCargo"] = "";
 	$fieldLabelsseccionales["Spanish"]["Director"] = "Director";
 	$fieldToolTipsseccionales["Spanish"]["Director"] = "";
 	$placeHoldersseccionales["Spanish"]["Director"] = "";
-	$fieldLabelsseccionales["Spanish"]["DirectorCargo"] = "Director Cargo";
+	$fieldLabelsseccionales["Spanish"]["DirectorCargo"] = "Cargo Director";
 	$fieldToolTipsseccionales["Spanish"]["DirectorCargo"] = "";
 	$placeHoldersseccionales["Spanish"]["DirectorCargo"] = "";
 	$fieldLabelsseccionales["Spanish"]["Abogado"] = "Abogado";
 	$fieldToolTipsseccionales["Spanish"]["Abogado"] = "";
 	$placeHoldersseccionales["Spanish"]["Abogado"] = "";
-	$fieldLabelsseccionales["Spanish"]["AbogadoCargo"] = "Abogado Cargo";
+	$fieldLabelsseccionales["Spanish"]["AbogadoCargo"] = "Cargo Abogado";
 	$fieldToolTipsseccionales["Spanish"]["AbogadoCargo"] = "";
 	$placeHoldersseccionales["Spanish"]["AbogadoCargo"] = "";
-	$fieldLabelsseccionales["Spanish"]["Formato"] = "Formato";
+	$fieldLabelsseccionales["Spanish"]["Formato"] = "Imprimir Formato";
 	$fieldToolTipsseccionales["Spanish"]["Formato"] = "";
 	$placeHoldersseccionales["Spanish"]["Formato"] = "";
-	$fieldLabelsseccionales["Spanish"]["Corporacion"] = "Corporacion";
+	$fieldLabelsseccionales["Spanish"]["Corporacion"] = "Corporación";
 	$fieldToolTipsseccionales["Spanish"]["Corporacion"] = "";
 	$placeHoldersseccionales["Spanish"]["Corporacion"] = "";
-	$fieldLabelsseccionales["Spanish"]["Unidad"] = "Unidad";
+	$fieldLabelsseccionales["Spanish"]["Unidad"] = "Unidad Administrativa";
 	$fieldToolTipsseccionales["Spanish"]["Unidad"] = "";
 	$placeHoldersseccionales["Spanish"]["Unidad"] = "";
-	$fieldLabelsseccionales["Spanish"]["Oficina"] = "Oficina";
+	$fieldLabelsseccionales["Spanish"]["Oficina"] = "Oficina Productora";
 	$fieldToolTipsseccionales["Spanish"]["Oficina"] = "";
 	$placeHoldersseccionales["Spanish"]["Oficina"] = "";
 	$fieldLabelsseccionales["Spanish"]["Serie"] = "Serie";
@@ -3588,41 +3588,11 @@ $detailsTablesData["dbo.Seccionales"] = array();
 				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
-//	dbo.Chequeos
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Chequeos";
-		$detailsParam["dOriginalTable"] = "dbo.Chequeos";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "chequeos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Chequeos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Seccionales"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"][]="SeccionalId";
-
-				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
 //	dbo.Procesos
 	
 	
 
-		$dIndex = 3;
+		$dIndex = 2;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Procesos";
 		$detailsParam["dOriginalTable"] = "dbo.Procesos";
@@ -3652,7 +3622,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 4;
+		$dIndex = 3;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Importaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Importaciones";
@@ -3682,7 +3652,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 5;
+		$dIndex = 4;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Indeterminados";
 		$detailsParam["dOriginalTable"] = "dbo.Indeterminados";
@@ -3712,7 +3682,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 6;
+		$dIndex = 5;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia";
@@ -3742,7 +3712,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 7;
+		$dIndex = 6;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia2";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia2";
@@ -3772,7 +3742,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 8;
+		$dIndex = 7;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia3";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia3";

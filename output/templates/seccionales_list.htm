@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
 						</div>
 		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_Subserie}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Subserie}" {$filterRow_attrs_Subserie}>
+			<label>{$label dbo_Seccionales Subserie }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Subserie}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Subserie}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Subserie}</span>
+						</div>
+		{END searchCtrlBlock_Subserie}
 																{BEGIN searchCtrlBlock_Unidad}
 
 
@@ -141,19 +154,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Telefonos}</span>
 						</div>
 		{END searchCtrlBlock_Telefonos}
-																{BEGIN searchCtrlBlock_Subserie}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Subserie}" {$filterRow_attrs_Subserie}>
-			<label>{$label dbo_Seccionales Subserie }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Subserie}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Subserie}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Subserie}</span>
-						</div>
-		{END searchCtrlBlock_Subserie}
 																{BEGIN searchCtrlBlock_Sigobius}
 
 
@@ -180,19 +180,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Serie}</span>
 						</div>
 		{END searchCtrlBlock_Serie}
-																{BEGIN searchCtrlBlock_SeccionalId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
-			<label>{$label dbo_Seccionales SeccionalId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
-						</div>
-		{END searchCtrlBlock_SeccionalId}
 																{BEGIN searchCtrlBlock_Seccional}
 
 
@@ -219,19 +206,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_PiePagina}</span>
 						</div>
 		{END searchCtrlBlock_PiePagina}
-																{BEGIN searchCtrlBlock_PCI}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_PCI}" {$filterRow_attrs_PCI}>
-			<label>{$label dbo_Seccionales PCI }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_PCI}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PCI}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PCI}</span>
-						</div>
-		{END searchCtrlBlock_PCI}
 																{BEGIN searchCtrlBlock_Oficina}
 
 
@@ -852,19 +826,13 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalId"]:before {
-		content: "{$label dbo_Seccionales SeccionalId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Codigo"]:before {
 		content: "{$label dbo_Seccionales Codigo}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
 		content: "{$label dbo_Seccionales Seccional}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="NIT"]:before {
-		content: "{$label dbo_Seccionales NIT}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CiudadId"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CiudadId"]:before {
 		content: "{$label dbo_Seccionales CiudadId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PiePagina"]:before {
@@ -882,46 +850,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Telefonos"]:before {
 		content: "{$label dbo_Seccionales Telefonos}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PCI"]:before {
-		content: "{$label dbo_Seccionales PCI}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Contador"]:before {
-		content: "{$label dbo_Seccionales Contador}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ContadorCargo"]:before {
-		content: "{$label dbo_Seccionales ContadorCargo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Director"]:before {
-		content: "{$label dbo_Seccionales Director}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DirectorCargo"]:before {
-		content: "{$label dbo_Seccionales DirectorCargo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
-		content: "{$label dbo_Seccionales Abogado}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoCargo"]:before {
-		content: "{$label dbo_Seccionales AbogadoCargo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Formato"]:before {
-		content: "{$label dbo_Seccionales Formato}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Corporacion"]:before {
-		content: "{$label dbo_Seccionales Corporacion}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Unidad"]:before {
-		content: "{$label dbo_Seccionales Unidad}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Oficina"]:before {
-		content: "{$label dbo_Seccionales Oficina}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Serie"]:before {
-		content: "{$label dbo_Seccionales Serie}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Subserie"]:before {
-		content: "{$label dbo_Seccionales Subserie}";
-	}
-	}
+														}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -988,31 +917,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
-
-			data-field="SeccionalId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SeccionalId_fieldheadercolumn}
-	{BEGIN SeccionalId_fieldheader}
-	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
-	{$label dbo_Seccionales SeccionalId }	{$arrow_icon_SeccionalId}
-	</SPAN>
-	{END SeccionalId_fieldheader}
-{END SeccionalId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -1063,31 +967,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$NIT_class}	"
-
-			data-field="NIT"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN NIT_fieldheadercolumn}
-	{BEGIN NIT_fieldheader}
-	<SPAN {$NIT_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NIT" data-fieldname="NIT">
-	{$label dbo_Seccionales NIT }	{$arrow_icon_NIT}
-	</SPAN>
-	{END NIT_fieldheader}
-{END NIT_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
 									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
@@ -1119,36 +998,11 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PiePagina_class}	"
-
-			data-field="PiePagina"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PiePagina_fieldheadercolumn}
-	{BEGIN PiePagina_fieldheader}
-	<SPAN {$PiePagina_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PiePagina" data-fieldname="PiePagina">
-	{$label dbo_Seccionales PiePagina }	{$arrow_icon_PiePagina}
-	</SPAN>
-	{END PiePagina_fieldheader}
-{END PiePagina_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Sigobius_class}	"
 
 			data-field="Sigobius"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1162,43 +1016,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Email_class}	"
-
-			data-field="Email"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Email_fieldheadercolumn}
-	{BEGIN Email_fieldheader}
-	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
-	{$label dbo_Seccionales Email }	{$arrow_icon_Email}
-	</SPAN>
-	{END Email_fieldheader}
-{END Email_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Direccion_class}	"
 
 			data-field="Direccion"
 	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1212,18 +1041,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_headcell_field9}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Telefonos_class}	"
 
 			data-field="Telefonos"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1237,332 +1066,57 @@
 
 	
 	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Email_class}	"
+
+			data-field="Email"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Email_fieldheadercolumn}
+	{BEGIN Email_fieldheader}
+	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
+	{$label dbo_Seccionales Email }	{$arrow_icon_Email}
+	</SPAN>
+	{END Email_fieldheader}
+{END Email_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PiePagina_class}	"
+
+			data-field="PiePagina"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PiePagina_fieldheadercolumn}
+	{BEGIN PiePagina_fieldheader}
+	<SPAN {$PiePagina_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PiePagina" data-fieldname="PiePagina">
+	{$label dbo_Seccionales PiePagina }	{$arrow_icon_PiePagina}
+	</SPAN>
+	{END PiePagina_fieldheader}
+{END PiePagina_fieldheadercolumn}
+
+	
+	</th>
 	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PCI_class}	"
-
-			data-field="PCI"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PCI_fieldheadercolumn}
-	{BEGIN PCI_fieldheader}
-	<SPAN {$PCI_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PCI" data-fieldname="PCI">
-	{$label dbo_Seccionales PCI }	{$arrow_icon_PCI}
-	</SPAN>
-	{END PCI_fieldheader}
-{END PCI_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
-									{BEGIN cellblock_grid_headcell_field11}
-	<th
-	
-	{$cell_grid_headcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Contador_class}	"
-
-			data-field="Contador"
-	
-	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Contador_fieldheadercolumn}
-	{BEGIN Contador_fieldheader}
-	<SPAN {$Contador_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Contador" data-fieldname="Contador">
-	{$label dbo_Seccionales Contador }	{$arrow_icon_Contador}
-	</SPAN>
-	{END Contador_fieldheader}
-{END Contador_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field11}
-									{BEGIN cellblock_grid_headcell_field12}
-	<th
-	
-	{$cell_grid_headcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ContadorCargo_class}	"
-
-			data-field="ContadorCargo"
-	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ContadorCargo_fieldheadercolumn}
-	{BEGIN ContadorCargo_fieldheader}
-	<SPAN {$ContadorCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ContadorCargo" data-fieldname="ContadorCargo">
-	{$label dbo_Seccionales ContadorCargo }	{$arrow_icon_ContadorCargo}
-	</SPAN>
-	{END ContadorCargo_fieldheader}
-{END ContadorCargo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field12}
-									{BEGIN cellblock_grid_headcell_field13}
-	<th
-	
-	{$cell_grid_headcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Director_class}	"
-
-			data-field="Director"
-	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Director_fieldheadercolumn}
-	{BEGIN Director_fieldheader}
-	<SPAN {$Director_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Director" data-fieldname="Director">
-	{$label dbo_Seccionales Director }	{$arrow_icon_Director}
-	</SPAN>
-	{END Director_fieldheader}
-{END Director_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field13}
-									{BEGIN cellblock_grid_headcell_field14}
-	<th
-	
-	{$cell_grid_headcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DirectorCargo_class}	"
-
-			data-field="DirectorCargo"
-	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DirectorCargo_fieldheadercolumn}
-	{BEGIN DirectorCargo_fieldheader}
-	<SPAN {$DirectorCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DirectorCargo" data-fieldname="DirectorCargo">
-	{$label dbo_Seccionales DirectorCargo }	{$arrow_icon_DirectorCargo}
-	</SPAN>
-	{END DirectorCargo_fieldheader}
-{END DirectorCargo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field14}
-									{BEGIN cellblock_grid_headcell_field15}
-	<th
-	
-	{$cell_grid_headcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Abogado_class}	"
-
-			data-field="Abogado"
-	
-	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Abogado_fieldheadercolumn}
-	{BEGIN Abogado_fieldheader}
-	<SPAN {$Abogado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
-	{$label dbo_Seccionales Abogado }	{$arrow_icon_Abogado}
-	</SPAN>
-	{END Abogado_fieldheader}
-{END Abogado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field15}
-									{BEGIN cellblock_grid_headcell_field16}
-	<th
-	
-	{$cell_grid_headcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AbogadoCargo_class}	"
-
-			data-field="AbogadoCargo"
-	
-	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AbogadoCargo_fieldheadercolumn}
-	{BEGIN AbogadoCargo_fieldheader}
-	<SPAN {$AbogadoCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo">
-	{$label dbo_Seccionales AbogadoCargo }	{$arrow_icon_AbogadoCargo}
-	</SPAN>
-	{END AbogadoCargo_fieldheader}
-{END AbogadoCargo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field16}
-									{BEGIN cellblock_grid_headcell_field17}
-	<th
-	
-	{$cell_grid_headcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Formato_class}	"
-
-			data-field="Formato"
-	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Formato_fieldheadercolumn}
-	{BEGIN Formato_fieldheader}
-	<SPAN {$Formato_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Formato" data-fieldname="Formato">
-	{$label dbo_Seccionales Formato }	{$arrow_icon_Formato}
-	</SPAN>
-	{END Formato_fieldheader}
-{END Formato_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field17}
-									{BEGIN cellblock_grid_headcell_field18}
-	<th
-	
-	{$cell_grid_headcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Corporacion_class}	"
-
-			data-field="Corporacion"
-	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Corporacion_fieldheadercolumn}
-	{BEGIN Corporacion_fieldheader}
-	<SPAN {$Corporacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Corporacion" data-fieldname="Corporacion">
-	{$label dbo_Seccionales Corporacion }	{$arrow_icon_Corporacion}
-	</SPAN>
-	{END Corporacion_fieldheader}
-{END Corporacion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field18}
-									{BEGIN cellblock_grid_headcell_field19}
-	<th
-	
-	{$cell_grid_headcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Unidad_class}	"
-
-			data-field="Unidad"
-	
-	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Unidad_fieldheadercolumn}
-	{BEGIN Unidad_fieldheader}
-	<SPAN {$Unidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Unidad" data-fieldname="Unidad">
-	{$label dbo_Seccionales Unidad }	{$arrow_icon_Unidad}
-	</SPAN>
-	{END Unidad_fieldheader}
-{END Unidad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field19}
-									{BEGIN cellblock_grid_headcell_field20}
-	<th
-	
-	{$cell_grid_headcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Oficina_class}	"
-
-			data-field="Oficina"
-	
-	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Oficina_fieldheadercolumn}
-	{BEGIN Oficina_fieldheader}
-	<SPAN {$Oficina_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Oficina" data-fieldname="Oficina">
-	{$label dbo_Seccionales Oficina }	{$arrow_icon_Oficina}
-	</SPAN>
-	{END Oficina_fieldheader}
-{END Oficina_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field20}
-									{BEGIN cellblock_grid_headcell_field21}
-	<th
-	
-	{$cell_grid_headcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Serie_class}	"
-
-			data-field="Serie"
-	
-	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Serie_fieldheadercolumn}
-	{BEGIN Serie_fieldheader}
-	<SPAN {$Serie_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Serie" data-fieldname="Serie">
-	{$label dbo_Seccionales Serie }	{$arrow_icon_Serie}
-	</SPAN>
-	{END Serie_fieldheader}
-{END Serie_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field21}
-									{BEGIN cellblock_grid_headcell_field22}
-	<th
-	
-	{$cell_grid_headcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Subserie_class}	"
-
-			data-field="Subserie"
-	
-	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Subserie_fieldheadercolumn}
-	{BEGIN Subserie_fieldheader}
-	<SPAN {$Subserie_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Subserie" data-fieldname="Subserie">
-	{$label dbo_Seccionales Subserie }	{$arrow_icon_Subserie}
-	</SPAN>
-	{END Subserie_fieldheader}
-{END Subserie_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field22}
 							</tr>
 																				
 					{END grid_header}
@@ -1607,17 +1161,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="seccionales_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -1661,27 +1204,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
-
-			data-field="SeccionalId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SeccionalId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
-{$SeccionalId_value}
-</span>
-{END SeccionalId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -1724,27 +1246,6 @@
 {END Seccional_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$NIT_class}	"
-
-			data-field="NIT"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN NIT_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NIT" data-fieldname="NIT" data-default-width >
-{$NIT_value}
-</span>
-{END NIT_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
 									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
@@ -1772,32 +1273,11 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PiePagina_class}	"
-
-			data-field="PiePagina"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PiePagina_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PiePagina" data-fieldname="PiePagina" data-default-width >
-{$PiePagina_value}
-</span>
-{END PiePagina_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Sigobius_class}	"
 
 			data-field="Sigobius"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1807,39 +1287,18 @@
 </span>
 {END Sigobius_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Email_class}	"
-
-			data-field="Email"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Email_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email" data-default-width >
-{$Email_value}
-</span>
-{END Email_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Direccion_class}	"
 
 			data-field="Direccion"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1849,18 +1308,18 @@
 </span>
 {END Direccion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Telefonos_class}	"
 
 			data-field="Telefonos"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1870,280 +1329,49 @@
 </span>
 {END Telefonos_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Email_class}	"
+
+			data-field="Email"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Email_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email" data-default-width >
+{$Email_value}
+</span>
+{END Email_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PiePagina_class}	"
+
+			data-field="PiePagina"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PiePagina_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PiePagina" data-fieldname="PiePagina" data-default-width >
+{$PiePagina_value}
+</span>
+{END PiePagina_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PCI_class}	"
-
-			data-field="PCI"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PCI_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PCI" data-fieldname="PCI" data-default-width >
-{$PCI_value}
-</span>
-{END PCI_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
-									{BEGIN cellblock_grid_cell_field11}
-	<td
-	
-	{$cell_grid_cell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Contador_class}	"
-
-			data-field="Contador"
-	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Contador_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Contador" data-fieldname="Contador" data-default-width >
-{$Contador_value}
-</span>
-{END Contador_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ContadorCargo_class}	"
-
-			data-field="ContadorCargo"
-	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ContadorCargo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ContadorCargo" data-fieldname="ContadorCargo" data-default-width >
-{$ContadorCargo_value}
-</span>
-{END ContadorCargo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
-	<td
-	
-	{$cell_grid_cell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Director_class}	"
-
-			data-field="Director"
-	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Director_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Director" data-fieldname="Director" data-default-width >
-{$Director_value}
-</span>
-{END Director_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
-	<td
-	
-	{$cell_grid_cell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DirectorCargo_class}	"
-
-			data-field="DirectorCargo"
-	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DirectorCargo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DirectorCargo" data-fieldname="DirectorCargo" data-default-width >
-{$DirectorCargo_value}
-</span>
-{END DirectorCargo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field14}
-									{BEGIN cellblock_grid_cell_field15}
-	<td
-	
-	{$cell_grid_cell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Abogado_class}	"
-
-			data-field="Abogado"
-	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Abogado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" data-default-width >
-{$Abogado_value}
-</span>
-{END Abogado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
-	<td
-	
-	{$cell_grid_cell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AbogadoCargo_class}	"
-
-			data-field="AbogadoCargo"
-	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN AbogadoCargo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo" data-default-width >
-{$AbogadoCargo_value}
-</span>
-{END AbogadoCargo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field16}
-									{BEGIN cellblock_grid_cell_field17}
-	<td
-	
-	{$cell_grid_cell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Formato_class}	"
-
-			data-field="Formato"
-	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Formato_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Formato" data-fieldname="Formato" data-default-width >
-{$Formato_value}
-</span>
-{END Formato_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field17}
-									{BEGIN cellblock_grid_cell_field18}
-	<td
-	
-	{$cell_grid_cell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Corporacion_class}	"
-
-			data-field="Corporacion"
-	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Corporacion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Corporacion" data-fieldname="Corporacion" data-default-width >
-{$Corporacion_value}
-</span>
-{END Corporacion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field18}
-									{BEGIN cellblock_grid_cell_field19}
-	<td
-	
-	{$cell_grid_cell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Unidad_class}	"
-
-			data-field="Unidad"
-	
-	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Unidad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Unidad" data-fieldname="Unidad" data-default-width >
-{$Unidad_value}
-</span>
-{END Unidad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field19}
-									{BEGIN cellblock_grid_cell_field20}
-	<td
-	
-	{$cell_grid_cell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Oficina_class}	"
-
-			data-field="Oficina"
-	
-	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Oficina_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Oficina" data-fieldname="Oficina" data-default-width >
-{$Oficina_value}
-</span>
-{END Oficina_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field20}
-									{BEGIN cellblock_grid_cell_field21}
-	<td
-	
-	{$cell_grid_cell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Serie_class}	"
-
-			data-field="Serie"
-	
-	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Serie_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Serie" data-fieldname="Serie" data-default-width >
-{$Serie_value}
-</span>
-{END Serie_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field21}
-									{BEGIN cellblock_grid_cell_field22}
-	<td
-	
-	{$cell_grid_cell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Subserie_class}	"
-
-			data-field="Subserie"
-	
-	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Subserie_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Subserie" data-fieldname="Subserie" data-default-width >
-{$Subserie_value}
-</span>
-{END Subserie_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field22}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -2154,46 +1382,13 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-											<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="abogados,presupuestos,chequeos,procesos,importaciones,indeterminados,minjusticia,minjusticia2,minjusticia3"
-			data-details-abogados			data-details-presupuestos			data-details-chequeos			data-details-procesos			data-details-importaciones			data-details-indeterminados			data-details-minjusticia			data-details-minjusticia2			data-details-minjusticia3	>
-		<span data-details-inside data-short-table="abogados">
-			</span>
-		<span data-details-inside data-short-table="presupuestos">
-			</span>
-		<span data-details-inside data-short-table="chequeos">
-			</span>
-		<span data-details-inside data-short-table="procesos">
-			</span>
-		<span data-details-inside data-short-table="importaciones">
-			</span>
-		<span data-details-inside data-short-table="indeterminados">
-			</span>
-		<span data-details-inside data-short-table="minjusticia">
-			</span>
-		<span data-details-inside data-short-table="minjusticia2">
-			</span>
-		<span data-details-inside data-short-table="minjusticia3">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			
+	
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>
@@ -2252,21 +1447,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
@@ -2297,21 +1477,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$NIT_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
 	<td
 	
@@ -2333,7 +1498,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PiePagina_class}	"
+		 r-ori-vert		 {$Sigobius_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
@@ -2348,7 +1513,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Sigobius_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
@@ -2363,7 +1528,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$Telefonos_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
@@ -2378,7 +1543,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
@@ -2393,7 +1558,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Telefonos_class}	"
+		 r-ori-vert		 {$PiePagina_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
@@ -2402,201 +1567,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field9}
-									{BEGIN cellblock_grid_footcell_field10}
-	<td
-	
-	{$cell_grid_footcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PCI_class}	"
-
-	
-	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field10}
-									{BEGIN cellblock_grid_footcell_field11}
-	<td
-	
-	{$cell_grid_footcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Contador_class}	"
-
-	
-	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field11}
-									{BEGIN cellblock_grid_footcell_field12}
-	<td
-	
-	{$cell_grid_footcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ContadorCargo_class}	"
-
-	
-	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field12}
-									{BEGIN cellblock_grid_footcell_field13}
-	<td
-	
-	{$cell_grid_footcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Director_class}	"
-
-	
-	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field13}
-									{BEGIN cellblock_grid_footcell_field14}
-	<td
-	
-	{$cell_grid_footcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DirectorCargo_class}	"
-
-	
-	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field14}
-									{BEGIN cellblock_grid_footcell_field15}
-	<td
-	
-	{$cell_grid_footcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Abogado_class}	"
-
-	
-	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field15}
-									{BEGIN cellblock_grid_footcell_field16}
-	<td
-	
-	{$cell_grid_footcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$AbogadoCargo_class}	"
-
-	
-	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field16}
-									{BEGIN cellblock_grid_footcell_field17}
-	<td
-	
-	{$cell_grid_footcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Formato_class}	"
-
-	
-	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field17}
-									{BEGIN cellblock_grid_footcell_field18}
-	<td
-	
-	{$cell_grid_footcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Corporacion_class}	"
-
-	
-	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field18}
-									{BEGIN cellblock_grid_footcell_field19}
-	<td
-	
-	{$cell_grid_footcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Unidad_class}	"
-
-	
-	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field19}
-									{BEGIN cellblock_grid_footcell_field20}
-	<td
-	
-	{$cell_grid_footcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Oficina_class}	"
-
-	
-	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field20}
-									{BEGIN cellblock_grid_footcell_field21}
-	<td
-	
-	{$cell_grid_footcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Serie_class}	"
-
-	
-	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field21}
-									{BEGIN cellblock_grid_footcell_field22}
-	<td
-	
-	{$cell_grid_footcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Subserie_class}	"
-
-	
-	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field22}
 							</tr>
 					
 					</tfoot>

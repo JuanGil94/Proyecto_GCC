@@ -1,5 +1,12 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'dbo.ChequeosOficios' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Correspondencias' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Suspensiones' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'master' => array( 'dbo.Actuaciones' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'Oficio',
 'Archivo',
 'Activo',

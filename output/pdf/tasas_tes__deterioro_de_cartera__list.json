@@ -134,6 +134,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_add}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_delete}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -219,35 +222,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'Tasa',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Tasa }","hidden":"{$item_hide_simple_grid_field}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Tasa_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Fecha_de_inicio',
 				style: 'headcell',
 		
@@ -262,11 +236,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Fecha_de_inicio }","hidden":"{$item_hide_simple_grid_field2}","bold":true},
+			{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Fecha_de_inicio }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Fecha_de_inicio_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Tasa',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Tasa }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Tasa_align}',
      
       
       },
@@ -314,35 +317,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'Tasa',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Tasa_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Tasa_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Fecha_de_inicio',
 				style: 'bodycell',
 		
@@ -362,6 +336,35 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Fecha_de_inicio_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Tasa',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Tasa_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Tasa_align}',
      
       
       },

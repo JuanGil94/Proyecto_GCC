@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Dias}</span>
 						</div>
 		{END searchCtrlBlock_Dias}
-																{BEGIN searchCtrlBlock_ReporteId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ReporteId}" {$filterRow_attrs_ReporteId}>
-			<label>{$label dbo_Reportes ReporteId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ReporteId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ReporteId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ReporteId}</span>
-						</div>
-		{END searchCtrlBlock_ReporteId}
 																{BEGIN searchCtrlBlock_Reporte}
 
 
@@ -517,9 +504,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ReporteId"]:before {
-		content: "{$label dbo_Reportes ReporteId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Reporte"]:before {
 		content: "{$label dbo_Reportes Reporte}";
 	}
@@ -590,21 +574,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ReporteId_class}	"
+		 r-ori-vert		 {$Reporte_class}	"
 
-			data-field="ReporteId"
+			data-field="Reporte"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ReporteId_fieldheadercolumn}
-	{BEGIN ReporteId_fieldheader}
-	<SPAN {$ReporteId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ReporteId" data-fieldname="ReporteId">
-	{$label dbo_Reportes ReporteId }	{$arrow_icon_ReporteId}
+		{BEGIN Reporte_fieldheadercolumn}
+	{BEGIN Reporte_fieldheader}
+	<SPAN {$Reporte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporte" data-fieldname="Reporte">
+	{$label dbo_Reportes Reporte }	{$arrow_icon_Reporte}
 	</SPAN>
-	{END ReporteId_fieldheader}
-{END ReporteId_fieldheadercolumn}
+	{END Reporte_fieldheader}
+{END Reporte_fieldheadercolumn}
 
 	
 	</th>
@@ -615,21 +599,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Reporte_class}	"
+		 r-ori-vert		 {$OficioId_class}	"
 
-			data-field="Reporte"
+			data-field="OficioId"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Reporte_fieldheadercolumn}
-	{BEGIN Reporte_fieldheader}
-	<SPAN {$Reporte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporte" data-fieldname="Reporte">
-	{$label dbo_Reportes Reporte }	{$arrow_icon_Reporte}
+		{BEGIN OficioId_fieldheadercolumn}
+	{BEGIN OficioId_fieldheader}
+	<SPAN {$OficioId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioId" data-fieldname="OficioId">
+	{$label dbo_Reportes OficioId }	{$arrow_icon_OficioId}
 	</SPAN>
-	{END Reporte_fieldheader}
-{END Reporte_fieldheadercolumn}
+	{END OficioId_fieldheader}
+{END OficioId_fieldheadercolumn}
 
 	
 	</th>
@@ -640,21 +624,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OficioId_class}	"
+		 r-ori-vert		 {$Dias_class}	"
 
-			data-field="OficioId"
+			data-field="Dias"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN OficioId_fieldheadercolumn}
-	{BEGIN OficioId_fieldheader}
-	<SPAN {$OficioId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioId" data-fieldname="OficioId">
-	{$label dbo_Reportes OficioId }	{$arrow_icon_OficioId}
+		{BEGIN Dias_fieldheadercolumn}
+	{BEGIN Dias_fieldheader}
+	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
+	{$label dbo_Reportes Dias }	{$arrow_icon_Dias}
 	</SPAN>
-	{END OficioId_fieldheader}
-{END OficioId_fieldheadercolumn}
+	{END Dias_fieldheader}
+{END Dias_fieldheadercolumn}
 
 	
 	</th>
@@ -665,42 +649,17 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Dias_class}	"
+		 r-ori-vert		 {$Minimo_class}	"
 
-			data-field="Dias"
+			data-field="Minimo"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Dias_fieldheadercolumn}
-	{BEGIN Dias_fieldheader}
-	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
-	{$label dbo_Reportes Dias }	{$arrow_icon_Dias}
-	</SPAN>
-	{END Dias_fieldheader}
-{END Dias_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Minimo_class}	"
-
-			data-field="Minimo"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Minimo_fieldheadercolumn}
 	{BEGIN Minimo_fieldheader}
-	<SPAN {$Minimo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minimo" data-fieldname="Minimo">
+	<SPAN {$Minimo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minimo" data-fieldname="Minimo">
 	{$label dbo_Reportes Minimo }	{$arrow_icon_Minimo}
 	</SPAN>
 	{END Minimo_fieldheader}
@@ -708,7 +667,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -726,7 +685,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes_list"		data-control-cell
@@ -744,17 +703,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="reportes_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -788,32 +736,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ReporteId_class}	"
-
-			data-field="ReporteId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ReporteId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ReporteId" data-fieldname="ReporteId" data-default-width >
-{$ReporteId_value}
-</span>
-{END ReporteId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Reporte_class}	"
 
 			data-field="Reporte"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -823,18 +750,18 @@
 </span>
 {END Reporte_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$OficioId_class}	"
 
 			data-field="OficioId"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -844,18 +771,18 @@
 </span>
 {END OficioId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Dias_class}	"
 
 			data-field="Dias"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -865,18 +792,18 @@
 </span>
 {END Dias_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Minimo_class}	"
 
 			data-field="Minimo"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -886,7 +813,7 @@
 </span>
 {END Minimo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -934,7 +861,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ReporteId_class}	"
+		 r-ori-vert		 {$Reporte_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes_list"	
@@ -949,7 +876,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Reporte_class}	"
+		 r-ori-vert		 {$OficioId_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes_list"	
@@ -964,7 +891,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OficioId_class}	"
+		 r-ori-vert		 {$Dias_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes_list"	
@@ -979,7 +906,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Dias_class}	"
+		 r-ori-vert		 {$Minimo_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes_list"	
@@ -988,21 +915,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Minimo_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

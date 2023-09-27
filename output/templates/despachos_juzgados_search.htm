@@ -1,0 +1,348 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Despachos_Juzgados search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN DespachoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DespachoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="DespachoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="DespachoId" data-fieldname="DespachoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_DespachoId}">
+		{$label dbo_Despachos_Juzgados DespachoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_DespachoId}
+	</div>
+	<div class="r-search-field">
+		{$DespachoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$DespachoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END DespachoId_fieldblock}
+											
+{BEGIN Codigo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Codigo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Codigo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Codigo" data-fieldname="Codigo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Codigo}">
+		{$label dbo_Despachos_Juzgados Codigo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Codigo}
+	</div>
+	<div class="r-search-field">
+		{$Codigo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Codigo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Codigo_fieldblock}
+											
+{BEGIN Activo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Activo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Activo}">
+		{$label dbo_Despachos_Juzgados Activo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Activo}
+	</div>
+	<div class="r-search-field">
+		{$Activo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Activo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Activo_fieldblock}
+											
+{BEGIN Juez_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Juez}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Juez{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Juez" data-fieldname="Juez" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Juez}">
+		{$label dbo_Despachos_Juzgados Juez }	</label>
+	<div class="r-search-option">
+		{$searchtype_Juez}
+	</div>
+	<div class="r-search-field">
+		{$Juez_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Juez_editcontrol1}
+	</div>
+	
+</div>
+
+{END Juez_fieldblock}
+											
+{BEGIN Correo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Correo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Correo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Correo" data-fieldname="Correo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Correo}">
+		{$label dbo_Despachos_Juzgados Correo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Correo}
+	</div>
+	<div class="r-search-field">
+		{$Correo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Correo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Correo_fieldblock}
+											
+{BEGIN Telefonos_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Telefonos}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Telefonos{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Telefonos" data-fieldname="Telefonos" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Telefonos}">
+		{$label dbo_Despachos_Juzgados Telefonos }	</label>
+	<div class="r-search-option">
+		{$searchtype_Telefonos}
+	</div>
+	<div class="r-search-field">
+		{$Telefonos_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Telefonos_editcontrol1}
+	</div>
+	
+</div>
+
+{END Telefonos_fieldblock}
+											
+{BEGIN Direccion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Direccion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Direccion}">
+		{$label dbo_Despachos_Juzgados Direccion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Direccion}
+	</div>
+	<div class="r-search-field">
+		{$Direccion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Direccion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Direccion_fieldblock}
+											
+{BEGIN Despacho_Juzgado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Despacho_Juzgado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Despacho_Juzgado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Despacho_Juzgado" data-fieldname="Despacho/Juzgado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Despacho_Juzgado}">
+		{$label dbo_Despachos_Juzgados Despacho_Juzgado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Despacho_Juzgado}
+	</div>
+	<div class="r-search-field">
+		{$Despacho_Juzgado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Despacho_Juzgado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Despacho_Juzgado_fieldblock}
+											
+{BEGIN Ciudad_Municipio_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ciudad_Municipio}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Ciudad_Municipio{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Ciudad_Municipio" data-fieldname="Ciudad/Municipio" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Ciudad_Municipio}">
+		{$label dbo_Despachos_Juzgados Ciudad_Municipio }	</label>
+	<div class="r-search-option">
+		{$searchtype_Ciudad_Municipio}
+	</div>
+	<div class="r-search-field">
+		{$Ciudad_Municipio_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Ciudad_Municipio_editcontrol1}
+	</div>
+	
+</div>
+
+{END Ciudad_Municipio_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -7664,24 +7664,6 @@ $masterTablesData["dbo.Minjusticia3"] = array();
 	//endif
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Despachos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Despachos";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "despachos";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Minjusticia3"][2] = $masterParams;
-				$masterTablesData["dbo.Minjusticia3"][2]["masterKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][2]["masterKeys"][]="DespachoId";
-				$masterTablesData["dbo.Minjusticia3"][2]["detailKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][2]["detailKeys"][]="DespachoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
 			$strOriginalDetailsTable="dbo.TiposDocumentos";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="dbo.TiposDocumentos";
@@ -7691,11 +7673,11 @@ $masterTablesData["dbo.Minjusticia3"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Minjusticia3"][3] = $masterParams;
-				$masterTablesData["dbo.Minjusticia3"][3]["masterKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][3]["masterKeys"][]="TipoDocumentoId";
-				$masterTablesData["dbo.Minjusticia3"][3]["detailKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][3]["detailKeys"][]="TipoDocumentoId";
+					$masterTablesData["dbo.Minjusticia3"][2] = $masterParams;
+				$masterTablesData["dbo.Minjusticia3"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Minjusticia3"][2]["masterKeys"][]="TipoDocumentoId";
+				$masterTablesData["dbo.Minjusticia3"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Minjusticia3"][2]["detailKeys"][]="TipoDocumentoId";
 		
 	//endif
 	
@@ -7709,11 +7691,11 @@ $masterTablesData["dbo.Minjusticia3"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Minjusticia3"][4] = $masterParams;
-				$masterTablesData["dbo.Minjusticia3"][4]["masterKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][4]["masterKeys"][]="SeccionalId";
-				$masterTablesData["dbo.Minjusticia3"][4]["detailKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][4]["detailKeys"][]="SeccionalId";
+					$masterTablesData["dbo.Minjusticia3"][3] = $masterParams;
+				$masterTablesData["dbo.Minjusticia3"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Minjusticia3"][3]["masterKeys"][]="SeccionalId";
+				$masterTablesData["dbo.Minjusticia3"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Minjusticia3"][3]["detailKeys"][]="SeccionalId";
 		
 	//endif
 	
@@ -7727,11 +7709,29 @@ $masterTablesData["dbo.Minjusticia3"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Minjusticia3"][4] = $masterParams;
+				$masterTablesData["dbo.Minjusticia3"][4]["masterKeys"] = array();
+	$masterTablesData["dbo.Minjusticia3"][4]["masterKeys"][]="CarteraTipoId";
+				$masterTablesData["dbo.Minjusticia3"][4]["detailKeys"] = array();
+	$masterTablesData["dbo.Minjusticia3"][4]["detailKeys"][]="CarteraTipoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Despachos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Despachos";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "despachos";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["dbo.Minjusticia3"][5] = $masterParams;
 				$masterTablesData["dbo.Minjusticia3"][5]["masterKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][5]["masterKeys"][]="CarteraTipoId";
+	$masterTablesData["dbo.Minjusticia3"][5]["masterKeys"][]="DespachoId";
 				$masterTablesData["dbo.Minjusticia3"][5]["detailKeys"] = array();
-	$masterTablesData["dbo.Minjusticia3"][5]["detailKeys"][]="CarteraTipoId";
+	$masterTablesData["dbo.Minjusticia3"][5]["detailKeys"][]="DespachoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

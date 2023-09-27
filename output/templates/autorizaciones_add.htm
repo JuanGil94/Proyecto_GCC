@@ -1,0 +1,938 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Autorizaciones add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_Autorizaciones SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Autorizaciones SeccionalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones SeccionalId }		</div>
+	</div>
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN ConceptoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ConceptoId}  r-vertical-field" 
+	data-signal-error-for="ConceptoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ConceptoId}">
+		{BEGIN ConceptoId_label}{$label dbo_Autorizaciones ConceptoId }{END ConceptoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ConceptoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ConceptoId" {$tooltipAttr dbo_Autorizaciones ConceptoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones ConceptoId }		</div>
+	</div>
+</div>
+
+
+{END ConceptoId_fieldblock}
+											
+{BEGIN TramiteId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TramiteId}  r-vertical-field" 
+	data-signal-error-for="TramiteId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="TramiteId" data-fieldname="TramiteId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_TramiteId}">
+		{BEGIN TramiteId_label}{$label dbo_Autorizaciones TramiteId }{END TramiteId_label}
+	</label>
+	<div class="r-edit-field">
+		{$TramiteId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="TramiteId" {$tooltipAttr dbo_Autorizaciones TramiteId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones TramiteId }		</div>
+	</div>
+</div>
+
+
+{END TramiteId_fieldblock}
+											<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event dbo_Chequeos_snippet1}
+</span>											
+{BEGIN FechaSancion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FechaSancion}  r-vertical-field" 
+	data-signal-error-for="FechaSancion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="FechaSancion" data-fieldname="FechaSancion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_FechaSancion}">
+		{BEGIN FechaSancion_label}{$label dbo_Autorizaciones FechaSancion }{END FechaSancion_label}
+	</label>
+	<div class="r-edit-field">
+		{$FechaSancion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="FechaSancion" {$tooltipAttr dbo_Autorizaciones FechaSancion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones FechaSancion }		</div>
+	</div>
+</div>
+
+
+{END FechaSancion_fieldblock}
+											
+{BEGIN Cantidad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cantidad}  r-vertical-field" 
+	data-signal-error-for="Cantidad{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Cantidad" data-fieldname="Cantidad" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cantidad}">
+		{BEGIN Cantidad_label}{$label dbo_Autorizaciones Cantidad }{END Cantidad_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cantidad_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cantidad" {$tooltipAttr dbo_Autorizaciones Cantidad } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Cantidad }		</div>
+	</div>
+</div>
+
+
+{END Cantidad_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+			 
+																
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN CarteraTipoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" 
+	data-signal-error-for="CarteraTipoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CarteraTipoId}">
+		{BEGIN CarteraTipoId_label}{$label dbo_Autorizaciones CarteraTipoId }{END CarteraTipoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CarteraTipoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarteraTipoId" {$tooltipAttr dbo_Autorizaciones CarteraTipoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones CarteraTipoId }		</div>
+	</div>
+</div>
+
+
+{END CarteraTipoId_fieldblock}
+											
+{BEGIN NaturalezaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NaturalezaId}  r-vertical-field" 
+	data-signal-error-for="NaturalezaId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="NaturalezaId" data-fieldname="NaturalezaId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_NaturalezaId}">
+		{BEGIN NaturalezaId_label}{$label dbo_Autorizaciones NaturalezaId }{END NaturalezaId_label}
+	</label>
+	<div class="r-edit-field">
+		{$NaturalezaId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="NaturalezaId" {$tooltipAttr dbo_Autorizaciones NaturalezaId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones NaturalezaId }		</div>
+	</div>
+</div>
+
+
+{END NaturalezaId_fieldblock}
+											
+{BEGIN DespachoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DespachoId}  r-vertical-field" 
+	data-signal-error-for="DespachoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="DespachoId" data-fieldname="DespachoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_DespachoId}">
+		{BEGIN DespachoId_label}{$label dbo_Autorizaciones DespachoId }{END DespachoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$DespachoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DespachoId" {$tooltipAttr dbo_Autorizaciones DespachoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones DespachoId }		</div>
+	</div>
+</div>
+
+
+{END DespachoId_fieldblock}
+											
+{BEGIN Origen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Origen}  r-vertical-field" 
+	data-signal-error-for="Origen{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Origen" data-fieldname="Origen" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Origen}">
+		{BEGIN Origen_label}{$label dbo_Autorizaciones Origen }{END Origen_label}
+	</label>
+	<div class="r-edit-field">
+		{$Origen_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Origen" {$tooltipAttr dbo_Autorizaciones Origen } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Origen }		</div>
+	</div>
+</div>
+
+
+{END Origen_fieldblock}
+											
+{BEGIN Tipo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tipo}  r-vertical-field" 
+	data-signal-error-for="Tipo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="Tipo" data-fieldname="Tipo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tipo}">
+		{BEGIN Tipo_label}{$label dbo_Autorizaciones Tipo }{END Tipo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tipo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tipo" {$tooltipAttr dbo_Autorizaciones Tipo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Tipo }		</div>
+	</div>
+</div>
+
+
+{END Tipo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c}
+								</tr>
+	 
+	 
+														<tr {$row_grid_1} >
+										
+
+{BEGIN cellblock_grid_c5}
+<td
+	{$cell_grid_c5}
+	class="r-align-center r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+	ocolspan="2"		data-cellId="grid_c5" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Obligacion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-vertical-field" 
+	data-signal-error-for="Obligacion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Obligacion}">
+		{BEGIN Obligacion_label}{$label dbo_Autorizaciones Obligacion }{END Obligacion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Obligacion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Obligacion" {$tooltipAttr dbo_Autorizaciones Obligacion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Obligacion }		</div>
+	</div>
+</div>
+
+
+{END Obligacion_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c5}
+								</tr>
+	 
+	 
+														<tr {$row_grid_2} >
+										
+
+{BEGIN cellblock_grid_c6}
+<td
+	{$cell_grid_c6}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Folios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Folios}  r-vertical-field" 
+	data-signal-error-for="Folios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Folios" data-fieldname="Folios" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Folios}">
+		{BEGIN Folios_label}{$label dbo_Autorizaciones Folios }{END Folios_label}
+	</label>
+	<div class="r-edit-field">
+		{$Folios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Folios" {$tooltipAttr dbo_Autorizaciones Folios } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Folios }		</div>
+	</div>
+</div>
+
+
+{END Folios_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-vertical-field" 
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Ejecutoria}">
+		{BEGIN Ejecutoria_label}{$label dbo_Autorizaciones Ejecutoria }{END Ejecutoria_label}
+	</label>
+	<div class="r-edit-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ejecutoria" {$tooltipAttr dbo_Autorizaciones Ejecutoria } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Ejecutoria }		</div>
+	</div>
+</div>
+
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN PrimeraCopia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PrimeraCopia}  r-vertical-field" 
+	data-signal-error-for="PrimeraCopia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="PrimeraCopia" data-fieldname="PrimeraCopia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_PrimeraCopia}">
+		{BEGIN PrimeraCopia_label}{$label dbo_Autorizaciones PrimeraCopia }{END PrimeraCopia_label}
+	</label>
+	<div class="r-edit-field">
+		{$PrimeraCopia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PrimeraCopia" {$tooltipAttr dbo_Autorizaciones PrimeraCopia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones PrimeraCopia }		</div>
+	</div>
+</div>
+
+
+{END PrimeraCopia_fieldblock}
+											
+{BEGIN PrestaMeritoEjecutivo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PrestaMeritoEjecutivo}  r-vertical-field" 
+	data-signal-error-for="PrestaMeritoEjecutivo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_PrestaMeritoEjecutivo}">
+		{BEGIN PrestaMeritoEjecutivo_label}{$label dbo_Autorizaciones PrestaMeritoEjecutivo }{END PrestaMeritoEjecutivo_label}
+	</label>
+	<div class="r-edit-field">
+		{$PrestaMeritoEjecutivo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PrestaMeritoEjecutivo" {$tooltipAttr dbo_Autorizaciones PrestaMeritoEjecutivo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones PrestaMeritoEjecutivo }		</div>
+	</div>
+</div>
+
+
+{END PrestaMeritoEjecutivo_fieldblock}
+											
+{BEGIN Expresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Expresa}  r-vertical-field" 
+	data-signal-error-for="Expresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Expresa" data-fieldname="Expresa" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Expresa}">
+		{BEGIN Expresa_label}{$label dbo_Autorizaciones Expresa }{END Expresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$Expresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Expresa" {$tooltipAttr dbo_Autorizaciones Expresa } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Expresa }		</div>
+	</div>
+</div>
+
+
+{END Expresa_fieldblock}
+											
+{BEGIN CompetenciaDEAJ_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CompetenciaDEAJ}  r-vertical-field" 
+	data-signal-error-for="CompetenciaDEAJ{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CompetenciaDEAJ}">
+		{BEGIN CompetenciaDEAJ_label}{$label dbo_Autorizaciones CompetenciaDEAJ }{END CompetenciaDEAJ_label}
+	</label>
+	<div class="r-edit-field">
+		{$CompetenciaDEAJ_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CompetenciaDEAJ" {$tooltipAttr dbo_Autorizaciones CompetenciaDEAJ } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones CompetenciaDEAJ }		</div>
+	</div>
+</div>
+
+
+{END CompetenciaDEAJ_fieldblock}
+											
+{BEGIN FaltaCompetencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FaltaCompetencia}  r-vertical-field" 
+	data-signal-error-for="FaltaCompetencia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_FaltaCompetencia}">
+		{BEGIN FaltaCompetencia_label}{$label dbo_Autorizaciones FaltaCompetencia }{END FaltaCompetencia_label}
+	</label>
+	<div class="r-edit-field">
+		{$FaltaCompetencia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="FaltaCompetencia" {$tooltipAttr dbo_Autorizaciones FaltaCompetencia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones FaltaCompetencia }		</div>
+	</div>
+</div>
+
+
+{END FaltaCompetencia_fieldblock}
+											
+{BEGIN MinJusticia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_MinJusticia}  r-vertical-field" 
+	data-signal-error-for="MinJusticia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="MinJusticia" data-fieldname="MinJusticia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_MinJusticia}">
+		{BEGIN MinJusticia_label}{$label dbo_Autorizaciones MinJusticia }{END MinJusticia_label}
+	</label>
+	<div class="r-edit-field">
+		{$MinJusticia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="MinJusticia" {$tooltipAttr dbo_Autorizaciones MinJusticia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones MinJusticia }		</div>
+	</div>
+</div>
+
+
+{END MinJusticia_fieldblock}
+											
+{BEGIN Remisorio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Remisorio}  r-vertical-field" 
+	data-signal-error-for="Remisorio{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="Remisorio" data-fieldname="Remisorio" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Remisorio}">
+		{BEGIN Remisorio_label}{$label dbo_Autorizaciones Remisorio }{END Remisorio_label}
+	</label>
+	<div class="r-edit-field">
+		{$Remisorio_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Remisorio" {$tooltipAttr dbo_Autorizaciones Remisorio } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Remisorio }		</div>
+	</div>
+</div>
+
+
+{END Remisorio_fieldblock}
+											
+{BEGIN Fisico_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fisico}  r-vertical-field" 
+	data-signal-error-for="Fisico{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="Fisico" data-fieldname="Fisico" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Fisico}">
+		{BEGIN Fisico_label}{$label dbo_Autorizaciones Fisico }{END Fisico_label}
+	</label>
+	<div class="r-edit-field">
+		{$Fisico_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Fisico" {$tooltipAttr dbo_Autorizaciones Fisico } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Fisico }		</div>
+	</div>
+</div>
+
+
+{END Fisico_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c6}
+			 
+																
+
+{BEGIN cellblock_grid_c7}
+<td
+	{$cell_grid_c7}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="grid_c7" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Providencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-vertical-field" 
+	data-signal-error-for="Providencia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Providencia}">
+		{BEGIN Providencia_label}{$label dbo_Autorizaciones Providencia }{END Providencia_label}
+	</label>
+	<div class="r-edit-field">
+		{$Providencia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Providencia" {$tooltipAttr dbo_Autorizaciones Providencia } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Providencia }		</div>
+	</div>
+</div>
+
+
+{END Providencia_fieldblock}
+											
+{BEGIN Plazo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Plazo}  r-vertical-field" 
+	data-signal-error-for="Plazo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="Plazo" data-fieldname="Plazo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Plazo}">
+		{BEGIN Plazo_label}{$label dbo_Autorizaciones Plazo }{END Plazo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Plazo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Plazo" {$tooltipAttr dbo_Autorizaciones Plazo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Plazo }		</div>
+	</div>
+</div>
+
+
+{END Plazo_fieldblock}
+											
+{BEGIN Autentica_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Autentica}  r-vertical-field" 
+	data-signal-error-for="Autentica{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Autentica" data-fieldname="Autentica" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Autentica}">
+		{BEGIN Autentica_label}{$label dbo_Autorizaciones Autentica }{END Autentica_label}
+	</label>
+	<div class="r-edit-field">
+		{$Autentica_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Autentica" {$tooltipAttr dbo_Autorizaciones Autentica } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Autentica }		</div>
+	</div>
+</div>
+
+
+{END Autentica_fieldblock}
+											
+{BEGIN Clara_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Clara}  r-vertical-field" 
+	data-signal-error-for="Clara{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Clara" data-fieldname="Clara" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Clara}">
+		{BEGIN Clara_label}{$label dbo_Autorizaciones Clara }{END Clara_label}
+	</label>
+	<div class="r-edit-field">
+		{$Clara_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Clara" {$tooltipAttr dbo_Autorizaciones Clara } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Clara }		</div>
+	</div>
+</div>
+
+
+{END Clara_fieldblock}
+											
+{BEGIN ActualmenteExigible_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ActualmenteExigible}  r-vertical-field" 
+	data-signal-error-for="ActualmenteExigible{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ActualmenteExigible}">
+		{BEGIN ActualmenteExigible_label}{$label dbo_Autorizaciones ActualmenteExigible }{END ActualmenteExigible_label}
+	</label>
+	<div class="r-edit-field">
+		{$ActualmenteExigible_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ActualmenteExigible" {$tooltipAttr dbo_Autorizaciones ActualmenteExigible } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones ActualmenteExigible }		</div>
+	</div>
+</div>
+
+
+{END ActualmenteExigible_fieldblock}
+											
+{BEGIN FaltaRequisitos_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FaltaRequisitos}  r-vertical-field" 
+	data-signal-error-for="FaltaRequisitos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_FaltaRequisitos}">
+		{BEGIN FaltaRequisitos_label}{$label dbo_Autorizaciones FaltaRequisitos }{END FaltaRequisitos_label}
+	</label>
+	<div class="r-edit-field">
+		{$FaltaRequisitos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="FaltaRequisitos" {$tooltipAttr dbo_Autorizaciones FaltaRequisitos } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones FaltaRequisitos }		</div>
+	</div>
+</div>
+
+
+{END FaltaRequisitos_fieldblock}
+											
+{BEGIN PorPrescripcion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PorPrescripcion}  r-vertical-field" 
+	data-signal-error-for="PorPrescripcion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="PorPrescripcion" data-fieldname="PorPrescripcion" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_PorPrescripcion}">
+		{BEGIN PorPrescripcion_label}{$label dbo_Autorizaciones PorPrescripcion }{END PorPrescripcion_label}
+	</label>
+	<div class="r-edit-field">
+		{$PorPrescripcion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PorPrescripcion" {$tooltipAttr dbo_Autorizaciones PorPrescripcion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones PorPrescripcion }		</div>
+	</div>
+</div>
+
+
+{END PorPrescripcion_fieldblock}
+											
+{BEGIN SeccionalIdDestino_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalIdDestino}  r-vertical-field" 
+	data-signal-error-for="SeccionalIdDestino{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalIdDestino}">
+		{BEGIN SeccionalIdDestino_label}{$label dbo_Autorizaciones SeccionalIdDestino }{END SeccionalIdDestino_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalIdDestino_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalIdDestino" {$tooltipAttr dbo_Autorizaciones SeccionalIdDestino } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones SeccionalIdDestino }		</div>
+	</div>
+</div>
+
+
+{END SeccionalIdDestino_fieldblock}
+											
+{BEGIN AbogadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
+	data-signal-error-for="AbogadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
+		{BEGIN AbogadoId_label}{$label dbo_Autorizaciones AbogadoId }{END AbogadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$AbogadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_Autorizaciones AbogadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones AbogadoId }		</div>
+	</div>
+</div>
+
+
+{END AbogadoId_fieldblock}
+											
+{BEGIN Digital_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Digital}  r-vertical-field" 
+	data-signal-error-for="Digital{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="Digital" data-fieldname="Digital" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Digital}">
+		{BEGIN Digital_label}{$label dbo_Autorizaciones Digital }{END Digital_label}
+	</label>
+	<div class="r-edit-field">
+		{$Digital_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Digital" {$tooltipAttr dbo_Autorizaciones Digital } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Digital }		</div>
+	</div>
+</div>
+
+
+{END Digital_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c7}
+								</tr>
+	 
+	 
+														<tr {$row_grid_3} >
+										
+
+{BEGIN cellblock_grid_c9}
+<td
+	{$cell_grid_c9}
+	class="r-align-center r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+	ocolspan="2"		data-cellId="grid_c9" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
+		{BEGIN Observaciones_label}{$label dbo_Autorizaciones Observaciones }{END Observaciones_label}
+	</label>
+	<div class="r-edit-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Observaciones" {$tooltipAttr dbo_Autorizaciones Observaciones } >
+		<div class="text-muted" >
+		{$tooltip dbo_Autorizaciones Observaciones }		</div>
+	</div>
+</div>
+
+
+{END Observaciones_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c9}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Guardar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

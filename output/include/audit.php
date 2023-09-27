@@ -392,10 +392,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Despachos")
-		{
-			return true;
-		}
 		if($table=="dbo.Empresas")
 		{
 			return true;
@@ -465,10 +461,6 @@ class AuditTrailTable
 			return true;
 		}
 		if($table=="dbo.Uvts")
-		{
-			return true;
-		}
-		if($table=="dbo.CarteraTipos")
 		{
 			return true;
 		}
@@ -676,23 +668,31 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="dbo.Carceles1")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles2")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles3")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles4")
-		{
-			return false;
-		}
 		if($table=="dbo.Alertas")
+		{
+			return false;
+		}
+		if($table=="dbo.OperacionTipo")
+		{
+			return false;
+		}
+		if($table=="dbo.Oficios1")
+		{
+			return true;
+		}
+		if($table=="dbo.CarteraTipos")
+		{
+			return false;
+		}
+		if($table=="dbo.Despachos")
+		{
+			return false;
+		}
+		if($table=="dbo.Ciudades1")
+		{
+			return true;
+		}
+		if($table=="dbo.Aplazamientos")
 		{
 			return false;
 		}
@@ -1040,10 +1040,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Despachos")
-		{
-			return true;
-		}
 		if($table=="dbo.Empresas")
 		{
 			return true;
@@ -1113,10 +1109,6 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.Uvts")
-		{
-			return true;
-		}
-		if($table=="dbo.CarteraTipos")
 		{
 			return true;
 		}
@@ -1324,23 +1316,31 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="dbo.Carceles1")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles2")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles3")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles4")
-		{
-			return false;
-		}
 		if($table=="dbo.Alertas")
+		{
+			return false;
+		}
+		if($table=="dbo.OperacionTipo")
+		{
+			return false;
+		}
+		if($table=="dbo.Oficios1")
+		{
+			return true;
+		}
+		if($table=="dbo.CarteraTipos")
+		{
+			return false;
+		}
+		if($table=="dbo.Despachos")
+		{
+			return false;
+		}
+		if($table=="dbo.Ciudades1")
+		{
+			return true;
+		}
+		if($table=="dbo.Aplazamientos")
 		{
 			return false;
 		}

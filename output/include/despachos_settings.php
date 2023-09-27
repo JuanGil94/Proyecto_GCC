@@ -6,11 +6,11 @@ $tdatadespachos[".OwnerID"] = "";
 $tdatadespachos[".OriginalTable"] = "dbo.Despachos";
 
 
-$tdatadespachos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadespachos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatadespachos[".originalPagesByType"] = $tdatadespachos[".pagesByType"];
-$tdatadespachos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadespachos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatadespachos[".originalPages"] = $tdatadespachos[".pages"];
-$tdatadespachos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadespachos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatadespachos[".originalDefaultPages"] = $tdatadespachos[".defaultPages"];
 
 //	field labels
@@ -31,10 +31,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Codigo"] = "Codigo";
 	$fieldToolTipsdespachos["Spanish"]["Codigo"] = "";
 	$placeHoldersdespachos["Spanish"]["Codigo"] = "";
-	$fieldLabelsdespachos["Spanish"]["Despacho"] = "Despacho";
+	$fieldLabelsdespachos["Spanish"]["Despacho"] = "Despacho/Juzgado";
 	$fieldToolTipsdespachos["Spanish"]["Despacho"] = "";
 	$placeHoldersdespachos["Spanish"]["Despacho"] = "";
-	$fieldLabelsdespachos["Spanish"]["CiudadId"] = "Ciudad Id";
+	$fieldLabelsdespachos["Spanish"]["CiudadId"] = "Ciudad/Municipio";
 	$fieldToolTipsdespachos["Spanish"]["CiudadId"] = "";
 	$placeHoldersdespachos["Spanish"]["CiudadId"] = "";
 	$fieldLabelsdespachos["Spanish"]["Especialidad"] = "Especialidad";
@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Juez"] = "Juez";
 	$fieldToolTipsdespachos["Spanish"]["Juez"] = "";
 	$placeHoldersdespachos["Spanish"]["Juez"] = "";
-	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo";
+	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo Electrónico";
 	$fieldToolTipsdespachos["Spanish"]["Correo"] = "";
 	$placeHoldersdespachos["Spanish"]["Correo"] = "";
 	$fieldLabelsdespachos["Spanish"]["Telefonos"] = "Telefonos";
@@ -91,7 +91,7 @@ $tdatadespachos[".listAjax"] = false;
 //	temporary
 //$tdatadespachos[".listAjax"] = false;
 
-	$tdatadespachos[".audit"] = true;
+	$tdatadespachos[".audit"] = false;
 
 	$tdatadespachos[".locking"] = false;
 
@@ -167,7 +167,7 @@ $tdatadespachos[".addPageEvents"] = false;
 $tdatadespachos[".isUseTimeForSearch"] = false;
 
 
-$tdatadespachos[".badgeColor"] = "778899";
+$tdatadespachos[".badgeColor"] = "CD5C5C";
 
 
 $tdatadespachos[".allSearchFields"] = array();
@@ -224,6 +224,17 @@ $tdatadespachos[".sqlFrom"] = "FROM dbo.Despachos";
 $tdatadespachos[".sqlWhereExpr"] = "";
 $tdatadespachos[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatadespachos[".arrGridTabs"] = $arrGridTabs;
 
 
 
@@ -753,7 +764,7 @@ $tdatadespachos[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Ciudades";
+	$edata["LookupTable"] = "dbo.Ciudades1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -762,7 +773,7 @@ $tdatadespachos[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "CiudadId";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Ciudad";
+	$edata["DisplayField"] = "Ciudad\\Municipio";
 
 	
 
@@ -1824,41 +1835,11 @@ changeTextControlsToDate( "dbo.Despachos" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Despachos"] = array();
-//	dbo.Procesos
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Procesos";
-		$detailsParam["dOriginalTable"] = "dbo.Procesos";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "procesos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Despachos"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"][]="DespachoId";
-
-				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
 //	dbo.Minjusticia
 	
 	
 
-		$dIndex = 1;
+		$dIndex = 0;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia";
@@ -1888,7 +1869,7 @@ $detailsTablesData["dbo.Despachos"] = array();
 	
 	
 
-		$dIndex = 2;
+		$dIndex = 1;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia2";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia2";
@@ -1918,7 +1899,7 @@ $detailsTablesData["dbo.Despachos"] = array();
 	
 	
 
-		$dIndex = 3;
+		$dIndex = 2;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia3";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia3";
@@ -1929,6 +1910,36 @@ $detailsTablesData["dbo.Despachos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "minjusticia3";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Despachos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"][]="DespachoId";
+
+				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
+//	dbo.Procesos
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Procesos";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

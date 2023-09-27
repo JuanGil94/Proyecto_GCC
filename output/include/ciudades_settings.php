@@ -734,11 +734,12 @@ $tdataciudades[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "DepartamentoId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Departamento";
+	$edata["DisplayField"] = "Codigo + ' - ' + Departamento";
 
 	
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "";
 
 	
@@ -911,126 +912,6 @@ $detailsTablesData["dbo.Ciudades"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "carceles";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
-
-				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
-//	dbo.Carceles1
-	
-	
-
-		$dIndex = 3;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Carceles1";
-		$detailsParam["dOriginalTable"] = "dbo.Carceles";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "carceles1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles1");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
-
-				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
-//	dbo.Carceles2
-	
-	
-
-		$dIndex = 4;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Carceles2";
-		$detailsParam["dOriginalTable"] = "dbo.Carceles";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "carceles2";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles2");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
-
-				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
-//	dbo.Carceles3
-	
-	
-
-		$dIndex = 5;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Carceles3";
-		$detailsParam["dOriginalTable"] = "dbo.Carceles";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "carceles3";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles3");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Ciudades"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["masterKeys"][]="CiudadId";
-
-				$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Ciudades"][$dIndex]["detailKeys"][]="CiudadId";
-//	dbo.Carceles4
-	
-	
-
-		$dIndex = 6;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Carceles4";
-		$detailsParam["dOriginalTable"] = "dbo.Carceles";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "carceles4";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Carceles4");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

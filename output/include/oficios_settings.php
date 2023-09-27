@@ -219,9 +219,9 @@ $tdataoficios[".strOrderBy"] = $tstrOrderBy;
 $tdataoficios[".orderindexes"] = array();
 
 
-$tdataoficios[".sqlHead"] = "SELECT OficioId,  Oficio,  Archivo,  Activo,  ActuacionId,  OficioIdRequisito,  Direcciones,  Edicion,  Abierto,  Sigobius,  Devolucion";
+$tdataoficios[".sqlHead"] = "SELECT OficioId,  	Oficio,  	Archivo,  	Activo,  	ActuacionId,  	OficioIdRequisito,  	Direcciones,  	Edicion,  	Abierto,  	Sigobius,  	Devolucion";
 $tdataoficios[".sqlFrom"] = "FROM dbo.Oficios";
-$tdataoficios[".sqlWhereExpr"] = "Sigobius = 0";
+$tdataoficios[".sqlWhereExpr"] = "";
 $tdataoficios[".sqlTail"] = "";
 
 
@@ -1886,6 +1886,36 @@ $detailsTablesData["dbo.Oficios"] = array();
 				$detailsTablesData["dbo.Oficios"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Oficios"][$dIndex]["detailKeys"][]="OficioId";
+//	dbo.Aplazamientos
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Aplazamientos";
+		$detailsParam["dOriginalTable"] = "dbo.Aplazamientos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "aplazamientos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Aplazamientos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Oficios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Oficios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios"][$dIndex]["masterKeys"][]="OficioId";
+
+				$detailsTablesData["dbo.Oficios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios"][$dIndex]["detailKeys"][]="OficioId";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1931,25 +1961,23 @@ function createSqlQuery_oficios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "OficioId,  Oficio,  Archivo,  Activo,  ActuacionId,  OficioIdRequisito,  Direcciones,  Edicion,  Abierto,  Sigobius,  Devolucion";
+$proto0["m_strFieldList"] = "OficioId,  	Oficio,  	Archivo,  	Activo,  	ActuacionId,  	OficioIdRequisito,  	Direcciones,  	Edicion,  	Abierto,  	Sigobius,  	Devolucion";
 $proto0["m_strFrom"] = "FROM dbo.Oficios";
-$proto0["m_strWhere"] = "Sigobius = 0";
+$proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "Sigobius = 0";
+$proto2["m_sql"] = "";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "Sigobius",
-	"m_strTable" => "dbo.Oficios",
-	"m_srcTableName" => "dbo.Oficios"
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "= 0";
+$proto2["m_strCase"] = "";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;

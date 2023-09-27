@@ -140,21 +140,6 @@ pdfDocument = {
 			"%",
 						{END row_grid_0}
 			 
-								{BEGIN row_grid_1}
-						
-			"%",
-						{END row_grid_1}
-			 
-								{BEGIN row_grid_2}
-						
-			"%",
-						{END row_grid_2}
-			 
-								{BEGIN row_grid_3}
-						
-			"%",
-						{END row_grid_3}
-			 
 				],
 	
 		body: [
@@ -178,22 +163,70 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"text":"{$event dbo_Chequeos_snippet1}","hidden":"{$item_hide_snippet}","isHtml":true},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel dbo_Chequeos ConceptoId }","bold":true},{"text":{$ConceptoId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Chequeos AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Chequeos DespachoId }","bold":true},{"text":{$DespachoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Chequeos Providencia }","bold":true},{"text":{$Providencia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Chequeos PrimeraCopia }","bold":true},{"text":{$PrimeraCopia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Chequeos PrestaMeritoEjecutivo }","bold":true},{"text":{$PrestaMeritoEjecutivo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel dbo_Chequeos Expresa }","bold":true},{"text":{$Expresa_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel dbo_Chequeos CompetenciaDEAJ }","bold":true},{"text":{$CompetenciaDEAJ_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel dbo_Chequeos FaltaCompetencia }","bold":true},{"text":{$FaltaCompetencia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalIdDestino }","bold":true},{"text":{$SeccionalIdDestino_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel dbo_Chequeos Procesado }","bold":true},{"text":{$Procesado_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel dbo_Chequeos FechaSancion }","bold":true},{"text":{$FechaSancion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field25}","stack":[{"text":"{$jslabel dbo_Chequeos Obligacion }","bold":true},{"text":{$Obligacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel dbo_Chequeos Remisorio }","bold":true},{"text":{$Remisorio_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field29}","stack":[{"text":"{$jslabel dbo_Chequeos MinJusticia }","bold":true},{"text":{$MinJusticia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field31}","stack":[{"text":"{$jslabel dbo_Chequeos AprobadoPor }","bold":true},{"text":{$AprobadoPor_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field33}","stack":[{"text":"{$jslabel dbo_Chequeos Plazo }","bold":true},{"text":{$Plazo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field35}","stack":[{"text":"{$jslabel dbo_Chequeos Sigobius }","bold":true},{"text":{$Sigobius_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel dbo_Chequeos TramiteId }","bold":true},{"text":{$TramiteId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"text":"{$event dbo_Chequeos_snippet1}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{"hidden":"{$item_hide_integrated_edit_field39}","stack":[{"text":"{$jslabel dbo_Chequeos Digital }","bold":true},{"text":{$Digital_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel dbo_Chequeos FechaSancion }","bold":true},{"text":{$FechaSancion_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel dbo_Chequeos Cantidad }","bold":true},{"text":{$Cantidad_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field41}","stack":[{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","bold":true},{"text":{$ObligacionLetras_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -220,153 +253,16 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel dbo_Chequeos CarteraTipoId }","bold":true},{"text":{$CarteraTipoId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Chequeos ConceptoId }","bold":true},{"text":{$ConceptoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel dbo_Chequeos NaturalezaId }","bold":true},{"text":{$NaturalezaId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Chequeos DespachoId }","bold":true},{"text":{$DespachoId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Chequeos Fecha }","bold":true},{"text":{$Fecha_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Chequeos Origen }","bold":true},{"text":{$Origen_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel dbo_Chequeos Tipo }","bold":true},{"text":{$Tipo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel dbo_Chequeos CantidadLetras }","bold":true},{"text":{$CantidadLetras_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c}
-											],
-				{END row_grid_0}
-						{BEGIN row_grid_1}
-				[
-																{BEGIN cellblock_grid_c5}
-{
-	cellId: 'c5',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-					{BEGIN colspan_grid_c5}
-			colSpan: {$colspan_grid_c5},
-			{END colspan_grid_c5}
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field25}","stack":[{"text":"{$jslabel dbo_Chequeos Obligacion }","bold":true},{"text":{$Obligacion_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","bold":true},{"text":{$ObligacionLetras_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-     
-      
-      },
-
-{END cellblock_grid_c5}
-																		{ 
-				cellId: 'c5',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_c6}
-{
-	cellId: 'c6',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel dbo_Chequeos Folios }","bold":true},{"text":{$Folios_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_Chequeos Ejecutoria }","bold":true},{"text":{$Ejecutoria_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Chequeos PrimeraCopia }","bold":true},{"text":{$PrimeraCopia_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Chequeos PrestaMeritoEjecutivo }","bold":true},{"text":{$PrestaMeritoEjecutivo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel dbo_Chequeos Expresa }","bold":true},{"text":{$Expresa_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel dbo_Chequeos CompetenciaDEAJ }","bold":true},{"text":{$CompetenciaDEAJ_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel dbo_Chequeos FaltaCompetencia }","bold":true},{"text":{$FaltaCompetencia_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field29}","stack":[{"text":"{$jslabel dbo_Chequeos MinJusticia }","bold":true},{"text":{$MinJusticia_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel dbo_Chequeos Remisorio }","bold":true},{"text":{$Remisorio_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field38}","stack":[{"text":"{$jslabel dbo_Chequeos Fisico }","bold":true},{"text":{$Fisico_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_c6}
-																							{BEGIN cellblock_grid_c7}
-{
-	cellId: 'c7',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Chequeos Providencia }","bold":true},{"text":{$Providencia_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field33}","stack":[{"text":"{$jslabel dbo_Chequeos Plazo }","bold":true},{"text":{$Plazo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Chequeos Autentica }","bold":true},{"text":{$Autentica_pdfvalue}}],"margin":[0,0,0,15]},
@@ -384,13 +280,40 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel dbo_Chequeos PorPrescripcion }","bold":true},{"text":{$PorPrescripcion_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalIdDestino }","bold":true},{"text":{$SeccionalIdDestino_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel dbo_Chequeos Folios }","bold":true},{"text":{$Folios_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Chequeos AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field20}","stack":[{"text":"{$jslabel dbo_Chequeos Observaciones }","bold":true},{"text":{$Observaciones_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field39}","stack":[{"text":"{$jslabel dbo_Chequeos Digital }","bold":true},{"text":{$Digital_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel dbo_Chequeos Tipo }","bold":true},{"text":{$Tipo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel dbo_Chequeos Cantidad }","bold":true},{"text":{$Cantidad_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel dbo_Chequeos Costas }","bold":true},{"text":{$Costas_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel dbo_Chequeos CarteraTipoId }","bold":true},{"text":{$CarteraTipoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel dbo_Chequeos Aprobado }","bold":true},{"text":{$Aprobado_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field32}","stack":[{"text":"{$jslabel dbo_Chequeos FechaAprobacion }","bold":true},{"text":{$FechaAprobacion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field34}","stack":[{"text":"{$jslabel dbo_Chequeos NaturalezaId }","bold":true},{"text":{$NaturalezaId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field36}","stack":[{"text":"{$jslabel dbo_Chequeos Monto }","bold":true},{"text":{$Monto_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field38}","stack":[{"text":"{$jslabel dbo_Chequeos Fisico }","bold":true},{"text":{$Fisico_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field40}","stack":[{"text":"{$jslabel dbo_Chequeos CantidadLetras }","bold":true},{"text":{$CantidadLetras_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -399,49 +322,9 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_c7}
+{END cellblock_grid_c}
 											],
-				{END row_grid_2}
-						{BEGIN row_grid_3}
-				[
-																{BEGIN cellblock_grid_c9}
-{
-	cellId: 'c9',
-	col:0,
-	row:0,
-			
-		
-	//	dynamic colspan/rowspan
-
-					{BEGIN colspan_grid_c9}
-			colSpan: {$colspan_grid_c9},
-			{END colspan_grid_c9}
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field20}","stack":[{"text":"{$jslabel dbo_Chequeos Observaciones }","bold":true},{"text":{$Observaciones_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'center',
-     
-      
-      },
-
-{END cellblock_grid_c9}
-																		{ 
-				cellId: 'c9',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-							],
-				{END row_grid_3}
+				{END row_grid_0}
 		
 		]
 	}

@@ -3554,8 +3554,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "conceptos" ] = "dbo.Conceptos";
 	$projectEntities[ "dbo.Departamentos" ] = array( "url" => "departamentos", "type" => 0 );
 	$projectEntitiesReverse[ "departamentos" ] = "dbo.Departamentos";
-	$projectEntities[ "dbo.Despachos" ] = array( "url" => "despachos", "type" => 0 );
-	$projectEntitiesReverse[ "despachos" ] = "dbo.Despachos";
 	$projectEntities[ "dbo.Empresas" ] = array( "url" => "empresas", "type" => 0 );
 	$projectEntitiesReverse[ "empresas" ] = "dbo.Empresas";
 	$projectEntities[ "dbo.Entidades" ] = array( "url" => "entidades", "type" => 0 );
@@ -3592,8 +3590,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "test" ] = "dbo.Test";
 	$projectEntities[ "dbo.Uvts" ] = array( "url" => "uvts", "type" => 0 );
 	$projectEntitiesReverse[ "uvts" ] = "dbo.Uvts";
-	$projectEntities[ "dbo.CarteraTipos" ] = array( "url" => "carteratipos", "type" => 0 );
-	$projectEntitiesReverse[ "carteratipos" ] = "dbo.CarteraTipos";
 	$projectEntities[ "dbo.Chequeos" ] = array( "url" => "chequeos", "type" => 0 );
 	$projectEntitiesReverse[ "chequeos" ] = "dbo.Chequeos";
 	$projectEntities[ "dbo.ChequeosOficios" ] = array( "url" => "chequeosoficios", "type" => 0 );
@@ -3696,16 +3692,20 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "tasas_tes__deterioro_de_cartera_" ] = "Tasas TES (Deterioro de Cartera)";
 	$projectEntities[ "dbo.Carceles" ] = array( "url" => "carceles", "type" => 0 );
 	$projectEntitiesReverse[ "carceles" ] = "dbo.Carceles";
-	$projectEntities[ "dbo.Carceles1" ] = array( "url" => "carceles1", "type" => 1 );
-	$projectEntitiesReverse[ "carceles1" ] = "dbo.Carceles1";
-	$projectEntities[ "dbo.Carceles2" ] = array( "url" => "carceles2", "type" => 1 );
-	$projectEntitiesReverse[ "carceles2" ] = "dbo.Carceles2";
-	$projectEntities[ "dbo.Carceles3" ] = array( "url" => "carceles3", "type" => 1 );
-	$projectEntitiesReverse[ "carceles3" ] = "dbo.Carceles3";
-	$projectEntities[ "dbo.Carceles4" ] = array( "url" => "carceles4", "type" => 1 );
-	$projectEntitiesReverse[ "carceles4" ] = "dbo.Carceles4";
 	$projectEntities[ "dbo.Alertas" ] = array( "url" => "alertas", "type" => 0 );
 	$projectEntitiesReverse[ "alertas" ] = "dbo.Alertas";
+	$projectEntities[ "dbo.OperacionTipo" ] = array( "url" => "operaciontipo", "type" => 0 );
+	$projectEntitiesReverse[ "operaciontipo" ] = "dbo.OperacionTipo";
+	$projectEntities[ "dbo.Oficios1" ] = array( "url" => "oficios1", "type" => 1 );
+	$projectEntitiesReverse[ "oficios1" ] = "dbo.Oficios1";
+	$projectEntities[ "dbo.CarteraTipos" ] = array( "url" => "carteratipos", "type" => 0 );
+	$projectEntitiesReverse[ "carteratipos" ] = "dbo.CarteraTipos";
+	$projectEntities[ "dbo.Despachos" ] = array( "url" => "despachos", "type" => 0 );
+	$projectEntitiesReverse[ "despachos" ] = "dbo.Despachos";
+	$projectEntities[ "dbo.Ciudades1" ] = array( "url" => "ciudades1", "type" => 1 );
+	$projectEntitiesReverse[ "ciudades1" ] = "dbo.Ciudades1";
+	$projectEntities[ "dbo.Aplazamientos" ] = array( "url" => "aplazamientos", "type" => 0 );
+	$projectEntitiesReverse[ "aplazamientos" ] = "dbo.Aplazamientos";
 }
 
 function findTable( $table ) {

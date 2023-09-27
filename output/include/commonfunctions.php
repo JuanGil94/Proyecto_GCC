@@ -221,8 +221,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("departamentos" == $shortTName )
 		return true;
-	if ("despachos" == $shortTName )
-		return true;
 	if ("empresas" == $shortTName )
 		return true;
 	if ("entidades" == $shortTName )
@@ -258,8 +256,6 @@ function checkTableName($shortTName )
 	if ("test" == $shortTName )
 		return true;
 	if ("uvts" == $shortTName )
-		return true;
-	if ("carteratipos" == $shortTName )
 		return true;
 	if ("chequeos" == $shortTName )
 		return true;
@@ -363,15 +359,19 @@ function checkTableName($shortTName )
 		return true;
 	if ("carceles" == $shortTName )
 		return true;
-	if ("carceles1" == $shortTName )
-		return true;
-	if ("carceles2" == $shortTName )
-		return true;
-	if ("carceles3" == $shortTName )
-		return true;
-	if ("carceles4" == $shortTName )
-		return true;
 	if ("alertas" == $shortTName )
+		return true;
+	if ("operaciontipo" == $shortTName )
+		return true;
+	if ("oficios1" == $shortTName )
+		return true;
+	if ("carteratipos" == $shortTName )
+		return true;
+	if ("despachos" == $shortTName )
+		return true;
+	if ("ciudades1" == $shortTName )
+		return true;
+	if ("aplazamientos" == $shortTName )
 		return true;
 	return false;
 }
@@ -503,15 +503,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Departamentos";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Despachos");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Despachos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -674,15 +665,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Uvts";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.CarteraTipos");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.CarteraTipos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -1145,48 +1127,66 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles1");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles1";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles2");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles2";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles3");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles3";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles4");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles4";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.Alertas");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Alertas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.OperacionTipo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.OperacionTipo";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Oficios1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Oficios1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.CarteraTipos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.CarteraTipos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Despachos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Despachos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Ciudades1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Aplazamientos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Aplazamientos";
 	}
 	return $arr;
 }
@@ -1206,7 +1206,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Ciudades";
 	$arr[]="dbo.Conceptos";
 	$arr[]="dbo.Departamentos";
-	$arr[]="dbo.Despachos";
 	$arr[]="dbo.Empresas";
 	$arr[]="dbo.Entidades";
 	$arr[]="dbo.Especialidades";
@@ -1225,7 +1224,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Seccionales";
 	$arr[]="dbo.Test";
 	$arr[]="dbo.Uvts";
-	$arr[]="dbo.CarteraTipos";
 	$arr[]="dbo.Chequeos";
 	$arr[]="dbo.ChequeosOficios";
 	$arr[]="dbo.ChequeosSancionados";
@@ -1277,11 +1275,13 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Tasas Comerciales";
 	$arr[]="Tasas TES (Deterioro de Cartera)";
 	$arr[]="dbo.Carceles";
-	$arr[]="dbo.Carceles1";
-	$arr[]="dbo.Carceles2";
-	$arr[]="dbo.Carceles3";
-	$arr[]="dbo.Carceles4";
 	$arr[]="dbo.Alertas";
+	$arr[]="dbo.OperacionTipo";
+	$arr[]="dbo.Oficios1";
+	$arr[]="dbo.CarteraTipos";
+	$arr[]="dbo.Despachos";
+	$arr[]="dbo.Ciudades1";
+	$arr[]="dbo.Aplazamientos";
 	return $arr;
 }
 
@@ -1954,11 +1954,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Despachos" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Empresas" )
 	{
 //	default permissions
@@ -2045,11 +2040,6 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Uvts" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.CarteraTipos" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -2309,27 +2299,37 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Carceles1" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.Carceles2" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.Carceles3" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.Carceles4" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Alertas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.OperacionTipo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Oficios1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.CarteraTipos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Despachos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Ciudades1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Aplazamientos" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

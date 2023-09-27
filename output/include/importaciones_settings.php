@@ -529,7 +529,7 @@ $tdataimportaciones[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "CarteraTipoId";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "CarteraTipo";
 
 	
@@ -3475,24 +3475,6 @@ $masterTablesData["dbo.Importaciones"] = array();
 
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.CarteraTipos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.CarteraTipos";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "carteratipos";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Importaciones"][0] = $masterParams;
-				$masterTablesData["dbo.Importaciones"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Importaciones"][0]["masterKeys"][]="CarteraTipoId";
-				$masterTablesData["dbo.Importaciones"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Importaciones"][0]["detailKeys"][]="CarteraTipoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
 			$strOriginalDetailsTable="dbo.Seccionales";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="dbo.Seccionales";
@@ -3502,11 +3484,11 @@ $masterTablesData["dbo.Importaciones"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Importaciones"][1] = $masterParams;
-				$masterTablesData["dbo.Importaciones"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.Importaciones"][1]["masterKeys"][]="SeccionalId";
-				$masterTablesData["dbo.Importaciones"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.Importaciones"][1]["detailKeys"][]="SeccionalId";
+					$masterTablesData["dbo.Importaciones"][0] = $masterParams;
+				$masterTablesData["dbo.Importaciones"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Importaciones"][0]["masterKeys"][]="SeccionalId";
+				$masterTablesData["dbo.Importaciones"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Importaciones"][0]["detailKeys"][]="SeccionalId";
 		
 	//endif
 	
@@ -3520,11 +3502,29 @@ $masterTablesData["dbo.Importaciones"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Importaciones"][1] = $masterParams;
+				$masterTablesData["dbo.Importaciones"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Importaciones"][1]["masterKeys"][]="ConceptoId";
+				$masterTablesData["dbo.Importaciones"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Importaciones"][1]["detailKeys"][]="ConceptoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.CarteraTipos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.CarteraTipos";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "carteratipos";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["dbo.Importaciones"][2] = $masterParams;
 				$masterTablesData["dbo.Importaciones"][2]["masterKeys"] = array();
-	$masterTablesData["dbo.Importaciones"][2]["masterKeys"][]="ConceptoId";
+	$masterTablesData["dbo.Importaciones"][2]["masterKeys"][]="CarteraTipoId";
 				$masterTablesData["dbo.Importaciones"][2]["detailKeys"] = array();
-	$masterTablesData["dbo.Importaciones"][2]["detailKeys"][]="ConceptoId";
+	$masterTablesData["dbo.Importaciones"][2]["detailKeys"][]="CarteraTipoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

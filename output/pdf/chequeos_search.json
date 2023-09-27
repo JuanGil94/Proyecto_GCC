@@ -166,133 +166,133 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
-			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$PrimeraCopia_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
-			{"text":{$Autentica_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
-				
-				
-			{"text":{$PrestaMeritoEjecutivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
-				
-				
-			{"text":{$Clara_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
-				
-				
-			{"text":{$Expresa_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
-				
-				
-			{"text":{$ActualmenteExigible_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
-				
-				
-			{"text":{$CompetenciaDEAJ_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
-				
-				
-			{"text":{$FaltaRequisitos_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
-				
-				
-			{"text":{$FaltaCompetencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
-				
-				
-			{"text":{$PorPrescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
-				
-				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
-				
-				
-			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
-				
-				
-			{"text":{$SeccionalIdDestino_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
-				
-				
-			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
-				
-				
-			{"text":{$Procesado_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
-				
-				
-			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
-				
-				
-			{"text":{$FechaSancion_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
-				
-				
-			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
-				
-				
-			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
-				
-				
-			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
-				
-				
-			{"text":{$Remisorio_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
-				
-				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},
-				
-				
-			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_integrated_search_field30}"},
-				
-				
-			{"text":{$Aprobado_pdfvalue},"hidden":"{$item_hide_integrated_search_field31}"},
-				
-				
-			{"text":{$AprobadoPor_pdfvalue},"hidden":"{$item_hide_integrated_search_field32}"},
-				
-				
-			{"text":{$FechaAprobacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field33}"},
-				
-				
-			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field34}"},
-				
-				
-			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field35}"},
-				
-				
-			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_integrated_search_field36}"},
-				
-				
-			{"text":{$Monto_pdfvalue},"hidden":"{$item_hide_integrated_search_field37}"},
-				
-				
-			{"text":{$TramiteId_pdfvalue},"hidden":"{$item_hide_integrated_search_field38}"},
-				
-				
-			{"text":{$Fisico_pdfvalue},"hidden":"{$item_hide_integrated_search_field39}"},
-				
-				
-			{"text":{$Digital_pdfvalue},"hidden":"{$item_hide_integrated_search_field40}"},
-				
-				
 			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$CantidadLetras_pdfvalue},"hidden":"{$item_hide_integrated_search_field41}"},
+			{"text":{$CantidadLetras_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_integrated_search_field42}"},
+			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$PrimeraCopia_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$Autentica_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$PrestaMeritoEjecutivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$Clara_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$Expresa_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$ActualmenteExigible_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$CompetenciaDEAJ_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$FaltaRequisitos_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$FaltaCompetencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$PorPrescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
+				
+				
+			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
+				
+				
+			{"text":{$SeccionalIdDestino_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
+				
+				
+			{"text":{$Procesado_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
+				
+				
+			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
+				
+				
+			{"text":{$FechaSancion_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
+				
+				
+			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
+				
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
+				
+				
+			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},
+				
+				
+			{"text":{$Remisorio_pdfvalue},"hidden":"{$item_hide_integrated_search_field30}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field31}"},
+				
+				
+			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_integrated_search_field32}"},
+				
+				
+			{"text":{$Aprobado_pdfvalue},"hidden":"{$item_hide_integrated_search_field33}"},
+				
+				
+			{"text":{$AprobadoPor_pdfvalue},"hidden":"{$item_hide_integrated_search_field34}"},
+				
+				
+			{"text":{$FechaAprobacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field35}"},
+				
+				
+			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field36}"},
+				
+				
+			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field37}"},
+				
+				
+			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_integrated_search_field38}"},
+				
+				
+			{"text":{$Monto_pdfvalue},"hidden":"{$item_hide_integrated_search_field39}"},
+				
+				
+			{"text":{$TramiteId_pdfvalue},"hidden":"{$item_hide_integrated_search_field40}"},
+				
+				
+			{"text":{$Fisico_pdfvalue},"hidden":"{$item_hide_integrated_search_field41}"},
+				
+				
+			{"text":{$Digital_pdfvalue},"hidden":"{$item_hide_integrated_search_field42}"},
 				
 		  ],
   "border": [ false, false, false, false ],

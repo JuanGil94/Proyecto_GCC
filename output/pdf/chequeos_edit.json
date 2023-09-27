@@ -160,6 +160,14 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"hidden":"{$item_hide_integrated_edit_field40}","stack":[{"text":"{$jslabel dbo_Chequeos ChequeoId }","bold":true},{"text":{$ChequeoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			 {BEGIN details_chequeosoficios}
+			{$displayDetailTable_chequeosoficios }
+		{END details_chequeosoficios},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Chequeos ConceptoId }","bold":true},{"text":{$ConceptoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -280,12 +288,10 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field39}","stack":[{"text":"{$jslabel dbo_Chequeos Digital }","bold":true},{"text":{$Digital_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field40}","stack":[{"text":"{$jslabel dbo_Chequeos ChequeoId }","bold":true},{"text":{$ChequeoId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field41}","stack":[{"text":"{$jslabel dbo_Chequeos CantidadLetras }","bold":true},{"text":{$CantidadLetras_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			 {BEGIN details_chequeosoficios}
-			{$displayDetailTable_chequeosoficios }
-		{END details_chequeosoficios},
+			{"hidden":"{$item_hide_integrated_edit_field42}","stack":[{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","bold":true},{"text":{$ObligacionLetras_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

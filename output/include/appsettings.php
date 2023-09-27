@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "746_1694711279";
+$projectBuildKey = "894_1695761796";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "746";
+$projectBuildNumber = "894";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -774,7 +774,6 @@ $tableCaptions["Spanish"]["dbo_Actuaciones"] = "Actuaciones";
 $tableCaptions["Spanish"]["dbo_Ciudades"] = "Ciudades";
 $tableCaptions["Spanish"]["dbo_Conceptos"] = "Conceptos";
 $tableCaptions["Spanish"]["dbo_Departamentos"] = "Departamentos";
-$tableCaptions["Spanish"]["dbo_Despachos"] = "Despachos";
 $tableCaptions["Spanish"]["dbo_Empresas"] = "Empresas";
 $tableCaptions["Spanish"]["dbo_Entidades"] = "Entidades";
 $tableCaptions["Spanish"]["dbo_Especialidades"] = "Especialidades";
@@ -793,7 +792,6 @@ $tableCaptions["Spanish"]["dbo_Salarios"] = "Salarios";
 $tableCaptions["Spanish"]["dbo_Seccionales"] = "Seccionales";
 $tableCaptions["Spanish"]["dbo_Test"] = "Test";
 $tableCaptions["Spanish"]["dbo_Uvts"] = "Uvts";
-$tableCaptions["Spanish"]["dbo_CarteraTipos"] = "Cartera Tipos";
 $tableCaptions["Spanish"]["dbo_Chequeos"] = "Chequeos";
 $tableCaptions["Spanish"]["dbo_ChequeosOficios"] = "Chequeos Oficios";
 $tableCaptions["Spanish"]["dbo_ChequeosSancionados"] = "Chequeos Sancionados";
@@ -845,11 +843,13 @@ $tableCaptions["Spanish"]["Tasas_Tributarias"] = "Tasas Tributarias";
 $tableCaptions["Spanish"]["Tasas_Comerciales"] = "Tasas Comerciales";
 $tableCaptions["Spanish"]["Tasas_TES__Deterioro_de_Cartera_"] = "Tasas TES (Deterioro de Cartera)";
 $tableCaptions["Spanish"]["dbo_Carceles"] = "Carceles";
-$tableCaptions["Spanish"]["dbo_Carceles1"] = "Carceles1";
-$tableCaptions["Spanish"]["dbo_Carceles2"] = "Carceles2";
-$tableCaptions["Spanish"]["dbo_Carceles3"] = "Carceles3";
-$tableCaptions["Spanish"]["dbo_Carceles4"] = "Carceles4";
 $tableCaptions["Spanish"]["dbo_Alertas"] = "Alertas";
+$tableCaptions["Spanish"]["dbo_OperacionTipo"] = "Operacion Tipo";
+$tableCaptions["Spanish"]["dbo_Oficios1"] = "Oficios1";
+$tableCaptions["Spanish"]["dbo_CarteraTipos"] = "Cartera Tipos";
+$tableCaptions["Spanish"]["dbo_Despachos"] = "Despachos";
+$tableCaptions["Spanish"]["dbo_Ciudades1"] = "Ciudades1";
+$tableCaptions["Spanish"]["dbo_Aplazamientos"] = "Aplazamientos";
 
 
 $globalEvents = new class_GlobalEvents;

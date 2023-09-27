@@ -127,27 +127,6 @@
 
 {END Oficio_fieldblock}
 											
-{BEGIN Archivo_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Archivo}  r-vertical-field" 
-	data-signal-error-for="Archivo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Archivo" data-fieldname="Archivo" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Archivo}">
-		{BEGIN Archivo_label}{$label dbo_Oficios1 Archivo }{END Archivo_label}
-	</label>
-	<div class="r-edit-field">
-		{$Archivo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Archivo" {$tooltipAttr dbo_Oficios1 Archivo } >
-		<div class="text-muted" >
-		{$tooltip dbo_Oficios1 Archivo }		</div>
-	</div>
-</div>
-
-
-{END Archivo_fieldblock}
-											
 {BEGIN Activo_fieldblock}
 
 
@@ -274,47 +253,26 @@
 
 {END Devolucion_fieldblock}
 											
-{BEGIN Edicion_fieldblock}
+{BEGIN Archivo_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Edicion}  r-vertical-field" 
-	data-signal-error-for="Edicion{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Edicion" data-fieldname="Edicion" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Archivo}  r-vertical-field" 
+	data-signal-error-for="Archivo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Archivo" data-fieldname="Archivo" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Edicion}">
-		{BEGIN Edicion_label}{$label dbo_Oficios1 Edicion }{END Edicion_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Archivo}">
+		{BEGIN Archivo_label}{$label dbo_Oficios1 Archivo }{END Archivo_label}
 	</label>
 	<div class="r-edit-field">
-		{$Edicion_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Edicion" {$tooltipAttr dbo_Oficios1 Edicion } >
+		{$Archivo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Archivo" {$tooltipAttr dbo_Oficios1 Archivo } >
 		<div class="text-muted" >
-		{$tooltip dbo_Oficios1 Edicion }		</div>
+		{$tooltip dbo_Oficios1 Archivo }		</div>
 	</div>
 </div>
 
 
-{END Edicion_fieldblock}
-											
-{BEGIN Abierto_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Abierto}  r-vertical-field" 
-	data-signal-error-for="Abierto{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Abierto" data-fieldname="Abierto" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Abierto}">
-		{BEGIN Abierto_label}{$label dbo_Oficios1 Abierto }{END Abierto_label}
-	</label>
-	<div class="r-edit-field">
-		{$Abierto_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Abierto" {$tooltipAttr dbo_Oficios1 Abierto } >
-		<div class="text-muted" >
-		{$tooltip dbo_Oficios1 Abierto }		</div>
-	</div>
-</div>
-
-
-{END Abierto_fieldblock}
+{END Archivo_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

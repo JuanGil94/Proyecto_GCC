@@ -252,7 +252,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Ciudades"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Conceptos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Departamentos"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Despachos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Empresas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Entidades"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Especialidades"] = "GCC_at_S00001_CCAD01";
@@ -271,7 +270,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Seccionales"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Test"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Uvts"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.CarteraTipos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Chequeos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ChequeosOficios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ChequeosSancionados"] = "GCC_at_S00001_CCAD01";
@@ -323,11 +321,13 @@ class ConnectionManager_Base
 		$connectionsIds["Tasas Comerciales"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Tasas TES (Deterioro de Cartera)"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Carceles"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles1"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles2"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles3"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles4"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Alertas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.OperacionTipo"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Oficios1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.CarteraTipos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Despachos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Ciudades1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Aplazamientos"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

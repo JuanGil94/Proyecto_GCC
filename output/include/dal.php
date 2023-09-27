@@ -53,6 +53,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Acuerdos;
 	var $tblGCC_at_S00001_CCAD01_dbo_Alertas;
 	var $tblGCC_at_S00001_CCAD01_dbo_AlertasTipos;
+	var $tblGCC_at_S00001_CCAD01_dbo_Aplazamientos;
 	var $tblGCC_at_S00001_CCAD01_dbo_Auditorias;
 	var $tblGCC_at_S00001_CCAD01_dbo_Ayudas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Bancos;
@@ -95,6 +96,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Niveles;
 	var $tblGCC_at_S00001_CCAD01_dbo_Oficios;
 	var $tblGCC_at_S00001_CCAD01_dbo_Operaciones;
+	var $tblGCC_at_S00001_CCAD01_dbo_OperacionTipo;
 	var $tblGCC_at_S00001_CCAD01_dbo_Pagos1;
 	var $tblGCC_at_S00001_CCAD01_dbo_Parejas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Presupuestos;
@@ -134,6 +136,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "Acuerdos", "varname" => "GCC_at_S00001_CCAD01_dbo_Acuerdos", "altvarname" => "Acuerdos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Alertas", "varname" => "GCC_at_S00001_CCAD01_dbo_Alertas", "altvarname" => "Alertas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "AlertasTipos", "varname" => "GCC_at_S00001_CCAD01_dbo_AlertasTipos", "altvarname" => "AlertasTipos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "Aplazamientos", "varname" => "GCC_at_S00001_CCAD01_dbo_Aplazamientos", "altvarname" => "Aplazamientos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Auditorias", "varname" => "GCC_at_S00001_CCAD01_dbo_Auditorias", "altvarname" => "Auditorias", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Ayudas", "varname" => "GCC_at_S00001_CCAD01_dbo_Ayudas", "altvarname" => "Ayudas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Bancos", "varname" => "GCC_at_S00001_CCAD01_dbo_Bancos", "altvarname" => "Bancos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
@@ -176,6 +179,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "Niveles", "varname" => "GCC_at_S00001_CCAD01_dbo_Niveles", "altvarname" => "Niveles", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Oficios", "varname" => "GCC_at_S00001_CCAD01_dbo_Oficios", "altvarname" => "Oficios", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Operaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Operaciones", "altvarname" => "Operaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "OperacionTipo", "varname" => "GCC_at_S00001_CCAD01_dbo_OperacionTipo", "altvarname" => "OperacionTipo", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Pagos1", "varname" => "GCC_at_S00001_CCAD01_dbo_Pagos1", "altvarname" => "Pagos1", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Parejas", "varname" => "GCC_at_S00001_CCAD01_dbo_Parejas", "altvarname" => "Parejas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Presupuestos", "varname" => "GCC_at_S00001_CCAD01_dbo_Presupuestos", "altvarname" => "Presupuestos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

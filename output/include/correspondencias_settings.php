@@ -155,7 +155,7 @@ $tdatacorrespondencias[".isUseAjaxSuggest"] = true;
 
 
 
-																																																												
+																																																																											
 
 $tdatacorrespondencias[".ajaxCodeSnippetAdded"] = false;
 
@@ -1970,6 +1970,24 @@ $masterTablesData["dbo.Correspondencias"] = array();
 	$masterTablesData["dbo.Correspondencias"][2]["detailKeys"][]="OficioId";
 		
 	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Oficios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Oficios1";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "oficios1";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Correspondencias"][3] = $masterParams;
+				$masterTablesData["dbo.Correspondencias"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][3]["masterKeys"][]="OficioId";
+				$masterTablesData["dbo.Correspondencias"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][3]["detailKeys"][]="OficioId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -2202,8 +2220,6 @@ $proto29["m_columns"][] = "Codigo";
 $proto29["m_columns"][] = "Radicado";
 $proto29["m_columns"][] = "UserId";
 $proto29["m_columns"][] = "AbogadoId";
-$proto29["m_columns"][] = "Lat";
-$proto29["m_columns"][] = "Lng";
 $obj = new SQLTable($proto29);
 
 $proto28["m_table"] = $obj;

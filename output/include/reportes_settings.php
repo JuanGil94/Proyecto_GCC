@@ -6,11 +6,11 @@ $tdatareportes[".OwnerID"] = "";
 $tdatareportes[".OriginalTable"] = "dbo.Reportes";
 
 
-$tdatareportes[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatareportes[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatareportes[".originalPagesByType"] = $tdatareportes[".pagesByType"];
-$tdatareportes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatareportes[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatareportes[".originalPages"] = $tdatareportes[".pages"];
-$tdatareportes[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatareportes[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatareportes[".originalDefaultPages"] = $tdatareportes[".defaultPages"];
 
 //	field labels
@@ -31,13 +31,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsreportes["Spanish"]["Reporte"] = "Reporte";
 	$fieldToolTipsreportes["Spanish"]["Reporte"] = "";
 	$placeHoldersreportes["Spanish"]["Reporte"] = "";
-	$fieldLabelsreportes["Spanish"]["OficioId"] = "Oficio Id";
+	$fieldLabelsreportes["Spanish"]["OficioId"] = "Oficio";
 	$fieldToolTipsreportes["Spanish"]["OficioId"] = "";
 	$placeHoldersreportes["Spanish"]["OficioId"] = "";
-	$fieldLabelsreportes["Spanish"]["Dias"] = "Dias";
+	$fieldLabelsreportes["Spanish"]["Dias"] = "No. Dias";
 	$fieldToolTipsreportes["Spanish"]["Dias"] = "";
 	$placeHoldersreportes["Spanish"]["Dias"] = "";
-	$fieldLabelsreportes["Spanish"]["Minimo"] = "Minimo";
+	$fieldLabelsreportes["Spanish"]["Minimo"] = "Cuantia Minima";
 	$fieldToolTipsreportes["Spanish"]["Minimo"] = "";
 	$placeHoldersreportes["Spanish"]["Minimo"] = "";
 	if (count($fieldToolTipsreportes["Spanish"]))
@@ -579,7 +579,7 @@ $tdatareportes[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -589,6 +589,34 @@ $tdatareportes[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Oficios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "OficioId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Oficio";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -603,17 +631,14 @@ $tdatareportes[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -633,7 +658,7 @@ $tdatareportes[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

@@ -1,0 +1,207 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Autorizaciones import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$PrimeraCopia_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Autentica_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$PrestaMeritoEjecutivo_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$Clara_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$Expresa_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$ActualmenteExigible_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$CompetenciaDEAJ_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$FaltaRequisitos_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$FaltaCompetencia_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$PorPrescripcion_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
+				
+			{"text":{$SeccionalIdDestino_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+				
+			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_import_field23}"},
+				
+				
+			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_import_field25}"},
+				
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_import_field26}"},
+				
+				
+			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_import_field27}"},
+				
+				
+			{"text":{$Remisorio_pdfvalue},"hidden":"{$item_hide_import_field28}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_import_field29}"},
+				
+				
+			{"text":{$Aprobado_pdfvalue},"hidden":"{$item_hide_import_field31}"},
+				
+				
+			{"text":{$FechaAprobacion_pdfvalue},"hidden":"{$item_hide_import_field33}"},
+				
+				
+			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

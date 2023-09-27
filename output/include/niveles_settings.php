@@ -6,11 +6,11 @@ $tdataniveles[".OwnerID"] = "";
 $tdataniveles[".OriginalTable"] = "dbo.Niveles";
 
 
-$tdataniveles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataniveles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataniveles[".originalPagesByType"] = $tdataniveles[".pagesByType"];
-$tdataniveles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataniveles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataniveles[".originalPages"] = $tdataniveles[".pages"];
-$tdataniveles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataniveles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataniveles[".originalDefaultPages"] = $tdataniveles[".defaultPages"];
 
 //	field labels
@@ -37,13 +37,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsniveles["Spanish"]["Hasta"] = "Hasta";
 	$fieldToolTipsniveles["Spanish"]["Hasta"] = "";
 	$placeHoldersniveles["Spanish"]["Hasta"] = "";
-	$fieldLabelsniveles["Spanish"]["Busqueda"] = "Busqueda";
+	$fieldLabelsniveles["Spanish"]["Busqueda"] = "Búsquedas";
 	$fieldToolTipsniveles["Spanish"]["Busqueda"] = "";
 	$placeHoldersniveles["Spanish"]["Busqueda"] = "";
-	$fieldLabelsniveles["Spanish"]["Antiguedad"] = "Antiguedad";
+	$fieldLabelsniveles["Spanish"]["Antiguedad"] = "Antigüedad";
 	$fieldToolTipsniveles["Spanish"]["Antiguedad"] = "";
 	$placeHoldersniveles["Spanish"]["Antiguedad"] = "";
-	$fieldLabelsniveles["Spanish"]["Clasificacion"] = "Clasificacion";
+	$fieldLabelsniveles["Spanish"]["Clasificacion"] = "Clasificación";
 	$fieldToolTipsniveles["Spanish"]["Clasificacion"] = "";
 	$placeHoldersniveles["Spanish"]["Clasificacion"] = "";
 	if (count($fieldToolTipsniveles["Spanish"]))

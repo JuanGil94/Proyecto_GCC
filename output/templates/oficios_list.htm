@@ -574,6 +574,13 @@
 					Suspensiones1				</label>
 			</div>
 			{END print_details_suspensiones1}
+														{BEGIN print_details_aplazamientos}
+			<div>
+				<label for="printDetailsaplazamientos{$id}">
+					<input type="checkbox" value="aplazamientos" id="printDetailsaplazamientos{$id}" checked>
+					Aplazamientos				</label>
+			</div>
+			{END print_details_aplazamientos}
 						</div>
 </div>
 {END print_details}
@@ -973,12 +980,62 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="oficios_list"		data-control-cell
 	
 	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
+		
+		
+	{BEGIN chequeosoficios_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$chequeosoficios_link_attrs} data-short-details="chequeosoficios"
+		class="{$chequeosoficios_dlink_class}" 
+		title="{$caption dbo_ChequeosOficios }"			>
+								
+									{BEGIN chequeosoficios_childcount}
+				<span class="details-badge badge chequeosoficios_badge" {$chequeosoficios_childnumber_attr}>
+					{$chequeosoficios_childnumber}				
+				</span>
+				{END chequeosoficios_childcount}
+						</a>
+	</span>
+	{END chequeosoficios_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN aplazamientos_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$aplazamientos_link_attrs} data-short-details="aplazamientos"
+		class="{$aplazamientos_dlink_class}" 
+		title="{$caption dbo_Aplazamientos }"			>
+								
+									{BEGIN aplazamientos_childcount}
+				<span class="details-badge badge aplazamientos_badge" {$aplazamientos_childnumber_attr}>
+					{$aplazamientos_childnumber}				
+				</span>
+				{END aplazamientos_childcount}
+						</a>
+	</span>
+	{END aplazamientos_dtable_link}
+
 
 	
 	</td>
@@ -1147,9 +1204,9 @@
 	>
 
 	 
-						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="chequeosoficios,suspensiones,suspensiones1,correspondencias"
-			data-details-chequeosoficios			data-details-suspensiones			data-details-suspensiones1			data-details-correspondencias	>
+							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="chequeosoficios,suspensiones,suspensiones1,correspondencias,aplazamientos"
+			data-details-chequeosoficios			data-details-suspensiones			data-details-suspensiones1			data-details-correspondencias			data-details-aplazamientos	>
 		<span data-details-inside data-short-table="chequeosoficios">
 			</span>
 		<span data-details-inside data-short-table="suspensiones">
@@ -1158,10 +1215,13 @@
 			</span>
 		<span data-details-inside data-short-table="correspondencias">
 			</span>
+		<span data-details-inside data-short-table="aplazamientos">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			

@@ -6,11 +6,11 @@ $tdatachequeos[".OwnerID"] = "";
 $tdatachequeos[".OriginalTable"] = "dbo.Chequeos";
 
 
-$tdatachequeos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatachequeos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatachequeos[".originalPagesByType"] = $tdatachequeos[".pagesByType"];
-$tdatachequeos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatachequeos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatachequeos[".originalPages"] = $tdatachequeos[".pages"];
-$tdatachequeos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatachequeos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatachequeos[".originalDefaultPages"] = $tdatachequeos[".defaultPages"];
 
 //	field labels
@@ -25,6 +25,15 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipschequeos["Spanish"] = array();
 	$placeHolderschequeos["Spanish"] = array();
 	$pageTitleschequeos["Spanish"] = array();
+	$fieldLabelschequeos["Spanish"]["ChequeoId"] = "# Chequeo";
+	$fieldToolTipschequeos["Spanish"]["ChequeoId"] = "";
+	$placeHolderschequeos["Spanish"]["ChequeoId"] = "";
+	$fieldLabelschequeos["Spanish"]["CantidadLetras"] = "Cantidad Letras";
+	$fieldToolTipschequeos["Spanish"]["CantidadLetras"] = "";
+	$placeHolderschequeos["Spanish"]["CantidadLetras"] = "";
+	$fieldLabelschequeos["Spanish"]["ObligacionLetras"] = "Obligacion Letras";
+	$fieldToolTipschequeos["Spanish"]["ObligacionLetras"] = "";
+	$placeHolderschequeos["Spanish"]["ObligacionLetras"] = "";
 	$fieldLabelschequeos["Spanish"]["ConceptoId"] = "Concepto - Naturaleza";
 	$fieldToolTipschequeos["Spanish"]["ConceptoId"] = "";
 	$placeHolderschequeos["Spanish"]["ConceptoId"] = "";
@@ -145,18 +154,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeos["Spanish"]["Digital"] = "Digital";
 	$fieldToolTipschequeos["Spanish"]["Digital"] = "";
 	$placeHolderschequeos["Spanish"]["Digital"] = "";
-	$fieldLabelschequeos["Spanish"]["ChequeoId"] = "# Chequeo";
-	$fieldToolTipschequeos["Spanish"]["ChequeoId"] = "";
-	$placeHolderschequeos["Spanish"]["ChequeoId"] = "";
 	$fieldLabelschequeos["Spanish"]["order"] = "Order";
 	$fieldToolTipschequeos["Spanish"]["order"] = "";
 	$placeHolderschequeos["Spanish"]["order"] = "";
-	$fieldLabelschequeos["Spanish"]["CantidadLetras"] = "Cantidad Letras";
-	$fieldToolTipschequeos["Spanish"]["CantidadLetras"] = "";
-	$placeHolderschequeos["Spanish"]["CantidadLetras"] = "";
-	$fieldLabelschequeos["Spanish"]["ObligacionLetras"] = "Obligacion Letras";
-	$fieldToolTipschequeos["Spanish"]["ObligacionLetras"] = "";
-	$placeHolderschequeos["Spanish"]["ObligacionLetras"] = "";
 	if (count($fieldToolTipschequeos["Spanish"]))
 		$tdatachequeos[".isUseToolTips"] = true;
 }
@@ -254,10 +254,10 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 
 
 
-								
-							
-							
-											
+					
+				
+				
+					
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 
@@ -348,15 +348,13 @@ $tdatachequeos[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY ChequeoId DESC";
+$tstrOrderBy = "";
 $tdatachequeos[".strOrderBy"] = $tstrOrderBy;
 
 $tdatachequeos[".orderindexes"] = array();
-	$tdatachequeos[".orderindexes"][] = array(43, (0 ? "ASC" : "DESC"), "ChequeoId");
 
 
-
-$tdatachequeos[".sqlHead"] = "SELECT '' as CantidadLetras, '' as ObligacionLetras,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId,  [order]";
+$tdatachequeos[".sqlHead"] = "SELECT '' AS CantidadLetras,  '' AS ObligacionLetras,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId,  [order]";
 $tdatachequeos[".sqlFrom"] = "FROM dbo.Chequeos";
 $tdatachequeos[".sqlWhereExpr"] = "";
 $tdatachequeos[".sqlTail"] = "";
@@ -824,7 +822,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -987,7 +985,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1229,7 +1227,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "DespachoId";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "Codigo + ' -  ' + Despacho";
 
 	
@@ -1289,7 +1287,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3186,7 +3184,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3487,7 +3485,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3627,7 +3625,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3927,7 +3925,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -4730,7 +4728,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "CarteraTipoId";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "CarteraTipo";
 
 	
@@ -4789,7 +4787,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -5630,7 +5628,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -6070,7 +6068,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -6521,8 +6519,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "order";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "[order]";
+		$fdata["FullName"] = "order";
 
 	
 	
@@ -6754,24 +6751,6 @@ $masterTablesData["dbo.Chequeos"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Seccionales";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Seccionales";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "seccionales";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Chequeos"][0] = $masterParams;
-				$masterTablesData["dbo.Chequeos"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Chequeos"][0]["masterKeys"][]="SeccionalId";
-				$masterTablesData["dbo.Chequeos"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Chequeos"][0]["detailKeys"][]="SeccionalId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -6792,10 +6771,10 @@ function createSqlQuery_chequeos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "'' as CantidadLetras, '' as ObligacionLetras,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId,  [order]";
+$proto0["m_strFieldList"] = "'' AS CantidadLetras,  '' AS ObligacionLetras,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId,  [order]";
 $proto0["m_strFrom"] = "FROM dbo.Chequeos";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY ChequeoId DESC";
+$proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -7519,482 +7498,7 @@ $obj = new SQLFromListItem($proto94);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
-												$proto98=array();
-						$obj = new SQLField(array(
-	"m_strName" => "ConceptoId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto98["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto98);
-
-$proto0["m_groupby"][]=$obj;
-												$proto100=array();
-						$obj = new SQLField(array(
-	"m_strName" => "AbogadoId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto100["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto100);
-
-$proto0["m_groupby"][]=$obj;
-												$proto102=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Fecha",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto102["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto102);
-
-$proto0["m_groupby"][]=$obj;
-												$proto104=array();
-						$obj = new SQLField(array(
-	"m_strName" => "DespachoId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto104["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto104);
-
-$proto0["m_groupby"][]=$obj;
-												$proto106=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Origen",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto106["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto106);
-
-$proto0["m_groupby"][]=$obj;
-												$proto108=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Providencia",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto108["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto108);
-
-$proto0["m_groupby"][]=$obj;
-												$proto110=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Ejecutoria",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto110["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto110);
-
-$proto0["m_groupby"][]=$obj;
-												$proto112=array();
-						$obj = new SQLField(array(
-	"m_strName" => "PrimeraCopia",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto112["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto112);
-
-$proto0["m_groupby"][]=$obj;
-												$proto114=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Autentica",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto114["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto114);
-
-$proto0["m_groupby"][]=$obj;
-												$proto116=array();
-						$obj = new SQLField(array(
-	"m_strName" => "PrestaMeritoEjecutivo",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto116["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto116);
-
-$proto0["m_groupby"][]=$obj;
-												$proto118=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Clara",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto118["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto118);
-
-$proto0["m_groupby"][]=$obj;
-												$proto120=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Expresa",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto120["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto120);
-
-$proto0["m_groupby"][]=$obj;
-												$proto122=array();
-						$obj = new SQLField(array(
-	"m_strName" => "ActualmenteExigible",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto122["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto122);
-
-$proto0["m_groupby"][]=$obj;
-												$proto124=array();
-						$obj = new SQLField(array(
-	"m_strName" => "CompetenciaDEAJ",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto124["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto124);
-
-$proto0["m_groupby"][]=$obj;
-												$proto126=array();
-						$obj = new SQLField(array(
-	"m_strName" => "FaltaRequisitos",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto126["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto126);
-
-$proto0["m_groupby"][]=$obj;
-												$proto128=array();
-						$obj = new SQLField(array(
-	"m_strName" => "FaltaCompetencia",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto128["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto128);
-
-$proto0["m_groupby"][]=$obj;
-												$proto130=array();
-						$obj = new SQLField(array(
-	"m_strName" => "PorPrescripcion",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto130["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto130);
-
-$proto0["m_groupby"][]=$obj;
-												$proto132=array();
-						$obj = new SQLField(array(
-	"m_strName" => "SeccionalId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto132["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto132);
-
-$proto0["m_groupby"][]=$obj;
-												$proto134=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Folios",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto134["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto134);
-
-$proto0["m_groupby"][]=$obj;
-												$proto136=array();
-						$obj = new SQLField(array(
-	"m_strName" => "SeccionalIdDestino",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto136["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto136);
-
-$proto0["m_groupby"][]=$obj;
-												$proto138=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Observaciones",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto138["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto138);
-
-$proto0["m_groupby"][]=$obj;
-												$proto140=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Procesado",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto140["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto140);
-
-$proto0["m_groupby"][]=$obj;
-												$proto142=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Tipo",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto142["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto142);
-
-$proto0["m_groupby"][]=$obj;
-												$proto144=array();
-						$obj = new SQLField(array(
-	"m_strName" => "FechaSancion",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto144["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto144);
-
-$proto0["m_groupby"][]=$obj;
-												$proto146=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Cantidad",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto146["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto146);
-
-$proto0["m_groupby"][]=$obj;
-												$proto148=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Obligacion",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto148["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto148);
-
-$proto0["m_groupby"][]=$obj;
-												$proto150=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Costas",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto150["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto150);
-
-$proto0["m_groupby"][]=$obj;
-												$proto152=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Remisorio",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto152["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto152);
-
-$proto0["m_groupby"][]=$obj;
-												$proto154=array();
-						$obj = new SQLField(array(
-	"m_strName" => "CarteraTipoId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto154["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto154);
-
-$proto0["m_groupby"][]=$obj;
-												$proto156=array();
-						$obj = new SQLField(array(
-	"m_strName" => "MinJusticia",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto156["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto156);
-
-$proto0["m_groupby"][]=$obj;
-												$proto158=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Aprobado",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto158["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto158);
-
-$proto0["m_groupby"][]=$obj;
-												$proto160=array();
-						$obj = new SQLField(array(
-	"m_strName" => "AprobadoPor",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto160["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto160);
-
-$proto0["m_groupby"][]=$obj;
-												$proto162=array();
-						$obj = new SQLField(array(
-	"m_strName" => "FechaAprobacion",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto162["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto162);
-
-$proto0["m_groupby"][]=$obj;
-												$proto164=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Plazo",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto164["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto164);
-
-$proto0["m_groupby"][]=$obj;
-												$proto166=array();
-						$obj = new SQLField(array(
-	"m_strName" => "NaturalezaId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto166["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto166);
-
-$proto0["m_groupby"][]=$obj;
-												$proto168=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Sigobius",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto168["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto168);
-
-$proto0["m_groupby"][]=$obj;
-												$proto170=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Monto",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto170["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto170);
-
-$proto0["m_groupby"][]=$obj;
-												$proto172=array();
-						$obj = new SQLField(array(
-	"m_strName" => "TramiteId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto172["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto172);
-
-$proto0["m_groupby"][]=$obj;
-												$proto174=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Fisico",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto174["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto174);
-
-$proto0["m_groupby"][]=$obj;
-												$proto176=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Digital",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto176["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto176);
-
-$proto0["m_groupby"][]=$obj;
-												$proto178=array();
-						$obj = new SQLField(array(
-	"m_strName" => "ChequeoId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto178["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto178);
-
-$proto0["m_groupby"][]=$obj;
-												$proto180=array();
-						$obj = new SQLField(array(
-	"m_strName" => "order",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto180["m_column"]=$obj;
-$obj = new SQLGroupByItem($proto180);
-
-$proto0["m_groupby"][]=$obj;
 $proto0["m_orderby"] = array();
-												$proto182=array();
-						$obj = new SQLField(array(
-	"m_strName" => "ChequeoId",
-	"m_strTable" => "dbo.Chequeos",
-	"m_srcTableName" => "dbo.Chequeos"
-));
-
-$proto182["m_column"]=$obj;
-$proto182["m_bAsc"] = 0;
-$proto182["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto182);
-
-$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Chequeos";		
 $obj = new SQLQuery($proto0);
 

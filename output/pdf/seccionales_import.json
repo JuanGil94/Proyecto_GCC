@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				
@@ -134,9 +131,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Telefonos_pdfvalue},"hidden":"{$item_hide_import_field9}"},
-				
-				
-			{"text":{$PCI_pdfvalue},"hidden":"{$item_hide_import_field10}"},
 				
 				
 			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_import_field11}"},
@@ -172,7 +166,7 @@ pdfDocument = {
 			{"text":{$Serie_pdfvalue},"hidden":"{$item_hide_import_field21}"},
 				
 				
-			{"text":{$Subserie_pdfvalue},"hidden":"{$item_hide_import_field22}"},
+			{"text":{$Subserie_pdfvalue},"hidden":"{$item_hide_import_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

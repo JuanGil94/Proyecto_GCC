@@ -6,11 +6,11 @@ $tdataalertas[".OwnerID"] = "";
 $tdataalertas[".OriginalTable"] = "dbo.Alertas";
 
 
-$tdataalertas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataalertas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataalertas[".originalPagesByType"] = $tdataalertas[".pagesByType"];
-$tdataalertas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataalertas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataalertas[".originalPages"] = $tdataalertas[".pages"];
-$tdataalertas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataalertas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataalertas[".originalDefaultPages"] = $tdataalertas[".defaultPages"];
 
 //	field labels
@@ -1133,6 +1133,36 @@ changeTextControlsToDate( "dbo.Alertas" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Alertas"] = array();
+//	dbo.Aplazamientos
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Aplazamientos";
+		$detailsParam["dOriginalTable"] = "dbo.Aplazamientos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "aplazamientos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Aplazamientos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Alertas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Alertas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Alertas"][$dIndex]["masterKeys"][]="AlertaId";
+
+				$detailsTablesData["dbo.Alertas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Alertas"][$dIndex]["detailKeys"][]="AlertaId";
 //endif
 
 // tables which are master tables for current table (detail)

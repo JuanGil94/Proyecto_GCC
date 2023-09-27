@@ -111,27 +111,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Tasa_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Tasa}  r-vertical-field" 
-	data-signal-error-for="Tasa{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Tasa" data-fieldname="Tasa" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Tasa}">
-		{BEGIN Tasa_label}{$label Tasas_TES__Deterioro_de_Cartera_ Tasa }{END Tasa_label}
-	</label>
-	<div class="r-edit-field">
-		{$Tasa_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Tasa" {$tooltipAttr Tasas_TES__Deterioro_de_Cartera_ Tasa } >
-		<div class="text-muted" >
-		{$tooltip Tasas_TES__Deterioro_de_Cartera_ Tasa }		</div>
-	</div>
-</div>
-
-
-{END Tasa_fieldblock}
-											
 {BEGIN Fecha_de_inicio_fieldblock}
 
 
@@ -152,6 +131,27 @@
 
 
 {END Fecha_de_inicio_fieldblock}
+											
+{BEGIN Tasa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tasa}  r-vertical-field" 
+	data-signal-error-for="Tasa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Tasa" data-fieldname="Tasa" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tasa}">
+		{BEGIN Tasa_label}{$label Tasas_TES__Deterioro_de_Cartera_ Tasa }{END Tasa_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tasa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tasa" {$tooltipAttr Tasas_TES__Deterioro_de_Cartera_ Tasa } >
+		<div class="text-muted" >
+		{$tooltip Tasas_TES__Deterioro_de_Cartera_ Tasa }		</div>
+	</div>
+</div>
+
+
+{END Tasa_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

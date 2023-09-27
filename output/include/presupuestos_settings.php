@@ -6,11 +6,11 @@ $tdatapresupuestos[".OwnerID"] = "";
 $tdatapresupuestos[".OriginalTable"] = "dbo.Presupuestos";
 
 
-$tdatapresupuestos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatapresupuestos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatapresupuestos[".originalPagesByType"] = $tdatapresupuestos[".pagesByType"];
-$tdatapresupuestos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatapresupuestos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatapresupuestos[".originalPages"] = $tdatapresupuestos[".pages"];
-$tdatapresupuestos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatapresupuestos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatapresupuestos[".originalDefaultPages"] = $tdatapresupuestos[".defaultPages"];
 
 //	field labels
@@ -31,13 +31,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspresupuestos["Spanish"]["Ano"] = "Año";
 	$fieldToolTipspresupuestos["Spanish"]["Ano"] = "";
 	$placeHolderspresupuestos["Spanish"]["Ano"] = "";
-	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional ";
 	$fieldToolTipspresupuestos["Spanish"]["SeccionalId"] = "";
 	$placeHolderspresupuestos["Spanish"]["SeccionalId"] = "";
 	$fieldLabelspresupuestos["Spanish"]["Meta"] = "Meta";
 	$fieldToolTipspresupuestos["Spanish"]["Meta"] = "";
 	$placeHolderspresupuestos["Spanish"]["Meta"] = "";
-	$fieldLabelspresupuestos["Spanish"]["Procesos"] = "Procesos";
+	$fieldLabelspresupuestos["Spanish"]["Procesos"] = "Cant. Procesos";
 	$fieldToolTipspresupuestos["Spanish"]["Procesos"] = "";
 	$placeHolderspresupuestos["Spanish"]["Procesos"] = "";
 	if (count($fieldToolTipspresupuestos["Spanish"]))

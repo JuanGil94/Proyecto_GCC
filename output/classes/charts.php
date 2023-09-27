@@ -396,8 +396,6 @@ class Chart
 			return true;
 		if("dbo.Departamentos" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Despachos" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Empresas" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Entidades" == $this->chrt_array['tables'][0])
@@ -433,8 +431,6 @@ class Chart
 		if("dbo.Test" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Uvts" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.CarteraTipos" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Chequeos" == $this->chrt_array['tables'][0])
 			return true;
@@ -538,15 +534,19 @@ class Chart
 			return true;
 		if("dbo.Carceles" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Alertas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.OperacionTipo" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Oficios" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.CarteraTipos" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Despachos" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Ciudades" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Aplazamientos" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

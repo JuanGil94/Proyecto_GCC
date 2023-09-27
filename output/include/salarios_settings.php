@@ -6,11 +6,11 @@ $tdatasalarios[".OwnerID"] = "";
 $tdatasalarios[".OriginalTable"] = "dbo.Salarios";
 
 
-$tdatasalarios[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatasalarios[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatasalarios[".originalPagesByType"] = $tdatasalarios[".pagesByType"];
-$tdatasalarios[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatasalarios[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatasalarios[".originalPages"] = $tdatasalarios[".pages"];
-$tdatasalarios[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatasalarios[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatasalarios[".originalDefaultPages"] = $tdatasalarios[".defaultPages"];
 
 //	field labels
@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssalarios["Spanish"]["SalarioId"] = "Salario Id";
 	$fieldToolTipssalarios["Spanish"]["SalarioId"] = "";
 	$placeHolderssalarios["Spanish"]["SalarioId"] = "";
-	$fieldLabelssalarios["Spanish"]["Ano"] = "Ano";
+	$fieldLabelssalarios["Spanish"]["Ano"] = "Año";
 	$fieldToolTipssalarios["Spanish"]["Ano"] = "";
 	$placeHolderssalarios["Spanish"]["Ano"] = "";
 	$fieldLabelssalarios["Spanish"]["Salario"] = "Salario";

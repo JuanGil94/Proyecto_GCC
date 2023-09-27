@@ -193,19 +193,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Devolucion}</span>
 						</div>
 		{END searchCtrlBlock_Devolucion}
-																{BEGIN searchCtrlBlock_Archivo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Archivo}" {$filterRow_attrs_Archivo}>
-			<label>{$label dbo_Oficios_Sigobius Archivo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Archivo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Archivo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Archivo}</span>
-						</div>
-		{END searchCtrlBlock_Archivo}
 																{BEGIN searchCtrlBlock_ActuacionId}
 
 
@@ -1011,17 +998,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="oficios_sigobius_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}

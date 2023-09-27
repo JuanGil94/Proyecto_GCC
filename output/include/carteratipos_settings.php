@@ -6,11 +6,11 @@ $tdatacarteratipos[".OwnerID"] = "";
 $tdatacarteratipos[".OriginalTable"] = "dbo.CarteraTipos";
 
 
-$tdatacarteratipos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatacarteratipos[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatacarteratipos[".originalPagesByType"] = $tdatacarteratipos[".pagesByType"];
-$tdatacarteratipos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatacarteratipos[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatacarteratipos[".originalPages"] = $tdatacarteratipos[".pages"];
-$tdatacarteratipos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatacarteratipos[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatacarteratipos[".originalDefaultPages"] = $tdatacarteratipos[".defaultPages"];
 
 //	field labels
@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscarteratipos["Spanish"]["CarteraTipoId"] = "Cartera Tipo Id";
 	$fieldToolTipscarteratipos["Spanish"]["CarteraTipoId"] = "";
 	$placeHolderscarteratipos["Spanish"]["CarteraTipoId"] = "";
-	$fieldLabelscarteratipos["Spanish"]["CarteraTipo"] = "Cartera Tipo";
+	$fieldLabelscarteratipos["Spanish"]["CarteraTipo"] = "Tipo de Cartera ";
 	$fieldToolTipscarteratipos["Spanish"]["CarteraTipo"] = "";
 	$placeHolderscarteratipos["Spanish"]["CarteraTipo"] = "";
 	$fieldLabelscarteratipos["Spanish"]["Color"] = "Color";
@@ -70,7 +70,7 @@ $tdatacarteratipos[".listAjax"] = false;
 //	temporary
 //$tdatacarteratipos[".listAjax"] = false;
 
-	$tdatacarteratipos[".audit"] = true;
+	$tdatacarteratipos[".audit"] = false;
 
 	$tdatacarteratipos[".locking"] = false;
 
@@ -146,7 +146,7 @@ $tdatacarteratipos[".addPageEvents"] = false;
 $tdatacarteratipos[".isUseTimeForSearch"] = false;
 
 
-$tdatacarteratipos[".badgeColor"] = "4169E1";
+$tdatacarteratipos[".badgeColor"] = "CFAE83";
 
 
 $tdatacarteratipos[".allSearchFields"] = array();

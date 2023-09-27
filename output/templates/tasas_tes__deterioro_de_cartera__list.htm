@@ -241,6 +241,14 @@
 		</a>
 	</li>
 {END exportselected_link}
+							{BEGIN deleteselected_link}
+	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
+				
+		Borrar articulos seleccionados		
+		</a>
+	</li>
+{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="tasas_tes__deterioro_de_cartera__search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -360,7 +368,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
@@ -372,6 +380,14 @@
 							Añadir nuevo			</a>
 </span>
 {END add_link}
+	 
+		{BEGIN deleteselected_link}
+<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
+							Borrar artículos seleccionados			</a>
+</span>
+{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -524,21 +540,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Tasa_class}	"
+		 r-ori-vert		 {$Fecha_de_inicio_class}	"
 
-			data-field="Tasa"
+			data-field="Fecha_de_inicio"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Tasa_fieldheadercolumn}
-	{BEGIN Tasa_fieldheader}
-	<SPAN {$Tasa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa">
-	{$label Tasas_TES__Deterioro_de_Cartera_ Tasa }	{$arrow_icon_Tasa}
+		{BEGIN Fecha_de_inicio_fieldheadercolumn}
+	{BEGIN Fecha_de_inicio_fieldheader}
+	<SPAN {$Fecha_de_inicio_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha_de_inicio" data-fieldname="Fecha de inicio">
+	{$label Tasas_TES__Deterioro_de_Cartera_ Fecha_de_inicio }	{$arrow_icon_Fecha_de_inicio}
 	</SPAN>
-	{END Tasa_fieldheader}
-{END Tasa_fieldheadercolumn}
+	{END Fecha_de_inicio_fieldheader}
+{END Fecha_de_inicio_fieldheadercolumn}
 
 	
 	</th>
@@ -549,21 +565,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fecha_de_inicio_class}	"
+		 r-ori-vert		 {$Tasa_class}	"
 
-			data-field="Fecha_de_inicio"
+			data-field="Tasa"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Fecha_de_inicio_fieldheadercolumn}
-	{BEGIN Fecha_de_inicio_fieldheader}
-	<SPAN {$Fecha_de_inicio_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha_de_inicio" data-fieldname="Fecha de inicio">
-	{$label Tasas_TES__Deterioro_de_Cartera_ Fecha_de_inicio }	{$arrow_icon_Fecha_de_inicio}
+		{BEGIN Tasa_fieldheadercolumn}
+	{BEGIN Tasa_fieldheader}
+	<SPAN {$Tasa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa">
+	{$label Tasas_TES__Deterioro_de_Cartera_ Tasa }	{$arrow_icon_Tasa}
 	</SPAN>
-	{END Fecha_de_inicio_fieldheader}
-{END Fecha_de_inicio_fieldheadercolumn}
+	{END Tasa_fieldheader}
+{END Tasa_fieldheadercolumn}
 
 	
 	</th>
@@ -609,32 +625,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Tasa_class}	"
-
-			data-field="Tasa"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Tasa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa" data-default-width >
-{$Tasa_value}
-</span>
-{END Tasa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Fecha_de_inicio_class}	"
 
 			data-field="Fecha_de_inicio"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -643,6 +638,27 @@
 {$Fecha_de_inicio_value}
 </span>
 {END Fecha_de_inicio_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Tasa_class}	"
+
+			data-field="Tasa"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tasa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa" data-default-width >
+{$Tasa_value}
+</span>
+{END Tasa_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 							</tr>
@@ -677,7 +693,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Tasa_class}	"
+		 r-ori-vert		 {$Fecha_de_inicio_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tasas_tes__deterioro_de_cartera__list"	
@@ -692,7 +708,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fecha_de_inicio_class}	"
+		 r-ori-vert		 {$Tasa_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tasas_tes__deterioro_de_cartera__list"	

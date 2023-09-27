@@ -1,9 +1,9 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'dbo.Procesos' => array( 'displayPreview' => 1 ) ),
-'master' => array( 'dbo.CarteraTipos' => array( 'preview' => true ),
-'dbo.Seccionales' => array( 'preview' => true ),
-'dbo.Conceptos' => array( 'preview' => true ) ),
+'master' => array( 'dbo.Seccionales' => array( 'preview' => true ),
+'dbo.Conceptos' => array( 'preview' => true ),
+'dbo.CarteraTipos' => array( 'preview' => true ) ),
 'totals' => array( 'ImportacionId' => array( 'totalsType' => '' ),
 'CarteraTipoId' => array( 'totalsType' => '' ),
 'SeccionalId' => array( 'totalsType' => '' ),
