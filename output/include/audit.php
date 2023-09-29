@@ -696,6 +696,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.tipoCobro")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1341,6 +1345,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.Alertas")
+		{
+			return false;
+		}
+		if($table=="dbo.tipoCobro")
 		{
 			return false;
 		}

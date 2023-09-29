@@ -818,6 +818,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -1158,309 +1164,159 @@
 {END print_friendly}
 	 
 		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
-	 showHide	 reorder	keep-open btn-group"
+		 reorder	keep-open btn-group"
 	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
 	>
 	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
 	<ul role="menu" class="dropdown-menu dropdown-left">
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ChequeoId" checked="checked" value="1" data-field="ChequeoId" data-fieldname="ChequeoId">
-					<span>{$label dbo_Chequeos ChequeoId }</span>
-				</label>
-			</div>
+						<span data-field="ChequeoId" data-fieldname="ChequeoId">{$label dbo_Chequeos ChequeoId }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
-					<span>{$label dbo_Chequeos Fecha }</span>
-				</label>
-			</div>
+						<span data-field="Fecha" data-fieldname="Fecha">{$label dbo_Chequeos Fecha }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_DespachoId" checked="checked" value="1" data-field="DespachoId" data-fieldname="DespachoId">
-					<span>{$label dbo_Chequeos DespachoId }</span>
-				</label>
-			</div>
+						<span data-field="DespachoId" data-fieldname="DespachoId">{$label dbo_Chequeos DespachoId }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Origen" checked="checked" value="1" data-field="Origen" data-fieldname="Origen">
-					<span>{$label dbo_Chequeos Origen }</span>
-				</label>
-			</div>
+						<span data-field="Origen" data-fieldname="Origen">{$label dbo_Chequeos Origen }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
-					<span>{$label dbo_Chequeos Providencia }</span>
-				</label>
-			</div>
+						<span data-field="Providencia" data-fieldname="Providencia">{$label dbo_Chequeos Providencia }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
-					<span>{$label dbo_Chequeos Ejecutoria }</span>
-				</label>
-			</div>
+						<span data-field="Ejecutoria" data-fieldname="Ejecutoria">{$label dbo_Chequeos Ejecutoria }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Tipo" checked="checked" value="1" data-field="Tipo" data-fieldname="Tipo">
-					<span>{$label dbo_Chequeos Tipo }</span>
-				</label>
-			</div>
+						<span data-field="Tipo" data-fieldname="Tipo">{$label dbo_Chequeos Tipo }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Cantidad" checked="checked" value="1" data-field="Cantidad" data-fieldname="Cantidad">
-					<span>{$label dbo_Chequeos Cantidad }</span>
-				</label>
-			</div>
+						<span data-field="Cantidad" data-fieldname="Cantidad">{$label dbo_Chequeos Cantidad }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Obligacion" checked="checked" value="1" data-field="Obligacion" data-fieldname="Obligacion">
-					<span>{$label dbo_Chequeos Obligacion }</span>
-				</label>
-			</div>
+						<span data-field="Obligacion" data-fieldname="Obligacion">{$label dbo_Chequeos Obligacion }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Costas" checked="checked" value="1" data-field="Costas" data-fieldname="Costas">
-					<span>{$label dbo_Chequeos Costas }</span>
-				</label>
-			</div>
+						<span data-field="Costas" data-fieldname="Costas">{$label dbo_Chequeos Costas }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_PrimeraCopia" checked="checked" value="1" data-field="PrimeraCopia" data-fieldname="PrimeraCopia">
-					<span>{$label dbo_Chequeos PrimeraCopia }</span>
-				</label>
-			</div>
+						<span data-field="PrimeraCopia" data-fieldname="PrimeraCopia">{$label dbo_Chequeos PrimeraCopia }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Autentica" checked="checked" value="1" data-field="Autentica" data-fieldname="Autentica">
-					<span>{$label dbo_Chequeos Autentica }</span>
-				</label>
-			</div>
+						<span data-field="Autentica" data-fieldname="Autentica">{$label dbo_Chequeos Autentica }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_PrestaMeritoEjecutivo" checked="checked" value="1" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">
-					<span>{$label dbo_Chequeos PrestaMeritoEjecutivo }</span>
-				</label>
-			</div>
+						<span data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">{$label dbo_Chequeos PrestaMeritoEjecutivo }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Clara" checked="checked" value="1" data-field="Clara" data-fieldname="Clara">
-					<span>{$label dbo_Chequeos Clara }</span>
-				</label>
-			</div>
+						<span data-field="Clara" data-fieldname="Clara">{$label dbo_Chequeos Clara }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Expresa" checked="checked" value="1" data-field="Expresa" data-fieldname="Expresa">
-					<span>{$label dbo_Chequeos Expresa }</span>
-				</label>
-			</div>
+						<span data-field="Expresa" data-fieldname="Expresa">{$label dbo_Chequeos Expresa }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ActualmenteExigible" checked="checked" value="1" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">
-					<span>{$label dbo_Chequeos ActualmenteExigible }</span>
-				</label>
-			</div>
+						<span data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">{$label dbo_Chequeos ActualmenteExigible }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_CompetenciaDEAJ" checked="checked" value="1" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">
-					<span>{$label dbo_Chequeos CompetenciaDEAJ }</span>
-				</label>
-			</div>
+						<span data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">{$label dbo_Chequeos CompetenciaDEAJ }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_FaltaRequisitos" checked="checked" value="1" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">
-					<span>{$label dbo_Chequeos FaltaRequisitos }</span>
-				</label>
-			</div>
+						<span data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">{$label dbo_Chequeos FaltaRequisitos }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_FaltaCompetencia" checked="checked" value="1" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">
-					<span>{$label dbo_Chequeos FaltaCompetencia }</span>
-				</label>
-			</div>
+						<span data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">{$label dbo_Chequeos FaltaCompetencia }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_PorPrescripcion" checked="checked" value="1" data-field="PorPrescripcion" data-fieldname="PorPrescripcion">
-					<span>{$label dbo_Chequeos PorPrescripcion }</span>
-				</label>
-			</div>
+						<span data-field="PorPrescripcion" data-fieldname="PorPrescripcion">{$label dbo_Chequeos PorPrescripcion }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SeccionalIdDestino" checked="checked" value="1" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">
-					<span>{$label dbo_Chequeos SeccionalIdDestino }</span>
-				</label>
-			</div>
+						<span data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">{$label dbo_Chequeos SeccionalIdDestino }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_AprobadoPor" checked="checked" value="1" data-field="AprobadoPor" data-fieldname="AprobadoPor">
-					<span>{$label dbo_Chequeos AprobadoPor }</span>
-				</label>
-			</div>
+						<span data-field="AprobadoPor" data-fieldname="AprobadoPor">{$label dbo_Chequeos AprobadoPor }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_FechaAprobacion" checked="checked" value="1" data-field="FechaAprobacion" data-fieldname="FechaAprobacion">
-					<span>{$label dbo_Chequeos FechaAprobacion }</span>
-				</label>
-			</div>
+						<span data-field="FechaAprobacion" data-fieldname="FechaAprobacion">{$label dbo_Chequeos FechaAprobacion }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_TramiteId" checked="checked" value="1" data-field="TramiteId" data-fieldname="TramiteId">
-					<span>{$label dbo_Chequeos TramiteId }</span>
-				</label>
-			</div>
+						<span data-field="TramiteId" data-fieldname="TramiteId">{$label dbo_Chequeos TramiteId }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
-					<span>{$label dbo_Chequeos AbogadoId }</span>
-				</label>
-			</div>
+						<span data-field="AbogadoId" data-fieldname="AbogadoId">{$label dbo_Chequeos AbogadoId }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Fisico" checked="checked" value="1" data-field="Fisico" data-fieldname="Fisico">
-					<span>{$label dbo_Chequeos Fisico }</span>
-				</label>
-			</div>
+						<span data-field="Fisico" data-fieldname="Fisico">{$label dbo_Chequeos Fisico }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Digital" checked="checked" value="1" data-field="Digital" data-fieldname="Digital">
-					<span>{$label dbo_Chequeos Digital }</span>
-				</label>
-			</div>
+						<span data-field="Digital" data-fieldname="Digital">{$label dbo_Chequeos Digital }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
-					<span>{$label dbo_Chequeos SeccionalId }</span>
-				</label>
-			</div>
+						<span data-field="SeccionalId" data-fieldname="SeccionalId">{$label dbo_Chequeos SeccionalId }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_CarteraTipoId" checked="checked" value="1" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
-					<span>{$label dbo_Chequeos CarteraTipoId }</span>
-				</label>
-			</div>
+						<span data-field="CarteraTipoId" data-fieldname="CarteraTipoId">{$label dbo_Chequeos CarteraTipoId }</span>
 					</a>
 		</li>
 							<li>
 		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ObligacionLetras" checked="checked" value="1" data-field="ObligacionLetras" data-fieldname="ObligacionLetras">
-					<span>{$label dbo_Chequeos ObligacionLetras }</span>
-				</label>
-			</div>
+						<span data-field="ObligacionLetras" data-fieldname="ObligacionLetras">{$label dbo_Chequeos ObligacionLetras }</span>
 					</a>
 		</li>
 			</ul>
@@ -1652,9 +1508,11 @@
 
 	 
 		{BEGIN ChequeoId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ChequeoId" data-fieldname="ChequeoId">
-	{$label dbo_Chequeos ChequeoId }	</span>
+	{BEGIN ChequeoId_fieldheader}
+	<SPAN {$ChequeoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ChequeoId" data-fieldname="ChequeoId">
+	{$label dbo_Chequeos ChequeoId }	{$arrow_icon_ChequeoId}
+	</SPAN>
+	{END ChequeoId_fieldheader}
 {END ChequeoId_fieldheadercolumn}
 
 	
@@ -1675,9 +1533,11 @@
 
 	 
 		{BEGIN Fecha_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
-	{$label dbo_Chequeos Fecha }	</span>
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label dbo_Chequeos Fecha }	{$arrow_icon_Fecha}
+	</SPAN>
+	{END Fecha_fieldheader}
 {END Fecha_fieldheadercolumn}
 
 	
@@ -1698,9 +1558,11 @@
 
 	 
 		{BEGIN DespachoId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
-	{$label dbo_Chequeos DespachoId }	</span>
+	{BEGIN DespachoId_fieldheader}
+	<SPAN {$DespachoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
+	{$label dbo_Chequeos DespachoId }	{$arrow_icon_DespachoId}
+	</SPAN>
+	{END DespachoId_fieldheader}
 {END DespachoId_fieldheadercolumn}
 
 	
@@ -1721,9 +1583,11 @@
 
 	 
 		{BEGIN Origen_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Origen" data-fieldname="Origen">
-	{$label dbo_Chequeos Origen }	</span>
+	{BEGIN Origen_fieldheader}
+	<SPAN {$Origen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Origen" data-fieldname="Origen">
+	{$label dbo_Chequeos Origen }	{$arrow_icon_Origen}
+	</SPAN>
+	{END Origen_fieldheader}
 {END Origen_fieldheadercolumn}
 
 	
@@ -1744,9 +1608,11 @@
 
 	 
 		{BEGIN Providencia_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
-	{$label dbo_Chequeos Providencia }	</span>
+	{BEGIN Providencia_fieldheader}
+	<SPAN {$Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
+	{$label dbo_Chequeos Providencia }	{$arrow_icon_Providencia}
+	</SPAN>
+	{END Providencia_fieldheader}
 {END Providencia_fieldheadercolumn}
 
 	
@@ -1767,9 +1633,11 @@
 
 	 
 		{BEGIN Ejecutoria_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
-	{$label dbo_Chequeos Ejecutoria }	</span>
+	{BEGIN Ejecutoria_fieldheader}
+	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+	{$label dbo_Chequeos Ejecutoria }	{$arrow_icon_Ejecutoria}
+	</SPAN>
+	{END Ejecutoria_fieldheader}
 {END Ejecutoria_fieldheadercolumn}
 
 	
@@ -1790,9 +1658,11 @@
 
 	 
 		{BEGIN Tipo_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tipo" data-fieldname="Tipo">
-	{$label dbo_Chequeos Tipo }	</span>
+	{BEGIN Tipo_fieldheader}
+	<SPAN {$Tipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tipo" data-fieldname="Tipo">
+	{$label dbo_Chequeos Tipo }	{$arrow_icon_Tipo}
+	</SPAN>
+	{END Tipo_fieldheader}
 {END Tipo_fieldheadercolumn}
 
 	
@@ -1813,9 +1683,11 @@
 
 	 
 		{BEGIN Cantidad_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cantidad" data-fieldname="Cantidad">
-	{$label dbo_Chequeos Cantidad }	</span>
+	{BEGIN Cantidad_fieldheader}
+	<SPAN {$Cantidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cantidad" data-fieldname="Cantidad">
+	{$label dbo_Chequeos Cantidad }	{$arrow_icon_Cantidad}
+	</SPAN>
+	{END Cantidad_fieldheader}
 {END Cantidad_fieldheadercolumn}
 
 	
@@ -1836,9 +1708,11 @@
 
 	 
 		{BEGIN Obligacion_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
-	{$label dbo_Chequeos Obligacion }	</span>
+	{BEGIN Obligacion_fieldheader}
+	<SPAN {$Obligacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+	{$label dbo_Chequeos Obligacion }	{$arrow_icon_Obligacion}
+	</SPAN>
+	{END Obligacion_fieldheader}
 {END Obligacion_fieldheadercolumn}
 
 	
@@ -1859,9 +1733,11 @@
 
 	 
 		{BEGIN Costas_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
-	{$label dbo_Chequeos Costas }	</span>
+	{BEGIN Costas_fieldheader}
+	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+	{$label dbo_Chequeos Costas }	{$arrow_icon_Costas}
+	</SPAN>
+	{END Costas_fieldheader}
 {END Costas_fieldheadercolumn}
 
 	
@@ -1882,9 +1758,11 @@
 
 	 
 		{BEGIN PrimeraCopia_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrimeraCopia" data-fieldname="PrimeraCopia">
-	{$label dbo_Chequeos PrimeraCopia }	</span>
+	{BEGIN PrimeraCopia_fieldheader}
+	<SPAN {$PrimeraCopia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrimeraCopia" data-fieldname="PrimeraCopia">
+	{$label dbo_Chequeos PrimeraCopia }	{$arrow_icon_PrimeraCopia}
+	</SPAN>
+	{END PrimeraCopia_fieldheader}
 {END PrimeraCopia_fieldheadercolumn}
 
 	
@@ -1905,9 +1783,11 @@
 
 	 
 		{BEGIN Autentica_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autentica" data-fieldname="Autentica">
-	{$label dbo_Chequeos Autentica }	</span>
+	{BEGIN Autentica_fieldheader}
+	<SPAN {$Autentica_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autentica" data-fieldname="Autentica">
+	{$label dbo_Chequeos Autentica }	{$arrow_icon_Autentica}
+	</SPAN>
+	{END Autentica_fieldheader}
 {END Autentica_fieldheadercolumn}
 
 	
@@ -1928,9 +1808,11 @@
 
 	 
 		{BEGIN PrestaMeritoEjecutivo_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">
-	{$label dbo_Chequeos PrestaMeritoEjecutivo }	</span>
+	{BEGIN PrestaMeritoEjecutivo_fieldheader}
+	<SPAN {$PrestaMeritoEjecutivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">
+	{$label dbo_Chequeos PrestaMeritoEjecutivo }	{$arrow_icon_PrestaMeritoEjecutivo}
+	</SPAN>
+	{END PrestaMeritoEjecutivo_fieldheader}
 {END PrestaMeritoEjecutivo_fieldheadercolumn}
 
 	
@@ -1951,9 +1833,11 @@
 
 	 
 		{BEGIN Clara_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clara" data-fieldname="Clara">
-	{$label dbo_Chequeos Clara }	</span>
+	{BEGIN Clara_fieldheader}
+	<SPAN {$Clara_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clara" data-fieldname="Clara">
+	{$label dbo_Chequeos Clara }	{$arrow_icon_Clara}
+	</SPAN>
+	{END Clara_fieldheader}
 {END Clara_fieldheadercolumn}
 
 	
@@ -1974,9 +1858,11 @@
 
 	 
 		{BEGIN Expresa_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Expresa" data-fieldname="Expresa">
-	{$label dbo_Chequeos Expresa }	</span>
+	{BEGIN Expresa_fieldheader}
+	<SPAN {$Expresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Expresa" data-fieldname="Expresa">
+	{$label dbo_Chequeos Expresa }	{$arrow_icon_Expresa}
+	</SPAN>
+	{END Expresa_fieldheader}
 {END Expresa_fieldheadercolumn}
 
 	
@@ -1997,9 +1883,11 @@
 
 	 
 		{BEGIN ActualmenteExigible_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">
-	{$label dbo_Chequeos ActualmenteExigible }	</span>
+	{BEGIN ActualmenteExigible_fieldheader}
+	<SPAN {$ActualmenteExigible_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">
+	{$label dbo_Chequeos ActualmenteExigible }	{$arrow_icon_ActualmenteExigible}
+	</SPAN>
+	{END ActualmenteExigible_fieldheader}
 {END ActualmenteExigible_fieldheadercolumn}
 
 	
@@ -2020,9 +1908,11 @@
 
 	 
 		{BEGIN CompetenciaDEAJ_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">
-	{$label dbo_Chequeos CompetenciaDEAJ }	</span>
+	{BEGIN CompetenciaDEAJ_fieldheader}
+	<SPAN {$CompetenciaDEAJ_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">
+	{$label dbo_Chequeos CompetenciaDEAJ }	{$arrow_icon_CompetenciaDEAJ}
+	</SPAN>
+	{END CompetenciaDEAJ_fieldheader}
 {END CompetenciaDEAJ_fieldheadercolumn}
 
 	
@@ -2043,9 +1933,11 @@
 
 	 
 		{BEGIN FaltaRequisitos_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">
-	{$label dbo_Chequeos FaltaRequisitos }	</span>
+	{BEGIN FaltaRequisitos_fieldheader}
+	<SPAN {$FaltaRequisitos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">
+	{$label dbo_Chequeos FaltaRequisitos }	{$arrow_icon_FaltaRequisitos}
+	</SPAN>
+	{END FaltaRequisitos_fieldheader}
 {END FaltaRequisitos_fieldheadercolumn}
 
 	
@@ -2066,9 +1958,11 @@
 
 	 
 		{BEGIN FaltaCompetencia_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">
-	{$label dbo_Chequeos FaltaCompetencia }	</span>
+	{BEGIN FaltaCompetencia_fieldheader}
+	<SPAN {$FaltaCompetencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">
+	{$label dbo_Chequeos FaltaCompetencia }	{$arrow_icon_FaltaCompetencia}
+	</SPAN>
+	{END FaltaCompetencia_fieldheader}
 {END FaltaCompetencia_fieldheadercolumn}
 
 	
@@ -2089,9 +1983,11 @@
 
 	 
 		{BEGIN PorPrescripcion_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PorPrescripcion" data-fieldname="PorPrescripcion">
-	{$label dbo_Chequeos PorPrescripcion }	</span>
+	{BEGIN PorPrescripcion_fieldheader}
+	<SPAN {$PorPrescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PorPrescripcion" data-fieldname="PorPrescripcion">
+	{$label dbo_Chequeos PorPrescripcion }	{$arrow_icon_PorPrescripcion}
+	</SPAN>
+	{END PorPrescripcion_fieldheader}
 {END PorPrescripcion_fieldheadercolumn}
 
 	
@@ -2112,9 +2008,11 @@
 
 	 
 		{BEGIN SeccionalIdDestino_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">
-	{$label dbo_Chequeos SeccionalIdDestino }	</span>
+	{BEGIN SeccionalIdDestino_fieldheader}
+	<SPAN {$SeccionalIdDestino_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">
+	{$label dbo_Chequeos SeccionalIdDestino }	{$arrow_icon_SeccionalIdDestino}
+	</SPAN>
+	{END SeccionalIdDestino_fieldheader}
 {END SeccionalIdDestino_fieldheadercolumn}
 
 	
@@ -2135,9 +2033,11 @@
 
 	 
 		{BEGIN AprobadoPor_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AprobadoPor" data-fieldname="AprobadoPor">
-	{$label dbo_Chequeos AprobadoPor }	</span>
+	{BEGIN AprobadoPor_fieldheader}
+	<SPAN {$AprobadoPor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AprobadoPor" data-fieldname="AprobadoPor">
+	{$label dbo_Chequeos AprobadoPor }	{$arrow_icon_AprobadoPor}
+	</SPAN>
+	{END AprobadoPor_fieldheader}
 {END AprobadoPor_fieldheadercolumn}
 
 	
@@ -2158,9 +2058,11 @@
 
 	 
 		{BEGIN FechaAprobacion_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FechaAprobacion" data-fieldname="FechaAprobacion">
-	{$label dbo_Chequeos FechaAprobacion }	</span>
+	{BEGIN FechaAprobacion_fieldheader}
+	<SPAN {$FechaAprobacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FechaAprobacion" data-fieldname="FechaAprobacion">
+	{$label dbo_Chequeos FechaAprobacion }	{$arrow_icon_FechaAprobacion}
+	</SPAN>
+	{END FechaAprobacion_fieldheader}
 {END FechaAprobacion_fieldheadercolumn}
 
 	
@@ -2181,9 +2083,11 @@
 
 	 
 		{BEGIN TramiteId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TramiteId" data-fieldname="TramiteId">
-	{$label dbo_Chequeos TramiteId }	</span>
+	{BEGIN TramiteId_fieldheader}
+	<SPAN {$TramiteId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TramiteId" data-fieldname="TramiteId">
+	{$label dbo_Chequeos TramiteId }	{$arrow_icon_TramiteId}
+	</SPAN>
+	{END TramiteId_fieldheader}
 {END TramiteId_fieldheadercolumn}
 
 	
@@ -2204,9 +2108,11 @@
 
 	 
 		{BEGIN AbogadoId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field81" {$item_simple_grid_field81} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
-	{$label dbo_Chequeos AbogadoId }	</span>
+	{BEGIN AbogadoId_fieldheader}
+	<SPAN {$AbogadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field81" {$item_simple_grid_field81} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
+	{$label dbo_Chequeos AbogadoId }	{$arrow_icon_AbogadoId}
+	</SPAN>
+	{END AbogadoId_fieldheader}
 {END AbogadoId_fieldheadercolumn}
 
 	
@@ -2227,9 +2133,11 @@
 
 	 
 		{BEGIN Fisico_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field79" {$item_simple_grid_field79} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fisico" data-fieldname="Fisico">
-	{$label dbo_Chequeos Fisico }	</span>
+	{BEGIN Fisico_fieldheader}
+	<SPAN {$Fisico_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field79" {$item_simple_grid_field79} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fisico" data-fieldname="Fisico">
+	{$label dbo_Chequeos Fisico }	{$arrow_icon_Fisico}
+	</SPAN>
+	{END Fisico_fieldheader}
 {END Fisico_fieldheadercolumn}
 
 	
@@ -2250,9 +2158,11 @@
 
 	 
 		{BEGIN Digital_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field80" {$item_simple_grid_field80} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Digital" data-fieldname="Digital">
-	{$label dbo_Chequeos Digital }	</span>
+	{BEGIN Digital_fieldheader}
+	<SPAN {$Digital_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field80" {$item_simple_grid_field80} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Digital" data-fieldname="Digital">
+	{$label dbo_Chequeos Digital }	{$arrow_icon_Digital}
+	</SPAN>
+	{END Digital_fieldheader}
 {END Digital_fieldheadercolumn}
 
 	
@@ -2288,9 +2198,11 @@
 
 	 
 		{BEGIN SeccionalId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
-	{$label dbo_Chequeos SeccionalId }	</span>
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label dbo_Chequeos SeccionalId }	{$arrow_icon_SeccionalId}
+	</SPAN>
+	{END SeccionalId_fieldheader}
 {END SeccionalId_fieldheadercolumn}
 
 	
@@ -2311,9 +2223,11 @@
 
 	 
 		{BEGIN CarteraTipoId_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
-	{$label dbo_Chequeos CarteraTipoId }	</span>
+	{BEGIN CarteraTipoId_fieldheader}
+	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+	{$label dbo_Chequeos CarteraTipoId }	{$arrow_icon_CarteraTipoId}
+	</SPAN>
+	{END CarteraTipoId_fieldheader}
 {END CarteraTipoId_fieldheadercolumn}
 
 	
@@ -2334,9 +2248,11 @@
 
 	 
 		{BEGIN ObligacionLetras_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras">
-	{$label dbo_Chequeos ObligacionLetras }	</span>
+	{BEGIN ObligacionLetras_fieldheader}
+	<SPAN {$ObligacionLetras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionLetras" data-fieldname="ObligacionLetras">
+	{$label dbo_Chequeos ObligacionLetras }	{$arrow_icon_ObligacionLetras}
+	</SPAN>
+	{END ObligacionLetras_fieldheader}
 {END ObligacionLetras_fieldheadercolumn}
 
 	
@@ -2386,17 +2302,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="chequeos_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}

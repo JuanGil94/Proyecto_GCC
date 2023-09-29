@@ -328,6 +328,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Carceles3"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Carceles4"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Alertas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.tipoCobro"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

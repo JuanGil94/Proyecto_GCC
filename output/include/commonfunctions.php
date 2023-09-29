@@ -373,6 +373,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("alertas" == $shortTName )
 		return true;
+	if ("tipocobro" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1188,6 +1190,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Alertas";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.tipoCobro");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.tipoCobro";
+	}
 	return $arr;
 }
 
@@ -1282,6 +1293,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Carceles3";
 	$arr[]="dbo.Carceles4";
 	$arr[]="dbo.Alertas";
+	$arr[]="dbo.tipoCobro";
 	return $arr;
 }
 
@@ -2330,6 +2342,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Alertas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.tipoCobro" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

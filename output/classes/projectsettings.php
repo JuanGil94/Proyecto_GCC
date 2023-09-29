@@ -3706,6 +3706,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "carceles4" ] = "dbo.Carceles4";
 	$projectEntities[ "dbo.Alertas" ] = array( "url" => "alertas", "type" => 0 );
 	$projectEntitiesReverse[ "alertas" ] = "dbo.Alertas";
+	$projectEntities[ "dbo.tipoCobro" ] = array( "url" => "tipocobro", "type" => 0 );
+	$projectEntitiesReverse[ "tipocobro" ] = "dbo.tipoCobro";
 }
 
 function findTable( $table ) {
