@@ -548,6 +548,8 @@ class Chart
 			return true;
 		if("dbo.Alertas" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.tipoCobro" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 
