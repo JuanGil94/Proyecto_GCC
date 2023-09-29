@@ -3857,18 +3857,17 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
-	$edata["LookupTable"] = "";
-	$edata["LookupConnId"] = "";
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.tipoCobro";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
 		
-	$edata["LinkField"] = "IdTipo";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Nombre";
+	$edata["LinkField"] = "TipoId";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Tipo";
 
 	
 
@@ -3878,8 +3877,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	
