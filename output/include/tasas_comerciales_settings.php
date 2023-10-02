@@ -453,10 +453,10 @@ $tdatatasas_comerciales[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -475,12 +475,13 @@ $tdatatasas_comerciales[".hideMobileList"] = array();
 
 	
 	
-	
-	
-			$edata["HTML5InuptType"] = "text";
+		$edata["DateEditType"] = 2;
+	$edata["InitialYearFactor"] = 100;
+	$edata["LastYearFactor"] = 10;
 
-		$edata["EditParams"] = "";
-		
+	
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -506,7 +507,7 @@ $tdatatasas_comerciales[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );

@@ -700,6 +700,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Oficios1")
+		{
+			return true;
+		}
+		if($table=="dbo.OperacionTipo")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1349,6 +1357,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.tipoCobro")
+		{
+			return false;
+		}
+		if($table=="dbo.Oficios1")
+		{
+			return true;
+		}
+		if($table=="dbo.OperacionTipo")
 		{
 			return false;
 		}

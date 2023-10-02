@@ -106,13 +106,13 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Pareja_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
 			{"text":{$AbogadoMinjusticia_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

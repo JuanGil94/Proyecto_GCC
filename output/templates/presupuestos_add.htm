@@ -111,27 +111,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Ano_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Ano}  r-vertical-field" 
-	data-signal-error-for="Ano{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Ano" data-fieldname="Ano" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Ano}">
-		{BEGIN Ano_label}{$label dbo_Presupuestos Ano }{END Ano_label}
-	</label>
-	<div class="r-edit-field">
-		{$Ano_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Ano" {$tooltipAttr dbo_Presupuestos Ano } >
-		<div class="text-muted" >
-		{$tooltip dbo_Presupuestos Ano }		</div>
-	</div>
-</div>
-
-
-{END Ano_fieldblock}
-											
 {BEGIN SeccionalId_fieldblock}
 
 
@@ -152,6 +131,27 @@
 
 
 {END SeccionalId_fieldblock}
+											
+{BEGIN Ano_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ano}  r-vertical-field" 
+	data-signal-error-for="Ano{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Ano" data-fieldname="Ano" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Ano}">
+		{BEGIN Ano_label}{$label dbo_Presupuestos Ano }{END Ano_label}
+	</label>
+	<div class="r-edit-field">
+		{$Ano_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Ano" {$tooltipAttr dbo_Presupuestos Ano } >
+		<div class="text-muted" >
+		{$tooltip dbo_Presupuestos Ano }		</div>
+	</div>
+</div>
+
+
+{END Ano_fieldblock}
 											
 {BEGIN Meta_fieldblock}
 

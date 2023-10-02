@@ -3708,6 +3708,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "alertas" ] = "dbo.Alertas";
 	$projectEntities[ "dbo.tipoCobro" ] = array( "url" => "tipocobro", "type" => 0 );
 	$projectEntitiesReverse[ "tipocobro" ] = "dbo.tipoCobro";
+	$projectEntities[ "dbo.Oficios1" ] = array( "url" => "oficios1", "type" => 1 );
+	$projectEntitiesReverse[ "oficios1" ] = "dbo.Oficios1";
+	$projectEntities[ "dbo.OperacionTipo" ] = array( "url" => "operaciontipo", "type" => 0 );
+	$projectEntitiesReverse[ "operaciontipo" ] = "dbo.OperacionTipo";
 }
 
 function findTable( $table ) {

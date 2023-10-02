@@ -1,7 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'master' => array( 'dbo.Oficios' => array( 'preview' => false ),
-'dbo.Oficios Sigobius' => array( 'preview' => false ) ),
+'dbo.Oficios Sigobius' => array( 'preview' => false ),
+'dbo.Oficios1' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'SuspensionId',
 'Suspension',
 'OficioId',

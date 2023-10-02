@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Descripcion}</span>
 						</div>
 		{END searchCtrlBlock_Descripcion}
-																{BEGIN searchCtrlBlock_TestId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_TestId}" {$filterRow_attrs_TestId}>
-			<label>{$label dbo_Test TestId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_TestId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_TestId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_TestId}</span>
-						</div>
-		{END searchCtrlBlock_TestId}
 																{BEGIN searchCtrlBlock_Test}
 
 
@@ -517,9 +504,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="TestId"]:before {
-		content: "{$label dbo_Test TestId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Test"]:before {
 		content: "{$label dbo_Test Test}";
 	}
@@ -590,21 +574,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TestId_class}	"
+		 r-ori-vert		 {$Test_class}	"
 
-			data-field="TestId"
+			data-field="Test"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN TestId_fieldheadercolumn}
-	{BEGIN TestId_fieldheader}
-	<SPAN {$TestId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TestId" data-fieldname="TestId">
-	{$label dbo_Test TestId }	{$arrow_icon_TestId}
+		{BEGIN Test_fieldheadercolumn}
+	{BEGIN Test_fieldheader}
+	<SPAN {$Test_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Test" data-fieldname="Test">
+	{$label dbo_Test Test }	{$arrow_icon_Test}
 	</SPAN>
-	{END TestId_fieldheader}
-{END TestId_fieldheadercolumn}
+	{END Test_fieldheader}
+{END Test_fieldheadercolumn}
 
 	
 	</th>
@@ -615,21 +599,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Test_class}	"
+		 r-ori-vert		 {$Nivel_class}	"
 
-			data-field="Test"
+			data-field="Nivel"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Test_fieldheadercolumn}
-	{BEGIN Test_fieldheader}
-	<SPAN {$Test_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Test" data-fieldname="Test">
-	{$label dbo_Test Test }	{$arrow_icon_Test}
+		{BEGIN Nivel_fieldheadercolumn}
+	{BEGIN Nivel_fieldheader}
+	<SPAN {$Nivel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nivel" data-fieldname="Nivel">
+	{$label dbo_Test Nivel }	{$arrow_icon_Nivel}
 	</SPAN>
-	{END Test_fieldheader}
-{END Test_fieldheadercolumn}
+	{END Nivel_fieldheader}
+{END Nivel_fieldheadercolumn}
 
 	
 	</th>
@@ -640,21 +624,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Nivel_class}	"
+		 r-ori-vert		 {$Descripcion_class}	"
 
-			data-field="Nivel"
+			data-field="Descripcion"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Nivel_fieldheadercolumn}
-	{BEGIN Nivel_fieldheader}
-	<SPAN {$Nivel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nivel" data-fieldname="Nivel">
-	{$label dbo_Test Nivel }	{$arrow_icon_Nivel}
+		{BEGIN Descripcion_fieldheadercolumn}
+	{BEGIN Descripcion_fieldheader}
+	<SPAN {$Descripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Descripcion" data-fieldname="Descripcion">
+	{$label dbo_Test Descripcion }	{$arrow_icon_Descripcion}
 	</SPAN>
-	{END Nivel_fieldheader}
-{END Nivel_fieldheadercolumn}
+	{END Descripcion_fieldheader}
+{END Descripcion_fieldheadercolumn}
 
 	
 	</th>
@@ -665,42 +649,17 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Descripcion_class}	"
+		 r-ori-vert		 {$Porcentaje_class}	"
 
-			data-field="Descripcion"
+			data-field="Porcentaje"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Descripcion_fieldheadercolumn}
-	{BEGIN Descripcion_fieldheader}
-	<SPAN {$Descripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Descripcion" data-fieldname="Descripcion">
-	{$label dbo_Test Descripcion }	{$arrow_icon_Descripcion}
-	</SPAN>
-	{END Descripcion_fieldheader}
-{END Descripcion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Porcentaje_class}	"
-
-			data-field="Porcentaje"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Porcentaje_fieldheadercolumn}
 	{BEGIN Porcentaje_fieldheader}
-	<SPAN {$Porcentaje_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Porcentaje" data-fieldname="Porcentaje">
+	<SPAN {$Porcentaje_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Porcentaje" data-fieldname="Porcentaje">
 	{$label dbo_Test Porcentaje }	{$arrow_icon_Porcentaje}
 	</SPAN>
 	{END Porcentaje_fieldheader}
@@ -708,7 +667,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -726,7 +685,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="test_list"		data-control-cell
@@ -744,17 +703,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="test_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -788,32 +736,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TestId_class}	"
-
-			data-field="TestId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN TestId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TestId" data-fieldname="TestId" data-default-width >
-{$TestId_value}
-</span>
-{END TestId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Test_class}	"
 
 			data-field="Test"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -823,18 +750,18 @@
 </span>
 {END Test_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Nivel_class}	"
 
 			data-field="Nivel"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -844,18 +771,18 @@
 </span>
 {END Nivel_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Descripcion_class}	"
 
 			data-field="Descripcion"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -865,18 +792,18 @@
 </span>
 {END Descripcion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Porcentaje_class}	"
 
 			data-field="Porcentaje"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -886,7 +813,7 @@
 </span>
 {END Porcentaje_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -934,7 +861,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TestId_class}	"
+		 r-ori-vert		 {$Test_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="test_list"	
@@ -949,7 +876,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Test_class}	"
+		 r-ori-vert		 {$Nivel_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="test_list"	
@@ -964,7 +891,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Nivel_class}	"
+		 r-ori-vert		 {$Descripcion_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="test_list"	
@@ -979,7 +906,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Descripcion_class}	"
+		 r-ori-vert		 {$Porcentaje_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="test_list"	
@@ -988,21 +915,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Porcentaje_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="test_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

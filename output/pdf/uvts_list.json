@@ -73,12 +73,6 @@ pdfDocument = {
 										{BEGIN col_grid_2}
 					"%",
 					{END col_grid_2}
-										{BEGIN col_grid_3}
-					"%",
-					{END col_grid_3}
-										{BEGIN col_grid_4}
-					"%",
-					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -140,9 +134,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_add}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_delete}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -195,33 +186,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_0}
 				[
-																{BEGIN cellblock_grid_headcell_icons}
-{
-	cellId: 'headcell_icons',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_icons}
-																							{BEGIN cellblock_grid_headcell_checkbox}
+																{BEGIN cellblock_grid_headcell_checkbox}
 {
 	cellId: 'headcell_checkbox',
 	col:0,
@@ -254,35 +219,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'UvtId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Uvts UvtId }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$UvtId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Ano',
 				style: 'headcell',
 		
@@ -297,7 +233,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Uvts Ano }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel dbo_Uvts Ano }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -306,10 +242,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Uvt',
@@ -326,7 +262,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Uvts Uvt }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel dbo_Uvts Uvt }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -335,7 +271,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field1}
 											],
 				{END row_grid_0}
 		
@@ -345,38 +281,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_cell_icons}
-{
-	cellId: 'cell_icons',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_icons}
-																							{BEGIN cellblock_grid_cell_checkbox}
+																{BEGIN cellblock_grid_cell_checkbox}
 {
 	cellId: 'cell_checkbox',
 	col:0,
@@ -409,35 +314,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'UvtId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$UvtId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$UvtId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Ano',
 				style: 'bodycell',
 		
@@ -461,10 +337,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Uvt',
@@ -490,7 +366,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field1}
 											],
 				{END row_grid_1}
 		
@@ -500,33 +376,7 @@ pdfDocument = {
 					
 				{BEGIN row_grid_2}
 				[
-																{BEGIN cellblock_grid_footcell_icons}
-{
-	cellId: 'footcell_icons',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_icons}
-																							{BEGIN cellblock_grid_footcell_checkbox}
+																{BEGIN cellblock_grid_footcell_checkbox}
 {
 	cellId: 'footcell_checkbox',
 	col:0,
@@ -604,32 +454,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field1}
-																							{BEGIN cellblock_grid_footcell_field2}
-{
-	cellId: 'footcell_field2',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field2}
 											],
 				{END row_grid_2}
 		

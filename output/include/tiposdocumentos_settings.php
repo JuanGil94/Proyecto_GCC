@@ -6,11 +6,11 @@ $tdatatiposdocumentos[".OwnerID"] = "";
 $tdatatiposdocumentos[".OriginalTable"] = "dbo.TiposDocumentos";
 
 
-$tdatatiposdocumentos[".pagesByType"] = my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
+$tdatatiposdocumentos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"]}" );
 $tdatatiposdocumentos[".originalPagesByType"] = $tdatatiposdocumentos[".pagesByType"];
-$tdatatiposdocumentos[".pages"] = types2pages( my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
+$tdatatiposdocumentos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"]}" ) );
 $tdatatiposdocumentos[".originalPages"] = $tdatatiposdocumentos[".pages"];
-$tdatatiposdocumentos[".defaultPages"] = my_json_decode( "{\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
+$tdatatiposdocumentos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\"}" );
 $tdatatiposdocumentos[".originalDefaultPages"] = $tdatatiposdocumentos[".defaultPages"];
 
 //	field labels

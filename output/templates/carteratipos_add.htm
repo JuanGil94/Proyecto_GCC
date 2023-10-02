@@ -132,27 +132,6 @@
 
 {END CarteraTipo_fieldblock}
 											
-{BEGIN Color_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Color}  r-vertical-field" 
-	data-signal-error-for="Color{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Color" data-fieldname="Color" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Color}">
-		{BEGIN Color_label}{$label dbo_CarteraTipos Color }{END Color_label}
-	</label>
-	<div class="r-edit-field">
-		{$Color_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Color" {$tooltipAttr dbo_CarteraTipos Color } >
-		<div class="text-muted" >
-		{$tooltip dbo_CarteraTipos Color }		</div>
-	</div>
-</div>
-
-
-{END Color_fieldblock}
-											
 {BEGIN Prescrita_fieldblock}
 
 
@@ -173,6 +152,27 @@
 
 
 {END Prescrita_fieldblock}
+											
+{BEGIN Color_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Color}  r-vertical-field" 
+	data-signal-error-for="Color{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Color" data-fieldname="Color" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Color}">
+		{BEGIN Color_label}{$label dbo_CarteraTipos Color }{END Color_label}
+	</label>
+	<div class="r-edit-field">
+		{$Color_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Color" {$tooltipAttr dbo_CarteraTipos Color } >
+		<div class="text-muted" >
+		{$tooltip dbo_CarteraTipos Color }		</div>
+	</div>
+</div>
+
+
+{END Color_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

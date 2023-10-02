@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$AlertaTipoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$AlertaTipo_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 		  ],

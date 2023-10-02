@@ -141,19 +141,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Procesos}</span>
 						</div>
 		{END searchCtrlBlock_Procesos}
-																{BEGIN searchCtrlBlock_PresupuestoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_PresupuestoId}" {$filterRow_attrs_PresupuestoId}>
-			<label>{$label dbo_Presupuestos PresupuestoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_PresupuestoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PresupuestoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PresupuestoId}</span>
-						</div>
-		{END searchCtrlBlock_PresupuestoId}
 																{BEGIN searchCtrlBlock_Meta}
 
 
@@ -539,9 +526,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PresupuestoId"]:before {
-		content: "{$label dbo_Presupuestos PresupuestoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ano"]:before {
 		content: "{$label dbo_Presupuestos Ano}";
 	}
@@ -612,21 +596,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PresupuestoId_class}	"
+		 r-ori-vert		 {$Ano_class}	"
 
-			data-field="PresupuestoId"
+			data-field="Ano"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN PresupuestoId_fieldheadercolumn}
-	{BEGIN PresupuestoId_fieldheader}
-	<SPAN {$PresupuestoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PresupuestoId" data-fieldname="PresupuestoId">
-	{$label dbo_Presupuestos PresupuestoId }	{$arrow_icon_PresupuestoId}
+		{BEGIN Ano_fieldheadercolumn}
+	{BEGIN Ano_fieldheader}
+	<SPAN {$Ano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ano" data-fieldname="Ano">
+	{$label dbo_Presupuestos Ano }	{$arrow_icon_Ano}
 	</SPAN>
-	{END PresupuestoId_fieldheader}
-{END PresupuestoId_fieldheadercolumn}
+	{END Ano_fieldheader}
+{END Ano_fieldheadercolumn}
 
 	
 	</th>
@@ -637,21 +621,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Ano_class}	"
+		 r-ori-vert		 {$SeccionalId_class}	"
 
-			data-field="Ano"
+			data-field="SeccionalId"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Ano_fieldheadercolumn}
-	{BEGIN Ano_fieldheader}
-	<SPAN {$Ano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ano" data-fieldname="Ano">
-	{$label dbo_Presupuestos Ano }	{$arrow_icon_Ano}
+		{BEGIN SeccionalId_fieldheadercolumn}
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label dbo_Presupuestos SeccionalId }	{$arrow_icon_SeccionalId}
 	</SPAN>
-	{END Ano_fieldheader}
-{END Ano_fieldheadercolumn}
+	{END SeccionalId_fieldheader}
+{END SeccionalId_fieldheadercolumn}
 
 	
 	</th>
@@ -662,21 +646,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
+		 r-ori-vert		 {$Meta_class}	"
 
-			data-field="SeccionalId"
+			data-field="Meta"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SeccionalId_fieldheadercolumn}
-	{BEGIN SeccionalId_fieldheader}
-	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
-	{$label dbo_Presupuestos SeccionalId }	{$arrow_icon_SeccionalId}
+		{BEGIN Meta_fieldheadercolumn}
+	{BEGIN Meta_fieldheader}
+	<SPAN {$Meta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Meta" data-fieldname="Meta">
+	{$label dbo_Presupuestos Meta }	{$arrow_icon_Meta}
 	</SPAN>
-	{END SeccionalId_fieldheader}
-{END SeccionalId_fieldheadercolumn}
+	{END Meta_fieldheader}
+{END Meta_fieldheadercolumn}
 
 	
 	</th>
@@ -687,42 +671,17 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Meta_class}	"
+		 r-ori-vert		 {$Procesos_class}	"
 
-			data-field="Meta"
+			data-field="Procesos"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Meta_fieldheadercolumn}
-	{BEGIN Meta_fieldheader}
-	<SPAN {$Meta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Meta" data-fieldname="Meta">
-	{$label dbo_Presupuestos Meta }	{$arrow_icon_Meta}
-	</SPAN>
-	{END Meta_fieldheader}
-{END Meta_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Procesos_class}	"
-
-			data-field="Procesos"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Procesos_fieldheadercolumn}
 	{BEGIN Procesos_fieldheader}
-	<SPAN {$Procesos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Procesos" data-fieldname="Procesos">
+	<SPAN {$Procesos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Procesos" data-fieldname="Procesos">
 	{$label dbo_Presupuestos Procesos }	{$arrow_icon_Procesos}
 	</SPAN>
 	{END Procesos_fieldheader}
@@ -730,7 +689,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -819,32 +778,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PresupuestoId_class}	"
-
-			data-field="PresupuestoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PresupuestoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PresupuestoId" data-fieldname="PresupuestoId" data-default-width >
-{$PresupuestoId_value}
-</span>
-{END PresupuestoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Ano_class}	"
 
 			data-field="Ano"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -854,18 +792,18 @@
 </span>
 {END Ano_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$SeccionalId_class}	"
 
 			data-field="SeccionalId"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -875,18 +813,18 @@
 </span>
 {END SeccionalId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Meta_class}	"
 
 			data-field="Meta"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -896,18 +834,18 @@
 </span>
 {END Meta_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Procesos_class}	"
 
 			data-field="Procesos"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -917,7 +855,7 @@
 </span>
 {END Procesos_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -965,7 +903,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PresupuestoId_class}	"
+		 r-ori-vert		 {$Ano_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="presupuestos_list"	
@@ -980,7 +918,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Ano_class}	"
+		 r-ori-vert		 {$SeccionalId_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="presupuestos_list"	
@@ -995,7 +933,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
+		 r-ori-vert		 {$Meta_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="presupuestos_list"	
@@ -1010,7 +948,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Meta_class}	"
+		 r-ori-vert		 {$Procesos_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="presupuestos_list"	
@@ -1019,21 +957,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Procesos_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="presupuestos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
@@ -134,9 +131,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Telefonos_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
-			{"text":{$PCI_pdfvalue},"hidden":"{$item_hide_export_field10}"},
 				
 				
 			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_export_field11}"},

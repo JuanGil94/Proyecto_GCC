@@ -6,6 +6,8 @@
 'dbo.Oficios Sigobius' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Alertas' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Oficios1' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Etapas' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),

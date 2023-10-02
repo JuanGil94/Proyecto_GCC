@@ -11,8 +11,6 @@ $dalTableCorrespondencias["Codigo"] = array("type"=>200,"varname"=>"Codigo", "na
 $dalTableCorrespondencias["Radicado"] = array("type"=>200,"varname"=>"Radicado", "name" => "Radicado", "autoInc" => "0");
 $dalTableCorrespondencias["UserId"] = array("type"=>3,"varname"=>"UserId", "name" => "UserId", "autoInc" => "0");
 $dalTableCorrespondencias["AbogadoId"] = array("type"=>3,"varname"=>"AbogadoId", "name" => "AbogadoId", "autoInc" => "0");
-$dalTableCorrespondencias["Lat"] = array("type"=>14,"varname"=>"Lat", "name" => "Lat", "autoInc" => "0");
-$dalTableCorrespondencias["Lng"] = array("type"=>14,"varname"=>"Lng", "name" => "Lng", "autoInc" => "0");
 $dalTableCorrespondencias["CorrespondenciaId"]["key"]=true;
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_Correspondencias"] = &$dalTableCorrespondencias;

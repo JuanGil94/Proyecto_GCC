@@ -31,13 +31,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspresupuestos["Spanish"]["Ano"] = "Año";
 	$fieldToolTipspresupuestos["Spanish"]["Ano"] = "";
 	$placeHolderspresupuestos["Spanish"]["Ano"] = "";
-	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipspresupuestos["Spanish"]["SeccionalId"] = "";
 	$placeHolderspresupuestos["Spanish"]["SeccionalId"] = "";
 	$fieldLabelspresupuestos["Spanish"]["Meta"] = "Meta";
 	$fieldToolTipspresupuestos["Spanish"]["Meta"] = "";
 	$placeHolderspresupuestos["Spanish"]["Meta"] = "";
-	$fieldLabelspresupuestos["Spanish"]["Procesos"] = "Procesos";
+	$fieldLabelspresupuestos["Spanish"]["Procesos"] = "Can. Procesos";
 	$fieldToolTipspresupuestos["Spanish"]["Procesos"] = "";
 	$placeHolderspresupuestos["Spanish"]["Procesos"] = "";
 	if (count($fieldToolTipspresupuestos["Spanish"]))
@@ -200,6 +200,17 @@ $tdatapresupuestos[".sqlFrom"] = "FROM dbo.Presupuestos";
 $tdatapresupuestos[".sqlWhereExpr"] = "";
 $tdatapresupuestos[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatapresupuestos[".arrGridTabs"] = $arrGridTabs;
 
 
 

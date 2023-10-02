@@ -160,10 +160,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Tasa }","bold":true},{"text":{$Tasa_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Fecha_de_inicio }","bold":true},{"text":{$Fecha_de_inicio_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel Tasas_TES__Deterioro_de_Cartera_ Tasa }","bold":true},{"text":{$Tasa_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
