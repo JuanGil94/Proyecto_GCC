@@ -6,11 +6,11 @@ $tdataparejas[".OwnerID"] = "";
 $tdataparejas[".OriginalTable"] = "dbo.Parejas";
 
 
-$tdataparejas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataparejas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataparejas[".originalPagesByType"] = $tdataparejas[".pagesByType"];
-$tdataparejas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataparejas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataparejas[".originalPages"] = $tdataparejas[".pages"];
-$tdataparejas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataparejas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataparejas[".originalDefaultPages"] = $tdataparejas[".defaultPages"];
 
 //	field labels
@@ -25,10 +25,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsparejas["Spanish"] = array();
 	$placeHoldersparejas["Spanish"] = array();
 	$pageTitlesparejas["Spanish"] = array();
-	$fieldLabelsparejas["Spanish"]["AbogadoId"] = "Abogado Id";
+	$fieldLabelsparejas["Spanish"]["AbogadoId"] = "Abogado CSJ";
 	$fieldToolTipsparejas["Spanish"]["AbogadoId"] = "";
 	$placeHoldersparejas["Spanish"]["AbogadoId"] = "";
-	$fieldLabelsparejas["Spanish"]["Pareja"] = "Pareja";
+	$fieldLabelsparejas["Spanish"]["Pareja"] = "Numero";
 	$fieldToolTipsparejas["Spanish"]["Pareja"] = "";
 	$placeHoldersparejas["Spanish"]["Pareja"] = "";
 	$fieldLabelsparejas["Spanish"]["AbogadoMinjusticia"] = "Abogado Minjusticia";

@@ -524,36 +524,11 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Tasa_class}	"
-
-			data-field="Tasa"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Tasa_fieldheadercolumn}
-	{BEGIN Tasa_fieldheader}
-	<SPAN {$Tasa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa">
-	{$label Tasas_TES__Deterioro_de_Cartera_ Tasa }	{$arrow_icon_Tasa}
-	</SPAN>
-	{END Tasa_fieldheader}
-{END Tasa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Fecha_de_inicio_class}	"
 
 			data-field="Fecha_de_inicio"
 	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -564,6 +539,31 @@
 	</SPAN>
 	{END Fecha_de_inicio_fieldheader}
 {END Fecha_de_inicio_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Tasa_class}	"
+
+			data-field="Tasa"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tasa_fieldheadercolumn}
+	{BEGIN Tasa_fieldheader}
+	<SPAN {$Tasa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa">
+	{$label Tasas_TES__Deterioro_de_Cartera_ Tasa }	{$arrow_icon_Tasa}
+	</SPAN>
+	{END Tasa_fieldheader}
+{END Tasa_fieldheadercolumn}
 
 	
 	</th>
@@ -609,32 +609,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Tasa_class}	"
-
-			data-field="Tasa"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Tasa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa" data-default-width >
-{$Tasa_value}
-</span>
-{END Tasa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Fecha_de_inicio_class}	"
 
 			data-field="Fecha_de_inicio"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -643,6 +622,27 @@
 {$Fecha_de_inicio_value}
 </span>
 {END Fecha_de_inicio_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Tasa_class}	"
+
+			data-field="Tasa"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tasa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tasa" data-fieldname="Tasa" data-default-width >
+{$Tasa_value}
+</span>
+{END Tasa_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 							</tr>
@@ -677,7 +677,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Tasa_class}	"
+		 r-ori-vert		 {$Fecha_de_inicio_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tasas_tes__deterioro_de_cartera__list"	
@@ -692,7 +692,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fecha_de_inicio_class}	"
+		 r-ori-vert		 {$Tasa_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tasas_tes__deterioro_de_cartera__list"	

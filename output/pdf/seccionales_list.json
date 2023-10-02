@@ -97,51 +97,6 @@ pdfDocument = {
 										{BEGIN col_grid_10}
 					"%",
 					{END col_grid_10}
-										{BEGIN col_grid_11}
-					"%",
-					{END col_grid_11}
-										{BEGIN col_grid_12}
-					"%",
-					{END col_grid_12}
-										{BEGIN col_grid_13}
-					"%",
-					{END col_grid_13}
-										{BEGIN col_grid_14}
-					"%",
-					{END col_grid_14}
-										{BEGIN col_grid_15}
-					"%",
-					{END col_grid_15}
-										{BEGIN col_grid_16}
-					"%",
-					{END col_grid_16}
-										{BEGIN col_grid_17}
-					"%",
-					{END col_grid_17}
-										{BEGIN col_grid_18}
-					"%",
-					{END col_grid_18}
-										{BEGIN col_grid_19}
-					"%",
-					{END col_grid_19}
-										{BEGIN col_grid_20}
-					"%",
-					{END col_grid_20}
-										{BEGIN col_grid_21}
-					"%",
-					{END col_grid_21}
-										{BEGIN col_grid_22}
-					"%",
-					{END col_grid_22}
-										{BEGIN col_grid_23}
-					"%",
-					{END col_grid_23}
-										{BEGIN col_grid_24}
-					"%",
-					{END col_grid_24}
-										{BEGIN col_grid_25}
-					"%",
-					{END col_grid_25}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -388,35 +343,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_details}
-																							{BEGIN cellblock_grid_headcell_field}
-{
-	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'SeccionalId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales SeccionalId }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SeccionalId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
 																							{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
@@ -475,35 +401,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
-{
-	cellId: 'headcell_field3',
-	col:0,
-	row:0,
-			fieldName: 'NIT',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales NIT }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$NIT_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field3}
 																							{BEGIN cellblock_grid_headcell_field4}
 {
 	cellId: 'headcell_field4',
@@ -538,35 +435,6 @@ pdfDocument = {
 	cellId: 'headcell_field5',
 	col:0,
 	row:0,
-			fieldName: 'PiePagina',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales PiePagina }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$PiePagina_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
-{
-	cellId: 'headcell_field6',
-	col:0,
-	row:0,
 			fieldName: 'Sigobius',
 				style: 'headcell',
 		
@@ -590,39 +458,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field7',
-	col:0,
-	row:0,
-			fieldName: 'Email',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Email }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Email_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
-{
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'Direccion',
@@ -648,10 +487,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Telefonos',
@@ -677,384 +516,65 @@ pdfDocument = {
       
       },
 
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Email',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Seccionales Email }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Email_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'PiePagina',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Seccionales PiePagina }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$PiePagina_align}',
+     
+      
+      },
+
 {END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
-{
-	cellId: 'headcell_field10',
-	col:0,
-	row:0,
-			fieldName: 'PCI',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales PCI }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$PCI_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
-{
-	cellId: 'headcell_field11',
-	col:0,
-	row:0,
-			fieldName: 'Contador',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Contador }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Contador_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
-{
-	cellId: 'headcell_field12',
-	col:0,
-	row:0,
-			fieldName: 'ContadorCargo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales ContadorCargo }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ContadorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
-{
-	cellId: 'headcell_field13',
-	col:0,
-	row:0,
-			fieldName: 'Director',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Director }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Director_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
-{
-	cellId: 'headcell_field14',
-	col:0,
-	row:0,
-			fieldName: 'DirectorCargo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales DirectorCargo }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DirectorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
-{
-	cellId: 'headcell_field15',
-	col:0,
-	row:0,
-			fieldName: 'Abogado',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Abogado }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Abogado_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
-{
-	cellId: 'headcell_field16',
-	col:0,
-	row:0,
-			fieldName: 'AbogadoCargo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales AbogadoCargo }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$AbogadoCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
-{
-	cellId: 'headcell_field17',
-	col:0,
-	row:0,
-			fieldName: 'Formato',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Formato }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Formato_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
-{
-	cellId: 'headcell_field18',
-	col:0,
-	row:0,
-			fieldName: 'Corporacion',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Corporacion }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Corporacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field19}
-{
-	cellId: 'headcell_field19',
-	col:0,
-	row:0,
-			fieldName: 'Unidad',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Unidad }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Unidad_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field19}
-																							{BEGIN cellblock_grid_headcell_field20}
-{
-	cellId: 'headcell_field20',
-	col:0,
-	row:0,
-			fieldName: 'Oficina',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Oficina }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Oficina_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field20}
-																							{BEGIN cellblock_grid_headcell_field21}
-{
-	cellId: 'headcell_field21',
-	col:0,
-	row:0,
-			fieldName: 'Serie',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Serie }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Serie_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field21}
-																							{BEGIN cellblock_grid_headcell_field22}
-{
-	cellId: 'headcell_field22',
-	col:0,
-	row:0,
-			fieldName: 'Subserie',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Seccionales Subserie }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Subserie_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field22}
 											],
 				{END row_grid_0}
 		
@@ -1086,9 +606,6 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1152,35 +669,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_details}
-																							{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'SeccionalId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SeccionalId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
@@ -1239,35 +727,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
-{
-	cellId: 'cell_field3',
-	col:0,
-	row:0,
-			fieldName: 'NIT',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$NIT_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$NIT_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field3}
 																							{BEGIN cellblock_grid_cell_field4}
 {
 	cellId: 'cell_field4',
@@ -1302,35 +761,6 @@ pdfDocument = {
 	cellId: 'cell_field5',
 	col:0,
 	row:0,
-			fieldName: 'PiePagina',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$PiePagina_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$PiePagina_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
-{
-	cellId: 'cell_field6',
-	col:0,
-	row:0,
 			fieldName: 'Sigobius',
 				style: 'bodycell',
 		
@@ -1354,39 +784,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
-	col:0,
-	row:0,
-			fieldName: 'Email',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Email_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
-{
-	cellId: 'cell_field8',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'Direccion',
@@ -1412,10 +813,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Telefonos',
@@ -1441,384 +842,65 @@ pdfDocument = {
       
       },
 
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Email',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Email_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'PiePagina',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$PiePagina_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$PiePagina_align}',
+     
+      
+      },
+
 {END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
-{
-	cellId: 'cell_field10',
-	col:0,
-	row:0,
-			fieldName: 'PCI',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$PCI_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$PCI_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
-{
-	cellId: 'cell_field11',
-	col:0,
-	row:0,
-			fieldName: 'Contador',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Contador_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
-{
-	cellId: 'cell_field12',
-	col:0,
-	row:0,
-			fieldName: 'ContadorCargo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ContadorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
-{
-	cellId: 'cell_field13',
-	col:0,
-	row:0,
-			fieldName: 'Director',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Director_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
-{
-	cellId: 'cell_field14',
-	col:0,
-	row:0,
-			fieldName: 'DirectorCargo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DirectorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
-{
-	cellId: 'cell_field15',
-	col:0,
-	row:0,
-			fieldName: 'Abogado',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Abogado_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
-{
-	cellId: 'cell_field16',
-	col:0,
-	row:0,
-			fieldName: 'AbogadoCargo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$AbogadoCargo_pdfvalue},"hidden":"{$item_hide_simple_grid_field16}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$AbogadoCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
-{
-	cellId: 'cell_field17',
-	col:0,
-	row:0,
-			fieldName: 'Formato',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Formato_pdfvalue},"hidden":"{$item_hide_simple_grid_field17}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Formato_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
-{
-	cellId: 'cell_field18',
-	col:0,
-	row:0,
-			fieldName: 'Corporacion',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Corporacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Corporacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field19}
-{
-	cellId: 'cell_field19',
-	col:0,
-	row:0,
-			fieldName: 'Unidad',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Unidad_pdfvalue},"hidden":"{$item_hide_simple_grid_field19}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Unidad_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field19}
-																							{BEGIN cellblock_grid_cell_field20}
-{
-	cellId: 'cell_field20',
-	col:0,
-	row:0,
-			fieldName: 'Oficina',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Oficina_pdfvalue},"hidden":"{$item_hide_simple_grid_field20}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Oficina_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field20}
-																							{BEGIN cellblock_grid_cell_field21}
-{
-	cellId: 'cell_field21',
-	col:0,
-	row:0,
-			fieldName: 'Serie',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Serie_pdfvalue},"hidden":"{$item_hide_simple_grid_field21}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Serie_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field21}
-																							{BEGIN cellblock_grid_cell_field22}
-{
-	cellId: 'cell_field22',
-	col:0,
-	row:0,
-			fieldName: 'Subserie',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Subserie_pdfvalue},"hidden":"{$item_hide_simple_grid_field22}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Subserie_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field22}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -1841,54 +923,10 @@ pdfDocument = {
 	
 			
 	
-			"stack": [
+			"text": [
 		
-				
-			 {BEGIN details_abogados}
-			{$displayDetailTable_abogados }
-		{END details_abogados},
-				
-				
-			 {BEGIN details_presupuestos}
-			{$displayDetailTable_presupuestos }
-		{END details_presupuestos},
-				
-				
-			 {BEGIN details_chequeos}
-			{$displayDetailTable_chequeos }
-		{END details_chequeos},
-				
-				
-			 {BEGIN details_procesos}
-			{$displayDetailTable_procesos }
-		{END details_procesos},
-				
-				
-			 {BEGIN details_importaciones}
-			{$displayDetailTable_importaciones }
-		{END details_importaciones},
-				
-				
-			 {BEGIN details_indeterminados}
-			{$displayDetailTable_indeterminados }
-		{END details_indeterminados},
-				
-				
-			 {BEGIN details_minjusticia}
-			{$displayDetailTable_minjusticia }
-		{END details_minjusticia},
-				
-				
-			 {BEGIN details_minjusticia2}
-			{$displayDetailTable_minjusticia2 }
-		{END details_minjusticia2},
-				
-				
-			 {BEGIN details_minjusticia3}
-			{$displayDetailTable_minjusticia3 }
-		{END details_minjusticia3},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1954,96 +992,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  10,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  11,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  12,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  13,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  14,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  15,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  16,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  17,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  18,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  19,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  20,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  21,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  22,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  23,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  24,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  25,
 				text: ''
 			},
 							],
@@ -2133,32 +1081,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_details}
-																							{BEGIN cellblock_grid_footcell_field}
-{
-	cellId: 'footcell_field',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field}
 																							{BEGIN cellblock_grid_footcell_field1}
 {
 	cellId: 'footcell_field1',
@@ -2211,32 +1133,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
-																							{BEGIN cellblock_grid_footcell_field3}
-{
-	cellId: 'footcell_field3',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field3}
 																							{BEGIN cellblock_grid_footcell_field4}
 {
 	cellId: 'footcell_field4',
@@ -2393,344 +1289,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field9}
-																							{BEGIN cellblock_grid_footcell_field10}
-{
-	cellId: 'footcell_field10',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field10}
-																							{BEGIN cellblock_grid_footcell_field11}
-{
-	cellId: 'footcell_field11',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field11}
-																							{BEGIN cellblock_grid_footcell_field12}
-{
-	cellId: 'footcell_field12',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field12}
-																							{BEGIN cellblock_grid_footcell_field13}
-{
-	cellId: 'footcell_field13',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field13}
-																							{BEGIN cellblock_grid_footcell_field14}
-{
-	cellId: 'footcell_field14',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field14}
-																							{BEGIN cellblock_grid_footcell_field15}
-{
-	cellId: 'footcell_field15',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field15}
-																							{BEGIN cellblock_grid_footcell_field16}
-{
-	cellId: 'footcell_field16',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field16}
-																							{BEGIN cellblock_grid_footcell_field17}
-{
-	cellId: 'footcell_field17',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field17}
-																							{BEGIN cellblock_grid_footcell_field18}
-{
-	cellId: 'footcell_field18',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field18}
-																							{BEGIN cellblock_grid_footcell_field19}
-{
-	cellId: 'footcell_field19',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field19}
-																							{BEGIN cellblock_grid_footcell_field20}
-{
-	cellId: 'footcell_field20',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field20}
-																							{BEGIN cellblock_grid_footcell_field21}
-{
-	cellId: 'footcell_field21',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field21}
-																							{BEGIN cellblock_grid_footcell_field22}
-{
-	cellId: 'footcell_field22',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field22}
 											],
 				{END row_grid_3}
 		

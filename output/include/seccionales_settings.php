@@ -6,11 +6,11 @@ $tdataseccionales[".OwnerID"] = "";
 $tdataseccionales[".OriginalTable"] = "dbo.Seccionales";
 
 
-$tdataseccionales[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataseccionales[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataseccionales[".originalPagesByType"] = $tdataseccionales[".pagesByType"];
-$tdataseccionales[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataseccionales[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataseccionales[".originalPages"] = $tdataseccionales[".pages"];
-$tdataseccionales[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataseccionales[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataseccionales[".originalDefaultPages"] = $tdataseccionales[".defaultPages"];
 
 //	field labels
@@ -37,7 +37,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["NIT"] = "NIT";
 	$fieldToolTipsseccionales["Spanish"]["NIT"] = "";
 	$placeHoldersseccionales["Spanish"]["NIT"] = "";
-	$fieldLabelsseccionales["Spanish"]["CiudadId"] = "Ciudad Id";
+	$fieldLabelsseccionales["Spanish"]["CiudadId"] = "Ciudad";
 	$fieldToolTipsseccionales["Spanish"]["CiudadId"] = "";
 	$placeHoldersseccionales["Spanish"]["CiudadId"] = "";
 	$fieldLabelsseccionales["Spanish"]["PiePagina"] = "Pie Pagina";
@@ -61,28 +61,28 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["Contador"] = "Contador";
 	$fieldToolTipsseccionales["Spanish"]["Contador"] = "";
 	$placeHoldersseccionales["Spanish"]["Contador"] = "";
-	$fieldLabelsseccionales["Spanish"]["ContadorCargo"] = "Contador Cargo";
+	$fieldLabelsseccionales["Spanish"]["ContadorCargo"] = "Cargo Contador";
 	$fieldToolTipsseccionales["Spanish"]["ContadorCargo"] = "";
 	$placeHoldersseccionales["Spanish"]["ContadorCargo"] = "";
 	$fieldLabelsseccionales["Spanish"]["Director"] = "Director";
 	$fieldToolTipsseccionales["Spanish"]["Director"] = "";
 	$placeHoldersseccionales["Spanish"]["Director"] = "";
-	$fieldLabelsseccionales["Spanish"]["DirectorCargo"] = "Director Cargo";
+	$fieldLabelsseccionales["Spanish"]["DirectorCargo"] = "Cargo Director";
 	$fieldToolTipsseccionales["Spanish"]["DirectorCargo"] = "";
 	$placeHoldersseccionales["Spanish"]["DirectorCargo"] = "";
 	$fieldLabelsseccionales["Spanish"]["Abogado"] = "Abogado";
 	$fieldToolTipsseccionales["Spanish"]["Abogado"] = "";
 	$placeHoldersseccionales["Spanish"]["Abogado"] = "";
-	$fieldLabelsseccionales["Spanish"]["AbogadoCargo"] = "Abogado Cargo";
+	$fieldLabelsseccionales["Spanish"]["AbogadoCargo"] = "Cargo Abogado";
 	$fieldToolTipsseccionales["Spanish"]["AbogadoCargo"] = "";
 	$placeHoldersseccionales["Spanish"]["AbogadoCargo"] = "";
-	$fieldLabelsseccionales["Spanish"]["Formato"] = "Formato";
+	$fieldLabelsseccionales["Spanish"]["Formato"] = "Imprimir Formato";
 	$fieldToolTipsseccionales["Spanish"]["Formato"] = "";
 	$placeHoldersseccionales["Spanish"]["Formato"] = "";
 	$fieldLabelsseccionales["Spanish"]["Corporacion"] = "Corporacion";
 	$fieldToolTipsseccionales["Spanish"]["Corporacion"] = "";
 	$placeHoldersseccionales["Spanish"]["Corporacion"] = "";
-	$fieldLabelsseccionales["Spanish"]["Unidad"] = "Unidad";
+	$fieldLabelsseccionales["Spanish"]["Unidad"] = "Unidad Administrativa";
 	$fieldToolTipsseccionales["Spanish"]["Unidad"] = "";
 	$placeHoldersseccionales["Spanish"]["Unidad"] = "";
 	$fieldLabelsseccionales["Spanish"]["Oficina"] = "Oficina";

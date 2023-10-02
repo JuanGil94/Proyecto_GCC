@@ -46,10 +46,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsoficios1["Spanish"]["Direcciones"] = "Direccion Sancionado";
 	$fieldToolTipsoficios1["Spanish"]["Direcciones"] = "";
 	$placeHoldersoficios1["Spanish"]["Direcciones"] = "";
-	$fieldLabelsoficios1["Spanish"]["Edicion"] = "Permitir Edicion";
+	$fieldLabelsoficios1["Spanish"]["Edicion"] = "Edicion";
 	$fieldToolTipsoficios1["Spanish"]["Edicion"] = "";
 	$placeHoldersoficios1["Spanish"]["Edicion"] = "";
-	$fieldLabelsoficios1["Spanish"]["Abierto"] = "Publicar Abierto";
+	$fieldLabelsoficios1["Spanish"]["Abierto"] = "Abierto";
 	$fieldToolTipsoficios1["Spanish"]["Abierto"] = "";
 	$placeHoldersoficios1["Spanish"]["Abierto"] = "";
 	$fieldLabelsoficios1["Spanish"]["Sigobius"] = "Sigobius";
@@ -167,7 +167,7 @@ $tdataoficios1[".addPageEvents"] = false;
 $tdataoficios1[".isUseTimeForSearch"] = false;
 
 
-$tdataoficios1[".badgeColor"] = "CD5C5C";
+$tdataoficios1[".badgeColor"] = "8FBC8B";
 
 
 $tdataoficios1[".allSearchFields"] = array();
@@ -1058,7 +1058,7 @@ $tdataoficios1[".hideMobileList"] = array();
 	
 		
 	$edata["LinkField"] = "OficioId";
-	$edata["LinkFieldType"] = 3;
+	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Oficio";
 
 	

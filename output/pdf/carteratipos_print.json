@@ -73,9 +73,6 @@ pdfDocument = {
 										{BEGIN col_grid_2}
 					"%",
 					{END col_grid_2}
-										{BEGIN col_grid_3}
-					"%",
-					{END col_grid_3}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -212,35 +209,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'CarteraTipoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_CarteraTipos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$CarteraTipoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'CarteraTipo',
 				style: 'headcell',
 		
@@ -255,7 +223,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CarteraTipos CarteraTipo }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel dbo_CarteraTipos CarteraTipo }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -264,10 +232,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Color',
@@ -284,7 +252,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CarteraTipos Color }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel dbo_CarteraTipos Color }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -293,10 +261,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Prescrita',
@@ -313,7 +281,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CarteraTipos Prescrita }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel dbo_CarteraTipos Prescrita }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -322,7 +290,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field2}
 											],
 				{END row_grid_0}
 		
@@ -335,35 +303,6 @@ pdfDocument = {
 																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'CarteraTipoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$CarteraTipoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'CarteraTipo',
@@ -389,10 +328,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Color',
@@ -418,10 +357,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Prescrita',
@@ -447,7 +386,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field2}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -510,12 +449,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  2,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  3,
 				text: ''
 			},
 							],
@@ -605,32 +538,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
-																							{BEGIN cellblock_grid_footcell_field3}
-{
-	cellId: 'footcell_field3',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field3}
 											],
 				{END row_grid_3}
 		

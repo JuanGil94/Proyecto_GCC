@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Reportes ReporteId }","bold":true},{"text":{$ReporteId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Reportes Reporte }","bold":true},{"text":{$Reporte_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

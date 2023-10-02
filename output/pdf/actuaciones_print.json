@@ -642,6 +642,11 @@ pdfDocument = {
 			{$displayDetailTable_alertas }
 		{END details_alertas},
 				
+				
+			 {BEGIN details_oficios1}
+			{$displayDetailTable_oficios1 }
+		{END details_oficios1},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

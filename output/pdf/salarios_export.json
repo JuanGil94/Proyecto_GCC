@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$SalarioId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Ano_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				

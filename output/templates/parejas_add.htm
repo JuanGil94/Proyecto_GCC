@@ -111,27 +111,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN AbogadoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
-	data-signal-error-for="AbogadoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
-		{BEGIN AbogadoId_label}{$label dbo_Parejas AbogadoId }{END AbogadoId_label}
-	</label>
-	<div class="r-edit-field">
-		{$AbogadoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_Parejas AbogadoId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Parejas AbogadoId }		</div>
-	</div>
-</div>
-
-
-{END AbogadoId_fieldblock}
-											
 {BEGIN Pareja_fieldblock}
 
 
@@ -152,6 +131,27 @@
 
 
 {END Pareja_fieldblock}
+											
+{BEGIN AbogadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
+	data-signal-error-for="AbogadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
+		{BEGIN AbogadoId_label}{$label dbo_Parejas AbogadoId }{END AbogadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$AbogadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_Parejas AbogadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Parejas AbogadoId }		</div>
+	</div>
+</div>
+
+
+{END AbogadoId_fieldblock}
 											
 {BEGIN AbogadoMinjusticia_fieldblock}
 

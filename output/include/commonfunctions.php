@@ -375,6 +375,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("tipocobro" == $shortTName )
 		return true;
+	if ("oficios1" == $shortTName )
+		return true;
+	if ("operaciontipo" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1199,6 +1203,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.tipoCobro";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Oficios1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Oficios1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.OperacionTipo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.OperacionTipo";
+	}
 	return $arr;
 }
 
@@ -1294,6 +1316,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Carceles4";
 	$arr[]="dbo.Alertas";
 	$arr[]="dbo.tipoCobro";
+	$arr[]="dbo.Oficios1";
+	$arr[]="dbo.OperacionTipo";
 	return $arr;
 }
 
@@ -2347,6 +2371,16 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.tipoCobro" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Oficios1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.OperacionTipo" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
