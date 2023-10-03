@@ -554,7 +554,6 @@ function tasa($nat,$conc,$a,$m){
             break;
     }
 }
-//function recaudo($obliInicial,$costas,$recaudo,$fecha,$procesoId){
 function recaudo($procesoId){
     //echo "Valourrrrrr: ".var_dump ($procesoId);
     $fechasR=array();
@@ -607,6 +606,7 @@ function deleteRe($procesoId){
 }
 //$numero=1006163;
 //$numero=1004469; //segundo numero que cuadra (no) really
+//$result["valor"]=10000;
 $numero=$params["ProcesoId"];
 //$numero=1006163; //caso que si da exacto a produccion
 //$numero=885865;
@@ -932,13 +932,13 @@ for ($i=0;$i<=$numAnnos;$i++){
             ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotalDiaria."</strong>";
             insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald); 
         }
-				 else if($annoEje==date("Y")&&$mes>date("m")){
+		else if($annoEje==date("Y")&&$mes>date("m")){
             //echo "Este mes: $mes con dias $dias no aplica<br>";
 						 //echo "La suma total es:".$sumaTotalDiaria;
 						 //echo "<script>alert('Holaaaa'+$sumaTotalDiaria);</script>";
-						 $result["total"]=$sumaTotalDiaria;
+						 $result["total"]=round($sumaTotalDiaria+$obligacion,2);
 						 //echo "<script language='javascript'>alert('El valor Saldo total al dia es de:'+$sumaTotalDiaria);location.reload(); </script>";
-            return;
+            //exit();
         }
         else{
 						 //echo "Valor de la Tasa para Octubre $tasaDiariaT";
