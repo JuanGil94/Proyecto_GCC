@@ -740,9 +740,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "804_1696021000";
+$projectBuildKey = "812_1696347385";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "804";
+$projectBuildNumber = "812";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -845,15 +845,12 @@ $tableCaptions["Spanish"]["Tasas_Tributarias"] = "Tasas Tributarias";
 $tableCaptions["Spanish"]["Tasas_Comerciales"] = "Tasas Comerciales";
 $tableCaptions["Spanish"]["Tasas_TES__Deterioro_de_Cartera_"] = "Tasas TES (Deterioro de Cartera)";
 $tableCaptions["Spanish"]["dbo_Carceles"] = "Carceles";
-$tableCaptions["Spanish"]["dbo_Carceles1"] = "Carceles1";
-$tableCaptions["Spanish"]["dbo_Carceles2"] = "Carceles2";
-$tableCaptions["Spanish"]["dbo_Carceles3"] = "Carceles3";
-$tableCaptions["Spanish"]["dbo_Carceles4"] = "Carceles4";
 $tableCaptions["Spanish"]["dbo_Alertas"] = "Alertas";
 $tableCaptions["Spanish"]["dbo_tipoCobro"] = "Tipo Cobro";
 $tableCaptions["Spanish"]["dbo_Oficios1"] = "Oficios1";
 $tableCaptions["Spanish"]["dbo_OperacionTipo"] = "Operacion Tipo";
 $tableCaptions["Spanish"]["dbo_Ciudades1"] = "Ciudades1";
+$tableCaptions["Spanish"]["dbo_Autorizaciones"] = "Autorizaciones";
 
 
 $globalEvents = new class_GlobalEvents;

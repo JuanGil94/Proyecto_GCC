@@ -143,7 +143,7 @@ $tdatachequeosoficios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																											
+																																																																																										
 
 $tdatachequeosoficios[".ajaxCodeSnippetAdded"] = false;
 
@@ -1342,6 +1342,24 @@ $masterTablesData["dbo.ChequeosOficios"] = array();
 	$masterTablesData["dbo.ChequeosOficios"][3]["masterKeys"][]="OficioId";
 				$masterTablesData["dbo.ChequeosOficios"][3]["detailKeys"] = array();
 	$masterTablesData["dbo.ChequeosOficios"][3]["detailKeys"][]="OficioId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Chequeos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Autorizaciones";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "autorizaciones";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.ChequeosOficios"][4] = $masterParams;
+				$masterTablesData["dbo.ChequeosOficios"][4]["masterKeys"] = array();
+	$masterTablesData["dbo.ChequeosOficios"][4]["masterKeys"][]="ChequeoId";
+				$masterTablesData["dbo.ChequeosOficios"][4]["detailKeys"] = array();
+	$masterTablesData["dbo.ChequeosOficios"][4]["detailKeys"][]="ChequeoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.MotivosDevoluciones' => array( 'preview' => false ),
-'dbo.Chequeos' => array( 'preview' => false ) ),
+'dbo.Chequeos' => array( 'preview' => false ),
+'dbo.Autorizaciones' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'ChequeoId',
 'MotivoDevolucionId',

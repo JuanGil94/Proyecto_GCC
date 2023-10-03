@@ -1,7 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'master' => array( 'dbo.MotivosDevoluciones' => array( 'preview' => false ),
-'dbo.Chequeos' => array( 'preview' => false ) ),
+'dbo.Chequeos' => array( 'preview' => false ),
+'dbo.Autorizaciones' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'DevolucionId',
 'ChequeoId',
 'MotivoDevolucionId',

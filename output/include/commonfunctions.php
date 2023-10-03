@@ -363,14 +363,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("carceles" == $shortTName )
 		return true;
-	if ("carceles1" == $shortTName )
-		return true;
-	if ("carceles2" == $shortTName )
-		return true;
-	if ("carceles3" == $shortTName )
-		return true;
-	if ("carceles4" == $shortTName )
-		return true;
 	if ("alertas" == $shortTName )
 		return true;
 	if ("tipocobro" == $shortTName )
@@ -380,6 +372,8 @@ function checkTableName($shortTName )
 	if ("operaciontipo" == $shortTName )
 		return true;
 	if ("ciudades1" == $shortTName )
+		return true;
+	if ("autorizaciones" == $shortTName )
 		return true;
 	return false;
 }
@@ -1153,42 +1147,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles1");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles1";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles2");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles2";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles3");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles3";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Carceles4");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Carceles4";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.Alertas");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1231,6 +1189,15 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Ciudades1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Autorizaciones");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Autorizaciones";
 	}
 	return $arr;
 }
@@ -1321,15 +1288,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Tasas Comerciales";
 	$arr[]="Tasas TES (Deterioro de Cartera)";
 	$arr[]="dbo.Carceles";
-	$arr[]="dbo.Carceles1";
-	$arr[]="dbo.Carceles2";
-	$arr[]="dbo.Carceles3";
-	$arr[]="dbo.Carceles4";
 	$arr[]="dbo.Alertas";
 	$arr[]="dbo.tipoCobro";
 	$arr[]="dbo.Oficios1";
 	$arr[]="dbo.OperacionTipo";
 	$arr[]="dbo.Ciudades1";
+	$arr[]="dbo.Autorizaciones";
 	return $arr;
 }
 
@@ -2357,26 +2321,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Carceles1" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.Carceles2" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.Carceles3" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.Carceles4" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Alertas" )
 	{
 //	default permissions
@@ -2398,6 +2342,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Autorizaciones" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -140,7 +140,7 @@ $tdatadevoluciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																													
+																																																												
 
 $tdatadevoluciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -1175,6 +1175,24 @@ $masterTablesData["dbo.Devoluciones"] = array();
 	$masterTablesData["dbo.Devoluciones"][1]["masterKeys"][]="ChequeoId";
 				$masterTablesData["dbo.Devoluciones"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Devoluciones"][1]["detailKeys"][]="ChequeoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Chequeos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Autorizaciones";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "autorizaciones";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Devoluciones"][2] = $masterParams;
+				$masterTablesData["dbo.Devoluciones"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Devoluciones"][2]["masterKeys"][]="ChequeoId";
+				$masterTablesData["dbo.Devoluciones"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Devoluciones"][2]["detailKeys"][]="ChequeoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

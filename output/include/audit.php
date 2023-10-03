@@ -676,22 +676,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="dbo.Carceles1")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles2")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles3")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles4")
-		{
-			return false;
-		}
 		if($table=="dbo.Alertas")
 		{
 			return false;
@@ -709,6 +693,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.Ciudades1")
+		{
+			return true;
+		}
+		if($table=="dbo.Autorizaciones")
 		{
 			return true;
 		}
@@ -1340,22 +1328,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="dbo.Carceles1")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles2")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles3")
-		{
-			return false;
-		}
-		if($table=="dbo.Carceles4")
-		{
-			return false;
-		}
 		if($table=="dbo.Alertas")
 		{
 			return false;
@@ -1373,6 +1345,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.Ciudades1")
+		{
+			return true;
+		}
+		if($table=="dbo.Autorizaciones")
 		{
 			return true;
 		}

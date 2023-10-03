@@ -6,11 +6,11 @@ $tdatatramites[".OwnerID"] = "";
 $tdatatramites[".OriginalTable"] = "dbo.Tramites";
 
 
-$tdatatramites[".pagesByType"] = my_json_decode( "{}" );
+$tdatatramites[".pagesByType"] = my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
 $tdatatramites[".originalPagesByType"] = $tdatatramites[".pagesByType"];
-$tdatatramites[".pages"] = types2pages( my_json_decode( "{}" ) );
+$tdatatramites[".pages"] = types2pages( my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
 $tdatatramites[".originalPages"] = $tdatatramites[".pages"];
-$tdatatramites[".defaultPages"] = my_json_decode( "{}" );
+$tdatatramites[".defaultPages"] = my_json_decode( "{\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
 $tdatatramites[".originalDefaultPages"] = $tdatatramites[".defaultPages"];
 
 //	field labels
@@ -528,6 +528,36 @@ changeTextControlsToDate( "dbo.Tramites" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Tramites"] = array();
+//	dbo.Autorizaciones
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Autorizaciones";
+		$detailsParam["dOriginalTable"] = "dbo.Chequeos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "autorizaciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Autorizaciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Tramites"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Tramites"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Tramites"][$dIndex]["masterKeys"][]="TramiteId";
+
+				$detailsTablesData["dbo.Tramites"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Tramites"][$dIndex]["detailKeys"][]="TramiteId";
 //endif
 
 // tables which are master tables for current table (detail)

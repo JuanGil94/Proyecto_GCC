@@ -595,24 +595,24 @@ pdfDocument = {
 		{END details_carceles},
 				
 				
-			 {BEGIN details_carceles1}
-			{$displayDetailTable_carceles1 }
-		{END details_carceles1},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 				
-			 {BEGIN details_carceles2}
-			{$displayDetailTable_carceles2 }
-		{END details_carceles2},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 				
-			 {BEGIN details_carceles3}
-			{$displayDetailTable_carceles3 }
-		{END details_carceles3},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 				
-			 {BEGIN details_carceles4}
-			{$displayDetailTable_carceles4 }
-		{END details_carceles4},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 		  ],
   "border": [ true, true, true, true ],

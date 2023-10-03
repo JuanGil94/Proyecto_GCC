@@ -323,15 +323,12 @@ class ConnectionManager_Base
 		$connectionsIds["Tasas Comerciales"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Tasas TES (Deterioro de Cartera)"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Carceles"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles1"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles2"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles3"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Carceles4"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Alertas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.tipoCobro"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Oficios1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.OperacionTipo"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Ciudades1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Autorizaciones"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

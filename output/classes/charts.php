@@ -538,14 +538,6 @@ class Chart
 			return true;
 		if("dbo.Carceles" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.Carceles" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Alertas" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.tipoCobro" == $this->chrt_array['tables'][0])
@@ -555,6 +547,8 @@ class Chart
 		if("dbo.OperacionTipo" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Ciudades" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Chequeos" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

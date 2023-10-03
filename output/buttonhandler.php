@@ -73,16 +73,34 @@ if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
 	fieldEventHandler_Tipo_event( $params );
 }
+if( $eventId == 'Tipo_event' && "dbo.Autorizaciones" == $table )
+{
+	require_once("include/autorizaciones_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Autorizaciones");
+	fieldEventHandler_Tipo_event( $params );
+}
 if( $eventId == 'Tipo_event1' && "dbo.Chequeos" == $table )
 {
 	require_once("include/chequeos_variables.php");
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
 	fieldEventHandler_Tipo_event1( $params );
 }
+if( $eventId == 'Tipo_event1' && "dbo.Autorizaciones" == $table )
+{
+	require_once("include/autorizaciones_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Autorizaciones");
+	fieldEventHandler_Tipo_event1( $params );
+}
 if( $eventId == 'cantidadLetras' && "dbo.Chequeos" == $table )
 {
 	require_once("include/chequeos_variables.php");
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_cantidadLetras( $params );
+}
+if( $eventId == 'cantidadLetras' && "dbo.Autorizaciones" == $table )
+{
+	require_once("include/autorizaciones_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Autorizaciones");
 	fieldEventHandler_cantidadLetras( $params );
 }
 
