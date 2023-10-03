@@ -16,6 +16,8 @@
 
 		$this->events["CustomAdd"]=true;
 
+		$this->events["AfterAdd"]=true;
+
 
 	}
 
@@ -128,6 +130,98 @@ return true;
 } // function CustomAdd
 
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record added
+function AfterAdd(&$values, &$keys, $inline, $pageObject)
+{
+
+		 // Verifica si la inserción fue exitosa
+    if ($pageObject->status == "success") {
+        // Genera código JavaScript para mostrar un SweetAlert
+				echo '<script>alert("FINISHHHHHH:");</script>';
+        $jsCode = "
+            <script>
+                swal({
+                    title: 'Registro exitoso',
+                    text: 'El registro se ha agregado satisfactoriamente.',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+            </script>
+        ";
+        
+        // Imprime el código JavaScript
+        echo $jsCode;
+    }
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterAdd
+
 		
 		
 		
