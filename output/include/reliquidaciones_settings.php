@@ -167,7 +167,7 @@ $tdatareliquidaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																														
+																																				
 
 $tdatareliquidaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -877,7 +877,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 10;
 
 	
 	

@@ -269,6 +269,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel dbo_Procesos Dias }","bold":true},{"text":{$Dias_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel dbo_Procesos ProcesoId }","bold":true},{"text":{$ProcesoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

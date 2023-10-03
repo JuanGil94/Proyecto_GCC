@@ -172,6 +172,9 @@ pdfDocument = {
 										{BEGIN col_grid_35}
 					"%",
 					{END col_grid_35}
+										{BEGIN col_grid_36}
+					"%",
+					{END col_grid_36}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1372,6 +1375,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field32}
+																							{BEGIN cellblock_grid_headcell_field33}
+{
+	cellId: 'headcell_field33',
+	col:0,
+	row:0,
+			fieldName: 'ProcesoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos ProcesoId }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ProcesoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field33}
 											],
 				{END row_grid_0}
 		
@@ -1459,6 +1491,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":""},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2425,6 +2460,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field32}
+																							{BEGIN cellblock_grid_cell_field33}
+{
+	cellId: 'cell_field33',
+	col:0,
+	row:0,
+			fieldName: 'ProcesoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ProcesoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field33}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2725,6 +2789,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  35,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  36,
 				text: ''
 			},
 							],
@@ -3672,6 +3742,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field32}
+																							{BEGIN cellblock_grid_footcell_field33}
+{
+	cellId: 'footcell_field33',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field33}
 											],
 				{END row_grid_3}
 		

@@ -204,6 +204,9 @@ pdfDocument = {
 				
 			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_export_field27}"},
 				
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field28}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
