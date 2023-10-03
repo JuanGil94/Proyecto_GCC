@@ -537,25 +537,66 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Actuacion" checked="checked" value="1" data-field="Actuacion" data-fieldname="Actuacion">
+					<span>{$label dbo_Actuaciones1 Actuacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Actuaciones1 Fecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Actuaciones1 Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Resolucion" checked="checked" value="1" data-field="Resolucion" data-fieldname="Resolucion">
+					<span>{$label dbo_Actuaciones1 Resolucion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ProcesoId" checked="checked" value="1" data-field="ProcesoId" data-fieldname="ProcesoId">
+					<span>{$label dbo_Actuaciones1 ProcesoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
-			 
-				<div class="row">
-			 
-				<div 
-	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class=" r-ori-vert			col-md-6
-	
-">
-			</div>			 
-				<div 
-	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
-	class="r-align-right r-ori-vert			col-md-6
-	
-">
-		 
-		<div class="form-inline sortby-ctrl" data-itemtype="sort_dropdown" data-itemid="sort_dropdown" {$item_sort_dropdown} data-pageid="{$pageid}">
-Ordenar por&nbsp;{$sortByDropdown}
-</div>		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>

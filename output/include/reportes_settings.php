@@ -178,6 +178,7 @@ $tdatareportes[".geocodingEnabled"] = false;
 
 
 
+$tdatareportes[".isResizeColumns"] = true;
 
 
 

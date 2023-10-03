@@ -182,6 +182,7 @@ $tdataalertas[".geocodingEnabled"] = false;
 
 
 
+$tdataalertas[".isResizeColumns"] = true;
 
 
 

@@ -166,6 +166,7 @@ $tdataetapas[".geocodingEnabled"] = false;
 
 
 
+$tdataetapas[".isResizeColumns"] = true;
 
 
 

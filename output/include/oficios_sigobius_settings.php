@@ -202,6 +202,7 @@ $tdataoficios_sigobius[".geocodingEnabled"] = false;
 
 
 
+$tdataoficios_sigobius[".isResizeColumns"] = true;
 
 
 

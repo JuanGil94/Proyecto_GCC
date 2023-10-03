@@ -170,6 +170,7 @@ $tdatasolidarios[".geocodingEnabled"] = false;
 
 
 
+$tdatasolidarios[".isResizeColumns"] = true;
 
 
 

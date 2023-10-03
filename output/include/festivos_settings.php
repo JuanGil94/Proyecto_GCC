@@ -170,6 +170,7 @@ $tdatafestivos[".geocodingEnabled"] = false;
 
 
 
+$tdatafestivos[".isResizeColumns"] = true;
 
 
 

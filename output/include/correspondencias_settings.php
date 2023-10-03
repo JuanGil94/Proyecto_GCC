@@ -202,6 +202,7 @@ $tdatacorrespondencias[".geocodingEnabled"] = false;
 
 
 
+$tdatacorrespondencias[".isResizeColumns"] = true;
 
 
 

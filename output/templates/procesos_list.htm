@@ -688,12 +688,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
-				{$simpleSearchFieldCombo}			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
-				{$simpleSearchTypeCombo}			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -1070,174 +1064,339 @@
 {END print_friendly}
 	 
 		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
-		 reorder	keep-open btn-group"
+	 showHide	 reorder	keep-open btn-group"
 	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
 	>
 	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
 	<ul role="menu" class="dropdown-menu dropdown-left">
 							<li>
 		<a>
-						<span data-field="ConceptoId" data-fieldname="ConceptoId">{$label dbo_Procesos ConceptoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ConceptoId" checked="checked" value="1" data-field="ConceptoId" data-fieldname="ConceptoId">
+					<span>{$label dbo_Procesos ConceptoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Numero" data-fieldname="Numero">{$label dbo_Procesos Numero }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
+					<span>{$label dbo_Procesos Numero }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="SancionadoId" data-fieldname="SancionadoId">{$label dbo_Procesos SancionadoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
+					<span>{$label dbo_Procesos SancionadoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="ObligacionInicial" data-fieldname="ObligacionInicial">{$label dbo_Procesos ObligacionInicial }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ObligacionInicial" checked="checked" value="1" data-field="ObligacionInicial" data-fieldname="ObligacionInicial">
+					<span>{$label dbo_Procesos ObligacionInicial }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="CostasInicial" data-fieldname="CostasInicial">{$label dbo_Procesos CostasInicial }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CostasInicial" checked="checked" value="1" data-field="CostasInicial" data-fieldname="CostasInicial">
+					<span>{$label dbo_Procesos CostasInicial }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="InteresesInicial" data-fieldname="InteresesInicial">{$label dbo_Procesos InteresesInicial }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_InteresesInicial" checked="checked" value="1" data-field="InteresesInicial" data-fieldname="InteresesInicial">
+					<span>{$label dbo_Procesos InteresesInicial }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Recaudo" data-fieldname="Recaudo">{$label dbo_Procesos Recaudo }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Recaudo" checked="checked" value="1" data-field="Recaudo" data-fieldname="Recaudo">
+					<span>{$label dbo_Procesos Recaudo }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Obligacion" data-fieldname="Obligacion">{$label dbo_Procesos Obligacion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Obligacion" checked="checked" value="1" data-field="Obligacion" data-fieldname="Obligacion">
+					<span>{$label dbo_Procesos Obligacion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Costas" data-fieldname="Costas">{$label dbo_Procesos Costas }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Costas" checked="checked" value="1" data-field="Costas" data-fieldname="Costas">
+					<span>{$label dbo_Procesos Costas }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="InteresesCalculados" data-fieldname="InteresesCalculados">{$label dbo_Procesos InteresesCalculados }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_InteresesCalculados" checked="checked" value="1" data-field="InteresesCalculados" data-fieldname="InteresesCalculados">
+					<span>{$label dbo_Procesos InteresesCalculados }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion">{$label dbo_Procesos ObligacionCreacion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ObligacionCreacion" checked="checked" value="1" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion">
+					<span>{$label dbo_Procesos ObligacionCreacion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="MinjusticiaId" data-fieldname="MinjusticiaId">{$label dbo_Procesos MinjusticiaId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MinjusticiaId" checked="checked" value="1" data-field="MinjusticiaId" data-fieldname="MinjusticiaId">
+					<span>{$label dbo_Procesos MinjusticiaId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Fecha" data-fieldname="Fecha">{$label dbo_Procesos Fecha }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Procesos Fecha }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Providencia" data-fieldname="Providencia">{$label dbo_Procesos Providencia }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
+					<span>{$label dbo_Procesos Providencia }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Ejecutoria" data-fieldname="Ejecutoria">{$label dbo_Procesos Ejecutoria }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+					<span>{$label dbo_Procesos Ejecutoria }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Plazo" data-fieldname="Plazo">{$label dbo_Procesos Plazo }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Plazo" checked="checked" value="1" data-field="Plazo" data-fieldname="Plazo">
+					<span>{$label dbo_Procesos Plazo }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Notificacion" data-fieldname="Notificacion">{$label dbo_Procesos Notificacion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Notificacion" checked="checked" value="1" data-field="Notificacion" data-fieldname="Notificacion">
+					<span>{$label dbo_Procesos Notificacion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Acuerdo" data-fieldname="Acuerdo">{$label dbo_Procesos Acuerdo }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Acuerdo" checked="checked" value="1" data-field="Acuerdo" data-fieldname="Acuerdo">
+					<span>{$label dbo_Procesos Acuerdo }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Incumplimiento" data-fieldname="Incumplimiento">{$label dbo_Procesos Incumplimiento }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Incumplimiento" checked="checked" value="1" data-field="Incumplimiento" data-fieldname="Incumplimiento">
+					<span>{$label dbo_Procesos Incumplimiento }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Dias" data-fieldname="Dias">{$label dbo_Procesos Dias }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Dias" checked="checked" value="1" data-field="Dias" data-fieldname="Dias">
+					<span>{$label dbo_Procesos Dias }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="EstadoId" data-fieldname="EstadoId">{$label dbo_Procesos EstadoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EstadoId" checked="checked" value="1" data-field="EstadoId" data-fieldname="EstadoId">
+					<span>{$label dbo_Procesos EstadoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="EtapaId" data-fieldname="EtapaId">{$label dbo_Procesos EtapaId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EtapaId" checked="checked" value="1" data-field="EtapaId" data-fieldname="EtapaId">
+					<span>{$label dbo_Procesos EtapaId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Terminacion" data-fieldname="Terminacion">{$label dbo_Procesos Terminacion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Terminacion" checked="checked" value="1" data-field="Terminacion" data-fieldname="Terminacion">
+					<span>{$label dbo_Procesos Terminacion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="MotivoId" data-fieldname="MotivoId">{$label dbo_Procesos MotivoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MotivoId" checked="checked" value="1" data-field="MotivoId" data-fieldname="MotivoId">
+					<span>{$label dbo_Procesos MotivoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="ActuacionId" data-fieldname="ActuacionId">{$label dbo_Procesos ActuacionId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActuacionId" checked="checked" value="1" data-field="ActuacionId" data-fieldname="ActuacionId">
+					<span>{$label dbo_Procesos ActuacionId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Origen" data-fieldname="Origen">{$label dbo_Procesos Origen }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Origen" checked="checked" value="1" data-field="Origen" data-fieldname="Origen">
+					<span>{$label dbo_Procesos Origen }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="DespachoId" data-fieldname="DespachoId">{$label dbo_Procesos DespachoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_DespachoId" checked="checked" value="1" data-field="DespachoId" data-fieldname="DespachoId">
+					<span>{$label dbo_Procesos DespachoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Folios" data-fieldname="Folios">{$label dbo_Procesos Folios }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Folios" checked="checked" value="1" data-field="Folios" data-fieldname="Folios">
+					<span>{$label dbo_Procesos Folios }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="MinJusticia" data-fieldname="MinJusticia">{$label dbo_Procesos MinJusticia }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MinJusticia" checked="checked" value="1" data-field="MinJusticia" data-fieldname="MinJusticia">
+					<span>{$label dbo_Procesos MinJusticia }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="NaturalezaId" data-fieldname="NaturalezaId">{$label dbo_Procesos NaturalezaId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_NaturalezaId" checked="checked" value="1" data-field="NaturalezaId" data-fieldname="NaturalezaId">
+					<span>{$label dbo_Procesos NaturalezaId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="AbogadoId" data-fieldname="AbogadoId">{$label dbo_Procesos AbogadoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
+					<span>{$label dbo_Procesos AbogadoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="CarteraTipoId" data-fieldname="CarteraTipoId">{$label dbo_Procesos CarteraTipoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CarteraTipoId" checked="checked" value="1" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+					<span>{$label dbo_Procesos CarteraTipoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="SeccionalId" data-fieldname="SeccionalId">{$label dbo_Procesos SeccionalId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
+					<span>{$label dbo_Procesos SeccionalId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 			</ul>
@@ -2286,7 +2445,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="procesos_view.php?{$editlink}" {$viewlink_attrs} title="Ver" data-popup >		
+	 glyphicon glyphicon-search" href="procesos_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
 				
 								</a>
 </span>

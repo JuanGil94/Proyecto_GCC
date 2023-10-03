@@ -485,7 +485,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="correspondencias_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="correspondencias_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -586,6 +586,125 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ProcesoId" checked="checked" value="1" data-field="ProcesoId" data-fieldname="ProcesoId">
+					<span>{$label dbo_Correspondencias ProcesoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_OficioId" checked="checked" value="1" data-field="OficioId" data-fieldname="OficioId">
+					<span>{$label dbo_Correspondencias OficioId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Correspondencias Fecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sigobius" checked="checked" value="1" data-field="Sigobius" data-fieldname="Sigobius">
+					<span>{$label dbo_Correspondencias Sigobius }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Correspondencias Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Resolucion" checked="checked" value="1" data-field="Resolucion" data-fieldname="Resolucion">
+					<span>{$label dbo_Correspondencias Resolucion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Codigo" checked="checked" value="1" data-field="Codigo" data-fieldname="Codigo">
+					<span>{$label dbo_Correspondencias Codigo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Radicado" checked="checked" value="1" data-field="Radicado" data-fieldname="Radicado">
+					<span>{$label dbo_Correspondencias Radicado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_UserId" checked="checked" value="1" data-field="UserId" data-fieldname="UserId">
+					<span>{$label dbo_Correspondencias UserId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
+					<span>{$label dbo_Correspondencias AbogadoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CorrespondenciaId" checked="checked" value="1" data-field="CorrespondenciaId" data-fieldname="CorrespondenciaId">
+					<span>{$label dbo_Correspondencias CorrespondenciaId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

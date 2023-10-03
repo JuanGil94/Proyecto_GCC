@@ -584,7 +584,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="medidas_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="medidas_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -693,6 +693,195 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MedidaId" checked="checked" value="1" data-field="MedidaId" data-fieldname="MedidaId">
+					<span>{$label dbo_Medidas MedidaId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PropiedadId" checked="checked" value="1" data-field="PropiedadId" data-fieldname="PropiedadId">
+					<span>{$label dbo_Medidas PropiedadId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EmbargoFecha" checked="checked" value="1" data-field="EmbargoFecha" data-fieldname="EmbargoFecha">
+					<span>{$label dbo_Medidas EmbargoFecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EmbargoResolucion" checked="checked" value="1" data-field="EmbargoResolucion" data-fieldname="EmbargoResolucion">
+					<span>{$label dbo_Medidas EmbargoResolucion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Secuestre" checked="checked" value="1" data-field="Secuestre" data-fieldname="Secuestre">
+					<span>{$label dbo_Medidas Secuestre }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SecuestreDocumento" checked="checked" value="1" data-field="SecuestreDocumento" data-fieldname="SecuestreDocumento">
+					<span>{$label dbo_Medidas SecuestreDocumento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SecuestreDireccion" checked="checked" value="1" data-field="SecuestreDireccion" data-fieldname="SecuestreDireccion">
+					<span>{$label dbo_Medidas SecuestreDireccion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SecuestreTelefono" checked="checked" value="1" data-field="SecuestreTelefono" data-fieldname="SecuestreTelefono">
+					<span>{$label dbo_Medidas SecuestreTelefono }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_RemateFecha" checked="checked" value="1" data-field="RemateFecha" data-fieldname="RemateFecha">
+					<span>{$label dbo_Medidas RemateFecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_RemateResolucion" checked="checked" value="1" data-field="RemateResolucion" data-fieldname="RemateResolucion">
+					<span>{$label dbo_Medidas RemateResolucion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Valor" checked="checked" value="1" data-field="Valor" data-fieldname="Valor">
+					<span>{$label dbo_Medidas Valor }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Medidas Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Secuestrado" checked="checked" value="1" data-field="Secuestrado" data-fieldname="Secuestrado">
+					<span>{$label dbo_Medidas Secuestrado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SecuestroFecha" checked="checked" value="1" data-field="SecuestroFecha" data-fieldname="SecuestroFecha">
+					<span>{$label dbo_Medidas SecuestroFecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Comision" checked="checked" value="1" data-field="Comision" data-fieldname="Comision">
+					<span>{$label dbo_Medidas Comision }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_RemateAviso" checked="checked" value="1" data-field="RemateAviso" data-fieldname="RemateAviso">
+					<span>{$label dbo_Medidas RemateAviso }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Aprobacion" checked="checked" value="1" data-field="Aprobacion" data-fieldname="Aprobacion">
+					<span>{$label dbo_Medidas Aprobacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Entrega" checked="checked" value="1" data-field="Entrega" data-fieldname="Entrega">
+					<span>{$label dbo_Medidas Entrega }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -1293,7 +1482,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="medidas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="medidas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>

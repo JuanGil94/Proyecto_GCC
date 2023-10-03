@@ -178,6 +178,7 @@ $tdatatest[".geocodingEnabled"] = false;
 
 
 
+$tdatatest[".isResizeColumns"] = true;
 
 
 

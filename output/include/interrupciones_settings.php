@@ -178,6 +178,7 @@ $tdatainterrupciones[".geocodingEnabled"] = false;
 
 
 
+$tdatainterrupciones[".isResizeColumns"] = true;
 
 
 

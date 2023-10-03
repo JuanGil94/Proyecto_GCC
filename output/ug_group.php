@@ -103,6 +103,7 @@ $nonAdminTablesArr[] = "dbo.Alertas";
 $nonAdminTablesArr[] = "dbo.tipoCobro";
 $nonAdminTablesArr[] = "dbo.Oficios1";
 $nonAdminTablesArr[] = "dbo.OperacionTipo";
+$nonAdminTablesArr[] = "dbo.Ciudades1";
 
 $ug_connection = $cman->getForUserGroups();
 

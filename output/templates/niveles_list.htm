@@ -515,6 +515,75 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Nivel" checked="checked" value="1" data-field="Nivel" data-fieldname="Nivel">
+					<span>{$label dbo_Niveles Nivel }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Desde" checked="checked" value="1" data-field="Desde" data-fieldname="Desde">
+					<span>{$label dbo_Niveles Desde }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Hasta" checked="checked" value="1" data-field="Hasta" data-fieldname="Hasta">
+					<span>{$label dbo_Niveles Hasta }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Busqueda" checked="checked" value="1" data-field="Busqueda" data-fieldname="Busqueda">
+					<span>{$label dbo_Niveles Busqueda }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Antiguedad" checked="checked" value="1" data-field="Antiguedad" data-fieldname="Antiguedad">
+					<span>{$label dbo_Niveles Antiguedad }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Clasificacion" checked="checked" value="1" data-field="Clasificacion" data-fieldname="Clasificacion">
+					<span>{$label dbo_Niveles Clasificacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

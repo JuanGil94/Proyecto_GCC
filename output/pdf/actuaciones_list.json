@@ -231,51 +231,8 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-			
-	
-			"text": [
-		
 				
-			{"text":"","hidden":"{$item_hide_sort_dropdown}"},
+			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -610,19 +567,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -797,19 +743,10 @@ pdfDocument = {
 	
 			
 	
-			"stack": [
+			"text": [
 		
-				
-			 {BEGIN details_alertas}
-			{$displayDetailTable_alertas }
-		{END details_alertas},
-				
-				
-			 {BEGIN details_oficios1}
-			{$displayDetailTable_oficios1 }
-		{END details_oficios1},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

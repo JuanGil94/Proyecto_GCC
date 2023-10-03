@@ -178,6 +178,7 @@ $tdatatasas_tributarias[".geocodingEnabled"] = false;
 
 
 
+$tdatatasas_tributarias[".isResizeColumns"] = true;
 
 
 

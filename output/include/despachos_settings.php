@@ -6,11 +6,11 @@ $tdatadespachos[".OwnerID"] = "";
 $tdatadespachos[".OriginalTable"] = "dbo.Despachos";
 
 
-$tdatadespachos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatadespachos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatadespachos[".originalPagesByType"] = $tdatadespachos[".pagesByType"];
-$tdatadespachos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatadespachos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatadespachos[".originalPages"] = $tdatadespachos[".pages"];
-$tdatadespachos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatadespachos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatadespachos[".originalDefaultPages"] = $tdatadespachos[".defaultPages"];
 
 //	field labels
@@ -31,10 +31,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Codigo"] = "Codigo";
 	$fieldToolTipsdespachos["Spanish"]["Codigo"] = "";
 	$placeHoldersdespachos["Spanish"]["Codigo"] = "";
-	$fieldLabelsdespachos["Spanish"]["Despacho"] = "Despacho";
+	$fieldLabelsdespachos["Spanish"]["Despacho"] = "Despacho/Juzgado";
 	$fieldToolTipsdespachos["Spanish"]["Despacho"] = "";
 	$placeHoldersdespachos["Spanish"]["Despacho"] = "";
-	$fieldLabelsdespachos["Spanish"]["CiudadId"] = "Ciudad Id";
+	$fieldLabelsdespachos["Spanish"]["CiudadId"] = "Ciudad/Municipio";
 	$fieldToolTipsdespachos["Spanish"]["CiudadId"] = "";
 	$placeHoldersdespachos["Spanish"]["CiudadId"] = "";
 	$fieldLabelsdespachos["Spanish"]["Especialidad"] = "Especialidad";
@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Juez"] = "Juez";
 	$fieldToolTipsdespachos["Spanish"]["Juez"] = "";
 	$placeHoldersdespachos["Spanish"]["Juez"] = "";
-	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo";
+	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo Electronico";
 	$fieldToolTipsdespachos["Spanish"]["Correo"] = "";
 	$placeHoldersdespachos["Spanish"]["Correo"] = "";
 	$fieldLabelsdespachos["Spanish"]["Telefonos"] = "Telefonos";
@@ -202,6 +202,7 @@ $tdatadespachos[".geocodingEnabled"] = false;
 
 
 
+$tdatadespachos[".isResizeColumns"] = true;
 
 
 
@@ -753,7 +754,7 @@ $tdatadespachos[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Ciudades";
+	$edata["LookupTable"] = "dbo.Ciudades1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -762,7 +763,7 @@ $tdatadespachos[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "CiudadId";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Ciudad";
+	$edata["DisplayField"] = "Ciudad/Municipio";
 
 	
 

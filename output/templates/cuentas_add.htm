@@ -132,27 +132,6 @@
 
 {END Cuenta_fieldblock}
 											
-{BEGIN Numero_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-vertical-field" 
-	data-signal-error-for="Numero{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Numero}">
-		{BEGIN Numero_label}{$label dbo_Cuentas Numero }{END Numero_label}
-	</label>
-	<div class="r-edit-field">
-		{$Numero_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Numero" {$tooltipAttr dbo_Cuentas Numero } >
-		<div class="text-muted" >
-		{$tooltip dbo_Cuentas Numero }		</div>
-	</div>
-</div>
-
-
-{END Numero_fieldblock}
-											
 {BEGIN SeccionalId_fieldblock}
 
 
@@ -194,6 +173,27 @@
 
 
 {END ConceptoId_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-vertical-field" 
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Numero}">
+		{BEGIN Numero_label}{$label dbo_Cuentas Numero }{END Numero_label}
+	</label>
+	<div class="r-edit-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Numero" {$tooltipAttr dbo_Cuentas Numero } >
+		<div class="text-muted" >
+		{$tooltip dbo_Cuentas Numero }		</div>
+	</div>
+</div>
+
+
+{END Numero_fieldblock}
 											
 {BEGIN Activa_fieldblock}
 

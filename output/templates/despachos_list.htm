@@ -128,19 +128,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Telefonos}</span>
 						</div>
 		{END searchCtrlBlock_Telefonos}
-																{BEGIN searchCtrlBlock_Subespecialidad}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Subespecialidad}" {$filterRow_attrs_Subespecialidad}>
-			<label>{$label dbo_Despachos Subespecialidad }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Subespecialidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Subespecialidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Subespecialidad}</span>
-						</div>
-		{END searchCtrlBlock_Subespecialidad}
 																{BEGIN searchCtrlBlock_Juez}
 
 
@@ -154,19 +141,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Juez}</span>
 						</div>
 		{END searchCtrlBlock_Juez}
-																{BEGIN searchCtrlBlock_Especialidad}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Especialidad}" {$filterRow_attrs_Especialidad}>
-			<label>{$label dbo_Despachos Especialidad }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Especialidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Especialidad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Especialidad}</span>
-						</div>
-		{END searchCtrlBlock_Especialidad}
 																{BEGIN searchCtrlBlock_Direccion}
 
 
@@ -180,19 +154,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Direccion}</span>
 						</div>
 		{END searchCtrlBlock_Direccion}
-																{BEGIN searchCtrlBlock_DespachoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_DespachoId}" {$filterRow_attrs_DespachoId}>
-			<label>{$label dbo_Despachos DespachoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_DespachoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_DespachoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_DespachoId}</span>
-						</div>
-		{END searchCtrlBlock_DespachoId}
 																{BEGIN searchCtrlBlock_Despacho}
 
 
@@ -624,6 +585,95 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Codigo" checked="checked" value="1" data-field="Codigo" data-fieldname="Codigo">
+					<span>{$label dbo_Despachos Codigo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Despacho" checked="checked" value="1" data-field="Despacho" data-fieldname="Despacho">
+					<span>{$label dbo_Despachos Despacho }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CiudadId" checked="checked" value="1" data-field="CiudadId" data-fieldname="CiudadId">
+					<span>{$label dbo_Despachos CiudadId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Juez" checked="checked" value="1" data-field="Juez" data-fieldname="Juez">
+					<span>{$label dbo_Despachos Juez }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Direccion" checked="checked" value="1" data-field="Direccion" data-fieldname="Direccion">
+					<span>{$label dbo_Despachos Direccion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Telefonos" checked="checked" value="1" data-field="Telefonos" data-fieldname="Telefonos">
+					<span>{$label dbo_Despachos Telefonos }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Correo" checked="checked" value="1" data-field="Correo" data-fieldname="Correo">
+					<span>{$label dbo_Despachos Correo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Activo" checked="checked" value="1" data-field="Activo" data-fieldname="Activo">
+					<span>{$label dbo_Despachos Activo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -639,9 +689,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DespachoId"]:before {
-		content: "{$label dbo_Despachos DespachoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Codigo"]:before {
 		content: "{$label dbo_Despachos Codigo}";
 	}
@@ -651,13 +698,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CiudadId"]:before {
 		content: "{$label dbo_Despachos CiudadId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Especialidad"]:before {
-		content: "{$label dbo_Despachos Especialidad}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Subespecialidad"]:before {
-		content: "{$label dbo_Despachos Subespecialidad}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
 		content: "{$label dbo_Despachos Activo}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Juez"]:before {
@@ -739,31 +780,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DespachoId_class}	"
-
-			data-field="DespachoId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DespachoId_fieldheadercolumn}
-	{BEGIN DespachoId_fieldheader}
-	<SPAN {$DespachoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
-	{$label dbo_Despachos DespachoId }	{$arrow_icon_DespachoId}
-	</SPAN>
-	{END DespachoId_fieldheader}
-{END DespachoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -839,92 +855,17 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Especialidad_class}	"
-
-			data-field="Especialidad"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Especialidad_fieldheadercolumn}
-	{BEGIN Especialidad_fieldheader}
-	<SPAN {$Especialidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Especialidad" data-fieldname="Especialidad">
-	{$label dbo_Despachos Especialidad }	{$arrow_icon_Especialidad}
-	</SPAN>
-	{END Especialidad_fieldheader}
-{END Especialidad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Subespecialidad_class}	"
-
-			data-field="Subespecialidad"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Subespecialidad_fieldheadercolumn}
-	{BEGIN Subespecialidad_fieldheader}
-	<SPAN {$Subespecialidad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Subespecialidad" data-fieldname="Subespecialidad">
-	{$label dbo_Despachos Subespecialidad }	{$arrow_icon_Subespecialidad}
-	</SPAN>
-	{END Subespecialidad_fieldheader}
-{END Subespecialidad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
 									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-			data-field="Activo"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Activo_fieldheadercolumn}
-	{BEGIN Activo_fieldheader}
-	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
-	{$label dbo_Despachos Activo }	{$arrow_icon_Activo}
-	</SPAN>
-	{END Activo_fieldheader}
-{END Activo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Juez_class}	"
 
 			data-field="Juez"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -938,6 +879,31 @@
 
 	
 	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Direccion_class}	"
+
+			data-field="Direccion"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Direccion_fieldheadercolumn}
+	{BEGIN Direccion_fieldheader}
+	<SPAN {$Direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion">
+	{$label dbo_Despachos Direccion }	{$arrow_icon_Direccion}
+	</SPAN>
+	{END Direccion_fieldheader}
+{END Direccion_fieldheadercolumn}
+
+	
+	</th>
 	{END cellblock_grid_headcell_field7}
 									{BEGIN cellblock_grid_headcell_field8}
 	<th
@@ -945,36 +911,11 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Correo_class}	"
-
-			data-field="Correo"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Correo_fieldheadercolumn}
-	{BEGIN Correo_fieldheader}
-	<SPAN {$Correo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Correo" data-fieldname="Correo">
-	{$label dbo_Despachos Correo }	{$arrow_icon_Correo}
-	</SPAN>
-	{END Correo_fieldheader}
-{END Correo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Telefonos_class}	"
 
 			data-field="Telefonos"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -988,6 +929,31 @@
 
 	
 	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Correo_class}	"
+
+			data-field="Correo"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Correo_fieldheadercolumn}
+	{BEGIN Correo_fieldheader}
+	<SPAN {$Correo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Correo" data-fieldname="Correo">
+	{$label dbo_Despachos Correo }	{$arrow_icon_Correo}
+	</SPAN>
+	{END Correo_fieldheader}
+{END Correo_fieldheadercolumn}
+
+	
+	</th>
 	{END cellblock_grid_headcell_field9}
 									{BEGIN cellblock_grid_headcell_field10}
 	<th
@@ -995,21 +961,21 @@
 	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
-			data-field="Direccion"
+			data-field="Activo"
 	
 	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Direccion_fieldheadercolumn}
-	{BEGIN Direccion_fieldheader}
-	<SPAN {$Direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion">
-	{$label dbo_Despachos Direccion }	{$arrow_icon_Direccion}
+		{BEGIN Activo_fieldheadercolumn}
+	{BEGIN Activo_fieldheader}
+	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
+	{$label dbo_Despachos Activo }	{$arrow_icon_Activo}
 	</SPAN>
-	{END Direccion_fieldheader}
-{END Direccion_fieldheadercolumn}
+	{END Activo_fieldheader}
+{END Activo_fieldheadercolumn}
 
 	
 	</th>
@@ -1031,7 +997,7 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"		data-control-cell
@@ -1049,17 +1015,6 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="despachos_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -1103,27 +1058,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DespachoId_class}	"
-
-			data-field="DespachoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DespachoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId" data-default-width >
-{$DespachoId_value}
-</span>
-{END DespachoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -1187,80 +1121,17 @@
 {END CiudadId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Especialidad_class}	"
-
-			data-field="Especialidad"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Especialidad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Especialidad" data-fieldname="Especialidad" data-default-width >
-{$Especialidad_value}
-</span>
-{END Especialidad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Subespecialidad_class}	"
-
-			data-field="Subespecialidad"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Subespecialidad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Subespecialidad" data-fieldname="Subespecialidad" data-default-width >
-{$Subespecialidad_value}
-</span>
-{END Subespecialidad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
 									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-			data-field="Activo"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Activo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo" data-default-width >
-{$Activo_value}
-</span>
-{END Activo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Juez_class}	"
 
 			data-field="Juez"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1270,6 +1141,27 @@
 </span>
 {END Juez_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Direccion_class}	"
+
+			data-field="Direccion"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Direccion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion" data-default-width >
+{$Direccion_value}
+</span>
+{END Direccion_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field7}
 									{BEGIN cellblock_grid_cell_field8}
 	<td
@@ -1277,32 +1169,11 @@
 	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Correo_class}	"
-
-			data-field="Correo"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Correo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Correo" data-fieldname="Correo" data-default-width >
-{$Correo_value}
-</span>
-{END Correo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Telefonos_class}	"
 
 			data-field="Telefonos"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1312,6 +1183,27 @@
 </span>
 {END Telefonos_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Correo_class}	"
+
+			data-field="Correo"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Correo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Correo" data-fieldname="Correo" data-default-width >
+{$Correo_value}
+</span>
+{END Correo_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field9}
 									{BEGIN cellblock_grid_cell_field10}
 	<td
@@ -1319,19 +1211,19 @@
 	{$cell_grid_cell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
-			data-field="Direccion"
+			data-field="Activo"
 	
 	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Direccion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion" data-default-width >
-{$Direccion_value}
+		{BEGIN Activo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo" data-default-width >
+{$Activo_value}
 </span>
-{END Direccion_fieldcolumn}	
+{END Activo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field10}
 							</tr>
@@ -1427,21 +1319,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DespachoId_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
@@ -1487,43 +1364,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Especialidad_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
-									{BEGIN cellblock_grid_footcell_field5}
-	<td
-	
-	{$cell_grid_footcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Subespecialidad_class}	"
-
-	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field5}
 									{BEGIN cellblock_grid_footcell_field6}
 	<td
 	
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activo_class}	"
+		 r-ori-vert		 {$Juez_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
@@ -1538,7 +1385,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Juez_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
@@ -1553,7 +1400,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Correo_class}	"
+		 r-ori-vert		 {$Telefonos_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
@@ -1568,7 +1415,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Telefonos_class}	"
+		 r-ori-vert		 {$Correo_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	
@@ -1583,7 +1430,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="despachos_list"	

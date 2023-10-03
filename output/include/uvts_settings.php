@@ -170,6 +170,7 @@ $tdatauvts[".geocodingEnabled"] = false;
 
 
 
+$tdatauvts[".isResizeColumns"] = true;
 
 
 

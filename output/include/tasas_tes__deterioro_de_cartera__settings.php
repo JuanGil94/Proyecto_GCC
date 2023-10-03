@@ -178,6 +178,7 @@ $tdatatasas_tes__deterioro_de_cartera_[".geocodingEnabled"] = false;
 
 
 
+$tdatatasas_tes__deterioro_de_cartera_[".isResizeColumns"] = true;
 
 
 

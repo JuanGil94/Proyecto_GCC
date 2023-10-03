@@ -818,12 +818,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
-				{$simpleSearchFieldCombo}			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
-				{$simpleSearchTypeCombo}			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -1164,159 +1158,309 @@
 {END print_friendly}
 	 
 		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
-		 reorder	keep-open btn-group"
+	 showHide	 reorder	keep-open btn-group"
 	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
 	>
 	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
 	<ul role="menu" class="dropdown-menu dropdown-left">
 							<li>
 		<a>
-						<span data-field="ChequeoId" data-fieldname="ChequeoId">{$label dbo_Chequeos ChequeoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ChequeoId" checked="checked" value="1" data-field="ChequeoId" data-fieldname="ChequeoId">
+					<span>{$label dbo_Chequeos ChequeoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Fecha" data-fieldname="Fecha">{$label dbo_Chequeos Fecha }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Chequeos Fecha }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="DespachoId" data-fieldname="DespachoId">{$label dbo_Chequeos DespachoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_DespachoId" checked="checked" value="1" data-field="DespachoId" data-fieldname="DespachoId">
+					<span>{$label dbo_Chequeos DespachoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Origen" data-fieldname="Origen">{$label dbo_Chequeos Origen }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Origen" checked="checked" value="1" data-field="Origen" data-fieldname="Origen">
+					<span>{$label dbo_Chequeos Origen }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Providencia" data-fieldname="Providencia">{$label dbo_Chequeos Providencia }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
+					<span>{$label dbo_Chequeos Providencia }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Ejecutoria" data-fieldname="Ejecutoria">{$label dbo_Chequeos Ejecutoria }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+					<span>{$label dbo_Chequeos Ejecutoria }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Tipo" data-fieldname="Tipo">{$label dbo_Chequeos Tipo }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Tipo" checked="checked" value="1" data-field="Tipo" data-fieldname="Tipo">
+					<span>{$label dbo_Chequeos Tipo }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Cantidad" data-fieldname="Cantidad">{$label dbo_Chequeos Cantidad }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Cantidad" checked="checked" value="1" data-field="Cantidad" data-fieldname="Cantidad">
+					<span>{$label dbo_Chequeos Cantidad }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Obligacion" data-fieldname="Obligacion">{$label dbo_Chequeos Obligacion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Obligacion" checked="checked" value="1" data-field="Obligacion" data-fieldname="Obligacion">
+					<span>{$label dbo_Chequeos Obligacion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Costas" data-fieldname="Costas">{$label dbo_Chequeos Costas }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Costas" checked="checked" value="1" data-field="Costas" data-fieldname="Costas">
+					<span>{$label dbo_Chequeos Costas }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="PrimeraCopia" data-fieldname="PrimeraCopia">{$label dbo_Chequeos PrimeraCopia }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PrimeraCopia" checked="checked" value="1" data-field="PrimeraCopia" data-fieldname="PrimeraCopia">
+					<span>{$label dbo_Chequeos PrimeraCopia }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Autentica" data-fieldname="Autentica">{$label dbo_Chequeos Autentica }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Autentica" checked="checked" value="1" data-field="Autentica" data-fieldname="Autentica">
+					<span>{$label dbo_Chequeos Autentica }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">{$label dbo_Chequeos PrestaMeritoEjecutivo }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PrestaMeritoEjecutivo" checked="checked" value="1" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">
+					<span>{$label dbo_Chequeos PrestaMeritoEjecutivo }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Clara" data-fieldname="Clara">{$label dbo_Chequeos Clara }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Clara" checked="checked" value="1" data-field="Clara" data-fieldname="Clara">
+					<span>{$label dbo_Chequeos Clara }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Expresa" data-fieldname="Expresa">{$label dbo_Chequeos Expresa }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Expresa" checked="checked" value="1" data-field="Expresa" data-fieldname="Expresa">
+					<span>{$label dbo_Chequeos Expresa }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">{$label dbo_Chequeos ActualmenteExigible }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActualmenteExigible" checked="checked" value="1" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">
+					<span>{$label dbo_Chequeos ActualmenteExigible }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">{$label dbo_Chequeos CompetenciaDEAJ }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CompetenciaDEAJ" checked="checked" value="1" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">
+					<span>{$label dbo_Chequeos CompetenciaDEAJ }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">{$label dbo_Chequeos FaltaRequisitos }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FaltaRequisitos" checked="checked" value="1" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">
+					<span>{$label dbo_Chequeos FaltaRequisitos }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">{$label dbo_Chequeos FaltaCompetencia }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FaltaCompetencia" checked="checked" value="1" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">
+					<span>{$label dbo_Chequeos FaltaCompetencia }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="PorPrescripcion" data-fieldname="PorPrescripcion">{$label dbo_Chequeos PorPrescripcion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PorPrescripcion" checked="checked" value="1" data-field="PorPrescripcion" data-fieldname="PorPrescripcion">
+					<span>{$label dbo_Chequeos PorPrescripcion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">{$label dbo_Chequeos SeccionalIdDestino }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalIdDestino" checked="checked" value="1" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">
+					<span>{$label dbo_Chequeos SeccionalIdDestino }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="AprobadoPor" data-fieldname="AprobadoPor">{$label dbo_Chequeos AprobadoPor }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AprobadoPor" checked="checked" value="1" data-field="AprobadoPor" data-fieldname="AprobadoPor">
+					<span>{$label dbo_Chequeos AprobadoPor }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="FechaAprobacion" data-fieldname="FechaAprobacion">{$label dbo_Chequeos FechaAprobacion }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FechaAprobacion" checked="checked" value="1" data-field="FechaAprobacion" data-fieldname="FechaAprobacion">
+					<span>{$label dbo_Chequeos FechaAprobacion }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="TramiteId" data-fieldname="TramiteId">{$label dbo_Chequeos TramiteId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_TramiteId" checked="checked" value="1" data-field="TramiteId" data-fieldname="TramiteId">
+					<span>{$label dbo_Chequeos TramiteId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="AbogadoId" data-fieldname="AbogadoId">{$label dbo_Chequeos AbogadoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
+					<span>{$label dbo_Chequeos AbogadoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Fisico" data-fieldname="Fisico">{$label dbo_Chequeos Fisico }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fisico" checked="checked" value="1" data-field="Fisico" data-fieldname="Fisico">
+					<span>{$label dbo_Chequeos Fisico }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="Digital" data-fieldname="Digital">{$label dbo_Chequeos Digital }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Digital" checked="checked" value="1" data-field="Digital" data-fieldname="Digital">
+					<span>{$label dbo_Chequeos Digital }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="SeccionalId" data-fieldname="SeccionalId">{$label dbo_Chequeos SeccionalId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
+					<span>{$label dbo_Chequeos SeccionalId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="CarteraTipoId" data-fieldname="CarteraTipoId">{$label dbo_Chequeos CarteraTipoId }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CarteraTipoId" checked="checked" value="1" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+					<span>{$label dbo_Chequeos CarteraTipoId }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 							<li>
 		<a>
-						<span data-field="ObligacionLetras" data-fieldname="ObligacionLetras">{$label dbo_Chequeos ObligacionLetras }</span>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ObligacionLetras" checked="checked" value="1" data-field="ObligacionLetras" data-fieldname="ObligacionLetras">
+					<span>{$label dbo_Chequeos ObligacionLetras }</span>
+				</label>
+			</div>
 					</a>
 		</li>
 			</ul>

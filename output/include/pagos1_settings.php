@@ -215,6 +215,7 @@ $tdatapagos1[".geocodingEnabled"] = false;
 
 
 
+$tdatapagos1[".isResizeColumns"] = true;
 
 
 

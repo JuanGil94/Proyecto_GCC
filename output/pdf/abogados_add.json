@@ -166,6 +166,9 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Abogados Documento }","bold":true},{"text":{$Documento_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Abogados SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Abogados Tarjeta }","bold":true},{"text":{$Tarjeta_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -181,19 +184,16 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_Abogados Email }","bold":true},{"text":{$Email_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Abogados SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Abogados Masculino }","bold":true},{"text":{$Masculino_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Abogados Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel dbo_Abogados Despacho }","bold":true},{"text":{$Despacho_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel dbo_Abogados Codificador }","bold":true},{"text":{$Codificador_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Abogados Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel dbo_Abogados Firma }","bold":true},{"text":{$Firma_pdfvalue}}],"margin":[0,0,0,15]},

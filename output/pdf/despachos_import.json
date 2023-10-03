@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				
@@ -116,12 +113,6 @@ pdfDocument = {
 				
 				
 			{"text":{$CiudadId_pdfvalue},"hidden":"{$item_hide_import_field3}"},
-				
-				
-			{"text":{$Especialidad_pdfvalue},"hidden":"{$item_hide_import_field4}"},
-				
-				
-			{"text":{$Subespecialidad_pdfvalue},"hidden":"{$item_hide_import_field5}"},
 				
 				
 			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_import_field6}"},

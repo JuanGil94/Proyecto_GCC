@@ -166,6 +166,7 @@ $tdatatramites[".geocodingEnabled"] = false;
 
 
 
+$tdatatramites[".isResizeColumns"] = true;
 
 
 

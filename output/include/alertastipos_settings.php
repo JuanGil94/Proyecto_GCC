@@ -166,6 +166,7 @@ $tdataalertastipos[".geocodingEnabled"] = false;
 
 
 
+$tdataalertastipos[".isResizeColumns"] = true;
 
 
 

@@ -106,48 +106,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Empresa_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Empresa}  r-vertical-field" 
-	data-signal-error-for="Empresa{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Empresa" data-fieldname="Empresa" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Empresa}">
-		{BEGIN Empresa_label}{$label dbo_Empresas Empresa }{END Empresa_label}
-	</label>
-	<div class="r-edit-field">
-		{$Empresa_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Empresa" {$tooltipAttr dbo_Empresas Empresa } >
-		<div class="text-muted" >
-		{$tooltip dbo_Empresas Empresa }		</div>
-	</div>
-</div>
-
-
-{END Empresa_fieldblock}
-											
-{BEGIN Cierre_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Cierre}  r-vertical-field" 
-	data-signal-error-for="Cierre{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Cierre" data-fieldname="Cierre" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Cierre}">
-		{BEGIN Cierre_label}{$label dbo_Empresas Cierre }{END Cierre_label}
-	</label>
-	<div class="r-edit-field">
-		{$Cierre_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Cierre" {$tooltipAttr dbo_Empresas Cierre } >
-		<div class="text-muted" >
-		{$tooltip dbo_Empresas Cierre }		</div>
-	</div>
-</div>
-
-
-{END Cierre_fieldblock}
-											
 {BEGIN MaximoPesos_fieldblock}
 
 
@@ -211,27 +169,6 @@
 
 {END MaximoUvt_fieldblock}
 											
-{BEGIN EmailAprobador_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_EmailAprobador}  r-vertical-field" 
-	data-signal-error-for="EmailAprobador{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="EmailAprobador" data-fieldname="EmailAprobador" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_EmailAprobador}">
-		{BEGIN EmailAprobador_label}{$label dbo_Empresas EmailAprobador }{END EmailAprobador_label}
-	</label>
-	<div class="r-edit-field">
-		{$EmailAprobador_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="EmailAprobador" {$tooltipAttr dbo_Empresas EmailAprobador } >
-		<div class="text-muted" >
-		{$tooltip dbo_Empresas EmailAprobador }		</div>
-	</div>
-</div>
-
-
-{END EmailAprobador_fieldblock}
-											
 {BEGIN Tope_fieldblock}
 
 
@@ -273,6 +210,69 @@
 
 
 {END DiasPersuasivo_fieldblock}
+											
+{BEGIN TasaDTN_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TasaDTN}  r-vertical-field" 
+	data-signal-error-for="TasaDTN{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="TasaDTN" data-fieldname="TasaDTN" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_TasaDTN}">
+		{BEGIN TasaDTN_label}{$label dbo_Empresas TasaDTN }{END TasaDTN_label}
+	</label>
+	<div class="r-edit-field">
+		{$TasaDTN_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="TasaDTN" {$tooltipAttr dbo_Empresas TasaDTN } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas TasaDTN }		</div>
+	</div>
+</div>
+
+
+{END TasaDTN_fieldblock}
+											
+{BEGIN TasaCivil_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TasaCivil}  r-vertical-field" 
+	data-signal-error-for="TasaCivil{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="TasaCivil" data-fieldname="TasaCivil" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_TasaCivil}">
+		{BEGIN TasaCivil_label}{$label dbo_Empresas TasaCivil }{END TasaCivil_label}
+	</label>
+	<div class="r-edit-field">
+		{$TasaCivil_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="TasaCivil" {$tooltipAttr dbo_Empresas TasaCivil } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas TasaCivil }		</div>
+	</div>
+</div>
+
+
+{END TasaCivil_fieldblock}
+											
+{BEGIN EmailAprobador_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EmailAprobador}  r-vertical-field" 
+	data-signal-error-for="EmailAprobador{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="EmailAprobador" data-fieldname="EmailAprobador" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_EmailAprobador}">
+		{BEGIN EmailAprobador_label}{$label dbo_Empresas EmailAprobador }{END EmailAprobador_label}
+	</label>
+	<div class="r-edit-field">
+		{$EmailAprobador_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="EmailAprobador" {$tooltipAttr dbo_Empresas EmailAprobador } >
+		<div class="text-muted" >
+		{$tooltip dbo_Empresas EmailAprobador }		</div>
+	</div>
+</div>
+
+
+{END EmailAprobador_fieldblock}
 											
 {BEGIN InteresesPlazo_fieldblock}
 

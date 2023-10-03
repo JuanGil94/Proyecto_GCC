@@ -564,7 +564,156 @@
 {$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
 		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
 		{$recsPerPage}
-</span>		</div>					</div>
+</span>	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CuentaId" checked="checked" value="1" data-field="CuentaId" data-fieldname="CuentaId">
+					<span>{$label dbo_Pagos1 CuentaId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Pagos1 Fecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
+					<span>{$label dbo_Pagos1 Numero }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Pago" checked="checked" value="1" data-field="Pago" data-fieldname="Pago">
+					<span>{$label dbo_Pagos1 Pago }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Pagos1 Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ProcesoId" checked="checked" value="1" data-field="ProcesoId" data-fieldname="ProcesoId">
+					<span>{$label dbo_Pagos1 ProcesoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Registro" checked="checked" value="1" data-field="Registro" data-fieldname="Registro">
+					<span>{$label dbo_Pagos1 Registro }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoObli" checked="checked" value="1" data-field="PagoObli" data-fieldname="PagoObli">
+					<span>{$label dbo_Pagos1 PagoObli }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoCost" checked="checked" value="1" data-field="PagoCost" data-fieldname="PagoCost">
+					<span>{$label dbo_Pagos1 PagoCost }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoInte" checked="checked" value="1" data-field="PagoInte" data-fieldname="PagoInte">
+					<span>{$label dbo_Pagos1 PagoInte }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoMayo" checked="checked" value="1" data-field="PagoMayo" data-fieldname="PagoMayo">
+					<span>{$label dbo_Pagos1 PagoMayo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoTerm" checked="checked" value="1" data-field="PagoTerm" data-fieldname="PagoTerm">
+					<span>{$label dbo_Pagos1 PagoTerm }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoIdOrig" checked="checked" value="1" data-field="PagoIdOrig" data-fieldname="PagoIdOrig">
+					<span>{$label dbo_Pagos1 PagoIdOrig }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PagoId" checked="checked" value="1" data-field="PagoId" data-fieldname="PagoId">
+					<span>{$label dbo_Pagos1 PagoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>

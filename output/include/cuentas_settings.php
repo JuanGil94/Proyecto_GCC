@@ -186,6 +186,7 @@ $tdatacuentas[".geocodingEnabled"] = false;
 
 
 
+$tdatacuentas[".isResizeColumns"] = true;
 
 
 

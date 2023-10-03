@@ -206,6 +206,7 @@ $tdataindeterminados[".geocodingEnabled"] = false;
 
 
 
+$tdataindeterminados[".isResizeColumns"] = true;
 
 
 

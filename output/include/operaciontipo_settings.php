@@ -166,6 +166,7 @@ $tdataoperaciontipo[".geocodingEnabled"] = false;
 
 
 
+$tdataoperaciontipo[".isResizeColumns"] = true;
 
 
 

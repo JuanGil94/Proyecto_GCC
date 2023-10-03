@@ -79,9 +79,6 @@ pdfDocument = {
 										{BEGIN col_grid_4}
 					"%",
 					{END col_grid_4}
-										{BEGIN col_grid_5}
-					"%",
-					{END col_grid_5}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -177,6 +174,9 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -339,35 +339,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field}
-{
-	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'Cuenta',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Conceptos Cuenta }","hidden":"{$item_hide_grid_field_label}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Cuenta_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
 											],
 				{END row_grid_0}
 		
@@ -517,35 +488,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'Cuenta',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Cuenta_pdfvalue},"hidden":"{$item_hide_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Cuenta_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -601,12 +543,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  4,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  5,
 				text: ''
 			},
 							],
@@ -748,32 +684,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
-																							{BEGIN cellblock_grid_footcell_field}
-{
-	cellId: 'footcell_field',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field}
 											],
 				{END row_grid_3}
 		

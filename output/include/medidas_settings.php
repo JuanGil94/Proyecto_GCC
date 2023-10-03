@@ -235,6 +235,7 @@ $tdatamedidas[".geocodingEnabled"] = false;
 
 
 
+$tdatamedidas[".isResizeColumns"] = true;
 
 
 

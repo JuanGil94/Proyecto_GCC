@@ -166,6 +166,7 @@ $tdatatemas[".geocodingEnabled"] = false;
 
 
 
+$tdatatemas[".isResizeColumns"] = true;
 
 
 

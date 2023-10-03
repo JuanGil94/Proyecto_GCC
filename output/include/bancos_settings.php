@@ -170,6 +170,7 @@ $tdatabancos[".geocodingEnabled"] = false;
 
 
 
+$tdatabancos[".isResizeColumns"] = true;
 
 
 

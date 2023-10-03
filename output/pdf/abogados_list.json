@@ -255,6 +255,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_columns_control}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
@@ -750,9 +753,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
-				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1197,34 +1197,10 @@ pdfDocument = {
 	
 			
 	
-			"stack": [
+			"text": [
 		
-				
-			 {BEGIN details_procesos}
-			{$displayDetailTable_procesos }
-		{END details_procesos},
-				
-				
-			 {BEGIN details_reasignaciones}
-			{$displayDetailTable_reasignaciones }
-		{END details_reasignaciones},
-				
-				
-			 {BEGIN details_minjusticia}
-			{$displayDetailTable_minjusticia }
-		{END details_minjusticia},
-				
-				
-			 {BEGIN details_minjusticia2}
-			{$displayDetailTable_minjusticia2 }
-		{END details_minjusticia2},
-				
-				
-			 {BEGIN details_minjusticia3}
-			{$displayDetailTable_minjusticia3 }
-		{END details_minjusticia3},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

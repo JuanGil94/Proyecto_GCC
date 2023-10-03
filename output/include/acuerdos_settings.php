@@ -195,6 +195,7 @@ $tdataacuerdos[".geocodingEnabled"] = false;
 
 
 
+$tdataacuerdos[".isResizeColumns"] = true;
 
 
 

@@ -166,6 +166,7 @@ $tdatatipocobro[".geocodingEnabled"] = false;
 
 
 
+$tdatatipocobro[".isResizeColumns"] = true;
 
 
 

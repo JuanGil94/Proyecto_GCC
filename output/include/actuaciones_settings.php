@@ -182,6 +182,7 @@ $tdataactuaciones[".geocodingEnabled"] = false;
 
 
 
+$tdataactuaciones[".isResizeColumns"] = true;
 
 
 

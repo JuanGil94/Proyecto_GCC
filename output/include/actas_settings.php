@@ -194,6 +194,7 @@ $tdataactas[".geocodingEnabled"] = false;
 
 
 
+$tdataactas[".isResizeColumns"] = true;
 
 
 

@@ -225,51 +225,8 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'right',
-     
-      
-      },
-
-											],
-						[
-																{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-     
-      
-      },
-
-																							{
-	cellId: 'c4',
-	col:0,
-	row:0,
-			
-		
-	//	static colspan/rowspan
-		
-			
-			
-	
-			"text": [
-		
 				
-			{"text":"","hidden":"{$item_hide_sort_dropdown}"},
+			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -174,6 +174,7 @@ $tdataciudades[".geocodingEnabled"] = false;
 
 
 
+$tdataciudades[".isResizeColumns"] = true;
 
 
 
@@ -734,11 +735,12 @@ $tdataciudades[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "DepartamentoId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Departamento";
+	$edata["DisplayField"] = "Codigo + ' - ' + Departamento";
 
 	
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "";
 
 	

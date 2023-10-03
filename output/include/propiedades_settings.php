@@ -187,6 +187,7 @@ $tdatapropiedades[".geocodingEnabled"] = false;
 
 
 
+$tdatapropiedades[".isResizeColumns"] = true;
 
 
 

@@ -194,6 +194,7 @@ $tdatauserprofile[".geocodingEnabled"] = false;
 
 
 
+$tdatauserprofile[".isResizeColumns"] = true;
 
 
 

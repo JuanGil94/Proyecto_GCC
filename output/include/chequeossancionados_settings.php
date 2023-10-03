@@ -206,6 +206,7 @@ $tdatachequeossancionados[".geocodingEnabled"] = false;
 
 
 
+$tdatachequeossancionados[".isResizeColumns"] = true;
 
 
 

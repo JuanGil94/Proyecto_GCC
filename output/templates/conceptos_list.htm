@@ -513,6 +513,35 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
+					<span>{$label dbo_Conceptos Concepto }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Activo" checked="checked" value="1" data-field="Activo" data-fieldname="Activo">
+					<span>{$label dbo_Conceptos Activo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -534,10 +563,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activo"]:before {
 		content: "{$label dbo_Conceptos Activo}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cuenta"]:before {
-		content: "{$label dbo_Conceptos Cuenta}";
-	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -654,31 +680,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuenta_class}	"
-
-			data-field="Cuenta"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cuenta_fieldheadercolumn}
-	{BEGIN Cuenta_fieldheader}
-	<SPAN {$Cuenta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta">
-	{$label dbo_Conceptos Cuenta }	{$arrow_icon_Cuenta}
-	</SPAN>
-	{END Cuenta_fieldheader}
-{END Cuenta_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 							</tr>
 																				
 					{END grid_header}
@@ -799,27 +800,6 @@
 {END Activo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuenta_class}	"
-
-			data-field="Cuenta"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cuenta_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta" data-default-width >
-{$Cuenta_value}
-</span>
-{END Cuenta_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -925,21 +905,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuenta_class}	"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="conceptos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
 							</tr>
 					
 					</tfoot>
