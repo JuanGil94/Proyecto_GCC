@@ -178,6 +178,7 @@ $tdatatasas_comerciales[".geocodingEnabled"] = false;
 
 
 
+$tdatatasas_comerciales[".isResizeColumns"] = true;
 
 
 

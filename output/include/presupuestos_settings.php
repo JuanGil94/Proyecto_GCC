@@ -178,6 +178,7 @@ $tdatapresupuestos[".geocodingEnabled"] = false;
 
 
 
+$tdatapresupuestos[".isResizeColumns"] = true;
 
 
 

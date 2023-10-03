@@ -362,6 +362,7 @@ $tdataminjusticia3[".geocodingEnabled"] = false;
 
 
 
+$tdataminjusticia3[".isResizeColumns"] = true;
 
 
 

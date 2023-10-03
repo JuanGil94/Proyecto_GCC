@@ -250,6 +250,7 @@ $tdataseccionales[".geocodingEnabled"] = false;
 
 
 
+$tdataseccionales[".isResizeColumns"] = true;
 
 
 

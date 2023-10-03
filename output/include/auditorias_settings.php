@@ -186,6 +186,7 @@ $tdataauditorias[".geocodingEnabled"] = false;
 
 
 
+$tdataauditorias[".isResizeColumns"] = true;
 
 
 

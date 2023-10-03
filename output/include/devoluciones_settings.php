@@ -182,6 +182,7 @@ $tdatadevoluciones[".geocodingEnabled"] = false;
 
 
 
+$tdatadevoluciones[".isResizeColumns"] = true;
 
 
 

@@ -453,6 +453,13 @@
 					Ciudades				</label>
 			</div>
 			{END print_details_ciudades}
+														{BEGIN print_details_ciudades1}
+			<div>
+				<label for="printDetailsciudades1{$id}">
+					<input type="checkbox" value="ciudades1" id="printDetailsciudades1{$id}" checked>
+					Ciudades1				</label>
+			</div>
+			{END print_details_ciudades1}
 						</div>
 </div>
 {END print_details}
@@ -486,6 +493,35 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Codigo" checked="checked" value="1" data-field="Codigo" data-fieldname="Codigo">
+					<span>{$label dbo_Departamentos Codigo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Departamento" checked="checked" value="1" data-field="Departamento" data-fieldname="Departamento">
+					<span>{$label dbo_Departamentos Departamento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

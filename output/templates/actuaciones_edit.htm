@@ -148,6 +148,27 @@
 
 {END EstadoId_fieldblock}
 											
+{BEGIN EtapaId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_EtapaId}  r-vertical-field" 
+	data-signal-error-for="EtapaId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="EtapaId" data-fieldname="EtapaId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_EtapaId}">
+		{BEGIN EtapaId_label}{$label dbo_Actuaciones EtapaId }{END EtapaId_label}
+	</label>
+	<div class="r-edit-field">
+		{$EtapaId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="EtapaId" {$tooltipAttr dbo_Actuaciones EtapaId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Actuaciones EtapaId }		</div>
+	</div>
+</div>
+
+
+{END EtapaId_fieldblock}
+											
 {BEGIN MotivoId_fieldblock}
 
 
@@ -189,27 +210,6 @@
 
 
 {END Intereses_fieldblock}
-											
-{BEGIN EtapaId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_EtapaId}  r-vertical-field" 
-	data-signal-error-for="EtapaId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="EtapaId" data-fieldname="EtapaId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_EtapaId}">
-		{BEGIN EtapaId_label}{$label dbo_Actuaciones EtapaId }{END EtapaId_label}
-	</label>
-	<div class="r-edit-field">
-		{$EtapaId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="EtapaId" {$tooltipAttr dbo_Actuaciones EtapaId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Actuaciones EtapaId }		</div>
-	</div>
-</div>
-
-
-{END EtapaId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

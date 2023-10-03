@@ -593,6 +593,135 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_HorarioId" checked="checked" value="1" data-field="HorarioId" data-fieldname="HorarioId">
+					<span>{$label dbo_Horarios HorarioId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Horario" checked="checked" value="1" data-field="Horario" data-fieldname="Horario">
+					<span>{$label dbo_Horarios Horario }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Lun" checked="checked" value="1" data-field="Lun" data-fieldname="Lun">
+					<span>{$label dbo_Horarios Lun }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Mar" checked="checked" value="1" data-field="Mar" data-fieldname="Mar">
+					<span>{$label dbo_Horarios Mar }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Mie" checked="checked" value="1" data-field="Mie" data-fieldname="Mie">
+					<span>{$label dbo_Horarios Mie }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Jue" checked="checked" value="1" data-field="Jue" data-fieldname="Jue">
+					<span>{$label dbo_Horarios Jue }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Vie" checked="checked" value="1" data-field="Vie" data-fieldname="Vie">
+					<span>{$label dbo_Horarios Vie }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sab" checked="checked" value="1" data-field="Sab" data-fieldname="Sab">
+					<span>{$label dbo_Horarios Sab }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Dom" checked="checked" value="1" data-field="Dom" data-fieldname="Dom">
+					<span>{$label dbo_Horarios Dom }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fes" checked="checked" value="1" data-field="Fes" data-fieldname="Fes">
+					<span>{$label dbo_Horarios Fes }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Desde" checked="checked" value="1" data-field="Desde" data-fieldname="Desde">
+					<span>{$label dbo_Horarios Desde }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Hasta" checked="checked" value="1" data-field="Hasta" data-fieldname="Hasta">
+					<span>{$label dbo_Horarios Hasta }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -1036,7 +1165,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="horarios_view.php?{$editlink}" {$viewlink_attrs} title="Ver" data-popup >		
+	 glyphicon glyphicon-search" href="horarios_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
 				
 								</a>
 </span>

@@ -170,6 +170,7 @@ $tdatasalarios[".geocodingEnabled"] = false;
 
 
 
+$tdatasalarios[".isResizeColumns"] = true;
 
 
 

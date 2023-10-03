@@ -735,7 +735,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "29";
-	$menuNode["name"] = "Depósitos Judiciales";
+	$menuNode["name"] = "Bancos y Cuentas";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.Bancos";
@@ -754,7 +754,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Depósitos Judiciales";
+	$menuNode["title"] = "Bancos y Cuentas";
 
 
 
@@ -1821,6 +1821,32 @@ function getMenuNodes_main($menuNodesObject)
 		$menuNode["color"] = "";
 
 	$menuNode["title"] = "Carceles4";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "71";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.Ciudades1";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Ciudades1";
 
 
 

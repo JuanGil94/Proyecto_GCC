@@ -174,6 +174,7 @@ $tdataconceptos[".geocodingEnabled"] = false;
 
 
 
+$tdataconceptos[".isResizeColumns"] = true;
 
 
 

@@ -202,6 +202,7 @@ $tdataoficios1[".geocodingEnabled"] = false;
 
 
 
+$tdataoficios1[".isResizeColumns"] = true;
 
 
 

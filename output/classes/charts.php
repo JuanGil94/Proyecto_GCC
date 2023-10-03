@@ -554,6 +554,8 @@ class Chart
 			return true;
 		if("dbo.OperacionTipo" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.Ciudades" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

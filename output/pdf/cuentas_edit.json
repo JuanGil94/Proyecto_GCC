@@ -163,13 +163,13 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Cuentas Cuenta }","bold":true},{"text":{$Cuenta_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Cuentas Numero }","bold":true},{"text":{$Numero_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Cuentas SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Cuentas ConceptoId }","bold":true},{"text":{$ConceptoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Cuentas Numero }","bold":true},{"text":{$Numero_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Cuentas Activa }","bold":true},{"text":{$Activa_pdfvalue}}],"margin":[0,0,0,15]},

@@ -174,6 +174,7 @@ $tdatausugcc_uggroups[".geocodingEnabled"] = false;
 
 
 
+$tdatausugcc_uggroups[".isResizeColumns"] = true;
 
 
 

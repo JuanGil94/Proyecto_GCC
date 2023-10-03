@@ -441,15 +441,7 @@
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="empresas_add.php{$stateLink_full}" data-popup >
-							Añadir nuevo			</a>
-</span>
-{END add_link}
-			{END firstAboveGridCell}	
+				{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -538,6 +530,105 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Empresa" checked="checked" value="1" data-field="Empresa" data-fieldname="Empresa">
+					<span>{$label dbo_Empresas Empresa }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EmailAprobador" checked="checked" value="1" data-field="EmailAprobador" data-fieldname="EmailAprobador">
+					<span>{$label dbo_Empresas EmailAprobador }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MaximoPesos" checked="checked" value="1" data-field="MaximoPesos" data-fieldname="MaximoPesos">
+					<span>{$label dbo_Empresas MaximoPesos }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MaximoSalarios" checked="checked" value="1" data-field="MaximoSalarios" data-fieldname="MaximoSalarios">
+					<span>{$label dbo_Empresas MaximoSalarios }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MaximoUvt" checked="checked" value="1" data-field="MaximoUvt" data-fieldname="MaximoUvt">
+					<span>{$label dbo_Empresas MaximoUvt }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Cierre" checked="checked" value="1" data-field="Cierre" data-fieldname="Cierre">
+					<span>{$label dbo_Empresas Cierre }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Tope" checked="checked" value="1" data-field="Tope" data-fieldname="Tope">
+					<span>{$label dbo_Empresas Tope }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_DiasPersuasivo" checked="checked" value="1" data-field="DiasPersuasivo" data-fieldname="DiasPersuasivo">
+					<span>{$label dbo_Empresas DiasPersuasivo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_InteresesPlazo" checked="checked" value="1" data-field="InteresesPlazo" data-fieldname="InteresesPlazo">
+					<span>{$label dbo_Empresas InteresesPlazo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -901,7 +992,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="empresas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="empresas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>

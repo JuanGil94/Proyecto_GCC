@@ -246,6 +246,7 @@ $tdataimportaciones[".geocodingEnabled"] = false;
 
 
 
+$tdataimportaciones[".isResizeColumns"] = true;
 
 
 

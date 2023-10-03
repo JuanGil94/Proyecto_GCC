@@ -513,6 +513,45 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Pareja" checked="checked" value="1" data-field="Pareja" data-fieldname="Pareja">
+					<span>{$label dbo_Parejas Pareja }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
+					<span>{$label dbo_Parejas AbogadoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoMinjusticia" checked="checked" value="1" data-field="AbogadoMinjusticia" data-fieldname="AbogadoMinjusticia">
+					<span>{$label dbo_Parejas AbogadoMinjusticia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

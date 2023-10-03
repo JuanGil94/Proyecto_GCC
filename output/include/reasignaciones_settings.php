@@ -171,6 +171,7 @@ $tdatareasignaciones[".geocodingEnabled"] = false;
 
 
 
+$tdatareasignaciones[".isResizeColumns"] = true;
 
 
 

@@ -169,25 +169,19 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Despachos CiudadId }","bold":true},{"text":{$CiudadId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Despachos Especialidad }","bold":true},{"text":{$Especialidad_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Despachos Subespecialidad }","bold":true},{"text":{$Subespecialidad_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Despachos Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_Despachos Juez }","bold":true},{"text":{$Juez_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Despachos Correo }","bold":true},{"text":{$Correo_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Despachos Direccion }","bold":true},{"text":{$Direccion_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Despachos Telefonos }","bold":true},{"text":{$Telefonos_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Despachos Direccion }","bold":true},{"text":{$Direccion_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Despachos Correo }","bold":true},{"text":{$Correo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Despachos Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -453,7 +453,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="actas_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="actas_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -554,6 +554,105 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActaId" checked="checked" value="1" data-field="ActaId" data-fieldname="ActaId">
+					<span>{$label dbo_Actas ActaId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Acta" checked="checked" value="1" data-field="Acta" data-fieldname="Acta">
+					<span>{$label dbo_Actas Acta }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Actas Fecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
+					<span>{$label dbo_Actas AbogadoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Consolidada" checked="checked" value="1" data-field="Consolidada" data-fieldname="Consolidada">
+					<span>{$label dbo_Actas Consolidada }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Rechazo" checked="checked" value="1" data-field="Rechazo" data-fieldname="Rechazo">
+					<span>{$label dbo_Actas Rechazo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Pareja" checked="checked" value="1" data-field="Pareja" data-fieldname="Pareja">
+					<span>{$label dbo_Actas Pareja }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Abogado" checked="checked" value="1" data-field="Abogado" data-fieldname="Abogado">
+					<span>{$label dbo_Actas Abogado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoMinjusticia" checked="checked" value="1" data-field="AbogadoMinjusticia" data-fieldname="AbogadoMinjusticia">
+					<span>{$label dbo_Actas AbogadoMinjusticia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -902,7 +1001,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="actas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="actas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>

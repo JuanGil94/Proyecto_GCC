@@ -170,6 +170,7 @@ $tdatasuspensiones1[".geocodingEnabled"] = false;
 
 
 
+$tdatasuspensiones1[".isResizeColumns"] = true;
 
 
 

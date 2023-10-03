@@ -60,6 +60,113 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_GroupID}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_GroupID}" {$filterRow_attrs_GroupID}>
+			<label>{$label dbo_UsuGCC_uggroups GroupID }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_GroupID}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_GroupID}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_GroupID}</span>
+						</div>
+		{END searchCtrlBlock_GroupID}
+																{BEGIN searchCtrlBlock_Comment}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Comment}" {$filterRow_attrs_Comment}>
+			<label>{$label dbo_UsuGCC_uggroups Comment }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Comment}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Comment}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Comment}</span>
+						</div>
+		{END searchCtrlBlock_Comment}
+																{BEGIN searchCtrlBlock_Provider}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Provider}" {$filterRow_attrs_Provider}>
+			<label>{$label dbo_UsuGCC_uggroups Provider }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Provider}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Provider}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Provider}</span>
+						</div>
+		{END searchCtrlBlock_Provider}
+																{BEGIN searchCtrlBlock_Label}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Label}" {$filterRow_attrs_Label}>
+			<label>{$label dbo_UsuGCC_uggroups Label }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Label}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Label}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Label}</span>
+						</div>
+		{END searchCtrlBlock_Label}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -146,6 +253,22 @@
 		</a>
 	</li>
 {END deleteselected_link}
+							<li role="separator" class="divider"></li>							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
 					</ul>
 	</span>
 </span>
@@ -259,7 +382,56 @@
 {$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
 		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
 		{$recsPerPage}
-</span>		</div>					</div>
+</span>	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_GroupID" checked="checked" value="1" data-field="GroupID" data-fieldname="GroupID">
+					<span>{$label dbo_UsuGCC_uggroups GroupID }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Label" checked="checked" value="1" data-field="Label" data-fieldname="Label">
+					<span>{$label dbo_UsuGCC_uggroups Label }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Provider" checked="checked" value="1" data-field="Provider" data-fieldname="Provider">
+					<span>{$label dbo_UsuGCC_uggroups Provider }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Comment" checked="checked" value="1" data-field="Comment" data-fieldname="Comment">
+					<span>{$label dbo_UsuGCC_uggroups Comment }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>

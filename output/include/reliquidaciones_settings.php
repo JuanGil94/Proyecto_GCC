@@ -218,6 +218,7 @@ $tdatareliquidaciones[".geocodingEnabled"] = false;
 
 
 
+$tdatareliquidaciones[".isResizeColumns"] = true;
 
 
 

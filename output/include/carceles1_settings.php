@@ -182,6 +182,7 @@ $tdatacarceles1[".geocodingEnabled"] = false;
 
 
 
+$tdatacarceles1[".isResizeColumns"] = true;
 
 
 

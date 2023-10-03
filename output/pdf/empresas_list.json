@@ -158,10 +158,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_add}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -189,6 +187,9 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],

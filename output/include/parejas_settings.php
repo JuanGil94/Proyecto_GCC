@@ -170,6 +170,7 @@ $tdataparejas[".geocodingEnabled"] = false;
 
 
 
+$tdataparejas[".isResizeColumns"] = true;
 
 
 

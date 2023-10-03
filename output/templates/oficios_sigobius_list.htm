@@ -633,6 +633,105 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Oficio" checked="checked" value="1" data-field="Oficio" data-fieldname="Oficio">
+					<span>{$label dbo_Oficios_Sigobius Oficio }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActuacionId" checked="checked" value="1" data-field="ActuacionId" data-fieldname="ActuacionId">
+					<span>{$label dbo_Oficios_Sigobius ActuacionId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Direcciones" checked="checked" value="1" data-field="Direcciones" data-fieldname="Direcciones">
+					<span>{$label dbo_Oficios_Sigobius Direcciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_OficioIdRequisito" checked="checked" value="1" data-field="OficioIdRequisito" data-fieldname="OficioIdRequisito">
+					<span>{$label dbo_Oficios_Sigobius OficioIdRequisito }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Devolucion" checked="checked" value="1" data-field="Devolucion" data-fieldname="Devolucion">
+					<span>{$label dbo_Oficios_Sigobius Devolucion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sigobius" checked="checked" value="1" data-field="Sigobius" data-fieldname="Sigobius">
+					<span>{$label dbo_Oficios_Sigobius Sigobius }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Activo" checked="checked" value="1" data-field="Activo" data-fieldname="Activo">
+					<span>{$label dbo_Oficios_Sigobius Activo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Edicion" checked="checked" value="1" data-field="Edicion" data-fieldname="Edicion">
+					<span>{$label dbo_Oficios_Sigobius Edicion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Abierto" checked="checked" value="1" data-field="Abierto" data-fieldname="Abierto">
+					<span>{$label dbo_Oficios_Sigobius Abierto }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

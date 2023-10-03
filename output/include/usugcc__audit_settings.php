@@ -186,6 +186,7 @@ $tdatausugcc__audit[".geocodingEnabled"] = false;
 
 
 
+$tdatausugcc__audit[".isResizeColumns"] = true;
 
 
 

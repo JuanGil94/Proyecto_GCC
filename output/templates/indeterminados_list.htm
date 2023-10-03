@@ -493,7 +493,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="indeterminados_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="indeterminados_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -602,6 +602,125 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FechaRegistro" checked="checked" value="1" data-field="FechaRegistro" data-fieldname="FechaRegistro">
+					<span>{$label dbo_Indeterminados FechaRegistro }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FechaRecaudo" checked="checked" value="1" data-field="FechaRecaudo" data-fieldname="FechaRecaudo">
+					<span>{$label dbo_Indeterminados FechaRecaudo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_NumeroConsecutivo" checked="checked" value="1" data-field="NumeroConsecutivo" data-fieldname="NumeroConsecutivo">
+					<span>{$label dbo_Indeterminados NumeroConsecutivo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_NumeroExpediente" checked="checked" value="1" data-field="NumeroExpediente" data-fieldname="NumeroExpediente">
+					<span>{$label dbo_Indeterminados NumeroExpediente }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sancionado" checked="checked" value="1" data-field="Sancionado" data-fieldname="Sancionado">
+					<span>{$label dbo_Indeterminados Sancionado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Documento" checked="checked" value="1" data-field="Documento" data-fieldname="Documento">
+					<span>{$label dbo_Indeterminados Documento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Valor" checked="checked" value="1" data-field="Valor" data-fieldname="Valor">
+					<span>{$label dbo_Indeterminados Valor }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_UserId" checked="checked" value="1" data-field="UserId" data-fieldname="UserId">
+					<span>{$label dbo_Indeterminados UserId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
+					<span>{$label dbo_Indeterminados SeccionalId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Demandante" checked="checked" value="1" data-field="Demandante" data-fieldname="Demandante">
+					<span>{$label dbo_Indeterminados Demandante }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Indeterminados Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -1006,7 +1125,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="indeterminados_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="indeterminados_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>

@@ -1013,7 +1013,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="minjusticia3_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="minjusticia3_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -1122,6 +1122,525 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MinjusticiaId" checked="checked" value="1" data-field="MinjusticiaId" data-fieldname="MinjusticiaId">
+					<span>{$label dbo_Minjusticia3 MinjusticiaId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Minjusticia" checked="checked" value="1" data-field="Minjusticia" data-fieldname="Minjusticia">
+					<span>{$label dbo_Minjusticia3 Minjusticia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
+					<span>{$label dbo_Minjusticia3 Numero }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Nombre" checked="checked" value="1" data-field="Nombre" data-fieldname="Nombre">
+					<span>{$label dbo_Minjusticia3 Nombre }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Documento" checked="checked" value="1" data-field="Documento" data-fieldname="Documento">
+					<span>{$label dbo_Minjusticia3 Documento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sentencia" checked="checked" value="1" data-field="Sentencia" data-fieldname="Sentencia">
+					<span>{$label dbo_Minjusticia3 Sentencia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+					<span>{$label dbo_Minjusticia3 Ejecutoria }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Obligacion" checked="checked" value="1" data-field="Obligacion" data-fieldname="Obligacion">
+					<span>{$label dbo_Minjusticia3 Obligacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Recaudo" checked="checked" value="1" data-field="Recaudo" data-fieldname="Recaudo">
+					<span>{$label dbo_Minjusticia3 Recaudo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Recaudo_Val" checked="checked" value="1" data-field="Recaudo_Val" data-fieldname="Recaudo_Val">
+					<span>{$label dbo_Minjusticia3 Recaudo_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Saldo" checked="checked" value="1" data-field="Saldo" data-fieldname="Saldo">
+					<span>{$label dbo_Minjusticia3 Saldo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Intereses" checked="checked" value="1" data-field="Intereses" data-fieldname="Intereses">
+					<span>{$label dbo_Minjusticia3 Intereses }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Intereses_Val" checked="checked" value="1" data-field="Intereses_Val" data-fieldname="Intereses_Val">
+					<span>{$label dbo_Minjusticia3 Intereses_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
+					<span>{$label dbo_Minjusticia3 AbogadoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Caja" checked="checked" value="1" data-field="Caja" data-fieldname="Caja">
+					<span>{$label dbo_Minjusticia3 Caja }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Cuadernillos" checked="checked" value="1" data-field="Cuadernillos" data-fieldname="Cuadernillos">
+					<span>{$label dbo_Minjusticia3 Cuadernillos }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Folios" checked="checked" value="1" data-field="Folios" data-fieldname="Folios">
+					<span>{$label dbo_Minjusticia3 Folios }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Hechos" checked="checked" value="1" data-field="Hechos" data-fieldname="Hechos">
+					<span>{$label dbo_Minjusticia3 Hechos }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Salarios" checked="checked" value="1" data-field="Salarios" data-fieldname="Salarios">
+					<span>{$label dbo_Minjusticia3 Salarios }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Obligacion_Val" checked="checked" value="1" data-field="Obligacion_Val" data-fieldname="Obligacion_Val">
+					<span>{$label dbo_Minjusticia3 Obligacion_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_DespachoId" checked="checked" value="1" data-field="DespachoId" data-fieldname="DespachoId">
+					<span>{$label dbo_Minjusticia3 DespachoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_TipoDocumentoId" checked="checked" value="1" data-field="TipoDocumentoId" data-fieldname="TipoDocumentoId">
+					<span>{$label dbo_Minjusticia3 TipoDocumentoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
+					<span>{$label dbo_Minjusticia3 SeccionalId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Registro" checked="checked" value="1" data-field="Registro" data-fieldname="Registro">
+					<span>{$label dbo_Minjusticia3 Registro }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Aprobacion" checked="checked" value="1" data-field="Aprobacion" data-fieldname="Aprobacion">
+					<span>{$label dbo_Minjusticia3 Aprobacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sentencia_Val" checked="checked" value="1" data-field="Sentencia_Val" data-fieldname="Sentencia_Val">
+					<span>{$label dbo_Minjusticia3 Sentencia_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Ejecutoria_Val" checked="checked" value="1" data-field="Ejecutoria_Val" data-fieldname="Ejecutoria_Val">
+					<span>{$label dbo_Minjusticia3 Ejecutoria_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Notificacion" checked="checked" value="1" data-field="Notificacion" data-fieldname="Notificacion">
+					<span>{$label dbo_Minjusticia3 Notificacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AcuerdoPago" checked="checked" value="1" data-field="AcuerdoPago" data-fieldname="AcuerdoPago">
+					<span>{$label dbo_Minjusticia3 AcuerdoPago }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ValorAcuerdopago" checked="checked" value="1" data-field="ValorAcuerdopago" data-fieldname="ValorAcuerdopago">
+					<span>{$label dbo_Minjusticia3 ValorAcuerdopago }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_NumeroCuotas" checked="checked" value="1" data-field="NumeroCuotas" data-fieldname="NumeroCuotas">
+					<span>{$label dbo_Minjusticia3 NumeroCuotas }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ValorCuota" checked="checked" value="1" data-field="ValorCuota" data-fieldname="ValorCuota">
+					<span>{$label dbo_Minjusticia3 ValorCuota }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CarteraTipoId" checked="checked" value="1" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+					<span>{$label dbo_Minjusticia3 CarteraTipoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Minjusticia3 Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ProcesoId" checked="checked" value="1" data-field="ProcesoId" data-fieldname="ProcesoId">
+					<span>{$label dbo_Minjusticia3 ProcesoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Nombre_Val" checked="checked" value="1" data-field="Nombre_Val" data-fieldname="Nombre_Val">
+					<span>{$label dbo_Minjusticia3 Nombre_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Documento_Val" checked="checked" value="1" data-field="Documento_Val" data-fieldname="Documento_Val">
+					<span>{$label dbo_Minjusticia3 Documento_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActaIndividual" checked="checked" value="1" data-field="ActaIndividual" data-fieldname="ActaIndividual">
+					<span>{$label dbo_Minjusticia3 ActaIndividual }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActaConsolidada" checked="checked" value="1" data-field="ActaConsolidada" data-fieldname="ActaConsolidada">
+					<span>{$label dbo_Minjusticia3 ActaConsolidada }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Autorizacion" checked="checked" value="1" data-field="Autorizacion" data-fieldname="Autorizacion">
+					<span>{$label dbo_Minjusticia3 Autorizacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Autorizado" checked="checked" value="1" data-field="Autorizado" data-fieldname="Autorizado">
+					<span>{$label dbo_Minjusticia3 Autorizado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CausalId" checked="checked" value="1" data-field="CausalId" data-fieldname="CausalId">
+					<span>{$label dbo_Minjusticia3 CausalId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero_Val" checked="checked" value="1" data-field="Numero_Val" data-fieldname="Numero_Val">
+					<span>{$label dbo_Minjusticia3 Numero_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Minjusticia_Val" checked="checked" value="1" data-field="Minjusticia_Val" data-fieldname="Minjusticia_Val">
+					<span>{$label dbo_Minjusticia3 Minjusticia_Val }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Pesos" checked="checked" value="1" data-field="Pesos" data-fieldname="Pesos">
+					<span>{$label dbo_Minjusticia3 Pesos }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_UserId" checked="checked" value="1" data-field="UserId" data-fieldname="UserId">
+					<span>{$label dbo_Minjusticia3 UserId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Digitalizado" checked="checked" value="1" data-field="Digitalizado" data-fieldname="Digitalizado">
+					<span>{$label dbo_Minjusticia3 Digitalizado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Procesado" checked="checked" value="1" data-field="Procesado" data-fieldname="Procesado">
+					<span>{$label dbo_Minjusticia3 Procesado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActaAnterior" checked="checked" value="1" data-field="ActaAnterior" data-fieldname="ActaAnterior">
+					<span>{$label dbo_Minjusticia3 ActaAnterior }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActaActual" checked="checked" value="1" data-field="ActaActual" data-fieldname="ActaActual">
+					<span>{$label dbo_Minjusticia3 ActaActual }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Subsanar" checked="checked" value="1" data-field="Subsanar" data-fieldname="Subsanar">
+					<span>{$label dbo_Minjusticia3 Subsanar }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -2646,7 +3165,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="minjusticia3_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="minjusticia3_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>

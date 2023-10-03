@@ -679,6 +679,145 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
+					<span>{$label dbo_Abogados SeccionalId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Abogado" checked="checked" value="1" data-field="Abogado" data-fieldname="Abogado">
+					<span>{$label dbo_Abogados Abogado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Documento" checked="checked" value="1" data-field="Documento" data-fieldname="Documento">
+					<span>{$label dbo_Abogados Documento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Masculino" checked="checked" value="1" data-field="Masculino" data-fieldname="Masculino">
+					<span>{$label dbo_Abogados Masculino }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Tarjeta" checked="checked" value="1" data-field="Tarjeta" data-fieldname="Tarjeta">
+					<span>{$label dbo_Abogados Tarjeta }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Direccion" checked="checked" value="1" data-field="Direccion" data-fieldname="Direccion">
+					<span>{$label dbo_Abogados Direccion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Telefonos" checked="checked" value="1" data-field="Telefonos" data-fieldname="Telefonos">
+					<span>{$label dbo_Abogados Telefonos }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Celular" checked="checked" value="1" data-field="Celular" data-fieldname="Celular">
+					<span>{$label dbo_Abogados Celular }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Email" checked="checked" value="1" data-field="Email" data-fieldname="Email">
+					<span>{$label dbo_Abogados Email }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Despacho" checked="checked" value="1" data-field="Despacho" data-fieldname="Despacho">
+					<span>{$label dbo_Abogados Despacho }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Codificador" checked="checked" value="1" data-field="Codificador" data-fieldname="Codificador">
+					<span>{$label dbo_Abogados Codificador }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Firma" checked="checked" value="1" data-field="Firma" data-fieldname="Firma">
+					<span>{$label dbo_Abogados Firma }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Activo" checked="checked" value="1" data-field="Activo" data-fieldname="Activo">
+					<span>{$label dbo_Abogados Activo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -1154,17 +1293,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="abogados_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -1475,34 +1603,13 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesos,reasignaciones,minjusticia,minjusticia2,minjusticia3"
-			data-details-procesos			data-details-reasignaciones			data-details-minjusticia			data-details-minjusticia2			data-details-minjusticia3	>
-		<span data-details-inside data-short-table="procesos">
-			</span>
-		<span data-details-inside data-short-table="reasignaciones">
-			</span>
-		<span data-details-inside data-short-table="minjusticia">
-			</span>
-		<span data-details-inside data-short-table="minjusticia2">
-			</span>
-		<span data-details-inside data-short-table="minjusticia3">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			 
-			 
-			 
-			
+	
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

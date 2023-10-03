@@ -206,6 +206,7 @@ $tdatahorarios[".geocodingEnabled"] = false;
 
 
 
+$tdatahorarios[".isResizeColumns"] = true;
 
 
 

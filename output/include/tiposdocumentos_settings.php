@@ -174,6 +174,7 @@ $tdatatiposdocumentos[".geocodingEnabled"] = false;
 
 
 
+$tdatatiposdocumentos[".isResizeColumns"] = true;
 
 
 

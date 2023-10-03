@@ -708,6 +708,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Ciudades1")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1367,6 +1371,10 @@ class AuditTrailFile
 		if($table=="dbo.OperacionTipo")
 		{
 			return false;
+		}
+		if($table=="dbo.Ciudades1")
+		{
+			return true;
 		}
 	}
 

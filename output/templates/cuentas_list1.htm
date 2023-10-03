@@ -458,6 +458,65 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Cuenta" checked="checked" value="1" data-field="Cuenta" data-fieldname="Cuenta">
+					<span>{$label dbo_Cuentas Cuenta }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
+					<span>{$label dbo_Cuentas Numero }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
+					<span>{$label dbo_Cuentas SeccionalId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ConceptoId" checked="checked" value="1" data-field="ConceptoId" data-fieldname="ConceptoId">
+					<span>{$label dbo_Cuentas ConceptoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Activa" checked="checked" value="1" data-field="Activa" data-fieldname="Activa">
+					<span>{$label dbo_Cuentas Activa }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

@@ -490,6 +490,7 @@ $tdataprocesos[".geocodingEnabled"] = false;
 
 
 
+$tdataprocesos[".isResizeColumns"] = true;
 
 
 

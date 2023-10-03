@@ -190,6 +190,7 @@ $tdataadmin_users[".geocodingEnabled"] = false;
 
 
 
+$tdataadmin_users[".isResizeColumns"] = true;
 
 
 

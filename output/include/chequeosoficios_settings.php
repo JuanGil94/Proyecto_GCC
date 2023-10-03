@@ -186,6 +186,7 @@ $tdatachequeosoficios[".geocodingEnabled"] = false;
 
 
 
+$tdatachequeosoficios[".isResizeColumns"] = true;
 
 
 

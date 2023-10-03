@@ -198,6 +198,7 @@ $tdatasancionados[".geocodingEnabled"] = false;
 
 
 
+$tdatasancionados[".isResizeColumns"] = true;
 
 
 

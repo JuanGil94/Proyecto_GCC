@@ -174,69 +174,6 @@
 
 {END CiudadId_fieldblock}
 											
-{BEGIN Especialidad_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Especialidad}  r-vertical-field" 
-	data-signal-error-for="Especialidad{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Especialidad" data-fieldname="Especialidad" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Especialidad}">
-		{BEGIN Especialidad_label}{$label dbo_Despachos Especialidad }{END Especialidad_label}
-	</label>
-	<div class="r-edit-field">
-		{$Especialidad_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Especialidad" {$tooltipAttr dbo_Despachos Especialidad } >
-		<div class="text-muted" >
-		{$tooltip dbo_Despachos Especialidad }		</div>
-	</div>
-</div>
-
-
-{END Especialidad_fieldblock}
-											
-{BEGIN Subespecialidad_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Subespecialidad}  r-vertical-field" 
-	data-signal-error-for="Subespecialidad{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Subespecialidad" data-fieldname="Subespecialidad" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Subespecialidad}">
-		{BEGIN Subespecialidad_label}{$label dbo_Despachos Subespecialidad }{END Subespecialidad_label}
-	</label>
-	<div class="r-edit-field">
-		{$Subespecialidad_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Subespecialidad" {$tooltipAttr dbo_Despachos Subespecialidad } >
-		<div class="text-muted" >
-		{$tooltip dbo_Despachos Subespecialidad }		</div>
-	</div>
-</div>
-
-
-{END Subespecialidad_fieldblock}
-											
-{BEGIN Activo_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-vertical-field" 
-	data-signal-error-for="Activo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Activo}">
-		{BEGIN Activo_label}{$label dbo_Despachos Activo }{END Activo_label}
-	</label>
-	<div class="r-edit-field">
-		{$Activo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Activo" {$tooltipAttr dbo_Despachos Activo } >
-		<div class="text-muted" >
-		{$tooltip dbo_Despachos Activo }		</div>
-	</div>
-</div>
-
-
-{END Activo_fieldblock}
-											
 {BEGIN Juez_fieldblock}
 
 
@@ -258,26 +195,26 @@
 
 {END Juez_fieldblock}
 											
-{BEGIN Correo_fieldblock}
+{BEGIN Direccion_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Correo}  r-vertical-field" 
-	data-signal-error-for="Correo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Correo" data-fieldname="Correo" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-vertical-field" 
+	data-signal-error-for="Direccion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Correo}">
-		{BEGIN Correo_label}{$label dbo_Despachos Correo }{END Correo_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Direccion}">
+		{BEGIN Direccion_label}{$label dbo_Despachos Direccion }{END Direccion_label}
 	</label>
 	<div class="r-edit-field">
-		{$Correo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Correo" {$tooltipAttr dbo_Despachos Correo } >
+		{$Direccion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Direccion" {$tooltipAttr dbo_Despachos Direccion } >
 		<div class="text-muted" >
-		{$tooltip dbo_Despachos Correo }		</div>
+		{$tooltip dbo_Despachos Direccion }		</div>
 	</div>
 </div>
 
 
-{END Correo_fieldblock}
+{END Direccion_fieldblock}
 											
 {BEGIN Telefonos_fieldblock}
 
@@ -300,26 +237,47 @@
 
 {END Telefonos_fieldblock}
 											
-{BEGIN Direccion_fieldblock}
+{BEGIN Correo_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-vertical-field" 
-	data-signal-error-for="Direccion{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Correo}  r-vertical-field" 
+	data-signal-error-for="Correo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Correo" data-fieldname="Correo" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Direccion}">
-		{BEGIN Direccion_label}{$label dbo_Despachos Direccion }{END Direccion_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Correo}">
+		{BEGIN Correo_label}{$label dbo_Despachos Correo }{END Correo_label}
 	</label>
 	<div class="r-edit-field">
-		{$Direccion_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Direccion" {$tooltipAttr dbo_Despachos Direccion } >
+		{$Correo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Correo" {$tooltipAttr dbo_Despachos Correo } >
 		<div class="text-muted" >
-		{$tooltip dbo_Despachos Direccion }		</div>
+		{$tooltip dbo_Despachos Correo }		</div>
 	</div>
 </div>
 
 
-{END Direccion_fieldblock}
+{END Correo_fieldblock}
+											
+{BEGIN Activo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-vertical-field" 
+	data-signal-error-for="Activo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Activo}">
+		{BEGIN Activo_label}{$label dbo_Despachos Activo }{END Activo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Activo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Activo" {$tooltipAttr dbo_Despachos Activo } >
+		<div class="text-muted" >
+		{$tooltip dbo_Despachos Activo }		</div>
+	</div>
+</div>
+
+
+{END Activo_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

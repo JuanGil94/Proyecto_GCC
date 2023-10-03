@@ -170,6 +170,7 @@ $tdataestados[".geocodingEnabled"] = false;
 
 
 
+$tdataestados[".isResizeColumns"] = true;
 
 
 

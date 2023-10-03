@@ -190,6 +190,7 @@ $tdatadirecciones[".geocodingEnabled"] = false;
 
 
 
+$tdatadirecciones[".isResizeColumns"] = true;
 
 
 

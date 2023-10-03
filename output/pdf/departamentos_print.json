@@ -355,6 +355,11 @@ pdfDocument = {
 			{$displayDetailTable_ciudades }
 		{END details_ciudades},
 				
+				
+			 {BEGIN details_ciudades1}
+			{$displayDetailTable_ciudades1 }
+		{END details_ciudades1},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

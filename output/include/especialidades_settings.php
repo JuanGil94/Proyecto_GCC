@@ -170,6 +170,7 @@ $tdataespecialidades[".geocodingEnabled"] = false;
 
 
 
+$tdataespecialidades[".isResizeColumns"] = true;
 
 
 

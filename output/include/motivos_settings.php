@@ -166,6 +166,7 @@ $tdatamotivos[".geocodingEnabled"] = false;
 
 
 
+$tdatamotivos[".isResizeColumns"] = true;
 
 
 

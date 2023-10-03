@@ -182,6 +182,7 @@ $tdataayudas[".geocodingEnabled"] = false;
 
 
 
+$tdataayudas[".isResizeColumns"] = true;
 
 
 

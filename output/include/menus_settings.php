@@ -178,6 +178,7 @@ $tdatamenus[".geocodingEnabled"] = false;
 
 
 
+$tdatamenus[".isResizeColumns"] = true;
 
 
 

@@ -170,6 +170,7 @@ $tdataipsrestringidas[".geocodingEnabled"] = false;
 
 
 
+$tdataipsrestringidas[".isResizeColumns"] = true;
 
 
 

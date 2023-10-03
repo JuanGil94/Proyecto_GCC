@@ -174,6 +174,7 @@ $tdatacarteratipos[".geocodingEnabled"] = false;
 
 
 
+$tdatacarteratipos[".isResizeColumns"] = true;
 
 
 

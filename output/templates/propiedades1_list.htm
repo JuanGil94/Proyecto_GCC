@@ -420,7 +420,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="propiedades1_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="propiedades1_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -510,6 +510,75 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Propiedades1 Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Matr_cula_Inmobiliaria" checked="checked" value="1" data-field="Matr_cula_Inmobiliaria" data-fieldname="Matrícula Inmobiliaria">
+					<span>{$label dbo_Propiedades1 Matr_cula_Inmobiliaria }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Aval_o" checked="checked" value="1" data-field="Aval_o" data-fieldname="Avalúo">
+					<span>{$label dbo_Propiedades1 Aval_o }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Ciudad" checked="checked" value="1" data-field="Ciudad" data-fieldname="Ciudad">
+					<span>{$label dbo_Propiedades1 Ciudad }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Direcci_n" checked="checked" value="1" data-field="Direcci_n" data-fieldname="Dirección">
+					<span>{$label dbo_Propiedades1 Direcci_n }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
+					<span>{$label dbo_Propiedades1 SancionadoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

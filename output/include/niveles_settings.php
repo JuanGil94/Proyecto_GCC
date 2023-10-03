@@ -186,6 +186,7 @@ $tdataniveles[".geocodingEnabled"] = false;
 
 
 
+$tdataniveles[".isResizeColumns"] = true;
 
 
 

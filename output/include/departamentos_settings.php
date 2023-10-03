@@ -170,6 +170,7 @@ $tdatadepartamentos[".geocodingEnabled"] = false;
 
 
 
+$tdatadepartamentos[".isResizeColumns"] = true;
 
 
 

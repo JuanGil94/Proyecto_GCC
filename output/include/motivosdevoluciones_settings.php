@@ -170,6 +170,7 @@ $tdatamotivosdevoluciones[".geocodingEnabled"] = false;
 
 
 
+$tdatamotivosdevoluciones[".isResizeColumns"] = true;
 
 
 

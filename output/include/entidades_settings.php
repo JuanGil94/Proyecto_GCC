@@ -166,6 +166,7 @@ $tdataentidades[".geocodingEnabled"] = false;
 
 
 
+$tdataentidades[".isResizeColumns"] = true;
 
 
 

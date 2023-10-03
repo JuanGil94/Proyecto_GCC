@@ -605,6 +605,105 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Sancionado" checked="checked" value="1" data-field="Sancionado" data-fieldname="Sancionado">
+					<span>{$label dbo_Sancionados Sancionado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_TipoDocumentoId" checked="checked" value="1" data-field="TipoDocumentoId" data-fieldname="TipoDocumentoId">
+					<span>{$label dbo_Sancionados TipoDocumentoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Documento" checked="checked" value="1" data-field="Documento" data-fieldname="Documento">
+					<span>{$label dbo_Sancionados Documento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Email" checked="checked" value="1" data-field="Email" data-fieldname="Email">
+					<span>{$label dbo_Sancionados Email }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Celular" checked="checked" value="1" data-field="Celular" data-fieldname="Celular">
+					<span>{$label dbo_Sancionados Celular }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Masculino" checked="checked" value="1" data-field="Masculino" data-fieldname="Masculino">
+					<span>{$label dbo_Sancionados Masculino }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label dbo_Sancionados Observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fallecimiento" checked="checked" value="1" data-field="Fallecimiento" data-fieldname="Fallecimiento">
+					<span>{$label dbo_Sancionados Fallecimiento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_PrivadoLibertad" checked="checked" value="1" data-field="PrivadoLibertad" data-fieldname="PrivadoLibertad">
+					<span>{$label dbo_Sancionados PrivadoLibertad }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -979,7 +1078,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="sancionados_view.php?{$editlink}" {$viewlink_attrs} title="Ver" data-popup >		
+	 glyphicon glyphicon-search" href="sancionados_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
 				
 								</a>
 </span>

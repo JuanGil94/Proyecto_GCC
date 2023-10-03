@@ -415,7 +415,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="alertas_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="alertas_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -524,6 +524,65 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_AlertaTipoId" checked="checked" value="1" data-field="AlertaTipoId" data-fieldname="AlertaTipoId">
+					<span>{$label dbo_Alertas AlertaTipoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Dias" checked="checked" value="1" data-field="Dias" data-fieldname="Dias">
+					<span>{$label dbo_Alertas Dias }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_ActuacionId" checked="checked" value="1" data-field="ActuacionId" data-fieldname="ActuacionId">
+					<span>{$label dbo_Alertas ActuacionId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Activa" checked="checked" value="1" data-field="Activa" data-fieldname="Activa">
+					<span>{$label dbo_Alertas Activa }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Publicar" checked="checked" value="1" data-field="Publicar" data-fieldname="Publicar">
+					<span>{$label dbo_Alertas Publicar }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}
@@ -760,7 +819,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="alertas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="alertas_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>
