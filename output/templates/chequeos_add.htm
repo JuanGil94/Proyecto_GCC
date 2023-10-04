@@ -172,9 +172,7 @@
 
 
 {END TramiteId_fieldblock}
-											<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
-{$event dbo_Chequeos_snippet1}
-</span>											
+											
 {BEGIN FechaSancion_fieldblock}
 
 
@@ -216,6 +214,27 @@
 
 
 {END Cantidad_fieldblock}
+											
+{BEGIN Folios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Folios}  r-vertical-field" 
+	data-signal-error-for="Folios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Folios" data-fieldname="Folios" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Folios}">
+		{BEGIN Folios_label}{$label dbo_Chequeos Folios }{END Folios_label}
+	</label>
+	<div class="r-edit-field">
+		{$Folios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Folios" {$tooltipAttr dbo_Chequeos Folios } >
+		<div class="text-muted" >
+		{$tooltip dbo_Chequeos Folios }		</div>
+	</div>
+</div>
+
+
+{END Folios_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -443,27 +462,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Folios_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Folios}  r-vertical-field" 
-	data-signal-error-for="Folios{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Folios" data-fieldname="Folios" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Folios}">
-		{BEGIN Folios_label}{$label dbo_Chequeos Folios }{END Folios_label}
-	</label>
-	<div class="r-edit-field">
-		{$Folios_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Folios" {$tooltipAttr dbo_Chequeos Folios } >
-		<div class="text-muted" >
-		{$tooltip dbo_Chequeos Folios }		</div>
-	</div>
-</div>
-
-
-{END Folios_fieldblock}
-											
 {BEGIN Ejecutoria_fieldblock}
 
 
