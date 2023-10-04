@@ -25,7 +25,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipschequeos["Spanish"] = array();
 	$placeHolderschequeos["Spanish"] = array();
 	$pageTitleschequeos["Spanish"] = array();
-	$fieldLabelschequeos["Spanish"]["ConceptoId"] = "Concepto - Naturaleza";
+	$fieldLabelschequeos["Spanish"]["ConceptoId"] = "Concepto";
 	$fieldToolTipschequeos["Spanish"]["ConceptoId"] = "";
 	$placeHolderschequeos["Spanish"]["ConceptoId"] = "";
 	$fieldLabelschequeos["Spanish"]["AbogadoId"] = "Abogado";
@@ -76,7 +76,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeos["Spanish"]["PorPrescripcion"] = "Por Prescripción";
 	$fieldToolTipschequeos["Spanish"]["PorPrescripcion"] = "";
 	$placeHolderschequeos["Spanish"]["PorPrescripcion"] = "";
-	$fieldLabelschequeos["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelschequeos["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipschequeos["Spanish"]["SeccionalId"] = "";
 	$placeHolderschequeos["Spanish"]["SeccionalId"] = "";
 	$fieldLabelschequeos["Spanish"]["Folios"] = "Folios";
@@ -109,7 +109,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeos["Spanish"]["Remisorio"] = "Remisorio";
 	$fieldToolTipschequeos["Spanish"]["Remisorio"] = "";
 	$placeHolderschequeos["Spanish"]["Remisorio"] = "";
-	$fieldLabelschequeos["Spanish"]["CarteraTipoId"] = "Cartera Tipo Id";
+	$fieldLabelschequeos["Spanish"]["CarteraTipoId"] = "Cartera Tipo";
 	$fieldToolTipschequeos["Spanish"]["CarteraTipoId"] = "";
 	$placeHolderschequeos["Spanish"]["CarteraTipoId"] = "";
 	$fieldLabelschequeos["Spanish"]["MinJusticia"] = "Min Justicia";
@@ -127,7 +127,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeos["Spanish"]["Plazo"] = "Plazo";
 	$fieldToolTipschequeos["Spanish"]["Plazo"] = "";
 	$placeHolderschequeos["Spanish"]["Plazo"] = "";
-	$fieldLabelschequeos["Spanish"]["NaturalezaId"] = "Naturaleza Id";
+	$fieldLabelschequeos["Spanish"]["NaturalezaId"] = "Naturaleza";
 	$fieldToolTipschequeos["Spanish"]["NaturalezaId"] = "";
 	$placeHolderschequeos["Spanish"]["NaturalezaId"] = "";
 	$fieldLabelschequeos["Spanish"]["Sigobius"] = "Sigobius";

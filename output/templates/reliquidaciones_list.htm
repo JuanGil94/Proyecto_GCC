@@ -370,14 +370,6 @@
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="reliquidaciones_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -516,13 +508,11 @@
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="reliquidaciones_add.php{$stateLink_full}" data-popup >
-							Añadir nuevo			</a>
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
 </span>
-{END add_link}
+{END pagination_block}
 	 
 		{BEGIN inlineadd_link}
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
@@ -531,14 +521,6 @@
 							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
-</span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -1215,24 +1197,13 @@
 	{$cell_grid_cell_icons}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reliquidaciones_list"		data-control-cell
 	
 	>
 
-	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="reliquidaciones_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
 	 
 		{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
@@ -1242,17 +1213,6 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
-{BEGIN view_link}
-<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver registro" class="btn-link   
-	 glyphicon glyphicon-search" href="reliquidaciones_view.php?{$editlink}" {$viewlink_attrs} title="Ver" >		
-				
-								</a>
-</span>
-{END view_link}
-{END view_column}
 	
 	</td>
 	{END cellblock_grid_cell_icons}
@@ -1806,13 +1766,7 @@
 	class="r-align-center r-ori-vert			col-md-12
 	
 ">
-		 
-		{BEGIN pagination_block}
-<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
-{$pagination}
-</span>
-{END pagination_block}
-		</div>					</div>
+			</div>					</div>
 			</div>		
 {END below-grid_block}
 	</div>
