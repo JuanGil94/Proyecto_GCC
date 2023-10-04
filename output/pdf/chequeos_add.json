@@ -187,13 +187,13 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel dbo_Chequeos TramiteId }","bold":true},{"text":{$TramiteId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"text":"{$event dbo_Chequeos_snippet1}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel dbo_Chequeos FechaSancion }","bold":true},{"text":{$FechaSancion_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel dbo_Chequeos Cantidad }","bold":true},{"text":{$Cantidad_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel dbo_Chequeos Folios }","bold":true},{"text":{$Folios_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -308,9 +308,6 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel dbo_Chequeos Folios }","bold":true},{"text":{$Folios_pdfvalue}}],"margin":[0,0,0,15]},
-				
 				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_Chequeos Ejecutoria }","bold":true},{"text":{$Ejecutoria_pdfvalue}}],"margin":[0,0,0,15]},
 				

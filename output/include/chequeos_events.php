@@ -19,6 +19,7 @@
 		$this->events["AfterAdd"]=true;
 
 
+
 	}
 
 //	handlers
@@ -198,30 +199,75 @@ return true;
 function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
-		 // Verifica si la inserción fue exitosa
-    if ($pageObject->status == "success") {
-        // Genera código JavaScript para mostrar un SweetAlert
-				echo '<script>alert("FINISHHHHHH:");</script>';
-        $jsCode = "
-            <script>
-                swal({
-                    title: 'Registro exitoso',
-                    text: 'El registro se ha agregado satisfactoriamente.',
-                    icon: 'success',
-                    confirmButtonText: 'Aceptar'
-                });
-            </script>
-        ";
-        
-        // Imprime el código JavaScript
-        echo $jsCode;
-    }
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+		echo "<script>alert('EL REGISTRO FUE REALIZADO CON EXITO');</script>"
 ;
 } // function AfterAdd
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
