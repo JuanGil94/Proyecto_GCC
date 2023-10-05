@@ -761,7 +761,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "30";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Parámetros";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.Empresas";
@@ -780,7 +780,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Empresas";
+	$menuNode["title"] = "Parámetros";
 
 
 
