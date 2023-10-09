@@ -25,7 +25,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsautorizaciones["Spanish"] = array();
 	$placeHoldersautorizaciones["Spanish"] = array();
 	$pageTitlesautorizaciones["Spanish"] = array();
-	$fieldLabelsautorizaciones["Spanish"]["ConceptoId"] = "Concepto - Naturaleza";
+	$fieldLabelsautorizaciones["Spanish"]["ConceptoId"] = "Concepto";
 	$fieldToolTipsautorizaciones["Spanish"]["ConceptoId"] = "";
 	$placeHoldersautorizaciones["Spanish"]["ConceptoId"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["AbogadoId"] = "Abogado";
@@ -76,7 +76,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsautorizaciones["Spanish"]["PorPrescripcion"] = "Por Prescripción";
 	$fieldToolTipsautorizaciones["Spanish"]["PorPrescripcion"] = "";
 	$placeHoldersautorizaciones["Spanish"]["PorPrescripcion"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelsautorizaciones["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipsautorizaciones["Spanish"]["SeccionalId"] = "";
 	$placeHoldersautorizaciones["Spanish"]["SeccionalId"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Folios"] = "Folios";
@@ -109,7 +109,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsautorizaciones["Spanish"]["Remisorio"] = "Remisorio";
 	$fieldToolTipsautorizaciones["Spanish"]["Remisorio"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Remisorio"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["CarteraTipoId"] = "Cartera Tipo Id";
+	$fieldLabelsautorizaciones["Spanish"]["CarteraTipoId"] = "Cartera Tipo";
 	$fieldToolTipsautorizaciones["Spanish"]["CarteraTipoId"] = "";
 	$placeHoldersautorizaciones["Spanish"]["CarteraTipoId"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["MinJusticia"] = "Min Justicia";
@@ -127,7 +127,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsautorizaciones["Spanish"]["Plazo"] = "Plazo";
 	$fieldToolTipsautorizaciones["Spanish"]["Plazo"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Plazo"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["NaturalezaId"] = "Naturaleza Id";
+	$fieldLabelsautorizaciones["Spanish"]["NaturalezaId"] = "Naturaleza";
 	$fieldToolTipsautorizaciones["Spanish"]["NaturalezaId"] = "";
 	$placeHoldersautorizaciones["Spanish"]["NaturalezaId"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Sigobius"] = "Sigobius";

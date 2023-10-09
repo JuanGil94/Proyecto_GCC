@@ -777,6 +777,9 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "NaturalezaId";
 
 	
 	
@@ -5578,7 +5581,10 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "ConceptoId", "lookup" => "ConceptoId" );
+
 	
 	
 

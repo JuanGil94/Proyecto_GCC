@@ -950,12 +950,12 @@
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="2"
+	data-body-height="1"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -1214,13 +1214,13 @@
 	</th>
 	{END cellblock_grid_headcell_field9}
 							</tr>
-																				
+															
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -1290,12 +1290,31 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"		data-control-cell
 	
 	>
+
+	 
+			 
+		
+	{BEGIN dtables_link}
+				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+		<a 
+			{$abogados_link_attrs} 
+			class="{$dtables_link_class} details-badge badge abogados_badge" 
+			title="Mostrar detalles"
+						
+		>
+							<span class="glyphicon glyphicon-th-list"></span>
+									<span class="{$abogados_cntspan_class}" {$abogados_childnumber_attr}>
+				{$abogados_childnumber}				
+			</span>
+		</a>
+		</span>
+	{END dtables_link}
 
 	
 	</td>
@@ -1469,31 +1488,12 @@
 	</td>
 	{END cellblock_grid_cell_field9}
 							</tr>
-											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
-				
-							">
-									{BEGIN cellblock_grid_cell_dpreview}
-	<td
-	
-	{$cell_grid_cell_dpreview}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_cell_dpreview}
-							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow
