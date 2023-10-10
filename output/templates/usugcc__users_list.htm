@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ext_security_id}</span>
 						</div>
 		{END searchCtrlBlock_ext_security_id}
+																{BEGIN searchCtrlBlock_apikey}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_apikey}" {$filterRow_attrs_apikey}>
+			<label>{$label dbo_UsuGCC__users apikey }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_apikey}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_apikey}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_apikey}</span>
+						</div>
+		{END searchCtrlBlock_apikey}
 																{BEGIN searchCtrlBlock_fullname}
 
 
@@ -440,6 +453,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_apikey" checked="checked" value="1" data-field="apikey" data-fieldname="apikey">
+					<span>{$label dbo_UsuGCC__users apikey }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -469,7 +492,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fullname"]:before {
 		content: "{$label dbo_UsuGCC__users fullname}";
 	}
-						}
+								[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="apikey"]:before {
+		content: "{$label dbo_UsuGCC__users apikey}";
+	}
+	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -537,7 +563,7 @@
 	 
 		{BEGIN username_fieldheadercolumn}
 	{BEGIN username_fieldheader}
-	<SPAN {$username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
+	<SPAN {$username_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="username" data-fieldname="username">
 	{$label dbo_UsuGCC__users username }	{$arrow_icon_username}
 	</SPAN>
 	{END username_fieldheader}
@@ -562,7 +588,7 @@
 	 
 		{BEGIN password_fieldheadercolumn}
 	{BEGIN password_fieldheader}
-	<SPAN {$password_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password">
+	<SPAN {$password_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="password" data-fieldname="password">
 	{$label dbo_UsuGCC__users password }	{$arrow_icon_password}
 	</SPAN>
 	{END password_fieldheader}
@@ -587,7 +613,7 @@
 	 
 		{BEGIN email_fieldheadercolumn}
 	{BEGIN email_fieldheader}
-	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email">
+	<SPAN {$email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email" data-fieldname="email">
 	{$label dbo_UsuGCC__users email }	{$arrow_icon_email}
 	</SPAN>
 	{END email_fieldheader}
@@ -612,7 +638,7 @@
 	 
 		{BEGIN fullname_fieldheadercolumn}
 	{BEGIN fullname_fieldheader}
-	<SPAN {$fullname_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fullname" data-fieldname="fullname">
+	<SPAN {$fullname_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fullname" data-fieldname="fullname">
 	{$label dbo_UsuGCC__users fullname }	{$arrow_icon_fullname}
 	</SPAN>
 	{END fullname_fieldheader}
@@ -621,6 +647,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$apikey_class}	"
+
+			data-field="apikey"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN apikey_fieldheadercolumn}
+	{BEGIN apikey_fieldheader}
+	<SPAN {$apikey_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="apikey" data-fieldname="apikey">
+	{$label dbo_UsuGCC__users apikey }	{$arrow_icon_apikey}
+	</SPAN>
+	{END apikey_fieldheader}
+{END apikey_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
 							</tr>
 															
 					{END grid_header}
@@ -767,6 +818,27 @@
 {END fullname_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$apikey_class}	"
+
+			data-field="apikey"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN apikey_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="apikey" data-fieldname="apikey" data-default-width >
+{$apikey_value}
+</span>
+{END apikey_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
 							</tr>
 										
 											{END grid_row}
@@ -868,6 +940,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$apikey_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__users_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

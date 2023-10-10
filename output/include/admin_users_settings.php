@@ -1576,6 +1576,7 @@ $proto23["m_columns"][] = "active";
 $proto23["m_columns"][] = "ext_security_id";
 $proto23["m_columns"][] = "reset_token";
 $proto23["m_columns"][] = "reset_date";
+$proto23["m_columns"][] = "apikey";
 $obj = new SQLTable($proto23);
 
 $proto22["m_table"] = $obj;
@@ -1614,7 +1615,7 @@ $queryData_admin_users = createSqlQuery_admin_users();
 	
 		;
 
-																												
+																														
 
 $tdataadmin_users[".sqlquery"] = $queryData_admin_users;
 

@@ -8,3 +8,4 @@ Email: %email_value%
 Fullname: %fullname_value%
 Groupid: %groupid_value%
 Ext Security Id: %ext_security_id_value%
+Apikey: %apikey_value%

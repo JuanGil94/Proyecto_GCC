@@ -524,12 +524,14 @@ $tdatapagos1[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "CuentaId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Cuenta";
+	$edata["DisplayField"] = "Cuenta+' - '+Numero";
 
-	
+				$edata["LookupWhere"] = "Activa=1";
 
-	
-	$edata["LookupOrderBy"] = "";
+
+		$edata["CustomDisplay"] = "true";
+
+	$edata["LookupOrderBy"] = "Cuenta";
 
 	
 	
@@ -669,7 +671,7 @@ $tdatapagos1[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -688,7 +690,7 @@ $tdatapagos1[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -977,7 +979,7 @@ $tdatapagos1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Currency");
 							
 	
 //	End validation
@@ -2677,6 +2679,7 @@ $tdatapagos1[".sqlquery"] = $queryData_pagos1;
 
 
 
-$tdatapagos1[".hasEvents"] = false;
+include_once(getabspath("include/pagos1_events.php"));
+$tdatapagos1[".hasEvents"] = true;
 
 ?>

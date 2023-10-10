@@ -1032,6 +1032,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
+				if($table=="dbo.Pagos1" && $field=="Fecha")
+	{
+		return now();;
+	}
 	return "";
 }
 

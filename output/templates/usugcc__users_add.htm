@@ -194,6 +194,27 @@
 
 
 {END fullname_fieldblock}
+											
+{BEGIN apikey_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_apikey}  r-vertical-field" 
+	data-signal-error-for="apikey{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="apikey" data-fieldname="apikey" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_apikey}">
+		{BEGIN apikey_label}{$label dbo_UsuGCC__users apikey }{END apikey_label}
+	</label>
+	<div class="r-edit-field">
+		{$apikey_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="apikey" {$tooltipAttr dbo_UsuGCC__users apikey } >
+		<div class="text-muted" >
+		{$tooltip dbo_UsuGCC__users apikey }		</div>
+	</div>
+</div>
+
+
+{END apikey_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
