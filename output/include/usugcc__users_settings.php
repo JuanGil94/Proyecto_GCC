@@ -55,6 +55,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc__users["Spanish"]["reset_date"] = "Reset Date";
 	$fieldToolTipsusugcc__users["Spanish"]["reset_date"] = "";
 	$placeHoldersusugcc__users["Spanish"]["reset_date"] = "";
+	$fieldLabelsusugcc__users["Spanish"]["apikey"] = "Apikey";
+	$fieldToolTipsusugcc__users["Spanish"]["apikey"] = "";
+	$placeHoldersusugcc__users["Spanish"]["apikey"] = "";
 	if (count($fieldToolTipsusugcc__users["Spanish"]))
 		$tdatausugcc__users[".isUseToolTips"] = true;
 }
@@ -180,6 +183,7 @@ $tdatausugcc__users[".googleLikeFields"][] = "fullname";
 $tdatausugcc__users[".googleLikeFields"][] = "groupid";
 $tdatausugcc__users[".googleLikeFields"][] = "active";
 $tdatausugcc__users[".googleLikeFields"][] = "ext_security_id";
+$tdatausugcc__users[".googleLikeFields"][] = "apikey";
 
 
 
@@ -214,7 +218,7 @@ $tdatausugcc__users[".strOrderBy"] = $tstrOrderBy;
 $tdatausugcc__users[".orderindexes"] = array();
 
 
-$tdatausugcc__users[".sqlHead"] = "SELECT ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	reset_token,  	reset_date";
+$tdatausugcc__users[".sqlHead"] = "SELECT ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	reset_token,  	reset_date,  	apikey";
 $tdatausugcc__users[".sqlFrom"] = "FROM dbo.[UsuGCC-_users]";
 $tdatausugcc__users[".sqlWhereExpr"] = "";
 $tdatausugcc__users[".sqlTail"] = "";
@@ -1680,6 +1684,144 @@ $tdatausugcc__users[".hideMobileList"] = array();
 
 	$tdatausugcc__users["reset_date"] = $fdata;
 		$tdatausugcc__users[".searchableFields"][] = "reset_date";
+//	apikey
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "apikey";
+	$fdata["GoodName"] = "apikey";
+	$fdata["ownerTable"] = "dbo.UsuGCC-_users";
+	$fdata["Label"] = GetFieldLabel("dbo_UsuGCC__users","apikey");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "apikey";
+
+		$fdata["sourceSingle"] = "apikey";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "apikey";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatausugcc__users["apikey"] = $fdata;
+		$tdatausugcc__users[".searchableFields"][] = "apikey";
 
 
 $tables_data["dbo.UsuGCC-_users"]=&$tdatausugcc__users;
@@ -1724,7 +1866,7 @@ function createSqlQuery_usugcc__users()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	reset_token,  	reset_date";
+$proto0["m_strFieldList"] = "ID,  	username,  	password,  	email,  	fullname,  	groupid,  	active,  	ext_security_id,  	reset_token,  	reset_date,  	apikey";
 $proto0["m_strFrom"] = "FROM dbo.[UsuGCC-_users]";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1904,46 +2046,61 @@ $proto24["m_alias"] = "";
 $obj = new SQLFieldListItem($proto24);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto26=array();
-$proto26["m_link"] = "SQLL_MAIN";
-			$proto27=array();
-$proto27["m_strName"] = "dbo.UsuGCC-_users";
-$proto27["m_srcTableName"] = "dbo.UsuGCC-_users";
-$proto27["m_columns"] = array();
-$proto27["m_columns"][] = "ID";
-$proto27["m_columns"][] = "username";
-$proto27["m_columns"][] = "password";
-$proto27["m_columns"][] = "email";
-$proto27["m_columns"][] = "fullname";
-$proto27["m_columns"][] = "groupid";
-$proto27["m_columns"][] = "active";
-$proto27["m_columns"][] = "ext_security_id";
-$proto27["m_columns"][] = "reset_token";
-$proto27["m_columns"][] = "reset_date";
-$obj = new SQLTable($proto27);
+						$proto26=array();
+			$obj = new SQLField(array(
+	"m_strName" => "apikey",
+	"m_strTable" => "dbo.UsuGCC-_users",
+	"m_srcTableName" => "dbo.UsuGCC-_users"
+));
 
-$proto26["m_table"] = $obj;
-$proto26["m_sql"] = "dbo.[UsuGCC-_users]";
-$proto26["m_alias"] = "";
+$proto26["m_sql"] = "apikey";
 $proto26["m_srcTableName"] = "dbo.UsuGCC-_users";
-$proto28=array();
-$proto28["m_sql"] = "";
-$proto28["m_uniontype"] = "SQLL_UNKNOWN";
+$proto26["m_expr"]=$obj;
+$proto26["m_alias"] = "";
+$obj = new SQLFieldListItem($proto26);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto28=array();
+$proto28["m_link"] = "SQLL_MAIN";
+			$proto29=array();
+$proto29["m_strName"] = "dbo.UsuGCC-_users";
+$proto29["m_srcTableName"] = "dbo.UsuGCC-_users";
+$proto29["m_columns"] = array();
+$proto29["m_columns"][] = "ID";
+$proto29["m_columns"][] = "username";
+$proto29["m_columns"][] = "password";
+$proto29["m_columns"][] = "email";
+$proto29["m_columns"][] = "fullname";
+$proto29["m_columns"][] = "groupid";
+$proto29["m_columns"][] = "active";
+$proto29["m_columns"][] = "ext_security_id";
+$proto29["m_columns"][] = "reset_token";
+$proto29["m_columns"][] = "reset_date";
+$proto29["m_columns"][] = "apikey";
+$obj = new SQLTable($proto29);
+
+$proto28["m_table"] = $obj;
+$proto28["m_sql"] = "dbo.[UsuGCC-_users]";
+$proto28["m_alias"] = "";
+$proto28["m_srcTableName"] = "dbo.UsuGCC-_users";
+$proto30=array();
+$proto30["m_sql"] = "";
+$proto30["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto28["m_column"]=$obj;
-$proto28["m_contained"] = array();
-$proto28["m_strCase"] = "";
-$proto28["m_havingmode"] = false;
-$proto28["m_inBrackets"] = false;
-$proto28["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto28);
+$proto30["m_column"]=$obj;
+$proto30["m_contained"] = array();
+$proto30["m_strCase"] = "";
+$proto30["m_havingmode"] = false;
+$proto30["m_inBrackets"] = false;
+$proto30["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto30);
 
-$proto26["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto26);
+$proto28["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto28);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1959,7 +2116,7 @@ $queryData_usugcc__users = createSqlQuery_usugcc__users();
 	
 		;
 
-										
+											
 
 $tdatausugcc__users[".sqlquery"] = $queryData_usugcc__users;
 
