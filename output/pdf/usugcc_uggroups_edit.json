@@ -168,9 +168,6 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_UsuGCC_uggroups Comment }","bold":true},{"text":{$Comment_pdfvalue}}],"margin":[0,0,0,15]},
 				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_UsuGCC_uggroups GroupID }","bold":true},{"text":{$GroupID_pdfvalue}}],"margin":[0,0,0,15]},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

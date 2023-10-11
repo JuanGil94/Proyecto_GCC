@@ -102,20 +102,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
-			<label>{$label dbo_usugcc__audit id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
-						</div>
-		{END searchCtrlBlock_id}
-																{BEGIN searchCtrlBlock_description}
+																		{BEGIN searchCtrlBlock_description}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_description}" {$filterRow_attrs_description}>
@@ -408,16 +395,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_id" checked="checked" value="1" data-field="id" data-fieldname="id">
-					<span>{$label dbo_usugcc__audit id }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_datetime" checked="checked" value="1" data-field="datetime" data-fieldname="datetime">
 					<span>{$label dbo_usugcc__audit datetime }</span>
 				</label>
@@ -491,9 +468,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id"]:before {
-		content: "{$label dbo_usugcc__audit id}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="datetime"]:before {
 		content: "{$label dbo_usugcc__audit datetime}";
 	}
@@ -570,21 +544,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
+		 r-ori-vert		 {$datetime_class}	"
 
-			data-field="id"
+			data-field="datetime"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN id_fieldheadercolumn}
-	{BEGIN id_fieldheader}
-	<SPAN {$id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
-	{$label dbo_usugcc__audit id }	{$arrow_icon_id}
+		{BEGIN datetime_fieldheadercolumn}
+	{BEGIN datetime_fieldheader}
+	<SPAN {$datetime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="datetime" data-fieldname="datetime">
+	{$label dbo_usugcc__audit datetime }	{$arrow_icon_datetime}
 	</SPAN>
-	{END id_fieldheader}
-{END id_fieldheadercolumn}
+	{END datetime_fieldheader}
+{END datetime_fieldheadercolumn}
 
 	
 	</th>
@@ -595,21 +569,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$datetime_class}	"
+		 r-ori-vert		 {$ip_class}	"
 
-			data-field="datetime"
+			data-field="ip"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN datetime_fieldheadercolumn}
-	{BEGIN datetime_fieldheader}
-	<SPAN {$datetime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="datetime" data-fieldname="datetime">
-	{$label dbo_usugcc__audit datetime }	{$arrow_icon_datetime}
+		{BEGIN ip_fieldheadercolumn}
+	{BEGIN ip_fieldheader}
+	<SPAN {$ip_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ip" data-fieldname="ip">
+	{$label dbo_usugcc__audit ip }	{$arrow_icon_ip}
 	</SPAN>
-	{END datetime_fieldheader}
-{END datetime_fieldheadercolumn}
+	{END ip_fieldheader}
+{END ip_fieldheadercolumn}
 
 	
 	</th>
@@ -620,21 +594,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ip_class}	"
+		 r-ori-vert		 {$user_class}	"
 
-			data-field="ip"
+			data-field="user"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ip_fieldheadercolumn}
-	{BEGIN ip_fieldheader}
-	<SPAN {$ip_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ip" data-fieldname="ip">
-	{$label dbo_usugcc__audit ip }	{$arrow_icon_ip}
+		{BEGIN user_fieldheadercolumn}
+	{BEGIN user_fieldheader}
+	<SPAN {$user_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="user" data-fieldname="user">
+	{$label dbo_usugcc__audit user }	{$arrow_icon_user}
 	</SPAN>
-	{END ip_fieldheader}
-{END ip_fieldheadercolumn}
+	{END user_fieldheader}
+{END user_fieldheadercolumn}
 
 	
 	</th>
@@ -645,21 +619,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$user_class}	"
+		 r-ori-vert		 {$table_class}	"
 
-			data-field="user"
+			data-field="table"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN user_fieldheadercolumn}
-	{BEGIN user_fieldheader}
-	<SPAN {$user_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="user" data-fieldname="user">
-	{$label dbo_usugcc__audit user }	{$arrow_icon_user}
+		{BEGIN table_fieldheadercolumn}
+	{BEGIN table_fieldheader}
+	<SPAN {$table_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="table" data-fieldname="table">
+	{$label dbo_usugcc__audit table }	{$arrow_icon_table}
 	</SPAN>
-	{END user_fieldheader}
-{END user_fieldheadercolumn}
+	{END table_fieldheader}
+{END table_fieldheadercolumn}
 
 	
 	</th>
@@ -670,21 +644,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$table_class}	"
+		 r-ori-vert		 {$action_class}	"
 
-			data-field="table"
+			data-field="action"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN table_fieldheadercolumn}
-	{BEGIN table_fieldheader}
-	<SPAN {$table_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="table" data-fieldname="table">
-	{$label dbo_usugcc__audit table }	{$arrow_icon_table}
+		{BEGIN action_fieldheadercolumn}
+	{BEGIN action_fieldheader}
+	<SPAN {$action_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="action" data-fieldname="action">
+	{$label dbo_usugcc__audit action }	{$arrow_icon_action}
 	</SPAN>
-	{END table_fieldheader}
-{END table_fieldheadercolumn}
+	{END action_fieldheader}
+{END action_fieldheadercolumn}
 
 	
 	</th>
@@ -695,48 +669,23 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$action_class}	"
+		 r-ori-vert		 {$description_class}	"
 
-			data-field="action"
+			data-field="description"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN action_fieldheadercolumn}
-	{BEGIN action_fieldheader}
-	<SPAN {$action_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="action" data-fieldname="action">
-	{$label dbo_usugcc__audit action }	{$arrow_icon_action}
-	</SPAN>
-	{END action_fieldheader}
-{END action_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$description_class}	"
-
-			data-field="description"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN description_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="description" data-fieldname="description">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="description" data-fieldname="description">
 	{$label dbo_usugcc__audit description }	</span>
 {END description_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field5}
 							</tr>
 															
 					{END grid_header}
@@ -805,32 +754,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
-
-			data-field="id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id" data-default-width >
-{$id_value}
-</span>
-{END id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$datetime_class}	"
 
 			data-field="datetime"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -840,18 +768,18 @@
 </span>
 {END datetime_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ip_class}	"
 
 			data-field="ip"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -861,18 +789,18 @@
 </span>
 {END ip_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$user_class}	"
 
 			data-field="user"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -882,18 +810,18 @@
 </span>
 {END user_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$table_class}	"
 
 			data-field="table"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -903,18 +831,18 @@
 </span>
 {END table_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$action_class}	"
 
 			data-field="action"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -924,18 +852,18 @@
 </span>
 {END action_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$description_class}	"
 
 			data-field="description"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -945,7 +873,7 @@
 </span>
 {END description_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field5}
 							</tr>
 										
 											{END grid_row}
@@ -993,7 +921,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$id_class}	"
+		 r-ori-vert		 {$datetime_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
@@ -1008,7 +936,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$datetime_class}	"
+		 r-ori-vert		 {$ip_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
@@ -1023,7 +951,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ip_class}	"
+		 r-ori-vert		 {$user_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
@@ -1038,7 +966,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$user_class}	"
+		 r-ori-vert		 {$table_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
@@ -1053,7 +981,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$table_class}	"
+		 r-ori-vert		 {$action_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
@@ -1068,7 +996,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$action_class}	"
+		 r-ori-vert		 {$description_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
@@ -1077,21 +1005,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$description_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc__audit_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
 							</tr>
 					
 					</tfoot>

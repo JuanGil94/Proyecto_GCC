@@ -7135,7 +7135,6 @@ $proto99["m_columns"][] = "Monto";
 $proto99["m_columns"][] = "TramiteId";
 $proto99["m_columns"][] = "Fisico";
 $proto99["m_columns"][] = "Digital";
-$proto99["m_columns"][] = "order";
 $obj = new SQLTable($proto99);
 
 $proto98["m_table"] = $obj;

@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$IPRestringidaId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$IPRestringida_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				

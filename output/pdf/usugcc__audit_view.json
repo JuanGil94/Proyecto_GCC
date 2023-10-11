@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_usugcc__audit id }","bold":true},{"text":{$id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_usugcc__audit datetime }","bold":true},{"text":{$datetime_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
