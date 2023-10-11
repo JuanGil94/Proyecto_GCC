@@ -106,13 +106,13 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$InterrupcionId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Inicio_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 				
 			{"text":{$Finalizacion_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$InterrupcionId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

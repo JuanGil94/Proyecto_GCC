@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$HorarioId_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
-				
 			{"text":{$Horario_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				

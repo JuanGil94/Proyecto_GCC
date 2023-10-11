@@ -128,19 +128,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Url}</span>
 						</div>
 		{END searchCtrlBlock_Url}
-																{BEGIN searchCtrlBlock_MenuId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_MenuId}" {$filterRow_attrs_MenuId}>
-			<label>{$label dbo_Menus MenuId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_MenuId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_MenuId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_MenuId}</span>
-						</div>
-		{END searchCtrlBlock_MenuId}
 																{BEGIN searchCtrlBlock_Menu}
 
 
@@ -513,16 +500,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_MenuId" checked="checked" value="1" data-field="MenuId" data-fieldname="MenuId">
-					<span>{$label dbo_Menus MenuId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Menu" checked="checked" value="1" data-field="Menu" data-fieldname="Menu">
 					<span>{$label dbo_Menus Menu }</span>
 				</label>
@@ -576,9 +553,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MenuId"]:before {
-		content: "{$label dbo_Menus MenuId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Menu"]:before {
 		content: "{$label dbo_Menus Menu}";
 	}
@@ -649,21 +623,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$MenuId_class}	"
+		 r-ori-vert		 {$Menu_class}	"
 
-			data-field="MenuId"
+			data-field="Menu"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN MenuId_fieldheadercolumn}
-	{BEGIN MenuId_fieldheader}
-	<SPAN {$MenuId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MenuId" data-fieldname="MenuId">
-	{$label dbo_Menus MenuId }	{$arrow_icon_MenuId}
+		{BEGIN Menu_fieldheadercolumn}
+	{BEGIN Menu_fieldheader}
+	<SPAN {$Menu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Menu" data-fieldname="Menu">
+	{$label dbo_Menus Menu }	{$arrow_icon_Menu}
 	</SPAN>
-	{END MenuId_fieldheader}
-{END MenuId_fieldheadercolumn}
+	{END Menu_fieldheader}
+{END Menu_fieldheadercolumn}
 
 	
 	</th>
@@ -674,21 +648,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Menu_class}	"
+		 r-ori-vert		 {$Url_class}	"
 
-			data-field="Menu"
+			data-field="Url"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Menu_fieldheadercolumn}
-	{BEGIN Menu_fieldheader}
-	<SPAN {$Menu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Menu" data-fieldname="Menu">
-	{$label dbo_Menus Menu }	{$arrow_icon_Menu}
+		{BEGIN Url_fieldheadercolumn}
+	{BEGIN Url_fieldheader}
+	<SPAN {$Url_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Url" data-fieldname="Url">
+	{$label dbo_Menus Url }	{$arrow_icon_Url}
 	</SPAN>
-	{END Menu_fieldheader}
-{END Menu_fieldheadercolumn}
+	{END Url_fieldheader}
+{END Url_fieldheadercolumn}
 
 	
 	</th>
@@ -699,21 +673,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Url_class}	"
+		 r-ori-vert		 {$Imagen_class}	"
 
-			data-field="Url"
+			data-field="Imagen"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Url_fieldheadercolumn}
-	{BEGIN Url_fieldheader}
-	<SPAN {$Url_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Url" data-fieldname="Url">
-	{$label dbo_Menus Url }	{$arrow_icon_Url}
+		{BEGIN Imagen_fieldheadercolumn}
+	{BEGIN Imagen_fieldheader}
+	<SPAN {$Imagen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Imagen" data-fieldname="Imagen">
+	{$label dbo_Menus Imagen }	{$arrow_icon_Imagen}
 	</SPAN>
-	{END Url_fieldheader}
-{END Url_fieldheadercolumn}
+	{END Imagen_fieldheader}
+{END Imagen_fieldheadercolumn}
 
 	
 	</th>
@@ -724,42 +698,17 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Imagen_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
-			data-field="Imagen"
+			data-field="Activo"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Imagen_fieldheadercolumn}
-	{BEGIN Imagen_fieldheader}
-	<SPAN {$Imagen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Imagen" data-fieldname="Imagen">
-	{$label dbo_Menus Imagen }	{$arrow_icon_Imagen}
-	</SPAN>
-	{END Imagen_fieldheader}
-{END Imagen_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-			data-field="Activo"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Activo_fieldheadercolumn}
 	{BEGIN Activo_fieldheader}
-	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
+	<SPAN {$Activo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activo" data-fieldname="Activo">
 	{$label dbo_Menus Activo }	{$arrow_icon_Activo}
 	</SPAN>
 	{END Activo_fieldheader}
@@ -767,7 +716,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 															
 					{END grid_header}
@@ -836,32 +785,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$MenuId_class}	"
-
-			data-field="MenuId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN MenuId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MenuId" data-fieldname="MenuId" data-default-width >
-{$MenuId_value}
-</span>
-{END MenuId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Menu_class}	"
 
 			data-field="Menu"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -871,18 +799,18 @@
 </span>
 {END Menu_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Url_class}	"
 
 			data-field="Url"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -892,18 +820,18 @@
 </span>
 {END Url_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Imagen_class}	"
 
 			data-field="Imagen"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -913,18 +841,18 @@
 </span>
 {END Imagen_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Activo_class}	"
 
 			data-field="Activo"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -934,7 +862,7 @@
 </span>
 {END Activo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field3}
 							</tr>
 										
 											{END grid_row}
@@ -982,7 +910,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$MenuId_class}	"
+		 r-ori-vert		 {$Menu_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="menus_list"	
@@ -997,7 +925,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Menu_class}	"
+		 r-ori-vert		 {$Url_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="menus_list"	
@@ -1012,7 +940,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Url_class}	"
+		 r-ori-vert		 {$Imagen_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="menus_list"	
@@ -1027,7 +955,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Imagen_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="menus_list"	
@@ -1036,21 +964,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="menus_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

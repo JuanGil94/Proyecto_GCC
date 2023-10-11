@@ -198,13 +198,15 @@ $tdatausugcc__audit[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY id DESC";
 $tdatausugcc__audit[".strOrderBy"] = $tstrOrderBy;
 
 $tdatausugcc__audit[".orderindexes"] = array();
+	$tdatausugcc__audit[".orderindexes"][] = array(1, (0 ? "ASC" : "DESC"), "id");
 
 
-$tdatausugcc__audit[".sqlHead"] = "SELECT id,  	[datetime],  	ip,  	[user],  	[table],  	[action],  	description";
+
+$tdatausugcc__audit[".sqlHead"] = "SELECT id,  [datetime],  ip,  [user],  [table],  [action],  description";
 $tdatausugcc__audit[".sqlFrom"] = "FROM dbo.[usugcc-_audit]";
 $tdatausugcc__audit[".sqlWhereExpr"] = "";
 $tdatausugcc__audit[".sqlTail"] = "";
@@ -1280,10 +1282,10 @@ function createSqlQuery_usugcc__audit()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	[datetime],  	ip,  	[user],  	[table],  	[action],  	description";
+$proto0["m_strFieldList"] = "id,  [datetime],  ip,  [user],  [table],  [action],  description";
 $proto0["m_strFrom"] = "FROM dbo.[usugcc-_audit]";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY id DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -1459,6 +1461,19 @@ $obj = new SQLFromListItem($proto20);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto24=array();
+						$obj = new SQLField(array(
+	"m_strName" => "id",
+	"m_strTable" => "dbo.usugcc-_audit",
+	"m_srcTableName" => "dbo.usugcc-_audit"
+));
+
+$proto24["m_column"]=$obj;
+$proto24["m_bAsc"] = 0;
+$proto24["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto24);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.usugcc-_audit";		
 $obj = new SQLQuery($proto0);
 

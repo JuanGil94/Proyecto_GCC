@@ -102,20 +102,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_GroupID}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_GroupID}" {$filterRow_attrs_GroupID}>
-			<label>{$label dbo_UsuGCC_uggroups GroupID }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_GroupID}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_GroupID}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_GroupID}</span>
-						</div>
-		{END searchCtrlBlock_GroupID}
-																{BEGIN searchCtrlBlock_Comment}
+																		{BEGIN searchCtrlBlock_Comment}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_Comment}" {$filterRow_attrs_Comment}>
@@ -393,16 +380,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_GroupID" checked="checked" value="1" data-field="GroupID" data-fieldname="GroupID">
-					<span>{$label dbo_UsuGCC_uggroups GroupID }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Label" checked="checked" value="1" data-field="Label" data-fieldname="Label">
 					<span>{$label dbo_UsuGCC_uggroups Label }</span>
 				</label>
@@ -446,9 +423,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="GroupID"]:before {
-		content: "{$label dbo_UsuGCC_uggroups GroupID}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Label"]:before {
 		content: "{$label dbo_UsuGCC_uggroups Label}";
 	}
@@ -516,21 +490,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$GroupID_class}	"
+		 r-ori-vert		 {$Label_class}	"
 
-			data-field="GroupID"
+			data-field="Label"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN GroupID_fieldheadercolumn}
-	{BEGIN GroupID_fieldheader}
-	<SPAN {$GroupID_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="GroupID" data-fieldname="GroupID">
-	{$label dbo_UsuGCC_uggroups GroupID }	{$arrow_icon_GroupID}
+		{BEGIN Label_fieldheadercolumn}
+	{BEGIN Label_fieldheader}
+	<SPAN {$Label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Label" data-fieldname="Label">
+	{$label dbo_UsuGCC_uggroups Label }	{$arrow_icon_Label}
 	</SPAN>
-	{END GroupID_fieldheader}
-{END GroupID_fieldheadercolumn}
+	{END Label_fieldheader}
+{END Label_fieldheadercolumn}
 
 	
 	</th>
@@ -541,21 +515,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Label_class}	"
+		 r-ori-vert		 {$Provider_class}	"
 
-			data-field="Label"
+			data-field="Provider"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Label_fieldheadercolumn}
-	{BEGIN Label_fieldheader}
-	<SPAN {$Label_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Label" data-fieldname="Label">
-	{$label dbo_UsuGCC_uggroups Label }	{$arrow_icon_Label}
+		{BEGIN Provider_fieldheadercolumn}
+	{BEGIN Provider_fieldheader}
+	<SPAN {$Provider_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Provider" data-fieldname="Provider">
+	{$label dbo_UsuGCC_uggroups Provider }	{$arrow_icon_Provider}
 	</SPAN>
-	{END Label_fieldheader}
-{END Label_fieldheadercolumn}
+	{END Provider_fieldheader}
+{END Provider_fieldheadercolumn}
 
 	
 	</th>
@@ -566,48 +540,23 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Provider_class}	"
+		 r-ori-vert		 {$Comment_class}	"
 
-			data-field="Provider"
+			data-field="Comment"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Provider_fieldheadercolumn}
-	{BEGIN Provider_fieldheader}
-	<SPAN {$Provider_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Provider" data-fieldname="Provider">
-	{$label dbo_UsuGCC_uggroups Provider }	{$arrow_icon_Provider}
-	</SPAN>
-	{END Provider_fieldheader}
-{END Provider_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Comment_class}	"
-
-			data-field="Comment"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Comment_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Comment" data-fieldname="Comment">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Comment" data-fieldname="Comment">
 	{$label dbo_UsuGCC_uggroups Comment }	</span>
 {END Comment_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field2}
 							</tr>
 															
 					{END grid_header}
@@ -676,32 +625,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$GroupID_class}	"
-
-			data-field="GroupID"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN GroupID_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="GroupID" data-fieldname="GroupID" data-default-width >
-{$GroupID_value}
-</span>
-{END GroupID_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Label_class}	"
 
 			data-field="Label"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -711,18 +639,18 @@
 </span>
 {END Label_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Provider_class}	"
 
 			data-field="Provider"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -732,18 +660,18 @@
 </span>
 {END Provider_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Comment_class}	"
 
 			data-field="Comment"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -753,7 +681,7 @@
 </span>
 {END Comment_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field2}
 							</tr>
 										
 											{END grid_row}
@@ -801,7 +729,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$GroupID_class}	"
+		 r-ori-vert		 {$Label_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc_uggroups_list"	
@@ -816,7 +744,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Label_class}	"
+		 r-ori-vert		 {$Provider_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc_uggroups_list"	
@@ -831,7 +759,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Provider_class}	"
+		 r-ori-vert		 {$Comment_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc_uggroups_list"	
@@ -840,21 +768,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Comment_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usugcc_uggroups_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

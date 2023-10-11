@@ -128,19 +128,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
 						</div>
 		{END searchCtrlBlock_Observaciones}
-																{BEGIN searchCtrlBlock_IPRestringidaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_IPRestringidaId}" {$filterRow_attrs_IPRestringidaId}>
-			<label>{$label dbo_IPsRestringidas IPRestringidaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_IPRestringidaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_IPRestringidaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_IPRestringidaId}</span>
-						</div>
-		{END searchCtrlBlock_IPRestringidaId}
 		
 
 	</div>
@@ -487,16 +474,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_IPRestringidaId" checked="checked" value="1" data-field="IPRestringidaId" data-fieldname="IPRestringidaId">
-					<span>{$label dbo_IPsRestringidas IPRestringidaId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_IPRestringida" checked="checked" value="1" data-field="IPRestringida" data-fieldname="IPRestringida">
 					<span>{$label dbo_IPsRestringidas IPRestringida }</span>
 				</label>
@@ -530,9 +507,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="IPRestringidaId"]:before {
-		content: "{$label dbo_IPsRestringidas IPRestringidaId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="IPRestringida"]:before {
 		content: "{$label dbo_IPsRestringidas IPRestringida}";
 	}
@@ -597,21 +571,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$IPRestringidaId_class}	"
+		 r-ori-vert		 {$IPRestringida_class}	"
 
-			data-field="IPRestringidaId"
+			data-field="IPRestringida"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN IPRestringidaId_fieldheadercolumn}
-	{BEGIN IPRestringidaId_fieldheader}
-	<SPAN {$IPRestringidaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="IPRestringidaId" data-fieldname="IPRestringidaId">
-	{$label dbo_IPsRestringidas IPRestringidaId }	{$arrow_icon_IPRestringidaId}
+		{BEGIN IPRestringida_fieldheadercolumn}
+	{BEGIN IPRestringida_fieldheader}
+	<SPAN {$IPRestringida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="IPRestringida" data-fieldname="IPRestringida">
+	{$label dbo_IPsRestringidas IPRestringida }	{$arrow_icon_IPRestringida}
 	</SPAN>
-	{END IPRestringidaId_fieldheader}
-{END IPRestringidaId_fieldheadercolumn}
+	{END IPRestringida_fieldheader}
+{END IPRestringida_fieldheadercolumn}
 
 	
 	</th>
@@ -622,42 +596,17 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$IPRestringida_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
-			data-field="IPRestringida"
+			data-field="Observaciones"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN IPRestringida_fieldheadercolumn}
-	{BEGIN IPRestringida_fieldheader}
-	<SPAN {$IPRestringida_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="IPRestringida" data-fieldname="IPRestringida">
-	{$label dbo_IPsRestringidas IPRestringida }	{$arrow_icon_IPRestringida}
-	</SPAN>
-	{END IPRestringida_fieldheader}
-{END IPRestringida_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Observaciones_class}	"
-
-			data-field="Observaciones"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Observaciones_fieldheadercolumn}
 	{BEGIN Observaciones_fieldheader}
-	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
+	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
 	{$label dbo_IPsRestringidas Observaciones }	{$arrow_icon_Observaciones}
 	</SPAN>
 	{END Observaciones_fieldheader}
@@ -665,7 +614,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -745,32 +694,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$IPRestringidaId_class}	"
-
-			data-field="IPRestringidaId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN IPRestringidaId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="IPRestringidaId" data-fieldname="IPRestringidaId" data-default-width >
-{$IPRestringidaId_value}
-</span>
-{END IPRestringidaId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$IPRestringida_class}	"
 
 			data-field="IPRestringida"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -780,18 +708,18 @@
 </span>
 {END IPRestringida_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Observaciones_class}	"
 
 			data-field="Observaciones"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -801,7 +729,7 @@
 </span>
 {END Observaciones_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -849,7 +777,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$IPRestringidaId_class}	"
+		 r-ori-vert		 {$IPRestringida_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ipsrestringidas_list"	
@@ -864,7 +792,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$IPRestringida_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ipsrestringidas_list"	
@@ -873,21 +801,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Observaciones_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ipsrestringidas_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>

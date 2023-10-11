@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Finalizacion}</span>
 						</div>
 		{END searchCtrlBlock_Finalizacion}
-																{BEGIN searchCtrlBlock_InterrupcionId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_InterrupcionId}" {$filterRow_attrs_InterrupcionId}>
-			<label>{$label dbo_Interrupciones InterrupcionId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_InterrupcionId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_InterrupcionId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_InterrupcionId}</span>
-						</div>
-		{END searchCtrlBlock_InterrupcionId}
 																{BEGIN searchCtrlBlock_Inicio}
 
 
@@ -509,16 +496,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_InterrupcionId" checked="checked" value="1" data-field="InterrupcionId" data-fieldname="InterrupcionId">
-					<span>{$label dbo_Interrupciones InterrupcionId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Inicio" checked="checked" value="1" data-field="Inicio" data-fieldname="Inicio">
 					<span>{$label dbo_Interrupciones Inicio }</span>
 				</label>
@@ -552,9 +529,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InterrupcionId"]:before {
-		content: "{$label dbo_Interrupciones InterrupcionId}";
-	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Inicio"]:before {
 		content: "{$label dbo_Interrupciones Inicio}";
 	}
@@ -619,21 +593,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$InterrupcionId_class}	"
+		 r-ori-vert		 {$Inicio_class}	"
 
-			data-field="InterrupcionId"
+			data-field="Inicio"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN InterrupcionId_fieldheadercolumn}
-	{BEGIN InterrupcionId_fieldheader}
-	<SPAN {$InterrupcionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InterrupcionId" data-fieldname="InterrupcionId">
-	{$label dbo_Interrupciones InterrupcionId }	{$arrow_icon_InterrupcionId}
+		{BEGIN Inicio_fieldheadercolumn}
+	{BEGIN Inicio_fieldheader}
+	<SPAN {$Inicio_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Inicio" data-fieldname="Inicio">
+	{$label dbo_Interrupciones Inicio }	{$arrow_icon_Inicio}
 	</SPAN>
-	{END InterrupcionId_fieldheader}
-{END InterrupcionId_fieldheadercolumn}
+	{END Inicio_fieldheader}
+{END Inicio_fieldheadercolumn}
 
 	
 	</th>
@@ -644,42 +618,17 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Inicio_class}	"
+		 r-ori-vert		 {$Finalizacion_class}	"
 
-			data-field="Inicio"
+			data-field="Finalizacion"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Inicio_fieldheadercolumn}
-	{BEGIN Inicio_fieldheader}
-	<SPAN {$Inicio_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Inicio" data-fieldname="Inicio">
-	{$label dbo_Interrupciones Inicio }	{$arrow_icon_Inicio}
-	</SPAN>
-	{END Inicio_fieldheader}
-{END Inicio_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Finalizacion_class}	"
-
-			data-field="Finalizacion"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
 		{BEGIN Finalizacion_fieldheadercolumn}
 	{BEGIN Finalizacion_fieldheader}
-	<SPAN {$Finalizacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Finalizacion" data-fieldname="Finalizacion">
+	<SPAN {$Finalizacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Finalizacion" data-fieldname="Finalizacion">
 	{$label dbo_Interrupciones Finalizacion }	{$arrow_icon_Finalizacion}
 	</SPAN>
 	{END Finalizacion_fieldheader}
@@ -687,7 +636,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
+	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -776,32 +725,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$InterrupcionId_class}	"
-
-			data-field="InterrupcionId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN InterrupcionId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InterrupcionId" data-fieldname="InterrupcionId" data-default-width >
-{$InterrupcionId_value}
-</span>
-{END InterrupcionId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Inicio_class}	"
 
 			data-field="Inicio"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -811,18 +739,18 @@
 </span>
 {END Inicio_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field2}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Finalizacion_class}	"
 
 			data-field="Finalizacion"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -832,7 +760,7 @@
 </span>
 {END Finalizacion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
+	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -880,7 +808,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$InterrupcionId_class}	"
+		 r-ori-vert		 {$Inicio_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="interrupciones_list"	
@@ -895,7 +823,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Inicio_class}	"
+		 r-ori-vert		 {$Finalizacion_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="interrupciones_list"	
@@ -904,21 +832,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Finalizacion_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="interrupciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 							</tr>
 					
 					</tfoot>
