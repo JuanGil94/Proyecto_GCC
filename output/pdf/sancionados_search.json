@@ -184,9 +184,6 @@ pdfDocument = {
 			{"text":{$Celular_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
@@ -194,6 +191,9 @@ pdfDocument = {
 				
 				
 			{"text":{$PrivadoLibertad_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 		  ],
   "border": [ false, false, false, false ],

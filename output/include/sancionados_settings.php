@@ -6,11 +6,11 @@ $tdatasancionados[".OwnerID"] = "";
 $tdatasancionados[".OriginalTable"] = "dbo.Sancionados";
 
 
-$tdatasancionados[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatasancionados[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatasancionados[".originalPagesByType"] = $tdatasancionados[".pagesByType"];
-$tdatasancionados[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatasancionados[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatasancionados[".originalPages"] = $tdatasancionados[".pages"];
-$tdatasancionados[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatasancionados[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatasancionados[".originalDefaultPages"] = $tdatasancionados[".defaultPages"];
 
 //	field labels
@@ -28,33 +28,33 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssancionados["Spanish"]["SancionadoId"] = "Sancionado Id";
 	$fieldToolTipssancionados["Spanish"]["SancionadoId"] = "";
 	$placeHolderssancionados["Spanish"]["SancionadoId"] = "";
-	$fieldLabelssancionados["Spanish"]["Sancionado"] = "Sancionado";
+	$fieldLabelssancionados["Spanish"]["Sancionado"] = "Deudor";
 	$fieldToolTipssancionados["Spanish"]["Sancionado"] = "";
 	$placeHolderssancionados["Spanish"]["Sancionado"] = "";
 	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento";
 	$fieldToolTipssancionados["Spanish"]["TipoDocumentoId"] = "";
 	$placeHolderssancionados["Spanish"]["TipoDocumentoId"] = "";
-	$fieldLabelssancionados["Spanish"]["Documento"] = "Documento";
+	$fieldLabelssancionados["Spanish"]["Documento"] = "No. Documento";
 	$fieldToolTipssancionados["Spanish"]["Documento"] = "";
 	$placeHolderssancionados["Spanish"]["Documento"] = "";
-	$fieldLabelssancionados["Spanish"]["Email"] = "Email";
+	$fieldLabelssancionados["Spanish"]["Email"] = "E-mail";
 	$fieldToolTipssancionados["Spanish"]["Email"] = "";
 	$placeHolderssancionados["Spanish"]["Email"] = "";
 	$fieldLabelssancionados["Spanish"]["Celular"] = "Celular";
 	$fieldToolTipssancionados["Spanish"]["Celular"] = "";
 	$placeHolderssancionados["Spanish"]["Celular"] = "";
-	$fieldLabelssancionados["Spanish"]["Masculino"] = "Masculino";
-	$fieldToolTipssancionados["Spanish"]["Masculino"] = "";
-	$placeHolderssancionados["Spanish"]["Masculino"] = "";
 	$fieldLabelssancionados["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipssancionados["Spanish"]["Observaciones"] = "";
 	$placeHolderssancionados["Spanish"]["Observaciones"] = "";
-	$fieldLabelssancionados["Spanish"]["Fallecimiento"] = "Fallecimiento";
+	$fieldLabelssancionados["Spanish"]["Fallecimiento"] = "F.Fallecimiento";
 	$fieldToolTipssancionados["Spanish"]["Fallecimiento"] = "";
 	$placeHolderssancionados["Spanish"]["Fallecimiento"] = "";
 	$fieldLabelssancionados["Spanish"]["PrivadoLibertad"] = "Privado Libertad";
 	$fieldToolTipssancionados["Spanish"]["PrivadoLibertad"] = "";
 	$placeHolderssancionados["Spanish"]["PrivadoLibertad"] = "";
+	$fieldLabelssancionados["Spanish"]["Masculino"] = "Género";
+	$fieldToolTipssancionados["Spanish"]["Masculino"] = "";
+	$placeHolderssancionados["Spanish"]["Masculino"] = "";
 	if (count($fieldToolTipssancionados["Spanish"]))
 		$tdatasancionados[".isUseToolTips"] = true;
 }
@@ -1149,7 +1149,7 @@ $tdatasancionados[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Checkbox");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1165,7 +1165,8 @@ $tdatasancionados[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["NeedEncode"] = true;
+
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1176,7 +1177,7 @@ $tdatasancionados[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Checkbox");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1186,6 +1187,34 @@ $tdatasancionados[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Genero";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "GeneroId";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Genero";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	

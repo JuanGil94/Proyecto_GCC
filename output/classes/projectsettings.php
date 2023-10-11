@@ -3708,6 +3708,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "ciudades1" ] = "dbo.Ciudades1";
 	$projectEntities[ "dbo.Autorizaciones" ] = array( "url" => "autorizaciones", "type" => 1 );
 	$projectEntitiesReverse[ "autorizaciones" ] = "dbo.Autorizaciones";
+	$projectEntities[ "dbo.Genero" ] = array( "url" => "genero", "type" => 0 );
+	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
 }
 
 function findTable( $table ) {

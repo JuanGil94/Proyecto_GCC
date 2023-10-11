@@ -55,7 +55,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<h2 class=\"ql-align-center\">BIENVENIDO AL PORTAL GESTION COBRO ACTIVO</h2>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"<h2 class=\"ql-align-center\">BIENVENIDO AL PORTAL COACTIVO</h2>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

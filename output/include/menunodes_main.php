@@ -397,7 +397,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "16";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Etapa Preliminar";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.Chequeos";
@@ -416,7 +416,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Chequeos";
+	$menuNode["title"] = "Etapa Preliminar";
 
 
 
