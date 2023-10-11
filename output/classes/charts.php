@@ -550,6 +550,8 @@ class Chart
 			return true;
 		if("dbo.Chequeos" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.Genero" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

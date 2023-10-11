@@ -257,6 +257,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] = array();
 		}
 		$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"]["edit"] = array("table" => "dbo.Sancionados", "field" => "TipoDocumentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Genero"] ) ) {
+			$lookupTableLinks["dbo.Genero"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Genero"]["sancionados.Masculino"] )) {
+			$lookupTableLinks["dbo.Genero"]["sancionados.Masculino"] = array();
+		}
+		$lookupTableLinks["dbo.Genero"]["sancionados.Masculino"]["edit"] = array("table" => "dbo.Sancionados", "field" => "Masculino", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
 			$lookupTableLinks["dbo.Seccionales"] = array();
 		}

@@ -375,6 +375,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("autorizaciones" == $shortTName )
 		return true;
+	if ("genero" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1199,6 +1201,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Autorizaciones";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Genero");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Genero";
+	}
 	return $arr;
 }
 
@@ -1294,6 +1305,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.OperacionTipo";
 	$arr[]="dbo.Ciudades1";
 	$arr[]="dbo.Autorizaciones";
+	$arr[]="dbo.Genero";
 	return $arr;
 }
 
@@ -2347,6 +2359,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Autorizaciones" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Genero" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
