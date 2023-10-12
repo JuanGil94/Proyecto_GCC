@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_Liquidacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Liquidacion}" {$filterRow_attrs_Liquidacion}>
+			<label>{$label dbo_Procesos Liquidacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Liquidacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Liquidacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Liquidacion}</span>
+						</div>
+		{END searchCtrlBlock_Liquidacion}
 																{BEGIN searchCtrlBlock_ProcesoId}
 
 
@@ -1276,6 +1289,16 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
+					<input type="checkbox" id="hide_Liquidacion" checked="checked" value="1" data-field="Liquidacion" data-fieldname="Liquidacion">
+					<span>{$label dbo_Procesos Liquidacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
 					<input type="checkbox" id="hide_Dias" checked="checked" value="1" data-field="Dias" data-fieldname="Dias">
 					<span>{$label dbo_Procesos Dias }</span>
 				</label>
@@ -1484,7 +1507,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Costas"]:before {
 		content: "{$label dbo_Procesos Costas}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Liquidacion"]:before {
+		content: "{$label dbo_Procesos Liquidacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
 		content: "{$label dbo_Procesos Dias}";
 	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo"]:before {
@@ -2089,11 +2115,36 @@
 	{$cell_grid_headcell_field19}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Liquidacion_class}	"
+
+			data-field="Liquidacion"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Liquidacion_fieldheadercolumn}
+	{BEGIN Liquidacion_fieldheader}
+	<SPAN {$Liquidacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Liquidacion" data-fieldname="Liquidacion">
+	{$label dbo_Procesos Liquidacion }	{$arrow_icon_Liquidacion}
+	</SPAN>
+	{END Liquidacion_fieldheader}
+{END Liquidacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Dias_class}	"
 
 			data-field="Dias"
 	
-	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2107,18 +2158,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field19}
-									{BEGIN cellblock_grid_headcell_field20}
+	{END cellblock_grid_headcell_field20}
+									{BEGIN cellblock_grid_headcell_field21}
 	<th
 	
-	{$cell_grid_headcell_field20}
+	{$cell_grid_headcell_field21}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$EstadoId_class}	"
 
 			data-field="EstadoId"
 	
-	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2132,18 +2183,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field20}
-									{BEGIN cellblock_grid_headcell_field21}
+	{END cellblock_grid_headcell_field21}
+									{BEGIN cellblock_grid_headcell_field22}
 	<th
 	
-	{$cell_grid_headcell_field21}
+	{$cell_grid_headcell_field22}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$EtapaId_class}	"
 
 			data-field="EtapaId"
 	
-	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2157,18 +2208,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field21}
-									{BEGIN cellblock_grid_headcell_field22}
+	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
 	<th
 	
-	{$cell_grid_headcell_field22}
+	{$cell_grid_headcell_field23}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Terminacion_class}	"
 
 			data-field="Terminacion"
 	
-	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2182,18 +2233,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field22}
-									{BEGIN cellblock_grid_headcell_field23}
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
 	<th
 	
-	{$cell_grid_headcell_field23}
+	{$cell_grid_headcell_field24}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$MotivoId_class}	"
 
 			data-field="MotivoId"
 	
-	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2207,18 +2258,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field23}
-									{BEGIN cellblock_grid_headcell_field24}
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
 	<th
 	
-	{$cell_grid_headcell_field24}
+	{$cell_grid_headcell_field25}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ActuacionId_class}	"
 
 			data-field="ActuacionId"
 	
-	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2232,18 +2283,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field24}
-									{BEGIN cellblock_grid_headcell_field25}
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
 	<th
 	
-	{$cell_grid_headcell_field25}
+	{$cell_grid_headcell_field26}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Origen_class}	"
 
 			data-field="Origen"
 	
-	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2257,18 +2308,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field25}
-									{BEGIN cellblock_grid_headcell_field26}
+	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
 	<th
 	
-	{$cell_grid_headcell_field26}
+	{$cell_grid_headcell_field27}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$DespachoId_class}	"
 
 			data-field="DespachoId"
 	
-	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2282,18 +2333,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field26}
-									{BEGIN cellblock_grid_headcell_field27}
+	{END cellblock_grid_headcell_field27}
+									{BEGIN cellblock_grid_headcell_field28}
 	<th
 	
-	{$cell_grid_headcell_field27}
+	{$cell_grid_headcell_field28}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Folios_class}	"
 
 			data-field="Folios"
 	
-	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2307,18 +2358,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field27}
-									{BEGIN cellblock_grid_headcell_field28}
+	{END cellblock_grid_headcell_field28}
+									{BEGIN cellblock_grid_headcell_field29}
 	<th
 	
-	{$cell_grid_headcell_field28}
+	{$cell_grid_headcell_field29}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$MinJusticia_class}	"
 
 			data-field="MinJusticia"
 	
-	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2332,18 +2383,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field28}
-									{BEGIN cellblock_grid_headcell_field29}
+	{END cellblock_grid_headcell_field29}
+									{BEGIN cellblock_grid_headcell_field30}
 	<th
 	
-	{$cell_grid_headcell_field29}
+	{$cell_grid_headcell_field30}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$NaturalezaId_class}	"
 
 			data-field="NaturalezaId"
 	
-	data-cellId="grid_headcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2357,18 +2408,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field29}
-									{BEGIN cellblock_grid_headcell_field30}
+	{END cellblock_grid_headcell_field30}
+									{BEGIN cellblock_grid_headcell_field31}
 	<th
 	
-	{$cell_grid_headcell_field30}
+	{$cell_grid_headcell_field31}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$AbogadoId_class}	"
 
 			data-field="AbogadoId"
 	
-	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2382,18 +2433,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field30}
-									{BEGIN cellblock_grid_headcell_field31}
+	{END cellblock_grid_headcell_field31}
+									{BEGIN cellblock_grid_headcell_field32}
 	<th
 	
-	{$cell_grid_headcell_field31}
+	{$cell_grid_headcell_field32}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$CarteraTipoId_class}	"
 
 			data-field="CarteraTipoId"
 	
-	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2407,18 +2458,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field31}
-									{BEGIN cellblock_grid_headcell_field32}
+	{END cellblock_grid_headcell_field32}
+									{BEGIN cellblock_grid_headcell_field33}
 	<th
 	
-	{$cell_grid_headcell_field32}
+	{$cell_grid_headcell_field33}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$SeccionalId_class}	"
 
 			data-field="SeccionalId"
 	
-	data-cellId="grid_headcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2432,18 +2483,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field32}
-									{BEGIN cellblock_grid_headcell_field33}
+	{END cellblock_grid_headcell_field33}
+									{BEGIN cellblock_grid_headcell_field34}
 	<th
 	
-	{$cell_grid_headcell_field33}
+	{$cell_grid_headcell_field34}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ProcesoId_class}	"
 
 			data-field="ProcesoId"
 	
-	data-cellId="grid_headcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2457,7 +2508,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field33}
+	{END cellblock_grid_headcell_field34}
 							</tr>
 																				
 					{END grid_header}
@@ -2965,11 +3016,32 @@
 	{$cell_grid_cell_field19}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Liquidacion_class}	"
+
+			data-field="Liquidacion"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Liquidacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Liquidacion" data-fieldname="Liquidacion" data-default-width >
+{$Liquidacion_value}
+</span>
+{END Liquidacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Dias_class}	"
 
 			data-field="Dias"
 	
-	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2979,18 +3051,18 @@
 </span>
 {END Dias_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field19}
-									{BEGIN cellblock_grid_cell_field20}
+	{END cellblock_grid_cell_field20}
+									{BEGIN cellblock_grid_cell_field21}
 	<td
 	
-	{$cell_grid_cell_field20}
+	{$cell_grid_cell_field21}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$EstadoId_class}	"
 
 			data-field="EstadoId"
 	
-	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3000,18 +3072,18 @@
 </span>
 {END EstadoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field20}
-									{BEGIN cellblock_grid_cell_field21}
+	{END cellblock_grid_cell_field21}
+									{BEGIN cellblock_grid_cell_field22}
 	<td
 	
-	{$cell_grid_cell_field21}
+	{$cell_grid_cell_field22}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$EtapaId_class}	"
 
 			data-field="EtapaId"
 	
-	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3021,18 +3093,18 @@
 </span>
 {END EtapaId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field21}
-									{BEGIN cellblock_grid_cell_field22}
+	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
 	<td
 	
-	{$cell_grid_cell_field22}
+	{$cell_grid_cell_field23}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Terminacion_class}	"
 
 			data-field="Terminacion"
 	
-	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3042,18 +3114,18 @@
 </span>
 {END Terminacion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field22}
-									{BEGIN cellblock_grid_cell_field23}
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
 	<td
 	
-	{$cell_grid_cell_field23}
+	{$cell_grid_cell_field24}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$MotivoId_class}	"
 
 			data-field="MotivoId"
 	
-	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3063,18 +3135,18 @@
 </span>
 {END MotivoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field23}
-									{BEGIN cellblock_grid_cell_field24}
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
 	<td
 	
-	{$cell_grid_cell_field24}
+	{$cell_grid_cell_field25}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ActuacionId_class}	"
 
 			data-field="ActuacionId"
 	
-	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3084,18 +3156,18 @@
 </span>
 {END ActuacionId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field24}
-									{BEGIN cellblock_grid_cell_field25}
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
 	<td
 	
-	{$cell_grid_cell_field25}
+	{$cell_grid_cell_field26}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Origen_class}	"
 
 			data-field="Origen"
 	
-	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3105,18 +3177,18 @@
 </span>
 {END Origen_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field25}
-									{BEGIN cellblock_grid_cell_field26}
+	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
 	<td
 	
-	{$cell_grid_cell_field26}
+	{$cell_grid_cell_field27}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$DespachoId_class}	"
 
 			data-field="DespachoId"
 	
-	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3126,18 +3198,18 @@
 </span>
 {END DespachoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field26}
-									{BEGIN cellblock_grid_cell_field27}
+	{END cellblock_grid_cell_field27}
+									{BEGIN cellblock_grid_cell_field28}
 	<td
 	
-	{$cell_grid_cell_field27}
+	{$cell_grid_cell_field28}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Folios_class}	"
 
 			data-field="Folios"
 	
-	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3147,18 +3219,18 @@
 </span>
 {END Folios_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field27}
-									{BEGIN cellblock_grid_cell_field28}
+	{END cellblock_grid_cell_field28}
+									{BEGIN cellblock_grid_cell_field29}
 	<td
 	
-	{$cell_grid_cell_field28}
+	{$cell_grid_cell_field29}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$MinJusticia_class}	"
 
 			data-field="MinJusticia"
 	
-	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3168,18 +3240,18 @@
 </span>
 {END MinJusticia_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field28}
-									{BEGIN cellblock_grid_cell_field29}
+	{END cellblock_grid_cell_field29}
+									{BEGIN cellblock_grid_cell_field30}
 	<td
 	
-	{$cell_grid_cell_field29}
+	{$cell_grid_cell_field30}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$NaturalezaId_class}	"
 
 			data-field="NaturalezaId"
 	
-	data-cellId="grid_cell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3189,18 +3261,18 @@
 </span>
 {END NaturalezaId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field29}
-									{BEGIN cellblock_grid_cell_field30}
+	{END cellblock_grid_cell_field30}
+									{BEGIN cellblock_grid_cell_field31}
 	<td
 	
-	{$cell_grid_cell_field30}
+	{$cell_grid_cell_field31}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$AbogadoId_class}	"
 
 			data-field="AbogadoId"
 	
-	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3210,18 +3282,18 @@
 </span>
 {END AbogadoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field30}
-									{BEGIN cellblock_grid_cell_field31}
+	{END cellblock_grid_cell_field31}
+									{BEGIN cellblock_grid_cell_field32}
 	<td
 	
-	{$cell_grid_cell_field31}
+	{$cell_grid_cell_field32}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$CarteraTipoId_class}	"
 
 			data-field="CarteraTipoId"
 	
-	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3231,18 +3303,18 @@
 </span>
 {END CarteraTipoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field31}
-									{BEGIN cellblock_grid_cell_field32}
+	{END cellblock_grid_cell_field32}
+									{BEGIN cellblock_grid_cell_field33}
 	<td
 	
-	{$cell_grid_cell_field32}
+	{$cell_grid_cell_field33}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$SeccionalId_class}	"
 
 			data-field="SeccionalId"
 	
-	data-cellId="grid_cell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3252,18 +3324,18 @@
 </span>
 {END SeccionalId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field32}
-									{BEGIN cellblock_grid_cell_field33}
+	{END cellblock_grid_cell_field33}
+									{BEGIN cellblock_grid_cell_field34}
 	<td
 	
-	{$cell_grid_cell_field33}
+	{$cell_grid_cell_field34}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$ProcesoId_class}	"
 
 			data-field="ProcesoId"
 	
-	data-cellId="grid_cell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3273,7 +3345,7 @@
 </span>
 {END ProcesoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field33}
+	{END cellblock_grid_cell_field34}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -3682,7 +3754,7 @@
 	{$cell_grid_footcell_field19}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Dias_class}	"
+		 r-ori-vert		 {$Liquidacion_class}	"
 
 	
 	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3697,7 +3769,7 @@
 	{$cell_grid_footcell_field20}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EstadoId_class}	"
+		 r-ori-vert		 {$Dias_class}	"
 
 	
 	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3712,7 +3784,7 @@
 	{$cell_grid_footcell_field21}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$EtapaId_class}	"
+		 r-ori-vert		 {$EstadoId_class}	"
 
 	
 	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3727,7 +3799,7 @@
 	{$cell_grid_footcell_field22}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Terminacion_class}	"
+		 r-ori-vert		 {$EtapaId_class}	"
 
 	
 	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3742,7 +3814,7 @@
 	{$cell_grid_footcell_field23}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$MotivoId_class}	"
+		 r-ori-vert		 {$Terminacion_class}	"
 
 	
 	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3757,7 +3829,7 @@
 	{$cell_grid_footcell_field24}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ActuacionId_class}	"
+		 r-ori-vert		 {$MotivoId_class}	"
 
 	
 	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3772,7 +3844,7 @@
 	{$cell_grid_footcell_field25}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Origen_class}	"
+		 r-ori-vert		 {$ActuacionId_class}	"
 
 	
 	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3787,7 +3859,7 @@
 	{$cell_grid_footcell_field26}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DespachoId_class}	"
+		 r-ori-vert		 {$Origen_class}	"
 
 	
 	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3802,7 +3874,7 @@
 	{$cell_grid_footcell_field27}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Folios_class}	"
+		 r-ori-vert		 {$DespachoId_class}	"
 
 	
 	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3817,7 +3889,7 @@
 	{$cell_grid_footcell_field28}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$MinJusticia_class}	"
+		 r-ori-vert		 {$Folios_class}	"
 
 	
 	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3832,7 +3904,7 @@
 	{$cell_grid_footcell_field29}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$NaturalezaId_class}	"
+		 r-ori-vert		 {$MinJusticia_class}	"
 
 	
 	data-cellId="grid_footcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3847,7 +3919,7 @@
 	{$cell_grid_footcell_field30}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AbogadoId_class}	"
+		 r-ori-vert		 {$NaturalezaId_class}	"
 
 	
 	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3862,7 +3934,7 @@
 	{$cell_grid_footcell_field31}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
+		 r-ori-vert		 {$AbogadoId_class}	"
 
 	
 	data-cellId="grid_footcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3877,7 +3949,7 @@
 	{$cell_grid_footcell_field32}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
+		 r-ori-vert		 {$CarteraTipoId_class}	"
 
 	
 	data-cellId="grid_footcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3892,7 +3964,7 @@
 	{$cell_grid_footcell_field33}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ProcesoId_class}	"
+		 r-ori-vert		 {$SeccionalId_class}	"
 
 	
 	data-cellId="grid_footcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3901,6 +3973,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field33}
+									{BEGIN cellblock_grid_footcell_field34}
+	<td
+	
+	{$cell_grid_footcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcesoId_class}	"
+
+	
+	data-cellId="grid_footcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field34}
 							</tr>
 					
 					</tfoot>

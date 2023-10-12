@@ -940,7 +940,7 @@ $tdataseccionales[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Ciudades";
+	$edata["LookupTable"] = "dbo.Ciudades1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -949,7 +949,7 @@ $tdataseccionales[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "CiudadId";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Ciudad";
+	$edata["DisplayField"] = "Ciudad/Municipio";
 
 	
 

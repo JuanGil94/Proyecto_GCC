@@ -163,19 +163,19 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Oficios1 Oficio }","bold":true},{"text":{$Oficio_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Oficios1 Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Oficios1 ActuacionId }","bold":true},{"text":{$ActuacionId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Oficios1 OficioIdRequisito }","bold":true},{"text":{$OficioIdRequisito_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Oficios1 Direcciones }","bold":true},{"text":{$Direcciones_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Oficios1 OficioIdRequisito }","bold":true},{"text":{$OficioIdRequisito_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Oficios1 Sigobius }","bold":true},{"text":{$Sigobius_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Oficios1 Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Oficios1 Devolucion }","bold":true},{"text":{$Devolucion_pdfvalue}}],"margin":[0,0,0,15]},

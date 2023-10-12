@@ -76,7 +76,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsprocesos["Spanish"]["Costas"] = "Cost.Saldo";
 	$fieldToolTipsprocesos["Spanish"]["Costas"] = "";
 	$placeHoldersprocesos["Spanish"]["Costas"] = "";
-	$fieldLabelsprocesos["Spanish"]["Liquidacion"] = "Liquidacion";
+	$fieldLabelsprocesos["Spanish"]["Liquidacion"] = "F.Liquidacion";
 	$fieldToolTipsprocesos["Spanish"]["Liquidacion"] = "";
 	$placeHoldersprocesos["Spanish"]["Liquidacion"] = "";
 	$fieldLabelsprocesos["Spanish"]["Dias"] = "Prescripcion dias";
