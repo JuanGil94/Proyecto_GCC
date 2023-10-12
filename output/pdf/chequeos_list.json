@@ -166,6 +166,9 @@ pdfDocument = {
 										{BEGIN col_grid_33}
 					"%",
 					{END col_grid_33}
+										{BEGIN col_grid_34}
+					"%",
+					{END col_grid_34}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -510,6 +513,64 @@ pdfDocument = {
 	cellId: 'headcell_field4',
 	col:0,
 	row:0,
+			fieldName: 'ConceptoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos ConceptoId }","hidden":"{$item_hide_grid_field_label3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ConceptoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'NaturalezaId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos NaturalezaId }","hidden":"{$item_hide_grid_field_label4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$NaturalezaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
 			fieldName: 'Origen',
 				style: 'headcell',
 		
@@ -533,10 +594,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Providencia',
@@ -562,10 +623,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'Ejecutoria',
@@ -591,10 +652,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'Tipo',
@@ -620,10 +681,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field10',
 	col:0,
 	row:0,
 			fieldName: 'Cantidad',
@@ -649,10 +710,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'Obligacion',
@@ -678,10 +739,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 			fieldName: 'Costas',
@@ -707,10 +768,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
 {
-	cellId: 'headcell_field11',
+	cellId: 'headcell_field13',
 	col:0,
 	row:0,
 			fieldName: 'PrimeraCopia',
@@ -736,10 +797,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
 {
-	cellId: 'headcell_field12',
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'Autentica',
@@ -765,10 +826,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'PrestaMeritoEjecutivo',
@@ -794,10 +855,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field16',
 	col:0,
 	row:0,
 			fieldName: 'Clara',
@@ -823,10 +884,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
 {
-	cellId: 'headcell_field15',
+	cellId: 'headcell_field17',
 	col:0,
 	row:0,
 			fieldName: 'Expresa',
@@ -852,10 +913,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
 {
-	cellId: 'headcell_field16',
+	cellId: 'headcell_field18',
 	col:0,
 	row:0,
 			fieldName: 'ActualmenteExigible',
@@ -881,10 +942,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field19}
 {
-	cellId: 'headcell_field17',
+	cellId: 'headcell_field19',
 	col:0,
 	row:0,
 			fieldName: 'CompetenciaDEAJ',
@@ -910,10 +971,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
+{END cellblock_grid_headcell_field19}
+																							{BEGIN cellblock_grid_headcell_field20}
 {
-	cellId: 'headcell_field18',
+	cellId: 'headcell_field20',
 	col:0,
 	row:0,
 			fieldName: 'FaltaRequisitos',
@@ -939,10 +1000,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field19}
+{END cellblock_grid_headcell_field20}
+																							{BEGIN cellblock_grid_headcell_field21}
 {
-	cellId: 'headcell_field19',
+	cellId: 'headcell_field21',
 	col:0,
 	row:0,
 			fieldName: 'FaltaCompetencia',
@@ -968,10 +1029,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field19}
-																							{BEGIN cellblock_grid_headcell_field20}
+{END cellblock_grid_headcell_field21}
+																							{BEGIN cellblock_grid_headcell_field22}
 {
-	cellId: 'headcell_field20',
+	cellId: 'headcell_field22',
 	col:0,
 	row:0,
 			fieldName: 'PorPrescripcion',
@@ -997,10 +1058,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field20}
-																							{BEGIN cellblock_grid_headcell_field21}
+{END cellblock_grid_headcell_field22}
+																							{BEGIN cellblock_grid_headcell_field23}
 {
-	cellId: 'headcell_field21',
+	cellId: 'headcell_field23',
 	col:0,
 	row:0,
 			fieldName: 'SeccionalIdDestino',
@@ -1026,10 +1087,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field21}
-																							{BEGIN cellblock_grid_headcell_field22}
+{END cellblock_grid_headcell_field23}
+																							{BEGIN cellblock_grid_headcell_field24}
 {
-	cellId: 'headcell_field22',
+	cellId: 'headcell_field24',
 	col:0,
 	row:0,
 			fieldName: 'AprobadoPor',
@@ -1055,10 +1116,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field22}
-																							{BEGIN cellblock_grid_headcell_field23}
+{END cellblock_grid_headcell_field24}
+																							{BEGIN cellblock_grid_headcell_field29}
 {
-	cellId: 'headcell_field23',
+	cellId: 'headcell_field29',
 	col:0,
 	row:0,
 			fieldName: 'FechaAprobacion',
@@ -1084,10 +1145,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field23}
-																							{BEGIN cellblock_grid_headcell_field24}
+{END cellblock_grid_headcell_field29}
+																							{BEGIN cellblock_grid_headcell_field38}
 {
-	cellId: 'headcell_field24',
+	cellId: 'headcell_field38',
 	col:0,
 	row:0,
 			fieldName: 'TramiteId',
@@ -1113,10 +1174,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field24}
-																							{BEGIN cellblock_grid_headcell_field29}
+{END cellblock_grid_headcell_field38}
+																							{BEGIN cellblock_grid_headcell_field39}
 {
-	cellId: 'headcell_field29',
+	cellId: 'headcell_field39',
 	col:0,
 	row:0,
 			fieldName: 'AbogadoId',
@@ -1142,10 +1203,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field29}
-																							{BEGIN cellblock_grid_headcell_field38}
+{END cellblock_grid_headcell_field39}
+																							{BEGIN cellblock_grid_headcell_field40}
 {
-	cellId: 'headcell_field38',
+	cellId: 'headcell_field40',
 	col:0,
 	row:0,
 			fieldName: 'Fisico',
@@ -1171,10 +1232,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field38}
-																							{BEGIN cellblock_grid_headcell_field39}
+{END cellblock_grid_headcell_field40}
+																							{BEGIN cellblock_grid_headcell_field25}
 {
-	cellId: 'headcell_field39',
+	cellId: 'headcell_field25',
 	col:0,
 	row:0,
 			fieldName: 'Digital',
@@ -1200,36 +1261,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field39}
-																							{BEGIN cellblock_grid_headcell_field40}
+{END cellblock_grid_headcell_field25}
+																							{BEGIN cellblock_grid_headcell_field26}
 {
-	cellId: 'headcell_field40',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field40}
-																							{BEGIN cellblock_grid_headcell_field25}
-{
-	cellId: 'headcell_field25',
+	cellId: 'headcell_field26',
 	col:0,
 	row:0,
 			fieldName: 'SeccionalId',
@@ -1255,10 +1290,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field25}
-																							{BEGIN cellblock_grid_headcell_field26}
+{END cellblock_grid_headcell_field26}
+																							{BEGIN cellblock_grid_headcell_field27}
 {
-	cellId: 'headcell_field26',
+	cellId: 'headcell_field27',
 	col:0,
 	row:0,
 			fieldName: 'CarteraTipoId',
@@ -1284,13 +1319,12 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field26}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field27}
+																							{BEGIN cellblock_grid_headcell_field28}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field28',
 	col:0,
 	row:0,
-			fieldName: 'ObligacionLetras',
 				style: 'headcell',
 		
 		
@@ -1303,17 +1337,15 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","hidden":"{$item_hide_grid_field_label2}","bold":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObligacionLetras_align}',
+              "alignment": 'left',
      
       
       },
 
-{END cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field28}
 											],
 				{END row_grid_0}
 		
@@ -1505,6 +1537,64 @@ pdfDocument = {
 	cellId: 'cell_field4',
 	col:0,
 	row:0,
+			fieldName: 'ConceptoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ConceptoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'NaturalezaId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_grid_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$NaturalezaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
 			fieldName: 'Origen',
 				style: 'bodycell',
 		
@@ -1528,10 +1618,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Providencia',
@@ -1557,10 +1647,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'Ejecutoria',
@@ -1586,10 +1676,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'Tipo',
@@ -1615,10 +1705,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field10',
 	col:0,
 	row:0,
 			fieldName: 'Cantidad',
@@ -1644,10 +1734,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field11',
 	col:0,
 	row:0,
 			fieldName: 'Obligacion',
@@ -1673,10 +1763,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field12',
 	col:0,
 	row:0,
 			fieldName: 'Costas',
@@ -1702,10 +1792,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
 {
-	cellId: 'cell_field11',
+	cellId: 'cell_field13',
 	col:0,
 	row:0,
 			fieldName: 'PrimeraCopia',
@@ -1731,10 +1821,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
 {
-	cellId: 'cell_field12',
+	cellId: 'cell_field14',
 	col:0,
 	row:0,
 			fieldName: 'Autentica',
@@ -1760,10 +1850,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'PrestaMeritoEjecutivo',
@@ -1789,10 +1879,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			fieldName: 'Clara',
@@ -1818,10 +1908,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field17',
 	col:0,
 	row:0,
 			fieldName: 'Expresa',
@@ -1847,10 +1937,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
 {
-	cellId: 'cell_field16',
+	cellId: 'cell_field18',
 	col:0,
 	row:0,
 			fieldName: 'ActualmenteExigible',
@@ -1876,10 +1966,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field19}
 {
-	cellId: 'cell_field17',
+	cellId: 'cell_field19',
 	col:0,
 	row:0,
 			fieldName: 'CompetenciaDEAJ',
@@ -1905,10 +1995,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
+{END cellblock_grid_cell_field19}
+																							{BEGIN cellblock_grid_cell_field20}
 {
-	cellId: 'cell_field18',
+	cellId: 'cell_field20',
 	col:0,
 	row:0,
 			fieldName: 'FaltaRequisitos',
@@ -1934,10 +2024,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field19}
+{END cellblock_grid_cell_field20}
+																							{BEGIN cellblock_grid_cell_field21}
 {
-	cellId: 'cell_field19',
+	cellId: 'cell_field21',
 	col:0,
 	row:0,
 			fieldName: 'FaltaCompetencia',
@@ -1963,10 +2053,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field19}
-																							{BEGIN cellblock_grid_cell_field20}
+{END cellblock_grid_cell_field21}
+																							{BEGIN cellblock_grid_cell_field22}
 {
-	cellId: 'cell_field20',
+	cellId: 'cell_field22',
 	col:0,
 	row:0,
 			fieldName: 'PorPrescripcion',
@@ -1992,10 +2082,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field20}
-																							{BEGIN cellblock_grid_cell_field21}
+{END cellblock_grid_cell_field22}
+																							{BEGIN cellblock_grid_cell_field23}
 {
-	cellId: 'cell_field21',
+	cellId: 'cell_field23',
 	col:0,
 	row:0,
 			fieldName: 'SeccionalIdDestino',
@@ -2021,10 +2111,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field21}
-																							{BEGIN cellblock_grid_cell_field22}
+{END cellblock_grid_cell_field23}
+																							{BEGIN cellblock_grid_cell_field24}
 {
-	cellId: 'cell_field22',
+	cellId: 'cell_field24',
 	col:0,
 	row:0,
 			fieldName: 'AprobadoPor',
@@ -2050,10 +2140,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field22}
-																							{BEGIN cellblock_grid_cell_field23}
+{END cellblock_grid_cell_field24}
+																							{BEGIN cellblock_grid_cell_field29}
 {
-	cellId: 'cell_field23',
+	cellId: 'cell_field29',
 	col:0,
 	row:0,
 			fieldName: 'FechaAprobacion',
@@ -2079,10 +2169,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field23}
-																							{BEGIN cellblock_grid_cell_field24}
+{END cellblock_grid_cell_field29}
+																							{BEGIN cellblock_grid_cell_field38}
 {
-	cellId: 'cell_field24',
+	cellId: 'cell_field38',
 	col:0,
 	row:0,
 			fieldName: 'TramiteId',
@@ -2108,10 +2198,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field24}
-																							{BEGIN cellblock_grid_cell_field29}
+{END cellblock_grid_cell_field38}
+																							{BEGIN cellblock_grid_cell_field39}
 {
-	cellId: 'cell_field29',
+	cellId: 'cell_field39',
 	col:0,
 	row:0,
 			fieldName: 'AbogadoId',
@@ -2137,10 +2227,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field29}
-																							{BEGIN cellblock_grid_cell_field38}
+{END cellblock_grid_cell_field39}
+																							{BEGIN cellblock_grid_cell_field40}
 {
-	cellId: 'cell_field38',
+	cellId: 'cell_field40',
 	col:0,
 	row:0,
 			fieldName: 'Fisico',
@@ -2166,10 +2256,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field38}
-																							{BEGIN cellblock_grid_cell_field39}
+{END cellblock_grid_cell_field40}
+																							{BEGIN cellblock_grid_cell_field25}
 {
-	cellId: 'cell_field39',
+	cellId: 'cell_field25',
 	col:0,
 	row:0,
 			fieldName: 'Digital',
@@ -2195,36 +2285,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field39}
-																							{BEGIN cellblock_grid_cell_field40}
+{END cellblock_grid_cell_field25}
+																							{BEGIN cellblock_grid_cell_field26}
 {
-	cellId: 'cell_field40',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_field40}
-																							{BEGIN cellblock_grid_cell_field25}
-{
-	cellId: 'cell_field25',
+	cellId: 'cell_field26',
 	col:0,
 	row:0,
 			fieldName: 'SeccionalId',
@@ -2250,10 +2314,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field25}
-																							{BEGIN cellblock_grid_cell_field26}
+{END cellblock_grid_cell_field26}
+																							{BEGIN cellblock_grid_cell_field27}
 {
-	cellId: 'cell_field26',
+	cellId: 'cell_field27',
 	col:0,
 	row:0,
 			fieldName: 'CarteraTipoId',
@@ -2279,13 +2343,12 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field26}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field27}
+																							{BEGIN cellblock_grid_cell_field28}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field28',
 	col:0,
 	row:0,
-			fieldName: 'ObligacionLetras',
 				style: 'bodycell',
 		
 		
@@ -2298,17 +2361,15 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObligacionLetras_align}',
+              "alignment": 'left',
      
       
       },
 
-{END cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field28}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2552,6 +2613,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  33,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  34,
 				text: ''
 			},
 							],
@@ -3421,9 +3488,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field26}
-																							{BEGIN cellblock_grid_footcell_field3}
+																							{BEGIN cellblock_grid_footcell_field27}
 {
-	cellId: 'footcell_field3',
+	cellId: 'footcell_field27',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -3446,7 +3513,33 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field3}
+{END cellblock_grid_footcell_field27}
+																							{BEGIN cellblock_grid_footcell_field28}
+{
+	cellId: 'footcell_field28',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field28}
 											],
 				{END row_grid_3}
 		

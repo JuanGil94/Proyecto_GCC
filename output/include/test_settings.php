@@ -837,7 +837,7 @@ $tdatatest[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	

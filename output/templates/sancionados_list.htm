@@ -646,6 +646,16 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
+					<input type="checkbox" id="hide_Masculino" checked="checked" value="1" data-field="Masculino" data-fieldname="Masculino">
+					<span>{$label dbo_Sancionados Masculino }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
 					<input type="checkbox" id="hide_Celular" checked="checked" value="1" data-field="Celular" data-fieldname="Celular">
 					<span>{$label dbo_Sancionados Celular }</span>
 				</label>
@@ -688,16 +698,6 @@
 				<label>
 					<input type="checkbox" id="hide_PrivadoLibertad" checked="checked" value="1" data-field="PrivadoLibertad" data-fieldname="PrivadoLibertad">
 					<span>{$label dbo_Sancionados PrivadoLibertad }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Masculino" checked="checked" value="1" data-field="Masculino" data-fieldname="Masculino">
-					<span>{$label dbo_Sancionados Masculino }</span>
 				</label>
 			</div>
 					</a>
@@ -894,11 +894,36 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Masculino_class}	"
+
+			data-field="Masculino"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Masculino_fieldheadercolumn}
+	{BEGIN Masculino_fieldheader}
+	<SPAN {$Masculino_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino">
+	{$label dbo_Sancionados Masculino }	{$arrow_icon_Masculino}
+	</SPAN>
+	{END Masculino_fieldheader}
+{END Masculino_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Celular_class}	"
 
 			data-field="Celular"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -912,18 +937,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field5}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Email_class}	"
 
 			data-field="Email"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -937,18 +962,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Observaciones_class}	"
 
 			data-field="Observaciones"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -962,18 +987,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
 	<th
 	
-	{$cell_grid_headcell_field7}
+	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Fallecimiento_class}	"
 
 			data-field="Fallecimiento"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -987,18 +1012,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
-	{$cell_grid_headcell_field8}
+	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$PrivadoLibertad_class}	"
 
 			data-field="PrivadoLibertad"
 	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1009,31 +1034,6 @@
 	</SPAN>
 	{END PrivadoLibertad_fieldheader}
 {END PrivadoLibertad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Masculino_class}	"
-
-			data-field="Masculino"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Masculino_fieldheadercolumn}
-	{BEGIN Masculino_fieldheader}
-	<SPAN {$Masculino_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino">
-	{$label dbo_Sancionados Masculino }	{$arrow_icon_Masculino}
-	</SPAN>
-	{END Masculino_fieldheader}
-{END Masculino_fieldheadercolumn}
 
 	
 	</th>
@@ -1185,11 +1185,32 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Masculino_class}	"
+
+			data-field="Masculino"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Masculino_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino" data-default-width >
+{$Masculino_value}
+</span>
+{END Masculino_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Celular_class}	"
 
 			data-field="Celular"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1199,18 +1220,18 @@
 </span>
 {END Celular_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Email_class}	"
 
 			data-field="Email"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1220,18 +1241,18 @@
 </span>
 {END Email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Observaciones_class}	"
 
 			data-field="Observaciones"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1241,18 +1262,18 @@
 </span>
 {END Observaciones_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Fallecimiento_class}	"
 
 			data-field="Fallecimiento"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1262,18 +1283,18 @@
 </span>
 {END Fallecimiento_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$PrivadoLibertad_class}	"
 
 			data-field="PrivadoLibertad"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1282,27 +1303,6 @@
 {$PrivadoLibertad_value}
 </span>
 {END PrivadoLibertad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Masculino_class}	"
-
-			data-field="Masculino"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Masculino_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino" data-default-width >
-{$Masculino_value}
-</span>
-{END Masculino_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
 							</tr>
@@ -1452,7 +1452,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Celular_class}	"
+		 r-ori-vert		 {$Masculino_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1467,7 +1467,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$Celular_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1482,7 +1482,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Observaciones_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1497,7 +1497,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fallecimiento_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1512,7 +1512,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PrivadoLibertad_class}	"
+		 r-ori-vert		 {$Fallecimiento_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1527,7 +1527,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Masculino_class}	"
+		 r-ori-vert		 {$PrivadoLibertad_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	

@@ -207,6 +207,9 @@ pdfDocument = {
 				
 			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field28}"},
 				
+				
+			{"text":{$Liquidacion_pdfvalue},"hidden":"{$item_hide_export_field29}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
