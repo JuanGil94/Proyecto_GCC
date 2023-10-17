@@ -18,6 +18,9 @@
 
 		$this->events["BeforeAdd"]=true;
 
+		$this->events["AfterAdd"]=true;
+
+
 
 	}
 
@@ -192,19 +195,187 @@ function BeforeProcessAdd($pageObject)
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-		include_once 'buttonhandler.php';
-$calendario=new CalendarioAnual(2022);
-$meses = $calendario->getMeses();
-//print_r($meses);
-echo "El valor del procesoId es: ".$values["ProcesoId"];
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-return true;
+		include_once (getabspath("classes/pruebaJuan.php"));
+$recalcular=new reliquidacion($values["ProcesoId"]);
+$recalcular->Calcular();
+$arrayFechas=$recalcular->getFechas();
+//print_r($arrayFechas);
+foreach($arrayFechas as $dato=>$valor){
+	if ($dato=="fechaEjecutoria"){
+		$date["fechaEjecutoria"]=$valor;
+	}
+	else if ($dato=="fechaActual"){
+		$date["fechaActual"]=$valor;
+	}
+}
+	$timestampE = strtotime($date["fechaEjecutoria"]);
+	$timestampA = strtotime($date["fechaActual"]);
+	$timestampR = strtotime($values["Fecha"]);
+		if ($timestampR<$timestampE or $timestampR>$timestampA){
+				echo "<script>alert('La fecha de recaudo no puede ser menor a la fecha Plazo y tampoco mayor a la fecha actual')</script>";
+				return false;
+		}
+		else{
+		//echo $dato["fechaEjecutoria"];
+		//echo $dato["fechaActual"];
+		//print_r($values);
+		return true;
+	}
+//return true;    
 ;
 } // function BeforeAdd
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record added
+function AfterAdd(&$values, &$keys, $inline, $pageObject)
+{
+
+		include_once (getabspath("classes/pruebaJuan.php"));
+$recalcular=new reliquidacion($values["ProcesoId"]);
+$recalcular->pagoId($values["PagoId"]);
+$recalcular->Calcular();
+echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
+/*
+echo '<script>if (confirm("Registro de recaudos realizado.")) {
+    location.reload();
+} else {
+    // Aquí puedes agregar un código adicional si el usuario hace clic en "Cancelar"
+}</script>'
+*/
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
