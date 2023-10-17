@@ -171,7 +171,7 @@ $tdatapagos1[".ajaxCodeSnippetAdded"] = false;
 
 $tdatapagos1[".buttonsAdded"] = false;
 
-$tdatapagos1[".addPageEvents"] = false;
+$tdatapagos1[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatapagos1[".isUseTimeForSearch"] = false;
