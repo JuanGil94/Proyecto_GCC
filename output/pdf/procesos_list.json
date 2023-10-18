@@ -2575,6 +2575,11 @@ pdfDocument = {
 			"stack": [
 		
 				
+			 {BEGIN details_correspondencias}
+			{$displayDetailTable_correspondencias }
+		{END details_correspondencias},
+				
+				
 			 {BEGIN details_solidarios}
 			{$displayDetailTable_solidarios }
 		{END details_solidarios},
@@ -2628,11 +2633,6 @@ pdfDocument = {
 			 {BEGIN details_reliquidaciones}
 			{$displayDetailTable_reliquidaciones }
 		{END details_reliquidaciones},
-				
-				
-			 {BEGIN details_correspondencias}
-			{$displayDetailTable_correspondencias }
-		{END details_correspondencias},
 				
 		  ],
   "border": [ true, true, true, true ],
