@@ -44,7 +44,7 @@
 function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 {
 
-		$values["Fecha"]=now();
+		//$values["Fecha"]=now();
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -299,7 +299,8 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
 $recalcular->Calcular();
-echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
+$proxy["saved"]=true;
+//echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
 /*
 echo '<script>if (confirm("Registro de recaudos realizado.")) {
     location.reload();
