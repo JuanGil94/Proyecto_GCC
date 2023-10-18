@@ -96,6 +96,16 @@ if($buttId=='New_Button3')
 	}
 	buttonHandler_New_Button3($params);
 }
+if($buttId=='New_Button4')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_New_Button4($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -545,7 +555,66 @@ function buttonHandler_New_Button3($params)
 //$result["txt"] = $params["txt"]." world!";
 include_once (getabspath("plantillaGCC.php"));
 $objeto=new plantillas();
-$objeto->persuasivo();;
+$log=$objeto->persuasivo();;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_New_Button4($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+//$result["txt"] = $params["txt"]." world!";
+include_once (getabspath("libs/mpdf-master/examples/example01_basic.php"));
+$objeto2=new pdf();
+$objeto2->generar();
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

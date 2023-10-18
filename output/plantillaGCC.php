@@ -9,7 +9,7 @@ class plantillas {
     public function persuasivo() {
         $templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
 
-        $nombre = "Juan";
+        $nombre = "JuannnchoooPolooo";
         $direccion = "Mi direcci�n";
         $municipio = "Mrd";
         $provincia = "Bdj";
@@ -27,10 +27,12 @@ class plantillas {
 
         // --- Guardamos el documento
         $templateWord->saveAs('templates_GCC/Persuasivo.docx');
+        //$templateWord->saveAs('templates_GCC/Persuasivo.pdf','PDF');
+
 
         header("Content-Disposition: attachment; filename=templates_GCC/Persuasivo.docx; charset=iso-8859-1");
-        echo file_get_contents('templates_GCC/Persuasivo.docx');
-        echo "Hola desde MiClase";
+        file_get_contents('templates_GCC/Persuasivo.docx');
+        //echo "Hola desde MiClase";
     }
 }
 
