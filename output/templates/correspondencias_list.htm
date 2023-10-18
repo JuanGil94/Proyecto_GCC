@@ -1116,18 +1116,15 @@
 	
 	</td>
 	{END cellblock_grid_cell_icons}
-									{BEGIN cellblock_grid_cell_checkbox}
-	<td
+										<td
 	
 	{$cell_grid_cell_checkbox}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
-	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
-		data-checkbox-cell
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1137,10 +1134,15 @@
 		>
 </span>	
 {END checkbox_column}
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="New_Button3" href="javascript:void(0)" typeid="ib" >
+							Imprimir			</a>
+</span>
 	
 	</td>
-	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_field}
+										{BEGIN cellblock_grid_cell_field}
 	<td
 	
 	{$cell_grid_cell_field}

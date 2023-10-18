@@ -260,7 +260,11 @@ class reliquidacion extends CalendarioAnual{
         }
         $recaudos=$this->recaudo($numero);
         $this->fechaEjecutoria=$fechaP;
-        $this->fechaActual=date('Y-m-d');  
+        $this->fechaActual=date('Y-m-d');
+        $fecha_objeto2=  new DateTime($this->fechaActual);
+        $annoAct = $fecha_objeto2->format('Y');  // Año
+        $mesAct = $fecha_objeto2->format('m');   // Mes
+        $diaAct = $fecha_objeto2->format('d');
         //echo "la fecha plazo es: ".$fechaP;
         // Tu fecha en formato "YYYY-MM-DD"
         $fecha_objeto = new DateTime($fechaP);
@@ -495,7 +499,12 @@ class reliquidacion extends CalendarioAnual{
                      
                 }
                 else if($mesEje==$mes && $annobase==$annoEje){
+                    //echo "Holaaaa";
                     $numDiasMesAct=$dias-$diaEje;
+                    if ($annoAct==$annoEje && $mesAct==$mes){
+                        $numDiasMesAct=$diaAct-$diaEje;
+                    }
+                    //echo $numDiasMesAct;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mesEje);
                     //echo "la tassssaaaa esss: ".$tasaDiaraT;
