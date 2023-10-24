@@ -22,6 +22,8 @@ class class_GlobalEvents extends eventsBase
 	function __construct()
 	{
 	// fill list of events
+		$this->events["AfterSuccessfulLogin"]=true;
+
 
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
@@ -33,6 +35,44 @@ class class_GlobalEvents extends eventsBase
 		}
 
 //	handlers
+
+		
+		
+		
+		
+		
+		
+				// After successful login
+function AfterSuccessfulLogin($username, $password, &$data, $pageObject)
+{
+
+		//echo($data);
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterSuccessfulLogin
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 //	onscreen events
 	function event_dbo_Chequeos_snippet(&$params)

@@ -101,7 +101,7 @@
 {BEGIN cellblock_grid_c3}
 <td
 	{$cell_grid_c3}
-	class=" r-ori-vert"
+	class="r-align-center r-ori-vert"
 	
 				data-fullwidth
 		
@@ -111,27 +111,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN ProcesoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_ProcesoId}  r-vertical-field" 
-	data-signal-error-for="ProcesoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="ProcesoId" data-fieldname="ProcesoId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_ProcesoId}">
-		{BEGIN ProcesoId_label}{$label dbo_Correspondencias ProcesoId }{END ProcesoId_label}
-	</label>
-	<div class="r-edit-field">
-		{$ProcesoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="ProcesoId" {$tooltipAttr dbo_Correspondencias ProcesoId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Correspondencias ProcesoId }		</div>
-	</div>
-</div>
-
-
-{END ProcesoId_fieldblock}
-											
 {BEGIN OficioId_fieldblock}
 
 
@@ -174,48 +153,6 @@
 
 {END Fecha_fieldblock}
 											
-{BEGIN Sigobius_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Sigobius}  r-vertical-field" 
-	data-signal-error-for="Sigobius{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Sigobius" data-fieldname="Sigobius" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Sigobius}">
-		{BEGIN Sigobius_label}{$label dbo_Correspondencias Sigobius }{END Sigobius_label}
-	</label>
-	<div class="r-edit-field">
-		{$Sigobius_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Sigobius" {$tooltipAttr dbo_Correspondencias Sigobius } >
-		<div class="text-muted" >
-		{$tooltip dbo_Correspondencias Sigobius }		</div>
-	</div>
-</div>
-
-
-{END Sigobius_fieldblock}
-											
-{BEGIN Observaciones_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
-	data-signal-error-for="Observaciones{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
-		{BEGIN Observaciones_label}{$label dbo_Correspondencias Observaciones }{END Observaciones_label}
-	</label>
-	<div class="r-edit-field">
-		{$Observaciones_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Observaciones" {$tooltipAttr dbo_Correspondencias Observaciones } >
-		<div class="text-muted" >
-		{$tooltip dbo_Correspondencias Observaciones }		</div>
-	</div>
-</div>
-
-
-{END Observaciones_fieldblock}
-											
 {BEGIN Resolucion_fieldblock}
 
 
@@ -236,27 +173,6 @@
 
 
 {END Resolucion_fieldblock}
-											
-{BEGIN Codigo_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Codigo}  r-vertical-field" 
-	data-signal-error-for="Codigo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Codigo" data-fieldname="Codigo" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Codigo}">
-		{BEGIN Codigo_label}{$label dbo_Correspondencias Codigo }{END Codigo_label}
-	</label>
-	<div class="r-edit-field">
-		{$Codigo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Codigo" {$tooltipAttr dbo_Correspondencias Codigo } >
-		<div class="text-muted" >
-		{$tooltip dbo_Correspondencias Codigo }		</div>
-	</div>
-</div>
-
-
-{END Codigo_fieldblock}
 											
 {BEGIN Radicado_fieldblock}
 
@@ -279,12 +195,33 @@
 
 {END Radicado_fieldblock}
 											
+{BEGIN Observaciones_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-vertical-field" 
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Observaciones}">
+		{BEGIN Observaciones_label}{$label dbo_Correspondencias Observaciones }{END Observaciones_label}
+	</label>
+	<div class="r-edit-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Observaciones" {$tooltipAttr dbo_Correspondencias Observaciones } >
+		<div class="text-muted" >
+		{$tooltip dbo_Correspondencias Observaciones }		</div>
+	</div>
+</div>
+
+
+{END Observaciones_fieldblock}
+											
 {BEGIN UserId_fieldblock}
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_UserId}  r-vertical-field" 
 	data-signal-error-for="UserId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="UserId" data-fieldname="UserId" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="UserId" data-fieldname="UserId" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_UserId}">
 		{BEGIN UserId_label}{$label dbo_Correspondencias UserId }{END UserId_label}
@@ -299,27 +236,6 @@
 
 
 {END UserId_fieldblock}
-											
-{BEGIN AbogadoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
-	data-signal-error-for="AbogadoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
-		{BEGIN AbogadoId_label}{$label dbo_Correspondencias AbogadoId }{END AbogadoId_label}
-	</label>
-	<div class="r-edit-field">
-		{$AbogadoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_Correspondencias AbogadoId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Correspondencias AbogadoId }		</div>
-	</div>
-</div>
-
-
-{END AbogadoId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

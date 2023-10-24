@@ -489,7 +489,7 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "ProcesoId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Numero";
+	$edata["DisplayField"] = "ProcesoId";
 
 	
 
@@ -794,10 +794,10 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Date");
+	$edata = array("EditFormat" => "Readonly");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -816,10 +816,7 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
-
+	
 	
 	
 	
@@ -1624,7 +1621,7 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1634,34 +1631,6 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.UsuGCC-_users";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "ID";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "username";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -1676,14 +1645,17 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -2278,6 +2250,7 @@ $tdatacorrespondencias[".sqlquery"] = $queryData_correspondencias;
 
 
 
-$tdatacorrespondencias[".hasEvents"] = false;
+include_once(getabspath("include/correspondencias_events.php"));
+$tdatacorrespondencias[".hasEvents"] = true;
 
 ?>
