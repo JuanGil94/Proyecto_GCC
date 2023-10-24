@@ -554,8 +554,16 @@ function buttonHandler_New_Button3($params)
 	// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
 include_once (getabspath("plantillaGCC.php"));
-$objeto=new plantillas();
-$log=$objeto->persuasivo();;
+$objeto=new plantillas($params["ProcesoId"]);
+switch($params["OficioId"]){
+	case "1097":
+		$log=$objeto->persuasivo();
+	break;
+	default:
+		echo "Opcion no homologada o no reconocida";
+		break;
+}
+//$log=$objeto->persuasivo();;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -611,7 +619,7 @@ function buttonHandler_New_Button4($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
-include_once (getabspath("libs/mpdf-master/examples/example01_basic.php"));
+include_once (getabspath("libs/mPDF/example.php"));
 $objeto2=new pdf();
 $objeto2->generar();
 ;

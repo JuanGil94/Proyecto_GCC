@@ -1036,6 +1036,14 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return now();;
 	}
+				if($table=="dbo.Correspondencias" && $field=="Fecha")
+	{
+		return now();;
+	}
+				if($table=="dbo.Correspondencias" && $field=="UserId")
+	{
+		return $_SESSION["ID"];
+	}
 	return "";
 }
 

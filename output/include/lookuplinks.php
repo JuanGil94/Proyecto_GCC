@@ -488,13 +488,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Oficios"]["correspondencias.OficioId"] = array();
 		}
 		$lookupTableLinks["dbo.Oficios"]["correspondencias.OficioId"]["edit"] = array("table" => "dbo.Correspondencias", "field" => "OficioId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.UsuGCC-_users"] ) ) {
-			$lookupTableLinks["dbo.UsuGCC-_users"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.UsuGCC-_users"]["correspondencias.UserId"] )) {
-			$lookupTableLinks["dbo.UsuGCC-_users"]["correspondencias.UserId"] = array();
-		}
-		$lookupTableLinks["dbo.UsuGCC-_users"]["correspondencias.UserId"]["edit"] = array("table" => "dbo.Correspondencias", "field" => "UserId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
 			$lookupTableLinks["dbo.Abogados"] = array();
 		}

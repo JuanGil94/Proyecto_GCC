@@ -233,6 +233,9 @@ class reliquidacion extends CalendarioAnual{
     public function getSuma(){
             return $this->suma;
     }
+    public function getinteresesSuma(){
+        return $this->sumaTotalDiaria;
+}
     public function Calcular(){
         //$result["total"]="perrosss";
         //$result["txt"] = " Juazzzzzworld!";
@@ -701,6 +704,7 @@ class reliquidacion extends CalendarioAnual{
                                 //echo "<script>alert('Holaaaa'+$sumaTotalDiaria);</script>";
                                 $result["total"]=round($sumaTotalDiaria+$obligacion+$costSald,2);
                                 $this->suma=$result["total"];
+                                $this->sumaTotalDiaria=$sumaTotalDiaria;
                                 //echo "<script language='javascript'>alert('El valor Saldo total al dia es de:'+$sumaTotalDiaria);location.reload(); </script>";
                     //exit();
                 }
