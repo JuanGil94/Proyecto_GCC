@@ -11,7 +11,7 @@ class plantillas {
         $this->procesoId=$procesoId;
     }
     public function persuasivo() {
-        $templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
+        //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
         
         $info=DB::Query("SELECT 
         S.Seccional ,
@@ -24,7 +24,7 @@ class plantillas {
         CI.Ciudad+ ' ('+DE.Departamento+')' AS SancionadoCiudad,
         'Correo electrónico: '+SA.Email AS 'sancionadoEmail',
         P.Numero AS 'Numero',
-        IIF (A.Masculino=1,'Respestado Señor:','Respetada Señora:') AS RespetadoSenor,
+        IIF (SA.Masculino=1,'Respestado Señor','Respetada Señora') AS RespetadoSenor,
         UPPER (DESP.Despacho) AS 'Despacho',
         FORMAT(P.Ejecutoria, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaEjecutoriaLarga',
         TD.TipoDocumento AS 'TipoDocumento',
@@ -50,7 +50,7 @@ class plantillas {
         INNER JOIN Departamentos DE ON DE.DepartamentoId = CI.DepartamentoId
         INNER JOIN Despachos DESP ON DESP.DespachoId = P.DespachoId
         INNER JOIN TiposDocumentos TD ON TD.TipoDocumentoId = SA.TipoDocumentoId
-        where p.Numero = '68001129000020230025700' AND C.OficioId = 1097");
+        where p.Numero = '11001079000020180085200' AND C.OficioId = 1097");
 
         while( $date = $info->fetchAssoc() )
         {
@@ -84,6 +84,9 @@ class plantillas {
         }
         
         foreach ($info2 as $key => $value) {
+            $templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
+            //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
+            //echo count($key);
             //print_r ($value);
             foreach($value as $param=>$date){
                 $Seccional=$value["Seccional"];
@@ -94,7 +97,7 @@ class plantillas {
                 $Sancionado=$value["Sancionado"];
                 $direccion=$value["direccion"];
                 $sancionadoCiudad=$value["sancionadoCiudad"];
-                $sancionadoEmail=$value["sancionadoEmail"];
+                $sanhocionadoEmail=$value["sancionadoEmail"];
                 $Numero=$value["Numero"];
                 $RespetadoSenor=$value["RespetadoSenor"];
                 $Despacho=$value["Despacho"];
@@ -109,89 +112,40 @@ class plantillas {
                 $SeccionalCorreo=$value["SeccionalCorreo"];
                 $SeccionalDireccion=$value["SeccionalDireccion"];
                 $SeccionalTelefono=$value["SeccionalTelefono"];
-
-                // --- Asignamos valores a la plantilla
-                /*
-                $templateWord->setValue('Seccional',$Seccional);
-                $templateWord->setValue('Sigobius',$Sigobius);
-                $templateWord->setValue('Ciudad',$Ciudad);
-                $templateWord->setValue('Fecha',$Fecha); 
-                $templateWord->setValue('Senor',$Senor);
-                $templateWord->setValue('Sancionado',$Sancionado);
-                $templateWord->setValue('direccion',$direccion);
-                $templateWord->setValue('sancionadoCiudad',$sancionadoCiudad);
-                $templateWord->setValue('sancionadoEmail',$sancionadoEmail);
-                $templateWord->setValue('Numero',$Numero);
-                $templateWord->setValue('RespetadoSenor',$RespetadoSenor);
-                $templateWord->setValue('Despacho',$Despacho);
-                $templateWord->setValue('FechaEjecutoriaLarga',$FechaEjecutoriaLarga);
-                $templateWord->setValue('TipoDocumento',$TipoDocumento);
-                $templateWord->setValue('documento',$documento);
-                $templateWord->setValue('Obligacion',$Obligacion);
-                $templateWord->setValue('PiePagina',$PiePagina);
-                $templateWord->setValue('Abogado',$Abogado);
-                $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
-                $templateWord->setValue('usuario',$usuario);
-                */
-                //$templateWord->saveAs('templates_GCC/Persuasivo'.$this->procesoId.'.docx');
-                //$templateWord->saveAs('templates_GCC/Persuasivo.pdf','PDF');
-                /*
-                $templateWord->saveAs('templates_GCC/Persuasivo.docx');
-                header("Content-Disposition: attachment; filename=templates_GCC/Persuasivo.docx; charset=iso-8859-1");
-                file_get_contents('templates_GCC/Persuasivo.docx');
-                */
             }
+            // --- Asignamos valores a la plantilla  
+            $templateWord->setValue('Seccional',$Seccional);
+            $templateWord->setValue('Sigobius',$Sigobius);
+            $templateWord->setValue('ciudad',$Ciudad);
+            $templateWord->setValue('fecha',$Fecha);   
+            $templateWord->setValue('senor',$Senor);
+            $templateWord->setValue('Sancionado',$Sancionado);
+            $templateWord->setValue('sancionado',$Sancionado);
+            $templateWord->setValue('direccion',$direccion);
+            $templateWord->setValue('sancionadoCiudad',$sancionadoCiudad);
+            $templateWord->setValue('sancionadoEmail',$sancionadoEmail);
+            $templateWord->setValue('Numero',$Numero);
+            $templateWord->setValue('RespetadoSenor',$RespetadoSenor);
+            $templateWord->setValue('Despacho',$Despacho);
+            $templateWord->setValue('FechaEjecutoriaLarga',$FechaEjecutoriaLarga);
+            $templateWord->setValue('TipoDocumento',$TipoDocumento);
+            $templateWord->setValue('documento',$documento);
+            $templateWord->setValue('Obligacion',$Obligacion);
+            $templateWord->setValue('PiePagina',$PiePagina);
+            $templateWord->setValue('Abogado',$Abogado);
+            $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
+            $templateWord->setValue('usuario',$usuario);
+            $templateWord->setValue('SeccionalCorreo',$SeccionalCorreo);
+            $templateWord->setValue('SeccionalDireccion',$SeccionalDireccion);
+            $templateWord->setValue('SeccionalTelefono',$SeccionalTelefono);
 
+            $templateWord->saveAs('templates_GCC/Persuasivo_'.$this->procesoId.'-'.$key.'.docx');
         }
-                $templateWord->setValue('Seccional',$Seccional);
-                $templateWord->setValue('Sigobius',$Sigobius);
-                $templateWord->setValue('ciudad',$Ciudad);
-                $templateWord->setValue('fecha',$Fecha);   
-                $templateWord->setValue('senor',$Senor);
-                $templateWord->setValue('Sancionado',$Sancionado);
-                $templateWord->setValue('sancionado',$Sancionado);
-                $templateWord->setValue('direccion',$direccion);
-                $templateWord->setValue('sancionadoCiudad',$sancionadoCiudad);
-                $templateWord->setValue('sancionadoEmail',$sancionadoEmail);
-                $templateWord->setValue('Numero',$Numero);
-                $templateWord->setValue('RespetadoSenor',$RespetadoSenor);
-                $templateWord->setValue('Despacho',$Despacho);
-                $templateWord->setValue('FechaEjecutoriaLarga',$FechaEjecutoriaLarga);
-                $templateWord->setValue('TipoDocumento',$TipoDocumento);
-                $templateWord->setValue('documento',$documento);
-                $templateWord->setValue('Obligacion',$Obligacion);
-                $templateWord->setValue('PiePagina',$PiePagina);
-                $templateWord->setValue('Abogado',$Abogado);
-                $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
-                $templateWord->setValue('usuario',$usuario);
-                $templateWord->setValue('SeccionalCorreo',$SeccionalCorreo);
-                $templateWord->setValue('SeccionalDireccion',$SeccionalDireccion);
-                $templateWord->setValue('SeccionalTelefono',$SeccionalTelefono);
-
-        //$info= DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);    
         
-        //print_r($info2);
-        //exit();
-        /*
-        $nombre = "JuannnchoooPolooo";
-        $direccion = "Mi direcci�n";
-        $municipio = "Mrd";
-        $provincia = "Bdj";
-        $cp = "02541";
-        $telefono = "24536784";
 
-
-        // --- Asignamos valores a la plantilla
-        $templateWord->setValue('sancionado',$nombre);
-        $templateWord->setValue('direccion_empresa',$direccion);
-        $templateWord->setValue('municipio_empresa',$municipio);
-        $templateWord->setValue('provincia_empresa',$provincia);
-        $templateWord->setValue('cp_empresa',$cp);
-        $templateWord->setValue('telefono_empresa',$telefono);
-        */
-
+        
         // --- Guardamos el documento
-        $templateWord->saveAs('templates_GCC/Persuasivo_'.$this->procesoId.'.docx');
+        //$templateWord->saveAs('templates_GCC/Persuasivo_'.$this->procesoId.'.docx');
         //$templateWord->saveAs('templates_GCC/Persuasivo.pdf','PDF');
 
 
@@ -199,8 +153,7 @@ class plantillas {
         file_get_contents('templates_GCC/Persuasivo.docx');
         //echo "Hola desde MiClase";
         
-    }
-}
-
         
+    }   
+}       
 ?>
