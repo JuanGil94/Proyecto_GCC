@@ -233,9 +233,9 @@ class reliquidacion extends CalendarioAnual{
     public function getSuma(){
             return $this->suma;
     }
-    public function getinteresesSuma(){
+    public function getInteresesSuma(){
         return $this->sumaTotalDiaria;
-}
+    }
     public function Calcular(){
         //$result["total"]="perrosss";
         //$result["txt"] = " Juazzzzzworld!";
