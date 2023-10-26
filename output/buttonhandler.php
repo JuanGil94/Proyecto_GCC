@@ -554,7 +554,8 @@ function buttonHandler_New_Button3($params)
 	// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
 include_once (getabspath("plantillaGCC.php"));
-$objeto=new plantillas($params["ProcesoId"]);
+//$objeto=new plantillas($params["ProcesoId"]);
+$objeto=new plantillas(834954);
 switch($params["OficioId"]){
 	case "1097":
 		$log=$objeto->persuasivo();
