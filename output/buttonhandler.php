@@ -555,10 +555,14 @@ function buttonHandler_New_Button3($params)
 //$result["txt"] = $params["txt"]." world!";
 include_once (getabspath("plantillaGCC.php"));
 //$objeto=new plantillas($params["ProcesoId"]);
-$objeto=new plantillas(834954);
+//echo "Value ".$params["OficioId"];
+$objeto=new plantillas($params["ProcesoId"],$params["OficioId"],$params["obligacionLetras"]);
 switch($params["OficioId"]){
 	case "1097":
 		$log=$objeto->persuasivo();
+	break;
+	case "4328":
+		$log=$objeto->resMandPago();
 	break;
 	default:
 		echo "Opcion no homologada o no reconocida";

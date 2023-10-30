@@ -199,7 +199,8 @@ return true;
 function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
-		echo "<script>alert('EL REGISTRO FUE REALIZADO CON EXITO');</script>"
+		
+echo "<script>alert('EL REGISTRO FUE REALIZADO CON EXITO');</script>"
 ;
 } // function AfterAdd
 
