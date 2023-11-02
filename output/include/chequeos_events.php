@@ -200,7 +200,21 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
 		
-echo "<script>alert('EL REGISTRO FUE REALIZADO CON EXITO');</script>"
+/*
+echo "<script>var confirm1;
+confirm1=confirm('EL REGISTRO FUE REALIZADO CON EXITO');
+if(confirm1)
+{
+		//console.log ('ingresooo');
+    //location.reload();
+		//pageObj.reload({a:'reload'});
+		//location.reload();
+		//window.location.href ='http://localhost:8086/chequeos_list.php?a=reload&';
+		//window.location.href = window.location.href;
+		//window.location.href ='http://localhost:8086/chequeos_list.php?a=return&fly=1&';
+		//window.location.href ='http://localhost:8086/chequeos_list.php';
+}</script>"
+*/
 ;
 } // function AfterAdd
 
