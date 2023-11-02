@@ -564,6 +564,27 @@ switch($params["OficioId"]){
 	case "4328":
 		$log=$objeto->resMandPago();
 	break;
+	case "4329":
+		$log=$objeto->citMandPago();
+	break;
+	case "4600":
+		$log=$objeto->susTerm();
+	break;
+	case "4450":
+		$log=$objeto->resSusTerm();
+	break;
+	case "4498":
+		$log=$objeto->notMandPago();
+	break;
+	case "4502":
+		$log=$objeto->constNotAvi();
+	break;
+	case "4337":
+		$log=$objeto->resTermOrden();
+	break;
+	case "4361":
+		$log=$objeto->notCorMandPago();
+	break;
 	default:
 		echo "Opcion no homologada o no reconocida";
 		break;
