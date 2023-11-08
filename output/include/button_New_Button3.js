@@ -1,5 +1,5 @@
 
-Runner.buttonEvents["New_Button3"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='New_Button3';if(!pageObj.buttonEventBefore['New_Button3']){pageObj.buttonEventBefore['New_Button3']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["ProcesoId"]=834954;params["OficioId"]=row.getFieldValue("OficioId");obligacion=$.ajax({type:"method",url:"consultas.php?w1="+params["ProcesoId"],dataType:'text',async:false,success:function(response){console.log("enviado valor de select por GET");}}).responseText;obligacion=Number(obligacion);function Unidades(num){switch(num)
+Runner.buttonEvents["New_Button3"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='New_Button3';if(!pageObj.buttonEventBefore['New_Button3']){pageObj.buttonEventBefore['New_Button3']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["ProcesoId"]=834954;params["OficioId"]=row.getFieldValue("OficioId");obligacion=$.ajax({type:"method",url:"consultas.php?w1="+params["ProcesoId"],dataType:'text',async:false,success:function(response){console.log("enviado valor de select por GET");}}).responseText;obligacionTotal=$.ajax({type:"method",url:"consultas.php?w2="+params["ProcesoId"],dataType:'text',async:false,success:function(response){console.log("enviado valor de select por GET");}}).responseText;obligacion=Number(obligacion);obligacionTotal=Number(obligacionTotal);function Unidades(num){switch(num)
 {case 1:return"UN";case 2:return"DOS";case 3:return"TRES";case 4:return"CUATRO";case 5:return"CINCO";case 6:return"SEIS";case 7:return"SIETE";case 8:return"OCHO";case 9:return"NUEVE";}
 return"";}
 function Decenas(num){decena=Math.floor(num/10);unidad=num-(decena*10);switch(decena)
@@ -36,7 +36,7 @@ data.letrasCentavos="CON "+NumeroALetras(data.centavos,true);if(data.enteros==0)
 return"CERO "+data.letrasMonedaPlural+" "+data.letrasCentavos;if(data.enteros==1)
 return Millones(data.enteros)+" "+data.letrasMonedaSingular+" "+data.letrasCentavos;else
 return Millones(data.enteros)+" "+data.letrasMonedaPlural+" "+data.letrasCentavos;}
-params["obligacionLetras"]=NumeroALetras(obligacion);console.log("Valueeee: "+params["obligacionLetras"]);}}
-if(!pageObj.buttonEventAfter['New_Button3']){pageObj.buttonEventAfter['New_Button3']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;swal({icon:"success",text:" Se genera la impresion Correctamente"}).then(function(value){switch(value){default:location.reload();break;}});}}
+params["obligacionLetras"]=NumeroALetras(obligacion);params["obligacionTotalLetras"]=NumeroALetras(obligacionTotal);}}
+if(!pageObj.buttonEventAfter['New_Button3']){pageObj.buttonEventAfter['New_Button3']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;}}
 $('a[id="New_Button3"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
 this.id="New_Button3"+"_"+Runner.genId();var button_New_Button3=new Runner.form.Button({id:this.id,btnName:"New_Button3"});button_New_Button3.init({args:[pageObj,proxy,pageid]});});};
