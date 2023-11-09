@@ -576,7 +576,7 @@ $tdataoficios1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -592,8 +592,7 @@ $tdataoficios1[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -618,7 +617,8 @@ $tdataoficios1[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypesHtml"] = "";
 
@@ -627,7 +627,7 @@ $tdataoficios1[".hideMobileList"] = array();
 	
 	
 	
-				$edata["nRows"] = 100;
+				$edata["nRows"] = 1000;
 			$edata["nCols"] = 200;
 
 	
