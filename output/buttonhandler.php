@@ -606,6 +606,12 @@ switch($params["OficioId"]){
 	case "1090":
 		$log=$objeto->comTerProcSanc();
 	break;
+	case "4416":
+		$log=$objeto->resAvoPresTerMjdCer();
+	break;
+	case "4547":
+		$log=$objeto->persCostJudSig();
+	break;
 	default:
 		echo "Opcion no homologada o no reconocida";
 		break;
@@ -666,9 +672,13 @@ function buttonHandler_New_Button4($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
+/*
 include_once (getabspath("libs/mPDF/example.php"));
 $objeto2=new pdf();
 $objeto2->generar();
+*/
+
+echo '<iframe src="https://sigobwebcsj.ramajudicial.gov.co/cache/APICorrespondencia/43e8f2b9-2e09-48e5-a524-8ef998ce5469-f.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>'
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
