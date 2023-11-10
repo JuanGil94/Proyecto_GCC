@@ -6,6 +6,7 @@ require_once dirname(__FILE__).'/libs/PHPWord-master/src/PhpWord/Autoloader.php'
 use PhpOffice\PhpWord\TemplateProcessor;
 
 class diccionario {
+    public $procesoId;
     public function process ($procesoId,$oficioId){
         //echo "value".$oficioId;
         $this->procesoId=$procesoId;
@@ -50,12 +51,13 @@ class diccionario {
         }
 
         $consulta=DB::Query("SELECT
+        IIF (SA.Masculino=1,'identificado','identificada') AS 'identificado',
         IIF (SA.Masculino=1,'al señor','a la señora') AS 'alsenor',
         IIF (SA.Masculino=1,'El señor','la señora') AS 'ElSenor',
         IIF (SA.Masculino=1,'Respestado Señor','Respetada Señora') AS 'RespetadoSenor',
         IIF (SA.Masculino=1,'Señor','Señora')AS 'Senor',
         SA.Sancionado AS 'Sancionado',TD.TipoDocumento AS 'TipoDocumento',
-        SA.Documento AS 'Documento',
+        SA.Documento AS 'documento',
         SA.Email AS 'SancionadoEmail'
         FROM Sancionados SA
         INNER JOIN Procesos P ON SA.SancionadoId = P.SancionadoId
@@ -67,12 +69,13 @@ class diccionario {
             $info["RespetadoSenor"]=$date["RespetadoSenor"];
             $info["Senor"]=$date["Senor"];
             $info["TipoDocumento"]=$date["TipoDocumento"];
-            $info["Documento"]=$date["Documento"];
+            $info["documento"]=$date["documento"];
             $info["SancionadoEmail"]=$date["SancionadoEmail"];
             $info["Sancionado"]=$date["Sancionado"];
             $info["alsenor"]=$date["alsenor"];
             $info["ElSenor"]=$date["ElSenor"];
             $info["Costas"]=$date["Costas"];
+            $info["identificado"]=$date["identificado"];
         }
         $consulta=DB::Query("
         SELECT Radicado + ' de ' + FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Resolucion' 
@@ -160,7 +163,6 @@ class diccionario {
             $info["Abogado"]=$date["Abogado"];
             $info["AbogadoEjecutor"]=$date["AbogadoEjecutor"];
             $info["ElAbogadoEjecutor"]=$date["ElAbogadoEjecutor"];
-            $info["identificado"]=$date["identificado"];
         }
 
         $consulta=DB::Query("SELECT U.UserName AS 'usuario' FROM Correspondencias C
@@ -465,7 +467,7 @@ class plantillas extends diccionario{
             $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
             $templateWord->setValue('usuario',$usuario);
             //$templateWord->saveAs('templates_GCC/Persuasivo_'.$this->procesoId.'.docx');
-            $templateWord->saveAs('templates_GCC/notMandPago_'.$this->procesoId.'-'.$key.'.docx');
+            $templateWord->saveAs('templates_GCC/notMandPago_'.$this->procesoId.'.docx');
              
     }
     public function constNotAvi() {
@@ -481,8 +483,8 @@ class plantillas extends diccionario{
             $Numero=$value["Numero"];
             $PiePagina=$value["PiePagina"];
             $AbogadoEjecutor=$value["AbogadoEjecutor"];
-            $documento=$documento["usuario"];
-            $Abogado=$documento["Abogado"];
+            $usuario=$value["usuario"];
+            $Abogado=$Abogado["Abogado"];
         }
         //$direcciones=parent::direcciones();
         //echo "Numero de Direcciones:".$length=count($direcciones);
@@ -538,7 +540,6 @@ class plantillas extends diccionario{
             $templateWord->setValue('Concepto',$Concepto);
             $templateWord->setValue('Sancionado',$Sancionado);
             $templateWord->setValue('ElAbogadoEjecutor',$ElAbogadoEjecutor);
-            $templateWord->setValue('Obligacion',$Obligacion);
             $templateWord->setValue('Numero',$Numero);
             $templateWord->setValue('Despacho',$Despacho);
             $templateWord->setValue('TipoDocumento',$TipoDocumento);
@@ -555,7 +556,6 @@ class plantillas extends diccionario{
         $value=parent::process($this->procesoId,$this->oficioId);
         //print_r ($value);
         foreach($value as $param=>$date){
-            $ObligacionLetras=$this->obligacionLetras;
             $Seccional=$value["Seccional"];
             $Sigobius=$value["Sigobius"];
             $Ciudad=$value["Ciudad"];
@@ -642,7 +642,7 @@ class plantillas extends diccionario{
             $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
             $templateWord->setValue('usuario',$usuario);
             $templateWord->setValue('Despacho',$Despacho);
-            $templateWord->saveAs('templates_GCC/citMandPago_'.$this->procesoId.'-'.$key.'.docx');
+            $templateWord->saveAs('templates_GCC/citMandPago_'.$this->procesoId.'.docx');
         
     }
     public function epsSigob() {
@@ -1026,5 +1026,123 @@ class plantillas extends diccionario{
             $templateWord->saveAs('templates_GCC/persCostJudSig_'.$this->procesoId.'-'.$key.'.docx');
         }      
     }
+    public function modParOtrTipOfiSig() {
+        //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_4438.docx');
+        $value=parent::process($this->procesoId,$this->oficioId);
+        //print_r ($value);
+        foreach($value as $param=>$date){
+           $Seccional=$value["Seccional"];
+           $Sigobius=$value["Sigobius"];
+           $Ciudad=$value["Ciudad"];
+           $Fecha=$value["Fecha"];
+           $Numero=$value["Numero"];
+           $PiePagina=$value["PiePagina"];
+           $AbogadoEjecutor=$value["AbogadoEjecutor"];
+           $usuario=$value["usuario"];
+           $Abogado=$value["Abogado"];
+        }
+        //$direcciones=parent::direcciones();
+        //echo "Numero de Direcciones:".$length=count($direcciones);
+        $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4438.docx');
+            $templateWord->setValue('Seccional',$Seccional);
+            $templateWord->setValue('Sigobius',$Sigobius);
+            $templateWord->setValue('Ciudad',$Ciudad);
+            $templateWord->setValue('Fecha',$Fecha);   
+            $templateWord->setValue('PiePagina',$PiePagina);
+            $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
+            $templateWord->setValue('usuario',$usuario);
+            $templateWord->setValue('Abogado',$Abogado);
+            $templateWord->setValue('Numero',$Numero);       
+            $templateWord->saveAs('templates_GCC/modParOtrTipOfiSig_'.$this->procesoId.'.docx');
+    }
+    public function desComiSig() {
+        //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_4365.docx');
+        $value=parent::process($this->procesoId,$this->oficioId);
+        //print_r ($value);
+        foreach($value as $param=>$date){
+           $Seccional=$value["Seccional"];
+           $Sigobius=$value["Sigobius"];
+           $Ciudad=$value["Ciudad"];
+           $Fecha=$value["Fecha"];
+           $Numero=$value["Numero"];
+           $PiePagina=$value["PiePagina"];
+           $ElAbogadoEjecutor=$value["El AbogadoEjecutor"];
+           $usuario=$value["usuario"];
+           $Abogado=$value["Abogado"];
+           $ElSenor=$value["ElSenor"];
+           $Sancionado=$value["Sancionado"];
+           $TipoDocumento=$value["TipoDocumento"];
+           $documento=$value["documento"];
+           $SeccionalCorreo=$value["SeccionalCorreo"];
+           $AbogadoEjecutor=$value["AbogadoEjecutor"];
+        }
+        //$direcciones=parent::direcciones();
+        //echo "Numero de Direcciones:".$length=count($direcciones);
+        $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4365.docx');
+            $templateWord->setValue('Seccional',$Seccional);
+            $templateWord->setValue('Sigobius',$Sigobius);
+            $templateWord->setValue('Ciudad',$Ciudad);
+            $templateWord->setValue('Fecha',$Fecha);   
+            $templateWord->setValue('PiePagina',$PiePagina);
+            $templateWord->setValue('ElAbogadoEjecutor',$ElAbogadoEjecutor);
+            $templateWord->setValue('usuario',$usuario);
+            $templateWord->setValue('Abogado',$Abogado);
+            $templateWord->setValue('Numero',$Numero);
+            $templateWord->setValue('ElSenor',$ElSenor);
+            $templateWord->setValue('Sancionado',$Sancionado);
+            $templateWord->setValue('TipoDocumento',$TipoDocumento);
+            $templateWord->setValue('documento',$documento);
+            $templateWord->setValue('SeccionalCorreo',$SeccionalCorreo);
+            $templateWord->setValue('AbogadoEjecutor',$AbogadoEjecutor);
+            $templateWord->saveAs('templates_GCC/desComiSig_'.$this->procesoId.'.docx');
+    } 
+    public function resEmbSumDin() {
+        //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_4347.docx');
+        $value=parent::process($this->procesoId,$this->oficioId);
+        //print_r ($value);
+        foreach($value as $param=>$date){
+           $ObligacionTotalLetras=$this->obligacionTotalLetras;
+           $ObligacionTotal=$value["ObligacionTotal"];
+           $ObligacionLetras=$this->obligacionLetras;
+           $Seccional=$value["Seccional"];
+           $Sigobius=$value["Sigobius"];
+           $Ciudad=$value["Ciudad"];
+           $Fecha=$value["Fecha"];
+           $Numero=$value["Numero"];
+           $PiePagina=$value["PiePagina"];
+           $ElAbogadoEjecutor=$value["ElAbogadoEjecutor"];
+           $usuario=$value["usuario"];
+           $Abogado=$value["Abogado"];
+           $ElSenor=$value["ElSenor"];
+           $Sancionado=$value["Sancionado"];
+           $TipoDocumento=$value["TipoDocumento"];
+           $documento=$value["documento"];
+           $Obligacion=$value["Obligacion"];
+           $identificado=$value["identificado"];
+           
+        }
+        //$direcciones=parent::direcciones();
+        //echo "Numero de Direcciones:".$length=count($direcciones);
+        $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4347.docx');
+            $templateWord->setValue('Seccional',$Seccional);
+            $templateWord->setValue('Sigobius',$Sigobius);
+            $templateWord->setValue('Ciudad',$Ciudad);
+            $templateWord->setValue('Fecha',$Fecha);   
+            $templateWord->setValue('PiePagina',$PiePagina);
+            $templateWord->setValue('ElAbogadoEjecutor',$ElAbogadoEjecutor);
+            $templateWord->setValue('usuario',$usuario);
+            $templateWord->setValue('Abogado',$Abogado);
+            $templateWord->setValue('Numero',$Numero);
+            $templateWord->setValue('ElSenor',$ElSenor);
+            $templateWord->setValue('Sancionado',$Sancionado);
+            $templateWord->setValue('TipoDocumento',$TipoDocumento);
+            $templateWord->setValue('documento',$documento);
+            $templateWord->setValue('Obligacion',$Obligacion);
+            $templateWord->setValue('identificado',$identificado);
+            $templateWord->setValue('ObligacionTotal',$ObligacionTotal); 
+            $templateWord->setValue('ObligacionLetras',$ObligacionLetras);
+            $templateWord->setValue('ObligacionTotalLetras',$ObligacionTotalLetras);
+            $templateWord->saveAs('templates_GCC/resEmbSumDin_'.$this->procesoId.'.docx');
+    } 
 }
 ?>

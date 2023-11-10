@@ -612,6 +612,15 @@ switch($params["OficioId"]){
 	case "4547":
 		$log=$objeto->persCostJudSig();
 	break;
+	case "4438":
+		$log=$objeto->modParOtrTipOfiSig();
+	break;
+	case "4365":
+		$log=$objeto->desComiSig();
+	break;
+	case "4347":
+		$log=$objeto->resEmbSumDin();
+	break;
 	default:
 		echo "Opcion no homologada o no reconocida";
 		break;
@@ -678,7 +687,7 @@ $objeto2=new pdf();
 $objeto2->generar();
 */
 
-echo '<iframe src="https://sigobwebcsj.ramajudicial.gov.co/cache/APICorrespondencia/43e8f2b9-2e09-48e5-a524-8ef998ce5469-f.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>'
+//echo '<iframe src="https://sigobwebcsj.ramajudicial.gov.co/cache/APICorrespondencia/43e8f2b9-2e09-48e5-a524-8ef998ce5469-f.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>'
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
