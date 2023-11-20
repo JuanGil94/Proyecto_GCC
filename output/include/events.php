@@ -29,6 +29,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["dbo_Chequeos_snippet"] = true;
 		$this->events["dbo_Correspondencias_snippet"] = true;
 		$this->events["dbo_Chequeos_snippet1"] = true;
+		$this->events["dbo_Liquidaciones_snippet"] = true;
 
 
 
@@ -135,6 +136,24 @@ $str.="</select>
     </div>";
 $str.="</div>";
 echo $str;
+	;
+}
+	function event_dbo_Liquidaciones_snippet(&$params)
+	{
+	// Put your code here.
+echo '<label for="miInput">Abono Inicial: </label>
+<input type="number" id="" name="" style="">
+<label for="miLista">Periodo: </label>
+<select id="" name="">
+    <option value="1">MENSUAL</option>
+    <option value="2">BIMESTRAL</option>
+    <option value="3">TRIMESTRAL</option>
+    <option value="4">MENSUAL</option>
+</select>
+<label for="miInput">No. Cuotas: </label>
+<input type="number" id="" name="" style="">
+<label for="fechaSeleccionada">Fecha Inicial:</label>
+<input type="date" id="fechaSeleccionada" name="fecha">';
 	;
 }
 

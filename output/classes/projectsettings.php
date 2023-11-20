@@ -3710,6 +3710,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "autorizaciones" ] = "dbo.Autorizaciones";
 	$projectEntities[ "dbo.Genero" ] = array( "url" => "genero", "type" => 0 );
 	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
+	$projectEntities[ "dbo.Liquidaciones" ] = array( "url" => "liquidaciones", "type" => 0 );
+	$projectEntitiesReverse[ "liquidaciones" ] = "dbo.Liquidaciones";
 }
 
 function findTable( $table ) {

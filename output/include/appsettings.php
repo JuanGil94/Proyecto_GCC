@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1200_1698757010";
+$projectBuildKey = "1226_1699633835";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "1200";
+$projectBuildNumber = "1226";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -854,6 +854,7 @@ $tableCaptions["Spanish"]["dbo_OperacionTipo"] = "Operacion Tipo";
 $tableCaptions["Spanish"]["dbo_Ciudades1"] = "Ciudades1";
 $tableCaptions["Spanish"]["dbo_Autorizaciones"] = "Autorizaciones";
 $tableCaptions["Spanish"]["dbo_Genero"] = "Genero";
+$tableCaptions["Spanish"]["dbo_Liquidaciones"] = "Liquidaciones";
 
 
 $globalEvents = new class_GlobalEvents;

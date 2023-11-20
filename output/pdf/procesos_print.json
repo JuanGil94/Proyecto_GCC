@@ -2456,6 +2456,11 @@ pdfDocument = {
 			{$displayDetailTable_correspondencias }
 		{END details_correspondencias},
 				
+				
+			 {BEGIN details_liquidaciones}
+			{$displayDetailTable_liquidaciones }
+		{END details_liquidaciones},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

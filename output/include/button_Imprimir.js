@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Imprimir"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Imprimir';if(!pageObj.buttonEventBefore['Imprimir']){pageObj.buttonEventBefore['Imprimir']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Imprimir']){pageObj.buttonEventAfter['Imprimir']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Imprimir"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Imprimir"+"_"+Runner.genId();var button_Imprimir=new Runner.form.Button({id:this.id,btnName:"Imprimir"});button_Imprimir.init({args:[pageObj,proxy,pageid]});});};
