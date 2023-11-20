@@ -704,6 +704,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Liquidaciones")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1357,6 +1361,10 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.Genero")
+		{
+			return false;
+		}
+		if($table=="dbo.Liquidaciones")
 		{
 			return false;
 		}

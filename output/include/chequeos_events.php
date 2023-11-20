@@ -20,6 +20,11 @@
 
 
 
+		$this->events["CustomEdit"]=true;
+
+		$this->events["AfterEdit"]=true;
+
+
 	}
 
 //	handlers
@@ -289,6 +294,225 @@ if(confirm1)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Custom record update
+function CustomEdit(&$values, $where, &$oldvalues, &$keys, &$error, $inline, $pageObject)
+{
+
+		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
+unset($values["CantidadLetras"]);
+$values["Fecha"]=now();
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function CustomEdit
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record updated
+function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
+{
+
+		$pageObject->setProxyValue('saved', true);  
+$pageObject->stopPRG = true;
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterEdit
+
 		
 		
 		

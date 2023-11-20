@@ -1055,6 +1055,13 @@
 					Reliquidaciones				</label>
 			</div>
 			{END print_details_reliquidaciones}
+														{BEGIN print_details_liquidaciones}
+			<div>
+				<label for="printDetailsliquidaciones{$id}">
+					<input type="checkbox" value="liquidaciones" id="printDetailsliquidaciones{$id}" checked>
+					Liquidaciones				</label>
+			</div>
+			{END print_details_liquidaciones}
 						</div>
 </div>
 {END print_details}
@@ -3363,9 +3370,9 @@
 	>
 
 	 
-														<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="correspondencias,solidarios,actuaciones1,llamadas,medidas,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones"
-			data-details-correspondencias			data-details-solidarios			data-details-actuaciones1			data-details-llamadas			data-details-medidas			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones	>
+															<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="correspondencias,solidarios,actuaciones1,llamadas,medidas,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,liquidaciones"
+			data-details-correspondencias			data-details-solidarios			data-details-actuaciones1			data-details-llamadas			data-details-medidas			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-liquidaciones	>
 		<span data-details-inside data-short-table="correspondencias">
 			</span>
 		<span data-details-inside data-short-table="solidarios">
@@ -3390,10 +3397,13 @@
 			</span>
 		<span data-details-inside data-short-table="reliquidaciones">
 			</span>
+		<span data-details-inside data-short-table="liquidaciones">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

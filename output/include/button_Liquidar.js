@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Liquidar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Liquidar';if(!pageObj.buttonEventBefore['Liquidar']){pageObj.buttonEventBefore['Liquidar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Liquidar']){pageObj.buttonEventAfter['Liquidar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Liquidar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Liquidar"+"_"+Runner.genId();var button_Liquidar=new Runner.form.Button({id:this.id,btnName:"Liquidar"});button_Liquidar.init({args:[pageObj,proxy,pageid]});});};

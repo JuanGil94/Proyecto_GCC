@@ -371,7 +371,7 @@ $tdataprocesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -12792,6 +12792,36 @@ $detailsTablesData["dbo.Procesos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "correspondencias";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Correspondencias");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Procesos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"][]="ProcesoId";
+
+				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
+//	dbo.Liquidaciones
+	
+	
+
+		$dIndex = 12;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Liquidaciones";
+		$detailsParam["dOriginalTable"] = "dbo.Liquidaciones";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "liquidaciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Liquidaciones");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

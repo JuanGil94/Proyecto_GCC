@@ -377,6 +377,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("genero" == $shortTName )
 		return true;
+	if ("liquidaciones" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1210,6 +1212,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Genero";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Liquidaciones");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Liquidaciones";
+	}
 	return $arr;
 }
 
@@ -1306,6 +1317,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Ciudades1";
 	$arr[]="dbo.Autorizaciones";
 	$arr[]="dbo.Genero";
+	$arr[]="dbo.Liquidaciones";
 	return $arr;
 }
 
@@ -2364,6 +2376,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Genero" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Liquidaciones" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

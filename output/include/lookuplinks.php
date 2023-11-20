@@ -838,6 +838,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Tramites"]["autorizaciones.TramiteId"] = array();
 		}
 		$lookupTableLinks["dbo.Tramites"]["autorizaciones.TramiteId"]["edit"] = array("table" => "dbo.Autorizaciones", "field" => "TramiteId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
+			$lookupTableLinks["dbo.Procesos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Procesos"]["liquidaciones.ProcesoId"] )) {
+			$lookupTableLinks["dbo.Procesos"]["liquidaciones.ProcesoId"] = array();
+		}
+		$lookupTableLinks["dbo.Procesos"]["liquidaciones.ProcesoId"]["edit"] = array("table" => "dbo.Liquidaciones", "field" => "ProcesoId", "page" => "edit");
 }
 
 ?>

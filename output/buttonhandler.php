@@ -106,6 +106,36 @@ if($buttId=='New_Button4')
 	}
 	buttonHandler_New_Button4($params);
 }
+if($buttId=='Liquidar')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Liquidar($params);
+}
+if($buttId=='Imprimir')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Imprimir($params);
+}
+if($buttId=='Generar_Acuerdo_de_Pago')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Generar_Acuerdo_de_Pago($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -621,9 +651,93 @@ switch($params["OficioId"]){
 	case "4347":
 		$log=$objeto->resEmbSumDin();
 	break;
+	case "4464":
+		$log=$objeto->NotPorAviResSegAde();
+	break;
+	case "4465":
+		$log=$objeto->notPorCorrResSegAde();
+	break;
+	case "4354":
+		$log=$objeto->citSegAdel();
+	break;
+	case "4484":
+		$log=$objeto->notPorAviOtrRes();
+	break;
+	case "4500":
+		$log=$objeto->inforCoacVari();
+	break;
+	case "1098":
+		$log=$objeto->conInfoDian();
+	break;
+	case "4338":
+		$log=$objeto->resTermAnul();
+	break;
+	case "4566":
+		$log=$objeto->acuPagoSig();
+	break;
 	default:
 		echo "Opcion no homologada o no reconocida";
-		break;
+	break;
+	case "4365":
+		$log=$objeto->desComiSig();
+	break;
+	case "4347":
+		$log=$objeto->resEmbSumDin();
+	break;
+	case "4464":
+		$log=$objeto->NotPorAviResSegAde();
+	break;
+	case "4465":
+		$log=$objeto->notPorCorrResSegAde();
+	break;
+	case "4354":
+		$log=$objeto->citSegAdel();
+	break;
+	case "4484":
+		$log=$objeto->notPorAviOtrRes();
+	break;
+	case "4500":
+		$log=$objeto->inforCoacVari();
+	break;
+	case "1098":
+		$log=$objeto->conInfoDian();
+	break;
+	case "4338":
+		$log=$objeto->resTermAnul();
+	break;
+	case "4366":
+		$log=$objeto->ofiEnvDespCom();
+	break;
+	case "4514":
+		$log=$objeto->respOfiPetVari();
+	break;
+	case "4479":
+		$log=$objeto->resTermMulFall();
+	break;
+	case "4358":
+		$log=$objeto->liqCredCost();
+	break;
+	case "4319":
+		$log=$objeto->solInsEmbInmu();
+	break;
+	case "4527":
+		$log=$objeto->consDesfNotiOtrRes();
+	break;
+	case "4420":
+		$log=$objeto->resSuspProc();
+	break;
+	case "4427":
+		$log=$objeto->notCorrCertOtrRes();
+	break;
+	case "4331":
+		$log=$objeto->resEmbInmu();
+	break;
+	case "4344":
+		$log=$objeto->oficRespDerPeti();
+	break;
+	case "3140":
+		$log=$objeto->solInsEmba();
+	break;
 }
 //$log=$objeto->persuasivo();;
 	RunnerContext::pop();
@@ -688,6 +802,174 @@ $objeto2->generar();
 */
 
 //echo '<iframe src="https://sigobwebcsj.ramajudicial.gov.co/cache/APICorrespondencia/43e8f2b9-2e09-48e5-a524-8ef998ce5469-f.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>'
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Liquidar($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Imprimir($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Generar_Acuerdo_de_Pago($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
