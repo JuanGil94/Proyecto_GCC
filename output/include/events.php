@@ -142,18 +142,36 @@ echo $str;
 	{
 	// Put your code here.
 echo '<label for="miInput">Abono Inicial: </label>
-<input type="number" id="" name="" style="">
+<input type="number" id="abono" name="" style="" value=0>
 <label for="miLista">Periodo: </label>
-<select id="" name="">
+<select id="periodo" name="">
     <option value="1">MENSUAL</option>
     <option value="2">BIMESTRAL</option>
     <option value="3">TRIMESTRAL</option>
-    <option value="4">MENSUAL</option>
+    <option value="4">SEMESTRAL</option>
 </select>
 <label for="miInput">No. Cuotas: </label>
-<input type="number" id="" name="" style="">
+<input type="number" id="noCuotas" name="" style="" value=1>
 <label for="fechaSeleccionada">Fecha Inicial:</label>
-<input type="date" id="fechaSeleccionada" name="fecha">';
+<input type="date" id="fechaInicial" name="fecha">
+<script>
+        // Obtener la fecha actual en el formato YYYY-MM-DD
+        function obtenerFechaActual() {
+            const hoy = new Date();
+            const año = hoy.getFullYear();
+            let mes = hoy.getMonth() + 1;
+            let dia = hoy.getDate();
+
+            // Agregar un cero delante si el mes o día son menores a 10
+            mes = mes < 10 ? "0" + mes : mes;
+            dia = dia < 10 ? "0" + dia : dia;
+
+            return `${año}-${mes}-${dia}`;
+        }
+
+        // Asignar la fecha actual al input date
+        document.getElementById("fechaInicial").value = obtenerFechaActual();
+    </script>';
 	;
 }
 

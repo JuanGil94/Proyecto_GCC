@@ -1984,13 +1984,13 @@ class plantillas extends diccionario{
             $templateWord->setValue('documento',$documento);
             $templateWord->saveAs('templates_GCC/solInsEmba_'.$this->procesoId.'.docx');
     }
+    
     public function acuPagoSig() {
         $value=parent::tablaAcuerdo();
         $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4566.docx');
-
         $templateWord->cloneRow('Capital', count($value));
-
         foreach($value as $date){
+            //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
             $templateWord->setValue('rowValue#'.$date["Cuota"], htmlspecialchars($date["Cuota"]));
             $templateWord->setValue('Capital#'.$date["Cuota"], htmlspecialchars($date["Capital"]));
             $templateWord->setValue('Fecha \@ dd/MM/yyyy#'.$date["Cuota"], htmlspecialchars($date["Fecha"]));
@@ -1998,8 +1998,30 @@ class plantillas extends diccionario{
             $templateWord->setValue('Costas#'.$date["Cuota"], htmlspecialchars($date["Costas"]));
             $templateWord->setValue('InteresesPlazo#'.$date["Cuota"], htmlspecialchars($date["InteresesPlazo"]));
             $templateWord->setValue('Total#'.$date["Cuota"], htmlspecialchars($date["Total"]));
+            $count++;
         }
         $templateWord->saveAs('templates_GCC/acuPagoSig.docx');
-    }    
+    }
+    /*
+    public function acuPagoSig() {
+        function calcularPagoMensual($tasa, $nper, $va) {
+            // Convertir la tasa de interés anual a la tasa de interés por período
+            $tasa_periodo = $tasa / 12 / 100; // Dividir por 12 para obtener la tasa mensual
+        
+            // Calcular el pago mensual utilizando la fórmula de amortización de préstamos
+            $pago = ($tasa_periodo * $va) / (1 - pow(1 + $tasa_periodo, -$nper));
+        
+            return $pago;
+        }
+        
+        // Ejemplo de uso
+        $tasaInteresAnual = 12; // Tasa de interés anual
+        $plazoEnMeses = 12; // Número total de pagos del préstamo
+        $valorPrestamo = 7377170; // Valor presente del préstamo
+        $pagoMensual = calcularPagoMensual($tasaInteresAnual, $plazoEnMeses, $valorPrestamo);
+        
+        echo "El pago mensual necesario es: " . number_format($pagoMensual, 2);
+    } 
+    */
 }
 ?>

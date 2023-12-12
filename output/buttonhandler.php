@@ -856,8 +856,18 @@ function buttonHandler_Liquidar($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
+	include_once (getabspath("classes/pruebaJuan.php"));
+include_once (getabspath("classes/acuerdoPago.php"));
+$recalcular=new reliquidacion($params["ProcesoId"]);
+//echo "Valor del Proceso: ".$params["ProcesoId"];
+$recalcular->CalcularAcuerdo($params["fechaInicial"]);
+//$recalcular->Calcular();
+$obligacionInicial=$recalcular->obligacionInicial;
+$costas=$recalcular->costas;
+$costSumInt=$recalcular->getInterSumCost();
+$acuerdoPago = new AcuerdoPago($params["ProcesoId"],$params["noCuotas"],$params["fechaInicial"],$params["abono"],$params["periodo"],$obligacionInicial,$costSumInt,$costas);
+$acuerdoPago->calcularAcuerdo();
+//echo "Valor InteresesObligacion fuera de la clase: ".$result["total"];
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);

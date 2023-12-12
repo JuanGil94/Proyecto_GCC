@@ -298,8 +298,9 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 		include_once (getabspath("classes/pruebaJuan.php"));
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
+//echo "El valor del PagoId es:".$values["PagoId"]; 
 $recalcular->Calcular();
-$proxy["saved"]=true;
+//$proxy["saved"]=true;
 //echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
 /*
 echo '<script>if (confirm("Registro de recaudos realizado.")) {

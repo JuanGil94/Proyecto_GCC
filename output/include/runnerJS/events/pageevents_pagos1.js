@@ -1,2 +1,2 @@
 
-Runner.pages.PageSettings.addPageEvent('dbo.Pagos1',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){if(proxy["saved"]){swal({icon:"success",text:"El recaudo se agrego con exito y se reliquida el proceso"}).then(function(value){switch(value){default:location.reload();break;}});}});
+Runner.pages.PageSettings.addPageEvent('dbo.Pagos1',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){this.on('afterSave',function(formObj,fieldControlsArr,pageObj){swal({icon:"success",text:"Se Agrega el recaudo correctamente"}).then(function(value){switch(value){default:location.reload();break;}});});});

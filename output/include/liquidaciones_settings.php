@@ -478,7 +478,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "ProcesoId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Numero";
+	$edata["DisplayField"] = "ProcesoId";
 
 	
 

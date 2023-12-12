@@ -13,3 +13,6 @@ pdfRendererPath =
 
 defaultFontName = Arial
 defaultFontSize = 10
+
+set_time_limit(600)
+max_execution_time=600
