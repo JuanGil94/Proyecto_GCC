@@ -244,7 +244,8 @@ class reliquidacion extends CalendarioAnual{
         $costF=round($this->costas,2);
         $sumaF=round($this->sumaTotalDiaria,2);
         $sumaCosInt=$costF+$sumaF;
-        //echo "Value: ".$this->sumaTotalDiaria;
+        //$sumaCosInt;
+        $this->sumaTotalDiaria;
         return $sumaCosInt;
     }
     public function Calcular(){
@@ -810,20 +811,7 @@ class reliquidacion extends CalendarioAnual{
     //La funcion CalcularAcuerdo es la misma que Calcular solo que se calcula con fechas futuras a la
     //ejecutoria, por ende cambio reralizado en Calcular se debe hacer en CalcularAcuerdo ya que estas, calculan los intereses de Mora
     public function CalcularAcuerdo($fechaInicioAcuerdo){
-        //$result["total"]="perrosss";
-        //$result["txt"] = " Juazzzzzworld!";
-        //$result["txt"] = $params["txt"]." world!";
-        //$numero=1006163;
-        //$numero=1004469; //segundo numero que cuadra (no) really
-        //$result["valor"]=10000;
         $numero=$this->procesoId;
-        //$numero=$params["ProcesoId"];
-        //$numero=1006163; //caso que si da exacto a produccion
-        //$numero=885865;
-        //$numero=600134; //proceso con muchos recaudos MEDELLIN-EJEMPLARIZANTE
-        //$numero=770212; //Proceso con recaudos varios DEAJ-CORRIENTE ACUERDO DE PAGO
-        //$numero=885865; //proceso con recaudos varios DEAJ-CORRIENTE
-        //$result["total"]=10000;
         $numero=intval($numero);
         $infoProceso=$this->infoProceso($numero); //se obtiene la info del proceso
         foreach($infoProceso as $date){
@@ -905,6 +893,7 @@ class reliquidacion extends CalendarioAnual{
                 $inteReca=0;
                 $costReca=0;
                 if ($annoEje==$annoHasta && ($mesDesde<$mes&&$mes<$mesHasta)){
+                    //echo "ingreso 1";
                     $elementos=range(1,$dias);
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorCorte=0;
@@ -961,6 +950,7 @@ class reliquidacion extends CalendarioAnual{
                     $this->insertRe($numero,$fechaBase,$diasS,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);  
                 }
                 else if ($annoEje==$annoHasta && $mes==$mesHasta){
+                    //echo "ingreso 2";
                     $numDiasMesAct=$dias-$diaHasta;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
@@ -1020,6 +1010,7 @@ class reliquidacion extends CalendarioAnual{
                     $this->insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);  
                 }
                 else if ($annoEje==$annoDesde && $mes==$mesDesde){
+                    //echo "ingreso 3";
                     $numDiasMesAct=$diaDesde-1;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
@@ -1082,10 +1073,14 @@ class reliquidacion extends CalendarioAnual{
                      
                 }
                 else if($mesEje==$mes && $annobase==$annoEje){
+                    //echo "ingreso suaaaa";
                     //echo "Holaaaa";
                     $numDiasMesAct=$dias-$diaEje;
                     if ($annoAct==$annoEje && $mesAct==$mes){
+                        //echo "dia actual: ".$diaAct;
+                        //echo "dia ejecutor: ".$diaEje;
                         $numDiasMesAct=$diaAct-$diaEje;
+                        //echo "nuemro de dias".$numDiasMesAct;
                     }
                     //echo $numDiasMesAct;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
@@ -1153,15 +1148,23 @@ class reliquidacion extends CalendarioAnual{
                     //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;
                     //$obligacion=$obligacion-$obliPor;
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),4);
+                    if ($mes==12){
+                        //echo "ingresa a calcular";
+                        $result["total"]=round($sumaTotalDiaria+$obligacion+$costSald,2);
+                        $this->suma=$result["total"];
+                        $this->sumaTotalDiaria=$sumaTotalDiaria; 
+                    }
                     ///echo "<br><strong> El año esll: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
                     if ($numDiasMesAct>0){
                         $this->insertRe($numero,$fechaBase,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
                     }
                 }
                 else if ($mesEje>$mes && $annobase==$annoEje){
+                    //echo "ingreso 4 no aplica".$mesEje." - ".$mes;
                     //echo "Este mes: $mes con dias $dias no aplica<br>";
                 }
                 else if ($annoEje==$annoAct && $mes==$mesAct){
+                   // echo "ingreso";
                     $numDiasMesAct1=$diaAct;
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct1*100),2);
@@ -1221,10 +1224,11 @@ class reliquidacion extends CalendarioAnual{
                         $this->suma=$result["total"];
                         $this->sumaTotalDiaria=$sumaTotalDiaria; 
                     }
-                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$dia." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
+                    //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$dia." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
                     $this->insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald); 
                 }
                 else if($annoEje=='2023' && $mes=='09'){
+                    //echo "ingreso 7";
                     $diaSuspe=7;
                     $numDiasMesAct=$dias-$diaSuspe;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
@@ -1288,6 +1292,7 @@ class reliquidacion extends CalendarioAnual{
                     $this->insertRe($numero,$fechaBase,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald); 
                 }
                 else if($annoEje==$annoAct&&$mes>$mesAct){
+                   // echo "ingreso 10";
                     //echo "Este mes: $mes con dias $dias no aplica<br>";
                                 //echo "La suma total es:".$sumaTotalDiaria;
                                 //echo "<script>alert('Holaaaa'+$sumaTotalDiaria);</script>";
@@ -1298,7 +1303,8 @@ class reliquidacion extends CalendarioAnual{
                     //exit();
                 }
                 else{
-                                //echo "Valor de la Tasa para Octubre $tasaDiariaT";
+                    //echo "ingreso 20";
+                    //echo "Valor de la Tasa para Octubre $tasaDiariaT";
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorDias=round(($tasaDiaraT*$obligacion*$dias*100),2);
                     $sumaTotal+=$valorDias;

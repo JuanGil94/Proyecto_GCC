@@ -859,12 +859,18 @@ function buttonHandler_Liquidar($params)
 	include_once (getabspath("classes/pruebaJuan.php"));
 include_once (getabspath("classes/acuerdoPago.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
+//global $pageObject;
 //echo "Valor del Proceso: ".$params["ProcesoId"];
+//$data = $pageObject->getMasterRecord(); //deberia devolver la data de de la tabla master, pero devuelve null como si no fuera tabla master y si lo es
+//$data = $ajax->getCurrentRecord();
+//$result["record"] = $data;
+//print_r($data);
 $recalcular->CalcularAcuerdo($params["fechaInicial"]);
 //$recalcular->Calcular();
 $obligacionInicial=$recalcular->obligacionInicial;
 $costas=$recalcular->costas;
 $costSumInt=$recalcular->getInterSumCost();
+$result["total"]=$costSumInt;
 $acuerdoPago = new AcuerdoPago($params["ProcesoId"],$params["noCuotas"],$params["fechaInicial"],$params["abono"],$params["periodo"],$obligacionInicial,$costSumInt,$costas);
 $acuerdoPago->calcularAcuerdo();
 //echo "Valor InteresesObligacion fuera de la clase: ".$result["total"];
@@ -978,9 +984,10 @@ function buttonHandler_Generar_Acuerdo_de_Pago($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	include_once (getabspath("classes/acuerdoPago.php"));
+$acuerdoP=new AcuerdoPagoFinal($params["ProcesoId"]);
+echo $result["Total"];
+$result["Total"]=$acuerdoP->insertAcuerdo($params[);;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

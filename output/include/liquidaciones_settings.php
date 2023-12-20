@@ -161,7 +161,7 @@ $tdataliquidaciones[".addPageEvents"] = false;
 $tdataliquidaciones[".isUseTimeForSearch"] = false;
 
 
-$tdataliquidaciones[".badgeColor"] = "5F9EA0";
+$tdataliquidaciones[".badgeColor"] = "5f9ea0";
 
 
 $tdataliquidaciones[".allSearchFields"] = array();

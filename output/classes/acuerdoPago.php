@@ -1,6 +1,6 @@
 <?php
 class AcuerdoPago{
-    public $procesoId,$obligacion,$costas,$noCuotas,$periodo,$fechaInicial,$abono;
+    public $procesoId,$obligacion,$costas,$noCuotas,$periodo,$fechaInicial,$abono,$sumaInteres;
     public function __construct($procesoId,$noCuotas,$fechaInicial,$abono,$periodo,$obligacion,$sumaInteres,$costas){
         /*
         echo "<br>valor no. cuotas:".$this->noCuotas=$noCuotas."<br>";
@@ -71,13 +71,21 @@ class AcuerdoPago{
   
         $periodo=intval($this->periodo);
         $noCuotas=intval($this->noCuotas);
-        $obligacion=round($this->obligacion,2);
+        //$obligacion=round($this->obligacion,2);// se debe habilitar cuando no se quiere quemar el valor de la obligacion
         $costas=intval($this->costas);
-        //$sumIntCost=round($this->sumaInteres,2); // se debe habilitar cuando no se quiere quemar el valor
+        $abono=intval($this->abono);
+        //$sumIntCost=round($this->sumaInteres,2); // se debe habilitar cuando no se quiere quemar el valor de los intereses
         $obligacion=5800000.00;
-        $sumIntCost=217495.53;
+        $sumIntCost=162062.79;
+        //$obliFA=$abono*0.951;
+        //$intCostFA=$abono*0.049;
         $tasaInteresAnual = 12; // Tasa de interés anual
         $this->deleteRe($this->procesoId);
+        /*
+        $obliF=$obligacion/$noCuotas;
+        $intCostF=$sumIntCost/$noCuotas;
+        $costas=$costas/$noCuotas;
+        */
         /*
         if (!empty($this->abono))
         {
@@ -92,10 +100,10 @@ class AcuerdoPago{
                 if ($noCuotas<=60){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
-                        $abono=intval($this->abono);
                         $cuota=0;
-                        $obliFA=$abono*0.9639;
-                        $intCostFA=$abono*0.0361;
+                        $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        //$costPor=round(($costas/($obligacion+$costas+$sumIntCost))*$abono,4);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
@@ -156,10 +164,9 @@ class AcuerdoPago{
                 if ($noCuotas<30){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
-                        $abono=intval($this->abono);
                         $cuota=0;
-                        $obliFA=$abono*0.9639;
-                        $intCostFA=$abono*0.0361;
+                        $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
@@ -223,10 +230,9 @@ class AcuerdoPago{
                 if ($noCuotas<20){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
-                        $abono=intval($this->abono);
                         $cuota=0;
-                        $obliFA=$abono*0.9639;
-                        $intCostFA=$abono*0.0361;
+                        $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
@@ -293,10 +299,9 @@ class AcuerdoPago{
                 if ($noCuotas<10){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
-                        $abono=intval($this->abono);
                         $cuota=0;
-                        $obliFA=$abono*0.9639;
-                        $intCostFA=$abono*0.0361;
+                        $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
@@ -362,7 +367,6 @@ class AcuerdoPago{
                 echo "Opcion no homologada o no reconocida";
             break;
         }
-
     }
     public function insertLiqui($cuota,$fecha,$obliF,$intCostF,$costas,$intPlazo,$valorCuota){
         try{
@@ -395,4 +399,53 @@ class AcuerdoPago{
                             exit();
                             }
     }
+}
+
+class AcuerdoPagoFinal extends AcuerdoPago{
+    public $procesoId;
+    public function __construct($procesoId){
+        $this->procesoId = $procesoId;  
+    }
+    public function insertAcuerdo() {
+        $procesoId=intval($this->procesoId);
+        //echo $procesoId;
+        $this->deleteAcuerdo($procesoId);
+        $consulta2=DB::Exec("INSERT INTO Acuerdos (ProcesoId,Fecha,Total,Capital,Intereses,Cuota,Costas,InteresesPlazo)
+        SELECT ProcesoId,Fecha,Total,Capital,Intereses,Cuota,Costas,InteresesPlazo
+        FROM Liquidaciones
+        where ProcesoId=".$procesoId);
+                    if ($consulta2) {
+                //echo "La consulta se realizó correctamente.";
+
+                        return true;
+                    } 
+                    else {
+                // Hubo un error en la ejecución de la consulta
+                            echo "Error al ejecutar la consulta: " . DB::LastError();
+                            exit();
+                            }
+    }
+    public function deleteAcuerdo($procesoId){
+        $consulta=DB::Exec("DELETE FROM Acuerdos WHERE ProcesoId=".$procesoId);
+            if ($consulta) {
+                //echo "La consulta se realizó correctamente.";
+                    } 
+                    else {
+                // Hubo un error en la ejecución de la consulta
+                            echo "Error al ejecutar la consulta de borrar: " . DB::LastError();
+                            exit();
+                            }
+    }
+    public function updateProceso($procesoId){
+        $consulta=DB::Exec("UPDATE Procesos SET EstadoId=3,Liquidacion='".date("d/m/Y")."',Intereses=532355,5172,Cuotas=12,Abono=200000,Inicio='".date("d/m/Y")."',VlrIntereses='19008,9509',Acuerdo='".date("d/m/Y")."',Notificacion='".date("d/m/Y")."',InteresesInicial=532355,1062,VlrIntereses='24542,3422' WHERE ProcesoId=".$procesoId);
+            if ($consulta) {
+                //echo "La consulta se realizó correctamente.";
+                    } 
+                    else {
+                                        // Hubo un error en la ejecución de la consulta
+                            echo "Error al ejecutar la consulta de borrar: " . DB::LastError();
+                            exit();
+                            }
+    }
+
 }

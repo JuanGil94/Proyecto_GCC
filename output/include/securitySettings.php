@@ -287,5 +287,7 @@ $securitySettings_var = array( 'providers' => array( array( 'type' => '%db',
 'adAdminGroups' => array(  ),
 'showUserSource' => false,
 'dbProviderCodes' => array( '00' ),
-'notifications' => array(  ) );
+'notifications' => array( 'enabled' => true,
+'table' => array( 'connId' => 'GCC_at_S00001_CCAD01',
+'table' => 'dbo.usugcc__noti' ) ) );
 ?>
