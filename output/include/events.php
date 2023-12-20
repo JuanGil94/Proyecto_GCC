@@ -141,6 +141,18 @@ echo $str;
 	function event_dbo_Liquidaciones_snippet(&$params)
 	{
 	// Put your code here.
+global $pageObject;
+//echo "Master Info<br>";
+/*
+if ($data = $pageObject->getMasterRecord())
+ {
+  echo "Field1: ".$data["ProcesoId"]."<br>";
+  echo "Field2: ".$data["Obligacion"]."<br>";
+ }
+*/
+$data = $pageObject->getMasterRecord();
+//$data["ProcesoId"];
+echo '<label for="miInput">No. Proceso: </label><input for="miInput" id="procesoId" value="'.$data["ProcesoId"].'" readonly></input>';
 echo '<label for="miInput">Abono Inicial: </label>
 <input type="number" id="abono" name="" style="" value=0>
 <label for="miLista">Periodo: </label>
