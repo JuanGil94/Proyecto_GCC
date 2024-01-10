@@ -986,8 +986,9 @@ function buttonHandler_Generar_Acuerdo_de_Pago($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("classes/acuerdoPago.php"));
 $acuerdoP=new AcuerdoPagoFinal($params["ProcesoId"]);
-echo $result["Total"];
-$result["Total"]=$acuerdoP->insertAcuerdo($params[);;
+//echo "antes del proceso".$result["Total"]."<br>";
+$result["Total"]=$acuerdoP->insertAcuerdo();
+//echo "despues del Proceso".$result["Total"]."y es un tipo".var_dump($result["Total"]);
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
