@@ -708,6 +708,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.usugcc__noti")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1365,6 +1369,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.Liquidaciones")
+		{
+			return false;
+		}
+		if($table=="dbo.usugcc__noti")
 		{
 			return false;
 		}

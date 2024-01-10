@@ -3712,6 +3712,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
 	$projectEntities[ "dbo.Liquidaciones" ] = array( "url" => "liquidaciones", "type" => 0 );
 	$projectEntitiesReverse[ "liquidaciones" ] = "dbo.Liquidaciones";
+	$projectEntities[ "dbo.usugcc__noti" ] = array( "url" => "usugcc__noti", "type" => 0 );
+	$projectEntitiesReverse[ "usugcc__noti" ] = "dbo.usugcc__noti";
 }
 
 function findTable( $table ) {

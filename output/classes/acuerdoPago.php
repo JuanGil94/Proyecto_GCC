@@ -71,12 +71,12 @@ class AcuerdoPago{
   
         $periodo=intval($this->periodo);
         $noCuotas=intval($this->noCuotas);
-        //$obligacion=round($this->obligacion,2);// se debe habilitar cuando no se quiere quemar el valor de la obligacion
+        $obligacion=round($this->obligacion,2);// se debe habilitar cuando no se quiere quemar el valor de la obligacion
         $costas=intval($this->costas);
         $abono=intval($this->abono);
-        //$sumIntCost=round($this->sumaInteres,2); // se debe habilitar cuando no se quiere quemar el valor de los intereses
-        $obligacion=5800000.00;
-        $sumIntCost=162062.79;
+        $sumIntCost=round($this->sumaInteres,2); // se debe habilitar cuando no se quiere quemar el valor de los intereses
+        //$obligacion=5800000.00; //este es para quemar valor de obligacion, se debe habilitar y comntarear $obligacion de arriba
+        //$sumIntCost=162062.79; //este es para quemar valor de sumaIntereses, se debe habilitar y comentarear $sumIntCost de arriba
         //$obliFA=$abono*0.951;
         //$intCostFA=$abono*0.049;
         $tasaInteresAnual = 12; // Tasa de interés anual

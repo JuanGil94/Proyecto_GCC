@@ -379,6 +379,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("liquidaciones" == $shortTName )
 		return true;
+	if ("usugcc__noti" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1221,6 +1223,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Liquidaciones";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.usugcc__noti");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.usugcc__noti";
+	}
 	return $arr;
 }
 
@@ -1318,6 +1329,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Autorizaciones";
 	$arr[]="dbo.Genero";
 	$arr[]="dbo.Liquidaciones";
+	$arr[]="dbo.usugcc__noti";
 	return $arr;
 }
 
@@ -2381,6 +2393,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Liquidaciones" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.usugcc__noti" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
