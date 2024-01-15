@@ -196,9 +196,9 @@ $pages = $tdatachequeos[".defaultPages"];
 
 if( $pages[PAGE_EDIT] ) {
 	$tdatachequeos[".edit"] = true;
-	$tdatachequeos[".afterEditAction"] = 1;
+	$tdatachequeos[".afterEditAction"] = 0;
 	$tdatachequeos[".closePopupAfterEdit"] = 1;
-	$tdatachequeos[".afterEditActionDetTable"] = "";
+	$tdatachequeos[".afterEditActionDetTable"] = "dbo.ChequeosOficios";
 }
 
 if( $pages[PAGE_ADD] ) {
@@ -254,7 +254,7 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 								
 							
 							
-																																																					
+																																																																							
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 

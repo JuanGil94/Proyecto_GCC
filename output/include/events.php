@@ -30,6 +30,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["dbo_Correspondencias_snippet"] = true;
 		$this->events["dbo_Chequeos_snippet1"] = true;
 		$this->events["dbo_Liquidaciones_snippet"] = true;
+		$this->events["dbo_Procesos_snippet"] = true;
 
 
 
@@ -184,6 +185,76 @@ echo '<label for="miInput">Abono Inicial: </label>
         // Asignar la fecha actual al input date
         document.getElementById("fechaInicial").value = obtenerFechaActual();
     </script>';
+	;
+}
+	function event_dbo_Procesos_snippet(&$params)
+	{
+	// Put your code here.
+echo '<button id="btnAbrirModal" class="glyphicon glyphicon-upload btn btn-upload">
+			</button>
+<div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" id="btnCerrarModal">&times;</span>
+            <p>Contenido del modal...</p>
+        </div>
+    </div>
+<style>
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: black;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var btnAbrirModal = document.getElementById("btnAbrirModal");
+    var miModal = document.getElementById("miModal");
+    var btnCerrarModal = document.getElementById("btnCerrarModal");
+
+    // Abrir modal al hacer clic en el botón
+    btnAbrirModal.addEventListener("click", function() {
+        miModal.style.display = "block";
+    });
+
+    // Cerrar modal al hacer clic en la "x"
+    btnCerrarModal.addEventListener("click", function() {
+        miModal.style.display = "none";
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener("click", function(event) {
+        if (event.target == miModal) {
+            miModal.style.display = "none";
+        }
+    });
+});</script>'
 	;
 }
 

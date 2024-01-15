@@ -24,6 +24,8 @@
 
 		$this->events["AfterEdit"]=true;
 
+		$this->events["BeforeEdit"]=true;
+
 
 	}
 
@@ -67,6 +69,8 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 		if ($data["Procesado"]==1){ 
   //$record["ChequeoId_css"].='background:yellow';
 	$pageObject->hideItem("button_crear", $recordId);
+	$pageObject->hideItem("grid_edit", $recordId);
+	$pageObject->hideItem("grid_checkbox", $recordId);
 }
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -513,6 +517,79 @@ $pageObject->stopPRG = true;
 ;
 } // function AfterEdit
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record updated
+function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
+{
+
+		
+
+;
+} // function BeforeEdit
+
+		
+		
 		
 		
 		
