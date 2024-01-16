@@ -450,8 +450,6 @@ class Chart
 			return true;
 		if("dbo.IPsRestringidas" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Sancionados" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.TiposDocumentos" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Tramites" == $this->chrt_array['tables'][0])
@@ -555,6 +553,8 @@ class Chart
 		if("dbo.Liquidaciones" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.usugcc__noti" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Sancionados" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

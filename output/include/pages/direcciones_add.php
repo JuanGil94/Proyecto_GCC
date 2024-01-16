@@ -1,7 +1,7 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Ciudades' => array( 'preview' => false ),
-'dbo.Sancionados' => array( 'preview' => false ),
-'dbo.Carceles' => array( 'preview' => false ) ),
+'dbo.Carceles' => array( 'preview' => false ),
+'dbo.Sancionados' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'SancionadoId',
 'CarcelId',

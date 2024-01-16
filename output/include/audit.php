@@ -500,10 +500,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Sancionados")
-		{
-			return true;
-		}
 		if($table=="dbo.TiposDocumentos")
 		{
 			return true;
@@ -709,6 +705,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.usugcc__noti")
+		{
+			return false;
+		}
+		if($table=="dbo.Sancionados")
 		{
 			return false;
 		}
@@ -1164,10 +1164,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Sancionados")
-		{
-			return true;
-		}
 		if($table=="dbo.TiposDocumentos")
 		{
 			return true;
@@ -1373,6 +1369,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.usugcc__noti")
+		{
+			return false;
+		}
+		if($table=="dbo.Sancionados")
 		{
 			return false;
 		}

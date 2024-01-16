@@ -1476,24 +1476,6 @@ $masterTablesData["dbo.Direcciones"] = array();
 	//endif
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Sancionados";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Sancionados";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "sancionados";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Direcciones"][1] = $masterParams;
-				$masterTablesData["dbo.Direcciones"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.Direcciones"][1]["masterKeys"][]="SancionadoId";
-				$masterTablesData["dbo.Direcciones"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.Direcciones"][1]["detailKeys"][]="SancionadoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
 			$strOriginalDetailsTable="dbo.Carceles";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="dbo.Carceles";
@@ -1503,11 +1485,29 @@ $masterTablesData["dbo.Direcciones"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Direcciones"][1] = $masterParams;
+				$masterTablesData["dbo.Direcciones"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][1]["masterKeys"][]="CarcelId";
+				$masterTablesData["dbo.Direcciones"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Direcciones"][1]["detailKeys"][]="CarcelId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Sancionados";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Sancionados";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "sancionados";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["dbo.Direcciones"][2] = $masterParams;
 				$masterTablesData["dbo.Direcciones"][2]["masterKeys"] = array();
-	$masterTablesData["dbo.Direcciones"][2]["masterKeys"][]="CarcelId";
+	$masterTablesData["dbo.Direcciones"][2]["masterKeys"][]="SancionadoId";
 				$masterTablesData["dbo.Direcciones"][2]["detailKeys"] = array();
-	$masterTablesData["dbo.Direcciones"][2]["detailKeys"][]="CarcelId";
+	$masterTablesData["dbo.Direcciones"][2]["detailKeys"][]="SancionadoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

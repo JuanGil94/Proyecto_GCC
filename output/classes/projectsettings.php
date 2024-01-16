@@ -3608,8 +3608,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "usugcc_uggroups" ] = "dbo.UsuGCC-uggroups";
 	$projectEntities[ "dbo.IPsRestringidas" ] = array( "url" => "ipsrestringidas", "type" => 0 );
 	$projectEntitiesReverse[ "ipsrestringidas" ] = "dbo.IPsRestringidas";
-	$projectEntities[ "dbo.Sancionados" ] = array( "url" => "sancionados", "type" => 0 );
-	$projectEntitiesReverse[ "sancionados" ] = "dbo.Sancionados";
 	$projectEntities[ "dbo.TiposDocumentos" ] = array( "url" => "tiposdocumentos", "type" => 0 );
 	$projectEntitiesReverse[ "tiposdocumentos" ] = "dbo.TiposDocumentos";
 	$projectEntities[ "dbo.Tramites" ] = array( "url" => "tramites", "type" => 0 );
@@ -3714,6 +3712,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "liquidaciones" ] = "dbo.Liquidaciones";
 	$projectEntities[ "dbo.usugcc__noti" ] = array( "url" => "usugcc__noti", "type" => 0 );
 	$projectEntitiesReverse[ "usugcc__noti" ] = "dbo.usugcc__noti";
+	$projectEntities[ "dbo.Sancionados" ] = array( "url" => "sancionados", "type" => 0 );
+	$projectEntitiesReverse[ "sancionados" ] = "dbo.Sancionados";
 }
 
 function findTable( $table ) {

@@ -250,20 +250,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.MotivosDevoluciones"]["devoluciones.MotivoDevolucionId"] = array();
 		}
 		$lookupTableLinks["dbo.MotivosDevoluciones"]["devoluciones.MotivoDevolucionId"]["edit"] = array("table" => "dbo.Devoluciones", "field" => "MotivoDevolucionId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"] ) ) {
-			$lookupTableLinks["dbo.TiposDocumentos"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] )) {
-			$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] = array();
-		}
-		$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"]["edit"] = array("table" => "dbo.Sancionados", "field" => "TipoDocumentoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Genero"] ) ) {
-			$lookupTableLinks["dbo.Genero"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Genero"]["sancionados.Masculino"] )) {
-			$lookupTableLinks["dbo.Genero"]["sancionados.Masculino"] = array();
-		}
-		$lookupTableLinks["dbo.Genero"]["sancionados.Masculino"]["edit"] = array("table" => "dbo.Sancionados", "field" => "Masculino", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
 			$lookupTableLinks["dbo.Seccionales"] = array();
 		}
@@ -845,6 +831,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Procesos"]["liquidaciones.ProcesoId"] = array();
 		}
 		$lookupTableLinks["dbo.Procesos"]["liquidaciones.ProcesoId"]["edit"] = array("table" => "dbo.Liquidaciones", "field" => "ProcesoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"] ) ) {
+			$lookupTableLinks["dbo.TiposDocumentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] )) {
+			$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] = array();
+		}
+		$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"]["edit"] = array("table" => "dbo.Sancionados", "field" => "TipoDocumentoId", "page" => "edit");
 }
 
 ?>

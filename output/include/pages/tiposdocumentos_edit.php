@@ -4,6 +4,8 @@
 'dbo.Minjusticia2' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Minjusticia3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Sancionados' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Codigo',

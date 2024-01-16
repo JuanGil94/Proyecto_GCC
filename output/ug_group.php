@@ -51,7 +51,6 @@ $nonAdminTablesArr[] = "dbo.Devoluciones";
 $nonAdminTablesArr[] = "dbo.Horarios";
 $nonAdminTablesArr[] = "dbo.UsuGCC-uggroups";
 $nonAdminTablesArr[] = "dbo.IPsRestringidas";
-$nonAdminTablesArr[] = "dbo.Sancionados";
 $nonAdminTablesArr[] = "dbo.TiposDocumentos";
 $nonAdminTablesArr[] = "dbo.Tramites";
 $nonAdminTablesArr[] = "dbo.Conceptos1";
@@ -104,6 +103,7 @@ $nonAdminTablesArr[] = "dbo.Autorizaciones";
 $nonAdminTablesArr[] = "dbo.Genero";
 $nonAdminTablesArr[] = "dbo.Liquidaciones";
 $nonAdminTablesArr[] = "dbo.usugcc__noti";
+$nonAdminTablesArr[] = "dbo.Sancionados";
 
 $ug_connection = $cman->getForUserGroups();
 

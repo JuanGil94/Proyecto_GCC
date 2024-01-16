@@ -203,6 +203,11 @@ class diccionario {
 		{
             $direcciones[]=$date["Direccion"];
         }
+        //echo "Numero de Direcciones: ".count($direcciones);
+        if (count($direcciones)<1){
+            echo "<script>var aceptar=confirm ('El sancionado debe contener por lo menos una direccion');if(aceptar){location.reload();}</script>";
+            exit();
+        }
         //print_r ($direcciones);
         return $direcciones;
     }

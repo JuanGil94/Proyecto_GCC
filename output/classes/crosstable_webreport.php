@@ -1453,8 +1453,6 @@ class CrossTableWebReport
 			$isDB = true;
 		if("dbo.IPsRestringidas" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("dbo.Sancionados" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("dbo.TiposDocumentos" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("dbo.Tramites" == $this->xml_array['tables'][0])
@@ -1558,6 +1556,8 @@ class CrossTableWebReport
 		if("dbo.Liquidaciones" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("dbo.usugcc__noti" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("dbo.Sancionados" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

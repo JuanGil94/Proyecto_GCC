@@ -100,6 +100,9 @@ pdfDocument = {
 										{BEGIN col_grid_11}
 					"%",
 					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -128,7 +131,51 @@ pdfDocument = {
 							stack: [
 
 																										
-''
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
 ,
 								
 																										
@@ -165,6 +212,9 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_add}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_inline_add}"},
+				
+				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 		  ],
@@ -195,9 +245,6 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -307,7 +354,7 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'TipoDocumentoId',
+			fieldName: 'SancionadoId',
 				style: 'headcell',
 		
 		
@@ -321,11 +368,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados TipoDocumentoId }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados SancionadoId }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$TipoDocumentoId_align}',
+              "alignment": '{$SancionadoId_align}',
      
       
       },
@@ -334,35 +381,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'Documento',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Sancionados Documento }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Documento_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Sancionado',
@@ -379,7 +397,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados Sancionado }","hidden":"{$item_hide_simple_grid_field}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados Sancionado }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -388,13 +406,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Masculino',
+			fieldName: 'TipoDocumentoId',
 				style: 'headcell',
 		
 		
@@ -408,11 +426,69 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados Masculino }","hidden":"{$item_hide_grid_field_label}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados TipoDocumentoId }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Masculino_align}',
+              "alignment": '{$TipoDocumentoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Sancionados Documento }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Documento_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Email',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Sancionados Email }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Email_align}',
      
       
       },
@@ -437,7 +513,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados Celular }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados Celular }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -452,7 +528,7 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Email',
+			fieldName: 'Masculino',
 				style: 'headcell',
 		
 		
@@ -466,11 +542,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados Email }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados Masculino }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Email_align}',
+              "alignment": '{$Masculino_align}',
      
       
       },
@@ -495,7 +571,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados Observaciones }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados Observaciones }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -524,7 +600,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados Fallecimiento }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados Fallecimiento }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -534,9 +610,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'PrivadoLibertad',
@@ -553,7 +629,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Sancionados PrivadoLibertad }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel dbo_Sancionados PrivadoLibertad }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -562,7 +638,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field9}
 											],
 				{END row_grid_0}
 		
@@ -591,6 +667,12 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -645,8 +727,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -659,7 +743,7 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'TipoDocumentoId',
+			fieldName: 'SancionadoId',
 				style: 'bodycell',
 		
 		
@@ -673,11 +757,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$TipoDocumentoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$TipoDocumentoId_align}',
+              "alignment": '{$SancionadoId_align}',
      
       
       },
@@ -686,35 +770,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'Documento',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Documento_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Sancionado',
@@ -740,13 +795,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Masculino',
+			fieldName: 'TipoDocumentoId',
 				style: 'bodycell',
 		
 		
@@ -760,11 +815,69 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+			{"text":{$TipoDocumentoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Masculino_align}',
+              "alignment": '{$TipoDocumentoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Documento_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Email',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Email_align}',
      
       
       },
@@ -804,7 +917,7 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
-			fieldName: 'Email',
+			fieldName: 'Masculino',
 				style: 'bodycell',
 		
 		
@@ -818,11 +931,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Email_align}',
+              "alignment": '{$Masculino_align}',
      
       
       },
@@ -886,9 +999,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'PrivadoLibertad',
@@ -914,7 +1027,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field9}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -940,14 +1053,14 @@ pdfDocument = {
 			"stack": [
 		
 				
-			 {BEGIN details_procesos}
-			{$displayDetailTable_procesos }
-		{END details_procesos},
-				
-				
 			 {BEGIN details_direcciones}
 			{$displayDetailTable_direcciones }
 		{END details_direcciones},
+				
+				
+			 {BEGIN details_procesos}
+			{$displayDetailTable_procesos }
+		{END details_procesos},
 				
 				
 			 {BEGIN details_propiedades}
@@ -955,14 +1068,9 @@ pdfDocument = {
 		{END details_propiedades},
 				
 				
-			 {BEGIN details_propiedades1}
-			{$displayDetailTable_propiedades1 }
-		{END details_propiedades1},
-				
-				
-			 {BEGIN details_propiedades3}
-			{$displayDetailTable_propiedades3 }
-		{END details_propiedades3},
+			 {BEGIN details_solidarios}
+			{$displayDetailTable_solidarios }
+		{END details_solidarios},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1036,6 +1144,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  12,
 				text: ''
 			},
 							],
@@ -1203,6 +1317,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field2}
+																							{BEGIN cellblock_grid_footcell_field3}
+{
+	cellId: 'footcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field3}
 																							{BEGIN cellblock_grid_footcell_field4}
 {
 	cellId: 'footcell_field4',
@@ -1333,9 +1473,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field8}
-																							{BEGIN cellblock_grid_footcell_field3}
+																							{BEGIN cellblock_grid_footcell_field9}
 {
-	cellId: 'footcell_field3',
+	cellId: 'footcell_field9',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -1358,7 +1498,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field3}
+{END cellblock_grid_footcell_field9}
 											],
 				{END row_grid_3}
 		

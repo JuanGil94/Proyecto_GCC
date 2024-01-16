@@ -896,6 +896,36 @@ $detailsTablesData["dbo.TiposDocumentos"] = array();
 				$detailsTablesData["dbo.TiposDocumentos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.TiposDocumentos"][$dIndex]["detailKeys"][]="TipoDocumentoId";
+//	dbo.Sancionados
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Sancionados";
+		$detailsParam["dOriginalTable"] = "dbo.Sancionados";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "sancionados";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Sancionados");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.TiposDocumentos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.TiposDocumentos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.TiposDocumentos"][$dIndex]["masterKeys"][]="TipoDocumentoId";
+
+				$detailsTablesData["dbo.TiposDocumentos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.TiposDocumentos"][$dIndex]["detailKeys"][]="TipoDocumentoId";
 //endif
 
 // tables which are master tables for current table (detail)

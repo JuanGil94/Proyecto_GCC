@@ -275,8 +275,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("ipsrestringidas" == $shortTName )
 		return true;
-	if ("sancionados" == $shortTName )
-		return true;
 	if ("tiposdocumentos" == $shortTName )
 		return true;
 	if ("tramites" == $shortTName )
@@ -380,6 +378,8 @@ function checkTableName($shortTName )
 	if ("liquidaciones" == $shortTName )
 		return true;
 	if ("usugcc__noti" == $shortTName )
+		return true;
+	if ("sancionados" == $shortTName )
 		return true;
 	return false;
 }
@@ -754,15 +754,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.IPsRestringidas";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Sancionados");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Sancionados";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -1232,6 +1223,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.usugcc__noti";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Sancionados");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Sancionados";
+	}
 	return $arr;
 }
 
@@ -1277,7 +1277,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Horarios";
 	$arr[]="dbo.UsuGCC-uggroups";
 	$arr[]="dbo.IPsRestringidas";
-	$arr[]="dbo.Sancionados";
 	$arr[]="dbo.TiposDocumentos";
 	$arr[]="dbo.Tramites";
 	$arr[]="dbo.Conceptos1";
@@ -1330,6 +1329,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Genero";
 	$arr[]="dbo.Liquidaciones";
 	$arr[]="dbo.usugcc__noti";
+	$arr[]="dbo.Sancionados";
 	return $arr;
 }
 
@@ -2137,11 +2137,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Sancionados" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.TiposDocumentos" )
 	{
 //	default permissions
@@ -2398,6 +2393,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.usugcc__noti" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Sancionados" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
