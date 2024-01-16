@@ -1,32 +1,35 @@
 <?php
 
 $archivo = $_FILES['archivo'];
-$nombre = $archivo['name'];
-$tipo = $archivo['type'];
-//$procesoId=array();
 $procesoId=$_POST["procesoId"];
 $procesoId=intval($procesoId);
-echo "Value: ".$procesoId;
+//echo "Value: ".$procesoId;
 //print_r($procesoId);
 
 if (!is_dir($procesoId)){
     mkdir($procesoId,0777);
 }
-move_uploaded_file($archivo['tmp_name'],$procesoId.'/'.$nombre);
-header("Refresh: 3; URL=../procesos_list.php");
-echo "<h1>Documento subido correctamente</h1>";
 
-
-/*
-var_dump($archivo);
-die();
-*/
-class Files {
-    private $procesoId;
-    public function __construct($procesoId) {
-        $this->procesoId=$procesoId;
+for ($i=0;$i<count($archivo["name"]);$i++){
+    if ($archivo["error"][$i]== UPLOAD_ERR_OK){
+        $nombreArchivo = $archivo["name"][$i];
+        $tipoArchivo = $archivo["type"][$i];
+        $tamanioArchivo = $archivo["size"][$i];
+        $archivoTemporal = $archivo["tmp_name"][$i];
+        // Mover el archivo a una ubicación deseada
+        $ubicacionDestino = "carpeta_destino/" . $nombreArchivo;
+        $flag=move_uploaded_file($archivoTemporal, $procesoId.'/'.$nombreArchivo);
+        //echo $flag."<br>";
+        //echo "Archivo subido con éxito: $ubicacionDestino<br>";      
     }
-    public function upload() {
-        echo "Hola desde MiClase: ".$this->procesoId;
+    else {
+        echo "Error en la carga del archivo $i.<br>";
     }
 }
+if ($flag==1){
+    //echo "<script>alert('Archivos Subidos Correctamentenete')</script>";
+    echo "<h1>Documentos subidos correctamente</h1>";
+    header("Refresh: 2; URL=../procesos_list.php");
+}
+//header("Refresh: 3; URL=../procesos_list.php");
+//echo "<h1>Documento subido correctamente</h1>";
