@@ -584,7 +584,6 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $
 {
 
 		
-
 ;
 } // function BeforeEdit
 

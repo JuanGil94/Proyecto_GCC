@@ -6,8 +6,8 @@ $tipo = $archivo['type'];
 //$procesoId=array();
 $chequeoId=$_POST["chequeoId"];
 $chequeoId=intval($chequeoId);
-echo "Name: ".$nombre;
-echo "Value: ".$chequeoId;
+echo "Name: ".$nombre."<br>";
+//echo "Value: ".$chequeoId;
 //print_r($procesoId);
 /*
 if (!is_dir($procesoId)){
@@ -16,7 +16,7 @@ if (!is_dir($procesoId)){
 */
 $nombre='Chequeo_'.$chequeoId.'.pdf';
 move_uploaded_file($archivo['tmp_name'],$nombre);
-header("Refresh: 3; URL=../chequeos_list.php");
+header("Refresh: 2; URL=../chequeos_list.php");
 echo "<h1>Documento subido correctamente</h1>";
 
 
