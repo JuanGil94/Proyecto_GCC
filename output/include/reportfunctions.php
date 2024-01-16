@@ -541,10 +541,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="dbo.Sancionados")
-		{
-			return 1;
-		}
 		if($table=="dbo.TiposDocumentos")
 		{
 			return 1;
@@ -750,6 +746,10 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="dbo.usugcc__noti")
+		{
+			return 1;
+		}
+		if($table=="dbo.Sancionados")
 		{
 			return 1;
 		}
@@ -1150,10 +1150,6 @@ function getCaptionTable($table)
 	{
 		return "IPs Restringidas";
 	}
-	if($table=="dbo.Sancionados")
-	{
-		return "Sancionados";
-	}
 	if($table=="dbo.TiposDocumentos")
 	{
 		return "Tipos Documentos";
@@ -1361,6 +1357,10 @@ function getCaptionTable($table)
 	if($table=="dbo.usugcc__noti")
 	{
 		return "Usugcc  Noti";
+	}
+	if($table=="dbo.Sancionados")
+	{
+		return "Sancionados";
 	}
 	return $table;
 }
@@ -2651,18 +2651,6 @@ function GetTablesListReport()
 			$arr[]="dbo.IPsRestringidas";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("dbo.Sancionados");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="dbo.Sancionados";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="dbo.Sancionados";
-	}
-	if( Security::permissionsAvailable() ) {
 		$strPerm = GetUserPermissions("dbo.TiposDocumentos");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
@@ -3285,6 +3273,18 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.usugcc__noti";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Sancionados");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Sancionados";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Sancionados";
 	}
 	return $arr;
 }

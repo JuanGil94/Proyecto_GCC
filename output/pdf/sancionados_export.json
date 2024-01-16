@@ -106,6 +106,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
 			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
@@ -121,6 +124,9 @@ pdfDocument = {
 			{"text":{$Celular_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
+			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
@@ -128,9 +134,6 @@ pdfDocument = {
 				
 				
 			{"text":{$PrivadoLibertad_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
-			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

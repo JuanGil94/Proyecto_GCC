@@ -260,7 +260,7 @@ data-pagetype="print"
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
@@ -270,6 +270,10 @@ data-pagetype="print"
 		{BEGIN details_}
 {$displayDetailTable_}
 {END details_}
+	 
+		{BEGIN details_sancionados}
+{$displayDetailTable_sancionados}
+{END details_sancionados}
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}

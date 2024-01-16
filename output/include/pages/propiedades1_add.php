@@ -1,6 +1,5 @@
 <?php
-			$optionsArray = array( 'master' => array( 'dbo.Sancionados' => array( 'preview' => false ) ),
-'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'SancionadoId',
 'Observaciones' ),
 'searchRequiredFields' => array(  ),

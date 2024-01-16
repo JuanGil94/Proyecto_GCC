@@ -131,7 +131,7 @@ $tdatasolidarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																										
+																																																																																																																																							
 
 $tdatasolidarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -755,6 +755,24 @@ $masterTablesData["dbo.Solidarios"] = array();
 	$masterTablesData["dbo.Solidarios"][0]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Solidarios"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Solidarios"][0]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Sancionados";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Sancionados";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "sancionados";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Solidarios"][1] = $masterParams;
+				$masterTablesData["dbo.Solidarios"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Solidarios"][1]["masterKeys"][]="SancionadoId";
+				$masterTablesData["dbo.Solidarios"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Solidarios"][1]["detailKeys"][]="SancionadoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

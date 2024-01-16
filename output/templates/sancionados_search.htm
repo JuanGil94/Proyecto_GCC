@@ -226,6 +226,28 @@
 
 {END Celular_fieldblock}
 											
+{BEGIN Masculino_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Masculino}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Masculino{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Masculino" data-fieldname="Masculino" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Masculino}">
+		{$label dbo_Sancionados Masculino }	</label>
+	<div class="r-search-option">
+		{$searchtype_Masculino}
+	</div>
+	<div class="r-search-field">
+		{$Masculino_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Masculino_editcontrol1}
+	</div>
+	
+</div>
+
+{END Masculino_fieldblock}
+											
 {BEGIN Observaciones_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-horizontal-field form-horizontal" 	
@@ -291,28 +313,6 @@
 </div>
 
 {END PrivadoLibertad_fieldblock}
-											
-{BEGIN Masculino_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Masculino}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Masculino{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Masculino" data-fieldname="Masculino" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Masculino}">
-		{$label dbo_Sancionados Masculino }	</label>
-	<div class="r-search-option">
-		{$searchtype_Masculino}
-	</div>
-	<div class="r-search-field">
-		{$Masculino_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Masculino_editcontrol1}
-	</div>
-	
-</div>
-
-{END Masculino_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

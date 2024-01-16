@@ -441,6 +441,11 @@ pdfDocument = {
 			{$displayDetailTable_undefined }
 		{END details_undefined},
 				
+				
+			 {BEGIN details_sancionados}
+			{$displayDetailTable_sancionados }
+		{END details_sancionados},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

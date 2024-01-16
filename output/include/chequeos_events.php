@@ -26,6 +26,8 @@
 
 		$this->events["BeforeEdit"]=true;
 
+		$this->events["BeforeAdd"]=true;
+
 
 	}
 
@@ -587,6 +589,82 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $
 ;
 } // function BeforeEdit
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record added
+function BeforeAdd(&$values, &$message, $inline, $pageObject)
+{
+
+		//echo "Value del campo: ".$recordId;
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeAdd
+
+		
+		
+		
+		
+		
+		
 		
 		
 		

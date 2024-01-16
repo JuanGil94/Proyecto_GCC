@@ -279,7 +279,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Horarios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.UsuGCC-uggroups"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.IPsRestringidas"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Sancionados"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.TiposDocumentos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Tramites"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Conceptos1"] = "GCC_at_S00001_CCAD01";
@@ -332,6 +331,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Genero"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Liquidaciones"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.usugcc__noti"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Sancionados"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

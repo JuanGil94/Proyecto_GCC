@@ -6,11 +6,11 @@ $tdatasancionados[".OwnerID"] = "";
 $tdatasancionados[".OriginalTable"] = "dbo.Sancionados";
 
 
-$tdatasancionados[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatasancionados[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatasancionados[".originalPagesByType"] = $tdatasancionados[".pagesByType"];
-$tdatasancionados[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatasancionados[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatasancionados[".originalPages"] = $tdatasancionados[".pages"];
-$tdatasancionados[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatasancionados[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatasancionados[".originalDefaultPages"] = $tdatasancionados[".defaultPages"];
 
 //	field labels
@@ -28,33 +28,33 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssancionados["Spanish"]["SancionadoId"] = "Sancionado Id";
 	$fieldToolTipssancionados["Spanish"]["SancionadoId"] = "";
 	$placeHolderssancionados["Spanish"]["SancionadoId"] = "";
-	$fieldLabelssancionados["Spanish"]["Sancionado"] = "Deudor";
+	$fieldLabelssancionados["Spanish"]["Sancionado"] = "Sancionado";
 	$fieldToolTipssancionados["Spanish"]["Sancionado"] = "";
 	$placeHolderssancionados["Spanish"]["Sancionado"] = "";
-	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento";
+	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento Id";
 	$fieldToolTipssancionados["Spanish"]["TipoDocumentoId"] = "";
 	$placeHolderssancionados["Spanish"]["TipoDocumentoId"] = "";
-	$fieldLabelssancionados["Spanish"]["Documento"] = "No. Documento";
+	$fieldLabelssancionados["Spanish"]["Documento"] = "Documento";
 	$fieldToolTipssancionados["Spanish"]["Documento"] = "";
 	$placeHolderssancionados["Spanish"]["Documento"] = "";
-	$fieldLabelssancionados["Spanish"]["Email"] = "E-mail";
+	$fieldLabelssancionados["Spanish"]["Email"] = "Email";
 	$fieldToolTipssancionados["Spanish"]["Email"] = "";
 	$placeHolderssancionados["Spanish"]["Email"] = "";
 	$fieldLabelssancionados["Spanish"]["Celular"] = "Celular";
 	$fieldToolTipssancionados["Spanish"]["Celular"] = "";
 	$placeHolderssancionados["Spanish"]["Celular"] = "";
+	$fieldLabelssancionados["Spanish"]["Masculino"] = "Masculino";
+	$fieldToolTipssancionados["Spanish"]["Masculino"] = "";
+	$placeHolderssancionados["Spanish"]["Masculino"] = "";
 	$fieldLabelssancionados["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipssancionados["Spanish"]["Observaciones"] = "";
 	$placeHolderssancionados["Spanish"]["Observaciones"] = "";
-	$fieldLabelssancionados["Spanish"]["Fallecimiento"] = "F.Fallecimiento";
+	$fieldLabelssancionados["Spanish"]["Fallecimiento"] = "Fallecimiento";
 	$fieldToolTipssancionados["Spanish"]["Fallecimiento"] = "";
 	$placeHolderssancionados["Spanish"]["Fallecimiento"] = "";
 	$fieldLabelssancionados["Spanish"]["PrivadoLibertad"] = "Privado Libertad";
 	$fieldToolTipssancionados["Spanish"]["PrivadoLibertad"] = "";
 	$placeHolderssancionados["Spanish"]["PrivadoLibertad"] = "";
-	$fieldLabelssancionados["Spanish"]["Masculino"] = "Género";
-	$fieldToolTipssancionados["Spanish"]["Masculino"] = "";
-	$placeHolderssancionados["Spanish"]["Masculino"] = "";
 	if (count($fieldToolTipssancionados["Spanish"]))
 		$tdatasancionados[".isUseToolTips"] = true;
 }
@@ -88,7 +88,7 @@ $tdatasancionados[".listAjax"] = false;
 //	temporary
 //$tdatasancionados[".listAjax"] = false;
 
-	$tdatasancionados[".audit"] = true;
+	$tdatasancionados[".audit"] = false;
 
 	$tdatasancionados[".locking"] = false;
 
@@ -152,7 +152,7 @@ $tdatasancionados[".isUseAjaxSuggest"] = true;
 
 
 
-																																													
+																																																																																										
 
 $tdatasancionados[".ajaxCodeSnippetAdded"] = false;
 
@@ -164,7 +164,7 @@ $tdatasancionados[".addPageEvents"] = false;
 $tdatasancionados[".isUseTimeForSearch"] = false;
 
 
-$tdatasancionados[".badgeColor"] = "BC8F8F";
+$tdatasancionados[".badgeColor"] = "B22222";
 
 
 $tdatasancionados[".allSearchFields"] = array();
@@ -198,7 +198,6 @@ $tdatasancionados[".geocodingEnabled"] = false;
 
 
 
-$tdatasancionados[".isResizeColumns"] = true;
 
 
 
@@ -210,13 +209,15 @@ $tdatasancionados[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY SancionadoId DESC";
 $tdatasancionados[".strOrderBy"] = $tstrOrderBy;
 
 $tdatasancionados[".orderindexes"] = array();
+	$tdatasancionados[".orderindexes"][] = array(1, (0 ? "ASC" : "DESC"), "SancionadoId");
 
 
-$tdatasancionados[".sqlHead"] = "SELECT SancionadoId,  	Sancionado,  	TipoDocumentoId,  	Documento,  	Email,  	Celular,  	Masculino,  	Observaciones,  	Fallecimiento,  	PrivadoLibertad";
+
+$tdatasancionados[".sqlHead"] = "SELECT SancionadoId,  Sancionado,  TipoDocumentoId,  Documento,  Email,  Celular,  Masculino,  Observaciones,  Fallecimiento,  PrivadoLibertad";
 $tdatasancionados[".sqlFrom"] = "FROM dbo.Sancionados";
 $tdatasancionados[".sqlWhereExpr"] = "";
 $tdatasancionados[".sqlTail"] = "";
@@ -621,7 +622,7 @@ $tdatasancionados[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "TipoDocumentoId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "TipoDocumento";
+	$edata["DisplayField"] = "Codigo";
 
 	
 
@@ -679,7 +680,7 @@ $tdatasancionados[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1149,7 +1150,7 @@ $tdatasancionados[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Checkbox");
 
 	
 	
@@ -1165,8 +1166,7 @@ $tdatasancionados[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1177,7 +1177,7 @@ $tdatasancionados[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Checkbox");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1187,34 +1187,6 @@ $tdatasancionados[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Genero";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "GeneroId";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Genero";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -1708,21 +1680,21 @@ changeTextControlsToDate( "dbo.Sancionados" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Sancionados"] = array();
-//	dbo.Procesos
+//	dbo.Direcciones
 	
 	
 
 		$dIndex = 0;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Procesos";
-		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+	$detailsParam["dDataSourceTable"]="dbo.Direcciones";
+		$detailsParam["dOriginalTable"] = "dbo.Direcciones";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "procesos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
+	$detailsParam["dShortTable"] = "direcciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Direcciones");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1738,21 +1710,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Direcciones
+//	dbo.Procesos
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Direcciones";
-		$detailsParam["dOriginalTable"] = "dbo.Direcciones";
+	$detailsParam["dDataSourceTable"]="dbo.Procesos";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "direcciones";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Direcciones");
+	$detailsParam["dShortTable"] = "procesos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1798,51 +1770,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Propiedades1
+//	dbo.Solidarios
 	
 	
 
 		$dIndex = 3;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Propiedades1";
-		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+	$detailsParam["dDataSourceTable"]="dbo.Solidarios";
+		$detailsParam["dOriginalTable"] = "dbo.Solidarios";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "propiedades1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades1");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
-
-				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Propiedades3
-	
-	
-
-		$dIndex = 4;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Propiedades3";
-		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "propiedades3";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades3");
+	$detailsParam["dShortTable"] = "solidarios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Solidarios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1865,6 +1807,24 @@ $masterTablesData["dbo.Sancionados"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.TiposDocumentos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.TiposDocumentos";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "tiposdocumentos";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Sancionados"][0] = $masterParams;
+				$masterTablesData["dbo.Sancionados"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Sancionados"][0]["masterKeys"][]="TipoDocumentoId";
+				$masterTablesData["dbo.Sancionados"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Sancionados"][0]["detailKeys"][]="TipoDocumentoId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1885,10 +1845,10 @@ function createSqlQuery_sancionados()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SancionadoId,  	Sancionado,  	TipoDocumentoId,  	Documento,  	Email,  	Celular,  	Masculino,  	Observaciones,  	Fallecimiento,  	PrivadoLibertad";
+$proto0["m_strFieldList"] = "SancionadoId,  Sancionado,  TipoDocumentoId,  Documento,  Email,  Celular,  Masculino,  Observaciones,  Fallecimiento,  PrivadoLibertad";
 $proto0["m_strFrom"] = "FROM dbo.Sancionados";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY SancionadoId DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -2109,6 +2069,19 @@ $obj = new SQLFromListItem($proto26);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto30=array();
+						$obj = new SQLField(array(
+	"m_strName" => "SancionadoId",
+	"m_strTable" => "dbo.Sancionados",
+	"m_srcTableName" => "dbo.Sancionados"
+));
+
+$proto30["m_column"]=$obj;
+$proto30["m_bAsc"] = 0;
+$proto30["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto30);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Sancionados";		
 $obj = new SQLQuery($proto0);
 

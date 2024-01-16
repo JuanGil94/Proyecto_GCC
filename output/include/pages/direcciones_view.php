@@ -1,8 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'master' => array( 'dbo.Ciudades' => array( 'preview' => false ),
-'dbo.Sancionados' => array( 'preview' => false ),
-'dbo.Carceles' => array( 'preview' => false ) ),
+'dbo.Carceles' => array( 'preview' => false ),
+'dbo.Sancionados' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'DireccionId',
 'SancionadoId',
 'CarcelId',
