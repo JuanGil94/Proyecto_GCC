@@ -222,6 +222,7 @@ class reliquidacion extends CalendarioAnual{
 
     }
     public function deleteRe($procesoId){
+        //echo "Ingreso<br>";
         $consulta=DB::Exec("DELETE FROM Reliquidaciones WHERE ProcesoId=".$procesoId);
             if ($consulta) {
                 //echo "La consulta se realizó correctamente.";
@@ -256,6 +257,7 @@ class reliquidacion extends CalendarioAnual{
         //$numero=1004469; //segundo numero que cuadra (no) really
         //$result["valor"]=10000;
         $numero=$this->procesoId;
+        $this->deleteRe($numero);
         //$numero=$params["ProcesoId"];
         //$numero=1006163; //caso que si da exacto a produccion
         //$numero=885865;
@@ -813,6 +815,7 @@ class reliquidacion extends CalendarioAnual{
     public function CalcularAcuerdo($fechaInicioAcuerdo){
         $numero=$this->procesoId;
         $numero=intval($numero);
+        //$this->deleteRe($numero);
         $infoProceso=$this->infoProceso($numero); //se obtiene la info del proceso
         foreach($infoProceso as $date){
             //$params["Numero"]=$date["Numero"];
