@@ -178,6 +178,9 @@ pdfDocument = {
 										{BEGIN col_grid_37}
 					"%",
 					{END col_grid_37}
+										{BEGIN col_grid_38}
+					"%",
+					{END col_grid_38}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1436,6 +1439,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field34}
+																							{BEGIN cellblock_grid_headcell_field36}
+{
+	cellId: 'headcell_field36',
+	col:0,
+	row:0,
+			fieldName: 'Prescripcion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Prescripcion }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Prescripcion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field36}
 											],
 				{END row_grid_0}
 		
@@ -2553,6 +2585,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field34}
+																							{BEGIN cellblock_grid_cell_field36}
+{
+	cellId: 'cell_field36',
+	col:0,
+	row:0,
+			fieldName: 'Prescripcion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Prescripcion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field36}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2870,6 +2931,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  37,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  38,
 				text: ''
 			},
 							],
@@ -3869,6 +3936,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field34}
+																							{BEGIN cellblock_grid_footcell_field35}
+{
+	cellId: 'footcell_field35',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field35}
 											],
 				{END row_grid_3}
 		

@@ -316,6 +316,9 @@ pdfDocument = {
 										{BEGIN col_grid_83}
 					"%",
 					{END col_grid_83}
+										{BEGIN col_grid_84}
+					"%",
+					{END col_grid_84}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -486,7 +489,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ProcesoId }","hidden":"{$item_hide_simple_grid_field83}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ProcesoId }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -515,7 +518,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos SeccionalId }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
+			{"text":"{$jslabel dbo_Procesos SeccionalId }","hidden":"{$item_hide_simple_grid_field85}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -544,7 +547,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos AbogadoId }","hidden":"{$item_hide_simple_grid_field85}","bold":true},
+			{"text":"{$jslabel dbo_Procesos AbogadoId }","hidden":"{$item_hide_simple_grid_field86}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -573,7 +576,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Fecha }","hidden":"{$item_hide_simple_grid_field86}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Fecha }","hidden":"{$item_hide_simple_grid_field87}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -602,7 +605,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Numero }","hidden":"{$item_hide_simple_grid_field87}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Numero }","hidden":"{$item_hide_simple_grid_field88}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -631,7 +634,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos DespachoId }","hidden":"{$item_hide_simple_grid_field88}","bold":true},
+			{"text":"{$jslabel dbo_Procesos DespachoId }","hidden":"{$item_hide_simple_grid_field89}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -660,7 +663,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos SancionadoId }","hidden":"{$item_hide_simple_grid_field89}","bold":true},
+			{"text":"{$jslabel dbo_Procesos SancionadoId }","hidden":"{$item_hide_simple_grid_field90}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -689,7 +692,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Providencia }","hidden":"{$item_hide_simple_grid_field90}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Providencia }","hidden":"{$item_hide_simple_grid_field91}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -718,7 +721,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Ejecutoria }","hidden":"{$item_hide_simple_grid_field91}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Ejecutoria }","hidden":"{$item_hide_simple_grid_field92}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -747,7 +750,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ConceptoId }","hidden":"{$item_hide_simple_grid_field92}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ConceptoId }","hidden":"{$item_hide_simple_grid_field93}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -776,7 +779,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos EstadoId }","hidden":"{$item_hide_simple_grid_field93}","bold":true},
+			{"text":"{$jslabel dbo_Procesos EstadoId }","hidden":"{$item_hide_simple_grid_field94}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -805,7 +808,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos EtapaId }","hidden":"{$item_hide_simple_grid_field94}","bold":true},
+			{"text":"{$jslabel dbo_Procesos EtapaId }","hidden":"{$item_hide_simple_grid_field95}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -834,7 +837,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Folios }","hidden":"{$item_hide_simple_grid_field95}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Folios }","hidden":"{$item_hide_simple_grid_field96}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -863,7 +866,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Tipo }","hidden":"{$item_hide_simple_grid_field96}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Tipo }","hidden":"{$item_hide_simple_grid_field97}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -892,7 +895,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Cantidad }","hidden":"{$item_hide_simple_grid_field97}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Cantidad }","hidden":"{$item_hide_simple_grid_field98}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -921,7 +924,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Obligacion }","hidden":"{$item_hide_simple_grid_field98}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Obligacion }","hidden":"{$item_hide_simple_grid_field99}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -950,7 +953,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Costas }","hidden":"{$item_hide_simple_grid_field99}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Costas }","hidden":"{$item_hide_simple_grid_field100}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -979,7 +982,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Liquidacion }","hidden":"{$item_hide_simple_grid_field100}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Liquidacion }","hidden":"{$item_hide_simple_grid_field101}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1008,7 +1011,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Dias }","hidden":"{$item_hide_simple_grid_field101}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Dias }","hidden":"{$item_hide_simple_grid_field102}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1037,7 +1040,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Intereses }","hidden":"{$item_hide_simple_grid_field102}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Intereses }","hidden":"{$item_hide_simple_grid_field103}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1066,7 +1069,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Recaudo }","hidden":"{$item_hide_simple_grid_field103}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Recaudo }","hidden":"{$item_hide_simple_grid_field104}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1095,7 +1098,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos CalificacionId }","hidden":"{$item_hide_simple_grid_field104}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CalificacionId }","hidden":"{$item_hide_simple_grid_field105}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1124,7 +1127,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Terminacion }","hidden":"{$item_hide_simple_grid_field105}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Terminacion }","hidden":"{$item_hide_simple_grid_field106}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1153,7 +1156,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos MotivoId }","hidden":"{$item_hide_simple_grid_field106}","bold":true},
+			{"text":"{$jslabel dbo_Procesos MotivoId }","hidden":"{$item_hide_simple_grid_field107}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1182,7 +1185,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Observaciones }","hidden":"{$item_hide_simple_grid_field107}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Observaciones }","hidden":"{$item_hide_simple_grid_field108}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1211,7 +1214,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Cuotas }","hidden":"{$item_hide_simple_grid_field108}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Cuotas }","hidden":"{$item_hide_simple_grid_field109}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1240,7 +1243,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Abono }","hidden":"{$item_hide_simple_grid_field109}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Abono }","hidden":"{$item_hide_simple_grid_field110}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1269,7 +1272,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Inicio }","hidden":"{$item_hide_simple_grid_field110}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Inicio }","hidden":"{$item_hide_simple_grid_field111}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1298,7 +1301,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos VlrCuota }","hidden":"{$item_hide_simple_grid_field111}","bold":true},
+			{"text":"{$jslabel dbo_Procesos VlrCuota }","hidden":"{$item_hide_simple_grid_field112}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1327,7 +1330,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos VlrIntereses }","hidden":"{$item_hide_simple_grid_field112}","bold":true},
+			{"text":"{$jslabel dbo_Procesos VlrIntereses }","hidden":"{$item_hide_simple_grid_field113}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1356,7 +1359,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Garantia }","hidden":"{$item_hide_simple_grid_field113}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Garantia }","hidden":"{$item_hide_simple_grid_field114}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1385,7 +1388,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Radicado }","hidden":"{$item_hide_simple_grid_field114}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Radicado }","hidden":"{$item_hide_simple_grid_field115}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1414,7 +1417,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Remisorio }","hidden":"{$item_hide_simple_grid_field115}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Remisorio }","hidden":"{$item_hide_simple_grid_field116}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1443,7 +1446,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Acuerdo }","hidden":"{$item_hide_simple_grid_field116}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Acuerdo }","hidden":"{$item_hide_simple_grid_field117}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1472,7 +1475,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Incumplimiento }","hidden":"{$item_hide_simple_grid_field117}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Incumplimiento }","hidden":"{$item_hide_simple_grid_field118}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1501,7 +1504,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Notificacion }","hidden":"{$item_hide_simple_grid_field118}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Notificacion }","hidden":"{$item_hide_simple_grid_field119}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1530,7 +1533,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Suspension }","hidden":"{$item_hide_simple_grid_field119}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Suspension }","hidden":"{$item_hide_simple_grid_field120}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1559,7 +1562,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Traslado }","hidden":"{$item_hide_simple_grid_field120}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Traslado }","hidden":"{$item_hide_simple_grid_field121}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1588,7 +1591,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Error }","hidden":"{$item_hide_simple_grid_field121}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Error }","hidden":"{$item_hide_simple_grid_field122}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1617,7 +1620,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field122}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field123}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1646,7 +1649,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ConceptoAbogado }","hidden":"{$item_hide_simple_grid_field123}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ConceptoAbogado }","hidden":"{$item_hide_simple_grid_field124}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1675,7 +1678,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Origen }","hidden":"{$item_hide_simple_grid_field124}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Origen }","hidden":"{$item_hide_simple_grid_field125}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1704,7 +1707,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Carpeta }","hidden":"{$item_hide_simple_grid_field125}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Carpeta }","hidden":"{$item_hide_simple_grid_field126}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1733,7 +1736,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ImportacionId }","hidden":"{$item_hide_simple_grid_field126}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ImportacionId }","hidden":"{$item_hide_simple_grid_field127}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1762,7 +1765,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ActuacionId }","hidden":"{$item_hide_simple_grid_field127}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ActuacionId }","hidden":"{$item_hide_simple_grid_field128}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1791,7 +1794,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ObligacionInicial }","hidden":"{$item_hide_simple_grid_field128}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ObligacionInicial }","hidden":"{$item_hide_simple_grid_field129}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1820,7 +1823,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos CostasInicial }","hidden":"{$item_hide_simple_grid_field129}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CostasInicial }","hidden":"{$item_hide_simple_grid_field130}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1849,7 +1852,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos InteresesInicial }","hidden":"{$item_hide_simple_grid_field130}","bold":true},
+			{"text":"{$jslabel dbo_Procesos InteresesInicial }","hidden":"{$item_hide_simple_grid_field131}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1878,7 +1881,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos MinJusticia }","hidden":"{$item_hide_simple_grid_field131}","bold":true},
+			{"text":"{$jslabel dbo_Procesos MinJusticia }","hidden":"{$item_hide_simple_grid_field132}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1907,7 +1910,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Revocatoria }","hidden":"{$item_hide_simple_grid_field132}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Revocatoria }","hidden":"{$item_hide_simple_grid_field133}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1936,7 +1939,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Mayor }","hidden":"{$item_hide_simple_grid_field133}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Mayor }","hidden":"{$item_hide_simple_grid_field134}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1965,7 +1968,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos NotificacionValidada }","hidden":"{$item_hide_simple_grid_field134}","bold":true},
+			{"text":"{$jslabel dbo_Procesos NotificacionValidada }","hidden":"{$item_hide_simple_grid_field135}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1994,7 +1997,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Validado }","hidden":"{$item_hide_simple_grid_field135}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Validado }","hidden":"{$item_hide_simple_grid_field136}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2023,7 +2026,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Seleccionado }","hidden":"{$item_hide_simple_grid_field136}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Seleccionado }","hidden":"{$item_hide_simple_grid_field137}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2052,7 +2055,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos CompetenciaId }","hidden":"{$item_hide_simple_grid_field137}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CompetenciaId }","hidden":"{$item_hide_simple_grid_field138}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2081,7 +2084,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos MinjusticiaId }","hidden":"{$item_hide_simple_grid_field138}","bold":true},
+			{"text":"{$jslabel dbo_Procesos MinjusticiaId }","hidden":"{$item_hide_simple_grid_field139}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2110,7 +2113,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos SeleccionadoPor }","hidden":"{$item_hide_simple_grid_field139}","bold":true},
+			{"text":"{$jslabel dbo_Procesos SeleccionadoPor }","hidden":"{$item_hide_simple_grid_field140}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2139,7 +2142,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Subsanar }","hidden":"{$item_hide_simple_grid_field140}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Subsanar }","hidden":"{$item_hide_simple_grid_field141}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2168,7 +2171,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos NumeroMinjusticia }","hidden":"{$item_hide_simple_grid_field141}","bold":true},
+			{"text":"{$jslabel dbo_Procesos NumeroMinjusticia }","hidden":"{$item_hide_simple_grid_field142}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2197,7 +2200,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ProcesoIdOrigen }","hidden":"{$item_hide_simple_grid_field142}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ProcesoIdOrigen }","hidden":"{$item_hide_simple_grid_field143}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2226,7 +2229,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos SeleccionadoFecha }","hidden":"{$item_hide_simple_grid_field143}","bold":true},
+			{"text":"{$jslabel dbo_Procesos SeleccionadoFecha }","hidden":"{$item_hide_simple_grid_field144}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2255,7 +2258,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos InteresesIniciales }","hidden":"{$item_hide_simple_grid_field144}","bold":true},
+			{"text":"{$jslabel dbo_Procesos InteresesIniciales }","hidden":"{$item_hide_simple_grid_field145}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2284,7 +2287,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos InteresesCalculados }","hidden":"{$item_hide_simple_grid_field145}","bold":true},
+			{"text":"{$jslabel dbo_Procesos InteresesCalculados }","hidden":"{$item_hide_simple_grid_field146}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2313,7 +2316,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ProcesoIdDestino }","hidden":"{$item_hide_simple_grid_field146}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ProcesoIdDestino }","hidden":"{$item_hide_simple_grid_field147}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2342,7 +2345,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos RecaudoMinjusticia }","hidden":"{$item_hide_simple_grid_field147}","bold":true},
+			{"text":"{$jslabel dbo_Procesos RecaudoMinjusticia }","hidden":"{$item_hide_simple_grid_field148}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2371,7 +2374,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos RecaudoTerminado }","hidden":"{$item_hide_simple_grid_field148}","bold":true},
+			{"text":"{$jslabel dbo_Procesos RecaudoTerminado }","hidden":"{$item_hide_simple_grid_field149}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2400,7 +2403,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Persuasivo }","hidden":"{$item_hide_simple_grid_field149}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Persuasivo }","hidden":"{$item_hide_simple_grid_field150}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2429,7 +2432,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ObligacionCreacion }","hidden":"{$item_hide_simple_grid_field150}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ObligacionCreacion }","hidden":"{$item_hide_simple_grid_field151}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2458,7 +2461,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos InteresesCreacion }","hidden":"{$item_hide_simple_grid_field151}","bold":true},
+			{"text":"{$jslabel dbo_Procesos InteresesCreacion }","hidden":"{$item_hide_simple_grid_field152}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2487,7 +2490,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos CostasCreacion }","hidden":"{$item_hide_simple_grid_field152}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CostasCreacion }","hidden":"{$item_hide_simple_grid_field153}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2516,7 +2519,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Plazo }","hidden":"{$item_hide_simple_grid_field153}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Plazo }","hidden":"{$item_hide_simple_grid_field154}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2545,7 +2548,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos NaturalezaId }","hidden":"{$item_hide_simple_grid_field154}","bold":true},
+			{"text":"{$jslabel dbo_Procesos NaturalezaId }","hidden":"{$item_hide_simple_grid_field155}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2574,7 +2577,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos TrasladoCartera }","hidden":"{$item_hide_simple_grid_field155}","bold":true},
+			{"text":"{$jslabel dbo_Procesos TrasladoCartera }","hidden":"{$item_hide_simple_grid_field156}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2603,7 +2606,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos CarteraTipoIdOrigen }","hidden":"{$item_hide_simple_grid_field156}","bold":true},
+			{"text":"{$jslabel dbo_Procesos CarteraTipoIdOrigen }","hidden":"{$item_hide_simple_grid_field157}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2632,7 +2635,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos TrasladoConcepto }","hidden":"{$item_hide_simple_grid_field157}","bold":true},
+			{"text":"{$jslabel dbo_Procesos TrasladoConcepto }","hidden":"{$item_hide_simple_grid_field158}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2661,7 +2664,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ConceptoIdOrigen }","hidden":"{$item_hide_simple_grid_field158}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ConceptoIdOrigen }","hidden":"{$item_hide_simple_grid_field159}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2690,7 +2693,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos AutorizadoPlazo }","hidden":"{$item_hide_simple_grid_field159}","bold":true},
+			{"text":"{$jslabel dbo_Procesos AutorizadoPlazo }","hidden":"{$item_hide_simple_grid_field160}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2719,7 +2722,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos AutorizadoFecha }","hidden":"{$item_hide_simple_grid_field160}","bold":true},
+			{"text":"{$jslabel dbo_Procesos AutorizadoFecha }","hidden":"{$item_hide_simple_grid_field161}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2748,7 +2751,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos AutorizadoPor }","hidden":"{$item_hide_simple_grid_field161}","bold":true},
+			{"text":"{$jslabel dbo_Procesos AutorizadoPor }","hidden":"{$item_hide_simple_grid_field162}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2777,7 +2780,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Reliquidacion }","hidden":"{$item_hide_simple_grid_field162}","bold":true},
+			{"text":"{$jslabel dbo_Procesos Reliquidacion }","hidden":"{$item_hide_simple_grid_field163}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2806,7 +2809,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos ChequeoId }","hidden":"{$item_hide_simple_grid_field163}","bold":true},
+			{"text":"{$jslabel dbo_Procesos ChequeoId }","hidden":"{$item_hide_simple_grid_field164}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2835,7 +2838,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos VlrCostas }","hidden":"{$item_hide_simple_grid_field164}","bold":true},
+			{"text":"{$jslabel dbo_Procesos VlrCostas }","hidden":"{$item_hide_simple_grid_field165}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2864,7 +2867,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos VlrInteresesPlazo }","hidden":"{$item_hide_simple_grid_field165}","bold":true},
+			{"text":"{$jslabel dbo_Procesos VlrInteresesPlazo }","hidden":"{$item_hide_simple_grid_field166}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -2874,6 +2877,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field82}
+																							{BEGIN cellblock_grid_headcell_field83}
+{
+	cellId: 'headcell_field83',
+	col:0,
+	row:0,
+			fieldName: 'Prescripcion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos Prescripcion }","hidden":"{$item_hide_simple_grid_field167}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Prescripcion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field83}
 											],
 				{END row_grid_0}
 		
@@ -5318,6 +5350,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field82}
+																							{BEGIN cellblock_grid_cell_field83}
+{
+	cellId: 'cell_field83',
+	col:0,
+	row:0,
+			fieldName: 'Prescripcion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_simple_grid_field83}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Prescripcion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field83}
 											],
 				{END row_grid_1}
 		
@@ -7511,6 +7572,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field82}
+																							{BEGIN cellblock_grid_footcell_field83}
+{
+	cellId: 'footcell_field83',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field83}
 											],
 				{END row_grid_2}
 		

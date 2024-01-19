@@ -31,6 +31,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["dbo_Chequeos_snippet1"] = true;
 		$this->events["dbo_Liquidaciones_snippet"] = true;
 		$this->events["dbo_Procesos_snippet"] = true;
+		$this->events["dbo_Procesos_snippet1"] = true;
 
 
 
@@ -255,6 +256,51 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });</script>'
+	;
+}
+	function event_dbo_Procesos_snippet1(&$params)
+	{
+	global $pageObject;
+//echo "Master Info<br>";
+/*
+if ($data = $pageObject->getMasterRecord())
+ {
+  echo "Field1: ".$data["ProcesoId"]."<br>";
+  echo "Field2: ".$data["Obligacion"]."<br>";
+ }
+*/
+$data = $pageObject->getMasterRecord();
+echo "Valor P: ".$data["ProcesoId"];
+/*
+$_SESSION["currentRecord"] = $values;
+var_dump($values);
+echo "<br>";
+echo $_SESSION["currentRecord"]["ProcesoId"];
+*/
+//echo "Valor del ProcesoId:".$data["ProcesoId"];
+//$srchObj = SearchClause::getSearchObject("Procesos");
+//echo "Value Proceso".$srchObj->getFieldValue("ProcesoId");
+// Put your code here.
+$consulta=DB::Query("SELECT TOP 1 ISNULL(dbo.InterrupcionesSumaView.Dias, 0) + dbo.Suspensiones_GetBy_Periodo(CASE WHEN Procesos.Incumplimiento IS NULL OR
+                         Procesos.Incumplimiento < Procesos.Acuerdo OR
+                         Procesos.Incumplimiento < Procesos.Notificacion THEN CASE WHEN Procesos.Acuerdo IS NULL OR
+                         Procesos.Acuerdo < Procesos.Notificacion THEN CASE WHEN Procesos.Notificacion IS NULL THEN Procesos.Ejecutoria ELSE Procesos.Notificacion END ELSE Procesos.Acuerdo END ELSE Procesos.Incumplimiento END, 
+                         GETDATE()) + DATEDIFF(day, GETDATE(), DATEADD(year, CASE WHEN Procesos.ConceptoId = 5 THEN 3 ELSE 5 END, CASE WHEN Procesos.Incumplimiento IS NULL OR
+                         Procesos.Incumplimiento < Procesos.Acuerdo OR
+                         Procesos.Incumplimiento < Procesos.Notificacion THEN CASE WHEN Procesos.Acuerdo IS NULL OR
+                         Procesos.Acuerdo < Procesos.Notificacion THEN CASE WHEN Procesos.Notificacion IS NULL THEN Procesos.Ejecutoria ELSE Procesos.Notificacion END ELSE Procesos.Acuerdo END ELSE Procesos.Incumplimiento END)) 
+                         AS Prescripcion FROM Procesos
+						 LEFT OUTER JOIN
+                         dbo.InterrupcionesSumaView ON dbo.Procesos.ProcesoId = dbo.InterrupcionesSumaView.ProcesoId");
+//print_r($consulta);
+//print_r($pageObject);
+echo "<br>";
+//echo "Value RecordId=".$recordId;
+while( $date = $consulta->fetchAssoc() )
+		{
+			echo "value: ".$date["Prescripcion"];
+        }
+//echo "Your message".$consulta;
 	;
 }
 

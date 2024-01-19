@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_Prescripcion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Prescripcion}" {$filterRow_attrs_Prescripcion}>
+			<label>{$label dbo_Procesos Prescripcion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Prescripcion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Prescripcion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Prescripcion}</span>
+						</div>
+		{END searchCtrlBlock_Prescripcion}
 																{BEGIN searchCtrlBlock_Liquidacion}
 
 
@@ -1516,6 +1529,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Prescripcion" checked="checked" value="1" data-field="Prescripcion" data-fieldname="Prescripcion">
+					<span>{$label dbo_Procesos Prescripcion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -1638,7 +1661,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="NaturalezaId"]:before {
 		content: "{$label dbo_Procesos NaturalezaId}";
 	}
-												}
+														[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Prescripcion"]:before {
+		content: "{$label dbo_Procesos Prescripcion}";
+	}
+	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -2580,6 +2606,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field34}
+									{BEGIN cellblock_grid_headcell_field36}
+	<th
+	
+	{$cell_grid_headcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+			data-field="Prescripcion"
+	
+	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prescripcion_fieldheadercolumn}
+	{BEGIN Prescripcion_fieldheader}
+	<SPAN {$Prescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion">
+	{$label dbo_Procesos Prescripcion }	{$arrow_icon_Prescripcion}
+	</SPAN>
+	{END Prescripcion_fieldheader}
+{END Prescripcion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field36}
 							</tr>
 																				
 					{END grid_header}
@@ -3424,6 +3475,27 @@
 {END ProcesoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field34}
+									{BEGIN cellblock_grid_cell_field36}
+	<td
+	
+	{$cell_grid_cell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+			data-field="Prescripcion"
+	
+	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prescripcion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion" data-default-width >
+{$Prescripcion_value}
+</span>
+{END Prescripcion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field36}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -4069,6 +4141,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field34}
+									{BEGIN cellblock_grid_footcell_field35}
+	<td
+	
+	{$cell_grid_footcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+	
+	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field35}
 							</tr>
 					
 					</tfoot>
