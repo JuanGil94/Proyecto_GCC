@@ -411,6 +411,9 @@ pdfDocument = {
 				
 			{"text":{$VlrInteresesPlazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field81}"},
 				
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field82}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -210,6 +210,9 @@ pdfDocument = {
 				
 			{"text":{$Liquidacion_pdfvalue},"hidden":"{$item_hide_import_field29}"},
 				
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_import_field30}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
