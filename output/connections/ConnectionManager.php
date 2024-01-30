@@ -146,7 +146,7 @@ class ConnectionManager extends ConnectionManager_Base
 		$data["connInfo"][4] = "";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = ""; //currently unused
-		$data["ODBCString"] = "Provider=SQLOLEDB;Server=192.168.209.48;Uid=sa;Pwd=B453C0br0c04ct1v0\$;Database=GCC";
+		$data["ODBCString"] = "Provider=MSOLEDBSQL;Server=192.168.209.48;Uid=sa;Pwd=B453C0br0c04ct1v0\$;Database=GCC";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;

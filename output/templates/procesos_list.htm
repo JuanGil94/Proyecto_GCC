@@ -1139,6 +1139,13 @@
 					Liquidaciones				</label>
 			</div>
 			{END print_details_liquidaciones}
+														{BEGIN print_details_seguimiento_y_control_de_acuerdos}
+			<div>
+				<label for="printDetailsseguimiento_y_control_de_acuerdos{$id}">
+					<input type="checkbox" value="seguimiento_y_control_de_acuerdos" id="printDetailsseguimiento_y_control_de_acuerdos{$id}" checked>
+					Seguimiento y control de Acuerdos				</label>
+			</div>
+			{END print_details_seguimiento_y_control_de_acuerdos}
 						</div>
 </div>
 {END print_details}
@@ -2714,17 +2721,24 @@
 	>
 
 	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
+			 
+		
+	{BEGIN dtables_link}
+				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+		<a 
+			{$seguimiento_y_control_de_acuerdos_link_attrs} 
+			class="{$dtables_link_class} details-badge badge seguimiento_y_control_de_acuerdos_badge" 
+			title="Mostrar detalles"
+						
+		>
+							<span class="glyphicon glyphicon-th-list"></span>
+									<span class="{$seguimiento_y_control_de_acuerdos_cntspan_class}" {$seguimiento_y_control_de_acuerdos_childnumber_attr}>
+				{$seguimiento_y_control_de_acuerdos_childnumber}				
+			</span>
+		</a>
+		</span>
+	{END dtables_link}
+
 	 
 		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
@@ -3513,9 +3527,9 @@
 	>
 
 	 
-															<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="correspondencias,solidarios,actuaciones1,llamadas,medidas,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,liquidaciones"
-			data-details-correspondencias			data-details-solidarios			data-details-actuaciones1			data-details-llamadas			data-details-medidas			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-liquidaciones	>
+																<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="correspondencias,solidarios,actuaciones1,llamadas,medidas,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,liquidaciones,seguimiento_y_control_de_acuerdos"
+			data-details-correspondencias			data-details-solidarios			data-details-actuaciones1			data-details-llamadas			data-details-medidas			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-liquidaciones			data-details-seguimiento_y_control_de_acuerdos	>
 		<span data-details-inside data-short-table="correspondencias">
 			</span>
 		<span data-details-inside data-short-table="solidarios">
@@ -3542,10 +3556,13 @@
 			</span>
 		<span data-details-inside data-short-table="liquidaciones">
 			</span>
+		<span data-details-inside data-short-table="seguimiento_y_control_de_acuerdos">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

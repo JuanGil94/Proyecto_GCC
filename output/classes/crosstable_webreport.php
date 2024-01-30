@@ -1551,13 +1551,13 @@ class CrossTableWebReport
 			$isDB = true;
 		if("dbo.Chequeos" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("dbo.Genero" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("dbo.Liquidaciones" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("dbo.usugcc__noti" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("dbo.Sancionados" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("dbo.Acuerdos" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

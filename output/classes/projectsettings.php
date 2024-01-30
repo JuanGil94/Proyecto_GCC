@@ -3706,14 +3706,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "ciudades1" ] = "dbo.Ciudades1";
 	$projectEntities[ "dbo.Autorizaciones" ] = array( "url" => "autorizaciones", "type" => 1 );
 	$projectEntitiesReverse[ "autorizaciones" ] = "dbo.Autorizaciones";
-	$projectEntities[ "dbo.Genero" ] = array( "url" => "genero", "type" => 0 );
-	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
 	$projectEntities[ "dbo.Liquidaciones" ] = array( "url" => "liquidaciones", "type" => 0 );
 	$projectEntitiesReverse[ "liquidaciones" ] = "dbo.Liquidaciones";
 	$projectEntities[ "dbo.usugcc__noti" ] = array( "url" => "usugcc__noti", "type" => 0 );
 	$projectEntitiesReverse[ "usugcc__noti" ] = "dbo.usugcc__noti";
 	$projectEntities[ "dbo.Sancionados" ] = array( "url" => "sancionados", "type" => 0 );
 	$projectEntitiesReverse[ "sancionados" ] = "dbo.Sancionados";
+	$projectEntities[ "dbo.Seguimiento y control de Acuerdos" ] = array( "url" => "seguimiento_y_control_de_acuerdos", "type" => 2 );
+	$projectEntitiesReverse[ "seguimiento_y_control_de_acuerdos" ] = "dbo.Seguimiento y control de Acuerdos";
 }
 
 function findTable( $table ) {

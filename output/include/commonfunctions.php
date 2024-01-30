@@ -373,13 +373,13 @@ function checkTableName($shortTName )
 		return true;
 	if ("autorizaciones" == $shortTName )
 		return true;
-	if ("genero" == $shortTName )
-		return true;
 	if ("liquidaciones" == $shortTName )
 		return true;
 	if ("usugcc__noti" == $shortTName )
 		return true;
 	if ("sancionados" == $shortTName )
+		return true;
+	if ("seguimiento_y_control_de_acuerdos" == $shortTName )
 		return true;
 	return false;
 }
@@ -1198,15 +1198,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Genero");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Genero";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.Liquidaciones");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1231,6 +1222,15 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Sancionados";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Seguimiento y control de Acuerdos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Seguimiento y control de Acuerdos";
 	}
 	return $arr;
 }
@@ -1326,10 +1326,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.OperacionTipo";
 	$arr[]="dbo.Ciudades1";
 	$arr[]="dbo.Autorizaciones";
-	$arr[]="dbo.Genero";
 	$arr[]="dbo.Liquidaciones";
 	$arr[]="dbo.usugcc__noti";
 	$arr[]="dbo.Sancionados";
+	$arr[]="dbo.Seguimiento y control de Acuerdos";
 	return $arr;
 }
 
@@ -2382,11 +2382,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Genero" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Liquidaciones" )
 	{
 //	default permissions
@@ -2401,6 +2396,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Seguimiento y control de Acuerdos" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

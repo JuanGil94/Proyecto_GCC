@@ -548,13 +548,13 @@ class Chart
 			return true;
 		if("dbo.Chequeos" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Genero" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Liquidaciones" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.usugcc__noti" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Sancionados" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Acuerdos" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

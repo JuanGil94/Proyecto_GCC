@@ -100,10 +100,10 @@ $nonAdminTablesArr[] = "dbo.Oficios1";
 $nonAdminTablesArr[] = "dbo.OperacionTipo";
 $nonAdminTablesArr[] = "dbo.Ciudades1";
 $nonAdminTablesArr[] = "dbo.Autorizaciones";
-$nonAdminTablesArr[] = "dbo.Genero";
 $nonAdminTablesArr[] = "dbo.Liquidaciones";
 $nonAdminTablesArr[] = "dbo.usugcc__noti";
 $nonAdminTablesArr[] = "dbo.Sancionados";
+$nonAdminTablesArr[] = "dbo.Seguimiento y control de Acuerdos";
 
 $ug_connection = $cman->getForUserGroups();
 

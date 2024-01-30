@@ -25,6 +25,8 @@
 'dbo.Correspondencias' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Liquidaciones' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Seguimiento y control de Acuerdos' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Seccionales' => array( 'preview' => false ),
 'dbo.Abogados' => array( 'preview' => false ),

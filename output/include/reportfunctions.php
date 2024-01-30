@@ -737,10 +737,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="dbo.Genero")
-		{
-			return 1;
-		}
 		if($table=="dbo.Liquidaciones")
 		{
 			return 1;
@@ -750,6 +746,10 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="dbo.Sancionados")
+		{
+			return 1;
+		}
+		if($table=="dbo.Seguimiento y control de Acuerdos")
 		{
 			return 1;
 		}
@@ -1346,10 +1346,6 @@ function getCaptionTable($table)
 	{
 		return "Autorizaciones";
 	}
-	if($table=="dbo.Genero")
-	{
-		return "Genero";
-	}
 	if($table=="dbo.Liquidaciones")
 	{
 		return "Liquidaciones";
@@ -1361,6 +1357,10 @@ function getCaptionTable($table)
 	if($table=="dbo.Sancionados")
 	{
 		return "Sancionados";
+	}
+	if($table=="dbo.Seguimiento y control de Acuerdos")
+	{
+		return "Seguimiento y control de Acuerdos";
 	}
 	return $table;
 }
@@ -3237,18 +3237,6 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.Autorizaciones";
-	}
-	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("dbo.Genero");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="dbo.Genero";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="dbo.Genero";
 	}
 	if( Security::permissionsAvailable() ) {
 		$strPerm = GetUserPermissions("dbo.Liquidaciones");
