@@ -696,10 +696,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Genero")
-		{
-			return false;
-		}
 		if($table=="dbo.Liquidaciones")
 		{
 			return false;
@@ -709,6 +705,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.Sancionados")
+		{
+			return false;
+		}
+		if($table=="dbo.Seguimiento y control de Acuerdos")
 		{
 			return false;
 		}
@@ -1360,10 +1360,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Genero")
-		{
-			return false;
-		}
 		if($table=="dbo.Liquidaciones")
 		{
 			return false;
@@ -1373,6 +1369,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.Sancionados")
+		{
+			return false;
+		}
+		if($table=="dbo.Seguimiento y control de Acuerdos")
 		{
 			return false;
 		}

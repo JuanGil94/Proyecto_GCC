@@ -1557,6 +1557,9 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+				
 			{"text":""},
 				
 				
@@ -2702,6 +2705,11 @@ pdfDocument = {
 			 {BEGIN details_liquidaciones}
 			{$displayDetailTable_liquidaciones }
 		{END details_liquidaciones},
+				
+				
+			 {BEGIN details_seguimiento_y_control_de_acuerdos}
+			{$displayDetailTable_seguimiento_y_control_de_acuerdos }
+		{END details_seguimiento_y_control_de_acuerdos},
 				
 		  ],
   "border": [ true, true, true, true ],

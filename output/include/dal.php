@@ -77,7 +77,6 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Estados;
 	var $tblGCC_at_S00001_CCAD01_dbo_Etapas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Festivos;
-	var $tblGCC_at_S00001_CCAD01_dbo_Genero;
 	var $tblGCC_at_S00001_CCAD01_dbo_Horarios;
 	var $tblGCC_at_S00001_CCAD01_dbo_Importaciones;
 	var $tblGCC_at_S00001_CCAD01_dbo_Indeterminados;
@@ -167,7 +166,6 @@ class tDAL
 		$this->lstTables[] = array("name" => "Estados", "varname" => "GCC_at_S00001_CCAD01_dbo_Estados", "altvarname" => "Estados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Etapas", "varname" => "GCC_at_S00001_CCAD01_dbo_Etapas", "altvarname" => "Etapas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Festivos", "varname" => "GCC_at_S00001_CCAD01_dbo_Festivos", "altvarname" => "Festivos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-		$this->lstTables[] = array("name" => "Genero", "varname" => "GCC_at_S00001_CCAD01_dbo_Genero", "altvarname" => "Genero", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Horarios", "varname" => "GCC_at_S00001_CCAD01_dbo_Horarios", "altvarname" => "Horarios", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Importaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Importaciones", "altvarname" => "Importaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Indeterminados", "varname" => "GCC_at_S00001_CCAD01_dbo_Indeterminados", "altvarname" => "Indeterminados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

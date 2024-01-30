@@ -838,6 +838,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] = array();
 		}
 		$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"]["edit"] = array("table" => "dbo.Sancionados", "field" => "TipoDocumentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
+			$lookupTableLinks["dbo.Procesos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Procesos"]["seguimiento_y_control_de_acuerdos.ProcesoId"] )) {
+			$lookupTableLinks["dbo.Procesos"]["seguimiento_y_control_de_acuerdos.ProcesoId"] = array();
+		}
+		$lookupTableLinks["dbo.Procesos"]["seguimiento_y_control_de_acuerdos.ProcesoId"]["search"] = array("table" => "dbo.Seguimiento y control de Acuerdos", "field" => "ProcesoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["seguimiento_y_control_de_acuerdos.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["seguimiento_y_control_de_acuerdos.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["seguimiento_y_control_de_acuerdos.EstadoId"]["search"] = array("table" => "dbo.Seguimiento y control de Acuerdos", "field" => "EstadoId", "page" => "search");
 }
 
 ?>

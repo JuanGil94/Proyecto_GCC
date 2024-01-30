@@ -1,0 +1,610 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#90EE90'
+		},
+		nbgroup_1: {
+			fillColor: '#90EE90'
+		},
+		header_1: {
+			fillColor: '#90EE90',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Seccional: {
+			fillColor: '#90EE90',
+			fontSize: 15,
+			bold: true
+		},
+		group_Seccional: {
+			fillColor: '#90EE90'
+		},
+
+			group_2: {
+			fillColor: '#ADD8E6'
+		},
+		nbgroup_2: {
+			fillColor: '#ADD8E6'
+		},
+		header_2: {
+			fillColor: '#ADD8E6',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_CarteraTipo: {
+			fillColor: '#ADD8E6',
+			fontSize: 15,
+			bold: true
+		},
+		group_CarteraTipo: {
+			fillColor: '#ADD8E6'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption dbo_Seguimiento_y_control_de_Acuerdos}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel dbo_Seguimiento_y_control_de_Acuerdos rprint}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 17,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Seguimiento_y_control_de_Acuerdos rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN Seccional_newgroup}
+		[
+								{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Seccional }',
+				style: "blackshade",
+				alignment: '{$Seccional_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos CarteraTipo }',
+				style: "blackshade",
+				alignment: '{$CarteraTipo_align}',
+			},
+																																																																																
+																		{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Numero }',
+				style: "blackshade",
+				alignment: '{$Numero_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Sancionado }',
+				style: "blackshade",
+				alignment: '{$Sancionado_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Concepto }',
+				style: "blackshade",
+				alignment: '{$Concepto_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Documento }',
+				style: "blackshade",
+				alignment: '{$Documento_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos saldo }',
+				style: "blackshade",
+				alignment: '{$saldo_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Recaudo }',
+				style: "blackshade",
+				alignment: '{$Recaudo_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Acuerdo }',
+				style: "blackshade",
+				alignment: '{$Acuerdo_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Vcuota }',
+				style: "blackshade",
+				alignment: '{$Vcuota_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Cuotas }',
+				style: "blackshade",
+				alignment: '{$Cuotas_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos UltPago }',
+				style: "blackshade",
+				alignment: '{$UltPago_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos FechUltPago }',
+				style: "blackshade",
+				alignment: '{$FechUltPago_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Abono }',
+				style: "blackshade",
+				alignment: '{$Abono_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos Incumplimiento }',
+				style: "blackshade",
+				alignment: '{$Incumplimiento_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos EstadoId }',
+				style: "blackshade",
+				alignment: '{$EstadoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_Seguimiento_y_control_de_Acuerdos fechNotific }',
+				style: "blackshade",
+				alignment: '{$fechNotific_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 17,
+					text: {$Seccional_grval},
+					style: "header_1"
+				},
+															],
+	{END Seccional_newgroup}
+	{BEGIN CarteraTipo_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 16,
+					text: {$CarteraTipo_grval},
+					style:"header_2"
+				},
+										],
+	{END CarteraTipo_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_2"
+		},
+												{
+			text: {$Numero_value},
+			alignment: '{$Numero_align}',
+		},
+							{
+			text: {$Sancionado_value},
+			alignment: '{$Sancionado_align}',
+		},
+							{
+			text: {$Concepto_value},
+			alignment: '{$Concepto_align}',
+		},
+							{
+			text: {$Documento_value},
+			alignment: '{$Documento_align}',
+		},
+							{
+			text: {$saldo_value},
+			alignment: '{$saldo_align}',
+		},
+							{
+			text: {$Recaudo_value},
+			alignment: '{$Recaudo_align}',
+		},
+							{
+			text: {$Acuerdo_value},
+			alignment: '{$Acuerdo_align}',
+		},
+							{
+			text: {$Vcuota_value},
+			alignment: '{$Vcuota_align}',
+		},
+							{
+			text: {$Cuotas_value},
+			alignment: '{$Cuotas_align}',
+		},
+							{
+			text: {$UltPago_value},
+			alignment: '{$UltPago_align}',
+		},
+							{
+			text: {$FechUltPago_value},
+			alignment: '{$FechUltPago_align}',
+		},
+							{
+			text: {$Abono_value},
+			alignment: '{$Abono_align}',
+		},
+							{
+			text: {$Incumplimiento_value},
+			alignment: '{$Incumplimiento_align}',
+		},
+							{
+			text: {$EstadoId_value},
+			alignment: '{$EstadoId_align}',
+		},
+							{
+			text: {$fechNotific_value},
+			alignment: '{$fechNotific_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN CarteraTipo_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+					
+													{
+				colSpan: 16,
+				text: [
+					'Resumen de {$jslabel dbo_Seguimiento_y_control_de_Acuerdos CarteraTipo } ', 
+					{$CarteraTipo_grval},
+					' - ', 
+					{$groupCarteraTipo_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_2',
+			},
+																																																																																	],
+	
+	
+	
+	
+	
+	{END CarteraTipo_endgroup}
+			{BEGIN Seccional_endgroup}
+
+		[
+		
+								{
+				colSpan: 17,
+				text: [
+					'Resumen de {$jslabel dbo_Seguimiento_y_control_de_Acuerdos Seccional } ', 
+					{$Seccional_grval},
+					' - ', 
+					{$groupSeccional_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_1',
+			},
+																																																																																						],
+	
+	
+	
+	
+	
+	{END Seccional_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+	[
+		{	
+			text: 'Resumen de la pagina {$page_total_cnt} - Registros totales',
+			colSpan: 17,
+			style: 'pagesummary',
+		}
+	],
+
+	
+	
+	
+	
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Resumen global {$global_total_cnt} - Registros totales',
+			colSpan: 17,
+			style: 'globalsummary',
+		}
+	],
+
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};
