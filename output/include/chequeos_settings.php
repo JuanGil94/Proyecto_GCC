@@ -931,7 +931,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Abogado";
 
-	
+				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalesWhere)and Activo=1";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -1232,7 +1233,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Codigo + ' -  ' + Despacho";
 
-	
+				$edata["LookupWhere"] = "CiudadId in (:session.Ciudades) and Activo=1";
+
 
 		$edata["CustomDisplay"] = "true";
 
@@ -3131,7 +3133,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "Seccional";
 
-	
+				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalesWhere)";
+
 
 	
 	$edata["LookupOrderBy"] = "";
