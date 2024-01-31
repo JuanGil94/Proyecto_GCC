@@ -49,9 +49,36 @@ class class_GlobalEvents extends eventsBase
 function AfterSuccessfulLogin($username, $password, &$data, $pageObject)
 {
 
-		//echo($data);
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+		$arraySeccionales=array();
+$arrayCiudades=array();
+$username=$_SESSION["UserData"]["username"];
+//buscar el UserId
+$consulta=DB::Query("SELECT * from UserProfile where UserName='".$username."'");
+while( $date = $consulta->fetchAssoc() )
+{
+	$userId=$date["UserId"];
+}
+//buscar las seccionales pertenecientes al UserId
+$userId=intval($userId);
+$consulta=DB::Query("SELECT * from UsuariosSeccionales where UserId=".$userId);
+while( $date = $consulta->fetchAssoc() )
+{
+	$arraySeccionales[]=intval($date["SeccionalId"]);
+}
+//Se asignan las seccionales en array para agregar al where
+$_SESSION["SeccionalesWhere"]=$arraySeccionales;
+$arraySeccionales=implode(",",$arraySeccionales);
+
+//Se asignan las Seccionales d elos usuarios logueados a la variable Global
+$_SESSION["Seccionales"]=$arraySeccionales;
+
+$consulta=DB::Query("SELECT * from Seccionales where SeccionalId in (".$arraySeccionales.")");
+while( $date = $consulta->fetchAssoc() )
+{
+	$arrayCiudades[]=intval($date["CiudadId"]);
+}
+$_SESSION["Ciudades"]=$arrayCiudades;
+
 ;
 } // function AfterSuccessfulLogin
 

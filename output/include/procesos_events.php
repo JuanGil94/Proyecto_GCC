@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeMoveNextList"]=true;
 
+		$this->events["BeforeQueryList"]=true;
+
 
 	}
 
@@ -60,6 +62,82 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 ;
 } // function BeforeMoveNextList
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// List page: Before SQL query
+function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
+{
+
+		$strWhereClause = whereAdd($strWhereClause, "SeccionalId in (".$_SESSION["Seccionales"].")");
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeQueryList
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

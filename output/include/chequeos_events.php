@@ -28,6 +28,8 @@
 
 		$this->events["BeforeAdd"]=true;
 
+		$this->events["BeforeQueryList"]=true;
+
 
 	}
 
@@ -668,6 +670,82 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// List page: Before SQL query
+function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
+{
+
+		$strWhereClause = whereAdd($strWhereClause, "SeccionalId in (".$_SESSION["Seccionales"].")");
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeQueryList
+
 		
 		
 		
