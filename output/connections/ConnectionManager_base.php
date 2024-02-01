@@ -332,6 +332,8 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.usugcc__noti"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Sancionados"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Seguimiento y control de Acuerdos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Despachos4"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Despachos1"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

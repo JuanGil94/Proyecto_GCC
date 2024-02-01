@@ -931,14 +931,17 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Abogado";
 
-				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalesWhere)and Activo=1";
+				$edata["LookupWhere"] = "Activo=1";
 
 
 	
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "SeccionalId", "lookup" => "SeccionalId" );
+
 	
 	
 
@@ -1222,7 +1225,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Despachos";
+	$edata["LookupTable"] = "dbo.Despachos1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -1231,17 +1234,19 @@ $tdatachequeos[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "DespachoId";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Codigo + ' -  ' + Despacho";
+	$edata["DisplayField"] = "D.Codigo + ' -  ' +D. Despacho";
 
-				$edata["LookupWhere"] = "CiudadId in (:session.Ciudades) and Activo=1";
-
+	
 
 		$edata["CustomDisplay"] = "true";
 
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "SeccionalId", "lookup" => "SeccionalId" );
+
 	
 	
 
@@ -3143,6 +3148,12 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "AbogadoId";
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "DespachoId";
 
 	
 	

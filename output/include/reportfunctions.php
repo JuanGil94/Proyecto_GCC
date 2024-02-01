@@ -753,6 +753,14 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.Despachos4")
+		{
+			return 1;
+		}
+		if($table=="dbo.Despachos1")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1361,6 +1369,14 @@ function getCaptionTable($table)
 	if($table=="dbo.Seguimiento y control de Acuerdos")
 	{
 		return "Seguimiento y control de Acuerdos";
+	}
+	if($table=="dbo.Despachos4")
+	{
+		return "Despachos4";
+	}
+	if($table=="dbo.Despachos1")
+	{
+		return "Despachos1";
 	}
 	return $table;
 }
@@ -3273,6 +3289,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.Sancionados";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Despachos4");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Despachos4";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Despachos4";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Despachos1");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Despachos1";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Despachos1";
 	}
 	return $arr;
 }
