@@ -381,6 +381,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("seguimiento_y_control_de_acuerdos" == $shortTName )
 		return true;
+	if ("dbo_despachos4" == $shortTName )
+		return true;
+	if ("despachos1" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1232,6 +1236,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Seguimiento y control de Acuerdos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Despachos4");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Despachos4";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Despachos1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Despachos1";
+	}
 	return $arr;
 }
 
@@ -1330,6 +1352,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.usugcc__noti";
 	$arr[]="dbo.Sancionados";
 	$arr[]="dbo.Seguimiento y control de Acuerdos";
+	$arr[]="dbo.Despachos4";
+	$arr[]="dbo.Despachos1";
 	return $arr;
 }
 
@@ -2401,6 +2425,16 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.Despachos4" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Despachos1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

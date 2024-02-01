@@ -166,13 +166,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Abogados"]["chequeos.AbogadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Abogados"]["chequeos.AbogadoId"]["edit"] = array("table" => "dbo.Chequeos", "field" => "AbogadoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
-			$lookupTableLinks["dbo.Despachos"] = array();
+		if( !isset( $lookupTableLinks["dbo.Despachos1"] ) ) {
+			$lookupTableLinks["dbo.Despachos1"] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.Despachos"]["chequeos.DespachoId"] )) {
-			$lookupTableLinks["dbo.Despachos"]["chequeos.DespachoId"] = array();
+		if( !isset( $lookupTableLinks["dbo.Despachos1"]["chequeos.DespachoId"] )) {
+			$lookupTableLinks["dbo.Despachos1"]["chequeos.DespachoId"] = array();
 		}
-		$lookupTableLinks["dbo.Despachos"]["chequeos.DespachoId"]["edit"] = array("table" => "dbo.Chequeos", "field" => "DespachoId", "page" => "edit");
+		$lookupTableLinks["dbo.Despachos1"]["chequeos.DespachoId"]["edit"] = array("table" => "dbo.Chequeos", "field" => "DespachoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
 			$lookupTableLinks["dbo.Seccionales"] = array();
 		}

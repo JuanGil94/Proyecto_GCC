@@ -3714,6 +3714,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "sancionados" ] = "dbo.Sancionados";
 	$projectEntities[ "dbo.Seguimiento y control de Acuerdos" ] = array( "url" => "seguimiento_y_control_de_acuerdos", "type" => 2 );
 	$projectEntitiesReverse[ "seguimiento_y_control_de_acuerdos" ] = "dbo.Seguimiento y control de Acuerdos";
+	$projectEntities[ "dbo.Despachos4" ] = array( "url" => "dbo_despachos4", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_despachos4" ] = "dbo.Despachos4";
+	$projectEntities[ "dbo.Despachos1" ] = array( "url" => "despachos1", "type" => 1 );
+	$projectEntitiesReverse[ "despachos1" ] = "dbo.Despachos1";
 }
 
 function findTable( $table ) {

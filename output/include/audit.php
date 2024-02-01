@@ -712,6 +712,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Despachos4")
+		{
+			return true;
+		}
+		if($table=="dbo.Despachos1")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1375,6 +1383,14 @@ class AuditTrailFile
 		if($table=="dbo.Seguimiento y control de Acuerdos")
 		{
 			return false;
+		}
+		if($table=="dbo.Despachos4")
+		{
+			return true;
+		}
+		if($table=="dbo.Despachos1")
+		{
+			return true;
 		}
 	}
 

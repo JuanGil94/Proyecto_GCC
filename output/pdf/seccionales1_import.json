@@ -1,0 +1,189 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Seccionales1 import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$NIT_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$CiudadId_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$PiePagina_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Direccion_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Telefonos_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$AbogadoCargo_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$Formato_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$Corporacion_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
+				
+			{"text":{$Unidad_pdfvalue},"hidden":"{$item_hide_import_field19}"},
+				
+				
+			{"text":{$Oficina_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+				
+			{"text":{$Serie_pdfvalue},"hidden":"{$item_hide_import_field21}"},
+				
+				
+			{"text":{$Subserie_pdfvalue},"hidden":"{$item_hide_import_field22}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  
