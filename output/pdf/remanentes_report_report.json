@@ -1,0 +1,3776 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption dbo_Remanentes_Report}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel dbo_Remanentes_Report report}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														{BEGIN col_grid_0}
+					"%",
+					{END col_grid_0}
+										{BEGIN col_grid_1}
+					"%",
+					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
+										{BEGIN col_grid_3}
+					"%",
+					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
+										{BEGIN col_grid_5}
+					"%",
+					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+															],
+											heights: [ // first height for header part
+					"%",
+																		{BEGIN row_grid_0}
+							"%",
+							{END row_grid_0}
+																								{BEGIN row_grid_1}
+							"%",
+							{END row_grid_1}
+																								{BEGIN row_grid_2}
+							"%",
+							{END row_grid_2}
+																							 	{BEGIN grid_row}
+													{BEGIN row_grid_3}
+							"%",
+							{END row_grid_3}
+													{END grid_row}
+																								{BEGIN row_grid_4}
+							"%",
+							{END row_grid_4}
+																								{BEGIN row_grid_5}
+							"%",
+							{END row_grid_5}
+																								{BEGIN row_grid_6}
+							"%",
+							{END row_grid_6}
+																								{BEGIN row_grid_7}
+							"%",
+							{END row_grid_7}
+																								{BEGIN row_grid_8}
+							"%",
+							{END row_grid_8}
+																								{BEGIN row_grid_9}
+							"%",
+							{END row_grid_9}
+																								{BEGIN row_grid_10}
+							"%",
+							{END row_grid_10}
+																								{BEGIN row_grid_11}
+							"%",
+							{END row_grid_11}
+																								{BEGIN row_grid_12}
+							"%",
+							{END row_grid_12}
+																								{BEGIN row_grid_13}
+							"%",
+							{END row_grid_13}
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: {$formwidth_grid},
+							border:[false, false,false,false],
+							stack: [
+
+																										
+''
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																	
+{BEGIN grid_row}
+							
+	{BEGIN Seccional_newgroup}
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_headcell_groupfield}
+{
+	cellId: 'headcell_groupfield',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Seccional }","hidden":"{$item_hide_grid_group_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_groupfield}
+																							{BEGIN cellblock_grid_headcell_groupfield1}
+{
+	cellId: 'headcell_groupfield1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report CarteraTipo }","hidden":"{$item_hide_grid_group_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_groupfield1}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Fecha }","hidden":"{$item_hide_report_advanced_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Remanente }","hidden":"{$item_hide_report_advanced_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Abogado }","hidden":"{$item_hide_report_advanced_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Concepto }","hidden":"{$item_hide_report_advanced_field_label3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Numero }","hidden":"{$item_hide_report_advanced_field_label4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Sancionado }","hidden":"{$item_hide_report_advanced_field_label5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Obligacion }","hidden":"{$item_hide_report_advanced_field_label7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Intereses }","hidden":"{$item_hide_report_advanced_field_label8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Costas }","hidden":"{$item_hide_report_advanced_field_label9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Documento }","hidden":"{$item_hide_report_advanced_field_label6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_group_field}
+{
+	cellId: 'cell_group_field',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'header_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_field}
+			colSpan: {$colspan_grid_cell_group_field},
+			{END colspan_grid_cell_group_field}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Seccional_grval},"hidden":"{$item_hide_grid_group_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field}
+																		{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+							],
+				{END row_grid_1}
+			{END Seccional_newgroup}
+
+									
+	{BEGIN CarteraTipo_newgroup}
+				{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_group_empty2}
+{
+	cellId: 'cell_group_empty2',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty2}
+																							{BEGIN cellblock_grid_cell_group_field1}
+{
+	cellId: 'cell_group_field1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'header_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_field1}
+			colSpan: {$colspan_grid_cell_group_field1},
+			{END colspan_grid_cell_group_field1}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$CarteraTipo_grval},"hidden":"{$item_hide_grid_group_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field1}
+																		{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+							],
+				{END row_grid_2}
+			{END CarteraTipo_newgroup}
+
+									
+	{BEGIN row_data}
+				{BEGIN row_grid_3}
+				[
+																{BEGIN cellblock_grid_cell_group_empty3}
+{
+	cellId: 'cell_group_empty3',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty3}
+																							{BEGIN cellblock_grid_cell_group_empty4}
+{
+	cellId: 'cell_group_empty4',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty4}
+																							{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Fecha_value},"hidden":"{$item_hide_report_advanced_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Fecha_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Remanente_value},"hidden":"{$item_hide_report_advanced_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Remanente_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Abogado_value},"hidden":"{$item_hide_report_advanced_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Abogado_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Concepto_value},"hidden":"{$item_hide_report_advanced_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Concepto_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Numero_value},"hidden":"{$item_hide_report_advanced_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Numero_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Sancionado_value},"hidden":"{$item_hide_report_advanced_field5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Sancionado_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Obligacion_value},"hidden":"{$item_hide_report_advanced_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Intereses_value},"hidden":"{$item_hide_report_advanced_field8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Costas_value},"hidden":"{$item_hide_report_advanced_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Documento_value},"hidden":"{$item_hide_report_advanced_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Documento_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+											],
+				{END row_grid_3}
+			{END row_data}
+
+									
+	{BEGIN CarteraTipo_endgroup}
+				{BEGIN row_grid_4}
+				[
+																{BEGIN cellblock_grid_cell_group_empty}
+{
+	cellId: 'cell_group_empty',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty}
+																							{BEGIN cellblock_grid_cell_group_summary1}
+{
+	cellId: 'cell_group_summary1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary1}
+			colSpan: {$colspan_grid_cell_group_summary1},
+			{END colspan_grid_cell_group_summary1}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen de","hidden":"{$item_hide_group_summary_label}","isHtml":true},
+				
+				
+			{"text":"{$jslabel dbo_Remanentes_Report CarteraTipo }","hidden":"{$item_hide_group_summary_field_label1}","bold":true},
+				
+				
+			{"text":{$CarteraTipo_grval},"hidden":"{$item_hide_group_summary_field_value1}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash1}","isHtml":true},
+				
+				
+			{"text":"{$groupCarteraTipo_total_cnt}","hidden":"{$item_hide_group_summary_count1}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_group_summary_label3}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary1}
+																		{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+							],
+				{END row_grid_4}
+						{BEGIN row_grid_5}
+				[
+																{BEGIN cellblock_grid_cell_group_empty1}
+{
+	cellId: 'cell_group_empty1',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty1}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum2}
+{
+	cellId: 'cell_group_summary_type_sum2',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_group_summary_type_sum1}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum2}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum8}
+{
+	cellId: 'cell_group_summary_field_sum8',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum8}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum4}
+{
+	cellId: 'cell_group_summary_field_sum4',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipo_totalRemanente_sum},"hidden":"{$item_hide_group_summary_field_sum4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Remanente_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum4}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum10}
+{
+	cellId: 'cell_group_summary_field_sum10',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum10}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum12}
+{
+	cellId: 'cell_group_summary_field_sum12',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum12}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum14}
+{
+	cellId: 'cell_group_summary_field_sum14',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum14}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum16}
+{
+	cellId: 'cell_group_summary_field_sum16',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum16}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum5}
+{
+	cellId: 'cell_group_summary_field_sum5',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipo_totalObligacion_sum},"hidden":"{$item_hide_group_summary_field_sum5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum5}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum6}
+{
+	cellId: 'cell_group_summary_field_sum6',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipo_totalIntereses_sum},"hidden":"{$item_hide_group_summary_field_sum6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum6}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum7}
+{
+	cellId: 'cell_group_summary_field_sum7',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipo_totalCostas_sum},"hidden":"{$item_hide_group_summary_field_sum7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum7}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum18}
+{
+	cellId: 'cell_group_summary_field_sum18',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'group_CarteraTipo',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum18}
+											],
+				{END row_grid_5}
+			{END CarteraTipo_endgroup}
+
+									
+	{BEGIN Seccional_endgroup}
+				{BEGIN row_grid_6}
+				[
+																{BEGIN cellblock_grid_cell_group_summary}
+{
+	cellId: 'cell_group_summary',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary}
+			colSpan: {$colspan_grid_cell_group_summary},
+			{END colspan_grid_cell_group_summary}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen de","hidden":"{$item_hide_group_summary_label1}","isHtml":true},
+				
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Seccional }","hidden":"{$item_hide_group_summary_field_label}","bold":true},
+				
+				
+			{"text":{$Seccional_grval},"hidden":"{$item_hide_group_summary_field_value}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$groupSeccional_total_cnt}","hidden":"{$item_hide_group_summary_count}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_group_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary}
+																		{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+							],
+				{END row_grid_6}
+						{BEGIN row_grid_7}
+				[
+																{BEGIN cellblock_grid_cell_group_summary_type_sum}
+{
+	cellId: 'cell_group_summary_type_sum',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_group_summary_type_sum}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum1}
+{
+	cellId: 'cell_group_summary_type_sum1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum1}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum9}
+{
+	cellId: 'cell_group_summary_field_sum9',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum9}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum}
+{
+	cellId: 'cell_group_summary_field_sum',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccional_totalRemanente_sum},"hidden":"{$item_hide_group_summary_field_sum}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Remanente_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum11}
+{
+	cellId: 'cell_group_summary_field_sum11',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum11}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum13}
+{
+	cellId: 'cell_group_summary_field_sum13',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum13}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum15}
+{
+	cellId: 'cell_group_summary_field_sum15',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum15}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum17}
+{
+	cellId: 'cell_group_summary_field_sum17',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum17}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum1}
+{
+	cellId: 'cell_group_summary_field_sum1',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccional_totalObligacion_sum},"hidden":"{$item_hide_group_summary_field_sum1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum1}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum2}
+{
+	cellId: 'cell_group_summary_field_sum2',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccional_totalIntereses_sum},"hidden":"{$item_hide_group_summary_field_sum2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum2}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum3}
+{
+	cellId: 'cell_group_summary_field_sum3',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccional_totalCostas_sum},"hidden":"{$item_hide_group_summary_field_sum3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum3}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum19}
+{
+	cellId: 'cell_group_summary_field_sum19',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'group_Seccional',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum19}
+											],
+				{END row_grid_7}
+			{END Seccional_endgroup}
+
+									{END grid_row}
+
+									
+	{BEGIN page_summary}
+				{BEGIN row_grid_8}
+				[
+																{BEGIN cellblock_grid_cell_page_summary_group_header}
+{
+	cellId: 'cell_page_summary_group_header',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Seccional }","hidden":"{$item_hide_page_summary_group_header}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_group_header}
+																							{BEGIN cellblock_grid_cell_page_summary_group_header1}
+{
+	cellId: 'cell_page_summary_group_header1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report CarteraTipo }","hidden":"{$item_hide_page_summary_group_header1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_group_header1}
+																							{BEGIN cellblock_grid_cell_page_summary_header}
+{
+	cellId: 'cell_page_summary_header',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Fecha }","hidden":"{$item_hide_page_summary_header}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header}
+																							{BEGIN cellblock_grid_cell_page_summary_header1}
+{
+	cellId: 'cell_page_summary_header1',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Remanente }","hidden":"{$item_hide_page_summary_header1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header1}
+																							{BEGIN cellblock_grid_cell_page_summary_header2}
+{
+	cellId: 'cell_page_summary_header2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Abogado }","hidden":"{$item_hide_page_summary_header2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header2}
+																							{BEGIN cellblock_grid_cell_page_summary_header3}
+{
+	cellId: 'cell_page_summary_header3',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Concepto }","hidden":"{$item_hide_page_summary_header3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header3}
+																							{BEGIN cellblock_grid_cell_page_summary_header4}
+{
+	cellId: 'cell_page_summary_header4',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Numero }","hidden":"{$item_hide_page_summary_header4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header4}
+																							{BEGIN cellblock_grid_cell_page_summary_header5}
+{
+	cellId: 'cell_page_summary_header5',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Sancionado }","hidden":"{$item_hide_page_summary_header5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header5}
+																							{BEGIN cellblock_grid_cell_page_summary_header7}
+{
+	cellId: 'cell_page_summary_header7',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Obligacion }","hidden":"{$item_hide_page_summary_header7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header7}
+																							{BEGIN cellblock_grid_cell_page_summary_header8}
+{
+	cellId: 'cell_page_summary_header8',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Intereses }","hidden":"{$item_hide_page_summary_header8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header8}
+																							{BEGIN cellblock_grid_cell_page_summary_header9}
+{
+	cellId: 'cell_page_summary_header9',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Costas }","hidden":"{$item_hide_page_summary_header9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header9}
+																							{BEGIN cellblock_grid_cell_page_summary_header6}
+{
+	cellId: 'cell_page_summary_header6',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Documento }","hidden":"{$item_hide_page_summary_header6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_header6}
+											],
+				{END row_grid_8}
+						{BEGIN row_grid_9}
+				[
+																{BEGIN cellblock_grid_cell_page_summary}
+{
+	cellId: 'cell_page_summary',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_page_summary}
+			colSpan: {$colspan_grid_cell_page_summary},
+			{END colspan_grid_cell_page_summary}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen de la pagina","hidden":"{$item_hide_page_summary_label1}","isHtml":true},
+				
+				
+			{"text":"-","hidden":"{$item_hide_page_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$page_total_cnt}","hidden":"{$item_hide_page_summary_count}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_page_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary}
+																		{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_page_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+							],
+				{END row_grid_9}
+						{BEGIN row_grid_10}
+				[
+																{BEGIN cellblock_grid_cell_page_summary_type_sum}
+{
+	cellId: 'cell_page_summary_type_sum',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_page_summary_type_sum}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_type_sum}
+																							{BEGIN cellblock_grid_cell_page_summary_type_sum1}
+{
+	cellId: 'cell_page_summary_type_sum1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_type_sum1}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum}
+{
+	cellId: 'cell_page_summary_field_sum',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum1}
+{
+	cellId: 'cell_page_summary_field_sum1',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$page_totalRemanente_sum},"hidden":"{$item_hide_page_summary_field_sum}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Remanente_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum1}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum2}
+{
+	cellId: 'cell_page_summary_field_sum2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum2}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum3}
+{
+	cellId: 'cell_page_summary_field_sum3',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum3}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum4}
+{
+	cellId: 'cell_page_summary_field_sum4',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum4}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum5}
+{
+	cellId: 'cell_page_summary_field_sum5',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum5}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum7}
+{
+	cellId: 'cell_page_summary_field_sum7',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$page_totalObligacion_sum},"hidden":"{$item_hide_page_summary_field_sum1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum7}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum8}
+{
+	cellId: 'cell_page_summary_field_sum8',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$page_totalIntereses_sum},"hidden":"{$item_hide_page_summary_field_sum2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum8}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum9}
+{
+	cellId: 'cell_page_summary_field_sum9',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$page_totalCostas_sum},"hidden":"{$item_hide_page_summary_field_sum3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum9}
+																							{BEGIN cellblock_grid_cell_page_summary_field_sum6}
+{
+	cellId: 'cell_page_summary_field_sum6',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'pagesummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_page_summary_field_sum6}
+											],
+				{END row_grid_10}
+			{END page_summary}
+
+					
+	{BEGIN global_summary}
+				{BEGIN row_grid_11}
+				[
+																{BEGIN cellblock_grid_cell_global_summary_group_header}
+{
+	cellId: 'cell_global_summary_group_header',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Seccional }","hidden":"{$item_hide_global_summary_group_header}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_group_header}
+																							{BEGIN cellblock_grid_cell_global_summary_group_header1}
+{
+	cellId: 'cell_global_summary_group_header1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report CarteraTipo }","hidden":"{$item_hide_global_summary_group_header1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_group_header1}
+																							{BEGIN cellblock_grid_cell_global_summary_header}
+{
+	cellId: 'cell_global_summary_header',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Fecha }","hidden":"{$item_hide_global_summary_header}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header}
+																							{BEGIN cellblock_grid_cell_global_summary_header1}
+{
+	cellId: 'cell_global_summary_header1',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Remanente }","hidden":"{$item_hide_global_summary_header1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header1}
+																							{BEGIN cellblock_grid_cell_global_summary_header2}
+{
+	cellId: 'cell_global_summary_header2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Abogado }","hidden":"{$item_hide_global_summary_header2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header2}
+																							{BEGIN cellblock_grid_cell_global_summary_header3}
+{
+	cellId: 'cell_global_summary_header3',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Concepto }","hidden":"{$item_hide_global_summary_header3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header3}
+																							{BEGIN cellblock_grid_cell_global_summary_header4}
+{
+	cellId: 'cell_global_summary_header4',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Numero }","hidden":"{$item_hide_global_summary_header4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header4}
+																							{BEGIN cellblock_grid_cell_global_summary_header5}
+{
+	cellId: 'cell_global_summary_header5',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Sancionado }","hidden":"{$item_hide_global_summary_header5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header5}
+																							{BEGIN cellblock_grid_cell_global_summary_header7}
+{
+	cellId: 'cell_global_summary_header7',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Obligacion }","hidden":"{$item_hide_global_summary_header7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header7}
+																							{BEGIN cellblock_grid_cell_global_summary_header8}
+{
+	cellId: 'cell_global_summary_header8',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Intereses }","hidden":"{$item_hide_global_summary_header8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header8}
+																							{BEGIN cellblock_grid_cell_global_summary_header9}
+{
+	cellId: 'cell_global_summary_header9',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Costas }","hidden":"{$item_hide_global_summary_header9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header9}
+																							{BEGIN cellblock_grid_cell_global_summary_header6}
+{
+	cellId: 'cell_global_summary_header6',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Remanentes_Report Documento }","hidden":"{$item_hide_global_summary_header6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header6}
+											],
+				{END row_grid_11}
+						{BEGIN row_grid_12}
+				[
+																{BEGIN cellblock_grid_cell_global_summary}
+{
+	cellId: 'cell_global_summary',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_global_summary}
+			colSpan: {$colspan_grid_cell_global_summary},
+			{END colspan_grid_cell_global_summary}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen global","hidden":"{$item_hide_global_summary_label1}","isHtml":true},
+				
+				
+			{"text":"-","hidden":"{$item_hide_global_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$global_total_cnt}","hidden":"{$item_hide_global_summary_count}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_global_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary}
+																		{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+							],
+				{END row_grid_12}
+						{BEGIN row_grid_13}
+				[
+																{BEGIN cellblock_grid_cell_global_summary_type_sum}
+{
+	cellId: 'cell_global_summary_type_sum',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_type_sum}
+																							{BEGIN cellblock_grid_cell_global_summary_type_sum1}
+{
+	cellId: 'cell_global_summary_type_sum1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipo',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_global_summary_type_sum}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_type_sum1}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum}
+{
+	cellId: 'cell_global_summary_field_sum',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum1}
+{
+	cellId: 'cell_global_summary_field_sum1',
+	col:0,
+	row:0,
+			fieldName: 'Remanente',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalRemanente_sum},"hidden":"{$item_hide_global_summary_field_sum}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Remanente_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum1}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum2}
+{
+	cellId: 'cell_global_summary_field_sum2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum2}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum3}
+{
+	cellId: 'cell_global_summary_field_sum3',
+	col:0,
+	row:0,
+			fieldName: 'Concepto',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum3}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum4}
+{
+	cellId: 'cell_global_summary_field_sum4',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum4}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum5}
+{
+	cellId: 'cell_global_summary_field_sum5',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum5}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum7}
+{
+	cellId: 'cell_global_summary_field_sum7',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalObligacion_sum},"hidden":"{$item_hide_global_summary_field_sum1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum7}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum8}
+{
+	cellId: 'cell_global_summary_field_sum8',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalIntereses_sum},"hidden":"{$item_hide_global_summary_field_sum2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum8}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum9}
+{
+	cellId: 'cell_global_summary_field_sum9',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalCostas_sum},"hidden":"{$item_hide_global_summary_field_sum3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum9}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum6}
+{
+	cellId: 'cell_global_summary_field_sum6',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum6}
+											],
+				{END row_grid_13}
+			{END global_summary}
+
+	
+
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};

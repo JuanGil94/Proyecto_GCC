@@ -385,6 +385,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("despachos1" == $shortTName )
 		return true;
+	if ("remanentes_report" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1254,6 +1256,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Despachos1";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Remanentes Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Remanentes Report";
+	}
 	return $arr;
 }
 
@@ -1354,6 +1365,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Seguimiento y control de Acuerdos";
 	$arr[]="dbo.Despachos4";
 	$arr[]="dbo.Despachos1";
+	$arr[]="dbo.Remanentes Report";
 	return $arr;
 }
 
@@ -2435,6 +2447,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Remanentes Report" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

@@ -761,6 +761,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.Remanentes Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1377,6 +1381,10 @@ function getCaptionTable($table)
 	if($table=="dbo.Despachos1")
 	{
 		return "Despachos1";
+	}
+	if($table=="dbo.Remanentes Report")
+	{
+		return "Remanentes Report";
 	}
 	return $table;
 }
