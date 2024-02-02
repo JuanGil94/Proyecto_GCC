@@ -1,0 +1,3132 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-report"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_Fecha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
+			<label>{$label dbo_Remanentes_Report Fecha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
+						</div>
+		{END searchCtrlBlock_Fecha}
+																{BEGIN searchCtrlBlock_Documento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Documento}" {$filterRow_attrs_Documento}>
+			<label>{$label dbo_Remanentes_Report Documento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Documento}</span>
+						</div>
+		{END searchCtrlBlock_Documento}
+																{BEGIN searchCtrlBlock_Costas}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Costas}" {$filterRow_attrs_Costas}>
+			<label>{$label dbo_Remanentes_Report Costas }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Costas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Costas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
+						</div>
+		{END searchCtrlBlock_Costas}
+																{BEGIN searchCtrlBlock_Intereses}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Intereses}" {$filterRow_attrs_Intereses}>
+			<label>{$label dbo_Remanentes_Report Intereses }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Intereses}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Intereses}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Intereses}</span>
+						</div>
+		{END searchCtrlBlock_Intereses}
+																{BEGIN searchCtrlBlock_Obligacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Obligacion}" {$filterRow_attrs_Obligacion}>
+			<label>{$label dbo_Remanentes_Report Obligacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
+						</div>
+		{END searchCtrlBlock_Obligacion}
+																{BEGIN searchCtrlBlock_Sancionado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sancionado}" {$filterRow_attrs_Sancionado}>
+			<label>{$label dbo_Remanentes_Report Sancionado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sancionado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sancionado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sancionado}</span>
+						</div>
+		{END searchCtrlBlock_Sancionado}
+																{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label dbo_Remanentes_Report Numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label dbo_Remanentes_Report Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_Abogado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Abogado}" {$filterRow_attrs_Abogado}>
+			<label>{$label dbo_Remanentes_Report Abogado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
+						</div>
+		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_Seccional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
+			<label>{$label dbo_Remanentes_Report Seccional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
+						</div>
+		{END searchCtrlBlock_Seccional}
+																{BEGIN searchCtrlBlock_CarteraTipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipo}" {$filterRow_attrs_CarteraTipo}>
+			<label>{$label dbo_Remanentes_Report CarteraTipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipo}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipo}
+																{BEGIN searchCtrlBlock_Remanente}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Remanente}" {$filterRow_attrs_Remanente}>
+			<label>{$label dbo_Remanentes_Report Remanente }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Remanente}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Remanente}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Remanente}</span>
+						</div>
+		{END searchCtrlBlock_Remanente}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_CarteraTipo}
+
+	<div class="panel panel-info filter-field filter-CarteraTipo-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_CarteraTipo}
+			<a href="#" class="filter-clear filter-clear-CarteraTipo" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_CarteraTipo}
+			{$label dbo_Remanentes_Report CarteraTipo }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_CarteraTipo}
+		<li class="list-group-item filter-values filter-values-CarteraTipo {$collapsedClass_CarteraTipo} {$visibilityClass_CarteraTipo}">
+			{$CarteraTipo_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_CarteraTipo}
+
+			{BEGIN filter_button_showmore_CarteraTipo}
+		<li class="list-group-item filter-show-more {$collapsedClass_CarteraTipo} {$showMoreBtnClass_CarteraTipo}">
+			<a class="filter-show-more-link filterShowMore_CarteraTipo" href="#">{$show_n_more_CarteraTipo}</a>
+		</li>
+		{END filter_button_showmore_CarteraTipo}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_CarteraTipo}
+
+
+
+
+
+
+{BEGIN filter_control_Concepto}
+
+	<div class="panel panel-info filter-field filter-Concepto-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_Concepto}
+			<a href="#" class="filter-clear filter-clear-Concepto" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Concepto}
+			{$label dbo_Remanentes_Report Concepto }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_Concepto}
+		<li class="list-group-item filter-values filter-values-Concepto {$collapsedClass_Concepto} {$visibilityClass_Concepto}">
+			{$Concepto_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_Concepto}
+
+			{BEGIN filter_button_showmore_Concepto}
+		<li class="list-group-item filter-show-more {$collapsedClass_Concepto} {$showMoreBtnClass_Concepto}">
+			<a class="filter-show-more-link filterShowMore_Concepto" href="#">{$show_n_more_Concepto}</a>
+		</li>
+		{END filter_button_showmore_Concepto}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_Concepto}
+
+
+
+
+
+
+{BEGIN filter_control_Fecha}
+
+	<div class="panel panel-info filter-field filter-Fecha-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_Fecha}
+			<a href="#" class="filter-clear filter-clear-Fecha" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Fecha}
+			{$label dbo_Remanentes_Report Fecha }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_Fecha}
+		<li class="list-group-item filter-values filter-values-Fecha {$collapsedClass_Fecha} {$visibilityClass_Fecha}">
+			{$Fecha_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_Fecha}
+
+			{BEGIN filter_button_showmore_Fecha}
+		<li class="list-group-item filter-show-more {$collapsedClass_Fecha} {$showMoreBtnClass_Fecha}">
+			<a class="filter-show-more-link filterShowMore_Fecha" href="#">{$show_n_more_Fecha}</a>
+		</li>
+		{END filter_button_showmore_Fecha}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_Fecha}
+
+
+
+
+
+
+{BEGIN filter_control_Seccional}
+
+	<div class="panel panel-info filter-field filter-Seccional-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_Seccional}
+			<a href="#" class="filter-clear filter-clear-Seccional" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_Seccional}
+			{$label dbo_Remanentes_Report Seccional }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_Seccional}
+		<li class="list-group-item filter-values filter-values-Seccional {$collapsedClass_Seccional} {$visibilityClass_Seccional}">
+			{$Seccional_filter}
+						
+					
+					
+					
+					</li>
+		{END filterCtrlBlock_Seccional}
+
+			{BEGIN filter_button_showmore_Seccional}
+		<li class="list-group-item filter-show-more {$collapsedClass_Seccional} {$showMoreBtnClass_Seccional}">
+			<a class="filter-show-more-link filterShowMore_Seccional" href="#">{$show_n_more_Seccional}</a>
+		</li>
+		{END filter_button_showmore_Seccional}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_Seccional}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="remanentes_report_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export_report_excel" data-itemid="export_report_excel" {$item_export_report_excel} data-pageid="{$pageid}" data-small >
+				<a  href="remanentes_report_print.php?all=1&amp;format=excel{$stateLink}" {$excellink_attrs}  title="" >
+				
+		Exportar a Excel		
+		</a>
+	</li>
+{END export_link}
+							{BEGIN export_link}
+	<li data-itemtype="export_report_word" data-itemid="export_report_word" {$item_export_report_word} data-pageid="{$pageid}" data-small >
+				<a  href="remanentes_report_print.php?all=1&amp;format=word{$stateLink}" {$wordlink_attrs}  title="" >
+				
+		Exportar a Word 		
+		</a>
+	</li>
+{END export_link}
+							{BEGIN export_link}
+	<li data-itemtype="export_report_pdf" data-itemid="export_report_pdf" {$item_export_report_pdf} data-pageid="{$pageid}" data-small >
+				<a  data-pdfpage="rprint" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Remanentes Report.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="rprint" 
+  title="" >
+				
+		Exportar a PDF		
+		</a>
+	</li>
+{END export_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$grpsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="remanentes_report_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir informe completo							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="remanentes_report_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Grupos por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+	.rnr-report {
+		width: 100%;
+	}
+	td {
+		padding: 2px 4px;
+	}
+			td.group_Seccional{
+			background-color: #C0FFFF;
+		}
+		td.header_Seccional {
+			background-color: #A3D8D8; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_CarteraTipo{
+			background-color: #98FB98;
+		}
+		td.header_CarteraTipo {
+			background-color: #81D581; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+		.blackshade {
+		font-size: 120%;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table-hover table-bordered table  r-report " 
+	cellpadding="0" 
+	data-body-height="1"
+>
+<tbody>	
+{BEGIN grid_row}
+							{BEGIN Seccional_newgroup}
+
+ 
+	<tr data-section="group" data-group="Seccional" data-rowidx="0" {$rowattrs} {$row_grid_0} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_headcell_groupfield}
+	<th
+	
+	{$cell_grid_headcell_groupfield}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_groupfield" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="grid_group_field_label" data-itemid="grid_group_field_label" {$item_grid_group_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+{$label dbo_Remanentes_Report Seccional }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_groupfield}
+		 
+			{BEGIN cellblock_grid_headcell_groupfield1}
+	<th
+	
+	{$cell_grid_headcell_groupfield1}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_headcell_groupfield1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="grid_group_field_label" data-itemid="grid_group_field_label1" {$item_grid_group_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+{$label dbo_Remanentes_Report CarteraTipo }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_groupfield1}
+		 
+			{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label" {$item_report_advanced_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+{$label dbo_Remanentes_Report Fecha }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+		 
+			{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label1" {$item_report_advanced_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente">
+{$label dbo_Remanentes_Report Remanente }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+		 
+			{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label2" {$item_report_advanced_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+{$label dbo_Remanentes_Report Abogado }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+		 
+			{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label3" {$item_report_advanced_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+{$label dbo_Remanentes_Report Concepto }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+		 
+			{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label4" {$item_report_advanced_field_label4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+{$label dbo_Remanentes_Report Numero }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+		 
+			{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label5" {$item_report_advanced_field_label5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
+{$label dbo_Remanentes_Report Sancionado }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+		 
+			{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label7" {$item_report_advanced_field_label7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+{$label dbo_Remanentes_Report Obligacion }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+		 
+			{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label8" {$item_report_advanced_field_label8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+{$label dbo_Remanentes_Report Intereses }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+		 
+			{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Costas"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label9" {$item_report_advanced_field_label9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+{$label dbo_Remanentes_Report Costas }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+		 
+			{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		blackshade   r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field_label" data-itemid="report_advanced_field_label6" {$item_report_advanced_field_label6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento">
+{$label dbo_Remanentes_Report Documento }</span>
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+			</tr>
+ 
+	<tr data-section="group" data-group="Seccional" data-rowidx="1" {$rowattrs} {$row_grid_1} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_field}
+	<td
+	
+	{$cell_grid_cell_group_field}
+	{$recordattrs}
+	class="
+		header_Seccional  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="grid_group_field" data-itemid="grid_group_field" {$item_grid_group_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" >
+{$Seccional_grval}&nbsp;
+</span>	
+	</td>
+	{END cellblock_grid_cell_group_field}
+			</tr>
+
+	{END Seccional_newgroup}
+									{BEGIN CarteraTipo_newgroup}
+
+ 
+	<tr data-section="group" data-group="CarteraTipo" data-rowidx="2" {$rowattrs} {$row_grid_2} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_empty2}
+	<td
+	
+	{$cell_grid_cell_group_empty2}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_empty2" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_empty2}
+		 
+			{BEGIN cellblock_grid_cell_group_field1}
+	<td
+	
+	{$cell_grid_cell_group_field1}
+	{$recordattrs}
+	class="
+		header_CarteraTipo  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_group_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="grid_group_field" data-itemid="grid_group_field1" {$item_grid_group_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo" >
+{$CarteraTipo_grval}&nbsp;
+</span>	
+	</td>
+	{END cellblock_grid_cell_group_field1}
+			</tr>
+
+	{END CarteraTipo_newgroup}
+									{BEGIN row_data}
+
+ 
+	<tr data-section="body" data-group="" data-rowidx="3" {$rowattrs} {$row_grid_3} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_empty3}
+	<td
+	
+	{$cell_grid_cell_group_empty3}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_empty3" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_empty3}
+		 
+			{BEGIN cellblock_grid_cell_group_empty4}
+	<td
+	
+	{$cell_grid_cell_group_empty4}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_group_empty4" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_empty4}
+		 
+			{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 {$Fecha_class}  r-ori-vert		 {$Fecha_class}	"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field" {$item_report_advanced_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" >
+{$Fecha_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field}
+		 
+			{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 {$Remanente_class}  r-ori-vert		 {$Remanente_class}	"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field1" {$item_report_advanced_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente" >
+{$Remanente_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field1}
+		 
+			{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 {$Abogado_class}  r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field2" {$item_report_advanced_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" >
+{$Abogado_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field5}
+		 
+			{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 {$Concepto_class}  r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field3" {$item_report_advanced_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" >
+{$Concepto_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field6}
+		 
+			{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 {$Numero_class}  r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field4" {$item_report_advanced_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero" >
+{$Numero_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field7}
+		 
+			{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 {$Sancionado_class}  r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field5" {$item_report_advanced_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado" >
+{$Sancionado_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field8}
+		 
+			{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 {$Obligacion_class}  r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field7" {$item_report_advanced_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" >
+{$Obligacion_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field2}
+		 
+			{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 {$Intereses_class}  r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field8" {$item_report_advanced_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" >
+{$Intereses_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field3}
+		 
+			{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 {$Costas_class}  r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field9" {$item_report_advanced_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" >
+{$Costas_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field4}
+		 
+			{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 {$Documento_class}  r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="report_advanced_field" data-itemid="report_advanced_field6" {$item_report_advanced_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento" >
+{$Documento_value}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_field9}
+			</tr>
+
+	{END row_data}
+									{BEGIN CarteraTipo_endgroup}
+
+ 
+	<tr data-section="group-summary" data-group="CarteraTipo" data-rowidx="4" {$rowattrs} {$row_grid_4} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_empty}
+	<td
+	
+	{$cell_grid_cell_group_empty}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_empty" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_empty}
+		 
+			{BEGIN cellblock_grid_cell_group_summary1}
+	<td
+	
+	{$cell_grid_cell_group_summary1}
+	{$recordattrs}
+	class="
+		group_CarteraTipo 			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_group_summary1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_label1" data-itemid="group_summary_label" {$item_group_summary_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Resumen de</span>
+	 
+		<span data-itemtype="group_summary_field_label" data-itemid="group_summary_field_label1" {$item_group_summary_field_label1} data-pageid="{$pageid}" data-page="remanentes_report_report" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+{$label dbo_Remanentes_Report CarteraTipo }</span>
+
+	 
+		<span data-itemtype="group_summary_field_value" data-itemid="group_summary_field_value1" {$item_group_summary_field_value1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo" >
+{$CarteraTipo_grval}&nbsp;
+</span>	 
+		<span data-itemtype="group_summary_dash" data-itemid="group_summary_dash1" {$item_group_summary_dash1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+-</span>
+	 
+		<span data-itemtype="group_summary_count" data-itemid="group_summary_count1" {$item_group_summary_count1} data-pageid="{$pageid}" data-page="remanentes_report_report" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+{$groupCarteraTipo_total_cnt}
+</span>	 
+		<span data-itemtype="group_summary_label2" data-itemid="group_summary_label3" {$item_group_summary_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Registros totales</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary1}
+			</tr>
+ 
+	<tr data-section="group-summary" data-group="CarteraTipo" data-rowidx="5" {$rowattrs} {$row_grid_5} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_empty1}
+	<td
+	
+	{$cell_grid_cell_group_empty1}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_empty1" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_empty1}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_type_sum2}
+	<td
+	
+	{$cell_grid_cell_group_summary_type_sum2}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_group_summary_type_sum2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_type_sum" data-itemid="group_summary_type_sum1" {$item_group_summary_type_sum1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small>
+Sum</span>	
+	</td>
+	{END cellblock_grid_cell_group_summary_type_sum2}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum8}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum8}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_group_summary_field_sum8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum8}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum4}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum4}
+	{$recordattrs}
+	class="
+		group_CarteraTipo {$Remanente_class}  r-ori-vert		 {$Remanente_class}	"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_group_summary_field_sum4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum4" {$item_group_summary_field_sum4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente" class="summary-CarteraTipo" data-type="sum" data-field="Remanente">
+{$groupCarteraTipo_totalRemanente_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum4}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum10}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum10}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_group_summary_field_sum10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum10}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum12}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum12}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_group_summary_field_sum12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum12}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum14}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum14}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_group_summary_field_sum14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum14}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum16}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum16}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_group_summary_field_sum16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum16}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum5}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum5}
+	{$recordattrs}
+	class="
+		group_CarteraTipo {$Obligacion_class}  r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_group_summary_field_sum5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum5" {$item_group_summary_field_sum5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" class="summary-CarteraTipo" data-type="sum" data-field="Obligacion">
+{$groupCarteraTipo_totalObligacion_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum5}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum6}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum6}
+	{$recordattrs}
+	class="
+		group_CarteraTipo {$Intereses_class}  r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_group_summary_field_sum6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum6" {$item_group_summary_field_sum6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" class="summary-CarteraTipo" data-type="sum" data-field="Intereses">
+{$groupCarteraTipo_totalIntereses_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum6}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum7}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum7}
+	{$recordattrs}
+	class="
+		group_CarteraTipo {$Costas_class}  r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_group_summary_field_sum7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum7" {$item_group_summary_field_sum7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" class="summary-CarteraTipo" data-type="sum" data-field="Costas">
+{$groupCarteraTipo_totalCostas_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum7}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum18}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum18}
+	{$recordattrs}
+	class="
+		group_CarteraTipo  r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_group_summary_field_sum18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum18}
+			</tr>
+
+	{END CarteraTipo_endgroup}
+									{BEGIN Seccional_endgroup}
+
+ 
+	<tr data-section="group-summary" data-group="Seccional" data-rowidx="6" {$rowattrs} {$row_grid_6} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_summary}
+	<td
+	
+	{$cell_grid_cell_group_summary}
+	{$recordattrs}
+	class="
+		group_Seccional 			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_summary" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_label1" data-itemid="group_summary_label1" {$item_group_summary_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Resumen de</span>
+	 
+		<span data-itemtype="group_summary_field_label" data-itemid="group_summary_field_label" {$item_group_summary_field_label} data-pageid="{$pageid}" data-page="remanentes_report_report" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+{$label dbo_Remanentes_Report Seccional }</span>
+
+	 
+		<span data-itemtype="group_summary_field_value" data-itemid="group_summary_field_value" {$item_group_summary_field_value} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" >
+{$Seccional_grval}&nbsp;
+</span>	 
+		<span data-itemtype="group_summary_dash" data-itemid="group_summary_dash" {$item_group_summary_dash} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+-</span>
+	 
+		<span data-itemtype="group_summary_count" data-itemid="group_summary_count" {$item_group_summary_count} data-pageid="{$pageid}" data-page="remanentes_report_report" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+{$groupSeccional_total_cnt}
+</span>	 
+		<span data-itemtype="group_summary_label2" data-itemid="group_summary_label2" {$item_group_summary_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Registros totales</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary}
+			</tr>
+ 
+	<tr data-section="group-summary" data-group="Seccional" data-rowidx="7" {$rowattrs} {$row_grid_7} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_group_summary_type_sum}
+	<td
+	
+	{$cell_grid_cell_group_summary_type_sum}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_group_summary_type_sum" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_type_sum" data-itemid="group_summary_type_sum" {$item_group_summary_type_sum} data-pageid="{$pageid}" data-record-id="{$recId}" data-small>
+Sum</span>	
+	</td>
+	{END cellblock_grid_cell_group_summary_type_sum}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_type_sum1}
+	<td
+	
+	{$cell_grid_cell_group_summary_type_sum1}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_group_summary_type_sum1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_type_sum1}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum9}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum9}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_group_summary_field_sum9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum9}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum}
+	{$recordattrs}
+	class="
+		group_Seccional {$Remanente_class}  r-ori-vert		 {$Remanente_class}	"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_group_summary_field_sum" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum" {$item_group_summary_field_sum} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente" class="summary-Seccional" data-type="sum" data-field="Remanente">
+{$groupSeccional_totalRemanente_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum11}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum11}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_group_summary_field_sum11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum11}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum13}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum13}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_group_summary_field_sum13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum13}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum15}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum15}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_group_summary_field_sum15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum15}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum17}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum17}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_group_summary_field_sum17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum17}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum1}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum1}
+	{$recordattrs}
+	class="
+		group_Seccional {$Obligacion_class}  r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_group_summary_field_sum1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum1" {$item_group_summary_field_sum1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" class="summary-Seccional" data-type="sum" data-field="Obligacion">
+{$groupSeccional_totalObligacion_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum1}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum2}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum2}
+	{$recordattrs}
+	class="
+		group_Seccional {$Intereses_class}  r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_group_summary_field_sum2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum2" {$item_group_summary_field_sum2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" class="summary-Seccional" data-type="sum" data-field="Intereses">
+{$groupSeccional_totalIntereses_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum2}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum3}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum3}
+	{$recordattrs}
+	class="
+		group_Seccional {$Costas_class}  r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_group_summary_field_sum3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="group_summary_field_sum" data-itemid="group_summary_field_sum3" {$item_group_summary_field_sum3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" class="summary-Seccional" data-type="sum" data-field="Costas">
+{$groupSeccional_totalCostas_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum3}
+		 
+			{BEGIN cellblock_grid_cell_group_summary_field_sum19}
+	<td
+	
+	{$cell_grid_cell_group_summary_field_sum19}
+	{$recordattrs}
+	class="
+		group_Seccional  r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_group_summary_field_sum19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_group_summary_field_sum19}
+			</tr>
+
+	{END Seccional_endgroup}
+									{END grid_row}
+																						{BEGIN page_summary}
+
+ 
+	<tr data-section="page-summary" data-group="" data-rowidx="8" {$rowattrs} {$row_grid_8} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_page_summary_group_header}
+	<td
+	
+	{$cell_grid_cell_page_summary_group_header}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_page_summary_group_header" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_group_header" data-itemid="page_summary_group_header" {$item_page_summary_group_header} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+{$label dbo_Remanentes_Report Seccional }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_group_header}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_group_header1}
+	<td
+	
+	{$cell_grid_cell_page_summary_group_header1}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_page_summary_group_header1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_group_header" data-itemid="page_summary_group_header1" {$item_page_summary_group_header1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+{$label dbo_Remanentes_Report CarteraTipo }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_group_header1}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header}
+	<td
+	
+	{$cell_grid_cell_page_summary_header}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_page_summary_header" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header" {$item_page_summary_header} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+{$label dbo_Remanentes_Report Fecha }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header1}
+	<td
+	
+	{$cell_grid_cell_page_summary_header1}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_page_summary_header1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header1" {$item_page_summary_header1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente">
+{$label dbo_Remanentes_Report Remanente }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header1}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header2}
+	<td
+	
+	{$cell_grid_cell_page_summary_header2}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_page_summary_header2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header2" {$item_page_summary_header2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+{$label dbo_Remanentes_Report Abogado }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header2}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header3}
+	<td
+	
+	{$cell_grid_cell_page_summary_header3}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_page_summary_header3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header3" {$item_page_summary_header3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+{$label dbo_Remanentes_Report Concepto }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header3}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header4}
+	<td
+	
+	{$cell_grid_cell_page_summary_header4}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_page_summary_header4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header4" {$item_page_summary_header4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+{$label dbo_Remanentes_Report Numero }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header4}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header5}
+	<td
+	
+	{$cell_grid_cell_page_summary_header5}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_page_summary_header5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header5" {$item_page_summary_header5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
+{$label dbo_Remanentes_Report Sancionado }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header5}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header7}
+	<td
+	
+	{$cell_grid_cell_page_summary_header7}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_page_summary_header7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header7" {$item_page_summary_header7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+{$label dbo_Remanentes_Report Obligacion }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header7}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header8}
+	<td
+	
+	{$cell_grid_cell_page_summary_header8}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_page_summary_header8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header8" {$item_page_summary_header8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+{$label dbo_Remanentes_Report Intereses }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header8}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header9}
+	<td
+	
+	{$cell_grid_cell_page_summary_header9}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_page_summary_header9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header9" {$item_page_summary_header9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+{$label dbo_Remanentes_Report Costas }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header9}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_header6}
+	<td
+	
+	{$cell_grid_cell_page_summary_header6}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_page_summary_header6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_header" data-itemid="page_summary_header6" {$item_page_summary_header6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento">
+{$label dbo_Remanentes_Report Documento }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_header6}
+			</tr>
+ 
+	<tr data-section="page-summary" data-group="" data-rowidx="9" {$rowattrs} {$row_grid_9} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_page_summary}
+	<td
+	
+	{$cell_grid_cell_page_summary}
+	{$recordattrs}
+	class="
+		pagesummary 			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_page_summary" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_label1" data-itemid="page_summary_label1" {$item_page_summary_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Resumen de la pagina</span>
+	 
+		<span data-itemtype="page_summary_dash" data-itemid="page_summary_dash" {$item_page_summary_dash} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+-</span>
+	 
+		<span data-itemtype="page_summary_count" data-itemid="page_summary_count" {$item_page_summary_count} data-pageid="{$pageid}" data-page="remanentes_report_report" data-record-id="{$recId}">
+{$page_total_cnt}
+</span>	 
+		<span data-itemtype="page_summary_label2" data-itemid="page_summary_label2" {$item_page_summary_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Registros totales</span>
+	
+	</td>
+	{END cellblock_grid_cell_page_summary}
+			</tr>
+ 
+	<tr data-section="page-summary" data-group="" data-rowidx="10" {$rowattrs} {$row_grid_10} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_page_summary_type_sum}
+	<td
+	
+	{$cell_grid_cell_page_summary_type_sum}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_page_summary_type_sum" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_type_sum" data-itemid="page_summary_type_sum" {$item_page_summary_type_sum} data-pageid="{$pageid}" data-record-id="{$recId}" data-small>
+Sum</span>	
+	</td>
+	{END cellblock_grid_cell_page_summary_type_sum}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_type_sum1}
+	<td
+	
+	{$cell_grid_cell_page_summary_type_sum1}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_page_summary_type_sum1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_type_sum1}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_page_summary_field_sum" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum1}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum1}
+	{$recordattrs}
+	class="
+		pagesummary {$Remanente_class}  r-ori-vert		 {$Remanente_class}	"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_page_summary_field_sum1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_field_sum" data-itemid="page_summary_field_sum" {$item_page_summary_field_sum} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente" class="summary-" data-type="sum" data-field="Remanente">
+{$page_totalRemanente_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum1}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum2}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum2}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_page_summary_field_sum2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum2}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum3}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum3}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_page_summary_field_sum3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum3}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum4}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum4}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_page_summary_field_sum4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum4}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum5}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum5}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_page_summary_field_sum5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum5}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum7}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum7}
+	{$recordattrs}
+	class="
+		pagesummary {$Obligacion_class}  r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_page_summary_field_sum7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_field_sum" data-itemid="page_summary_field_sum1" {$item_page_summary_field_sum1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" class="summary-" data-type="sum" data-field="Obligacion">
+{$page_totalObligacion_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum7}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum8}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum8}
+	{$recordattrs}
+	class="
+		pagesummary {$Intereses_class}  r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_page_summary_field_sum8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_field_sum" data-itemid="page_summary_field_sum2" {$item_page_summary_field_sum2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" class="summary-" data-type="sum" data-field="Intereses">
+{$page_totalIntereses_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum8}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum9}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum9}
+	{$recordattrs}
+	class="
+		pagesummary {$Costas_class}  r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_page_summary_field_sum9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="page_summary_field_sum" data-itemid="page_summary_field_sum3" {$item_page_summary_field_sum3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" class="summary-" data-type="sum" data-field="Costas">
+{$page_totalCostas_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum9}
+		 
+			{BEGIN cellblock_grid_cell_page_summary_field_sum6}
+	<td
+	
+	{$cell_grid_cell_page_summary_field_sum6}
+	{$recordattrs}
+	class="
+		pagesummary  r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_page_summary_field_sum6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_page_summary_field_sum6}
+			</tr>
+
+	{END page_summary}
+									{BEGIN global_summary}
+
+ 
+	<tr data-section="global-summary" data-group="" data-rowidx="11" {$rowattrs} {$row_grid_11} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_global_summary_group_header}
+	<td
+	
+	{$cell_grid_cell_global_summary_group_header}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_global_summary_group_header" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_group_header" data-itemid="global_summary_group_header" {$item_global_summary_group_header} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+{$label dbo_Remanentes_Report Seccional }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_group_header}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_group_header1}
+	<td
+	
+	{$cell_grid_cell_global_summary_group_header1}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_global_summary_group_header1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_group_header" data-itemid="global_summary_group_header1" {$item_global_summary_group_header1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+{$label dbo_Remanentes_Report CarteraTipo }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_group_header1}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header}
+	<td
+	
+	{$cell_grid_cell_global_summary_header}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_global_summary_header" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header" {$item_global_summary_header} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+{$label dbo_Remanentes_Report Fecha }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header1}
+	<td
+	
+	{$cell_grid_cell_global_summary_header1}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_global_summary_header1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header1" {$item_global_summary_header1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente">
+{$label dbo_Remanentes_Report Remanente }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header1}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header2}
+	<td
+	
+	{$cell_grid_cell_global_summary_header2}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_global_summary_header2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header2" {$item_global_summary_header2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+{$label dbo_Remanentes_Report Abogado }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header2}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header3}
+	<td
+	
+	{$cell_grid_cell_global_summary_header3}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_global_summary_header3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header3" {$item_global_summary_header3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+{$label dbo_Remanentes_Report Concepto }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header3}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header4}
+	<td
+	
+	{$cell_grid_cell_global_summary_header4}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_global_summary_header4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header4" {$item_global_summary_header4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+{$label dbo_Remanentes_Report Numero }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header4}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header5}
+	<td
+	
+	{$cell_grid_cell_global_summary_header5}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_global_summary_header5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header5" {$item_global_summary_header5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
+{$label dbo_Remanentes_Report Sancionado }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header5}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header7}
+	<td
+	
+	{$cell_grid_cell_global_summary_header7}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_global_summary_header7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header7" {$item_global_summary_header7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+{$label dbo_Remanentes_Report Obligacion }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header7}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header8}
+	<td
+	
+	{$cell_grid_cell_global_summary_header8}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_global_summary_header8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header8" {$item_global_summary_header8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+{$label dbo_Remanentes_Report Intereses }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header8}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header9}
+	<td
+	
+	{$cell_grid_cell_global_summary_header9}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_global_summary_header9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header9" {$item_global_summary_header9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+{$label dbo_Remanentes_Report Costas }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header9}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_header6}
+	<td
+	
+	{$cell_grid_cell_global_summary_header6}
+	{$recordattrs}
+	class="
+		blackshade  r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_global_summary_header6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_header" data-itemid="global_summary_header6" {$item_global_summary_header6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento">
+{$label dbo_Remanentes_Report Documento }</span>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_header6}
+			</tr>
+ 
+	<tr data-section="global-summary" data-group="" data-rowidx="12" {$rowattrs} {$row_grid_12} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_global_summary}
+	<td
+	
+	{$cell_grid_cell_global_summary}
+	{$recordattrs}
+	class="
+		globalsummary 			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_global_summary" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_label1" data-itemid="global_summary_label1" {$item_global_summary_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Resumen global</span>
+	 
+		<span data-itemtype="global_summary_dash" data-itemid="global_summary_dash" {$item_global_summary_dash} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+-</span>
+	 
+		<span data-itemtype="global_summary_count" data-itemid="global_summary_count" {$item_global_summary_count} data-pageid="{$pageid}" data-page="remanentes_report_report" data-record-id="{$recId}">
+{$global_total_cnt}
+</span>	 
+		<span data-itemtype="global_summary_label2" data-itemid="global_summary_label2" {$item_global_summary_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small >
+Registros totales</span>
+	
+	</td>
+	{END cellblock_grid_cell_global_summary}
+			</tr>
+ 
+	<tr data-section="global-summary" data-group="" data-rowidx="13" {$rowattrs} {$row_grid_13} class="{$rowclass} 
+		
+				r-gridrow
+			">
+		 
+			{BEGIN cellblock_grid_cell_global_summary_type_sum}
+	<td
+	
+	{$cell_grid_cell_global_summary_type_sum}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_global_summary_type_sum" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_type_sum}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_type_sum1}
+	<td
+	
+	{$cell_grid_cell_global_summary_type_sum1}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_global_summary_type_sum1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_type_sum" data-itemid="global_summary_type_sum" {$item_global_summary_type_sum} data-pageid="{$pageid}" data-record-id="{$recId}" data-small>
+Sum</span>	
+	</td>
+	{END cellblock_grid_cell_global_summary_type_sum1}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_global_summary_field_sum" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum1}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum1}
+	{$recordattrs}
+	class="
+		globalsummary {$Remanente_class}  r-ori-vert		 {$Remanente_class}	"
+
+			data-field="Remanente"
+	
+	data-cellId="grid_cell_global_summary_field_sum1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_field_sum" data-itemid="global_summary_field_sum" {$item_global_summary_field_sum} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Remanente" data-fieldname="Remanente" class="summary-" data-type="sum" data-field="Remanente">
+{$global_totalRemanente_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum1}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum2}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum2}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_global_summary_field_sum2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum2}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum3}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum3}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_global_summary_field_sum3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum3}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum4}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum4}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_global_summary_field_sum4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum4}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum5}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum5}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_global_summary_field_sum5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum5}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum7}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum7}
+	{$recordattrs}
+	class="
+		globalsummary {$Obligacion_class}  r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_global_summary_field_sum7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_field_sum" data-itemid="global_summary_field_sum1" {$item_global_summary_field_sum1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" class="summary-" data-type="sum" data-field="Obligacion">
+{$global_totalObligacion_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum7}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum8}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum8}
+	{$recordattrs}
+	class="
+		globalsummary {$Intereses_class}  r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_global_summary_field_sum8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_field_sum" data-itemid="global_summary_field_sum2" {$item_global_summary_field_sum2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" class="summary-" data-type="sum" data-field="Intereses">
+{$global_totalIntereses_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum8}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum9}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum9}
+	{$recordattrs}
+	class="
+		globalsummary {$Costas_class}  r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_global_summary_field_sum9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		<span data-itemtype="global_summary_field_sum" data-itemid="global_summary_field_sum3" {$item_global_summary_field_sum3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" class="summary-" data-type="sum" data-field="Costas">
+{$global_totalCostas_sum}
+</span>
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum9}
+		 
+			{BEGIN cellblock_grid_cell_global_summary_field_sum6}
+	<td
+	
+	{$cell_grid_cell_global_summary_field_sum6}
+	{$recordattrs}
+	class="
+		globalsummary  r-ori-vert			"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_global_summary_field_sum6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_cell_global_summary_field_sum6}
+			</tr>
+
+	{END global_summary}
+			
+</tbody>	
+	
+</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

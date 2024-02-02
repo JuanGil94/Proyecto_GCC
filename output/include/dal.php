@@ -82,7 +82,6 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Indeterminados;
 	var $tblGCC_at_S00001_CCAD01_dbo_Intereses;
 	var $tblGCC_at_S00001_CCAD01_dbo_Interrupciones;
-	var $tblGCC_at_S00001_CCAD01_dbo_InterrupcionesSumaView;
 	var $tblGCC_at_S00001_CCAD01_dbo_IPsRestringidas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Liquidaciones;
 	var $tblGCC_at_S00001_CCAD01_dbo_Llamadas;
@@ -105,6 +104,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Propiedades;
 	var $tblGCC_at_S00001_CCAD01_dbo_Reasignaciones;
 	var $tblGCC_at_S00001_CCAD01_dbo_Reliquidaciones;
+	var $tblGCC_at_S00001_CCAD01_dbo_Remanentes;
 	var $tblGCC_at_S00001_CCAD01_dbo_Reportes;
 	var $tblGCC_at_S00001_CCAD01_dbo_Salarios;
 	var $tblGCC_at_S00001_CCAD01_dbo_Sancionados;
@@ -171,7 +171,6 @@ class tDAL
 		$this->lstTables[] = array("name" => "Indeterminados", "varname" => "GCC_at_S00001_CCAD01_dbo_Indeterminados", "altvarname" => "Indeterminados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Intereses", "varname" => "GCC_at_S00001_CCAD01_dbo_Intereses", "altvarname" => "Intereses", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Interrupciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Interrupciones", "altvarname" => "Interrupciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-		$this->lstTables[] = array("name" => "InterrupcionesSumaView", "varname" => "GCC_at_S00001_CCAD01_dbo_InterrupcionesSumaView", "altvarname" => "InterrupcionesSumaView", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "IPsRestringidas", "varname" => "GCC_at_S00001_CCAD01_dbo_IPsRestringidas", "altvarname" => "IPsRestringidas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Liquidaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Liquidaciones", "altvarname" => "Liquidaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Llamadas", "varname" => "GCC_at_S00001_CCAD01_dbo_Llamadas", "altvarname" => "Llamadas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
@@ -194,6 +193,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "Propiedades", "varname" => "GCC_at_S00001_CCAD01_dbo_Propiedades", "altvarname" => "Propiedades", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Reasignaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Reasignaciones", "altvarname" => "Reasignaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Reliquidaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Reliquidaciones", "altvarname" => "Reliquidaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "Remanentes", "varname" => "GCC_at_S00001_CCAD01_dbo_Remanentes", "altvarname" => "Remanentes", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Reportes", "varname" => "GCC_at_S00001_CCAD01_dbo_Reportes", "altvarname" => "Reportes", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Salarios", "varname" => "GCC_at_S00001_CCAD01_dbo_Salarios", "altvarname" => "Salarios", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Sancionados", "varname" => "GCC_at_S00001_CCAD01_dbo_Sancionados", "altvarname" => "Sancionados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

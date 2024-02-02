@@ -720,6 +720,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="dbo.Remanentes Report")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1391,6 +1395,10 @@ class AuditTrailFile
 		if($table=="dbo.Despachos1")
 		{
 			return true;
+		}
+		if($table=="dbo.Remanentes Report")
+		{
+			return false;
 		}
 	}
 
