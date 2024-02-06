@@ -387,6 +387,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("remanentes_report" == $shortTName )
 		return true;
+	if ("dbo_procesosprescritos" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1265,6 +1267,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Remanentes Report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosPrescritos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ProcesosPrescritos";
+	}
 	return $arr;
 }
 
@@ -1366,6 +1377,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Despachos4";
 	$arr[]="dbo.Despachos1";
 	$arr[]="dbo.Remanentes Report";
+	$arr[]="dbo.ProcesosPrescritos";
 	return $arr;
 }
 
@@ -2452,6 +2464,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.ProcesosPrescritos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

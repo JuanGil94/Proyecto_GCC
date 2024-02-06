@@ -426,6 +426,11 @@ pdfDocument = {
 			{$displayDetailTable_importaciones }
 		{END details_importaciones},
 				
+				
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

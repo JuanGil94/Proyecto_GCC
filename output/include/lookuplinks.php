@@ -852,6 +852,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Estados"]["seguimiento_y_control_de_acuerdos.EstadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Estados"]["seguimiento_y_control_de_acuerdos.EstadoId"]["search"] = array("table" => "dbo.Seguimiento y control de Acuerdos", "field" => "EstadoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["dbo_procesosprescritos.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["dbo_procesosprescritos.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["dbo_procesosprescritos.SancionadoId"]["edit"] = array("table" => "dbo.ProcesosPrescritos", "field" => "SancionadoId", "page" => "edit");
 }
 
 ?>

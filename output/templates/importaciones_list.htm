@@ -799,7 +799,7 @@
 					Procesos				</label>
 			</div>
 			{END print_details_procesos}
-						</div>
+														</div>
 </div>
 {END print_details}
 				 
@@ -1855,23 +1855,54 @@
 	>
 
 	 
-			 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
 		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$procesos_link_attrs} 
-			class="{$dtables_link_class} details-badge badge procesos_badge" 
-			title="Mostrar detalles"
-						
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$procesos_cntspan_class}" {$procesos_childnumber_attr}>
-				{$procesos_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
+		
+	{BEGIN procesos_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$procesos_link_attrs} data-short-details="procesos"
+		class="{$procesos_dlink_class}" 
+		title="{$caption dbo_Procesos }"			>
+								
+									{BEGIN procesos_childcount}
+				<span class="details-badge badge procesos_badge" {$procesos_childnumber_attr}>
+					{$procesos_childnumber}				
+				</span>
+				{END procesos_childcount}
+						</a>
+	</span>
+	{END procesos_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN _dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$_link_attrs} data-short-details=""
+		class="{$_dlink_class}" 
+		title="{$caption dbo_Procesos1 }"			>
+								
+									{BEGIN _childcount}
+				<span class="details-badge badge _badge" {$_childnumber_attr}>
+					{$_childnumber}				
+				</span>
+				{END _childcount}
+						</a>
+	</span>
+	{END _dtable_link}
+
 
 	
 	</td>
@@ -2348,22 +2379,25 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesos"
-			data-details-procesos	>
+				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="procesos,"
+			data-details-procesos			data-details-	>
 		<span data-details-inside data-short-table="procesos">
+			</span>
+		<span data-details-inside data-short-table="">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

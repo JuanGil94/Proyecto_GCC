@@ -3720,6 +3720,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "despachos1" ] = "dbo.Despachos1";
 	$projectEntities[ "dbo.Remanentes Report" ] = array( "url" => "remanentes_report", "type" => 2 );
 	$projectEntitiesReverse[ "remanentes_report" ] = "dbo.Remanentes Report";
+	$projectEntities[ "dbo.ProcesosPrescritos" ] = array( "url" => "dbo_procesosprescritos", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_procesosprescritos" ] = "dbo.ProcesosPrescritos";
 }
 
 function findTable( $table ) {

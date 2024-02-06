@@ -57,6 +57,7 @@ $consulta=DB::Query("SELECT * from UserProfile where UserName='".$username."'");
 while( $date = $consulta->fetchAssoc() )
 {
 	$userId=$date["UserId"];
+	$_SESSION["AbogadoId"]=$date["AbogadoId"];
 }
 //buscar las seccionales pertenecientes al UserId
 $userId=intval($userId);

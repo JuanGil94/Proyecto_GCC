@@ -736,6 +736,11 @@ pdfDocument = {
 			{$displayDetailTable_minjusticia3 }
 		{END details_minjusticia3},
 				
+				
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

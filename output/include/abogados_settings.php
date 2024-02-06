@@ -213,6 +213,7 @@ $tdataabogados[".geocodingEnabled"] = false;
 
 
 
+$tdataabogados[".isDisplayLoading"] = true;
 
 $tdataabogados[".isResizeColumns"] = true;
 
