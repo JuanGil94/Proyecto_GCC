@@ -380,7 +380,7 @@ $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
 $tdataprocesos[".buttonsAdded"] = false;
 
-$tdataprocesos[".addPageEvents"] = false;
+$tdataprocesos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataprocesos[".isUseTimeForSearch"] = false;

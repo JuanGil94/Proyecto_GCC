@@ -724,6 +724,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.ProcesosPrescritos")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1399,6 +1403,10 @@ class AuditTrailFile
 		if($table=="dbo.Remanentes Report")
 		{
 			return false;
+		}
+		if($table=="dbo.ProcesosPrescritos")
+		{
+			return true;
 		}
 	}
 

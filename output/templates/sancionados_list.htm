@@ -664,7 +664,7 @@
 					Solidarios				</label>
 			</div>
 			{END print_details_solidarios}
-						</div>
+														</div>
 </div>
 {END print_details}
 				 
@@ -1147,7 +1147,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"		data-control-cell
@@ -1155,17 +1155,24 @@
 	>
 
 	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
+			 
+		
+	{BEGIN dtables_link}
+				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+		<a 
+			{$_link_attrs} 
+			class="{$dtables_link_class} details-badge badge _badge" 
+			title="Mostrar detalles"
+						
+		>
+							<span class="glyphicon glyphicon-th-list"></span>
+									<span class="{$_cntspan_class}" {$_childnumber_attr}>
+				{$_childnumber}				
+			</span>
+		</a>
+		</span>
+	{END dtables_link}
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1396,9 +1403,9 @@
 	>
 
 	 
-						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="direcciones,procesos,propiedades,solidarios"
-			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios	>
+							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="direcciones,procesos,propiedades,solidarios,"
+			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-	>
 		<span data-details-inside data-short-table="direcciones">
 			</span>
 		<span data-details-inside data-short-table="procesos">
@@ -1407,10 +1414,13 @@
 			</span>
 		<span data-details-inside data-short-table="solidarios">
 			</span>
+		<span data-details-inside data-short-table="">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			
