@@ -1,0 +1,994 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#7FFFD4'
+		},
+		nbgroup_1: {
+			fillColor: '#7FFFD4'
+		},
+		header_1: {
+			fillColor: '#7FFFD4',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Seccional: {
+			fillColor: '#7FFFD4',
+			fontSize: 15,
+			bold: true
+		},
+		group_Seccional: {
+			fillColor: '#7FFFD4'
+		},
+
+			group_2: {
+			fillColor: '#E6E6FA'
+		},
+		nbgroup_2: {
+			fillColor: '#E6E6FA'
+		},
+		header_2: {
+			fillColor: '#E6E6FA',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_CarteraTipoId: {
+			fillColor: '#E6E6FA',
+			fontSize: 15,
+			bold: true
+		},
+		group_CarteraTipoId: {
+			fillColor: '#E6E6FA'
+		},
+
+			group_3: {
+			fillColor: '#FFFFFF'
+		},
+		nbgroup_3: {
+			fillColor: '#FFFFFF'
+		},
+		header_3: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Abogado: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_Abogado: {
+			fillColor: '#FFFFFF'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption dbo_Prescritos_Report}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel dbo_Prescritos_Report rprint}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 11,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_Prescritos_Report rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN Seccional_newgroup}
+		[
+								{
+				text: '{$jslabel dbo_Prescritos_Report Seccional }',
+				style: "blackshade",
+				alignment: '{$Seccional_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report CarteraTipoId }',
+				style: "blackshade",
+				alignment: '{$CarteraTipoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Abogado }',
+				style: "blackshade",
+				alignment: '{$Abogado_align}',
+			},
+																																													
+																							{
+				text: '{$jslabel dbo_Prescritos_Report Fecha }',
+				style: "blackshade",
+				alignment: '{$Fecha_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Concepto }',
+				style: "blackshade",
+				alignment: '{$Concepto_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Numero }',
+				style: "blackshade",
+				alignment: '{$Numero_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Sancionado }',
+				style: "blackshade",
+				alignment: '{$Sancionado_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Documento }',
+				style: "blackshade",
+				alignment: '{$Documento_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Obligacion }',
+				style: "blackshade",
+				alignment: '{$Obligacion_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Intereses }',
+				style: "blackshade",
+				alignment: '{$Intereses_align}',
+			},
+											{
+				text: '{$jslabel dbo_Prescritos_Report Costas }',
+				style: "blackshade",
+				alignment: '{$Costas_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 11,
+					text: {$Seccional_grval},
+					style: "header_1"
+				},
+																				],
+	{END Seccional_newgroup}
+	{BEGIN CarteraTipoId_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 10,
+					text: {$CarteraTipoId_grval},
+					style: "header_2"
+				},
+															],
+	{END CarteraTipoId_newgroup}
+	{BEGIN Abogado_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+																{
+					colSpan: 9,
+					text: {$Abogado_grval},
+					style:"header_3"
+				},
+										],
+	{END Abogado_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_2"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_3"
+		},
+															{
+			text: {$Fecha_value},
+			alignment: '{$Fecha_align}',
+		},
+							{
+			text: {$Concepto_value},
+			alignment: '{$Concepto_align}',
+		},
+							{
+			text: {$Numero_value},
+			alignment: '{$Numero_align}',
+		},
+							{
+			text: {$Sancionado_value},
+			alignment: '{$Sancionado_align}',
+		},
+							{
+			text: {$Documento_value},
+			alignment: '{$Documento_align}',
+		},
+							{
+			text: {$Obligacion_value},
+			alignment: '{$Obligacion_align}',
+		},
+							{
+			text: {$Intereses_value},
+			alignment: '{$Intereses_align}',
+		},
+							{
+			text: {$Costas_value},
+			alignment: '{$Costas_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN Abogado_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+					
+																		{
+				colSpan: 9,
+				text: [
+					'Resumen de {$jslabel dbo_Prescritos_Report Abogado } ', 
+					{$Abogado_grval},
+					' - ', 
+					{$groupAbogado_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_3',
+			},
+																																														],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: {$groupAbogado_totalObligacion_sum},
+				style: "group_3",
+				alignment: '{$Obligacion_align}',
+			},
+											
+						{
+				text: {$groupAbogado_totalIntereses_sum},
+				style: "group_3",
+				alignment: '{$Intereses_align}',
+			},
+											
+						{
+				text: {$groupAbogado_totalCostas_sum},
+				style: "group_3",
+				alignment: '{$Costas_align}',
+			},
+						],
+	
+	
+	
+	
+	{END Abogado_endgroup}
+			{BEGIN CarteraTipoId_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+					
+													{
+				colSpan: 10,
+				text: [
+					'Resumen de {$jslabel dbo_Prescritos_Report CarteraTipoId } ', 
+					{$CarteraTipoId_grval},
+					' - ', 
+					{$groupCarteraTipoId_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_2',
+			},
+																																																			],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalObligacion_sum},
+				style: "group_2",
+				alignment: '{$Obligacion_align}',
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalIntereses_sum},
+				style: "group_2",
+				alignment: '{$Intereses_align}',
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalCostas_sum},
+				style: "group_2",
+				alignment: '{$Costas_align}',
+			},
+						],
+	
+	
+	
+	
+	{END CarteraTipoId_endgroup}
+			{BEGIN Seccional_endgroup}
+
+		[
+		
+								{
+				colSpan: 11,
+				text: [
+					'Resumen de {$jslabel dbo_Prescritos_Report Seccional } ', 
+					{$Seccional_grval},
+					' - ', 
+					{$groupSeccional_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_1',
+			},
+																																																								],
+	
+		[
+								
+						{
+				text: "Sum",
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: {$groupSeccional_totalObligacion_sum},
+				style: "group_1",
+				alignment: '{$Obligacion_align}',
+			},
+											
+						{
+				text: {$groupSeccional_totalIntereses_sum},
+				style: "group_1",
+				alignment: '{$Intereses_align}',
+			},
+											
+						{
+				text: {$groupSeccional_totalCostas_sum},
+				style: "group_1",
+				alignment: '{$Costas_align}',
+			},
+						],
+	
+	
+	
+	
+	{END Seccional_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+	[
+		{	
+			text: 'Resumen de la pagina {$page_total_cnt} - Registros totales',
+			colSpan: 11,
+			style: 'pagesummary',
+		}
+	],
+
+		[
+							{
+			text: [
+			 
+				'Sum ', 
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							'', 
+						],
+			style: 'pagesummary',
+			
+					},
+							{
+			text: [
+						
+							{$page_totalObligacion_sum},
+						],
+			style: 'pagesummary',
+			
+			 
+			alignment: '{$Obligacion_align}',
+					},
+							{
+			text: [
+						
+							{$page_totalIntereses_sum},
+						],
+			style: 'pagesummary',
+			
+			 
+			alignment: '{$Intereses_align}',
+					},
+							{
+			text: [
+						
+							{$page_totalCostas_sum},
+						],
+			style: 'pagesummary',
+			
+			 
+			alignment: '{$Costas_align}',
+					},
+			],
+	
+	
+	
+	
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Resumen global {$global_total_cnt} - Registros totales',
+			colSpan: 11,
+			style: 'globalsummary',
+		}
+	],
+
+		[
+							{
+			text: [
+							'Sum ',
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							{$global_totalObligacion_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Obligacion_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalIntereses_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Intereses_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalCostas_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Costas_align}',
+					},
+			],
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};

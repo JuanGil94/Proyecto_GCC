@@ -859,6 +859,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Sancionados"]["dbo_procesosprescritos.SancionadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Sancionados"]["dbo_procesosprescritos.SancionadoId"]["edit"] = array("table" => "dbo.ProcesosPrescritos", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["prescritos_report.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["prescritos_report.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["prescritos_report.CarteraTipoId"]["search"] = array("table" => "dbo.Prescritos Report", "field" => "CarteraTipoId", "page" => "search");
 }
 
 ?>

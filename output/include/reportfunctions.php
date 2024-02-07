@@ -769,6 +769,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.Prescritos Report")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1393,6 +1397,10 @@ function getCaptionTable($table)
 	if($table=="dbo.ProcesosPrescritos")
 	{
 		return "Procesos Prescritos";
+	}
+	if($table=="dbo.Prescritos Report")
+	{
+		return "Prescritos Report";
 	}
 	return $table;
 }
