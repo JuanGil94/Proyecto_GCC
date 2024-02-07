@@ -336,6 +336,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Despachos1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Remanentes Report"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ProcesosPrescritos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Prescritos Report"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
