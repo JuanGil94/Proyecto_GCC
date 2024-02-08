@@ -60,6 +60,7 @@ while( $date = $consulta->fetchAssoc() )
 	$_SESSION["AbogadoId"]=$date["AbogadoId"];
 	$_SESSION["CarteraTipoId"]=$date["CarteraTipoId"];
 }
+//createNotification( array( "message" => "New category added: ", "title" => "New category", "icon" => "fa-envelope") );  
 //buscar las seccionales pertenecientes al UserId
 $userId=intval($userId);
 $consulta=DB::Query("SELECT * from UsuariosSeccionales where UserId=".$userId);
@@ -82,6 +83,7 @@ while( $date = $consulta->fetchAssoc() )
 $_SESSION["Ciudades"]=$arrayCiudades;
 
 
+DB::Delete("usugcc__noti", "[user]='$username'" ); //borrar las notificacione sexistenten para insertar las nuevas
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=1
 $consulta=DB::Query("SELECT COUNT(Procesos.ProcesoId) Cantidad
                  FROM Procesos
@@ -98,7 +100,7 @@ while( $date = $consulta->fetchAssoc() )
 	$conteo=$date["Cantidad"];
 }
 if ($conteo>0){
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "http://localhost:8086/dbo_procesosprescritos_list.php", null, null, true );
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "http://localhost:8086/dbo_procesosprescritos_list.php",null, $username,"" );
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=2
@@ -122,10 +124,56 @@ while( $date = $consulta->fetchAssoc() )
 	$conteo=$date["Cantidad"];
 }
 if ($conteo>0){
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertmandpago_list.php", null, null, true );
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertmandpago_list.php",null,$username,"");
 }
 //
-
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=4
+$consulta=DB::Query("SELECT COUNT(ProcesosView1.ProcesoId) Cantidad
+                 FROM ProcesosView1
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (ProcesosView1.EstadoId = 2) -- Activo
+                      AND (ProcesosView1.EtapaId = 2) -- Coactivo
+                      AND (ProcesosView1.ConceptoId <> 2) --concepto poliza
+                      AND (ProcesosView1.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 4)--Notificación Mandamientos de Pago
+                      AND (ProcesosView1.AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND (ProcesosView1.Notificacion IS NULL) --sin notificacion
+                      AND ((ProcesosView1.Acuerdo IS NULL)
+                           OR NOT(ProcesosView1.Incumplimiento IS NULL))");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-NotificacionMandamientoDePago", "ALERTA NOTIFICACION MANDAMIENTO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertnotmandpago_list.php",null,$username,"");
+}
+//
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=5
+$consulta=DB::Query("SELECT COUNT(DISTINCT Procesos.ProcesoId) Cantidad
+                 FROM Procesos
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                      INNER JOIN Pagos1 ON Pagos1.ProcesoId = Procesos.ProcesoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (Procesos.EstadoId = 2) -- Activo
+                      AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 5) -- Incumplimiento de Acuerdo de Pago
+                      AND (Procesos.AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND ((Procesos.Incumplimiento IS NULL)
+                           AND NOT(Procesos.Acuerdo IS NULL))
+                      AND ((Procesos.Obligacion+Procesos.Intereses+Procesos.Costas) > 0)");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-IncumplimientoAcuerdoDePago", "ALERTA NOTIFICACION INCUMPLIMIENTO DE ACUERDO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertincacupago_list.php",null,$username,"");
+}
+//
 
 
 ;

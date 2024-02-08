@@ -393,6 +393,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("alertmandpago" == $shortTName )
 		return true;
+	if ("alertnotmandpago" == $shortTName )
+		return true;
+	if ("alertincacupago" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1298,6 +1302,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.AlertMandPago";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AlertNotMandPago");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AlertNotMandPago";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AlertIncAcuPago");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AlertIncAcuPago";
+	}
 	return $arr;
 }
 
@@ -1402,6 +1424,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ProcesosPrescritos";
 	$arr[]="dbo.Prescritos Report";
 	$arr[]="dbo.AlertMandPago";
+	$arr[]="AlertNotMandPago";
+	$arr[]="AlertIncAcuPago";
 	return $arr;
 }
 
@@ -2500,6 +2524,16 @@ function GetUserPermissionsStatic( $table )
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.AlertMandPago" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AlertNotMandPago" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AlertIncAcuPago" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

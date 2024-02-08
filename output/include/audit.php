@@ -736,6 +736,14 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="AlertNotMandPago")
+		{
+			return true;
+		}
+		if($table=="AlertIncAcuPago")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1421,6 +1429,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.AlertMandPago")
+		{
+			return true;
+		}
+		if($table=="AlertNotMandPago")
+		{
+			return true;
+		}
+		if($table=="AlertIncAcuPago")
 		{
 			return true;
 		}

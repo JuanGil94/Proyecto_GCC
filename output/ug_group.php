@@ -110,6 +110,8 @@ $nonAdminTablesArr[] = "dbo.Remanentes Report";
 $nonAdminTablesArr[] = "dbo.ProcesosPrescritos";
 $nonAdminTablesArr[] = "dbo.Prescritos Report";
 $nonAdminTablesArr[] = "dbo.AlertMandPago";
+$nonAdminTablesArr[] = "AlertNotMandPago";
+$nonAdminTablesArr[] = "AlertIncAcuPago";
 
 $ug_connection = $cman->getForUserGroups();
 

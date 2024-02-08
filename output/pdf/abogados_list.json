@@ -856,6 +856,12 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1274,6 +1280,16 @@ pdfDocument = {
 			 {BEGIN details_alertmandpago}
 			{$displayDetailTable_alertmandpago }
 		{END details_alertmandpago},
+				
+				
+			 {BEGIN details_alertnotmandpago}
+			{$displayDetailTable_alertnotmandpago }
+		{END details_alertnotmandpago},
+				
+				
+			 {BEGIN details_alertincacupago}
+			{$displayDetailTable_alertincacupago }
+		{END details_alertincacupago},
 				
 		  ],
   "border": [ true, true, true, true ],

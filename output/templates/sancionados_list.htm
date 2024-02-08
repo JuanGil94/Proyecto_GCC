@@ -671,6 +671,20 @@
 					Alert Mand Pago				</label>
 			</div>
 			{END print_details_alertmandpago}
+														{BEGIN print_details_alertnotmandpago}
+			<div>
+				<label for="printDetailsalertnotmandpago{$id}">
+					<input type="checkbox" value="alertnotmandpago" id="printDetailsalertnotmandpago{$id}" checked>
+					Alert Not Mand Pago				</label>
+			</div>
+			{END print_details_alertnotmandpago}
+														{BEGIN print_details_alertincacupago}
+			<div>
+				<label for="printDetailsalertincacupago{$id}">
+					<input type="checkbox" value="alertincacupago" id="printDetailsalertincacupago{$id}" checked>
+					Alert Inc Acu Pago				</label>
+			</div>
+			{END print_details_alertincacupago}
 						</div>
 </div>
 {END print_details}
@@ -1211,6 +1225,44 @@
 	{END alertmandpago_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN alertnotmandpago_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$alertnotmandpago_link_attrs} data-short-details="alertnotmandpago"
+		class="{$alertnotmandpago_dlink_class}" 
+		title="{$caption AlertNotMandPago }"			>
+								
+									{BEGIN alertnotmandpago_childcount}
+				<span class="details-badge badge alertnotmandpago_badge" {$alertnotmandpago_childnumber_attr}>
+					{$alertnotmandpago_childnumber}				
+				</span>
+				{END alertnotmandpago_childcount}
+						</a>
+	</span>
+	{END alertnotmandpago_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN alertincacupago_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$alertincacupago_link_attrs} data-short-details="alertincacupago"
+		class="{$alertincacupago_dlink_class}" 
+		title="{$caption AlertIncAcuPago }"			>
+								
+									{BEGIN alertincacupago_childcount}
+				<span class="details-badge badge alertincacupago_badge" {$alertincacupago_childnumber_attr}>
+					{$alertincacupago_childnumber}				
+				</span>
+				{END alertincacupago_childcount}
+						</a>
+	</span>
+	{END alertincacupago_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1441,9 +1493,9 @@
 	>
 
 	 
-								<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago"
-			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago	>
+										<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago,alertnotmandpago,alertincacupago"
+			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago	>
 		<span data-details-inside data-short-table="direcciones">
 			</span>
 		<span data-details-inside data-short-table="procesos">
@@ -1456,10 +1508,16 @@
 			</span>
 		<span data-details-inside data-short-table="alertmandpago">
 			</span>
+		<span data-details-inside data-short-table="alertnotmandpago">
+			</span>
+		<span data-details-inside data-short-table="alertincacupago">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
+			 
 			 
 			 
 			 

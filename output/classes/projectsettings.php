@@ -3726,6 +3726,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "prescritos_report" ] = "dbo.Prescritos Report";
 	$projectEntities[ "dbo.AlertMandPago" ] = array( "url" => "alertmandpago", "type" => 1 );
 	$projectEntitiesReverse[ "alertmandpago" ] = "dbo.AlertMandPago";
+	$projectEntities[ "AlertNotMandPago" ] = array( "url" => "alertnotmandpago", "type" => 1 );
+	$projectEntitiesReverse[ "alertnotmandpago" ] = "AlertNotMandPago";
+	$projectEntities[ "AlertIncAcuPago" ] = array( "url" => "alertincacupago", "type" => 1 );
+	$projectEntitiesReverse[ "alertincacupago" ] = "AlertIncAcuPago";
 }
 
 function findTable( $table ) {
