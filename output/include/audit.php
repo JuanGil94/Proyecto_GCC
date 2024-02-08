@@ -732,6 +732,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.AlertMandPago")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1415,6 +1419,10 @@ class AuditTrailFile
 		if($table=="dbo.Prescritos Report")
 		{
 			return false;
+		}
+		if($table=="dbo.AlertMandPago")
+		{
+			return true;
 		}
 	}
 

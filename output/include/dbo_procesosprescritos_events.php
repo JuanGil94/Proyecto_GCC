@@ -142,12 +142,7 @@ echo "<script>Runner.displayPopup( {
 function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
 {
 
-		$consulta=DB::Query("SELECT * from Alertas where AlertaId=1");
-while( $date = $consulta->fetchAssoc() )
-{
-	$diasUmbral=$date["Dias"];
-}
-$strWhereClause = whereAdd($strWhereClause, "SeccionalId in (".$_SESSION["Seccionales"].") and AbogadoId=".$_SESSION["AbogadoId"]." and Dias<".$diasUmbral."");
+		//$strWhereClause = whereAdd($strWhereClause, "CarteraTipoId in (".$_SESSION["CarteraTipoId"].") and AbogadoId=".$_SESSION["AbogadoId"]."");
 
 
 // Place event code here.

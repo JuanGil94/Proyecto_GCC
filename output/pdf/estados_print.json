@@ -296,6 +296,11 @@ pdfDocument = {
 			{$displayDetailTable_undefined }
 		{END details_undefined},
 				
+				
+			 {BEGIN details_alertmandpago}
+			{$displayDetailTable_alertmandpago }
+		{END details_alertmandpago},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

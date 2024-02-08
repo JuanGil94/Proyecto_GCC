@@ -85,9 +85,6 @@ pdfDocument = {
 										{BEGIN col_grid_6}
 					"%",
 					{END col_grid_6}
-										{BEGIN col_grid_7}
-					"%",
-					{END col_grid_7}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -190,10 +187,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -216,33 +211,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_0}
 				[
-																{BEGIN cellblock_grid_headcell_icons}
-{
-	cellId: 'headcell_icons',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_icons}
-																							{BEGIN cellblock_grid_headcell_field}
+																{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
 	col:0,
@@ -276,35 +245,6 @@ pdfDocument = {
 	cellId: 'headcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'SancionadoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosPrescritos SancionadoId }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
-	col:0,
-	row:0,
 			fieldName: 'Providencia',
 				style: 'headcell',
 		
@@ -319,7 +259,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosPrescritos Providencia }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosPrescritos Providencia }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -328,10 +268,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Ejecutoria',
@@ -348,7 +288,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosPrescritos Ejecutoria }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosPrescritos Ejecutoria }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -357,10 +297,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Notificacion',
@@ -386,39 +326,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field5',
-	col:0,
-	row:0,
-			fieldName: 'Prescripcion',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosPrescritos Prescripcion }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Prescripcion_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
-{
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'FechaPrescripcion',
@@ -435,11 +346,69 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosPrescritos FechaPrescripcion }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosPrescritos FechaPrescripcion }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$FechaPrescripcion_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosPrescritos Dias }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Saldo',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosPrescritos Saldo }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Saldo_align}',
      
       
       },
@@ -454,35 +423,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_cell_icons}
-{
-	cellId: 'cell_icons',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_icons}
-																							{BEGIN cellblock_grid_cell_field}
+																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
 	col:0,
@@ -516,35 +457,6 @@ pdfDocument = {
 	cellId: 'cell_field1',
 	col:0,
 	row:0,
-			fieldName: 'SancionadoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
-	col:0,
-	row:0,
 			fieldName: 'Providencia',
 				style: 'bodycell',
 		
@@ -568,10 +480,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Ejecutoria',
@@ -597,10 +509,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Notificacion',
@@ -626,39 +538,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field5',
-	col:0,
-	row:0,
-			fieldName: 'Prescripcion',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_simple_grid_field83}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Prescripcion_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
-{
-	cellId: 'cell_field6',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'FechaPrescripcion',
@@ -684,22 +567,14 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-											],
-				{END row_grid_1}
-		
-		{END grid_record}
-	{END grid_row}
-			
-					
-				{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_footcell_icons}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'footcell_icons',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
-				style: 'footcell',
+			fieldName: 'Dias',
+				style: 'bodycell',
 		
 		
 	//	dynamic colspan/rowspan
@@ -711,16 +586,56 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Dias_align}',
      
       
       },
 
-{END cellblock_grid_footcell_icons}
-																							{BEGIN cellblock_grid_footcell_field}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Saldo',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Saldo_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+											],
+				{END row_grid_1}
+		
+		{END grid_record}
+	{END grid_row}
+			
+					
+				{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',
 	col:0,

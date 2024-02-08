@@ -58,6 +58,7 @@ while( $date = $consulta->fetchAssoc() )
 {
 	$userId=$date["UserId"];
 	$_SESSION["AbogadoId"]=$date["AbogadoId"];
+	$_SESSION["CarteraTipoId"]=$date["CarteraTipoId"];
 }
 //buscar las seccionales pertenecientes al UserId
 $userId=intval($userId);
@@ -79,6 +80,53 @@ while( $date = $consulta->fetchAssoc() )
 	$arrayCiudades[]=intval($date["CiudadId"]);
 }
 $_SESSION["Ciudades"]=$arrayCiudades;
+
+
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=1
+$consulta=DB::Query("SELECT COUNT(Procesos.ProcesoId) Cantidad
+                 FROM Procesos
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (Procesos.EstadoId = 2) -- Activos
+                      AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 1) -- Prescripción
+                      AND (AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND ((FORMAT(DATEADD(DAY,dbo.Procesos.Dias,GETDATE()),'yyyy/MM/dd')))  <= ((FORMAT(DATEADD(DAY,dbo.Alertas.Dias,GETDATE()),'yyyy/MM/dd')))");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "http://localhost:8086/dbo_procesosprescritos_list.php", null, null, true );
+}
+//
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=2
+$consulta=DB::Query("SELECT COUNT(Procesos.ProcesoId) Cantidad
+                 FROM Procesos
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (Procesos.EstadoId = 2) -- Activo
+                      AND (Procesos.EtapaId = 1) -- Persuasivo
+                      AND (Procesos.ConceptoId <> 2) --concepto poliza
+                      AND (Procesos.Notificacion IS NULL)
+                      AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 2) -- Mandamiento de Pago
+                      AND (Procesos.AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND ((Procesos.Acuerdo IS NULL)
+                      OR (NOT Procesos.Incumplimiento IS NULL))
+                      AND (DATEDIFF(day, GETDATE(), DATEADD(day, Alertas.Dias, ISNULL(dbo.Procesos.Persuasivo, DATEADD(day, Alertas.Dias,Procesos.Fecha))))) < Alertas.Dias");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertmandpago_list.php", null, null, true );
+}
+//
+
+
 
 ;
 } // function AfterSuccessfulLogin

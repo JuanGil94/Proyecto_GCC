@@ -102,20 +102,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Prescripcion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Prescripcion}" {$filterRow_attrs_Prescripcion}>
-			<label>{$label dbo_ProcesosPrescritos Prescripcion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Prescripcion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Prescripcion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Prescripcion}</span>
-						</div>
-		{END searchCtrlBlock_Prescripcion}
-																{BEGIN searchCtrlBlock_FechaPrescripcion}
+																		{BEGIN searchCtrlBlock_FechaPrescripcion}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_FechaPrescripcion}" {$filterRow_attrs_FechaPrescripcion}>
@@ -128,6 +115,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_FechaPrescripcion}</span>
 						</div>
 		{END searchCtrlBlock_FechaPrescripcion}
+																{BEGIN searchCtrlBlock_Saldo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Saldo}" {$filterRow_attrs_Saldo}>
+			<label>{$label dbo_ProcesosPrescritos Saldo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Saldo}</span>
+						</div>
+		{END searchCtrlBlock_Saldo}
+																{BEGIN searchCtrlBlock_Dias}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Dias}" {$filterRow_attrs_Dias}>
+			<label>{$label dbo_ProcesosPrescritos Dias }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Dias}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Dias}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Dias}</span>
+						</div>
+		{END searchCtrlBlock_Dias}
 																{BEGIN searchCtrlBlock_Notificacion}
 
 
@@ -141,19 +154,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Notificacion}</span>
 						</div>
 		{END searchCtrlBlock_Notificacion}
-																{BEGIN searchCtrlBlock_SancionadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
-			<label>{$label dbo_ProcesosPrescritos SancionadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
-						</div>
-		{END searchCtrlBlock_SancionadoId}
 																{BEGIN searchCtrlBlock_Providencia}
 
 
@@ -503,21 +503,13 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
 		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
-	<h2><strong>Procesos a Prescribir</strong></h2></span>
-	 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							Añadir nuevo			</a>
-</span>
-{END inlineadd_link}
+	<h2>Alerta-Prescripcion Procesos</h2></span>
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -731,16 +723,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
-					<span>{$label dbo_ProcesosPrescritos SancionadoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
 					<span>{$label dbo_ProcesosPrescritos Providencia }</span>
 				</label>
@@ -771,8 +753,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Prescripcion" checked="checked" value="1" data-field="Prescripcion" data-fieldname="Prescripcion">
-					<span>{$label dbo_ProcesosPrescritos Prescripcion }</span>
+					<input type="checkbox" id="hide_FechaPrescripcion" checked="checked" value="1" data-field="FechaPrescripcion" data-fieldname="FechaPrescripcion">
+					<span>{$label dbo_ProcesosPrescritos FechaPrescripcion }</span>
 				</label>
 			</div>
 					</a>
@@ -781,8 +763,18 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_FechaPrescripcion" checked="checked" value="1" data-field="FechaPrescripcion" data-fieldname="FechaPrescripcion">
-					<span>{$label dbo_ProcesosPrescritos FechaPrescripcion }</span>
+					<input type="checkbox" id="hide_Dias" checked="checked" value="1" data-field="Dias" data-fieldname="Dias">
+					<span>{$label dbo_ProcesosPrescritos Dias }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Saldo" checked="checked" value="1" data-field="Saldo" data-fieldname="Saldo">
+					<span>{$label dbo_ProcesosPrescritos Saldo }</span>
 				</label>
 			</div>
 					</a>
@@ -807,9 +799,6 @@
 		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
 		content: "{$label dbo_ProcesosPrescritos Numero}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
-		content: "{$label dbo_ProcesosPrescritos SancionadoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Providencia"]:before {
 		content: "{$label dbo_ProcesosPrescritos Providencia}";
 	}
@@ -819,11 +808,14 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Notificacion"]:before {
 		content: "{$label dbo_ProcesosPrescritos Notificacion}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Prescripcion"]:before {
-		content: "{$label dbo_ProcesosPrescritos Prescripcion}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
+		content: "{$label dbo_ProcesosPrescritos Dias}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="FechaPrescripcion"]:before {
 		content: "{$label dbo_ProcesosPrescritos FechaPrescripcion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Saldo"]:before {
+		content: "{$label dbo_ProcesosPrescritos Saldo}";
 	}
 	}
 </style>
@@ -839,22 +831,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -880,31 +856,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldheadercolumn}
-	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
-	{$label dbo_ProcesosPrescritos SancionadoId }	{$arrow_icon_SancionadoId}
-	</SPAN>
-	{END SancionadoId_fieldheader}
-{END SancionadoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 									{BEGIN cellblock_grid_headcell_field13}
 	<th
 	
@@ -980,31 +931,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field16}
-									{BEGIN cellblock_grid_headcell_field36}
-	<th
-	
-	{$cell_grid_headcell_field36}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Prescripcion_class}	"
-
-			data-field="Prescripcion"
-	
-	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Prescripcion_fieldheadercolumn}
-	{BEGIN Prescripcion_fieldheader}
-	<SPAN {$Prescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion">
-	{$label dbo_ProcesosPrescritos Prescripcion }	{$arrow_icon_Prescripcion}
-	</SPAN>
-	{END Prescripcion_fieldheader}
-{END Prescripcion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field36}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -1030,6 +956,56 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Dias_class}	"
+
+			data-field="Dias"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dias_fieldheadercolumn}
+	{BEGIN Dias_fieldheader}
+	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
+	{$label dbo_ProcesosPrescritos Dias }	{$arrow_icon_Dias}
+	</SPAN>
+	{END Dias_fieldheader}
+{END Dias_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldheadercolumn}
+	{BEGIN Saldo_fieldheader}
+	<SPAN {$Saldo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo">
+	{$label dbo_ProcesosPrescritos Saldo }	{$arrow_icon_Saldo}
+	</SPAN>
+	{END Saldo_fieldheader}
+{END Saldo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
 							</tr>
 																				
 					{END grid_header}
@@ -1041,31 +1017,6 @@
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN inline_cancel}
-<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancelar" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
-				
-								</a>
-</span>
-{END inline_cancel}
-	
-	</td>
-	{END cellblock_grid_cell_icons}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -1087,27 +1038,6 @@
 {END Numero_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
-{$SancionadoId_value}
-</span>
-{END SancionadoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field13}
 	<td
 	
@@ -1171,27 +1101,6 @@
 {END Notificacion_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field16}
-									{BEGIN cellblock_grid_cell_field36}
-	<td
-	
-	{$cell_grid_cell_field36}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Prescripcion_class}	"
-
-			data-field="Prescripcion"
-	
-	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Prescripcion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion" data-default-width >
-{$Prescripcion_value}
-</span>
-{END Prescripcion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field36}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -1213,6 +1122,48 @@
 {END FechaPrescripcion_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Dias_class}	"
+
+			data-field="Dias"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dias_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias" data-default-width >
+{$Dias_value}
+</span>
+{END Dias_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo" data-default-width >
+{$Saldo_value}
+</span>
+{END Saldo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1243,21 +1194,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_icons1}
-	<td
-	
-	{$cell_grid_footcell_icons1}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_icons1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons1}
 									{BEGIN cellblock_grid_footcell_icons}
 	<td
 	
@@ -1279,7 +1215,7 @@
 	{$cell_grid_footcell_checkbox}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Providencia_class}	"
 
 	
 	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
@@ -1294,7 +1230,7 @@
 	{$cell_grid_footcell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Providencia_class}	"
+		 r-ori-vert		 {$Ejecutoria_class}	"
 
 	
 	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
@@ -1309,7 +1245,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Ejecutoria_class}	"
+		 r-ori-vert		 {$Notificacion_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
@@ -1318,28 +1254,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Notificacion_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field13}
 	<td
 	
 	{$cell_grid_footcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Prescripcion_class}	"
+		 r-ori-vert		 {$FechaPrescripcion_class}	"
 
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
@@ -1354,7 +1275,7 @@
 	{$cell_grid_footcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$FechaPrescripcion_class}	"
+		 r-ori-vert		 {$Dias_class}	"
 
 	
 	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
@@ -1369,7 +1290,7 @@
 	{$cell_grid_footcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$Saldo_class}	"
 
 	
 	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
@@ -1378,21 +1299,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field16}
-									{BEGIN cellblock_grid_footcell_field35}
-	<td
-	
-	{$cell_grid_footcell_field35}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field35}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	
@@ -1408,6 +1314,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesosprescritos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

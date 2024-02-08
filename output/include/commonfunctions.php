@@ -391,6 +391,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("prescritos_report" == $shortTName )
 		return true;
+	if ("alertmandpago" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1287,6 +1289,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Prescritos Report";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.AlertMandPago");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.AlertMandPago";
+	}
 	return $arr;
 }
 
@@ -1390,6 +1401,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Remanentes Report";
 	$arr[]="dbo.ProcesosPrescritos";
 	$arr[]="dbo.Prescritos Report";
+	$arr[]="dbo.AlertMandPago";
 	return $arr;
 }
 
@@ -2486,6 +2498,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.AlertMandPago" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

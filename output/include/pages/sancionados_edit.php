@@ -6,8 +6,6 @@
 'dbo.Propiedades' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Solidarios' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'dbo.ProcesosPrescritos' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.TiposDocumentos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),

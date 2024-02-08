@@ -664,7 +664,14 @@
 					Solidarios				</label>
 			</div>
 			{END print_details_solidarios}
-														</div>
+																						{BEGIN print_details_alertmandpago}
+			<div>
+				<label for="printDetailsalertmandpago{$id}">
+					<input type="checkbox" value="alertmandpago" id="printDetailsalertmandpago{$id}" checked>
+					Alert Mand Pago				</label>
+			</div>
+			{END print_details_alertmandpago}
+						</div>
 </div>
 {END print_details}
 				 
@@ -1155,23 +1162,54 @@
 	>
 
 	 
-			 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
 		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$_link_attrs} 
-			class="{$dtables_link_class} details-badge badge _badge" 
-			title="Mostrar detalles"
-						
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$_cntspan_class}" {$_childnumber_attr}>
-				{$_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
+		
+	{BEGIN _dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$_link_attrs} data-short-details=""
+		class="{$_dlink_class}" 
+		title="{$caption dbo_Procesos1 }"			>
+								
+									{BEGIN _childcount}
+				<span class="details-badge badge _badge" {$_childnumber_attr}>
+					{$_childnumber}				
+				</span>
+				{END _childcount}
+						</a>
+	</span>
+	{END _dtable_link}
+
+
+	 
+		
+		
+	{BEGIN alertmandpago_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$alertmandpago_link_attrs} data-short-details="alertmandpago"
+		class="{$alertmandpago_dlink_class}" 
+		title="{$caption dbo_AlertMandPago }"			>
+								
+									{BEGIN alertmandpago_childcount}
+				<span class="details-badge badge alertmandpago_badge" {$alertmandpago_childnumber_attr}>
+					{$alertmandpago_childnumber}				
+				</span>
+				{END alertmandpago_childcount}
+						</a>
+	</span>
+	{END alertmandpago_dtable_link}
+
 
 	
 	</td>
@@ -1403,9 +1441,9 @@
 	>
 
 	 
-							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="direcciones,procesos,propiedades,solidarios,"
-			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-	>
+								<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago"
+			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago	>
 		<span data-details-inside data-short-table="direcciones">
 			</span>
 		<span data-details-inside data-short-table="procesos">
@@ -1416,10 +1454,13 @@
 			</span>
 		<span data-details-inside data-short-table="">
 			</span>
+		<span data-details-inside data-short-table="alertmandpago">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 
