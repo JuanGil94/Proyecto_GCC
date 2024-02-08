@@ -109,9 +109,6 @@ pdfDocument = {
 			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field6}"},
-				
-				
 			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
@@ -121,10 +118,13 @@ pdfDocument = {
 			{"text":{$Notificacion_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
-			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_export_field30}"},
-				
-				
 			{"text":{$FechaPrescripcion_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 		  ],
   "border": [ false, false, false, false ],

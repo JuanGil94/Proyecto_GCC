@@ -1800,36 +1800,6 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.ProcesosPrescritos
-	
-	
-
-		$dIndex = 4;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.ProcesosPrescritos";
-		$detailsParam["dOriginalTable"] = "dbo.Procesos";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "dbo_procesosprescritos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosPrescritos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
-
-				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
 //endif
 
 // tables which are master tables for current table (detail)

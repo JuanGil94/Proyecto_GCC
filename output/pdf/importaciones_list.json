@@ -1123,6 +1123,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1802,6 +1805,11 @@ pdfDocument = {
 			 {BEGIN details_undefined}
 			{$displayDetailTable_undefined }
 		{END details_undefined},
+				
+				
+			 {BEGIN details_alertmandpago}
+			{$displayDetailTable_alertmandpago }
+		{END details_alertmandpago},
 				
 		  ],
   "border": [ true, true, true, true ],

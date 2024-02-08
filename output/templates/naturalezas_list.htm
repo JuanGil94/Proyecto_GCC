@@ -565,7 +565,14 @@
 					Procesos				</label>
 			</div>
 			{END print_details_procesos}
-														</div>
+																						{BEGIN print_details_alertmandpago}
+			<div>
+				<label for="printDetailsalertmandpago{$id}">
+					<input type="checkbox" value="alertmandpago" id="printDetailsalertmandpago{$id}" checked>
+					Alert Mand Pago				</label>
+			</div>
+			{END print_details_alertmandpago}
+						</div>
 </div>
 {END print_details}
 				 
@@ -937,6 +944,25 @@
 	{END _dtable_link}
 
 
+	 
+		
+		
+	{BEGIN alertmandpago_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$alertmandpago_link_attrs} data-short-details="alertmandpago"
+		class="{$alertmandpago_dlink_class}" 
+		title="{$caption dbo_AlertMandPago }"			>
+								
+									{BEGIN alertmandpago_childcount}
+				<span class="details-badge badge alertmandpago_badge" {$alertmandpago_childnumber_attr}>
+					{$alertmandpago_childnumber}				
+				</span>
+				{END alertmandpago_childcount}
+						</a>
+	</span>
+	{END alertmandpago_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1020,17 +1046,20 @@
 	>
 
 	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesos,"
-			data-details-procesos			data-details-	>
+					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="procesos,,alertmandpago"
+			data-details-procesos			data-details-			data-details-alertmandpago	>
 		<span data-details-inside data-short-table="procesos">
 			</span>
 		<span data-details-inside data-short-table="">
+			</span>
+		<span data-details-inside data-short-table="alertmandpago">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			
 	</td>
 	{END cellblock_grid_cell_dpreview}

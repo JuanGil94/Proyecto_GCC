@@ -199,7 +199,7 @@ function BeforeProcessList($pageObject)
 		//echo $_SESSION["AbogadoId"];
 //echo "HEllo";
 //http://localhost:8086/procesos_list.php?w3=3
-addNotification( "Tiene varios Procesos por Prescribir", "Procesos a Prescribir", "glyphicon-tag", "http://localhost:8086/dbo_procesosprescritos_list.php", null, null, true );
+//addNotification( "Tiene varios Procesos por Prescribir", "Procesos a Prescribir", "glyphicon-tag", "http://localhost:8086/dbo_procesosprescritos_list.php", null, null, true );
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;
