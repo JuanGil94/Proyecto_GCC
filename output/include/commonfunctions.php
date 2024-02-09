@@ -397,6 +397,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("alertincacupago" == $shortTName )
 		return true;
+	if ("alertsinpersuasivo" == $shortTName )
+		return true;
+	if ("alertbusqbienes" == $shortTName )
+		return true;
+	if ("alertsegadelante" == $shortTName )
+		return true;
+	if ("alertintsusp" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1320,6 +1328,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="AlertIncAcuPago";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AlertSinPersuasivo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AlertSinPersuasivo";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AlertBusqBienes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AlertBusqBienes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AlertSegAdelante");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AlertSegAdelante";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("AlertIntSusp");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="AlertIntSusp";
+	}
 	return $arr;
 }
 
@@ -1426,6 +1470,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.AlertMandPago";
 	$arr[]="AlertNotMandPago";
 	$arr[]="AlertIncAcuPago";
+	$arr[]="AlertSinPersuasivo";
+	$arr[]="AlertBusqBienes";
+	$arr[]="AlertSegAdelante";
+	$arr[]="AlertIntSusp";
 	return $arr;
 }
 
@@ -2534,6 +2582,26 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertIncAcuPago" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AlertSinPersuasivo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AlertBusqBienes" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AlertSegAdelante" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="AlertIntSusp" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

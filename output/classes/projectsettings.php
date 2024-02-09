@@ -3730,6 +3730,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "alertnotmandpago" ] = "AlertNotMandPago";
 	$projectEntities[ "AlertIncAcuPago" ] = array( "url" => "alertincacupago", "type" => 1 );
 	$projectEntitiesReverse[ "alertincacupago" ] = "AlertIncAcuPago";
+	$projectEntities[ "AlertSinPersuasivo" ] = array( "url" => "alertsinpersuasivo", "type" => 1 );
+	$projectEntitiesReverse[ "alertsinpersuasivo" ] = "AlertSinPersuasivo";
+	$projectEntities[ "AlertBusqBienes" ] = array( "url" => "alertbusqbienes", "type" => 1 );
+	$projectEntitiesReverse[ "alertbusqbienes" ] = "AlertBusqBienes";
+	$projectEntities[ "AlertSegAdelante" ] = array( "url" => "alertsegadelante", "type" => 1 );
+	$projectEntitiesReverse[ "alertsegadelante" ] = "AlertSegAdelante";
+	$projectEntities[ "AlertIntSusp" ] = array( "url" => "alertintsusp", "type" => 1 );
+	$projectEntitiesReverse[ "alertintsusp" ] = "AlertIntSusp";
 }
 
 function findTable( $table ) {

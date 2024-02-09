@@ -217,7 +217,7 @@ $tdataalertnotmandpago[".orderindexes"] = array();
 
 $tdataalertnotmandpago[".sqlHead"] = "SELECT dbo.Procesos.Numero,  dbo.Procesos.Fecha,  dbo.Sancionados.Sancionado,  (Procesos.Obligacion+Procesos.Intereses+Procesos.Costas) AS Saldo,  dbo.Procesos.Providencia,  dbo.Procesos.Ejecutoria,  dbo.Procesos.Notificacion,  0 AS DiasValidarNotificaion,  FORMAT(GETDATE(), 'yyyy/mm/dd') AS FechaGenerarNotificacion";
 $tdataalertnotmandpago[".sqlFrom"] = "FROM dbo.Procesos  INNER JOIN dbo.Sancionados ON dbo.Procesos.SancionadoId = dbo.Sancionados.SancionadoId  , dbo.AlertasTipos  INNER JOIN dbo.Alertas ON dbo.AlertasTipos.AlertaTipoId = dbo.Alertas.AlertaTipoId";
-$tdataalertnotmandpago[".sqlWhereExpr"] = "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2) AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))";
+$tdataalertnotmandpago[".sqlWhereExpr"] = "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2)   AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))";
 $tdataalertnotmandpago[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -1564,16 +1564,16 @@ $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "dbo.Procesos.Numero,  dbo.Procesos.Fecha,  dbo.Sancionados.Sancionado,  (Procesos.Obligacion+Procesos.Intereses+Procesos.Costas) AS Saldo,  dbo.Procesos.Providencia,  dbo.Procesos.Ejecutoria,  dbo.Procesos.Notificacion,  0 AS DiasValidarNotificaion,  FORMAT(GETDATE(), 'yyyy/mm/dd') AS FechaGenerarNotificacion";
 $proto0["m_strFrom"] = "FROM dbo.Procesos  INNER JOIN dbo.Sancionados ON dbo.Procesos.SancionadoId = dbo.Sancionados.SancionadoId  , dbo.AlertasTipos  INNER JOIN dbo.Alertas ON dbo.AlertasTipos.AlertaTipoId = dbo.Alertas.AlertaTipoId";
-$proto0["m_strWhere"] = "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2) AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))";
+$proto0["m_strWhere"] = "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2)   AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))";
 $proto0["m_strOrderBy"] = "ORDER BY (Procesos.Obligacion+Procesos.Intereses+Procesos.Costas) DESC";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2) AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))";
+$proto2["m_sql"] = "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2)   AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2) AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))"
+	"m_sql" => "(dbo.Alertas.Activa = 1) AND (dbo.Procesos.EstadoId = 2) AND (dbo.Procesos.EtapaId = 2) AND (dbo.Procesos.ConceptoId <> 2)   AND (dbo.Procesos.CarteraTipoId = :session.CarteraTipoId) AND (dbo.AlertasTipos.AlertaTipoId = 4) AND (dbo.Procesos.AbogadoId = :session.AbogadoId) AND (dbo.Procesos.Notificacion IS NULL) AND ((dbo.Procesos.Acuerdo IS NULL) OR NOT (Procesos.Incumplimiento IS NULL))"
 ));
 
 $proto2["m_column"]=$obj;

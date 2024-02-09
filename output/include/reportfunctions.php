@@ -785,6 +785,22 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="AlertSinPersuasivo")
+		{
+			return 1;
+		}
+		if($table=="AlertBusqBienes")
+		{
+			return 1;
+		}
+		if($table=="AlertSegAdelante")
+		{
+			return 1;
+		}
+		if($table=="AlertIntSusp")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1425,6 +1441,22 @@ function getCaptionTable($table)
 	if($table=="AlertIncAcuPago")
 	{
 		return "Alert Inc Acu Pago";
+	}
+	if($table=="AlertSinPersuasivo")
+	{
+		return "Alert Sin Persuasivo";
+	}
+	if($table=="AlertBusqBienes")
+	{
+		return "Alert Busq Bienes";
+	}
+	if($table=="AlertSegAdelante")
+	{
+		return "Alert Seg Adelante";
+	}
+	if($table=="AlertIntSusp")
+	{
+		return "Alert Int Susp";
 	}
 	return $table;
 }
@@ -3409,6 +3441,54 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="AlertIncAcuPago";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("AlertSinPersuasivo");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="AlertSinPersuasivo";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="AlertSinPersuasivo";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("AlertBusqBienes");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="AlertBusqBienes";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="AlertBusqBienes";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("AlertSegAdelante");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="AlertSegAdelante";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="AlertSegAdelante";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("AlertIntSusp");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="AlertIntSusp";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="AlertIntSusp";
 	}
 	return $arr;
 }

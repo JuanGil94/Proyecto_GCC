@@ -631,6 +631,18 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link5}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link6}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link7}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link8}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -934,6 +946,26 @@ pdfDocument = {
 			 {BEGIN details_alertincacupago}
 			{$displayDetailTable_alertincacupago }
 		{END details_alertincacupago},
+				
+				
+			 {BEGIN details_alertsinpersuasivo}
+			{$displayDetailTable_alertsinpersuasivo }
+		{END details_alertsinpersuasivo},
+				
+				
+			 {BEGIN details_alertbusqbienes}
+			{$displayDetailTable_alertbusqbienes }
+		{END details_alertbusqbienes},
+				
+				
+			 {BEGIN details_alertsegadelante}
+			{$displayDetailTable_alertsegadelante }
+		{END details_alertsegadelante},
+				
+				
+			 {BEGIN details_alertintsusp}
+			{$displayDetailTable_alertintsusp }
+		{END details_alertintsusp},
 				
 		  ],
   "border": [ true, true, true, true ],
