@@ -82,6 +82,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_Indeterminados;
 	var $tblGCC_at_S00001_CCAD01_dbo_Intereses;
 	var $tblGCC_at_S00001_CCAD01_dbo_Interrupciones;
+	var $tblGCC_at_S00001_CCAD01_dbo_InterrupcionesMaxView;
 	var $tblGCC_at_S00001_CCAD01_dbo_IPsRestringidas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Liquidaciones;
 	var $tblGCC_at_S00001_CCAD01_dbo_Llamadas;
@@ -172,6 +173,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "Indeterminados", "varname" => "GCC_at_S00001_CCAD01_dbo_Indeterminados", "altvarname" => "Indeterminados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Intereses", "varname" => "GCC_at_S00001_CCAD01_dbo_Intereses", "altvarname" => "Intereses", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Interrupciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Interrupciones", "altvarname" => "Interrupciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "InterrupcionesMaxView", "varname" => "GCC_at_S00001_CCAD01_dbo_InterrupcionesMaxView", "altvarname" => "InterrupcionesMaxView", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "IPsRestringidas", "varname" => "GCC_at_S00001_CCAD01_dbo_IPsRestringidas", "altvarname" => "IPsRestringidas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Liquidaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Liquidaciones", "altvarname" => "Liquidaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Llamadas", "varname" => "GCC_at_S00001_CCAD01_dbo_Llamadas", "altvarname" => "Llamadas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

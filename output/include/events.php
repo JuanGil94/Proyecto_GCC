@@ -174,6 +174,109 @@ if ($conteo>0){
 	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-IncumplimientoAcuerdoDePago", "ALERTA NOTIFICACION INCUMPLIMIENTO DE ACUERDO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertincacupago_list.php",null,$username,"");
 }
 //
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=6
+$consulta=DB::Query("SELECT COUNT(Procesos.ProcesoId) Cantidad
+                 FROM Procesos
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (Procesos.EstadoId = 2) -- Activo
+                      AND (Procesos.EtapaId = 1)
+                      AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 6) -- Procesos sin Oficio Persuasivo
+                      AND (Procesos.AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND (Procesos.Persuasivo IS NULL)
+                      AND (Procesos.ConceptoId <> 2) --concepto poliza
+                      AND (Procesos.Acuerdo IS NULL OR NOT Procesos.Incumplimiento IS NULL)");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Oficio Persuasivo", "ALERTA NOTIFICACION SIN OFICIO PERSUASIVO", "glyphicon-tag", "http://localhost:8086/alertsinpersuasivo_list.php",null,$username,"");
+}
+//
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=7
+$consulta=DB::Query("SELECT COUNT(Procesos.ProcesoId) Cantidad
+                 FROM Procesos
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (Procesos.EstadoId = 2) -- Activo
+                      AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 7) -- Busqueda
+                      AND (Procesos.AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND (Procesos.ConceptoId <> 2) --concepto poliza
+                      AND (NOT EXISTS
+                 (
+                     SELECT *
+                     FROM Correspondencias
+                          INNER JOIN Oficios ON Correspondencias.OficioId = Oficios.OficioId
+                     WHERE Procesos.ProcesoId = Correspondencias.ProcesoId
+                           AND (Oficios.ActuacionId = 1035)
+                 ))");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Busquedad de Bienes", "ALERTA NOTIFICACION SIN BUSQUEDAD DE BIENES", "glyphicon-tag", "http://localhost:8086/alertbusqbienes_list.php",null,$username,"");
+}
+//
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=8
+$consulta=DB::Query("SELECT COUNT(Procesos.ProcesoId) Cantidad
+                 FROM Procesos
+                      CROSS JOIN AlertasTipos
+                      INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+                 WHERE(Alertas.Activa = 1)
+                      AND (Procesos.EstadoId = 2) -- Activo
+                      AND (Procesos.EtapaId = 2)
+                      AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+                      AND (AlertasTipos.AlertaTipoId = 8) -- Procesos Resolucion Seguir Adelante
+                      AND (Procesos.AbogadoId = ".$_SESSION["AbogadoId"].")
+                      AND (Procesos.ConceptoId <> 2) --concepto poliza
+                      AND (Procesos.Acuerdo IS NULL
+                           OR NOT Procesos.Incumplimiento IS NULL)
+                      AND ((DATEADD(day, Alertas.Dias, Procesos.notificacion)) < GETDATE())
+                      AND NOT(Procesos.Notificacion IS NULL)
+                      AND (NOT EXISTS
+                 (
+                     SELECT *
+                     FROM Correspondencias
+                     WHERE Procesos.ProcesoId = Correspondencias.ProcesoId
+                           AND (Correspondencias.OficioId = 1110
+                                OR Correspondencias.OficioId = 4346)
+                 ))");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Resolucion Seguir Adelante", "ALERTA SIN RESOLUCION SEGUIR ADELANTE", "glyphicon-tag", "http://localhost:8086/alertsegadelante_list.php",null,$username,"");
+}
+//
+//Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=9
+$consulta=DB::Query("SELECT COUNT(*) Cantidad 
+FROM Procesos 
+CROSS JOIN AlertasTipos
+INNER JOIN Alertas ON AlertasTipos.AlertaTipoId = Alertas.AlertaTipoId
+WHERE
+(Alertas.Activa = 1)
+        AND (Procesos.EstadoId IN(4, 5))
+    AND (AlertasTipos.AlertaTipoId = 9)--Interrumpidos/Suspendidos
+    AND (Procesos.CarteraTipoId = ".$_SESSION["CarteraTipoId"].")
+    AND (Procesos.AbogadoId = ".$_SESSION["AbogadoId"].")");
+while( $date = $consulta->fetchAssoc() )
+{
+	$conteo=$date["Cantidad"];
+}
+if ($conteo>0){
+	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Interrumpidos/Suspendidos", "ALERTA INTERRUMPIDOS/SUSPENDIDOS", "glyphicon-tag", "http://localhost:8086/alertintsusp_list.php",null,$username,"");
+}
 
 
 ;

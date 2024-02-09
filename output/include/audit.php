@@ -744,6 +744,22 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="AlertSinPersuasivo")
+		{
+			return true;
+		}
+		if($table=="AlertBusqBienes")
+		{
+			return true;
+		}
+		if($table=="AlertSegAdelante")
+		{
+			return true;
+		}
+		if($table=="AlertIntSusp")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1437,6 +1453,22 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="AlertIncAcuPago")
+		{
+			return true;
+		}
+		if($table=="AlertSinPersuasivo")
+		{
+			return true;
+		}
+		if($table=="AlertBusqBienes")
+		{
+			return true;
+		}
+		if($table=="AlertSegAdelante")
+		{
+			return true;
+		}
+		if($table=="AlertIntSusp")
 		{
 			return true;
 		}

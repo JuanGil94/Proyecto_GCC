@@ -340,6 +340,10 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.AlertMandPago"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["AlertNotMandPago"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["AlertIncAcuPago"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["AlertSinPersuasivo"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["AlertBusqBienes"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["AlertSegAdelante"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["AlertIntSusp"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

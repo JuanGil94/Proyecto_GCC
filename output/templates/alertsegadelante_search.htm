@@ -1,0 +1,348 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel AlertSegAdelante search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Fecha_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
+		{$label AlertSegAdelante Fecha }	</label>
+	<div class="r-search-option">
+		{$searchtype_Fecha}
+	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol1}
+	</div>
+	
+</div>
+
+{END Fecha_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label AlertSegAdelante Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Providencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Providencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Providencia}">
+		{$label AlertSegAdelante Providencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_Providencia}
+	</div>
+	<div class="r-search-field">
+		{$Providencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Providencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END Providencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Ejecutoria}">
+		{$label AlertSegAdelante Ejecutoria }	</label>
+	<div class="r-search-option">
+		{$searchtype_Ejecutoria}
+	</div>
+	<div class="r-search-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Ejecutoria_editcontrol1}
+	</div>
+	
+</div>
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN Dias_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Dias}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Dias{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="Dias" data-fieldname="Dias" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Dias}">
+		{$label AlertSegAdelante Dias }	</label>
+	<div class="r-search-option">
+		{$searchtype_Dias}
+	</div>
+	<div class="r-search-field">
+		{$Dias_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Dias_editcontrol1}
+	</div>
+	
+</div>
+
+{END Dias_fieldblock}
+											
+{BEGIN Notificacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Notificacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Notificacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field34" {$item_integrated_search_field34} data-pageid="{$pageid}" data-field="Notificacion" data-fieldname="Notificacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Notificacion}">
+		{$label AlertSegAdelante Notificacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Notificacion}
+	</div>
+	<div class="r-search-field">
+		{$Notificacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Notificacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Notificacion_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Sancionado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Sancionado}">
+		{$label AlertSegAdelante Sancionado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Sancionado}
+	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Sancionado_fieldblock}
+											
+{BEGIN Saldo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Saldo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Saldo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Saldo" data-fieldname="Saldo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Saldo}">
+		{$label AlertSegAdelante Saldo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Saldo}
+	</div>
+	<div class="r-search-field">
+		{$Saldo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Saldo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Saldo_fieldblock}
+											
+{BEGIN FechaEmitirResolucion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_FechaEmitirResolucion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="FechaEmitirResolucion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="FechaEmitirResolucion" data-fieldname="FechaEmitirResolucion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_FechaEmitirResolucion}">
+		{$label AlertSegAdelante FechaEmitirResolucion }	</label>
+	<div class="r-search-option">
+		{$searchtype_FechaEmitirResolucion}
+	</div>
+	<div class="r-search-field">
+		{$FechaEmitirResolucion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$FechaEmitirResolucion_editcontrol1}
+	</div>
+	
+</div>
+
+{END FechaEmitirResolucion_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
