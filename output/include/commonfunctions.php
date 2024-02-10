@@ -405,6 +405,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("alertintsusp" == $shortTName )
 		return true;
+	if ("reportemandamientos" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1364,6 +1366,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="AlertIntSusp";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ReporteMandamientos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ReporteMandamientos";
+	}
 	return $arr;
 }
 
@@ -1474,6 +1485,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="AlertBusqBienes";
 	$arr[]="AlertSegAdelante";
 	$arr[]="AlertIntSusp";
+	$arr[]="dbo.ReporteMandamientos";
 	return $arr;
 }
 
@@ -2605,6 +2617,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.ReporteMandamientos" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

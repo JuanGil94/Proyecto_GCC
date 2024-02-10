@@ -3738,6 +3738,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "alertsegadelante" ] = "AlertSegAdelante";
 	$projectEntities[ "AlertIntSusp" ] = array( "url" => "alertintsusp", "type" => 1 );
 	$projectEntitiesReverse[ "alertintsusp" ] = "AlertIntSusp";
+	$projectEntities[ "dbo.ReporteMandamientos" ] = array( "url" => "reportemandamientos", "type" => 2 );
+	$projectEntitiesReverse[ "reportemandamientos" ] = "dbo.ReporteMandamientos";
 }
 
 function findTable( $table ) {

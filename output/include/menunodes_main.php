@@ -1619,6 +1619,32 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "63";
+	$menuNode["name"] = "Reporte Mandamientos Automaticos";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.ReporteMandamientos";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "60";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("Report");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-hand-right";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Reporte Mandamientos Automaticos";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "64";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1644,7 +1670,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "64";
+	$menuNode["id"] = "65";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Leaf";
@@ -1670,7 +1696,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "65";
+	$menuNode["id"] = "66";
 	$menuNode["name"] = "Proceso Automaticos";
 	$menuNode["href"] = "";
 	$menuNode["type"] = "Group";
@@ -1696,7 +1722,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "66";
+	$menuNode["id"] = "67";
 	$menuNode["name"] = "Correspondencias Procesos";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1722,7 +1748,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "67";
+	$menuNode["id"] = "68";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1748,7 +1774,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "68";
+	$menuNode["id"] = "69";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1774,7 +1800,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "69";
+	$menuNode["id"] = "70";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1800,7 +1826,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "70";
+	$menuNode["id"] = "71";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1826,7 +1852,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "71";
+	$menuNode["id"] = "72";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1852,7 +1878,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "72";
+	$menuNode["id"] = "73";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -1878,7 +1904,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "73";
+	$menuNode["id"] = "74";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";

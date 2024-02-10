@@ -801,6 +801,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.ReporteMandamientos")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1457,6 +1461,10 @@ function getCaptionTable($table)
 	if($table=="AlertIntSusp")
 	{
 		return "Alert Int Susp";
+	}
+	if($table=="dbo.ReporteMandamientos")
+	{
+		return "Reporte Mandamientos";
 	}
 	return $table;
 }

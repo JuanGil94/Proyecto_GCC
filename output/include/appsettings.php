@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1644_1706895122";
+$projectBuildKey = "1651_1707523950";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "1644";
+$projectBuildNumber = "1651";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -868,6 +868,7 @@ $tableCaptions["Spanish"]["AlertSinPersuasivo"] = "Alert Sin Persuasivo";
 $tableCaptions["Spanish"]["AlertBusqBienes"] = "Alert Busq Bienes";
 $tableCaptions["Spanish"]["AlertSegAdelante"] = "Alert Seg Adelante";
 $tableCaptions["Spanish"]["AlertIntSusp"] = "Alert Int Susp";
+$tableCaptions["Spanish"]["dbo_ReporteMandamientos"] = "Reporte Mandamientos";
 
 
 $globalEvents = new class_GlobalEvents;

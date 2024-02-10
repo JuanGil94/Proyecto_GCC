@@ -859,6 +859,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["prescritos_report.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["prescritos_report.CarteraTipoId"]["search"] = array("table" => "dbo.Prescritos Report", "field" => "CarteraTipoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["reportemandamientos.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["reportemandamientos.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["reportemandamientos.CarteraTipoId"]["search"] = array("table" => "dbo.ReporteMandamientos", "field" => "CarteraTipoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["reportemandamientos.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["reportemandamientos.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["reportemandamientos.ConceptoId"]["search"] = array("table" => "dbo.ReporteMandamientos", "field" => "ConceptoId", "page" => "search");
 }
 
 ?>
