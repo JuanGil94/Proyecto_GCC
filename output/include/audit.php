@@ -760,6 +760,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="dbo.ReporteMandamientos")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1471,6 +1475,10 @@ class AuditTrailFile
 		if($table=="AlertIntSusp")
 		{
 			return true;
+		}
+		if($table=="dbo.ReporteMandamientos")
+		{
+			return false;
 		}
 	}
 
