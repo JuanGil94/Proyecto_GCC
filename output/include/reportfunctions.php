@@ -805,6 +805,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.ListaChequeosReporte")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1465,6 +1469,10 @@ function getCaptionTable($table)
 	if($table=="dbo.ReporteMandamientos")
 	{
 		return "Reporte Mandamientos";
+	}
+	if($table=="dbo.ListaChequeosReporte")
+	{
+		return "Lista Chequeos Reporte";
 	}
 	return $table;
 }

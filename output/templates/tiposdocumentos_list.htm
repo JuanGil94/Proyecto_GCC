@@ -637,12 +637,12 @@
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="2"
+	data-body-height="1"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -776,13 +776,13 @@
 	</th>
 	{END cellblock_grid_headcell_field2}
 							</tr>
-																				
+															
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -843,62 +843,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="tiposdocumentos_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN _dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$_link_attrs} data-short-details=""
-		class="{$_dlink_class}" 
-		title="{$caption dbo_Deudores }"			>
-								
-									{BEGIN _childcount}
-				<span class="details-badge badge _badge" {$_childnumber_attr}>
-					{$_childnumber}				
-				</span>
-				{END _childcount}
-						</a>
-	</span>
-	{END _dtable_link}
-
-
-	 
-		
-		
-	{BEGIN sancionados_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$sancionados_link_attrs} data-short-details="sancionados"
-		class="{$sancionados_dlink_class}" 
-		title="{$caption dbo_Sancionados }"			>
-								
-									{BEGIN sancionados_childcount}
-				<span class="details-badge badge sancionados_badge" {$sancionados_childnumber_attr}>
-					{$sancionados_childnumber}				
-				</span>
-				{END sancionados_childcount}
-						</a>
-	</span>
-	{END sancionados_dtable_link}
-
 
 	
 	</td>
@@ -967,43 +917,12 @@
 	</td>
 	{END cellblock_grid_cell_field2}
 							</tr>
-											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
-				
-							">
-									{BEGIN cellblock_grid_cell_dpreview}
-	<td
-	
-	{$cell_grid_cell_dpreview}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders=",sancionados"
-			data-details-			data-details-sancionados	>
-		<span data-details-inside data-short-table="">
-			</span>
-		<span data-details-inside data-short-table="sancionados">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			
-	</td>
-	{END cellblock_grid_cell_dpreview}
-							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow

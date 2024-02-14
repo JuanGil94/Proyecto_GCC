@@ -1585,6 +1585,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("dbo.Mandamientos" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("dbo.Chequeos" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

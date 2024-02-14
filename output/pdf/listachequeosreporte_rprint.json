@@ -1,0 +1,616 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption dbo_ListaChequeosReporte}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel dbo_ListaChequeosReporte rprint}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 14,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_ListaChequeosReporte rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+[	
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte ChequeoId }',
+		alignment: '{$ChequeoId_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Fecha }',
+		alignment: '{$Fecha_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Origen }',
+		alignment: '{$Origen_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Observaciones }',
+		alignment: '{$Observaciones_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Obligacion }',
+		alignment: '{$Obligacion_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte TramiteId }',
+		alignment: '{$TramiteId_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Fisico }',
+		alignment: '{$Fisico_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Digital }',
+		alignment: '{$Digital_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Seccional }',
+		alignment: '{$Seccional_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Abogado }',
+		alignment: '{$Abogado_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Despacho }',
+		alignment: '{$Despacho_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Numero }',
+		alignment: '{$Numero_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte Persuasivo }',
+		alignment: '{$Persuasivo_align}',
+	},
+		{
+		text: '{$jslabel dbo_ListaChequeosReporte AbogadoId1 }',
+		alignment: '{$AbogadoId1_align}',
+	},
+	],
+
+{BEGIN grid_row}
+	{BEGIN row_data}
+[	
+		{	
+		text: {$ChequeoId_value},
+		alignment: '{$ChequeoId_align}',
+	},
+		{	
+		text: {$Fecha_value},
+		alignment: '{$Fecha_align}',
+	},
+		{	
+		text: {$Origen_value},
+		alignment: '{$Origen_align}',
+	},
+		{	
+		text: {$Observaciones_value},
+		alignment: '{$Observaciones_align}',
+	},
+		{	
+		text: {$Obligacion_value},
+		alignment: '{$Obligacion_align}',
+	},
+		{	
+		text: {$TramiteId_value},
+		alignment: '{$TramiteId_align}',
+	},
+		{	
+		text: {$Fisico_value},
+		alignment: '{$Fisico_align}',
+	},
+		{	
+		text: {$Digital_value},
+		alignment: '{$Digital_align}',
+	},
+		{	
+		text: {$Seccional_value},
+		alignment: '{$Seccional_align}',
+	},
+		{	
+		text: {$Abogado_value},
+		alignment: '{$Abogado_align}',
+	},
+		{	
+		text: {$Despacho_value},
+		alignment: '{$Despacho_align}',
+	},
+		{	
+		text: {$Numero_value},
+		alignment: '{$Numero_align}',
+	},
+		{	
+		text: {$Persuasivo_value},
+		alignment: '{$Persuasivo_align}',
+	},
+		{	
+		text: {$AbogadoId1_value},
+		alignment: '{$AbogadoId1_align}',
+	},
+	],
+	{END row_data}
+{END grid_row}
+
+[
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte ChequeoId }',
+		alignment: '{$ChequeoId_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Fecha }',
+		alignment: '{$Fecha_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Origen }',
+		alignment: '{$Origen_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Observaciones }',
+		alignment: '{$Observaciones_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Obligacion }',
+		alignment: '{$Obligacion_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte TramiteId }',
+		alignment: '{$TramiteId_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Fisico }',
+		alignment: '{$Fisico_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Digital }',
+		alignment: '{$Digital_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Seccional }',
+		alignment: '{$Seccional_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Abogado }',
+		alignment: '{$Abogado_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Despacho }',
+		alignment: '{$Despacho_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Numero }',
+		alignment: '{$Numero_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte Persuasivo }',
+		alignment: '{$Persuasivo_align}',
+	},
+		{	
+		text: '{$jslabel dbo_ListaChequeosReporte AbogadoId1 }',
+		alignment: '{$AbogadoId1_align}',
+	},
+	],
+
+
+
+
+
+
+
+
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Resumen global {$global_total_cnt} - Registros totales',
+			colSpan: 14,
+			style: 'globalsummary',
+		}
+	],
+
+		[
+							{
+			text: [
+							'Sum ',
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							{$global_totalObligacion_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Obligacion_align}',
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+			],
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};

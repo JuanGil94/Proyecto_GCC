@@ -203,6 +203,12 @@ if( $eventId == 'cantidadLetras' && "dbo.Autorizaciones" == $table )
 	$cipherer = new RunnerCipherer("dbo.Autorizaciones");
 	fieldEventHandler_cantidadLetras( $params );
 }
+if( $eventId == 'cantidadLetras' && "dbo.ListaChequeosReporte" == $table )
+{
+	require_once("include/listachequeosreporte_variables.php");
+	$cipherer = new RunnerCipherer("dbo.ListaChequeosReporte");
+	fieldEventHandler_cantidadLetras( $params );
+}
 
 
 
