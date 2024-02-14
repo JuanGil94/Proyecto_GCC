@@ -1,0 +1,305 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-rprint" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pdflink_block}
+<span data-itemtype="print_pdf" data-itemid="print_pdf" {$item_print_pdf} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	pdflink" data-pdfpage="rprint" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Lista Chequeos Reporte.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="rprint" 
+{$pdflink_attrs} >
+							Vista PDF			</a>
+</span>
+{END pdflink_block}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_ListaChequeosReporte rprint}</h2>
+	 
+		{BEGIN printtabheader}
+<span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
+{$printtabheader_text}
+</span>
+{END printtabheader}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c4" data-pageid="{$pageid}"	{$cell_top_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+</style>
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+			<!-- 0 group fields -->
+
+ <!-- add to settings ? -->
+<table class="table table-hover table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" >
+	<thead>
+		{BEGIN grid_header}
+		<tr class="rnr-toprow table-header style1">
+					<th class="{$fieldclass_ChequeoId}"> {$label dbo_ListaChequeosReporte ChequeoId }</th>
+					<th class="{$fieldclass_Fecha}"> {$label dbo_ListaChequeosReporte Fecha }</th>
+					<th class="{$fieldclass_Origen}"> {$label dbo_ListaChequeosReporte Origen }</th>
+					<th class="{$fieldclass_Observaciones}"> {$label dbo_ListaChequeosReporte Observaciones }</th>
+					<th class="{$fieldclass_Obligacion}"> {$label dbo_ListaChequeosReporte Obligacion }</th>
+					<th class="{$fieldclass_TramiteId}"> {$label dbo_ListaChequeosReporte TramiteId }</th>
+					<th class="{$fieldclass_Fisico}"> {$label dbo_ListaChequeosReporte Fisico }</th>
+					<th class="{$fieldclass_Digital}"> {$label dbo_ListaChequeosReporte Digital }</th>
+					<th class="{$fieldclass_Seccional}"> {$label dbo_ListaChequeosReporte Seccional }</th>
+					<th class="{$fieldclass_Abogado}"> {$label dbo_ListaChequeosReporte Abogado }</th>
+					<th class="{$fieldclass_Despacho}"> {$label dbo_ListaChequeosReporte Despacho }</th>
+					<th class="{$fieldclass_Numero}"> {$label dbo_ListaChequeosReporte Numero }</th>
+					<th class="{$fieldclass_Persuasivo}"> {$label dbo_ListaChequeosReporte Persuasivo }</th>
+					<th class="{$fieldclass_AbogadoId1}"> {$label dbo_ListaChequeosReporte AbogadoId1 }</th>
+				</tr>
+		{END grid_header}
+	</thead>
+	<tbody>
+{BEGIN grid_row}
+	{BEGIN row_data}
+		<tr class="rnr-row style1" {$rowattrs}>
+								<td {$recordattrs} class="{$fieldclass_ChequeoId}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="ChequeoId" data-fieldname="ChequeoId" >
+{$ChequeoId_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Fecha}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+{$Fecha_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Origen}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="Origen" data-fieldname="Origen" >
+{$Origen_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Observaciones}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field21" {$item_report_grid_field21} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+{$Observaciones_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Obligacion}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field26" {$item_report_grid_field26} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+{$Obligacion_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_TramiteId}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field38" {$item_report_grid_field38} data-pageid="{$pageid}" data-field="TramiteId" data-fieldname="TramiteId" >
+{$TramiteId_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Fisico}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field39" {$item_report_grid_field39} data-pageid="{$pageid}" data-field="Fisico" data-fieldname="Fisico" >
+{$Fisico_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Digital}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field40" {$item_report_grid_field40} data-pageid="{$pageid}" data-field="Digital" data-fieldname="Digital" >
+{$Digital_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Seccional}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="Seccional" data-fieldname="Seccional" >
+{$Seccional_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Abogado}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="Abogado" data-fieldname="Abogado" >
+{$Abogado_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Despacho}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field7" {$item_report_grid_field7} data-pageid="{$pageid}" data-field="Despacho" data-fieldname="Despacho" >
+{$Despacho_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Numero}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+{$Numero_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Persuasivo}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="Persuasivo" data-fieldname="Persuasivo" >
+{$Persuasivo_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_AbogadoId1}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="AbogadoId1" data-fieldname="AbogadoId1" >
+{$AbogadoId1_value}
+</span>			</td>
+				</tr>
+	{END row_data}
+{END grid_row}
+
+		{BEGIN summary_header}
+		<tr class="rnr-toprow summary-header style1">
+					<td class="{$fieldclass_ChequeoId}">{$label dbo_ListaChequeosReporte ChequeoId }</td>
+					<td class="{$fieldclass_Fecha}">{$label dbo_ListaChequeosReporte Fecha }</td>
+					<td class="{$fieldclass_Origen}">{$label dbo_ListaChequeosReporte Origen }</td>
+					<td class="{$fieldclass_Observaciones}">{$label dbo_ListaChequeosReporte Observaciones }</td>
+					<td class="{$fieldclass_Obligacion}">{$label dbo_ListaChequeosReporte Obligacion }</td>
+					<td class="{$fieldclass_TramiteId}">{$label dbo_ListaChequeosReporte TramiteId }</td>
+					<td class="{$fieldclass_Fisico}">{$label dbo_ListaChequeosReporte Fisico }</td>
+					<td class="{$fieldclass_Digital}">{$label dbo_ListaChequeosReporte Digital }</td>
+					<td class="{$fieldclass_Seccional}">{$label dbo_ListaChequeosReporte Seccional }</td>
+					<td class="{$fieldclass_Abogado}">{$label dbo_ListaChequeosReporte Abogado }</td>
+					<td class="{$fieldclass_Despacho}">{$label dbo_ListaChequeosReporte Despacho }</td>
+					<td class="{$fieldclass_Numero}">{$label dbo_ListaChequeosReporte Numero }</td>
+					<td class="{$fieldclass_Persuasivo}">{$label dbo_ListaChequeosReporte Persuasivo }</td>
+					<td class="{$fieldclass_AbogadoId1}">{$label dbo_ListaChequeosReporte AbogadoId1 }</td>
+				</tr>
+	{END summary_header}	
+	
+
+	
+
+
+    
+    
+
+	<!-- global summary-->
+	{BEGIN global_summary}
+    <tr class="summaryrow summary-global">
+        <td class="globalsummary" colspan="14">
+            Resumen global {$global_total_cnt} - Registros totales        </td>
+    </tr>
+
+	    <!--  Sum -->
+    <tr class="summary-global">
+					
+                <td class="globalsummary">Sum</td>
+        		
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary {$fieldclass_Obligacion}">
+            {$global_totalObligacion_sum}
+        </td>
+        		
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+					
+                <td class="globalsummary">&nbsp;</td>
+				
+		</tr>
+	
+	
+	
+		{END global_summary}
+
+	</tbody>
+</table>	</div>
+{END grid_block}									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

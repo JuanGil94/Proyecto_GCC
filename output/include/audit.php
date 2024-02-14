@@ -764,6 +764,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.ListaChequeosReporte")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1477,6 +1481,10 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.ReporteMandamientos")
+		{
+			return false;
+		}
+		if($table=="dbo.ListaChequeosReporte")
 		{
 			return false;
 		}

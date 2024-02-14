@@ -12980,36 +12980,6 @@ $detailsTablesData["dbo.Procesos"] = array();
 				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Seguimiento y control de Acuerdos
-	
-	
-
-		$dIndex = 13;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Seguimiento y control de Acuerdos";
-		$detailsParam["dOriginalTable"] = "dbo.Acuerdos";
-
-
-
-		$detailsParam["dType"]=PAGE_REPORT;
-	
-		$detailsParam["dShortTable"] = "seguimiento_y_control_de_acuerdos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Seguimiento_y_control_de_Acuerdos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Procesos"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
 //endif
 
 // tables which are master tables for current table (detail)

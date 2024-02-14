@@ -873,6 +873,41 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Conceptos"]["reportemandamientos.ConceptoId"] = array();
 		}
 		$lookupTableLinks["dbo.Conceptos"]["reportemandamientos.ConceptoId"]["search"] = array("table" => "dbo.ReporteMandamientos", "field" => "ConceptoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["listachequeosreporte.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["listachequeosreporte.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["listachequeosreporte.SeccionalId"]["search"] = array("table" => "dbo.ListaChequeosReporte", "field" => "SeccionalId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["listachequeosreporte.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["listachequeosreporte.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["listachequeosreporte.AbogadoId"]["search"] = array("table" => "dbo.ListaChequeosReporte", "field" => "AbogadoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Despachos1"] ) ) {
+			$lookupTableLinks["dbo.Despachos1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos1"]["listachequeosreporte.DespachoId"] )) {
+			$lookupTableLinks["dbo.Despachos1"]["listachequeosreporte.DespachoId"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos1"]["listachequeosreporte.DespachoId"]["search"] = array("table" => "dbo.ListaChequeosReporte", "field" => "DespachoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["listachequeosreporte.AbogadoId1"] )) {
+			$lookupTableLinks["dbo.Abogados"]["listachequeosreporte.AbogadoId1"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["listachequeosreporte.AbogadoId1"]["search"] = array("table" => "dbo.ListaChequeosReporte", "field" => "AbogadoId1", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Tramites"] ) ) {
+			$lookupTableLinks["dbo.Tramites"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Tramites"]["listachequeosreporte.TramiteId"] )) {
+			$lookupTableLinks["dbo.Tramites"]["listachequeosreporte.TramiteId"] = array();
+		}
+		$lookupTableLinks["dbo.Tramites"]["listachequeosreporte.TramiteId"]["search"] = array("table" => "dbo.ListaChequeosReporte", "field" => "TramiteId", "page" => "search");
 }
 
 ?>

@@ -182,13 +182,15 @@ $tdatasalarios[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY Ano DESC";
 $tdatasalarios[".strOrderBy"] = $tstrOrderBy;
 
 $tdatasalarios[".orderindexes"] = array();
+	$tdatasalarios[".orderindexes"][] = array(2, (0 ? "ASC" : "DESC"), "Ano");
 
 
-$tdatasalarios[".sqlHead"] = "SELECT SalarioId,  	Ano,  	Salario";
+
+$tdatasalarios[".sqlHead"] = "SELECT SalarioId,  Ano,  Salario";
 $tdatasalarios[".sqlFrom"] = "FROM dbo.Salarios";
 $tdatasalarios[".sqlWhereExpr"] = "";
 $tdatasalarios[".sqlTail"] = "";
@@ -544,7 +546,7 @@ $tdatasalarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Currency");
 
 	
 	
@@ -553,8 +555,7 @@ $tdatasalarios[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -607,7 +608,7 @@ $tdatasalarios[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Currency");
 							
 	
 //	End validation
@@ -698,10 +699,10 @@ function createSqlQuery_salarios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SalarioId,  	Ano,  	Salario";
+$proto0["m_strFieldList"] = "SalarioId,  Ano,  Salario";
 $proto0["m_strFrom"] = "FROM dbo.Salarios";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY Ano DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -817,6 +818,19 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto16=array();
+						$obj = new SQLField(array(
+	"m_strName" => "Ano",
+	"m_strTable" => "dbo.Salarios",
+	"m_srcTableName" => "dbo.Salarios"
+));
+
+$proto16["m_column"]=$obj;
+$proto16["m_bAsc"] = 0;
+$proto16["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto16);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Salarios";		
 $obj = new SQLQuery($proto0);
 

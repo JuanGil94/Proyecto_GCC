@@ -407,6 +407,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("reportemandamientos" == $shortTName )
 		return true;
+	if ("listachequeosreporte" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1375,6 +1377,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.ReporteMandamientos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ListaChequeosReporte");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ListaChequeosReporte";
+	}
 	return $arr;
 }
 
@@ -1486,6 +1497,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="AlertSegAdelante";
 	$arr[]="AlertIntSusp";
 	$arr[]="dbo.ReporteMandamientos";
+	$arr[]="dbo.ListaChequeosReporte";
 	return $arr;
 }
 
@@ -2619,6 +2631,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ReporteMandamientos" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.ListaChequeosReporte" )
 	{
 //	default permissions
 		return "SP".$extraPerm;

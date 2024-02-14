@@ -268,7 +268,7 @@ $tdataseccionales[".strOrderBy"] = $tstrOrderBy;
 $tdataseccionales[".orderindexes"] = array();
 
 
-$tdataseccionales[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$tdataseccionales[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCION DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
 $tdataseccionales[".sqlFrom"] = "FROM dbo.Seccionales";
 $tdataseccionales[".sqlWhereExpr"] = "";
 $tdataseccionales[".sqlTail"] = "";
@@ -601,7 +601,7 @@ $tdataseccionales[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Seccional";
 	$fdata["GoodName"] = "Seccional";
-	$fdata["ownerTable"] = "dbo.Seccionales";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Seccionales","Seccional");
 	$fdata["FieldType"] = 200;
 
@@ -615,7 +615,7 @@ $tdataseccionales[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Seccional";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Seccional";
+	$fdata["FullName"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCION DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
 
 	
 	
@@ -3874,7 +3874,7 @@ function createSqlQuery_seccionales()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCION DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
 $proto0["m_strFrom"] = "FROM dbo.Seccionales";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3943,16 +3943,14 @@ $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Seccional",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "case Seccional  	when 'DEAJ' THEN 'DIRECCION DE ADMINISTRACION JUDICIAL'  	else Seccional  	end"
 ));
 
-$proto10["m_sql"] = "Seccional";
+$proto10["m_sql"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCION DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
 $proto10["m_srcTableName"] = "dbo.Seccionales";
 $proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
+$proto10["m_alias"] = "Seccional";
 $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;

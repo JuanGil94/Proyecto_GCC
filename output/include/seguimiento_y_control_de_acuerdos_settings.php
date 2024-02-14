@@ -179,7 +179,7 @@ $tdataseguimiento_y_control_de_acuerdos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																										
+																																													
 
 $tdataseguimiento_y_control_de_acuerdos[".ajaxCodeSnippetAdded"] = false;
 
@@ -3013,24 +3013,6 @@ $masterTablesData["dbo.Seguimiento y control de Acuerdos"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Procesos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Procesos";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "procesos";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Seguimiento y control de Acuerdos"][0] = $masterParams;
-				$masterTablesData["dbo.Seguimiento y control de Acuerdos"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Seguimiento y control de Acuerdos"][0]["masterKeys"][]="ProcesoId";
-				$masterTablesData["dbo.Seguimiento y control de Acuerdos"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Seguimiento y control de Acuerdos"][0]["detailKeys"][]="ProcesoId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
