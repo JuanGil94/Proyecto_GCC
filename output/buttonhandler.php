@@ -829,7 +829,54 @@ function buttonHandler_New_Button4($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
+	    ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - INICIO
+    // URL del servicio web ASMX
+    $url = 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerDocumentoCorrespondencia';
+
+    // Datos que deseas enviar en la solicitud POST
+    $data = array(
+        'Codigo' => $params["radicado"],
+        'ConvertirAPDF' => 'TRUE',
+        //'Despacho' => 'DE640',
+        //'Codificador' => '4883',
+        'Contrasena' => '448B8890'
+        // ... Agrega más parámetros según sea necesario
+    );
+
+    // Convertir los datos a formato de cadena
+    $postData = http_build_query($data);
+
+    // Configurar opciones de cURL
+    $options = array(
+        CURLOPT_URL            => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $postData,
+    );
+
+    // Inicializar cURL y configurar opciones
+    $curl = curl_init();
+    curl_setopt_array($curl, $options);
+
+
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+    // Realizar la solicitud cURL y obtener la respuesta
+    $response = curl_exec($curl);
+    // Verificar errores
+    if (curl_errno($curl)) {
+        echo 'Error al realizar la solicitud: ' . curl_error($curl);
+    }
+		$result["total"]=$response;
+    // Cerrar la sesión cURL
+    curl_close($curl);
+		//$params["URL"]=$response;
+		//echo $response;
+		//var_dump($response);
+    // Imprimir la respuesta del servicio web
+    //echo $response;
+    ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - FIN// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
 /*
 include_once (getabspath("libs/mPDF/example.php"));
@@ -838,6 +885,7 @@ $objeto2->generar();
 */
 
 //echo '<iframe src="https://sigobwebcsj.ramajudicial.gov.co/cache/APICorrespondencia/43e8f2b9-2e09-48e5-a524-8ef998ce5469-f.pdf" style="width:600px; height:500px;" frameborder="0"></iframe>'
+
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
