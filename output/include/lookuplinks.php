@@ -908,6 +908,34 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Tramites"]["listachequeosreporte.TramiteId"] = array();
 		}
 		$lookupTableLinks["dbo.Tramites"]["listachequeosreporte.TramiteId"]["search"] = array("table" => "dbo.ListaChequeosReporte", "field" => "TramiteId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["reporteclasificacioncartera.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["reporteclasificacioncartera.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["reporteclasificacioncartera.CarteraTipoId"]["search"] = array("table" => "dbo.ReporteClasificacionCartera", "field" => "CarteraTipoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["reporteclasificacioncartera.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["reporteclasificacioncartera.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["reporteclasificacioncartera.SeccionalId"]["search"] = array("table" => "dbo.ReporteClasificacionCartera", "field" => "SeccionalId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["reporteclasificacioncartera.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["reporteclasificacioncartera.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["reporteclasificacioncartera.ConceptoId"]["search"] = array("table" => "dbo.ReporteClasificacionCartera", "field" => "ConceptoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Naturalezas"] ) ) {
+			$lookupTableLinks["dbo.Naturalezas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Naturalezas"]["reporteclasificacioncartera.NaturalezaId"] )) {
+			$lookupTableLinks["dbo.Naturalezas"]["reporteclasificacioncartera.NaturalezaId"] = array();
+		}
+		$lookupTableLinks["dbo.Naturalezas"]["reporteclasificacioncartera.NaturalezaId"]["search"] = array("table" => "dbo.ReporteClasificacionCartera", "field" => "NaturalezaId", "page" => "search");
 }
 
 ?>

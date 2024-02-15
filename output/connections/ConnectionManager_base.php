@@ -346,6 +346,7 @@ class ConnectionManager_Base
 		$connectionsIds["AlertIntSusp"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ReporteMandamientos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ListaChequeosReporte"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.ReporteClasificacionCartera"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
