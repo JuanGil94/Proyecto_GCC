@@ -118,6 +118,7 @@ $nonAdminTablesArr[] = "AlertSegAdelante";
 $nonAdminTablesArr[] = "AlertIntSusp";
 $nonAdminTablesArr[] = "dbo.ReporteMandamientos";
 $nonAdminTablesArr[] = "dbo.ListaChequeosReporte";
+$nonAdminTablesArr[] = "dbo.ReporteClasificacionCartera";
 
 $ug_connection = $cman->getForUserGroups();
 

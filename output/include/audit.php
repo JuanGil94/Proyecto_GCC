@@ -768,6 +768,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.ReporteClasificacionCartera")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1485,6 +1489,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.ListaChequeosReporte")
+		{
+			return false;
+		}
+		if($table=="dbo.ReporteClasificacionCartera")
 		{
 			return false;
 		}

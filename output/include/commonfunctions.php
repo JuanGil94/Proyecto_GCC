@@ -409,6 +409,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("listachequeosreporte" == $shortTName )
 		return true;
+	if ("reporteclasificacioncartera" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1386,6 +1388,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.ListaChequeosReporte";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ReporteClasificacionCartera");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ReporteClasificacionCartera";
+	}
 	return $arr;
 }
 
@@ -1498,6 +1509,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="AlertIntSusp";
 	$arr[]="dbo.ReporteMandamientos";
 	$arr[]="dbo.ListaChequeosReporte";
+	$arr[]="dbo.ReporteClasificacionCartera";
 	return $arr;
 }
 
@@ -2636,6 +2648,11 @@ function GetUserPermissionsStatic( $table )
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ListaChequeosReporte" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.ReporteClasificacionCartera" )
 	{
 //	default permissions
 		return "SP".$extraPerm;

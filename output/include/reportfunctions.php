@@ -809,6 +809,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.ReporteClasificacionCartera")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1473,6 +1477,10 @@ function getCaptionTable($table)
 	if($table=="dbo.ListaChequeosReporte")
 	{
 		return "Lista Chequeos Reporte";
+	}
+	if($table=="dbo.ReporteClasificacionCartera")
+	{
+		return "Reporte Clasificacion Cartera";
 	}
 	return $table;
 }

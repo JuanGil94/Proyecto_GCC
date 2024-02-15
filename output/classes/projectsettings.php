@@ -3742,6 +3742,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "reportemandamientos" ] = "dbo.ReporteMandamientos";
 	$projectEntities[ "dbo.ListaChequeosReporte" ] = array( "url" => "listachequeosreporte", "type" => 2 );
 	$projectEntitiesReverse[ "listachequeosreporte" ] = "dbo.ListaChequeosReporte";
+	$projectEntities[ "dbo.ReporteClasificacionCartera" ] = array( "url" => "reporteclasificacioncartera", "type" => 2 );
+	$projectEntitiesReverse[ "reporteclasificacioncartera" ] = "dbo.ReporteClasificacionCartera";
 }
 
 function findTable( $table ) {

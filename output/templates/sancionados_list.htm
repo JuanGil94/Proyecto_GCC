@@ -713,6 +713,13 @@
 					Alert Int Susp				</label>
 			</div>
 			{END print_details_alertintsusp}
+														{BEGIN print_details_reporteclasificacioncartera}
+			<div>
+				<label for="printDetailsreporteclasificacioncartera{$id}">
+					<input type="checkbox" value="reporteclasificacioncartera" id="printDetailsreporteclasificacioncartera{$id}" checked>
+					Reporte Clasificacion Cartera				</label>
+			</div>
+			{END print_details_reporteclasificacioncartera}
 						</div>
 </div>
 {END print_details}
@@ -1367,6 +1374,25 @@
 	{END alertintsusp_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN reporteclasificacioncartera_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link8" {$item_grid_details_link8} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$reporteclasificacioncartera_link_attrs} data-short-details="reporteclasificacioncartera"
+		class="{$reporteclasificacioncartera_dlink_class}" 
+		title="{$caption dbo_ReporteClasificacionCartera }"			>
+								
+									{BEGIN reporteclasificacioncartera_childcount}
+				<span class="details-badge badge reporteclasificacioncartera_badge" {$reporteclasificacioncartera_childnumber_attr}>
+					{$reporteclasificacioncartera_childnumber}				
+				</span>
+				{END reporteclasificacioncartera_childcount}
+						</a>
+	</span>
+	{END reporteclasificacioncartera_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1597,9 +1623,9 @@
 	>
 
 	 
-														<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp"
-			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp	>
+															<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera"
+			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera	>
 		<span data-details-inside data-short-table="direcciones">
 			</span>
 		<span data-details-inside data-short-table="procesos">
@@ -1624,10 +1650,13 @@
 			</span>
 		<span data-details-inside data-short-table="alertintsusp">
 			</span>
+		<span data-details-inside data-short-table="reporteclasificacioncartera">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

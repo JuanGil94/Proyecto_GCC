@@ -844,8 +844,16 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1252,10 +1260,14 @@ pdfDocument = {
 	
 			
 	
-			"text": [
+			"stack": [
 		
-				'',
-	  ],
+				
+			 {BEGIN details_reporteclasificacioncartera}
+			{$displayDetailTable_reporteclasificacioncartera }
+		{END details_reporteclasificacioncartera},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

@@ -1,0 +1,264 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-rprint" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pdflink_block}
+<span data-itemtype="print_pdf" data-itemid="print_pdf" {$item_print_pdf} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	pdflink" data-pdfpage="rprint" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Reporte Clasificacion Cartera.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="rprint" 
+{$pdflink_attrs} >
+							Vista PDF			</a>
+</span>
+{END pdflink_block}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_ReporteClasificacionCartera rprint}</h2>
+	 
+		{BEGIN printtabheader}
+<span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
+{$printtabheader_text}
+</span>
+{END printtabheader}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c4" data-pageid="{$pageid}"	{$cell_top_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+</style>
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+			<!-- 0 group fields -->
+
+ <!-- add to settings ? -->
+<table class="table table-hover table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" >
+	<thead>
+		{BEGIN grid_header}
+		<tr class="rnr-toprow table-header style1">
+					<th class="{$fieldclass_SeccionalId}"> {$label dbo_ReporteClasificacionCartera SeccionalId }</th>
+					<th class="{$fieldclass_Fecha}"> {$label dbo_ReporteClasificacionCartera Fecha }</th>
+					<th class="{$fieldclass_Numero}"> {$label dbo_ReporteClasificacionCartera Numero }</th>
+					<th class="{$fieldclass_ConceptoId}"> {$label dbo_ReporteClasificacionCartera ConceptoId }</th>
+					<th class="{$fieldclass_Obligacion}"> {$label dbo_ReporteClasificacionCartera Obligacion }</th>
+					<th class="{$fieldclass_Costas}"> {$label dbo_ReporteClasificacionCartera Costas }</th>
+					<th class="{$fieldclass_Intereses}"> {$label dbo_ReporteClasificacionCartera Intereses }</th>
+					<th class="{$fieldclass_Recaudo}"> {$label dbo_ReporteClasificacionCartera Recaudo }</th>
+					<th class="{$fieldclass_CarteraTipoId}"> {$label dbo_ReporteClasificacionCartera CarteraTipoId }</th>
+					<th class="{$fieldclass_NaturalezaId}"> {$label dbo_ReporteClasificacionCartera NaturalezaId }</th>
+					<th class="{$fieldclass_Sancionado}"> {$label dbo_ReporteClasificacionCartera Sancionado }</th>
+					<th class="{$fieldclass_Identificacion}"> {$label dbo_ReporteClasificacionCartera Identificacion }</th>
+					<th class="{$fieldclass_Saldo}"> {$label dbo_ReporteClasificacionCartera Saldo }</th>
+					<th class="{$fieldclass_Uvt}"> {$label dbo_ReporteClasificacionCartera Uvt }</th>
+					<th class="{$fieldclass_Negativo}"> {$label dbo_ReporteClasificacionCartera Negativo }</th>
+					<th class="{$fieldclass_Positivo}"> {$label dbo_ReporteClasificacionCartera Positivo }</th>
+					<th class="{$fieldclass_Antiguedad}"> {$label dbo_ReporteClasificacionCartera Antiguedad }</th>
+					<th class="{$fieldclass_Clasificacion}"> {$label dbo_ReporteClasificacionCartera Clasificacion }</th>
+					<th class="{$fieldclass_Nivel}"> {$label dbo_ReporteClasificacionCartera Nivel }</th>
+					<th class="{$fieldclass_Busquedas}"> {$label dbo_ReporteClasificacionCartera Busquedas }</th>
+				</tr>
+		{END grid_header}
+	</thead>
+	<tbody>
+{BEGIN grid_row}
+	{BEGIN row_data}
+		<tr class="rnr-row style1" {$rowattrs}>
+								<td {$recordattrs} class="{$fieldclass_SeccionalId}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+{$SeccionalId_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Fecha}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+{$Fecha_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Numero}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+{$Numero_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_ConceptoId}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field9" {$item_report_grid_field9} data-pageid="{$pageid}" data-field="ConceptoId" data-fieldname="ConceptoId" >
+{$ConceptoId_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Obligacion}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field15" {$item_report_grid_field15} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+{$Obligacion_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Costas}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field16" {$item_report_grid_field16} data-pageid="{$pageid}" data-field="Costas" data-fieldname="Costas" >
+{$Costas_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Intereses}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field19" {$item_report_grid_field19} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" >
+{$Intereses_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Recaudo}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field20" {$item_report_grid_field20} data-pageid="{$pageid}" data-field="Recaudo" data-fieldname="Recaudo" >
+{$Recaudo_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_CarteraTipoId}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field39" {$item_report_grid_field39} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
+{$CarteraTipoId_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_NaturalezaId}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field71" {$item_report_grid_field71} data-pageid="{$pageid}" data-field="NaturalezaId" data-fieldname="NaturalezaId" >
+{$NaturalezaId_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Sancionado}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field2" {$item_report_grid_field2} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+{$Sancionado_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Identificacion}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="Identificacion" data-fieldname="Identificacion" >
+{$Identificacion_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Saldo}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field6" {$item_report_grid_field6} data-pageid="{$pageid}" data-field="Saldo" data-fieldname="Saldo" >
+{$Saldo_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Uvt}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field7" {$item_report_grid_field7} data-pageid="{$pageid}" data-field="Uvt" data-fieldname="Uvt" >
+{$Uvt_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Negativo}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field8" {$item_report_grid_field8} data-pageid="{$pageid}" data-field="Negativo" data-fieldname="Negativo" >
+{$Negativo_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Positivo}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field10" {$item_report_grid_field10} data-pageid="{$pageid}" data-field="Positivo" data-fieldname="Positivo" >
+{$Positivo_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Antiguedad}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field11" {$item_report_grid_field11} data-pageid="{$pageid}" data-field="Antiguedad" data-fieldname="Antiguedad" >
+{$Antiguedad_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Clasificacion}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field12" {$item_report_grid_field12} data-pageid="{$pageid}" data-field="Clasificacion" data-fieldname="Clasificacion" >
+{$Clasificacion_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Nivel}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field13" {$item_report_grid_field13} data-pageid="{$pageid}" data-field="Nivel" data-fieldname="Nivel" >
+{$Nivel_value}
+</span>			</td>
+								<td {$recordattrs} class="{$fieldclass_Busquedas}">
+				<span data-itemtype="report_grid_field" data-itemid="report_grid_field14" {$item_report_grid_field14} data-pageid="{$pageid}" data-field="Busquedas" data-fieldname="Busquedas" >
+{$Busquedas_value}
+</span>			</td>
+				</tr>
+	{END row_data}
+{END grid_row}
+
+	
+
+	
+
+
+    
+    
+
+
+	</tbody>
+</table>	</div>
+{END grid_block}									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+			</div>					</div>
+			</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
