@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.Procesos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.ProcesosSinNotificaReport' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Estado' ),

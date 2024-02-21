@@ -813,6 +813,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.ProcesosSinNotificaReport")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1481,6 +1485,10 @@ function getCaptionTable($table)
 	if($table=="dbo.ReporteClasificacionCartera")
 	{
 		return "Reporte Clasificacion Cartera";
+	}
+	if($table=="dbo.ProcesosSinNotificaReport")
+	{
+		return "Procesos Sin Notifica Report";
 	}
 	return $table;
 }

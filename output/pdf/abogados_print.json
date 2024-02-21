@@ -1124,6 +1124,11 @@ pdfDocument = {
 			{$displayDetailTable_reporteclasificacioncartera }
 		{END details_reporteclasificacioncartera},
 				
+				
+			 {BEGIN details_procesossinnotificareport}
+			{$displayDetailTable_procesossinnotificareport }
+		{END details_procesossinnotificareport},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

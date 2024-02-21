@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'master' => array( 'dbo.Procesos' => array( 'preview' => false ) ),
+'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
+'dbo.ProcesosSinNotificaReport' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'Fecha',
 'Intereses' ),
 'searchRequiredFields' => array(  ),

@@ -700,6 +700,36 @@ $detailsTablesData["dbo.Estados"] = array();
 				$detailsTablesData["dbo.Estados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Estados"][$dIndex]["detailKeys"][]="EstadoId";
+//	dbo.ProcesosSinNotificaReport
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosSinNotificaReport";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		$detailsParam["dType"]=PAGE_REPORT;
+	
+		$detailsParam["dShortTable"] = "procesossinnotificareport";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosSinNotificaReport");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Estados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Estados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Estados"][$dIndex]["masterKeys"][]="EstadoId";
+
+				$detailsTablesData["dbo.Estados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Estados"][$dIndex]["detailKeys"][]="EstadoId";
 //endif
 
 // tables which are master tables for current table (detail)

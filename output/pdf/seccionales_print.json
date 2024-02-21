@@ -1632,6 +1632,11 @@ pdfDocument = {
 			{$displayDetailTable_alertintsusp }
 		{END details_alertintsusp},
 				
+				
+			 {BEGIN details_procesossinnotificareport}
+			{$displayDetailTable_procesossinnotificareport }
+		{END details_procesossinnotificareport},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

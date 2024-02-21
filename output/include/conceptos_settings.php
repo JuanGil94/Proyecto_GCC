@@ -896,6 +896,36 @@ $detailsTablesData["dbo.Conceptos"] = array();
 				$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"][]="ConceptoId";
+//	dbo.ProcesosSinNotificaReport
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosSinNotificaReport";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		$detailsParam["dType"]=PAGE_REPORT;
+	
+		$detailsParam["dShortTable"] = "procesossinnotificareport";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosSinNotificaReport");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Conceptos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Conceptos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Conceptos"][$dIndex]["masterKeys"][]="ConceptoId";
+
+				$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"][]="ConceptoId";
 //endif
 
 // tables which are master tables for current table (detail)
