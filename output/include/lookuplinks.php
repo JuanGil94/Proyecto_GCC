@@ -936,6 +936,34 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Naturalezas"]["reporteclasificacioncartera.NaturalezaId"] = array();
 		}
 		$lookupTableLinks["dbo.Naturalezas"]["reporteclasificacioncartera.NaturalezaId"]["search"] = array("table" => "dbo.ReporteClasificacionCartera", "field" => "NaturalezaId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["procesossinnotificareport.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["procesossinnotificareport.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["procesossinnotificareport.CarteraTipoId"]["search"] = array("table" => "dbo.ProcesosSinNotificaReport", "field" => "CarteraTipoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["procesossinnotificareport.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["procesossinnotificareport.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["procesossinnotificareport.SeccionalId"]["search"] = array("table" => "dbo.ProcesosSinNotificaReport", "field" => "SeccionalId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["procesossinnotificareport.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["procesossinnotificareport.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["procesossinnotificareport.ConceptoId"]["search"] = array("table" => "dbo.ProcesosSinNotificaReport", "field" => "ConceptoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["procesossinnotificareport.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["procesossinnotificareport.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["procesossinnotificareport.EstadoId"]["search"] = array("table" => "dbo.ProcesosSinNotificaReport", "field" => "EstadoId", "page" => "search");
 }
 
 ?>

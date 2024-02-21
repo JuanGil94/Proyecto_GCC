@@ -1,0 +1,13 @@
+<?php
+$strTableName="dbo.ProcesosSinNotificacionReport";
+$_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
+
+$strOriginalTableName="dbo.Procesos";
+
+$gstrOrderBy="ORDER BY dbo.Procesos.CarteraTipoId, dbo.Procesos.SeccionalId, dbo.Procesos.AbogadoId, dbo.Procesos.ConceptoId, dbo.Procesos.SancionadoId, dbo.Procesos.EstadoId";
+if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")
+	$gstrOrderBy="order by ".$gstrOrderBy;
+
+$reportCaseSensitiveGroupFields = false;
+
+?>

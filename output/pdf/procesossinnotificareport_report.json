@@ -1,0 +1,874 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption dbo_ProcesosSinNotificaReport}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel dbo_ProcesosSinNotificaReport report}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 13,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN CarteraTipoId_newgroup}
+		[
+								{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId }',
+				style: "blackshade",
+				alignment: '{$CarteraTipoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport SeccionalId }',
+				style: "blackshade",
+				alignment: '{$SeccionalId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Abogado }',
+				style: "blackshade",
+				alignment: '{$Abogado_align}',
+			},
+																																																							
+																							{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Fecha }',
+				style: "blackshade",
+				alignment: '{$Fecha_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Numero }',
+				style: "blackshade",
+				alignment: '{$Numero_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport ConceptoId }',
+				style: "blackshade",
+				alignment: '{$ConceptoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport EstadoId }',
+				style: "blackshade",
+				alignment: '{$EstadoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Obligacion }',
+				style: "blackshade",
+				alignment: '{$Obligacion_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Costas }',
+				style: "blackshade",
+				alignment: '{$Costas_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Intereses }',
+				style: "blackshade",
+				alignment: '{$Intereses_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Sancionado }',
+				style: "blackshade",
+				alignment: '{$Sancionado_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Documento }',
+				style: "blackshade",
+				alignment: '{$Documento_align}',
+			},
+											{
+				text: '{$jslabel dbo_ProcesosSinNotificaReport Mandamiento }',
+				style: "blackshade",
+				alignment: '{$Mandamiento_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 13,
+					text: {$CarteraTipoId_grval},
+					style: "header_1"
+				},
+																				],
+	{END CarteraTipoId_newgroup}
+	{BEGIN SeccionalId_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 12,
+					text: {$SeccionalId_grval},
+					style: "header_2"
+				},
+															],
+	{END SeccionalId_newgroup}
+	{BEGIN Abogado_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+																{
+					colSpan: 11,
+					text: {$Abogado_grval},
+					style:"header_3"
+				},
+										],
+	{END Abogado_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_2"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_3"
+		},
+															{
+			text: {$Fecha_value},
+			alignment: '{$Fecha_align}',
+		},
+							{
+			text: {$Numero_value},
+			alignment: '{$Numero_align}',
+		},
+							{
+			text: {$ConceptoId_value},
+			alignment: '{$ConceptoId_align}',
+		},
+							{
+			text: {$EstadoId_value},
+			alignment: '{$EstadoId_align}',
+		},
+							{
+			text: {$Obligacion_value},
+			alignment: '{$Obligacion_align}',
+		},
+							{
+			text: {$Costas_value},
+			alignment: '{$Costas_align}',
+		},
+							{
+			text: {$Intereses_value},
+			alignment: '{$Intereses_align}',
+		},
+							{
+			text: {$Sancionado_value},
+			alignment: '{$Sancionado_align}',
+		},
+							{
+			text: {$Documento_value},
+			alignment: '{$Documento_align}',
+		},
+							{
+			text: {$Mandamiento_value},
+			alignment: '{$Mandamiento_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN Abogado_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+					
+																		{
+				colSpan: 11,
+				text: [
+					'Resumen de {$jslabel dbo_ProcesosSinNotificaReport Abogado } ', 
+					{$Abogado_grval},
+					' - ', 
+					{$groupAbogado_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_3',
+			},
+																																																								],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: {$groupAbogado_totalObligacion_sum},
+				style: "group_3",
+				alignment: '{$Obligacion_align}',
+			},
+											
+						{
+				text: {$groupAbogado_totalCostas_sum},
+				style: "group_3",
+				alignment: '{$Costas_align}',
+			},
+											
+						{
+				text: {$groupAbogado_totalIntereses_sum},
+				style: "group_3",
+				alignment: '{$Intereses_align}',
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+						],
+	
+	
+	
+	
+	{END Abogado_endgroup}
+			{BEGIN SeccionalId_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+					
+													{
+				colSpan: 12,
+				text: [
+					'Resumen de {$jslabel dbo_ProcesosSinNotificaReport SeccionalId } ', 
+					{$SeccionalId_grval},
+					' - ', 
+					{$groupSeccionalId_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_2',
+			},
+																																																													],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: {$groupSeccionalId_totalObligacion_sum},
+				style: "group_2",
+				alignment: '{$Obligacion_align}',
+			},
+											
+						{
+				text: {$groupSeccionalId_totalCostas_sum},
+				style: "group_2",
+				alignment: '{$Costas_align}',
+			},
+											
+						{
+				text: {$groupSeccionalId_totalIntereses_sum},
+				style: "group_2",
+				alignment: '{$Intereses_align}',
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+						],
+	
+	
+	
+	
+	{END SeccionalId_endgroup}
+			{BEGIN CarteraTipoId_endgroup}
+
+		[
+		
+								{
+				colSpan: 13,
+				text: [
+					'Resumen de {$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId } ', 
+					{$CarteraTipoId_grval},
+					' - ', 
+					{$groupCarteraTipoId_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_1',
+			},
+																																																																		],
+	
+		[
+								
+						{
+				text: "Sum",
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalObligacion_sum},
+				style: "group_1",
+				alignment: '{$Obligacion_align}',
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalCostas_sum},
+				style: "group_1",
+				alignment: '{$Costas_align}',
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalIntereses_sum},
+				style: "group_1",
+				alignment: '{$Intereses_align}',
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+						],
+	
+	
+	
+	
+	{END CarteraTipoId_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Resumen global {$global_total_cnt} - Registros totales',
+			colSpan: 13,
+			style: 'globalsummary',
+		}
+	],
+
+		[
+							{
+			text: [
+							'Sum ',
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							{$global_totalObligacion_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Obligacion_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalCostas_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Costas_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalIntereses_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Intereses_align}',
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+			],
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};

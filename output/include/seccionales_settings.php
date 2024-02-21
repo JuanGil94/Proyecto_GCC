@@ -3829,6 +3829,36 @@ $detailsTablesData["dbo.Seccionales"] = array();
 				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
+//	dbo.ProcesosSinNotificaReport
+	
+	
+
+		$dIndex = 10;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosSinNotificaReport";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		$detailsParam["dType"]=PAGE_REPORT;
+	
+		$detailsParam["dShortTable"] = "procesossinnotificareport";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosSinNotificaReport");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Seccionales"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"][]="SeccionalId";
+
+				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
 //endif
 
 // tables which are master tables for current table (detail)

@@ -757,6 +757,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link8}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link9}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1143,6 +1146,11 @@ pdfDocument = {
 			 {BEGIN details_reporteclasificacioncartera}
 			{$displayDetailTable_reporteclasificacioncartera }
 		{END details_reporteclasificacioncartera},
+				
+				
+			 {BEGIN details_procesossinnotificareport}
+			{$displayDetailTable_procesossinnotificareport }
+		{END details_procesossinnotificareport},
 				
 		  ],
   "border": [ true, true, true, true ],

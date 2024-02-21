@@ -411,6 +411,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("reporteclasificacioncartera" == $shortTName )
 		return true;
+	if ("procesossinnotificareport" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1397,6 +1399,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.ReporteClasificacionCartera";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosSinNotificaReport");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ProcesosSinNotificaReport";
+	}
 	return $arr;
 }
 
@@ -1510,6 +1521,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ReporteMandamientos";
 	$arr[]="dbo.ListaChequeosReporte";
 	$arr[]="dbo.ReporteClasificacionCartera";
+	$arr[]="dbo.ProcesosSinNotificaReport";
 	return $arr;
 }
 
@@ -2653,6 +2665,11 @@ function GetUserPermissionsStatic( $table )
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ReporteClasificacionCartera" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.ProcesosSinNotificaReport" )
 	{
 //	default permissions
 		return "SP".$extraPerm;
