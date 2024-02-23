@@ -348,6 +348,8 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.ListaChequeosReporte"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ReporteClasificacionCartera"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ProcesosSinNotificaReport"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.ReporteCorporaciónEspecialidad"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.CorporacionesView"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

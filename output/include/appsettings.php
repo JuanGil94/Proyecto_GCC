@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1710_1707784582";
+$projectBuildKey = "1761_1708610714";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "1710";
+$projectBuildNumber = "1761";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -872,6 +872,8 @@ $tableCaptions["Spanish"]["dbo_ReporteMandamientos"] = "Reporte Mandamientos";
 $tableCaptions["Spanish"]["dbo_ListaChequeosReporte"] = "Lista Chequeos Reporte";
 $tableCaptions["Spanish"]["dbo_ReporteClasificacionCartera"] = "Reporte Clasificacion Cartera";
 $tableCaptions["Spanish"]["dbo_ProcesosSinNotificaReport"] = "Procesos Sin Notifica Report";
+$tableCaptions["Spanish"]["dbo_ReporteCorporaci_nEspecialidad"] = "Reporte Corporación Especialidad";
+$tableCaptions["Spanish"]["dbo_CorporacionesView"] = "Corporaciones View";
 
 
 $globalEvents = new class_GlobalEvents;

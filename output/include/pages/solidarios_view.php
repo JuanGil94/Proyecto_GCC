@@ -1,8 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
-'dbo.Sancionados' => array( 'preview' => false ),
-'dbo.ProcesosSinNotificaReport' => array( 'preview' => false ) ),
+'dbo.Sancionados' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'SancionadoId',
 'ProcesoId' ),
 'searchRequiredFields' => array(  ),

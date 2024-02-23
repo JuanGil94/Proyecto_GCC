@@ -856,6 +856,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1274,6 +1277,11 @@ pdfDocument = {
 			 {BEGIN details_procesossinnotificareport}
 			{$displayDetailTable_procesossinnotificareport }
 		{END details_procesossinnotificareport},
+				
+				
+			 {BEGIN details_reportecorporaci_nespecialidad}
+			{$displayDetailTable_reportecorporaci_nespecialidad }
+		{END details_reportecorporaci_nespecialidad},
 				
 		  ],
   "border": [ true, true, true, true ],

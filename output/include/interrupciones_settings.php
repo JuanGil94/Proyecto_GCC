@@ -137,7 +137,7 @@ $tdatainterrupciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																							
+																																																																																										
 
 $tdatainterrupciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -996,25 +996,6 @@ $masterTablesData["dbo.Interrupciones"] = array();
 	$masterTablesData["dbo.Interrupciones"][0]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Interrupciones"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Interrupciones"][0]["detailKeys"][]="ProcesoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Procesos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.ProcesosSinNotificaReport";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "procesossinnotificareport";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterParams["type"] = PAGE_REPORT;
-	$masterTablesData["dbo.Interrupciones"][1] = $masterParams;
-				$masterTablesData["dbo.Interrupciones"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.Interrupciones"][1]["masterKeys"][]="ProcesoId";
-				$masterTablesData["dbo.Interrupciones"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.Interrupciones"][1]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

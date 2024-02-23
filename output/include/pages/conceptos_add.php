@@ -4,8 +4,6 @@
 'dbo.Procesos' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Importaciones' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'dbo.ProcesosSinNotificaReport' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Concepto',

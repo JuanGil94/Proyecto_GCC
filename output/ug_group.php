@@ -120,6 +120,8 @@ $nonAdminTablesArr[] = "dbo.ReporteMandamientos";
 $nonAdminTablesArr[] = "dbo.ListaChequeosReporte";
 $nonAdminTablesArr[] = "dbo.ReporteClasificacionCartera";
 $nonAdminTablesArr[] = "dbo.ProcesosSinNotificaReport";
+$nonAdminTablesArr[] = "dbo.ReporteCorporaciónEspecialidad";
+$nonAdminTablesArr[] = "dbo.CorporacionesView";
 
 $ug_connection = $cman->getForUserGroups();
 

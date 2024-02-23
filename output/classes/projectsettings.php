@@ -3746,6 +3746,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "reporteclasificacioncartera" ] = "dbo.ReporteClasificacionCartera";
 	$projectEntities[ "dbo.ProcesosSinNotificaReport" ] = array( "url" => "procesossinnotificareport", "type" => 2 );
 	$projectEntitiesReverse[ "procesossinnotificareport" ] = "dbo.ProcesosSinNotificaReport";
+	$projectEntities[ "dbo.ReporteCorporaciónEspecialidad" ] = array( "url" => "reportecorporaci_nespecialidad", "type" => 2 );
+	$projectEntitiesReverse[ "reportecorporaci_nespecialidad" ] = "dbo.ReporteCorporaciónEspecialidad";
+	$projectEntities[ "dbo.CorporacionesView" ] = array( "url" => "corporacionesview", "type" => 0 );
+	$projectEntitiesReverse[ "corporacionesview" ] = "dbo.CorporacionesView";
 }
 
 function findTable( $table ) {

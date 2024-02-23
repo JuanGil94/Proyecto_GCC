@@ -61,26 +61,99 @@ pdfDocument = {
 								{BEGIN embedded_grid} -1 {END embedded_grid} ,
 
 				widths: [
-														"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
-										"%",
+														{BEGIN col_grid_0}
+					"%",
+					{END col_grid_0}
+										{BEGIN col_grid_1}
+					"%",
+					{END col_grid_1}
+										{BEGIN col_grid_2}
+					"%",
+					{END col_grid_2}
+										{BEGIN col_grid_3}
+					"%",
+					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
+										{BEGIN col_grid_5}
+					"%",
+					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
+															],
+											heights: [ // first height for header part
+					"%",
+																		{BEGIN row_grid_0}
+							"%",
+							{END row_grid_0}
+																								{BEGIN row_grid_1}
+							"%",
+							{END row_grid_1}
+																								{BEGIN row_grid_2}
+							"%",
+							{END row_grid_2}
+																								{BEGIN row_grid_3}
+							"%",
+							{END row_grid_3}
+																							 	{BEGIN grid_row}
+													{BEGIN row_grid_4}
+							"%",
+							{END row_grid_4}
+													{END grid_row}
+																								{BEGIN row_grid_5}
+							"%",
+							{END row_grid_5}
+																								{BEGIN row_grid_6}
+							"%",
+							{END row_grid_6}
+																								{BEGIN row_grid_7}
+							"%",
+							{END row_grid_7}
+																								{BEGIN row_grid_8}
+							"%",
+							{END row_grid_8}
+																								{BEGIN row_grid_9}
+							"%",
+							{END row_grid_9}
+																								{BEGIN row_grid_10}
+							"%",
+							{END row_grid_10}
+																								{BEGIN row_grid_11}
+							"%",
+							{END row_grid_11}
+																								{BEGIN row_grid_12}
+							"%",
+							{END row_grid_12}
+																								{BEGIN row_grid_13}
+							"%",
+							{END row_grid_13}
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 13,
+							colSpan: {$formwidth_grid},
 							border:[false, false,false,false],
 							stack: [
 
@@ -210,612 +283,3559 @@ pdfDocument = {
 					],
 				{END standalone_page}
 
-																
-
-
+																	
 {BEGIN grid_row}
+							
 	{BEGIN CarteraTipoId_newgroup}
-		[
-								{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId }',
-				style: "blackshade",
-				alignment: '{$CarteraTipoId_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport SeccionalId }',
-				style: "blackshade",
-				alignment: '{$SeccionalId_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Abogado }',
-				style: "blackshade",
-				alignment: '{$Abogado_align}',
-			},
-																																																							
-																							{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Fecha }',
-				style: "blackshade",
-				alignment: '{$Fecha_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Numero }',
-				style: "blackshade",
-				alignment: '{$Numero_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport ConceptoId }',
-				style: "blackshade",
-				alignment: '{$ConceptoId_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport EstadoId }',
-				style: "blackshade",
-				alignment: '{$EstadoId_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Obligacion }',
-				style: "blackshade",
-				alignment: '{$Obligacion_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Costas }',
-				style: "blackshade",
-				alignment: '{$Costas_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Intereses }',
-				style: "blackshade",
-				alignment: '{$Intereses_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Sancionado }',
-				style: "blackshade",
-				alignment: '{$Sancionado_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Documento }',
-				style: "blackshade",
-				alignment: '{$Documento_align}',
-			},
-											{
-				text: '{$jslabel dbo_ProcesosSinNotificaReport Mandamiento }',
-				style: "blackshade",
-				alignment: '{$Mandamiento_align}',
-			},
-						],
-	
-	[
-													{
-					colSpan: 13,
-					text: {$CarteraTipoId_grval},
-					style: "header_1"
-				},
-																				],
-	{END CarteraTipoId_newgroup}
-	{BEGIN SeccionalId_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-																{
-					colSpan: 12,
-					text: {$SeccionalId_grval},
-					style: "header_2"
-				},
-															],
-	{END SeccionalId_newgroup}
-	{BEGIN Abogado_newgroup}
-	
-	[
-									{
-					text: '',
-					style: "group_1"
-				},
-												{
-					text: '',
-					style: "group_2"
-				},
-																{
-					colSpan: 11,
-					text: {$Abogado_grval},
-					style:"header_3"
-				},
-										],
-	{END Abogado_newgroup}
-
-	{BEGIN row_data}
-	[
-			{
-			text: [
-									''
-							],
-			style: "group_1"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_2"
-		},
-			{
-			text: [
-									''
-							],
-			style: "group_3"
-		},
-															{
-			text: {$Fecha_value},
-			alignment: '{$Fecha_align}',
-		},
-							{
-			text: {$Numero_value},
-			alignment: '{$Numero_align}',
-		},
-							{
-			text: {$ConceptoId_value},
-			alignment: '{$ConceptoId_align}',
-		},
-							{
-			text: {$EstadoId_value},
-			alignment: '{$EstadoId_align}',
-		},
-							{
-			text: {$Obligacion_value},
-			alignment: '{$Obligacion_align}',
-		},
-							{
-			text: {$Costas_value},
-			alignment: '{$Costas_align}',
-		},
-							{
-			text: {$Intereses_value},
-			alignment: '{$Intereses_align}',
-		},
-							{
-			text: {$Sancionado_value},
-			alignment: '{$Sancionado_align}',
-		},
-							{
-			text: {$Documento_value},
-			alignment: '{$Documento_align}',
-		},
-							{
-			text: {$Mandamiento_value},
-			alignment: '{$Mandamiento_align}',
-		},
-				],
-	{END row_data}
-
-
-		{BEGIN Abogado_endgroup}
-
-		[
-								{
-				text: "",
-				style: "group_1"
-			},
-						{
-				text: "",
-				style: "group_2"
-			},
-					
-																		{
-				colSpan: 11,
-				text: [
-					'Resumen de {$jslabel dbo_ProcesosSinNotificaReport Abogado } ', 
-					{$Abogado_grval},
-					' - ', 
-					{$groupAbogado_total_cnt}, 
-					' Registros totales'
-				],
-				style: 'group_3',
-			},
-																																																								],
-	
-		[
-								
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: "Sum",
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: {$groupAbogado_totalObligacion_sum},
-				style: "group_3",
-				alignment: '{$Obligacion_align}',
-			},
-											
-						{
-				text: {$groupAbogado_totalCostas_sum},
-				style: "group_3",
-				alignment: '{$Costas_align}',
-			},
-											
-						{
-				text: {$groupAbogado_totalIntereses_sum},
-				style: "group_3",
-				alignment: '{$Intereses_align}',
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-											
-						{
-				text: '',
-				style: "group_3"
-			},
-						],
-	
-	
-	
-	
-	{END Abogado_endgroup}
-			{BEGIN SeccionalId_endgroup}
-
-		[
-								{
-				text: "",
-				style: "group_1"
-			},
-					
-													{
-				colSpan: 12,
-				text: [
-					'Resumen de {$jslabel dbo_ProcesosSinNotificaReport SeccionalId } ', 
-					{$SeccionalId_grval},
-					' - ', 
-					{$groupSeccionalId_total_cnt}, 
-					' Registros totales'
-				],
-				style: 'group_2',
-			},
-																																																													],
-	
-		[
-								
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: "Sum",
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: {$groupSeccionalId_totalObligacion_sum},
-				style: "group_2",
-				alignment: '{$Obligacion_align}',
-			},
-											
-						{
-				text: {$groupSeccionalId_totalCostas_sum},
-				style: "group_2",
-				alignment: '{$Costas_align}',
-			},
-											
-						{
-				text: {$groupSeccionalId_totalIntereses_sum},
-				style: "group_2",
-				alignment: '{$Intereses_align}',
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-											
-						{
-				text: '',
-				style: "group_2"
-			},
-						],
-	
-	
-	
-	
-	{END SeccionalId_endgroup}
-			{BEGIN CarteraTipoId_endgroup}
-
-		[
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_headcell_groupfield}
+{
+	cellId: 'headcell_groupfield',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'blackshade ',
 		
-								{
-				colSpan: 13,
-				text: [
-					'Resumen de {$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId } ', 
-					{$CarteraTipoId_grval},
-					' - ', 
-					{$groupCarteraTipoId_total_cnt}, 
-					' Registros totales'
-				],
-				style: 'group_1',
-			},
-																																																																		],
+		
+	//	dynamic colspan/rowspan
+
+		
+		
 	
-		[
-								
-						{
-				text: "Sum",
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: {$groupCarteraTipoId_totalObligacion_sum},
-				style: "group_1",
-				alignment: '{$Obligacion_align}',
-			},
-											
-						{
-				text: {$groupCarteraTipoId_totalCostas_sum},
-				style: "group_1",
-				alignment: '{$Costas_align}',
-			},
-											
-						{
-				text: {$groupCarteraTipoId_totalIntereses_sum},
-				style: "group_1",
-				alignment: '{$Intereses_align}',
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-											
-						{
-				text: '',
-				style: "group_1"
-			},
-						],
+			
 	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId }","hidden":"{$item_hide_grid_group_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_groupfield}
+																							{BEGIN cellblock_grid_headcell_groupfield1}
+{
+	cellId: 'headcell_groupfield1',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
 	
+			
 	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport SeccionalId }","hidden":"{$item_hide_grid_group_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_groupfield1}
+																							{BEGIN cellblock_grid_headcell_groupfield2}
+{
+	cellId: 'headcell_groupfield2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
 	
-	{END CarteraTipoId_endgroup}
+			
 	
-{END grid_row}
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Abogado }","hidden":"{$item_hide_grid_group_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
 
+{END cellblock_grid_headcell_groupfield2}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
 
-
-
-
-
-
-
-
-
-{BEGIN global_summary}
-	[
-		{
-			text: 'Resumen global {$global_total_cnt} - Registros totales',
-			colSpan: 13,
-			style: 'globalsummary',
-		}
-	],
-
-		[
-							{
-			text: [
-							'Sum ',
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							{$global_totalObligacion_sum},
-						],
-			style: 'globalsummary',
-
-			 
-			alignment: '{$Obligacion_align}',
-					},
-							{
-			text: [
-			
-							{$global_totalCostas_sum},
-						],
-			style: 'globalsummary',
-
-			 
-			alignment: '{$Costas_align}',
-					},
-							{
-			text: [
-			
-							{$global_totalIntereses_sum},
-						],
-			style: 'globalsummary',
-
-			 
-			alignment: '{$Intereses_align}',
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-							{
-			text: [
-			
-							'',
-						],
-			style: 'globalsummary',
-
-					},
-			],
+		
+		
 	
+			
 	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Fecha }","hidden":"{$item_hide_report_advanced_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
 	
+			
 	
-{END global_summary}
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Numero }","hidden":"{$item_hide_report_advanced_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport ConceptoId }","hidden":"{$item_hide_report_advanced_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport EstadoId }","hidden":"{$item_hide_report_advanced_field_label3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Obligacion }","hidden":"{$item_hide_report_advanced_field_label4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Costas }","hidden":"{$item_hide_report_advanced_field_label5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Intereses }","hidden":"{$item_hide_report_advanced_field_label6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Sancionado }","hidden":"{$item_hide_report_advanced_field_label7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Documento }","hidden":"{$item_hide_report_advanced_field_label8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+				style: 'blackshade ',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Mandamiento }","hidden":"{$item_hide_report_advanced_field_label9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+											],
+				{END row_grid_0}
+						{BEGIN row_grid_1}
+				[
+																{BEGIN cellblock_grid_cell_group_field}
+{
+	cellId: 'cell_group_field',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'header_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_field}
+			colSpan: {$colspan_grid_cell_group_field},
+			{END colspan_grid_cell_group_field}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$CarteraTipoId_grval},"hidden":"{$item_hide_grid_group_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field}
+																		{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+							],
+				{END row_grid_1}
+			{END CarteraTipoId_newgroup}
+
+									
+	{BEGIN SeccionalId_newgroup}
+				{BEGIN row_grid_2}
+				[
+																{BEGIN cellblock_grid_cell_group_empty2}
+{
+	cellId: 'cell_group_empty2',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty2}
+																							{BEGIN cellblock_grid_cell_group_field1}
+{
+	cellId: 'cell_group_field1',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'header_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_field1}
+			colSpan: {$colspan_grid_cell_group_field1},
+			{END colspan_grid_cell_group_field1}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$SeccionalId_grval},"hidden":"{$item_hide_grid_group_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field1}
+																		{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field1',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+							],
+				{END row_grid_2}
+			{END SeccionalId_newgroup}
+
+									
+	{BEGIN Abogado_newgroup}
+				{BEGIN row_grid_3}
+				[
+																{BEGIN cellblock_grid_cell_group_empty7}
+{
+	cellId: 'cell_group_empty7',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty7}
+																							{BEGIN cellblock_grid_cell_group_empty8}
+{
+	cellId: 'cell_group_empty8',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty8}
+																							{BEGIN cellblock_grid_cell_group_field2}
+{
+	cellId: 'cell_group_field2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'header_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_field2}
+			colSpan: {$colspan_grid_cell_group_field2},
+			{END colspan_grid_cell_group_field2}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Abogado_grval},"hidden":"{$item_hide_grid_group_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_field2}
+																		{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_field2',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+							],
+				{END row_grid_3}
+			{END Abogado_newgroup}
+
+									
+	{BEGIN row_data}
+				{BEGIN row_grid_4}
+				[
+																{BEGIN cellblock_grid_cell_group_empty9}
+{
+	cellId: 'cell_group_empty9',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty9}
+																							{BEGIN cellblock_grid_cell_group_empty10}
+{
+	cellId: 'cell_group_empty10',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty10}
+																							{BEGIN cellblock_grid_cell_group_empty11}
+{
+	cellId: 'cell_group_empty11',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty11}
+																							{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Fecha_value},"hidden":"{$item_hide_report_advanced_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Fecha_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Numero_value},"hidden":"{$item_hide_report_advanced_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Numero_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ConceptoId_value},"hidden":"{$item_hide_report_advanced_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ConceptoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EstadoId_value},"hidden":"{$item_hide_report_advanced_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Obligacion_value},"hidden":"{$item_hide_report_advanced_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Costas_value},"hidden":"{$item_hide_report_advanced_field5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Intereses_value},"hidden":"{$item_hide_report_advanced_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Sancionado_value},"hidden":"{$item_hide_report_advanced_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Sancionado_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Documento_value},"hidden":"{$item_hide_report_advanced_field8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Documento_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Mandamiento_value},"hidden":"{$item_hide_report_advanced_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Mandamiento_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+											],
+				{END row_grid_4}
+			{END row_data}
+
+									
+	{BEGIN Abogado_endgroup}
+				{BEGIN row_grid_5}
+				[
+																{BEGIN cellblock_grid_cell_group_empty3}
+{
+	cellId: 'cell_group_empty3',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty3}
+																							{BEGIN cellblock_grid_cell_group_empty4}
+{
+	cellId: 'cell_group_empty4',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty4}
+																							{BEGIN cellblock_grid_cell_group_summary2}
+{
+	cellId: 'cell_group_summary2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary2}
+			colSpan: {$colspan_grid_cell_group_summary2},
+			{END colspan_grid_cell_group_summary2}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen de","hidden":"{$item_hide_group_summary_label4}","isHtml":true},
+				
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Abogado }","hidden":"{$item_hide_group_summary_field_label2}","bold":true},
+				
+				
+			{"text":{$Abogado_grval},"hidden":"{$item_hide_group_summary_field_value2}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash2}","isHtml":true},
+				
+				
+			{"text":"{$groupAbogado_total_cnt}","hidden":"{$item_hide_group_summary_count2}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_group_summary_label5}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary2}
+																		{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary2',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+							],
+				{END row_grid_5}
+						{BEGIN row_grid_6}
+				[
+																{BEGIN cellblock_grid_cell_group_empty5}
+{
+	cellId: 'cell_group_empty5',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty5}
+																							{BEGIN cellblock_grid_cell_group_empty6}
+{
+	cellId: 'cell_group_empty6',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty6}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum5}
+{
+	cellId: 'cell_group_summary_type_sum5',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_group_summary_type_sum2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum5}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum9}
+{
+	cellId: 'cell_group_summary_field_sum9',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum9}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum12}
+{
+	cellId: 'cell_group_summary_field_sum12',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum12}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum15}
+{
+	cellId: 'cell_group_summary_field_sum15',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum15}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum18}
+{
+	cellId: 'cell_group_summary_field_sum18',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum18}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum6}
+{
+	cellId: 'cell_group_summary_field_sum6',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupAbogado_totalObligacion_sum},"hidden":"{$item_hide_group_summary_field_sum6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum6}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum7}
+{
+	cellId: 'cell_group_summary_field_sum7',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupAbogado_totalCostas_sum},"hidden":"{$item_hide_group_summary_field_sum7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum7}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum8}
+{
+	cellId: 'cell_group_summary_field_sum8',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupAbogado_totalIntereses_sum},"hidden":"{$item_hide_group_summary_field_sum8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum8}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum21}
+{
+	cellId: 'cell_group_summary_field_sum21',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum21}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum24}
+{
+	cellId: 'cell_group_summary_field_sum24',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum24}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum27}
+{
+	cellId: 'cell_group_summary_field_sum27',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+				style: 'group_Abogado',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum27}
+											],
+				{END row_grid_6}
+			{END Abogado_endgroup}
+
+									
+	{BEGIN SeccionalId_endgroup}
+				{BEGIN row_grid_7}
+				[
+																{BEGIN cellblock_grid_cell_group_empty}
+{
+	cellId: 'cell_group_empty',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty}
+																							{BEGIN cellblock_grid_cell_group_summary1}
+{
+	cellId: 'cell_group_summary1',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary1}
+			colSpan: {$colspan_grid_cell_group_summary1},
+			{END colspan_grid_cell_group_summary1}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen de","hidden":"{$item_hide_group_summary_label}","isHtml":true},
+				
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport SeccionalId }","hidden":"{$item_hide_group_summary_field_label1}","bold":true},
+				
+				
+			{"text":{$SeccionalId_grval},"hidden":"{$item_hide_group_summary_field_value1}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash1}","isHtml":true},
+				
+				
+			{"text":"{$groupSeccionalId_total_cnt}","hidden":"{$item_hide_group_summary_count1}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_group_summary_label3}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary1}
+																		{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary1',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+							],
+				{END row_grid_7}
+						{BEGIN row_grid_8}
+				[
+																{BEGIN cellblock_grid_cell_group_empty1}
+{
+	cellId: 'cell_group_empty1',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_empty1}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum2}
+{
+	cellId: 'cell_group_summary_type_sum2',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_group_summary_type_sum1}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum2}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum3}
+{
+	cellId: 'cell_group_summary_type_sum3',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum3}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum10}
+{
+	cellId: 'cell_group_summary_field_sum10',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum10}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum13}
+{
+	cellId: 'cell_group_summary_field_sum13',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum13}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum16}
+{
+	cellId: 'cell_group_summary_field_sum16',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum16}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum19}
+{
+	cellId: 'cell_group_summary_field_sum19',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum19}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum3}
+{
+	cellId: 'cell_group_summary_field_sum3',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccionalId_totalObligacion_sum},"hidden":"{$item_hide_group_summary_field_sum3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum3}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum4}
+{
+	cellId: 'cell_group_summary_field_sum4',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccionalId_totalCostas_sum},"hidden":"{$item_hide_group_summary_field_sum4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum4}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum5}
+{
+	cellId: 'cell_group_summary_field_sum5',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupSeccionalId_totalIntereses_sum},"hidden":"{$item_hide_group_summary_field_sum5}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum5}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum22}
+{
+	cellId: 'cell_group_summary_field_sum22',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum22}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum25}
+{
+	cellId: 'cell_group_summary_field_sum25',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum25}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum28}
+{
+	cellId: 'cell_group_summary_field_sum28',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+				style: 'group_SeccionalId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum28}
+											],
+				{END row_grid_8}
+			{END SeccionalId_endgroup}
+
+									
+	{BEGIN CarteraTipoId_endgroup}
+				{BEGIN row_grid_9}
+				[
+																{BEGIN cellblock_grid_cell_group_summary}
+{
+	cellId: 'cell_group_summary',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_group_summary}
+			colSpan: {$colspan_grid_cell_group_summary},
+			{END colspan_grid_cell_group_summary}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen de","hidden":"{$item_hide_group_summary_label1}","isHtml":true},
+				
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId }","hidden":"{$item_hide_group_summary_field_label}","bold":true},
+				
+				
+			{"text":{$CarteraTipoId_grval},"hidden":"{$item_hide_group_summary_field_value}"},
+				
+				
+			{"text":"-","hidden":"{$item_hide_group_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$groupCarteraTipoId_total_cnt}","hidden":"{$item_hide_group_summary_count}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_group_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary}
+																		{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_group_summary',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+							],
+				{END row_grid_9}
+						{BEGIN row_grid_10}
+				[
+																{BEGIN cellblock_grid_cell_group_summary_type_sum}
+{
+	cellId: 'cell_group_summary_type_sum',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_group_summary_type_sum}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum1}
+{
+	cellId: 'cell_group_summary_type_sum1',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum1}
+																							{BEGIN cellblock_grid_cell_group_summary_type_sum4}
+{
+	cellId: 'cell_group_summary_type_sum4',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_type_sum4}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum11}
+{
+	cellId: 'cell_group_summary_field_sum11',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum11}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum14}
+{
+	cellId: 'cell_group_summary_field_sum14',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum14}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum17}
+{
+	cellId: 'cell_group_summary_field_sum17',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum17}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum20}
+{
+	cellId: 'cell_group_summary_field_sum20',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum20}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum}
+{
+	cellId: 'cell_group_summary_field_sum',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipoId_totalObligacion_sum},"hidden":"{$item_hide_group_summary_field_sum}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum1}
+{
+	cellId: 'cell_group_summary_field_sum1',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipoId_totalCostas_sum},"hidden":"{$item_hide_group_summary_field_sum1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum1}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum2}
+{
+	cellId: 'cell_group_summary_field_sum2',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$groupCarteraTipoId_totalIntereses_sum},"hidden":"{$item_hide_group_summary_field_sum2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum2}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum23}
+{
+	cellId: 'cell_group_summary_field_sum23',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum23}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum26}
+{
+	cellId: 'cell_group_summary_field_sum26',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum26}
+																							{BEGIN cellblock_grid_cell_group_summary_field_sum29}
+{
+	cellId: 'cell_group_summary_field_sum29',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+				style: 'group_CarteraTipoId',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_group_summary_field_sum29}
+											],
+				{END row_grid_10}
+			{END CarteraTipoId_endgroup}
+
+						{END grid_row}
+
+											
+	{BEGIN global_summary}
+				{BEGIN row_grid_11}
+				[
+																{BEGIN cellblock_grid_cell_global_summary_group_header}
+{
+	cellId: 'cell_global_summary_group_header',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport CarteraTipoId }","hidden":"{$item_hide_global_summary_group_header}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_group_header}
+																							{BEGIN cellblock_grid_cell_global_summary_group_header1}
+{
+	cellId: 'cell_global_summary_group_header1',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport SeccionalId }","hidden":"{$item_hide_global_summary_group_header1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_group_header1}
+																							{BEGIN cellblock_grid_cell_global_summary_group_header2}
+{
+	cellId: 'cell_global_summary_group_header2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Abogado }","hidden":"{$item_hide_global_summary_group_header2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_group_header2}
+																							{BEGIN cellblock_grid_cell_global_summary_header}
+{
+	cellId: 'cell_global_summary_header',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Fecha }","hidden":"{$item_hide_global_summary_header}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header}
+																							{BEGIN cellblock_grid_cell_global_summary_header1}
+{
+	cellId: 'cell_global_summary_header1',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Numero }","hidden":"{$item_hide_global_summary_header1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header1}
+																							{BEGIN cellblock_grid_cell_global_summary_header2}
+{
+	cellId: 'cell_global_summary_header2',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport ConceptoId }","hidden":"{$item_hide_global_summary_header2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header2}
+																							{BEGIN cellblock_grid_cell_global_summary_header3}
+{
+	cellId: 'cell_global_summary_header3',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport EstadoId }","hidden":"{$item_hide_global_summary_header3}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header3}
+																							{BEGIN cellblock_grid_cell_global_summary_header4}
+{
+	cellId: 'cell_global_summary_header4',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Obligacion }","hidden":"{$item_hide_global_summary_header4}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header4}
+																							{BEGIN cellblock_grid_cell_global_summary_header5}
+{
+	cellId: 'cell_global_summary_header5',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Costas }","hidden":"{$item_hide_global_summary_header5}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header5}
+																							{BEGIN cellblock_grid_cell_global_summary_header6}
+{
+	cellId: 'cell_global_summary_header6',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Intereses }","hidden":"{$item_hide_global_summary_header6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header6}
+																							{BEGIN cellblock_grid_cell_global_summary_header7}
+{
+	cellId: 'cell_global_summary_header7',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Sancionado }","hidden":"{$item_hide_global_summary_header7}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header7}
+																							{BEGIN cellblock_grid_cell_global_summary_header8}
+{
+	cellId: 'cell_global_summary_header8',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Documento }","hidden":"{$item_hide_global_summary_header8}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header8}
+																							{BEGIN cellblock_grid_cell_global_summary_header9}
+{
+	cellId: 'cell_global_summary_header9',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+				style: 'blackshade',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosSinNotificaReport Mandamiento }","hidden":"{$item_hide_global_summary_header9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_header9}
+											],
+				{END row_grid_11}
+						{BEGIN row_grid_12}
+				[
+																{BEGIN cellblock_grid_cell_global_summary}
+{
+	cellId: 'cell_global_summary',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_global_summary}
+			colSpan: {$colspan_grid_cell_global_summary},
+			{END colspan_grid_cell_global_summary}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Resumen global","hidden":"{$item_hide_global_summary_label1}","isHtml":true},
+				
+				
+			{"text":"-","hidden":"{$item_hide_global_summary_dash}","isHtml":true},
+				
+				
+			{"text":"{$global_total_cnt}","hidden":"{$item_hide_global_summary_count}"},
+				
+				
+			{"text":"Registros totales","hidden":"{$item_hide_global_summary_label2}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary}
+																		{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  6,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  7,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  8,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  9,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  10,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  11,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_global_summary',
+				row:  0,
+				col:  12,
+				text: ''
+			},
+							],
+				{END row_grid_12}
+						{BEGIN row_grid_13}
+				[
+																{BEGIN cellblock_grid_cell_global_summary_type_sum}
+{
+	cellId: 'cell_global_summary_type_sum',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"Sum","hidden":"{$item_hide_global_summary_type_sum}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_type_sum}
+																							{BEGIN cellblock_grid_cell_global_summary_type_sum1}
+{
+	cellId: 'cell_global_summary_type_sum1',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_type_sum1}
+																							{BEGIN cellblock_grid_cell_global_summary_type_sum2}
+{
+	cellId: 'cell_global_summary_type_sum2',
+	col:0,
+	row:0,
+			fieldName: 'Abogado',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_type_sum2}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum}
+{
+	cellId: 'cell_global_summary_field_sum',
+	col:0,
+	row:0,
+			fieldName: 'Fecha',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum1}
+{
+	cellId: 'cell_global_summary_field_sum1',
+	col:0,
+	row:0,
+			fieldName: 'Numero',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum1}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum2}
+{
+	cellId: 'cell_global_summary_field_sum2',
+	col:0,
+	row:0,
+			fieldName: 'ConceptoId',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum2}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum3}
+{
+	cellId: 'cell_global_summary_field_sum3',
+	col:0,
+	row:0,
+			fieldName: 'EstadoId',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum3}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum4}
+{
+	cellId: 'cell_global_summary_field_sum4',
+	col:0,
+	row:0,
+			fieldName: 'Obligacion',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalObligacion_sum},"hidden":"{$item_hide_global_summary_field_sum}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Obligacion_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum4}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum5}
+{
+	cellId: 'cell_global_summary_field_sum5',
+	col:0,
+	row:0,
+			fieldName: 'Costas',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalCostas_sum},"hidden":"{$item_hide_global_summary_field_sum1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Costas_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum5}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum6}
+{
+	cellId: 'cell_global_summary_field_sum6',
+	col:0,
+	row:0,
+			fieldName: 'Intereses',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$global_totalIntereses_sum},"hidden":"{$item_hide_global_summary_field_sum2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Intereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum6}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum7}
+{
+	cellId: 'cell_global_summary_field_sum7',
+	col:0,
+	row:0,
+			fieldName: 'Sancionado',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum7}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum8}
+{
+	cellId: 'cell_global_summary_field_sum8',
+	col:0,
+	row:0,
+			fieldName: 'Documento',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum8}
+																							{BEGIN cellblock_grid_cell_global_summary_field_sum9}
+{
+	cellId: 'cell_global_summary_field_sum9',
+	col:0,
+	row:0,
+			fieldName: 'Mandamiento',
+				style: 'globalsummary',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_global_summary_field_sum9}
+											],
+				{END row_grid_13}
+			{END global_summary}
+
+	
+
 									]
 			
 			}

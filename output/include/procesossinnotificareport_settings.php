@@ -163,7 +163,7 @@ $tdataprocesossinnotificareport[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																				
+																																													
 
 $tdataprocesossinnotificareport[".ajaxCodeSnippetAdded"] = false;
 
@@ -225,7 +225,6 @@ $tdataprocesossinnotificareport[".pageSizeRecords"] = 20;
 
 
 
-$tdataprocesossinnotificareport[".noRecordsFirstPage"] = true;
 
 
 
@@ -238,7 +237,7 @@ $tdataprocesossinnotificareport[".orderindexes"] = array();
 
 $tdataprocesossinnotificareport[".sqlHead"] = "            SELECT Procesos.ProcesoId,               Procesos.CarteraTipoId,               Procesos.SeccionalId,               Abogados.Abogado,               Procesos.ConceptoId,               Procesos.Fecha,               Procesos.Numero,               Sancionados.Sancionado,               Sancionados.Documento,               Procesos.Obligacion,               Procesos.Intereses,               Procesos.Costas,  			(select top 1 Correspondencias.Fecha from Correspondencias where ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105) order by Correspondencias.Fecha desc) Mandamiento,              Procesos.EstadoId";
 $tdataprocesossinnotificareport[".sqlFrom"] = "FROM Procesos  		  INNER JOIN Sancionados ON Sancionados.SancionadoId = Procesos.SancionadoId  		  INNER JOIN Seccionales on Seccionales.SeccionalId = Procesos.SeccionalId  		  INNER JOIN Abogados on Abogados.AbogadoId = Procesos.AbogadoId";
-$tdataprocesossinnotificareport[".sqlWhereExpr"] = "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)";
+$tdataprocesossinnotificareport[".sqlWhereExpr"] = "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)  			AND Seccionales.SeccionalId in (:session.SeccionalesWhere)";
 $tdataprocesossinnotificareport[".sqlTail"] = "";
 
 
@@ -2358,306 +2357,6 @@ changeTextControlsToDate( "dbo.ProcesosSinNotificaReport" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.ProcesosSinNotificaReport"] = array();
-//	dbo.Acuerdos
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Acuerdos";
-		$detailsParam["dOriginalTable"] = "dbo.Acuerdos";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "acuerdos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Acuerdos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Correspondencias
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Correspondencias";
-		$detailsParam["dOriginalTable"] = "dbo.Correspondencias";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "correspondencias";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Correspondencias");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Intereses
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Intereses";
-		$detailsParam["dOriginalTable"] = "dbo.Intereses";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "intereses";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Intereses");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Interrupciones
-	
-	
-
-		$dIndex = 3;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Interrupciones";
-		$detailsParam["dOriginalTable"] = "dbo.Interrupciones";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "interrupciones";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Interrupciones");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Liquidaciones
-	
-	
-
-		$dIndex = 4;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Liquidaciones";
-		$detailsParam["dOriginalTable"] = "dbo.Liquidaciones";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "liquidaciones";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Liquidaciones");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Llamadas
-	
-	
-
-		$dIndex = 5;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Llamadas";
-		$detailsParam["dOriginalTable"] = "dbo.Llamadas";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "llamadas";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Llamadas");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Medidas
-	
-	
-
-		$dIndex = 6;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Medidas";
-		$detailsParam["dOriginalTable"] = "dbo.Medidas";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "medidas";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Medidas");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Pagos1
-	
-	
-
-		$dIndex = 7;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Pagos1";
-		$detailsParam["dOriginalTable"] = "dbo.Pagos1";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "pagos1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Pagos1");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Reasignaciones
-	
-	
-
-		$dIndex = 8;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Reasignaciones";
-		$detailsParam["dOriginalTable"] = "dbo.Reasignaciones";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "reasignaciones";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Reasignaciones");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Solidarios
-	
-	
-
-		$dIndex = 9;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Solidarios";
-		$detailsParam["dOriginalTable"] = "dbo.Solidarios";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "solidarios";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Solidarios");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosSinNotificaReport"][$dIndex]["detailKeys"][]="ProcesoId";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -2665,60 +2364,6 @@ $masterTablesData["dbo.ProcesosSinNotificaReport"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Conceptos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Conceptos";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "conceptos";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosSinNotificaReport"][0] = $masterParams;
-				$masterTablesData["dbo.ProcesosSinNotificaReport"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosSinNotificaReport"][0]["masterKeys"][]="ConceptoId";
-				$masterTablesData["dbo.ProcesosSinNotificaReport"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosSinNotificaReport"][0]["detailKeys"][]="ConceptoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Estados";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Estados";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "estados";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosSinNotificaReport"][1] = $masterParams;
-				$masterTablesData["dbo.ProcesosSinNotificaReport"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosSinNotificaReport"][1]["masterKeys"][]="EstadoId";
-				$masterTablesData["dbo.ProcesosSinNotificaReport"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosSinNotificaReport"][1]["detailKeys"][]="EstadoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Seccionales";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Seccionales";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "seccionales";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosSinNotificaReport"][2] = $masterParams;
-				$masterTablesData["dbo.ProcesosSinNotificaReport"][2]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosSinNotificaReport"][2]["masterKeys"][]="SeccionalId";
-				$masterTablesData["dbo.ProcesosSinNotificaReport"][2]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosSinNotificaReport"][2]["detailKeys"][]="SeccionalId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -2741,16 +2386,16 @@ $proto0=array();
 $proto0["m_strHead"] = "            SELECT";
 $proto0["m_strFieldList"] = "Procesos.ProcesoId,               Procesos.CarteraTipoId,               Procesos.SeccionalId,               Abogados.Abogado,               Procesos.ConceptoId,               Procesos.Fecha,               Procesos.Numero,               Sancionados.Sancionado,               Sancionados.Documento,               Procesos.Obligacion,               Procesos.Intereses,               Procesos.Costas,  			(select top 1 Correspondencias.Fecha from Correspondencias where ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105) order by Correspondencias.Fecha desc) Mandamiento,              Procesos.EstadoId";
 $proto0["m_strFrom"] = "FROM Procesos  		  INNER JOIN Sancionados ON Sancionados.SancionadoId = Procesos.SancionadoId  		  INNER JOIN Seccionales on Seccionales.SeccionalId = Procesos.SeccionalId  		  INNER JOIN Abogados on Abogados.AbogadoId = Procesos.AbogadoId";
-$proto0["m_strWhere"] = "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)";
+$proto0["m_strWhere"] = "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)  			AND Seccionales.SeccionalId in (:session.SeccionalesWhere)";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)";
+$proto2["m_sql"] = "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)  			AND Seccionales.SeccionalId in (:session.SeccionalesWhere)";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)"
+	"m_sql" => "(Procesos.EstadoId <> 6)  		  AND (Procesos.Notificacion IS NULL)  		  AND (dbo.EnAcuerdo(Procesos.ProcesoId)=0)  			AND Seccionales.SeccionalId in (:session.SeccionalesWhere)"
 ));
 
 $proto2["m_column"]=$obj;
@@ -2814,6 +2459,24 @@ $proto8["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto8);
 
 			$proto2["m_contained"][]=$obj;
+						$proto11=array();
+$proto11["m_sql"] = "Seccionales.SeccionalId in (:session.SeccionalesWhere)";
+$proto11["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "SeccionalId",
+	"m_strTable" => "dbo.Seccionales",
+	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
+));
+
+$proto11["m_column"]=$obj;
+$proto11["m_contained"] = array();
+$proto11["m_strCase"] = "in (:session.SeccionalesWhere)";
+$proto11["m_havingmode"] = false;
+$proto11["m_inBrackets"] = false;
+$proto11["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto11);
+
+			$proto2["m_contained"][]=$obj;
 $proto2["m_strCase"] = "";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
@@ -2821,45 +2484,31 @@ $proto2["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto2);
 
 $proto0["m_where"] = $obj;
-$proto11=array();
-$proto11["m_sql"] = "";
-$proto11["m_uniontype"] = "SQLL_UNKNOWN";
+$proto13=array();
+$proto13["m_sql"] = "";
+$proto13["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto11["m_column"]=$obj;
-$proto11["m_contained"] = array();
-$proto11["m_strCase"] = "";
-$proto11["m_havingmode"] = false;
-$proto11["m_inBrackets"] = false;
-$proto11["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto11);
+$proto13["m_column"]=$obj;
+$proto13["m_contained"] = array();
+$proto13["m_strCase"] = "";
+$proto13["m_havingmode"] = false;
+$proto13["m_inBrackets"] = false;
+$proto13["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto13);
 
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
-						$proto13=array();
+						$proto15=array();
 			$obj = new SQLField(array(
 	"m_strName" => "ProcesoId",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto13["m_sql"] = "Procesos.ProcesoId";
-$proto13["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto13["m_expr"]=$obj;
-$proto13["m_alias"] = "";
-$obj = new SQLFieldListItem($proto13);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto15=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CarteraTipoId",
-	"m_strTable" => "dbo.Procesos",
-	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
-));
-
-$proto15["m_sql"] = "Procesos.CarteraTipoId";
+$proto15["m_sql"] = "Procesos.ProcesoId";
 $proto15["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto15["m_expr"]=$obj;
 $proto15["m_alias"] = "";
@@ -2868,12 +2517,12 @@ $obj = new SQLFieldListItem($proto15);
 $proto0["m_fieldlist"][]=$obj;
 						$proto17=array();
 			$obj = new SQLField(array(
-	"m_strName" => "SeccionalId",
+	"m_strName" => "CarteraTipoId",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto17["m_sql"] = "Procesos.SeccionalId";
+$proto17["m_sql"] = "Procesos.CarteraTipoId";
 $proto17["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto17["m_expr"]=$obj;
 $proto17["m_alias"] = "";
@@ -2882,12 +2531,12 @@ $obj = new SQLFieldListItem($proto17);
 $proto0["m_fieldlist"][]=$obj;
 						$proto19=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Abogado",
-	"m_strTable" => "dbo.Abogados",
+	"m_strName" => "SeccionalId",
+	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto19["m_sql"] = "Abogados.Abogado";
+$proto19["m_sql"] = "Procesos.SeccionalId";
 $proto19["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto19["m_expr"]=$obj;
 $proto19["m_alias"] = "";
@@ -2896,12 +2545,12 @@ $obj = new SQLFieldListItem($proto19);
 $proto0["m_fieldlist"][]=$obj;
 						$proto21=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ConceptoId",
-	"m_strTable" => "dbo.Procesos",
+	"m_strName" => "Abogado",
+	"m_strTable" => "dbo.Abogados",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto21["m_sql"] = "Procesos.ConceptoId";
+$proto21["m_sql"] = "Abogados.Abogado";
 $proto21["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto21["m_expr"]=$obj;
 $proto21["m_alias"] = "";
@@ -2910,12 +2559,12 @@ $obj = new SQLFieldListItem($proto21);
 $proto0["m_fieldlist"][]=$obj;
 						$proto23=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Fecha",
+	"m_strName" => "ConceptoId",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto23["m_sql"] = "Procesos.Fecha";
+$proto23["m_sql"] = "Procesos.ConceptoId";
 $proto23["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto23["m_expr"]=$obj;
 $proto23["m_alias"] = "";
@@ -2924,12 +2573,12 @@ $obj = new SQLFieldListItem($proto23);
 $proto0["m_fieldlist"][]=$obj;
 						$proto25=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Numero",
+	"m_strName" => "Fecha",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto25["m_sql"] = "Procesos.Numero";
+$proto25["m_sql"] = "Procesos.Fecha";
 $proto25["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto25["m_expr"]=$obj;
 $proto25["m_alias"] = "";
@@ -2938,12 +2587,12 @@ $obj = new SQLFieldListItem($proto25);
 $proto0["m_fieldlist"][]=$obj;
 						$proto27=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Sancionado",
-	"m_strTable" => "dbo.Sancionados",
+	"m_strName" => "Numero",
+	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto27["m_sql"] = "Sancionados.Sancionado";
+$proto27["m_sql"] = "Procesos.Numero";
 $proto27["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto27["m_expr"]=$obj;
 $proto27["m_alias"] = "";
@@ -2952,12 +2601,12 @@ $obj = new SQLFieldListItem($proto27);
 $proto0["m_fieldlist"][]=$obj;
 						$proto29=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Documento",
+	"m_strName" => "Sancionado",
 	"m_strTable" => "dbo.Sancionados",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto29["m_sql"] = "Sancionados.Documento";
+$proto29["m_sql"] = "Sancionados.Sancionado";
 $proto29["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto29["m_expr"]=$obj;
 $proto29["m_alias"] = "";
@@ -2966,12 +2615,12 @@ $obj = new SQLFieldListItem($proto29);
 $proto0["m_fieldlist"][]=$obj;
 						$proto31=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Obligacion",
-	"m_strTable" => "dbo.Procesos",
+	"m_strName" => "Documento",
+	"m_strTable" => "dbo.Sancionados",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto31["m_sql"] = "Procesos.Obligacion";
+$proto31["m_sql"] = "Sancionados.Documento";
 $proto31["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto31["m_expr"]=$obj;
 $proto31["m_alias"] = "";
@@ -2980,12 +2629,12 @@ $obj = new SQLFieldListItem($proto31);
 $proto0["m_fieldlist"][]=$obj;
 						$proto33=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Intereses",
+	"m_strName" => "Obligacion",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto33["m_sql"] = "Procesos.Intereses";
+$proto33["m_sql"] = "Procesos.Obligacion";
 $proto33["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto33["m_expr"]=$obj;
 $proto33["m_alias"] = "";
@@ -2994,12 +2643,12 @@ $obj = new SQLFieldListItem($proto33);
 $proto0["m_fieldlist"][]=$obj;
 						$proto35=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Costas",
+	"m_strName" => "Intereses",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto35["m_sql"] = "Procesos.Costas";
+$proto35["m_sql"] = "Procesos.Intereses";
 $proto35["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
 $proto35["m_expr"]=$obj;
 $proto35["m_alias"] = "";
@@ -3007,438 +2656,452 @@ $obj = new SQLFieldListItem($proto35);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto37=array();
-			$proto38=array();
-$proto38["m_strHead"] = "select top 1";
-$proto38["m_strFieldList"] = "Correspondencias.Fecha";
-$proto38["m_strFrom"] = "from Correspondencias";
-$proto38["m_strWhere"] = "ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105)";
-$proto38["m_strOrderBy"] = "order by Correspondencias.Fecha desc";
+			$obj = new SQLField(array(
+	"m_strName" => "Costas",
+	"m_strTable" => "dbo.Procesos",
+	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
+));
+
+$proto37["m_sql"] = "Procesos.Costas";
+$proto37["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto37["m_expr"]=$obj;
+$proto37["m_alias"] = "";
+$obj = new SQLFieldListItem($proto37);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto39=array();
+			$proto40=array();
+$proto40["m_strHead"] = "select top 1";
+$proto40["m_strFieldList"] = "Correspondencias.Fecha";
+$proto40["m_strFrom"] = "from Correspondencias";
+$proto40["m_strWhere"] = "ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105)";
+$proto40["m_strOrderBy"] = "order by Correspondencias.Fecha desc";
 	
 		;
-			$proto38["cipherer"] = null;
-$proto40=array();
-$proto40["m_sql"] = "ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105)";
-$proto40["m_uniontype"] = "SQLL_AND";
+			$proto40["cipherer"] = null;
+$proto42=array();
+$proto42["m_sql"] = "ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105)";
+$proto42["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => "ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105)"
 ));
 
-$proto40["m_column"]=$obj;
-$proto40["m_contained"] = array();
-						$proto42=array();
-$proto42["m_sql"] = "ProcesoId = Procesos.ProcesoId";
-$proto42["m_uniontype"] = "SQLL_UNKNOWN";
+$proto42["m_column"]=$obj;
+$proto42["m_contained"] = array();
+						$proto44=array();
+$proto44["m_sql"] = "ProcesoId = Procesos.ProcesoId";
+$proto44["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "ProcesoId",
 	"m_strTable" => "dbo.Correspondencias",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto42["m_column"]=$obj;
-$proto42["m_contained"] = array();
-$proto42["m_strCase"] = "= Procesos.ProcesoId";
-$proto42["m_havingmode"] = false;
-$proto42["m_inBrackets"] = false;
-$proto42["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto42);
+$proto44["m_column"]=$obj;
+$proto44["m_contained"] = array();
+$proto44["m_strCase"] = "= Procesos.ProcesoId";
+$proto44["m_havingmode"] = false;
+$proto44["m_inBrackets"] = false;
+$proto44["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto44);
 
-			$proto40["m_contained"][]=$obj;
-						$proto44=array();
-$proto44["m_sql"] = "OficioId in (4328,1105)";
-$proto44["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto42["m_contained"][]=$obj;
+						$proto46=array();
+$proto46["m_sql"] = "OficioId in (4328,1105)";
+$proto46["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "OficioId",
 	"m_strTable" => "dbo.Correspondencias",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto44["m_column"]=$obj;
-$proto44["m_contained"] = array();
-$proto44["m_strCase"] = "in (4328,1105)";
-$proto44["m_havingmode"] = false;
-$proto44["m_inBrackets"] = false;
-$proto44["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto44);
-
-			$proto40["m_contained"][]=$obj;
-$proto40["m_strCase"] = "";
-$proto40["m_havingmode"] = false;
-$proto40["m_inBrackets"] = false;
-$proto40["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto40);
-
-$proto38["m_where"] = $obj;
-$proto46=array();
-$proto46["m_sql"] = "";
-$proto46["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
-));
-
 $proto46["m_column"]=$obj;
 $proto46["m_contained"] = array();
-$proto46["m_strCase"] = "";
+$proto46["m_strCase"] = "in (4328,1105)";
 $proto46["m_havingmode"] = false;
 $proto46["m_inBrackets"] = false;
 $proto46["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto46);
 
-$proto38["m_having"] = $obj;
-$proto38["m_fieldlist"] = array();
-						$proto48=array();
+			$proto42["m_contained"][]=$obj;
+$proto42["m_strCase"] = "";
+$proto42["m_havingmode"] = false;
+$proto42["m_inBrackets"] = false;
+$proto42["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto42);
+
+$proto40["m_where"] = $obj;
+$proto48=array();
+$proto48["m_sql"] = "";
+$proto48["m_uniontype"] = "SQLL_UNKNOWN";
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
+));
+
+$proto48["m_column"]=$obj;
+$proto48["m_contained"] = array();
+$proto48["m_strCase"] = "";
+$proto48["m_havingmode"] = false;
+$proto48["m_inBrackets"] = false;
+$proto48["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto48);
+
+$proto40["m_having"] = $obj;
+$proto40["m_fieldlist"] = array();
+						$proto50=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Fecha",
 	"m_strTable" => "dbo.Correspondencias",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto48["m_sql"] = "Correspondencias.Fecha";
-$proto48["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto48["m_expr"]=$obj;
-$proto48["m_alias"] = "";
-$obj = new SQLFieldListItem($proto48);
-
-$proto38["m_fieldlist"][]=$obj;
-$proto38["m_fromlist"] = array();
-												$proto50=array();
-$proto50["m_link"] = "SQLL_MAIN";
-			$proto51=array();
-$proto51["m_strName"] = "dbo.Correspondencias";
-$proto51["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto51["m_columns"] = array();
-$proto51["m_columns"][] = "CorrespondenciaId";
-$proto51["m_columns"][] = "ProcesoId";
-$proto51["m_columns"][] = "OficioId";
-$proto51["m_columns"][] = "Fecha";
-$proto51["m_columns"][] = "Sigobius";
-$proto51["m_columns"][] = "Observaciones";
-$proto51["m_columns"][] = "Resolucion";
-$proto51["m_columns"][] = "Codigo";
-$proto51["m_columns"][] = "Radicado";
-$proto51["m_columns"][] = "UserId";
-$proto51["m_columns"][] = "AbogadoId";
-$obj = new SQLTable($proto51);
-
-$proto50["m_table"] = $obj;
-$proto50["m_sql"] = "Correspondencias";
-$proto50["m_alias"] = "";
+$proto50["m_sql"] = "Correspondencias.Fecha";
 $proto50["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto52=array();
-$proto52["m_sql"] = "";
-$proto52["m_uniontype"] = "SQLL_UNKNOWN";
+$proto50["m_expr"]=$obj;
+$proto50["m_alias"] = "";
+$obj = new SQLFieldListItem($proto50);
+
+$proto40["m_fieldlist"][]=$obj;
+$proto40["m_fromlist"] = array();
+												$proto52=array();
+$proto52["m_link"] = "SQLL_MAIN";
+			$proto53=array();
+$proto53["m_strName"] = "dbo.Correspondencias";
+$proto53["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto53["m_columns"] = array();
+$proto53["m_columns"][] = "CorrespondenciaId";
+$proto53["m_columns"][] = "ProcesoId";
+$proto53["m_columns"][] = "OficioId";
+$proto53["m_columns"][] = "Fecha";
+$proto53["m_columns"][] = "Sigobius";
+$proto53["m_columns"][] = "Observaciones";
+$proto53["m_columns"][] = "Resolucion";
+$proto53["m_columns"][] = "Codigo";
+$proto53["m_columns"][] = "Radicado";
+$proto53["m_columns"][] = "UserId";
+$proto53["m_columns"][] = "AbogadoId";
+$obj = new SQLTable($proto53);
+
+$proto52["m_table"] = $obj;
+$proto52["m_sql"] = "Correspondencias";
+$proto52["m_alias"] = "";
+$proto52["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto54=array();
+$proto54["m_sql"] = "";
+$proto54["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto52["m_column"]=$obj;
-$proto52["m_contained"] = array();
-$proto52["m_strCase"] = "";
-$proto52["m_havingmode"] = false;
-$proto52["m_inBrackets"] = false;
-$proto52["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto52);
+$proto54["m_column"]=$obj;
+$proto54["m_contained"] = array();
+$proto54["m_strCase"] = "";
+$proto54["m_havingmode"] = false;
+$proto54["m_inBrackets"] = false;
+$proto54["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto54);
 
-$proto50["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto50);
+$proto52["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto52);
 
-$proto38["m_fromlist"][]=$obj;
-$proto38["m_groupby"] = array();
-$proto38["m_orderby"] = array();
-												$proto54=array();
+$proto40["m_fromlist"][]=$obj;
+$proto40["m_groupby"] = array();
+$proto40["m_orderby"] = array();
+												$proto56=array();
 						$obj = new SQLField(array(
 	"m_strName" => "Fecha",
 	"m_strTable" => "dbo.Correspondencias",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto54["m_column"]=$obj;
-$proto54["m_bAsc"] = 0;
-$proto54["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto54);
+$proto56["m_column"]=$obj;
+$proto56["m_bAsc"] = 0;
+$proto56["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto56);
 
-$proto38["m_orderby"][]=$obj;					
-$proto38["m_srcTableName"]="dbo.ProcesosSinNotificaReport";		
-$obj = new SQLQuery($proto38);
+$proto40["m_orderby"][]=$obj;					
+$proto40["m_srcTableName"]="dbo.ProcesosSinNotificaReport";		
+$obj = new SQLQuery($proto40);
 
-$proto37["m_sql"] = "(select top 1 Correspondencias.Fecha from Correspondencias where ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105) order by Correspondencias.Fecha desc)";
-$proto37["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto37["m_expr"]=$obj;
-$proto37["m_alias"] = "Mandamiento";
-$obj = new SQLFieldListItem($proto37);
+$proto39["m_sql"] = "(select top 1 Correspondencias.Fecha from Correspondencias where ProcesoId = Procesos.ProcesoId and OficioId in (4328,1105) order by Correspondencias.Fecha desc)";
+$proto39["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto39["m_expr"]=$obj;
+$proto39["m_alias"] = "Mandamiento";
+$obj = new SQLFieldListItem($proto39);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto56=array();
+						$proto58=array();
 			$obj = new SQLField(array(
 	"m_strName" => "EstadoId",
 	"m_strTable" => "dbo.Procesos",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto56["m_sql"] = "Procesos.EstadoId";
-$proto56["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto56["m_expr"]=$obj;
-$proto56["m_alias"] = "";
-$obj = new SQLFieldListItem($proto56);
+$proto58["m_sql"] = "Procesos.EstadoId";
+$proto58["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto58["m_expr"]=$obj;
+$proto58["m_alias"] = "";
+$obj = new SQLFieldListItem($proto58);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto58=array();
-$proto58["m_link"] = "SQLL_MAIN";
-			$proto59=array();
-$proto59["m_strName"] = "dbo.Procesos";
-$proto59["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto59["m_columns"] = array();
-$proto59["m_columns"][] = "ProcesoId";
-$proto59["m_columns"][] = "SeccionalId";
-$proto59["m_columns"][] = "AbogadoId";
-$proto59["m_columns"][] = "Fecha";
-$proto59["m_columns"][] = "Numero";
-$proto59["m_columns"][] = "DespachoId";
-$proto59["m_columns"][] = "SancionadoId";
-$proto59["m_columns"][] = "Providencia";
-$proto59["m_columns"][] = "Ejecutoria";
-$proto59["m_columns"][] = "ConceptoId";
-$proto59["m_columns"][] = "EstadoId";
-$proto59["m_columns"][] = "EtapaId";
-$proto59["m_columns"][] = "Folios";
-$proto59["m_columns"][] = "Tipo";
-$proto59["m_columns"][] = "Cantidad";
-$proto59["m_columns"][] = "Obligacion";
-$proto59["m_columns"][] = "Costas";
-$proto59["m_columns"][] = "Liquidacion";
-$proto59["m_columns"][] = "Dias";
-$proto59["m_columns"][] = "Intereses";
-$proto59["m_columns"][] = "Recaudo";
-$proto59["m_columns"][] = "CalificacionId";
-$proto59["m_columns"][] = "Terminacion";
-$proto59["m_columns"][] = "MotivoId";
-$proto59["m_columns"][] = "Observaciones";
-$proto59["m_columns"][] = "Cuotas";
-$proto59["m_columns"][] = "Abono";
-$proto59["m_columns"][] = "Inicio";
-$proto59["m_columns"][] = "VlrCuota";
-$proto59["m_columns"][] = "VlrIntereses";
-$proto59["m_columns"][] = "Garantia";
-$proto59["m_columns"][] = "Radicado";
-$proto59["m_columns"][] = "Remisorio";
-$proto59["m_columns"][] = "Acuerdo";
-$proto59["m_columns"][] = "Incumplimiento";
-$proto59["m_columns"][] = "Notificacion";
-$proto59["m_columns"][] = "Suspension";
-$proto59["m_columns"][] = "Traslado";
-$proto59["m_columns"][] = "Error";
-$proto59["m_columns"][] = "CarteraTipoId";
-$proto59["m_columns"][] = "ConceptoAbogado";
-$proto59["m_columns"][] = "Origen";
-$proto59["m_columns"][] = "Carpeta";
-$proto59["m_columns"][] = "ImportacionId";
-$proto59["m_columns"][] = "ActuacionId";
-$proto59["m_columns"][] = "ObligacionInicial";
-$proto59["m_columns"][] = "CostasInicial";
-$proto59["m_columns"][] = "InteresesInicial";
-$proto59["m_columns"][] = "MinJusticia";
-$proto59["m_columns"][] = "Revocatoria";
-$proto59["m_columns"][] = "Mayor";
-$proto59["m_columns"][] = "NotificacionValidada";
-$proto59["m_columns"][] = "Validado";
-$proto59["m_columns"][] = "Seleccionado";
-$proto59["m_columns"][] = "CompetenciaId";
-$proto59["m_columns"][] = "MinjusticiaId";
-$proto59["m_columns"][] = "SeleccionadoPor";
-$proto59["m_columns"][] = "Subsanar";
-$proto59["m_columns"][] = "NumeroMinjusticia";
-$proto59["m_columns"][] = "ProcesoIdOrigen";
-$proto59["m_columns"][] = "SeleccionadoFecha";
-$proto59["m_columns"][] = "InteresesIniciales";
-$proto59["m_columns"][] = "InteresesCalculados";
-$proto59["m_columns"][] = "ProcesoIdDestino";
-$proto59["m_columns"][] = "RecaudoMinjusticia";
-$proto59["m_columns"][] = "RecaudoTerminado";
-$proto59["m_columns"][] = "Persuasivo";
-$proto59["m_columns"][] = "ObligacionCreacion";
-$proto59["m_columns"][] = "InteresesCreacion";
-$proto59["m_columns"][] = "CostasCreacion";
-$proto59["m_columns"][] = "Plazo";
-$proto59["m_columns"][] = "NaturalezaId";
-$proto59["m_columns"][] = "TrasladoCartera";
-$proto59["m_columns"][] = "CarteraTipoIdOrigen";
-$proto59["m_columns"][] = "TrasladoConcepto";
-$proto59["m_columns"][] = "ConceptoIdOrigen";
-$proto59["m_columns"][] = "AutorizadoPlazo";
-$proto59["m_columns"][] = "AutorizadoFecha";
-$proto59["m_columns"][] = "AutorizadoPor";
-$proto59["m_columns"][] = "Reliquidacion";
-$proto59["m_columns"][] = "ChequeoId";
-$proto59["m_columns"][] = "VlrCostas";
-$proto59["m_columns"][] = "VlrInteresesPlazo";
-$obj = new SQLTable($proto59);
+												$proto60=array();
+$proto60["m_link"] = "SQLL_MAIN";
+			$proto61=array();
+$proto61["m_strName"] = "dbo.Procesos";
+$proto61["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto61["m_columns"] = array();
+$proto61["m_columns"][] = "ProcesoId";
+$proto61["m_columns"][] = "SeccionalId";
+$proto61["m_columns"][] = "AbogadoId";
+$proto61["m_columns"][] = "Fecha";
+$proto61["m_columns"][] = "Numero";
+$proto61["m_columns"][] = "DespachoId";
+$proto61["m_columns"][] = "SancionadoId";
+$proto61["m_columns"][] = "Providencia";
+$proto61["m_columns"][] = "Ejecutoria";
+$proto61["m_columns"][] = "ConceptoId";
+$proto61["m_columns"][] = "EstadoId";
+$proto61["m_columns"][] = "EtapaId";
+$proto61["m_columns"][] = "Folios";
+$proto61["m_columns"][] = "Tipo";
+$proto61["m_columns"][] = "Cantidad";
+$proto61["m_columns"][] = "Obligacion";
+$proto61["m_columns"][] = "Costas";
+$proto61["m_columns"][] = "Liquidacion";
+$proto61["m_columns"][] = "Dias";
+$proto61["m_columns"][] = "Intereses";
+$proto61["m_columns"][] = "Recaudo";
+$proto61["m_columns"][] = "CalificacionId";
+$proto61["m_columns"][] = "Terminacion";
+$proto61["m_columns"][] = "MotivoId";
+$proto61["m_columns"][] = "Observaciones";
+$proto61["m_columns"][] = "Cuotas";
+$proto61["m_columns"][] = "Abono";
+$proto61["m_columns"][] = "Inicio";
+$proto61["m_columns"][] = "VlrCuota";
+$proto61["m_columns"][] = "VlrIntereses";
+$proto61["m_columns"][] = "Garantia";
+$proto61["m_columns"][] = "Radicado";
+$proto61["m_columns"][] = "Remisorio";
+$proto61["m_columns"][] = "Acuerdo";
+$proto61["m_columns"][] = "Incumplimiento";
+$proto61["m_columns"][] = "Notificacion";
+$proto61["m_columns"][] = "Suspension";
+$proto61["m_columns"][] = "Traslado";
+$proto61["m_columns"][] = "Error";
+$proto61["m_columns"][] = "CarteraTipoId";
+$proto61["m_columns"][] = "ConceptoAbogado";
+$proto61["m_columns"][] = "Origen";
+$proto61["m_columns"][] = "Carpeta";
+$proto61["m_columns"][] = "ImportacionId";
+$proto61["m_columns"][] = "ActuacionId";
+$proto61["m_columns"][] = "ObligacionInicial";
+$proto61["m_columns"][] = "CostasInicial";
+$proto61["m_columns"][] = "InteresesInicial";
+$proto61["m_columns"][] = "MinJusticia";
+$proto61["m_columns"][] = "Revocatoria";
+$proto61["m_columns"][] = "Mayor";
+$proto61["m_columns"][] = "NotificacionValidada";
+$proto61["m_columns"][] = "Validado";
+$proto61["m_columns"][] = "Seleccionado";
+$proto61["m_columns"][] = "CompetenciaId";
+$proto61["m_columns"][] = "MinjusticiaId";
+$proto61["m_columns"][] = "SeleccionadoPor";
+$proto61["m_columns"][] = "Subsanar";
+$proto61["m_columns"][] = "NumeroMinjusticia";
+$proto61["m_columns"][] = "ProcesoIdOrigen";
+$proto61["m_columns"][] = "SeleccionadoFecha";
+$proto61["m_columns"][] = "InteresesIniciales";
+$proto61["m_columns"][] = "InteresesCalculados";
+$proto61["m_columns"][] = "ProcesoIdDestino";
+$proto61["m_columns"][] = "RecaudoMinjusticia";
+$proto61["m_columns"][] = "RecaudoTerminado";
+$proto61["m_columns"][] = "Persuasivo";
+$proto61["m_columns"][] = "ObligacionCreacion";
+$proto61["m_columns"][] = "InteresesCreacion";
+$proto61["m_columns"][] = "CostasCreacion";
+$proto61["m_columns"][] = "Plazo";
+$proto61["m_columns"][] = "NaturalezaId";
+$proto61["m_columns"][] = "TrasladoCartera";
+$proto61["m_columns"][] = "CarteraTipoIdOrigen";
+$proto61["m_columns"][] = "TrasladoConcepto";
+$proto61["m_columns"][] = "ConceptoIdOrigen";
+$proto61["m_columns"][] = "AutorizadoPlazo";
+$proto61["m_columns"][] = "AutorizadoFecha";
+$proto61["m_columns"][] = "AutorizadoPor";
+$proto61["m_columns"][] = "Reliquidacion";
+$proto61["m_columns"][] = "ChequeoId";
+$proto61["m_columns"][] = "VlrCostas";
+$proto61["m_columns"][] = "VlrInteresesPlazo";
+$obj = new SQLTable($proto61);
 
-$proto58["m_table"] = $obj;
-$proto58["m_sql"] = "Procesos";
-$proto58["m_alias"] = "";
-$proto58["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto60=array();
-$proto60["m_sql"] = "";
-$proto60["m_uniontype"] = "SQLL_UNKNOWN";
+$proto60["m_table"] = $obj;
+$proto60["m_sql"] = "Procesos";
+$proto60["m_alias"] = "";
+$proto60["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto62=array();
+$proto62["m_sql"] = "";
+$proto62["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto60["m_column"]=$obj;
-$proto60["m_contained"] = array();
-$proto60["m_strCase"] = "";
-$proto60["m_havingmode"] = false;
-$proto60["m_inBrackets"] = false;
-$proto60["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto60);
+$proto62["m_column"]=$obj;
+$proto62["m_contained"] = array();
+$proto62["m_strCase"] = "";
+$proto62["m_havingmode"] = false;
+$proto62["m_inBrackets"] = false;
+$proto62["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto62);
 
-$proto58["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto58);
+$proto60["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto60);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto62=array();
-$proto62["m_link"] = "SQLL_INNERJOIN";
-			$proto63=array();
-$proto63["m_strName"] = "dbo.Sancionados";
-$proto63["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto63["m_columns"] = array();
-$proto63["m_columns"][] = "SancionadoId";
-$proto63["m_columns"][] = "Sancionado";
-$proto63["m_columns"][] = "TipoDocumentoId";
-$proto63["m_columns"][] = "Documento";
-$proto63["m_columns"][] = "Email";
-$proto63["m_columns"][] = "Celular";
-$proto63["m_columns"][] = "Masculino";
-$proto63["m_columns"][] = "Observaciones";
-$proto63["m_columns"][] = "Fallecimiento";
-$proto63["m_columns"][] = "PrivadoLibertad";
-$obj = new SQLTable($proto63);
+												$proto64=array();
+$proto64["m_link"] = "SQLL_INNERJOIN";
+			$proto65=array();
+$proto65["m_strName"] = "dbo.Sancionados";
+$proto65["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto65["m_columns"] = array();
+$proto65["m_columns"][] = "SancionadoId";
+$proto65["m_columns"][] = "Sancionado";
+$proto65["m_columns"][] = "TipoDocumentoId";
+$proto65["m_columns"][] = "Documento";
+$proto65["m_columns"][] = "Email";
+$proto65["m_columns"][] = "Celular";
+$proto65["m_columns"][] = "Masculino";
+$proto65["m_columns"][] = "Observaciones";
+$proto65["m_columns"][] = "Fallecimiento";
+$proto65["m_columns"][] = "PrivadoLibertad";
+$obj = new SQLTable($proto65);
 
-$proto62["m_table"] = $obj;
-$proto62["m_sql"] = "INNER JOIN Sancionados ON Sancionados.SancionadoId = Procesos.SancionadoId";
-$proto62["m_alias"] = "";
-$proto62["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto64=array();
-$proto64["m_sql"] = "dbo.Sancionados.SancionadoId = dbo.Procesos.SancionadoId";
-$proto64["m_uniontype"] = "SQLL_UNKNOWN";
+$proto64["m_table"] = $obj;
+$proto64["m_sql"] = "INNER JOIN Sancionados ON Sancionados.SancionadoId = Procesos.SancionadoId";
+$proto64["m_alias"] = "";
+$proto64["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto66=array();
+$proto66["m_sql"] = "dbo.Sancionados.SancionadoId = dbo.Procesos.SancionadoId";
+$proto66["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "SancionadoId",
 	"m_strTable" => "dbo.Sancionados",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto64["m_column"]=$obj;
-$proto64["m_contained"] = array();
-$proto64["m_strCase"] = "= dbo.Procesos.SancionadoId";
-$proto64["m_havingmode"] = false;
-$proto64["m_inBrackets"] = false;
-$proto64["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto64);
+$proto66["m_column"]=$obj;
+$proto66["m_contained"] = array();
+$proto66["m_strCase"] = "= dbo.Procesos.SancionadoId";
+$proto66["m_havingmode"] = false;
+$proto66["m_inBrackets"] = false;
+$proto66["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto66);
 
-$proto62["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto62);
+$proto64["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto64);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto66=array();
-$proto66["m_link"] = "SQLL_INNERJOIN";
-			$proto67=array();
-$proto67["m_strName"] = "dbo.Seccionales";
-$proto67["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto67["m_columns"] = array();
-$proto67["m_columns"][] = "SeccionalId";
-$proto67["m_columns"][] = "Codigo";
-$proto67["m_columns"][] = "Seccional";
-$proto67["m_columns"][] = "NIT";
-$proto67["m_columns"][] = "CiudadId";
-$proto67["m_columns"][] = "PiePagina";
-$proto67["m_columns"][] = "Sigobius";
-$proto67["m_columns"][] = "Email";
-$proto67["m_columns"][] = "Direccion";
-$proto67["m_columns"][] = "Telefonos";
-$proto67["m_columns"][] = "PCI";
-$proto67["m_columns"][] = "Contador";
-$proto67["m_columns"][] = "ContadorCargo";
-$proto67["m_columns"][] = "Director";
-$proto67["m_columns"][] = "DirectorCargo";
-$proto67["m_columns"][] = "Abogado";
-$proto67["m_columns"][] = "AbogadoCargo";
-$proto67["m_columns"][] = "Formato";
-$proto67["m_columns"][] = "Corporacion";
-$proto67["m_columns"][] = "Unidad";
-$proto67["m_columns"][] = "Oficina";
-$proto67["m_columns"][] = "Serie";
-$proto67["m_columns"][] = "Subserie";
-$obj = new SQLTable($proto67);
+												$proto68=array();
+$proto68["m_link"] = "SQLL_INNERJOIN";
+			$proto69=array();
+$proto69["m_strName"] = "dbo.Seccionales";
+$proto69["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto69["m_columns"] = array();
+$proto69["m_columns"][] = "SeccionalId";
+$proto69["m_columns"][] = "Codigo";
+$proto69["m_columns"][] = "Seccional";
+$proto69["m_columns"][] = "NIT";
+$proto69["m_columns"][] = "CiudadId";
+$proto69["m_columns"][] = "PiePagina";
+$proto69["m_columns"][] = "Sigobius";
+$proto69["m_columns"][] = "Email";
+$proto69["m_columns"][] = "Direccion";
+$proto69["m_columns"][] = "Telefonos";
+$proto69["m_columns"][] = "PCI";
+$proto69["m_columns"][] = "Contador";
+$proto69["m_columns"][] = "ContadorCargo";
+$proto69["m_columns"][] = "Director";
+$proto69["m_columns"][] = "DirectorCargo";
+$proto69["m_columns"][] = "Abogado";
+$proto69["m_columns"][] = "AbogadoCargo";
+$proto69["m_columns"][] = "Formato";
+$proto69["m_columns"][] = "Corporacion";
+$proto69["m_columns"][] = "Unidad";
+$proto69["m_columns"][] = "Oficina";
+$proto69["m_columns"][] = "Serie";
+$proto69["m_columns"][] = "Subserie";
+$obj = new SQLTable($proto69);
 
-$proto66["m_table"] = $obj;
-$proto66["m_sql"] = "INNER JOIN Seccionales on Seccionales.SeccionalId = Procesos.SeccionalId";
-$proto66["m_alias"] = "";
-$proto66["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto68=array();
-$proto68["m_sql"] = "dbo.Seccionales.SeccionalId = dbo.Procesos.SeccionalId";
-$proto68["m_uniontype"] = "SQLL_UNKNOWN";
+$proto68["m_table"] = $obj;
+$proto68["m_sql"] = "INNER JOIN Seccionales on Seccionales.SeccionalId = Procesos.SeccionalId";
+$proto68["m_alias"] = "";
+$proto68["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto70=array();
+$proto70["m_sql"] = "dbo.Seccionales.SeccionalId = dbo.Procesos.SeccionalId";
+$proto70["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "SeccionalId",
 	"m_strTable" => "dbo.Seccionales",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto68["m_column"]=$obj;
-$proto68["m_contained"] = array();
-$proto68["m_strCase"] = "= dbo.Procesos.SeccionalId";
-$proto68["m_havingmode"] = false;
-$proto68["m_inBrackets"] = false;
-$proto68["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto68);
+$proto70["m_column"]=$obj;
+$proto70["m_contained"] = array();
+$proto70["m_strCase"] = "= dbo.Procesos.SeccionalId";
+$proto70["m_havingmode"] = false;
+$proto70["m_inBrackets"] = false;
+$proto70["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto70);
 
-$proto66["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto66);
+$proto68["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto68);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto70=array();
-$proto70["m_link"] = "SQLL_INNERJOIN";
-			$proto71=array();
-$proto71["m_strName"] = "dbo.Abogados";
-$proto71["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto71["m_columns"] = array();
-$proto71["m_columns"][] = "AbogadoId";
-$proto71["m_columns"][] = "Abogado";
-$proto71["m_columns"][] = "Documento";
-$proto71["m_columns"][] = "Tarjeta";
-$proto71["m_columns"][] = "Direccion";
-$proto71["m_columns"][] = "Telefonos";
-$proto71["m_columns"][] = "Celular";
-$proto71["m_columns"][] = "Email";
-$proto71["m_columns"][] = "SeccionalId";
-$proto71["m_columns"][] = "Masculino";
-$proto71["m_columns"][] = "Activo";
-$proto71["m_columns"][] = "Despacho";
-$proto71["m_columns"][] = "Codificador";
-$obj = new SQLTable($proto71);
+												$proto72=array();
+$proto72["m_link"] = "SQLL_INNERJOIN";
+			$proto73=array();
+$proto73["m_strName"] = "dbo.Abogados";
+$proto73["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto73["m_columns"] = array();
+$proto73["m_columns"][] = "AbogadoId";
+$proto73["m_columns"][] = "Abogado";
+$proto73["m_columns"][] = "Documento";
+$proto73["m_columns"][] = "Tarjeta";
+$proto73["m_columns"][] = "Direccion";
+$proto73["m_columns"][] = "Telefonos";
+$proto73["m_columns"][] = "Celular";
+$proto73["m_columns"][] = "Email";
+$proto73["m_columns"][] = "SeccionalId";
+$proto73["m_columns"][] = "Masculino";
+$proto73["m_columns"][] = "Activo";
+$proto73["m_columns"][] = "Despacho";
+$proto73["m_columns"][] = "Codificador";
+$obj = new SQLTable($proto73);
 
-$proto70["m_table"] = $obj;
-$proto70["m_sql"] = "INNER JOIN Abogados on Abogados.AbogadoId = Procesos.AbogadoId";
-$proto70["m_alias"] = "";
-$proto70["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
-$proto72=array();
-$proto72["m_sql"] = "dbo.Abogados.AbogadoId = dbo.Procesos.AbogadoId";
-$proto72["m_uniontype"] = "SQLL_UNKNOWN";
+$proto72["m_table"] = $obj;
+$proto72["m_sql"] = "INNER JOIN Abogados on Abogados.AbogadoId = Procesos.AbogadoId";
+$proto72["m_alias"] = "";
+$proto72["m_srcTableName"] = "dbo.ProcesosSinNotificaReport";
+$proto74=array();
+$proto74["m_sql"] = "dbo.Abogados.AbogadoId = dbo.Procesos.AbogadoId";
+$proto74["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "AbogadoId",
 	"m_strTable" => "dbo.Abogados",
 	"m_srcTableName" => "dbo.ProcesosSinNotificaReport"
 ));
 
-$proto72["m_column"]=$obj;
-$proto72["m_contained"] = array();
-$proto72["m_strCase"] = "= dbo.Procesos.AbogadoId";
-$proto72["m_havingmode"] = false;
-$proto72["m_inBrackets"] = false;
-$proto72["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto72);
+$proto74["m_column"]=$obj;
+$proto74["m_contained"] = array();
+$proto74["m_strCase"] = "= dbo.Procesos.AbogadoId";
+$proto74["m_havingmode"] = false;
+$proto74["m_inBrackets"] = false;
+$proto74["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto74);
 
-$proto70["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto70);
+$proto72["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto72);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

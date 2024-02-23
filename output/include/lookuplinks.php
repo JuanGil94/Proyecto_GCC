@@ -964,6 +964,34 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Estados"]["procesossinnotificareport.EstadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Estados"]["procesossinnotificareport.EstadoId"]["search"] = array("table" => "dbo.ProcesosSinNotificaReport", "field" => "EstadoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["reportecorporaci_nespecialidad.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["reportecorporaci_nespecialidad.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["reportecorporaci_nespecialidad.CarteraTipoId"]["search"] = array("table" => "dbo.ReporteCorporaciónEspecialidad", "field" => "CarteraTipoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["reportecorporaci_nespecialidad.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["reportecorporaci_nespecialidad.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["reportecorporaci_nespecialidad.SeccionalId"]["search"] = array("table" => "dbo.ReporteCorporaciónEspecialidad", "field" => "SeccionalId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.CorporacionesView"] ) ) {
+			$lookupTableLinks["dbo.CorporacionesView"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CorporacionesView"]["reportecorporaci_nespecialidad.Codigo"] )) {
+			$lookupTableLinks["dbo.CorporacionesView"]["reportecorporaci_nespecialidad.Codigo"] = array();
+		}
+		$lookupTableLinks["dbo.CorporacionesView"]["reportecorporaci_nespecialidad.Codigo"]["search"] = array("table" => "dbo.ReporteCorporaciónEspecialidad", "field" => "Codigo", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["reportecorporaci_nespecialidad.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["reportecorporaci_nespecialidad.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["reportecorporaci_nespecialidad.ConceptoId"]["search"] = array("table" => "dbo.ReporteCorporaciónEspecialidad", "field" => "ConceptoId", "page" => "search");
 }
 
 ?>

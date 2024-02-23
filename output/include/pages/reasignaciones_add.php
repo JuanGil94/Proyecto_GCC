@@ -1,7 +1,6 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Abogados' => array( 'preview' => false ),
-'dbo.Procesos' => array( 'preview' => false ),
-'dbo.ProcesosSinNotificaReport' => array( 'preview' => false ) ),
+'dbo.Procesos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Fecha',
 'ProcesoId',

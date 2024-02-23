@@ -413,6 +413,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("procesossinnotificareport" == $shortTName )
 		return true;
+	if ("reportecorporaci_nespecialidad" == $shortTName )
+		return true;
+	if ("corporacionesview" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1408,6 +1412,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.ProcesosSinNotificaReport";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ReporteCorporaciónEspecialidad");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ReporteCorporaciónEspecialidad";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.CorporacionesView");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.CorporacionesView";
+	}
 	return $arr;
 }
 
@@ -1522,6 +1544,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ListaChequeosReporte";
 	$arr[]="dbo.ReporteClasificacionCartera";
 	$arr[]="dbo.ProcesosSinNotificaReport";
+	$arr[]="dbo.ReporteCorporaciónEspecialidad";
+	$arr[]="dbo.CorporacionesView";
 	return $arr;
 }
 
@@ -2673,6 +2697,16 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.ReporteCorporaciónEspecialidad" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
+	}
+	if( $table=="dbo.CorporacionesView" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

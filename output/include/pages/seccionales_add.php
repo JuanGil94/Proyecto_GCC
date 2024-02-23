@@ -18,8 +18,6 @@
 'dbo.Minjusticia3' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Autorizaciones' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'dbo.ProcesosSinNotificaReport' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Cuentas' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),

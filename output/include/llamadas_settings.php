@@ -140,7 +140,7 @@ $tdatallamadas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																							
+																																																																																										
 
 $tdatallamadas[".ajaxCodeSnippetAdded"] = false;
 
@@ -1146,25 +1146,6 @@ $masterTablesData["dbo.Llamadas"] = array();
 	$masterTablesData["dbo.Llamadas"][0]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Llamadas"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Llamadas"][0]["detailKeys"][]="ProcesoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Procesos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.ProcesosSinNotificaReport";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "procesossinnotificareport";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterParams["type"] = PAGE_REPORT;
-	$masterTablesData["dbo.Llamadas"][1] = $masterParams;
-				$masterTablesData["dbo.Llamadas"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.Llamadas"][1]["masterKeys"][]="ProcesoId";
-				$masterTablesData["dbo.Llamadas"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.Llamadas"][1]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

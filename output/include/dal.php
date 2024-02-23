@@ -65,6 +65,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_ChequeosSancionados;
 	var $tblGCC_at_S00001_CCAD01_dbo_Ciudades;
 	var $tblGCC_at_S00001_CCAD01_dbo_Conceptos;
+	var $tblGCC_at_S00001_CCAD01_dbo_CorporacionesView;
 	var $tblGCC_at_S00001_CCAD01_dbo_Correspondencias;
 	var $tblGCC_at_S00001_CCAD01_dbo_Cuentas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Departamentos;
@@ -157,6 +158,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "ChequeosSancionados", "varname" => "GCC_at_S00001_CCAD01_dbo_ChequeosSancionados", "altvarname" => "ChequeosSancionados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Ciudades", "varname" => "GCC_at_S00001_CCAD01_dbo_Ciudades", "altvarname" => "Ciudades", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Conceptos", "varname" => "GCC_at_S00001_CCAD01_dbo_Conceptos", "altvarname" => "Conceptos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "CorporacionesView", "varname" => "GCC_at_S00001_CCAD01_dbo_CorporacionesView", "altvarname" => "CorporacionesView", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Correspondencias", "varname" => "GCC_at_S00001_CCAD01_dbo_Correspondencias", "altvarname" => "Correspondencias", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Cuentas", "varname" => "GCC_at_S00001_CCAD01_dbo_Cuentas", "altvarname" => "Cuentas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Departamentos", "varname" => "GCC_at_S00001_CCAD01_dbo_Departamentos", "altvarname" => "Departamentos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

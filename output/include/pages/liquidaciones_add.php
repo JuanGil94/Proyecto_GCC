@@ -1,6 +1,5 @@
 <?php
-			$optionsArray = array( 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
-'dbo.ProcesosSinNotificaReport' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'dbo.Procesos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'ProcesoId',
 'Cuota',

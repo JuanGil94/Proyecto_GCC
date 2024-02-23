@@ -776,6 +776,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.ReporteCorporaciónEspecialidad")
+		{
+			return false;
+		}
+		if($table=="dbo.CorporacionesView")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1501,6 +1509,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.ProcesosSinNotificaReport")
+		{
+			return false;
+		}
+		if($table=="dbo.ReporteCorporaciónEspecialidad")
+		{
+			return false;
+		}
+		if($table=="dbo.CorporacionesView")
 		{
 			return false;
 		}
