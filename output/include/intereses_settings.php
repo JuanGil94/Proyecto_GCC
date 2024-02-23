@@ -143,7 +143,7 @@ $tdataintereses[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																										
+																																																																																																
 
 $tdataintereses[".ajaxCodeSnippetAdded"] = false;
 

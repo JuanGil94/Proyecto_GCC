@@ -107,7 +107,8 @@ class diccionario {
         }
 
         $consulta=DB::Query("SELECT Numero AS 'Numero',
-        Obligacion AS 'Obligacion',
+        --FORMAT(Obligacion, 'C', 'es-MX') AS 'Obligacion',
+        Obligacion AS Obligacion,
         Radicado AS 'Radicado',
         Costas AS 'Costas',
         InteresesInicial AS 'Intereses',
@@ -115,7 +116,9 @@ class diccionario {
         Providencia AS 'fechaProvidencia',
         FORMAT(Ejecutoria, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaEjecutoriaLarga',
         FORMAT(Acuerdo, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaAcuerdoLarga',
-        dbo.Procesos.ObligacionInicial + dbo.Procesos.CostasInicial + dbo.Procesos.InteresesInicial AS ObligacionTotal  
+        dbo.Procesos.ObligacionInicial + dbo.Procesos.CostasInicial + dbo.Procesos.InteresesInicial AS ObligacionTotal,
+        FORMAT(CONVERT(DATE, Ejecutoria), 'dd/MM/yyyy') AS FechaEjecutoria,
+        FORMAT(CONVERT(DATE, Fecha), 'dd/MM/yyyy') AS FechaCreacion
         FROM Procesos
         where ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
@@ -129,8 +132,16 @@ class diccionario {
             $info["FechaProvidenciaLarga"]=$date["FechaProvidenciaLarga"];
             $info["fechaProvidencia"]=$date["fechaProvidencia"];
             $info["FechaAcuerdoLarga"]=$date["FechaAcuerdoLarga"];
+            $info["FechaEjecutoria"]=$date["FechaEjecutoria"];
+            $info["FechaCreacion"]=$date["FechaCreacion"];
         }
-
+        $n=$info["Numero"];
+        for ($i = 0; $i < strlen($n); $i++) {
+            $caracter = $n[$i];
+            //echo "Carácter en la posición $i: $caracter\n";
+        }
+        $numFormat=$n[0].$n[1].$n[2].$n[3].$n[4]."-".$n[5].$n[6].$n[7].$n[8]."-".$n[9].$n[10].$n[11]."-".$n[12].$n[13].$n[14].$n[15]."-".$n[16].$n[17].$n[18].$n[19].$n[20]."-".$n[21].$n[22];
+        $info["numeroFormat"]=$numFormat;
         $consulta=DB::Query("SELECT
         UPPER (DESP.Despacho) AS 'Despacho'
         FROM Despachos DESP
@@ -178,6 +189,13 @@ class diccionario {
             $info["ElAbogadoEjecutor"]=$date["ElAbogadoEjecutor"];
         }
 
+        $consulta=DB::Query("SELECT U.UserName AS 'usuario' FROM Correspondencias C
+        INNER JOIN UserProfile U ON U.UserId = C.UserId
+        WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["usuario"]=$date["usuario"];
+        }
         $consulta=DB::Query("SELECT U.UserName AS 'usuario' FROM Correspondencias C
         INNER JOIN UserProfile U ON U.UserId = C.UserId
         WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
@@ -1382,7 +1400,6 @@ class plantillas extends diccionario{
             $templateWord->setValue('FechaAcuerdoLarga',$FechaAcuerdoLarga);
             $templateWord->saveAs('templates_GCC/inforCoacVari_'.$this->procesoId.'.docx');
     }
-
     public function conInfoDian() {
         //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1098.docx');
         $value=parent::process($this->procesoId,$this->oficioId);
@@ -2029,4 +2046,43 @@ class plantillas extends diccionario{
     } 
     */
 }
+class plantillaCaratulas extends diccionario{
+    public function caratulaProceso($procesoId,$oficioId) {
+        //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
+        $value=parent::process($procesoId,$oficioId);//se envia el procesoId el numero de la plantilla
+        //print_r ($value);
+        foreach($value as $param=>$date){
+            $NumeroFormateado=$value["numeroFormat"];
+            $Seccional=$value["Seccional"];
+            $PiePagina=$value["PiePagina"];
+            $Sancionado=$value["Sancionado"];
+            $TipoDocumento=$value["TipoDocumento"];
+            $FechaEjecutoria=$value["FechaEjecutoria"];
+            $FechaCreacion=$value["FechaCreacion"];
+            $Concepto=$value["Concepto"];
+            $Despacho=$value["Despacho"];
+            $Obligacion=$value["Obligacion"];
+            $documento=$value["documento"];
+        }
+            //echo "Obligacion: ".$Obligacion."<br>";
+            //echo "Docuemnto".$documento."<br>";
+            //echo "Numero".$NumeroFormateado."<br>";
+            $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4561.docx');
+            $templateWord->setValue('NumeroFormateado',$NumeroFormateado);
+            $templateWord->setValue('Seccional',$Seccional);
+            $templateWord->setValue('PiePagina',$PiePagina);
+            $templateWord->setValue('Sancionado',$Sancionado);
+            $templateWord->setValue('TipoDocumento',$TipoDocumento);
+            $templateWord->setValue('documento',$documento);
+            $templateWord->setValue('FechaEjecutoria',$FechaEjecutoria);
+            $templateWord->setValue('FechaCreacion',$FechaCreacion);
+            $templateWord->setValue('PiePagina',$PiePagina);
+            $templateWord->setValue('Concepto',$Concepto);
+            $templateWord->setValue('Despacho',$Despacho);
+            $templateWord->setValue('Obligacion',$Obligacion);
+            $templateWord->saveAs('templates_GCC/carProceso'.$this->procesoId.'.docx');
+              
+    }
+}
+
 ?>
