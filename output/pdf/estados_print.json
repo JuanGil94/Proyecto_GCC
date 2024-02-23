@@ -337,9 +337,9 @@ pdfDocument = {
 		{END details_reporteclasificacioncartera},
 				
 				
-			 {BEGIN details_procesossinnotificareport}
-			{$displayDetailTable_procesossinnotificareport }
-		{END details_procesossinnotificareport},
+			 {BEGIN details_reportecorporaci_nespecialidad}
+			{$displayDetailTable_reportecorporaci_nespecialidad }
+		{END details_reportecorporaci_nespecialidad},
 				
 		  ],
   "border": [ true, true, true, true ],

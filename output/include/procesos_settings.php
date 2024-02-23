@@ -517,7 +517,7 @@ $tdataprocesos[".orderindexes"] = array();
 
 $tdataprocesos[".sqlHead"] = "SELECT dbo.Procesos.ProcesoId AS ProcesoId,  dbo.Procesos.SeccionalId,  dbo.Procesos.AbogadoId,  dbo.Procesos.Fecha,  dbo.Procesos.Numero,  dbo.Procesos.DespachoId,  dbo.Procesos.SancionadoId,  dbo.Procesos.Providencia,  dbo.Procesos.Ejecutoria,  dbo.Procesos.ConceptoId,  dbo.Procesos.EstadoId,  dbo.Procesos.EtapaId,  dbo.Procesos.Folios,  dbo.Procesos.Tipo,  dbo.Procesos.Cantidad,  dbo.Procesos.Obligacion,  dbo.Procesos.Costas,  dbo.Procesos.Liquidacion,  dbo.Procesos.Dias,  dbo.Procesos.Intereses,  dbo.Procesos.Recaudo,  dbo.Procesos.CalificacionId,  dbo.Procesos.Terminacion,  dbo.Procesos.MotivoId,  dbo.Procesos.Observaciones,  dbo.Procesos.Cuotas,  dbo.Procesos.Abono,  dbo.Procesos.Inicio,  dbo.Procesos.VlrCuota,  dbo.Procesos.VlrIntereses,  dbo.Procesos.Garantia,  dbo.Procesos.Radicado,  dbo.Procesos.Remisorio,  dbo.Procesos.Acuerdo,  dbo.Procesos.Incumplimiento,  dbo.Procesos.Notificacion,  dbo.Procesos.Suspension,  dbo.Procesos.Traslado,  dbo.Procesos.Error,  dbo.Procesos.CarteraTipoId,  dbo.Procesos.ConceptoAbogado,  dbo.Procesos.Origen,  dbo.Procesos.Carpeta,  dbo.Procesos.ImportacionId,  dbo.Procesos.ActuacionId,  dbo.Procesos.ObligacionInicial,  dbo.Procesos.CostasInicial,  dbo.Procesos.InteresesInicial,  dbo.Procesos.MinJusticia,  dbo.Procesos.Revocatoria,  dbo.Procesos.Mayor,  dbo.Procesos.NotificacionValidada,  dbo.Procesos.Validado,  dbo.Procesos.Seleccionado,  dbo.Procesos.CompetenciaId,  dbo.Procesos.MinjusticiaId,  dbo.Procesos.SeleccionadoPor,  dbo.Procesos.Subsanar,  dbo.Procesos.NumeroMinjusticia,  dbo.Procesos.ProcesoIdOrigen,  dbo.Procesos.SeleccionadoFecha,  dbo.Procesos.InteresesIniciales,  dbo.Procesos.InteresesCalculados,  dbo.Procesos.ProcesoIdDestino,  dbo.Procesos.RecaudoMinjusticia,  dbo.Procesos.RecaudoTerminado,  dbo.Procesos.Persuasivo,  dbo.Procesos.ObligacionCreacion,  dbo.Procesos.InteresesCreacion,  dbo.Procesos.CostasCreacion,  dbo.Procesos.Plazo,  dbo.Procesos.NaturalezaId,  dbo.Procesos.TrasladoCartera,  dbo.Procesos.CarteraTipoIdOrigen,  dbo.Procesos.TrasladoConcepto,  dbo.Procesos.ConceptoIdOrigen,  dbo.Procesos.AutorizadoPlazo,  dbo.Procesos.AutorizadoFecha,  dbo.Procesos.AutorizadoPor,  dbo.Procesos.Reliquidacion,  dbo.Procesos.ChequeoId,  dbo.Procesos.VlrCostas,  dbo.Procesos.VlrInteresesPlazo,  dbo.Procesos.Dias AS Prescripcion";
 $tdataprocesos[".sqlFrom"] = "FROM dbo.Procesos";
-$tdataprocesos[".sqlWhereExpr"] = "";
+$tdataprocesos[".sqlWhereExpr"] = "SeccionalId in (:session.SeccionalesWhere)";
 $tdataprocesos[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -13189,21 +13189,23 @@ $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "dbo.Procesos.ProcesoId AS ProcesoId,  dbo.Procesos.SeccionalId,  dbo.Procesos.AbogadoId,  dbo.Procesos.Fecha,  dbo.Procesos.Numero,  dbo.Procesos.DespachoId,  dbo.Procesos.SancionadoId,  dbo.Procesos.Providencia,  dbo.Procesos.Ejecutoria,  dbo.Procesos.ConceptoId,  dbo.Procesos.EstadoId,  dbo.Procesos.EtapaId,  dbo.Procesos.Folios,  dbo.Procesos.Tipo,  dbo.Procesos.Cantidad,  dbo.Procesos.Obligacion,  dbo.Procesos.Costas,  dbo.Procesos.Liquidacion,  dbo.Procesos.Dias,  dbo.Procesos.Intereses,  dbo.Procesos.Recaudo,  dbo.Procesos.CalificacionId,  dbo.Procesos.Terminacion,  dbo.Procesos.MotivoId,  dbo.Procesos.Observaciones,  dbo.Procesos.Cuotas,  dbo.Procesos.Abono,  dbo.Procesos.Inicio,  dbo.Procesos.VlrCuota,  dbo.Procesos.VlrIntereses,  dbo.Procesos.Garantia,  dbo.Procesos.Radicado,  dbo.Procesos.Remisorio,  dbo.Procesos.Acuerdo,  dbo.Procesos.Incumplimiento,  dbo.Procesos.Notificacion,  dbo.Procesos.Suspension,  dbo.Procesos.Traslado,  dbo.Procesos.Error,  dbo.Procesos.CarteraTipoId,  dbo.Procesos.ConceptoAbogado,  dbo.Procesos.Origen,  dbo.Procesos.Carpeta,  dbo.Procesos.ImportacionId,  dbo.Procesos.ActuacionId,  dbo.Procesos.ObligacionInicial,  dbo.Procesos.CostasInicial,  dbo.Procesos.InteresesInicial,  dbo.Procesos.MinJusticia,  dbo.Procesos.Revocatoria,  dbo.Procesos.Mayor,  dbo.Procesos.NotificacionValidada,  dbo.Procesos.Validado,  dbo.Procesos.Seleccionado,  dbo.Procesos.CompetenciaId,  dbo.Procesos.MinjusticiaId,  dbo.Procesos.SeleccionadoPor,  dbo.Procesos.Subsanar,  dbo.Procesos.NumeroMinjusticia,  dbo.Procesos.ProcesoIdOrigen,  dbo.Procesos.SeleccionadoFecha,  dbo.Procesos.InteresesIniciales,  dbo.Procesos.InteresesCalculados,  dbo.Procesos.ProcesoIdDestino,  dbo.Procesos.RecaudoMinjusticia,  dbo.Procesos.RecaudoTerminado,  dbo.Procesos.Persuasivo,  dbo.Procesos.ObligacionCreacion,  dbo.Procesos.InteresesCreacion,  dbo.Procesos.CostasCreacion,  dbo.Procesos.Plazo,  dbo.Procesos.NaturalezaId,  dbo.Procesos.TrasladoCartera,  dbo.Procesos.CarteraTipoIdOrigen,  dbo.Procesos.TrasladoConcepto,  dbo.Procesos.ConceptoIdOrigen,  dbo.Procesos.AutorizadoPlazo,  dbo.Procesos.AutorizadoFecha,  dbo.Procesos.AutorizadoPor,  dbo.Procesos.Reliquidacion,  dbo.Procesos.ChequeoId,  dbo.Procesos.VlrCostas,  dbo.Procesos.VlrInteresesPlazo,  dbo.Procesos.Dias AS Prescripcion";
 $proto0["m_strFrom"] = "FROM dbo.Procesos";
-$proto0["m_strWhere"] = "";
+$proto0["m_strWhere"] = "SeccionalId in (:session.SeccionalesWhere)";
 $proto0["m_strOrderBy"] = "ORDER BY dbo.Procesos.Fecha DESC";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "";
+$proto2["m_sql"] = "SeccionalId in (:session.SeccionalesWhere)";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
+						$obj = new SQLField(array(
+	"m_strName" => "SeccionalId",
+	"m_strTable" => "dbo.Procesos",
+	"m_srcTableName" => "dbo.Procesos"
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "";
+$proto2["m_strCase"] = "in (:session.SeccionalesWhere)";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;

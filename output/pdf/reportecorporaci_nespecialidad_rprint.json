@@ -1,0 +1,874 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#C0C0C0'
+		},
+		nbgroup_1: {
+			fillColor: '#C0C0C0'
+		},
+		header_1: {
+			fillColor: '#C0C0C0',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_CarteraTipoId: {
+			fillColor: '#C0C0C0',
+			fontSize: 15,
+			bold: true
+		},
+		group_CarteraTipoId: {
+			fillColor: '#C0C0C0'
+		},
+
+			group_2: {
+			fillColor: '#ADD8E6'
+		},
+		nbgroup_2: {
+			fillColor: '#ADD8E6'
+		},
+		header_2: {
+			fillColor: '#ADD8E6',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Codigo: {
+			fillColor: '#ADD8E6',
+			fontSize: 15,
+			bold: true
+		},
+		group_Codigo: {
+			fillColor: '#ADD8E6'
+		},
+
+			group_3: {
+			fillColor: '#FFFFFF'
+		},
+		nbgroup_3: {
+			fillColor: '#FFFFFF'
+		},
+		header_3: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Especialidad2: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_Especialidad2: {
+			fillColor: '#FFFFFF'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption dbo_ReporteCorporaci_nEspecialidad}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel dbo_ReporteCorporaci_nEspecialidad rprint}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 10,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_ReporteCorporaci_nEspecialidad rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN CarteraTipoId_newgroup}
+		[
+								{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad CarteraTipoId }',
+				style: "blackshade",
+				alignment: '{$CarteraTipoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad Codigo }',
+				style: "blackshade",
+				alignment: '{$Codigo_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad Especialidad2 }',
+				style: "blackshade",
+				alignment: '{$Especialidad2_align}',
+			},
+																																								
+																							{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad SeccionalId }',
+				style: "blackshade",
+				alignment: '{$SeccionalId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad ConceptoId }',
+				style: "blackshade",
+				alignment: '{$ConceptoId_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad Procesos }',
+				style: "blackshade",
+				alignment: '{$Procesos_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad Saldo }',
+				style: "blackshade",
+				alignment: '{$Saldo_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad CarteraTipo }',
+				style: "blackshade",
+				alignment: '{$CarteraTipo_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad Corporacion }',
+				style: "blackshade",
+				alignment: '{$Corporacion_align}',
+			},
+											{
+				text: '{$jslabel dbo_ReporteCorporaci_nEspecialidad Especialidad }',
+				style: "blackshade",
+				alignment: '{$Especialidad_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 10,
+					text: {$CarteraTipoId_grval},
+					style: "header_1"
+				},
+																				],
+	{END CarteraTipoId_newgroup}
+	{BEGIN Codigo_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 9,
+					text: {$Codigo_grval},
+					style: "header_2"
+				},
+															],
+	{END Codigo_newgroup}
+	{BEGIN Especialidad2_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+																{
+					colSpan: 8,
+					text: {$Especialidad2_grval},
+					style:"header_3"
+				},
+										],
+	{END Especialidad2_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_2"
+		},
+			{
+			text: [
+									''
+							],
+			style: "group_3"
+		},
+															{
+			text: {$SeccionalId_value},
+			alignment: '{$SeccionalId_align}',
+		},
+							{
+			text: {$ConceptoId_value},
+			alignment: '{$ConceptoId_align}',
+		},
+							{
+			text: {$Procesos_value},
+			alignment: '{$Procesos_align}',
+		},
+							{
+			text: {$Saldo_value},
+			alignment: '{$Saldo_align}',
+		},
+							{
+			text: {$CarteraTipo_value},
+			alignment: '{$CarteraTipo_align}',
+		},
+							{
+			text: {$Corporacion_value},
+			alignment: '{$Corporacion_align}',
+		},
+							{
+			text: {$Especialidad_value},
+			alignment: '{$Especialidad_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN Especialidad2_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+					
+																		{
+				colSpan: 8,
+				text: [
+					'Resumen de {$jslabel dbo_ReporteCorporaci_nEspecialidad Especialidad2 } ', 
+					{$Especialidad2_grval},
+					' - ', 
+					{$groupEspecialidad2_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_3',
+			},
+																																									],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: {$groupEspecialidad2_totalProcesos_sum},
+				style: "group_3",
+				alignment: '{$Procesos_align}',
+			},
+											
+						{
+				text: {$groupEspecialidad2_totalSaldo_sum},
+				style: "group_3",
+				alignment: '{$Saldo_align}',
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+											
+						{
+				text: '',
+				style: "group_3"
+			},
+						],
+	
+	
+	
+	
+	{END Especialidad2_endgroup}
+			{BEGIN Codigo_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+					
+													{
+				colSpan: 9,
+				text: [
+					'Resumen de {$jslabel dbo_ReporteCorporaci_nEspecialidad Codigo } ', 
+					{$Codigo_grval},
+					' - ', 
+					{$groupCodigo_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_2',
+			},
+																																														],
+	
+		[
+								
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: "Sum",
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: {$groupCodigo_totalProcesos_sum},
+				style: "group_2",
+				alignment: '{$Procesos_align}',
+			},
+											
+						{
+				text: {$groupCodigo_totalSaldo_sum},
+				style: "group_2",
+				alignment: '{$Saldo_align}',
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+											
+						{
+				text: '',
+				style: "group_2"
+			},
+						],
+	
+	
+	
+	
+	{END Codigo_endgroup}
+			{BEGIN CarteraTipoId_endgroup}
+
+		[
+		
+								{
+				colSpan: 10,
+				text: [
+					'Resumen de {$jslabel dbo_ReporteCorporaci_nEspecialidad CarteraTipoId } ', 
+					{$CarteraTipoId_grval},
+					' - ', 
+					{$groupCarteraTipoId_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_1',
+			},
+																																																			],
+	
+		[
+								
+						{
+				text: "Sum",
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalProcesos_sum},
+				style: "group_1",
+				alignment: '{$Procesos_align}',
+			},
+											
+						{
+				text: {$groupCarteraTipoId_totalSaldo_sum},
+				style: "group_1",
+				alignment: '{$Saldo_align}',
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+											
+						{
+				text: '',
+				style: "group_1"
+			},
+						],
+	
+	
+	
+	
+	{END CarteraTipoId_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+
+
+
+{BEGIN global_summary}
+	[
+		{
+			text: 'Resumen global {$global_total_cnt} - Registros totales',
+			colSpan: 10,
+			style: 'globalsummary',
+		}
+	],
+
+		[
+							{
+			text: [
+							'Sum ',
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							{$global_totalProcesos_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Procesos_align}',
+					},
+							{
+			text: [
+			
+							{$global_totalSaldo_sum},
+						],
+			style: 'globalsummary',
+
+			 
+			alignment: '{$Saldo_align}',
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+							{
+			text: [
+			
+							'',
+						],
+			style: 'globalsummary',
+
+					},
+			],
+	
+	
+	
+	
+{END global_summary}
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	};
+
+
+pdfFonts = {$pdfFonts};

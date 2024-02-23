@@ -560,13 +560,13 @@
 					Reporte Clasificacion Cartera				</label>
 			</div>
 			{END print_details_reporteclasificacioncartera}
-														{BEGIN print_details_procesossinnotificareport}
+														{BEGIN print_details_reportecorporaci_nespecialidad}
 			<div>
-				<label for="printDetailsprocesossinnotificareport{$id}">
-					<input type="checkbox" value="procesossinnotificareport" id="printDetailsprocesossinnotificareport{$id}" checked>
-					Procesos Sin Notifica Report				</label>
+				<label for="printDetailsreportecorporaci_nespecialidad{$id}">
+					<input type="checkbox" value="reportecorporaci_nespecialidad" id="printDetailsreportecorporaci_nespecialidad{$id}" checked>
+					Reporte Corporación Especialidad				</label>
 			</div>
-			{END print_details_procesossinnotificareport}
+			{END print_details_reportecorporaci_nespecialidad}
 						</div>
 </div>
 {END print_details}
@@ -857,20 +857,20 @@
 	 
 		
 		
-	{BEGIN procesossinnotificareport_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesossinnotificareport_link_attrs} data-short-details="procesossinnotificareport"
-		class="{$procesossinnotificareport_dlink_class}" 
-		title="{$caption dbo_ProcesosSinNotificaReport }"			>
+	{BEGIN reportecorporaci_nespecialidad_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$reportecorporaci_nespecialidad_link_attrs} data-short-details="reportecorporaci_nespecialidad"
+		class="{$reportecorporaci_nespecialidad_dlink_class}" 
+		title="{$caption dbo_ReporteCorporaci_nEspecialidad }"			>
 								
-									{BEGIN procesossinnotificareport_childcount}
-				<span class="details-badge badge procesossinnotificareport_badge" {$procesossinnotificareport_childnumber_attr}>
-					{$procesossinnotificareport_childnumber}				
+									{BEGIN reportecorporaci_nespecialidad_childcount}
+				<span class="details-badge badge reportecorporaci_nespecialidad_badge" {$reportecorporaci_nespecialidad_childnumber_attr}>
+					{$reportecorporaci_nespecialidad_childnumber}				
 				</span>
-				{END procesossinnotificareport_childcount}
+				{END reportecorporaci_nespecialidad_childcount}
 						</a>
 	</span>
-	{END procesossinnotificareport_dtable_link}
+	{END reportecorporaci_nespecialidad_dtable_link}
 
 
 	
@@ -915,11 +915,11 @@
 
 	 
 				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="reporteclasificacioncartera,procesossinnotificareport"
-			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport	>
+	data-orders="reporteclasificacioncartera,reportecorporaci_nespecialidad"
+			data-details-reporteclasificacioncartera			data-details-reportecorporaci_nespecialidad	>
 		<span data-details-inside data-short-table="reporteclasificacioncartera">
 			</span>
-		<span data-details-inside data-short-table="procesossinnotificareport">
+		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
 			</span>
 		<div data-details-preview>
 	</div>

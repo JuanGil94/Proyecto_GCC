@@ -132,7 +132,7 @@ $tdatareasignaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																				
+																																																																																																																																							
 
 $tdatareasignaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -758,25 +758,6 @@ $masterTablesData["dbo.Reasignaciones"] = array();
 	$masterTablesData["dbo.Reasignaciones"][1]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Reasignaciones"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Reasignaciones"][1]["detailKeys"][]="ProcesoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Procesos";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.ProcesosSinNotificaReport";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "procesossinnotificareport";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterParams["type"] = PAGE_REPORT;
-	$masterTablesData["dbo.Reasignaciones"][2] = $masterParams;
-				$masterTablesData["dbo.Reasignaciones"][2]["masterKeys"] = array();
-	$masterTablesData["dbo.Reasignaciones"][2]["masterKeys"][]="ProcesoId";
-				$masterTablesData["dbo.Reasignaciones"][2]["detailKeys"] = array();
-	$masterTablesData["dbo.Reasignaciones"][2]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

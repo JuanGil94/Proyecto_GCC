@@ -727,6 +727,13 @@
 					Procesos Sin Notifica Report				</label>
 			</div>
 			{END print_details_procesossinnotificareport}
+														{BEGIN print_details_reportecorporaci_nespecialidad}
+			<div>
+				<label for="printDetailsreportecorporaci_nespecialidad{$id}">
+					<input type="checkbox" value="reportecorporaci_nespecialidad" id="printDetailsreportecorporaci_nespecialidad{$id}" checked>
+					Reporte Corporación Especialidad				</label>
+			</div>
+			{END print_details_reportecorporaci_nespecialidad}
 						</div>
 </div>
 {END print_details}
@@ -1419,6 +1426,25 @@
 	{END procesossinnotificareport_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN reportecorporaci_nespecialidad_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link10" {$item_grid_details_link10} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$reportecorporaci_nespecialidad_link_attrs} data-short-details="reportecorporaci_nespecialidad"
+		class="{$reportecorporaci_nespecialidad_dlink_class}" 
+		title="{$caption dbo_ReporteCorporaci_nEspecialidad }"			>
+								
+									{BEGIN reportecorporaci_nespecialidad_childcount}
+				<span class="details-badge badge reportecorporaci_nespecialidad_badge" {$reportecorporaci_nespecialidad_childnumber_attr}>
+					{$reportecorporaci_nespecialidad_childnumber}				
+				</span>
+				{END reportecorporaci_nespecialidad_childcount}
+						</a>
+	</span>
+	{END reportecorporaci_nespecialidad_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1649,9 +1675,9 @@
 	>
 
 	 
-																<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport"
-			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport	>
+																	<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad"
+			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad	>
 		<span data-details-inside data-short-table="direcciones">
 			</span>
 		<span data-details-inside data-short-table="procesos">
@@ -1680,10 +1706,13 @@
 			</span>
 		<span data-details-inside data-short-table="procesossinnotificareport">
 			</span>
+		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 
