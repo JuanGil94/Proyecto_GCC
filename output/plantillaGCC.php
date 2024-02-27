@@ -118,6 +118,8 @@ class diccionario {
         FORMAT(Acuerdo, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaAcuerdoLarga',
         dbo.Procesos.ObligacionInicial + dbo.Procesos.CostasInicial + dbo.Procesos.InteresesInicial AS ObligacionTotal,
         FORMAT(CONVERT(DATE, Ejecutoria), 'dd/MM/yyyy') AS FechaEjecutoria,
+        FORMAT(CONVERT(DATE, Plazo), 'dd/MM/yyyy') AS FechaPlazo,
+        FORMAT(CONVERT(DATE, (DATEADD(YEAR, 5, Ejecutoria))), 'dd/MM/yyyy')  AS FechaPrescripcion,
         FORMAT(CONVERT(DATE, Fecha), 'dd/MM/yyyy') AS FechaCreacion
         FROM Procesos
         where ProcesoId =".$procesoId);
@@ -134,6 +136,8 @@ class diccionario {
             $info["FechaAcuerdoLarga"]=$date["FechaAcuerdoLarga"];
             $info["FechaEjecutoria"]=$date["FechaEjecutoria"];
             $info["FechaCreacion"]=$date["FechaCreacion"];
+            $info["FechaPrescripcion"]=$date["FechaPrescripcion"];
+            $info["FechaPlazo"]=$date["FechaPlazo"];
         }
         $n=$info["Numero"];
         for ($i = 0; $i < strlen($n); $i++) {
@@ -189,13 +193,6 @@ class diccionario {
             $info["ElAbogadoEjecutor"]=$date["ElAbogadoEjecutor"];
         }
 
-        $consulta=DB::Query("SELECT U.UserName AS 'usuario' FROM Correspondencias C
-        INNER JOIN UserProfile U ON U.UserId = C.UserId
-        WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
-        while( $date = $consulta->fetchAssoc() )
-		{
-            $info["usuario"]=$date["usuario"];
-        }
         $consulta=DB::Query("SELECT U.UserName AS 'usuario' FROM Correspondencias C
         INNER JOIN UserProfile U ON U.UserId = C.UserId
         WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
@@ -2050,38 +2047,169 @@ class plantillaCaratulas extends diccionario{
     public function caratulaProceso($procesoId,$oficioId) {
         //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
         $value=parent::process($procesoId,$oficioId);//se envia el procesoId el numero de la plantilla
-        //print_r ($value);
-        foreach($value as $param=>$date){
-            $NumeroFormateado=$value["numeroFormat"];
-            $Seccional=$value["Seccional"];
-            $PiePagina=$value["PiePagina"];
-            $Sancionado=$value["Sancionado"];
-            $TipoDocumento=$value["TipoDocumento"];
-            $FechaEjecutoria=$value["FechaEjecutoria"];
-            $FechaCreacion=$value["FechaCreacion"];
-            $Concepto=$value["Concepto"];
-            $Despacho=$value["Despacho"];
-            $Obligacion=$value["Obligacion"];
-            $documento=$value["documento"];
-        }
-            //echo "Obligacion: ".$Obligacion."<br>";
-            //echo "Docuemnto".$documento."<br>";
-            //echo "Numero".$NumeroFormateado."<br>";
             $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4561.docx');
-            $templateWord->setValue('NumeroFormateado',$NumeroFormateado);
-            $templateWord->setValue('Seccional',$Seccional);
-            $templateWord->setValue('PiePagina',$PiePagina);
-            $templateWord->setValue('Sancionado',$Sancionado);
-            $templateWord->setValue('TipoDocumento',$TipoDocumento);
-            $templateWord->setValue('documento',$documento);
-            $templateWord->setValue('FechaEjecutoria',$FechaEjecutoria);
-            $templateWord->setValue('FechaCreacion',$FechaCreacion);
-            $templateWord->setValue('PiePagina',$PiePagina);
-            $templateWord->setValue('Concepto',$Concepto);
-            $templateWord->setValue('Despacho',$Despacho);
-            $templateWord->setValue('Obligacion',$Obligacion);
+            $templateWord->setValue('NumeroFormateado',$value["numeroFormat"]);
+            $templateWord->setValue('Seccional',$value["Seccional"]);
+            $templateWord->setValue('PiePagina',$value["PiePagina"]);
+            $templateWord->setValue('Sancionado',$value["Sancionado"]);
+            $templateWord->setValue('TipoDocumento',$value["TipoDocumento"]);
+            $templateWord->setValue('documento',$value["documento"]);
+            $templateWord->setValue('FechaEjecutoria',$value["FechaEjecutoria"]);
+            $templateWord->setValue('FechaCreacion',$value["FechaCreacion"]);
+            $templateWord->setValue('PiePagina',$value["PiePagina"]);
+            $templateWord->setValue('Concepto',$value["Concepto"]);
+            $templateWord->setValue('Despacho',$value["Despacho"]);
+            $templateWord->setValue('Obligacion',$value["Obligacion"]);
             $templateWord->saveAs('templates_GCC/carProceso'.$this->procesoId.'.docx');
               
+    }
+    public function caratulaChequeo($chequeoId){
+        $consulta=DB::Query("SELECT ChequeosSancionados.ChequeoSancionadoId,
+        Chequeos.ChequeoId,
+        Chequeos.Fecha,
+        Chequeos.Origen,
+        Chequeos.Providencia,
+        Chequeos.Ejecutoria,
+        DATEADD(year, 5, Chequeos.Ejecutoria) AS Prescripcion,
+        CASE
+            WHEN PrimeraCopia = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS PrimeraCopia,
+        CASE
+            WHEN Autentica = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS Autentica,
+        CASE
+            WHEN PrestaMeritoEjecutivo = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS PrestaMeritoEjecutivo,
+        CASE
+            WHEN Clara = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS Clara,
+        CASE
+            WHEN Expresa = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS Expresa,
+        CASE
+            WHEN ActualmenteExigible = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS ActualmenteExigible,
+        CASE
+            WHEN CompetenciaDEAJ = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS CompetenciaDEAJ,
+        CASE
+            WHEN FaltaRequisitos = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS FaltaRequisitos,
+        CASE
+            WHEN FaltaCompetencia = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS FaltaCompetencia,
+        CASE
+            WHEN PorPrescripcion = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS PorPrescripcion,
+        CASE
+            WHEN MinJusticia = 1
+            THEN 'SI'
+            ELSE 'NO'
+        END AS MinJusticia,
+        Chequeos.Folios,
+        Chequeos.Observaciones,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        ChequeosSancionados.Sancionado,
+        ChequeosSancionados.Documento,
+        ChequeosSancionados.Direccion,
+        ChequeosSancionados.Telefono,
+        ChequeosSancionados.Email,
+        ChequeosSancionados.Masculino,
+        ChequeosSancionados.Observaciones AS ChequeoObservaciones,
+        Chequeos.Obligacion,
+        Chequeos.Costas,
+        TiposDocumentos.TipoDocumento,
+        Ciudades.Ciudad,
+        Carceles.Carcel,
+        Seccionales.Seccional SeccionalDestino,
+        SeccionalesView.Seccional,
+        SeccionalesView.PiePagina,
+        SeccionalesView.CiudadDepartamento,
+        Conceptos.Concepto, Chequeos.Plazo
+ FROM Chequeos
+      INNER JOIN SeccionalesView ON Chequeos.SeccionalId = SeccionalesView.SeccionalId
+      INNER JOIN Conceptos ON Chequeos.ConceptoId = Conceptos.ConceptoId
+      LEFT JOIN ChequeosSancionados ON Chequeos.ChequeoId = ChequeosSancionados.ChequeoId
+      LEFT JOIN Despachos ON Chequeos.DespachoId = Despachos.DespachoId
+      LEFT JOIN Carceles ON ChequeosSancionados.CarcelId = Carceles.CarcelId
+      LEFT JOIN TiposDocumentos ON ChequeosSancionados.TipoDocumentoId = TiposDocumentos.TipoDocumentoId
+      LEFT JOIN Seccionales ON Chequeos.SeccionalIdDestino = Seccionales.SeccionalId
+      LEFT JOIN Ciudades ON ChequeosSancionados.CiudadId = Ciudades.CiudadId
+ WHERE Chequeos.ChequeoId =".$chequeoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $infoC["Despacho"]=$date["Despacho"];
+            $infoC["Concepto"]=$date["Concepto"];
+            $infoC["Sancionado"]=$date["Sancionado"];
+            $infoC["Documento"]=$date["Documento"];
+            $infoC["Sancionado"]=$date["Sancionado"];
+            $infoC["Obligacion"]=$date["Obligacion"];
+            $infoC["Providencia"]=$date["Providencia"];
+            $infoC["Ejecutoria"]=$date["Ejecutoria"];
+            $infoC["Prescripcion"]=$date["Prescripcion"];
+            $infoC["Ejecutoria"]=$date["Ejecutoria"];
+            $infoC["Plazo"]=$date["Plazo"];
+            $infoC["PrimeraCopia"]=$date["PrimeraCopia"];
+            $infoC["Autentica"]=$date["Autentica"];
+            $infoC["PrestaMeritoEjecutivo"]=$date["PrestaMeritoEjecutivo"];
+            $infoC["Clara"]=$date["Clara"];
+            $infoC["Expresa"]=$date["Expresa"];
+            $infoC["ActualmenteExigible"]=$date["ActualmenteExigible"];
+            $infoC["CompetenciaDEAJ"]=$date["CompetenciaDEAJ"];
+            $infoC["FaltaCompetencia"]=$date["FaltaCompetencia"];
+            $infoC["FaltaRequisitos"]=$date["FaltaRequisitos"];
+            $infoC["PorPrescripcion"]=$date["PorPrescripcion"];
+            $infoC["SeccionalDestino"]=$date["SeccionalDestino"];
+            $infoC["MinJusticia"]=$date["MinJusticia"];
+            $infoC["PiePagina"]=$date["PiePagina"];
+            $infoC["Seccional"]=$date["Seccional"];
+        }
+            $templateWord = new TemplateProcessor('templates_GCC/Plantilla_Caratula.docx');
+            $templateWord->setValue('Despacho',$infoC["Despacho"]);
+            $templateWord->setValue('Concepto',$infoC["Concepto"]);
+            $templateWord->setValue('Sancionado',$infoC["Sancionado"]);
+            $templateWord->setValue('Documento',$infoC["Documento"]);
+            $templateWord->setValue('Obligacion',$infoC["Obligacion"]);
+            $templateWord->setValue('Providencia',$infoC["Providencia"]);
+            $templateWord->setValue('Ejecutoria',$infoC["Ejecutoria"]);
+            $templateWord->setValue('Prescripcion',$infoC["Prescripcion"]);
+            $templateWord->setValue('Plazo',$$infoC["Plazo"]);
+            $templateWord->setValue('PrimeraCopia',$infoC["PrimeraCopia"]);
+            $templateWord->setValue('Autentica',$infoC["Autentica"]);
+            $templateWord->setValue('PrestaMeritoEjecutivo',$infoC["PrestaMeritoEjecutivo"]);
+            $templateWord->setValue('Clara',$infoC["Clara"]);
+            $templateWord->setValue('Expresa',$infoC["Expresa"]);
+            $templateWord->setValue('ActualmenteExigible',$infoC["ActualmenteExigible"]);
+            $templateWord->setValue('CompetenciaDEAJ',$infoC["CompetenciaDEAJ"]);
+            $templateWord->setValue('FaltaRequisitos',$infoC["FaltaRequisitos"]);
+            $templateWord->setValue('FaltaCompetencia',$infoC["FaltaCompetencia"]);
+            $templateWord->setValue('PorPrescripcion',$infoC["PorPrescripcion"]);
+            $templateWord->setValue('SeccionalDestino',$infoC["SeccionalDestino"]);
+            $templateWord->setValue('MinJusticia',$infoC["MinJusticia"]);
+            $templateWord->setValue('PiePagina',$infoC["PiePagina"]);
+            $templateWord->setValue('Seccional',$infoC["Seccional"]);
+            $templateWord->saveAs('templates_GCC/carChequeo'.$chequeoId.'.docx');
     }
 }
 

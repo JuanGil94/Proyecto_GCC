@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["New_Button9"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='New_Button9';if(!pageObj.buttonEventBefore['New_Button9']){pageObj.buttonEventBefore['New_Button9']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["ChequeoId"]=row.getFieldValue("ChequeoId");}}
+if(!pageObj.buttonEventAfter['New_Button9']){pageObj.buttonEventAfter['New_Button9']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var iframe=document.createElement("iframe");console.log("valor ChequeoId:"+params["ChequeoId"]);iframe.src="templates_GCC/caratulas/carChequeo"+params["ChequeoId"]+".pdf";iframe.width="100%";iframe.height="100%";var ventanaEmergente=window.open("","VentanaEmergente","width=640, height=480");ventanaEmergente.document.body.appendChild(iframe);}}
+$('a[id="New_Button9"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="New_Button9"+"_"+Runner.genId();var button_New_Button9=new Runner.form.Button({id:this.id,btnName:"New_Button9"});button_New_Button9.init({args:[pageObj,proxy,pageid]});});};
