@@ -83,6 +83,7 @@ $dalTableProcesos["Reliquidacion"] = array("type"=>7,"varname"=>"Reliquidacion",
 $dalTableProcesos["ChequeoId"] = array("type"=>3,"varname"=>"ChequeoId", "name" => "ChequeoId", "autoInc" => "0");
 $dalTableProcesos["VlrCostas"] = array("type"=>6,"varname"=>"VlrCostas", "name" => "VlrCostas", "autoInc" => "0");
 $dalTableProcesos["VlrInteresesPlazo"] = array("type"=>6,"varname"=>"VlrInteresesPlazo", "name" => "VlrInteresesPlazo", "autoInc" => "0");
+$dalTableProcesos["SeccionalIdOrigen"] = array("type"=>3,"varname"=>"SeccionalIdOrigen", "name" => "SeccionalIdOrigen", "autoInc" => "0");
 $dalTableProcesos["ProcesoId"]["key"]=true;
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_Procesos"] = &$dalTableProcesos;

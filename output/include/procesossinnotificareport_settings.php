@@ -2934,6 +2934,7 @@ $proto61["m_columns"][] = "Reliquidacion";
 $proto61["m_columns"][] = "ChequeoId";
 $proto61["m_columns"][] = "VlrCostas";
 $proto61["m_columns"][] = "VlrInteresesPlazo";
+$proto61["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto61);
 
 $proto60["m_table"] = $obj;

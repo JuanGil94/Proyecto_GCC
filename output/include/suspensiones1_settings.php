@@ -928,6 +928,7 @@ $proto17["m_columns"][] = "Reliquidacion";
 $proto17["m_columns"][] = "ChequeoId";
 $proto17["m_columns"][] = "VlrCostas";
 $proto17["m_columns"][] = "VlrInteresesPlazo";
+$proto17["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto17);
 
 $proto16["m_table"] = $obj;

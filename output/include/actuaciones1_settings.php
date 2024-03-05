@@ -1405,6 +1405,7 @@ $proto23["m_columns"][] = "Reliquidacion";
 $proto23["m_columns"][] = "ChequeoId";
 $proto23["m_columns"][] = "VlrCostas";
 $proto23["m_columns"][] = "VlrInteresesPlazo";
+$proto23["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto23);
 
 $proto22["m_table"] = $obj;

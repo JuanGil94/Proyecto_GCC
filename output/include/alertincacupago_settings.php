@@ -2011,6 +2011,7 @@ $proto50["m_columns"][] = "Reliquidacion";
 $proto50["m_columns"][] = "ChequeoId";
 $proto50["m_columns"][] = "VlrCostas";
 $proto50["m_columns"][] = "VlrInteresesPlazo";
+$proto50["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto50);
 
 $proto49["m_table"] = $obj;

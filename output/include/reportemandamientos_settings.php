@@ -2380,6 +2380,7 @@ $proto35["m_columns"][] = "Reliquidacion";
 $proto35["m_columns"][] = "ChequeoId";
 $proto35["m_columns"][] = "VlrCostas";
 $proto35["m_columns"][] = "VlrInteresesPlazo";
+$proto35["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto35);
 
 $proto34["m_table"] = $obj;

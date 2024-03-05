@@ -14495,6 +14495,7 @@ $proto175["m_columns"][] = "Reliquidacion";
 $proto175["m_columns"][] = "ChequeoId";
 $proto175["m_columns"][] = "VlrCostas";
 $proto175["m_columns"][] = "VlrInteresesPlazo";
+$proto175["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto175);
 
 $proto174["m_table"] = $obj;

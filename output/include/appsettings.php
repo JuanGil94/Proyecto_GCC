@@ -582,11 +582,11 @@ $globalSettings["useBuiltInMailer"] = false;
 
 $globalSettings["useCustomSMTPSettings"] = true;
 
-$globalSettings["strSMTPUser"] = "soportegcc@deaj.ramajudicial.gov.co";
+$globalSettings["strSMTPUser"] = "soportecobrocoactivo@deaj.ramajudicial.gov.co";
 $globalSettings["strSMTPServer"] = "smtp.office365.com";
 $globalSettings["strSMTPPort"] = "587";
-$globalSettings["strSMTPPassword"] = "Taf98594";
-$globalSettings["strFromEmail"] = "evargasri@deaj.ramajudicial.gov.co";
+$globalSettings["strSMTPPassword"] = "Coactivo\$97";
+$globalSettings["strFromEmail"] = "soportecobrocoactivo@deaj.ramajudicial.gov.co";
 
 $globalSettings["SMTPSecure"] = "tls";
 //
@@ -619,7 +619,7 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["Spanish"] = "GCC";
+$globalSettings["ProjectLogo"]["Spanish"] = "Portal Coactivo";
 
 $globalSettings["CookieBanner"] = array();
 
@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1771_1708610714";
+$projectBuildKey = "1786_1709643839";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "1771";
+$projectBuildNumber = "1786";
 
 $mlang_messages = array();
 $mlang_charsets = array();
