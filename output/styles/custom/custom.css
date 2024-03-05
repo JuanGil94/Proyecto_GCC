@@ -1,4 +1,4 @@
-  #value_ObligacionLetras_66{
+  #value_ObligacionLetras_86{
     width:500px;
     display: block; /* Cambia el comportamiento del input a bloque */
     margin: 0 auto;
@@ -6,7 +6,7 @@
 	color: #FFFFFF;
 	pointer-events: none;
 }
-#value_CantidadLetras_66{
+#value_CantidadLetras_86{
     width:350.5px;
     display: block; /* Cambia el comportamiento del input a bloque */
     margin: 0 auto;
@@ -14,7 +14,7 @@
 	color: #FFFFFF;
 	pointer-events: none;
 }
-#value_Obligacion_66{
+#value_Obligacion_86{
     display: block; /* Cambia el comportamiento del input a bloque */
     margin: 0 auto;
     pointer-events: none;

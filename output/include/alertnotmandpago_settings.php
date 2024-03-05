@@ -2018,6 +2018,7 @@ $proto49["m_columns"][] = "Reliquidacion";
 $proto49["m_columns"][] = "ChequeoId";
 $proto49["m_columns"][] = "VlrCostas";
 $proto49["m_columns"][] = "VlrInteresesPlazo";
+$proto49["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto49);
 
 $proto48["m_table"] = $obj;

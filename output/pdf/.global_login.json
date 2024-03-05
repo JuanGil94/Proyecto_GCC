@@ -102,7 +102,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"GCC","hidden":"{$item_hide_login-logo}","fontSize":24,"isHtml":true},
+			{"text":"Portal Coactivo","hidden":"{$item_hide_login-logo}","fontSize":24,"isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
