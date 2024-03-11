@@ -254,7 +254,7 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 								
 							
 							
-																																																																																			
+																																																																																									
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 
@@ -355,7 +355,7 @@ $tdatachequeos[".orderindexes"] = array();
 
 $tdatachequeos[".sqlHead"] = "SELECT '' AS CantidadLetras,  '' AS ObligacionLetras,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId";
 $tdatachequeos[".sqlFrom"] = "FROM dbo.Chequeos";
-$tdatachequeos[".sqlWhereExpr"] = "SeccionalId in (:session.SeccionalesWhere)";
+$tdatachequeos[".sqlWhereExpr"] = "(SeccionalId in (:session.SeccionalesWhere))";
 $tdatachequeos[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -6674,7 +6674,7 @@ $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "'' AS CantidadLetras,  '' AS ObligacionLetras,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  Obligacion,  Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId";
 $proto0["m_strFrom"] = "FROM dbo.Chequeos";
-$proto0["m_strWhere"] = "SeccionalId in (:session.SeccionalesWhere)";
+$proto0["m_strWhere"] = "(SeccionalId in (:session.SeccionalesWhere))";
 $proto0["m_strOrderBy"] = "ORDER BY ChequeoId DESC";
 	
 		;

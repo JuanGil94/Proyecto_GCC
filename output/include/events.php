@@ -49,7 +49,8 @@ class class_GlobalEvents extends eventsBase
 function AfterSuccessfulLogin($username, $password, &$data, $pageObject)
 {
 
-		$arraySeccionales=array();
+		//phpinfo();
+$arraySeccionales=array();
 $arrayCiudades=array();
 $username=$_SESSION["UserData"]["username"];
 //buscar el UserId
