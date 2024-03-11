@@ -214,6 +214,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
+				
+			{"text":""},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

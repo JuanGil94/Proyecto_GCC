@@ -248,7 +248,7 @@ $tdataautorizaciones[".isUseAjaxSuggest"] = true;
 											
 										
 										
-																																																																																																																													
+																																																																																																																																						
 
 $tdataautorizaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -344,8 +344,8 @@ $tdataautorizaciones[".orderindexes"] = array();
 
 
 $tdataautorizaciones[".sqlHead"] = "SELECT C.ConceptoId,  C.AbogadoId,  C.Fecha,  C.DespachoId,  C.Origen,  C.Providencia,  C.Ejecutoria,  C.PrimeraCopia,  C.Autentica,  C.PrestaMeritoEjecutivo,  C.Clara,  C.Expresa,  C.ActualmenteExigible,  C.CompetenciaDEAJ,  C.FaltaRequisitos,  C.FaltaCompetencia,  C.PorPrescripcion,  C.SeccionalId,  C.Folios,  C.SeccionalIdDestino,  C.Observaciones,  C.Procesado,  C.Tipo,  C.FechaSancion,  C.Cantidad,  C.Obligacion,  C.Costas,  C.Remisorio,  C.CarteraTipoId,  C.MinJusticia,  C.Aprobado,  C.AprobadoPor,  C.FechaAprobacion,  C.Plazo,  C.NaturalezaId,  C.Sigobius,  C.Monto,  C.TramiteId,  C.Fisico,  C.Digital,  C.ChequeoId";
-$tdataautorizaciones[".sqlFrom"] = "FROM dbo.Chequeos C  INNER JOIN Seccionales S ON s.SeccionalId = c.SeccionalId  INNER JOIN CarteraTipos CA ON CA.CarteraTipoId = C.CarteraTipoId  INNER JOIN Procesos P ON P.ChequeoId = C.ChequeoId";
-$tdataautorizaciones[".sqlWhereExpr"] = "c.Obligacion = 0 or c.Obligacion>(Select MaximoPesos from Empresas) and P.EstadoId <> 6 and c.Aprobado =1";
+$tdataautorizaciones[".sqlFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON C.CarteraTipoId = CA.CarteraTipoId  INNER JOIN dbo.Procesos AS P ON C.ChequeoId = P.ChequeoId";
+$tdataautorizaciones[".sqlWhereExpr"] = "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
 $tdataautorizaciones[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -6386,23 +6386,23 @@ function createSqlQuery_autorizaciones()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "C.ConceptoId,  C.AbogadoId,  C.Fecha,  C.DespachoId,  C.Origen,  C.Providencia,  C.Ejecutoria,  C.PrimeraCopia,  C.Autentica,  C.PrestaMeritoEjecutivo,  C.Clara,  C.Expresa,  C.ActualmenteExigible,  C.CompetenciaDEAJ,  C.FaltaRequisitos,  C.FaltaCompetencia,  C.PorPrescripcion,  C.SeccionalId,  C.Folios,  C.SeccionalIdDestino,  C.Observaciones,  C.Procesado,  C.Tipo,  C.FechaSancion,  C.Cantidad,  C.Obligacion,  C.Costas,  C.Remisorio,  C.CarteraTipoId,  C.MinJusticia,  C.Aprobado,  C.AprobadoPor,  C.FechaAprobacion,  C.Plazo,  C.NaturalezaId,  C.Sigobius,  C.Monto,  C.TramiteId,  C.Fisico,  C.Digital,  C.ChequeoId";
-$proto0["m_strFrom"] = "FROM dbo.Chequeos C  INNER JOIN Seccionales S ON s.SeccionalId = c.SeccionalId  INNER JOIN CarteraTipos CA ON CA.CarteraTipoId = C.CarteraTipoId  INNER JOIN Procesos P ON P.ChequeoId = C.ChequeoId";
-$proto0["m_strWhere"] = "c.Obligacion = 0 or c.Obligacion>(Select MaximoPesos from Empresas) and P.EstadoId <> 6 and c.Aprobado =1";
+$proto0["m_strFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON C.CarteraTipoId = CA.CarteraTipoId  INNER JOIN dbo.Procesos AS P ON C.ChequeoId = P.ChequeoId";
+$proto0["m_strWhere"] = "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "c.Obligacion = 0 or c.Obligacion>(Select MaximoPesos from Empresas) and P.EstadoId <> 6 and c.Aprobado =1";
+$proto2["m_sql"] = "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
 $proto2["m_uniontype"] = "SQLL_OR";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "c.Obligacion = 0 or c.Obligacion>(Select MaximoPesos from Empresas) and P.EstadoId <> 6 and c.Aprobado =1"
+	"m_sql" => "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1"
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
 						$proto4=array();
-$proto4["m_sql"] = "c.Obligacion = 0";
+$proto4["m_sql"] = "C.Obligacion = 0";
 $proto4["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "Obligacion",
@@ -6420,16 +6420,16 @@ $obj = new SQLLogicalExpr($proto4);
 
 			$proto2["m_contained"][]=$obj;
 						$proto6=array();
-$proto6["m_sql"] = "c.Obligacion>(Select MaximoPesos from Empresas) and P.EstadoId <> 6 and c.Aprobado =1";
+$proto6["m_sql"] = "C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
 $proto6["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "c.Obligacion>(Select MaximoPesos from Empresas) and P.EstadoId <> 6 and c.Aprobado =1"
+	"m_sql" => "C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1"
 ));
 
 $proto6["m_column"]=$obj;
 $proto6["m_contained"] = array();
 						$proto8=array();
-$proto8["m_sql"] = "c.Obligacion>(Select MaximoPesos from Empresas)";
+$proto8["m_sql"] = "C.Obligacion >(Select MaximoPesos from Empresas)";
 $proto8["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "Obligacion",
@@ -6465,7 +6465,7 @@ $obj = new SQLLogicalExpr($proto10);
 
 			$proto6["m_contained"][]=$obj;
 						$proto12=array();
-$proto12["m_sql"] = "c.Aprobado =1";
+$proto12["m_sql"] = "C.Aprobado =1";
 $proto12["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "Aprobado",
@@ -7138,7 +7138,7 @@ $proto99["m_columns"][] = "Digital";
 $obj = new SQLTable($proto99);
 
 $proto98["m_table"] = $obj;
-$proto98["m_sql"] = "dbo.Chequeos C";
+$proto98["m_sql"] = "dbo.Chequeos AS C";
 $proto98["m_alias"] = "C";
 $proto98["m_srcTableName"] = "dbo.Autorizaciones";
 $proto100=array();
@@ -7192,7 +7192,7 @@ $proto103["m_columns"][] = "Subserie";
 $obj = new SQLTable($proto103);
 
 $proto102["m_table"] = $obj;
-$proto102["m_sql"] = "INNER JOIN Seccionales S ON s.SeccionalId = c.SeccionalId";
+$proto102["m_sql"] = "INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId";
 $proto102["m_alias"] = "S";
 $proto102["m_srcTableName"] = "dbo.Autorizaciones";
 $proto104=array();
@@ -7229,7 +7229,7 @@ $proto107["m_columns"][] = "Prescrita";
 $obj = new SQLTable($proto107);
 
 $proto106["m_table"] = $obj;
-$proto106["m_sql"] = "INNER JOIN CarteraTipos CA ON CA.CarteraTipoId = C.CarteraTipoId";
+$proto106["m_sql"] = "INNER JOIN dbo.CarteraTipos AS CA ON C.CarteraTipoId = CA.CarteraTipoId";
 $proto106["m_alias"] = "CA";
 $proto106["m_srcTableName"] = "dbo.Autorizaciones";
 $proto108=array();
@@ -7346,7 +7346,7 @@ $proto111["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto111);
 
 $proto110["m_table"] = $obj;
-$proto110["m_sql"] = "INNER JOIN Procesos P ON P.ChequeoId = C.ChequeoId";
+$proto110["m_sql"] = "INNER JOIN dbo.Procesos AS P ON C.ChequeoId = P.ChequeoId";
 $proto110["m_alias"] = "P";
 $proto110["m_srcTableName"] = "dbo.Autorizaciones";
 $proto112=array();

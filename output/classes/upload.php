@@ -27,9 +27,9 @@ for ($i=0;$i<count($archivo["name"]);$i++){
     }
 }
 if ($flag==1){
-    //echo "<script>alert('Archivos Subidos Correctamentenete')</script>";
-    echo "<h1>Documentos subidos correctamente</h1>";
-    header("Refresh: 2; URL=../procesos_list.php");
+    echo "<script>alert('Archivos Subidos Correctamentenete');window.location.href='../procesos_list.php';</script>";
+    //echo "<h1>Documentos subidos correctamente</h1>";
+    //header("Refresh: 2; URL=../procesos_list.php");
 }
 //header("Refresh: 3; URL=../procesos_list.php");
 //echo "<h1>Documento subido correctamente</h1>";

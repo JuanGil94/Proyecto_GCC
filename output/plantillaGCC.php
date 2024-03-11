@@ -2021,6 +2021,57 @@ class plantillas extends diccionario{
         }
         $templateWord->saveAs('templates_GCC/acuPagoSig.docx');
     }
+    public function funcGlobal(){
+        $info=parent::process($this->procesoId,$this->oficioId);
+        $direcciones=parent::direcciones();
+        $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
+        // Crear un objeto TemplateProcessor
+        $templateProcessor = new TemplateProcessor($templatePath);
+        $variables = $templateProcessor->getVariables();
+        //echo count($variables);
+        //print_r($variables);
+        $case=count($direcciones);
+        if($case>0){
+            foreach( $direcciones as $key=>$dato){
+                $templateProcessor = new TemplateProcessor($templatePath);
+                $direccion=$dato;
+                $templateProcessor->setValue('direccion',$direccion);
+                foreach($variables as $variable){
+                    preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
+                    //print_r();
+                    $resultados = $matches[1];
+                    //echo count($resultados);
+                    for($i=0;$i<count($resultados);$i++){
+                        $resultadoF.=$resultados[$i];
+                    }
+                    $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                    //$var[]=$resultadoF;
+                    $resultadoF='';
+                    //$resultados = $matches[1];
+                    //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
+                }
+                $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->procesoId.'_'.$this->oficioId.'_'.$key.'.docx');
+            }
+        }
+        else{
+            foreach($variables as $variable){
+                $templateProcessor = new TemplateProcessor($templatePath);
+                preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
+                //print_r();
+                $resultados = $matches[1];
+                //echo count($resultados);
+                for($i=0;$i<count($resultados);$i++){
+                    $resultadoF.=$resultados[$i];
+                }
+                $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                //$var[]=$resultadoF;
+                $resultadoF='';
+                //$resultados = $matches[1];
+                //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
+            }
+            $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->procesoId.'_'.$this->oficioId.'.docx');
+        }
+    }
     /*
     public function acuPagoSig() {
         function calcularPagoMensual($tasa, $nper, $va) {

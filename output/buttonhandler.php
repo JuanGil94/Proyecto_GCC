@@ -186,6 +186,16 @@ if($buttId=='New_Button9')
 	}
 	buttonHandler_New_Button9($params);
 }
+if($buttId=='New_Button10')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_New_Button10($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -643,9 +653,11 @@ include_once (getabspath("plantillaGCC.php"));
 //$objeto=new plantillas($params["ProcesoId"]);
 //echo "Value ".$params["OficioId"];
 $objeto=new plantillas($params["ProcesoId"],$params["OficioId"],$params["obligacionLetras"],$params["obligacionTotalLetras"]);
+$objeto->funcGlobal();
+/*
 switch($params["OficioId"]){
 	case "1097":
-		$log=$objeto->persuasivo();
+		$log=$objeto->funcGlobal();
 	break;
 	case "4328":
 		$log=$objeto->resMandPago();
@@ -795,6 +807,7 @@ switch($params["OficioId"]){
 		$log=$objeto->solInsEmba();
 	break;
 }
+*/
 //$log=$objeto->persuasivo();;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -1461,6 +1474,70 @@ if ($resultado === null) {
     echo "Error en la conversión: $resultado";
 }
 */;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_New_Button10($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	include_once (getabspath("plantillaGCC.php"));
+//$objeto=new plantillas($params["ProcesoId"]);
+//echo "Value ".$params["OficioId"];
+$objeto=new diccionario;
+$dic=$objeto->process(1029004,1097);
+foreach($dic as $param=>$date){
+$result["txt"][]=$param;
+//echo $param."<br>";
+}
+
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
