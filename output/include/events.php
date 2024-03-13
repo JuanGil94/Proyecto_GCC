@@ -61,6 +61,7 @@ while( $date = $consulta->fetchAssoc() )
 	$_SESSION["AbogadoId"]=$date["AbogadoId"];
 	$_SESSION["CarteraTipoId"]=$date["CarteraTipoId"];
 }
+$_SESSION["UserId"]=$userId;
 //createNotification( array( "message" => "New category added: ", "title" => "New category", "icon" => "fa-envelope") );  
 //buscar las seccionales pertenecientes al UserId
 $userId=intval($userId);

@@ -1042,7 +1042,7 @@ function GetDefaultValue($field, $ptype, $table="")
 	}
 				if($table=="dbo.Correspondencias" && $field=="UserId")
 	{
-		return $_SESSION["ID"];
+		return $_SESSION["UserId"];
 	}
 	return "";
 }
