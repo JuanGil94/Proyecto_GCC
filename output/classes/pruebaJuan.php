@@ -178,11 +178,12 @@ class reliquidacion extends CalendarioAnual{
             //echo "la consulta da como resultado: ".$consultaR;
         while($date=$consultaR->fetchAssoc() ){
             $fechasR []= array(
-                "Fecha"=> $date['Fecha'],
+                "Fecha"=> date("Y-m-d", strtotime($date['Fecha'])),
                 "Pago" => $date['Pago'],
                 "PagoId" => $date['PagoId'],
             );
         };
+            //print_r($fechasR);
             $sumaPorFecha = array();
             foreach($fechasR as $dato){
                 $fecha = $dato['Fecha'];
@@ -196,6 +197,7 @@ class reliquidacion extends CalendarioAnual{
                 $sumaPorFecha[$fecha]=array('Fecha'=>$fecha,'Pago'=>$valor,'PagoId'=>$pagoId);
             }
             }
+            //print_r($sumaPorFecha);
             return $sumaPorFecha;
             //$fechasR
             //print_r($fechasR);
@@ -204,6 +206,7 @@ class reliquidacion extends CalendarioAnual{
     public function insertRe($procesoId,$fecha,$dias,$tasa,$intereses,$obliReca,$obliNove,$obliSald,$inteReca,$inteNove,$inteSald,$costReca,$costNove,$costSald){
         try{
             $tasa=floatval($tasa*100);
+            //var_dump($fecha);
                     //var_dump($procesoId);var_dump($fecha);var_dump($dias);var_dump($tasa);var_dump($intereses);var_dump($obliReca);var_dump($obliNove);var_dump($obliSald);var_dump($inteReca);var_dump($inteNove);var_dump($inteSald);var_dump($costReca);var_dump($costNove);var_dump($costSald);
             //echo "Valores: ".$procesoId."-".$fecha."-".$dias."-".$tasa."-".$intereses."-".$obliReca."-".$obliNove."-".$obliSald."-".$inteReca."-".$inteNove."-".$inteSald."-".$costReca."-".$costNove."-".$costSald;
             $consulta2=DB::Exec("INSERT INTO Reliquidaciones (ProcesoId,Fecha,Dias,Tasa,Intereses,ObliReca,ObliNove,ObliSald,InteReca,InteNove,InteSald,CostReca,CostNove,CostSald) VALUES (".$procesoId.",'".$fecha."',".$dias.",".$tasa.",".$intereses.",".$obliReca.",".$obliNove.",".$obliSald.",".$inteReca.",".$inteNove.",".$inteSald.",".$costReca.",".$costNove.",".$costSald.")");
@@ -212,7 +215,7 @@ class reliquidacion extends CalendarioAnual{
                     } 
                     else {
                 // Hubo un error en la ejecución de la consulta
-                            echo "Error al ejecutar la consulta: " . DB::LastError();
+                            echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
                             exit();
                             }
         }
@@ -351,10 +354,10 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
-                        ///echo "<br>".$fechaCom;
+                        //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
-                                ///echo "La fecha es igual al recaudo";
+                                //echo "La fecha es igual al recaudo";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
                                 ///echo "<br>COSTAoriginal: ".$costas;
@@ -374,10 +377,13 @@ class reliquidacion extends CalendarioAnual{
                                 //$saldoInteresCorte=$sumaTotalDiaria;
                                 $this->insertRe($numero,$fechaIns,$diasS,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
                                 $pagoId=$this->getpagoId();
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
                                 }
+                                */
                                 //$costas=$costas-$costPor;
                                 //$obligacion=$obligacion-$obliPor;
                                 //$sumaTotalDiaria=$sumaTotalDiaria-$intePor;
@@ -411,11 +417,11 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
-                        ///echo "<br>".$fechaCom;
+                        //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
                                 $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                ///echo "La fecha es igual al recaudo";
+                                //echo "La fecha es igual al recaudo 1";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
                                 ///echo "<br>COSTAoriginal: ".$costas;
@@ -438,10 +444,13 @@ class reliquidacion extends CalendarioAnual{
                                 $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                                 $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
                                 $pagoId=$this->getpagoId();
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
                                 }
+                                */
                             }
                             //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
@@ -467,11 +476,11 @@ class reliquidacion extends CalendarioAnual{
                     foreach($elementos as $dia){
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                         $sumaTotalDiaria+=$valorDiario;
-                        ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
+                        //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
                                 $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                ///echo "La fecha es igual al recaudo";
+                                //echo "La fecha es igual al recaudo 2";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
                                 ///echo "<br>COSTAoriginal: ".$costas;
@@ -495,10 +504,13 @@ class reliquidacion extends CalendarioAnual{
                                 $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                                 $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
                                 $pagoId=$this->getpagoId();
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
                                 }
+                                */
                             }
                             //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }   
@@ -554,7 +566,7 @@ class reliquidacion extends CalendarioAnual{
                                 $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
                                 //$obliPor=($$obligacion/($$obligacion+$costas+$inteAcu));
                                 //$intePor=($inteAcu/($obliInicial+$costas+$inteAcu));
-                                //echo "La fecha es igual al recaudo";
+                                //echo "La fecha es igual al recaudo 3";
                                 $diaCorte=$dia-1;
                                 $valorCorte=$valorDiario*$diaCorte;
                                 $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
@@ -572,10 +584,13 @@ class reliquidacion extends CalendarioAnual{
                                 $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                                 $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
                                 $pagoId=$this->getpagoId();
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
-                                }  
+                                }
+                                */  
                             }
                             //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
@@ -614,10 +629,10 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
-                        ///echo "<br>".$fechaCom;
+                        //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
-                                ///echo "La fecha es igual al recaudo";
+                                //echo "La fecha es igual al recaudo 4";
                                 $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
                                 $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
                                 $diaCorte=$dia-1;
@@ -634,10 +649,13 @@ class reliquidacion extends CalendarioAnual{
                                 $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                                 $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
                                 $pagoId=$this->getpagoId();
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
                                 }
+                                */
                             }
                             //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
@@ -680,7 +698,7 @@ class reliquidacion extends CalendarioAnual{
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
                                 $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                ///echo "La fecha es igual al recaudo";
+                                echo "La fecha es igual al recaudo 5";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
                                 ///echo "<br>COSTAoriginal: ".$costas;
@@ -704,10 +722,13 @@ class reliquidacion extends CalendarioAnual{
                                 $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                                 $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
                                 $pagoId=$this->getpagoId();
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
                                 }
+                                */
                             }
                             //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
@@ -750,11 +771,12 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
-                        ///echo "<br>".$fechaCom;
+                        //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
+                            //echo "fecha del recaudo".$fecha["Fecha"];
                             if($fecha["Fecha"]==$fechaCom) {
                                 $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                ///echo "La fecha es igual al recaudo";
+                                //echo "La fecha es igual al recaudo 6";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
                                 ///echo "<br>COSTAoriginal: ".$costas;
@@ -772,17 +794,24 @@ class reliquidacion extends CalendarioAnual{
                                 //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
                                 //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
                                 $fechaIns=$annoEje."-".$mes."-".$dia;
+                                //var_dump($fechaIns);
+                                //$fechaObjeto = DateTime::createFromFormat('Y-m-d', $fechaIns);
+                                //var_dump($fechaObjeto);
                                 ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
                                 //$saldoInteresCorte=$sumaTotalDiaria;
                                 $this->insertRe($numero,$fechaIns,$dia,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
                                 $obligacion=$obligacion-$obliPor;
                                 $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                                 $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//se suma el interes del dia del recaudo bsado en la nueva obligacion;
-                                $pagoId=$this->getpagoId();
+                                //$pagoId=$this->getpagoId();
+                                //echo "Valor del PagoId: ".$fecha["PagoId"];
                                 //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                /*
                                 if ($pagoId==$fecha["PagoId"]){
                                     $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
                                 }
+                                */
                             }
                             //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
@@ -886,7 +915,8 @@ class reliquidacion extends CalendarioAnual{
             $meses = $calendario->getMeses();
             foreach ($meses as $mes => $dias) {
                 $fechaBase=$annoEje."-".$mes."-".$dias;
-                        ///echo "Fechaaaa Base: ".$fechaBase;
+                //var_dump($fechaBase);
+                //echo "Fechaaaa Base: ".$fechaBase;
                 $obliPor=0;
                 $intePor=0;
                 $diaCorte=0;
@@ -1382,7 +1412,7 @@ class reliquidacion extends CalendarioAnual{
         }
     }
     public function pagoId($pagoId){
-        //echo "El valor essss: ".$pagoId;
+        //echo "El valor essss antes de : ".$pagoId;
         $this->pagoId=$pagoId;
     }
     public function getpagoId(){

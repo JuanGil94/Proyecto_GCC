@@ -128,7 +128,7 @@ $tdatatemas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																						
+																																																									
 
 $tdatatemas[".ajaxCodeSnippetAdded"] = false;
 
