@@ -287,6 +287,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":""},
+				
+				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 		  ],

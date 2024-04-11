@@ -216,7 +216,7 @@ class reliquidacion extends CalendarioAnual{
                     else {
                 // Hubo un error en la ejecución de la consulta
                             echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
-                            exit();
+                            //exit();
                             }
         }
         catch (PDOException $e) {
@@ -227,6 +227,7 @@ class reliquidacion extends CalendarioAnual{
     public function deleteRe($procesoId){
         //echo "Ingreso<br>";
         $consulta=DB::Exec("DELETE FROM Reliquidaciones WHERE ProcesoId=".$procesoId);
+        /*
             if ($consulta) {
                 //echo "La consulta se realizó correctamente.";
                     } 
@@ -235,6 +236,7 @@ class reliquidacion extends CalendarioAnual{
                             echo "Error al ejecutar la consulta de borrar: " . DB::LastError();
                             exit();
                             }
+                            */
     }
     public function getSuma(){
             //echo "Valor de la suma de intereses: ".$this->suma;
@@ -839,6 +841,53 @@ class reliquidacion extends CalendarioAnual{
             $annoEje++; 
         }
     }
+    public function calInteresesCierre($anoActual,$mesActual){
+        //$count=0;
+        $infoProceso=$this->infoProceso($this->procesoId);
+        foreach($infoProceso as $date){
+            //$params["Numero"]=$date["Numero"];
+            $naturaleza=$date["Naturaleza"];
+            //$costas=$date["Costa"];
+            $concepto=$date["Concepto"];
+            $obligacion=$date["Obligacion"];
+            //$fechaP=$date["Plazo"];
+        }
+        $tasaDiaraT=$this->tasa($naturaleza,$concepto,$anoActual,$mesActual);
+        $calendario=new CalendarioAnual($$anoActual);
+        $meses = $calendario->getMeses();
+        foreach ($meses as $mes => $dias) {
+            if ($mes==$mesActual){
+                $numDiasMesAct1=date("d");
+                //$valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct1*100),2);
+                $elementos=range(1,$numDiasMesAct1);
+                //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct1." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."<br></strong>";
+                //$fechaIns=$anoActual."-".$mes."-".$dias;
+                //insertRe($numero,$fechaIns,$numDiasMesAct1,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
+                $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                foreach($elementos as $dia){
+                    //echo $count++."<br>";   
+                    $sumaTotalDiaria+=$valorDiario;
+                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
+                    $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                    //$fechaCom=$anoActual."-".$mes."-".$dia;
+                    //echo "<br>".$fechaCom;
+                }
+                return $sumaTotalDiaria;
+                //echo "El valor de los intereses es: ".$sumaTotalDiaria." para el calculo de ".$dia." del mes ".$mes."<br>";
+                /*
+                if ($mes==12){
+                    //echo "Ingreso";
+                    $result["total"]=round($sumaTotalDiaria+$obligacion+$costSald,2);
+                    $this->suma=$result["total"];
+                    $this->sumaTotalDiaria=$sumaTotalDiaria; 
+                }
+                ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$dia." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
+                $this->insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald); 
+            */
+            //echo "ingreso en el mes".$mes." con dias ".$dias."<br>";
+            }}
+        }
+        
     //La funcion CalcularAcuerdo es la misma que Calcular solo que se calcula con fechas futuras a la
     //ejecutoria, por ende cambio reralizado en Calcular se debe hacer en CalcularAcuerdo ya que estas, calculan los intereses de Mora
     public function CalcularAcuerdo($fechaInicioAcuerdo){

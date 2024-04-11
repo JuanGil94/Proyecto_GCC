@@ -22,32 +22,64 @@ class diccionario {
             );
         }
         
-        $consulta=DB::Query("SELECT Radicado AS 'Sigobius',
-        FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha',
-        observaciones AS 'Observaciones' 
-        FROM Correspondencias  
-        WHERE OficioId =".$oficioId." 
-        AND ProcesoId =".$procesoId);
+        $consulta=DB::Query("SELECT C.Radicado AS 'Sigobius',
+        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha',
+        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaDiezDias',
+        C.Observaciones AS 'Observaciones',
+		O.Oficio AS 'Oficio'
+        FROM Correspondencias  C
+        INNER JOIN Oficios O ON O.OficioId = C.OficioId
+        WHERE O.OficioId =".$oficioId."AND C.ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
+            $info["Observaciones"]=$date["Observaciones"];
+            $info["Oficio"]=$date["Oficio"];
             $info["Sigobius"]=$date["Sigobius"];
             $info["Fecha"]=$date["Fecha"];
-
+            $info["FechaDiezDias"]=$date["FechaDiezDias"];
         }
-        $consulta=DB::Query("SELECT C.Ciudad AS 'CiudadDespacho' FROM Procesos P 
-        INNER JOIN Despachos D on P.DespachoId = D.DespachoId
-        INNER JOIN Ciudades C ON C.CiudadId =D.CiudadId
-        WHERE P.ProcesoId =".$procesoId);
+        $consulta=DB::Query("SELECT FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaNotifiMandaLarga',
+        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaNotiManda'  
+        FROM Correspondencias C WHERE C.OficioId=3138 and C.ProcesoId=".$procesoId);
+        while( $date = $consulta->fetchAssoc()){
+            $info["FechaNotifiMandaLarga"]=$date["FechaNotifiMandaLarga"];
+            $info["FechaNotiManda"]=$date["FechaNotiManda"];
+        }
+
+        $consulta=DB::Query("SELECT C.Ciudad + ' - ' + D.Departamento AS 'CiudadDepartamento',
+        C.Ciudad AS 'CiudadDespacho'
+        FROM Ciudades C 
+        INNER JOIN Departamentos D ON D.DepartamentoId = C.DepartamentoId 
+        INNER JOIN Seccionales S ON S.CiudadId = C.CiudadId 
+        INNER JOIN Procesos P ON P.SeccionalId = S.SeccionalId 
+        LEFT JOIN Despachos DE ON DE.DespachoId = P.DespachoId
+        WHERE P.ProcesoId = ".$procesoId);
         while( $date = $consulta->fetchAssoc() ){
             $info["CiudadDespacho"]=$date["CiudadDespacho"];
+            $info["CiudadDepartamento"]=$date["CiudadDepartamento"];
         }
-        $consulta=DB::Query("SELECT CI.Ciudad AS 'Ciudad' FROM Ciudades CI
+        $consulta=DB::Query("SELECT CI.Ciudad AS 'Ciudad'
+         FROM Ciudades CI
         INNER JOIN Seccionales S ON S.CiudadId = CI.CiudadId
         INNER JOIN Procesos P ON S.SeccionalId = P.SeccionalId
         where P.ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
             $info["Ciudad"]=$date["Ciudad"];
+        }
+        $consulta=DB::Query("SELECT U.UserName AS 'usuario', 
+        DATENAME(year, C.Fecha) AS 'Ano',
+        DATENAME(MONTH, C.Fecha) AS 'Mes',
+        DATENAME(DAY, C.Fecha) AS 'Dia'
+        FROM Correspondencias C
+        INNER JOIN UserProfile U ON U.UserId = C.UserId
+        WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["usuario"]=$date["usuario"];
+            $info["Ano"]=$date["Ano"];
+            $info["Dia"]=$date["Dia"];
+            $info["Mes"]=$date["Mes"];
         }
 
         $consulta=DB::Query("SELECT
@@ -59,7 +91,9 @@ class diccionario {
         SA.Sancionado AS 'Sancionado',TD.TipoDocumento AS 'TipoDocumento',
         SA.Documento AS 'documento',
         SA.Email AS 'SancionadoEmail',
-        Fallecimiento AS 'Fallecimiento'
+        Fallecimiento AS 'Fallecimiento',
+        celular AS 'Telefono',
+        celular AS 'SancionadoCelular'
         FROM Sancionados SA
         INNER JOIN Procesos P ON SA.SancionadoId = P.SancionadoId
         INNER JOIN TiposDocumentos TD ON TD.TipoDocumentoId = SA.TipoDocumentoId
@@ -67,6 +101,8 @@ class diccionario {
 
         while( $date = $consulta->fetchAssoc() )
 		{
+            $info["SancionadoCelular"]=$date["SancionadoCelular"];
+            $info["Telefono"]=$date["Telefono"];
             $info["RespetadoSenor"]=$date["RespetadoSenor"];
             $info["Senor"]=$date["Senor"];
             $info["TipoDocumento"]=$date["TipoDocumento"];
@@ -79,16 +115,15 @@ class diccionario {
             $info["identificado"]=$date["identificado"];
             $info["Fallecimiento"]=$date["Fallecimiento"];
         }
-        $consulta=DB::Query("
-        SELECT Radicado + ' de ' + FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Resolucion' 
-        FROM Correspondencias where OficioId = 4337 and ProcesoId =".$procesoId);
+        $consulta=DB::Query("SELECT Radicado + ' de ' + FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Resolucion' 
+        FROM Correspondencias where OficioId =4337 and ProcesoId =".$procesoId);
 
         while( $date = $consulta->fetchAssoc() )
 		{
             $info["Resolucion"]=$date["Resolucion"];
         }
-        $consulta=DB::Query("
-        SELECT Radicado + ' de ' + FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'resolucionEmbargo' 
+        
+        $consulta=DB::Query("SELECT Radicado + ' de ' + FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'resolucionEmbargo' 
         FROM Correspondencias where OficioId = 4563 and ProcesoId=".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
@@ -139,6 +174,17 @@ class diccionario {
             $info["FechaPrescripcion"]=$date["FechaPrescripcion"];
             $info["FechaPlazo"]=$date["FechaPlazo"];
         }
+
+        $consulta=DB::Query("SELECT PR.Propiedad + ' - ' + Matricula AS Garantia  
+        FROM Procesos P
+        INNER JOIN Sancionados S ON S.SancionadoId = P.SancionadoId
+        INNER JOIN Propiedades PR ON PR.SancionadoId = s.SancionadoId
+          where P.ProcesoId =".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Garantia"]=$date["Garantia"];
+        }
+
         $n=$info["Numero"];
         for ($i = 0; $i < strlen($n); $i++) {
             $caracter = $n[$i];
@@ -155,24 +201,44 @@ class diccionario {
 		{
             $info["Despacho"]=$date["Despacho"];
         }
-        $consulta=DB::Query("SELECT C.Concepto AS 'Concepto' 
-        FROM Conceptos C
-        INNER JOIN Procesos P ON P.ConceptoId = C.ConceptoId
-        where P.ProcesoId=".$procesoId);
+        $consulta=DB::Query("SELECT C.Concepto AS 'Concepto',
+        CASE
+           WHEN C.Concepto = 'MULTA' THEN 'de la multa'
+           WHEN C.Concepto = 'POLIZA'THEN 'de la poliza'
+           WHEN C.Concepto = 'INCAPACIDAD'THEN 'de la incapacidad'
+           WHEN C.Concepto = 'REINTEGRO'THEN 'del reintegro'
+           WHEN C.Concepto = 'ARANCEL'THEN 'del arancel'
+           ELSE ''
+       END AS 'delConcepto',
+        CASE
+           WHEN C.Concepto = 'MULTA' THEN 'una multa'
+           WHEN C.Concepto = 'POLIZA'THEN 'una poliza'
+           WHEN C.Concepto = 'INCAPACIDAD'THEN 'una incapacidad'
+           WHEN C.Concepto = 'REINTEGRO'THEN 'un reintegro'
+           WHEN C.Concepto = 'ARANCEL'THEN 'un arancel'
+           ELSE ''
+       END AS 'UnConcepto' 
+       FROM Conceptos C
+       INNER JOIN Procesos P ON P.ConceptoId = C.ConceptoId
+       where P.ProcesoId=".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
             $info["Concepto"]=$date["Concepto"];
+            $info["delConcepto"]=$date["delConcepto"];
+            $info["UnConcepto"]=$date["UnConcepto"];
         }
 
         $consulta=DB::Query("SELECT S.Email AS 'SeccionalCorreo',
         S.Direccion AS 'SeccionalDireccion',
         S.Telefonos AS 'SeccionalTelefono',
-        s.PiePagina AS 'PiePagina'
+        s.PiePagina AS 'PiePagina',
+        s.NIT AS 'SeccionalNit'
          FROM Seccionales S
         INNER JOIN Procesos P ON P.SeccionalId = S.SeccionalId
         where P.ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
+            $info["SeccionalNit"]=$date["SeccionalNit"];
             $info["SeccionalCorreo"]=$date["SeccionalCorreo"];
             $info["SeccionalDireccion"]=$date["SeccionalDireccion"];
             $info["SeccionalTelefono"]=$date["SeccionalTelefono"];
@@ -181,6 +247,8 @@ class diccionario {
 
         $consulta=DB::Query("SELECT 
         A.Abogado AS 'Abogado',
+        IIF (A.Masculino=1,'El abogado','La abogada') AS 'ElAbogado',
+        IIF (A.Masculino=1,'Doctor','Doctora') AS 'Doctor',
         IIF (A.Masculino=1,'Abogado Ejecutor','Abogada Ejecutora') AS 'AbogadoEjecutor',
         IIF (A.Masculino=1,'El Abogado Ejecutor','La Abogada Ejecutora') AS 'ElAbogadoEjecutor'
         FROM Abogados A
@@ -188,11 +256,13 @@ class diccionario {
         WHERE  P.ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
+            $info["ElAbogado"]=$date["ElAbogado"];
+            $info["Doctor"]=$date["Doctor"];
             $info["Abogado"]=$date["Abogado"];
             $info["AbogadoEjecutor"]=$date["AbogadoEjecutor"];
             $info["ElAbogadoEjecutor"]=$date["ElAbogadoEjecutor"];
         }
-
+        /*
         $consulta=DB::Query("SELECT U.UserName AS 'usuario' FROM Correspondencias C
         INNER JOIN UserProfile U ON U.UserId = C.UserId
         WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
@@ -200,10 +270,97 @@ class diccionario {
 		{
             $info["usuario"]=$date["usuario"];
         }
-            //agregar al array con su llave.
-            //$miArreglo['clave4'] = 'valor4';
-            //$info["Direcciones"]=array("Hola","Sooo","Value");
+        */
+        $consulta=DB::Query("SELECT Fecha AS 'FechaAcuerdo' 
+        from Acuerdos where ProcesoId =".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["FechaAcuerdo"]=$date["FechaAcuerdo"];
+        }
+        $consulta=DB::Query("SELECT  max(Acuerdos.Cuota) AS 'Plazo'
+        FROM Acuerdos WHERE ProcesoId =".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Plazo"]=$date["Plazo"];
+        }
+
+        $consulta=DB::Query("SELECT SUM(Pago) AS 'Recaudo' 
+        FROM Pagos1 WHERE ProcesoId =".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Recaudo"]=$date["Recaudo"];
+        }
+        $variables = array(
+            'Seccional' => '',
+            'Observaciones' => '',
+            'Oficio' => '',
+            'Sigobius' => '',
+            'Fecha' => '',
+            'FechaDiezDias' => '',
+            'FechaNotifiMandaLarga' => '',
+            'FechaNotiManda' => '',
+            'CiudadDespacho' => '',
+            'CiudadDepartamento' => '',
+            'Ciudad' => '',
+            'usuario' => '',
+            'Ano' => '',
+            'Dia' => '',
+            'Mes' => '',
+            'SancionadoCelular' => '',
+            'Telefono' => '',
+            'RespetadoSenor' => '',
+            'Senor' => '',
+            'TipoDocumento' => '',
+            'documento' => '',
+            'SancionadoEmail' => '',
+            'Sancionado' => '',
+            'alsenor' => '',
+            'ElSenor' => '',
+            'Costas' => '',
+            'identificado' => '',
+            'Fallecimiento' => '',
+            'Resolucion' => '',
+            'resolucionEmbargo' => '',
+            'SancionadoCiudad' => '',
+            'ObligacionTotal' => '',
+            'Intereses' => '',
+            'Radicado' => '',
+            'Numero' => '',
+            'Obligacion' => '',
+            'FechaEjecutoriaLarga' => '',
+            'FechaProvidenciaLarga' => '',
+            'fechaProvidencia' => '',
+            'FechaAcuerdoLarga' => '',
+            'FechaEjecutoria' => '',
+            'FechaCreacion' => '',
+            'FechaPrescripcion' => '',
+            'FechaPlazo' => '',
+            'Garantia' => '',
+            'numeroFormat' => '',
+            'Despacho' => '',
+            'Concepto' => '',
+            'delConcepto' => '',
+            'UnConcepto' => '',
+            'SeccionalNit' => '',
+            'SeccionalCorreo' => '',
+            'SeccionalDireccion' => '',
+            'SeccionalTelefono' => '',
+            'PiePagina' => '',
+            'ElAbogado' => '',
+            'Doctor' => '',
+            'Abogado' => '',
+            'AbogadoEjecutor' => '',
+            'ElAbogadoEjecutor' => '',
+            'usuario' => '',
+            'FechaAcuerdo' => '',
+            'Plazo' => '',
+            'Recaudo' => '',
+        );
+        $this->variables=$variables;
+            //$numVariables=count(array_keys($variables));
+            //echo $numVariables;
             return $info;
+        
 		
     }
     public function direcciones(){
@@ -227,7 +384,8 @@ class diccionario {
         return $direcciones;
     }
     public function tablaAcuerdo(){
-        $consulta=DB::Query("SELECT Cuota,Fecha,Capital,Intereses,Costas,InteresesPlazo,Total from Acuerdos WHERE ProcesoId=".$this->procesoId);
+        $consulta=DB::Query("SELECT Cuota,Fecha,Capital,Intereses,Costas,InteresesPlazo,Total 
+        from Acuerdos WHERE ProcesoId=".$this->procesoId);
         //print_r($info);
         while( $date = $consulta->fetchAssoc() )
 		{
@@ -237,6 +395,9 @@ class diccionario {
         }
         //print_r($acuerdo);
         return $acuerdo;
+    }
+    public function getVariables(){
+        return $this->variables;
     }
 }
 class plantillas extends diccionario{

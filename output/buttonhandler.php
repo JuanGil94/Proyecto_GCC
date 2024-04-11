@@ -206,6 +206,16 @@ if($buttId=='ConceptoAbogado')
 	}
 	buttonHandler_ConceptoAbogado($params);
 }
+if($buttId=='CierreMes')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_CierreMes($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -1541,12 +1551,18 @@ function buttonHandler_New_Button10($params)
 //$objeto=new plantillas($params["ProcesoId"]);
 //echo "Value ".$params["OficioId"];
 $objeto=new diccionario;
-$dic=$objeto->process(1029004,1097);
+$objeto->process(1,1);
+$dic=$objeto->getVariables();
+//print_r($dic);
 foreach($dic as $param=>$date){
 $result["txt"][]=$param;
 //echo $param."<br>";
 }
-
+/*
+$recalcular=new reliquidacion($params["ProcesoId"]);
+$meses = $recalcular->Calcular();
+$result["total"]=$recalcular->getSuma();
+*/
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -1610,6 +1626,204 @@ while( $date = $consulta->fetchAssoc() )
             $result["conceptoAbogado"]=$date["ConceptoAbogado"];
     }
 //echo $result["conceptoAbogado"];;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_CierreMes($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	include_once (getabspath("classes/pruebaJuan.php"));
+ini_set('max_execution_time', 0); //quitar el timeout de ejecucion de script
+$consulta=DB::Query("SELECT Cierre FROM Empresas WHERE EmpresaId = 1");
+        while($date=$consulta->fetchAssoc()){
+                $fechaCierre=$date["Cierre"];
+        }
+// Convertimos la cadena de fecha a un objeto DateTime
+$fechaObj= new DateTime($fechaCierre);
+$fechaCierre=$fechaObj->format('Y-m-d');
+// Para reemplazar DATEADD(day, 1, fecha)
+//1. Se Obtienen las fechas a trabajar.
+$fechaObj->modify('+1 day');
+$fechaDesde=$fechaObj->format('Y-m-d');
+$fechaHasta=$fechaObj->format('Y-m-t');
+$anoActual=$fechaObj->format('Y');
+$mesActual=$fechaObj->format('m');
+echo "values: ".$fechaCierre.",".$fechaDesde.",".$fechaHasta;
+//1.1 Se obtienen los procesos a calcular los intereses.
+$consulta=DB::Query("SELECT TOP 3 Procesos.ProcesoId, '".$fechaHasta."' AS Fecha, 10000 AS Intereses, Procesos.SeccionalId, 1 AS Liquidacion
+			   FROM Procesos
+					INNER JOIN
+					CarteraTipos
+					ON Procesos.CarteraTipoId = CarteraTipos.CarteraTipoId
+			   WHERE( Procesos.Acuerdo IS NULL OR 
+					  NOT Procesos.Incumplimiento IS NULL
+					) AND 
+					((Procesos.EstadoId <> 6)) AND 
+					((Procesos.EstadoId <> 7)) AND 
+					--(Procesos.EtapaId = 2) AND 
+					(Procesos.Fecha <= '2024-04-30') AND 
+					--(dbo.Intereses_GetBy_ProcesoId( Procesos.ProcesoId, @Hasta ) > 0) AND 
+					(CarteraTipos.Prescrita = 0)
+					AND DATEADD(day, 1, ISNULL(Plazo, Ejecutoria)) <= '".$fechaHasta."'");
+        while($date=$consulta->fetchAssoc()){
+//1.2 Se calculan los intereses de cada uno de los procesos
+						$recalcular=new reliquidacion($date["ProcesoId"]);
+						$valueIntereses=$recalcular->calInteresesCierre($anoActual,$mesActual);
+           //$procesosId[$date["ProcesoId"]]=$valueIntereses;
+						$fechaHasta=strval($fechaHasta);
+//1.3 Se insertan los intereses calculados en la tabla Intereses.
+						$consulta2=DB::Exec("INSERT INTO Intereses( ProcesoId, Fecha, Intereses, SeccionalId, Liquidacion ) values (".$date["ProcesoId"].",'".$fechaHasta."',".$valueIntereses.",".$date["SeccionalId"].",1)");
+            if ($consulta2) {
+                echo "La consulta se realizó correctamente.";
+                    } 
+             else {
+								  // Hubo un error en la ejecución de la consulta
+								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
+								  //exit();
+                   }
+        }
+//1.3 Se realiza el update de los intereses a cada Proceso en la tabla Proceso.
+$consulta2=DB::Exec("UPDATE Procesos
+		  SET Liquidacion = Intereses.Fecha, Intereses = Procesos.Intereses + Intereses.Intereses, InteresesInicial = Procesos.InteresesInicial + Intereses.Intereses
+		FROM Procesos
+			 INNER JOIN
+			 Intereses
+			 ON Procesos.ProcesoId = Intereses.ProcesoId
+		WHERE(Intereses.Fecha = '".$fechaHasta."') AND 
+			 (Intereses.Liquidacion = 1) AND 
+			 (Intereses.Intereses > 0)");
+            if ($consulta2) {
+                echo "La actualizacion de los intereses se realizo correctamente en todos los procesos.";
+                    } 
+             else {
+								  // Hubo un error en la ejecución de la consulta
+								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
+								  //exit();
+                   }
+//1.4 Se eliminan los intereses que sean igual a 0.
+$consulta=DB::Exec("DELETE FROM Intereses WHERE Fecha = '".$fechaHasta."' and Intereses = 0 and Liquidacion=1");
+            if ($consulta2) {
+                echo "Se eliminan los intereses que sean igual a 0 de la fecha cierre.";
+                    } 
+             else {
+								  // Hubo un error en la ejecución de la consulta
+								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
+								  //exit();
+                   }
+//2. Se Generan los reportes de Movimientos.
+//3. Genera los Historicos 
+$consulta=DB::Exec("INSERT INTO Historicos
+     (Hasta, 
+      ProcesoId, 
+      ConceptoId, 
+      Numero, 
+      Fecha, 
+      Ejecutoria, 
+      Notificacion, 
+      Sancionado, 
+      SancionadoTipoDocumento, 
+      SancionadoDocumento, 
+      Obligacion, 
+      Costas, 
+      Intereses, 
+      Saldo, 
+      CarteraTipoId, 
+      SeccionalId, 
+      Recaudo, 
+      EstadoId, 
+      Prescripcion, 
+      Acuerdo, 
+      Incumplimiento, 
+      Persuasivo, AbogadoId
+     )SELECT DISTINCT TOP 3
+                   '".$fechaHasta."' AS Hasta, 
+                   ProcesoId, 
+                   ConceptoId, 
+                   Numero, 
+                   Fecha, 
+                   Ejecutoria, 
+                   Notificacion, 
+                   Sancionados.Sancionado, 
+                   TiposDocumentos.TipoDocumento, 
+                   Sancionados.Documento, 
+                   Obligacion, 
+                   Costas, 
+                   Intereses, 
+                   (Obligacion+Costas+Intereses) as Saldo, 
+                   CarteraTipoId, 
+                   SeccionalId, 
+                   Recaudo,
+                   CASE
+                       WHEN EstadoId = 6
+                       THEN 2
+                       ELSE EstadoId
+                   END, 
+                   isnull(Dias,0), 
+                   Acuerdo, 
+                   Incumplimiento, 
+                   Persuasivo, AbogadoId
+            FROM Procesos
+			INNER JOIN Sancionados ON Procesos.SancionadoId=Sancionados.SancionadoId
+			INNER JOIN TiposDocumentos ON TiposDocumentos.TipoDocumentoId=Sancionados.TipoDocumentoId
+            WHERE(Fecha <= '".$fechaHasta."')
+                 AND ((EstadoId <> 6)
+                      OR (EstadoId = 6
+                          AND Terminacion > '".$fechaHasta."'));");
+            if ($consulta) {
+                echo "Se insertan los historicos correctamente.";
+                    } 
+             else {
+								  // Hubo un error en la ejecución de la consulta
+								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
+								  //exit();
+                   };
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
