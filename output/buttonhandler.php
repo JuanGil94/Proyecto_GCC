@@ -1729,7 +1729,26 @@ $consulta=DB::Query("SELECT TOP 3 Procesos.ProcesoId, '".$fechaHasta."' AS Fecha
 								  //exit();
                    }
         }
-//1.3 Se realiza el update de los intereses a cada Proceso en la tabla Proceso.
+//1.4 Se eliminan los intereses que sean igual a 0.
+$consulta=DB::Exec("DELETE FROM Intereses WHERE Fecha = '".$fechaHasta."' and Intereses = 0 and Liquidacion=1");
+            if ($consulta2) {
+                echo "Se eliminan los intereses que sean igual a 0 de la fecha cierre.";
+                    } 
+             else {
+								  // Hubo un error en la ejecución de la consulta
+								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
+								  //exit();
+                   }
+//2. Se Generan los reportes de Movimientos.
+$consulta=DB::Exec("dbo.Empresas_Cerrar_Reportes '".$fechaHasta."'");
+if ($consulta){
+echo "El SP dbo.Empresas_Cerrar_Reportes se ejecuto correctamente";
+}
+else{
+echo "El SP dbo.Empresas_Cerrar_Reportes no se pudo ejecutar debido a: ".DB::LastError();
+}
+
+//3 Se realiza el update de los intereses a cada Proceso en la tabla Proceso.
 $consulta2=DB::Exec("UPDATE Procesos
 		  SET Liquidacion = Intereses.Fecha, Intereses = Procesos.Intereses + Intereses.Intereses, InteresesInicial = Procesos.InteresesInicial + Intereses.Intereses
 		FROM Procesos
@@ -1747,18 +1766,7 @@ $consulta2=DB::Exec("UPDATE Procesos
 								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
 								  //exit();
                    }
-//1.4 Se eliminan los intereses que sean igual a 0.
-$consulta=DB::Exec("DELETE FROM Intereses WHERE Fecha = '".$fechaHasta."' and Intereses = 0 and Liquidacion=1");
-            if ($consulta2) {
-                echo "Se eliminan los intereses que sean igual a 0 de la fecha cierre.";
-                    } 
-             else {
-								  // Hubo un error en la ejecución de la consulta
-								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
-								  //exit();
-                   }
-//2. Se Generan los reportes de Movimientos.
-//3. Genera los Historicos 
+//4. Genera los Historicos 
 $consulta=DB::Exec("INSERT INTO Historicos
      (Hasta, 
       ProcesoId, 
@@ -1823,7 +1831,33 @@ $consulta=DB::Exec("INSERT INTO Historicos
 								  // Hubo un error en la ejecución de la consulta
 								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
 								  //exit();
-                   };
+                   }
+//5. Genera los indicadores
+$consulta=DB::Exec("dbo.Empresas_Cerrar_Indicadores '".$fechaHasta."'");
+if ($consulta){
+echo "El SP dbo.Empresas_Cerrar_Indicadores se ejecuto correctamente";
+}
+else{
+echo "El SP dbo.Empresas_Cerrar_Indicadores no se pudo ejecutar debido a: ".DB::LastError();
+}
+//-- 7. Cierra el mes
+$consulta=DB::Exec("UPDATE Empresas
+		  SET Cierre = '".$fechaHasta."'
+		WHERE EmpresaId = 1");
+if ($consulta){
+echo "Se actualiza el cierre";
+}
+else{
+echo "No se actualizo el cierre debido a: ".DB::LastError();
+}
+//--9. Empresas_Cerrar_Deterioro
+$consulta=DB::Exec("dbo.Empresas_Cerrar_Deterioro");
+if ($consulta){
+echo "El SP dbo.Empresas_Cerrar_Deterioro se ejecuto correctamente";
+}
+else{
+echo "El SP dbo.Empresas_Cerrar_Deterioro no se pudo ejecutar debido a: ".DB::LastError();
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
