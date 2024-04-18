@@ -76,6 +76,9 @@ pdfDocument = {
 										{BEGIN col_grid_3}
 					"%",
 					{END col_grid_3}
+										{BEGIN col_grid_4}
+					"%",
+					{END col_grid_4}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -179,7 +182,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_add}"},
+			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
@@ -316,7 +319,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Fecha_align}',
      
       
       },
@@ -345,12 +348,38 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Intereses_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field2}
 											],
 				{END row_grid_0}
 		
@@ -379,6 +408,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
@@ -442,7 +474,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Fecha_align}',
      
       
       },
@@ -471,12 +503,38 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Intereses_align}',
      
       
       },
 
 {END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
 											],
 				{END row_grid_1}
 		
@@ -543,7 +601,6 @@ pdfDocument = {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
-			fieldName: 'Fecha',
 				style: 'footcell',
 		
 		
@@ -570,7 +627,34 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Intereses',
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event SumaInteresesTable}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field1}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
 				style: 'footcell',
 		
 		
@@ -591,7 +675,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field1}
+{END cellblock_grid_cell_field4}
 											],
 				{END row_grid_2}
 		

@@ -689,7 +689,7 @@ class reliquidacion extends CalendarioAnual{
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),2);
                     $sumaTotal+=$valorDias;
-                    $elementos=range(1,$dias);
+                    $elementos=range(1,$numDiasMesAct);
                     foreach($elementos as $dia){
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                         $sumaTotalDiaria+=$valorDiario;
@@ -1250,6 +1250,7 @@ class reliquidacion extends CalendarioAnual{
                     $numDiasMesAct1=$diaAct;
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct1*100),2);
+                    //echo $valorDias+$sumaTotalDiaria;
                     $sumaTotal+=$valorDias;
                     $elementos=range(1,$numDiasMesAct1);
                     //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct1." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."<br></strong>";
@@ -1258,6 +1259,7 @@ class reliquidacion extends CalendarioAnual{
                     foreach($elementos as $dia){   
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                         $sumaTotalDiaria+=$valorDiario;
+                        //echo "SumaTotalDiaria".$dia.": ".$sumaTotalDiaria."<br>";
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
@@ -1317,10 +1319,14 @@ class reliquidacion extends CalendarioAnual{
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),2);
                     $sumaTotal+=$valorDias;
-                    $elementos=range(1,$dias);
+                    //echo "SumaTotal: ".$sumaTotal."<br>";
+                    $elementos=range(1,$numDiasMesAct);
+                    //echo "SumaTotalDiaria: ".$sumaTotalDiaria."<br>";
                     foreach($elementos as $dia){
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                        //echo "valorDiario: ".$valorDiario."<br>";
                         $sumaTotalDiaria+=$valorDiario;
+                        //echo "SumaTotalDiaria".$dia.": ".$sumaTotalDiaria."<br>";
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
@@ -1365,10 +1371,12 @@ class reliquidacion extends CalendarioAnual{
                     $costReca=$costPor;
                     $costas=$costas-$costReca;
                     $costSald=$costas;
+                    //echo "SumaTotalDiaria: ".$sumaTotalDiaria."<br>";
                     //$obligacion=$obligacion-$obliPor;
                     $sumaTotal=$sumaTotalDiaria-$inteReca;
                     //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;
                     //$obligacion=$obligacion-$obliPor;
+                    //echo "SumaTotal: ".$sumaTotal."<br>";
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),4);
                     ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotalDiaria."</strong>";
                     $this->insertRe($numero,$fechaBase,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald); 

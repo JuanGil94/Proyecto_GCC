@@ -212,7 +212,7 @@ $tdataliquidaciones[".strOrderBy"] = $tstrOrderBy;
 $tdataliquidaciones[".orderindexes"] = array();
 
 
-$tdataliquidaciones[".sqlHead"] = "SELECT LiquidacionId,  	ProcesoId,  	Cuota,  	Fecha,  	Capital,  	Intereses,  	Total,  	Costas,  	InteresesPlazo";
+$tdataliquidaciones[".sqlHead"] = "SELECT LiquidacionId,  	ProcesoId,  	Cuota,  	Fecha,  	FORMAT(Capital, 'C', 'es-CO') Capital,  	FORMAT(Intereses, 'C', 'es-CO') Intereses,  	FORMAT(Total, 'C', 'es-CO') Total,  	FORMAT(Costas, 'C', 'es-CO') Costas,  	FORMAT(InteresesPlazo, 'C', 'es-CO') InteresesPlazo";
 $tdataliquidaciones[".sqlFrom"] = "FROM dbo.Liquidaciones";
 $tdataliquidaciones[".sqlWhereExpr"] = "";
 $tdataliquidaciones[".sqlTail"] = "";
@@ -846,9 +846,9 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "Capital";
 	$fdata["GoodName"] = "Capital";
-	$fdata["ownerTable"] = "dbo.Liquidaciones";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Liquidaciones","Capital");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -860,7 +860,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Capital";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Capital";
+	$fdata["FullName"] = "FORMAT(Capital, 'C', 'es-CO')";
 
 	
 	
@@ -869,7 +869,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -878,8 +878,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -925,7 +924,8 @@ $tdataliquidaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=19";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -985,9 +985,9 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	$fdata["Index"] = 6;
 	$fdata["strName"] = "Intereses";
 	$fdata["GoodName"] = "Intereses";
-	$fdata["ownerTable"] = "dbo.Liquidaciones";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Liquidaciones","Intereses");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -999,7 +999,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Intereses";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Intereses";
+	$fdata["FullName"] = "FORMAT(Intereses, 'C', 'es-CO')";
 
 	
 	
@@ -1008,7 +1008,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1017,8 +1017,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1064,7 +1063,8 @@ $tdataliquidaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=19";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1124,9 +1124,9 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	$fdata["Index"] = 7;
 	$fdata["strName"] = "Total";
 	$fdata["GoodName"] = "Total";
-	$fdata["ownerTable"] = "dbo.Liquidaciones";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Liquidaciones","Total");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -1138,7 +1138,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Total";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Total";
+	$fdata["FullName"] = "FORMAT(Total, 'C', 'es-CO')";
 
 	
 	
@@ -1147,7 +1147,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1156,8 +1156,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1203,7 +1202,8 @@ $tdataliquidaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=19";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1263,9 +1263,9 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	$fdata["Index"] = 8;
 	$fdata["strName"] = "Costas";
 	$fdata["GoodName"] = "Costas";
-	$fdata["ownerTable"] = "dbo.Liquidaciones";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Liquidaciones","Costas");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -1277,7 +1277,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Costas";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Costas";
+	$fdata["FullName"] = "FORMAT(Costas, 'C', 'es-CO')";
 
 	
 	
@@ -1286,7 +1286,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1295,8 +1295,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1342,7 +1341,8 @@ $tdataliquidaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=19";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1402,9 +1402,9 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	$fdata["Index"] = 9;
 	$fdata["strName"] = "InteresesPlazo";
 	$fdata["GoodName"] = "InteresesPlazo";
-	$fdata["ownerTable"] = "dbo.Liquidaciones";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Liquidaciones","InteresesPlazo");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -1416,7 +1416,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "InteresesPlazo";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "InteresesPlazo";
+	$fdata["FullName"] = "FORMAT(InteresesPlazo, 'C', 'es-CO')";
 
 	
 	
@@ -1425,7 +1425,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1434,8 +1434,7 @@ $tdataliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1481,7 +1480,8 @@ $tdataliquidaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=19";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1597,7 +1597,7 @@ function createSqlQuery_liquidaciones()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "LiquidacionId,  	ProcesoId,  	Cuota,  	Fecha,  	Capital,  	Intereses,  	Total,  	Costas,  	InteresesPlazo";
+$proto0["m_strFieldList"] = "LiquidacionId,  	ProcesoId,  	Cuota,  	Fecha,  	FORMAT(Capital, 'C', 'es-CO') Capital,  	FORMAT(Intereses, 'C', 'es-CO') Intereses,  	FORMAT(Total, 'C', 'es-CO') Total,  	FORMAT(Costas, 'C', 'es-CO') Costas,  	FORMAT(InteresesPlazo, 'C', 'es-CO') InteresesPlazo";
 $proto0["m_strFrom"] = "FROM dbo.Liquidaciones";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1694,114 +1694,189 @@ $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Capital",
-	"m_strTable" => "dbo.Liquidaciones",
-	"m_srcTableName" => "dbo.Liquidaciones"
+			$proto15=array();
+$proto15["m_functiontype"] = "SQLF_CUSTOM";
+$proto15["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Capital"
 ));
 
-$proto14["m_sql"] = "Capital";
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto15["m_arguments"][]=$obj;
+$proto15["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto15);
+
+$proto14["m_sql"] = "FORMAT(Capital, 'C', 'es-CO')";
 $proto14["m_srcTableName"] = "dbo.Liquidaciones";
 $proto14["m_expr"]=$obj;
-$proto14["m_alias"] = "";
+$proto14["m_alias"] = "Capital";
 $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto16=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Intereses",
-	"m_strTable" => "dbo.Liquidaciones",
-	"m_srcTableName" => "dbo.Liquidaciones"
+						$proto19=array();
+			$proto20=array();
+$proto20["m_functiontype"] = "SQLF_CUSTOM";
+$proto20["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Intereses"
 ));
 
-$proto16["m_sql"] = "Intereses";
-$proto16["m_srcTableName"] = "dbo.Liquidaciones";
-$proto16["m_expr"]=$obj;
-$proto16["m_alias"] = "";
-$obj = new SQLFieldListItem($proto16);
+$proto20["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto20["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto20["m_arguments"][]=$obj;
+$proto20["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto20);
+
+$proto19["m_sql"] = "FORMAT(Intereses, 'C', 'es-CO')";
+$proto19["m_srcTableName"] = "dbo.Liquidaciones";
+$proto19["m_expr"]=$obj;
+$proto19["m_alias"] = "Intereses";
+$obj = new SQLFieldListItem($proto19);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto18=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Total",
-	"m_strTable" => "dbo.Liquidaciones",
-	"m_srcTableName" => "dbo.Liquidaciones"
+						$proto24=array();
+			$proto25=array();
+$proto25["m_functiontype"] = "SQLF_CUSTOM";
+$proto25["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Total"
 ));
 
-$proto18["m_sql"] = "Total";
-$proto18["m_srcTableName"] = "dbo.Liquidaciones";
-$proto18["m_expr"]=$obj;
-$proto18["m_alias"] = "";
-$obj = new SQLFieldListItem($proto18);
+$proto25["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto25["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto25["m_arguments"][]=$obj;
+$proto25["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto25);
+
+$proto24["m_sql"] = "FORMAT(Total, 'C', 'es-CO')";
+$proto24["m_srcTableName"] = "dbo.Liquidaciones";
+$proto24["m_expr"]=$obj;
+$proto24["m_alias"] = "Total";
+$obj = new SQLFieldListItem($proto24);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto20=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Costas",
-	"m_strTable" => "dbo.Liquidaciones",
-	"m_srcTableName" => "dbo.Liquidaciones"
+						$proto29=array();
+			$proto30=array();
+$proto30["m_functiontype"] = "SQLF_CUSTOM";
+$proto30["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Costas"
 ));
 
-$proto20["m_sql"] = "Costas";
-$proto20["m_srcTableName"] = "dbo.Liquidaciones";
-$proto20["m_expr"]=$obj;
-$proto20["m_alias"] = "";
-$obj = new SQLFieldListItem($proto20);
+$proto30["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto30["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto30["m_arguments"][]=$obj;
+$proto30["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto30);
+
+$proto29["m_sql"] = "FORMAT(Costas, 'C', 'es-CO')";
+$proto29["m_srcTableName"] = "dbo.Liquidaciones";
+$proto29["m_expr"]=$obj;
+$proto29["m_alias"] = "Costas";
+$obj = new SQLFieldListItem($proto29);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto22=array();
-			$obj = new SQLField(array(
-	"m_strName" => "InteresesPlazo",
-	"m_strTable" => "dbo.Liquidaciones",
-	"m_srcTableName" => "dbo.Liquidaciones"
+						$proto34=array();
+			$proto35=array();
+$proto35["m_functiontype"] = "SQLF_CUSTOM";
+$proto35["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "InteresesPlazo"
 ));
 
-$proto22["m_sql"] = "InteresesPlazo";
-$proto22["m_srcTableName"] = "dbo.Liquidaciones";
-$proto22["m_expr"]=$obj;
-$proto22["m_alias"] = "";
-$obj = new SQLFieldListItem($proto22);
+$proto35["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto35["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto35["m_arguments"][]=$obj;
+$proto35["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto35);
+
+$proto34["m_sql"] = "FORMAT(InteresesPlazo, 'C', 'es-CO')";
+$proto34["m_srcTableName"] = "dbo.Liquidaciones";
+$proto34["m_expr"]=$obj;
+$proto34["m_alias"] = "InteresesPlazo";
+$obj = new SQLFieldListItem($proto34);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto24=array();
-$proto24["m_link"] = "SQLL_MAIN";
-			$proto25=array();
-$proto25["m_strName"] = "dbo.Liquidaciones";
-$proto25["m_srcTableName"] = "dbo.Liquidaciones";
-$proto25["m_columns"] = array();
-$proto25["m_columns"][] = "LiquidacionId";
-$proto25["m_columns"][] = "ProcesoId";
-$proto25["m_columns"][] = "Cuota";
-$proto25["m_columns"][] = "Fecha";
-$proto25["m_columns"][] = "Capital";
-$proto25["m_columns"][] = "Intereses";
-$proto25["m_columns"][] = "Total";
-$proto25["m_columns"][] = "Costas";
-$proto25["m_columns"][] = "InteresesPlazo";
-$obj = new SQLTable($proto25);
+												$proto39=array();
+$proto39["m_link"] = "SQLL_MAIN";
+			$proto40=array();
+$proto40["m_strName"] = "dbo.Liquidaciones";
+$proto40["m_srcTableName"] = "dbo.Liquidaciones";
+$proto40["m_columns"] = array();
+$proto40["m_columns"][] = "LiquidacionId";
+$proto40["m_columns"][] = "ProcesoId";
+$proto40["m_columns"][] = "Cuota";
+$proto40["m_columns"][] = "Fecha";
+$proto40["m_columns"][] = "Capital";
+$proto40["m_columns"][] = "Intereses";
+$proto40["m_columns"][] = "Total";
+$proto40["m_columns"][] = "Costas";
+$proto40["m_columns"][] = "InteresesPlazo";
+$obj = new SQLTable($proto40);
 
-$proto24["m_table"] = $obj;
-$proto24["m_sql"] = "dbo.Liquidaciones";
-$proto24["m_alias"] = "";
-$proto24["m_srcTableName"] = "dbo.Liquidaciones";
-$proto26=array();
-$proto26["m_sql"] = "";
-$proto26["m_uniontype"] = "SQLL_UNKNOWN";
+$proto39["m_table"] = $obj;
+$proto39["m_sql"] = "dbo.Liquidaciones";
+$proto39["m_alias"] = "";
+$proto39["m_srcTableName"] = "dbo.Liquidaciones";
+$proto41=array();
+$proto41["m_sql"] = "";
+$proto41["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto26["m_column"]=$obj;
-$proto26["m_contained"] = array();
-$proto26["m_strCase"] = "";
-$proto26["m_havingmode"] = false;
-$proto26["m_inBrackets"] = false;
-$proto26["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto26);
+$proto41["m_column"]=$obj;
+$proto41["m_contained"] = array();
+$proto41["m_strCase"] = "";
+$proto41["m_havingmode"] = false;
+$proto41["m_inBrackets"] = false;
+$proto41["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto41);
 
-$proto24["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto24);
+$proto39["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto39);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
