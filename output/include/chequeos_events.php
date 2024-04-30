@@ -24,8 +24,6 @@
 
 		$this->events["AfterEdit"]=true;
 
-		$this->events["BeforeEdit"]=true;
-
 		$this->events["BeforeAdd"]=true;
 
 		$this->events["BeforeQueryList"]=true;
@@ -213,6 +211,19 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
 		
+$consulta=DB::exec("declare @p2 int
+set @p2=0
+declare @p3 nvarchar(max)
+set @p3=N''
+exec [dbo].[Chequeos_Validar] @ChequeoId=".$values["ChequeoId"].",@Err_num=@p2 output,@Err_msg=@p3 output
+select @p2 error_num, @p3 error-msg");
+
+/*$consulta=DB::Query("SELECT Cierre FROM Empresas WHERE EmpresaId = 1");
+        while($date=$consulta->fetchAssoc()){
+                $fechaCierre=$date["Cierre"];
+        }
+*/
+
 /*
 echo "<script>var confirm1;
 confirm1=confirm('EL REGISTRO FUE REALIZADO CON EXITO');
@@ -514,85 +525,13 @@ return true;
 function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 {
 
-		$pageObject->setProxyValue('saved', true);  
-$pageObject->stopPRG = true;
+		//$pageObject->setProxyValue('saved', true);  
+//$pageObject->stopPRG = true;
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;
 } // function AfterEdit
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				// Before record updated
-function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
-{
-
-		
-;
-} // function BeforeEdit
-
-		
-		
 		
 		
 		
