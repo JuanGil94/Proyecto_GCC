@@ -1,25 +1,3 @@
-  #value_ObligacionLetras_86{
-    width:500px;
-    display: block; /* Cambia el comportamiento del input a bloque */
-    margin: 0 auto;
-    background-color: #71B98A;
-	color: #FFFFFF;
-	pointer-events: none;
-}
-#value_CantidadLetras_86{
-    width:350.5px;
-    display: block; /* Cambia el comportamiento del input a bloque */
-    margin: 0 auto;
-    background-color: #71B98A;
-	color: #FFFFFF;
-	pointer-events: none;
-}
-#value_Obligacion_86{
-    display: block; /* Cambia el comportamiento del input a bloque */
-    margin: 0 auto;
-    pointer-events: none;
-}
-
 .table2{
     width: 20% !important;
     max-width: 20% !important;
