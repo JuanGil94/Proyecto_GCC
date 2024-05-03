@@ -140,7 +140,7 @@ $tdatacarceles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																								
+																																																																																																																																				
 
 $tdatacarceles[".ajaxCodeSnippetAdded"] = false;
 

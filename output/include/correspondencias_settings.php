@@ -155,13 +155,13 @@ $tdatacorrespondencias[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																										
 
 $tdatacorrespondencias[".ajaxCodeSnippetAdded"] = false;
 
 $tdatacorrespondencias[".buttonsAdded"] = false;
 
-$tdatacorrespondencias[".addPageEvents"] = false;
+$tdatacorrespondencias[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatacorrespondencias[".isUseTimeForSearch"] = false;

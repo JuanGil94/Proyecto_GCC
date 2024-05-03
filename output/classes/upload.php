@@ -17,7 +17,7 @@ for ($i=0;$i<count($archivo["name"]);$i++){
         $tamanioArchivo = $archivo["size"][$i];
         $archivoTemporal = $archivo["tmp_name"][$i];
         // Mover el archivo a una ubicación deseada
-        $ubicacionDestino = "carpeta_destino/" . $nombreArchivo;
+        //$ubicacionDestino = "carpeta_destino/" . $nombreArchivo;
         $flag=move_uploaded_file($archivoTemporal, $procesoId.'/'.$nombreArchivo);
         //echo $flag."<br>";
         //echo "Archivo subido con éxito: $ubicacionDestino<br>";      

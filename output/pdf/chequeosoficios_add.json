@@ -163,19 +163,7 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_ChequeosOficios OficioId }","bold":true},{"text":{$OficioId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_ChequeosOficios Fecha }","bold":true},{"text":{$Fecha_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_ChequeosOficios Radicado }","bold":true},{"text":{$Radicado_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_ChequeosOficios Codigo }","bold":true},{"text":{$Codigo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_ChequeosOficios Observaciones }","bold":true},{"text":{$Observaciones_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_ChequeosOficios ChequeoId }","bold":true},{"text":{$ChequeoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

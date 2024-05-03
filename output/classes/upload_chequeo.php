@@ -15,15 +15,18 @@ if (!is_dir($procesoId)){
 }
 */
 $nombre='Chequeo_'.$chequeoId.'.pdf';
-move_uploaded_file($archivo['tmp_name'],$nombre);
-header("Refresh: 2; URL=../chequeos_list.php");
-echo "<h1>Documento subido correctamente</h1>";
-
+$flag=move_uploaded_file($archivo['tmp_name'],$nombre);
+//header("Refresh: 2; URL=../chequeos_list.php");
+//echo "<h1>Documento subido correctamente</h1>";
+if ($flag){
+    echo "<script>alert('Archivo Subido Correctamentenete');window.location.href='../Chequeos_list.php';</script>";
+}
 
 /*
 var_dump($archivo);
 die();
 */
+/*
 class Files {
     private $procesoId;
     public function __construct($procesoId) {
@@ -33,3 +36,4 @@ class Files {
         echo "Hola desde MiClase: ".$this->procesoId;
     }
 }
+*/

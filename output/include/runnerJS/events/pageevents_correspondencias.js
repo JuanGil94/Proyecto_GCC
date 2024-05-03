@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('dbo.Correspondencias',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){this.on('afterSave',function(formObj,fieldControlsArr,pageObj){swal({icon:"success",text:"Se ingresa el Oficio Devolucion Correctamente"})});});

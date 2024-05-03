@@ -15,6 +15,7 @@
 		$this->events["CustomAdd"]=true;
 
 
+
 	}
 
 //	handlers
@@ -78,6 +79,71 @@ return true;
 ;
 } // function CustomAdd
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

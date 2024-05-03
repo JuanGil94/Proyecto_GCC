@@ -155,7 +155,7 @@ $tdatareportecorporaci_nespecialidad[".isUseAjaxSuggest"] = true;
 
 
 
-																																																												
+																																																																		
 
 $tdatareportecorporaci_nespecialidad[".ajaxCodeSnippetAdded"] = false;
 
