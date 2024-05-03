@@ -30,4 +30,14 @@ if (isset($_GET["w1"])) {
        });</script>";
 
     }
+    elseif (isset($_GET["w4"])){
+        $chequeoId = $_GET["w1"];
+        $procesoId=intval($chequeoId);
+        $consulta=DB::Query("SELECT * FROM ChequeosOficios where ChequeoId =".$chequeoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+           echo $obligacion=$date["Obligacion"];
+        }
+    }
 

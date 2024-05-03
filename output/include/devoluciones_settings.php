@@ -140,13 +140,13 @@ $tdatadevoluciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																								
 
 $tdatadevoluciones[".ajaxCodeSnippetAdded"] = false;
 
 $tdatadevoluciones[".buttonsAdded"] = false;
 
-$tdatadevoluciones[".addPageEvents"] = false;
+$tdatadevoluciones[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatadevoluciones[".isUseTimeForSearch"] = false;
@@ -674,7 +674,7 @@ $tdatadevoluciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1396,6 +1396,7 @@ $tdatadevoluciones[".sqlquery"] = $queryData_devoluciones;
 
 
 
-$tdatadevoluciones[".hasEvents"] = false;
+include_once(getabspath("include/devoluciones_events.php"));
+$tdatadevoluciones[".hasEvents"] = true;
 
 ?>

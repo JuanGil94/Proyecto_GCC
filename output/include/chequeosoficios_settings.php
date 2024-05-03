@@ -143,13 +143,13 @@ $tdatachequeosoficios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatachequeosoficios[".ajaxCodeSnippetAdded"] = false;
 
 $tdatachequeosoficios[".buttonsAdded"] = false;
 
-$tdatachequeosoficios[".addPageEvents"] = false;
+$tdatachequeosoficios[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatachequeosoficios[".isUseTimeForSearch"] = false;
@@ -473,7 +473,8 @@ $tdatachequeosoficios[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "Oficio";
 
-	
+				$edata["LookupWhere"] = "Oficio like 'DEV_%' and Edicion=1";
+
 
 	
 	$edata["LookupOrderBy"] = "";
@@ -529,7 +530,7 @@ $tdatachequeosoficios[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1578,6 +1579,7 @@ $tdatachequeosoficios[".sqlquery"] = $queryData_chequeosoficios;
 
 
 
-$tdatachequeosoficios[".hasEvents"] = false;
+include_once(getabspath("include/chequeosoficios_events.php"));
+$tdatachequeosoficios[".hasEvents"] = true;
 
 ?>
