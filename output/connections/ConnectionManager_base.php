@@ -284,7 +284,6 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Conceptos1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Procesos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Solidarios"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["dbo.Actuaciones1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Llamadas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Medidas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Acuerdos"] = "GCC_at_S00001_CCAD01";
@@ -350,6 +349,8 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.ProcesosSinNotificaReport"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ReporteCorporaciónEspecialidad"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.CorporacionesView"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Fechas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.AuditoriasProcesosView"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

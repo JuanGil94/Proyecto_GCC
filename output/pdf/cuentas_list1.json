@@ -88,6 +88,9 @@ pdfDocument = {
 										{BEGIN col_grid_7}
 					"%",
 					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -476,6 +479,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
+			fieldName: 'NaturalezaId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Cuentas NaturalezaId }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$NaturalezaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
 											],
 				{END row_grid_0}
 		
@@ -715,6 +747,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
+			fieldName: 'NaturalezaId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$NaturalezaId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
 											],
 				{END row_grid_1}
 		
@@ -932,6 +993,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field5}
+																							{BEGIN cellblock_grid_footcell_field1}
+{
+	cellId: 'footcell_field1',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field1}
 											],
 				{END row_grid_2}
 		

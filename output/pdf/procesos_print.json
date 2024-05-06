@@ -2463,11 +2463,6 @@ pdfDocument = {
 		{END details_solidarios},
 				
 				
-			 {BEGIN details_actuaciones1}
-			{$displayDetailTable_actuaciones1 }
-		{END details_actuaciones1},
-				
-				
 			 {BEGIN details_llamadas}
 			{$displayDetailTable_llamadas }
 		{END details_llamadas},
@@ -2521,6 +2516,16 @@ pdfDocument = {
 			 {BEGIN details_liquidaciones}
 			{$displayDetailTable_liquidaciones }
 		{END details_liquidaciones},
+				
+				
+			 {BEGIN details_fechas}
+			{$displayDetailTable_fechas }
+		{END details_fechas},
+				
+				
+			 {BEGIN details_auditoriasprocesosview}
+			{$displayDetailTable_auditoriasprocesosview }
+		{END details_auditoriasprocesosview},
 				
 		  ],
   "border": [ true, true, true, true ],

@@ -6,11 +6,11 @@ $tdatacuentas[".OwnerID"] = "";
 $tdatacuentas[".OriginalTable"] = "dbo.Cuentas";
 
 
-$tdatacuentas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
+$tdatacuentas[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"search\":[\"search\"]}" );
 $tdatacuentas[".originalPagesByType"] = $tdatacuentas[".pagesByType"];
-$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
+$tdatacuentas[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"search\":[\"search\"]}" ) );
 $tdatacuentas[".originalPages"] = $tdatacuentas[".pages"];
-$tdatacuentas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list1\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
+$tdatacuentas[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list1\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"search\":\"search\"}" );
 $tdatacuentas[".originalDefaultPages"] = $tdatacuentas[".defaultPages"];
 
 //	field labels
@@ -46,6 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscuentas["Spanish"]["Activa"] = "Activa";
 	$fieldToolTipscuentas["Spanish"]["Activa"] = "";
 	$placeHolderscuentas["Spanish"]["Activa"] = "";
+	$fieldLabelscuentas["Spanish"]["NaturalezaId"] = "Naturaleza Id";
+	$fieldToolTipscuentas["Spanish"]["NaturalezaId"] = "";
+	$placeHolderscuentas["Spanish"]["NaturalezaId"] = "";
 	if (count($fieldToolTipscuentas["Spanish"]))
 		$tdatacuentas[".isUseToolTips"] = true;
 }
@@ -170,6 +173,7 @@ $tdatacuentas[".googleLikeFields"][] = "Numero";
 $tdatacuentas[".googleLikeFields"][] = "SeccionalId";
 $tdatacuentas[".googleLikeFields"][] = "ConceptoId";
 $tdatacuentas[".googleLikeFields"][] = "Activa";
+$tdatacuentas[".googleLikeFields"][] = "NaturalezaId";
 
 
 
@@ -204,7 +208,7 @@ $tdatacuentas[".strOrderBy"] = $tstrOrderBy;
 $tdatacuentas[".orderindexes"] = array();
 
 
-$tdatacuentas[".sqlHead"] = "SELECT CuentaId,  	Cuenta,  	BancoId,  	Numero,  	SeccionalId,  	ConceptoId,  	Activa";
+$tdatacuentas[".sqlHead"] = "SELECT CuentaId,  	Cuenta,  	BancoId,  	Numero,  	SeccionalId,  	ConceptoId,  	Activa,  	NaturalezaId";
 $tdatacuentas[".sqlFrom"] = "FROM dbo.Cuentas";
 $tdatacuentas[".sqlWhereExpr"] = "";
 $tdatacuentas[".sqlTail"] = "";
@@ -1301,6 +1305,144 @@ $tdatacuentas[".hideMobileList"] = array();
 
 	$tdatacuentas["Activa"] = $fdata;
 		$tdatacuentas[".searchableFields"][] = "Activa";
+//	NaturalezaId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "NaturalezaId";
+	$fdata["GoodName"] = "NaturalezaId";
+	$fdata["ownerTable"] = "dbo.Cuentas";
+	$fdata["Label"] = GetFieldLabel("dbo_Cuentas","NaturalezaId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "NaturalezaId";
+
+		$fdata["sourceSingle"] = "NaturalezaId";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "NaturalezaId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacuentas["NaturalezaId"] = $fdata;
+		$tdatacuentas[".searchableFields"][] = "NaturalezaId";
 
 
 $tables_data["dbo.Cuentas"]=&$tdatacuentas;
@@ -1393,7 +1535,7 @@ function createSqlQuery_cuentas()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "CuentaId,  	Cuenta,  	BancoId,  	Numero,  	SeccionalId,  	ConceptoId,  	Activa";
+$proto0["m_strFieldList"] = "CuentaId,  	Cuenta,  	BancoId,  	Numero,  	SeccionalId,  	ConceptoId,  	Activa,  	NaturalezaId";
 $proto0["m_strFrom"] = "FROM dbo.Cuentas";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1531,43 +1673,58 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "dbo.Cuentas";
-$proto21["m_srcTableName"] = "dbo.Cuentas";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "CuentaId";
-$proto21["m_columns"][] = "Cuenta";
-$proto21["m_columns"][] = "BancoId";
-$proto21["m_columns"][] = "Numero";
-$proto21["m_columns"][] = "SeccionalId";
-$proto21["m_columns"][] = "ConceptoId";
-$proto21["m_columns"][] = "Activa";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "NaturalezaId",
+	"m_strTable" => "dbo.Cuentas",
+	"m_srcTableName" => "dbo.Cuentas"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "dbo.Cuentas";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "NaturalezaId";
 $proto20["m_srcTableName"] = "dbo.Cuentas";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "dbo.Cuentas";
+$proto23["m_srcTableName"] = "dbo.Cuentas";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "CuentaId";
+$proto23["m_columns"][] = "Cuenta";
+$proto23["m_columns"][] = "BancoId";
+$proto23["m_columns"][] = "Numero";
+$proto23["m_columns"][] = "SeccionalId";
+$proto23["m_columns"][] = "ConceptoId";
+$proto23["m_columns"][] = "Activa";
+$proto23["m_columns"][] = "NaturalezaId";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "dbo.Cuentas";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "dbo.Cuentas";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1583,7 +1740,7 @@ $queryData_cuentas = createSqlQuery_cuentas();
 	
 		;
 
-							
+								
 
 $tdatacuentas[".sqlquery"] = $queryData_cuentas;
 

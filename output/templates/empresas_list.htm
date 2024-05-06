@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Tope}</span>
 						</div>
 		{END searchCtrlBlock_Tope}
+																{BEGIN searchCtrlBlock_MaximoUvb}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_MaximoUvb}" {$filterRow_attrs_MaximoUvb}>
+			<label>{$label dbo_Empresas MaximoUvb }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_MaximoUvb}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_MaximoUvb}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_MaximoUvb}</span>
+						</div>
+		{END searchCtrlBlock_MaximoUvb}
 																{BEGIN searchCtrlBlock_MaximoUvt}
 
 
@@ -691,6 +704,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_MaximoUvb" checked="checked" value="1" data-field="MaximoUvb" data-fieldname="MaximoUvb">
+					<span>{$label dbo_Empresas MaximoUvb }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -734,6 +757,9 @@
 	}
 						[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteresesPlazo"]:before {
 		content: "{$label dbo_Empresas InteresesPlazo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MaximoUvb"]:before {
+		content: "{$label dbo_Empresas MaximoUvb}";
 	}
 	}
 </style>
@@ -1027,6 +1053,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MaximoUvb_class}	"
+
+			data-field="MaximoUvb"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MaximoUvb_fieldheadercolumn}
+	{BEGIN MaximoUvb_fieldheader}
+	<SPAN {$MaximoUvb_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MaximoUvb" data-fieldname="MaximoUvb">
+	{$label dbo_Empresas MaximoUvb }	{$arrow_icon_MaximoUvb}
+	</SPAN>
+	{END MaximoUvb_fieldheader}
+{END MaximoUvb_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
 							</tr>
 															
 					{END grid_header}
@@ -1293,6 +1344,27 @@
 {END InteresesPlazo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MaximoUvb_class}	"
+
+			data-field="MaximoUvb"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MaximoUvb_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MaximoUvb" data-fieldname="MaximoUvb" data-default-width >
+{$MaximoUvb_value}
+</span>
+{END MaximoUvb_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
 							</tr>
 										
 											{END grid_row}
@@ -1484,6 +1556,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MaximoUvb_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="empresas_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
 							</tr>
 					
 					</tfoot>

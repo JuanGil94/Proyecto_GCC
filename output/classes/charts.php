@@ -460,8 +460,6 @@ class Chart
 			return true;
 		if("dbo.Solidarios" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Actuaciones" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Llamadas" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Medidas" == $this->chrt_array['tables'][0])
@@ -591,6 +589,10 @@ class Chart
 		if("dbo.Procesos" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.CorporacionesView" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Fechas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.AuditoriasProcesosView" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

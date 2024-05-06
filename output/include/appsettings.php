@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1953_1713368274";
+$projectBuildKey = "1962_1714998979";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "1953";
+$projectBuildNumber = "1962";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -808,7 +808,6 @@ $tableCaptions["Spanish"]["dbo_Tramites"] = "Tramites";
 $tableCaptions["Spanish"]["dbo_Conceptos1"] = "Conceptos1";
 $tableCaptions["Spanish"]["dbo_Procesos"] = "Procesos";
 $tableCaptions["Spanish"]["dbo_Solidarios"] = "Solidarios";
-$tableCaptions["Spanish"]["dbo_Actuaciones1"] = "Actuaciones1";
 $tableCaptions["Spanish"]["dbo_Llamadas"] = "Llamadas";
 $tableCaptions["Spanish"]["dbo_Medidas"] = "Medidas";
 $tableCaptions["Spanish"]["dbo_Acuerdos"] = "Acuerdos";
@@ -874,6 +873,8 @@ $tableCaptions["Spanish"]["dbo_ReporteClasificacionCartera"] = "Reporte Clasific
 $tableCaptions["Spanish"]["dbo_ProcesosSinNotificaReport"] = "Procesos Sin Notifica Report";
 $tableCaptions["Spanish"]["dbo_ReporteCorporaci_nEspecialidad"] = "Reporte Corporación Especialidad";
 $tableCaptions["Spanish"]["dbo_CorporacionesView"] = "Corporaciones View";
+$tableCaptions["Spanish"]["dbo_Fechas"] = "Fechas";
+$tableCaptions["Spanish"]["dbo_AuditoriasProcesosView"] = "Auditorias Procesos View";
 
 
 $globalEvents = new class_GlobalEvents;

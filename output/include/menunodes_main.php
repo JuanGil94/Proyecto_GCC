@@ -2007,5 +2007,31 @@ function getMenuNodes_main($menuNodesObject)
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "78";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.Fechas";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-camera";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Fechas";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
 }
 ?>

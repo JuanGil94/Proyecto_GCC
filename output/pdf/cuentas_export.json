@@ -120,6 +120,9 @@ pdfDocument = {
 				
 			{"text":{$Activa_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
+				
+			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

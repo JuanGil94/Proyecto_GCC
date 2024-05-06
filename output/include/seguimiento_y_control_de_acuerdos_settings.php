@@ -3735,6 +3735,7 @@ $proto76["m_columns"][] = "PagoInte";
 $proto76["m_columns"][] = "PagoMayo";
 $proto76["m_columns"][] = "PagoTerm";
 $proto76["m_columns"][] = "PagoIdOrig";
+$proto76["m_columns"][] = "TipoRecaudoId";
 $obj = new SQLTable($proto76);
 
 $proto75["m_table"] = $obj;

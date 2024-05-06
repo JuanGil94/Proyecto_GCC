@@ -520,10 +520,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.Actuaciones1")
-		{
-			return true;
-		}
 		if($table=="dbo.Llamadas")
 		{
 			return true;
@@ -781,6 +777,14 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.CorporacionesView")
+		{
+			return false;
+		}
+		if($table=="dbo.Fechas")
+		{
+			return false;
+		}
+		if($table=="dbo.AuditoriasProcesosView")
 		{
 			return false;
 		}
@@ -1256,10 +1260,6 @@ class AuditTrailFile
 		{
 			return true;
 		}
-		if($table=="dbo.Actuaciones1")
-		{
-			return true;
-		}
 		if($table=="dbo.Llamadas")
 		{
 			return true;
@@ -1517,6 +1517,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.CorporacionesView")
+		{
+			return false;
+		}
+		if($table=="dbo.Fechas")
+		{
+			return false;
+		}
+		if($table=="dbo.AuditoriasProcesosView")
 		{
 			return false;
 		}

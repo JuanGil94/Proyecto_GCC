@@ -561,10 +561,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="dbo.Actuaciones1")
-		{
-			return 1;
-		}
 		if($table=="dbo.Llamadas")
 		{
 			return 1;
@@ -822,6 +818,14 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="dbo.CorporacionesView")
+		{
+			return 1;
+		}
+		if($table=="dbo.Fechas")
+		{
+			return 1;
+		}
+		if($table=="dbo.AuditoriasProcesosView")
 		{
 			return 1;
 		}
@@ -1242,10 +1246,6 @@ function getCaptionTable($table)
 	{
 		return "Solidarios";
 	}
-	if($table=="dbo.Actuaciones1")
-	{
-		return "Actuaciones1";
-	}
 	if($table=="dbo.Llamadas")
 	{
 		return "Llamadas";
@@ -1505,6 +1505,14 @@ function getCaptionTable($table)
 	if($table=="dbo.CorporacionesView")
 	{
 		return "Corporaciones View";
+	}
+	if($table=="dbo.Fechas")
+	{
+		return "Fechas";
+	}
+	if($table=="dbo.AuditoriasProcesosView")
+	{
+		return "Auditorias Procesos View";
 	}
 	return $table;
 }
@@ -2855,18 +2863,6 @@ function GetTablesListReport()
 			$arr[]="dbo.Solidarios";
 	}
 	if( Security::permissionsAvailable() ) {
-		$strPerm = GetUserPermissions("dbo.Actuaciones1");
-		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
-	}
-	if($securityFlag)
-	{
-		$value="dbo.Actuaciones1";
-		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
-		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
-		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
-			$arr[]="dbo.Actuaciones1";
-	}
-	if( Security::permissionsAvailable() ) {
 		$strPerm = GetUserPermissions("dbo.Llamadas");
 		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
 	}
@@ -3549,6 +3545,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.CorporacionesView";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Fechas");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Fechas";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Fechas";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.AuditoriasProcesosView");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.AuditoriasProcesosView";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.AuditoriasProcesosView";
 	}
 	return $arr;
 }

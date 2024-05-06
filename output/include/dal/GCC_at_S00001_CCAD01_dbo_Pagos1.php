@@ -14,6 +14,7 @@ $dalTablePagos1["PagoInte"] = array("type"=>6,"varname"=>"PagoInte", "name" => "
 $dalTablePagos1["PagoMayo"] = array("type"=>6,"varname"=>"PagoMayo", "name" => "PagoMayo", "autoInc" => "0");
 $dalTablePagos1["PagoTerm"] = array("type"=>6,"varname"=>"PagoTerm", "name" => "PagoTerm", "autoInc" => "0");
 $dalTablePagos1["PagoIdOrig"] = array("type"=>3,"varname"=>"PagoIdOrig", "name" => "PagoIdOrig", "autoInc" => "0");
+$dalTablePagos1["TipoRecaudoId"] = array("type"=>3,"varname"=>"TipoRecaudoId", "name" => "TipoRecaudoId", "autoInc" => "0");
 $dalTablePagos1["PagoId"]["key"]=true;
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_Pagos1"] = &$dalTablePagos1;

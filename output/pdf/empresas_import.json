@@ -132,6 +132,9 @@ pdfDocument = {
 				
 			{"text":{$InteresesPlazo_pdfvalue},"hidden":"{$item_hide_import_field13}"},
 				
+				
+			{"text":{$MaximoUvb_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

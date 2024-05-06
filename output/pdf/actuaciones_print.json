@@ -641,6 +641,11 @@ pdfDocument = {
 			{$displayDetailTable_reportecorporaci_nespecialidad }
 		{END details_reportecorporaci_nespecialidad},
 				
+				
+			 {BEGIN details_fechas}
+			{$displayDetailTable_fechas }
+		{END details_fechas},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
