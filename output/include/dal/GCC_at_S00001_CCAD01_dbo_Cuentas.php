@@ -7,6 +7,7 @@ $dalTableCuentas["Numero"] = array("type"=>200,"varname"=>"Numero", "name" => "N
 $dalTableCuentas["SeccionalId"] = array("type"=>3,"varname"=>"SeccionalId", "name" => "SeccionalId", "autoInc" => "0");
 $dalTableCuentas["ConceptoId"] = array("type"=>3,"varname"=>"ConceptoId", "name" => "ConceptoId", "autoInc" => "0");
 $dalTableCuentas["Activa"] = array("type"=>11,"varname"=>"Activa", "name" => "Activa", "autoInc" => "0");
+$dalTableCuentas["NaturalezaId"] = array("type"=>3,"varname"=>"NaturalezaId", "name" => "NaturalezaId", "autoInc" => "0");
 $dalTableCuentas["CuentaId"]["key"]=true;
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_Cuentas"] = &$dalTableCuentas;

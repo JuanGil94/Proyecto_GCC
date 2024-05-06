@@ -688,9 +688,9 @@ pdfDocument = {
 		{END details_solidarios},
 				
 				
-			 {BEGIN details_actuaciones1}
-			{$displayDetailTable_actuaciones1 }
-		{END details_actuaciones1},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 				
 			 {BEGIN details_llamadas}

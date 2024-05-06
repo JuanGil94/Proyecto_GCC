@@ -2057,6 +2057,7 @@ $proto54["m_columns"][] = "PagoInte";
 $proto54["m_columns"][] = "PagoMayo";
 $proto54["m_columns"][] = "PagoTerm";
 $proto54["m_columns"][] = "PagoIdOrig";
+$proto54["m_columns"][] = "TipoRecaudoId";
 $obj = new SQLTable($proto54);
 
 $proto53["m_table"] = $obj;

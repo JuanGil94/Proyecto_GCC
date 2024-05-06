@@ -3618,8 +3618,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "procesos" ] = "dbo.Procesos";
 	$projectEntities[ "dbo.Solidarios" ] = array( "url" => "solidarios", "type" => 0 );
 	$projectEntitiesReverse[ "solidarios" ] = "dbo.Solidarios";
-	$projectEntities[ "dbo.Actuaciones1" ] = array( "url" => "actuaciones1", "type" => 1 );
-	$projectEntitiesReverse[ "actuaciones1" ] = "dbo.Actuaciones1";
 	$projectEntities[ "dbo.Llamadas" ] = array( "url" => "llamadas", "type" => 0 );
 	$projectEntitiesReverse[ "llamadas" ] = "dbo.Llamadas";
 	$projectEntities[ "dbo.Medidas" ] = array( "url" => "medidas", "type" => 0 );
@@ -3750,6 +3748,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "reportecorporaci_nespecialidad" ] = "dbo.ReporteCorporaciónEspecialidad";
 	$projectEntities[ "dbo.CorporacionesView" ] = array( "url" => "corporacionesview", "type" => 0 );
 	$projectEntitiesReverse[ "corporacionesview" ] = "dbo.CorporacionesView";
+	$projectEntities[ "dbo.Fechas" ] = array( "url" => "fechas", "type" => 0 );
+	$projectEntitiesReverse[ "fechas" ] = "dbo.Fechas";
+	$projectEntities[ "dbo.AuditoriasProcesosView" ] = array( "url" => "auditoriasprocesosview", "type" => 0 );
+	$projectEntitiesReverse[ "auditoriasprocesosview" ] = "dbo.AuditoriasProcesosView";
 }
 
 function findTable( $table ) {

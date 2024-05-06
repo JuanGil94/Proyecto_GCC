@@ -85,7 +85,7 @@
 	 
 		{BEGIN Cuenta_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta">
 	{$label dbo_Cuentas Cuenta }	</span>
 {END Cuenta_fieldheadercolumn}
 
@@ -184,6 +184,29 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NaturalezaId_class}	"
+
+			data-field="NaturalezaId"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NaturalezaId_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NaturalezaId" data-fieldname="NaturalezaId">
+	{$label dbo_Cuentas NaturalezaId }	</span>
+{END NaturalezaId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
 							</tr>
 															
 					{END grid_header}
@@ -325,6 +348,27 @@
 {END Activa_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NaturalezaId_class}	"
+
+			data-field="NaturalezaId"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NaturalezaId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NaturalezaId" data-fieldname="NaturalezaId" data-default-width >
+{$NaturalezaId_value}
+</span>
+{END NaturalezaId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
 							</tr>
 										
 											{END grid_row}
@@ -426,6 +470,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NaturalezaId_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="cuentas_masterprint"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
 							</tr>
 					
 					</tfoot>

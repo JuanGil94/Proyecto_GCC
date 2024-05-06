@@ -67,6 +67,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsempresas["Spanish"]["InteresesPlazo"] = "Intereses Plazo";
 	$fieldToolTipsempresas["Spanish"]["InteresesPlazo"] = "";
 	$placeHoldersempresas["Spanish"]["InteresesPlazo"] = "";
+	$fieldLabelsempresas["Spanish"]["MaximoUvb"] = "Maximo Uvb";
+	$fieldToolTipsempresas["Spanish"]["MaximoUvb"] = "";
+	$placeHoldersempresas["Spanish"]["MaximoUvb"] = "";
 	if (count($fieldToolTipsempresas["Spanish"]))
 		$tdataempresas[".isUseToolTips"] = true;
 }
@@ -198,6 +201,7 @@ $tdataempresas[".googleLikeFields"][] = "CarteraEspecialUvt";
 $tdataempresas[".googleLikeFields"][] = "TasaDTN";
 $tdataempresas[".googleLikeFields"][] = "TasaCivil";
 $tdataempresas[".googleLikeFields"][] = "InteresesPlazo";
+$tdataempresas[".googleLikeFields"][] = "MaximoUvb";
 
 
 
@@ -232,7 +236,7 @@ $tdataempresas[".strOrderBy"] = $tstrOrderBy;
 $tdataempresas[".orderindexes"] = array();
 
 
-$tdataempresas[".sqlHead"] = "SELECT EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo";
+$tdataempresas[".sqlHead"] = "SELECT EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo,  	MaximoUvb";
 $tdataempresas[".sqlFrom"] = "FROM dbo.Empresas";
 $tdataempresas[".sqlWhereExpr"] = "";
 $tdataempresas[".sqlTail"] = "";
@@ -2217,6 +2221,145 @@ $tdataempresas[".hideMobileList"] = array();
 
 	$tdataempresas["InteresesPlazo"] = $fdata;
 		$tdataempresas[".searchableFields"][] = "InteresesPlazo";
+//	MaximoUvb
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "MaximoUvb";
+	$fdata["GoodName"] = "MaximoUvb";
+	$fdata["ownerTable"] = "dbo.Empresas";
+	$fdata["Label"] = GetFieldLabel("dbo_Empresas","MaximoUvb");
+	$fdata["FieldType"] = 6;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "MaximoUvb";
+
+		$fdata["sourceSingle"] = "MaximoUvb";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "MaximoUvb";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 4;
+
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataempresas["MaximoUvb"] = $fdata;
+		$tdataempresas[".searchableFields"][] = "MaximoUvb";
 
 
 $tables_data["dbo.Empresas"]=&$tdataempresas;
@@ -2261,7 +2404,7 @@ function createSqlQuery_empresas()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo";
+$proto0["m_strFieldList"] = "EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo,  	MaximoUvb";
 $proto0["m_strFrom"] = "FROM dbo.Empresas";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2497,50 +2640,65 @@ $proto32["m_alias"] = "";
 $obj = new SQLFieldListItem($proto32);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto34=array();
-$proto34["m_link"] = "SQLL_MAIN";
-			$proto35=array();
-$proto35["m_strName"] = "dbo.Empresas";
-$proto35["m_srcTableName"] = "dbo.Empresas";
-$proto35["m_columns"] = array();
-$proto35["m_columns"][] = "EmpresaId";
-$proto35["m_columns"][] = "Empresa";
-$proto35["m_columns"][] = "Cierre";
-$proto35["m_columns"][] = "ValorMaximo";
-$proto35["m_columns"][] = "MaximoPesos";
-$proto35["m_columns"][] = "MaximoSalarios";
-$proto35["m_columns"][] = "MaximoUvt";
-$proto35["m_columns"][] = "EmailAprobador";
-$proto35["m_columns"][] = "Tope";
-$proto35["m_columns"][] = "DiasPersuasivo";
-$proto35["m_columns"][] = "CarteraEspecialUvt";
-$proto35["m_columns"][] = "TasaDTN";
-$proto35["m_columns"][] = "TasaCivil";
-$proto35["m_columns"][] = "InteresesPlazo";
-$obj = new SQLTable($proto35);
+						$proto34=array();
+			$obj = new SQLField(array(
+	"m_strName" => "MaximoUvb",
+	"m_strTable" => "dbo.Empresas",
+	"m_srcTableName" => "dbo.Empresas"
+));
 
-$proto34["m_table"] = $obj;
-$proto34["m_sql"] = "dbo.Empresas";
-$proto34["m_alias"] = "";
+$proto34["m_sql"] = "MaximoUvb";
 $proto34["m_srcTableName"] = "dbo.Empresas";
-$proto36=array();
-$proto36["m_sql"] = "";
-$proto36["m_uniontype"] = "SQLL_UNKNOWN";
+$proto34["m_expr"]=$obj;
+$proto34["m_alias"] = "";
+$obj = new SQLFieldListItem($proto34);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto36=array();
+$proto36["m_link"] = "SQLL_MAIN";
+			$proto37=array();
+$proto37["m_strName"] = "dbo.Empresas";
+$proto37["m_srcTableName"] = "dbo.Empresas";
+$proto37["m_columns"] = array();
+$proto37["m_columns"][] = "EmpresaId";
+$proto37["m_columns"][] = "Empresa";
+$proto37["m_columns"][] = "Cierre";
+$proto37["m_columns"][] = "ValorMaximo";
+$proto37["m_columns"][] = "MaximoPesos";
+$proto37["m_columns"][] = "MaximoSalarios";
+$proto37["m_columns"][] = "MaximoUvt";
+$proto37["m_columns"][] = "EmailAprobador";
+$proto37["m_columns"][] = "Tope";
+$proto37["m_columns"][] = "DiasPersuasivo";
+$proto37["m_columns"][] = "CarteraEspecialUvt";
+$proto37["m_columns"][] = "TasaDTN";
+$proto37["m_columns"][] = "TasaCivil";
+$proto37["m_columns"][] = "InteresesPlazo";
+$proto37["m_columns"][] = "MaximoUvb";
+$obj = new SQLTable($proto37);
+
+$proto36["m_table"] = $obj;
+$proto36["m_sql"] = "dbo.Empresas";
+$proto36["m_alias"] = "";
+$proto36["m_srcTableName"] = "dbo.Empresas";
+$proto38=array();
+$proto38["m_sql"] = "";
+$proto38["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto36["m_column"]=$obj;
-$proto36["m_contained"] = array();
-$proto36["m_strCase"] = "";
-$proto36["m_havingmode"] = false;
-$proto36["m_inBrackets"] = false;
-$proto36["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto36);
+$proto38["m_column"]=$obj;
+$proto38["m_contained"] = array();
+$proto38["m_strCase"] = "";
+$proto38["m_havingmode"] = false;
+$proto38["m_inBrackets"] = false;
+$proto38["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto38);
 
-$proto34["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto34);
+$proto36["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto36);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2556,7 +2714,7 @@ $queryData_empresas = createSqlQuery_empresas();
 	
 		;
 
-														
+															
 
 $tdataempresas[".sqlquery"] = $queryData_empresas;
 

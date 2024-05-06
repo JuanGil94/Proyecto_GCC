@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Activa}</span>
 						</div>
 		{END searchCtrlBlock_Activa}
+																{BEGIN searchCtrlBlock_NaturalezaId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_NaturalezaId}" {$filterRow_attrs_NaturalezaId}>
+			<label>{$label dbo_Cuentas NaturalezaId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_NaturalezaId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_NaturalezaId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_NaturalezaId}</span>
+						</div>
+		{END searchCtrlBlock_NaturalezaId}
 																{BEGIN searchCtrlBlock_ConceptoId}
 
 
@@ -266,6 +279,12 @@
 		</a>
 	</li>
 {END exportselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="cuentas_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
 							<li role="separator" class="divider"></li>							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -579,6 +598,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_NaturalezaId" checked="checked" value="1" data-field="NaturalezaId" data-fieldname="NaturalezaId">
+					<span>{$label dbo_Cuentas NaturalezaId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -610,6 +639,9 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Activa"]:before {
 		content: "{$label dbo_Cuentas Activa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="NaturalezaId"]:before {
+		content: "{$label dbo_Cuentas NaturalezaId}";
 	}
 	}
 </style>
@@ -803,6 +835,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NaturalezaId_class}	"
+
+			data-field="NaturalezaId"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NaturalezaId_fieldheadercolumn}
+	{BEGIN NaturalezaId_fieldheader}
+	<SPAN {$NaturalezaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NaturalezaId" data-fieldname="NaturalezaId">
+	{$label dbo_Cuentas NaturalezaId }	{$arrow_icon_NaturalezaId}
+	</SPAN>
+	{END NaturalezaId_fieldheader}
+{END NaturalezaId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -995,6 +1052,27 @@
 {END Activa_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NaturalezaId_class}	"
+
+			data-field="NaturalezaId"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NaturalezaId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NaturalezaId" data-fieldname="NaturalezaId" data-default-width >
+{$NaturalezaId_value}
+</span>
+{END NaturalezaId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -1126,6 +1204,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NaturalezaId_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="cuentas_list1"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
 							</tr>
 					
 					</tfoot>

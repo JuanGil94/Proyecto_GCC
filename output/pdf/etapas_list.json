@@ -460,9 +460,9 @@ pdfDocument = {
 		{END details_actuaciones},
 				
 				
-			 {BEGIN details_actuaciones1}
-			{$displayDetailTable_actuaciones1 }
-		{END details_actuaciones1},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 		  ],
   "border": [ true, true, true, true ],

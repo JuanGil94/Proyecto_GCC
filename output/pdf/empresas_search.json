@@ -207,6 +207,9 @@ pdfDocument = {
 				
 			{"text":{$InteresesPlazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
 				
+				
+			{"text":{$MaximoUvb_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

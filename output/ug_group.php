@@ -56,7 +56,6 @@ $nonAdminTablesArr[] = "dbo.Tramites";
 $nonAdminTablesArr[] = "dbo.Conceptos1";
 $nonAdminTablesArr[] = "dbo.Procesos";
 $nonAdminTablesArr[] = "dbo.Solidarios";
-$nonAdminTablesArr[] = "dbo.Actuaciones1";
 $nonAdminTablesArr[] = "dbo.Llamadas";
 $nonAdminTablesArr[] = "dbo.Medidas";
 $nonAdminTablesArr[] = "dbo.Acuerdos";
@@ -122,6 +121,8 @@ $nonAdminTablesArr[] = "dbo.ReporteClasificacionCartera";
 $nonAdminTablesArr[] = "dbo.ProcesosSinNotificaReport";
 $nonAdminTablesArr[] = "dbo.ReporteCorporaciónEspecialidad";
 $nonAdminTablesArr[] = "dbo.CorporacionesView";
+$nonAdminTablesArr[] = "dbo.Fechas";
+$nonAdminTablesArr[] = "dbo.AuditoriasProcesosView";
 
 $ug_connection = $cman->getForUserGroups();
 

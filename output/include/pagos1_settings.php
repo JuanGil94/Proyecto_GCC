@@ -2622,6 +2622,7 @@ $proto35["m_columns"][] = "PagoInte";
 $proto35["m_columns"][] = "PagoMayo";
 $proto35["m_columns"][] = "PagoTerm";
 $proto35["m_columns"][] = "PagoIdOrig";
+$proto35["m_columns"][] = "TipoRecaudoId";
 $obj = new SQLTable($proto35);
 
 $proto34["m_table"] = $obj;

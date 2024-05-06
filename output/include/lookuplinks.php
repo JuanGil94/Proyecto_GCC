@@ -992,6 +992,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Conceptos"]["reportecorporaci_nespecialidad.ConceptoId"] = array();
 		}
 		$lookupTableLinks["dbo.Conceptos"]["reportecorporaci_nespecialidad.ConceptoId"]["search"] = array("table" => "dbo.ReporteCorporaciónEspecialidad", "field" => "ConceptoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
+			$lookupTableLinks["dbo.Procesos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Procesos"]["fechas.ProcesoId"] )) {
+			$lookupTableLinks["dbo.Procesos"]["fechas.ProcesoId"] = array();
+		}
+		$lookupTableLinks["dbo.Procesos"]["fechas.ProcesoId"]["edit"] = array("table" => "dbo.Fechas", "field" => "ProcesoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Actuaciones"] ) ) {
+			$lookupTableLinks["dbo.Actuaciones"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Actuaciones"]["fechas.ActuacionId"] )) {
+			$lookupTableLinks["dbo.Actuaciones"]["fechas.ActuacionId"] = array();
+		}
+		$lookupTableLinks["dbo.Actuaciones"]["fechas.ActuacionId"]["edit"] = array("table" => "dbo.Fechas", "field" => "ActuacionId", "page" => "edit");
 }
 
 ?>

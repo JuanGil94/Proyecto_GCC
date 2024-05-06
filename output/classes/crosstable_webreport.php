@@ -1463,8 +1463,6 @@ class CrossTableWebReport
 			$isDB = true;
 		if("dbo.Solidarios" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("dbo.Actuaciones" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("dbo.Llamadas" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("dbo.Medidas" == $this->xml_array['tables'][0])
@@ -1594,6 +1592,10 @@ class CrossTableWebReport
 		if("dbo.Procesos" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("dbo.CorporacionesView" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("dbo.Fechas" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("dbo.AuditoriasProcesosView" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

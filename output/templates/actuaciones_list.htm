@@ -669,6 +669,13 @@
 					Reporte Corporación Especialidad				</label>
 			</div>
 			{END print_details_reportecorporaci_nespecialidad}
+														{BEGIN print_details_fechas}
+			<div>
+				<label for="printDetailsfechas{$id}">
+					<input type="checkbox" value="fechas" id="printDetailsfechas{$id}" checked>
+					Fechas				</label>
+			</div>
+			{END print_details_fechas}
 						</div>
 </div>
 {END print_details}
@@ -1155,6 +1162,25 @@
 	{END reportecorporaci_nespecialidad_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN fechas_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$fechas_link_attrs} data-short-details="fechas"
+		class="{$fechas_dlink_class}" 
+		title="{$caption dbo_Fechas }"			>
+								
+									{BEGIN fechas_childcount}
+				<span class="details-badge badge fechas_badge" {$fechas_childnumber_attr}>
+					{$fechas_childnumber}				
+				</span>
+				{END fechas_childcount}
+						</a>
+	</span>
+	{END fechas_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1280,19 +1306,22 @@
 	>
 
 	 
-					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad"
-			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad	>
+						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,fechas"
+			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-fechas	>
 		<span data-details-inside data-short-table="reporteclasificacioncartera">
 			</span>
 		<span data-details-inside data-short-table="procesossinnotificareport">
 			</span>
 		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
 			</span>
+		<span data-details-inside data-short-table="fechas">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			
 	</td>

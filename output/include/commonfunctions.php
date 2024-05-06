@@ -285,8 +285,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("solidarios" == $shortTName )
 		return true;
-	if ("actuaciones1" == $shortTName )
-		return true;
 	if ("llamadas" == $shortTName )
 		return true;
 	if ("medidas" == $shortTName )
@@ -416,6 +414,10 @@ function checkTableName($shortTName )
 	if ("reportecorporaci_nespecialidad" == $shortTName )
 		return true;
 	if ("corporacionesview" == $shortTName )
+		return true;
+	if ("fechas" == $shortTName )
+		return true;
+	if ("auditoriasprocesosview" == $shortTName )
 		return true;
 	return false;
 }
@@ -835,15 +837,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Solidarios";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Actuaciones1");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Actuaciones1";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -1430,6 +1423,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.CorporacionesView";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Fechas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Fechas";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.AuditoriasProcesosView");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.AuditoriasProcesosView";
+	}
 	return $arr;
 }
 
@@ -1480,7 +1491,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Conceptos1";
 	$arr[]="dbo.Procesos";
 	$arr[]="dbo.Solidarios";
-	$arr[]="dbo.Actuaciones1";
 	$arr[]="dbo.Llamadas";
 	$arr[]="dbo.Medidas";
 	$arr[]="dbo.Acuerdos";
@@ -1546,6 +1556,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ProcesosSinNotificaReport";
 	$arr[]="dbo.ReporteCorporaciónEspecialidad";
 	$arr[]="dbo.CorporacionesView";
+	$arr[]="dbo.Fechas";
+	$arr[]="dbo.AuditoriasProcesosView";
 	return $arr;
 }
 
@@ -2378,11 +2390,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Actuaciones1" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Llamadas" )
 	{
 //	default permissions
@@ -2704,6 +2711,16 @@ function GetUserPermissionsStatic( $table )
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.CorporacionesView" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Fechas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.AuditoriasProcesosView" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
