@@ -360,8 +360,6 @@ class diccionario {
             //$numVariables=count(array_keys($variables));
             //echo $numVariables;
             return $info;
-        
-		
     }
     public function direcciones(){
         $consulta2=DB::Query("SELECT 
@@ -2205,7 +2203,10 @@ class plantillas extends diccionario{
                     for($i=0;$i<count($resultados);$i++){
                         $resultadoF.=$resultados[$i];
                     }
-                    $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                    if ($info[$resultadoF]==!NULL){
+                        $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                    }
+                    
                     //$var[]=$resultadoF;
                     $resultadoF='';
                     //$resultados = $matches[1];
@@ -2215,8 +2216,8 @@ class plantillas extends diccionario{
             }
         }
         else{
+            $templateProcessor = new TemplateProcessor($templatePath);
             foreach($variables as $variable){
-                $templateProcessor = new TemplateProcessor($templatePath);
                 preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
                 //print_r();
                 $resultados = $matches[1];
@@ -2224,12 +2225,15 @@ class plantillas extends diccionario{
                 for($i=0;$i<count($resultados);$i++){
                     $resultadoF.=$resultados[$i];
                 }
+                if ($info[$resultadoF]==!NULL){
                 $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                }
                 //$var[]=$resultadoF;
                 $resultadoF='';
                 //$resultados = $matches[1];
                 //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
             }
+
             $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->procesoId.'_'.$this->oficioId.'.docx');
         }
     }
@@ -2422,6 +2426,112 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('PiePagina',$infoC["PiePagina"]);
             $templateWord->setValue('Seccional',$infoC["Seccional"]);
             $templateWord->saveAs('templates_GCC/carChequeo'.$chequeoId.'.docx');
+    }
+}
+class diccionarioChequeo{
+    public $chequeoId;
+    public $variables;
+    public function process ($chequeoId,$oficioId){
+        $this->chequeoId=$chequeoId;
+        $this->oficioId=$oficioId;
+        $consulta=DB::Query("SELECT S.Seccional AS 'Seccional' FROM Seccionales S
+        INNER JOIN Chequeos C ON C.SeccionalId = S.SeccionalId
+        where C.ChequeoId=".$chequeoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info=array(
+                "Ciudad"=>$date["Seccional"],
+                "Seccional"=>$date["Seccional"]
+            );
+        }
+        $consulta=DB::Query("SELECT Radicado AS 'Sigobius',
+        FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha'
+        FROM ChequeosOficios
+        WHERE OficioId=".$oficioId." and ChequeoId=".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Sigobius"]=$date["Sigobius"];
+            $info["Fecha"]=$date["Fecha"];
+        }
+        $variables = array(
+            'Seccional' => '',
+            'Ciudad' => '',
+            'Sigobius' => '',
+            'Fecha' => '',
+        );
+        $this->variables=$variables;
+            return $info;
+    }
+    public function getVariables(){
+        return $this->variables;
+    }
+
+}
+class plantillaDev extends diccionarioChequeo{
+    public $ChequeoId;
+    public $oficioId;
+    public $obligacionLetras;
+    public $obligacionTotalLetras;
+    public function __construct($ChequeoId,$oficioId,$obligacionLetras,$obligacionTotalLetras){
+        $this->chequeoId=$ChequeoId;
+        $this->oficioId=$oficioId;
+        $this->obligacionLetras=$obligacionLetras;
+        $this->obligacionTotalLetras=$obligacionTotalLetras;
+    }
+    public function funcGlobal(){
+        $info=parent::process($this->chequeoId,$this->oficioId);
+        //$direcciones=parent::direcciones();
+        $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
+        // Crear un objeto TemplateProcessor
+        $templateProcessor = new TemplateProcessor($templatePath);
+        $variables = $templateProcessor->getVariables();
+        //print_r($variables);
+        //echo count($variables);
+        //print_r($variables);
+        //$case=count($direcciones);
+        $templateProcessor = new TemplateProcessor($templatePath);
+        //$direccion=$dato;
+        //$templateProcessor->setValue('direccion',$direccion);
+        foreach($variables as $variable){
+            preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
+            //print_r();
+            $resultados = $matches[1];
+            //echo count($resultados);
+            for($i=0;$i<count($resultados);$i++){
+                $resultadoF.=$resultados[$i];
+            }
+            echo "Variable del documento ".$resultadoF.".Valor de la variable del diccionario: ".$info[$resultadoF]."<br>";
+            if ($info[$resultadoF]==!NULL){
+                $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+            }//$var[]=$resultadoF;
+            $resultadoF='';
+            //$resultados = $matches[1];
+            //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
+        }
+        $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->chequeoId.'_'.$this->oficioId.'.docx');  
+
+        /*
+        {
+            foreach($variables as $variable){
+                $templateProcessor = new TemplateProcessor($templatePath);
+                preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
+                //print_r();
+                $resultados = $matches[1];
+                //echo count($resultados);
+                for($i=0;$i<count($resultados);$i++){
+                    $resultadoF.=$resultados[$i];
+                }
+                $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                //$var[]=$resultadoF;
+                $resultadoF='';
+                //$resultados = $matches[1];
+                //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
+            }
+
+            $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->procesoId.'_'.$this->oficioId.'.docx');
+        }
+        */
     }
 }
 
