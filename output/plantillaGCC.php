@@ -2459,6 +2459,7 @@ class diccionarioChequeo{
             'Ciudad' => '',
             'Sigobius' => '',
             'Fecha' => '',
+            'Sancionado' =>'',
         );
         $this->variables=$variables;
             return $info;
