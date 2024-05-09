@@ -12,8 +12,8 @@
 	function __construct()
 	{
 	// fill list of events
-		$this->events["CustomAdd"]=true;
 
+		$this->events["BeforeAdd"]=true;
 
 
 	}
@@ -34,14 +34,119 @@
 		
 		
 		
-				// Custom add
-function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record added
+function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
 		include_once (getabspath("classes/pruebaJuan.php"));
+include_once (getabspath("classes/actuacionAction.php"));
+$values["UserId"]=$_SESSION["UserId"];
 $oficioId=$values["OficioId"];
-$fechaLiqui=date("d-m-Y");
-$fechaAct=date('Y-m-d H-i-s');
+$response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$actuacionId=$date["ActuacionId"];
+				}
+$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"]);
+$resultado["response"]=$oficio->process();
+//echo "Respuesta de la funcion".$resultado["response"]."<br>";
+if ($resultado["response"]==true) {
+					return true;
+			  }
+			  else {
+					//echo "Ocurrio un error en la DB: ".$resultado["response"];
+					return false;
+			  }
+/*
+switch ($actuacionId) {
+    case "4":
+			$recalcular=new reliquidacion($values["ProcesoId"]);
+			$meses = $recalcular->Calcular();
+			$result["total"]=$recalcular->getInteresesSuma();
+			//$result["total"]=$recalcular->getSuma();
+			$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses=".$result["total"].",InteresesInicial=".$result["total"].",Liquidacion='".$fechaLiqui."',SeleccionadoFecha=".$fechaLiqui.", Persuasivo='".$fechaLiqui."',ActuacionId=".$actuacionId." where ProcesoId=".$values["ProcesoId"]);
+			$resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$values["ProcesoId"].",'".$values["Fecha"]."',".$result["total"].",NULL,0,NULL)");
+			$resultado3["response"]=DB::Exec("INSERT INTO Fechas (ActuacionId,Fecha,Resolucion,Observaciones,ProcesoId) values (".$actuacionId.",'".$values["Fecha"]."',".$values["Resolucion"].",'".$values["Observaciones"]."',".$values["ProcesoId"].")");
+			if ($resultado2["response"] && $resultado["response"] && $resultado3["response"]) {
+					echo '<script>alert("Se agrega la correspondencia PERSUASIVO y se calculan los intereses a la fecha")</script>';
+					return true;
+			  }
+			  else {
+					echo "Ocurrio un error".DB::LastError();
+					return false;
+			  }
+        break;
+    case "Martes":
+        echo "Hoy es Martes.";
+        break;
+}
+
+*/
+/*
 //print_r($values);
 //echo $oficioId;
 if ($oficioId==1097){
@@ -69,80 +174,20 @@ if ($oficioId==1097){
             //exit();
         }
 }
+*/
 
 
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
 return true;
 ;
-} // function CustomAdd
+} // function BeforeAdd
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
