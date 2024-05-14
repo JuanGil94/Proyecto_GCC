@@ -174,9 +174,6 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Correspondencias Observaciones }","bold":true},{"text":{$Observaciones_pdfvalue}}],"margin":[0,0,0,15]},
 				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Correspondencias UserId }","bold":true},{"text":{$UserId_pdfvalue}}],"margin":[0,0,0,15]},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',

@@ -15,6 +15,8 @@
 		$this->events["CustomAdd"]=true;
 
 
+		$this->events["BeforeAdd"]=true;
+
 
 	}
 
@@ -38,7 +40,9 @@
 function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 {
 
-		include_once (getabspath("classes/pruebaJuan.php"));
+		$values["UserId"]=$_SESSION["UserId"];
+/*
+include_once (getabspath("classes/actuacionAction.php"));
 $oficioId=$values["OficioId"];
 $fechaLiqui=date("d-m-Y");
 $fechaAct=date('Y-m-d H-i-s');
@@ -74,8 +78,9 @@ if ($oficioId==1097){
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-
+*/
 return true;
+
 ;
 } // function CustomAdd
 
@@ -143,6 +148,108 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record added
+function BeforeAdd(&$values, &$message, $inline, $pageObject)
+{
+
+		include_once (getabspath("classes/actuacionAction.php"));
+include_once (getabspath("classes/pruebaJuan.php"));
+$oficioId=$values["OficioId"];
+//$fechaLiqui=date("d-m-Y");
+//$fechaAct=date('Y-m-d H-i-s');
+$response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
+		//print_r($actuacionId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$actuacionId=$date["ActuacionId"];
+				}
+$response=DB::Query("SELECT EtapaId FROM Actuaciones WHERE ActuacionId=".$actuacionId);
+		//print_r($actuacionId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$etapaId=$date["EtapaId"];
+				}
+$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId);
+$response=$oficio->process();
+if ($response==true){
+	echo '<script>alert("Se agrega la correspondencia correctamente")</script>';
+	return true;
+}
+else{
+	return false;
+}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+
+;
+} // function BeforeAdd
+
 		
 		
 		
