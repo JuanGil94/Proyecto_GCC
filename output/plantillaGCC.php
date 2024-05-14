@@ -2434,32 +2434,169 @@ class diccionarioChequeo{
     public function process ($chequeoId,$oficioId){
         $this->chequeoId=$chequeoId;
         $this->oficioId=$oficioId;
-        $consulta=DB::Query("SELECT S.Seccional AS 'Seccional' FROM Seccionales S
+        $consulta=DB::Query("SELECT S.Seccional AS 'Seccional',
+        S.PiePagina AS 'PiePagina', 
+        S.Telefonos AS 'SeccionalTelefonos', 
+        CI.Ciudad AS 'Ciudad' FROM Seccionales S
         INNER JOIN Chequeos C ON C.SeccionalId = S.SeccionalId
+		INNER JOIN Ciudades CI ON CI.CiudadId = S.CiudadId
         where C.ChequeoId=".$chequeoId);
         //print_r($info);
         while( $date = $consulta->fetchAssoc() )
 		{
             $info=array(
-                "Ciudad"=>$date["Seccional"],
-                "Seccional"=>$date["Seccional"]
+                "Ciudad"=>$date["Ciudad"],
+                "Seccional"=>$date["Seccional"],
+                "PiePagina"=>$date["PiePagina"],
+                "SeccionalTelefonos"=>$date["SeccionalTelefonos"]
             );
         }
-        $consulta=DB::Query("SELECT Radicado AS 'Sigobius',
-        FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha'
+        $consulta=DB::Query("SELECT Radicado AS 'Sigobius'
         FROM ChequeosOficios
         WHERE OficioId=".$oficioId." and ChequeoId=".$chequeoId."");
         while( $date = $consulta->fetchAssoc() )
 		{
             $info["Sigobius"]=$date["Sigobius"];
-            $info["Fecha"]=$date["Fecha"];
         }
+
+        $consulta=DB::Query("SELECT top 1 
+        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'fechahoy',
+        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaHoy'
+        FROM ChequeosOficios C
+        where C.OficioId =".$oficioId." and ChequeoId=".$chequeoId."ORDER BY C.Fecha desc");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["FechaHoy"]=$date["FechaHoy"];
+            $info["fechahoy"]=$date["fechahoy"];
+        }
+
+        $consulta=DB::Query("SELECT S.Email AS 'SeccionalCorreo',
+        S.Direccion AS 'SeccionalDireccion',
+        S.Telefonos AS 'SeccionalTelefono'
+        FROM Seccionales S
+        INNER JOIN Chequeos C ON C.SeccionalId = S.SeccionalId
+        where C.ChequeoId=".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["SeccionalCorreo"]=$date["SeccionalCorreo"];
+            $info["SeccionalDireccion"]=$date["SeccionalDireccion"];
+            $info["SeccionalTelefono"]=$date["SeccionalTelefono"];
+        }
+
+        $consulta=DB::Query("SELECT 
+        CS.Sancionado AS 'Sancionado',
+        TD.TipoDocumento AS 'TipoDocumento',
+        CS.Documento AS 'Documento'
+        FROM ChequeosSancionados CS
+        INNER JOIN TiposDocumentos TD ON TD.TipoDocumentoId = CS.TipoDocumentoId
+        INNER JOIN Chequeos C ON C.ChequeoId = cs.ChequeoId
+        WHERE C.ChequeoId =".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Sancionado"]=$date["Sancionado"];
+            $info["TipoDocumento"]=$date["TipoDocumento"];
+            $info["Documento"]=$date["Documento"];
+        }
+
+
+        $consulta=DB::Query("SELECT A.Abogado AS 'Abogado',
+        IIF (A.Masculino=1,'Abogado Ejecutor','Abogada Ejecutora') AS 'AbogadoEjecutor',
+        U.UserName AS 'Usuario',
+        C.Origen AS 'CUI',
+        FORMAT(C.Providencia, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaProvidencia',
+        C.Obligacion AS 'Obligacion',
+        Ejecutoria AS 'FechaEjecutoria'
+        FROM Chequeos C
+        INNER JOIN Abogados A ON C.AbogadoId = A.AbogadoId
+        INNER JOIN UserProfile U ON U.AbogadoId = A.AbogadoId
+        WHERE C.ChequeoId =".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["AbogadoEjecutor"]=$date["AbogadoEjecutor"];
+            $info["Abogado"]=$date["Abogado"];
+            $info["Usuario"]=$date["Usuario"];
+            $info["CUI"]=$date["CUI"];
+            $info["FechaProvidencia"]=$date["FechaProvidencia"];
+            $info["Obligacion"]=$date["Obligacion"];
+            $info["FechaEjecutoria"]=$date["FechaEjecutoria"];
+        }
+        
+        $consulta=DB::Query("SELECT  D.Despacho AS 'Despacho', 
+        Juez AS 'DespachoJuez',
+        Direccion AS 'DespachoDireccion',
+        Correo AS 'DespachoCorreo',
+        IIF (D.juez=null,'Doctor','Doctora') AS 'Doctor'
+        FROM Despachos D
+        INNER JOIN Chequeos C ON C.DespachoId = D.DespachoId
+        WHERE ChequeoId =".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Despacho"]=$date["Despacho"];
+            $info["DespachoJuez"]=$date["DespachoJuez"];
+            $info["DespachoDireccion"]=$date["DespachoDireccion"];
+            $info["DespachoCorreo"]=$date["DespachoCorreo"];
+            $info["Doctor"]=$date["Doctor"];
+        }
+        
+        $consulta=DB::Query("SELECT Remisorio AS 'Remisorio',
+        Remisorio AS 'REMISORIO'
+        FROM Chequeos WHERE ChequeoId = ".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Remisorio"]=$date["Remisorio"];
+            $info["REMISORIO"]=$date["REMISORIO"];
+        }
+
+        $consulta=DB::Query("SELECT MD.MotivoDevolucion AS 'MotivoDevolucion' 
+        FROM Devoluciones D
+		INNER JOIN MotivosDevoluciones MD ON MD.MotivoDevolucionId = D.MotivoDevolucionId
+		WHERE ChequeoId =".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["MotivoDevolucion"]=$date["MotivoDevolucion"];
+        }
+
+        $consulta=DB::Query("SELECT
+        FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha',
+		Radicado as 'Radicado', 
+		Observaciones AS 'Observaciones'
+		FROM ChequeosOficios WHERE OficioId = 4573 AND Fecha <= GETDATE() AND ChequeoId =".$chequeoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["Fecha"]=$date["Fecha"];
+            $info["Radicado"]=$date["Radicado"];
+            $info["Observaciones"]=$date["Observaciones"];
+        }
+
         $variables = array(
+            'Remisorio' => '',
+            'REMISORIO' => '',
             'Seccional' => '',
             'Ciudad' => '',
             'Sigobius' => '',
-            'Fecha' => '',
-            'Sancionado' =>'',
+            'fechahoy'=>'',
+            'FechaHoy'=>'',
+            'SeccionalCorreo'=>'',
+            'SeccionalDireccion'=>'',
+            'SeccionalTelefono'=>'',
+            'Sancionado'=>'',
+            'TipoDocumento'=>'',
+            'Documento'=>'',
+            'Abogado'=>'',
+            'AbogadoEjecutor'=>'',
+            'Despacho'=>'',
+            'DespachoJuez'=>'',
+            'DespachoDireccion'=>'',
+            'DespachoCorreo'=>'',
+            'Doctor'=>'',
+            'MotivoDevolucion'=>'',
+            'Fecha'=>'',
+            'Radicado'=>'',
+            'Observaciones'=>'',
+            'Obligacion' =>'',
+            'PiePagina' =>'',
+            'SeccionalTelefonos' =>'',
+            'FechaEjecutoria' =>''
         );
         $this->variables=$variables;
             return $info;

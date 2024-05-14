@@ -102,25 +102,32 @@
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-		include_once (getabspath("classes/pruebaJuan.php"));
-include_once (getabspath("classes/actuacionAction.php"));
-$values["UserId"]=$_SESSION["UserId"];
+		include_once (getabspath("classes/actuacionAction.php"));
+include_once (getabspath("classes/pruebaJuan.php"));
 $oficioId=$values["OficioId"];
+//$fechaLiqui=date("d-m-Y");
+//$fechaAct=date('Y-m-d H-i-s');
 $response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
+		//print_r($actuacionId);
 		while( $date = $response->fetchAssoc() )
 				{
 					$actuacionId=$date["ActuacionId"];
 				}
-$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"]);
-$resultado["response"]=$oficio->process();
-//echo "Respuesta de la funcion".$resultado["response"]."<br>";
-if ($resultado["response"]==true) {
-					return true;
-			  }
-			  else {
-					//echo "Ocurrio un error en la DB: ".$resultado["response"];
-					return false;
-			  }
+$response=DB::Query("SELECT EtapaId FROM Actuaciones WHERE ActuacionId=".$actuacionId);
+		//print_r($actuacionId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$etapaId=$date["EtapaId"];
+				}
+$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId);
+$response=$oficio->process();
+if ($response==true){
+	echo '<script>alert("Se agrega la correspondencia correctamente")</script>';
+	return true;
+}
+else{
+	return false;
+}
 /*
 switch ($actuacionId) {
     case "4":
