@@ -343,7 +343,29 @@ function buttonHandler_New_Button($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$result["total"]= DB::DBLookup("select ChequeoId from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
+	$rs=DB::Query("declare @p2 int
+set @p2=0
+declare @p3 nvarchar(max)
+set @p3=N''
+exec [dbo].[Chequeos_Validar] @ChequeoId=".$params["ChequeoId"].",@Err_num=@p2 output,@Err_msg=@p3 output
+select @p2 Errnum, @p3 Errmsg
+");
+//print_r($consulta);
+while( $data = $rs->fetchAssoc() )
+	{
+		$Errmsg=$data['Errmsg'];
+		//echo "Valor del error: ".$Errmsg;
+		//echo "Valor del Numero error: ".$Errnum;
+	}
+if ($Errmsg){
+	echo " <script>if (confirm('Se encontro un error por Chequeo_Validar: ".$Errmsg."')) {
+            location.reload(); // Recargar la página si el usuario hace clic en Aceptar
+        }</script>";
+//echo "<script>alert ('Problema: ".$Errmsg."')";
+	}
+
+//Si no se detecta error, se ejecuta la creacion del proceso
+$result["total"]= DB::DBLookup("select ChequeoId from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
 $contador=0;
 if ($result["total"]!=null){
 	$array=array();
@@ -435,10 +457,27 @@ if ($result["total"]!=null){
 		}
 		//echo "Sancionado Finissshhhhh:".$SancionadoIdFinal;
 		$resultado["response"]=DB::Exec("INSERT INTO Procesos (SeccionalId,AbogadoId,Fecha,Numero,DespachoId,SancionadoId,Providencia,Ejecutoria,ConceptoId,EstadoId,EtapaId,Folios,Tipo,Cantidad,Obligacion,Costas,Liquidacion,Dias,Intereses,Recaudo,CalificacionId,Terminacion,MotivoId,Observaciones,Cuotas,Abono,Inicio,VlrCuota,VlrIntereses,Garantia,Radicado,Remisorio,Acuerdo,Incumplimiento,Notificacion,Suspension,Traslado,Error,CarteraTipoId,ConceptoAbogado,Origen,Carpeta,ImportacionId,ActuacionId,ObligacionInicial,CostasInicial,InteresesInicial,MinJusticia,Revocatoria,Mayor,NotificacionValidada,Validado,Seleccionado,CompetenciaId,MinjusticiaId,SeleccionadoPor,Subsanar,NumeroMinjusticia,ProcesoIdOrigen,SeleccionadoFecha,InteresesIniciales,InteresesCalculados,ProcesoIdDestino,RecaudoMinjusticia,RecaudoTerminado,Persuasivo,ObligacionCreacion,InteresesCreacion,CostasCreacion,Plazo,NaturalezaId,TrasladoCartera,CarteraTipoIdOrigen,TrasladoConcepto,ConceptoIdOrigen,AutorizadoPlazo,AutorizadoFecha,AutorizadoPor,Reliquidacion,ChequeoId,VlrCostas,VlrInteresesPlazo) SELECT SeccionalId,AbogadoId,Fecha,".$numProcesoFinal.",DespachoId,".$SancionadoIdFinal.",Providencia,Ejecutoria,ConceptoId,2,1,Folios,Tipo,Cantidad,Obligacion,Costas,NULL,0,0,0,1,NULL,NULL,Observaciones,0,0,NULL,0,0,NULL,Origen,Remisorio,NULL,NULL,NULL,NULL,NULL,NULL,CarteraTipoId,NULL,NULL,NULL,NULL,NULL,Obligacion,Costas,0,MinJusticia,NULL,0,0,0,0,NULL,NULL,NULL,0,NULL,NULL,NULL,0,0,NULL,NULL,0,NULL,Obligacion,0,Costas,Plazo,NaturalezaId,NULL,NULL,NULL,NULL,0,NULL,NULL,NULL,ChequeoId,0,0 FROM Chequeos WHERE ChequeoId=".$params["ChequeoId"]);
-	//echo "Valor de la insercion es: " . $resultado["response"];
+//echo "Valor de la insercion es: " . $resultado["response"];
 		if ($resultado["response"]) {
 				DB::Exec("UPDATE Chequeos SET Procesado=1 WHERE ChequeoId=".$params["ChequeoId"]);
-				//echo ("<script>alert('Proceso insertado correctamnete')</script>");
+				$rs = DB::Select("Procesos", "ChequeoId='".$params["ChequeoId"]."'");
+						while( $data = $rs->fetchAssoc() )
+						{
+							$procesoId=$data["ProcesoId"];
+							$abogadoId=$data["AbogadoId"];
+						}
+				$asignacion=	DB::Exec("INSERT INTO Reasignaciones (Fecha,ProcesoId,AbogadoId) VALUES (GETDATE(),".$procesoId.",".$abogadoId.")");
+			/*
+			//Validacion si hay error en el INSERT
+			if ($asignacion){
+				echo "El insert en reasiganciones se realizo correctamnete";
+			}
+			else{
+			echo "Error al ejecutar la consulta: " . DB::LastError();
+			}
+			*/
+			//echo "Valor de la asignacion: ".	$asignacion;
+			//echo ("<script>alert('Proceso insertado correctamnete')</script>");
 			//echo "Se realiza la insercion del Proceso con exito";
 		} else {
 			 // Hubo un error en la ejecución de la consulta
