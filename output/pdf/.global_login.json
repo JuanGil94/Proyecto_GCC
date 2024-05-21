@@ -55,7 +55,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$pdf_image images/LogoCSJ.png undefined 0},"hidden":"{$item_hide_image}"},
+			{"text":{$pdf_image images/LogoCSJ.png 100 10},"hidden":"{$item_hide_image}"},
 				
 		  ],
   "border": [ false, false, false, false ],
