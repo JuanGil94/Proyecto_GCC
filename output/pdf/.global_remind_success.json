@@ -106,7 +106,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Registro y contraseña fueron mandados a tu dirección electrónica","hidden":"{$item_hide_remind_success_message}","isHtml":true},
+			{"text":"Registro y contraseña fueron enviados a tu dirección electrónica","hidden":"{$item_hide_remind_success_message}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
