@@ -28,6 +28,8 @@
 
 		$this->events["BeforeQueryList"]=true;
 
+		$this->events["BeforeDelete"]=true;
+
 
 	}
 
@@ -685,6 +687,85 @@ function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
 ;
 } // function BeforeQueryList
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record deleted
+function BeforeDelete($where, &$deleted_values, &$message, $pageObject)
+{
+
+		DB::Delete("ChequeosSancionados", "ChequeoId=".$deleted_values["ChequeoId"]."" );
+DB::Delete("Devoluciones", "ChequeoId=".$deleted_values["ChequeoId"]."" );
+DB::Delete("ChequeosOficios", "ChequeoId=".$deleted_values["ChequeoId"]."" );
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeDelete
+
+		
+		
+		
+		
+		
+		
 		
 		
 		

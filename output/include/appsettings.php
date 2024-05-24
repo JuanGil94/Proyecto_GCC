@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2019_1715957891";
+$projectBuildKey = "2022_1715957891";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2019";
+$projectBuildNumber = "2022";
 
 $mlang_messages = array();
 $mlang_charsets = array();
