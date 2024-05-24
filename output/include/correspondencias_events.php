@@ -15,6 +15,8 @@
 
 		$this->events["BeforeAdd"]=true;
 
+		$this->events["CustomAdd"]=true;
+
 
 	}
 
@@ -113,13 +115,15 @@ $response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$oficioId)
 				{
 					$actuacionId=$date["ActuacionId"];
 				}
-$response=DB::Query("SELECT EtapaId FROM Actuaciones WHERE ActuacionId=".$actuacionId);
+$response=DB::Query("SELECT EtapaId, EstadoId, MotivoId FROM Actuaciones WHERE ActuacionId=".$actuacionId);
 		//print_r($actuacionId);
 		while( $date = $response->fetchAssoc() )
 				{
 					$etapaId=$date["EtapaId"];
+					$estadoId=$date["EstadoId"];
+					$motivoId=$date["MotivoId"];
 				}
-$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId);
+$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
 $response=$oficio->process();
 if ($response==true){
 	echo '<script>alert("Se agrega la correspondencia correctamente")</script>';
@@ -196,6 +200,85 @@ return true;
 } // function BeforeAdd
 
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Custom add
+function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
+{
+
+		
+$values["UserId"]=$_SESSION["UserId"];
+$values["AbogadoId"]=$_SESSION["AbogadoId"];
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function CustomAdd
+
 		
 		
 		
