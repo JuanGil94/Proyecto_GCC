@@ -135,7 +135,15 @@ function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
 $values["Fecha"]=now();
-
+/*
+foreach ($values as $value){
+echo "Valorr de ".$values.": ".$value."<br>";
+}
+*/
+//print_r($values);
+//echo "valorrr de Obligacion: ".$values["Obligacion"];
+//$values["Obligacion"]=$_SESSION["Obligacion"];
+//echo "El valor issss: ".$_SESSION["Obligacion"];
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
@@ -597,8 +605,18 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 		//echo "Value del campo: ".$recordId;
 // Place event code here.
 // Use "Add Action" button to add code snippets.
+print_r($values);
+/*
+$length=mb_strlen($values["Origen"], 'UTF-8');
+if ($length<23||$length>23){
+	echo '<script>alert ("El numero de Origen debe contener 23 caracteres ")</script>';
+	return false;
+}
+else{
+	return true;
+}
+*/
 
-return true;
 ;
 } // function BeforeAdd
 
