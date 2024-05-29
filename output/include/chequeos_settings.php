@@ -254,7 +254,8 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 								
 							
 							
-																																																																																																																							
+																																																																																																																									
+					
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
 
@@ -936,7 +937,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Abogado";
 
 	
 		$edata["UseCategory"] = true;
@@ -1375,7 +1376,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 	
 		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
+	$vdata["NumberOfChars"] = 23;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
@@ -1450,7 +1451,8 @@ $tdatachequeos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "ConceptoId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -3147,7 +3149,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Seccional";
 
 	
 	
@@ -4147,7 +4149,7 @@ $tdatachequeos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -4156,8 +4158,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 2;
-
+	
 	
 	
 	
@@ -4204,7 +4205,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -4214,7 +4215,6 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Currency");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -4245,7 +4245,8 @@ $tdatachequeos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "ConceptoId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -4358,8 +4359,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Currency");
-							
+	
 	
 //	End validation
 
@@ -4388,7 +4388,8 @@ $tdatachequeos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "ConceptoId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -4572,7 +4573,7 @@ $tdatachequeos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Currency");
 
 	
 	
@@ -4608,7 +4609,10 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Remisorio_event_uperrcase", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -4761,7 +4765,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "CarteraTipo";
 
-	
+				$edata["LookupWhere"] = "CarteraTipoId=1";
+
 
 	
 	$edata["LookupOrderBy"] = "";

@@ -289,6 +289,12 @@ if( $eventId == 'cantidadLetras' && "dbo.ListaChequeosReporte" == $table )
 	$cipherer = new RunnerCipherer("dbo.ListaChequeosReporte");
 	fieldEventHandler_cantidadLetras( $params );
 }
+if( $eventId == 'Remisorio_event_uperrcase' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_Remisorio_event_uperrcase( $params );
+}
 
 
 
@@ -2155,12 +2161,21 @@ elseif($result["upper"]==2){
 	//echo "valor del salario: ".$valorFinal;
 	//$record->setValue("CampoA", $nuevoValor);
 }
-else{
+elseif($result["upper"]==3){
 	//echo ("La seleccion es UVTs");
 	$rs = DB::Select("Uvts", "Ano=".$params["valorAnno"]);
 	while( $data = $rs->fetchAssoc() )
 		{
 			$valorF=$data["Uvt"];
+		}
+//echo "valor de la obligacion".$valorFinal
+}
+else{
+	//echo ("La seleccion es Uvbs");
+	$rs = DB::Select("Uvbs", "Ano=".$params["valorAnno"]);
+	while( $data = $rs->fetchAssoc() )
+		{
+			$valorF=$data["Uvb"];
 		}
 }
 $result["valor"]=$params["cantidad"]*$valorF;
@@ -2208,7 +2223,7 @@ elseif($params["tipo"]==2){
 	//echo "valor del salario: ".$valorFinal;
 	//$record->setValue("CampoA", $nuevoValor);
 }
-else{
+elseif ($params["tipo"]==3){
 	//echo ("La seleccion es UVTs");
 	$rs = DB::Select("Uvts", "Ano=".$params["valorAnno"]);
 	while( $data = $rs->fetchAssoc() )
@@ -2216,7 +2231,16 @@ else{
 			$valorF=$data["Uvt"];
 		}
 }
+elseif ($params["tipo"]==4){
+	//echo ("La seleccion es Uvbs");
+	$rs = DB::Select("Uvbs", "Ano=".$params["valorAnno"]);
+	while( $data = $rs->fetchAssoc() )
+		{
+			$valorF=$data["Uvb"];
+		}
+}
 $result["valor"]=$result["upper"]*$valorF;
+//echo $_SESSION["Obligacion"]=$result["valor"];
 //echo "valor de la obligacion".$valorFinal;
 	RunnerContext::pop();
 	
@@ -2246,6 +2270,35 @@ function fieldEventHandler_cantidadLetras( $params )
 	
 // Sample:
 $result["valor"]=$params["value"];
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Remisorio_event_uperrcase( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+//$result["upper"] = strtoupper( $params["value"] );
 ;
 	RunnerContext::pop();
 	

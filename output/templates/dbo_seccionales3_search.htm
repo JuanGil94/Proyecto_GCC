@@ -1,0 +1,656 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_Seccionales3 search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN SeccionalId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SeccionalId}">
+		{$label dbo_Seccionales3 SeccionalId }	</label>
+	<div class="r-search-option">
+		{$searchtype_SeccionalId}
+	</div>
+	<div class="r-search-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SeccionalId_editcontrol1}
+	</div>
+	
+</div>
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN Codigo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Codigo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Codigo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Codigo" data-fieldname="Codigo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Codigo}">
+		{$label dbo_Seccionales3 Codigo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Codigo}
+	</div>
+	<div class="r-search-field">
+		{$Codigo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Codigo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Codigo_fieldblock}
+											
+{BEGIN Seccional_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Seccional}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Seccional{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Seccional" data-fieldname="Seccional" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Seccional}">
+		{$label dbo_Seccionales3 Seccional }	</label>
+	<div class="r-search-option">
+		{$searchtype_Seccional}
+	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol1}
+	</div>
+	
+</div>
+
+{END Seccional_fieldblock}
+											
+{BEGIN NIT_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NIT}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="NIT{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="NIT" data-fieldname="NIT" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_NIT}">
+		{$label dbo_Seccionales3 NIT }	</label>
+	<div class="r-search-option">
+		{$searchtype_NIT}
+	</div>
+	<div class="r-search-field">
+		{$NIT_editcontrol}	</div>
+	<div class="r-search-field">
+		{$NIT_editcontrol1}
+	</div>
+	
+</div>
+
+{END NIT_fieldblock}
+											
+{BEGIN CiudadId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CiudadId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="CiudadId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="CiudadId" data-fieldname="CiudadId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_CiudadId}">
+		{$label dbo_Seccionales3 CiudadId }	</label>
+	<div class="r-search-option">
+		{$searchtype_CiudadId}
+	</div>
+	<div class="r-search-field">
+		{$CiudadId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$CiudadId_editcontrol1}
+	</div>
+	
+</div>
+
+{END CiudadId_fieldblock}
+											
+{BEGIN PiePagina_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PiePagina}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PiePagina{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="PiePagina" data-fieldname="PiePagina" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PiePagina}">
+		{$label dbo_Seccionales3 PiePagina }	</label>
+	<div class="r-search-option">
+		{$searchtype_PiePagina}
+	</div>
+	<div class="r-search-field">
+		{$PiePagina_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PiePagina_editcontrol1}
+	</div>
+	
+</div>
+
+{END PiePagina_fieldblock}
+											
+{BEGIN Sigobius_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sigobius}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Sigobius{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Sigobius" data-fieldname="Sigobius" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Sigobius}">
+		{$label dbo_Seccionales3 Sigobius }	</label>
+	<div class="r-search-option">
+		{$searchtype_Sigobius}
+	</div>
+	<div class="r-search-field">
+		{$Sigobius_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Sigobius_editcontrol1}
+	</div>
+	
+</div>
+
+{END Sigobius_fieldblock}
+											
+{BEGIN Email_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Email}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Email{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Email" data-fieldname="Email" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Email}">
+		{$label dbo_Seccionales3 Email }	</label>
+	<div class="r-search-option">
+		{$searchtype_Email}
+	</div>
+	<div class="r-search-field">
+		{$Email_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Email_editcontrol1}
+	</div>
+	
+</div>
+
+{END Email_fieldblock}
+											
+{BEGIN Direccion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Direccion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Direccion}">
+		{$label dbo_Seccionales3 Direccion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Direccion}
+	</div>
+	<div class="r-search-field">
+		{$Direccion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Direccion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Direccion_fieldblock}
+											
+{BEGIN Telefonos_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Telefonos}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Telefonos{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Telefonos" data-fieldname="Telefonos" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Telefonos}">
+		{$label dbo_Seccionales3 Telefonos }	</label>
+	<div class="r-search-option">
+		{$searchtype_Telefonos}
+	</div>
+	<div class="r-search-field">
+		{$Telefonos_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Telefonos_editcontrol1}
+	</div>
+	
+</div>
+
+{END Telefonos_fieldblock}
+											
+{BEGIN PCI_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PCI}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PCI{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="PCI" data-fieldname="PCI" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PCI}">
+		{$label dbo_Seccionales3 PCI }	</label>
+	<div class="r-search-option">
+		{$searchtype_PCI}
+	</div>
+	<div class="r-search-field">
+		{$PCI_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PCI_editcontrol1}
+	</div>
+	
+</div>
+
+{END PCI_fieldblock}
+											
+{BEGIN Contador_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Contador}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Contador{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Contador" data-fieldname="Contador" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Contador}">
+		{$label dbo_Seccionales3 Contador }	</label>
+	<div class="r-search-option">
+		{$searchtype_Contador}
+	</div>
+	<div class="r-search-field">
+		{$Contador_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Contador_editcontrol1}
+	</div>
+	
+</div>
+
+{END Contador_fieldblock}
+											
+{BEGIN ContadorCargo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ContadorCargo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ContadorCargo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="ContadorCargo" data-fieldname="ContadorCargo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ContadorCargo}">
+		{$label dbo_Seccionales3 ContadorCargo }	</label>
+	<div class="r-search-option">
+		{$searchtype_ContadorCargo}
+	</div>
+	<div class="r-search-field">
+		{$ContadorCargo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ContadorCargo_editcontrol1}
+	</div>
+	
+</div>
+
+{END ContadorCargo_fieldblock}
+											
+{BEGIN Director_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Director}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Director{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="Director" data-fieldname="Director" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Director}">
+		{$label dbo_Seccionales3 Director }	</label>
+	<div class="r-search-option">
+		{$searchtype_Director}
+	</div>
+	<div class="r-search-field">
+		{$Director_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Director_editcontrol1}
+	</div>
+	
+</div>
+
+{END Director_fieldblock}
+											
+{BEGIN DirectorCargo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DirectorCargo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="DirectorCargo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="DirectorCargo" data-fieldname="DirectorCargo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_DirectorCargo}">
+		{$label dbo_Seccionales3 DirectorCargo }	</label>
+	<div class="r-search-option">
+		{$searchtype_DirectorCargo}
+	</div>
+	<div class="r-search-field">
+		{$DirectorCargo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$DirectorCargo_editcontrol1}
+	</div>
+	
+</div>
+
+{END DirectorCargo_fieldblock}
+											
+{BEGIN Abogado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Abogado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Abogado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="Abogado" data-fieldname="Abogado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Abogado}">
+		{$label dbo_Seccionales3 Abogado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Abogado}
+	</div>
+	<div class="r-search-field">
+		{$Abogado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Abogado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Abogado_fieldblock}
+											
+{BEGIN AbogadoCargo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoCargo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="AbogadoCargo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_AbogadoCargo}">
+		{$label dbo_Seccionales3 AbogadoCargo }	</label>
+	<div class="r-search-option">
+		{$searchtype_AbogadoCargo}
+	</div>
+	<div class="r-search-field">
+		{$AbogadoCargo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$AbogadoCargo_editcontrol1}
+	</div>
+	
+</div>
+
+{END AbogadoCargo_fieldblock}
+											
+{BEGIN Formato_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Formato}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Formato{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="Formato" data-fieldname="Formato" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Formato}">
+		{$label dbo_Seccionales3 Formato }	</label>
+	<div class="r-search-option">
+		{$searchtype_Formato}
+	</div>
+	<div class="r-search-field">
+		{$Formato_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Formato_editcontrol1}
+	</div>
+	
+</div>
+
+{END Formato_fieldblock}
+											
+{BEGIN Corporacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Corporacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Corporacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="Corporacion" data-fieldname="Corporacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Corporacion}">
+		{$label dbo_Seccionales3 Corporacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Corporacion}
+	</div>
+	<div class="r-search-field">
+		{$Corporacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Corporacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Corporacion_fieldblock}
+											
+{BEGIN Unidad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Unidad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Unidad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="Unidad" data-fieldname="Unidad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Unidad}">
+		{$label dbo_Seccionales3 Unidad }	</label>
+	<div class="r-search-option">
+		{$searchtype_Unidad}
+	</div>
+	<div class="r-search-field">
+		{$Unidad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Unidad_editcontrol1}
+	</div>
+	
+</div>
+
+{END Unidad_fieldblock}
+											
+{BEGIN Oficina_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Oficina}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Oficina{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="Oficina" data-fieldname="Oficina" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Oficina}">
+		{$label dbo_Seccionales3 Oficina }	</label>
+	<div class="r-search-option">
+		{$searchtype_Oficina}
+	</div>
+	<div class="r-search-field">
+		{$Oficina_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Oficina_editcontrol1}
+	</div>
+	
+</div>
+
+{END Oficina_fieldblock}
+											
+{BEGIN Serie_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Serie}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Serie{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="Serie" data-fieldname="Serie" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Serie}">
+		{$label dbo_Seccionales3 Serie }	</label>
+	<div class="r-search-option">
+		{$searchtype_Serie}
+	</div>
+	<div class="r-search-field">
+		{$Serie_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Serie_editcontrol1}
+	</div>
+	
+</div>
+
+{END Serie_fieldblock}
+											
+{BEGIN Subserie_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Subserie}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Subserie{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field22" {$item_integrated_search_field22} data-pageid="{$pageid}" data-field="Subserie" data-fieldname="Subserie" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Subserie}">
+		{$label dbo_Seccionales3 Subserie }	</label>
+	<div class="r-search-option">
+		{$searchtype_Subserie}
+	</div>
+	<div class="r-search-field">
+		{$Subserie_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Subserie_editcontrol1}
+	</div>
+	
+</div>
+
+{END Subserie_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

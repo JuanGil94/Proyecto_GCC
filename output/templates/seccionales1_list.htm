@@ -841,6 +841,55 @@
 					Autorizaciones				</label>
 			</div>
 			{END print_details_autorizaciones}
+																						{BEGIN print_details_alertmandpago}
+			<div>
+				<label for="printDetailsalertmandpago{$id}">
+					<input type="checkbox" value="alertmandpago" id="printDetailsalertmandpago{$id}" checked>
+					Alert Mand Pago				</label>
+			</div>
+			{END print_details_alertmandpago}
+														{BEGIN print_details_alertnotmandpago}
+			<div>
+				<label for="printDetailsalertnotmandpago{$id}">
+					<input type="checkbox" value="alertnotmandpago" id="printDetailsalertnotmandpago{$id}" checked>
+					Alert Not Mand Pago				</label>
+			</div>
+			{END print_details_alertnotmandpago}
+														{BEGIN print_details_alertincacupago}
+			<div>
+				<label for="printDetailsalertincacupago{$id}">
+					<input type="checkbox" value="alertincacupago" id="printDetailsalertincacupago{$id}" checked>
+					Alert Inc Acu Pago				</label>
+			</div>
+			{END print_details_alertincacupago}
+														{BEGIN print_details_alertsinpersuasivo}
+			<div>
+				<label for="printDetailsalertsinpersuasivo{$id}">
+					<input type="checkbox" value="alertsinpersuasivo" id="printDetailsalertsinpersuasivo{$id}" checked>
+					Alert Sin Persuasivo				</label>
+			</div>
+			{END print_details_alertsinpersuasivo}
+														{BEGIN print_details_alertbusqbienes}
+			<div>
+				<label for="printDetailsalertbusqbienes{$id}">
+					<input type="checkbox" value="alertbusqbienes" id="printDetailsalertbusqbienes{$id}" checked>
+					Alert Busq Bienes				</label>
+			</div>
+			{END print_details_alertbusqbienes}
+														{BEGIN print_details_alertsegadelante}
+			<div>
+				<label for="printDetailsalertsegadelante{$id}">
+					<input type="checkbox" value="alertsegadelante" id="printDetailsalertsegadelante{$id}" checked>
+					Alert Seg Adelante				</label>
+			</div>
+			{END print_details_alertsegadelante}
+														{BEGIN print_details_alertintsusp}
+			<div>
+				<label for="printDetailsalertintsusp{$id}">
+					<input type="checkbox" value="alertintsusp" id="printDetailsalertintsusp{$id}" checked>
+					Alert Int Susp				</label>
+			</div>
+			{END print_details_alertintsusp}
 						</div>
 </div>
 {END print_details}
@@ -1337,12 +1386,31 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales1_list"		data-control-cell
 	
 	>
+
+	 
+			 
+		
+	{BEGIN dtables_link}
+				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+		<a 
+			{$abogados_link_attrs} 
+			class="{$dtables_link_class} details-badge badge abogados_badge" 
+			title="Mostrar detalles"
+						
+		>
+							<span class="glyphicon glyphicon-th-list"></span>
+									<span class="{$abogados_cntspan_class}" {$abogados_childnumber_attr}>
+				{$abogados_childnumber}				
+			</span>
+		</a>
+		</span>
+	{END dtables_link}
 
 	
 	</td>

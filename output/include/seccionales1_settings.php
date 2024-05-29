@@ -37,7 +37,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales1["Spanish"]["NIT"] = "NIT";
 	$fieldToolTipsseccionales1["Spanish"]["NIT"] = "";
 	$placeHoldersseccionales1["Spanish"]["NIT"] = "";
-	$fieldLabelsseccionales1["Spanish"]["CiudadId"] = "Ciudad Id";
+	$fieldLabelsseccionales1["Spanish"]["CiudadId"] = "Ciudad";
 	$fieldToolTipsseccionales1["Spanish"]["CiudadId"] = "";
 	$placeHoldersseccionales1["Spanish"]["CiudadId"] = "";
 	$fieldLabelsseccionales1["Spanish"]["PiePagina"] = "Pie Pagina";
@@ -61,28 +61,28 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales1["Spanish"]["Contador"] = "Contador";
 	$fieldToolTipsseccionales1["Spanish"]["Contador"] = "";
 	$placeHoldersseccionales1["Spanish"]["Contador"] = "";
-	$fieldLabelsseccionales1["Spanish"]["ContadorCargo"] = "Contador Cargo";
+	$fieldLabelsseccionales1["Spanish"]["ContadorCargo"] = "Cargo Contador";
 	$fieldToolTipsseccionales1["Spanish"]["ContadorCargo"] = "";
 	$placeHoldersseccionales1["Spanish"]["ContadorCargo"] = "";
 	$fieldLabelsseccionales1["Spanish"]["Director"] = "Director";
 	$fieldToolTipsseccionales1["Spanish"]["Director"] = "";
 	$placeHoldersseccionales1["Spanish"]["Director"] = "";
-	$fieldLabelsseccionales1["Spanish"]["DirectorCargo"] = "Director Cargo";
+	$fieldLabelsseccionales1["Spanish"]["DirectorCargo"] = "Cargo Director";
 	$fieldToolTipsseccionales1["Spanish"]["DirectorCargo"] = "";
 	$placeHoldersseccionales1["Spanish"]["DirectorCargo"] = "";
 	$fieldLabelsseccionales1["Spanish"]["Abogado"] = "Abogado";
 	$fieldToolTipsseccionales1["Spanish"]["Abogado"] = "";
 	$placeHoldersseccionales1["Spanish"]["Abogado"] = "";
-	$fieldLabelsseccionales1["Spanish"]["AbogadoCargo"] = "Abogado Cargo";
+	$fieldLabelsseccionales1["Spanish"]["AbogadoCargo"] = "Cargo Abogado";
 	$fieldToolTipsseccionales1["Spanish"]["AbogadoCargo"] = "";
 	$placeHoldersseccionales1["Spanish"]["AbogadoCargo"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Formato"] = "Formato";
+	$fieldLabelsseccionales1["Spanish"]["Formato"] = "Imprimir Formato";
 	$fieldToolTipsseccionales1["Spanish"]["Formato"] = "";
 	$placeHoldersseccionales1["Spanish"]["Formato"] = "";
 	$fieldLabelsseccionales1["Spanish"]["Corporacion"] = "Corporacion";
 	$fieldToolTipsseccionales1["Spanish"]["Corporacion"] = "";
 	$placeHoldersseccionales1["Spanish"]["Corporacion"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Unidad"] = "Unidad";
+	$fieldLabelsseccionales1["Spanish"]["Unidad"] = "Unidad Administrativa";
 	$fieldToolTipsseccionales1["Spanish"]["Unidad"] = "";
 	$placeHoldersseccionales1["Spanish"]["Unidad"] = "";
 	$fieldLabelsseccionales1["Spanish"]["Oficina"] = "Oficina";
@@ -191,7 +191,7 @@ $tdataseccionales1[".isUseAjaxSuggest"] = true;
 
 
 
-																																													
+																																																																					
 
 $tdataseccionales1[".ajaxCodeSnippetAdded"] = false;
 
@@ -203,7 +203,7 @@ $tdataseccionales1[".addPageEvents"] = false;
 $tdataseccionales1[".isUseTimeForSearch"] = false;
 
 
-$tdataseccionales1[".badgeColor"] = "778899";
+$tdataseccionales1[".badgeColor"] = "3CB371";
 
 
 $tdataseccionales1[".allSearchFields"] = array();
@@ -262,15 +262,17 @@ $tdataseccionales1[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY Seccional ASC";
 $tdataseccionales1[".strOrderBy"] = $tstrOrderBy;
 
 $tdataseccionales1[".orderindexes"] = array();
+	$tdataseccionales1[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "Seccional");
 
 
-$tdataseccionales1[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+
+$tdataseccionales1[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
 $tdataseccionales1[".sqlFrom"] = "FROM dbo.Seccionales";
-$tdataseccionales1[".sqlWhereExpr"] = "SeccionalId=1022";
+$tdataseccionales1[".sqlWhereExpr"] = "";
 $tdataseccionales1[".sqlTail"] = "";
 
 
@@ -601,7 +603,7 @@ $tdataseccionales1[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Seccional";
 	$fdata["GoodName"] = "Seccional";
-	$fdata["ownerTable"] = "dbo.Seccionales";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Seccional");
 	$fdata["FieldType"] = 200;
 
@@ -615,7 +617,7 @@ $tdataseccionales1[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Seccional";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Seccional";
+	$fdata["FullName"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
 
 	
 	
@@ -3556,25 +3558,23 @@ function createSqlQuery_seccionales1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
 $proto0["m_strFrom"] = "FROM dbo.Seccionales";
-$proto0["m_strWhere"] = "SeccionalId=1022";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strWhere"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY Seccional ASC";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "SeccionalId=1022";
+$proto2["m_sql"] = "";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "SeccionalId",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "=1022";
+$proto2["m_strCase"] = "";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;
@@ -3627,16 +3627,14 @@ $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Seccional",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end"
 ));
 
-$proto10["m_sql"] = "Seccional";
+$proto10["m_sql"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
 $proto10["m_srcTableName"] = "dbo.Seccionales1";
 $proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
+$proto10["m_alias"] = "Seccional";
 $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;
@@ -3977,6 +3975,19 @@ $obj = new SQLFromListItem($proto52);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto56=array();
+						$obj = new SQLField(array(
+	"m_strName" => "Seccional",
+	"m_strTable" => "dbo.Seccionales",
+	"m_srcTableName" => "dbo.Seccionales1"
+));
+
+$proto56["m_column"]=$obj;
+$proto56["m_bAsc"] = 1;
+$proto56["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto56);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Seccionales1";		
 $obj = new SQLQuery($proto0);
 
