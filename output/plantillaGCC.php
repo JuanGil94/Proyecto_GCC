@@ -2639,7 +2639,7 @@ class plantillaDev extends diccionarioChequeo{
             for($i=0;$i<count($resultados);$i++){
                 $resultadoF.=$resultados[$i];
             }
-            echo "Variable del documento ".$resultadoF.".Valor de la variable del diccionario: ".$info[$resultadoF]."<br>";
+            //echo "Variable del documento ".$resultadoF.".Valor de la variable del diccionario: ".$info[$resultadoF]."<br>";
             if ($info[$resultadoF]==!NULL){
                 $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
             }//$var[]=$resultadoF;

@@ -742,7 +742,12 @@ function buttonHandler_New_Button3($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
+	$data = $pageObject->getMasterRecord();
+print_r($data);
+
+
+
+// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
 include_once (getabspath("plantillaGCC.php"));
 //$objeto=new plantillas($params["ProcesoId"]);
@@ -2043,10 +2048,158 @@ function buttonHandler_ImprimirOfChe($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	 include_once (getabspath("plantillaGCC.php"));
+//SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS
+$consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=(SELECT AbogadoId from Chequeos where ChequeoId=".$params["ChequeoId"].")");
+        //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
+            while($date=$consulta->fetchAssoc()){
+            $despacho=$date["Despacho"];
+            $codificador=$date["Codificador"];
+            //echo "La tasa de Usura diaria es: ".$tasaUsuraDiaria."<br>";
+        };
+
+//CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
+//la url de la conexion a Sigob
+$url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
+//Parametro a enviar para consumir el metodo
+$data = array(
+    'Despacho' => 'DE637',
+    'Codificador' => '6188',
+    'SoloEditorExterno' => '1',
+    'Contrasena' => '448B8890'
+    // ... Agrega más parámetros según sea necesario
+);
+
+// Convertir los datos a formato de cadena
+$postData = http_build_query($data);
+
+// Configurar opciones de cURL
+$options = array(
+    CURLOPT_URL            => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => $postData,
+);
+
+// Inicializar cURL y configurar opciones
+$curl = curl_init();
+curl_setopt_array($curl, $options);
+
+//NO VALIDAR SI REQUIERE SSL
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+// Realizar la solicitud cURL y obtener la respuesta
+$response2 = curl_exec($curl);
+// Verificar errores
+if (curl_errno($curl)) {
+    echo 'Error al realizar la solicitud: ' . curl_error($curl);
+}else{
+// Imprimir la respuesta del servicio web
+//echo "<br>Valor del metodo NuevaCorrespondencia: ".$response2."<br>";
+$xml = new SimpleXMLElement($response2);
+$radicadoF=strval($xml[0]);
+
+$resultado["response"]=DB::Exec("UPDATE ChequeosOficios set Radicado='".$radicadoF."' where ChequeoOficioId=".$params['ChequeoOficioId']."");
+                    if (!$resultado["response"]){
+                        echo "Ocurrio un error debido a: ".DB::LastError(); 
+                        return false;
+                    } 
+$result["total"]=$response2;
+////////
+//CONSUMINOS EL METODO DE ActualizarCorrespondencia de la API SOAP
+$curl = curl_init();
+//SE LLAMA LA FUNCION LA CUAL TOMA LA PLANTILLA Y REEMPLAZA SUS VARIABLES, CREANDO UN NUEVO .DOCX
+ $objeto=new plantillaDev($params["ChequeoId"],$params["OficioId"],$params["obligacionLetras"],$params["obligacionTotalLetras"]);
+ $objeto->funcGlobal();
+//$rutaArchivo = 'Plantilla_1097.docx';
+$rutaArchivo = 'templates_GCC/Archivo_'.$params["ChequeoId"].'_'.$params["OficioId"].'.docx';
+// Leer el contenido del archivo como un arreglo de bytes
+$bytesDocumento = file_get_contents($rutaArchivo);
+$base64 = base64_encode($bytesDocumento);
+//echo $base64;
+//$radicado='DEAJGCC23-12554';
+//echo "<br>valor del string quemando ekl radicado DEAJ-XXXX: ".var_dump($radicado);
+//echo $bytesDocumento;
+//$bytesDocumento =  unpack("C*", $bytesDocumento);
+//$radicado='DEAJGCC23-12547';
+//print_r($bytesDocumento);
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <ActualizarCorrespondencia xmlns="http://tempuri.org/">
+      <CodigoRegistro>'.$radicadoF.'</CodigoRegistro>
+      <Asunto>Prueba wsAPICorrespondenci</Asunto>
+      <Tipo>1</Tipo>
+      <GradoReserva>0</GradoReserva>
+      <Prioridad>0</Prioridad>
+      <MedioEnvio>0</MedioEnvio>
+      <EsperaRespuesta>N</EsperaRespuesta>
+      <FechaEstimadaRespuesta>1977/01/01</FechaEstimadaRespuesta>
+      <ResultadoGestion>-1</ResultadoGestion>
+      <Objetivos>1</Objetivos>
+      <FormatoDocumento>1</FormatoDocumento>
+      <Documento>'.$base64.'</Documento>
+      <NombreDocumento>Prueba wsAPICorrespondencia.docx</NombreDocumento>
+      <DocumentoTexto>Texto sin formato del documento</DocumentoTexto>
+      <Firmante>DE637</Firmante>
+      <Estado>0</Estado>
+      <DespachoDestino></DespachoDestino>
+      <Vocativo>-1</Vocativo>
+      <Apellido>Lamonaca</Apellido>
+      <Nombre>Alejandro</Nombre>
+      <NumeroDocumento>12345</NumeroDocumento>
+      <Sexo>0</Sexo>
+      <FechaNacimiento>1977/01/01</FechaNacimiento>
+      <Institucion>-1</Institucion>
+      <Cargo>-1</Cargo>
+      <Departamento>-1</Departamento>
+      <Telefono>09811111231</Telefono>
+      <CorreoElectronico>alelamonaca@gmail.com</CorreoElectronico>
+      <Calle>Mi calle</Calle>
+      <Ciudad>Asunción</Ciudad>
+      <ProvinciaDepartamento>Central</ProvinciaDepartamento>
+      <Pais>Paraguay</Pais>
+      <TipoDireccion>1</TipoDireccion>
+      <CodigoRegistroPrecedente></CodigoRegistroPrecedente>
+      <EsRespuesta>0</EsRespuesta>
+      <Contrasena>448B8890</Contrasena>
+    </ActualizarCorrespondencia>
+  </soap12:Body>
+</soap12:Envelope>',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: text/xml',
+    'Cookie: ASP.NET_SessionId=4uvpkyerhy21mcwghvyqfuw0'
+  ),
+));
+
+//NO VERIFICAR CERTICADO SSL
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+$response = curl_exec($curl);
+$result["response"]=$response;
+if ($response === false) {
+    echo 'Error en la solicitud cURL: ' . curl_error($curl);
+} else {
+    echo 'Respuesta de la API Metodo Actualizar Correspondencia: ' . $response;
+}
+//echo $response;
  //$objeto=new plantillas($params["ProcesoId"]);
  //echo "Value ".$params["OficioId"];
- $objeto=new plantillaDev($params["ChequeoId"],$params["OficioId"],$params["obligacionLetras"],$params["obligacionTotalLetras"]);
- $objeto->funcGlobal();;
+ //$objeto=new plantillaDev($params["ChequeoId"],$params["OficioId"],$params["obligacionLetras"],$params["obligacionTotalLetras"]);
+ //$objeto->funcGlobal();
+}
+curl_close($curl);;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -2179,6 +2332,7 @@ else{
 		}
 }
 $result["valor"]=$params["cantidad"]*$valorF;
+$_SESSION["Obligacion"]=$result["valor"];
 //echo "valor de la obligacion".$valorFinal;
 	RunnerContext::pop();
 	
@@ -2240,8 +2394,9 @@ elseif ($params["tipo"]==4){
 		}
 }
 $result["valor"]=$result["upper"]*$valorF;
+$_SESSION["Obligacion"]=$result["valor"];
 //echo $_SESSION["Obligacion"]=$result["valor"];
-//echo "valor de la obligacion".$valorFinal;
+//echo "valor de la obligacion".$_SESSION["Obligacion"];;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );
