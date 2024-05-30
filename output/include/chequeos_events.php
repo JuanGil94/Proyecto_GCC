@@ -134,6 +134,7 @@ function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
+unset($values["Dias"]);
 $values["Fecha"]=now();
 //$values["Obligacion"]=$_SESSION["Obligacion"];
 /*

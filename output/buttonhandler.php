@@ -295,6 +295,12 @@ if( $eventId == 'Remisorio_event_uperrcase' && "dbo.Chequeos" == $table )
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
 	fieldEventHandler_Remisorio_event_uperrcase( $params );
 }
+if( $eventId == 'calcular_diasPlazo' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_calcular_diasPlazo( $params );
+}
 
 
 
@@ -2056,7 +2062,23 @@ $consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId
             $codificador=$date["Codificador"];
             //echo "La tasa de Usura diaria es: ".$tasaUsuraDiaria."<br>";
         };
-
+$consulta=DB::Query("SELECT  D.Despacho AS 'Despacho', 
+        Juez AS 'DespachoJuez',
+        Direccion AS 'DespachoDireccion',
+        Correo AS 'DespachoCorreo',
+        IIF (D.juez=null,'Doctor','Doctora') AS 'Doctor'
+        FROM Despachos D
+        INNER JOIN Chequeos C ON C.DespachoId = D.DespachoId
+        WHERE ChequeoId =".$params["ChequeoId"]."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $despachoJuez=$date["DespachoJuez"];
+        }
+$consulta=DB::Query("SELECT * FROM Oficios WHERE OficioId=".$params["OficioId"]."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $asunto=$date["Oficio"];
+        }
 //CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
 //la url de la conexion a Sigob
 $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
@@ -2138,25 +2160,25 @@ curl_setopt_array($curl, array(
   <soap12:Body>
     <ActualizarCorrespondencia xmlns="http://tempuri.org/">
       <CodigoRegistro>'.$radicadoF.'</CodigoRegistro>
-      <Asunto>Prueba wsAPICorrespondenci</Asunto>
-      <Tipo>1</Tipo>
+      <Asunto>'.$asunto.'</Asunto>
+      <Tipo>2</Tipo>
       <GradoReserva>0</GradoReserva>
       <Prioridad>0</Prioridad>
       <MedioEnvio>0</MedioEnvio>
       <EsperaRespuesta>N</EsperaRespuesta>
-      <FechaEstimadaRespuesta>1977/01/01</FechaEstimadaRespuesta>
+      <FechaEstimadaRespuesta>'.now().'</FechaEstimadaRespuesta>
       <ResultadoGestion>-1</ResultadoGestion>
-      <Objetivos>1</Objetivos>
+      <Objetivos>11</Objetivos>
       <FormatoDocumento>1</FormatoDocumento>
       <Documento>'.$base64.'</Documento>
       <NombreDocumento>Prueba wsAPICorrespondencia.docx</NombreDocumento>
       <DocumentoTexto>Texto sin formato del documento</DocumentoTexto>
-      <Firmante>DE637</Firmante>
+      <Firmante>'.$despacho.'</Firmante>
       <Estado>0</Estado>
       <DespachoDestino></DespachoDestino>
       <Vocativo>-1</Vocativo>
-      <Apellido>Lamonaca</Apellido>
-      <Nombre>Alejandro</Nombre>
+      <Apellido>'.$despachoJuez.'</Apellido>
+      <Nombre>'.$despachoJuez.'</Nombre>
       <NumeroDocumento>12345</NumeroDocumento>
       <Sexo>0</Sexo>
       <FechaNacimiento>1977/01/01</FechaNacimiento>
@@ -2455,6 +2477,62 @@ function fieldEventHandler_Remisorio_event_uperrcase( $params )
 // Sample:
 //$result["upper"] = strtoupper( $params["value"] );
 ;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_calcular_diasPlazo( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
+//echo "Fecha Ejecutoria: ".$fechaEje;
+$rs=DB::Query("declare @p2 date
+set @p2=''
+exec [dbo].[Procesos_FechaPlazo_PCC_F_C] @Ejecutoria='".$fechaEje."',@Dias=".$params["value"].",@Plazo=@p2 output
+select @p2 fechaPlazo");
+//print_r($consulta);
+while( $data = $rs->fetchAssoc() )
+	{
+		$fechaPlazo=$data['fechaPlazo'];
+	}
+//echo "Valor de la Fecha Plazo: ".$fechaPlazo;
+
+// Divide la cadena en fecha y hora
+$dateTimeParts = explode(' ', $fechaPlazo);
+$datePart = $dateTimeParts[0];
+
+// Divide la parte de la fecha en año, mes y día
+$dateComponents = explode('-', $datePart);
+$year = $dateComponents[0];
+$month = $dateComponents[1];
+$day = $dateComponents[2];
+$result["anno"]=$year ;
+$result["mes"]=intval($month);
+$result["dia"]=$day;
+
+//echo "Año:". $result['anno'];
+//echo "Mes:".$result['mes'];
+//echo "Día:".$result['dia'];
+
+//echo "<script>alert ('Problema: ".$Errmsg."')";;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

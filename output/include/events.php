@@ -39,6 +39,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["SumCuota"] = true;
 		$this->events["SumIntereses1"] = true;
 		$this->events["SumaInteresesTable"] = true;
+		$this->events["Dias"] = true;
+		$this->events["dbo_Chequeos_snippet2"] = true;
 
 
 
@@ -642,6 +644,18 @@ $consulta=DB::Query("SELECT FORMAT(SUM(Intereses), 'C', 'es-CO') sumIntereses FR
             $sumIntereses=$date["sumIntereses"];
         }
 echo "<strong>".$sumIntereses."</strong>";
+	;
+}
+	function event_Dias(&$params)
+	{
+	// Put your code here.
+echo "<input type='number' class='form-control' id='dias' name='dias'></input>";
+	;
+}
+	function event_dbo_Chequeos_snippet2(&$params)
+	{
+	// Put your code here.
+echo "<label class='r-edit-label control-label'>Tipo de Expediente</label>";
 	;
 }
 
