@@ -169,6 +169,9 @@ pdfDocument = {
 										{BEGIN col_grid_34}
 					"%",
 					{END col_grid_34}
+										{BEGIN col_grid_35}
+					"%",
+					{END col_grid_35}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1346,6 +1349,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field28}
+																							{BEGIN cellblock_grid_headcell_field3}
+{
+	cellId: 'headcell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos Dias }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field3}
 											],
 				{END row_grid_0}
 		
@@ -2376,6 +2408,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field28}
+																							{BEGIN cellblock_grid_cell_field3}
+{
+	cellId: 'cell_field3',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field3}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2625,6 +2686,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  34,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  35,
 				text: ''
 			},
 							],
@@ -3546,6 +3613,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field28}
+																							{BEGIN cellblock_grid_footcell_field3}
+{
+	cellId: 'footcell_field3',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field3}
 											],
 				{END row_grid_3}
 		

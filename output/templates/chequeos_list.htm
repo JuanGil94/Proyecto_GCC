@@ -213,6 +213,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_Dias}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Dias}" {$filterRow_attrs_Dias}>
+			<label>{$label dbo_Chequeos Dias }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Dias}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Dias}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Dias}</span>
+						</div>
+		{END searchCtrlBlock_Dias}
 																{BEGIN searchCtrlBlock_ObligacionLetras}
 
 
@@ -1537,6 +1550,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Dias" checked="checked" value="1" data-field="Dias" data-fieldname="Dias">
+					<span>{$label dbo_Chequeos Dias }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -1554,7 +1577,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
+		content: "{$label dbo_Chequeos Dias}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
 		content: "{$label dbo_Chequeos ConceptoId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoId"]:before {
@@ -2504,6 +2530,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field28}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Dias_class}	"
+
+			data-field="Dias"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dias_fieldheadercolumn}
+	{BEGIN Dias_fieldheader}
+	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
+	{$label dbo_Chequeos Dias }	{$arrow_icon_Dias}
+	</SPAN>
+	{END Dias_fieldheader}
+{END Dias_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
 							</tr>
 																				
 					{END grid_header}
@@ -3286,6 +3337,27 @@
 	
 	</td>
 	{END cellblock_grid_cell_field28}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Dias_class}	"
+
+			data-field="Dias"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dias_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias" data-default-width >
+{$Dias_value}
+</span>
+{END Dias_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -3856,6 +3928,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field28}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Dias_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

@@ -234,6 +234,9 @@ pdfDocument = {
 				
 			{"text":{$ObligacionLetras_pdfvalue},"hidden":"{$item_hide_export_field42}"},
 				
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_export_field43}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

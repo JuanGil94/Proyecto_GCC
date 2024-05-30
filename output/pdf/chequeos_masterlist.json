@@ -196,6 +196,9 @@ pdfDocument = {
 										{BEGIN col_grid_43}
 					"%",
 					{END col_grid_43}
+										{BEGIN col_grid_44}
+					"%",
+					{END col_grid_44}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1597,6 +1600,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field42}
+																							{BEGIN cellblock_grid_headcell_field43}
+{
+	cellId: 'headcell_field43',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos Dias }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field43}
 											],
 				{END row_grid_0}
 		
@@ -2881,6 +2913,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field42}
+																							{BEGIN cellblock_grid_cell_field43}
+{
+	cellId: 'cell_field43',
+	col:0,
+	row:0,
+			fieldName: 'Dias',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Dias_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field43}
 											],
 				{END row_grid_1}
 		
@@ -4034,6 +4095,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field42}
+																							{BEGIN cellblock_grid_footcell_field43}
+{
+	cellId: 'footcell_field43',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field43}
 											],
 				{END row_grid_2}
 		
