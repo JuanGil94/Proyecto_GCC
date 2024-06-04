@@ -61,24 +61,8 @@ class coreOficios {
                 break;
                 case "15":
                     //echo "Actuacion Nunmero 15";
-                    $recalcular=new reliquidacion($this->procesoId);
-                    $meses = $recalcular->Calcular();
-                    $this->intereses=$recalcular->getInteresesSuma();
-                    $response=DB::Query("SELECT * FROM procesos WHERE ProcesoId=".$this->procesoId);
-		            //print_r($actuacionId);
-		            while( $date = $response->fetchAssoc() )
-				        {
-					    $interesesP=$date["Intereses"];
-				     }
-                    $this->interesesDiferencial=$this->intereses-$interesesP;
-                    //$result["total"]=$recalcular->getSuma();
-                    $resultado["response"]=DB::Exec("UPDATE Procesos set MotivoId=".$this->motivoId.", Terminacion='".$this->fechaLiqui."',EstadoId =".$this->estadoId.",Observaciones='".$this->observaciones."',Intereses=".$this->intereses.",InteresesInicial=".$this->intereses.",Liquidacion='".$this->fechaLiqui."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
+                    $resultado["response"]=DB::Exec("UPDATE Procesos set MotivoId=".$this->motivoId.", Terminacion='".$this->fechaLiqui."',EstadoId =".$this->estadoId.",Observaciones='".$this->observaciones."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                     if (!$resultado["response"]){
-                        echo "Ocurrio un error debido a: ".DB::LastError(); 
-                        return false;
-                    } 
-                    $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$this->procesoId.",'".$this->fecha."',".$this->interesesDiferencial.",NULL,0,NULL)");
-                    if (!$resultado2["response"]){
                         echo "Ocurrio un error debido a: ".DB::LastError(); 
                         return false;
                     } 

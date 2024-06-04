@@ -585,7 +585,7 @@ $globalSettings["useCustomSMTPSettings"] = true;
 $globalSettings["strSMTPUser"] = "soporteGCC@deaj.ramajudicial.gov.co";
 $globalSettings["strSMTPServer"] = "smtp.office365.com";
 $globalSettings["strSMTPPort"] = "587";
-$globalSettings["strSMTPPassword"] = "Taf98594";
+$globalSettings["strSMTPPassword"] = "Huestes*7";
 $globalSettings["strFromEmail"] = "soporteGCC@deaj.ramajudicial.gov.co";
 
 $globalSettings["SMTPSecure"] = "tls";
@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2148_1717102227";
+$projectBuildKey = "2157_1717102227";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2148";
+$projectBuildNumber = "2157";
 
 $mlang_messages = array();
 $mlang_charsets = array();

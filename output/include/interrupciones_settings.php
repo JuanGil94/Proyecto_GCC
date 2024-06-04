@@ -628,8 +628,8 @@ $tdatainterrupciones[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	
@@ -766,8 +766,8 @@ $tdatainterrupciones[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	

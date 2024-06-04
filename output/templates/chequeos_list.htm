@@ -1560,6 +1560,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FechaSancion" checked="checked" value="1" data-field="FechaSancion" data-fieldname="FechaSancion">
+					<span>{$label dbo_Chequeos FechaSancion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -1640,7 +1650,10 @@
 					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Tipo"]:before {
 		content: "{$label dbo_Chequeos Tipo}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cantidad"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="FechaSancion"]:before {
+		content: "{$label dbo_Chequeos FechaSancion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cantidad"]:before {
 		content: "{$label dbo_Chequeos Cantidad}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion"]:before {
@@ -2555,6 +2568,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field30}
+	<th
+	
+	{$cell_grid_headcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$FechaSancion_class}	"
+
+			data-field="FechaSancion"
+	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN FechaSancion_fieldheadercolumn}
+	{BEGIN FechaSancion_fieldheader}
+	<SPAN {$FechaSancion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label5" {$item_grid_field_label5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FechaSancion" data-fieldname="FechaSancion">
+	{$label dbo_Chequeos FechaSancion }	{$arrow_icon_FechaSancion}
+	</SPAN>
+	{END FechaSancion_fieldheader}
+{END FechaSancion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field30}
 							</tr>
 																				
 					{END grid_header}
@@ -3358,6 +3396,27 @@
 {END Dias_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field30}
+	<td
+	
+	{$cell_grid_cell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$FechaSancion_class}	"
+
+			data-field="FechaSancion"
+	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN FechaSancion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FechaSancion" data-fieldname="FechaSancion" data-default-width >
+{$FechaSancion_value}
+</span>
+{END FechaSancion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field30}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -3943,6 +4002,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field30}
+	<td
+	
+	{$cell_grid_footcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$FechaSancion_class}	"
+
+	
+	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field30}
 							</tr>
 					
 					</tfoot>
