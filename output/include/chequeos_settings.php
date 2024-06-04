@@ -1244,8 +1244,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 5;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	
@@ -1693,8 +1693,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	
@@ -1831,8 +1831,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	
@@ -4193,8 +4193,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -4205,8 +4204,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 5;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	
@@ -4217,8 +4216,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 //	End validation
 
@@ -5477,8 +5475,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	
@@ -5615,8 +5613,8 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
 
 	
 	

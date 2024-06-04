@@ -748,8 +748,8 @@ function buttonHandler_New_Button3($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$data = $pageObject->getMasterRecord();
-print_r($data);
+	//$data = $pageObject->getMasterRecord();
+//print_r($data);
 
 
 
