@@ -2429,11 +2429,12 @@ class plantillaCaratulas extends diccionario{
     }
 }
 class diccionarioChequeo{
-    public $chequeoId;
+    public $chequeoId,$sigobius;
     public $variables;
-    public function process ($chequeoId,$oficioId){
+    public function process ($chequeoId,$oficioId,$sigobius){
         $this->chequeoId=$chequeoId;
         $this->oficioId=$oficioId;
+        $this->sigobius=$sigobius;
         $consulta=DB::Query("SELECT S.Seccional AS 'Seccional',
         S.PiePagina AS 'PiePagina', 
         S.Telefonos AS 'SeccionalTelefonos', 
@@ -2451,22 +2452,11 @@ class diccionarioChequeo{
                 "SeccionalTelefonos"=>$date["SeccionalTelefonos"]
             );
         }
-        $consulta=DB::Query("SELECT Radicado AS 'Sigobius'
-        FROM ChequeosOficios
-        WHERE OficioId=".$oficioId." and ChequeoId=".$chequeoId."");
+        $info["Sigobius"]=$this->sigobius;
+        $consulta=DB::Query("SELECT FORMAT(GETDATE(), 'dd \de MMMM \de yyyy', 'es-ES') AS 'fechahoy'");
         while( $date = $consulta->fetchAssoc() )
 		{
-            $info["Sigobius"]=$date["Sigobius"];
-        }
-
-        $consulta=DB::Query("SELECT top 1 
-        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'fechahoy',
-        FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaHoy'
-        FROM ChequeosOficios C
-        where C.OficioId =".$oficioId." and ChequeoId=".$chequeoId."ORDER BY C.Fecha desc");
-        while( $date = $consulta->fetchAssoc() )
-		{
-            $info["FechaHoy"]=$date["FechaHoy"];
+            $info["FechaHoy"]=$date["fechahoy"];
             $info["fechahoy"]=$date["fechahoy"];
         }
 
@@ -2607,18 +2597,14 @@ class diccionarioChequeo{
 
 }
 class plantillaDev extends diccionarioChequeo{
-    public $ChequeoId;
-    public $oficioId;
-    public $obligacionLetras;
-    public $obligacionTotalLetras;
-    public function __construct($ChequeoId,$oficioId,$obligacionLetras,$obligacionTotalLetras){
+    public $ChequeoId,$oficioId,$sigobius;
+    public function __construct($ChequeoId,$oficioId,$sigobius){
         $this->chequeoId=$ChequeoId;
         $this->oficioId=$oficioId;
-        $this->obligacionLetras=$obligacionLetras;
-        $this->obligacionTotalLetras=$obligacionTotalLetras;
+        $this->sigobius=$sigobius;
     }
     public function funcGlobal(){
-        $info=parent::process($this->chequeoId,$this->oficioId);
+        $info=parent::process($this->chequeoId,$this->oficioId,$this->sigobius);
         //$direcciones=parent::direcciones();
         $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
         // Crear un objeto TemplateProcessor

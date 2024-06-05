@@ -912,7 +912,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Concepto";
 
 	
 	
@@ -3604,7 +3604,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Seccional";
 
 	
 	
@@ -5754,7 +5754,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Naturaleza";
 
 	
 		$edata["UseCategory"] = true;
@@ -6199,7 +6199,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Tramite";
 
 	
 	

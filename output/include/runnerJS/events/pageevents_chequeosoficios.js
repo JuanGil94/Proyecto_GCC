@@ -1,2 +1,2 @@
 
-Runner.pages.PageSettings.addPageEvent('dbo.ChequeosOficios',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){this.on('afterSave',function(formObj,fieldControlsArr,pageObj){swal({icon:"success",text:"Se ingresa el Oficio Devolucion Correctamente"})});});
+Runner.pages.PageSettings.addPageEvent('dbo.ChequeosOficios',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){this.on('afterSave',function(formObj,fieldControlsArr,pageObj){swal({icon:"success",text:"Se ingresa el Oficio Devolucion Correctamente y se crea el Oficio en Sigobius"})});});

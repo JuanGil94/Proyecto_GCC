@@ -748,8 +748,8 @@ function buttonHandler_New_Button3($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	//$data = $pageObject->getMasterRecord();
-//print_r($data);
+	$data = $pageObject->getMasterRecord();
+print_r($data);
 
 
 
@@ -2509,6 +2509,7 @@ set @p2=''
 exec [dbo].[Procesos_FechaPlazo_PCC_F_C] @Ejecutoria='".$fechaEje."',@Dias=".$params["value"].",@Plazo=@p2 output
 select @p2 fechaPlazo");
 //print_r($consulta);
+if ($rs){
 while( $data = $rs->fetchAssoc() )
 	{
 		$fechaPlazo=$data['fechaPlazo'];
@@ -2526,8 +2527,8 @@ $month = $dateComponents[1];
 $day = $dateComponents[2];
 $result["anno"]=$year ;
 $result["mes"]=intval($month);
-$result["dia"]=$day;
-
+$result["dia"]=intval($day);
+}
 //echo "Año:". $result['anno'];
 //echo "Mes:".$result['mes'];
 //echo "Día:".$result['dia'];
