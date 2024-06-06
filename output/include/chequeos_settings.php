@@ -259,6 +259,7 @@ $tdatachequeos[".isUseAjaxSuggest"] = true;
 							
 																																																																																																																									
 							
+							
 					
 
 $tdatachequeos[".ajaxCodeSnippetAdded"] = false;
@@ -1811,12 +1812,15 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Ejecutoria_event", "type" => "editing" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1830,7 +1834,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 24;
 	$edata["LastYearFactor"] = 0;
 

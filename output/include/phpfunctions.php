@@ -1028,6 +1028,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="dbo.Chequeos" && $field=="Dias")
+	{
+		return 10;
+	}
 				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
 	{
 		return $_SESSION["UserName"];
