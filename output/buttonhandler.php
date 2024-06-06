@@ -301,6 +301,12 @@ if( $eventId == 'calcular_diasPlazo' && "dbo.Chequeos" == $table )
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
 	fieldEventHandler_calcular_diasPlazo( $params );
 }
+if( $eventId == 'Ejecutoria_event' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_Ejecutoria_event( $params );
+}
 
 
 
@@ -2534,6 +2540,60 @@ $result["dia"]=intval($day);
 //echo "Día:".$result['dia'];
 
 //echo "<script>alert ('Problema: ".$Errmsg."')";;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Ejecutoria_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
+//echo "Fecha Ejecutoria: ".$fechaEje;
+$rs=DB::Query("declare @p2 date
+set @p2=''
+exec [dbo].[Procesos_FechaPlazo_PCC_F_C] @Ejecutoria='".$fechaEje."',@Dias=".$params["value"].",@Plazo=@p2 output
+select @p2 fechaPlazo");
+//print_r($consulta);
+if ($rs){
+while( $data = $rs->fetchAssoc() )
+	{
+		$fechaPlazo=$data['fechaPlazo'];
+	}
+//echo "Valor de la Fecha Plazo: ".$fechaPlazo;
+
+// Divide la cadena en fecha y hora
+$dateTimeParts = explode(' ', $fechaPlazo);
+$datePart = $dateTimeParts[0];
+
+// Divide la parte de la fecha en año, mes y día
+$dateComponents = explode('-', $datePart);
+$year = $dateComponents[0];
+$month = $dateComponents[1];
+$day = $dateComponents[2];
+$result["anno"]=$year ;
+$result["mes"]=intval($month);
+$result["dia"]=intval($day);
+}
+
+;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

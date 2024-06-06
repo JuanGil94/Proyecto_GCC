@@ -30,6 +30,8 @@
 
 		$this->events["BeforeDelete"]=true;
 
+		$this->events["BeforeEdit"]=true;
+
 
 	}
 
@@ -459,6 +461,7 @@ function CustomEdit(&$values, $where, &$oldvalues, &$keys, &$error, $inline, $pa
 
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
+unset($values["Dias"]);
 $values["Fecha"]=now();
 
 // Place event code here.
@@ -616,9 +619,19 @@ if ($length<23||$length>23){
 	echo '<script>alert ("El numero de Origen debe contener 23 caracteres ")</script>';
 	return false;
 }
-else{
-	return true;
+elseif($values['Ejecutoria']<$values['Providencia']){
+	echo '<script>alert ("La Fecha Ejecutoria: '.$values['Ejecutoria'].' debe ser mayor o igual a la Fecha Providencia: '.$values['Providencia'].'")</script>';
+	return false;
 }
+elseif($values['Ejecutoria']>$values['Plazo']){
+	echo '<script>alert ("La Fecha Ejecutoria: '.$values['Ejecutoria'].' debe ser menor o igual a la Fecha Plazo: '.$values['Plazo'].'")</script>';
+	return false;
+}
+elseif($values['FechaSancion']>now()){
+	echo '<script>alert ("La Fecha Sancion: '.$values['FechaSancion'].' debe ser menor o igual a la Fecha Actual: '.now().'")</script>';
+	return false;
+}
+return true;
 
 
 ;
@@ -785,6 +798,104 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record updated
+function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
+{
+
+		$values["Obligacion"]=$_SESSION["Obligacion"];
+$values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
+//print_r($values);
+
+$length=mb_strlen($values["Origen"], 'UTF-8');
+if ($length<23||$length>23){
+	echo '<script>alert ("El numero de Origen debe contener 23 caracteres ")</script>';
+	return false;
+}
+elseif($values['Ejecutoria']<$values['Providencia']){
+	echo '<script>alert ("La Fecha Ejecutoria: '.$values['Ejecutoria'].' debe ser mayor o igual a la Fecha Providencia: '.$values['Providencia'].'")</script>';
+	return false;
+}
+elseif($values['Ejecutoria']>$values['Plazo']){
+	echo '<script>alert ("La Fecha Ejecutoria: '.$values['Ejecutoria'].' debe ser menor o igual a la Fecha Plazo: '.$values['Plazo'].'")</script>';
+	return false;
+}
+elseif($values['FechaSancion']>now()){
+	echo '<script>alert ("La Fecha Sancion: '.$values['FechaSancion'].' debe ser menor o igual a la Fecha Actual: '.now().'")</script>';
+	return false;
+}
+return true;
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeEdit
+
 		
 		
 		

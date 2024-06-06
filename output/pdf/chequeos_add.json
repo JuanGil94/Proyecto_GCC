@@ -350,6 +350,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel dbo_Chequeos Remisorio }","bold":true},{"text":{$Remisorio_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalIdDestino }","bold":true},{"text":{$SeccionalIdDestino_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -431,9 +434,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel dbo_Chequeos PorPrescripcion }","bold":true},{"text":{$PorPrescripcion_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel dbo_Chequeos SeccionalIdDestino }","bold":true},{"text":{$SeccionalIdDestino_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Chequeos AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
