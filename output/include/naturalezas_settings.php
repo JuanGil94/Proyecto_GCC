@@ -137,7 +137,7 @@ $tdatanaturalezas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																								
 
 $tdatanaturalezas[".ajaxCodeSnippetAdded"] = false;
 
@@ -988,6 +988,36 @@ $detailsTablesData["dbo.Naturalezas"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "procesos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Naturalezas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Naturalezas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Naturalezas"][$dIndex]["masterKeys"][]="NaturalezaId";
+
+				$detailsTablesData["dbo.Naturalezas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Naturalezas"][$dIndex]["detailKeys"][]="NaturalezaId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

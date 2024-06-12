@@ -143,7 +143,7 @@ $tdataintereses[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																																																																																												
 
 $tdataintereses[".ajaxCodeSnippetAdded"] = false;
 
@@ -1285,6 +1285,24 @@ $masterTablesData["dbo.Intereses"] = array();
 	$masterTablesData["dbo.Intereses"][0]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Intereses"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Intereses"][0]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.ProcesosReasignar";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "procesosreasignar";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Intereses"][1] = $masterParams;
+				$masterTablesData["dbo.Intereses"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Intereses"][1]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Intereses"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Intereses"][1]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

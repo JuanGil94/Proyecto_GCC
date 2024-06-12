@@ -1153,6 +1153,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link11}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link12}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1882,6 +1885,11 @@ pdfDocument = {
 			 {BEGIN details_reportecorporaci_nespecialidad}
 			{$displayDetailTable_reportecorporaci_nespecialidad }
 		{END details_reportecorporaci_nespecialidad},
+				
+				
+			 {BEGIN details_procesosreasignar}
+			{$displayDetailTable_procesosreasignar }
+		{END details_procesosreasignar},
 				
 		  ],
   "border": [ true, true, true, true ],

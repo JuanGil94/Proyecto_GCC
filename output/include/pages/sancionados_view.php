@@ -7,6 +7,8 @@
 'dbo.Propiedades' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Solidarios' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.ProcesosReasignar' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.TiposDocumentos' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'SancionadoId',

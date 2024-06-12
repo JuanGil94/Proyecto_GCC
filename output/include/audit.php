@@ -788,6 +788,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.ProcesosReasignar")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1527,6 +1531,10 @@ class AuditTrailFile
 		if($table=="dbo.AuditoriasProcesosView")
 		{
 			return false;
+		}
+		if($table=="dbo.ProcesosReasignar")
+		{
+			return true;
 		}
 	}
 

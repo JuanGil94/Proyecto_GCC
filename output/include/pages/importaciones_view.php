@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'dbo.Procesos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.ProcesosReasignar' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.CarteraTipos' => array( 'preview' => false ),
 'dbo.Seccionales' => array( 'preview' => false ),

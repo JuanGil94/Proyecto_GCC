@@ -191,7 +191,7 @@ $tdataseccionales[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																								
 
 $tdataseccionales[".ajaxCodeSnippetAdded"] = false;
 
@@ -3814,6 +3814,36 @@ $detailsTablesData["dbo.Seccionales"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "autorizaciones";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Autorizaciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Seccionales"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"][]="SeccionalId";
+
+				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 10;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

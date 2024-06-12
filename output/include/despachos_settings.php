@@ -155,7 +155,7 @@ $tdatadespachos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																														
+																																																																																				
 
 $tdatadespachos[".ajaxCodeSnippetAdded"] = false;
 
@@ -1930,6 +1930,36 @@ $detailsTablesData["dbo.Despachos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "minjusticia3";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Despachos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["masterKeys"][]="DespachoId";
+
+				$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Despachos"][$dIndex]["detailKeys"][]="DespachoId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

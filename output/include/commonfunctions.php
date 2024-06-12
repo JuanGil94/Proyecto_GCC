@@ -419,6 +419,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("auditoriasprocesosview" == $shortTName )
 		return true;
+	if ("procesosreasignar" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1441,6 +1443,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.AuditoriasProcesosView";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosReasignar");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ProcesosReasignar";
+	}
 	return $arr;
 }
 
@@ -1558,6 +1569,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.CorporacionesView";
 	$arr[]="dbo.Fechas";
 	$arr[]="dbo.AuditoriasProcesosView";
+	$arr[]="dbo.ProcesosReasignar";
 	return $arr;
 }
 
@@ -2721,6 +2733,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.AuditoriasProcesosView" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.ProcesosReasignar" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

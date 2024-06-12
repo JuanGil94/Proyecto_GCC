@@ -1,6 +1,7 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Actuaciones' => array( 'preview' => false ),
-'dbo.Procesos' => array( 'preview' => false ) ),
+'dbo.Procesos' => array( 'preview' => false ),
+'dbo.ProcesosReasignar' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'ActuacionId',
 'Fecha',

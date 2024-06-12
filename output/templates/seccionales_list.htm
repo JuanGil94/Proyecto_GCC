@@ -898,6 +898,13 @@
 					Alert Int Susp				</label>
 			</div>
 			{END print_details_alertintsusp}
+														{BEGIN print_details_procesosreasignar}
+			<div>
+				<label for="printDetailsprocesosreasignar{$id}">
+					<input type="checkbox" value="procesosreasignar" id="printDetailsprocesosreasignar{$id}" checked>
+					Procesos Reasignar				</label>
+			</div>
+			{END print_details_procesosreasignar}
 						</div>
 </div>
 {END print_details}
@@ -1063,12 +1070,12 @@
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="1"
+	data-body-height="2"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -1327,13 +1334,13 @@
 	</th>
 	{END cellblock_grid_headcell_field9}
 							</tr>
-															
+																				
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -1411,23 +1418,54 @@
 	>
 
 	 
-			 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
 		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$abogados_link_attrs} 
-			class="{$dtables_link_class} details-badge badge abogados_badge" 
-			title="Mostrar detalles"
-						
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$abogados_cntspan_class}" {$abogados_childnumber_attr}>
-				{$abogados_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
+		
+	{BEGIN abogados_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$abogados_link_attrs} data-short-details="abogados"
+		class="{$abogados_dlink_class}" 
+		title="{$caption dbo_Abogados }"			>
+								
+									{BEGIN abogados_childcount}
+				<span class="details-badge badge abogados_badge" {$abogados_childnumber_attr}>
+					{$abogados_childnumber}				
+				</span>
+				{END abogados_childcount}
+						</a>
+	</span>
+	{END abogados_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN procesosreasignar_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$procesosreasignar_link_attrs} data-short-details="procesosreasignar"
+		class="{$procesosreasignar_dlink_class}" 
+		title="{$caption dbo_ProcesosReasignar }"			>
+								
+									{BEGIN procesosreasignar_childcount}
+				<span class="details-badge badge procesosreasignar_badge" {$procesosreasignar_childnumber_attr}>
+					{$procesosreasignar_childnumber}				
+				</span>
+				{END procesosreasignar_childcount}
+						</a>
+	</span>
+	{END procesosreasignar_dtable_link}
+
 
 	
 	</td>
@@ -1601,12 +1639,40 @@
 	</td>
 	{END cellblock_grid_cell_field9}
 							</tr>
+											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+				
+							">
+									{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="procesosreasignar"
+			data-details-procesosreasignar	>
+		<span data-details-inside data-short-table="procesosreasignar">
+			</span>
+		<div data-details-preview>
+	</div>
+</div>
+	
+	</td>
+	{END cellblock_grid_cell_dpreview}
+							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow

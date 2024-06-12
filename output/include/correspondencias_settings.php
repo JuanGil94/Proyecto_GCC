@@ -155,7 +155,7 @@ $tdatacorrespondencias[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																						
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatacorrespondencias[".ajaxCodeSnippetAdded"] = false;
 
@@ -1959,6 +1959,24 @@ $masterTablesData["dbo.Correspondencias"] = array();
 	$masterTablesData["dbo.Correspondencias"][3]["masterKeys"][]="OficioId";
 				$masterTablesData["dbo.Correspondencias"][3]["detailKeys"] = array();
 	$masterTablesData["dbo.Correspondencias"][3]["detailKeys"][]="OficioId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.ProcesosReasignar";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "procesosreasignar";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Correspondencias"][4] = $masterParams;
+				$masterTablesData["dbo.Correspondencias"][4]["masterKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][4]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Correspondencias"][4]["detailKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][4]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

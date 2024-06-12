@@ -10,6 +10,8 @@
 'dbo.Oficios1' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Fechas' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.ProcesosReasignar' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Etapas' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),

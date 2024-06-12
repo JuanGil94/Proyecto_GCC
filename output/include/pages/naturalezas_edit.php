@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.Procesos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.ProcesosReasignar' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Conceptos' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),

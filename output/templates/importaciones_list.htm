@@ -869,6 +869,13 @@
 					Reporte Corporación Especialidad				</label>
 			</div>
 			{END print_details_reportecorporaci_nespecialidad}
+														{BEGIN print_details_procesosreasignar}
+			<div>
+				<label for="printDetailsprocesosreasignar{$id}">
+					<input type="checkbox" value="procesosreasignar" id="printDetailsprocesosreasignar{$id}" checked>
+					Procesos Reasignar				</label>
+			</div>
+			{END print_details_procesosreasignar}
 						</div>
 </div>
 {END print_details}
@@ -2164,6 +2171,25 @@
 	{END reportecorporaci_nespecialidad_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN procesosreasignar_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link12" {$item_grid_details_link12} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$procesosreasignar_link_attrs} data-short-details="procesosreasignar"
+		class="{$procesosreasignar_dlink_class}" 
+		title="{$caption dbo_ProcesosReasignar }"			>
+								
+									{BEGIN procesosreasignar_childcount}
+				<span class="details-badge badge procesosreasignar_badge" {$procesosreasignar_childnumber_attr}>
+					{$procesosreasignar_childnumber}				
+				</span>
+				{END procesosreasignar_childcount}
+						</a>
+	</span>
+	{END procesosreasignar_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -2646,9 +2672,9 @@
 	>
 
 	 
-														<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesos,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad"
-			data-details-procesos			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad	>
+															<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="procesos,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar"
+			data-details-procesos			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar	>
 		<span data-details-inside data-short-table="procesos">
 			</span>
 		<span data-details-inside data-short-table="">
@@ -2673,10 +2699,13 @@
 			</span>
 		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
 			</span>
+		<span data-details-inside data-short-table="procesosreasignar">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

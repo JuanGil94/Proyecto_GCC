@@ -346,6 +346,11 @@ pdfDocument = {
 			{$displayDetailTable_reportecorporaci_nespecialidad }
 		{END details_reportecorporaci_nespecialidad},
 				
+				
+			 {BEGIN details_procesosreasignar}
+			{$displayDetailTable_procesosreasignar }
+		{END details_procesosreasignar},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
