@@ -1006,6 +1006,97 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Actuaciones"]["fechas.ActuacionId"] = array();
 		}
 		$lookupTableLinks["dbo.Actuaciones"]["fechas.ActuacionId"]["edit"] = array("table" => "dbo.Fechas", "field" => "ActuacionId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["procesosreasignar.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["procesosreasignar.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["procesosreasignar.SeccionalId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["procesosreasignar.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["procesosreasignar.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["procesosreasignar.AbogadoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["procesosreasignar.DespachoId"] )) {
+			$lookupTableLinks["dbo.Despachos"]["procesosreasignar.DespachoId"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["procesosreasignar.DespachoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "DespachoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["procesosreasignar.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["procesosreasignar.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["procesosreasignar.SancionadoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["procesosreasignar.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["procesosreasignar.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["procesosreasignar.ConceptoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["procesosreasignar.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["procesosreasignar.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["procesosreasignar.EstadoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "EstadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["procesosreasignar.EtapaId"] )) {
+			$lookupTableLinks["dbo.Etapas"]["procesosreasignar.EtapaId"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["procesosreasignar.EtapaId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "EtapaId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Calificaciones"] ) ) {
+			$lookupTableLinks["dbo.Calificaciones"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Calificaciones"]["procesosreasignar.CalificacionId"] )) {
+			$lookupTableLinks["dbo.Calificaciones"]["procesosreasignar.CalificacionId"] = array();
+		}
+		$lookupTableLinks["dbo.Calificaciones"]["procesosreasignar.CalificacionId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "CalificacionId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["procesosreasignar.MotivoId"] )) {
+			$lookupTableLinks["dbo.Motivos"]["procesosreasignar.MotivoId"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["procesosreasignar.MotivoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "MotivoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["procesosreasignar.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["procesosreasignar.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["procesosreasignar.CarteraTipoId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Importaciones"] ) ) {
+			$lookupTableLinks["dbo.Importaciones"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Importaciones"]["procesosreasignar.ImportacionId"] )) {
+			$lookupTableLinks["dbo.Importaciones"]["procesosreasignar.ImportacionId"] = array();
+		}
+		$lookupTableLinks["dbo.Importaciones"]["procesosreasignar.ImportacionId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "ImportacionId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Actuaciones"] ) ) {
+			$lookupTableLinks["dbo.Actuaciones"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Actuaciones"]["procesosreasignar.ActuacionId"] )) {
+			$lookupTableLinks["dbo.Actuaciones"]["procesosreasignar.ActuacionId"] = array();
+		}
+		$lookupTableLinks["dbo.Actuaciones"]["procesosreasignar.ActuacionId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "ActuacionId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Naturalezas"] ) ) {
+			$lookupTableLinks["dbo.Naturalezas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Naturalezas"]["procesosreasignar.NaturalezaId"] )) {
+			$lookupTableLinks["dbo.Naturalezas"]["procesosreasignar.NaturalezaId"] = array();
+		}
+		$lookupTableLinks["dbo.Naturalezas"]["procesosreasignar.NaturalezaId"]["edit"] = array("table" => "dbo.ProcesosReasignar", "field" => "NaturalezaId", "page" => "edit");
 }
 
 ?>

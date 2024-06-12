@@ -164,7 +164,7 @@ $tdataabogados[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																								
 
 $tdataabogados[".ajaxCodeSnippetAdded"] = false;
 
@@ -2379,6 +2379,36 @@ $detailsTablesData["dbo.Abogados"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "minjusticia3";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Minjusticia3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Abogados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Abogados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Abogados"][$dIndex]["masterKeys"][]="AbogadoId";
+
+				$detailsTablesData["dbo.Abogados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Abogados"][$dIndex]["detailKeys"][]="AbogadoId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 5;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

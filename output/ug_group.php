@@ -123,6 +123,7 @@ $nonAdminTablesArr[] = "dbo.ReporteCorporaciónEspecialidad";
 $nonAdminTablesArr[] = "dbo.CorporacionesView";
 $nonAdminTablesArr[] = "dbo.Fechas";
 $nonAdminTablesArr[] = "dbo.AuditoriasProcesosView";
+$nonAdminTablesArr[] = "dbo.ProcesosReasignar";
 
 $ug_connection = $cman->getForUserGroups();
 

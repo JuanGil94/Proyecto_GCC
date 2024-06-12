@@ -351,6 +351,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.CorporacionesView"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Fechas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.AuditoriasProcesosView"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.ProcesosReasignar"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

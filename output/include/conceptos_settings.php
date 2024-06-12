@@ -134,7 +134,7 @@ $tdataconceptos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																														
+																																																																																				
 
 $tdataconceptos[".ajaxCodeSnippetAdded"] = false;
 
@@ -881,6 +881,36 @@ $detailsTablesData["dbo.Conceptos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "importaciones";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Importaciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Conceptos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Conceptos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Conceptos"][$dIndex]["masterKeys"][]="ConceptoId";
+
+				$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"][]="ConceptoId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

@@ -128,7 +128,7 @@ $tdatamotivos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																														
+																																																																																				
 
 $tdatamotivos[".ajaxCodeSnippetAdded"] = false;
 
@@ -543,6 +543,36 @@ $detailsTablesData["dbo.Motivos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "procesos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Motivos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Motivos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Motivos"][$dIndex]["masterKeys"][]="MotivoId";
+
+				$detailsTablesData["dbo.Motivos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Motivos"][$dIndex]["detailKeys"][]="MotivoId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

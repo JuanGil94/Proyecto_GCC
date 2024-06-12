@@ -585,6 +585,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link5}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -781,6 +784,11 @@ pdfDocument = {
 			 {BEGIN details_fechas}
 			{$displayDetailTable_fechas }
 		{END details_fechas},
+				
+				
+			 {BEGIN details_procesosreasignar}
+			{$displayDetailTable_procesosreasignar }
+		{END details_procesosreasignar},
 				
 		  ],
   "border": [ true, true, true, true ],

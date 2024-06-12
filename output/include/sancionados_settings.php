@@ -152,7 +152,7 @@ $tdatasancionados[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																								
 
 $tdatasancionados[".ajaxCodeSnippetAdded"] = false;
 
@@ -1785,6 +1785,36 @@ $detailsTablesData["dbo.Sancionados"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "solidarios";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Solidarios");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.ProcesosReasignar
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "procesosreasignar";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

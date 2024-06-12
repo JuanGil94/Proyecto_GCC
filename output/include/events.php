@@ -325,33 +325,18 @@ echo "Your message";
 	function event_dbo_Correspondencias_snippet(&$params)
 	{
 	// Put your code here.
-$str= "<select style='width: 450px; display: inline-block;' class='form-control'>";
+$str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
 //select values from the database
-$strSQL = "select * from Oficios";
+$strSQL = "select * from Abogados ORDER BY Abogado ASC";
 $rs = db_query($strSQL);
 while ($data = db_fetch_array($rs)){
-$str.="<option value='".$data['OficioId']."'>".$data['Oficio']."</option>";
+$str.="<option value='".$data['AbogadoId']."'>".$data['Abogado']."</option>";
 }
 $str.="</select>";
 echo $str;
-/*
-<select name="select">
-    <option value="value1">Value 1</option>
-    <option value="value2" selected>Value 2</option>
-    <option value="value3">Value 3</option>
-  </select>
 
 
-echo "<option value='".$date['OficioId']."'>".$date['Oficio']."</option>";
 
-<select id="seccional" class="selectholder" name="seccional">
-                        <?php
-                        $respuesta->validarSeccionales();
-                        //$objeto10->seleccionarAbogado(); //se ejecuta el objeto ya creado en Comprobar.php
-                        //print_r($respuesta); 
-                        ?>
-                    </select>
-*/
 	;
 }
 	function event_dbo_Chequeos_snippet1(&$params)

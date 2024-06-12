@@ -150,7 +150,7 @@ $tdataacuerdos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																																																																																												
 
 $tdataacuerdos[".ajaxCodeSnippetAdded"] = false;
 
@@ -1576,6 +1576,24 @@ $masterTablesData["dbo.Acuerdos"] = array();
 	$masterTablesData["dbo.Acuerdos"][0]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Acuerdos"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Acuerdos"][0]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.ProcesosReasignar";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "procesosreasignar";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Acuerdos"][1] = $masterParams;
+				$masterTablesData["dbo.Acuerdos"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Acuerdos"][1]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Acuerdos"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Acuerdos"][1]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

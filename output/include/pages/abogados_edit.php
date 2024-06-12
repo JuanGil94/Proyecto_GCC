@@ -8,6 +8,8 @@
 'dbo.Minjusticia2' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Minjusticia3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.ProcesosReasignar' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Seccionales' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
