@@ -866,8 +866,13 @@ return true;
 function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
 {
 
-		$values["Obligacion"]=$_SESSION["Obligacion"];
-$values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
+		$values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
+//$values["Obligacion"]=$_SESSION["Obligacion"];
+
+if ($_SESSION["Obligacion"]!=NULL){
+	$values["Obligacion"]=$_SESSION["Obligacion"];
+}
+
 //print_r($values);
 
 $length=mb_strlen($values["Origen"], 'UTF-8');
