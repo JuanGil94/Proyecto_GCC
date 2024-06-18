@@ -17,6 +17,10 @@
 
 		$this->events["CustomAdd"]=true;
 
+		$this->events["BeforeProcessAdd"]=true;
+
+		$this->events["AfterAdd"]=true;
+
 
 	}
 
@@ -106,11 +110,9 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 
 		include_once (getabspath("classes/actuacionAction.php"));
 include_once (getabspath("classes/pruebaJuan.php"));
-$oficioId=$values["OficioId"];
-//$fechaLiqui=date("d-m-Y");
-//$fechaAct=date('Y-m-d H-i-s');
-$response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
-		//print_r($actuacionId);
+include_once (getabspath("plantillaGCC.php"));
+//SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS
+$response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$values['OficioId']);
 		while( $date = $response->fetchAssoc() )
 				{
 					$actuacionId=$date["ActuacionId"];
@@ -123,79 +125,281 @@ $response=DB::Query("SELECT EtapaId, EstadoId, MotivoId FROM Actuaciones WHERE A
 					$estadoId=$date["EstadoId"];
 					$motivoId=$date["MotivoId"];
 				}
-$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
-$response=$oficio->process();
-if ($response==true){
-	echo '<script>alert("Se agrega la correspondencia correctamente")</script>';
-	return true;
+$consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=(SELECT AbogadoId from Procesos where ProcesoId=".$values["ProcesoId"].")");
+        //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
+            while($date=$consulta->fetchAssoc()){
+            $despacho=$date["Despacho"];
+            $codificador=$date["Codificador"];
+            //echo "La tasa de Usura diaria es: ".$tasaUsuraDiaria."<br>";
+        };
+$consulta=DB::Query("SELECT  D.Despacho AS 'Despacho', 
+        Juez AS 'DespachoJuez',
+        Direccion AS 'DespachoDireccion',
+        Correo AS 'DespachoCorreo',
+        IIF (D.juez=null,'Doctor','Doctora') AS 'Doctor'
+        FROM Despachos D
+        INNER JOIN Procesos C ON C.DespachoId = D.DespachoId
+        WHERE ProcesoId =".$values["ProcesoId"]."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $despachoJuez=$date["DespachoJuez"];
+        }
+$consulta=DB::Query("SELECT * FROM Oficios WHERE OficioId=".$values["OficioId"]."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $asunto=$date["Oficio"];
+        }
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$values["ProcesoId"]."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $obligacion=$date["Obligacion"];
+						 $obligacionTotal=$date["ObligacionInicial"]+$date["CostasInicial"]+$date["InteresesInicial"];
+        }
+$consulta=DB::Query("SELECT dbo.Num2Text(".$obligacion.") Obligacion, dbo.Num2Text(".$obligacionTotal.") obligacionTotal");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $obligacion=$date["Obligacion"];
+						 $obligacionTotal=$date["obligacionTotal"];
+        }
+
+//CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
+//la url de la conexion a Sigob
+$url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
+//Parametro a enviar para consumir el metodo
+$data = array(
+    'Despacho' => $despacho,
+    'Codificador' => $codificador,
+    'SoloEditorExterno' => '1',
+    'Contrasena' => '448B8890'
+    // ... Agrega más parámetros según sea necesario
+);
+
+// Convertir los datos a formato de cadena
+$postData = http_build_query($data);
+
+// Configurar opciones de cURL
+$options = array(
+    CURLOPT_URL            => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => $postData,
+);
+
+// Inicializar cURL y configurar opciones
+$curl = curl_init();
+curl_setopt_array($curl, $options);
+
+//NO VALIDAR SI REQUIERE SSL
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+// Realizar la solicitud cURL y obtener la respuesta
+$response2 = curl_exec($curl);
+// Verificar errores
+if (curl_errno($curl)) {
+    echo 'Error al realizar la solicitud: ' . curl_error($curl);
+		return false;
 }
 else{
-	return false;
+// Imprimir la respuesta del servicio web
+//echo "<br>Valor del metodo NuevaCorrespondencia: ".$response2."<br>";
+$xml = new SimpleXMLElement($response2);
+$radicadoF=strval($xml[0]);
+$_SESSION["Radicado"]=$radicadoF;
+////////
+//CONSUMINOS EL METODO DE ActualizarCorrespondencia de la API SOAP
+$curl = curl_init();
+//SE LLAMA LA FUNCION LA CUAL TOMA LA PLANTILLA Y REEMPLAZA SUS VARIABLES, CREANDO UN NUEVO .DOCX
+ $objeto=new plantillas($values["ProcesoId"],$values["OficioId"],$obligacion,$obligacionTotal,$radicadoF);
+ $objeto->funcGlobal();
+//$rutaArchivo = 'Plantilla_1097.docx';
+$noDirecciones=$objeto->getNoDirecciones();
+//echo "Numero de direcciones: ".$noDirecciones.var_dump($noDirecciones);
+$noDirecciones=$noDirecciones-1;//porque las plantillas son XXX_0
+//$docxFiles = array();
+for ($i=0;$i<=$noDirecciones;$i++){
+	$docxFiles []='templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_'.strval($i).'.docx';
+	//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_'.strval($i).'.docx';
 }
-/*
-switch ($actuacionId) {
-    case "4":
-			$recalcular=new reliquidacion($values["ProcesoId"]);
-			$meses = $recalcular->Calcular();
-			$result["total"]=$recalcular->getInteresesSuma();
-			//$result["total"]=$recalcular->getSuma();
-			$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses=".$result["total"].",InteresesInicial=".$result["total"].",Liquidacion='".$fechaLiqui."',SeleccionadoFecha=".$fechaLiqui.", Persuasivo='".$fechaLiqui."',ActuacionId=".$actuacionId." where ProcesoId=".$values["ProcesoId"]);
-			$resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$values["ProcesoId"].",'".$values["Fecha"]."',".$result["total"].",NULL,0,NULL)");
-			$resultado3["response"]=DB::Exec("INSERT INTO Fechas (ActuacionId,Fecha,Resolucion,Observaciones,ProcesoId) values (".$actuacionId.",'".$values["Fecha"]."',".$values["Resolucion"].",'".$values["Observaciones"]."',".$values["ProcesoId"].")");
-			if ($resultado2["response"] && $resultado["response"] && $resultado3["response"]) {
-					echo '<script>alert("Se agrega la correspondencia PERSUASIVO y se calculan los intereses a la fecha")</script>';
+function mergeDocx($docxFiles, $output) {
+    $outputZip = new ZipArchive;
+    if ($outputZip->open($output, ZipArchive::CREATE) !== TRUE) {
+        exit("No se puede abrir el archivo de salida <$output>\n");
+    }
+
+    // Copiar archivos del primer DOCX al archivo de salida
+    $zip1 = new ZipArchive;
+    if ($zip1->open($docxFiles[0]) === TRUE) {
+        for ($i = 0; $i < $zip1->numFiles; $i++) {
+            $file = $zip1->getNameIndex($i);
+            $outputZip->addFromString($file, $zip1->getFromName($file));
+        }
+
+        // Fusionar document.xml del primer archivo
+        $doc1 = new DOMDocument;
+        $doc1->loadXML($zip1->getFromName('word/document.xml'));
+        $zip1->close();
+    } else {
+        exit("No se puede abrir el archivo DOCX: " . $docxFiles[0] . "\n");
+    }
+
+    // Procesar los archivos restantes
+    for ($j = 1; $j < count($docxFiles); $j++) {
+        $zip = new ZipArchive;
+        if ($zip->open($docxFiles[$j]) === TRUE) {
+            // Crear un salto de página antes de agregar el nuevo documento
+            $paragraph = $doc1->createElement('w:p');
+            $run = $doc1->createElement('w:r');
+            $br = $doc1->createElement('w:br');
+            $br->setAttribute('w:type', 'page');
+            $run->appendChild($br);
+            $paragraph->appendChild($run);
+            $body1 = $doc1->getElementsByTagName('body')->item(0);
+            $body1->appendChild($paragraph);
+
+            // Fusionar document.xml del archivo actual
+            $doc2 = new DOMDocument;
+            $doc2->loadXML($zip->getFromName('word/document.xml'));
+            $body2 = $doc2->getElementsByTagName('body')->item(0);
+
+            foreach ($body2->childNodes as $child) {
+                $node = $doc1->importNode($child, true);
+                $body1->appendChild($node);
+            }
+
+            // Copiar todos los archivos del DOCX al archivo de salida, excepto document.xml
+            for ($i = 0; $i < $zip->numFiles; $i++) {
+                $file = $zip->getNameIndex($i);
+                if ($file !== 'word/document.xml') {
+                    $outputZip->addFromString($file, $zip->getFromName($file));
+                }
+            }
+
+            $zip->close();
+        } else {
+            exit("No se puede abrir el archivo DOCX: " . $docxFiles[$j] . "\n");
+        }
+    }
+
+    // Guardar el document.xml fusionado en el archivo de salida
+    $outputZip->addFromString('word/document.xml', $doc1->saveXML());
+    $outputZip->close();
+    //echo "Documentos unificados en $output\n";
+}
+
+//$docxFiles = array('templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx','templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx');
+$salida = 'templates_GCC/ArchivoF_'.$values["ProcesoId"].'_'.$values["OficioId"].'.docx';
+mergeDocx($docxFiles, $salida);
+$rutaArchivo = 'templates_GCC/ArchivoF_'.$values["ProcesoId"].'_'.$values["OficioId"].'.docx';
+$bytesDocumento = file_get_contents($rutaArchivo);
+$base64 = base64_encode($bytesDocumento);
+//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx';
+//$rutaArchivo2 = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx';
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <ActualizarCorrespondencia xmlns="http://tempuri.org/">
+      <CodigoRegistro>'.$radicadoF.'</CodigoRegistro>
+      <Asunto>'.$asunto.'</Asunto>
+      <Tipo>2</Tipo>
+      <GradoReserva>0</GradoReserva>
+      <Prioridad>0</Prioridad>
+      <MedioEnvio>0</MedioEnvio>
+      <EsperaRespuesta>N</EsperaRespuesta>
+      <FechaEstimadaRespuesta>'.now().'</FechaEstimadaRespuesta>
+      <ResultadoGestion>-1</ResultadoGestion>
+      <Objetivos>11</Objetivos>
+      <FormatoDocumento>1</FormatoDocumento>
+      <Documento>'.$base64.'</Documento>
+      <NombreDocumento>Prueba wsAPICorrespondencia.docx</NombreDocumento>
+      <DocumentoTexto>Texto sin formato del documento</DocumentoTexto>
+      <Firmante>'.$despacho.'</Firmante>
+      <Estado>0</Estado>
+      <DespachoDestino></DespachoDestino>
+      <Vocativo>-1</Vocativo>
+      <Apellido>'.$despachoJuez.'</Apellido>
+      <Nombre>'.$despachoJuez.'</Nombre>
+      <NumeroDocumento>12345</NumeroDocumento>
+      <Sexo>0</Sexo>
+      <FechaNacimiento>1977/01/01</FechaNacimiento>
+      <Institucion>-1</Institucion>
+      <Cargo>-1</Cargo>
+      <Departamento>-1</Departamento>
+      <Telefono>09811111231</Telefono>
+      <CorreoElectronico>alelamonaca@gmail.com</CorreoElectronico>
+      <Calle>Mi calle</Calle>
+      <Ciudad>Asunción</Ciudad>
+      <ProvinciaDepartamento>Central</ProvinciaDepartamento>
+      <Pais>Paraguay</Pais>
+      <TipoDireccion>1</TipoDireccion>
+      <CodigoRegistroPrecedente></CodigoRegistroPrecedente>
+      <EsRespuesta>0</EsRespuesta>
+      <Contrasena>448B8890</Contrasena>
+    </ActualizarCorrespondencia>
+  </soap12:Body>
+</soap12:Envelope>',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: text/xml',
+    'Cookie: ASP.NET_SessionId=4uvpkyerhy21mcwghvyqfuw0'
+  ),
+));
+
+//NO VERIFICAR CERTICADO SSL
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+$response = curl_exec($curl);
+if ($response == false) {
+    echo 'Error en la solicitud cURL: ' . curl_error($curl);
+		return false;
+} else {
+//echo '<br>Respuesta de la API Metodo Actualizar Correspondencia: ' . $response;
+$xml = new SimpleXMLElement($response);
+    // Definir el namespace
+    $namespaces = $xml->getNamespaces(true);
+    $soapNamespace = $namespaces['soap'];
+
+    // Acceder al cuerpo del SOAP
+    $body = $xml->children($soapNamespace)->Body;
+
+    // Acceder al namespace específico del cuerpo
+    $responseNamespace = $namespaces[''];
+    $token = $body->children($responseNamespace)->ActualizarCorrespondenciaResponse->ActualizarCorrespondenciaResult;
+		$token=strval($token);
+		$_SESSION["token"]=$token;
+    // Mostrar el resultado
+    //echo "Resultado: " .$token;
+		//var_dump($token);
+		//echo "Result: ".$token ;
+		$ultimosCaracteres = substr($token, -2);
+    //echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y el valor del metodo ActualizarCorrespondencia es: ".$token."')</script>";
+    // Comparar con "=="
+    if ($ultimosCaracteres === "==") {
+				curl_close($curl);
+				$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
+				$response=$oficio->process();
+				if ($response==true){
+					//echo '<script>alert("Se agrega la correspondencia correctamente")</script>';
 					return true;
-			  }
-			  else {
-					echo "Ocurrio un error".DB::LastError();
-					return false;
-			  }
-        break;
-    case "Martes":
-        echo "Hoy es Martes.";
-        break;
-}
-
-*/
-/*
-//print_r($values);
-//echo $oficioId;
-if ($oficioId==1097){
-		//echo "Entrooooo";
-		//$actuacionId=4; //PERSUASIVO
-		$response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
-		//print_r($actuacionId);
-		while( $date = $response->fetchAssoc() )
-				{
-					$actuacionId=$date["ActuacionId"];
 				}
-		$recalcular=new reliquidacion($values["ProcesoId"]);
-		$meses = $recalcular->Calcular();
-		$result["total"]=$recalcular->getInteresesSuma();
-		//$result["total"]=$recalcular->getSuma();
-		$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses=".$result["total"].",InteresesInicial=".$result["total"].",Liquidacion='".$fechaLiqui."',SeleccionadoFecha=".$fechaLiqui.", Persuasivo='".$fechaLiqui."',ActuacionId=".$actuacionId." where ProcesoId=".$values["ProcesoId"]);
-		$resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$values["ProcesoId"].",'".$values["Fecha"]."',".$result["total"].",NULL,0,NULL)");
-		if ($resultado2["response"] && $resultado["response"]) {
-            echo '<script>alert("Se agrega la correspondencia PERSUASIVO y se calculan los intereses a la fecha")</script>';
-        }
-        else {
-            // Hubo un error en la ejecución de la consulta
-							echo "Ocurrio un error".DB::LastError();
-            //echo "<script>alert("Se realiza la actualizacion del pagoId")</script>Error al ejecutar la consulta: " . DB::LastError();
-            //exit();
-        }
+				else{
+					return false;
+				}
+    } else {
+				 echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
+        return false;
+    }
 }
-*/
-
-
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-return true;
+}
 ;
 } // function BeforeAdd
 
@@ -280,6 +484,160 @@ return true;
 } // function CustomAdd
 
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+				// Add page: Before process
+function BeforeProcessAdd($pageObject)
+{
+
+		//phpinfo();
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeProcessAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record added
+function AfterAdd(&$values, &$keys, $inline, $pageObject)
+{
+
+		$resultado["response"]=DB::Exec("UPDATE Correspondencias set Radicado='".$_SESSION["Radicado"]."',Codigo='".$_SESSION["token"]."' where CorrespondenciaId=".$values['CorrespondenciaId']."");
+                    if (!$resultado["response"]){
+                        echo "Ocurrio un error debido a: ".DB::LastError(); 
+                        return false;
+                    }
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterAdd
+
 		
 		
 		

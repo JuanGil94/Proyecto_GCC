@@ -29,17 +29,17 @@ class coreOficios {
                     //$result["total"]=$recalcular->getSuma();
                     $resultado["response"]=DB::Exec("UPDATE Procesos set Observaciones='".$this->observaciones."',Intereses=".$this->intereses.",InteresesInicial=".$this->intereses.",Liquidacion='".$this->fechaLiqui."',SeleccionadoFecha=".$this->fechaLiqui.", Persuasivo='".$this->fechaLiqui."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                     if (!$resultado["response"]){
-                        echo "Ocurrio un error debido a: ".DB::LastError(); 
+                        echo "Ocurrio un error en el Update debido a: ".DB::LastError(); 
                         return false;
                     } 
                     $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$this->procesoId.",'".$this->fecha."',".$this->intereses.",NULL,0,NULL)");
                     if (!$resultado2["response"]){
-                        echo "Ocurrio un error debido a: ".DB::LastError(); 
+                        echo "Ocurrio un error en el Insert Intereses debido a: ".DB::LastError(); 
                         return false;
                     } 
-                    $resultado3["response"]=DB::Exec("INSERT INTO Fechas (ActuacionId,Fecha,Resolucion,Observaciones,ProcesoId) values (".$this->actuacionId.",'".$this->fecha."',".$this->resolucion.",'".$this->observaciones."',".$this->procesoId.")");
+                    $resultado3["response"]=DB::Exec("INSERT INTO Fechas (ActuacionId,Fecha,Resolucion,Observaciones,ProcesoId) values (".$this->actuacionId.",'".$this->fecha."','".$this->resolucion."','".$this->observaciones."',".$this->procesoId.")");
                     if (!$resultado3["response"]){
-                        echo "Ocurrio un error debido a: ".DB::LastError(); 
+                        echo "Ocurrio un error en el Insert Fechas debido a: ".DB::LastError(); 
                         return false;
                     }
 
@@ -49,12 +49,12 @@ class coreOficios {
                     //echo "Actuacion Nunmero 5";
                     $resultado["response"]=DB::Exec("UPDATE Procesos set EtapaId=".$this->etapaId.",ActuacionId=".$this->actuacionId.",Observaciones='".$this->observaciones."' where ProcesoId=".$this->procesoId);
                         if (!$resultado["response"]){
-                            echo "Ocurrio un error debido a: ".DB::LastError(); 
+                            echo "Ocurrio un error en el Update debido a: ".DB::LastError(); 
                             return false;
                         }
                     $resultado3["response"]=DB::Exec("INSERT INTO Fechas (ActuacionId,Fecha,Resolucion,Observaciones,ProcesoId) values (".$this->actuacionId.",'".$this->fecha."',".$this->resolucion.",'".$this->observaciones."',".$this->procesoId.")");
                         if (!$resultado3["response"]){
-                            echo "Ocurrio un error debido a: ".DB::LastError(); 
+                            echo "Ocurrio un error en el Insert Fechas debido a: ".DB::LastError(); 
                             return false;
                         }
                         return true;

@@ -367,7 +367,7 @@ if ($response == false) {
 				curl_close($curl);
         return true;
     } else {
-				 echo "<script>alert('Se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
+				 echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
         return false;
     }
 }
