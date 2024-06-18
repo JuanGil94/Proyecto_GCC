@@ -647,7 +647,7 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 		$edata["listPageId"] = "list";
 		$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 2;
+		$edata["LCType"] = 1;
 
 	
 		
@@ -671,7 +671,8 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -691,7 +692,8 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -720,7 +722,8 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "CorrespondenciaId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1039,7 +1042,7 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -1055,8 +1058,7 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1080,7 +1082,8 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 
 
 	
-	
+		$edata["insertNull"] = true;
+
 	
 	
 			$edata["acceptFileTypesHtml"] = "";
@@ -1220,7 +1223,8 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 
 
 	
-	
+		$edata["insertNull"] = true;
+
 	
 	
 			$edata["acceptFileTypesHtml"] = "";
@@ -1496,7 +1500,8 @@ $tdatacorrespondencias[".hideMobileList"] = array();
 
 
 	
-	
+		$edata["insertNull"] = true;
+
 	
 	
 			$edata["acceptFileTypesHtml"] = "";

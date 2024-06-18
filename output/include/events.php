@@ -25,6 +25,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["AfterSuccessfulLogin"]=true;
 
 
+
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
 		$this->events["dbo_Correspondencias_snippet"] = true;
@@ -293,6 +294,35 @@ if ($conteo>0){
 ;
 } // function AfterSuccessfulLogin
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

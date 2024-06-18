@@ -742,9 +742,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2276_1718109349";
+$projectBuildKey = "2327_1718109349";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2276";
+$projectBuildNumber = "2327";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -984,6 +984,12 @@ $gReadPermissions = true;
 $resizeImagesOnClient = false;
 
 
+// here goes EVENT_INIT_APP event
+$ajaxSearchStartsWith = false; //Se agrega el comando para buscar con ajax opciones que contengan la palabra escrita
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
 
 
 // default connection link #9875
