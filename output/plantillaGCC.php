@@ -149,7 +149,7 @@ class diccionario {
 
         $consulta=DB::Query("SELECT Numero AS 'Numero',
         --FORMAT(Obligacion, 'C', 'es-MX') AS 'Obligacion',
-        Obligacion AS Obligacion,
+        FORMAT(Obligacion, 'C', 'es-CO')  AS Obligacion,
         Radicado AS 'Radicado',
         Costas AS 'Costas',
         InteresesInicial AS 'Intereses',
@@ -180,7 +180,6 @@ class diccionario {
             $info["FechaPrescripcion"]=$date["FechaPrescripcion"];
             $info["FechaPlazo"]=$date["FechaPlazo"];
         }
-
         $consulta=DB::Query("SELECT PR.Propiedad + ' - ' + Matricula AS Garantia  
         FROM Procesos P
         INNER JOIN Sancionados S ON S.SancionadoId = P.SancionadoId
@@ -502,7 +501,7 @@ class plantillas extends diccionario{
 class plantillaCaratulas extends diccionario{
     public function caratulaProceso($procesoId,$oficioId) {
         //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
-        $value=parent::process($procesoId,$oficioId);//se envia el procesoId el numero de la plantilla
+        $value=parent::process($procesoId,$oficioId,'');//se envia el procesoId el numero de la plantilla
             $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4561.docx');
             $templateWord->setValue('NumeroFormateado',$value["numeroFormat"]);
             $templateWord->setValue('Seccional',$value["Seccional"]);
@@ -524,9 +523,10 @@ class plantillaCaratulas extends diccionario{
         Chequeos.ChequeoId,
         Chequeos.Fecha,
         Chequeos.Origen,
-        Chequeos.Providencia,
-        Chequeos.Ejecutoria,
-        DATEADD(year, 5, Chequeos.Ejecutoria) AS Prescripcion,
+        FORMAT(CONVERT(DATE, Chequeos.Providencia), 'dd/MM/yyyy') as ChequeosProvidencia,
+        FORMAT(CONVERT(DATE, Chequeos.Ejecutoria), 'dd/MM/yyyy') as Ejecutoria,
+        FORMAT(CONVERT(DATE, DATEADD(year, 5, Chequeos.Ejecutoria)), 'dd/MM/yyyy')  AS Prescripcion,
+        FORMAT(CONVERT(DATE, Chequeos.Plazo), 'dd/MM/yyyy') as CPlazo,
         CASE
             WHEN PrimeraCopia = 1
             THEN 'SI'
@@ -593,7 +593,7 @@ class plantillaCaratulas extends diccionario{
         ChequeosSancionados.Email,
         ChequeosSancionados.Masculino,
         ChequeosSancionados.Observaciones AS ChequeoObservaciones,
-        Chequeos.Obligacion,
+        FORMAT(Chequeos.Obligacion, 'C', 'es-CO') AS ChequeosObligacion,
         Chequeos.Costas,
         TiposDocumentos.TipoDocumento,
         Ciudades.Ciudad,
@@ -602,7 +602,7 @@ class plantillaCaratulas extends diccionario{
         SeccionalesView.Seccional,
         SeccionalesView.PiePagina,
         SeccionalesView.CiudadDepartamento,
-        Conceptos.Concepto, Chequeos.Plazo
+        Conceptos.Concepto
  FROM Chequeos
       INNER JOIN SeccionalesView ON Chequeos.SeccionalId = SeccionalesView.SeccionalId
       INNER JOIN Conceptos ON Chequeos.ConceptoId = Conceptos.ConceptoId
@@ -620,12 +620,12 @@ class plantillaCaratulas extends diccionario{
             $infoC["Sancionado"]=$date["Sancionado"];
             $infoC["Documento"]=$date["Documento"];
             $infoC["Sancionado"]=$date["Sancionado"];
-            $infoC["Obligacion"]=$date["Obligacion"];
-            $infoC["Providencia"]=$date["Providencia"];
+            $infoC["Obligacion"]=$date["ChequeosObligacion"];
+            $infoC["Providencia"]=$date["ChequeosProvidencia"];
             $infoC["Ejecutoria"]=$date["Ejecutoria"];
             $infoC["Prescripcion"]=$date["Prescripcion"];
             $infoC["Ejecutoria"]=$date["Ejecutoria"];
-            $infoC["Plazo"]=$date["Plazo"];
+            $infoC["Plazo"]=$date["CPlazo"];
             $infoC["PrimeraCopia"]=$date["PrimeraCopia"];
             $infoC["Autentica"]=$date["Autentica"];
             $infoC["PrestaMeritoEjecutivo"]=$date["PrestaMeritoEjecutivo"];
@@ -641,6 +641,7 @@ class plantillaCaratulas extends diccionario{
             $infoC["PiePagina"]=$date["PiePagina"];
             $infoC["Seccional"]=$date["Seccional"];
         }
+            //$infoC["Obligacion"]='$'.number_format($infoC["Obligacion"],2);
             $templateWord = new TemplateProcessor('templates_GCC/Plantilla_Caratula.docx');
             $templateWord->setValue('Despacho',$infoC["Despacho"]);
             $templateWord->setValue('Concepto',$infoC["Concepto"]);
@@ -650,7 +651,7 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('Providencia',$infoC["Providencia"]);
             $templateWord->setValue('Ejecutoria',$infoC["Ejecutoria"]);
             $templateWord->setValue('Prescripcion',$infoC["Prescripcion"]);
-            $templateWord->setValue('Plazo',$$infoC["Plazo"]);
+            $templateWord->setValue('Plazo',$infoC["Plazo"]);
             $templateWord->setValue('PrimeraCopia',$infoC["PrimeraCopia"]);
             $templateWord->setValue('Autentica',$infoC["Autentica"]);
             $templateWord->setValue('PrestaMeritoEjecutivo',$infoC["PrestaMeritoEjecutivo"]);
@@ -734,7 +735,7 @@ class diccionarioChequeo{
         U.UserName AS 'Usuario',
         C.Origen AS 'CUI',
         FORMAT(C.Providencia, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaProvidencia',
-        C.Obligacion AS 'Obligacion',
+        FORMAT(C.Obligacion, 'C', 'es-CO') AS 'Obligacion',
         Ejecutoria AS 'FechaEjecutoria'
         FROM Chequeos C
         INNER JOIN Abogados A ON C.AbogadoId = A.AbogadoId

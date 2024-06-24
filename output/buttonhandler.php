@@ -2690,10 +2690,13 @@ function fieldEventHandler_calcular_diasPlazo( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
 //echo "Fecha Ejecutoria: ".$fechaEje;
+$rs=DB::Query(" SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
+/*
 $rs=DB::Query("declare @p2 date
 set @p2=''
 exec [dbo].[Procesos_FechaPlazo_PCC_F_C] @Ejecutoria='".$fechaEje."',@Dias=".$params["value"].",@Plazo=@p2 output
 select @p2 fechaPlazo");
+*/
 //print_r($consulta);
 if ($rs){
 while( $data = $rs->fetchAssoc() )
@@ -2747,10 +2750,13 @@ function fieldEventHandler_Ejecutoria_event( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
 //echo "Fecha Ejecutoria: ".$fechaEje;
+$rs=DB::Query(" SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
+/*
 $rs=DB::Query("declare @p2 date
 set @p2=''
 exec [dbo].[Procesos_FechaPlazo_PCC_F_C] @Ejecutoria='".$fechaEje."',@Dias=".$params["value"].",@Plazo=@p2 output
 select @p2 fechaPlazo");
+*/
 //print_r($consulta);
 if ($rs){
 while( $data = $rs->fetchAssoc() )

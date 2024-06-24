@@ -243,6 +243,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Carceles"]["chequeossancionados.CarcelId"] = array();
 		}
 		$lookupTableLinks["dbo.Carceles"]["chequeossancionados.CarcelId"]["edit"] = array("table" => "dbo.ChequeosSancionados", "field" => "CarcelId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Genero"] ) ) {
+			$lookupTableLinks["dbo.Genero"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Genero"]["chequeossancionados.Masculino"] )) {
+			$lookupTableLinks["dbo.Genero"]["chequeossancionados.Masculino"] = array();
+		}
+		$lookupTableLinks["dbo.Genero"]["chequeossancionados.Masculino"]["edit"] = array("table" => "dbo.ChequeosSancionados", "field" => "Masculino", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.MotivosDevoluciones"] ) ) {
 			$lookupTableLinks["dbo.MotivosDevoluciones"] = array();
 		}

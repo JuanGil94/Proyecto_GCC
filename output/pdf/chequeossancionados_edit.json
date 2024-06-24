@@ -160,31 +160,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados ChequeoId }","bold":true},{"text":{$ChequeoId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Sancionado }","bold":true},{"text":{$Sancionado_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados TipoDocumentoId }","bold":true},{"text":{$TipoDocumentoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Documento }","bold":true},{"text":{$Documento_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Direccion }","bold":true},{"text":{$Direccion_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Telefono }","bold":true},{"text":{$Telefono_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados CiudadId }","bold":true},{"text":{$CiudadId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados CarcelId }","bold":true},{"text":{$CarcelId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Email }","bold":true},{"text":{$Email_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Sancionado }","bold":true},{"text":{$Sancionado_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_ChequeosSancionados Masculino }","bold":true},{"text":{$Masculino_pdfvalue}}],"margin":[0,0,0,15]},

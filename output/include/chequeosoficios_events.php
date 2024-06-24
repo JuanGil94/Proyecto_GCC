@@ -185,7 +185,10 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 		// Place event code here.
 // Use "Add Action" button to add code snippets.
 include_once (getabspath("plantillaGCC.php"));
-
+global $pageObject;
+$data = $pageObject->getMasterRecord();
+//echo "El AbogadoId del proceso es: ".$data["AbogadoId"];
+if($data["AbogadoId"]==$_SESSION["AbogadoId"]){
 //SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS
 $consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=(SELECT AbogadoId from Chequeos where ChequeoId=".$values["ChequeoId"].")");
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
@@ -371,6 +374,11 @@ if ($response == false) {
         return false;
     }
 }
+}
+}
+  else{
+	echo "<script>alert('El Despacho resgistrador no esta autorizado a indicar como firmante al despacho firmante')</script>";
+	return false;
 }
 ;
 } // function BeforeAdd
