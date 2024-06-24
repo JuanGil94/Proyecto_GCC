@@ -1,39 +1,32 @@
 <?php
-
 $archivo = $_FILES['archivo'];
-$nombre = $archivo['name'];
-$tipo = $archivo['type'];
-//$procesoId=array();
 $chequeoId=$_POST["chequeoId"];
 $chequeoId=intval($chequeoId);
-echo "Name: ".$nombre."<br>";
-//echo "Value: ".$chequeoId;
+//echo "Value: ".$procesoId;
 //print_r($procesoId);
-/*
-if (!is_dir($procesoId)){
-    mkdir($procesoId,0777);
-}
-*/
-$nombre='Chequeo_'.$chequeoId.'.pdf';
-$flag=move_uploaded_file($archivo['tmp_name'],$nombre);
-//header("Refresh: 2; URL=../chequeos_list.php");
-//echo "<h1>Documento subido correctamente</h1>";
-if ($flag){
-    echo "<script>alert('Archivo Subido Correctamentenete');window.location.href='../Chequeos_list.php';</script>";
+
+if (!is_dir($chequeoId)){
+    mkdir($chequeoId,0777);
 }
 
-/*
-var_dump($archivo);
-die();
-*/
-/*
-class Files {
-    private $procesoId;
-    public function __construct($procesoId) {
-        $this->procesoId=$procesoId;
+for ($i=0;$i<count($archivo["name"]);$i++){
+    if ($archivo["error"][$i]== UPLOAD_ERR_OK){
+        $nombreArchivo = $archivo["name"][$i];
+        $tipoArchivo = $archivo["type"][$i];
+        $tamanioArchivo = $archivo["size"][$i];
+        $archivoTemporal = $archivo["tmp_name"][$i];
+        // Mover el archivo a una ubicación deseada
+        //$ubicacionDestino = "carpeta_destino/" . $nombreArchivo;
+        $flag=move_uploaded_file($archivoTemporal, $chequeoId.'/'.$nombreArchivo);
+        //echo $flag."<br>";
+        //echo "Archivo subido con éxito: $ubicacionDestino<br>";      
     }
-    public function upload() {
-        echo "Hola desde MiClase: ".$this->procesoId;
+    else {
+        echo "Error en la carga del archivo $i.<br>";
     }
 }
-*/
+if ($flag==1){
+    echo "<script>alert('Archivos Subidos Correctamentenete');window.location.href='../Chequeos_list.php';</script>";
+    //echo "<h1>Documentos subidos correctamente</h1>";
+    //header("Refresh: 2; URL=../procesos_list.php");
+}

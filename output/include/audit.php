@@ -792,6 +792,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="dbo.Genero")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1535,6 +1539,10 @@ class AuditTrailFile
 		if($table=="dbo.ProcesosReasignar")
 		{
 			return true;
+		}
+		if($table=="dbo.Genero")
+		{
+			return false;
 		}
 	}
 

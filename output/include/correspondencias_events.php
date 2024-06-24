@@ -112,6 +112,10 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 include_once (getabspath("classes/pruebaJuan.php"));
 include_once (getabspath("plantillaGCC.php"));
 //SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS
+global $pageObject;
+$data = $pageObject->getMasterRecord();
+//echo "El AbogadoId del proceso es: ".$data["AbogadoId"];
+if($data["AbogadoId"]==$_SESSION["AbogadoId"]){
 $response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$values['OficioId']);
 		while( $date = $response->fetchAssoc() )
 				{
@@ -399,6 +403,11 @@ $xml = new SimpleXMLElement($response);
         return false;
     }
 }
+}
+}
+else{
+	echo "<script>alert('El Despacho resgistrador no esta autorizado a indicar como firmante al despacho firmante')</script>";
+	return false;
 }
 ;
 } // function BeforeAdd

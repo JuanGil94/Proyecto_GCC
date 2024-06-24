@@ -1375,7 +1375,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LookupTable"] = "dbo.Despachos1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 1;
 
 	
 		
@@ -1399,8 +1399,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
@@ -1554,7 +1553,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "number";
+			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
 			$edata["EditParams"].= " maxlength=23";

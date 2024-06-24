@@ -1032,10 +1032,6 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return 10;
 	}
-				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
-	{
-		return $_SESSION["UserName"];
-	}
 				if($table=="dbo.Pagos1" && $field=="Fecha")
 	{
 		return now();;
@@ -1059,10 +1055,6 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
-	{
-		return $_SESSION["UserName"];
-	}
 	return "";
 }
 

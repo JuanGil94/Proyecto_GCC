@@ -2523,6 +2523,11 @@ pdfDocument = {
 			"stack": [
 		
 				
+			 {BEGIN details_devoluciones}
+			{$displayDetailTable_devoluciones }
+		{END details_devoluciones},
+				
+				
 			 {BEGIN details_chequeosoficios}
 			{$displayDetailTable_chequeosoficios }
 		{END details_chequeosoficios},
@@ -2531,11 +2536,6 @@ pdfDocument = {
 			 {BEGIN details_chequeossancionados}
 			{$displayDetailTable_chequeossancionados }
 		{END details_chequeossancionados},
-				
-				
-			 {BEGIN details_devoluciones}
-			{$displayDetailTable_devoluciones }
-		{END details_devoluciones},
 				
 		  ],
   "border": [ true, true, true, true ],

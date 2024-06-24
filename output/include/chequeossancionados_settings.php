@@ -31,13 +31,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeossancionados["Spanish"]["ChequeoId"] = "Chequeo Id";
 	$fieldToolTipschequeossancionados["Spanish"]["ChequeoId"] = "";
 	$placeHolderschequeossancionados["Spanish"]["ChequeoId"] = "";
-	$fieldLabelschequeossancionados["Spanish"]["Sancionado"] = "Sancionado";
+	$fieldLabelschequeossancionados["Spanish"]["Sancionado"] = "Deudor";
 	$fieldToolTipschequeossancionados["Spanish"]["Sancionado"] = "";
 	$placeHolderschequeossancionados["Spanish"]["Sancionado"] = "";
-	$fieldLabelschequeossancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento Id";
+	$fieldLabelschequeossancionados["Spanish"]["TipoDocumentoId"] = "Tipo de Documento";
 	$fieldToolTipschequeossancionados["Spanish"]["TipoDocumentoId"] = "";
 	$placeHolderschequeossancionados["Spanish"]["TipoDocumentoId"] = "";
-	$fieldLabelschequeossancionados["Spanish"]["Documento"] = "Documento";
+	$fieldLabelschequeossancionados["Spanish"]["Documento"] = "No. Documento";
 	$fieldToolTipschequeossancionados["Spanish"]["Documento"] = "";
 	$placeHolderschequeossancionados["Spanish"]["Documento"] = "";
 	$fieldLabelschequeossancionados["Spanish"]["Direccion"] = "Direccion";
@@ -55,7 +55,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeossancionados["Spanish"]["Email"] = "Email";
 	$fieldToolTipschequeossancionados["Spanish"]["Email"] = "";
 	$placeHolderschequeossancionados["Spanish"]["Email"] = "";
-	$fieldLabelschequeossancionados["Spanish"]["Masculino"] = "Masculino";
+	$fieldLabelschequeossancionados["Spanish"]["Masculino"] = "Género";
 	$fieldToolTipschequeossancionados["Spanish"]["Masculino"] = "";
 	$placeHolderschequeossancionados["Spanish"]["Masculino"] = "";
 	$fieldLabelschequeossancionados["Spanish"]["Observaciones"] = "Observaciones";
@@ -1797,17 +1797,29 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-		$edata["LookupType"] = 0;
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Genero";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "FEMENINO";
-	$edata["LookupValues"][] = "MASCULINO";
+		
+	$edata["LinkField"] = "GeneroId";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Genero";
 
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
 	
 		$edata["SelectSize"] = 1;
 
@@ -1837,8 +1849,7 @@ $tdatachequeossancionados[".hideMobileList"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
-		$edata["autoUpdatable"] = true;
-
+	
 //	End validation
 
 	

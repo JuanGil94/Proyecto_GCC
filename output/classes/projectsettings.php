@@ -3754,6 +3754,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "auditoriasprocesosview" ] = "dbo.AuditoriasProcesosView";
 	$projectEntities[ "dbo.ProcesosReasignar" ] = array( "url" => "procesosreasignar", "type" => 1 );
 	$projectEntitiesReverse[ "procesosreasignar" ] = "dbo.ProcesosReasignar";
+	$projectEntities[ "dbo.Genero" ] = array( "url" => "genero", "type" => 0 );
+	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
 }
 
 function findTable( $table ) {
