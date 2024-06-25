@@ -3756,6 +3756,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "procesosreasignar" ] = "dbo.ProcesosReasignar";
 	$projectEntities[ "dbo.Genero" ] = array( "url" => "genero", "type" => 0 );
 	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
+	$projectEntities[ "admin_admembers" ] = array( "url" => "admin_admembers", "type" => 1 );
+	$projectEntitiesReverse[ "admin_admembers" ] = "admin_admembers";
 }
 
 function findTable( $table ) {

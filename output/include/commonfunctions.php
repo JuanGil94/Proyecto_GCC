@@ -423,6 +423,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("genero" == $shortTName )
 		return true;
+	if ("admin_admembers" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1463,6 +1465,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Genero";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_admembers");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_admembers";
+	}
 	return $arr;
 }
 
@@ -1582,6 +1593,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.AuditoriasProcesosView";
 	$arr[]="dbo.ProcesosReasignar";
 	$arr[]="dbo.Genero";
+	$arr[]="admin_admembers";
 	return $arr;
 }
 
@@ -2192,6 +2204,8 @@ function GetUserPermissionsDynamic( $table )
 			return "ADESPIM";
 		if($table=="admin_users")
 			return "ADESPIM";
+		if($table=="admin_admembers")
+			return "ADESPIM";
 	}
 
 	$userRights = &Security::dynamicUserRights();
@@ -2755,6 +2769,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Genero" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_admembers" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -3427,9 +3446,11 @@ function checkpassword($pwd)
 
 		$cUnique[$c] = 1;
 	}
-	if(count($cUnique)<4)
+	if(count($cUnique)<1)
 		return false;
 	if($cDigit<2)
+		return false;
+	if(!$cLower || !$cUpper)
 		return false;
 	return true;
 }

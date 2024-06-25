@@ -53,6 +53,20 @@ function getMenuNodes_adminarea($menuNodesObject)
 				$menuNode["title"] = "Añadir/Editar usuarios";
 		$menuNode["href"] = GetTableLink("admin_users", "list");
 		$menuNodesObject->menuNodes["adminarea"][] = $menuNode;
+		// admin_admembers item
+		$menuNode = array();
+		$menuNode["id"] = "4";
+		$menuNode["name"] = "admin_admembers";
+		$menuNode["type"] = "Leaf";
+		$menuNode["table"] = "admin_admembers";
+		$menuNode["style"] = "";
+		$menuNode["params"] = "";
+		$menuNode["parent"] = "0";
+		$menuNode["nameType"] = "Text";
+		$menuNode["linkType"] = "External";
+		$menuNode["pageType"] = "AdminArea";
+		$menuNode["openType"] = "None";	
+				$menuNodesObject->menuNodes["adminarea"][] = $menuNode;
 }
 	
 ?>
