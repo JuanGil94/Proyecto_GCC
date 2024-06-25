@@ -2,7 +2,7 @@
 $tdataabogados = array();
 $tdataabogados[".searchableFields"] = array();
 $tdataabogados[".ShortName"] = "abogados";
-$tdataabogados[".OwnerID"] = "";
+$tdataabogados[".OwnerID"] = "AbogadoId";
 $tdataabogados[".OriginalTable"] = "dbo.Abogados";
 
 
@@ -79,7 +79,7 @@ if(mlang_getcurrentlang()=="Spanish")
 $tdataabogados[".shortTableName"] = "abogados";
 $tdataabogados[".nSecOptions"] = 0;
 
-$tdataabogados[".mainTableOwnerID"] = "";
+$tdataabogados[".mainTableOwnerID"] = "AbogadoId";
 $tdataabogados[".entityType"] = 0;
 $tdataabogados[".connId"] = "GCC_at_S00001_CCAD01";
 

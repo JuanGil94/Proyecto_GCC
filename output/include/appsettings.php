@@ -637,6 +637,12 @@ $globalSettings["apiGoogleMapsCode"] = "";
 
 $globalSettings["useEmbedMapsAPI"] = 1 != 0;
 
+//password global settings for register page
+$globalSettings["pwdStrong"] = true;
+$globalSettings["pwdLen"] = 8;
+$globalSettings["pwdUnique"] = 1;
+$globalSettings["pwdDigits"] = 2;
+$globalSettings["pwdUpperLower"] = true;
 
 
 /**
@@ -724,7 +730,7 @@ $globalSettings["usersDatasourceTable"] = "dbo.UsuGCC-_users";
 $globalSettings["userRequireActivation"] = true;
 $globalSettings["userActivationField"] = "active";
 
-$globalSettings["jwtSecret"] = "xH6VZUMsWhhBLPRMzv9y";
+$globalSettings["jwtSecret"] = "ibM3D3ojrsLt0VHyTPKD";
 
 
 $arrCustomPages = array();
@@ -742,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2352_1719247507";
+$projectBuildKey = "2358_1719247507";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2352";
+$projectBuildNumber = "2358";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -877,6 +883,7 @@ $tableCaptions["Spanish"]["dbo_Fechas"] = "Fechas";
 $tableCaptions["Spanish"]["dbo_AuditoriasProcesosView"] = "Auditorias Procesos View";
 $tableCaptions["Spanish"]["dbo_ProcesosReasignar"] = "Procesos Reasignar";
 $tableCaptions["Spanish"]["dbo_Genero"] = "Genero";
+$tableCaptions["Spanish"]["admin_admembers"] = "Admin Admembers";
 
 
 $globalEvents = new class_GlobalEvents;

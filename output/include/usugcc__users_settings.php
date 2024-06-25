@@ -2,7 +2,7 @@
 $tdatausugcc__users = array();
 $tdatausugcc__users[".searchableFields"] = array();
 $tdatausugcc__users[".ShortName"] = "usugcc__users";
-$tdatausugcc__users[".OwnerID"] = "";
+$tdatausugcc__users[".OwnerID"] = "ID";
 $tdatausugcc__users[".OriginalTable"] = "dbo.UsuGCC-_users";
 
 
@@ -70,7 +70,7 @@ if(mlang_getcurrentlang()=="Spanish")
 $tdatausugcc__users[".shortTableName"] = "usugcc__users";
 $tdatausugcc__users[".nSecOptions"] = 0;
 
-$tdatausugcc__users[".mainTableOwnerID"] = "";
+$tdatausugcc__users[".mainTableOwnerID"] = "ID";
 $tdatausugcc__users[".entityType"] = 0;
 $tdatausugcc__users[".connId"] = "GCC_at_S00001_CCAD01";
 
