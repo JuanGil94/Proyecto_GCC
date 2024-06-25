@@ -307,6 +307,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_headcell_field}
+			colSpan: {$colspan_grid_headcell_field},
+			{END colspan_grid_headcell_field}
 		
 		
 	
@@ -325,36 +328,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'ProcesoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Solidarios ProcesoId }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ProcesoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
-											],
+																		{ 
+				cellId: 'headcell_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_0}
 		
 			
@@ -436,6 +416,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_cell_field}
+			colSpan: {$colspan_grid_cell_field},
+			{END colspan_grid_cell_field}
 		
 		
 	
@@ -454,36 +437,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'ProcesoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ProcesoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-											],
+																		{ 
+				cellId: 'cell_field',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_1}
 		
 		{END grid_record}

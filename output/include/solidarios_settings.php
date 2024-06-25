@@ -31,7 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssolidarios["Spanish"]["ProcesoId"] = "No. Proceso";
 	$fieldToolTipssolidarios["Spanish"]["ProcesoId"] = "";
 	$placeHolderssolidarios["Spanish"]["ProcesoId"] = "";
-	$fieldLabelssolidarios["Spanish"]["SancionadoId"] = "Sancionado Solidario";
+	$fieldLabelssolidarios["Spanish"]["SancionadoId"] = "Deudor";
 	$fieldToolTipssolidarios["Spanish"]["SancionadoId"] = "";
 	$placeHolderssolidarios["Spanish"]["SancionadoId"] = "";
 	if (count($fieldToolTipssolidarios["Spanish"]))
@@ -131,7 +131,7 @@ $tdatasolidarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatasolidarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -623,7 +623,7 @@ $tdatasolidarios[".hideMobileList"] = array();
 	$edata["LookupTable"] = "dbo.Sancionados";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 1;
 
 	
 		
@@ -644,8 +644,7 @@ $tdatasolidarios[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 

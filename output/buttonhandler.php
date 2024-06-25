@@ -266,6 +266,16 @@ if($buttId=='New_Button12')
 	}
 	buttonHandler_New_Button12($params);
 }
+if($buttId=='maxTime')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_maxTime($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -2476,6 +2486,86 @@ while ( $data = $button->getNextSelectedRecord() ) {
 
 			}
 		
+};
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_maxTime($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+//$result["txt"] = $params["txt"]." world!";
+
+if ($params["txt"]){
+	$rs=DB::Query("declare @p3 int
+									set @p3=0
+									declare @p4 nvarchar(max)
+									set @p4=N''
+									exec [dbo].[Procesos_Autorizar] @ProcesoId=".$params["ProcesoId"].",@AutorizadoPor='".$_SESSION["UserData"]["username"]."',@Err_num=@p3 output,@Err_msg=@p4 output
+									select @p3, @p4 Errmsg");
+	while( $data = $rs->fetchAssoc() )
+	{
+		$Errmsg=$data['Errmsg'];
+		//echo "Valor del error: ".$Errmsg;
+		//echo "Valor del Numero error: ".$Errnum;
+	}
+	if ($Errmsg){
+	echo " <script>if (confirm('Se encontro un error al crear el Proceso: ".$Errmsg."')) {
+            location.reload(); // Recargar la página si el usuario hace clic en Aceptar
+        }</script>";
+	//$result["rs"]=false;
+	}
+	else{
+	//echo "Entroooooo";
+	$result["rs"]=true;
+	}
 };
 	RunnerContext::pop();
 	echo my_json_encode($result);

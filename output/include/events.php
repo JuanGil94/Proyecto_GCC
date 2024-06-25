@@ -25,6 +25,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["AfterSuccessfulLogin"]=true;
 
 
+		$this->events["AfterUnsuccessfulLogin"]=true;
+
 
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
@@ -59,7 +61,8 @@ class class_GlobalEvents extends eventsBase
 function AfterSuccessfulLogin($username, $password, &$data, $pageObject)
 {
 
-		//phpinfo();
+		echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
+//phpinfo();
 $arraySeccionales=array();
 $arrayCiudades=array();
 $username=$_SESSION["UserData"]["username"];
@@ -324,6 +327,58 @@ if ($conteo>0){
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+				// After unsuccessful login
+function AfterUnsuccessfulLogin($username, $password, &$message, $pageObject, $userdata)
+{
+
+		$rs=DB::Query("SELECT username,* FROM [GCC].[dbo].[UsuGCC-_users] WHERE Username='".$username."'");
+while( $date = $rs->fetchAssoc() ){
+	$usernameDB=$date["username"];
+	$passwordDB=$date["password"];
+}
+//echo "<script>alert('Valorrr: ".$usernameDB."')</script>";
+if ($usernameDB==""){
+$message="El usuario no existe en el sistema";
+}
+else{
+	if ($passwordDB!=$password){
+$message="Contraseña incorrecta";
+		}
+}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterUnsuccessfulLogin
+
 		
 		
 		

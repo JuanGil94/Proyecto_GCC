@@ -566,16 +566,6 @@
 			</div>
 					</a>
 		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ProcesoId" checked="checked" value="1" data-field="ProcesoId" data-fieldname="ProcesoId">
-					<span>{$label dbo_Solidarios ProcesoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -593,10 +583,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcesoId"]:before {
-		content: "{$label dbo_Solidarios ProcesoId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
 		content: "{$label dbo_Solidarios SancionadoId}";
 	}
 	}
@@ -676,31 +663,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ProcesoId_class}	"
-
-			data-field="ProcesoId"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ProcesoId_fieldheadercolumn}
-	{BEGIN ProcesoId_fieldheader}
-	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
-	{$label dbo_Solidarios ProcesoId }	{$arrow_icon_ProcesoId}
-	</SPAN>
-	{END ProcesoId_fieldheader}
-{END ProcesoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
 							</tr>
 															
 					{END grid_header}
@@ -804,27 +766,6 @@
 {END SancionadoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ProcesoId_class}	"
-
-			data-field="ProcesoId"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ProcesoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId" data-default-width >
-{$ProcesoId_value}
-</span>
-{END ProcesoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
 							</tr>
 										
 											{END grid_row}
@@ -887,7 +828,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ProcesoId_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="solidarios_list"	
