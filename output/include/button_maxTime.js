@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["maxTime"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='maxTime';if(!pageObj.buttonEventBefore['maxTime']){pageObj.buttonEventBefore['maxTime']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]=confirm('¿Desea autorizar dos (2) años adicionales a este proceso?');params["ProcesoId"]=row.getFieldValue("ProcesoId");}}
+if(!pageObj.buttonEventAfter['maxTime']){pageObj.buttonEventAfter['maxTime']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;console.log("valor de Result: "+result["rs"]);if(result["rs"]){swal({icon:"success",text:"Se Agrega los dos años al proceso"});}}}
+$('a[id="maxTime"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="maxTime"+"_"+Runner.genId();var button_maxTime=new Runner.form.Button({id:this.id,btnName:"maxTime"});button_maxTime.init({args:[pageObj,proxy,pageid]});});};
