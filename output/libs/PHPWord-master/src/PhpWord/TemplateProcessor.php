@@ -234,13 +234,18 @@ class TemplateProcessor
     {
         $xmlBlock = null;
         preg_match(
-            '/(<\?xml.*)(<w:p.*>\${' . $blockname . '}<\/w:.*?p>)(.*)(<w:p.*\${\/' . $blockname . '}<\/w:.*?p>)/is',
+            '/(<\?xml.*)(<w:p.*>\${' . $blockname .'}<\/w:.*?p>)(.*)(<w:p.*\${\/' . $blockname . '}<\/w:.*?p>)/is',
             $this->temporaryDocumentMainPart,
             $matches
         );
 
         if (isset($matches[3])) {
             $xmlBlock = $matches[3];
+            //echo "Valor del contenido".$xmlBlock;
+            preg_match_all('/\$\{(.*?)}/i', $xmlBlock, $matches);
+            $matches[1];
+            echo "Variables:";
+            print_r($matches[1]);
             $cloned = array();
             for ($i = 1; $i <= $clones; $i++) {
                 $cloned[] = $xmlBlock;
@@ -257,7 +262,7 @@ class TemplateProcessor
 
         return $xmlBlock;
     }
-
+    
     /**
      * Replace a block.
      *

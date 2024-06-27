@@ -852,6 +852,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Ciudades2")
+		{
+			return true;
+		}
+		if($table=="dbo.Ciudades4")
+		{
+			return true;
+		}
+		if($table=="dbo.Ciudades5")
+		{
+			return true;
+		}
+		if($table=="dbo.Ciudades3")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1657,6 +1673,22 @@ class AuditTrailFile
 		if($table=="admin_admembers")
 		{
 			return false;
+		}
+		if($table=="dbo.Ciudades2")
+		{
+			return true;
+		}
+		if($table=="dbo.Ciudades4")
+		{
+			return true;
+		}
+		if($table=="dbo.Ciudades5")
+		{
+			return true;
+		}
+		if($table=="dbo.Ciudades3")
+		{
+			return true;
 		}
 	}
 

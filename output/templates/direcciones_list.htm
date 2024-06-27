@@ -638,38 +638,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_DireccionId" checked="checked" value="1" data-field="DireccionId" data-fieldname="DireccionId">
-					<span>{$label dbo_Direcciones DireccionId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
-					<span>{$label dbo_Direcciones SancionadoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_CarcelId" checked="checked" value="1" data-field="CarcelId" data-fieldname="CarcelId">
-					<span>{$label dbo_Direcciones CarcelId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_CiudadId" checked="checked" value="1" data-field="CiudadId" data-fieldname="CiudadId">
-					<span>{$label dbo_Direcciones CiudadId }</span>
+					<input type="checkbox" id="hide_Activa" checked="checked" value="1" data-field="Activa" data-fieldname="Activa">
+					<span>{$label dbo_Direcciones Activa }</span>
 				</label>
 			</div>
 					</a>
@@ -698,6 +668,16 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
+					<input type="checkbox" id="hide_CiudadId" checked="checked" value="1" data-field="CiudadId" data-fieldname="CiudadId">
+					<span>{$label dbo_Direcciones CiudadId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
 					<input type="checkbox" id="hide_Telefonos" checked="checked" value="1" data-field="Telefonos" data-fieldname="Telefonos">
 					<span>{$label dbo_Direcciones Telefonos }</span>
 				</label>
@@ -708,8 +688,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Activa" checked="checked" value="1" data-field="Activa" data-fieldname="Activa">
-					<span>{$label dbo_Direcciones Activa }</span>
+					<input type="checkbox" id="hide_CarcelId" checked="checked" value="1" data-field="CarcelId" data-fieldname="CarcelId">
+					<span>{$label dbo_Direcciones CarcelId }</span>
 				</label>
 			</div>
 					</a>
@@ -731,13 +711,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DireccionId"]:before {
-		content: "{$label dbo_Direcciones DireccionId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
-		content: "{$label dbo_Direcciones SancionadoId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarcelId"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarcelId"]:before {
 		content: "{$label dbo_Direcciones CarcelId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CiudadId"]:before {
@@ -813,21 +787,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DireccionId_class}	"
+		 r-ori-vert		 {$Activa_class}	"
 
-			data-field="DireccionId"
+			data-field="Activa"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN DireccionId_fieldheadercolumn}
-	{BEGIN DireccionId_fieldheader}
-	<SPAN {$DireccionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DireccionId" data-fieldname="DireccionId">
-	{$label dbo_Direcciones DireccionId }	{$arrow_icon_DireccionId}
+		{BEGIN Activa_fieldheadercolumn}
+	{BEGIN Activa_fieldheader}
+	<SPAN {$Activa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activa" data-fieldname="Activa">
+	{$label dbo_Direcciones Activa }	{$arrow_icon_Activa}
 	</SPAN>
-	{END DireccionId_fieldheader}
-{END DireccionId_fieldheadercolumn}
+	{END Activa_fieldheader}
+{END Activa_fieldheadercolumn}
 
 	
 	</th>
@@ -838,21 +812,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
-			data-field="SancionadoId"
+			data-field="Direccion"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SancionadoId_fieldheadercolumn}
-	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
-	{$label dbo_Direcciones SancionadoId }	{$arrow_icon_SancionadoId}
+		{BEGIN Direccion_fieldheadercolumn}
+	{BEGIN Direccion_fieldheader}
+	<SPAN {$Direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion">
+	{$label dbo_Direcciones Direccion }	{$arrow_icon_Direccion}
 	</SPAN>
-	{END SancionadoId_fieldheader}
-{END SancionadoId_fieldheadercolumn}
+	{END Direccion_fieldheader}
+{END Direccion_fieldheadercolumn}
 
 	
 	</th>
@@ -863,21 +837,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CarcelId_class}	"
+		 r-ori-vert		 {$Barrio_class}	"
 
-			data-field="CarcelId"
+			data-field="Barrio"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN CarcelId_fieldheadercolumn}
-	{BEGIN CarcelId_fieldheader}
-	<SPAN {$CarcelId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarcelId" data-fieldname="CarcelId">
-	{$label dbo_Direcciones CarcelId }	{$arrow_icon_CarcelId}
+		{BEGIN Barrio_fieldheadercolumn}
+	{BEGIN Barrio_fieldheader}
+	<SPAN {$Barrio_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Barrio" data-fieldname="Barrio">
+	{$label dbo_Direcciones Barrio }	{$arrow_icon_Barrio}
 	</SPAN>
-	{END CarcelId_fieldheader}
-{END CarcelId_fieldheadercolumn}
+	{END Barrio_fieldheader}
+{END Barrio_fieldheadercolumn}
 
 	
 	</th>
@@ -898,7 +872,7 @@
 	 
 		{BEGIN CiudadId_fieldheadercolumn}
 	{BEGIN CiudadId_fieldheader}
-	<SPAN {$CiudadId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CiudadId" data-fieldname="CiudadId">
+	<SPAN {$CiudadId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CiudadId" data-fieldname="CiudadId">
 	{$label dbo_Direcciones CiudadId }	{$arrow_icon_CiudadId}
 	</SPAN>
 	{END CiudadId_fieldheader}
@@ -913,21 +887,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
+		 r-ori-vert		 {$Telefonos_class}	"
 
-			data-field="Direccion"
+			data-field="Telefonos"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Direccion_fieldheadercolumn}
-	{BEGIN Direccion_fieldheader}
-	<SPAN {$Direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion">
-	{$label dbo_Direcciones Direccion }	{$arrow_icon_Direccion}
+		{BEGIN Telefonos_fieldheadercolumn}
+	{BEGIN Telefonos_fieldheader}
+	<SPAN {$Telefonos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Telefonos" data-fieldname="Telefonos">
+	{$label dbo_Direcciones Telefonos }	{$arrow_icon_Telefonos}
 	</SPAN>
-	{END Direccion_fieldheader}
-{END Direccion_fieldheadercolumn}
+	{END Telefonos_fieldheader}
+{END Telefonos_fieldheadercolumn}
 
 	
 	</th>
@@ -938,75 +912,25 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Barrio_class}	"
+		 r-ori-vert		 {$CarcelId_class}	"
 
-			data-field="Barrio"
+			data-field="CarcelId"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Barrio_fieldheadercolumn}
-	{BEGIN Barrio_fieldheader}
-	<SPAN {$Barrio_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Barrio" data-fieldname="Barrio">
-	{$label dbo_Direcciones Barrio }	{$arrow_icon_Barrio}
+		{BEGIN CarcelId_fieldheadercolumn}
+	{BEGIN CarcelId_fieldheader}
+	<SPAN {$CarcelId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarcelId" data-fieldname="CarcelId">
+	{$label dbo_Direcciones CarcelId }	{$arrow_icon_CarcelId}
 	</SPAN>
-	{END Barrio_fieldheader}
-{END Barrio_fieldheadercolumn}
+	{END CarcelId_fieldheader}
+{END CarcelId_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Telefonos_class}	"
-
-			data-field="Telefonos"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Telefonos_fieldheadercolumn}
-	{BEGIN Telefonos_fieldheader}
-	<SPAN {$Telefonos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Telefonos" data-fieldname="Telefonos">
-	{$label dbo_Direcciones Telefonos }	{$arrow_icon_Telefonos}
-	</SPAN>
-	{END Telefonos_fieldheader}
-{END Telefonos_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activa_class}	"
-
-			data-field="Activa"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Activa_fieldheadercolumn}
-	{BEGIN Activa_fieldheader}
-	<SPAN {$Activa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activa" data-fieldname="Activa">
-	{$label dbo_Direcciones Activa }	{$arrow_icon_Activa}
-	</SPAN>
-	{END Activa_fieldheader}
-{END Activa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -1095,19 +1019,19 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DireccionId_class}	"
+		 r-ori-vert		 {$Activa_class}	"
 
-			data-field="DireccionId"
+			data-field="Activa"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN DireccionId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DireccionId" data-fieldname="DireccionId" data-default-width >
-{$DireccionId_value}
+		{BEGIN Activa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activa" data-fieldname="Activa" data-default-width >
+{$Activa_value}
 </span>
-{END DireccionId_fieldcolumn}	
+{END Activa_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -1116,19 +1040,19 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
-			data-field="SancionadoId"
+			data-field="Direccion"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SancionadoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
-{$SancionadoId_value}
+		{BEGIN Direccion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion" data-default-width >
+{$Direccion_value}
 </span>
-{END SancionadoId_fieldcolumn}	
+{END Direccion_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
@@ -1137,19 +1061,19 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CarcelId_class}	"
+		 r-ori-vert		 {$Barrio_class}	"
 
-			data-field="CarcelId"
+			data-field="Barrio"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN CarcelId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarcelId" data-fieldname="CarcelId" data-default-width >
-{$CarcelId_value}
+		{BEGIN Barrio_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Barrio" data-fieldname="Barrio" data-default-width >
+{$Barrio_value}
 </span>
-{END CarcelId_fieldcolumn}	
+{END Barrio_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field3}
@@ -1179,53 +1103,11 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
-
-			data-field="Direccion"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Direccion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion" data-default-width >
-{$Direccion_value}
-</span>
-{END Direccion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Barrio_class}	"
-
-			data-field="Barrio"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Barrio_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Barrio" data-fieldname="Barrio" data-default-width >
-{$Barrio_value}
-</span>
-{END Barrio_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Telefonos_class}	"
 
 			data-field="Telefonos"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1235,28 +1117,28 @@
 </span>
 {END Telefonos_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Activa_class}	"
+		 r-ori-vert		 {$CarcelId_class}	"
 
-			data-field="Activa"
+			data-field="CarcelId"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Activa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Activa" data-fieldname="Activa" data-default-width >
-{$Activa_value}
+		{BEGIN CarcelId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarcelId" data-fieldname="CarcelId" data-default-width >
+{$CarcelId_value}
 </span>
-{END Activa_fieldcolumn}	
+{END CarcelId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
 							</tr>
 										
 											{END grid_row}
@@ -1304,7 +1186,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$DireccionId_class}	"
+		 r-ori-vert		 {$Activa_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
@@ -1319,7 +1201,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
@@ -1334,7 +1216,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CarcelId_class}	"
+		 r-ori-vert		 {$Barrio_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
@@ -1364,7 +1246,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direccion_class}	"
+		 r-ori-vert		 {$Telefonos_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
@@ -1379,7 +1261,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Barrio_class}	"
+		 r-ori-vert		 {$CarcelId_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
@@ -1388,36 +1270,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Telefonos_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activa_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="direcciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

@@ -425,6 +425,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("admin_admembers" == $shortTName )
 		return true;
+	if ("ciudades2" == $shortTName )
+		return true;
+	if ("dbo_ciudades4" == $shortTName )
+		return true;
+	if ("dbo_ciudades5" == $shortTName )
+		return true;
+	if ("ciudades3" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1474,6 +1482,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="admin_admembers";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Ciudades2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades4");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Ciudades4";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades5");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Ciudades5";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades3");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Ciudades3";
+	}
 	return $arr;
 }
 
@@ -1594,6 +1638,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ProcesosReasignar";
 	$arr[]="dbo.Genero";
 	$arr[]="admin_admembers";
+	$arr[]="dbo.Ciudades2";
+	$arr[]="dbo.Ciudades4";
+	$arr[]="dbo.Ciudades5";
+	$arr[]="dbo.Ciudades3";
 	return $arr;
 }
 
@@ -2774,6 +2822,26 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="admin_admembers" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Ciudades2" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Ciudades4" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Ciudades5" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Ciudades3" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

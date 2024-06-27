@@ -841,6 +841,22 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.Ciudades2")
+		{
+			return 1;
+		}
+		if($table=="dbo.Ciudades4")
+		{
+			return 1;
+		}
+		if($table=="dbo.Ciudades5")
+		{
+			return 1;
+		}
+		if($table=="dbo.Ciudades3")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1537,6 +1553,22 @@ function getCaptionTable($table)
 	if($table=="admin_admembers")
 	{
 		return "Admin Admembers";
+	}
+	if($table=="dbo.Ciudades2")
+	{
+		return "Ciudades2";
+	}
+	if($table=="dbo.Ciudades4")
+	{
+		return "Ciudades4";
+	}
+	if($table=="dbo.Ciudades5")
+	{
+		return "Ciudades5";
+	}
+	if($table=="dbo.Ciudades3")
+	{
+		return "Ciudades3";
 	}
 	return $table;
 }
@@ -3629,6 +3661,54 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="admin_admembers";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades2");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Ciudades2";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Ciudades2";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades4");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Ciudades4";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Ciudades4";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades5");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Ciudades5";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Ciudades5";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Ciudades3");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Ciudades3";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Ciudades3";
 	}
 	return $arr;
 }

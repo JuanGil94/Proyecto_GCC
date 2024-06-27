@@ -354,6 +354,10 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.ProcesosReasignar"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Genero"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["admin_admembers"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Ciudades2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Ciudades4"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Ciudades5"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Ciudades3"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

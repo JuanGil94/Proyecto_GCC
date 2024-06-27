@@ -670,12 +670,56 @@ class plantillaCaratulas extends diccionario{
     }
 }
 class diccionarioChequeo{
-    public $chequeoId,$sigobius;
+    public $chequeoId,$sigobius,$fecha,$observaciones;
     public $variables;
-    public function process ($chequeoId,$oficioId,$sigobius){
+    public function process ($chequeoId,$oficioId,$sigobius,$fecha,$observaciones){
+        if ($oficioId==4578){
+            $templatePath=('templates_GCC/Sample_23_TemplateBlock.docx');
+            //$templatePath=('templates_GCC/Plantilla_4578.docx');
+            $zip = new ZipArchive;
+            if ($zip->open($templatePath) === TRUE) {
+                // Leer el contenido del documento principal (word/document.xml)
+                $xmlContent = $zip->getFromName('word/document.xml');
+
+                // Cerrar el archivo ZIP
+                $zip->close();
+
+                // Mostrar el contenido XML
+                header('Content-Type: text/xml');
+                //echo $xmlContent;
+            } else {
+                echo "No se pudo abrir el archivo DOCX.";
+            }
+            $value=$this->tablaChequeosSancionados();
+            //print_r($value);
+            $templateWord = new TemplateProcessor('templates_GCC/Sample_23_TemplateBlock.docx');
+            //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_4578.docx');
+            //echo "Valor del conteo: ".count($value);
+            $templateWord->cloneBlock('DELETEME', 4,true);
+            $templateWord->cloneBlock('SANCIONADOS', 4,true);
+            $count=1;
+            $replacements = array(
+                array('Sancionado' => 'Batman'),
+                array('Sancionado' => 'Superman'),
+            );
+            //$templateWord->cloneBlock('DELETEME', 2, true, true, $replacements);
+            //$templateWord->setValue('Sancionado#1', "JUAN");
+            //$templateWord->setValue('Sancionado#2', "PEDRO");
+            foreach($value as $date){
+                //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
+                //$templateWord->setValue('Sancionado#'.$count, htmlspecialchars($date["C.Sancionado"]));
+                $templateWord->setValue('Sancionado#'.$count, "holaaaaaa");
+                $templateWord->setValue('TipoDocumento#'.$count, htmlspecialchars($date["T.TipoDocumento"]));
+                $templateWord->setValue('Documento#'.$count, htmlspecialchars($date["DDocumento"]));
+                $count++;
+            }
+        $templateWord->saveAs('templates_GCC/acuPagoSig.docx');    
+        }
         $this->chequeoId=$chequeoId;
         $this->oficioId=$oficioId;
         $this->sigobius=$sigobius;
+        $this->fecha=$fecha;
+        $this->observaciones=$observaciones;
         $consulta=DB::Query("SELECT S.Seccional AS 'Seccional',
         S.PiePagina AS 'PiePagina', 
         S.Telefonos AS 'SeccionalTelefonos', 
@@ -694,6 +738,9 @@ class diccionarioChequeo{
             );
         }
         $info["Sigobius"]=$this->sigobius;
+        $info["Fecha"]=$this->fecha;
+        $info["Radicado"]=$this->sigobius;
+        $info["Observaciones"]=$this->observaciones;
         $consulta=DB::Query("SELECT FORMAT(GETDATE(), 'dd \de MMMM \de yyyy', 'es-ES') AS 'fechahoy'");
         while( $date = $consulta->fetchAssoc() )
 		{
@@ -786,7 +833,7 @@ class diccionarioChequeo{
 		{
             $info["MotivoDevolucion"]=$date["MotivoDevolucion"];
         }
-
+        /*
         $consulta=DB::Query("SELECT
         FORMAT(Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha',
 		Radicado as 'Radicado', 
@@ -798,7 +845,7 @@ class diccionarioChequeo{
             $info["Radicado"]=$date["Radicado"];
             $info["Observaciones"]=$date["Observaciones"];
         }
-
+        */
         $variables = array(
             'Remisorio' => '',
             'REMISORIO' => '',
@@ -835,17 +882,33 @@ class diccionarioChequeo{
     public function getVariables(){
         return $this->variables;
     }
+    public function tablaChequeosSancionados(){
+        $consulta=DB::Query("SELECT C.Sancionado,T.TipoDocumento,C.Documento
+                            FROM ChequeosSancionados C INNER JOIN TiposDocumentos T ON C.TipoDocumentoId=T.TipoDocumentoId 
+                            WHERE ChequeoId=".$this->chequeoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            //echo $date["Cuota"]; 
+            $sancionados[]=$date;
+            //$cuotas[]=$date["Cuota"];
+        }
+        //print_r($acuerdo);
+        return $sancionados;
+    }
 
 }
 class plantillaDev extends diccionarioChequeo{
-    public $ChequeoId,$oficioId,$sigobius;
-    public function __construct($ChequeoId,$oficioId,$sigobius){
+    public $ChequeoId,$oficioId,$sigobius,$fecha,$observaciones;
+    public function __construct($ChequeoId,$oficioId,$sigobius,$fecha,$observaciones){
         $this->chequeoId=$ChequeoId;
         $this->oficioId=$oficioId;
         $this->sigobius=$sigobius;
+        $this->fecha=$fecha;
+        $this->observaciones=$observaciones;
     }
     public function funcGlobal(){
-        $info=parent::process($this->chequeoId,$this->oficioId,$this->sigobius);
+        $info=parent::process($this->chequeoId,$this->oficioId,$this->sigobius,$this->fecha,$this->observaciones);
         //$direcciones=parent::direcciones();
         $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
         // Crear un objeto TemplateProcessor

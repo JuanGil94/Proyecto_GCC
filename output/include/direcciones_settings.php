@@ -792,7 +792,7 @@ $tdatadirecciones[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Ciudades";
+	$edata["LookupTable"] = "dbo.Ciudades3";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -801,11 +801,12 @@ $tdatadirecciones[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "CiudadId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Ciudad";
+	$edata["DisplayField"] = "dbo.Departamentos.Codigo+dbo.Ciudades.Codigo+' - '+dbo.Ciudades.Ciudad+' ('+dbo.Departamentos.Departamento+')'";
 
 	
 
-	
+		$edata["CustomDisplay"] = "true";
+
 	$edata["LookupOrderBy"] = "";
 
 	

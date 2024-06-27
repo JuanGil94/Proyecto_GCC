@@ -477,7 +477,7 @@ $tdatachequeosoficios[".hideMobileList"] = array();
 
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Oficio";
 
 	
 	
@@ -617,7 +617,7 @@ $tdatachequeosoficios[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -636,7 +636,7 @@ $tdatachequeosoficios[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 24;
 	$edata["LastYearFactor"] = 0;
 
