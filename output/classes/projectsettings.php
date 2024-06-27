@@ -3758,6 +3758,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "genero" ] = "dbo.Genero";
 	$projectEntities[ "admin_admembers" ] = array( "url" => "admin_admembers", "type" => 1 );
 	$projectEntitiesReverse[ "admin_admembers" ] = "admin_admembers";
+	$projectEntities[ "dbo.Ciudades2" ] = array( "url" => "ciudades2", "type" => 1 );
+	$projectEntitiesReverse[ "ciudades2" ] = "dbo.Ciudades2";
+	$projectEntities[ "dbo.Ciudades4" ] = array( "url" => "dbo_ciudades4", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_ciudades4" ] = "dbo.Ciudades4";
+	$projectEntities[ "dbo.Ciudades5" ] = array( "url" => "dbo_ciudades5", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_ciudades5" ] = "dbo.Ciudades5";
+	$projectEntities[ "dbo.Ciudades3" ] = array( "url" => "ciudades3", "type" => 1 );
+	$projectEntitiesReverse[ "ciudades3" ] = "dbo.Ciudades3";
 }
 
 function findTable( $table ) {

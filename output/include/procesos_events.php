@@ -59,7 +59,8 @@
 function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 {
 
-		//addNotification( "It's time to check your mail", "Mail check", "glyphicon-envelope", "https://mail.google.com", null, null, true );
+		//$record["hovercss"]='background:yellow;';
+//addNotification( "It's time to check your mail", "Mail check", "glyphicon-envelope", "https://mail.google.com", null, null, true );
 /*
 $_SESSION["AbogadoId"];
 $abogadoId=intval($_SESSION["AbogadoId"]);

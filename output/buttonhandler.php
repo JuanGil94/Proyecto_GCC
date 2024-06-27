@@ -539,15 +539,32 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 							$abogadoId=$data["AbogadoId"];
 						}
 				$asignacion=	DB::Exec("INSERT INTO Reasignaciones (Fecha,ProcesoId,AbogadoId) VALUES (GETDATE(),".$procesoId.",".$abogadoId.")");
-			/*
-			//Validacion si hay error en el INSERT
-			if ($asignacion){
-				echo "El insert en reasiganciones se realizo correctamnete";
-			}
-			else{
-			echo "Error al ejecutar la consulta: " . DB::LastError();
-			}
-			*/
+				
+				//Validacion si hay error en el INSERT
+				if ($asignacion){
+					//echo "El insert en reasiganciones se realizo correctamnete";
+				}
+				else{
+				echo "Error al ejecutar la consulta: " . DB::LastError();
+				return false;
+				}
+				$path="classes/".$procesoId;
+				$path1="classes/".$params["ChequeoId"];
+				if (is_dir($path1)){
+					$archivos = scandir($path1);
+					$archivos = array_diff($archivos, array('.', '..'));
+					mkdir($path,0777);
+					foreach ($archivos as $archivo) {
+						//echo "Nombre del archivo: ".$archivo;
+						if (copy($path1."/".$archivo,$path."/".$archivo)) {
+							 //echo "El archivo ha sido movido correctamente.";
+						} else {
+							 $error = error_get_last();
+							 echo "Hubo un error al intentar mover el archivo.".$error['message'];
+							 return false;
+						}
+				}
+				}
 			//echo "Valor de la asignacion: ".	$asignacion;
 			//echo ("<script>alert('Proceso insertado correctamnete')</script>");
 			//echo "Se realiza la insercion del Proceso con exito";
@@ -1030,7 +1047,7 @@ function buttonHandler_New_Button4($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	    ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - INICIO
     // URL del servicio web ASMX
-    $url = 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerDocumentoCorrespondencia';
+    $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerDocumentoCorrespondencia';
 
     // Datos que deseas enviar en la solicitud POST
     $data = array(
@@ -2780,7 +2797,7 @@ function fieldEventHandler_calcular_diasPlazo( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
 //echo "Fecha Ejecutoria: ".$fechaEje;
-$rs=DB::Query(" SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
+$rs=DB::Query("SET DATEFIRST 7;SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
 /*
 $rs=DB::Query("declare @p2 date
 set @p2=''
@@ -2840,7 +2857,7 @@ function fieldEventHandler_Ejecutoria_event( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
 //echo "Fecha Ejecutoria: ".$fechaEje;
-$rs=DB::Query(" SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
+$rs=DB::Query("SET DATEFIRST 7;SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
 /*
 $rs=DB::Query("declare @p2 date
 set @p2=''

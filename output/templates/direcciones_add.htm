@@ -111,68 +111,26 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN SancionadoId_fieldblock}
+{BEGIN Activa_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-vertical-field" 
-	data-signal-error-for="SancionadoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="SancionadoId" data-fieldname="SancionadoId" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Activa}  r-vertical-field" 
+	data-signal-error-for="Activa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Activa" data-fieldname="Activa" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_SancionadoId}">
-		{BEGIN SancionadoId_label}{$label dbo_Direcciones SancionadoId }{END SancionadoId_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Activa}">
+		{BEGIN Activa_label}{$label dbo_Direcciones Activa }{END Activa_label}
 	</label>
 	<div class="r-edit-field">
-		{$SancionadoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="SancionadoId" {$tooltipAttr dbo_Direcciones SancionadoId } >
+		{$Activa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Activa" {$tooltipAttr dbo_Direcciones Activa } >
 		<div class="text-muted" >
-		{$tooltip dbo_Direcciones SancionadoId }		</div>
+		{$tooltip dbo_Direcciones Activa }		</div>
 	</div>
 </div>
 
 
-{END SancionadoId_fieldblock}
-											
-{BEGIN CarcelId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_CarcelId}  r-vertical-field" 
-	data-signal-error-for="CarcelId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="CarcelId" data-fieldname="CarcelId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_CarcelId}">
-		{BEGIN CarcelId_label}{$label dbo_Direcciones CarcelId }{END CarcelId_label}
-	</label>
-	<div class="r-edit-field">
-		{$CarcelId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="CarcelId" {$tooltipAttr dbo_Direcciones CarcelId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Direcciones CarcelId }		</div>
-	</div>
-</div>
-
-
-{END CarcelId_fieldblock}
-											
-{BEGIN CiudadId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_CiudadId}  r-vertical-field" 
-	data-signal-error-for="CiudadId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="CiudadId" data-fieldname="CiudadId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_CiudadId}">
-		{BEGIN CiudadId_label}{$label dbo_Direcciones CiudadId }{END CiudadId_label}
-	</label>
-	<div class="r-edit-field">
-		{$CiudadId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="CiudadId" {$tooltipAttr dbo_Direcciones CiudadId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Direcciones CiudadId }		</div>
-	</div>
-</div>
-
-
-{END CiudadId_fieldblock}
+{END Activa_fieldblock}
 											
 {BEGIN Direccion_fieldblock}
 
@@ -216,6 +174,27 @@
 
 {END Barrio_fieldblock}
 											
+{BEGIN CiudadId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CiudadId}  r-vertical-field" 
+	data-signal-error-for="CiudadId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="CiudadId" data-fieldname="CiudadId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_CiudadId}">
+		{BEGIN CiudadId_label}{$label dbo_Direcciones CiudadId }{END CiudadId_label}
+	</label>
+	<div class="r-edit-field">
+		{$CiudadId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CiudadId" {$tooltipAttr dbo_Direcciones CiudadId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Direcciones CiudadId }		</div>
+	</div>
+</div>
+
+
+{END CiudadId_fieldblock}
+											
 {BEGIN Telefonos_fieldblock}
 
 
@@ -237,26 +216,26 @@
 
 {END Telefonos_fieldblock}
 											
-{BEGIN Activa_fieldblock}
+{BEGIN CarcelId_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Activa}  r-vertical-field" 
-	data-signal-error-for="Activa{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Activa" data-fieldname="Activa" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarcelId}  r-vertical-field" 
+	data-signal-error-for="CarcelId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="CarcelId" data-fieldname="CarcelId" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_Activa}">
-		{BEGIN Activa_label}{$label dbo_Direcciones Activa }{END Activa_label}
+	<label class="r-edit-label control-label" for="{$labelfor_CarcelId}">
+		{BEGIN CarcelId_label}{$label dbo_Direcciones CarcelId }{END CarcelId_label}
 	</label>
 	<div class="r-edit-field">
-		{$Activa_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Activa" {$tooltipAttr dbo_Direcciones Activa } >
+		{$CarcelId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CarcelId" {$tooltipAttr dbo_Direcciones CarcelId } >
 		<div class="text-muted" >
-		{$tooltip dbo_Direcciones Activa }		</div>
+		{$tooltip dbo_Direcciones CarcelId }		</div>
 	</div>
 </div>
 
 
-{END Activa_fieldblock}
+{END CarcelId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

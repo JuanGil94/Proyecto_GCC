@@ -260,10 +260,12 @@ $_SESSION["Radicado"]=$radicadoF;
 ////////
 //CONSUMINOS EL METODO DE ActualizarCorrespondencia de la API SOAP
 $curl = curl_init();
-//Juannnnnnnn
+$values['Fecha']=date('Y-m-d');
+//print_r($values);
 //SE LLAMA LA FUNCION LA CUAL TOMA LA PLANTILLA Y REEMPLAZA SUS VARIABLES, CREANDO UN NUEVO .DOCX
- $objeto=new plantillaDev($values["ChequeoId"],$values["OficioId"],$radicadoF);
+ $objeto=new plantillaDev($values["ChequeoId"],$values["OficioId"],$radicadoF,$values["Fecha"],$values["Observaciones"]);
  $objeto->funcGlobal();
+ //return false;
 //$rutaArchivo = 'Plantilla_1097.docx';
 $rutaArchivo = 'templates_GCC/Archivo_'.$values["ChequeoId"].'_'.$values["OficioId"].'.docx';
 // Leer el contenido del archivo como un arreglo de bytes

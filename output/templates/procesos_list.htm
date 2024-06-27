@@ -213,6 +213,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_Traslado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Traslado}" {$filterRow_attrs_Traslado}>
+			<label>{$label dbo_Procesos Traslado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Traslado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Traslado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Traslado}</span>
+						</div>
+		{END searchCtrlBlock_Traslado}
 																{BEGIN searchCtrlBlock_Prescripcion}
 
 
@@ -727,6 +740,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
