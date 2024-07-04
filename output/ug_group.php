@@ -129,6 +129,7 @@ $nonAdminTablesArr[] = "dbo.Ciudades2";
 $nonAdminTablesArr[] = "dbo.Ciudades4";
 $nonAdminTablesArr[] = "dbo.Ciudades5";
 $nonAdminTablesArr[] = "dbo.Ciudades3";
+$nonAdminTablesArr[] = "dbo.Uvbs";
 
 $ug_connection = $cman->getForUserGroups();
 

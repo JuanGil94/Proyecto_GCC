@@ -433,6 +433,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("ciudades3" == $shortTName )
 		return true;
+	if ("uvbs" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1518,6 +1520,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Ciudades3";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Uvbs");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Uvbs";
+	}
 	return $arr;
 }
 
@@ -1642,6 +1653,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Ciudades4";
 	$arr[]="dbo.Ciudades5";
 	$arr[]="dbo.Ciudades3";
+	$arr[]="dbo.Uvbs";
 	return $arr;
 }
 
@@ -2842,6 +2854,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades3" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Uvbs" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

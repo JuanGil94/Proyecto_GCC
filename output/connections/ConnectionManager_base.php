@@ -358,6 +358,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Ciudades4"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Ciudades5"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Ciudades3"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Uvbs"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
