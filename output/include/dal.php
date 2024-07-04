@@ -132,6 +132,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuGCC_ugrights;
 	var $tblGCC_at_S00001_CCAD01_dbo_usugcc__noti;
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuGCC__settings;
+	var $tblGCC_at_S00001_CCAD01_dbo_Uvbs;
 	var $tblGCC_at_S00001_CCAD01_dbo_Uvts;
 	var $tblGCC_at_S00001_CCAD01_dbo_webreport_admin;
 	var $tblGCC_at_S00001_CCAD01_dbo_webreport_style;
@@ -228,6 +229,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "UsuGCC-ugrights", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuGCC_ugrights", "altvarname" => "UsuGCC_ugrights", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "usugcc__noti", "varname" => "GCC_at_S00001_CCAD01_dbo_usugcc__noti", "altvarname" => "usugcc__noti", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UsuGCC__settings", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuGCC__settings", "altvarname" => "UsuGCC__settings", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "Uvbs", "varname" => "GCC_at_S00001_CCAD01_dbo_Uvbs", "altvarname" => "Uvbs", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Uvts", "varname" => "GCC_at_S00001_CCAD01_dbo_Uvts", "altvarname" => "Uvts", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "webreport_admin", "varname" => "GCC_at_S00001_CCAD01_dbo_webreport_admin", "altvarname" => "webreport_admin", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "webreport_style", "varname" => "GCC_at_S00001_CCAD01_dbo_webreport_style", "altvarname" => "webreport_style", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

@@ -194,12 +194,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_delete}"},
-				
-				
 			{"text":"{$event dbo_Liquidaciones_snippet}","color":"#000000","hidden":"{$item_hide_snippet}","isHtml":true},
 				
 				
@@ -210,6 +204,9 @@ pdfDocument = {
 				
 				
 			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
 		  ],
   "border": [ false, false, false, false ],

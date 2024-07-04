@@ -3766,6 +3766,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dbo_ciudades5" ] = "dbo.Ciudades5";
 	$projectEntities[ "dbo.Ciudades3" ] = array( "url" => "ciudades3", "type" => 1 );
 	$projectEntitiesReverse[ "ciudades3" ] = "dbo.Ciudades3";
+	$projectEntities[ "dbo.Uvbs" ] = array( "url" => "uvbs", "type" => 0 );
+	$projectEntitiesReverse[ "uvbs" ] = "dbo.Uvbs";
 }
 
 function findTable( $table ) {

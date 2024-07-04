@@ -528,22 +528,6 @@
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							Añadir nuevo			</a>
-</span>
-{END inlineadd_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
-</span>
-{END deleteselected_link}
-	 
 		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-page="liquidaciones_list" >
 {$event dbo_Liquidaciones_snippet}
 </span>	 
@@ -564,6 +548,14 @@
 	" id="Generar_Acuerdo_de_Pago" href="javascript:void(0)" typeid="ib" >
 							Generar Acuerdo de Pago			</a>
 </span>
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Añadir nuevo			</a>
+</span>
+{END inlineadd_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
