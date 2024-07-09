@@ -435,6 +435,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("uvbs" == $shortTName )
 		return true;
+	if ("resumen_mensual" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1529,6 +1531,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Uvbs";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Resumen_Mensual");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Resumen_Mensual";
+	}
 	return $arr;
 }
 
@@ -1654,6 +1665,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Ciudades5";
 	$arr[]="dbo.Ciudades3";
 	$arr[]="dbo.Uvbs";
+	$arr[]="Resumen_Mensual";
 	return $arr;
 }
 
@@ -2859,6 +2871,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Uvbs" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Resumen_Mensual" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

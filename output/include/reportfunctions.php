@@ -861,6 +861,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="Resumen_Mensual")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1577,6 +1581,10 @@ function getCaptionTable($table)
 	if($table=="dbo.Uvbs")
 	{
 		return "Uvbs";
+	}
+	if($table=="Resumen_Mensual")
+	{
+		return "Resumen Mensual";
 	}
 	return $table;
 }

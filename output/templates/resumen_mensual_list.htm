@@ -1,0 +1,4317 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_CarteraTipoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
+			<label>{$label Resumen_Mensual CarteraTipoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipoId}
+																{BEGIN searchCtrlBlock_AbogadoCargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_AbogadoCargo}" {$filterRow_attrs_AbogadoCargo}>
+			<label>{$label Resumen_Mensual AbogadoCargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_AbogadoCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_AbogadoCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoCargo}</span>
+						</div>
+		{END searchCtrlBlock_AbogadoCargo}
+																{BEGIN searchCtrlBlock_Abogado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Abogado}" {$filterRow_attrs_Abogado}>
+			<label>{$label Resumen_Mensual Abogado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
+						</div>
+		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_DirectorCargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DirectorCargo}" {$filterRow_attrs_DirectorCargo}>
+			<label>{$label Resumen_Mensual DirectorCargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DirectorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DirectorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DirectorCargo}</span>
+						</div>
+		{END searchCtrlBlock_DirectorCargo}
+																{BEGIN searchCtrlBlock_Director}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Director}" {$filterRow_attrs_Director}>
+			<label>{$label Resumen_Mensual Director }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Director}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Director}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Director}</span>
+						</div>
+		{END searchCtrlBlock_Director}
+																{BEGIN searchCtrlBlock_ContadorCargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ContadorCargo}" {$filterRow_attrs_ContadorCargo}>
+			<label>{$label Resumen_Mensual ContadorCargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ContadorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ContadorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ContadorCargo}</span>
+						</div>
+		{END searchCtrlBlock_ContadorCargo}
+																{BEGIN searchCtrlBlock_Contador}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Contador}" {$filterRow_attrs_Contador}>
+			<label>{$label Resumen_Mensual Contador }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Contador}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Contador}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Contador}</span>
+						</div>
+		{END searchCtrlBlock_Contador}
+																{BEGIN searchCtrlBlock_CarteraTipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipo}" {$filterRow_attrs_CarteraTipo}>
+			<label>{$label Resumen_Mensual CarteraTipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipo}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipo}
+																{BEGIN searchCtrlBlock_DeteActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DeteActu}" {$filterRow_attrs_DeteActu}>
+			<label>{$label Resumen_Mensual DeteActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DeteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DeteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DeteActu}</span>
+						</div>
+		{END searchCtrlBlock_DeteActu}
+																{BEGIN searchCtrlBlock_DeteTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DeteTota}" {$filterRow_attrs_DeteTota}>
+			<label>{$label Resumen_Mensual DeteTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DeteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DeteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DeteTota}</span>
+						</div>
+		{END searchCtrlBlock_DeteTota}
+																{BEGIN searchCtrlBlock_DeteAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DeteAnte}" {$filterRow_attrs_DeteAnte}>
+			<label>{$label Resumen_Mensual DeteAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DeteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DeteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DeteAnte}</span>
+						</div>
+		{END searchCtrlBlock_DeteAnte}
+																{BEGIN searchCtrlBlock_InteTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteTota}" {$filterRow_attrs_InteTota}>
+			<label>{$label Resumen_Mensual InteTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteTota}</span>
+						</div>
+		{END searchCtrlBlock_InteTota}
+																{BEGIN searchCtrlBlock_CostTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostTota}" {$filterRow_attrs_CostTota}>
+			<label>{$label Resumen_Mensual CostTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostTota}</span>
+						</div>
+		{END searchCtrlBlock_CostTota}
+																{BEGIN searchCtrlBlock_ObliTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliTota}" {$filterRow_attrs_ObliTota}>
+			<label>{$label Resumen_Mensual ObliTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliTota}</span>
+						</div>
+		{END searchCtrlBlock_ObliTota}
+																{BEGIN searchCtrlBlock_ProcTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcTota}" {$filterRow_attrs_ProcTota}>
+			<label>{$label Resumen_Mensual ProcTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcTota}</span>
+						</div>
+		{END searchCtrlBlock_ProcTota}
+																{BEGIN searchCtrlBlock_InteMayo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteMayo}" {$filterRow_attrs_InteMayo}>
+			<label>{$label Resumen_Mensual InteMayo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteMayo}</span>
+						</div>
+		{END searchCtrlBlock_InteMayo}
+																{BEGIN searchCtrlBlock_CostMayo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostMayo}" {$filterRow_attrs_CostMayo}>
+			<label>{$label Resumen_Mensual CostMayo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostMayo}</span>
+						</div>
+		{END searchCtrlBlock_CostMayo}
+																{BEGIN searchCtrlBlock_ObliMayo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliMayo}" {$filterRow_attrs_ObliMayo}>
+			<label>{$label Resumen_Mensual ObliMayo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliMayo}</span>
+						</div>
+		{END searchCtrlBlock_ObliMayo}
+																{BEGIN searchCtrlBlock_ProcMayo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcMayo}" {$filterRow_attrs_ProcMayo}>
+			<label>{$label Resumen_Mensual ProcMayo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcMayo}</span>
+						</div>
+		{END searchCtrlBlock_ProcMayo}
+																{BEGIN searchCtrlBlock_InteNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteNove}" {$filterRow_attrs_InteNove}>
+			<label>{$label Resumen_Mensual InteNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteNove}</span>
+						</div>
+		{END searchCtrlBlock_InteNove}
+																{BEGIN searchCtrlBlock_CostNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostNove}" {$filterRow_attrs_CostNove}>
+			<label>{$label Resumen_Mensual CostNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostNove}</span>
+						</div>
+		{END searchCtrlBlock_CostNove}
+																{BEGIN searchCtrlBlock_ObliNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliNove}" {$filterRow_attrs_ObliNove}>
+			<label>{$label Resumen_Mensual ObliNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliNove}</span>
+						</div>
+		{END searchCtrlBlock_ObliNove}
+																{BEGIN searchCtrlBlock_ProcNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcNove}" {$filterRow_attrs_ProcNove}>
+			<label>{$label Resumen_Mensual ProcNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcNove}</span>
+						</div>
+		{END searchCtrlBlock_ProcNove}
+																{BEGIN searchCtrlBlock_InteNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteNopa}" {$filterRow_attrs_InteNopa}>
+			<label>{$label Resumen_Mensual InteNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteNopa}</span>
+						</div>
+		{END searchCtrlBlock_InteNopa}
+																{BEGIN searchCtrlBlock_CostNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostNopa}" {$filterRow_attrs_CostNopa}>
+			<label>{$label Resumen_Mensual CostNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostNopa}</span>
+						</div>
+		{END searchCtrlBlock_CostNopa}
+																{BEGIN searchCtrlBlock_ObliNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliNopa}" {$filterRow_attrs_ObliNopa}>
+			<label>{$label Resumen_Mensual ObliNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliNopa}</span>
+						</div>
+		{END searchCtrlBlock_ObliNopa}
+																{BEGIN searchCtrlBlock_ProcNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcNopa}" {$filterRow_attrs_ProcNopa}>
+			<label>{$label Resumen_Mensual ProcNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcNopa}</span>
+						</div>
+		{END searchCtrlBlock_ProcNopa}
+																{BEGIN searchCtrlBlock_InteTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteTras}" {$filterRow_attrs_InteTras}>
+			<label>{$label Resumen_Mensual InteTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteTras}</span>
+						</div>
+		{END searchCtrlBlock_InteTras}
+																{BEGIN searchCtrlBlock_CostTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostTras}" {$filterRow_attrs_CostTras}>
+			<label>{$label Resumen_Mensual CostTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostTras}</span>
+						</div>
+		{END searchCtrlBlock_CostTras}
+																{BEGIN searchCtrlBlock_ObliTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliTras}" {$filterRow_attrs_ObliTras}>
+			<label>{$label Resumen_Mensual ObliTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliTras}</span>
+						</div>
+		{END searchCtrlBlock_ObliTras}
+																{BEGIN searchCtrlBlock_ProcTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcTras}" {$filterRow_attrs_ProcTras}>
+			<label>{$label Resumen_Mensual ProcTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcTras}</span>
+						</div>
+		{END searchCtrlBlock_ProcTras}
+																{BEGIN searchCtrlBlock_InteReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteReca}" {$filterRow_attrs_InteReca}>
+			<label>{$label Resumen_Mensual InteReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteReca}</span>
+						</div>
+		{END searchCtrlBlock_InteReca}
+																{BEGIN searchCtrlBlock_CostReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostReca}" {$filterRow_attrs_CostReca}>
+			<label>{$label Resumen_Mensual CostReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostReca}</span>
+						</div>
+		{END searchCtrlBlock_CostReca}
+																{BEGIN searchCtrlBlock_ObliReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliReca}" {$filterRow_attrs_ObliReca}>
+			<label>{$label Resumen_Mensual ObliReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliReca}</span>
+						</div>
+		{END searchCtrlBlock_ObliReca}
+																{BEGIN searchCtrlBlock_ProcReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcReca}" {$filterRow_attrs_ProcReca}>
+			<label>{$label Resumen_Mensual ProcReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcReca}</span>
+						</div>
+		{END searchCtrlBlock_ProcReca}
+																{BEGIN searchCtrlBlock_InteActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteActu}" {$filterRow_attrs_InteActu}>
+			<label>{$label Resumen_Mensual InteActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteActu}</span>
+						</div>
+		{END searchCtrlBlock_InteActu}
+																{BEGIN searchCtrlBlock_CostActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostActu}" {$filterRow_attrs_CostActu}>
+			<label>{$label Resumen_Mensual CostActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostActu}</span>
+						</div>
+		{END searchCtrlBlock_CostActu}
+																{BEGIN searchCtrlBlock_ObliActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliActu}" {$filterRow_attrs_ObliActu}>
+			<label>{$label Resumen_Mensual ObliActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliActu}</span>
+						</div>
+		{END searchCtrlBlock_ObliActu}
+																{BEGIN searchCtrlBlock_ProcActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcActu}" {$filterRow_attrs_ProcActu}>
+			<label>{$label Resumen_Mensual ProcActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcActu}</span>
+						</div>
+		{END searchCtrlBlock_ProcActu}
+																{BEGIN searchCtrlBlock_InteAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_InteAnte}" {$filterRow_attrs_InteAnte}>
+			<label>{$label Resumen_Mensual InteAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_InteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_InteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_InteAnte}</span>
+						</div>
+		{END searchCtrlBlock_InteAnte}
+																{BEGIN searchCtrlBlock_CostAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CostAnte}" {$filterRow_attrs_CostAnte}>
+			<label>{$label Resumen_Mensual CostAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CostAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CostAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CostAnte}</span>
+						</div>
+		{END searchCtrlBlock_CostAnte}
+																{BEGIN searchCtrlBlock_ObliAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliAnte}" {$filterRow_attrs_ObliAnte}>
+			<label>{$label Resumen_Mensual ObliAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliAnte}</span>
+						</div>
+		{END searchCtrlBlock_ObliAnte}
+																{BEGIN searchCtrlBlock_ProcAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcAnte}" {$filterRow_attrs_ProcAnte}>
+			<label>{$label Resumen_Mensual ProcAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcAnte}</span>
+						</div>
+		{END searchCtrlBlock_ProcAnte}
+																{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label Resumen_Mensual Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_ConceptoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ConceptoId}" {$filterRow_attrs_ConceptoId}>
+			<label>{$label Resumen_Mensual ConceptoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ConceptoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ConceptoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
+						</div>
+		{END searchCtrlBlock_ConceptoId}
+																{BEGIN searchCtrlBlock_Seccional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
+			<label>{$label Resumen_Mensual Seccional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
+						</div>
+		{END searchCtrlBlock_Seccional}
+																{BEGIN searchCtrlBlock_Hasta}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Hasta}" {$filterRow_attrs_Hasta}>
+			<label>{$label Resumen_Mensual Hasta }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Hasta}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Hasta}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Hasta}</span>
+						</div>
+		{END searchCtrlBlock_Hasta}
+																{BEGIN searchCtrlBlock_Desde}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Desde}" {$filterRow_attrs_Desde}>
+			<label>{$label Resumen_Mensual Desde }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Desde}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Desde}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Desde}</span>
+						</div>
+		{END searchCtrlBlock_Desde}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="resumen_mensual_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="resumen_mensual_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event Resumen_Mensual}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Resumen_Mensual1" href="javascript:void(0)" typeid="ib" >
+							Resumen Mensual			</a>
+</span>
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="resumen_mensual_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir todas las páginas							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="resumen_mensual_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Resultados por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipoId"]:before {
+		content: "{$label Resumen_Mensual CarteraTipoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Desde"]:before {
+		content: "{$label Resumen_Mensual Desde}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Hasta"]:before {
+		content: "{$label Resumen_Mensual Hasta}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
+		content: "{$label Resumen_Mensual Seccional}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
+		content: "{$label Resumen_Mensual ConceptoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
+		content: "{$label Resumen_Mensual Concepto}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcAnte"]:before {
+		content: "{$label Resumen_Mensual ProcAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliAnte"]:before {
+		content: "{$label Resumen_Mensual ObliAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostAnte"]:before {
+		content: "{$label Resumen_Mensual CostAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteAnte"]:before {
+		content: "{$label Resumen_Mensual InteAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcActu"]:before {
+		content: "{$label Resumen_Mensual ProcActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliActu"]:before {
+		content: "{$label Resumen_Mensual ObliActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostActu"]:before {
+		content: "{$label Resumen_Mensual CostActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteActu"]:before {
+		content: "{$label Resumen_Mensual InteActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcReca"]:before {
+		content: "{$label Resumen_Mensual ProcReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliReca"]:before {
+		content: "{$label Resumen_Mensual ObliReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostReca"]:before {
+		content: "{$label Resumen_Mensual CostReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteReca"]:before {
+		content: "{$label Resumen_Mensual InteReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcTras"]:before {
+		content: "{$label Resumen_Mensual ProcTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliTras"]:before {
+		content: "{$label Resumen_Mensual ObliTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostTras"]:before {
+		content: "{$label Resumen_Mensual CostTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteTras"]:before {
+		content: "{$label Resumen_Mensual InteTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcNopa"]:before {
+		content: "{$label Resumen_Mensual ProcNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliNopa"]:before {
+		content: "{$label Resumen_Mensual ObliNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostNopa"]:before {
+		content: "{$label Resumen_Mensual CostNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteNopa"]:before {
+		content: "{$label Resumen_Mensual InteNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcNove"]:before {
+		content: "{$label Resumen_Mensual ProcNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliNove"]:before {
+		content: "{$label Resumen_Mensual ObliNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostNove"]:before {
+		content: "{$label Resumen_Mensual CostNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteNove"]:before {
+		content: "{$label Resumen_Mensual InteNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcMayo"]:before {
+		content: "{$label Resumen_Mensual ProcMayo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliMayo"]:before {
+		content: "{$label Resumen_Mensual ObliMayo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostMayo"]:before {
+		content: "{$label Resumen_Mensual CostMayo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteMayo"]:before {
+		content: "{$label Resumen_Mensual InteMayo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcTota"]:before {
+		content: "{$label Resumen_Mensual ProcTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliTota"]:before {
+		content: "{$label Resumen_Mensual ObliTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CostTota"]:before {
+		content: "{$label Resumen_Mensual CostTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteTota"]:before {
+		content: "{$label Resumen_Mensual InteTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DeteAnte"]:before {
+		content: "{$label Resumen_Mensual DeteAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DeteTota"]:before {
+		content: "{$label Resumen_Mensual DeteTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DeteActu"]:before {
+		content: "{$label Resumen_Mensual DeteActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipo"]:before {
+		content: "{$label Resumen_Mensual CarteraTipo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Contador"]:before {
+		content: "{$label Resumen_Mensual Contador}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ContadorCargo"]:before {
+		content: "{$label Resumen_Mensual ContadorCargo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Director"]:before {
+		content: "{$label Resumen_Mensual Director}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DirectorCargo"]:before {
+		content: "{$label Resumen_Mensual DirectorCargo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
+		content: "{$label Resumen_Mensual Abogado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoCargo"]:before {
+		content: "{$label Resumen_Mensual AbogadoCargo}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldheadercolumn}
+	{BEGIN CarteraTipoId_fieldheader}
+	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+	{$label Resumen_Mensual CarteraTipoId }	{$arrow_icon_CarteraTipoId}
+	</SPAN>
+	{END CarteraTipoId_fieldheader}
+{END CarteraTipoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Desde_class}	"
+
+			data-field="Desde"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Desde_fieldheadercolumn}
+	{BEGIN Desde_fieldheader}
+	<SPAN {$Desde_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Desde" data-fieldname="Desde">
+	{$label Resumen_Mensual Desde }	{$arrow_icon_Desde}
+	</SPAN>
+	{END Desde_fieldheader}
+{END Desde_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Hasta_class}	"
+
+			data-field="Hasta"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hasta_fieldheadercolumn}
+	{BEGIN Hasta_fieldheader}
+	<SPAN {$Hasta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hasta" data-fieldname="Hasta">
+	{$label Resumen_Mensual Hasta }	{$arrow_icon_Hasta}
+	</SPAN>
+	{END Hasta_fieldheader}
+{END Hasta_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldheadercolumn}
+	{BEGIN Seccional_fieldheader}
+	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+	{$label Resumen_Mensual Seccional }	{$arrow_icon_Seccional}
+	</SPAN>
+	{END Seccional_fieldheader}
+{END Seccional_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConceptoId_class}	"
+
+			data-field="ConceptoId"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ConceptoId_fieldheadercolumn}
+	{BEGIN ConceptoId_fieldheader}
+	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
+	{$label Resumen_Mensual ConceptoId }	{$arrow_icon_ConceptoId}
+	</SPAN>
+	{END ConceptoId_fieldheader}
+{END ConceptoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label Resumen_Mensual Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcAnte_class}	"
+
+			data-field="ProcAnte"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcAnte_fieldheadercolumn}
+	{BEGIN ProcAnte_fieldheader}
+	<SPAN {$ProcAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcAnte" data-fieldname="ProcAnte">
+	{$label Resumen_Mensual ProcAnte }	{$arrow_icon_ProcAnte}
+	</SPAN>
+	{END ProcAnte_fieldheader}
+{END ProcAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliAnte_class}	"
+
+			data-field="ObliAnte"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliAnte_fieldheadercolumn}
+	{BEGIN ObliAnte_fieldheader}
+	<SPAN {$ObliAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliAnte" data-fieldname="ObliAnte">
+	{$label Resumen_Mensual ObliAnte }	{$arrow_icon_ObliAnte}
+	</SPAN>
+	{END ObliAnte_fieldheader}
+{END ObliAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostAnte_class}	"
+
+			data-field="CostAnte"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostAnte_fieldheadercolumn}
+	{BEGIN CostAnte_fieldheader}
+	<SPAN {$CostAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostAnte" data-fieldname="CostAnte">
+	{$label Resumen_Mensual CostAnte }	{$arrow_icon_CostAnte}
+	</SPAN>
+	{END CostAnte_fieldheader}
+{END CostAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteAnte_class}	"
+
+			data-field="InteAnte"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteAnte_fieldheadercolumn}
+	{BEGIN InteAnte_fieldheader}
+	<SPAN {$InteAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteAnte" data-fieldname="InteAnte">
+	{$label Resumen_Mensual InteAnte }	{$arrow_icon_InteAnte}
+	</SPAN>
+	{END InteAnte_fieldheader}
+{END InteAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcActu_class}	"
+
+			data-field="ProcActu"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcActu_fieldheadercolumn}
+	{BEGIN ProcActu_fieldheader}
+	<SPAN {$ProcActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcActu" data-fieldname="ProcActu">
+	{$label Resumen_Mensual ProcActu }	{$arrow_icon_ProcActu}
+	</SPAN>
+	{END ProcActu_fieldheader}
+{END ProcActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliActu_class}	"
+
+			data-field="ObliActu"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliActu_fieldheadercolumn}
+	{BEGIN ObliActu_fieldheader}
+	<SPAN {$ObliActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliActu" data-fieldname="ObliActu">
+	{$label Resumen_Mensual ObliActu }	{$arrow_icon_ObliActu}
+	</SPAN>
+	{END ObliActu_fieldheader}
+{END ObliActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostActu_class}	"
+
+			data-field="CostActu"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostActu_fieldheadercolumn}
+	{BEGIN CostActu_fieldheader}
+	<SPAN {$CostActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostActu" data-fieldname="CostActu">
+	{$label Resumen_Mensual CostActu }	{$arrow_icon_CostActu}
+	</SPAN>
+	{END CostActu_fieldheader}
+{END CostActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteActu_class}	"
+
+			data-field="InteActu"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteActu_fieldheadercolumn}
+	{BEGIN InteActu_fieldheader}
+	<SPAN {$InteActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteActu" data-fieldname="InteActu">
+	{$label Resumen_Mensual InteActu }	{$arrow_icon_InteActu}
+	</SPAN>
+	{END InteActu_fieldheader}
+{END InteActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcReca_class}	"
+
+			data-field="ProcReca"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcReca_fieldheadercolumn}
+	{BEGIN ProcReca_fieldheader}
+	<SPAN {$ProcReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcReca" data-fieldname="ProcReca">
+	{$label Resumen_Mensual ProcReca }	{$arrow_icon_ProcReca}
+	</SPAN>
+	{END ProcReca_fieldheader}
+{END ProcReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliReca_class}	"
+
+			data-field="ObliReca"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliReca_fieldheadercolumn}
+	{BEGIN ObliReca_fieldheader}
+	<SPAN {$ObliReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliReca" data-fieldname="ObliReca">
+	{$label Resumen_Mensual ObliReca }	{$arrow_icon_ObliReca}
+	</SPAN>
+	{END ObliReca_fieldheader}
+{END ObliReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostReca_class}	"
+
+			data-field="CostReca"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostReca_fieldheadercolumn}
+	{BEGIN CostReca_fieldheader}
+	<SPAN {$CostReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostReca" data-fieldname="CostReca">
+	{$label Resumen_Mensual CostReca }	{$arrow_icon_CostReca}
+	</SPAN>
+	{END CostReca_fieldheader}
+{END CostReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteReca_class}	"
+
+			data-field="InteReca"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteReca_fieldheadercolumn}
+	{BEGIN InteReca_fieldheader}
+	<SPAN {$InteReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteReca" data-fieldname="InteReca">
+	{$label Resumen_Mensual InteReca }	{$arrow_icon_InteReca}
+	</SPAN>
+	{END InteReca_fieldheader}
+{END InteReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTras_class}	"
+
+			data-field="ProcTras"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTras_fieldheadercolumn}
+	{BEGIN ProcTras_fieldheader}
+	<SPAN {$ProcTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field66" {$item_simple_grid_field66} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTras" data-fieldname="ProcTras">
+	{$label Resumen_Mensual ProcTras }	{$arrow_icon_ProcTras}
+	</SPAN>
+	{END ProcTras_fieldheader}
+{END ProcTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTras_class}	"
+
+			data-field="ObliTras"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTras_fieldheadercolumn}
+	{BEGIN ObliTras_fieldheader}
+	<SPAN {$ObliTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field67" {$item_simple_grid_field67} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTras" data-fieldname="ObliTras">
+	{$label Resumen_Mensual ObliTras }	{$arrow_icon_ObliTras}
+	</SPAN>
+	{END ObliTras_fieldheader}
+{END ObliTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostTras_class}	"
+
+			data-field="CostTras"
+	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostTras_fieldheadercolumn}
+	{BEGIN CostTras_fieldheader}
+	<SPAN {$CostTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field68" {$item_simple_grid_field68} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostTras" data-fieldname="CostTras">
+	{$label Resumen_Mensual CostTras }	{$arrow_icon_CostTras}
+	</SPAN>
+	{END CostTras_fieldheader}
+{END CostTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field20}
+									{BEGIN cellblock_grid_headcell_field21}
+	<th
+	
+	{$cell_grid_headcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteTras_class}	"
+
+			data-field="InteTras"
+	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteTras_fieldheadercolumn}
+	{BEGIN InteTras_fieldheader}
+	<SPAN {$InteTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field69" {$item_simple_grid_field69} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteTras" data-fieldname="InteTras">
+	{$label Resumen_Mensual InteTras }	{$arrow_icon_InteTras}
+	</SPAN>
+	{END InteTras_fieldheader}
+{END InteTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field21}
+									{BEGIN cellblock_grid_headcell_field22}
+	<th
+	
+	{$cell_grid_headcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNopa_class}	"
+
+			data-field="ProcNopa"
+	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNopa_fieldheadercolumn}
+	{BEGIN ProcNopa_fieldheader}
+	<SPAN {$ProcNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field70" {$item_simple_grid_field70} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNopa" data-fieldname="ProcNopa">
+	{$label Resumen_Mensual ProcNopa }	{$arrow_icon_ProcNopa}
+	</SPAN>
+	{END ProcNopa_fieldheader}
+{END ProcNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNopa_class}	"
+
+			data-field="ObliNopa"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNopa_fieldheadercolumn}
+	{BEGIN ObliNopa_fieldheader}
+	<SPAN {$ObliNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field71" {$item_simple_grid_field71} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNopa" data-fieldname="ObliNopa">
+	{$label Resumen_Mensual ObliNopa }	{$arrow_icon_ObliNopa}
+	</SPAN>
+	{END ObliNopa_fieldheader}
+{END ObliNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
+	<th
+	
+	{$cell_grid_headcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostNopa_class}	"
+
+			data-field="CostNopa"
+	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostNopa_fieldheadercolumn}
+	{BEGIN CostNopa_fieldheader}
+	<SPAN {$CostNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field72" {$item_simple_grid_field72} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostNopa" data-fieldname="CostNopa">
+	{$label Resumen_Mensual CostNopa }	{$arrow_icon_CostNopa}
+	</SPAN>
+	{END CostNopa_fieldheader}
+{END CostNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
+	<th
+	
+	{$cell_grid_headcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteNopa_class}	"
+
+			data-field="InteNopa"
+	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteNopa_fieldheadercolumn}
+	{BEGIN InteNopa_fieldheader}
+	<SPAN {$InteNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field73" {$item_simple_grid_field73} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteNopa" data-fieldname="InteNopa">
+	{$label Resumen_Mensual InteNopa }	{$arrow_icon_InteNopa}
+	</SPAN>
+	{END InteNopa_fieldheader}
+{END InteNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
+	<th
+	
+	{$cell_grid_headcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNove_class}	"
+
+			data-field="ProcNove"
+	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNove_fieldheadercolumn}
+	{BEGIN ProcNove_fieldheader}
+	<SPAN {$ProcNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field74" {$item_simple_grid_field74} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNove" data-fieldname="ProcNove">
+	{$label Resumen_Mensual ProcNove }	{$arrow_icon_ProcNove}
+	</SPAN>
+	{END ProcNove_fieldheader}
+{END ProcNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
+	<th
+	
+	{$cell_grid_headcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNove_class}	"
+
+			data-field="ObliNove"
+	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNove_fieldheadercolumn}
+	{BEGIN ObliNove_fieldheader}
+	<SPAN {$ObliNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field75" {$item_simple_grid_field75} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNove" data-fieldname="ObliNove">
+	{$label Resumen_Mensual ObliNove }	{$arrow_icon_ObliNove}
+	</SPAN>
+	{END ObliNove_fieldheader}
+{END ObliNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field27}
+									{BEGIN cellblock_grid_headcell_field28}
+	<th
+	
+	{$cell_grid_headcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostNove_class}	"
+
+			data-field="CostNove"
+	
+	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostNove_fieldheadercolumn}
+	{BEGIN CostNove_fieldheader}
+	<SPAN {$CostNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field76" {$item_simple_grid_field76} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostNove" data-fieldname="CostNove">
+	{$label Resumen_Mensual CostNove }	{$arrow_icon_CostNove}
+	</SPAN>
+	{END CostNove_fieldheader}
+{END CostNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field28}
+									{BEGIN cellblock_grid_headcell_field29}
+	<th
+	
+	{$cell_grid_headcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteNove_class}	"
+
+			data-field="InteNove"
+	
+	data-cellId="grid_headcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteNove_fieldheadercolumn}
+	{BEGIN InteNove_fieldheader}
+	<SPAN {$InteNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field77" {$item_simple_grid_field77} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteNove" data-fieldname="InteNove">
+	{$label Resumen_Mensual InteNove }	{$arrow_icon_InteNove}
+	</SPAN>
+	{END InteNove_fieldheader}
+{END InteNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field29}
+									{BEGIN cellblock_grid_headcell_field30}
+	<th
+	
+	{$cell_grid_headcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcMayo_class}	"
+
+			data-field="ProcMayo"
+	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcMayo_fieldheadercolumn}
+	{BEGIN ProcMayo_fieldheader}
+	<SPAN {$ProcMayo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field78" {$item_simple_grid_field78} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcMayo" data-fieldname="ProcMayo">
+	{$label Resumen_Mensual ProcMayo }	{$arrow_icon_ProcMayo}
+	</SPAN>
+	{END ProcMayo_fieldheader}
+{END ProcMayo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field30}
+									{BEGIN cellblock_grid_headcell_field31}
+	<th
+	
+	{$cell_grid_headcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliMayo_class}	"
+
+			data-field="ObliMayo"
+	
+	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliMayo_fieldheadercolumn}
+	{BEGIN ObliMayo_fieldheader}
+	<SPAN {$ObliMayo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field79" {$item_simple_grid_field79} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliMayo" data-fieldname="ObliMayo">
+	{$label Resumen_Mensual ObliMayo }	{$arrow_icon_ObliMayo}
+	</SPAN>
+	{END ObliMayo_fieldheader}
+{END ObliMayo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field31}
+									{BEGIN cellblock_grid_headcell_field32}
+	<th
+	
+	{$cell_grid_headcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostMayo_class}	"
+
+			data-field="CostMayo"
+	
+	data-cellId="grid_headcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostMayo_fieldheadercolumn}
+	{BEGIN CostMayo_fieldheader}
+	<SPAN {$CostMayo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field80" {$item_simple_grid_field80} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostMayo" data-fieldname="CostMayo">
+	{$label Resumen_Mensual CostMayo }	{$arrow_icon_CostMayo}
+	</SPAN>
+	{END CostMayo_fieldheader}
+{END CostMayo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field32}
+									{BEGIN cellblock_grid_headcell_field33}
+	<th
+	
+	{$cell_grid_headcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteMayo_class}	"
+
+			data-field="InteMayo"
+	
+	data-cellId="grid_headcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteMayo_fieldheadercolumn}
+	{BEGIN InteMayo_fieldheader}
+	<SPAN {$InteMayo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field81" {$item_simple_grid_field81} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteMayo" data-fieldname="InteMayo">
+	{$label Resumen_Mensual InteMayo }	{$arrow_icon_InteMayo}
+	</SPAN>
+	{END InteMayo_fieldheader}
+{END InteMayo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field33}
+									{BEGIN cellblock_grid_headcell_field34}
+	<th
+	
+	{$cell_grid_headcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTota_class}	"
+
+			data-field="ProcTota"
+	
+	data-cellId="grid_headcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTota_fieldheadercolumn}
+	{BEGIN ProcTota_fieldheader}
+	<SPAN {$ProcTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field82" {$item_simple_grid_field82} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTota" data-fieldname="ProcTota">
+	{$label Resumen_Mensual ProcTota }	{$arrow_icon_ProcTota}
+	</SPAN>
+	{END ProcTota_fieldheader}
+{END ProcTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field34}
+									{BEGIN cellblock_grid_headcell_field35}
+	<th
+	
+	{$cell_grid_headcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTota_class}	"
+
+			data-field="ObliTota"
+	
+	data-cellId="grid_headcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTota_fieldheadercolumn}
+	{BEGIN ObliTota_fieldheader}
+	<SPAN {$ObliTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field83" {$item_simple_grid_field83} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTota" data-fieldname="ObliTota">
+	{$label Resumen_Mensual ObliTota }	{$arrow_icon_ObliTota}
+	</SPAN>
+	{END ObliTota_fieldheader}
+{END ObliTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field35}
+									{BEGIN cellblock_grid_headcell_field36}
+	<th
+	
+	{$cell_grid_headcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostTota_class}	"
+
+			data-field="CostTota"
+	
+	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostTota_fieldheadercolumn}
+	{BEGIN CostTota_fieldheader}
+	<SPAN {$CostTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field84" {$item_simple_grid_field84} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostTota" data-fieldname="CostTota">
+	{$label Resumen_Mensual CostTota }	{$arrow_icon_CostTota}
+	</SPAN>
+	{END CostTota_fieldheader}
+{END CostTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field36}
+									{BEGIN cellblock_grid_headcell_field37}
+	<th
+	
+	{$cell_grid_headcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteTota_class}	"
+
+			data-field="InteTota"
+	
+	data-cellId="grid_headcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteTota_fieldheadercolumn}
+	{BEGIN InteTota_fieldheader}
+	<SPAN {$InteTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field85" {$item_simple_grid_field85} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteTota" data-fieldname="InteTota">
+	{$label Resumen_Mensual InteTota }	{$arrow_icon_InteTota}
+	</SPAN>
+	{END InteTota_fieldheader}
+{END InteTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field37}
+									{BEGIN cellblock_grid_headcell_field38}
+	<th
+	
+	{$cell_grid_headcell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteAnte_class}	"
+
+			data-field="DeteAnte"
+	
+	data-cellId="grid_headcell_field38" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DeteAnte_fieldheadercolumn}
+	{BEGIN DeteAnte_fieldheader}
+	<SPAN {$DeteAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field86" {$item_simple_grid_field86} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DeteAnte" data-fieldname="DeteAnte">
+	{$label Resumen_Mensual DeteAnte }	{$arrow_icon_DeteAnte}
+	</SPAN>
+	{END DeteAnte_fieldheader}
+{END DeteAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field38}
+									{BEGIN cellblock_grid_headcell_field39}
+	<th
+	
+	{$cell_grid_headcell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteTota_class}	"
+
+			data-field="DeteTota"
+	
+	data-cellId="grid_headcell_field39" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DeteTota_fieldheadercolumn}
+	{BEGIN DeteTota_fieldheader}
+	<SPAN {$DeteTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field87" {$item_simple_grid_field87} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DeteTota" data-fieldname="DeteTota">
+	{$label Resumen_Mensual DeteTota }	{$arrow_icon_DeteTota}
+	</SPAN>
+	{END DeteTota_fieldheader}
+{END DeteTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field39}
+									{BEGIN cellblock_grid_headcell_field40}
+	<th
+	
+	{$cell_grid_headcell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteActu_class}	"
+
+			data-field="DeteActu"
+	
+	data-cellId="grid_headcell_field40" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DeteActu_fieldheadercolumn}
+	{BEGIN DeteActu_fieldheader}
+	<SPAN {$DeteActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field88" {$item_simple_grid_field88} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DeteActu" data-fieldname="DeteActu">
+	{$label Resumen_Mensual DeteActu }	{$arrow_icon_DeteActu}
+	</SPAN>
+	{END DeteActu_fieldheader}
+{END DeteActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field40}
+									{BEGIN cellblock_grid_headcell_field41}
+	<th
+	
+	{$cell_grid_headcell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_headcell_field41" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldheadercolumn}
+	{BEGIN CarteraTipo_fieldheader}
+	<SPAN {$CarteraTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field89" {$item_simple_grid_field89} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+	{$label Resumen_Mensual CarteraTipo }	{$arrow_icon_CarteraTipo}
+	</SPAN>
+	{END CarteraTipo_fieldheader}
+{END CarteraTipo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field41}
+									{BEGIN cellblock_grid_headcell_field42}
+	<th
+	
+	{$cell_grid_headcell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Contador_class}	"
+
+			data-field="Contador"
+	
+	data-cellId="grid_headcell_field42" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Contador_fieldheadercolumn}
+	{BEGIN Contador_fieldheader}
+	<SPAN {$Contador_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field90" {$item_simple_grid_field90} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Contador" data-fieldname="Contador">
+	{$label Resumen_Mensual Contador }	{$arrow_icon_Contador}
+	</SPAN>
+	{END Contador_fieldheader}
+{END Contador_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field42}
+									{BEGIN cellblock_grid_headcell_field43}
+	<th
+	
+	{$cell_grid_headcell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ContadorCargo_class}	"
+
+			data-field="ContadorCargo"
+	
+	data-cellId="grid_headcell_field43" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ContadorCargo_fieldheadercolumn}
+	{BEGIN ContadorCargo_fieldheader}
+	<SPAN {$ContadorCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field91" {$item_simple_grid_field91} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ContadorCargo" data-fieldname="ContadorCargo">
+	{$label Resumen_Mensual ContadorCargo }	{$arrow_icon_ContadorCargo}
+	</SPAN>
+	{END ContadorCargo_fieldheader}
+{END ContadorCargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field43}
+									{BEGIN cellblock_grid_headcell_field44}
+	<th
+	
+	{$cell_grid_headcell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Director_class}	"
+
+			data-field="Director"
+	
+	data-cellId="grid_headcell_field44" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Director_fieldheadercolumn}
+	{BEGIN Director_fieldheader}
+	<SPAN {$Director_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field92" {$item_simple_grid_field92} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Director" data-fieldname="Director">
+	{$label Resumen_Mensual Director }	{$arrow_icon_Director}
+	</SPAN>
+	{END Director_fieldheader}
+{END Director_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field44}
+									{BEGIN cellblock_grid_headcell_field45}
+	<th
+	
+	{$cell_grid_headcell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DirectorCargo_class}	"
+
+			data-field="DirectorCargo"
+	
+	data-cellId="grid_headcell_field45" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DirectorCargo_fieldheadercolumn}
+	{BEGIN DirectorCargo_fieldheader}
+	<SPAN {$DirectorCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field93" {$item_simple_grid_field93} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DirectorCargo" data-fieldname="DirectorCargo">
+	{$label Resumen_Mensual DirectorCargo }	{$arrow_icon_DirectorCargo}
+	</SPAN>
+	{END DirectorCargo_fieldheader}
+{END DirectorCargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field45}
+									{BEGIN cellblock_grid_headcell_field46}
+	<th
+	
+	{$cell_grid_headcell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_headcell_field46" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldheadercolumn}
+	{BEGIN Abogado_fieldheader}
+	<SPAN {$Abogado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field94" {$item_simple_grid_field94} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+	{$label Resumen_Mensual Abogado }	{$arrow_icon_Abogado}
+	</SPAN>
+	{END Abogado_fieldheader}
+{END Abogado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field46}
+									{BEGIN cellblock_grid_headcell_field47}
+	<th
+	
+	{$cell_grid_headcell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoCargo_class}	"
+
+			data-field="AbogadoCargo"
+	
+	data-cellId="grid_headcell_field47" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AbogadoCargo_fieldheadercolumn}
+	{BEGIN AbogadoCargo_fieldheader}
+	<SPAN {$AbogadoCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field95" {$item_simple_grid_field95} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo">
+	{$label Resumen_Mensual AbogadoCargo }	{$arrow_icon_AbogadoCargo}
+	</SPAN>
+	{END AbogadoCargo_fieldheader}
+{END AbogadoCargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field47}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-default-width >
+{$CarteraTipoId_value}
+</span>
+{END CarteraTipoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Desde_class}	"
+
+			data-field="Desde"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Desde_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Desde" data-fieldname="Desde" data-default-width >
+{$Desde_value}
+</span>
+{END Desde_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Hasta_class}	"
+
+			data-field="Hasta"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hasta_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hasta" data-fieldname="Hasta" data-default-width >
+{$Hasta_value}
+</span>
+{END Hasta_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
+{$Seccional_value}
+</span>
+{END Seccional_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConceptoId_class}	"
+
+			data-field="ConceptoId"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ConceptoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId" data-default-width >
+{$ConceptoId_value}
+</span>
+{END ConceptoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
+</span>
+{END Concepto_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcAnte_class}	"
+
+			data-field="ProcAnte"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcAnte" data-fieldname="ProcAnte" data-default-width >
+{$ProcAnte_value}
+</span>
+{END ProcAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliAnte_class}	"
+
+			data-field="ObliAnte"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliAnte" data-fieldname="ObliAnte" data-default-width >
+{$ObliAnte_value}
+</span>
+{END ObliAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostAnte_class}	"
+
+			data-field="CostAnte"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostAnte" data-fieldname="CostAnte" data-default-width >
+{$CostAnte_value}
+</span>
+{END CostAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteAnte_class}	"
+
+			data-field="InteAnte"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteAnte" data-fieldname="InteAnte" data-default-width >
+{$InteAnte_value}
+</span>
+{END InteAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcActu_class}	"
+
+			data-field="ProcActu"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcActu" data-fieldname="ProcActu" data-default-width >
+{$ProcActu_value}
+</span>
+{END ProcActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliActu_class}	"
+
+			data-field="ObliActu"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliActu" data-fieldname="ObliActu" data-default-width >
+{$ObliActu_value}
+</span>
+{END ObliActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostActu_class}	"
+
+			data-field="CostActu"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostActu" data-fieldname="CostActu" data-default-width >
+{$CostActu_value}
+</span>
+{END CostActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteActu_class}	"
+
+			data-field="InteActu"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteActu" data-fieldname="InteActu" data-default-width >
+{$InteActu_value}
+</span>
+{END InteActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcReca_class}	"
+
+			data-field="ProcReca"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcReca" data-fieldname="ProcReca" data-default-width >
+{$ProcReca_value}
+</span>
+{END ProcReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliReca_class}	"
+
+			data-field="ObliReca"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliReca" data-fieldname="ObliReca" data-default-width >
+{$ObliReca_value}
+</span>
+{END ObliReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostReca_class}	"
+
+			data-field="CostReca"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostReca" data-fieldname="CostReca" data-default-width >
+{$CostReca_value}
+</span>
+{END CostReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteReca_class}	"
+
+			data-field="InteReca"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteReca" data-fieldname="InteReca" data-default-width >
+{$InteReca_value}
+</span>
+{END InteReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTras_class}	"
+
+			data-field="ProcTras"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTras" data-fieldname="ProcTras" data-default-width >
+{$ProcTras_value}
+</span>
+{END ProcTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTras_class}	"
+
+			data-field="ObliTras"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTras" data-fieldname="ObliTras" data-default-width >
+{$ObliTras_value}
+</span>
+{END ObliTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostTras_class}	"
+
+			data-field="CostTras"
+	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostTras" data-fieldname="CostTras" data-default-width >
+{$CostTras_value}
+</span>
+{END CostTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field20}
+									{BEGIN cellblock_grid_cell_field21}
+	<td
+	
+	{$cell_grid_cell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteTras_class}	"
+
+			data-field="InteTras"
+	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteTras" data-fieldname="InteTras" data-default-width >
+{$InteTras_value}
+</span>
+{END InteTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field21}
+									{BEGIN cellblock_grid_cell_field22}
+	<td
+	
+	{$cell_grid_cell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNopa_class}	"
+
+			data-field="ProcNopa"
+	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNopa" data-fieldname="ProcNopa" data-default-width >
+{$ProcNopa_value}
+</span>
+{END ProcNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNopa_class}	"
+
+			data-field="ObliNopa"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNopa" data-fieldname="ObliNopa" data-default-width >
+{$ObliNopa_value}
+</span>
+{END ObliNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
+	<td
+	
+	{$cell_grid_cell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostNopa_class}	"
+
+			data-field="CostNopa"
+	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostNopa" data-fieldname="CostNopa" data-default-width >
+{$CostNopa_value}
+</span>
+{END CostNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
+	<td
+	
+	{$cell_grid_cell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteNopa_class}	"
+
+			data-field="InteNopa"
+	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteNopa" data-fieldname="InteNopa" data-default-width >
+{$InteNopa_value}
+</span>
+{END InteNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
+	<td
+	
+	{$cell_grid_cell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNove_class}	"
+
+			data-field="ProcNove"
+	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNove" data-fieldname="ProcNove" data-default-width >
+{$ProcNove_value}
+</span>
+{END ProcNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
+	<td
+	
+	{$cell_grid_cell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNove_class}	"
+
+			data-field="ObliNove"
+	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNove" data-fieldname="ObliNove" data-default-width >
+{$ObliNove_value}
+</span>
+{END ObliNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field27}
+									{BEGIN cellblock_grid_cell_field28}
+	<td
+	
+	{$cell_grid_cell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostNove_class}	"
+
+			data-field="CostNove"
+	
+	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostNove" data-fieldname="CostNove" data-default-width >
+{$CostNove_value}
+</span>
+{END CostNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field28}
+									{BEGIN cellblock_grid_cell_field29}
+	<td
+	
+	{$cell_grid_cell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteNove_class}	"
+
+			data-field="InteNove"
+	
+	data-cellId="grid_cell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteNove" data-fieldname="InteNove" data-default-width >
+{$InteNove_value}
+</span>
+{END InteNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field29}
+									{BEGIN cellblock_grid_cell_field30}
+	<td
+	
+	{$cell_grid_cell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcMayo_class}	"
+
+			data-field="ProcMayo"
+	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcMayo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcMayo" data-fieldname="ProcMayo" data-default-width >
+{$ProcMayo_value}
+</span>
+{END ProcMayo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field30}
+									{BEGIN cellblock_grid_cell_field31}
+	<td
+	
+	{$cell_grid_cell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliMayo_class}	"
+
+			data-field="ObliMayo"
+	
+	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliMayo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliMayo" data-fieldname="ObliMayo" data-default-width >
+{$ObliMayo_value}
+</span>
+{END ObliMayo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field31}
+									{BEGIN cellblock_grid_cell_field32}
+	<td
+	
+	{$cell_grid_cell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostMayo_class}	"
+
+			data-field="CostMayo"
+	
+	data-cellId="grid_cell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostMayo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostMayo" data-fieldname="CostMayo" data-default-width >
+{$CostMayo_value}
+</span>
+{END CostMayo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field32}
+									{BEGIN cellblock_grid_cell_field33}
+	<td
+	
+	{$cell_grid_cell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteMayo_class}	"
+
+			data-field="InteMayo"
+	
+	data-cellId="grid_cell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteMayo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteMayo" data-fieldname="InteMayo" data-default-width >
+{$InteMayo_value}
+</span>
+{END InteMayo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field33}
+									{BEGIN cellblock_grid_cell_field34}
+	<td
+	
+	{$cell_grid_cell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTota_class}	"
+
+			data-field="ProcTota"
+	
+	data-cellId="grid_cell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTota" data-fieldname="ProcTota" data-default-width >
+{$ProcTota_value}
+</span>
+{END ProcTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field34}
+									{BEGIN cellblock_grid_cell_field35}
+	<td
+	
+	{$cell_grid_cell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTota_class}	"
+
+			data-field="ObliTota"
+	
+	data-cellId="grid_cell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTota" data-fieldname="ObliTota" data-default-width >
+{$ObliTota_value}
+</span>
+{END ObliTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field35}
+									{BEGIN cellblock_grid_cell_field36}
+	<td
+	
+	{$cell_grid_cell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostTota_class}	"
+
+			data-field="CostTota"
+	
+	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CostTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostTota" data-fieldname="CostTota" data-default-width >
+{$CostTota_value}
+</span>
+{END CostTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field36}
+									{BEGIN cellblock_grid_cell_field37}
+	<td
+	
+	{$cell_grid_cell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteTota_class}	"
+
+			data-field="InteTota"
+	
+	data-cellId="grid_cell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN InteTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteTota" data-fieldname="InteTota" data-default-width >
+{$InteTota_value}
+</span>
+{END InteTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field37}
+									{BEGIN cellblock_grid_cell_field38}
+	<td
+	
+	{$cell_grid_cell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteAnte_class}	"
+
+			data-field="DeteAnte"
+	
+	data-cellId="grid_cell_field38" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DeteAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DeteAnte" data-fieldname="DeteAnte" data-default-width >
+{$DeteAnte_value}
+</span>
+{END DeteAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field38}
+									{BEGIN cellblock_grid_cell_field39}
+	<td
+	
+	{$cell_grid_cell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteTota_class}	"
+
+			data-field="DeteTota"
+	
+	data-cellId="grid_cell_field39" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DeteTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DeteTota" data-fieldname="DeteTota" data-default-width >
+{$DeteTota_value}
+</span>
+{END DeteTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field39}
+									{BEGIN cellblock_grid_cell_field40}
+	<td
+	
+	{$cell_grid_cell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteActu_class}	"
+
+			data-field="DeteActu"
+	
+	data-cellId="grid_cell_field40" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DeteActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DeteActu" data-fieldname="DeteActu" data-default-width >
+{$DeteActu_value}
+</span>
+{END DeteActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field40}
+									{BEGIN cellblock_grid_cell_field41}
+	<td
+	
+	{$cell_grid_cell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_field41" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo" data-default-width >
+{$CarteraTipo_value}
+</span>
+{END CarteraTipo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field41}
+									{BEGIN cellblock_grid_cell_field42}
+	<td
+	
+	{$cell_grid_cell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Contador_class}	"
+
+			data-field="Contador"
+	
+	data-cellId="grid_cell_field42" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Contador_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Contador" data-fieldname="Contador" data-default-width >
+{$Contador_value}
+</span>
+{END Contador_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field42}
+									{BEGIN cellblock_grid_cell_field43}
+	<td
+	
+	{$cell_grid_cell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ContadorCargo_class}	"
+
+			data-field="ContadorCargo"
+	
+	data-cellId="grid_cell_field43" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ContadorCargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ContadorCargo" data-fieldname="ContadorCargo" data-default-width >
+{$ContadorCargo_value}
+</span>
+{END ContadorCargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field43}
+									{BEGIN cellblock_grid_cell_field44}
+	<td
+	
+	{$cell_grid_cell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Director_class}	"
+
+			data-field="Director"
+	
+	data-cellId="grid_cell_field44" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Director_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Director" data-fieldname="Director" data-default-width >
+{$Director_value}
+</span>
+{END Director_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field44}
+									{BEGIN cellblock_grid_cell_field45}
+	<td
+	
+	{$cell_grid_cell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DirectorCargo_class}	"
+
+			data-field="DirectorCargo"
+	
+	data-cellId="grid_cell_field45" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DirectorCargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DirectorCargo" data-fieldname="DirectorCargo" data-default-width >
+{$DirectorCargo_value}
+</span>
+{END DirectorCargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field45}
+									{BEGIN cellblock_grid_cell_field46}
+	<td
+	
+	{$cell_grid_cell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_field46" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" data-default-width >
+{$Abogado_value}
+</span>
+{END Abogado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field46}
+									{BEGIN cellblock_grid_cell_field47}
+	<td
+	
+	{$cell_grid_cell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoCargo_class}	"
+
+			data-field="AbogadoCargo"
+	
+	data-cellId="grid_cell_field47" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AbogadoCargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo" data-default-width >
+{$AbogadoCargo_value}
+</span>
+{END AbogadoCargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field47}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Desde_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Hasta_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConceptoId_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcActu_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliActu_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostActu_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteActu_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcReca_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliReca_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostReca_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteReca_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTras_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTras_class}	"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+									{BEGIN cellblock_grid_footcell_field20}
+	<td
+	
+	{$cell_grid_footcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostTras_class}	"
+
+	
+	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field20}
+									{BEGIN cellblock_grid_footcell_field21}
+	<td
+	
+	{$cell_grid_footcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteTras_class}	"
+
+	
+	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field21}
+									{BEGIN cellblock_grid_footcell_field22}
+	<td
+	
+	{$cell_grid_footcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field22}
+									{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+									{BEGIN cellblock_grid_footcell_field24}
+	<td
+	
+	{$cell_grid_footcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field24}
+									{BEGIN cellblock_grid_footcell_field25}
+	<td
+	
+	{$cell_grid_footcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field25}
+									{BEGIN cellblock_grid_footcell_field26}
+	<td
+	
+	{$cell_grid_footcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNove_class}	"
+
+	
+	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field26}
+									{BEGIN cellblock_grid_footcell_field27}
+	<td
+	
+	{$cell_grid_footcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNove_class}	"
+
+	
+	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field27}
+									{BEGIN cellblock_grid_footcell_field28}
+	<td
+	
+	{$cell_grid_footcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostNove_class}	"
+
+	
+	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field28}
+									{BEGIN cellblock_grid_footcell_field29}
+	<td
+	
+	{$cell_grid_footcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteNove_class}	"
+
+	
+	data-cellId="grid_footcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field29}
+									{BEGIN cellblock_grid_footcell_field30}
+	<td
+	
+	{$cell_grid_footcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcMayo_class}	"
+
+	
+	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field30}
+									{BEGIN cellblock_grid_footcell_field31}
+	<td
+	
+	{$cell_grid_footcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliMayo_class}	"
+
+	
+	data-cellId="grid_footcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field31}
+									{BEGIN cellblock_grid_footcell_field32}
+	<td
+	
+	{$cell_grid_footcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostMayo_class}	"
+
+	
+	data-cellId="grid_footcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field32}
+									{BEGIN cellblock_grid_footcell_field33}
+	<td
+	
+	{$cell_grid_footcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteMayo_class}	"
+
+	
+	data-cellId="grid_footcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field33}
+									{BEGIN cellblock_grid_footcell_field34}
+	<td
+	
+	{$cell_grid_footcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTota_class}	"
+
+	
+	data-cellId="grid_footcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field34}
+									{BEGIN cellblock_grid_footcell_field35}
+	<td
+	
+	{$cell_grid_footcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTota_class}	"
+
+	
+	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field35}
+									{BEGIN cellblock_grid_footcell_field36}
+	<td
+	
+	{$cell_grid_footcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CostTota_class}	"
+
+	
+	data-cellId="grid_footcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field36}
+									{BEGIN cellblock_grid_footcell_field37}
+	<td
+	
+	{$cell_grid_footcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$InteTota_class}	"
+
+	
+	data-cellId="grid_footcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field37}
+									{BEGIN cellblock_grid_footcell_field38}
+	<td
+	
+	{$cell_grid_footcell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field38" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field38}
+									{BEGIN cellblock_grid_footcell_field39}
+	<td
+	
+	{$cell_grid_footcell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteTota_class}	"
+
+	
+	data-cellId="grid_footcell_field39" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field39}
+									{BEGIN cellblock_grid_footcell_field40}
+	<td
+	
+	{$cell_grid_footcell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DeteActu_class}	"
+
+	
+	data-cellId="grid_footcell_field40" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field40}
+									{BEGIN cellblock_grid_footcell_field41}
+	<td
+	
+	{$cell_grid_footcell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+	
+	data-cellId="grid_footcell_field41" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field41}
+									{BEGIN cellblock_grid_footcell_field42}
+	<td
+	
+	{$cell_grid_footcell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Contador_class}	"
+
+	
+	data-cellId="grid_footcell_field42" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field42}
+									{BEGIN cellblock_grid_footcell_field43}
+	<td
+	
+	{$cell_grid_footcell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ContadorCargo_class}	"
+
+	
+	data-cellId="grid_footcell_field43" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field43}
+									{BEGIN cellblock_grid_footcell_field44}
+	<td
+	
+	{$cell_grid_footcell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Director_class}	"
+
+	
+	data-cellId="grid_footcell_field44" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field44}
+									{BEGIN cellblock_grid_footcell_field45}
+	<td
+	
+	{$cell_grid_footcell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DirectorCargo_class}	"
+
+	
+	data-cellId="grid_footcell_field45" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field45}
+									{BEGIN cellblock_grid_footcell_field46}
+	<td
+	
+	{$cell_grid_footcell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+	
+	data-cellId="grid_footcell_field46" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field46}
+									{BEGIN cellblock_grid_footcell_field47}
+	<td
+	
+	{$cell_grid_footcell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoCargo_class}	"
+
+	
+	data-cellId="grid_footcell_field47" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field47}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

@@ -44,6 +44,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["SumaInteresesTable"] = true;
 		$this->events["Dias"] = true;
 		$this->events["dbo_Chequeos_snippet2"] = true;
+		$this->events["Resumen_Mensual"] = true;
 
 
 
@@ -61,11 +62,14 @@ class class_GlobalEvents extends eventsBase
 function AfterSuccessfulLogin($username, $password, &$data, $pageObject)
 {
 
-		echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
+		//echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
 //phpinfo();
 $arraySeccionales=array();
 $arrayCiudades=array();
 $username=$_SESSION["UserData"]["username"];
+//variables para informes:
+$_SESSION["UserNameF"]=$username;
+$_SESSION["fechaIn"]='2024-04-01';
 //buscar el UserId
 $consulta=DB::Query("SELECT * from UserProfile where UserName='".$username."'");
 while( $date = $consulta->fetchAssoc() )
@@ -726,6 +730,12 @@ echo "<input type='number' class='form-control' id='dias' name='dias'></input>";
 	{
 	// Put your code here.
 echo "<label class='r-edit-label control-label'>Tipo de Expediente</label>";
+	;
+}
+	function event_Resumen_Mensual(&$params)
+	{
+	// Put your code here.
+echo "<label value='".$_SESSION["fechaIn"]."' style='margin-right: 20px;'>Seleccione Fecha: </label><br><input type='month' id='fechaIn'></input>"
 	;
 }
 

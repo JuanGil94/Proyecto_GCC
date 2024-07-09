@@ -34,28 +34,28 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsmedidas["Spanish"]["PropiedadId"] = "Propiedad";
 	$fieldToolTipsmedidas["Spanish"]["PropiedadId"] = "";
 	$placeHoldersmedidas["Spanish"]["PropiedadId"] = "";
-	$fieldLabelsmedidas["Spanish"]["EmbargoFecha"] = "Embargo Fecha";
+	$fieldLabelsmedidas["Spanish"]["EmbargoFecha"] = "F, Embargo";
 	$fieldToolTipsmedidas["Spanish"]["EmbargoFecha"] = "";
 	$placeHoldersmedidas["Spanish"]["EmbargoFecha"] = "";
-	$fieldLabelsmedidas["Spanish"]["EmbargoResolucion"] = "Embargo Resolucion";
+	$fieldLabelsmedidas["Spanish"]["EmbargoResolucion"] = "Res. Embargo";
 	$fieldToolTipsmedidas["Spanish"]["EmbargoResolucion"] = "";
 	$placeHoldersmedidas["Spanish"]["EmbargoResolucion"] = "";
 	$fieldLabelsmedidas["Spanish"]["Secuestre"] = "Secuestre";
 	$fieldToolTipsmedidas["Spanish"]["Secuestre"] = "";
 	$placeHoldersmedidas["Spanish"]["Secuestre"] = "";
-	$fieldLabelsmedidas["Spanish"]["SecuestreDocumento"] = "Secuestre Documento";
+	$fieldLabelsmedidas["Spanish"]["SecuestreDocumento"] = "No. Documento";
 	$fieldToolTipsmedidas["Spanish"]["SecuestreDocumento"] = "";
 	$placeHoldersmedidas["Spanish"]["SecuestreDocumento"] = "";
-	$fieldLabelsmedidas["Spanish"]["SecuestreDireccion"] = "Secuestre Direccion";
+	$fieldLabelsmedidas["Spanish"]["SecuestreDireccion"] = "Dir. Secuestre ";
 	$fieldToolTipsmedidas["Spanish"]["SecuestreDireccion"] = "";
 	$placeHoldersmedidas["Spanish"]["SecuestreDireccion"] = "";
-	$fieldLabelsmedidas["Spanish"]["SecuestreTelefono"] = "Secuestre Telefono";
+	$fieldLabelsmedidas["Spanish"]["SecuestreTelefono"] = "Tel. Secuestre ";
 	$fieldToolTipsmedidas["Spanish"]["SecuestreTelefono"] = "";
 	$placeHoldersmedidas["Spanish"]["SecuestreTelefono"] = "";
-	$fieldLabelsmedidas["Spanish"]["RemateFecha"] = "Remate Fecha";
+	$fieldLabelsmedidas["Spanish"]["RemateFecha"] = "F. Remate ";
 	$fieldToolTipsmedidas["Spanish"]["RemateFecha"] = "";
 	$placeHoldersmedidas["Spanish"]["RemateFecha"] = "";
-	$fieldLabelsmedidas["Spanish"]["RemateResolucion"] = "Remate Resolucion";
+	$fieldLabelsmedidas["Spanish"]["RemateResolucion"] = "Res. Remate";
 	$fieldToolTipsmedidas["Spanish"]["RemateResolucion"] = "";
 	$placeHoldersmedidas["Spanish"]["RemateResolucion"] = "";
 	$fieldLabelsmedidas["Spanish"]["Valor"] = "Valor";
@@ -67,19 +67,19 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsmedidas["Spanish"]["Secuestrado"] = "Secuestrado";
 	$fieldToolTipsmedidas["Spanish"]["Secuestrado"] = "";
 	$placeHoldersmedidas["Spanish"]["Secuestrado"] = "";
-	$fieldLabelsmedidas["Spanish"]["SecuestroFecha"] = "Secuestro Fecha";
+	$fieldLabelsmedidas["Spanish"]["SecuestroFecha"] = "F. Secuestro";
 	$fieldToolTipsmedidas["Spanish"]["SecuestroFecha"] = "";
 	$placeHoldersmedidas["Spanish"]["SecuestroFecha"] = "";
 	$fieldLabelsmedidas["Spanish"]["Comision"] = "Comision";
 	$fieldToolTipsmedidas["Spanish"]["Comision"] = "";
 	$placeHoldersmedidas["Spanish"]["Comision"] = "";
-	$fieldLabelsmedidas["Spanish"]["RemateAviso"] = "Remate Aviso";
+	$fieldLabelsmedidas["Spanish"]["RemateAviso"] = "Aviso Remate ";
 	$fieldToolTipsmedidas["Spanish"]["RemateAviso"] = "";
 	$placeHoldersmedidas["Spanish"]["RemateAviso"] = "";
 	$fieldLabelsmedidas["Spanish"]["Aprobacion"] = "Aprobacion";
 	$fieldToolTipsmedidas["Spanish"]["Aprobacion"] = "";
 	$placeHoldersmedidas["Spanish"]["Aprobacion"] = "";
-	$fieldLabelsmedidas["Spanish"]["Entrega"] = "Entrega";
+	$fieldLabelsmedidas["Spanish"]["Entrega"] = "Dilig. Entrega";
 	$fieldToolTipsmedidas["Spanish"]["Entrega"] = "";
 	$placeHoldersmedidas["Spanish"]["Entrega"] = "";
 	$pageTitlesmedidas["Spanish"]["list"] = "Medidas Cautelares";
@@ -180,7 +180,7 @@ $tdatamedidas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																					
+																																																																																																																																																																																																																																																																														
 
 $tdatamedidas[".ajaxCodeSnippetAdded"] = false;
 
@@ -674,7 +674,8 @@ $tdatamedidas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -697,7 +698,8 @@ $tdatamedidas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -803,7 +805,7 @@ $tdatamedidas[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -812,7 +814,8 @@ $tdatamedidas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -822,7 +825,7 @@ $tdatamedidas[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 24;
 	$edata["LastYearFactor"] = 0;
 
@@ -835,7 +838,8 @@ $tdatamedidas[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -950,7 +954,8 @@ $tdatamedidas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -973,7 +978,8 @@ $tdatamedidas[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

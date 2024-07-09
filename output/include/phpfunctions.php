@@ -1036,6 +1036,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return now();;
 	}
+				if($table=="dbo.Llamadas" && $field=="Fecha")
+	{
+		return now();
+	}
 				if($table=="dbo.Pagos1" && $field=="Fecha")
 	{
 		return now();;
