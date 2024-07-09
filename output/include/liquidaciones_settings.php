@@ -52,6 +52,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsliquidaciones["Spanish"]["InteresesPlazo"] = "Intereses de Plazo";
 	$fieldToolTipsliquidaciones["Spanish"]["InteresesPlazo"] = "";
 	$placeHoldersliquidaciones["Spanish"]["InteresesPlazo"] = "";
+	$pageTitlesliquidaciones["Spanish"]["list"] = "Liquidaciones para Acuerdo de Pago";
 	if (count($fieldToolTipsliquidaciones["Spanish"]))
 		$tdataliquidaciones[".isUseToolTips"] = true;
 }
@@ -149,7 +150,7 @@ $tdataliquidaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																					
+																																																																																																																																																																																																																																																																														
 
 $tdataliquidaciones[".ajaxCodeSnippetAdded"] = false;
 

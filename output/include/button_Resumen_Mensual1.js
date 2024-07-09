@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Resumen_Mensual1"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Resumen_Mensual1';if(!pageObj.buttonEventBefore['Resumen_Mensual1']){pageObj.buttonEventBefore['Resumen_Mensual1']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var reportDate=$('#fechaIn').val();params["txt"]=reportDate;console.log("Fecha recibida: "+reportDate);}}
+if(!pageObj.buttonEventAfter['Resumen_Mensual1']){pageObj.buttonEventAfter['Resumen_Mensual1']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Resumen_Mensual1"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Resumen_Mensual1"+"_"+Runner.genId();var button_Resumen_Mensual1=new Runner.form.Button({id:this.id,btnName:"Resumen_Mensual1"});button_Resumen_Mensual1.init({args:[pageObj,proxy,pageid]});});};

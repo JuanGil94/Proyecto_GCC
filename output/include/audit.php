@@ -872,6 +872,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Resumen_Mensual")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1695,6 +1699,10 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.Uvbs")
+		{
+			return false;
+		}
+		if($table=="Resumen_Mensual")
 		{
 			return false;
 		}

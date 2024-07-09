@@ -140,7 +140,7 @@ $tdatallamadas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																					
+																																																																																																																																																																																																																																																																														
 
 $tdatallamadas[".ajaxCodeSnippetAdded"] = false;
 
@@ -200,7 +200,7 @@ $tdatallamadas[".strOrderBy"] = $tstrOrderBy;
 $tdatallamadas[".orderindexes"] = array();
 
 
-$tdatallamadas[".sqlHead"] = "SELECT LlamadaId,  	ProcesoId,  	Fecha,  	Telefono,  	Contesto,  	Mensaje";
+$tdatallamadas[".sqlHead"] = "SELECT LlamadaId,  	ProcesoId,  	FORMAT(Fecha, 'yyyy-MM-dd HH:mm:ss') Fecha,  	Telefono,  	Contesto,  	Mensaje";
 $tdatallamadas[".sqlFrom"] = "FROM dbo.Llamadas";
 $tdatallamadas[".sqlWhereExpr"] = "";
 $tdatallamadas[".sqlTail"] = "";
@@ -558,7 +558,7 @@ $tdatallamadas[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Fecha";
 	$fdata["GoodName"] = "Fecha";
-	$fdata["ownerTable"] = "dbo.Llamadas";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Llamadas","Fecha");
 	$fdata["FieldType"] = 135;
 
@@ -572,7 +572,7 @@ $tdatallamadas[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Fecha";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Fecha";
+	$fdata["FullName"] = "FORMAT(Fecha, 'yyyy-MM-dd HH:mm:ss')";
 
 	
 	
@@ -581,7 +581,7 @@ $tdatallamadas[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Datetime");
 
 	
 	
@@ -612,7 +612,7 @@ $tdatallamadas[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -631,7 +631,7 @@ $tdatallamadas[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 24;
 	$edata["LastYearFactor"] = 0;
 
@@ -1186,7 +1186,7 @@ function createSqlQuery_llamadas()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "LlamadaId,  	ProcesoId,  	Fecha,  	Telefono,  	Contesto,  	Mensaje";
+$proto0["m_strFieldList"] = "LlamadaId,  	ProcesoId,  	FORMAT(Fecha, 'yyyy-MM-dd HH:mm:ss') Fecha,  	Telefono,  	Contesto,  	Mensaje";
 $proto0["m_strFrom"] = "FROM dbo.Llamadas";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1255,41 +1255,37 @@ $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Fecha",
-	"m_strTable" => "dbo.Llamadas",
-	"m_srcTableName" => "dbo.Llamadas"
+			$proto11=array();
+$proto11["m_functiontype"] = "SQLF_CUSTOM";
+$proto11["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Fecha"
 ));
 
-$proto10["m_sql"] = "Fecha";
+$proto11["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'yyyy-MM-dd HH:mm:ss'"
+));
+
+$proto11["m_arguments"][]=$obj;
+$proto11["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto11);
+
+$proto10["m_sql"] = "FORMAT(Fecha, 'yyyy-MM-dd HH:mm:ss')";
 $proto10["m_srcTableName"] = "dbo.Llamadas";
 $proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
+$proto10["m_alias"] = "Fecha";
 $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto12=array();
+						$proto14=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Telefono",
 	"m_strTable" => "dbo.Llamadas",
 	"m_srcTableName" => "dbo.Llamadas"
 ));
 
-$proto12["m_sql"] = "Telefono";
-$proto12["m_srcTableName"] = "dbo.Llamadas";
-$proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "";
-$obj = new SQLFieldListItem($proto12);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto14=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Contesto",
-	"m_strTable" => "dbo.Llamadas",
-	"m_srcTableName" => "dbo.Llamadas"
-));
-
-$proto14["m_sql"] = "Contesto";
+$proto14["m_sql"] = "Telefono";
 $proto14["m_srcTableName"] = "dbo.Llamadas";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -1298,54 +1294,68 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Mensaje",
+	"m_strName" => "Contesto",
 	"m_strTable" => "dbo.Llamadas",
 	"m_srcTableName" => "dbo.Llamadas"
 ));
 
-$proto16["m_sql"] = "Mensaje";
+$proto16["m_sql"] = "Contesto";
 $proto16["m_srcTableName"] = "dbo.Llamadas";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
 $obj = new SQLFieldListItem($proto16);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto18=array();
-$proto18["m_link"] = "SQLL_MAIN";
-			$proto19=array();
-$proto19["m_strName"] = "dbo.Llamadas";
-$proto19["m_srcTableName"] = "dbo.Llamadas";
-$proto19["m_columns"] = array();
-$proto19["m_columns"][] = "LlamadaId";
-$proto19["m_columns"][] = "ProcesoId";
-$proto19["m_columns"][] = "Fecha";
-$proto19["m_columns"][] = "Telefono";
-$proto19["m_columns"][] = "Contesto";
-$proto19["m_columns"][] = "Mensaje";
-$obj = new SQLTable($proto19);
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Mensaje",
+	"m_strTable" => "dbo.Llamadas",
+	"m_srcTableName" => "dbo.Llamadas"
+));
 
-$proto18["m_table"] = $obj;
-$proto18["m_sql"] = "dbo.Llamadas";
-$proto18["m_alias"] = "";
+$proto18["m_sql"] = "Mensaje";
 $proto18["m_srcTableName"] = "dbo.Llamadas";
-$proto20=array();
-$proto20["m_sql"] = "";
-$proto20["m_uniontype"] = "SQLL_UNKNOWN";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto20=array();
+$proto20["m_link"] = "SQLL_MAIN";
+			$proto21=array();
+$proto21["m_strName"] = "dbo.Llamadas";
+$proto21["m_srcTableName"] = "dbo.Llamadas";
+$proto21["m_columns"] = array();
+$proto21["m_columns"][] = "LlamadaId";
+$proto21["m_columns"][] = "ProcesoId";
+$proto21["m_columns"][] = "Fecha";
+$proto21["m_columns"][] = "Telefono";
+$proto21["m_columns"][] = "Contesto";
+$proto21["m_columns"][] = "Mensaje";
+$obj = new SQLTable($proto21);
+
+$proto20["m_table"] = $obj;
+$proto20["m_sql"] = "dbo.Llamadas";
+$proto20["m_alias"] = "";
+$proto20["m_srcTableName"] = "dbo.Llamadas";
+$proto22=array();
+$proto22["m_sql"] = "";
+$proto22["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto20["m_column"]=$obj;
-$proto20["m_contained"] = array();
-$proto20["m_strCase"] = "";
-$proto20["m_havingmode"] = false;
-$proto20["m_inBrackets"] = false;
-$proto20["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto20);
+$proto22["m_column"]=$obj;
+$proto22["m_contained"] = array();
+$proto22["m_strCase"] = "";
+$proto22["m_havingmode"] = false;
+$proto22["m_inBrackets"] = false;
+$proto22["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto22);
 
-$proto18["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto18);
+$proto20["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto20);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1367,6 +1377,7 @@ $tdatallamadas[".sqlquery"] = $queryData_llamadas;
 
 
 
-$tdatallamadas[".hasEvents"] = false;
+include_once(getabspath("include/llamadas_events.php"));
+$tdatallamadas[".hasEvents"] = true;
 
 ?>

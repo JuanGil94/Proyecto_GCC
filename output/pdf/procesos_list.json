@@ -2676,6 +2676,11 @@ pdfDocument = {
 		{END details_medidas},
 				
 				
+			 {BEGIN details_liquidaciones}
+			{$displayDetailTable_liquidaciones }
+		{END details_liquidaciones},
+				
+				
 			 {BEGIN details_acuerdos}
 			{$displayDetailTable_acuerdos }
 		{END details_acuerdos},
@@ -2709,11 +2714,6 @@ pdfDocument = {
 			 {BEGIN details_reliquidaciones}
 			{$displayDetailTable_reliquidaciones }
 		{END details_reliquidaciones},
-				
-				
-			 {BEGIN details_liquidaciones}
-			{$displayDetailTable_liquidaciones }
-		{END details_liquidaciones},
 				
 				
 			 {BEGIN details_auditoriasprocesosview}

@@ -1,0 +1,270 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Resumen_Mensual import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Desde_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Hasta_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$ProcAnte_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$ObliAnte_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$CostAnte_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$InteAnte_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$ProcActu_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$ObliActu_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$CostActu_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$InteActu_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$ProcReca_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$CostReca_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$InteReca_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$ProcTras_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
+				
+			{"text":{$ObliTras_pdfvalue},"hidden":"{$item_hide_import_field19}"},
+				
+				
+			{"text":{$CostTras_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+				
+			{"text":{$InteTras_pdfvalue},"hidden":"{$item_hide_import_field21}"},
+				
+				
+			{"text":{$ProcNopa_pdfvalue},"hidden":"{$item_hide_import_field22}"},
+				
+				
+			{"text":{$ObliNopa_pdfvalue},"hidden":"{$item_hide_import_field23}"},
+				
+				
+			{"text":{$CostNopa_pdfvalue},"hidden":"{$item_hide_import_field24}"},
+				
+				
+			{"text":{$InteNopa_pdfvalue},"hidden":"{$item_hide_import_field25}"},
+				
+				
+			{"text":{$ProcNove_pdfvalue},"hidden":"{$item_hide_import_field26}"},
+				
+				
+			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_import_field27}"},
+				
+				
+			{"text":{$CostNove_pdfvalue},"hidden":"{$item_hide_import_field28}"},
+				
+				
+			{"text":{$InteNove_pdfvalue},"hidden":"{$item_hide_import_field29}"},
+				
+				
+			{"text":{$ProcMayo_pdfvalue},"hidden":"{$item_hide_import_field30}"},
+				
+				
+			{"text":{$ObliMayo_pdfvalue},"hidden":"{$item_hide_import_field31}"},
+				
+				
+			{"text":{$CostMayo_pdfvalue},"hidden":"{$item_hide_import_field32}"},
+				
+				
+			{"text":{$InteMayo_pdfvalue},"hidden":"{$item_hide_import_field33}"},
+				
+				
+			{"text":{$ProcTota_pdfvalue},"hidden":"{$item_hide_import_field34}"},
+				
+				
+			{"text":{$ObliTota_pdfvalue},"hidden":"{$item_hide_import_field35}"},
+				
+				
+			{"text":{$CostTota_pdfvalue},"hidden":"{$item_hide_import_field36}"},
+				
+				
+			{"text":{$InteTota_pdfvalue},"hidden":"{$item_hide_import_field37}"},
+				
+				
+			{"text":{$DeteAnte_pdfvalue},"hidden":"{$item_hide_import_field38}"},
+				
+				
+			{"text":{$DeteTota_pdfvalue},"hidden":"{$item_hide_import_field39}"},
+				
+				
+			{"text":{$DeteActu_pdfvalue},"hidden":"{$item_hide_import_field40}"},
+				
+				
+			{"text":{$CarteraTipo_pdfvalue},"hidden":"{$item_hide_import_field41}"},
+				
+				
+			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_import_field42}"},
+				
+				
+			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_import_field43}"},
+				
+				
+			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_import_field44}"},
+				
+				
+			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_import_field45}"},
+				
+				
+			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_import_field46}"},
+				
+				
+			{"text":{$AbogadoCargo_pdfvalue},"hidden":"{$item_hide_import_field47}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  
