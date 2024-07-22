@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2435_1719247507";
+$projectBuildKey = "2478_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2435";
+$projectBuildNumber = "2478";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -884,12 +884,15 @@ $tableCaptions["Spanish"]["dbo_AuditoriasProcesosView"] = "Auditorias Procesos V
 $tableCaptions["Spanish"]["dbo_ProcesosReasignar"] = "Procesos Reasignar";
 $tableCaptions["Spanish"]["dbo_Genero"] = "Genero";
 $tableCaptions["Spanish"]["admin_admembers"] = "Admin Admembers";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_Ciudades4"] = "Ciudades4";
 $tableCaptions["Spanish"]["dbo_Ciudades5"] = "Ciudades5";
 $tableCaptions["Spanish"]["dbo_Ciudades3"] = "Ciudades3";
 $tableCaptions["Spanish"]["dbo_Uvbs"] = "Uvbs";
 $tableCaptions["Spanish"]["Resumen_Mensual"] = "Resumen Mensual";
+$tableCaptions["Spanish"]["dbo_tipoRecaudo"] = "Tipo Recaudo";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
+$tableCaptions["Spanish"]["dbo_Despachos2"] = "Despachos2";
+$tableCaptions["Spanish"]["dbo_Despachos5"] = "Despachos5";
 
 
 $globalEvents = new class_GlobalEvents;

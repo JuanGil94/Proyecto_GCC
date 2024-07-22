@@ -102,46 +102,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Ciudad}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Ciudad}" {$filterRow_attrs_Ciudad}>
-			<label>{$label dbo_Ciudades2 Ciudad }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Ciudad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Ciudad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Ciudad}</span>
-						</div>
-		{END searchCtrlBlock_Ciudad}
-																{BEGIN searchCtrlBlock_DepartamentoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_DepartamentoId}" {$filterRow_attrs_DepartamentoId}>
-			<label>{$label dbo_Ciudades2 DepartamentoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_DepartamentoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_DepartamentoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_DepartamentoId}</span>
-						</div>
-		{END searchCtrlBlock_DepartamentoId}
-																{BEGIN searchCtrlBlock_Codigo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Codigo}" {$filterRow_attrs_Codigo}>
-			<label>{$label dbo_Ciudades2 Codigo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Codigo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Codigo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Codigo}</span>
-						</div>
-		{END searchCtrlBlock_Codigo}
-		
+				
 
 	</div>
 
@@ -240,14 +201,6 @@
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="ciudades2_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -445,7 +398,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
@@ -457,14 +410,6 @@
 							Añadir nuevo			</a>
 </span>
 {END add_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
-</span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -512,17 +457,6 @@
 		</div>
 	</div>
 		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Imprimir la selección			</label>
-		</div>
-	</div>
 	</div>
 				 
 					</li>
@@ -605,36 +539,6 @@
 	>
 	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
 	<ul role="menu" class="dropdown-menu dropdown-left">
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_DepartamentoId" checked="checked" value="1" data-field="DepartamentoId" data-fieldname="DepartamentoId">
-					<span>{$label dbo_Ciudades2 DepartamentoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Codigo" checked="checked" value="1" data-field="Codigo" data-fieldname="Codigo">
-					<span>{$label dbo_Ciudades2 Codigo }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Ciudad" checked="checked" value="1" data-field="Ciudad" data-fieldname="Ciudad">
-					<span>{$label dbo_Ciudades2 Ciudad }</span>
-				</label>
-			</div>
-					</a>
-		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -652,16 +556,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Codigo"]:before {
-		content: "{$label dbo_Ciudades2 Codigo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ciudad"]:before {
-		content: "{$label dbo_Ciudades2 Ciudad}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DepartamentoId"]:before {
-		content: "{$label dbo_Ciudades2 DepartamentoId}";
-	}
-	}
+}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -675,22 +570,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
 									{BEGIN cellblock_grid_headcell_checkbox}
 	<th
 	
@@ -728,81 +607,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DepartamentoId_class}	"
-
-			data-field="DepartamentoId"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DepartamentoId_fieldheadercolumn}
-	{BEGIN DepartamentoId_fieldheader}
-	<SPAN {$DepartamentoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DepartamentoId" data-fieldname="DepartamentoId">
-	{$label dbo_Ciudades2 DepartamentoId }	{$arrow_icon_DepartamentoId}
-	</SPAN>
-	{END DepartamentoId_fieldheader}
-{END DepartamentoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Codigo_class}	"
-
-			data-field="Codigo"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Codigo_fieldheadercolumn}
-	{BEGIN Codigo_fieldheader}
-	<SPAN {$Codigo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Codigo" data-fieldname="Codigo">
-	{$label dbo_Ciudades2 Codigo }	{$arrow_icon_Codigo}
-	</SPAN>
-	{END Codigo_fieldheader}
-{END Codigo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ciudad_class}	"
-
-			data-field="Ciudad"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Ciudad_fieldheadercolumn}
-	{BEGIN Ciudad_fieldheader}
-	<SPAN {$Ciudad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ciudad" data-fieldname="Ciudad">
-	{$label dbo_Ciudades2 Ciudad }	{$arrow_icon_Ciudad}
-	</SPAN>
-	{END Ciudad_fieldheader}
-{END Ciudad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
 							</tr>
 																				
 					{END grid_header}
@@ -814,33 +618,6 @@
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="ciudades2_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
-	
-	</td>
-	{END cellblock_grid_cell_icons}
 									{BEGIN cellblock_grid_cell_checkbox}
 	<td
 	
@@ -850,8 +627,7 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
 		data-checkbox-cell
 	>
 
@@ -874,76 +650,12 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"		data-control-cell
-	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"	
 	>
 
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DepartamentoId_class}	"
-
-			data-field="DepartamentoId"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DepartamentoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DepartamentoId" data-fieldname="DepartamentoId" data-default-width >
-{$DepartamentoId_value}
-</span>
-{END DepartamentoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Codigo_class}	"
-
-			data-field="Codigo"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Codigo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Codigo" data-fieldname="Codigo" data-default-width >
-{$Codigo_value}
-</span>
-{END Codigo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ciudad_class}	"
-
-			data-field="Ciudad"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Ciudad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ciudad" data-fieldname="Ciudad" data-default-width >
-{$Ciudad_value}
-</span>
-{END Ciudad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -974,21 +686,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_icons}
-	<td
-	
-	{$cell_grid_footcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons}
 									{BEGIN cellblock_grid_footcell_checkbox}
 	<td
 	
@@ -1019,51 +716,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_details}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DepartamentoId_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Codigo_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ciudad_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="ciudades2_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>

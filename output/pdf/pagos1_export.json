@@ -147,6 +147,9 @@ pdfDocument = {
 				
 			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
+				
+			{"text":{$TipoRecaudoId_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

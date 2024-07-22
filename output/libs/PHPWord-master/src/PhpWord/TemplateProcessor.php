@@ -37,6 +37,10 @@ class TemplateProcessor
      */
     private $temporaryDocumentFilename;
 
+    protected static $macroOpeningChars = '${';
+
+    protected static $macroClosingChars = '}';
+
     /**
      * Content of main document part (in XML format) of the temporary document.
      *
@@ -230,7 +234,7 @@ class TemplateProcessor
      * @param boolean $replace
      * @return string|null
      */
-    public function cloneBlock($blockname, $clones = 1, $replace = true)
+    public function cloneBlockO($blockname, $clones = 1, $replace = true)
     {
         $xmlBlock = null;
         preg_match(
@@ -262,7 +266,77 @@ class TemplateProcessor
 
         return $xmlBlock;
     }
-    
+    protected function indexClonedVariables($count, $xmlBlock)
+    {
+        $results = [];
+        $escapedMacroOpeningChars = preg_quote(self::$macroOpeningChars);
+        $escapedMacroClosingChars = preg_quote(self::$macroClosingChars);
+
+        for ($i = 1; $i <= $count; ++$i) {
+            $results[] = preg_replace("/$escapedMacroOpeningChars([^:]*?)(:.*?)?$escapedMacroClosingChars/", self::$macroOpeningChars . '\1#' . $i . '\2' . self::$macroClosingChars, $xmlBlock);
+        }
+
+        return $results;
+    }
+    protected function replaceClonedVariables($variableReplacements, $xmlBlock)
+    {
+        $results = [];
+        foreach ($variableReplacements as $replacementArray) {
+            $localXmlBlock = $xmlBlock;
+            foreach ($replacementArray as $search => $replacement) {
+                $localXmlBlock = $this->setValueForPart(self::ensureMacroCompleted($search), $replacement, $localXmlBlock, self::MAXIMUM_REPLACEMENTS_DEFAULT);
+            }
+            $results[] = $localXmlBlock;
+        }
+
+        return $results;
+    }
+    protected static function ensureMacroCompleted($macro)
+    {
+        if (substr($macro, 0, 2) !== self::$macroOpeningChars && substr($macro, -1) !== self::$macroClosingChars) {
+            $macro = self::$macroOpeningChars . $macro . self::$macroClosingChars;
+        }
+
+        return $macro;
+    }
+    public function cloneBlock($blockname, $clones = 1, $replace = true, $indexVariables = false, $variableReplacements = null)
+    {
+        $xmlBlock = null;
+        $matches = [];
+        $escapedMacroOpeningChars = self::$macroOpeningChars;
+        $escapedMacroClosingChars = self::$macroClosingChars;
+        preg_match(
+            //'/(.*((?s)<w:p\b(?:(?!<w:p\b).)*?\{{' . $blockname . '}<\/w:.*?p>))(.*)((?s)<w:p\b(?:(?!<w:p\b).)[^$]*?\{{\/' . $blockname . '}<\/w:.*?p>)/is',
+            '/(.*((?s)<w:p\b(?:(?!<w:p\b).)*?\\' . $escapedMacroOpeningChars . $blockname . $escapedMacroClosingChars . '<\/w:.*?p>))(.*)((?s)<w:p\b(?:(?!<w:p\b).)[^$]*?\\' . $escapedMacroOpeningChars . '\/' . $blockname . $escapedMacroClosingChars . '<\/w:.*?p>)/is',
+            //'/(.*((?s)<w:p\b(?:(?!<w:p\b).)*?\\'. $escapedMacroOpeningChars . $blockname . '}<\/w:.*?p>))(.*)((?s)<w:p\b(?:(?!<w:p\b).)[^$]*?\\'.$escapedMacroOpeningChars.'\/' . $blockname . '}<\/w:.*?p>)/is',
+            $this->temporaryDocumentMainPart,
+            $matches
+        );
+
+        if (isset($matches[3])) {
+            $xmlBlock = $matches[3];
+            if ($indexVariables) {
+                $cloned = $this->indexClonedVariables($clones, $xmlBlock);
+            } elseif ($variableReplacements !== null && is_array($variableReplacements)) {
+                $cloned = $this->replaceClonedVariables($variableReplacements, $xmlBlock);
+            } else {
+                $cloned = [];
+                for ($i = 1; $i <= $clones; ++$i) {
+                    $cloned[] = $xmlBlock;
+                }
+            }
+
+            if ($replace) {
+                $this->temporaryDocumentMainPart = str_replace(
+                    $matches[2] . $matches[3] . $matches[4],
+                    implode('', $cloned),
+                    $this->temporaryDocumentMainPart
+                );
+            }
+        }
+
+        return $xmlBlock;
+    }
     /**
      * Replace a block.
      *

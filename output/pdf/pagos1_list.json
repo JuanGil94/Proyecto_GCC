@@ -85,6 +85,9 @@ pdfDocument = {
 										{BEGIN col_grid_6}
 					"%",
 					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -321,7 +324,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Pagos1 CuentaId }","hidden":"{$item_hide_simple_grid_field}","bold":true},
+			{"text":"{$jslabel dbo_Pagos1 CuentaId }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -350,7 +353,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Pagos1 Fecha }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel dbo_Pagos1 Fecha }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -379,7 +382,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Pagos1 Numero }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
+			{"text":"{$jslabel dbo_Pagos1 Numero }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -408,7 +411,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Pagos1 Pago }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
+			{"text":"{$jslabel dbo_Pagos1 Pago }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -437,7 +440,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Pagos1 Observaciones }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel dbo_Pagos1 Observaciones }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -447,6 +450,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'TipoRecaudoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Pagos1 TipoRecaudoId }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$TipoRecaudoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
 											],
 				{END row_grid_0}
 		
@@ -660,6 +692,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'TipoRecaudoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$TipoRecaudoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$TipoRecaudoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
 											],
 				{END row_grid_1}
 		
@@ -851,6 +912,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field4}
+																							{BEGIN cellblock_grid_footcell_field5}
+{
+	cellId: 'footcell_field5',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field5}
 											],
 				{END row_grid_2}
 		

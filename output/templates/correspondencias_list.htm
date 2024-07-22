@@ -344,14 +344,6 @@
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="correspondencias_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -569,14 +561,6 @@
 							Añadir nuevo			</a>
 </span>
 {END inlineadd_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
-</span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 

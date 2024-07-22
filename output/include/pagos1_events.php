@@ -109,7 +109,12 @@ return true;
 function BeforeProcessAdd($pageObject)
 {
 
-		//print_r($pageObject);
+		global $pageObject;
+$data = $pageObject->getMasterRecord();
+$_SESSION["ConceptoId"]= $data["ConceptoId"];
+$_SESSION["NaturalezaId"]= $data["NaturalezaId"];
+
+//print_r($pageObject);
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

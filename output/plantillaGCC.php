@@ -673,9 +673,10 @@ class diccionarioChequeo{
     public $chequeoId,$sigobius,$fecha,$observaciones;
     public $variables;
     public function process ($chequeoId,$oficioId,$sigobius,$fecha,$observaciones){
-        if ($oficioId==4578){
-            $templatePath=('templates_GCC/Sample_23_TemplateBlock.docx');
+        if ($oficioId=='XXXXX'){
+            //$templatePath=('templates_GCC/Plantilla_4573.docx');
             //$templatePath=('templates_GCC/Plantilla_4578.docx');
+            /*
             $zip = new ZipArchive;
             if ($zip->open($templatePath) === TRUE) {
                 // Leer el contenido del documento principal (word/document.xml)
@@ -690,30 +691,31 @@ class diccionarioChequeo{
             } else {
                 echo "No se pudo abrir el archivo DOCX.";
             }
+            */
             $value=$this->tablaChequeosSancionados();
             //print_r($value);
-            $templateWord = new TemplateProcessor('templates_GCC/Sample_23_TemplateBlock.docx');
+            $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4573.docx');
             //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_4578.docx');
             //echo "Valor del conteo: ".count($value);
-            $templateWord->cloneBlock('DELETEME', 4,true);
-            $templateWord->cloneBlock('SANCIONADOS', 4,true);
+            $templateWord->cloneBlock('DELETEME', 4,true,TRUE);
+            $templateWord->cloneBlock('SANCIONADOS', count($value),TRUE,TRUE);
             $count=1;
-            $replacements = array(
-                array('Sancionado' => 'Batman'),
-                array('Sancionado' => 'Superman'),
-            );
             //$templateWord->cloneBlock('DELETEME', 2, true, true, $replacements);
             //$templateWord->setValue('Sancionado#1', "JUAN");
             //$templateWord->setValue('Sancionado#2', "PEDRO");
             foreach($value as $date){
                 //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
                 //$templateWord->setValue('Sancionado#'.$count, htmlspecialchars($date["C.Sancionado"]));
-                $templateWord->setValue('Sancionado#'.$count, "holaaaaaa");
-                $templateWord->setValue('TipoDocumento#'.$count, htmlspecialchars($date["T.TipoDocumento"]));
-                $templateWord->setValue('Documento#'.$count, htmlspecialchars($date["DDocumento"]));
+                //echo $date["C.Sancionado"];
+                //print_r($date);
+                $templateWord->setValue('Sancionado#'.$count, $date["Sancionado"]);
+                //$templateWord->setValue('Sancionado#'.$count, htmlspecialchars($date["C.Sancionado"]));
+                $templateWord->setValue('TipoDocumento#'.$count, htmlspecialchars($date["TipoDocumento"]));
+                $templateWord->setValue('Documento#'.$count, htmlspecialchars($date["Documento"]));
                 $count++;
             }
-        $templateWord->saveAs('templates_GCC/acuPagoSig.docx');    
+        $templateWord->saveAs('templates_GCC/APruebaFF.docx');
+        exit();    
         }
         $this->chequeoId=$chequeoId;
         $this->oficioId=$oficioId;
@@ -914,16 +916,11 @@ class plantillaDev extends diccionarioChequeo{
         // Crear un objeto TemplateProcessor
         $templateProcessor = new TemplateProcessor($templatePath);
         $variables = $templateProcessor->getVariables();
-        //print_r($variables);
-        //echo count($variables);
-        //print_r($variables);
-        //$case=count($direcciones);
-        $templateProcessor = new TemplateProcessor($templatePath);
-        //$direccion=$dato;
-        //$templateProcessor->setValue('direccion',$direccion);
+        //print_r ($variables);
+        //$templateProcessor = new TemplateProcessor($templatePath);
         foreach($variables as $variable){
             preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
-            //print_r();
+            //print_r($matches);
             $resultados = $matches[1];
             //echo count($resultados);
             for($i=0;$i<count($resultados);$i++){
@@ -937,8 +934,25 @@ class plantillaDev extends diccionarioChequeo{
             //$resultados = $matches[1];
             //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
         }
+        if ($this->oficioId==4573){ //DEV_OLUCIÓN TITULO EJECUTIVO SUBSANAR SIGOBius
+            $value=parent::tablaChequeosSancionados();
+            //echo count($value);
+            //exit();
+            $templateProcessor->cloneBlock('DELETEME', 4,true,TRUE);
+            $templateProcessor->cloneBlock('SANCIONADOS', count($value),TRUE,TRUE);
+            $count=1;
+            foreach($value as $date){
+                //print_r($date);
+                $templateProcessor->setValue('Sancionado#'.$count, $date["Sancionado"]);
+                $templateProcessor->setValue('TipoDocumento#'.$count, htmlspecialchars($date["TipoDocumento"]));
+                $templateProcessor->setValue('Documento#'.$count, htmlspecialchars($date["Documento"]));
+                $count++;
+            }
+            //$templateProcessor->saveAs('templates_GCC/APruebaFF.docx');
+            //exit();  
+        }
         $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->chequeoId.'_'.$this->oficioId.'.docx');  
-
+        //exit();
         /*
         {
             foreach($variables as $variable){

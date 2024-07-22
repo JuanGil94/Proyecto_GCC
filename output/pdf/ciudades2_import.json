@@ -105,16 +105,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
-				
-				
-			{"text":{$Ciudad_pdfvalue},"hidden":"{$item_hide_import_field2}"},
-				
-				
-			{"text":{$DepartamentoId_pdfvalue},"hidden":"{$item_hide_import_field3}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

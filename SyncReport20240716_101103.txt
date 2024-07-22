@@ -1,0 +1,6 @@
+Modified tables ("-" means deleted field, "+" means new field):
+	● dbo.Ciudades:
+		 - Ciudad
+		 - CiudadId
+		 - Codigo
+		 - DepartamentoId

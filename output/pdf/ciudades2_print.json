@@ -64,16 +64,7 @@ pdfDocument = {
 													{BEGIN embedded_grid} -1 {END embedded_grid} ,
 
 				widths: [
-														{BEGIN col_grid_0}
-					"%",
-					{END col_grid_0}
-										{BEGIN col_grid_1}
-					"%",
-					{END col_grid_1}
-										{BEGIN col_grid_2}
-					"%",
-					{END col_grid_2}
-															],
+																			],
 											heights: [ // first height for header part
 					"%",
 																		{BEGIN row_grid_0}
@@ -231,94 +222,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_0}
 				[
-																{BEGIN cellblock_grid_headcell_field}
-{
-	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'Codigo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Ciudades2 Codigo }","hidden":"{$item_hide_simple_grid_field}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Codigo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
-			fieldName: 'Ciudad',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Ciudades2 Ciudad }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Ciudad_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
-	col:0,
-	row:0,
-			fieldName: 'DepartamentoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Ciudades2 DepartamentoId }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DepartamentoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field2}
-											],
+				],
 				{END row_grid_0}
 		
 			
@@ -327,94 +231,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'Codigo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Codigo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
-			fieldName: 'Ciudad',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Ciudad_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Ciudad_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
-	col:0,
-	row:0,
-			fieldName: 'DepartamentoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$DepartamentoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DepartamentoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field2}
-											],
+				],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
 				[
@@ -428,9 +245,6 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
-					{BEGIN colspan_grid_cell_dpreview}
-			colSpan: {$colspan_grid_cell_dpreview},
-			{END colspan_grid_cell_dpreview}
 		
 		
 	
@@ -466,19 +280,7 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_dpreview}
-																		{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  1,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  2,
-				text: ''
-			},
-							],
+											],
 				{END row_grid_2}
 		
 		{END grid_record}
@@ -487,85 +289,7 @@ pdfDocument = {
 					
 				{BEGIN row_grid_3}
 				[
-																{BEGIN cellblock_grid_footcell_field}
-{
-	cellId: 'footcell_field',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field}
-																							{BEGIN cellblock_grid_footcell_field1}
-{
-	cellId: 'footcell_field1',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field1}
-																							{BEGIN cellblock_grid_footcell_field2}
-{
-	cellId: 'footcell_field2',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field2}
-											],
+				],
 				{END row_grid_3}
 		
 				

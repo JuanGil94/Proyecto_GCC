@@ -159,16 +159,8 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Ciudades2 DepartamentoId }","bold":true},{"text":{$DepartamentoId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Ciudades2 Codigo }","bold":true},{"text":{$Codigo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Ciudades2 Ciudad }","bold":true},{"text":{$Ciudad_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

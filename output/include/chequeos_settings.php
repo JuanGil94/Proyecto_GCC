@@ -339,6 +339,7 @@ $tdatachequeos[".geocodingEnabled"] = false;
 
 
 
+$tdatachequeos[".isDisplayLoading"] = true;
 
 $tdatachequeos[".isResizeColumns"] = true;
 
@@ -1372,7 +1373,7 @@ $tdatachequeos[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Despachos1";
+	$edata["LookupTable"] = "dbo.Despachos";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 1;
@@ -1381,7 +1382,7 @@ $tdatachequeos[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "DespachoId";
 	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "D.Codigo + ' -  ' +D. Despacho";
+	$edata["DisplayField"] = "Codigo + ' -  ' +Despacho";
 
 	
 
@@ -1390,10 +1391,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-		$edata["UseCategory"] = true;
-	$edata["categoryFields"] = array();
-	$edata["categoryFields"][] = array( "main" => "SeccionalId", "lookup" => "SeccionalId" );
-
+	
 	
 	
 
@@ -3292,7 +3290,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "Seccional";
 
-				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalesWhere)";
+				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalUser)";
 
 
 	
@@ -3305,9 +3303,6 @@ $tdatachequeos[".hideMobileList"] = array();
 				//dependent dropdowns @deprecated data ?
 	$edata["DependentLookups"] = array();
 	$edata["DependentLookups"][] = "AbogadoId";
-				//dependent dropdowns @deprecated data ?
-	$edata["DependentLookups"] = array();
-	$edata["DependentLookups"][] = "DespachoId";
 
 	
 	

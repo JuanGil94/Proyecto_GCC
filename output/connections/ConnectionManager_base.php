@@ -360,6 +360,9 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Ciudades3"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Uvbs"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Resumen_Mensual"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.tipoRecaudo"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Despachos2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Despachos5"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
