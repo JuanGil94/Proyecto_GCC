@@ -201,6 +201,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Pagos1 PagoId }","bold":true},{"text":{$PagoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel dbo_Pagos1 TipoRecaudoId }","bold":true},{"text":{$TipoRecaudoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

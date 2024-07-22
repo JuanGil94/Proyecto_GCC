@@ -795,7 +795,7 @@ $tdatadirecciones[".hideMobileList"] = array();
 	$edata["LookupTable"] = "dbo.Ciudades3";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 1;
 
 	
 		
@@ -816,8 +816,7 @@ $tdatadirecciones[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 

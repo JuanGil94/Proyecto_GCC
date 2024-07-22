@@ -437,6 +437,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("resumen_mensual" == $shortTName )
 		return true;
+	if ("tiporecaudo" == $shortTName )
+		return true;
+	if ("despachos2" == $shortTName )
+		return true;
+	if ("dbo_despachos5" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1540,6 +1546,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Resumen_Mensual";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.tipoRecaudo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.tipoRecaudo";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Despachos2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Despachos2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Despachos5");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Despachos5";
+	}
 	return $arr;
 }
 
@@ -1666,6 +1699,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Ciudades3";
 	$arr[]="dbo.Uvbs";
 	$arr[]="Resumen_Mensual";
+	$arr[]="dbo.tipoRecaudo";
+	$arr[]="dbo.Despachos2";
+	$arr[]="dbo.Despachos5";
 	return $arr;
 }
 
@@ -2876,6 +2912,21 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Resumen_Mensual" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.tipoRecaudo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Despachos2" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Despachos5" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

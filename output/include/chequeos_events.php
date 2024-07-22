@@ -463,6 +463,7 @@ function CustomEdit(&$values, $where, &$oldvalues, &$keys, &$error, $inline, $pa
 unset($values["CantidadLetras"]);
 unset($values["Dias"]);
 $values["Fecha"]=now();
+$values["Obligacion"]=floatval($values["Obligacion"]);
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -866,8 +867,10 @@ return true;
 function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
 {
 
-		$values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
+		//print_r($values);
+$values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
 //$values["Obligacion"]=$_SESSION["Obligacion"];
+//echo $_SESSION["Obligacion"];
 
 if ($_SESSION["Obligacion"]!=NULL){
 	$values["Obligacion"]=$_SESSION["Obligacion"];
@@ -892,11 +895,6 @@ elseif($values['FechaSancion']>now()){
 	echo '<script>alert ("La Fecha Sancion: '.$values['FechaSancion'].' debe ser menor o igual a la Fecha Actual: '.now().'")</script>';
 	return false;
 }
-return true;
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
 return true;
 ;
 } // function BeforeEdit

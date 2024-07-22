@@ -6,11 +6,11 @@ $tdataciudades2[".OwnerID"] = "";
 $tdataciudades2[".OriginalTable"] = "dbo.Ciudades";
 
 
-$tdataciudades2[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataciudades2[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataciudades2[".originalPagesByType"] = $tdataciudades2[".pagesByType"];
-$tdataciudades2[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataciudades2[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataciudades2[".originalPages"] = $tdataciudades2[".pages"];
-$tdataciudades2[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataciudades2[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataciudades2[".originalDefaultPages"] = $tdataciudades2[".defaultPages"];
 
 //	field labels
@@ -25,18 +25,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsciudades2["Spanish"] = array();
 	$placeHoldersciudades2["Spanish"] = array();
 	$pageTitlesciudades2["Spanish"] = array();
-	$fieldLabelsciudades2["Spanish"]["CiudadId"] = "Ciudad Id";
-	$fieldToolTipsciudades2["Spanish"]["CiudadId"] = "";
-	$placeHoldersciudades2["Spanish"]["CiudadId"] = "";
-	$fieldLabelsciudades2["Spanish"]["Codigo"] = "Codigo";
-	$fieldToolTipsciudades2["Spanish"]["Codigo"] = "";
-	$placeHoldersciudades2["Spanish"]["Codigo"] = "";
-	$fieldLabelsciudades2["Spanish"]["Ciudad"] = "Ciudad";
-	$fieldToolTipsciudades2["Spanish"]["Ciudad"] = "";
-	$placeHoldersciudades2["Spanish"]["Ciudad"] = "";
-	$fieldLabelsciudades2["Spanish"]["DepartamentoId"] = "Departamento Id";
-	$fieldToolTipsciudades2["Spanish"]["DepartamentoId"] = "";
-	$placeHoldersciudades2["Spanish"]["DepartamentoId"] = "";
 	if (count($fieldToolTipsciudades2["Spanish"]))
 		$tdataciudades2[".isUseToolTips"] = true;
 }
@@ -153,11 +141,6 @@ $tdataciudades2[".allSearchFields"] = array();
 $tdataciudades2[".filterFields"] = array();
 $tdataciudades2[".requiredSearchFields"] = array();
 
-$tdataciudades2[".googleLikeFields"] = array();
-$tdataciudades2[".googleLikeFields"][] = "CiudadId";
-$tdataciudades2[".googleLikeFields"][] = "Codigo";
-$tdataciudades2[".googleLikeFields"][] = "Ciudad";
-$tdataciudades2[".googleLikeFields"][] = "DepartamentoId";
 
 
 
@@ -186,14 +169,14 @@ $tdataciudades2[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY dbo.Departamentos.Departamento ASC";
 $tdataciudades2[".strOrderBy"] = $tstrOrderBy;
 
 $tdataciudades2[".orderindexes"] = array();
 
 
-$tdataciudades2[".sqlHead"] = "SELECT CiudadId,  	Codigo,  	Ciudad,  	DepartamentoId";
-$tdataciudades2[".sqlFrom"] = "FROM dbo.Ciudades";
+$tdataciudades2[".sqlHead"] = "SELECT dbo.Departamentos.Codigo+dbo.Ciudades.Codigo+' - '+dbo.Ciudades.Ciudad+' ('+dbo.Departamentos.Departamento+')'";
+$tdataciudades2[".sqlFrom"] = "FROM dbo.Ciudades  INNER JOIN dbo.Departamentos ON dbo.Ciudades.DepartamentoId=dbo.Departamentos.DepartamentoId";
 $tdataciudades2[".sqlWhereExpr"] = "";
 $tdataciudades2[".sqlTail"] = "";
 
@@ -231,7 +214,6 @@ $tdataciudades2[".arrGroupsPerPage"] = $arrGPP;
 $tdataciudades2[".highlightSearchResults"] = true;
 
 $tableKeysciudades2 = array();
-$tableKeysciudades2[] = "CiudadId";
 $tdataciudades2[".Keys"] = $tableKeysciudades2;
 
 
@@ -240,587 +222,6 @@ $tdataciudades2[".hideMobileList"] = array();
 
 
 
-//	CiudadId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 1;
-	$fdata["strName"] = "CiudadId";
-	$fdata["GoodName"] = "CiudadId";
-	$fdata["ownerTable"] = "dbo.Ciudades";
-	$fdata["Label"] = GetFieldLabel("dbo_Ciudades2","CiudadId");
-	$fdata["FieldType"] = 3;
-
-
-		$fdata["AutoInc"] = true;
-
-	
-			
-
-		$fdata["strField"] = "CiudadId";
-
-		$fdata["sourceSingle"] = "CiudadId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CiudadId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataciudades2["CiudadId"] = $fdata;
-		$tdataciudades2[".searchableFields"][] = "CiudadId";
-//	Codigo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 2;
-	$fdata["strName"] = "Codigo";
-	$fdata["GoodName"] = "Codigo";
-	$fdata["ownerTable"] = "dbo.Ciudades";
-	$fdata["Label"] = GetFieldLabel("dbo_Ciudades2","Codigo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Codigo";
-
-		$fdata["sourceSingle"] = "Codigo";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Codigo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=3";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataciudades2["Codigo"] = $fdata;
-		$tdataciudades2[".searchableFields"][] = "Codigo";
-//	Ciudad
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 3;
-	$fdata["strName"] = "Ciudad";
-	$fdata["GoodName"] = "Ciudad";
-	$fdata["ownerTable"] = "dbo.Ciudades";
-	$fdata["Label"] = GetFieldLabel("dbo_Ciudades2","Ciudad");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Ciudad";
-
-		$fdata["sourceSingle"] = "Ciudad";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Ciudad";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataciudades2["Ciudad"] = $fdata;
-		$tdataciudades2[".searchableFields"][] = "Ciudad";
-//	DepartamentoId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 4;
-	$fdata["strName"] = "DepartamentoId";
-	$fdata["GoodName"] = "DepartamentoId";
-	$fdata["ownerTable"] = "dbo.Ciudades";
-	$fdata["Label"] = GetFieldLabel("dbo_Ciudades2","DepartamentoId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DepartamentoId";
-
-		$fdata["sourceSingle"] = "DepartamentoId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "DepartamentoId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Departamentos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "DepartamentoId";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Codigo + ' - ' + Departamento";
-
-	
-
-		$edata["CustomDisplay"] = "true";
-
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataciudades2["DepartamentoId"] = $fdata;
-		$tdataciudades2[".searchableFields"][] = "DepartamentoId";
 
 
 $tables_data["dbo.Ciudades2"]=&$tdataciudades2;
@@ -865,10 +266,10 @@ function createSqlQuery_ciudades2()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "CiudadId,  	Codigo,  	Ciudad,  	DepartamentoId";
-$proto0["m_strFrom"] = "FROM dbo.Ciudades";
+$proto0["m_strFieldList"] = "dbo.Departamentos.Codigo+dbo.Ciudades.Codigo+' - '+dbo.Ciudades.Ciudad+' ('+dbo.Departamentos.Departamento+')'";
+$proto0["m_strFrom"] = "FROM dbo.Ciudades  INNER JOIN dbo.Departamentos ON dbo.Ciudades.DepartamentoId=dbo.Departamentos.DepartamentoId";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY dbo.Departamentos.Departamento ASC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -906,99 +307,104 @@ $obj = new SQLLogicalExpr($proto4);
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CiudadId",
-	"m_strTable" => "dbo.Ciudades",
-	"m_srcTableName" => "dbo.Ciudades2"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "dbo.Departamentos.Codigo+dbo.Ciudades.Codigo+' - '+dbo.Ciudades.Ciudad+' ('+dbo.Departamentos.Departamento+')'"
 ));
 
-$proto6["m_sql"] = "CiudadId";
+$proto6["m_sql"] = "dbo.Departamentos.Codigo+dbo.Ciudades.Codigo+' - '+dbo.Ciudades.Ciudad+' ('+dbo.Departamentos.Departamento+')'";
 $proto6["m_srcTableName"] = "dbo.Ciudades2";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto8=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Codigo",
-	"m_strTable" => "dbo.Ciudades",
-	"m_srcTableName" => "dbo.Ciudades2"
-));
-
-$proto8["m_sql"] = "Codigo";
-$proto8["m_srcTableName"] = "dbo.Ciudades2";
-$proto8["m_expr"]=$obj;
-$proto8["m_alias"] = "";
-$obj = new SQLFieldListItem($proto8);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Ciudad",
-	"m_strTable" => "dbo.Ciudades",
-	"m_srcTableName" => "dbo.Ciudades2"
-));
-
-$proto10["m_sql"] = "Ciudad";
-$proto10["m_srcTableName"] = "dbo.Ciudades2";
-$proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
-$obj = new SQLFieldListItem($proto10);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto12=array();
-			$obj = new SQLField(array(
-	"m_strName" => "DepartamentoId",
-	"m_strTable" => "dbo.Ciudades",
-	"m_srcTableName" => "dbo.Ciudades2"
-));
-
-$proto12["m_sql"] = "DepartamentoId";
-$proto12["m_srcTableName"] = "dbo.Ciudades2";
-$proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "";
-$obj = new SQLFieldListItem($proto12);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto14=array();
-$proto14["m_link"] = "SQLL_MAIN";
-			$proto15=array();
-$proto15["m_strName"] = "dbo.Ciudades";
-$proto15["m_srcTableName"] = "dbo.Ciudades2";
-$proto15["m_columns"] = array();
-$proto15["m_columns"][] = "CiudadId";
-$proto15["m_columns"][] = "Codigo";
-$proto15["m_columns"][] = "Ciudad";
-$proto15["m_columns"][] = "DepartamentoId";
-$obj = new SQLTable($proto15);
+												$proto8=array();
+$proto8["m_link"] = "SQLL_MAIN";
+			$proto9=array();
+$proto9["m_strName"] = "dbo.Ciudades";
+$proto9["m_srcTableName"] = "dbo.Ciudades2";
+$proto9["m_columns"] = array();
+$proto9["m_columns"][] = "CiudadId";
+$proto9["m_columns"][] = "Codigo";
+$proto9["m_columns"][] = "Ciudad";
+$proto9["m_columns"][] = "DepartamentoId";
+$obj = new SQLTable($proto9);
 
-$proto14["m_table"] = $obj;
-$proto14["m_sql"] = "dbo.Ciudades";
-$proto14["m_alias"] = "";
-$proto14["m_srcTableName"] = "dbo.Ciudades2";
-$proto16=array();
-$proto16["m_sql"] = "";
-$proto16["m_uniontype"] = "SQLL_UNKNOWN";
+$proto8["m_table"] = $obj;
+$proto8["m_sql"] = "dbo.Ciudades";
+$proto8["m_alias"] = "";
+$proto8["m_srcTableName"] = "dbo.Ciudades2";
+$proto10=array();
+$proto10["m_sql"] = "";
+$proto10["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto16["m_column"]=$obj;
-$proto16["m_contained"] = array();
-$proto16["m_strCase"] = "";
-$proto16["m_havingmode"] = false;
-$proto16["m_inBrackets"] = false;
-$proto16["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto16);
+$proto10["m_column"]=$obj;
+$proto10["m_contained"] = array();
+$proto10["m_strCase"] = "";
+$proto10["m_havingmode"] = false;
+$proto10["m_inBrackets"] = false;
+$proto10["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto10);
 
-$proto14["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto14);
+$proto8["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto8);
+
+$proto0["m_fromlist"][]=$obj;
+												$proto12=array();
+$proto12["m_link"] = "SQLL_INNERJOIN";
+			$proto13=array();
+$proto13["m_strName"] = "dbo.Departamentos";
+$proto13["m_srcTableName"] = "dbo.Ciudades2";
+$proto13["m_columns"] = array();
+$proto13["m_columns"][] = "DepartamentoId";
+$proto13["m_columns"][] = "Codigo";
+$proto13["m_columns"][] = "Departamento";
+$obj = new SQLTable($proto13);
+
+$proto12["m_table"] = $obj;
+$proto12["m_sql"] = "INNER JOIN dbo.Departamentos ON dbo.Ciudades.DepartamentoId=dbo.Departamentos.DepartamentoId";
+$proto12["m_alias"] = "";
+$proto12["m_srcTableName"] = "dbo.Ciudades2";
+$proto14=array();
+$proto14["m_sql"] = "dbo.Departamentos.DepartamentoId = dbo.Ciudades.DepartamentoId";
+$proto14["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "DepartamentoId",
+	"m_strTable" => "dbo.Departamentos",
+	"m_srcTableName" => "dbo.Ciudades2"
+));
+
+$proto14["m_column"]=$obj;
+$proto14["m_contained"] = array();
+$proto14["m_strCase"] = "= dbo.Ciudades.DepartamentoId";
+$proto14["m_havingmode"] = false;
+$proto14["m_inBrackets"] = false;
+$proto14["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto14);
+
+$proto12["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto12);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto16=array();
+						$obj = new SQLField(array(
+	"m_strName" => "Departamento",
+	"m_strTable" => "dbo.Departamentos",
+	"m_srcTableName" => "dbo.Ciudades2"
+));
+
+$proto16["m_column"]=$obj;
+$proto16["m_bAsc"] = 1;
+$proto16["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto16);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Ciudades2";		
 $obj = new SQLQuery($proto0);
 
@@ -1010,7 +416,7 @@ $queryData_ciudades2 = createSqlQuery_ciudades2();
 	
 		;
 
-				
+
 
 $tdataciudades2[".sqlquery"] = $queryData_ciudades2;
 

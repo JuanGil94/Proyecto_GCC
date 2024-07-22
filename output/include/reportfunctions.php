@@ -865,6 +865,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.tipoRecaudo")
+		{
+			return 1;
+		}
+		if($table=="dbo.Despachos2")
+		{
+			return 1;
+		}
+		if($table=="dbo.Despachos5")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1585,6 +1597,18 @@ function getCaptionTable($table)
 	if($table=="Resumen_Mensual")
 	{
 		return "Resumen Mensual";
+	}
+	if($table=="dbo.tipoRecaudo")
+	{
+		return "Tipo Recaudo";
+	}
+	if($table=="dbo.Despachos2")
+	{
+		return "Despachos2";
+	}
+	if($table=="dbo.Despachos5")
+	{
+		return "Despachos5";
 	}
 	return $table;
 }
@@ -3737,6 +3761,42 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.Uvbs";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.tipoRecaudo");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.tipoRecaudo";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.tipoRecaudo";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Despachos2");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Despachos2";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Despachos2";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.Despachos5");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.Despachos5";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.Despachos5";
 	}
 	return $arr;
 }

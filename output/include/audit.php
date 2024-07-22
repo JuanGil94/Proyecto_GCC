@@ -876,6 +876,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.tipoRecaudo")
+		{
+			return false;
+		}
+		if($table=="dbo.Despachos2")
+		{
+			return true;
+		}
+		if($table=="dbo.Despachos5")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1705,6 +1717,18 @@ class AuditTrailFile
 		if($table=="Resumen_Mensual")
 		{
 			return false;
+		}
+		if($table=="dbo.tipoRecaudo")
+		{
+			return false;
+		}
+		if($table=="dbo.Despachos2")
+		{
+			return true;
+		}
+		if($table=="dbo.Despachos5")
+		{
+			return true;
 		}
 	}
 

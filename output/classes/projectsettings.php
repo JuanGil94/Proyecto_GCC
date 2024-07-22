@@ -3770,6 +3770,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "uvbs" ] = "dbo.Uvbs";
 	$projectEntities[ "Resumen_Mensual" ] = array( "url" => "resumen_mensual", "type" => 6 );
 	$projectEntitiesReverse[ "resumen_mensual" ] = "Resumen_Mensual";
+	$projectEntities[ "dbo.tipoRecaudo" ] = array( "url" => "tiporecaudo", "type" => 0 );
+	$projectEntitiesReverse[ "tiporecaudo" ] = "dbo.tipoRecaudo";
+	$projectEntities[ "dbo.Despachos2" ] = array( "url" => "despachos2", "type" => 1 );
+	$projectEntitiesReverse[ "despachos2" ] = "dbo.Despachos2";
+	$projectEntities[ "dbo.Despachos5" ] = array( "url" => "dbo_despachos5", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_despachos5" ] = "dbo.Despachos5";
 }
 
 function findTable( $table ) {

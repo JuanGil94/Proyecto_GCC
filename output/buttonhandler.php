@@ -401,7 +401,17 @@ function buttonHandler_New_Button($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$carteraTipoId=1;
+	$data = $button->getCurrentRecord();
+$params["ChequeoId"]=$data["ChequeoId"];
+if ($data["TramiteId"]!= 1){
+//print_r($data);
+/*
+global $pageObject;
+$data = $pageObject->getMasterRecord(); //Obtengo los datos de la tabla Master
+print_r($data);
+exit();
+*/
+$carteraTipoId=1;
 $rs=DB::Query("declare @p2 int
 set @p2=0
 declare @p3 nvarchar(max)
@@ -612,7 +622,11 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 						}
 			}
 		}
-}   ;
+}   
+}
+else{
+	$result["Dev"]=1;
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -1352,7 +1366,9 @@ function buttonHandler_New_Button5($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
+	$data = $button->getCurrentRecord();
+$result["ChequeoId"]=$data["ChequeoId"];
+// Put your code here.
 
 ;
 	RunnerContext::pop();
@@ -1639,7 +1655,12 @@ function buttonHandler_New_Button9($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	include_once (getabspath("plantillaGCC.php"));
+	$data = $button->getCurrentRecord();
+//print_r($data);
+$params["ChequeoId"]=$data["ChequeoId"];
+$result["ChequeoId"]=$data["ChequeoId"];
+//echo $params["ChequeoId"];
+include_once (getabspath("plantillaGCC.php"));
 //$result["procesoId"]=$params["ProcesoId"];
 //$objeto=new plantillas($params["ProcesoId"]);
 //echo "Value ".$params["OficioId"];

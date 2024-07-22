@@ -160,6 +160,9 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Pagos1 TipoRecaudoId }","bold":true},{"text":{$TipoRecaudoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Pagos1 CuentaId }","bold":true},{"text":{$CuentaId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

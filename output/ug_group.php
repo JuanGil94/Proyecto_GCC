@@ -131,6 +131,9 @@ $nonAdminTablesArr[] = "dbo.Ciudades5";
 $nonAdminTablesArr[] = "dbo.Ciudades3";
 $nonAdminTablesArr[] = "dbo.Uvbs";
 $nonAdminTablesArr[] = "Resumen_Mensual";
+$nonAdminTablesArr[] = "dbo.tipoRecaudo";
+$nonAdminTablesArr[] = "dbo.Despachos2";
+$nonAdminTablesArr[] = "dbo.Despachos5";
 
 $ug_connection = $cman->getForUserGroups();
 
