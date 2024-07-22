@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2478_1721142599";
+$projectBuildKey = "2479_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2478";
+$projectBuildNumber = "2479";
 
 $mlang_messages = array();
 $mlang_charsets = array();
