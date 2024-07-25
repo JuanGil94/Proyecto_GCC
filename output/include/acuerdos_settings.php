@@ -6,11 +6,11 @@ $tdataacuerdos[".OwnerID"] = "";
 $tdataacuerdos[".OriginalTable"] = "dbo.Acuerdos";
 
 
-$tdataacuerdos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataacuerdos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataacuerdos[".originalPagesByType"] = $tdataacuerdos[".pagesByType"];
-$tdataacuerdos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataacuerdos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataacuerdos[".originalPages"] = $tdataacuerdos[".pages"];
-$tdataacuerdos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataacuerdos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataacuerdos[".originalDefaultPages"] = $tdataacuerdos[".defaultPages"];
 
 //	field labels
@@ -150,7 +150,7 @@ $tdataacuerdos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																							
 
 $tdataacuerdos[".ajaxCodeSnippetAdded"] = false;
 

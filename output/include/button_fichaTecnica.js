@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["fichaTecnica"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='fichaTecnica';if(!pageObj.buttonEventBefore['fichaTecnica']){pageObj.buttonEventBefore['fichaTecnica']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['fichaTecnica']){pageObj.buttonEventAfter['fichaTecnica']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var iframe=document.createElement("iframe");iframe.src="templates_GCC/caratulas/fichaTecnica_"+result["ProcesoId"]+".pdf";file:iframe.width="100%";iframe.height="100%";var ventanaEmergente=window.open("","VentanaEmergente","width=640, height=480");ventanaEmergente.document.body.appendChild(iframe);}}
+$('a[id="fichaTecnica"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="fichaTecnica"+"_"+Runner.genId();var button_fichaTecnica=new Runner.form.Button({id:this.id,btnName:"fichaTecnica"});button_fichaTecnica.init({args:[pageObj,proxy,pageid]});});};

@@ -25,78 +25,12 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsautorizaciones["Spanish"] = array();
 	$placeHoldersautorizaciones["Spanish"] = array();
 	$pageTitlesautorizaciones["Spanish"] = array();
-	$fieldLabelsautorizaciones["Spanish"]["ConceptoId"] = "Concepto";
-	$fieldToolTipsautorizaciones["Spanish"]["ConceptoId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["ConceptoId"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["AbogadoId"] = "Abogado";
-	$fieldToolTipsautorizaciones["Spanish"]["AbogadoId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["AbogadoId"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Fecha"] = "F. Creación";
 	$fieldToolTipsautorizaciones["Spanish"]["Fecha"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Fecha"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["DespachoId"] = "Competencia";
-	$fieldToolTipsautorizaciones["Spanish"]["DespachoId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["DespachoId"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Origen"] = "No. Radicado de Origen";
-	$fieldToolTipsautorizaciones["Spanish"]["Origen"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Origen"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Providencia"] = "Providencia";
-	$fieldToolTipsautorizaciones["Spanish"]["Providencia"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Providencia"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Ejecutoria"] = "Ejecutoria";
-	$fieldToolTipsautorizaciones["Spanish"]["Ejecutoria"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Ejecutoria"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["PrimeraCopia"] = "Primera Copia";
-	$fieldToolTipsautorizaciones["Spanish"]["PrimeraCopia"] = "";
-	$placeHoldersautorizaciones["Spanish"]["PrimeraCopia"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Autentica"] = "Autentica";
-	$fieldToolTipsautorizaciones["Spanish"]["Autentica"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Autentica"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["PrestaMeritoEjecutivo"] = "Presta Merito Ejecutivo";
-	$fieldToolTipsautorizaciones["Spanish"]["PrestaMeritoEjecutivo"] = "";
-	$placeHoldersautorizaciones["Spanish"]["PrestaMeritoEjecutivo"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Clara"] = "Clara";
-	$fieldToolTipsautorizaciones["Spanish"]["Clara"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Clara"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Expresa"] = "Expresa";
-	$fieldToolTipsautorizaciones["Spanish"]["Expresa"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Expresa"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["ActualmenteExigible"] = "Actualmente Exigible";
-	$fieldToolTipsautorizaciones["Spanish"]["ActualmenteExigible"] = "";
-	$placeHoldersautorizaciones["Spanish"]["ActualmenteExigible"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["CompetenciaDEAJ"] = "Competencia";
-	$fieldToolTipsautorizaciones["Spanish"]["CompetenciaDEAJ"] = "";
-	$placeHoldersautorizaciones["Spanish"]["CompetenciaDEAJ"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["FaltaRequisitos"] = "Falta de Requisitos";
-	$fieldToolTipsautorizaciones["Spanish"]["FaltaRequisitos"] = "";
-	$placeHoldersautorizaciones["Spanish"]["FaltaRequisitos"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["FaltaCompetencia"] = "Falta de Competencia";
-	$fieldToolTipsautorizaciones["Spanish"]["FaltaCompetencia"] = "";
-	$placeHoldersautorizaciones["Spanish"]["FaltaCompetencia"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["PorPrescripcion"] = "Por Prescripción";
-	$fieldToolTipsautorizaciones["Spanish"]["PorPrescripcion"] = "";
-	$placeHoldersautorizaciones["Spanish"]["PorPrescripcion"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["SeccionalId"] = "Seccional";
-	$fieldToolTipsautorizaciones["Spanish"]["SeccionalId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["SeccionalId"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Folios"] = "Folios";
-	$fieldToolTipsautorizaciones["Spanish"]["Folios"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Folios"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["SeccionalIdDestino"] = "Seccional Destino";
-	$fieldToolTipsautorizaciones["Spanish"]["SeccionalIdDestino"] = "";
-	$placeHoldersautorizaciones["Spanish"]["SeccionalIdDestino"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Observaciones"] = "Observaciones";
-	$fieldToolTipsautorizaciones["Spanish"]["Observaciones"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Observaciones"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Procesado"] = "Procesado";
-	$fieldToolTipsautorizaciones["Spanish"]["Procesado"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Procesado"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Tipo"] = "Tipo";
 	$fieldToolTipsautorizaciones["Spanish"]["Tipo"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Tipo"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["FechaSancion"] = "Fecha Liquidación";
-	$fieldToolTipsautorizaciones["Spanish"]["FechaSancion"] = "";
-	$placeHoldersautorizaciones["Spanish"]["FechaSancion"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Cantidad"] = "Cantidad";
 	$fieldToolTipsautorizaciones["Spanish"]["Cantidad"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Cantidad"] = "";
@@ -106,48 +40,18 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsautorizaciones["Spanish"]["Costas"] = "Costas";
 	$fieldToolTipsautorizaciones["Spanish"]["Costas"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Costas"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Remisorio"] = "Remisorio";
-	$fieldToolTipsautorizaciones["Spanish"]["Remisorio"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Remisorio"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["CarteraTipoId"] = "Cartera Tipo";
-	$fieldToolTipsautorizaciones["Spanish"]["CarteraTipoId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["CarteraTipoId"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["MinJusticia"] = "Min Justicia";
-	$fieldToolTipsautorizaciones["Spanish"]["MinJusticia"] = "";
-	$placeHoldersautorizaciones["Spanish"]["MinJusticia"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Aprobado"] = "Aprobado";
-	$fieldToolTipsautorizaciones["Spanish"]["Aprobado"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Aprobado"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["AprobadoPor"] = "Autorizado Por";
-	$fieldToolTipsautorizaciones["Spanish"]["AprobadoPor"] = "";
-	$placeHoldersautorizaciones["Spanish"]["AprobadoPor"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["FechaAprobacion"] = "F. Autorización";
-	$fieldToolTipsautorizaciones["Spanish"]["FechaAprobacion"] = "";
-	$placeHoldersautorizaciones["Spanish"]["FechaAprobacion"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Plazo"] = "Plazo";
-	$fieldToolTipsautorizaciones["Spanish"]["Plazo"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Plazo"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["NaturalezaId"] = "Naturaleza";
-	$fieldToolTipsautorizaciones["Spanish"]["NaturalezaId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["NaturalezaId"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Sigobius"] = "Sigobius";
-	$fieldToolTipsautorizaciones["Spanish"]["Sigobius"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Sigobius"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Monto"] = "Monto";
-	$fieldToolTipsautorizaciones["Spanish"]["Monto"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Monto"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["TramiteId"] = "Tramite";
-	$fieldToolTipsautorizaciones["Spanish"]["TramiteId"] = "";
-	$placeHoldersautorizaciones["Spanish"]["TramiteId"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Fisico"] = "Fisico";
-	$fieldToolTipsautorizaciones["Spanish"]["Fisico"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Fisico"] = "";
-	$fieldLabelsautorizaciones["Spanish"]["Digital"] = "Digital";
-	$fieldToolTipsautorizaciones["Spanish"]["Digital"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Digital"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["ChequeoId"] = "# Chequeo";
 	$fieldToolTipsautorizaciones["Spanish"]["ChequeoId"] = "";
 	$placeHoldersautorizaciones["Spanish"]["ChequeoId"] = "";
+	$fieldLabelsautorizaciones["Spanish"]["Seccional"] = "Seccional";
+	$fieldToolTipsautorizaciones["Spanish"]["Seccional"] = "";
+	$placeHoldersautorizaciones["Spanish"]["Seccional"] = "";
+	$fieldLabelsautorizaciones["Spanish"]["Concepto"] = "Concepto";
+	$fieldToolTipsautorizaciones["Spanish"]["Concepto"] = "";
+	$placeHoldersautorizaciones["Spanish"]["Concepto"] = "";
+	$fieldLabelsautorizaciones["Spanish"]["Competencia"] = "Competencia";
+	$fieldToolTipsautorizaciones["Spanish"]["Competencia"] = "";
+	$placeHoldersautorizaciones["Spanish"]["Competencia"] = "";
 	if (count($fieldToolTipsautorizaciones["Spanish"]))
 		$tdataautorizaciones[".isUseToolTips"] = true;
 }
@@ -245,10 +149,10 @@ $tdataautorizaciones[".isUseAjaxSuggest"] = true;
 
 
 
-											
-										
-										
-																																																																																																																																																																																																																																																		
+					
+				
+				
+																																																																																			
 
 $tdataautorizaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -268,47 +172,15 @@ $tdataautorizaciones[".filterFields"] = array();
 $tdataautorizaciones[".requiredSearchFields"] = array();
 
 $tdataautorizaciones[".googleLikeFields"] = array();
-$tdataautorizaciones[".googleLikeFields"][] = "ConceptoId";
-$tdataautorizaciones[".googleLikeFields"][] = "AbogadoId";
-$tdataautorizaciones[".googleLikeFields"][] = "Fecha";
-$tdataautorizaciones[".googleLikeFields"][] = "DespachoId";
-$tdataautorizaciones[".googleLikeFields"][] = "Origen";
-$tdataautorizaciones[".googleLikeFields"][] = "Providencia";
-$tdataautorizaciones[".googleLikeFields"][] = "Ejecutoria";
-$tdataautorizaciones[".googleLikeFields"][] = "PrimeraCopia";
-$tdataautorizaciones[".googleLikeFields"][] = "Autentica";
-$tdataautorizaciones[".googleLikeFields"][] = "PrestaMeritoEjecutivo";
-$tdataautorizaciones[".googleLikeFields"][] = "Clara";
-$tdataautorizaciones[".googleLikeFields"][] = "Expresa";
-$tdataautorizaciones[".googleLikeFields"][] = "ActualmenteExigible";
-$tdataautorizaciones[".googleLikeFields"][] = "CompetenciaDEAJ";
-$tdataautorizaciones[".googleLikeFields"][] = "FaltaRequisitos";
-$tdataautorizaciones[".googleLikeFields"][] = "FaltaCompetencia";
-$tdataautorizaciones[".googleLikeFields"][] = "PorPrescripcion";
-$tdataautorizaciones[".googleLikeFields"][] = "SeccionalId";
-$tdataautorizaciones[".googleLikeFields"][] = "Folios";
-$tdataautorizaciones[".googleLikeFields"][] = "SeccionalIdDestino";
-$tdataautorizaciones[".googleLikeFields"][] = "Observaciones";
-$tdataautorizaciones[".googleLikeFields"][] = "Procesado";
+$tdataautorizaciones[".googleLikeFields"][] = "ChequeoId";
+$tdataautorizaciones[".googleLikeFields"][] = "Seccional";
+$tdataautorizaciones[".googleLikeFields"][] = "Concepto";
 $tdataautorizaciones[".googleLikeFields"][] = "Tipo";
-$tdataautorizaciones[".googleLikeFields"][] = "FechaSancion";
 $tdataautorizaciones[".googleLikeFields"][] = "Cantidad";
 $tdataautorizaciones[".googleLikeFields"][] = "Obligacion";
 $tdataautorizaciones[".googleLikeFields"][] = "Costas";
-$tdataautorizaciones[".googleLikeFields"][] = "Remisorio";
-$tdataautorizaciones[".googleLikeFields"][] = "CarteraTipoId";
-$tdataautorizaciones[".googleLikeFields"][] = "MinJusticia";
-$tdataautorizaciones[".googleLikeFields"][] = "Aprobado";
-$tdataautorizaciones[".googleLikeFields"][] = "AprobadoPor";
-$tdataautorizaciones[".googleLikeFields"][] = "FechaAprobacion";
-$tdataautorizaciones[".googleLikeFields"][] = "Plazo";
-$tdataautorizaciones[".googleLikeFields"][] = "NaturalezaId";
-$tdataautorizaciones[".googleLikeFields"][] = "Sigobius";
-$tdataautorizaciones[".googleLikeFields"][] = "Monto";
-$tdataautorizaciones[".googleLikeFields"][] = "TramiteId";
-$tdataautorizaciones[".googleLikeFields"][] = "Fisico";
-$tdataautorizaciones[".googleLikeFields"][] = "Digital";
-$tdataautorizaciones[".googleLikeFields"][] = "ChequeoId";
+$tdataautorizaciones[".googleLikeFields"][] = "Fecha";
+$tdataautorizaciones[".googleLikeFields"][] = "Competencia";
 
 
 
@@ -343,9 +215,9 @@ $tdataautorizaciones[".strOrderBy"] = $tstrOrderBy;
 $tdataautorizaciones[".orderindexes"] = array();
 
 
-$tdataautorizaciones[".sqlHead"] = "SELECT C.ConceptoId,  C.AbogadoId,  C.Fecha,  C.DespachoId,  C.Origen,  C.Providencia,  C.Ejecutoria,  C.PrimeraCopia,  C.Autentica,  C.PrestaMeritoEjecutivo,  C.Clara,  C.Expresa,  C.ActualmenteExigible,  C.CompetenciaDEAJ,  C.FaltaRequisitos,  C.FaltaCompetencia,  C.PorPrescripcion,  C.SeccionalId,  C.Folios,  C.SeccionalIdDestino,  C.Observaciones,  C.Procesado,  C.Tipo,  C.FechaSancion,  C.Cantidad,  C.Obligacion,  C.Costas,  C.Remisorio,  C.CarteraTipoId,  C.MinJusticia,  C.Aprobado,  C.AprobadoPor,  C.FechaAprobacion,  C.Plazo,  C.NaturalezaId,  C.Sigobius,  C.Monto,  C.TramiteId,  C.Fisico,  C.Digital,  C.ChequeoId";
-$tdataautorizaciones[".sqlFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON C.CarteraTipoId = CA.CarteraTipoId  INNER JOIN dbo.Procesos AS P ON C.ChequeoId = P.ChequeoId";
-$tdataautorizaciones[".sqlWhereExpr"] = "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
+$tdataautorizaciones[".sqlHead"] = "	SELECT C.ChequeoId,  S.Seccional,  co.Concepto,  t.Tipo,  C.Cantidad,  FORMAT(C.Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(C.Costas, 'C', 'es-CO') AS Costas,  C.Fecha,  d.Codigo + ' -  ' +d.Despacho AS Competencia";
+$tdataautorizaciones[".sqlFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.Conceptos AS co ON C.ConceptoId = co.ConceptoId  INNER JOIN dbo.tipoCobro AS t ON C.Tipo = t.TipoId  INNER JOIN dbo.Despachos AS d ON C.DespachoId = d.DespachoId";
+$tdataautorizaciones[".sqlWhereExpr"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)";
 $tdataautorizaciones[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -402,656 +274,28 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 
 
-//	ConceptoId
+//	ChequeoId
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "ConceptoId";
-	$fdata["GoodName"] = "ConceptoId";
+	$fdata["strName"] = "ChequeoId";
+	$fdata["GoodName"] = "ChequeoId";
 	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","ConceptoId");
+	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","ChequeoId");
 	$fdata["FieldType"] = 3;
 
 
-	
+		$fdata["AutoInc"] = true;
+
 	
 			
 
-		$fdata["strField"] = "ConceptoId";
+		$fdata["strField"] = "ChequeoId";
 
-		$fdata["sourceSingle"] = "ConceptoId";
+		$fdata["sourceSingle"] = "ChequeoId";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.ConceptoId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Conceptos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "ConceptoId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Concepto";
-
-	
-
-		$edata["CustomDisplay"] = "true";
-
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["ConceptoId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "ConceptoId";
-//	AbogadoId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 2;
-	$fdata["strName"] = "AbogadoId";
-	$fdata["GoodName"] = "AbogadoId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","AbogadoId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "AbogadoId";
-
-		$fdata["sourceSingle"] = "AbogadoId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.AbogadoId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Abogados";
-			$edata["autoCompleteFieldsOnEdit"] = 1;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "AbogadoId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Abogado";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["AbogadoId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "AbogadoId";
-//	Fecha
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 3;
-	$fdata["strName"] = "Fecha";
-	$fdata["GoodName"] = "Fecha";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Fecha");
-	$fdata["FieldType"] = 7;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Fecha";
-
-		$fdata["sourceSingle"] = "Fecha";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Fecha";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Short Date");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Date");
-
-	
-		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-		$edata["DateEditType"] = 5;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["Fecha"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Fecha";
-//	DespachoId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 4;
-	$fdata["strName"] = "DespachoId";
-	$fdata["GoodName"] = "DespachoId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","DespachoId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DespachoId";
-
-		$fdata["sourceSingle"] = "DespachoId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.DespachoId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Despachos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "DespachoId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Codigo + ' -  ' + Despacho";
-
-	
-
-		$edata["CustomDisplay"] = "true";
-
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["DespachoId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "DespachoId";
-//	Origen
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 5;
-	$fdata["strName"] = "Origen";
-	$fdata["GoodName"] = "Origen";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Origen");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Origen";
-
-		$fdata["sourceSingle"] = "Origen";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Origen";
+	$fdata["FullName"] = "C.ChequeoId";
 
 	
 	
@@ -1100,1904 +344,8 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 
 
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
+		$edata["IsRequired"] = true;
 
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=23";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["Origen"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Origen";
-//	Providencia
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 6;
-	$fdata["strName"] = "Providencia";
-	$fdata["GoodName"] = "Providencia";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Providencia");
-	$fdata["FieldType"] = 7;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Providencia";
-
-		$fdata["sourceSingle"] = "Providencia";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Providencia";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Short Date");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Date");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["Providencia"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Providencia";
-//	Ejecutoria
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 7;
-	$fdata["strName"] = "Ejecutoria";
-	$fdata["GoodName"] = "Ejecutoria";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Ejecutoria");
-	$fdata["FieldType"] = 7;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Ejecutoria";
-
-		$fdata["sourceSingle"] = "Ejecutoria";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Ejecutoria";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Short Date");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Date");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["Ejecutoria"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Ejecutoria";
-//	PrimeraCopia
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 8;
-	$fdata["strName"] = "PrimeraCopia";
-	$fdata["GoodName"] = "PrimeraCopia";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","PrimeraCopia");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "PrimeraCopia";
-
-		$fdata["sourceSingle"] = "PrimeraCopia";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.PrimeraCopia";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["PrimeraCopia"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "PrimeraCopia";
-//	Autentica
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 9;
-	$fdata["strName"] = "Autentica";
-	$fdata["GoodName"] = "Autentica";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Autentica");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Autentica";
-
-		$fdata["sourceSingle"] = "Autentica";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Autentica";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["Autentica"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Autentica";
-//	PrestaMeritoEjecutivo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 10;
-	$fdata["strName"] = "PrestaMeritoEjecutivo";
-	$fdata["GoodName"] = "PrestaMeritoEjecutivo";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","PrestaMeritoEjecutivo");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "PrestaMeritoEjecutivo";
-
-		$fdata["sourceSingle"] = "PrestaMeritoEjecutivo";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.PrestaMeritoEjecutivo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["PrestaMeritoEjecutivo"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "PrestaMeritoEjecutivo";
-//	Clara
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 11;
-	$fdata["strName"] = "Clara";
-	$fdata["GoodName"] = "Clara";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Clara");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Clara";
-
-		$fdata["sourceSingle"] = "Clara";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Clara";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["Clara"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Clara";
-//	Expresa
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 12;
-	$fdata["strName"] = "Expresa";
-	$fdata["GoodName"] = "Expresa";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Expresa");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Expresa";
-
-		$fdata["sourceSingle"] = "Expresa";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Expresa";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["Expresa"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Expresa";
-//	ActualmenteExigible
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 13;
-	$fdata["strName"] = "ActualmenteExigible";
-	$fdata["GoodName"] = "ActualmenteExigible";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","ActualmenteExigible");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "ActualmenteExigible";
-
-		$fdata["sourceSingle"] = "ActualmenteExigible";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.ActualmenteExigible";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["ActualmenteExigible"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "ActualmenteExigible";
-//	CompetenciaDEAJ
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 14;
-	$fdata["strName"] = "CompetenciaDEAJ";
-	$fdata["GoodName"] = "CompetenciaDEAJ";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","CompetenciaDEAJ");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CompetenciaDEAJ";
-
-		$fdata["sourceSingle"] = "CompetenciaDEAJ";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.CompetenciaDEAJ";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["CompetenciaDEAJ"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "CompetenciaDEAJ";
-//	FaltaRequisitos
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 15;
-	$fdata["strName"] = "FaltaRequisitos";
-	$fdata["GoodName"] = "FaltaRequisitos";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","FaltaRequisitos");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "FaltaRequisitos";
-
-		$fdata["sourceSingle"] = "FaltaRequisitos";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.FaltaRequisitos";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["FaltaRequisitos"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "FaltaRequisitos";
-//	FaltaCompetencia
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 16;
-	$fdata["strName"] = "FaltaCompetencia";
-	$fdata["GoodName"] = "FaltaCompetencia";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","FaltaCompetencia");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "FaltaCompetencia";
-
-		$fdata["sourceSingle"] = "FaltaCompetencia";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.FaltaCompetencia";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["FaltaCompetencia"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "FaltaCompetencia";
-//	PorPrescripcion
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 17;
-	$fdata["strName"] = "PorPrescripcion";
-	$fdata["GoodName"] = "PorPrescripcion";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","PorPrescripcion");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "PorPrescripcion";
-
-		$fdata["sourceSingle"] = "PorPrescripcion";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.PorPrescripcion";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["PorPrescripcion"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "PorPrescripcion";
-//	SeccionalId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 18;
-	$fdata["strName"] = "SeccionalId";
-	$fdata["GoodName"] = "SeccionalId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","SeccionalId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "SeccionalId";
-
-		$fdata["sourceSingle"] = "SeccionalId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.SeccionalId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Seccionales";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "SeccionalId";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Seccional";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["SeccionalId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "SeccionalId";
-//	Folios
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 19;
-	$fdata["strName"] = "Folios";
-	$fdata["GoodName"] = "Folios";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Folios");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Folios";
-
-		$fdata["sourceSingle"] = "Folios";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Folios";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
 	
 	
 	
@@ -3020,7 +368,8 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -3064,179 +413,16 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataautorizaciones["Folios"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Folios";
-//	SeccionalIdDestino
+	$tdataautorizaciones["ChequeoId"] = $fdata;
+		$tdataautorizaciones[".searchableFields"][] = "ChequeoId";
+//	Seccional
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 20;
-	$fdata["strName"] = "SeccionalIdDestino";
-	$fdata["GoodName"] = "SeccionalIdDestino";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","SeccionalIdDestino");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "SeccionalIdDestino";
-
-		$fdata["sourceSingle"] = "SeccionalIdDestino";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.SeccionalIdDestino";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Seccionales";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "SeccionalId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Seccional";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["SeccionalIdDestino"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "SeccionalIdDestino";
-//	Observaciones
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 21;
-	$fdata["strName"] = "Observaciones";
-	$fdata["GoodName"] = "Observaciones";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Observaciones");
+	$fdata["Index"] = 2;
+	$fdata["strName"] = "Seccional";
+	$fdata["GoodName"] = "Seccional";
+	$fdata["ownerTable"] = "dbo.Seccionales";
+	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Seccional");
 	$fdata["FieldType"] = 200;
 
 
@@ -3244,12 +430,11 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Observaciones";
+		$fdata["strField"] = "Seccional";
 
-		$fdata["sourceSingle"] = "Observaciones";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Observaciones";
+	$fdata["FullName"] = "S.Seccional";
 
 	
 	
@@ -3286,7 +471,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text area");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3304,16 +489,16 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 0;
+		$edata["maxNumberOfFiles"] = 1;
 
 	
 	
 	
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
+	
+			$edata["HTML5InuptType"] = "text";
 
-	
-	
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3324,10 +509,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 //	End validation
 
-		$edata["CreateThumbnail"] = true;
-	$edata["StrThumbnail"] = "th";
-			$edata["ThumbnailSize"] = 600;
-
+	
 			
 	
 	
@@ -3342,7 +524,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3367,29 +549,28 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataautorizaciones["Observaciones"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Observaciones";
-//	Procesado
+	$tdataautorizaciones["Seccional"] = $fdata;
+		$tdataautorizaciones[".searchableFields"][] = "Seccional";
+//	Concepto
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 22;
-	$fdata["strName"] = "Procesado";
-	$fdata["GoodName"] = "Procesado";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Procesado");
-	$fdata["FieldType"] = 11;
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "Concepto";
+	$fdata["GoodName"] = "Concepto";
+	$fdata["ownerTable"] = "dbo.Conceptos";
+	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Concepto");
+	$fdata["FieldType"] = 200;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Procesado";
+		$fdata["strField"] = "Concepto";
 
-		$fdata["sourceSingle"] = "Procesado";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Procesado";
+	$fdata["FullName"] = "co.Concepto";
 
 	
 	
@@ -3398,7 +579,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Checkbox");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -3414,7 +595,8 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["NeedEncode"] = true;
+
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -3425,7 +607,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Checkbox");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3449,8 +631,10 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3476,7 +660,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3485,31 +669,33 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
 
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
 //end of Filters settings
 
 
-	$tdataautorizaciones["Procesado"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Procesado";
+	$tdataautorizaciones["Concepto"] = $fdata;
+		$tdataautorizaciones[".searchableFields"][] = "Concepto";
 //	Tipo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 23;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "Tipo";
 	$fdata["GoodName"] = "Tipo";
-	$fdata["ownerTable"] = "dbo.Chequeos";
+	$fdata["ownerTable"] = "dbo.tipoCobro";
 	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Tipo");
-	$fdata["FieldType"] = 3;
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -3521,7 +707,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Tipo";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Tipo";
+	$fdata["FullName"] = "t.Tipo";
 
 	
 	
@@ -3667,148 +853,10 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 	$tdataautorizaciones["Tipo"] = $fdata;
 		$tdataautorizaciones[".searchableFields"][] = "Tipo";
-//	FechaSancion
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 24;
-	$fdata["strName"] = "FechaSancion";
-	$fdata["GoodName"] = "FechaSancion";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","FechaSancion");
-	$fdata["FieldType"] = 7;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "FechaSancion";
-
-		$fdata["sourceSingle"] = "FechaSancion";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.FechaSancion";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Short Date");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Date");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["FechaSancion"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "FechaSancion";
 //	Cantidad
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 25;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "Cantidad";
 	$fdata["GoodName"] = "Cantidad";
 	$fdata["ownerTable"] = "dbo.Chequeos";
@@ -3950,12 +998,12 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //	Obligacion
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 26;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "Obligacion";
 	$fdata["GoodName"] = "Obligacion";
-	$fdata["ownerTable"] = "dbo.Chequeos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Obligacion");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -3967,7 +1015,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Obligacion";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Obligacion";
+	$fdata["FullName"] = "FORMAT(C.Obligacion, 'C', 'es-CO')";
 
 	
 	
@@ -4093,12 +1141,12 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //	Costas
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 27;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "Costas";
 	$fdata["GoodName"] = "Costas";
-	$fdata["ownerTable"] = "dbo.Chequeos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Costas");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -4110,7 +1158,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Costas";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Costas";
+	$fdata["FullName"] = "FORMAT(C.Costas, 'C', 'es-CO')";
 
 	
 	
@@ -4228,855 +1276,14 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 	$tdataautorizaciones["Costas"] = $fdata;
 		$tdataautorizaciones[".searchableFields"][] = "Costas";
-//	Remisorio
+//	Fecha
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 28;
-	$fdata["strName"] = "Remisorio";
-	$fdata["GoodName"] = "Remisorio";
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "Fecha";
+	$fdata["GoodName"] = "Fecha";
 	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Remisorio");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Remisorio";
-
-		$fdata["sourceSingle"] = "Remisorio";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Remisorio";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=20";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["Remisorio"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Remisorio";
-//	CarteraTipoId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 29;
-	$fdata["strName"] = "CarteraTipoId";
-	$fdata["GoodName"] = "CarteraTipoId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","CarteraTipoId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CarteraTipoId";
-
-		$fdata["sourceSingle"] = "CarteraTipoId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.CarteraTipoId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.CarteraTipos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "CarteraTipoId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "CarteraTipo";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["CarteraTipoId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "CarteraTipoId";
-//	MinJusticia
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 30;
-	$fdata["strName"] = "MinJusticia";
-	$fdata["GoodName"] = "MinJusticia";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","MinJusticia");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "MinJusticia";
-
-		$fdata["sourceSingle"] = "MinJusticia";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.MinJusticia";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["MinJusticia"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "MinJusticia";
-//	Aprobado
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 31;
-	$fdata["strName"] = "Aprobado";
-	$fdata["GoodName"] = "Aprobado";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Aprobado");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Aprobado";
-
-		$fdata["sourceSingle"] = "Aprobado";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Aprobado";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["Aprobado"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Aprobado";
-//	AprobadoPor
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 32;
-	$fdata["strName"] = "AprobadoPor";
-	$fdata["GoodName"] = "AprobadoPor";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","AprobadoPor");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "AprobadoPor";
-
-		$fdata["sourceSingle"] = "AprobadoPor";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.AprobadoPor";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=30";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["AprobadoPor"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "AprobadoPor";
-//	FechaAprobacion
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 33;
-	$fdata["strName"] = "FechaAprobacion";
-	$fdata["GoodName"] = "FechaAprobacion";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","FechaAprobacion");
-	$fdata["FieldType"] = 135;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "FechaAprobacion";
-
-		$fdata["sourceSingle"] = "FechaAprobacion";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.FechaAprobacion";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Short Date");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Date");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["FechaAprobacion"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "FechaAprobacion";
-//	Plazo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 34;
-	$fdata["strName"] = "Plazo";
-	$fdata["GoodName"] = "Plazo";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Plazo");
+	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Fecha");
 	$fdata["FieldType"] = 7;
 
 
@@ -5084,12 +1291,12 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Plazo";
+		$fdata["strField"] = "Fecha";
 
-		$fdata["sourceSingle"] = "Plazo";
+		$fdata["sourceSingle"] = "Fecha";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Plazo";
+	$fdata["FullName"] = "C.Fecha";
 
 	
 	
@@ -5129,7 +1336,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -5148,7 +1355,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 24;
 	$edata["LastYearFactor"] = 0;
 
@@ -5205,179 +1412,16 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataautorizaciones["Plazo"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Plazo";
-//	NaturalezaId
+	$tdataautorizaciones["Fecha"] = $fdata;
+		$tdataautorizaciones[".searchableFields"][] = "Fecha";
+//	Competencia
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 35;
-	$fdata["strName"] = "NaturalezaId";
-	$fdata["GoodName"] = "NaturalezaId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","NaturalezaId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "NaturalezaId";
-
-		$fdata["sourceSingle"] = "NaturalezaId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.NaturalezaId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Naturalezas";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "NaturalezaId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Naturaleza";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["NaturalezaId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "NaturalezaId";
-//	Sigobius
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 36;
-	$fdata["strName"] = "Sigobius";
-	$fdata["GoodName"] = "Sigobius";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Sigobius");
+	$fdata["Index"] = 9;
+	$fdata["strName"] = "Competencia";
+	$fdata["GoodName"] = "Competencia";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Competencia");
 	$fdata["FieldType"] = 200;
 
 
@@ -5385,12 +1429,11 @@ $tdataautorizaciones[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Sigobius";
+		$fdata["strField"] = "Competencia";
 
-		$fdata["sourceSingle"] = "Sigobius";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Sigobius";
+	$fdata["FullName"] = "d.Codigo + ' -  ' +d.Despacho";
 
 	
 	
@@ -5454,8 +1497,7 @@ $tdataautorizaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -5506,715 +1548,8 @@ $tdataautorizaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataautorizaciones["Sigobius"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Sigobius";
-//	Monto
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 37;
-	$fdata["strName"] = "Monto";
-	$fdata["GoodName"] = "Monto";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Monto");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Monto";
-
-		$fdata["sourceSingle"] = "Monto";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Monto";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 4;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["Monto"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Monto";
-//	TramiteId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 38;
-	$fdata["strName"] = "TramiteId";
-	$fdata["GoodName"] = "TramiteId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","TramiteId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "TramiteId";
-
-		$fdata["sourceSingle"] = "TramiteId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.TramiteId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Tramites";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "TramiteId";
-	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Tramite";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["TramiteId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "TramiteId";
-//	Fisico
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 39;
-	$fdata["strName"] = "Fisico";
-	$fdata["GoodName"] = "Fisico";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Fisico");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Fisico";
-
-		$fdata["sourceSingle"] = "Fisico";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Fisico";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["Fisico"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Fisico";
-//	Digital
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 40;
-	$fdata["strName"] = "Digital";
-	$fdata["GoodName"] = "Digital";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","Digital");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Digital";
-
-		$fdata["sourceSingle"] = "Digital";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.Digital";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataautorizaciones["Digital"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "Digital";
-//	ChequeoId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 41;
-	$fdata["strName"] = "ChequeoId";
-	$fdata["GoodName"] = "ChequeoId";
-	$fdata["ownerTable"] = "dbo.Chequeos";
-	$fdata["Label"] = GetFieldLabel("dbo_Autorizaciones","ChequeoId");
-	$fdata["FieldType"] = 3;
-
-
-		$fdata["AutoInc"] = true;
-
-	
-			
-
-		$fdata["strField"] = "ChequeoId";
-
-		$fdata["sourceSingle"] = "ChequeoId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "C.ChequeoId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataautorizaciones["ChequeoId"] = $fdata;
-		$tdataautorizaciones[".searchableFields"][] = "ChequeoId";
+	$tdataautorizaciones["Competencia"] = $fdata;
+		$tdataautorizaciones[".searchableFields"][] = "Competencia";
 
 
 $tables_data["dbo.Autorizaciones"]=&$tdataautorizaciones;
@@ -6329,42 +1664,6 @@ $masterTablesData["dbo.Autorizaciones"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Seccionales";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Seccionales";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "seccionales";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Autorizaciones"][0] = $masterParams;
-				$masterTablesData["dbo.Autorizaciones"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Autorizaciones"][0]["masterKeys"][]="SeccionalId";
-				$masterTablesData["dbo.Autorizaciones"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Autorizaciones"][0]["detailKeys"][]="SeccionalId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Tramites";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Tramites";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "tramites";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Autorizaciones"][1] = $masterParams;
-				$masterTablesData["dbo.Autorizaciones"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.Autorizaciones"][1]["masterKeys"][]="TramiteId";
-				$masterTablesData["dbo.Autorizaciones"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.Autorizaciones"][1]["detailKeys"][]="TramiteId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -6384,109 +1683,111 @@ require_once(getabspath("classes/sql.php"));
 function createSqlQuery_autorizaciones()
 {
 $proto0=array();
-$proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "C.ConceptoId,  C.AbogadoId,  C.Fecha,  C.DespachoId,  C.Origen,  C.Providencia,  C.Ejecutoria,  C.PrimeraCopia,  C.Autentica,  C.PrestaMeritoEjecutivo,  C.Clara,  C.Expresa,  C.ActualmenteExigible,  C.CompetenciaDEAJ,  C.FaltaRequisitos,  C.FaltaCompetencia,  C.PorPrescripcion,  C.SeccionalId,  C.Folios,  C.SeccionalIdDestino,  C.Observaciones,  C.Procesado,  C.Tipo,  C.FechaSancion,  C.Cantidad,  C.Obligacion,  C.Costas,  C.Remisorio,  C.CarteraTipoId,  C.MinJusticia,  C.Aprobado,  C.AprobadoPor,  C.FechaAprobacion,  C.Plazo,  C.NaturalezaId,  C.Sigobius,  C.Monto,  C.TramiteId,  C.Fisico,  C.Digital,  C.ChequeoId";
-$proto0["m_strFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON C.CarteraTipoId = CA.CarteraTipoId  INNER JOIN dbo.Procesos AS P ON C.ChequeoId = P.ChequeoId";
-$proto0["m_strWhere"] = "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
+$proto0["m_strHead"] = "	SELECT";
+$proto0["m_strFieldList"] = "C.ChequeoId,  S.Seccional,  co.Concepto,  t.Tipo,  C.Cantidad,  FORMAT(C.Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(C.Costas, 'C', 'es-CO') AS Costas,  C.Fecha,  d.Codigo + ' -  ' +d.Despacho AS Competencia";
+$proto0["m_strFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.Conceptos AS co ON C.ConceptoId = co.ConceptoId  INNER JOIN dbo.tipoCobro AS t ON C.Tipo = t.TipoId  INNER JOIN dbo.Despachos AS d ON C.DespachoId = d.DespachoId";
+$proto0["m_strWhere"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
-$proto2["m_uniontype"] = "SQLL_OR";
+$proto2["m_sql"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)";
+$proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "C.Obligacion = 0 OR C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1"
+	"m_sql" => "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)"
 ));
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
 						$proto4=array();
-$proto4["m_sql"] = "C.Obligacion = 0";
+$proto4["m_sql"] = "C.CarteraTipoId =1";
 $proto4["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "Obligacion",
+	"m_strName" => "CarteraTipoId",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
 $proto4["m_column"]=$obj;
 $proto4["m_contained"] = array();
-$proto4["m_strCase"] = "= 0";
+$proto4["m_strCase"] = "=1";
 $proto4["m_havingmode"] = false;
-$proto4["m_inBrackets"] = false;
+$proto4["m_inBrackets"] = true;
 $proto4["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto4);
 
 			$proto2["m_contained"][]=$obj;
 						$proto6=array();
-$proto6["m_sql"] = "C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1";
-$proto6["m_uniontype"] = "SQLL_AND";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => "C.Obligacion >(Select MaximoPesos from Empresas) AND P.EstadoId <> 6 AND C.Aprobado =1"
-));
-
-$proto6["m_column"]=$obj;
-$proto6["m_contained"] = array();
-						$proto8=array();
-$proto8["m_sql"] = "C.Obligacion >(Select MaximoPesos from Empresas)";
-$proto8["m_uniontype"] = "SQLL_UNKNOWN";
+$proto6["m_sql"] = "C.Procesado <>1";
+$proto6["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "Obligacion",
+	"m_strName" => "Procesado",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto8["m_column"]=$obj;
-$proto8["m_contained"] = array();
-$proto8["m_strCase"] = ">(Select MaximoPesos from Empresas)";
-$proto8["m_havingmode"] = false;
-$proto8["m_inBrackets"] = false;
-$proto8["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto8);
+$proto6["m_column"]=$obj;
+$proto6["m_contained"] = array();
+$proto6["m_strCase"] = "<>1";
+$proto6["m_havingmode"] = false;
+$proto6["m_inBrackets"] = true;
+$proto6["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto6);
 
-			$proto6["m_contained"][]=$obj;
-						$proto10=array();
-$proto10["m_sql"] = "P.EstadoId <> 6";
-$proto10["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "EstadoId",
-	"m_strTable" => "P",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto10["m_column"]=$obj;
-$proto10["m_contained"] = array();
-$proto10["m_strCase"] = "<> 6";
-$proto10["m_havingmode"] = false;
-$proto10["m_inBrackets"] = false;
-$proto10["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto10);
-
-			$proto6["m_contained"][]=$obj;
-						$proto12=array();
-$proto12["m_sql"] = "C.Aprobado =1";
-$proto12["m_uniontype"] = "SQLL_UNKNOWN";
+			$proto2["m_contained"][]=$obj;
+						$proto8=array();
+$proto8["m_sql"] = "C.Aprobado <>1";
+$proto8["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "Aprobado",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
+$proto8["m_column"]=$obj;
+$proto8["m_contained"] = array();
+$proto8["m_strCase"] = "<>1";
+$proto8["m_havingmode"] = false;
+$proto8["m_inBrackets"] = true;
+$proto8["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto8);
+
+			$proto2["m_contained"][]=$obj;
+						$proto10=array();
+$proto10["m_sql"] = "C.SeccionalId =:sesion.SeccionalUser";
+$proto10["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "SeccionalId",
+	"m_strTable" => "C",
+	"m_srcTableName" => "dbo.Autorizaciones"
+));
+
+$proto10["m_column"]=$obj;
+$proto10["m_contained"] = array();
+$proto10["m_strCase"] = "=:sesion.SeccionalUser";
+$proto10["m_havingmode"] = false;
+$proto10["m_inBrackets"] = true;
+$proto10["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto10);
+
+			$proto2["m_contained"][]=$obj;
+						$proto12=array();
+$proto12["m_sql"] = "C.TramiteId =2";
+$proto12["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "TramiteId",
+	"m_strTable" => "C",
+	"m_srcTableName" => "dbo.Autorizaciones"
+));
+
 $proto12["m_column"]=$obj;
 $proto12["m_contained"] = array();
-$proto12["m_strCase"] = "=1";
+$proto12["m_strCase"] = "=2";
 $proto12["m_havingmode"] = false;
-$proto12["m_inBrackets"] = false;
+$proto12["m_inBrackets"] = true;
 $proto12["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto12);
-
-			$proto6["m_contained"][]=$obj;
-$proto6["m_strCase"] = "";
-$proto6["m_havingmode"] = false;
-$proto6["m_inBrackets"] = false;
-$proto6["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto6);
 
 			$proto2["m_contained"][]=$obj;
 $proto2["m_strCase"] = "";
@@ -6515,12 +1816,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ConceptoId",
+	"m_strName" => "ChequeoId",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto16["m_sql"] = "C.ConceptoId";
+$proto16["m_sql"] = "C.ChequeoId";
 $proto16["m_srcTableName"] = "dbo.Autorizaciones";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -6529,12 +1830,12 @@ $obj = new SQLFieldListItem($proto16);
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
-	"m_strName" => "AbogadoId",
-	"m_strTable" => "C",
+	"m_strName" => "Seccional",
+	"m_strTable" => "S",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto18["m_sql"] = "C.AbogadoId";
+$proto18["m_sql"] = "S.Seccional";
 $proto18["m_srcTableName"] = "dbo.Autorizaciones";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -6543,12 +1844,12 @@ $obj = new SQLFieldListItem($proto18);
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Fecha",
-	"m_strTable" => "C",
+	"m_strName" => "Concepto",
+	"m_strTable" => "co",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto20["m_sql"] = "C.Fecha";
+$proto20["m_sql"] = "co.Concepto";
 $proto20["m_srcTableName"] = "dbo.Autorizaciones";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -6557,12 +1858,12 @@ $obj = new SQLFieldListItem($proto20);
 $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
-	"m_strName" => "DespachoId",
-	"m_strTable" => "C",
+	"m_strName" => "Tipo",
+	"m_strTable" => "t",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto22["m_sql"] = "C.DespachoId";
+$proto22["m_sql"] = "t.Tipo";
 $proto22["m_srcTableName"] = "dbo.Autorizaciones";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -6571,12 +1872,12 @@ $obj = new SQLFieldListItem($proto22);
 $proto0["m_fieldlist"][]=$obj;
 						$proto24=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Origen",
+	"m_strName" => "Cantidad",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto24["m_sql"] = "C.Origen";
+$proto24["m_sql"] = "C.Cantidad";
 $proto24["m_srcTableName"] = "dbo.Autorizaciones";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -6584,83 +1885,71 @@ $obj = new SQLFieldListItem($proto24);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Providencia",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
+			$proto27=array();
+$proto27["m_functiontype"] = "SQLF_CUSTOM";
+$proto27["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "C.Obligacion"
 ));
 
-$proto26["m_sql"] = "C.Providencia";
+$proto27["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto27["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto27["m_arguments"][]=$obj;
+$proto27["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto27);
+
+$proto26["m_sql"] = "FORMAT(C.Obligacion, 'C', 'es-CO')";
 $proto26["m_srcTableName"] = "dbo.Autorizaciones";
 $proto26["m_expr"]=$obj;
-$proto26["m_alias"] = "";
+$proto26["m_alias"] = "Obligacion";
 $obj = new SQLFieldListItem($proto26);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto28=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Ejecutoria",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
+						$proto31=array();
+			$proto32=array();
+$proto32["m_functiontype"] = "SQLF_CUSTOM";
+$proto32["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "C.Costas"
 ));
 
-$proto28["m_sql"] = "C.Ejecutoria";
-$proto28["m_srcTableName"] = "dbo.Autorizaciones";
-$proto28["m_expr"]=$obj;
-$proto28["m_alias"] = "";
-$obj = new SQLFieldListItem($proto28);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto30=array();
-			$obj = new SQLField(array(
-	"m_strName" => "PrimeraCopia",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
+$proto32["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
 ));
 
-$proto30["m_sql"] = "C.PrimeraCopia";
-$proto30["m_srcTableName"] = "dbo.Autorizaciones";
-$proto30["m_expr"]=$obj;
-$proto30["m_alias"] = "";
-$obj = new SQLFieldListItem($proto30);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto32=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Autentica",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
+$proto32["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
 ));
 
-$proto32["m_sql"] = "C.Autentica";
-$proto32["m_srcTableName"] = "dbo.Autorizaciones";
-$proto32["m_expr"]=$obj;
-$proto32["m_alias"] = "";
-$obj = new SQLFieldListItem($proto32);
+$proto32["m_arguments"][]=$obj;
+$proto32["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto32);
 
-$proto0["m_fieldlist"][]=$obj;
-						$proto34=array();
-			$obj = new SQLField(array(
-	"m_strName" => "PrestaMeritoEjecutivo",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto34["m_sql"] = "C.PrestaMeritoEjecutivo";
-$proto34["m_srcTableName"] = "dbo.Autorizaciones";
-$proto34["m_expr"]=$obj;
-$proto34["m_alias"] = "";
-$obj = new SQLFieldListItem($proto34);
+$proto31["m_sql"] = "FORMAT(C.Costas, 'C', 'es-CO')";
+$proto31["m_srcTableName"] = "dbo.Autorizaciones";
+$proto31["m_expr"]=$obj;
+$proto31["m_alias"] = "Costas";
+$obj = new SQLFieldListItem($proto31);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto36=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Clara",
+	"m_strName" => "Fecha",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto36["m_sql"] = "C.Clara";
+$proto36["m_sql"] = "C.Fecha";
 $proto36["m_srcTableName"] = "dbo.Autorizaciones";
 $proto36["m_expr"]=$obj;
 $proto36["m_alias"] = "";
@@ -6668,706 +1957,260 @@ $obj = new SQLFieldListItem($proto36);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto38=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Expresa",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "d.Codigo + ' -  ' +d.Despacho"
 ));
 
-$proto38["m_sql"] = "C.Expresa";
+$proto38["m_sql"] = "d.Codigo + ' -  ' +d.Despacho";
 $proto38["m_srcTableName"] = "dbo.Autorizaciones";
 $proto38["m_expr"]=$obj;
-$proto38["m_alias"] = "";
+$proto38["m_alias"] = "Competencia";
 $obj = new SQLFieldListItem($proto38);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto40=array();
-			$obj = new SQLField(array(
-	"m_strName" => "ActualmenteExigible",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto40["m_sql"] = "C.ActualmenteExigible";
-$proto40["m_srcTableName"] = "dbo.Autorizaciones";
-$proto40["m_expr"]=$obj;
-$proto40["m_alias"] = "";
-$obj = new SQLFieldListItem($proto40);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto42=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CompetenciaDEAJ",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto42["m_sql"] = "C.CompetenciaDEAJ";
-$proto42["m_srcTableName"] = "dbo.Autorizaciones";
-$proto42["m_expr"]=$obj;
-$proto42["m_alias"] = "";
-$obj = new SQLFieldListItem($proto42);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto44=array();
-			$obj = new SQLField(array(
-	"m_strName" => "FaltaRequisitos",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto44["m_sql"] = "C.FaltaRequisitos";
-$proto44["m_srcTableName"] = "dbo.Autorizaciones";
-$proto44["m_expr"]=$obj;
-$proto44["m_alias"] = "";
-$obj = new SQLFieldListItem($proto44);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto46=array();
-			$obj = new SQLField(array(
-	"m_strName" => "FaltaCompetencia",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto46["m_sql"] = "C.FaltaCompetencia";
-$proto46["m_srcTableName"] = "dbo.Autorizaciones";
-$proto46["m_expr"]=$obj;
-$proto46["m_alias"] = "";
-$obj = new SQLFieldListItem($proto46);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto48=array();
-			$obj = new SQLField(array(
-	"m_strName" => "PorPrescripcion",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto48["m_sql"] = "C.PorPrescripcion";
-$proto48["m_srcTableName"] = "dbo.Autorizaciones";
-$proto48["m_expr"]=$obj;
-$proto48["m_alias"] = "";
-$obj = new SQLFieldListItem($proto48);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto50=array();
-			$obj = new SQLField(array(
-	"m_strName" => "SeccionalId",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto50["m_sql"] = "C.SeccionalId";
-$proto50["m_srcTableName"] = "dbo.Autorizaciones";
-$proto50["m_expr"]=$obj;
-$proto50["m_alias"] = "";
-$obj = new SQLFieldListItem($proto50);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto52=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Folios",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto52["m_sql"] = "C.Folios";
-$proto52["m_srcTableName"] = "dbo.Autorizaciones";
-$proto52["m_expr"]=$obj;
-$proto52["m_alias"] = "";
-$obj = new SQLFieldListItem($proto52);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto54=array();
-			$obj = new SQLField(array(
-	"m_strName" => "SeccionalIdDestino",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto54["m_sql"] = "C.SeccionalIdDestino";
-$proto54["m_srcTableName"] = "dbo.Autorizaciones";
-$proto54["m_expr"]=$obj;
-$proto54["m_alias"] = "";
-$obj = new SQLFieldListItem($proto54);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto56=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Observaciones",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto56["m_sql"] = "C.Observaciones";
-$proto56["m_srcTableName"] = "dbo.Autorizaciones";
-$proto56["m_expr"]=$obj;
-$proto56["m_alias"] = "";
-$obj = new SQLFieldListItem($proto56);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto58=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Procesado",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto58["m_sql"] = "C.Procesado";
-$proto58["m_srcTableName"] = "dbo.Autorizaciones";
-$proto58["m_expr"]=$obj;
-$proto58["m_alias"] = "";
-$obj = new SQLFieldListItem($proto58);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto60=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Tipo",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto60["m_sql"] = "C.Tipo";
-$proto60["m_srcTableName"] = "dbo.Autorizaciones";
-$proto60["m_expr"]=$obj;
-$proto60["m_alias"] = "";
-$obj = new SQLFieldListItem($proto60);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto62=array();
-			$obj = new SQLField(array(
-	"m_strName" => "FechaSancion",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto62["m_sql"] = "C.FechaSancion";
-$proto62["m_srcTableName"] = "dbo.Autorizaciones";
-$proto62["m_expr"]=$obj;
-$proto62["m_alias"] = "";
-$obj = new SQLFieldListItem($proto62);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto64=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Cantidad",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto64["m_sql"] = "C.Cantidad";
-$proto64["m_srcTableName"] = "dbo.Autorizaciones";
-$proto64["m_expr"]=$obj;
-$proto64["m_alias"] = "";
-$obj = new SQLFieldListItem($proto64);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto66=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Obligacion",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto66["m_sql"] = "C.Obligacion";
-$proto66["m_srcTableName"] = "dbo.Autorizaciones";
-$proto66["m_expr"]=$obj;
-$proto66["m_alias"] = "";
-$obj = new SQLFieldListItem($proto66);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto68=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Costas",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto68["m_sql"] = "C.Costas";
-$proto68["m_srcTableName"] = "dbo.Autorizaciones";
-$proto68["m_expr"]=$obj;
-$proto68["m_alias"] = "";
-$obj = new SQLFieldListItem($proto68);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto70=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Remisorio",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto70["m_sql"] = "C.Remisorio";
-$proto70["m_srcTableName"] = "dbo.Autorizaciones";
-$proto70["m_expr"]=$obj;
-$proto70["m_alias"] = "";
-$obj = new SQLFieldListItem($proto70);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto72=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CarteraTipoId",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto72["m_sql"] = "C.CarteraTipoId";
-$proto72["m_srcTableName"] = "dbo.Autorizaciones";
-$proto72["m_expr"]=$obj;
-$proto72["m_alias"] = "";
-$obj = new SQLFieldListItem($proto72);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto74=array();
-			$obj = new SQLField(array(
-	"m_strName" => "MinJusticia",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto74["m_sql"] = "C.MinJusticia";
-$proto74["m_srcTableName"] = "dbo.Autorizaciones";
-$proto74["m_expr"]=$obj;
-$proto74["m_alias"] = "";
-$obj = new SQLFieldListItem($proto74);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto76=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Aprobado",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto76["m_sql"] = "C.Aprobado";
-$proto76["m_srcTableName"] = "dbo.Autorizaciones";
-$proto76["m_expr"]=$obj;
-$proto76["m_alias"] = "";
-$obj = new SQLFieldListItem($proto76);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto78=array();
-			$obj = new SQLField(array(
-	"m_strName" => "AprobadoPor",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto78["m_sql"] = "C.AprobadoPor";
-$proto78["m_srcTableName"] = "dbo.Autorizaciones";
-$proto78["m_expr"]=$obj;
-$proto78["m_alias"] = "";
-$obj = new SQLFieldListItem($proto78);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto80=array();
-			$obj = new SQLField(array(
-	"m_strName" => "FechaAprobacion",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto80["m_sql"] = "C.FechaAprobacion";
-$proto80["m_srcTableName"] = "dbo.Autorizaciones";
-$proto80["m_expr"]=$obj;
-$proto80["m_alias"] = "";
-$obj = new SQLFieldListItem($proto80);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto82=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Plazo",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto82["m_sql"] = "C.Plazo";
-$proto82["m_srcTableName"] = "dbo.Autorizaciones";
-$proto82["m_expr"]=$obj;
-$proto82["m_alias"] = "";
-$obj = new SQLFieldListItem($proto82);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto84=array();
-			$obj = new SQLField(array(
-	"m_strName" => "NaturalezaId",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto84["m_sql"] = "C.NaturalezaId";
-$proto84["m_srcTableName"] = "dbo.Autorizaciones";
-$proto84["m_expr"]=$obj;
-$proto84["m_alias"] = "";
-$obj = new SQLFieldListItem($proto84);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto86=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Sigobius",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto86["m_sql"] = "C.Sigobius";
-$proto86["m_srcTableName"] = "dbo.Autorizaciones";
-$proto86["m_expr"]=$obj;
-$proto86["m_alias"] = "";
-$obj = new SQLFieldListItem($proto86);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto88=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Monto",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto88["m_sql"] = "C.Monto";
-$proto88["m_srcTableName"] = "dbo.Autorizaciones";
-$proto88["m_expr"]=$obj;
-$proto88["m_alias"] = "";
-$obj = new SQLFieldListItem($proto88);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto90=array();
-			$obj = new SQLField(array(
-	"m_strName" => "TramiteId",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto90["m_sql"] = "C.TramiteId";
-$proto90["m_srcTableName"] = "dbo.Autorizaciones";
-$proto90["m_expr"]=$obj;
-$proto90["m_alias"] = "";
-$obj = new SQLFieldListItem($proto90);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto92=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Fisico",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto92["m_sql"] = "C.Fisico";
-$proto92["m_srcTableName"] = "dbo.Autorizaciones";
-$proto92["m_expr"]=$obj;
-$proto92["m_alias"] = "";
-$obj = new SQLFieldListItem($proto92);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto94=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Digital",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto94["m_sql"] = "C.Digital";
-$proto94["m_srcTableName"] = "dbo.Autorizaciones";
-$proto94["m_expr"]=$obj;
-$proto94["m_alias"] = "";
-$obj = new SQLFieldListItem($proto94);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto96=array();
-			$obj = new SQLField(array(
-	"m_strName" => "ChequeoId",
-	"m_strTable" => "C",
-	"m_srcTableName" => "dbo.Autorizaciones"
-));
-
-$proto96["m_sql"] = "C.ChequeoId";
-$proto96["m_srcTableName"] = "dbo.Autorizaciones";
-$proto96["m_expr"]=$obj;
-$proto96["m_alias"] = "";
-$obj = new SQLFieldListItem($proto96);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto98=array();
-$proto98["m_link"] = "SQLL_MAIN";
-			$proto99=array();
-$proto99["m_strName"] = "dbo.Chequeos";
-$proto99["m_srcTableName"] = "dbo.Autorizaciones";
-$proto99["m_columns"] = array();
-$proto99["m_columns"][] = "ChequeoId";
-$proto99["m_columns"][] = "ConceptoId";
-$proto99["m_columns"][] = "AbogadoId";
-$proto99["m_columns"][] = "Fecha";
-$proto99["m_columns"][] = "DespachoId";
-$proto99["m_columns"][] = "Origen";
-$proto99["m_columns"][] = "Providencia";
-$proto99["m_columns"][] = "Ejecutoria";
-$proto99["m_columns"][] = "PrimeraCopia";
-$proto99["m_columns"][] = "Autentica";
-$proto99["m_columns"][] = "PrestaMeritoEjecutivo";
-$proto99["m_columns"][] = "Clara";
-$proto99["m_columns"][] = "Expresa";
-$proto99["m_columns"][] = "ActualmenteExigible";
-$proto99["m_columns"][] = "CompetenciaDEAJ";
-$proto99["m_columns"][] = "FaltaRequisitos";
-$proto99["m_columns"][] = "FaltaCompetencia";
-$proto99["m_columns"][] = "PorPrescripcion";
-$proto99["m_columns"][] = "SeccionalId";
-$proto99["m_columns"][] = "Folios";
-$proto99["m_columns"][] = "SeccionalIdDestino";
-$proto99["m_columns"][] = "Observaciones";
-$proto99["m_columns"][] = "Procesado";
-$proto99["m_columns"][] = "Tipo";
-$proto99["m_columns"][] = "FechaSancion";
-$proto99["m_columns"][] = "Cantidad";
-$proto99["m_columns"][] = "Obligacion";
-$proto99["m_columns"][] = "Costas";
-$proto99["m_columns"][] = "Remisorio";
-$proto99["m_columns"][] = "CarteraTipoId";
-$proto99["m_columns"][] = "MinJusticia";
-$proto99["m_columns"][] = "Aprobado";
-$proto99["m_columns"][] = "AprobadoPor";
-$proto99["m_columns"][] = "FechaAprobacion";
-$proto99["m_columns"][] = "Plazo";
-$proto99["m_columns"][] = "NaturalezaId";
-$proto99["m_columns"][] = "Sigobius";
-$proto99["m_columns"][] = "Monto";
-$proto99["m_columns"][] = "TramiteId";
-$proto99["m_columns"][] = "Fisico";
-$proto99["m_columns"][] = "Digital";
-$obj = new SQLTable($proto99);
+												$proto40=array();
+$proto40["m_link"] = "SQLL_MAIN";
+			$proto41=array();
+$proto41["m_strName"] = "dbo.Chequeos";
+$proto41["m_srcTableName"] = "dbo.Autorizaciones";
+$proto41["m_columns"] = array();
+$proto41["m_columns"][] = "ChequeoId";
+$proto41["m_columns"][] = "ConceptoId";
+$proto41["m_columns"][] = "AbogadoId";
+$proto41["m_columns"][] = "Fecha";
+$proto41["m_columns"][] = "DespachoId";
+$proto41["m_columns"][] = "Origen";
+$proto41["m_columns"][] = "Providencia";
+$proto41["m_columns"][] = "Ejecutoria";
+$proto41["m_columns"][] = "PrimeraCopia";
+$proto41["m_columns"][] = "Autentica";
+$proto41["m_columns"][] = "PrestaMeritoEjecutivo";
+$proto41["m_columns"][] = "Clara";
+$proto41["m_columns"][] = "Expresa";
+$proto41["m_columns"][] = "ActualmenteExigible";
+$proto41["m_columns"][] = "CompetenciaDEAJ";
+$proto41["m_columns"][] = "FaltaRequisitos";
+$proto41["m_columns"][] = "FaltaCompetencia";
+$proto41["m_columns"][] = "PorPrescripcion";
+$proto41["m_columns"][] = "SeccionalId";
+$proto41["m_columns"][] = "Folios";
+$proto41["m_columns"][] = "SeccionalIdDestino";
+$proto41["m_columns"][] = "Observaciones";
+$proto41["m_columns"][] = "Procesado";
+$proto41["m_columns"][] = "Tipo";
+$proto41["m_columns"][] = "FechaSancion";
+$proto41["m_columns"][] = "Cantidad";
+$proto41["m_columns"][] = "Obligacion";
+$proto41["m_columns"][] = "Costas";
+$proto41["m_columns"][] = "Remisorio";
+$proto41["m_columns"][] = "CarteraTipoId";
+$proto41["m_columns"][] = "MinJusticia";
+$proto41["m_columns"][] = "Aprobado";
+$proto41["m_columns"][] = "AprobadoPor";
+$proto41["m_columns"][] = "FechaAprobacion";
+$proto41["m_columns"][] = "Plazo";
+$proto41["m_columns"][] = "NaturalezaId";
+$proto41["m_columns"][] = "Sigobius";
+$proto41["m_columns"][] = "Monto";
+$proto41["m_columns"][] = "TramiteId";
+$proto41["m_columns"][] = "Fisico";
+$proto41["m_columns"][] = "Digital";
+$obj = new SQLTable($proto41);
 
-$proto98["m_table"] = $obj;
-$proto98["m_sql"] = "dbo.Chequeos AS C";
-$proto98["m_alias"] = "C";
-$proto98["m_srcTableName"] = "dbo.Autorizaciones";
-$proto100=array();
-$proto100["m_sql"] = "";
-$proto100["m_uniontype"] = "SQLL_UNKNOWN";
+$proto40["m_table"] = $obj;
+$proto40["m_sql"] = "dbo.Chequeos AS C";
+$proto40["m_alias"] = "C";
+$proto40["m_srcTableName"] = "dbo.Autorizaciones";
+$proto42=array();
+$proto42["m_sql"] = "";
+$proto42["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto100["m_column"]=$obj;
-$proto100["m_contained"] = array();
-$proto100["m_strCase"] = "";
-$proto100["m_havingmode"] = false;
-$proto100["m_inBrackets"] = false;
-$proto100["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto100);
+$proto42["m_column"]=$obj;
+$proto42["m_contained"] = array();
+$proto42["m_strCase"] = "";
+$proto42["m_havingmode"] = false;
+$proto42["m_inBrackets"] = false;
+$proto42["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto42);
 
-$proto98["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto98);
+$proto40["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto40);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto102=array();
-$proto102["m_link"] = "SQLL_INNERJOIN";
-			$proto103=array();
-$proto103["m_strName"] = "dbo.Seccionales";
-$proto103["m_srcTableName"] = "dbo.Autorizaciones";
-$proto103["m_columns"] = array();
-$proto103["m_columns"][] = "SeccionalId";
-$proto103["m_columns"][] = "Codigo";
-$proto103["m_columns"][] = "Seccional";
-$proto103["m_columns"][] = "NIT";
-$proto103["m_columns"][] = "CiudadId";
-$proto103["m_columns"][] = "PiePagina";
-$proto103["m_columns"][] = "Sigobius";
-$proto103["m_columns"][] = "Email";
-$proto103["m_columns"][] = "Direccion";
-$proto103["m_columns"][] = "Telefonos";
-$proto103["m_columns"][] = "PCI";
-$proto103["m_columns"][] = "Contador";
-$proto103["m_columns"][] = "ContadorCargo";
-$proto103["m_columns"][] = "Director";
-$proto103["m_columns"][] = "DirectorCargo";
-$proto103["m_columns"][] = "Abogado";
-$proto103["m_columns"][] = "AbogadoCargo";
-$proto103["m_columns"][] = "Formato";
-$proto103["m_columns"][] = "Corporacion";
-$proto103["m_columns"][] = "Unidad";
-$proto103["m_columns"][] = "Oficina";
-$proto103["m_columns"][] = "Serie";
-$proto103["m_columns"][] = "Subserie";
-$obj = new SQLTable($proto103);
+												$proto44=array();
+$proto44["m_link"] = "SQLL_INNERJOIN";
+			$proto45=array();
+$proto45["m_strName"] = "dbo.Seccionales";
+$proto45["m_srcTableName"] = "dbo.Autorizaciones";
+$proto45["m_columns"] = array();
+$proto45["m_columns"][] = "SeccionalId";
+$proto45["m_columns"][] = "Codigo";
+$proto45["m_columns"][] = "Seccional";
+$proto45["m_columns"][] = "NIT";
+$proto45["m_columns"][] = "CiudadId";
+$proto45["m_columns"][] = "PiePagina";
+$proto45["m_columns"][] = "Sigobius";
+$proto45["m_columns"][] = "Email";
+$proto45["m_columns"][] = "Direccion";
+$proto45["m_columns"][] = "Telefonos";
+$proto45["m_columns"][] = "PCI";
+$proto45["m_columns"][] = "Contador";
+$proto45["m_columns"][] = "ContadorCargo";
+$proto45["m_columns"][] = "Director";
+$proto45["m_columns"][] = "DirectorCargo";
+$proto45["m_columns"][] = "Abogado";
+$proto45["m_columns"][] = "AbogadoCargo";
+$proto45["m_columns"][] = "Formato";
+$proto45["m_columns"][] = "Corporacion";
+$proto45["m_columns"][] = "Unidad";
+$proto45["m_columns"][] = "Oficina";
+$proto45["m_columns"][] = "Serie";
+$proto45["m_columns"][] = "Subserie";
+$obj = new SQLTable($proto45);
 
-$proto102["m_table"] = $obj;
-$proto102["m_sql"] = "INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId";
-$proto102["m_alias"] = "S";
-$proto102["m_srcTableName"] = "dbo.Autorizaciones";
-$proto104=array();
-$proto104["m_sql"] = "S.SeccionalId = C.SeccionalId";
-$proto104["m_uniontype"] = "SQLL_UNKNOWN";
+$proto44["m_table"] = $obj;
+$proto44["m_sql"] = "INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId";
+$proto44["m_alias"] = "S";
+$proto44["m_srcTableName"] = "dbo.Autorizaciones";
+$proto46=array();
+$proto46["m_sql"] = "S.SeccionalId = C.SeccionalId";
+$proto46["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "SeccionalId",
 	"m_strTable" => "S",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto104["m_column"]=$obj;
-$proto104["m_contained"] = array();
-$proto104["m_strCase"] = "= C.SeccionalId";
-$proto104["m_havingmode"] = false;
-$proto104["m_inBrackets"] = false;
-$proto104["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto104);
+$proto46["m_column"]=$obj;
+$proto46["m_contained"] = array();
+$proto46["m_strCase"] = "= C.SeccionalId";
+$proto46["m_havingmode"] = false;
+$proto46["m_inBrackets"] = false;
+$proto46["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto46);
 
-$proto102["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto102);
+$proto44["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto44);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto106=array();
-$proto106["m_link"] = "SQLL_INNERJOIN";
-			$proto107=array();
-$proto107["m_strName"] = "dbo.CarteraTipos";
-$proto107["m_srcTableName"] = "dbo.Autorizaciones";
-$proto107["m_columns"] = array();
-$proto107["m_columns"][] = "CarteraTipoId";
-$proto107["m_columns"][] = "CarteraTipo";
-$proto107["m_columns"][] = "Color";
-$proto107["m_columns"][] = "Prescrita";
-$obj = new SQLTable($proto107);
+												$proto48=array();
+$proto48["m_link"] = "SQLL_INNERJOIN";
+			$proto49=array();
+$proto49["m_strName"] = "dbo.Conceptos";
+$proto49["m_srcTableName"] = "dbo.Autorizaciones";
+$proto49["m_columns"] = array();
+$proto49["m_columns"][] = "ConceptoId";
+$proto49["m_columns"][] = "Concepto";
+$proto49["m_columns"][] = "Activo";
+$proto49["m_columns"][] = "Cuenta";
+$obj = new SQLTable($proto49);
 
-$proto106["m_table"] = $obj;
-$proto106["m_sql"] = "INNER JOIN dbo.CarteraTipos AS CA ON C.CarteraTipoId = CA.CarteraTipoId";
-$proto106["m_alias"] = "CA";
-$proto106["m_srcTableName"] = "dbo.Autorizaciones";
-$proto108=array();
-$proto108["m_sql"] = "CA.CarteraTipoId = C.CarteraTipoId";
-$proto108["m_uniontype"] = "SQLL_UNKNOWN";
+$proto48["m_table"] = $obj;
+$proto48["m_sql"] = "INNER JOIN dbo.Conceptos AS co ON C.ConceptoId = co.ConceptoId";
+$proto48["m_alias"] = "co";
+$proto48["m_srcTableName"] = "dbo.Autorizaciones";
+$proto50=array();
+$proto50["m_sql"] = "co.ConceptoId = C.ConceptoId";
+$proto50["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "CarteraTipoId",
-	"m_strTable" => "CA",
+	"m_strName" => "ConceptoId",
+	"m_strTable" => "co",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto108["m_column"]=$obj;
-$proto108["m_contained"] = array();
-$proto108["m_strCase"] = "= C.CarteraTipoId";
-$proto108["m_havingmode"] = false;
-$proto108["m_inBrackets"] = false;
-$proto108["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto108);
+$proto50["m_column"]=$obj;
+$proto50["m_contained"] = array();
+$proto50["m_strCase"] = "= C.ConceptoId";
+$proto50["m_havingmode"] = false;
+$proto50["m_inBrackets"] = false;
+$proto50["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto50);
 
-$proto106["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto106);
+$proto48["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto48);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto110=array();
-$proto110["m_link"] = "SQLL_INNERJOIN";
-			$proto111=array();
-$proto111["m_strName"] = "dbo.Procesos";
-$proto111["m_srcTableName"] = "dbo.Autorizaciones";
-$proto111["m_columns"] = array();
-$proto111["m_columns"][] = "ProcesoId";
-$proto111["m_columns"][] = "SeccionalId";
-$proto111["m_columns"][] = "AbogadoId";
-$proto111["m_columns"][] = "Fecha";
-$proto111["m_columns"][] = "Numero";
-$proto111["m_columns"][] = "DespachoId";
-$proto111["m_columns"][] = "SancionadoId";
-$proto111["m_columns"][] = "Providencia";
-$proto111["m_columns"][] = "Ejecutoria";
-$proto111["m_columns"][] = "ConceptoId";
-$proto111["m_columns"][] = "EstadoId";
-$proto111["m_columns"][] = "EtapaId";
-$proto111["m_columns"][] = "Folios";
-$proto111["m_columns"][] = "Tipo";
-$proto111["m_columns"][] = "Cantidad";
-$proto111["m_columns"][] = "Obligacion";
-$proto111["m_columns"][] = "Costas";
-$proto111["m_columns"][] = "Liquidacion";
-$proto111["m_columns"][] = "Dias";
-$proto111["m_columns"][] = "Intereses";
-$proto111["m_columns"][] = "Recaudo";
-$proto111["m_columns"][] = "CalificacionId";
-$proto111["m_columns"][] = "Terminacion";
-$proto111["m_columns"][] = "MotivoId";
-$proto111["m_columns"][] = "Observaciones";
-$proto111["m_columns"][] = "Cuotas";
-$proto111["m_columns"][] = "Abono";
-$proto111["m_columns"][] = "Inicio";
-$proto111["m_columns"][] = "VlrCuota";
-$proto111["m_columns"][] = "VlrIntereses";
-$proto111["m_columns"][] = "Garantia";
-$proto111["m_columns"][] = "Radicado";
-$proto111["m_columns"][] = "Remisorio";
-$proto111["m_columns"][] = "Acuerdo";
-$proto111["m_columns"][] = "Incumplimiento";
-$proto111["m_columns"][] = "Notificacion";
-$proto111["m_columns"][] = "Suspension";
-$proto111["m_columns"][] = "Traslado";
-$proto111["m_columns"][] = "Error";
-$proto111["m_columns"][] = "CarteraTipoId";
-$proto111["m_columns"][] = "ConceptoAbogado";
-$proto111["m_columns"][] = "Origen";
-$proto111["m_columns"][] = "Carpeta";
-$proto111["m_columns"][] = "ImportacionId";
-$proto111["m_columns"][] = "ActuacionId";
-$proto111["m_columns"][] = "ObligacionInicial";
-$proto111["m_columns"][] = "CostasInicial";
-$proto111["m_columns"][] = "InteresesInicial";
-$proto111["m_columns"][] = "MinJusticia";
-$proto111["m_columns"][] = "Revocatoria";
-$proto111["m_columns"][] = "Mayor";
-$proto111["m_columns"][] = "NotificacionValidada";
-$proto111["m_columns"][] = "Validado";
-$proto111["m_columns"][] = "Seleccionado";
-$proto111["m_columns"][] = "CompetenciaId";
-$proto111["m_columns"][] = "MinjusticiaId";
-$proto111["m_columns"][] = "SeleccionadoPor";
-$proto111["m_columns"][] = "Subsanar";
-$proto111["m_columns"][] = "NumeroMinjusticia";
-$proto111["m_columns"][] = "ProcesoIdOrigen";
-$proto111["m_columns"][] = "SeleccionadoFecha";
-$proto111["m_columns"][] = "InteresesIniciales";
-$proto111["m_columns"][] = "InteresesCalculados";
-$proto111["m_columns"][] = "ProcesoIdDestino";
-$proto111["m_columns"][] = "RecaudoMinjusticia";
-$proto111["m_columns"][] = "RecaudoTerminado";
-$proto111["m_columns"][] = "Persuasivo";
-$proto111["m_columns"][] = "ObligacionCreacion";
-$proto111["m_columns"][] = "InteresesCreacion";
-$proto111["m_columns"][] = "CostasCreacion";
-$proto111["m_columns"][] = "Plazo";
-$proto111["m_columns"][] = "NaturalezaId";
-$proto111["m_columns"][] = "TrasladoCartera";
-$proto111["m_columns"][] = "CarteraTipoIdOrigen";
-$proto111["m_columns"][] = "TrasladoConcepto";
-$proto111["m_columns"][] = "ConceptoIdOrigen";
-$proto111["m_columns"][] = "AutorizadoPlazo";
-$proto111["m_columns"][] = "AutorizadoFecha";
-$proto111["m_columns"][] = "AutorizadoPor";
-$proto111["m_columns"][] = "Reliquidacion";
-$proto111["m_columns"][] = "ChequeoId";
-$proto111["m_columns"][] = "VlrCostas";
-$proto111["m_columns"][] = "VlrInteresesPlazo";
-$proto111["m_columns"][] = "SeccionalIdOrigen";
-$obj = new SQLTable($proto111);
+												$proto52=array();
+$proto52["m_link"] = "SQLL_INNERJOIN";
+			$proto53=array();
+$proto53["m_strName"] = "dbo.tipoCobro";
+$proto53["m_srcTableName"] = "dbo.Autorizaciones";
+$proto53["m_columns"] = array();
+$proto53["m_columns"][] = "TipoId";
+$proto53["m_columns"][] = "Tipo";
+$obj = new SQLTable($proto53);
 
-$proto110["m_table"] = $obj;
-$proto110["m_sql"] = "INNER JOIN dbo.Procesos AS P ON C.ChequeoId = P.ChequeoId";
-$proto110["m_alias"] = "P";
-$proto110["m_srcTableName"] = "dbo.Autorizaciones";
-$proto112=array();
-$proto112["m_sql"] = "P.ChequeoId = C.ChequeoId";
-$proto112["m_uniontype"] = "SQLL_UNKNOWN";
+$proto52["m_table"] = $obj;
+$proto52["m_sql"] = "INNER JOIN dbo.tipoCobro AS t ON C.Tipo = t.TipoId";
+$proto52["m_alias"] = "t";
+$proto52["m_srcTableName"] = "dbo.Autorizaciones";
+$proto54=array();
+$proto54["m_sql"] = "t.TipoId = C.Tipo";
+$proto54["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "ChequeoId",
-	"m_strTable" => "P",
+	"m_strName" => "TipoId",
+	"m_strTable" => "t",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
-$proto112["m_column"]=$obj;
-$proto112["m_contained"] = array();
-$proto112["m_strCase"] = "= C.ChequeoId";
-$proto112["m_havingmode"] = false;
-$proto112["m_inBrackets"] = false;
-$proto112["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto112);
+$proto54["m_column"]=$obj;
+$proto54["m_contained"] = array();
+$proto54["m_strCase"] = "= C.Tipo";
+$proto54["m_havingmode"] = false;
+$proto54["m_inBrackets"] = false;
+$proto54["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto54);
 
-$proto110["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto110);
+$proto52["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto52);
+
+$proto0["m_fromlist"][]=$obj;
+												$proto56=array();
+$proto56["m_link"] = "SQLL_INNERJOIN";
+			$proto57=array();
+$proto57["m_strName"] = "dbo.Despachos";
+$proto57["m_srcTableName"] = "dbo.Autorizaciones";
+$proto57["m_columns"] = array();
+$proto57["m_columns"][] = "DespachoId";
+$proto57["m_columns"][] = "Codigo";
+$proto57["m_columns"][] = "Despacho";
+$proto57["m_columns"][] = "CiudadId";
+$proto57["m_columns"][] = "Especialidad";
+$proto57["m_columns"][] = "Subespecialidad";
+$proto57["m_columns"][] = "Activo";
+$proto57["m_columns"][] = "Juez";
+$proto57["m_columns"][] = "Correo";
+$proto57["m_columns"][] = "Telefonos";
+$proto57["m_columns"][] = "Direccion";
+$obj = new SQLTable($proto57);
+
+$proto56["m_table"] = $obj;
+$proto56["m_sql"] = "INNER JOIN dbo.Despachos AS d ON C.DespachoId = d.DespachoId";
+$proto56["m_alias"] = "d";
+$proto56["m_srcTableName"] = "dbo.Autorizaciones";
+$proto58=array();
+$proto58["m_sql"] = "d.DespachoId = C.DespachoId";
+$proto58["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "DespachoId",
+	"m_strTable" => "d",
+	"m_srcTableName" => "dbo.Autorizaciones"
+));
+
+$proto58["m_column"]=$obj;
+$proto58["m_contained"] = array();
+$proto58["m_strCase"] = "= C.DespachoId";
+$proto58["m_havingmode"] = false;
+$proto58["m_inBrackets"] = false;
+$proto58["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto58);
+
+$proto56["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto56);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -7383,7 +2226,7 @@ $queryData_autorizaciones = createSqlQuery_autorizaciones();
 	
 		;
 
-																																									
+									
 
 $tdataautorizaciones[".sqlquery"] = $queryData_autorizaciones;
 

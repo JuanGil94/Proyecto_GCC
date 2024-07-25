@@ -134,7 +134,7 @@ $tdatacarteratipos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																										
+																																																																																													
 
 $tdatacarteratipos[".ajaxCodeSnippetAdded"] = false;
 

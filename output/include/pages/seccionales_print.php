@@ -9,7 +9,6 @@
 'dbo.Minjusticia' => array( 'displayPreview' => 1 ),
 'dbo.Minjusticia2' => array( 'displayPreview' => 1 ),
 'dbo.Minjusticia3' => array( 'displayPreview' => 1 ),
-'dbo.Autorizaciones' => array( 'displayPreview' => 1 ),
 'dbo.ProcesosReasignar' => array( 'displayPreview' => 1 ) ),
 'master' => array( 'dbo.Cuentas' => array( 'preview' => true ) ),
 'totals' => array( 'SeccionalId' => array( 'totalsType' => '' ),

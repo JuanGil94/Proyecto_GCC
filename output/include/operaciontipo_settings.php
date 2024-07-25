@@ -128,7 +128,7 @@ $tdataoperaciontipo[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																										
+																																																																																													
 
 $tdataoperaciontipo[".ajaxCodeSnippetAdded"] = false;
 

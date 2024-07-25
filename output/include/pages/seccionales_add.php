@@ -17,8 +17,6 @@
 'previewPageId' => '' ),
 'dbo.Minjusticia3' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'dbo.Autorizaciones' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
 'dbo.ProcesosReasignar' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Cuentas' => array( 'preview' => false ) ),

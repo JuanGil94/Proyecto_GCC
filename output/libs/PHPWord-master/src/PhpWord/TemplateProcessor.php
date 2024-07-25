@@ -182,7 +182,8 @@ class TemplateProcessor
         if (substr($search, 0, 2) !== '${' && substr($search, -1) !== '}') {
             $search = '${' . $search . '}';
         }
-
+        //echo $search ;
+        //echo $this->temporaryDocumentMainPart;
         $tagPos = strpos($this->temporaryDocumentMainPart, $search);
         if (!$tagPos) {
             throw new Exception("Can not clone row, template variable not found or variable contains markup.");
@@ -225,7 +226,6 @@ class TemplateProcessor
 
         $this->temporaryDocumentMainPart = $result;
     }
-
     /**
      * Clone a block.
      *
