@@ -286,6 +286,16 @@ if($buttId=='Resumen_Mensual1')
 	}
 	buttonHandler_Resumen_Mensual1($params);
 }
+if($buttId=='fichaTecnica')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_fichaTecnica($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -404,13 +414,6 @@ function buttonHandler_New_Button($params)
 	$data = $button->getCurrentRecord();
 $params["ChequeoId"]=$data["ChequeoId"];
 if ($data["TramiteId"]!= 1){
-//print_r($data);
-/*
-global $pageObject;
-$data = $pageObject->getMasterRecord(); //Obtengo los datos de la tabla Master
-print_r($data);
-exit();
-*/
 $carteraTipoId=1;
 $rs=DB::Query("declare @p2 int
 set @p2=0
@@ -427,11 +430,17 @@ while( $data = $rs->fetchAssoc() )
 		//echo "Valor del Numero error: ".$Errnum;
 	}
 if ($Errmsg){
+/*
 	echo " <script>if (confirm('Se encontro un error al crear el Proceso: ".$Errmsg."')) {
             location.reload(); // Recargar la página si el usuario hace clic en Aceptar
         }</script>";
+*/
+	$result["Errr"]=1;
+	$result["mensaje"]=$Errmsg;
+	//return true;
 	}
-
+else{
+$result["ChequeoId"]=$data["ChequeoId"];
 //Si no se detecta error, se ejecuta la creacion del proceso
 $result["total"]= DB::DBLookup("select ChequeoId from ChequeosSancionados where ChequeoId=".$params["ChequeoId"]);
 $contador=0;
@@ -623,6 +632,7 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 			}
 		}
 }   
+}
 }
 else{
 	$result["Dev"]=1;
@@ -2669,6 +2679,71 @@ function buttonHandler_Resumen_Mensual1($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	$_SESSION["fechaIn"]=$params["txt"].'-01';
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_fichaTecnica($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	include_once (getabspath("plantillaGCC.php"));
+$data = $button->getCurrentRecord();
+$result["ProcesoId"]=$data["ProcesoId"];
+$objeto=new fichaTecnica($data["ProcesoId"]);
+$objeto->planFichaTecnica();
+$comando = '"C:\Program Files\LibreOffice\program\soffice.bin" --convert-to pdf --outdir "templates_GCC\caratulas" "templates_GCC\FichaTecnica_'.$result["ProcesoId"].'.docx"';
+//chdir("C:\Projects\Proyecto_GCC\output\templates_GCC") ;
+//$directorioActual = getcwd();//mostrar directorio donde se ejecuta el comando
+//echo "Directorio Actual".$directorioActual;
+// Ejecutar el comando
+$resultado = shell_exec($comando);
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);

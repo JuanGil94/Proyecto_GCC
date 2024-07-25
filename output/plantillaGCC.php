@@ -977,4 +977,148 @@ class plantillaDev extends diccionarioChequeo{
     }
 }
 
+class fichaTecnica {
+    public $procesoId;
+    public function __construct($procesoId){
+        $this->procesoId=$procesoId;
+    }
+    public function processFicha (){
+        //echo "value".$oficioId;
+        $consulta=DB::Query("SELECT ProcesosView.ProcesoId
+		,ProcesosView.SancionadoId
+		,ProcesosView.Sancionado
+		,ProcesosView.SancionadoDocumento AS Documento
+		,ProcesosView.Concepto
+		,ProcesosView.Numero
+		,FORMAT(ProcesosView.Obligacion, 'C', 'es-CO') AS Obligacion
+		,FORMAT(ProcesosView.Costas, 'C', 'es-CO') AS Costas
+		,FORMAT(ProcesosView.Intereses, 'C', 'es-CO') AS Intereses
+		,FORMAT(CONVERT(DATE, ProcesosView.Ejecutoria), 'dd/MM/yyyy') as Ejecutoria
+		,FORMAT(CONVERT(DATE, ProcesosView.Providencia), 'dd/MM/yyyy') as Providencia
+		,ProcesosView.ConceptoAbogado
+		,ProcesosView.PiePagina
+		,FORMAT(CONVERT(DATE, DATEADD(year, 5, CASE 
+				WHEN ProcesosView.Incumplimiento IS NULL
+					THEN CASE 
+							WHEN ProcesosView.Acuerdo IS NULL
+								THEN CASE 
+										WHEN ProcesosView.Notificacion IS NULL
+											THEN ProcesosView.Ejecutoria
+										ELSE ProcesosView.Notificacion
+										END
+							ELSE ProcesosView.Acuerdo
+							END
+				ELSE ProcesosView.Incumplimiento
+				END)), 'dd/MM/yyyy') as Prescripcion 
+        ,FORMAT(CONVERT(DATE, ProcesosView.Plazo), 'dd/MM/yyyy') as Plazo 
+	FROM ProcesosView
+	WHERE ProcesoId =".$this->procesoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info=array(
+                "SancionadoId"=>$date["SancionadoId"],
+                "Sancionado"=>$date["Sancionado"],
+                "Documento"=>$date["Documento"],
+                "Numero"=>$date["Numero"],
+                "Concepto"=>$date["Concepto"],
+                "Obligacion"=>$date["Obligacion"],
+                "Intereses"=>$date["Intereses"],
+                "Costas"=>$date["Costas"],
+                "Providencia"=>$date["Providencia"],
+                "Ejecutoria"=>$date["Ejecutoria"],
+                "Prescripcion"=>$date["Prescripcion"],
+                "Plazo"=>$date["Plazo"],
+                "ConceptoAbogado"=>$date["ConceptoAbogado"],
+                "PiePagina"=>$date["PiePagina"]
+            );
+        }
+        $date = new DateTime();
+        // Formatear la fecha y la hora
+        $info["date"]=$date->format('Y-m-d H:i:s');
+        return $info;
+    }
+    public function planFichaTecnica (){ 
+        $info=$this->processFicha();
+        $templatePath = 'templates_GCC/Plantilla_FichaTecnica.docx';
+        $templateProcessor = new TemplateProcessor($templatePath);
+        //$variables = $templateProcessor->getVariables();
+        $templateProcessor->setValue('date',$info['date']);
+        $templateProcessor->setValue('Sancionado',$info['Sancionado']);
+        $templateProcessor->setValue('Documento',$info['Documento']);
+        $templateProcessor->setValue('Numero',$info['Numero']);
+        $templateProcessor->setValue('Concepto',$info['Concepto']);
+        $templateProcessor->setValue('Obligacion',$info['Obligacion']);
+        $templateProcessor->setValue('Intereses',$info['Intereses']);
+        $templateProcessor->setValue('Costas',$info['Costas']);
+        $templateProcessor->setValue('Providencia',$info['Providencia']);
+        $templateProcessor->setValue('Ejecutoria',$info['Ejecutoria']);
+        $templateProcessor->setValue('Prescripcion',$info['Prescripcion']);
+        $templateProcessor->setValue('Plazo',$info['Plazo']);
+        $templateProcessor->setValue('ConceptoAbogado',$info['ConceptoAbogado']);
+        $templateProcessor->setValue('PiePagina',$info['PiePagina']);
+        $correspondencias=$this->tablaCorrespondencias();
+        $bienes=$this->tablaBienes($info['SancionadoId']);
+        $templateProcessor->cloneRow('propiedad', count($bienes));
+        $templateProcessor->cloneRow('fecha', count($correspondencias));
+        $count=1;
+        foreach($bienes as $date){
+            //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
+            $templateProcessor->setValue('propiedad#'.$count, htmlspecialchars($date["Propiedad"]));
+            $templateProcessor->setValue('avaluo#'.$count, htmlspecialchars($date["Avaluo"]));
+            $templateProcessor->setValue('ciudad#'.$count, htmlspecialchars($date["Fecha"]));
+            $templateProcessor->setValue('dirección#'.$count, htmlspecialchars($date["Direccion"]));
+            $templateProcessor->setValue('observaciones#'.$count, htmlspecialchars($date["Costas"]));
+            $count++;
+        }
+        $count=1;
+        foreach($correspondencias as $date){
+            //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
+            $templateProcessor->setValue('fecha#'.$count, htmlspecialchars($date["Fecha"]));
+            $templateProcessor->setValue('oficio#'.$count, htmlspecialchars($date["Oficio"]));
+            $templateProcessor->setValue('resolución#'.$count, htmlspecialchars($date["Resolucion"]));
+            $templateProcessor->setValue('radicado#'.$count, htmlspecialchars($date["Radicado"]));
+            $templateProcessor->setValue('observacionesC#'.$count, htmlspecialchars($date["Observaciones"]));
+            $count++;
+        }
+        $templateProcessor->saveAs('templates_GCC/FichaTecnica_'.$this->procesoId.'.docx');
+    }
+    public function tablaCorrespondencias(){
+        $consulta=DB::Query("SELECT        Actuaciones.ActuacionId, Oficios.OficioId, Oficios.Oficio, Actuaciones.Actuacion, Correspondencias.Fecha, Correspondencias.ProcesoId, Correspondencias.Sigobius, Correspondencias.Observaciones, Correspondencias.Codigo, 
+                        Correspondencias.Resolucion, Correspondencias.AbogadoId, Correspondencias.UserId, Correspondencias.Radicado, Oficios.OficioIdRequisito
+                        FROM            Actuaciones 
+                        INNER JOIN      Oficios ON Actuaciones.ActuacionId = Oficios.ActuacionId 
+                        INNER JOIN      Correspondencias ON Oficios.OficioId = Correspondencias.OficioId
+                        WHERE        (Actuaciones.ActuacionId = 1035) and Correspondencias.ProcesoId=".$this->procesoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            //echo $date["Cuota"]; 
+            $correspondencias[]=$date;
+            //$cuotas[]=$date["Cuota"];
+        }
+        //print_r($acuerdo);
+        return $correspondencias;
+    }
+    public function tablaBienes($sancionadoId){
+        $consulta=DB::Query("SELECT Ciudades.Ciudad, 
+       Propiedades.Propiedad, 
+       Propiedades.Avaluo, 
+       Propiedades.Observaciones, 
+       Propiedades.Direccion 
+    FROM Propiedades
+    INNER JOIN Ciudades ON Propiedades.CiudadId = Ciudades.CiudadId
+    WHERE Propiedades.SancionadoId =".$sancionadoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            //echo $date["Cuota"]; 
+            $bienes[]=$date;
+            //$cuotas[]=$date["Cuota"];
+        }
+        //print_r($acuerdo);
+        return $bienes;
+    }
+}
+
 ?>

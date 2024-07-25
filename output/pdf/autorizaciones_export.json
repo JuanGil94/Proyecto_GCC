@@ -106,76 +106,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
-			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
 			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
-			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_export_field4}"},
-				
-				
-			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_export_field5}"},
-				
-				
-			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_export_field6}"},
-				
-				
-			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_export_field7}"},
-				
-				
-			{"text":{$PrimeraCopia_pdfvalue},"hidden":"{$item_hide_export_field8}"},
-				
-				
-			{"text":{$Autentica_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
-			{"text":{$PrestaMeritoEjecutivo_pdfvalue},"hidden":"{$item_hide_export_field10}"},
-				
-				
-			{"text":{$Clara_pdfvalue},"hidden":"{$item_hide_export_field11}"},
-				
-				
-			{"text":{$Expresa_pdfvalue},"hidden":"{$item_hide_export_field12}"},
-				
-				
-			{"text":{$ActualmenteExigible_pdfvalue},"hidden":"{$item_hide_export_field13}"},
-				
-				
-			{"text":{$CompetenciaDEAJ_pdfvalue},"hidden":"{$item_hide_export_field14}"},
-				
-				
-			{"text":{$FaltaRequisitos_pdfvalue},"hidden":"{$item_hide_export_field15}"},
-				
-				
-			{"text":{$FaltaCompetencia_pdfvalue},"hidden":"{$item_hide_export_field16}"},
-				
-				
-			{"text":{$PorPrescripcion_pdfvalue},"hidden":"{$item_hide_export_field17}"},
-				
-				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field18}"},
-				
-				
-			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_export_field19}"},
-				
-				
-			{"text":{$SeccionalIdDestino_pdfvalue},"hidden":"{$item_hide_export_field20}"},
-				
-				
-			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field21}"},
-				
-				
-			{"text":{$Procesado_pdfvalue},"hidden":"{$item_hide_export_field22}"},
-				
-				
 			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_export_field23}"},
-				
-				
-			{"text":{$FechaSancion_pdfvalue},"hidden":"{$item_hide_export_field24}"},
 				
 				
 			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_export_field25}"},
@@ -187,46 +121,16 @@ pdfDocument = {
 			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_export_field27}"},
 				
 				
-			{"text":{$Remisorio_pdfvalue},"hidden":"{$item_hide_export_field28}"},
-				
-				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field29}"},
-				
-				
-			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_export_field30}"},
-				
-				
-			{"text":{$Aprobado_pdfvalue},"hidden":"{$item_hide_export_field31}"},
-				
-				
-			{"text":{$AprobadoPor_pdfvalue},"hidden":"{$item_hide_export_field32}"},
-				
-				
-			{"text":{$FechaAprobacion_pdfvalue},"hidden":"{$item_hide_export_field33}"},
-				
-				
-			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_export_field34}"},
-				
-				
-			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_export_field35}"},
-				
-				
-			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_export_field36}"},
-				
-				
-			{"text":{$Monto_pdfvalue},"hidden":"{$item_hide_export_field37}"},
-				
-				
-			{"text":{$TramiteId_pdfvalue},"hidden":"{$item_hide_export_field38}"},
-				
-				
-			{"text":{$Fisico_pdfvalue},"hidden":"{$item_hide_export_field39}"},
-				
-				
-			{"text":{$Digital_pdfvalue},"hidden":"{$item_hide_export_field40}"},
-				
-				
 			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Competencia_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 		  ],
   "border": [ false, false, false, false ],

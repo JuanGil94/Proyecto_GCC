@@ -91,9 +91,6 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
-										{BEGIN col_grid_9}
-					"%",
-					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -257,33 +254,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_0}
 				[
-																{BEGIN cellblock_grid_headcell_icons}
-{
-	cellId: 'headcell_icons',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_icons}
-																							{BEGIN cellblock_grid_cell_icons1}
+																{BEGIN cellblock_grid_cell_icons1}
 {
 	cellId: 'cell_icons1',
 	col:0,
@@ -549,41 +520,7 @@ pdfDocument = {
 				
 				{BEGIN row_grid_1}
 				[
-																{BEGIN cellblock_grid_cell_icons}
-{
-	cellId: 'cell_icons',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_view}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_icons}
-																							{BEGIN cellblock_grid_cell_icons2}
+																{BEGIN cellblock_grid_cell_icons2}
 {
 	cellId: 'cell_icons2',
 	col:0,
@@ -604,7 +541,7 @@ pdfDocument = {
 			{"text":""},
 				
 				
-			{"text":""},
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -854,33 +791,7 @@ pdfDocument = {
 					
 				{BEGIN row_grid_2}
 				[
-																{BEGIN cellblock_grid_footcell_icons}
-{
-	cellId: 'footcell_icons',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_icons}
-																							{BEGIN cellblock_grid_cell_icons3}
+																{BEGIN cellblock_grid_cell_icons3}
 {
 	cellId: 'cell_icons3',
 	col:0,

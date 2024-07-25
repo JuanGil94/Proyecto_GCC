@@ -102,20 +102,7 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_AbogadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_AbogadoId}" {$filterRow_attrs_AbogadoId}>
-			<label>{$label dbo_Autorizaciones AbogadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_AbogadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_AbogadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
-						</div>
-		{END searchCtrlBlock_AbogadoId}
-																{BEGIN searchCtrlBlock_ChequeoId}
+																		{BEGIN searchCtrlBlock_ChequeoId}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_ChequeoId}" {$filterRow_attrs_ChequeoId}>
@@ -128,19 +115,45 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ChequeoId}</span>
 						</div>
 		{END searchCtrlBlock_ChequeoId}
-																{BEGIN searchCtrlBlock_TramiteId}
+																{BEGIN searchCtrlBlock_Competencia}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_TramiteId}" {$filterRow_attrs_TramiteId}>
-			<label>{$label dbo_Autorizaciones TramiteId }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_Competencia}" {$filterRow_attrs_Competencia}>
+			<label>{$label dbo_Autorizaciones Competencia }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_TramiteId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_TramiteId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_TramiteId}</span>
+								<span class="rnr-searchtype">{$searchtype_Competencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Competencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Competencia}</span>
 						</div>
-		{END searchCtrlBlock_TramiteId}
+		{END searchCtrlBlock_Competencia}
+																{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label dbo_Autorizaciones Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_Seccional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
+			<label>{$label dbo_Autorizaciones Seccional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
+						</div>
+		{END searchCtrlBlock_Seccional}
 																{BEGIN searchCtrlBlock_Tipo}
 
 
@@ -154,162 +167,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Tipo}</span>
 						</div>
 		{END searchCtrlBlock_Tipo}
-																{BEGIN searchCtrlBlock_Sigobius}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Sigobius}" {$filterRow_attrs_Sigobius}>
-			<label>{$label dbo_Autorizaciones Sigobius }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Sigobius}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Sigobius}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Sigobius}</span>
-						</div>
-		{END searchCtrlBlock_Sigobius}
-																{BEGIN searchCtrlBlock_SeccionalIdDestino}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SeccionalIdDestino}" {$filterRow_attrs_SeccionalIdDestino}>
-			<label>{$label dbo_Autorizaciones SeccionalIdDestino }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SeccionalIdDestino}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalIdDestino}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalIdDestino}</span>
-						</div>
-		{END searchCtrlBlock_SeccionalIdDestino}
-																{BEGIN searchCtrlBlock_SeccionalId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
-			<label>{$label dbo_Autorizaciones SeccionalId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
-						</div>
-		{END searchCtrlBlock_SeccionalId}
-																{BEGIN searchCtrlBlock_Remisorio}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Remisorio}" {$filterRow_attrs_Remisorio}>
-			<label>{$label dbo_Autorizaciones Remisorio }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Remisorio}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Remisorio}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Remisorio}</span>
-						</div>
-		{END searchCtrlBlock_Remisorio}
-																{BEGIN searchCtrlBlock_Providencia}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Providencia}" {$filterRow_attrs_Providencia}>
-			<label>{$label dbo_Autorizaciones Providencia }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Providencia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Providencia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Providencia}</span>
-						</div>
-		{END searchCtrlBlock_Providencia}
-																{BEGIN searchCtrlBlock_Procesado}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Procesado}" {$filterRow_attrs_Procesado}>
-			<label>{$label dbo_Autorizaciones Procesado }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Procesado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Procesado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Procesado}</span>
-						</div>
-		{END searchCtrlBlock_Procesado}
-																{BEGIN searchCtrlBlock_PrimeraCopia}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_PrimeraCopia}" {$filterRow_attrs_PrimeraCopia}>
-			<label>{$label dbo_Autorizaciones PrimeraCopia }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_PrimeraCopia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PrimeraCopia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PrimeraCopia}</span>
-						</div>
-		{END searchCtrlBlock_PrimeraCopia}
-																{BEGIN searchCtrlBlock_PrestaMeritoEjecutivo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_PrestaMeritoEjecutivo}" {$filterRow_attrs_PrestaMeritoEjecutivo}>
-			<label>{$label dbo_Autorizaciones PrestaMeritoEjecutivo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_PrestaMeritoEjecutivo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PrestaMeritoEjecutivo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PrestaMeritoEjecutivo}</span>
-						</div>
-		{END searchCtrlBlock_PrestaMeritoEjecutivo}
-																{BEGIN searchCtrlBlock_PorPrescripcion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_PorPrescripcion}" {$filterRow_attrs_PorPrescripcion}>
-			<label>{$label dbo_Autorizaciones PorPrescripcion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_PorPrescripcion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PorPrescripcion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PorPrescripcion}</span>
-						</div>
-		{END searchCtrlBlock_PorPrescripcion}
-																{BEGIN searchCtrlBlock_Plazo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Plazo}" {$filterRow_attrs_Plazo}>
-			<label>{$label dbo_Autorizaciones Plazo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Plazo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Plazo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Plazo}</span>
-						</div>
-		{END searchCtrlBlock_Plazo}
-																{BEGIN searchCtrlBlock_Origen}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Origen}" {$filterRow_attrs_Origen}>
-			<label>{$label dbo_Autorizaciones Origen }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Origen}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Origen}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Origen}</span>
-						</div>
-		{END searchCtrlBlock_Origen}
-																{BEGIN searchCtrlBlock_Observaciones}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Observaciones}" {$filterRow_attrs_Observaciones}>
-			<label>{$label dbo_Autorizaciones Observaciones }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Observaciones}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Observaciones}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
-						</div>
-		{END searchCtrlBlock_Observaciones}
 																{BEGIN searchCtrlBlock_Obligacion}
 
 
@@ -323,97 +180,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
 						</div>
 		{END searchCtrlBlock_Obligacion}
-																{BEGIN searchCtrlBlock_NaturalezaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_NaturalezaId}" {$filterRow_attrs_NaturalezaId}>
-			<label>{$label dbo_Autorizaciones NaturalezaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_NaturalezaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_NaturalezaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_NaturalezaId}</span>
-						</div>
-		{END searchCtrlBlock_NaturalezaId}
-																{BEGIN searchCtrlBlock_Monto}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Monto}" {$filterRow_attrs_Monto}>
-			<label>{$label dbo_Autorizaciones Monto }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Monto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Monto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Monto}</span>
-						</div>
-		{END searchCtrlBlock_Monto}
-																{BEGIN searchCtrlBlock_MinJusticia}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_MinJusticia}" {$filterRow_attrs_MinJusticia}>
-			<label>{$label dbo_Autorizaciones MinJusticia }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_MinJusticia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_MinJusticia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_MinJusticia}</span>
-						</div>
-		{END searchCtrlBlock_MinJusticia}
-																{BEGIN searchCtrlBlock_Folios}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Folios}" {$filterRow_attrs_Folios}>
-			<label>{$label dbo_Autorizaciones Folios }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Folios}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Folios}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Folios}</span>
-						</div>
-		{END searchCtrlBlock_Folios}
-																{BEGIN searchCtrlBlock_Fisico}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Fisico}" {$filterRow_attrs_Fisico}>
-			<label>{$label dbo_Autorizaciones Fisico }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Fisico}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Fisico}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Fisico}</span>
-						</div>
-		{END searchCtrlBlock_Fisico}
-																{BEGIN searchCtrlBlock_FechaSancion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_FechaSancion}" {$filterRow_attrs_FechaSancion}>
-			<label>{$label dbo_Autorizaciones FechaSancion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_FechaSancion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_FechaSancion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_FechaSancion}</span>
-						</div>
-		{END searchCtrlBlock_FechaSancion}
-																{BEGIN searchCtrlBlock_FechaAprobacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_FechaAprobacion}" {$filterRow_attrs_FechaAprobacion}>
-			<label>{$label dbo_Autorizaciones FechaAprobacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_FechaAprobacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_FechaAprobacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_FechaAprobacion}</span>
-						</div>
-		{END searchCtrlBlock_FechaAprobacion}
 																{BEGIN searchCtrlBlock_Fecha}
 
 
@@ -427,84 +193,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
 						</div>
 		{END searchCtrlBlock_Fecha}
-																{BEGIN searchCtrlBlock_FaltaRequisitos}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_FaltaRequisitos}" {$filterRow_attrs_FaltaRequisitos}>
-			<label>{$label dbo_Autorizaciones FaltaRequisitos }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_FaltaRequisitos}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_FaltaRequisitos}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_FaltaRequisitos}</span>
-						</div>
-		{END searchCtrlBlock_FaltaRequisitos}
-																{BEGIN searchCtrlBlock_FaltaCompetencia}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_FaltaCompetencia}" {$filterRow_attrs_FaltaCompetencia}>
-			<label>{$label dbo_Autorizaciones FaltaCompetencia }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_FaltaCompetencia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_FaltaCompetencia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_FaltaCompetencia}</span>
-						</div>
-		{END searchCtrlBlock_FaltaCompetencia}
-																{BEGIN searchCtrlBlock_Expresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Expresa}" {$filterRow_attrs_Expresa}>
-			<label>{$label dbo_Autorizaciones Expresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Expresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Expresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Expresa}</span>
-						</div>
-		{END searchCtrlBlock_Expresa}
-																{BEGIN searchCtrlBlock_Ejecutoria}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Ejecutoria}" {$filterRow_attrs_Ejecutoria}>
-			<label>{$label dbo_Autorizaciones Ejecutoria }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Ejecutoria}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Ejecutoria}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Ejecutoria}</span>
-						</div>
-		{END searchCtrlBlock_Ejecutoria}
-																{BEGIN searchCtrlBlock_Digital}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Digital}" {$filterRow_attrs_Digital}>
-			<label>{$label dbo_Autorizaciones Digital }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Digital}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Digital}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Digital}</span>
-						</div>
-		{END searchCtrlBlock_Digital}
-																{BEGIN searchCtrlBlock_DespachoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_DespachoId}" {$filterRow_attrs_DespachoId}>
-			<label>{$label dbo_Autorizaciones DespachoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_DespachoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_DespachoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_DespachoId}</span>
-						</div>
-		{END searchCtrlBlock_DespachoId}
 																{BEGIN searchCtrlBlock_Costas}
 
 
@@ -518,58 +206,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
 						</div>
 		{END searchCtrlBlock_Costas}
-																{BEGIN searchCtrlBlock_ConceptoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ConceptoId}" {$filterRow_attrs_ConceptoId}>
-			<label>{$label dbo_Autorizaciones ConceptoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ConceptoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ConceptoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
-						</div>
-		{END searchCtrlBlock_ConceptoId}
-																{BEGIN searchCtrlBlock_CompetenciaDEAJ}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_CompetenciaDEAJ}" {$filterRow_attrs_CompetenciaDEAJ}>
-			<label>{$label dbo_Autorizaciones CompetenciaDEAJ }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_CompetenciaDEAJ}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_CompetenciaDEAJ}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_CompetenciaDEAJ}</span>
-						</div>
-		{END searchCtrlBlock_CompetenciaDEAJ}
-																{BEGIN searchCtrlBlock_Clara}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Clara}" {$filterRow_attrs_Clara}>
-			<label>{$label dbo_Autorizaciones Clara }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Clara}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Clara}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Clara}</span>
-						</div>
-		{END searchCtrlBlock_Clara}
-																{BEGIN searchCtrlBlock_CarteraTipoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
-			<label>{$label dbo_Autorizaciones CarteraTipoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
-						</div>
-		{END searchCtrlBlock_CarteraTipoId}
 																{BEGIN searchCtrlBlock_Cantidad}
 
 
@@ -583,58 +219,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Cantidad}</span>
 						</div>
 		{END searchCtrlBlock_Cantidad}
-																{BEGIN searchCtrlBlock_Autentica}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Autentica}" {$filterRow_attrs_Autentica}>
-			<label>{$label dbo_Autorizaciones Autentica }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Autentica}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Autentica}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Autentica}</span>
-						</div>
-		{END searchCtrlBlock_Autentica}
-																{BEGIN searchCtrlBlock_AprobadoPor}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_AprobadoPor}" {$filterRow_attrs_AprobadoPor}>
-			<label>{$label dbo_Autorizaciones AprobadoPor }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_AprobadoPor}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_AprobadoPor}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_AprobadoPor}</span>
-						</div>
-		{END searchCtrlBlock_AprobadoPor}
-																{BEGIN searchCtrlBlock_Aprobado}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Aprobado}" {$filterRow_attrs_Aprobado}>
-			<label>{$label dbo_Autorizaciones Aprobado }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Aprobado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Aprobado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Aprobado}</span>
-						</div>
-		{END searchCtrlBlock_Aprobado}
-																{BEGIN searchCtrlBlock_ActualmenteExigible}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ActualmenteExigible}" {$filterRow_attrs_ActualmenteExigible}>
-			<label>{$label dbo_Autorizaciones ActualmenteExigible }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ActualmenteExigible}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ActualmenteExigible}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ActualmenteExigible}</span>
-						</div>
-		{END searchCtrlBlock_ActualmenteExigible}
 		
 
 	</div>
@@ -655,90 +239,6 @@
 	<div class="filterPanelContainer {$filterPanelStateClass}" 
 			>
 	<!-- Begin Filter panel content -->
-
-
-
-
-
-
-{BEGIN filter_control_SeccionalId}
-
-	<div class="panel panel-info filter-field filter-SeccionalId-container">
-		<div class="panel-heading filter-expander">
-													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
-
-		
-			{BEGIN clearLink_SeccionalId}
-			<a href="#" class="filter-clear filter-clear-SeccionalId" title="borrar">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_SeccionalId}
-			{$label dbo_Autorizaciones SeccionalId }		</div>
-		<ul class="list-group">
-					{BEGIN filterCtrlBlock_SeccionalId}
-		<li class="list-group-item filter-values filter-values-SeccionalId {$collapsedClass_SeccionalId} {$visibilityClass_SeccionalId}">
-			{$SeccionalId_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_SeccionalId}
-
-			{BEGIN filter_button_showmore_SeccionalId}
-		<li class="list-group-item filter-show-more {$collapsedClass_SeccionalId} {$showMoreBtnClass_SeccionalId}">
-			<a class="filter-show-more-link filterShowMore_SeccionalId" href="#">{$show_n_more_SeccionalId}</a>
-		</li>
-		{END filter_button_showmore_SeccionalId}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_SeccionalId}
-
-
-
-
-
-
-{BEGIN filter_control_CarteraTipoId}
-
-	<div class="panel panel-info filter-field filter-CarteraTipoId-container">
-		<div class="panel-heading filter-expander">
-													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
-
-		
-			{BEGIN clearLink_CarteraTipoId}
-			<a href="#" class="filter-clear filter-clear-CarteraTipoId" title="borrar">
-				<span class="glyphicon glyphicon-remove"></span>
-			</a>
-			{END clearLink_CarteraTipoId}
-			{$label dbo_Autorizaciones CarteraTipoId }		</div>
-		<ul class="list-group">
-					{BEGIN filterCtrlBlock_CarteraTipoId}
-		<li class="list-group-item filter-values filter-values-CarteraTipoId {$collapsedClass_CarteraTipoId} {$visibilityClass_CarteraTipoId}">
-			{$CarteraTipoId_filter}
-						
-					
-					</li>
-		{END filterCtrlBlock_CarteraTipoId}
-
-			{BEGIN filter_button_showmore_CarteraTipoId}
-		<li class="list-group-item filter-show-more {$collapsedClass_CarteraTipoId} {$showMoreBtnClass_CarteraTipoId}">
-			<a class="filter-show-more-link filterShowMore_CarteraTipoId" href="#">{$show_n_more_CarteraTipoId}</a>
-		</li>
-		{END filter_button_showmore_CarteraTipoId}
-	
-
-
-	
-
-			</ul>
-	</div>
-
-{END filter_control_CarteraTipoId}
 
 
 
@@ -1029,21 +529,13 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
 		<span data-itemtype="custom_button_container" data-itemid="custom_button_container" {$item_custom_button_container} data-pageid="{$pageid}" data-small data-button-item>
 </span>
-	 
-		{BEGIN inlineadd_link}
-<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$inlineaddlink_attrs} >
-							Añadir nuevo			</a>
-</span>
-{END inlineadd_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -1191,26 +683,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
-					<span>{$label dbo_Autorizaciones SeccionalId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ConceptoId" checked="checked" value="1" data-field="ConceptoId" data-fieldname="ConceptoId">
-					<span>{$label dbo_Autorizaciones ConceptoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Tipo" checked="checked" value="1" data-field="Tipo" data-fieldname="Tipo">
 					<span>{$label dbo_Autorizaciones Tipo }</span>
 				</label>
@@ -1261,8 +733,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_DespachoId" checked="checked" value="1" data-field="DespachoId" data-fieldname="DespachoId">
-					<span>{$label dbo_Autorizaciones DespachoId }</span>
+					<input type="checkbox" id="hide_Seccional" checked="checked" value="1" data-field="Seccional" data-fieldname="Seccional">
+					<span>{$label dbo_Autorizaciones Seccional }</span>
 				</label>
 			</div>
 					</a>
@@ -1271,8 +743,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Origen" checked="checked" value="1" data-field="Origen" data-fieldname="Origen">
-					<span>{$label dbo_Autorizaciones Origen }</span>
+					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
+					<span>{$label dbo_Autorizaciones Concepto }</span>
 				</label>
 			</div>
 					</a>
@@ -1281,128 +753,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
-					<span>{$label dbo_Autorizaciones Providencia }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
-					<span>{$label dbo_Autorizaciones Ejecutoria }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_PrimeraCopia" checked="checked" value="1" data-field="PrimeraCopia" data-fieldname="PrimeraCopia">
-					<span>{$label dbo_Autorizaciones PrimeraCopia }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Autentica" checked="checked" value="1" data-field="Autentica" data-fieldname="Autentica">
-					<span>{$label dbo_Autorizaciones Autentica }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_PrestaMeritoEjecutivo" checked="checked" value="1" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">
-					<span>{$label dbo_Autorizaciones PrestaMeritoEjecutivo }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Clara" checked="checked" value="1" data-field="Clara" data-fieldname="Clara">
-					<span>{$label dbo_Autorizaciones Clara }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Expresa" checked="checked" value="1" data-field="Expresa" data-fieldname="Expresa">
-					<span>{$label dbo_Autorizaciones Expresa }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_ActualmenteExigible" checked="checked" value="1" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">
-					<span>{$label dbo_Autorizaciones ActualmenteExigible }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_CompetenciaDEAJ" checked="checked" value="1" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">
-					<span>{$label dbo_Autorizaciones CompetenciaDEAJ }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_FaltaRequisitos" checked="checked" value="1" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">
-					<span>{$label dbo_Autorizaciones FaltaRequisitos }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_FaltaCompetencia" checked="checked" value="1" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">
-					<span>{$label dbo_Autorizaciones FaltaCompetencia }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_PorPrescripcion" checked="checked" value="1" data-field="PorPrescripcion" data-fieldname="PorPrescripcion">
-					<span>{$label dbo_Autorizaciones PorPrescripcion }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SeccionalIdDestino" checked="checked" value="1" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">
-					<span>{$label dbo_Autorizaciones SeccionalIdDestino }</span>
+					<input type="checkbox" id="hide_Competencia" checked="checked" value="1" data-field="Competencia" data-fieldname="Competencia">
+					<span>{$label dbo_Autorizaciones Competencia }</span>
 				</label>
 			</div>
 					</a>
@@ -1424,64 +776,19 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
-		content: "{$label dbo_Autorizaciones ConceptoId}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ChequeoId"]:before {
+		content: "{$label dbo_Autorizaciones ChequeoId}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
-		content: "{$label dbo_Autorizaciones Fecha}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
+		content: "{$label dbo_Autorizaciones Seccional}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DespachoId"]:before {
-		content: "{$label dbo_Autorizaciones DespachoId}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
+		content: "{$label dbo_Autorizaciones Concepto}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Origen"]:before {
-		content: "{$label dbo_Autorizaciones Origen}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Providencia"]:before {
-		content: "{$label dbo_Autorizaciones Providencia}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ejecutoria"]:before {
-		content: "{$label dbo_Autorizaciones Ejecutoria}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PrimeraCopia"]:before {
-		content: "{$label dbo_Autorizaciones PrimeraCopia}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Autentica"]:before {
-		content: "{$label dbo_Autorizaciones Autentica}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PrestaMeritoEjecutivo"]:before {
-		content: "{$label dbo_Autorizaciones PrestaMeritoEjecutivo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Clara"]:before {
-		content: "{$label dbo_Autorizaciones Clara}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Expresa"]:before {
-		content: "{$label dbo_Autorizaciones Expresa}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ActualmenteExigible"]:before {
-		content: "{$label dbo_Autorizaciones ActualmenteExigible}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CompetenciaDEAJ"]:before {
-		content: "{$label dbo_Autorizaciones CompetenciaDEAJ}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="FaltaRequisitos"]:before {
-		content: "{$label dbo_Autorizaciones FaltaRequisitos}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="FaltaCompetencia"]:before {
-		content: "{$label dbo_Autorizaciones FaltaCompetencia}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PorPrescripcion"]:before {
-		content: "{$label dbo_Autorizaciones PorPrescripcion}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalId"]:before {
-		content: "{$label dbo_Autorizaciones SeccionalId}";
-	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalIdDestino"]:before {
-		content: "{$label dbo_Autorizaciones SeccionalIdDestino}";
-	}
-					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Tipo"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Tipo"]:before {
 		content: "{$label dbo_Autorizaciones Tipo}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cantidad"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cantidad"]:before {
 		content: "{$label dbo_Autorizaciones Cantidad}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion"]:before {
@@ -1490,8 +797,11 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Costas"]:before {
 		content: "{$label dbo_Autorizaciones Costas}";
 	}
-																[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ChequeoId"]:before {
-		content: "{$label dbo_Autorizaciones ChequeoId}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
+		content: "{$label dbo_Autorizaciones Fecha}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Competencia"]:before {
+		content: "{$label dbo_Autorizaciones Competencia}";
 	}
 	}
 </style>
@@ -1507,22 +817,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
 									{BEGIN cellblock_grid_headcell_checkbox}
 	<th
 	
@@ -1585,56 +879,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
-
-			data-field="SeccionalId"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SeccionalId_fieldheadercolumn}
-	{BEGIN SeccionalId_fieldheader}
-	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
-	{$label dbo_Autorizaciones SeccionalId }	{$arrow_icon_SeccionalId}
-	</SPAN>
-	{END SeccionalId_fieldheader}
-{END SeccionalId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-			data-field="ConceptoId"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConceptoId_fieldheadercolumn}
-	{BEGIN ConceptoId_fieldheader}
-	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
-	{$label dbo_Autorizaciones ConceptoId }	{$arrow_icon_ConceptoId}
-	</SPAN>
-	{END ConceptoId_fieldheader}
-{END ConceptoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
 									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
@@ -1760,381 +1004,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DespachoId_class}	"
-
-			data-field="DespachoId"
-	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DespachoId_fieldheadercolumn}
-	{BEGIN DespachoId_fieldheader}
-	<SPAN {$DespachoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
-	{$label dbo_Autorizaciones DespachoId }	{$arrow_icon_DespachoId}
-	</SPAN>
-	{END DespachoId_fieldheader}
-{END DespachoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Origen_class}	"
-
-			data-field="Origen"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Origen_fieldheadercolumn}
-	{BEGIN Origen_fieldheader}
-	<SPAN {$Origen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Origen" data-fieldname="Origen">
-	{$label dbo_Autorizaciones Origen }	{$arrow_icon_Origen}
-	</SPAN>
-	{END Origen_fieldheader}
-{END Origen_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
-									{BEGIN cellblock_grid_headcell_field11}
-	<th
-	
-	{$cell_grid_headcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Providencia_class}	"
-
-			data-field="Providencia"
-	
-	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Providencia_fieldheadercolumn}
-	{BEGIN Providencia_fieldheader}
-	<SPAN {$Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
-	{$label dbo_Autorizaciones Providencia }	{$arrow_icon_Providencia}
-	</SPAN>
-	{END Providencia_fieldheader}
-{END Providencia_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field11}
-									{BEGIN cellblock_grid_headcell_field12}
-	<th
-	
-	{$cell_grid_headcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ejecutoria_class}	"
-
-			data-field="Ejecutoria"
-	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Ejecutoria_fieldheadercolumn}
-	{BEGIN Ejecutoria_fieldheader}
-	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
-	{$label dbo_Autorizaciones Ejecutoria }	{$arrow_icon_Ejecutoria}
-	</SPAN>
-	{END Ejecutoria_fieldheader}
-{END Ejecutoria_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field12}
-									{BEGIN cellblock_grid_headcell_field13}
-	<th
-	
-	{$cell_grid_headcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PrimeraCopia_class}	"
-
-			data-field="PrimeraCopia"
-	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PrimeraCopia_fieldheadercolumn}
-	{BEGIN PrimeraCopia_fieldheader}
-	<SPAN {$PrimeraCopia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrimeraCopia" data-fieldname="PrimeraCopia">
-	{$label dbo_Autorizaciones PrimeraCopia }	{$arrow_icon_PrimeraCopia}
-	</SPAN>
-	{END PrimeraCopia_fieldheader}
-{END PrimeraCopia_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field13}
-									{BEGIN cellblock_grid_headcell_field14}
-	<th
-	
-	{$cell_grid_headcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Autentica_class}	"
-
-			data-field="Autentica"
-	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Autentica_fieldheadercolumn}
-	{BEGIN Autentica_fieldheader}
-	<SPAN {$Autentica_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autentica" data-fieldname="Autentica">
-	{$label dbo_Autorizaciones Autentica }	{$arrow_icon_Autentica}
-	</SPAN>
-	{END Autentica_fieldheader}
-{END Autentica_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field14}
-									{BEGIN cellblock_grid_headcell_field15}
-	<th
-	
-	{$cell_grid_headcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PrestaMeritoEjecutivo_class}	"
-
-			data-field="PrestaMeritoEjecutivo"
-	
-	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PrestaMeritoEjecutivo_fieldheadercolumn}
-	{BEGIN PrestaMeritoEjecutivo_fieldheader}
-	<SPAN {$PrestaMeritoEjecutivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo">
-	{$label dbo_Autorizaciones PrestaMeritoEjecutivo }	{$arrow_icon_PrestaMeritoEjecutivo}
-	</SPAN>
-	{END PrestaMeritoEjecutivo_fieldheader}
-{END PrestaMeritoEjecutivo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field15}
-									{BEGIN cellblock_grid_headcell_field16}
-	<th
-	
-	{$cell_grid_headcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Clara_class}	"
-
-			data-field="Clara"
-	
-	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Clara_fieldheadercolumn}
-	{BEGIN Clara_fieldheader}
-	<SPAN {$Clara_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clara" data-fieldname="Clara">
-	{$label dbo_Autorizaciones Clara }	{$arrow_icon_Clara}
-	</SPAN>
-	{END Clara_fieldheader}
-{END Clara_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field16}
-									{BEGIN cellblock_grid_headcell_field17}
-	<th
-	
-	{$cell_grid_headcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Expresa_class}	"
-
-			data-field="Expresa"
-	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Expresa_fieldheadercolumn}
-	{BEGIN Expresa_fieldheader}
-	<SPAN {$Expresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Expresa" data-fieldname="Expresa">
-	{$label dbo_Autorizaciones Expresa }	{$arrow_icon_Expresa}
-	</SPAN>
-	{END Expresa_fieldheader}
-{END Expresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field17}
-									{BEGIN cellblock_grid_headcell_field18}
-	<th
-	
-	{$cell_grid_headcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ActualmenteExigible_class}	"
-
-			data-field="ActualmenteExigible"
-	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ActualmenteExigible_fieldheadercolumn}
-	{BEGIN ActualmenteExigible_fieldheader}
-	<SPAN {$ActualmenteExigible_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible">
-	{$label dbo_Autorizaciones ActualmenteExigible }	{$arrow_icon_ActualmenteExigible}
-	</SPAN>
-	{END ActualmenteExigible_fieldheader}
-{END ActualmenteExigible_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field18}
-									{BEGIN cellblock_grid_headcell_field19}
-	<th
-	
-	{$cell_grid_headcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CompetenciaDEAJ_class}	"
-
-			data-field="CompetenciaDEAJ"
-	
-	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN CompetenciaDEAJ_fieldheadercolumn}
-	{BEGIN CompetenciaDEAJ_fieldheader}
-	<SPAN {$CompetenciaDEAJ_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ">
-	{$label dbo_Autorizaciones CompetenciaDEAJ }	{$arrow_icon_CompetenciaDEAJ}
-	</SPAN>
-	{END CompetenciaDEAJ_fieldheader}
-{END CompetenciaDEAJ_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field19}
-									{BEGIN cellblock_grid_headcell_field20}
-	<th
-	
-	{$cell_grid_headcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$FaltaRequisitos_class}	"
-
-			data-field="FaltaRequisitos"
-	
-	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN FaltaRequisitos_fieldheadercolumn}
-	{BEGIN FaltaRequisitos_fieldheader}
-	<SPAN {$FaltaRequisitos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos">
-	{$label dbo_Autorizaciones FaltaRequisitos }	{$arrow_icon_FaltaRequisitos}
-	</SPAN>
-	{END FaltaRequisitos_fieldheader}
-{END FaltaRequisitos_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field20}
-									{BEGIN cellblock_grid_headcell_field21}
-	<th
-	
-	{$cell_grid_headcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$FaltaCompetencia_class}	"
-
-			data-field="FaltaCompetencia"
-	
-	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN FaltaCompetencia_fieldheadercolumn}
-	{BEGIN FaltaCompetencia_fieldheader}
-	<SPAN {$FaltaCompetencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia">
-	{$label dbo_Autorizaciones FaltaCompetencia }	{$arrow_icon_FaltaCompetencia}
-	</SPAN>
-	{END FaltaCompetencia_fieldheader}
-{END FaltaCompetencia_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field21}
-									{BEGIN cellblock_grid_headcell_field22}
-	<th
-	
-	{$cell_grid_headcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PorPrescripcion_class}	"
-
-			data-field="PorPrescripcion"
-	
-	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PorPrescripcion_fieldheadercolumn}
-	{BEGIN PorPrescripcion_fieldheader}
-	<SPAN {$PorPrescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PorPrescripcion" data-fieldname="PorPrescripcion">
-	{$label dbo_Autorizaciones PorPrescripcion }	{$arrow_icon_PorPrescripcion}
-	</SPAN>
-	{END PorPrescripcion_fieldheader}
-{END PorPrescripcion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field22}
-									{BEGIN cellblock_grid_headcell_field23}
-	<th
-	
-	{$cell_grid_headcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalIdDestino_class}	"
-
-			data-field="SeccionalIdDestino"
-	
-	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SeccionalIdDestino_fieldheadercolumn}
-	{BEGIN SeccionalIdDestino_fieldheader}
-	<SPAN {$SeccionalIdDestino_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino">
-	{$label dbo_Autorizaciones SeccionalIdDestino }	{$arrow_icon_SeccionalIdDestino}
-	</SPAN>
-	{END SeccionalIdDestino_fieldheader}
-{END SeccionalIdDestino_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field23}
 									{BEGIN cellblock_grid_headcell_field24}
 	<th
 	
@@ -2150,6 +1019,81 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldheadercolumn}
+	{BEGIN Seccional_fieldheader}
+	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+	{$label dbo_Autorizaciones Seccional }	{$arrow_icon_Seccional}
+	</SPAN>
+	{END Seccional_fieldheader}
+{END Seccional_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label dbo_Autorizaciones Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+			data-field="Competencia"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Competencia_fieldheadercolumn}
+	{BEGIN Competencia_fieldheader}
+	<SPAN {$Competencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia">
+	{$label dbo_Autorizaciones Competencia }	{$arrow_icon_Competencia}
+	</SPAN>
+	{END Competencia_fieldheader}
+{END Competencia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
 							</tr>
 																				
 					{END grid_header}
@@ -2161,31 +1105,6 @@
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN inline_cancel}
-<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Cancelar" class="btn-link   
-	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
-				
-								</a>
-</span>
-{END inline_cancel}
-	
-	</td>
-	{END cellblock_grid_cell_icons}
 									{BEGIN cellblock_grid_cell_checkbox}
 	<td
 	
@@ -2251,48 +1170,6 @@
 {END ChequeoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
-
-			data-field="SeccionalId"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SeccionalId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
-{$SeccionalId_value}
-</span>
-{END SeccionalId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-			data-field="ConceptoId"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ConceptoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId" data-default-width >
-{$ConceptoId_value}
-</span>
-{END ConceptoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
@@ -2398,321 +1275,6 @@
 {END Fecha_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DespachoId_class}	"
-
-			data-field="DespachoId"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN DespachoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId" data-default-width >
-{$DespachoId_value}
-</span>
-{END DespachoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Origen_class}	"
-
-			data-field="Origen"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Origen_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Origen" data-fieldname="Origen" data-default-width >
-{$Origen_value}
-</span>
-{END Origen_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
-									{BEGIN cellblock_grid_cell_field11}
-	<td
-	
-	{$cell_grid_cell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Providencia_class}	"
-
-			data-field="Providencia"
-	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Providencia_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia" data-default-width >
-{$Providencia_value}
-</span>
-{END Providencia_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ejecutoria_class}	"
-
-			data-field="Ejecutoria"
-	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Ejecutoria_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria" data-default-width >
-{$Ejecutoria_value}
-</span>
-{END Ejecutoria_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field12}
-									{BEGIN cellblock_grid_cell_field13}
-	<td
-	
-	{$cell_grid_cell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PrimeraCopia_class}	"
-
-			data-field="PrimeraCopia"
-	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PrimeraCopia_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrimeraCopia" data-fieldname="PrimeraCopia" data-default-width >
-{$PrimeraCopia_value}
-</span>
-{END PrimeraCopia_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field13}
-									{BEGIN cellblock_grid_cell_field14}
-	<td
-	
-	{$cell_grid_cell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Autentica_class}	"
-
-			data-field="Autentica"
-	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Autentica_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Autentica" data-fieldname="Autentica" data-default-width >
-{$Autentica_value}
-</span>
-{END Autentica_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field14}
-									{BEGIN cellblock_grid_cell_field15}
-	<td
-	
-	{$cell_grid_cell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PrestaMeritoEjecutivo_class}	"
-
-			data-field="PrestaMeritoEjecutivo"
-	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PrestaMeritoEjecutivo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PrestaMeritoEjecutivo" data-fieldname="PrestaMeritoEjecutivo" data-default-width >
-{$PrestaMeritoEjecutivo_value}
-</span>
-{END PrestaMeritoEjecutivo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
-	<td
-	
-	{$cell_grid_cell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Clara_class}	"
-
-			data-field="Clara"
-	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Clara_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Clara" data-fieldname="Clara" data-default-width >
-{$Clara_value}
-</span>
-{END Clara_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field16}
-									{BEGIN cellblock_grid_cell_field17}
-	<td
-	
-	{$cell_grid_cell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Expresa_class}	"
-
-			data-field="Expresa"
-	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Expresa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Expresa" data-fieldname="Expresa" data-default-width >
-{$Expresa_value}
-</span>
-{END Expresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field17}
-									{BEGIN cellblock_grid_cell_field18}
-	<td
-	
-	{$cell_grid_cell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ActualmenteExigible_class}	"
-
-			data-field="ActualmenteExigible"
-	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ActualmenteExigible_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActualmenteExigible" data-fieldname="ActualmenteExigible" data-default-width >
-{$ActualmenteExigible_value}
-</span>
-{END ActualmenteExigible_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field18}
-									{BEGIN cellblock_grid_cell_field19}
-	<td
-	
-	{$cell_grid_cell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CompetenciaDEAJ_class}	"
-
-			data-field="CompetenciaDEAJ"
-	
-	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN CompetenciaDEAJ_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CompetenciaDEAJ" data-fieldname="CompetenciaDEAJ" data-default-width >
-{$CompetenciaDEAJ_value}
-</span>
-{END CompetenciaDEAJ_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field19}
-									{BEGIN cellblock_grid_cell_field20}
-	<td
-	
-	{$cell_grid_cell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$FaltaRequisitos_class}	"
-
-			data-field="FaltaRequisitos"
-	
-	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN FaltaRequisitos_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaRequisitos" data-fieldname="FaltaRequisitos" data-default-width >
-{$FaltaRequisitos_value}
-</span>
-{END FaltaRequisitos_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field20}
-									{BEGIN cellblock_grid_cell_field21}
-	<td
-	
-	{$cell_grid_cell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$FaltaCompetencia_class}	"
-
-			data-field="FaltaCompetencia"
-	
-	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN FaltaCompetencia_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FaltaCompetencia" data-fieldname="FaltaCompetencia" data-default-width >
-{$FaltaCompetencia_value}
-</span>
-{END FaltaCompetencia_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field21}
-									{BEGIN cellblock_grid_cell_field22}
-	<td
-	
-	{$cell_grid_cell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PorPrescripcion_class}	"
-
-			data-field="PorPrescripcion"
-	
-	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PorPrescripcion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PorPrescripcion" data-fieldname="PorPrescripcion" data-default-width >
-{$PorPrescripcion_value}
-</span>
-{END PorPrescripcion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field22}
-									{BEGIN cellblock_grid_cell_field23}
-	<td
-	
-	{$cell_grid_cell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalIdDestino_class}	"
-
-			data-field="SeccionalIdDestino"
-	
-	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SeccionalIdDestino_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalIdDestino" data-fieldname="SeccionalIdDestino" data-default-width >
-{$SeccionalIdDestino_value}
-</span>
-{END SeccionalIdDestino_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field23}
 									{BEGIN cellblock_grid_cell_field24}
 	<td
 	
@@ -2728,6 +1290,69 @@
 	
 	</td>
 	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
+{$Seccional_value}
+</span>
+{END Seccional_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
+</span>
+{END Concepto_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+			data-field="Competencia"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Competencia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia" data-default-width >
+{$Competencia_value}
+</span>
+{END Competencia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -2758,21 +1383,6 @@
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_icons}
-	<td
-	
-	{$cell_grid_footcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons}
 									{BEGIN cellblock_grid_footcell_checkbox}
 	<td
 	
@@ -2818,36 +1428,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-									{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ConceptoId_class}	"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field4}
 	<td
 	
@@ -2923,231 +1503,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
-									{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$DespachoId_class}	"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
-									{BEGIN cellblock_grid_footcell_field10}
-	<td
-	
-	{$cell_grid_footcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Origen_class}	"
-
-	
-	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field10}
-									{BEGIN cellblock_grid_footcell_field11}
-	<td
-	
-	{$cell_grid_footcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Providencia_class}	"
-
-	
-	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field11}
-									{BEGIN cellblock_grid_footcell_field12}
-	<td
-	
-	{$cell_grid_footcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Ejecutoria_class}	"
-
-	
-	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field12}
-									{BEGIN cellblock_grid_footcell_field13}
-	<td
-	
-	{$cell_grid_footcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PrimeraCopia_class}	"
-
-	
-	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field13}
-									{BEGIN cellblock_grid_footcell_field14}
-	<td
-	
-	{$cell_grid_footcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Autentica_class}	"
-
-	
-	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field14}
-									{BEGIN cellblock_grid_footcell_field15}
-	<td
-	
-	{$cell_grid_footcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PrestaMeritoEjecutivo_class}	"
-
-	
-	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field15}
-									{BEGIN cellblock_grid_footcell_field16}
-	<td
-	
-	{$cell_grid_footcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Clara_class}	"
-
-	
-	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field16}
-									{BEGIN cellblock_grid_footcell_field17}
-	<td
-	
-	{$cell_grid_footcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Expresa_class}	"
-
-	
-	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field17}
-									{BEGIN cellblock_grid_footcell_field18}
-	<td
-	
-	{$cell_grid_footcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$ActualmenteExigible_class}	"
-
-	
-	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field18}
-									{BEGIN cellblock_grid_footcell_field19}
-	<td
-	
-	{$cell_grid_footcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CompetenciaDEAJ_class}	"
-
-	
-	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field19}
-									{BEGIN cellblock_grid_footcell_field20}
-	<td
-	
-	{$cell_grid_footcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$FaltaRequisitos_class}	"
-
-	
-	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field20}
-									{BEGIN cellblock_grid_footcell_field21}
-	<td
-	
-	{$cell_grid_footcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$FaltaCompetencia_class}	"
-
-	
-	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field21}
-									{BEGIN cellblock_grid_footcell_field22}
-	<td
-	
-	{$cell_grid_footcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$PorPrescripcion_class}	"
-
-	
-	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field22}
-									{BEGIN cellblock_grid_footcell_field23}
-	<td
-	
-	{$cell_grid_footcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SeccionalIdDestino_class}	"
-
-	
-	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field23}
 									{BEGIN cellblock_grid_footcell_field24}
 	<td
 	
@@ -3163,6 +1518,51 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field24}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
 							</tr>
 					
 					</tfoot>
