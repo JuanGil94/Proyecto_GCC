@@ -134,6 +134,20 @@ $nonAdminTablesArr[] = "Resumen_Mensual";
 $nonAdminTablesArr[] = "dbo.tipoRecaudo";
 $nonAdminTablesArr[] = "dbo.Despachos2";
 $nonAdminTablesArr[] = "dbo.Despachos5";
+$nonAdminTablesArr[] = "BDME Actualización";
+$nonAdminTablesArr[] = "BDME Guía del Deudor Moroso";
+$nonAdminTablesArr[] = "BDME Incumplimiento Acuerdo de Pago Semestral";
+$nonAdminTablesArr[] = "BDME Retiros";
+$nonAdminTablesArr[] = "BDME Reporte Semestral";
+$nonAdminTablesArr[] = "BDME Cancelación Acuerdo de Pago";
+$nonAdminTablesArr[] = "BDME Excluidos";
+$nonAdminTablesArr[] = "Base de Datos - Historico";
+$nonAdminTablesArr[] = "Deterioro de Cartera por Proceso";
+$nonAdminTablesArr[] = "Intereses por Proceso";
+$nonAdminTablesArr[] = "Listado Medidas Cautelares";
+$nonAdminTablesArr[] = "Presunción Prescripción";
+$nonAdminTablesArr[] = "Intereses por Proceso Report";
+$nonAdminTablesArr[] = "Certificado del Resumen por Periodo";
 
 $ug_connection = $cman->getForUserGroups();
 

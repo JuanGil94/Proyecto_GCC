@@ -1,0 +1,568 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel Deterioro_de_Cartera_por_Proceso search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label Deterioro_de_Cartera_por_Proceso Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Concepto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Concepto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Concepto" data-fieldname="Concepto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Concepto}">
+		{$label Deterioro_de_Cartera_por_Proceso Concepto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Concepto}
+	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Concepto_fieldblock}
+											
+{BEGIN Rel_Monto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Monto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Monto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Rel_Monto" data-fieldname="Rel_Monto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Monto}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Monto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Monto}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Monto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Monto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Monto_fieldblock}
+											
+{BEGIN Rel_Antiguedad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Antiguedad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Antiguedad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Rel_Antiguedad" data-fieldname="Rel_Antiguedad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Antiguedad}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Antiguedad }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Antiguedad}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Antiguedad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Antiguedad_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Antiguedad_fieldblock}
+											
+{BEGIN Rel_Notificacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Notificacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Notificacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Rel_Notificacion" data-fieldname="Rel_Notificacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Notificacion}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Notificacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Notificacion}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Notificacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Notificacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Notificacion_fieldblock}
+											
+{BEGIN Rel_Ubicacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Ubicacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Ubicacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Rel_Ubicacion" data-fieldname="Rel_Ubicacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Ubicacion}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Ubicacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Ubicacion}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Ubicacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Ubicacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Ubicacion_fieldblock}
+											
+{BEGIN Rel_Libertad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Libertad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Libertad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Rel_Libertad" data-fieldname="Rel_Libertad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Libertad}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Libertad }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Libertad}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Libertad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Libertad_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Libertad_fieldblock}
+											
+{BEGIN Rel_Solidarios_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Solidarios}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Solidarios{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Rel_Solidarios" data-fieldname="Rel_Solidarios" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Solidarios}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Solidarios }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Solidarios}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Solidarios_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Solidarios_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Solidarios_fieldblock}
+											
+{BEGIN Rel_Cautelares_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Cautelares}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Cautelares{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Rel_Cautelares" data-fieldname="Rel_Cautelares" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Cautelares}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Cautelares }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Cautelares}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Cautelares_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Cautelares_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Cautelares_fieldblock}
+											
+{BEGIN Rel_Concepto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Concepto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Concepto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Rel_Concepto" data-fieldname="Rel_Concepto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Concepto}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Concepto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Concepto}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Concepto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Concepto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Concepto_fieldblock}
+											
+{BEGIN Rel_Especialidad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Especialidad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Especialidad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Rel_Especialidad" data-fieldname="Rel_Especialidad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Especialidad}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Especialidad }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Especialidad}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Especialidad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Especialidad_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Especialidad_fieldblock}
+											
+{BEGIN Rel_Porcentaje_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Porcentaje}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Porcentaje{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Rel_Porcentaje" data-fieldname="Rel_Porcentaje" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Porcentaje}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Porcentaje }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Porcentaje}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Porcentaje_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Porcentaje_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Porcentaje_fieldblock}
+											
+{BEGIN Saldo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Saldo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Saldo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="Saldo" data-fieldname="Saldo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Saldo}">
+		{$label Deterioro_de_Cartera_por_Proceso Saldo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Saldo}
+	</div>
+	<div class="r-search-field">
+		{$Saldo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Saldo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Saldo_fieldblock}
+											
+{BEGIN Recobrable_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Recobrable}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Recobrable{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="Recobrable" data-fieldname="Recobrable" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Recobrable}">
+		{$label Deterioro_de_Cartera_por_Proceso Recobrable }	</label>
+	<div class="r-search-option">
+		{$searchtype_Recobrable}
+	</div>
+	<div class="r-search-field">
+		{$Recobrable_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Recobrable_editcontrol1}
+	</div>
+	
+</div>
+
+{END Recobrable_fieldblock}
+											
+{BEGIN Rel_Meses_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Meses}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Meses{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="Rel_Meses" data-fieldname="Rel_Meses" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Meses}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Meses }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Meses}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Meses_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Meses_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Meses_fieldblock}
+											
+{BEGIN Rel_Alicuotas_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Alicuotas}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Alicuotas{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="Rel_Alicuotas" data-fieldname="Rel_Alicuotas" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Alicuotas}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Alicuotas }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Alicuotas}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Alicuotas_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Alicuotas_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Alicuotas_fieldblock}
+											
+{BEGIN Rel_Tasa_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Rel_Tasa}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Rel_Tasa{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="Rel_Tasa" data-fieldname="Rel_Tasa" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Rel_Tasa}">
+		{$label Deterioro_de_Cartera_por_Proceso Rel_Tasa }	</label>
+	<div class="r-search-option">
+		{$searchtype_Rel_Tasa}
+	</div>
+	<div class="r-search-field">
+		{$Rel_Tasa_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Rel_Tasa_editcontrol1}
+	</div>
+	
+</div>
+
+{END Rel_Tasa_fieldblock}
+											
+{BEGIN VPN_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_VPN}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="VPN{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="VPN" data-fieldname="VPN" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_VPN}">
+		{$label Deterioro_de_Cartera_por_Proceso VPN }	</label>
+	<div class="r-search-option">
+		{$searchtype_VPN}
+	</div>
+	<div class="r-search-field">
+		{$VPN_editcontrol}	</div>
+	<div class="r-search-field">
+		{$VPN_editcontrol1}
+	</div>
+	
+</div>
+
+{END VPN_fieldblock}
+											
+{BEGIN Deterioro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Deterioro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Deterioro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="Deterioro" data-fieldname="Deterioro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Deterioro}">
+		{$label Deterioro_de_Cartera_por_Proceso Deterioro }	</label>
+	<div class="r-search-option">
+		{$searchtype_Deterioro}
+	</div>
+	<div class="r-search-field">
+		{$Deterioro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Deterioro_editcontrol1}
+	</div>
+	
+</div>
+
+{END Deterioro_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

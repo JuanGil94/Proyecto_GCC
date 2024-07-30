@@ -1,0 +1,656 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel Listado_Medidas_Cautelares search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Seccional_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Seccional}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Seccional{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Seccional" data-fieldname="Seccional" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Seccional}">
+		{$label Listado_Medidas_Cautelares Seccional }	</label>
+	<div class="r-search-option">
+		{$searchtype_Seccional}
+	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol1}
+	</div>
+	
+</div>
+
+{END Seccional_fieldblock}
+											
+{BEGIN Concepto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Concepto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Concepto" data-fieldname="Concepto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Concepto}">
+		{$label Listado_Medidas_Cautelares Concepto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Concepto}
+	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Concepto_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label Listado_Medidas_Cautelares Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Sancionado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Sancionado}">
+		{$label Listado_Medidas_Cautelares Sancionado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Sancionado}
+	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Sancionado_fieldblock}
+											
+{BEGIN No__Documento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_No__Documento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="No__Documento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="No__Documento" data-fieldname="No. Documento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_No__Documento}">
+		{$label Listado_Medidas_Cautelares No__Documento }	</label>
+	<div class="r-search-option">
+		{$searchtype_No__Documento}
+	</div>
+	<div class="r-search-field">
+		{$No__Documento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$No__Documento_editcontrol1}
+	</div>
+	
+</div>
+
+{END No__Documento_fieldblock}
+											
+{BEGIN TipoPropiedad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TipoPropiedad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="TipoPropiedad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="TipoPropiedad" data-fieldname="TipoPropiedad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_TipoPropiedad}">
+		{$label Listado_Medidas_Cautelares TipoPropiedad }	</label>
+	<div class="r-search-option">
+		{$searchtype_TipoPropiedad}
+	</div>
+	<div class="r-search-field">
+		{$TipoPropiedad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$TipoPropiedad_editcontrol1}
+	</div>
+	
+</div>
+
+{END TipoPropiedad_fieldblock}
+											
+{BEGIN Propiedad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Propiedad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Propiedad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Propiedad" data-fieldname="Propiedad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Propiedad}">
+		{$label Listado_Medidas_Cautelares Propiedad }	</label>
+	<div class="r-search-option">
+		{$searchtype_Propiedad}
+	</div>
+	<div class="r-search-field">
+		{$Propiedad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Propiedad_editcontrol1}
+	</div>
+	
+</div>
+
+{END Propiedad_fieldblock}
+											
+{BEGIN Ciudad_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ciudad}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Ciudad{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Ciudad" data-fieldname="Ciudad" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Ciudad}">
+		{$label Listado_Medidas_Cautelares Ciudad }	</label>
+	<div class="r-search-option">
+		{$searchtype_Ciudad}
+	</div>
+	<div class="r-search-field">
+		{$Ciudad_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Ciudad_editcontrol1}
+	</div>
+	
+</div>
+
+{END Ciudad_fieldblock}
+											
+{BEGIN Matr_cula_Placa_Registro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Matr_cula_Placa_Registro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Matr_cula_Placa_Registro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Matr_cula_Placa_Registro" data-fieldname="Matrícula/Placa/Registro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Matr_cula_Placa_Registro}">
+		{$label Listado_Medidas_Cautelares Matr_cula_Placa_Registro }	</label>
+	<div class="r-search-option">
+		{$searchtype_Matr_cula_Placa_Registro}
+	</div>
+	<div class="r-search-field">
+		{$Matr_cula_Placa_Registro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Matr_cula_Placa_Registro_editcontrol1}
+	</div>
+	
+</div>
+
+{END Matr_cula_Placa_Registro_fieldblock}
+											
+{BEGIN Aval_o_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Aval_o}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Aval_o{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Aval_o" data-fieldname="Avalúo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Aval_o}">
+		{$label Listado_Medidas_Cautelares Aval_o }	</label>
+	<div class="r-search-option">
+		{$searchtype_Aval_o}
+	</div>
+	<div class="r-search-field">
+		{$Aval_o_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Aval_o_editcontrol1}
+	</div>
+	
+</div>
+
+{END Aval_o_fieldblock}
+											
+{BEGIN F__Embargo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_F__Embargo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="F__Embargo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="F__Embargo" data-fieldname="F. Embargo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_F__Embargo}">
+		{$label Listado_Medidas_Cautelares F__Embargo }	</label>
+	<div class="r-search-option">
+		{$searchtype_F__Embargo}
+	</div>
+	<div class="r-search-field">
+		{$F__Embargo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$F__Embargo_editcontrol1}
+	</div>
+	
+</div>
+
+{END F__Embargo_fieldblock}
+											
+{BEGIN Secuestrado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Secuestrado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Secuestrado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Secuestrado" data-fieldname="Secuestrado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Secuestrado}">
+		{$label Listado_Medidas_Cautelares Secuestrado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Secuestrado}
+	</div>
+	<div class="r-search-field">
+		{$Secuestrado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Secuestrado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Secuestrado_fieldblock}
+											
+{BEGIN F__Secuestro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_F__Secuestro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="F__Secuestro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="F__Secuestro" data-fieldname="F. Secuestro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_F__Secuestro}">
+		{$label Listado_Medidas_Cautelares F__Secuestro }	</label>
+	<div class="r-search-option">
+		{$searchtype_F__Secuestro}
+	</div>
+	<div class="r-search-field">
+		{$F__Secuestro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$F__Secuestro_editcontrol1}
+	</div>
+	
+</div>
+
+{END F__Secuestro_fieldblock}
+											
+{BEGIN Secuestre_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Secuestre}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Secuestre{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="Secuestre" data-fieldname="Secuestre" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Secuestre}">
+		{$label Listado_Medidas_Cautelares Secuestre }	</label>
+	<div class="r-search-option">
+		{$searchtype_Secuestre}
+	</div>
+	<div class="r-search-field">
+		{$Secuestre_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Secuestre_editcontrol1}
+	</div>
+	
+</div>
+
+{END Secuestre_fieldblock}
+											
+{BEGIN Doc__Secuestre_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Doc__Secuestre}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Doc__Secuestre{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="Doc__Secuestre" data-fieldname="Doc. Secuestre" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Doc__Secuestre}">
+		{$label Listado_Medidas_Cautelares Doc__Secuestre }	</label>
+	<div class="r-search-option">
+		{$searchtype_Doc__Secuestre}
+	</div>
+	<div class="r-search-field">
+		{$Doc__Secuestre_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Doc__Secuestre_editcontrol1}
+	</div>
+	
+</div>
+
+{END Doc__Secuestre_fieldblock}
+											
+{BEGIN Dir__Secuestre_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Dir__Secuestre}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Dir__Secuestre{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="Dir__Secuestre" data-fieldname="Dir. Secuestre" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Dir__Secuestre}">
+		{$label Listado_Medidas_Cautelares Dir__Secuestre }	</label>
+	<div class="r-search-option">
+		{$searchtype_Dir__Secuestre}
+	</div>
+	<div class="r-search-field">
+		{$Dir__Secuestre_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Dir__Secuestre_editcontrol1}
+	</div>
+	
+</div>
+
+{END Dir__Secuestre_fieldblock}
+											
+{BEGIN Tel__Secuestre_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tel__Secuestre}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Tel__Secuestre{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="Tel__Secuestre" data-fieldname="Tel. Secuestre" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Tel__Secuestre}">
+		{$label Listado_Medidas_Cautelares Tel__Secuestre }	</label>
+	<div class="r-search-option">
+		{$searchtype_Tel__Secuestre}
+	</div>
+	<div class="r-search-field">
+		{$Tel__Secuestre_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Tel__Secuestre_editcontrol1}
+	</div>
+	
+</div>
+
+{END Tel__Secuestre_fieldblock}
+											
+{BEGIN Comisi_n_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Comisi_n}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Comisi_n{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="Comisi_n" data-fieldname="Comisión" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Comisi_n}">
+		{$label Listado_Medidas_Cautelares Comisi_n }	</label>
+	<div class="r-search-option">
+		{$searchtype_Comisi_n}
+	</div>
+	<div class="r-search-field">
+		{$Comisi_n_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Comisi_n_editcontrol1}
+	</div>
+	
+</div>
+
+{END Comisi_n_fieldblock}
+											
+{BEGIN Aviso_Remate_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Aviso_Remate}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Aviso_Remate{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="Aviso_Remate" data-fieldname="Aviso Remate" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Aviso_Remate}">
+		{$label Listado_Medidas_Cautelares Aviso_Remate }	</label>
+	<div class="r-search-option">
+		{$searchtype_Aviso_Remate}
+	</div>
+	<div class="r-search-field">
+		{$Aviso_Remate_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Aviso_Remate_editcontrol1}
+	</div>
+	
+</div>
+
+{END Aviso_Remate_fieldblock}
+											
+{BEGIN Aprobaci_n_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Aprobaci_n}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Aprobaci_n{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="Aprobaci_n" data-fieldname="Aprobación" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Aprobaci_n}">
+		{$label Listado_Medidas_Cautelares Aprobaci_n }	</label>
+	<div class="r-search-option">
+		{$searchtype_Aprobaci_n}
+	</div>
+	<div class="r-search-field">
+		{$Aprobaci_n_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Aprobaci_n_editcontrol1}
+	</div>
+	
+</div>
+
+{END Aprobaci_n_fieldblock}
+											
+{BEGIN Valor_Rematado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Valor_Rematado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Valor_Rematado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="Valor_Rematado" data-fieldname="Valor Rematado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Valor_Rematado}">
+		{$label Listado_Medidas_Cautelares Valor_Rematado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Valor_Rematado}
+	</div>
+	<div class="r-search-field">
+		{$Valor_Rematado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Valor_Rematado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Valor_Rematado_fieldblock}
+											
+{BEGIN Dilig__Entrega_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Dilig__Entrega}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Dilig__Entrega{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="Dilig__Entrega" data-fieldname="Dilig. Entrega" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Dilig__Entrega}">
+		{$label Listado_Medidas_Cautelares Dilig__Entrega }	</label>
+	<div class="r-search-option">
+		{$searchtype_Dilig__Entrega}
+	</div>
+	<div class="r-search-field">
+		{$Dilig__Entrega_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Dilig__Entrega_editcontrol1}
+	</div>
+	
+</div>
+
+{END Dilig__Entrega_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field22" {$item_integrated_search_field22} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Observaciones}">
+		{$label Listado_Medidas_Cautelares Observaciones }	</label>
+	<div class="r-search-option">
+		{$searchtype_Observaciones}
+	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol1}
+	</div>
+	
+</div>
+
+{END Observaciones_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

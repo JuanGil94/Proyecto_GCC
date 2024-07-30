@@ -1,0 +1,183 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Deterioro_de_Cartera_por_Proceso import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Rel_Monto_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Rel_Antiguedad_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$Rel_Notificacion_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$Rel_Ubicacion_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Rel_Libertad_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Rel_Solidarios_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Rel_Cautelares_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Rel_Concepto_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$Rel_Especialidad_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$Rel_Porcentaje_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$Recobrable_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$Rel_Meses_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$Rel_Alicuotas_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$Rel_Tasa_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$VPN_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$Deterioro_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

@@ -443,6 +443,34 @@ function checkTableName($shortTName )
 		return true;
 	if ("dbo_despachos5" == $shortTName )
 		return true;
+	if ("bdme_actualizaci_n" == $shortTName )
+		return true;
+	if ("bdme_gu_a_del_deudor_moroso" == $shortTName )
+		return true;
+	if ("bdme_incumplimiento_acuerdo_de_pago_semestral" == $shortTName )
+		return true;
+	if ("bdme_retiros" == $shortTName )
+		return true;
+	if ("bdme_reporte_semestral" == $shortTName )
+		return true;
+	if ("bdme_cancelaci_n_acuerdo_de_pago" == $shortTName )
+		return true;
+	if ("bdme_excluidos" == $shortTName )
+		return true;
+	if ("base_de_datos___historico" == $shortTName )
+		return true;
+	if ("deterioro_de_cartera_por_proceso" == $shortTName )
+		return true;
+	if ("intereses_por_proceso" == $shortTName )
+		return true;
+	if ("listado_medidas_cautelares" == $shortTName )
+		return true;
+	if ("presunci_n_prescripci_n" == $shortTName )
+		return true;
+	if ("intereses_por_proceso_report" == $shortTName )
+		return true;
+	if ("certificado_del_resumen_por_periodo" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1573,6 +1601,132 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Despachos5";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Actualización");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Actualización";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Guía del Deudor Moroso");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Guía del Deudor Moroso";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Incumplimiento Acuerdo de Pago Semestral");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Incumplimiento Acuerdo de Pago Semestral";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Retiros");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Retiros";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Reporte Semestral");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Reporte Semestral";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Cancelación Acuerdo de Pago");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Cancelación Acuerdo de Pago";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Excluidos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Excluidos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Base de Datos - Historico");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Base de Datos - Historico";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Deterioro de Cartera por Proceso");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Deterioro de Cartera por Proceso";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Intereses por Proceso");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Intereses por Proceso";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Listado Medidas Cautelares");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Listado Medidas Cautelares";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Presunción Prescripción");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Presunción Prescripción";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Intereses por Proceso Report");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Intereses por Proceso Report";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Certificado del Resumen por Periodo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Certificado del Resumen por Periodo";
+	}
 	return $arr;
 }
 
@@ -1702,6 +1856,20 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.tipoRecaudo";
 	$arr[]="dbo.Despachos2";
 	$arr[]="dbo.Despachos5";
+	$arr[]="BDME Actualización";
+	$arr[]="BDME Guía del Deudor Moroso";
+	$arr[]="BDME Incumplimiento Acuerdo de Pago Semestral";
+	$arr[]="BDME Retiros";
+	$arr[]="BDME Reporte Semestral";
+	$arr[]="BDME Cancelación Acuerdo de Pago";
+	$arr[]="BDME Excluidos";
+	$arr[]="Base de Datos - Historico";
+	$arr[]="Deterioro de Cartera por Proceso";
+	$arr[]="Intereses por Proceso";
+	$arr[]="Listado Medidas Cautelares";
+	$arr[]="Presunción Prescripción";
+	$arr[]="Intereses por Proceso Report";
+	$arr[]="Certificado del Resumen por Periodo";
 	return $arr;
 }
 
@@ -2927,6 +3095,76 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Despachos5" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Actualización" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Guía del Deudor Moroso" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Incumplimiento Acuerdo de Pago Semestral" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Retiros" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Reporte Semestral" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Cancelación Acuerdo de Pago" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Excluidos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Base de Datos - Historico" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Deterioro de Cartera por Proceso" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Intereses por Proceso" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Listado Medidas Cautelares" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Presunción Prescripción" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Intereses por Proceso Report" )
+	{
+//	default permissions
+		return "SP".$extraPerm;
+	}
+	if( $table=="Certificado del Resumen por Periodo" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

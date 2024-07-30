@@ -363,6 +363,20 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.tipoRecaudo"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Despachos2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Despachos5"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Actualización"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Guía del Deudor Moroso"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Incumplimiento Acuerdo de Pago Semestral"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Retiros"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Reporte Semestral"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Cancelación Acuerdo de Pago"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Excluidos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Base de Datos - Historico"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Deterioro de Cartera por Proceso"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Intereses por Proceso"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Listado Medidas Cautelares"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Presunción Prescripción"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Intereses por Proceso Report"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Certificado del Resumen por Periodo"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

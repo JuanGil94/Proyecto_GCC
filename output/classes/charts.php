@@ -618,6 +618,34 @@ class Chart
 			return true;
 		if("dbo.Despachos" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("Intereses por Proceso" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

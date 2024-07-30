@@ -888,6 +888,62 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="BDME Actualización")
+		{
+			return false;
+		}
+		if($table=="BDME Guía del Deudor Moroso")
+		{
+			return false;
+		}
+		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral")
+		{
+			return false;
+		}
+		if($table=="BDME Retiros")
+		{
+			return false;
+		}
+		if($table=="BDME Reporte Semestral")
+		{
+			return false;
+		}
+		if($table=="BDME Cancelación Acuerdo de Pago")
+		{
+			return false;
+		}
+		if($table=="BDME Excluidos")
+		{
+			return false;
+		}
+		if($table=="Base de Datos - Historico")
+		{
+			return false;
+		}
+		if($table=="Deterioro de Cartera por Proceso")
+		{
+			return false;
+		}
+		if($table=="Intereses por Proceso")
+		{
+			return false;
+		}
+		if($table=="Listado Medidas Cautelares")
+		{
+			return false;
+		}
+		if($table=="Presunción Prescripción")
+		{
+			return false;
+		}
+		if($table=="Intereses por Proceso Report")
+		{
+			return false;
+		}
+		if($table=="Certificado del Resumen por Periodo")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1729,6 +1785,62 @@ class AuditTrailFile
 		if($table=="dbo.Despachos5")
 		{
 			return true;
+		}
+		if($table=="BDME Actualización")
+		{
+			return false;
+		}
+		if($table=="BDME Guía del Deudor Moroso")
+		{
+			return false;
+		}
+		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral")
+		{
+			return false;
+		}
+		if($table=="BDME Retiros")
+		{
+			return false;
+		}
+		if($table=="BDME Reporte Semestral")
+		{
+			return false;
+		}
+		if($table=="BDME Cancelación Acuerdo de Pago")
+		{
+			return false;
+		}
+		if($table=="BDME Excluidos")
+		{
+			return false;
+		}
+		if($table=="Base de Datos - Historico")
+		{
+			return false;
+		}
+		if($table=="Deterioro de Cartera por Proceso")
+		{
+			return false;
+		}
+		if($table=="Intereses por Proceso")
+		{
+			return false;
+		}
+		if($table=="Listado Medidas Cautelares")
+		{
+			return false;
+		}
+		if($table=="Presunción Prescripción")
+		{
+			return false;
+		}
+		if($table=="Intereses por Proceso Report")
+		{
+			return false;
+		}
+		if($table=="Certificado del Resumen por Periodo")
+		{
+			return false;
 		}
 	}
 

@@ -877,6 +877,62 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="BDME Actualización")
+		{
+			return 1;
+		}
+		if($table=="BDME Guía del Deudor Moroso")
+		{
+			return 1;
+		}
+		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral")
+		{
+			return 1;
+		}
+		if($table=="BDME Retiros")
+		{
+			return 1;
+		}
+		if($table=="BDME Reporte Semestral")
+		{
+			return 1;
+		}
+		if($table=="BDME Cancelación Acuerdo de Pago")
+		{
+			return 1;
+		}
+		if($table=="BDME Excluidos")
+		{
+			return 1;
+		}
+		if($table=="Base de Datos - Historico")
+		{
+			return 1;
+		}
+		if($table=="Deterioro de Cartera por Proceso")
+		{
+			return 1;
+		}
+		if($table=="Intereses por Proceso")
+		{
+			return 1;
+		}
+		if($table=="Listado Medidas Cautelares")
+		{
+			return 1;
+		}
+		if($table=="Presunción Prescripción")
+		{
+			return 1;
+		}
+		if($table=="Intereses por Proceso Report")
+		{
+			return 1;
+		}
+		if($table=="Certificado del Resumen por Periodo")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1609,6 +1665,62 @@ function getCaptionTable($table)
 	if($table=="dbo.Despachos5")
 	{
 		return "Despachos5";
+	}
+	if($table=="BDME Actualización")
+	{
+		return "BDME Actualización";
+	}
+	if($table=="BDME Guía del Deudor Moroso")
+	{
+		return "BDME Guía del Deudor Moroso";
+	}
+	if($table=="BDME Incumplimiento Acuerdo de Pago Semestral")
+	{
+		return "BDME Incumplimiento Acuerdo de Pago Semestral";
+	}
+	if($table=="BDME Retiros")
+	{
+		return "BDME Retiros";
+	}
+	if($table=="BDME Reporte Semestral")
+	{
+		return "BDME Reporte Semestral";
+	}
+	if($table=="BDME Cancelación Acuerdo de Pago")
+	{
+		return "BDME Cancelación Acuerdo de Pago";
+	}
+	if($table=="BDME Excluidos")
+	{
+		return "BDME Excluidos";
+	}
+	if($table=="Base de Datos - Historico")
+	{
+		return "Base de Datos - Historico";
+	}
+	if($table=="Deterioro de Cartera por Proceso")
+	{
+		return "Deterioro de Cartera por Proceso";
+	}
+	if($table=="Intereses por Proceso")
+	{
+		return "Intereses por Proceso";
+	}
+	if($table=="Listado Medidas Cautelares")
+	{
+		return "Listado Medidas Cautelares";
+	}
+	if($table=="Presunción Prescripción")
+	{
+		return "Presunción Prescripción";
+	}
+	if($table=="Intereses por Proceso Report")
+	{
+		return "Intereses por Proceso Report";
+	}
+	if($table=="Certificado del Resumen por Periodo")
+	{
+		return "Certificado del Resumen por Periodo";
 	}
 	return $table;
 }
