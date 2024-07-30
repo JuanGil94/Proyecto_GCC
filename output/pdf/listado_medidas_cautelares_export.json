@@ -1,0 +1,195 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Listado_Medidas_Cautelares export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$No__Documento_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$TipoPropiedad_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Propiedad_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Ciudad_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Matr_cula_Placa_Registro_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Aval_o_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$F__Embargo_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Secuestrado_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$F__Secuestro_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Secuestre_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Doc__Secuestre_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Dir__Secuestre_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Tel__Secuestre_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$Comisi_n_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$Aviso_Remate_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$Aprobaci_n_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$Valor_Rematado_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$Dilig__Entrega_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field22}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

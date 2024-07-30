@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2523_1721142599";
+$projectBuildKey = "2535_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2523";
+$projectBuildNumber = "2535";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -893,6 +893,20 @@ $tableCaptions["Spanish"]["dbo_tipoRecaudo"] = "Tipo Recaudo";
 $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_Despachos2"] = "Despachos2";
 $tableCaptions["Spanish"]["dbo_Despachos5"] = "Despachos5";
+$tableCaptions["Spanish"]["BDME_Actualizaci_n"] = "BDME Actualización";
+$tableCaptions["Spanish"]["BDME_Gu_a_del_Deudor_Moroso"] = "BDME Guía del Deudor Moroso";
+$tableCaptions["Spanish"]["BDME_Incumplimiento_Acuerdo_de_Pago_Semestral"] = "BDME Incumplimiento Acuerdo de Pago Semestral";
+$tableCaptions["Spanish"]["BDME_Retiros"] = "BDME Retiros";
+$tableCaptions["Spanish"]["BDME_Reporte_Semestral"] = "BDME Reporte Semestral";
+$tableCaptions["Spanish"]["BDME_Cancelaci_n_Acuerdo_de_Pago"] = "BDME Cancelación Acuerdo de Pago";
+$tableCaptions["Spanish"]["BDME_Excluidos"] = "BDME Excluidos";
+$tableCaptions["Spanish"]["Base_de_Datos___Historico"] = "Base de Datos - Historico";
+$tableCaptions["Spanish"]["Deterioro_de_Cartera_por_Proceso"] = "Deterioro de Cartera por Proceso";
+$tableCaptions["Spanish"]["Intereses_por_Proceso"] = "Intereses por Proceso";
+$tableCaptions["Spanish"]["Listado_Medidas_Cautelares"] = "Listado Medidas Cautelares";
+$tableCaptions["Spanish"]["Presunci_n_Prescripci_n"] = "Presunción Prescripción";
+$tableCaptions["Spanish"]["Intereses_por_Proceso_Report"] = "Intereses por Proceso Report";
+$tableCaptions["Spanish"]["Certificado_del_Resumen_por_Periodo"] = "Certificado del Resumen por Periodo";
 
 
 $globalEvents = new class_GlobalEvents;

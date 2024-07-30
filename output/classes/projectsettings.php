@@ -3776,6 +3776,34 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "despachos2" ] = "dbo.Despachos2";
 	$projectEntities[ "dbo.Despachos5" ] = array( "url" => "dbo_despachos5", "type" => 1 );
 	$projectEntitiesReverse[ "dbo_despachos5" ] = "dbo.Despachos5";
+	$projectEntities[ "BDME Actualización" ] = array( "url" => "bdme_actualizaci_n", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_actualizaci_n" ] = "BDME Actualización";
+	$projectEntities[ "BDME Guía del Deudor Moroso" ] = array( "url" => "bdme_gu_a_del_deudor_moroso", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_gu_a_del_deudor_moroso" ] = "BDME Guía del Deudor Moroso";
+	$projectEntities[ "BDME Incumplimiento Acuerdo de Pago Semestral" ] = array( "url" => "bdme_incumplimiento_acuerdo_de_pago_semestral", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_incumplimiento_acuerdo_de_pago_semestral" ] = "BDME Incumplimiento Acuerdo de Pago Semestral";
+	$projectEntities[ "BDME Retiros" ] = array( "url" => "bdme_retiros", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_retiros" ] = "BDME Retiros";
+	$projectEntities[ "BDME Reporte Semestral" ] = array( "url" => "bdme_reporte_semestral", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_reporte_semestral" ] = "BDME Reporte Semestral";
+	$projectEntities[ "BDME Cancelación Acuerdo de Pago" ] = array( "url" => "bdme_cancelaci_n_acuerdo_de_pago", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_cancelaci_n_acuerdo_de_pago" ] = "BDME Cancelación Acuerdo de Pago";
+	$projectEntities[ "BDME Excluidos" ] = array( "url" => "bdme_excluidos", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_excluidos" ] = "BDME Excluidos";
+	$projectEntities[ "Base de Datos - Historico" ] = array( "url" => "base_de_datos___historico", "type" => 6 );
+	$projectEntitiesReverse[ "base_de_datos___historico" ] = "Base de Datos - Historico";
+	$projectEntities[ "Deterioro de Cartera por Proceso" ] = array( "url" => "deterioro_de_cartera_por_proceso", "type" => 6 );
+	$projectEntitiesReverse[ "deterioro_de_cartera_por_proceso" ] = "Deterioro de Cartera por Proceso";
+	$projectEntities[ "Intereses por Proceso" ] = array( "url" => "intereses_por_proceso", "type" => 6 );
+	$projectEntitiesReverse[ "intereses_por_proceso" ] = "Intereses por Proceso";
+	$projectEntities[ "Listado Medidas Cautelares" ] = array( "url" => "listado_medidas_cautelares", "type" => 6 );
+	$projectEntitiesReverse[ "listado_medidas_cautelares" ] = "Listado Medidas Cautelares";
+	$projectEntities[ "Presunción Prescripción" ] = array( "url" => "presunci_n_prescripci_n", "type" => 6 );
+	$projectEntitiesReverse[ "presunci_n_prescripci_n" ] = "Presunción Prescripción";
+	$projectEntities[ "Intereses por Proceso Report" ] = array( "url" => "intereses_por_proceso_report", "type" => 8 );
+	$projectEntitiesReverse[ "intereses_por_proceso_report" ] = "Intereses por Proceso Report";
+	$projectEntities[ "Certificado del Resumen por Periodo" ] = array( "url" => "certificado_del_resumen_por_periodo", "type" => 6 );
+	$projectEntitiesReverse[ "certificado_del_resumen_por_periodo" ] = "Certificado del Resumen por Periodo";
 }
 
 function findTable( $table ) {

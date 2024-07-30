@@ -1,9 +1,3 @@
-[data-page=".global_menu"][data-itemid="welcome_item"] > .bs-welcome-header {
-  background-color: #D2691E;
-}
-[data-page=".global_menu"][data-itemid="welcome_item1"] > .bs-welcome-header {
-  background-color: #8FBC8B;
-}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

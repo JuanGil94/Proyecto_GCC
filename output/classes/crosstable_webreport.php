@@ -1621,6 +1621,34 @@ class CrossTableWebReport
 			$isDB = true;
 		if("dbo.Despachos" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("Intereses por Proceso" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	
