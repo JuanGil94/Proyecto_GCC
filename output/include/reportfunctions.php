@@ -929,6 +929,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="Certificado del Resumen Mensual")
+		{
+			return 1;
+		}
 		if($table=="Certificado del Resumen por Periodo")
 		{
 			return 1;
@@ -1717,6 +1721,10 @@ function getCaptionTable($table)
 	if($table=="Intereses por Proceso Report")
 	{
 		return "Intereses por Proceso Report";
+	}
+	if($table=="Certificado del Resumen Mensual")
+	{
+		return "Certificado del Resumen Mensual";
 	}
 	if($table=="Certificado del Resumen por Periodo")
 	{

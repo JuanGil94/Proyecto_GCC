@@ -2260,4 +2260,28 @@ menu-treelike
 
 	</li>
 	{END item101_menulink}
+	
+	
+	{BEGIN item102_menulink}
+	<li class=" {$item102_current}">
+		
+<a {$item102_menulink_attrs} title="{$item102_tooltip}" 
+			data-menu-top
+			data-menu-v
+			data-menu-inline
+	data-menu-link
+>
+	<span class="
+	r-menu-link
+			r-menu-expanded
+	"> 
+		<span class="r-menu-title">
+		{$item102_icon} {$item102_title}
+		</span>
+			</span>
+		<span class="r-menu-collapsed">{$item102_collicon}{$item102_firstcap}</span>
+</a>
+
+	</li>
+	{END item102_menulink}
 </ul>

@@ -940,6 +940,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Certificado del Resumen Mensual")
+		{
+			return false;
+		}
 		if($table=="Certificado del Resumen por Periodo")
 		{
 			return false;
@@ -1835,6 +1839,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Intereses por Proceso Report")
+		{
+			return false;
+		}
+		if($table=="Certificado del Resumen Mensual")
 		{
 			return false;
 		}

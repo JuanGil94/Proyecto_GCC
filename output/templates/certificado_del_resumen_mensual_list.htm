@@ -1,0 +1,3522 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label Certificado_del_Resumen_Mensual Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_ContadorCargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ContadorCargo}" {$filterRow_attrs_ContadorCargo}>
+			<label>{$label Certificado_del_Resumen_Mensual ContadorCargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ContadorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ContadorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ContadorCargo}</span>
+						</div>
+		{END searchCtrlBlock_ContadorCargo}
+																{BEGIN searchCtrlBlock_Contador}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Contador}" {$filterRow_attrs_Contador}>
+			<label>{$label Certificado_del_Resumen_Mensual Contador }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Contador}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Contador}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Contador}</span>
+						</div>
+		{END searchCtrlBlock_Contador}
+																{BEGIN searchCtrlBlock_AbogadoCargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_AbogadoCargo}" {$filterRow_attrs_AbogadoCargo}>
+			<label>{$label Certificado_del_Resumen_Mensual AbogadoCargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_AbogadoCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_AbogadoCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoCargo}</span>
+						</div>
+		{END searchCtrlBlock_AbogadoCargo}
+																{BEGIN searchCtrlBlock_Abogado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Abogado}" {$filterRow_attrs_Abogado}>
+			<label>{$label Certificado_del_Resumen_Mensual Abogado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
+						</div>
+		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_DirectorCargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DirectorCargo}" {$filterRow_attrs_DirectorCargo}>
+			<label>{$label Certificado_del_Resumen_Mensual DirectorCargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DirectorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DirectorCargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DirectorCargo}</span>
+						</div>
+		{END searchCtrlBlock_DirectorCargo}
+																{BEGIN searchCtrlBlock_Director}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Director}" {$filterRow_attrs_Director}>
+			<label>{$label Certificado_del_Resumen_Mensual Director }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Director}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Director}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Director}</span>
+						</div>
+		{END searchCtrlBlock_Director}
+																{BEGIN searchCtrlBlock_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}" {$filterRow_attrs_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}>
+			<label>{$label Certificado_del_Resumen_Mensual DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}</span>
+						</div>
+		{END searchCtrlBlock_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}
+																{BEGIN searchCtrlBlock_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}" {$filterRow_attrs_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}>
+			<label>{$label Certificado_del_Resumen_Mensual DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}</span>
+						</div>
+		{END searchCtrlBlock_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}
+																{BEGIN searchCtrlBlock__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}" {$filterRow_attrs__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}>
+			<label>{$label Certificado_del_Resumen_Mensual _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}</span>
+						</div>
+		{END searchCtrlBlock__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}
+																{BEGIN searchCtrlBlock_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}" {$filterRow_attrs_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}>
+			<label>{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}</span>
+						</div>
+		{END searchCtrlBlock_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}
+																{BEGIN searchCtrlBlock_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}" {$filterRow_attrs_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}>
+			<label>{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___H__NOVEDADES___CostNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}</span>
+						</div>
+		{END searchCtrlBlock_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}
+																{BEGIN searchCtrlBlock_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}" {$filterRow_attrs_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}>
+			<label>{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}</span>
+						</div>
+		{END searchCtrlBlock_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}
+																{BEGIN searchCtrlBlock_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}" {$filterRow_attrs_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}>
+			<label>{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___F_TRASLADOS___CostTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}</span>
+						</div>
+		{END searchCtrlBlock_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}
+																{BEGIN searchCtrlBlock_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}" {$filterRow_attrs_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}>
+			<label>{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___E__RECAUDO___CostReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}</span>
+						</div>
+		{END searchCtrlBlock_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}
+																{BEGIN searchCtrlBlock__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}" {$filterRow_attrs__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}>
+			<label>{$label Certificado_del_Resumen_Mensual _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}</span>
+						</div>
+		{END searchCtrlBlock__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}
+																{BEGIN searchCtrlBlock__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}" {$filterRow_attrs__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}>
+			<label>{$label Certificado_del_Resumen_Mensual _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}</span>
+						</div>
+		{END searchCtrlBlock__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}" {$filterRow_attrs_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}" {$filterRow_attrs_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___H__NOVEDADES___InteNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}" {$filterRow_attrs_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}" {$filterRow_attrs_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS____F_TRASLADOS___InteTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}" {$filterRow_attrs_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___E__RECAUDO__InteReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}" {$filterRow_attrs_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}
+																{BEGIN searchCtrlBlock_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}" {$filterRow_attrs_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}>
+			<label>{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}</span>
+						</div>
+		{END searchCtrlBlock_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}
+																{BEGIN searchCtrlBlock_ObliTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliTota}" {$filterRow_attrs_ObliTota}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliTota}</span>
+						</div>
+		{END searchCtrlBlock_ObliTota}
+																{BEGIN searchCtrlBlock_ProcTota}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcTota}" {$filterRow_attrs_ProcTota}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcTota }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcTota}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcTota}</span>
+						</div>
+		{END searchCtrlBlock_ProcTota}
+																{BEGIN searchCtrlBlock_ObliNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliNove}" {$filterRow_attrs_ObliNove}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliNove}</span>
+						</div>
+		{END searchCtrlBlock_ObliNove}
+																{BEGIN searchCtrlBlock_ProcNove}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcNove}" {$filterRow_attrs_ProcNove}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcNove }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcNove}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcNove}</span>
+						</div>
+		{END searchCtrlBlock_ProcNove}
+																{BEGIN searchCtrlBlock_ObliNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliNopa}" {$filterRow_attrs_ObliNopa}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliNopa}</span>
+						</div>
+		{END searchCtrlBlock_ObliNopa}
+																{BEGIN searchCtrlBlock_ProcNopa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcNopa}" {$filterRow_attrs_ProcNopa}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcNopa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcNopa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcNopa}</span>
+						</div>
+		{END searchCtrlBlock_ProcNopa}
+																{BEGIN searchCtrlBlock_ObliTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliTras}" {$filterRow_attrs_ObliTras}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliTras}</span>
+						</div>
+		{END searchCtrlBlock_ObliTras}
+																{BEGIN searchCtrlBlock_ProcTras}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcTras}" {$filterRow_attrs_ProcTras}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcTras }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcTras}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcTras}</span>
+						</div>
+		{END searchCtrlBlock_ProcTras}
+																{BEGIN searchCtrlBlock_ObliReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliReca}" {$filterRow_attrs_ObliReca}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliReca}</span>
+						</div>
+		{END searchCtrlBlock_ObliReca}
+																{BEGIN searchCtrlBlock_ProcReca}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcReca}" {$filterRow_attrs_ProcReca}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcReca }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcReca}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcReca}</span>
+						</div>
+		{END searchCtrlBlock_ProcReca}
+																{BEGIN searchCtrlBlock_ObliActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliActu}" {$filterRow_attrs_ObliActu}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliActu}</span>
+						</div>
+		{END searchCtrlBlock_ObliActu}
+																{BEGIN searchCtrlBlock_ProcActu}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcActu}" {$filterRow_attrs_ProcActu}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcActu }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcActu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcActu}</span>
+						</div>
+		{END searchCtrlBlock_ProcActu}
+																{BEGIN searchCtrlBlock_ObliAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ObliAnte}" {$filterRow_attrs_ObliAnte}>
+			<label>{$label Certificado_del_Resumen_Mensual ObliAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ObliAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ObliAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ObliAnte}</span>
+						</div>
+		{END searchCtrlBlock_ObliAnte}
+																{BEGIN searchCtrlBlock_ProcAnte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ProcAnte}" {$filterRow_attrs_ProcAnte}>
+			<label>{$label Certificado_del_Resumen_Mensual ProcAnte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ProcAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcAnte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcAnte}</span>
+						</div>
+		{END searchCtrlBlock_ProcAnte}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="certificado_del_resumen_mensual_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="certificado_del_resumen_mensual_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="certificado_del_resumen_mensual_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir todas las páginas							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="certificado_del_resumen_mensual_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Resultados por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual Concepto}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcAnte"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliAnte"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcActu"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliActu"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcReca"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliReca"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcTras"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliTras"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcNopa"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliNopa"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcNove"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliNove"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcTota"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ProcTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObliTota"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ObliTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS___E__RECAUDO__InteReca"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___E__RECAUDO__InteReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS____F_TRASLADOS___InteTras"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS___H__NOVEDADES___InteNove"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="COSTAS_DE_MULTAS___E__RECAUDO___CostReca"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___E__RECAUDO___CostReca}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="COSTAS_DE_MULTAS___F_TRASLADOS___CostTras"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="COSTAS_DE_MULTAS___H__NOVEDADES___CostNove"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Director"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual Director}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="DirectorCargo"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual DirectorCargo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual Abogado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AbogadoCargo"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual AbogadoCargo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Contador"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual Contador}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ContadorCargo"]:before {
+		content: "{$label Certificado_del_Resumen_Mensual ContadorCargo}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label Certificado_del_Resumen_Mensual Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcAnte_class}	"
+
+			data-field="ProcAnte"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcAnte_fieldheadercolumn}
+	{BEGIN ProcAnte_fieldheader}
+	<SPAN {$ProcAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcAnte" data-fieldname="ProcAnte">
+	{$label Certificado_del_Resumen_Mensual ProcAnte }	{$arrow_icon_ProcAnte}
+	</SPAN>
+	{END ProcAnte_fieldheader}
+{END ProcAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliAnte_class}	"
+
+			data-field="ObliAnte"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliAnte_fieldheadercolumn}
+	{BEGIN ObliAnte_fieldheader}
+	<SPAN {$ObliAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliAnte" data-fieldname="ObliAnte">
+	{$label Certificado_del_Resumen_Mensual ObliAnte }	{$arrow_icon_ObliAnte}
+	</SPAN>
+	{END ObliAnte_fieldheader}
+{END ObliAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcActu_class}	"
+
+			data-field="ProcActu"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcActu_fieldheadercolumn}
+	{BEGIN ProcActu_fieldheader}
+	<SPAN {$ProcActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcActu" data-fieldname="ProcActu">
+	{$label Certificado_del_Resumen_Mensual ProcActu }	{$arrow_icon_ProcActu}
+	</SPAN>
+	{END ProcActu_fieldheader}
+{END ProcActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliActu_class}	"
+
+			data-field="ObliActu"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliActu_fieldheadercolumn}
+	{BEGIN ObliActu_fieldheader}
+	<SPAN {$ObliActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliActu" data-fieldname="ObliActu">
+	{$label Certificado_del_Resumen_Mensual ObliActu }	{$arrow_icon_ObliActu}
+	</SPAN>
+	{END ObliActu_fieldheader}
+{END ObliActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcReca_class}	"
+
+			data-field="ProcReca"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcReca_fieldheadercolumn}
+	{BEGIN ProcReca_fieldheader}
+	<SPAN {$ProcReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcReca" data-fieldname="ProcReca">
+	{$label Certificado_del_Resumen_Mensual ProcReca }	{$arrow_icon_ProcReca}
+	</SPAN>
+	{END ProcReca_fieldheader}
+{END ProcReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliReca_class}	"
+
+			data-field="ObliReca"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliReca_fieldheadercolumn}
+	{BEGIN ObliReca_fieldheader}
+	<SPAN {$ObliReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliReca" data-fieldname="ObliReca">
+	{$label Certificado_del_Resumen_Mensual ObliReca }	{$arrow_icon_ObliReca}
+	</SPAN>
+	{END ObliReca_fieldheader}
+{END ObliReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTras_class}	"
+
+			data-field="ProcTras"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTras_fieldheadercolumn}
+	{BEGIN ProcTras_fieldheader}
+	<SPAN {$ProcTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTras" data-fieldname="ProcTras">
+	{$label Certificado_del_Resumen_Mensual ProcTras }	{$arrow_icon_ProcTras}
+	</SPAN>
+	{END ProcTras_fieldheader}
+{END ProcTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTras_class}	"
+
+			data-field="ObliTras"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTras_fieldheadercolumn}
+	{BEGIN ObliTras_fieldheader}
+	<SPAN {$ObliTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTras" data-fieldname="ObliTras">
+	{$label Certificado_del_Resumen_Mensual ObliTras }	{$arrow_icon_ObliTras}
+	</SPAN>
+	{END ObliTras_fieldheader}
+{END ObliTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNopa_class}	"
+
+			data-field="ProcNopa"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNopa_fieldheadercolumn}
+	{BEGIN ProcNopa_fieldheader}
+	<SPAN {$ProcNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNopa" data-fieldname="ProcNopa">
+	{$label Certificado_del_Resumen_Mensual ProcNopa }	{$arrow_icon_ProcNopa}
+	</SPAN>
+	{END ProcNopa_fieldheader}
+{END ProcNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNopa_class}	"
+
+			data-field="ObliNopa"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNopa_fieldheadercolumn}
+	{BEGIN ObliNopa_fieldheader}
+	<SPAN {$ObliNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNopa" data-fieldname="ObliNopa">
+	{$label Certificado_del_Resumen_Mensual ObliNopa }	{$arrow_icon_ObliNopa}
+	</SPAN>
+	{END ObliNopa_fieldheader}
+{END ObliNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNove_class}	"
+
+			data-field="ProcNove"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNove_fieldheadercolumn}
+	{BEGIN ProcNove_fieldheader}
+	<SPAN {$ProcNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNove" data-fieldname="ProcNove">
+	{$label Certificado_del_Resumen_Mensual ProcNove }	{$arrow_icon_ProcNove}
+	</SPAN>
+	{END ProcNove_fieldheader}
+{END ProcNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNove_class}	"
+
+			data-field="ObliNove"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNove_fieldheadercolumn}
+	{BEGIN ObliNove_fieldheader}
+	<SPAN {$ObliNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNove" data-fieldname="ObliNove">
+	{$label Certificado_del_Resumen_Mensual ObliNove }	{$arrow_icon_ObliNove}
+	</SPAN>
+	{END ObliNove_fieldheader}
+{END ObliNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTota_class}	"
+
+			data-field="ProcTota"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTota_fieldheadercolumn}
+	{BEGIN ProcTota_fieldheader}
+	<SPAN {$ProcTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTota" data-fieldname="ProcTota">
+	{$label Certificado_del_Resumen_Mensual ProcTota }	{$arrow_icon_ProcTota}
+	</SPAN>
+	{END ProcTota_fieldheader}
+{END ProcTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTota_class}	"
+
+			data-field="ObliTota"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTota_fieldheadercolumn}
+	{BEGIN ObliTota_fieldheader}
+	<SPAN {$ObliTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTota" data-fieldname="ObliTota">
+	{$label Certificado_del_Resumen_Mensual ObliTota }	{$arrow_icon_ObliTota}
+	</SPAN>
+	{END ObliTota_fieldheader}
+{END ObliTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_class}	"
+
+			data-field="INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte" data-fieldname="INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte }	{$arrow_icon_INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte}
+	</SPAN>
+	{END INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_fieldheader}
+{END INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_class}	"
+
+			data-field="INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu" data-fieldname="INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu }	{$arrow_icon_INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu}
+	</SPAN>
+	{END INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_fieldheader}
+{END INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_class}	"
+
+			data-field="INTERESES_DE_MULTAS___E__RECAUDO__InteReca"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___E__RECAUDO__InteReca_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS___E__RECAUDO__InteReca_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___E__RECAUDO__InteReca" data-fieldname="INTERESES DE MULTAS - E. RECAUDO -InteReca">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___E__RECAUDO__InteReca }	{$arrow_icon_INTERESES_DE_MULTAS___E__RECAUDO__InteReca}
+	</SPAN>
+	{END INTERESES_DE_MULTAS___E__RECAUDO__InteReca_fieldheader}
+{END INTERESES_DE_MULTAS___E__RECAUDO__InteReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_class}	"
+
+			data-field="INTERESES_DE_MULTAS____F_TRASLADOS___InteTras"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS____F_TRASLADOS___InteTras" data-fieldname="INTERESES DE MULTAS  - F.TRASLADOS - InteTras">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS____F_TRASLADOS___InteTras }	{$arrow_icon_INTERESES_DE_MULTAS____F_TRASLADOS___InteTras}
+	</SPAN>
+	{END INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_fieldheader}
+{END INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_class}	"
+
+			data-field="INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa" data-fieldname="INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa }	{$arrow_icon_INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa}
+	</SPAN>
+	{END INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_fieldheader}
+{END INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_class}	"
+
+			data-field="INTERESES_DE_MULTAS___H__NOVEDADES___InteNove"
+	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___H__NOVEDADES___InteNove" data-fieldname="INTERESES DE MULTAS - H. NOVEDADES - InteNove">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___H__NOVEDADES___InteNove }	{$arrow_icon_INTERESES_DE_MULTAS___H__NOVEDADES___InteNove}
+	</SPAN>
+	{END INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_fieldheader}
+{END INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field20}
+									{BEGIN cellblock_grid_headcell_field21}
+	<th
+	
+	{$cell_grid_headcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_class}	"
+
+			data-field="INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"
+	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_fieldheadercolumn}
+	{BEGIN INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_fieldheader}
+	<SPAN {$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota" data-fieldname="INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota">
+	{$label Certificado_del_Resumen_Mensual INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota }	{$arrow_icon_INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota}
+	</SPAN>
+	{END INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_fieldheader}
+{END INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field21}
+									{BEGIN cellblock_grid_headcell_field22}
+	<th
+	
+	{$cell_grid_headcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_class}	"
+
+			data-field="_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"
+	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_fieldheadercolumn}
+	{BEGIN _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_fieldheader}
+	<SPAN {$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte" data-fieldname=" COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte">
+	{$label Certificado_del_Resumen_Mensual _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte }	{$arrow_icon__COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte}
+	</SPAN>
+	{END _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_fieldheader}
+{END _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_class}	"
+
+			data-field="_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_fieldheadercolumn}
+	{BEGIN _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_fieldheader}
+	<SPAN {$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu" data-fieldname=" COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu">
+	{$label Certificado_del_Resumen_Mensual _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu }	{$arrow_icon__COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu}
+	</SPAN>
+	{END _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_fieldheader}
+{END _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
+	<th
+	
+	{$cell_grid_headcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_class}	"
+
+			data-field="COSTAS_DE_MULTAS___E__RECAUDO___CostReca"
+	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___E__RECAUDO___CostReca_fieldheadercolumn}
+	{BEGIN COSTAS_DE_MULTAS___E__RECAUDO___CostReca_fieldheader}
+	<SPAN {$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___E__RECAUDO___CostReca" data-fieldname="COSTAS DE MULTAS - E. RECAUDO - CostReca">
+	{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___E__RECAUDO___CostReca }	{$arrow_icon_COSTAS_DE_MULTAS___E__RECAUDO___CostReca}
+	</SPAN>
+	{END COSTAS_DE_MULTAS___E__RECAUDO___CostReca_fieldheader}
+{END COSTAS_DE_MULTAS___E__RECAUDO___CostReca_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
+	<th
+	
+	{$cell_grid_headcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_class}	"
+
+			data-field="COSTAS_DE_MULTAS___F_TRASLADOS___CostTras"
+	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_fieldheadercolumn}
+	{BEGIN COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_fieldheader}
+	<SPAN {$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___F_TRASLADOS___CostTras" data-fieldname="COSTAS DE MULTAS - F.TRASLADOS - CostTras">
+	{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___F_TRASLADOS___CostTras }	{$arrow_icon_COSTAS_DE_MULTAS___F_TRASLADOS___CostTras}
+	</SPAN>
+	{END COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_fieldheader}
+{END COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
+	<th
+	
+	{$cell_grid_headcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_class}	"
+
+			data-field="COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa"
+	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_fieldheadercolumn}
+	{BEGIN COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_fieldheader}
+	<SPAN {$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa" data-fieldname="COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa">
+	{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa }	{$arrow_icon_COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa}
+	</SPAN>
+	{END COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_fieldheader}
+{END COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field26}
+									{BEGIN cellblock_grid_headcell_field27}
+	<th
+	
+	{$cell_grid_headcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_class}	"
+
+			data-field="COSTAS_DE_MULTAS___H__NOVEDADES___CostNove"
+	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_fieldheadercolumn}
+	{BEGIN COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_fieldheader}
+	<SPAN {$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___H__NOVEDADES___CostNove" data-fieldname="COSTAS DE MULTAS - H. NOVEDADES - CostNove">
+	{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___H__NOVEDADES___CostNove }	{$arrow_icon_COSTAS_DE_MULTAS___H__NOVEDADES___CostNove}
+	</SPAN>
+	{END COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_fieldheader}
+{END COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field27}
+									{BEGIN cellblock_grid_headcell_field28}
+	<th
+	
+	{$cell_grid_headcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_class}	"
+
+			data-field="COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota"
+	
+	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_fieldheadercolumn}
+	{BEGIN COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_fieldheader}
+	<SPAN {$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field66" {$item_simple_grid_field66} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota" data-fieldname="COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota">
+	{$label Certificado_del_Resumen_Mensual COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota }	{$arrow_icon_COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota}
+	</SPAN>
+	{END COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_fieldheader}
+{END COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field28}
+									{BEGIN cellblock_grid_headcell_field29}
+	<th
+	
+	{$cell_grid_headcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_class}	"
+
+			data-field="_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte"
+	
+	data-cellId="grid_headcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_fieldheadercolumn}
+	{BEGIN _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_fieldheader}
+	<SPAN {$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field67" {$item_simple_grid_field67} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte" data-fieldname=" DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte">
+	{$label Certificado_del_Resumen_Mensual _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte }	{$arrow_icon__DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte}
+	</SPAN>
+	{END _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_fieldheader}
+{END _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field29}
+									{BEGIN cellblock_grid_headcell_field30}
+	<th
+	
+	{$cell_grid_headcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_class}	"
+
+			data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu"
+	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_fieldheadercolumn}
+	{BEGIN DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_fieldheader}
+	<SPAN {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field68" {$item_simple_grid_field68} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu" data-fieldname="DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu">
+	{$label Certificado_del_Resumen_Mensual DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu }	{$arrow_icon_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu}
+	</SPAN>
+	{END DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_fieldheader}
+{END DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field30}
+									{BEGIN cellblock_grid_headcell_field31}
+	<th
+	
+	{$cell_grid_headcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_class}	"
+
+			data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota"
+	
+	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_fieldheadercolumn}
+	{BEGIN DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_fieldheader}
+	<SPAN {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field69" {$item_simple_grid_field69} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota" data-fieldname="DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota">
+	{$label Certificado_del_Resumen_Mensual DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota }	{$arrow_icon_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota}
+	</SPAN>
+	{END DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_fieldheader}
+{END DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field31}
+									{BEGIN cellblock_grid_headcell_field32}
+	<th
+	
+	{$cell_grid_headcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Director_class}	"
+
+			data-field="Director"
+	
+	data-cellId="grid_headcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Director_fieldheadercolumn}
+	{BEGIN Director_fieldheader}
+	<SPAN {$Director_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field70" {$item_simple_grid_field70} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Director" data-fieldname="Director">
+	{$label Certificado_del_Resumen_Mensual Director }	{$arrow_icon_Director}
+	</SPAN>
+	{END Director_fieldheader}
+{END Director_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field32}
+									{BEGIN cellblock_grid_headcell_field33}
+	<th
+	
+	{$cell_grid_headcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DirectorCargo_class}	"
+
+			data-field="DirectorCargo"
+	
+	data-cellId="grid_headcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DirectorCargo_fieldheadercolumn}
+	{BEGIN DirectorCargo_fieldheader}
+	<SPAN {$DirectorCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field71" {$item_simple_grid_field71} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DirectorCargo" data-fieldname="DirectorCargo">
+	{$label Certificado_del_Resumen_Mensual DirectorCargo }	{$arrow_icon_DirectorCargo}
+	</SPAN>
+	{END DirectorCargo_fieldheader}
+{END DirectorCargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field33}
+									{BEGIN cellblock_grid_headcell_field34}
+	<th
+	
+	{$cell_grid_headcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_headcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldheadercolumn}
+	{BEGIN Abogado_fieldheader}
+	<SPAN {$Abogado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field72" {$item_simple_grid_field72} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+	{$label Certificado_del_Resumen_Mensual Abogado }	{$arrow_icon_Abogado}
+	</SPAN>
+	{END Abogado_fieldheader}
+{END Abogado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field34}
+									{BEGIN cellblock_grid_headcell_field35}
+	<th
+	
+	{$cell_grid_headcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoCargo_class}	"
+
+			data-field="AbogadoCargo"
+	
+	data-cellId="grid_headcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AbogadoCargo_fieldheadercolumn}
+	{BEGIN AbogadoCargo_fieldheader}
+	<SPAN {$AbogadoCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field73" {$item_simple_grid_field73} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo">
+	{$label Certificado_del_Resumen_Mensual AbogadoCargo }	{$arrow_icon_AbogadoCargo}
+	</SPAN>
+	{END AbogadoCargo_fieldheader}
+{END AbogadoCargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field35}
+									{BEGIN cellblock_grid_headcell_field36}
+	<th
+	
+	{$cell_grid_headcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Contador_class}	"
+
+			data-field="Contador"
+	
+	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Contador_fieldheadercolumn}
+	{BEGIN Contador_fieldheader}
+	<SPAN {$Contador_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field74" {$item_simple_grid_field74} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Contador" data-fieldname="Contador">
+	{$label Certificado_del_Resumen_Mensual Contador }	{$arrow_icon_Contador}
+	</SPAN>
+	{END Contador_fieldheader}
+{END Contador_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field36}
+									{BEGIN cellblock_grid_headcell_field37}
+	<th
+	
+	{$cell_grid_headcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ContadorCargo_class}	"
+
+			data-field="ContadorCargo"
+	
+	data-cellId="grid_headcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ContadorCargo_fieldheadercolumn}
+	{BEGIN ContadorCargo_fieldheader}
+	<SPAN {$ContadorCargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field75" {$item_simple_grid_field75} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ContadorCargo" data-fieldname="ContadorCargo">
+	{$label Certificado_del_Resumen_Mensual ContadorCargo }	{$arrow_icon_ContadorCargo}
+	</SPAN>
+	{END ContadorCargo_fieldheader}
+{END ContadorCargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field37}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
+</span>
+{END Concepto_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcAnte_class}	"
+
+			data-field="ProcAnte"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcAnte" data-fieldname="ProcAnte" data-default-width >
+{$ProcAnte_value}
+</span>
+{END ProcAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliAnte_class}	"
+
+			data-field="ObliAnte"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliAnte" data-fieldname="ObliAnte" data-default-width >
+{$ObliAnte_value}
+</span>
+{END ObliAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcActu_class}	"
+
+			data-field="ProcActu"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcActu" data-fieldname="ProcActu" data-default-width >
+{$ProcActu_value}
+</span>
+{END ProcActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliActu_class}	"
+
+			data-field="ObliActu"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliActu" data-fieldname="ObliActu" data-default-width >
+{$ObliActu_value}
+</span>
+{END ObliActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcReca_class}	"
+
+			data-field="ProcReca"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcReca" data-fieldname="ProcReca" data-default-width >
+{$ProcReca_value}
+</span>
+{END ProcReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliReca_class}	"
+
+			data-field="ObliReca"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliReca" data-fieldname="ObliReca" data-default-width >
+{$ObliReca_value}
+</span>
+{END ObliReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTras_class}	"
+
+			data-field="ProcTras"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTras" data-fieldname="ProcTras" data-default-width >
+{$ProcTras_value}
+</span>
+{END ProcTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTras_class}	"
+
+			data-field="ObliTras"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTras" data-fieldname="ObliTras" data-default-width >
+{$ObliTras_value}
+</span>
+{END ObliTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNopa_class}	"
+
+			data-field="ProcNopa"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNopa" data-fieldname="ProcNopa" data-default-width >
+{$ProcNopa_value}
+</span>
+{END ProcNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNopa_class}	"
+
+			data-field="ObliNopa"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNopa" data-fieldname="ObliNopa" data-default-width >
+{$ObliNopa_value}
+</span>
+{END ObliNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNove_class}	"
+
+			data-field="ProcNove"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcNove" data-fieldname="ProcNove" data-default-width >
+{$ProcNove_value}
+</span>
+{END ProcNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNove_class}	"
+
+			data-field="ObliNove"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliNove" data-fieldname="ObliNove" data-default-width >
+{$ObliNove_value}
+</span>
+{END ObliNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTota_class}	"
+
+			data-field="ProcTota"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ProcTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcTota" data-fieldname="ProcTota" data-default-width >
+{$ProcTota_value}
+</span>
+{END ProcTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTota_class}	"
+
+			data-field="ObliTota"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ObliTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObliTota" data-fieldname="ObliTota" data-default-width >
+{$ObliTota_value}
+</span>
+{END ObliTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_class}	"
+
+			data-field="INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte" data-fieldname="INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte" data-default-width >
+{$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_value}
+</span>
+{END INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_class}	"
+
+			data-field="INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu" data-fieldname="INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu" data-default-width >
+{$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_value}
+</span>
+{END INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_class}	"
+
+			data-field="INTERESES_DE_MULTAS___E__RECAUDO__InteReca"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___E__RECAUDO__InteReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___E__RECAUDO__InteReca" data-fieldname="INTERESES DE MULTAS - E. RECAUDO -InteReca" data-default-width >
+{$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_value}
+</span>
+{END INTERESES_DE_MULTAS___E__RECAUDO__InteReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_class}	"
+
+			data-field="INTERESES_DE_MULTAS____F_TRASLADOS___InteTras"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS____F_TRASLADOS___InteTras" data-fieldname="INTERESES DE MULTAS  - F.TRASLADOS - InteTras" data-default-width >
+{$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_value}
+</span>
+{END INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_class}	"
+
+			data-field="INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa" data-fieldname="INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa" data-default-width >
+{$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_value}
+</span>
+{END INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_class}	"
+
+			data-field="INTERESES_DE_MULTAS___H__NOVEDADES___InteNove"
+	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___H__NOVEDADES___InteNove" data-fieldname="INTERESES DE MULTAS - H. NOVEDADES - InteNove" data-default-width >
+{$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_value}
+</span>
+{END INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field20}
+									{BEGIN cellblock_grid_cell_field21}
+	<td
+	
+	{$cell_grid_cell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_class}	"
+
+			data-field="INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"
+	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota" data-fieldname="INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota" data-default-width >
+{$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_value}
+</span>
+{END INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field21}
+									{BEGIN cellblock_grid_cell_field22}
+	<td
+	
+	{$cell_grid_cell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_class}	"
+
+			data-field="_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"
+	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte" data-fieldname=" COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte" data-default-width >
+{$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_value}
+</span>
+{END _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_class}	"
+
+			data-field="_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu" data-fieldname=" COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu" data-default-width >
+{$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_value}
+</span>
+{END _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
+	<td
+	
+	{$cell_grid_cell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_class}	"
+
+			data-field="COSTAS_DE_MULTAS___E__RECAUDO___CostReca"
+	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___E__RECAUDO___CostReca_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___E__RECAUDO___CostReca" data-fieldname="COSTAS DE MULTAS - E. RECAUDO - CostReca" data-default-width >
+{$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_value}
+</span>
+{END COSTAS_DE_MULTAS___E__RECAUDO___CostReca_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
+	<td
+	
+	{$cell_grid_cell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_class}	"
+
+			data-field="COSTAS_DE_MULTAS___F_TRASLADOS___CostTras"
+	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___F_TRASLADOS___CostTras" data-fieldname="COSTAS DE MULTAS - F.TRASLADOS - CostTras" data-default-width >
+{$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_value}
+</span>
+{END COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
+	<td
+	
+	{$cell_grid_cell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_class}	"
+
+			data-field="COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa"
+	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa" data-fieldname="COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa" data-default-width >
+{$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_value}
+</span>
+{END COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field26}
+									{BEGIN cellblock_grid_cell_field27}
+	<td
+	
+	{$cell_grid_cell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_class}	"
+
+			data-field="COSTAS_DE_MULTAS___H__NOVEDADES___CostNove"
+	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___H__NOVEDADES___CostNove" data-fieldname="COSTAS DE MULTAS - H. NOVEDADES - CostNove" data-default-width >
+{$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_value}
+</span>
+{END COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field27}
+									{BEGIN cellblock_grid_cell_field28}
+	<td
+	
+	{$cell_grid_cell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_class}	"
+
+			data-field="COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota"
+	
+	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota" data-fieldname="COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota" data-default-width >
+{$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_value}
+</span>
+{END COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field28}
+									{BEGIN cellblock_grid_cell_field29}
+	<td
+	
+	{$cell_grid_cell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_class}	"
+
+			data-field="_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte"
+	
+	data-cellId="grid_cell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte" data-fieldname=" DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte" data-default-width >
+{$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_value}
+</span>
+{END _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field29}
+									{BEGIN cellblock_grid_cell_field30}
+	<td
+	
+	{$cell_grid_cell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_class}	"
+
+			data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu"
+	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu" data-fieldname="DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu" data-default-width >
+{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_value}
+</span>
+{END DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field30}
+									{BEGIN cellblock_grid_cell_field31}
+	<td
+	
+	{$cell_grid_cell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_class}	"
+
+			data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota"
+	
+	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota" data-fieldname="DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota" data-default-width >
+{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_value}
+</span>
+{END DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field31}
+									{BEGIN cellblock_grid_cell_field32}
+	<td
+	
+	{$cell_grid_cell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Director_class}	"
+
+			data-field="Director"
+	
+	data-cellId="grid_cell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Director_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Director" data-fieldname="Director" data-default-width >
+{$Director_value}
+</span>
+{END Director_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field32}
+									{BEGIN cellblock_grid_cell_field33}
+	<td
+	
+	{$cell_grid_cell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DirectorCargo_class}	"
+
+			data-field="DirectorCargo"
+	
+	data-cellId="grid_cell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN DirectorCargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DirectorCargo" data-fieldname="DirectorCargo" data-default-width >
+{$DirectorCargo_value}
+</span>
+{END DirectorCargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field33}
+									{BEGIN cellblock_grid_cell_field34}
+	<td
+	
+	{$cell_grid_cell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" data-default-width >
+{$Abogado_value}
+</span>
+{END Abogado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field34}
+									{BEGIN cellblock_grid_cell_field35}
+	<td
+	
+	{$cell_grid_cell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoCargo_class}	"
+
+			data-field="AbogadoCargo"
+	
+	data-cellId="grid_cell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN AbogadoCargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoCargo" data-fieldname="AbogadoCargo" data-default-width >
+{$AbogadoCargo_value}
+</span>
+{END AbogadoCargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field35}
+									{BEGIN cellblock_grid_cell_field36}
+	<td
+	
+	{$cell_grid_cell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Contador_class}	"
+
+			data-field="Contador"
+	
+	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Contador_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Contador" data-fieldname="Contador" data-default-width >
+{$Contador_value}
+</span>
+{END Contador_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field36}
+									{BEGIN cellblock_grid_cell_field37}
+	<td
+	
+	{$cell_grid_cell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ContadorCargo_class}	"
+
+			data-field="ContadorCargo"
+	
+	data-cellId="grid_cell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ContadorCargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ContadorCargo" data-fieldname="ContadorCargo" data-default-width >
+{$ContadorCargo_value}
+</span>
+{END ContadorCargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field37}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcActu_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliActu_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcReca_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliReca_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTras_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTras_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcNove_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliNove_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ProcTota_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ObliTota_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+									{BEGIN cellblock_grid_footcell_field20}
+	<td
+	
+	{$cell_grid_footcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_class}	"
+
+	
+	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field20}
+									{BEGIN cellblock_grid_footcell_field21}
+	<td
+	
+	{$cell_grid_footcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_class}	"
+
+	
+	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field21}
+									{BEGIN cellblock_grid_footcell_field22}
+	<td
+	
+	{$cell_grid_footcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field22}
+									{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_class}	"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+									{BEGIN cellblock_grid_footcell_field24}
+	<td
+	
+	{$cell_grid_footcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_class}	"
+
+	
+	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field24}
+									{BEGIN cellblock_grid_footcell_field25}
+	<td
+	
+	{$cell_grid_footcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_class}	"
+
+	
+	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field25}
+									{BEGIN cellblock_grid_footcell_field26}
+	<td
+	
+	{$cell_grid_footcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_class}	"
+
+	
+	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field26}
+									{BEGIN cellblock_grid_footcell_field27}
+	<td
+	
+	{$cell_grid_footcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_class}	"
+
+	
+	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field27}
+									{BEGIN cellblock_grid_footcell_field28}
+	<td
+	
+	{$cell_grid_footcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_class}	"
+
+	
+	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field28}
+									{BEGIN cellblock_grid_footcell_field29}
+	<td
+	
+	{$cell_grid_footcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_class}	"
+
+	
+	data-cellId="grid_footcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field29}
+									{BEGIN cellblock_grid_footcell_field30}
+	<td
+	
+	{$cell_grid_footcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_class}	"
+
+	
+	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field30}
+									{BEGIN cellblock_grid_footcell_field31}
+	<td
+	
+	{$cell_grid_footcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_class}	"
+
+	
+	data-cellId="grid_footcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field31}
+									{BEGIN cellblock_grid_footcell_field32}
+	<td
+	
+	{$cell_grid_footcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Director_class}	"
+
+	
+	data-cellId="grid_footcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field32}
+									{BEGIN cellblock_grid_footcell_field33}
+	<td
+	
+	{$cell_grid_footcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$DirectorCargo_class}	"
+
+	
+	data-cellId="grid_footcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field33}
+									{BEGIN cellblock_grid_footcell_field34}
+	<td
+	
+	{$cell_grid_footcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+	
+	data-cellId="grid_footcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field34}
+									{BEGIN cellblock_grid_footcell_field35}
+	<td
+	
+	{$cell_grid_footcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$AbogadoCargo_class}	"
+
+	
+	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field35}
+									{BEGIN cellblock_grid_footcell_field36}
+	<td
+	
+	{$cell_grid_footcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Contador_class}	"
+
+	
+	data-cellId="grid_footcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field36}
+									{BEGIN cellblock_grid_footcell_field37}
+	<td
+	
+	{$cell_grid_footcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ContadorCargo_class}	"
+
+	
+	data-cellId="grid_footcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="certificado_del_resumen_mensual_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field37}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

@@ -3802,6 +3802,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "presunci_n_prescripci_n" ] = "Presunción Prescripción";
 	$projectEntities[ "Intereses por Proceso Report" ] = array( "url" => "intereses_por_proceso_report", "type" => 8 );
 	$projectEntitiesReverse[ "intereses_por_proceso_report" ] = "Intereses por Proceso Report";
+	$projectEntities[ "Certificado del Resumen Mensual" ] = array( "url" => "certificado_del_resumen_mensual", "type" => 6 );
+	$projectEntitiesReverse[ "certificado_del_resumen_mensual" ] = "Certificado del Resumen Mensual";
 	$projectEntities[ "Certificado del Resumen por Periodo" ] = array( "url" => "certificado_del_resumen_por_periodo", "type" => 6 );
 	$projectEntitiesReverse[ "certificado_del_resumen_por_periodo" ] = "Certificado del Resumen por Periodo";
 }

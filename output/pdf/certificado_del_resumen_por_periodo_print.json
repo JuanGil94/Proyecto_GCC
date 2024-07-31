@@ -136,48 +136,6 @@ pdfDocument = {
 										{BEGIN col_grid_23}
 					"%",
 					{END col_grid_23}
-										{BEGIN col_grid_24}
-					"%",
-					{END col_grid_24}
-										{BEGIN col_grid_25}
-					"%",
-					{END col_grid_25}
-										{BEGIN col_grid_26}
-					"%",
-					{END col_grid_26}
-										{BEGIN col_grid_27}
-					"%",
-					{END col_grid_27}
-										{BEGIN col_grid_28}
-					"%",
-					{END col_grid_28}
-										{BEGIN col_grid_29}
-					"%",
-					{END col_grid_29}
-										{BEGIN col_grid_30}
-					"%",
-					{END col_grid_30}
-										{BEGIN col_grid_31}
-					"%",
-					{END col_grid_31}
-										{BEGIN col_grid_32}
-					"%",
-					{END col_grid_32}
-										{BEGIN col_grid_33}
-					"%",
-					{END col_grid_33}
-										{BEGIN col_grid_34}
-					"%",
-					{END col_grid_34}
-										{BEGIN col_grid_35}
-					"%",
-					{END col_grid_35}
-										{BEGIN col_grid_36}
-					"%",
-					{END col_grid_36}
-										{BEGIN col_grid_37}
-					"%",
-					{END col_grid_37}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -311,6 +269,35 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
+			fieldName: 'Seccional',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo Seccional }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Seccional_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
+{
+	cellId: 'headcell_field1',
+	col:0,
+	row:0,
 			fieldName: 'Concepto',
 				style: 'headcell',
 		
@@ -325,7 +312,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo Concepto }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo Concepto }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -334,10 +321,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field1',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'ProcAnte',
@@ -354,7 +341,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcAnte }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcAnte }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -363,10 +350,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ObliAnte',
@@ -383,7 +370,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliAnte }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliAnte }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -392,10 +379,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'ProcActu',
@@ -412,7 +399,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcActu }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcActu }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -421,10 +408,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'ObliActu',
@@ -441,7 +428,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliActu }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliActu }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -450,10 +437,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'ProcReca',
@@ -470,7 +457,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcReca }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcReca }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -479,10 +466,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'ObliReca',
@@ -499,7 +486,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliReca }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliReca }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -508,10 +495,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'ProcTras',
@@ -528,7 +515,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcTras }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcTras }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -537,10 +524,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'ObliTras',
@@ -557,7 +544,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliTras }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliTras }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -566,10 +553,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field10',
 	col:0,
 	row:0,
 			fieldName: 'ProcNopa',
@@ -586,7 +573,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcNopa }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcNopa }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -595,10 +582,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'ObliNopa',
@@ -615,7 +602,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliNopa }","hidden":"{$item_hide_simple_grid_field48}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliNopa }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -624,10 +611,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'headcell_field11',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 			fieldName: 'ProcNove',
@@ -644,7 +631,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcNove }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcNove }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -653,10 +640,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
 {
-	cellId: 'headcell_field12',
+	cellId: 'headcell_field13',
 	col:0,
 	row:0,
 			fieldName: 'ObliNove',
@@ -673,7 +660,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliNove }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliNove }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -682,10 +669,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'ProcTota',
@@ -702,7 +689,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcTota }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ProcTota }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -711,10 +698,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'ObliTota',
@@ -731,40 +718,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliTota }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ObliTota }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$ObliTota_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
-{
-	cellId: 'headcell_field15',
-	col:0,
-	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_align}',
      
       
       },
@@ -775,7 +733,7 @@ pdfDocument = {
 	cellId: 'headcell_field16',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte',
 				style: 'headcell',
 		
 		
@@ -789,11 +747,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_align}',
      
       
       },
@@ -804,7 +762,7 @@ pdfDocument = {
 	cellId: 'headcell_field17',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___E__RECAUDO__InteReca',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu',
 				style: 'headcell',
 		
 		
@@ -818,11 +776,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS___E__RECAUDO__InteReca }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu_align}',
      
       
       },
@@ -833,7 +791,7 @@ pdfDocument = {
 	cellId: 'headcell_field18',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS____F_TRASLADOS___InteTras',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca',
 				style: 'headcell',
 		
 		
@@ -847,11 +805,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS____F_TRASLADOS___InteTras }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca_align}',
      
       
       },
@@ -862,7 +820,7 @@ pdfDocument = {
 	cellId: 'headcell_field19',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras',
 				style: 'headcell',
 		
 		
@@ -876,11 +834,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa }","hidden":"{$item_hide_simple_grid_field57}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras_align}',
      
       
       },
@@ -891,7 +849,7 @@ pdfDocument = {
 	cellId: 'headcell_field20',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___H__NOVEDADES___InteNove',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa',
 				style: 'headcell',
 		
 		
@@ -905,11 +863,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS___H__NOVEDADES___InteNove }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa_align}',
      
       
       },
@@ -920,7 +878,7 @@ pdfDocument = {
 	cellId: 'headcell_field21',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove',
 				style: 'headcell',
 		
 		
@@ -934,11 +892,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove_align}',
      
       
       },
@@ -949,7 +907,7 @@ pdfDocument = {
 	cellId: 'headcell_field22',
 	col:0,
 	row:0,
-			fieldName: '_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota',
 				style: 'headcell',
 		
 		
@@ -963,11 +921,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo _COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_align}',
      
       
       },
@@ -978,7 +936,7 @@ pdfDocument = {
 	cellId: 'headcell_field23',
 	col:0,
 	row:0,
-			fieldName: '_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu',
+			fieldName: 'COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte',
 				style: 'headcell',
 		
 		
@@ -992,422 +950,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo _COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
+			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_align}',
+              "alignment": '{$COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field23}
-																							{BEGIN cellblock_grid_headcell_field24}
-{
-	cellId: 'headcell_field24',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___E__RECAUDO___CostReca',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo COSTAS_DE_MULTAS___E__RECAUDO___CostReca }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field24}
-																							{BEGIN cellblock_grid_headcell_field25}
-{
-	cellId: 'headcell_field25',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___F_TRASLADOS___CostTras',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo COSTAS_DE_MULTAS___F_TRASLADOS___CostTras }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field25}
-																							{BEGIN cellblock_grid_headcell_field26}
-{
-	cellId: 'headcell_field26',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa }","hidden":"{$item_hide_simple_grid_field64}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field26}
-																							{BEGIN cellblock_grid_headcell_field27}
-{
-	cellId: 'headcell_field27',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___H__NOVEDADES___CostNove',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo COSTAS_DE_MULTAS___H__NOVEDADES___CostNove }","hidden":"{$item_hide_simple_grid_field65}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field27}
-																							{BEGIN cellblock_grid_headcell_field28}
-{
-	cellId: 'headcell_field28',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota }","hidden":"{$item_hide_simple_grid_field66}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field28}
-																							{BEGIN cellblock_grid_headcell_field29}
-{
-	cellId: 'headcell_field29',
-	col:0,
-	row:0,
-			fieldName: '_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo _DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte }","hidden":"{$item_hide_simple_grid_field67}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field29}
-																							{BEGIN cellblock_grid_headcell_field30}
-{
-	cellId: 'headcell_field30',
-	col:0,
-	row:0,
-			fieldName: 'DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu }","hidden":"{$item_hide_simple_grid_field68}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field30}
-																							{BEGIN cellblock_grid_headcell_field31}
-{
-	cellId: 'headcell_field31',
-	col:0,
-	row:0,
-			fieldName: 'DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota }","hidden":"{$item_hide_simple_grid_field69}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field31}
-																							{BEGIN cellblock_grid_headcell_field32}
-{
-	cellId: 'headcell_field32',
-	col:0,
-	row:0,
-			fieldName: 'Director',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo Director }","hidden":"{$item_hide_simple_grid_field70}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Director_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field32}
-																							{BEGIN cellblock_grid_headcell_field33}
-{
-	cellId: 'headcell_field33',
-	col:0,
-	row:0,
-			fieldName: 'DirectorCargo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo DirectorCargo }","hidden":"{$item_hide_simple_grid_field71}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DirectorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field33}
-																							{BEGIN cellblock_grid_headcell_field34}
-{
-	cellId: 'headcell_field34',
-	col:0,
-	row:0,
-			fieldName: 'Abogado',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo Abogado }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Abogado_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field34}
-																							{BEGIN cellblock_grid_headcell_field35}
-{
-	cellId: 'headcell_field35',
-	col:0,
-	row:0,
-			fieldName: 'AbogadoCargo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo AbogadoCargo }","hidden":"{$item_hide_simple_grid_field73}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$AbogadoCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field35}
-																							{BEGIN cellblock_grid_headcell_field36}
-{
-	cellId: 'headcell_field36',
-	col:0,
-	row:0,
-			fieldName: 'Contador',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo Contador }","hidden":"{$item_hide_simple_grid_field74}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Contador_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field36}
-																							{BEGIN cellblock_grid_headcell_field37}
-{
-	cellId: 'headcell_field37',
-	col:0,
-	row:0,
-			fieldName: 'ContadorCargo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Certificado_del_Resumen_por_Periodo ContadorCargo }","hidden":"{$item_hide_simple_grid_field75}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ContadorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field37}
 											],
 				{END row_grid_0}
 		
@@ -1422,6 +974,35 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
+			fieldName: 'Seccional',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Seccional_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
+{
+	cellId: 'cell_field1',
+	col:0,
+	row:0,
 			fieldName: 'Concepto',
 				style: 'bodycell',
 		
@@ -1436,7 +1017,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1445,10 +1026,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field1',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'ProcAnte',
@@ -1465,7 +1046,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$ProcAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1474,10 +1055,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'ObliAnte',
@@ -1494,7 +1075,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field2}"},
+			{"text":{$ObliAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1503,10 +1084,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'ProcActu',
@@ -1523,7 +1104,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+			{"text":{$ProcActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1532,10 +1113,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'ObliActu',
@@ -1552,7 +1133,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+			{"text":{$ObliActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1561,10 +1142,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'ProcReca',
@@ -1581,7 +1162,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
+			{"text":{$ProcReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1590,10 +1171,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'ObliReca',
@@ -1610,7 +1191,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
+			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1619,10 +1200,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'ProcTras',
@@ -1639,7 +1220,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+			{"text":{$ProcTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1648,10 +1229,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'ObliTras',
@@ -1668,7 +1249,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
+			{"text":{$ObliTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1677,10 +1258,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field10',
 	col:0,
 	row:0,
 			fieldName: 'ProcNopa',
@@ -1697,7 +1278,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
+			{"text":{$ProcNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1706,10 +1287,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field11',
 	col:0,
 	row:0,
 			fieldName: 'ObliNopa',
@@ -1726,7 +1307,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+			{"text":{$ObliNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1735,10 +1316,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
 {
-	cellId: 'cell_field11',
+	cellId: 'cell_field12',
 	col:0,
 	row:0,
 			fieldName: 'ProcNove',
@@ -1755,7 +1336,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+			{"text":{$ProcNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1764,10 +1345,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
 {
-	cellId: 'cell_field12',
+	cellId: 'cell_field13',
 	col:0,
 	row:0,
 			fieldName: 'ObliNove',
@@ -1784,7 +1365,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
+			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1793,10 +1374,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field14',
 	col:0,
 	row:0,
 			fieldName: 'ProcTota',
@@ -1813,7 +1394,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ProcTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
+			{"text":{$ProcTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1822,10 +1403,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'ObliTota',
@@ -1842,40 +1423,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
+			{"text":{$ObliTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$ObliTota_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
-{
-	cellId: 'cell_field15',
-	col:0,
-	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_align}',
      
       
       },
@@ -1886,7 +1438,7 @@ pdfDocument = {
 	cellId: 'cell_field16',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte',
 				style: 'bodycell',
 		
 		
@@ -1900,11 +1452,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field16}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field16}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_align}',
      
       
       },
@@ -1915,7 +1467,7 @@ pdfDocument = {
 	cellId: 'cell_field17',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___E__RECAUDO__InteReca',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu',
 				style: 'bodycell',
 		
 		
@@ -1929,11 +1481,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field17}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field17}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu_align}',
      
       
       },
@@ -1944,7 +1496,7 @@ pdfDocument = {
 	cellId: 'cell_field18',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS____F_TRASLADOS___InteTras',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca',
 				style: 'bodycell',
 		
 		
@@ -1958,11 +1510,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca_align}',
      
       
       },
@@ -1973,7 +1525,7 @@ pdfDocument = {
 	cellId: 'cell_field19',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras',
 				style: 'bodycell',
 		
 		
@@ -1987,11 +1539,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field19}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field19}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras_align}',
      
       
       },
@@ -2002,7 +1554,7 @@ pdfDocument = {
 	cellId: 'cell_field20',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___H__NOVEDADES___InteNove',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa',
 				style: 'bodycell',
 		
 		
@@ -2016,11 +1568,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field20}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field20}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa_align}',
      
       
       },
@@ -2031,7 +1583,7 @@ pdfDocument = {
 	cellId: 'cell_field21',
 	col:0,
 	row:0,
-			fieldName: 'INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove',
 				style: 'bodycell',
 		
 		
@@ -2045,11 +1597,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field21}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field21}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove_align}',
      
       
       },
@@ -2060,7 +1612,7 @@ pdfDocument = {
 	cellId: 'cell_field22',
 	col:0,
 	row:0,
-			fieldName: '_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte',
+			fieldName: 'INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota',
 				style: 'bodycell',
 		
 		
@@ -2074,11 +1626,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field22}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field22}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_align}',
+              "alignment": '{$INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_align}',
      
       
       },
@@ -2089,7 +1641,7 @@ pdfDocument = {
 	cellId: 'cell_field23',
 	col:0,
 	row:0,
-			fieldName: '_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu',
+			fieldName: 'COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte',
 				style: 'bodycell',
 		
 		
@@ -2103,422 +1655,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field23}"},
+			{"text":{$COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field23}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_align}',
+              "alignment": '{$COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_align}',
      
       
       },
 
 {END cellblock_grid_cell_field23}
-																							{BEGIN cellblock_grid_cell_field24}
-{
-	cellId: 'cell_field24',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___E__RECAUDO___CostReca',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field24}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field24}
-																							{BEGIN cellblock_grid_cell_field25}
-{
-	cellId: 'cell_field25',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___F_TRASLADOS___CostTras',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_pdfvalue},"hidden":"{$item_hide_simple_grid_field25}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field25}
-																							{BEGIN cellblock_grid_cell_field26}
-{
-	cellId: 'cell_field26',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_pdfvalue},"hidden":"{$item_hide_simple_grid_field26}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field26}
-																							{BEGIN cellblock_grid_cell_field27}
-{
-	cellId: 'cell_field27',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___H__NOVEDADES___CostNove',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field27}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field27}
-																							{BEGIN cellblock_grid_cell_field28}
-{
-	cellId: 'cell_field28',
-	col:0,
-	row:0,
-			fieldName: 'COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field28}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field28}
-																							{BEGIN cellblock_grid_cell_field29}
-{
-	cellId: 'cell_field29',
-	col:0,
-	row:0,
-			fieldName: '_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_pdfvalue},"hidden":"{$item_hide_simple_grid_field29}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field29}
-																							{BEGIN cellblock_grid_cell_field30}
-{
-	cellId: 'cell_field30',
-	col:0,
-	row:0,
-			fieldName: 'DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_pdfvalue},"hidden":"{$item_hide_simple_grid_field30}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field30}
-																							{BEGIN cellblock_grid_cell_field31}
-{
-	cellId: 'cell_field31',
-	col:0,
-	row:0,
-			fieldName: 'DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_pdfvalue},"hidden":"{$item_hide_simple_grid_field31}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field31}
-																							{BEGIN cellblock_grid_cell_field32}
-{
-	cellId: 'cell_field32',
-	col:0,
-	row:0,
-			fieldName: 'Director',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_simple_grid_field32}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Director_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field32}
-																							{BEGIN cellblock_grid_cell_field33}
-{
-	cellId: 'cell_field33',
-	col:0,
-	row:0,
-			fieldName: 'DirectorCargo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_simple_grid_field33}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$DirectorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field33}
-																							{BEGIN cellblock_grid_cell_field34}
-{
-	cellId: 'cell_field34',
-	col:0,
-	row:0,
-			fieldName: 'Abogado',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_simple_grid_field34}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Abogado_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field34}
-																							{BEGIN cellblock_grid_cell_field35}
-{
-	cellId: 'cell_field35',
-	col:0,
-	row:0,
-			fieldName: 'AbogadoCargo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$AbogadoCargo_pdfvalue},"hidden":"{$item_hide_simple_grid_field35}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$AbogadoCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field35}
-																							{BEGIN cellblock_grid_cell_field36}
-{
-	cellId: 'cell_field36',
-	col:0,
-	row:0,
-			fieldName: 'Contador',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_simple_grid_field36}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Contador_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field36}
-																							{BEGIN cellblock_grid_cell_field37}
-{
-	cellId: 'cell_field37',
-	col:0,
-	row:0,
-			fieldName: 'ContadorCargo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_simple_grid_field37}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ContadorCargo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field37}
 											],
 				{END row_grid_1}
 		
@@ -3152,370 +2298,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field23}
-																							{BEGIN cellblock_grid_footcell_field24}
-{
-	cellId: 'footcell_field24',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field24}
-																							{BEGIN cellblock_grid_footcell_field25}
-{
-	cellId: 'footcell_field25',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field25}
-																							{BEGIN cellblock_grid_footcell_field26}
-{
-	cellId: 'footcell_field26',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field26}
-																							{BEGIN cellblock_grid_footcell_field27}
-{
-	cellId: 'footcell_field27',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field27}
-																							{BEGIN cellblock_grid_footcell_field28}
-{
-	cellId: 'footcell_field28',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field28}
-																							{BEGIN cellblock_grid_footcell_field29}
-{
-	cellId: 'footcell_field29',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field29}
-																							{BEGIN cellblock_grid_footcell_field30}
-{
-	cellId: 'footcell_field30',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field30}
-																							{BEGIN cellblock_grid_footcell_field31}
-{
-	cellId: 'footcell_field31',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field31}
-																							{BEGIN cellblock_grid_footcell_field32}
-{
-	cellId: 'footcell_field32',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field32}
-																							{BEGIN cellblock_grid_footcell_field33}
-{
-	cellId: 'footcell_field33',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field33}
-																							{BEGIN cellblock_grid_footcell_field34}
-{
-	cellId: 'footcell_field34',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field34}
-																							{BEGIN cellblock_grid_footcell_field35}
-{
-	cellId: 'footcell_field35',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field35}
-																							{BEGIN cellblock_grid_footcell_field36}
-{
-	cellId: 'footcell_field36',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field36}
-																							{BEGIN cellblock_grid_footcell_field37}
-{
-	cellId: 'footcell_field37',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field37}
 											],
 				{END row_grid_2}
 		

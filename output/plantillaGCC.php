@@ -7,7 +7,7 @@ use PhpOffice\PhpWord\TemplateProcessor;
 
 class diccionario {
     public $procesoId, $sigobius;
-    public function process ($procesoId,$oficioId,$sigobius){
+    public function process ($procesoId,$oficioId,$sigobius,$obligacionLetras,$obligacionTotalLetras){
         //echo "value".$oficioId;
         $this->procesoId=$procesoId;
         $this->oficioId=$oficioId;
@@ -23,6 +23,8 @@ class diccionario {
             );
         }
         $info["Sigobius"]=$this->sigobius;
+        $info["ObligacionLetras"]=$obligacionLetras;
+        $info["ObligacionTotalLetras"]=$obligacionTotalLetras;
         $consulta=DB::Query("SELECT FORMAT(GETDATE(), 'dd \de MMMM \de yyyy', 'es-ES') AS 'fechahoy'");
         while( $date = $consulta->fetchAssoc() )
 		{
@@ -180,6 +182,7 @@ class diccionario {
             $info["FechaPrescripcion"]=$date["FechaPrescripcion"];
             $info["FechaPlazo"]=$date["FechaPlazo"];
         }
+        //echo $info["Radicado"];
         $consulta=DB::Query("SELECT PR.Propiedad + ' - ' + Matricula AS Garantia  
         FROM Procesos P
         INNER JOIN Sancionados S ON S.SancionadoId = P.SancionadoId
@@ -360,6 +363,8 @@ class diccionario {
             'FechaAcuerdo' => '',
             'Plazo' => '',
             'Recaudo' => '',
+            'ObligacionLetras'=>'',
+            'ObligacionTotalLetras'=>'',
         );
         $this->variables=$variables;
             //$numVariables=count(array_keys($variables));
@@ -417,7 +422,7 @@ class plantillas extends diccionario{
         $this->sigobius=$sigobius;
     }
     public function funcGlobal(){
-        $info=parent::process($this->procesoId,$this->oficioId,$this->sigobius);
+        $info=parent::process($this->procesoId,$this->oficioId,$this->sigobius,$this->obligacionLetras,$this->obligacionTotalLetras);
         $direcciones=parent::direcciones();
         $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
         // Crear un objeto TemplateProcessor
@@ -439,6 +444,7 @@ class plantillas extends diccionario{
                     for($i=0;$i<count($resultados);$i++){
                         $resultadoF.=$resultados[$i];
                     }
+
                     if ($info[$resultadoF]==!NULL){
                         $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
                     }
@@ -501,7 +507,7 @@ class plantillas extends diccionario{
 class plantillaCaratulas extends diccionario{
     public function caratulaProceso($procesoId,$oficioId) {
         //$templateWord = new TemplateProcessor('templates_GCC/Plantilla_1097.docx');
-        $value=parent::process($procesoId,$oficioId,'');//se envia el procesoId el numero de la plantilla
+        $value=parent::process($procesoId,$oficioId,'','','');//se envia el procesoId el numero de la plantilla
             $templateWord = new TemplateProcessor('templates_GCC/Plantilla_4561.docx');
             $templateWord->setValue('NumeroFormateado',$value["numeroFormat"]);
             $templateWord->setValue('Seccional',$value["Seccional"]);
@@ -515,6 +521,7 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('Concepto',$value["Concepto"]);
             $templateWord->setValue('Despacho',$value["Despacho"]);
             $templateWord->setValue('Obligacion',$value["Obligacion"]);
+            $templateWord->setValue('Radicado',$value["Radicado"]);
             $templateWord->saveAs('templates_GCC/carProceso'.$this->procesoId.'.docx');
               
     }
@@ -523,6 +530,7 @@ class plantillaCaratulas extends diccionario{
         Chequeos.ChequeoId,
         Chequeos.Fecha,
         Chequeos.Origen,
+        Chequeos.Remisorio,
         FORMAT(CONVERT(DATE, Chequeos.Providencia), 'dd/MM/yyyy') as ChequeosProvidencia,
         FORMAT(CONVERT(DATE, Chequeos.Ejecutoria), 'dd/MM/yyyy') as Ejecutoria,
         FORMAT(CONVERT(DATE, DATEADD(year, 5, Chequeos.Ejecutoria)), 'dd/MM/yyyy')  AS Prescripcion,
@@ -640,6 +648,7 @@ class plantillaCaratulas extends diccionario{
             $infoC["MinJusticia"]=$date["MinJusticia"];
             $infoC["PiePagina"]=$date["PiePagina"];
             $infoC["Seccional"]=$date["Seccional"];
+            $infoC["Remisorio"]=$date["Remisorio"];
         }
             //$infoC["Obligacion"]='$'.number_format($infoC["Obligacion"],2);
             $templateWord = new TemplateProcessor('templates_GCC/Plantilla_Caratula.docx');
@@ -666,6 +675,7 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('MinJusticia',$infoC["MinJusticia"]);
             $templateWord->setValue('PiePagina',$infoC["PiePagina"]);
             $templateWord->setValue('Seccional',$infoC["Seccional"]);
+            $templateWord->setValue('Remisorio',$infoC["Remisorio"]);
             $templateWord->saveAs('templates_GCC/carChequeo'.$chequeoId.'.docx');
     }
 }
@@ -741,7 +751,7 @@ class diccionarioChequeo{
         }
         $info["Sigobius"]=$this->sigobius;
         $info["Fecha"]=$this->fecha;
-        $info["Radicado"]=$this->sigobius;
+        //$info["Radicado"]=$this->sigobius;
         $info["Observaciones"]=$this->observaciones;
         $consulta=DB::Query("SELECT FORMAT(GETDATE(), 'dd \de MMMM \de yyyy', 'es-ES') AS 'fechahoy'");
         while( $date = $consulta->fetchAssoc() )

@@ -106,118 +106,76 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_import_field}"},
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_import_field}"},
 				
 				
-			{"text":{$ProcAnte_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				
-			{"text":{$ObliAnte_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+			{"text":{$ProcAnte_pdfvalue},"hidden":"{$item_hide_import_field2}"},
 				
 				
-			{"text":{$ProcActu_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+			{"text":{$ObliAnte_pdfvalue},"hidden":"{$item_hide_import_field3}"},
 				
 				
-			{"text":{$ObliActu_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+			{"text":{$ProcActu_pdfvalue},"hidden":"{$item_hide_import_field4}"},
 				
 				
-			{"text":{$ProcReca_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+			{"text":{$ObliActu_pdfvalue},"hidden":"{$item_hide_import_field5}"},
 				
 				
-			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+			{"text":{$ProcReca_pdfvalue},"hidden":"{$item_hide_import_field6}"},
 				
 				
-			{"text":{$ProcTras_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_import_field7}"},
 				
 				
-			{"text":{$ObliTras_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+			{"text":{$ProcTras_pdfvalue},"hidden":"{$item_hide_import_field8}"},
 				
 				
-			{"text":{$ProcNopa_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+			{"text":{$ObliTras_pdfvalue},"hidden":"{$item_hide_import_field9}"},
 				
 				
-			{"text":{$ObliNopa_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+			{"text":{$ProcNopa_pdfvalue},"hidden":"{$item_hide_import_field10}"},
 				
 				
-			{"text":{$ProcNove_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+			{"text":{$ObliNopa_pdfvalue},"hidden":"{$item_hide_import_field11}"},
 				
 				
-			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+			{"text":{$ProcNove_pdfvalue},"hidden":"{$item_hide_import_field12}"},
 				
 				
-			{"text":{$ProcTota_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_import_field13}"},
 				
 				
-			{"text":{$ObliTota_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+			{"text":{$ProcTota_pdfvalue},"hidden":"{$item_hide_import_field14}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+			{"text":{$ObliTota_pdfvalue},"hidden":"{$item_hide_import_field15}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte_pdfvalue},"hidden":"{$item_hide_import_field16}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS___E__RECAUDO__InteReca_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu_pdfvalue},"hidden":"{$item_hide_import_field17}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS____F_TRASLADOS___InteTras_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca_pdfvalue},"hidden":"{$item_hide_import_field18}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa_pdfvalue},"hidden":"{$item_hide_import_field19}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras_pdfvalue},"hidden":"{$item_hide_import_field19}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS___H__NOVEDADES___InteNove_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa_pdfvalue},"hidden":"{$item_hide_import_field20}"},
 				
 				
-			{"text":{$INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_pdfvalue},"hidden":"{$item_hide_import_field21}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove_pdfvalue},"hidden":"{$item_hide_import_field21}"},
 				
 				
-			{"text":{$_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_pdfvalue},"hidden":"{$item_hide_import_field22}"},
+			{"text":{$INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota_pdfvalue},"hidden":"{$item_hide_import_field22}"},
 				
 				
-			{"text":{$_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu_pdfvalue},"hidden":"{$item_hide_import_field23}"},
-				
-				
-			{"text":{$COSTAS_DE_MULTAS___E__RECAUDO___CostReca_pdfvalue},"hidden":"{$item_hide_import_field24}"},
-				
-				
-			{"text":{$COSTAS_DE_MULTAS___F_TRASLADOS___CostTras_pdfvalue},"hidden":"{$item_hide_import_field25}"},
-				
-				
-			{"text":{$COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa_pdfvalue},"hidden":"{$item_hide_import_field26}"},
-				
-				
-			{"text":{$COSTAS_DE_MULTAS___H__NOVEDADES___CostNove_pdfvalue},"hidden":"{$item_hide_import_field27}"},
-				
-				
-			{"text":{$COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota_pdfvalue},"hidden":"{$item_hide_import_field28}"},
-				
-				
-			{"text":{$_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte_pdfvalue},"hidden":"{$item_hide_import_field29}"},
-				
-				
-			{"text":{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu_pdfvalue},"hidden":"{$item_hide_import_field30}"},
-				
-				
-			{"text":{$DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota_pdfvalue},"hidden":"{$item_hide_import_field31}"},
-				
-				
-			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_import_field32}"},
-				
-				
-			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_import_field33}"},
-				
-				
-			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_import_field34}"},
-				
-				
-			{"text":{$AbogadoCargo_pdfvalue},"hidden":"{$item_hide_import_field35}"},
-				
-				
-			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_import_field36}"},
-				
-				
-			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_import_field37}"},
+			{"text":{$COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte_pdfvalue},"hidden":"{$item_hide_import_field23}"},
 				
 		  ],
   "border": [ false, false, false, false ],

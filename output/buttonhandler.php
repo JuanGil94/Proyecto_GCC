@@ -413,6 +413,7 @@ function buttonHandler_New_Button($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	$data = $button->getCurrentRecord();
 $params["ChequeoId"]=$data["ChequeoId"];
+if ($data["Plazo"]<now()){
 if ($data["TramiteId"]!= 1){
 $carteraTipoId=1;
 $rs=DB::Query("declare @p2 int
@@ -567,8 +568,18 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 							$procesoId=$data["ProcesoId"];
 							$abogadoId=$data["AbogadoId"];
 						}
+				DB::Exec("UPDATE Procesos SET Dias=ISNULL(dbo.InterrupcionesSumaView.Dias, 0) + dbo.Suspensiones_GetBy_Periodo(CASE WHEN Procesos.Incumplimiento IS NULL OR
+                         Procesos.Incumplimiento < Procesos.Acuerdo OR
+                         Procesos.Incumplimiento < Procesos.Notificacion THEN CASE WHEN Procesos.Acuerdo IS NULL OR
+                         Procesos.Acuerdo < Procesos.Notificacion THEN CASE WHEN Procesos.Notificacion IS NULL THEN Procesos.Ejecutoria ELSE Procesos.Notificacion END ELSE Procesos.Acuerdo END ELSE Procesos.Incumplimiento END, 
+                         GETDATE(), Procesos.SeccionalId) + DATEDIFF(day, GETDATE(), DATEADD(year, CASE WHEN Procesos.ConceptoId = 5 THEN 3 ELSE 5 END, CASE WHEN Procesos.Incumplimiento IS NULL OR
+                         Procesos.Incumplimiento < Procesos.Acuerdo OR
+                         Procesos.Incumplimiento < Procesos.Notificacion THEN CASE WHEN Procesos.Acuerdo IS NULL OR
+                         Procesos.Acuerdo < Procesos.Notificacion THEN CASE WHEN Procesos.Notificacion IS NULL THEN Procesos.Ejecutoria ELSE Procesos.Notificacion END ELSE Procesos.Acuerdo END ELSE Procesos.Incumplimiento END))
+						 FROM Procesos
+						 LEFT JOIN dbo.InterrupcionesSumaView ON dbo.Procesos.ProcesoId = dbo.InterrupcionesSumaView.ProcesoId
+						 WHERE dbo.Procesos.ProcesoId=".$procesoId);
 				$asignacion=	DB::Exec("INSERT INTO Reasignaciones (Fecha,ProcesoId,AbogadoId) VALUES (GETDATE(),".$procesoId.",".$abogadoId.")");
-				
 				//Validacion si hay error en el INSERT
 				if ($asignacion){
 					//echo "El insert en reasiganciones se realizo correctamnete";
@@ -636,6 +647,10 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 }
 else{
 	$result["Dev"]=1;
+}
+}
+else{
+	$result["Plazo"]=1;
 };
 	RunnerContext::pop();
 	echo my_json_encode($result);
