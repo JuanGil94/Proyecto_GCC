@@ -376,6 +376,7 @@ class ConnectionManager_Base
 		$connectionsIds["Listado Medidas Cautelares"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Presunción Prescripción"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Intereses por Proceso Report"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Certificado del Resumen Mensual"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Certificado del Resumen por Periodo"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;

@@ -469,6 +469,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("intereses_por_proceso_report" == $shortTName )
 		return true;
+	if ("certificado_del_resumen_mensual" == $shortTName )
+		return true;
 	if ("certificado_del_resumen_por_periodo" == $shortTName )
 		return true;
 	return false;
@@ -1720,6 +1722,15 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Certificado del Resumen Mensual");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Certificado del Resumen Mensual";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("Certificado del Resumen por Periodo");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1869,6 +1880,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Listado Medidas Cautelares";
 	$arr[]="Presunción Prescripción";
 	$arr[]="Intereses por Proceso Report";
+	$arr[]="Certificado del Resumen Mensual";
 	$arr[]="Certificado del Resumen por Periodo";
 	return $arr;
 }
@@ -3163,6 +3175,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "SP".$extraPerm;
+	}
+	if( $table=="Certificado del Resumen Mensual" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Certificado del Resumen por Periodo" )
 	{

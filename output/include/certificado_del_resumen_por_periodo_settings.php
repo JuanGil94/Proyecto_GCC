@@ -25,6 +25,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"] = array();
 	$placeHolderscertificado_del_resumen_por_periodo["Spanish"] = array();
 	$pageTitlescertificado_del_resumen_por_periodo["Spanish"] = array();
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["Seccional"] = "Seccional";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["Seccional"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["Seccional"] = "";
 	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["Concepto"] = "Concepto";
 	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["Concepto"] = "";
 	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["Concepto"] = "";
@@ -70,75 +73,30 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["ObliTota"] = "Obli Tota";
 	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["ObliTota"] = "";
 	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["ObliTota"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"] = "INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu"] = "INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___E__RECAUDO__InteReca"] = "INTERESES DE MULTAS - E. RECAUDO -InteReca";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___E__RECAUDO__InteReca"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___E__RECAUDO__InteReca"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS____F_TRASLADOS___InteTras"] = "INTERESES DE MULTAS  - F.TRASLADOS - InteTras";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS____F_TRASLADOS___InteTras"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS____F_TRASLADOS___InteTras"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa"] = "INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___H__NOVEDADES___InteNove"] = "INTERESES DE MULTAS - H. NOVEDADES - InteNove";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___H__NOVEDADES___InteNove"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___H__NOVEDADES___InteNove"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"] = "INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"] = "COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu"] = "COSTAS DE MULTAS - D. PROCESOS RECIBIDOS,  NUEVOS INTER. Y COSTAS - CostActu";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___E__RECAUDO___CostReca"] = "COSTAS DE MULTAS - E. RECAUDO - CostReca";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___E__RECAUDO___CostReca"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___E__RECAUDO___CostReca"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___F_TRASLADOS___CostTras"] = "COSTAS DE MULTAS - F.TRASLADOS - CostTras";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___F_TRASLADOS___CostTras"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___F_TRASLADOS___CostTras"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa"] = "COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___H__NOVEDADES___CostNove"] = "COSTAS DE MULTAS - H. NOVEDADES - CostNove";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___H__NOVEDADES___CostNove"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___H__NOVEDADES___CostNove"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota"] = "COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["Director"] = "Director";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["Director"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["Director"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["DirectorCargo"] = "Director Cargo";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["DirectorCargo"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["DirectorCargo"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["Abogado"] = "Abogado";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["Abogado"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["Abogado"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["AbogadoCargo"] = "Abogado Cargo";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["AbogadoCargo"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["AbogadoCargo"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["Contador"] = "Contador";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["Contador"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["Contador"] = "";
-	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["ContadorCargo"] = "Contador Cargo";
-	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["ContadorCargo"] = "";
-	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["ContadorCargo"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"] = "INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu"] = "INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca"] = "INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras"] = "INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa"] = "INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove"] = "INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"] = "INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota"] = "";
+	$fieldLabelscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"] = "COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte";
+	$fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"] = "";
+	$placeHolderscertificado_del_resumen_por_periodo["Spanish"]["COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte"] = "";
 	if (count($fieldToolTipscertificado_del_resumen_por_periodo["Spanish"]))
 		$tdatacertificado_del_resumen_por_periodo[".isUseToolTips"] = true;
 }
@@ -248,7 +206,7 @@ $tdatacertificado_del_resumen_por_periodo[".addPageEvents"] = false;
 $tdatacertificado_del_resumen_por_periodo[".isUseTimeForSearch"] = false;
 
 
-$tdatacertificado_del_resumen_por_periodo[".badgeColor"] = "008B8B";
+$tdatacertificado_del_resumen_por_periodo[".badgeColor"] = "8FBC8B";
 
 
 $tdatacertificado_del_resumen_por_periodo[".allSearchFields"] = array();
@@ -256,6 +214,7 @@ $tdatacertificado_del_resumen_por_periodo[".filterFields"] = array();
 $tdatacertificado_del_resumen_por_periodo[".requiredSearchFields"] = array();
 
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"] = array();
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "Seccional";
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "Concepto";
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ProcAnte";
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ObliAnte";
@@ -271,29 +230,14 @@ $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ProcNove";
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ObliNove";
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ProcTota";
 $tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ObliTota";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS - E. RECAUDO -InteReca";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS  - F.TRASLADOS - InteTras";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS - H. NOVEDADES - InteNove";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = " COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = " COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "COSTAS DE MULTAS - E. RECAUDO - CostReca";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "COSTAS DE MULTAS - F.TRASLADOS - CostTras";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "COSTAS DE MULTAS - H. NOVEDADES - CostNove";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = " DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "Director";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "DirectorCargo";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "Abogado";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "AbogadoCargo";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "Contador";
-$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "ContadorCargo";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
+$tdatacertificado_del_resumen_por_periodo[".googleLikeFields"][] = "COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte";
 
 
 
@@ -373,10 +317,145 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 
 
 
-//	Concepto
+//	Seccional
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
+	$fdata["strName"] = "Seccional";
+	$fdata["GoodName"] = "Seccional";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","Seccional");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Seccional";
+
+	
+		$fdata["FullName"] = "Seccional";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacertificado_del_resumen_por_periodo["Seccional"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "Seccional";
+//	Concepto
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "Concepto";
 	$fdata["GoodName"] = "Concepto";
 	$fdata["ownerTable"] = "";
@@ -511,7 +590,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcAnte
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 2;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "ProcAnte";
 	$fdata["GoodName"] = "ProcAnte";
 	$fdata["ownerTable"] = "";
@@ -649,7 +728,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliAnte
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "ObliAnte";
 	$fdata["GoodName"] = "ObliAnte";
 	$fdata["ownerTable"] = "";
@@ -788,7 +867,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcActu
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "ProcActu";
 	$fdata["GoodName"] = "ProcActu";
 	$fdata["ownerTable"] = "";
@@ -926,7 +1005,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliActu
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "ObliActu";
 	$fdata["GoodName"] = "ObliActu";
 	$fdata["ownerTable"] = "";
@@ -1065,7 +1144,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcReca
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "ProcReca";
 	$fdata["GoodName"] = "ProcReca";
 	$fdata["ownerTable"] = "";
@@ -1203,7 +1282,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliReca
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "ObliReca";
 	$fdata["GoodName"] = "ObliReca";
 	$fdata["ownerTable"] = "";
@@ -1342,7 +1421,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcTras
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 8;
+	$fdata["Index"] = 9;
 	$fdata["strName"] = "ProcTras";
 	$fdata["GoodName"] = "ProcTras";
 	$fdata["ownerTable"] = "";
@@ -1480,7 +1559,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliTras
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 9;
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "ObliTras";
 	$fdata["GoodName"] = "ObliTras";
 	$fdata["ownerTable"] = "";
@@ -1619,7 +1698,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcNopa
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 10;
+	$fdata["Index"] = 11;
 	$fdata["strName"] = "ProcNopa";
 	$fdata["GoodName"] = "ProcNopa";
 	$fdata["ownerTable"] = "";
@@ -1757,7 +1836,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliNopa
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 12;
 	$fdata["strName"] = "ObliNopa";
 	$fdata["GoodName"] = "ObliNopa";
 	$fdata["ownerTable"] = "";
@@ -1896,7 +1975,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcNove
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 12;
+	$fdata["Index"] = 13;
 	$fdata["strName"] = "ProcNove";
 	$fdata["GoodName"] = "ProcNove";
 	$fdata["ownerTable"] = "";
@@ -2034,7 +2113,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliNove
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 13;
+	$fdata["Index"] = 14;
 	$fdata["strName"] = "ObliNove";
 	$fdata["GoodName"] = "ObliNove";
 	$fdata["ownerTable"] = "";
@@ -2173,7 +2252,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ProcTota
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 14;
+	$fdata["Index"] = 15;
 	$fdata["strName"] = "ProcTota";
 	$fdata["GoodName"] = "ProcTota";
 	$fdata["ownerTable"] = "";
@@ -2311,7 +2390,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //	ObliTota
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 15;
+	$fdata["Index"] = 16;
 	$fdata["strName"] = "ObliTota";
 	$fdata["GoodName"] = "ObliTota";
 	$fdata["ownerTable"] = "";
@@ -2447,14 +2526,14 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 
 	$tdatacertificado_del_resumen_por_periodo["ObliTota"] = $fdata;
 		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "ObliTota";
-//	INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte
+//	INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 16;
-	$fdata["strName"] = "INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte";
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___InteAnte");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___InteAnte");
 	$fdata["FieldType"] = 6;
 
 
@@ -2465,7 +2544,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteAnte";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte";
 
 	
 	
@@ -2584,16 +2663,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS - C. SALDO FINAL MES ANTERIOR - InteAnte";
-//	INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - InteAnte";
+//	INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 17;
-	$fdata["strName"] = "INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu";
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS____D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS_InteActu");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___InteActu");
 	$fdata["FieldType"] = 6;
 
 
@@ -2604,7 +2683,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteActu";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu";
 
 	
 	
@@ -2723,16 +2802,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS -  D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS InteActu";
-//	INTERESES DE MULTAS - E. RECAUDO -InteReca
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - InteActu";
+//	INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 18;
-	$fdata["strName"] = "INTERESES DE MULTAS - E. RECAUDO -InteReca";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS___E__RECAUDO__InteReca";
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS___E__RECAUDO__InteReca");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR____E__RECAUDO___InteReca");
 	$fdata["FieldType"] = 6;
 
 
@@ -2743,7 +2822,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteReca";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS - E. RECAUDO -InteReca";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca";
 
 	
 	
@@ -2862,16 +2941,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS - E. RECAUDO -InteReca"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS - E. RECAUDO -InteReca";
-//	INTERESES DE MULTAS  - F.TRASLADOS - InteTras
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR  - E. RECAUDO - InteReca";
+//	INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
-	$fdata["strName"] = "INTERESES DE MULTAS  - F.TRASLADOS - InteTras";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS____F_TRASLADOS___InteTras";
+	$fdata["Index"] = 20;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS____F_TRASLADOS___InteTras");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR___F_TRASLADOS___InteTras");
 	$fdata["FieldType"] = 6;
 
 
@@ -2882,7 +2961,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteTras";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS  - F.TRASLADOS - InteTras";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras";
 
 	
 	
@@ -3001,16 +3080,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS  - F.TRASLADOS - InteTras"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS  - F.TRASLADOS - InteTras";
-//	INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR - F.TRASLADOS - InteTras";
+//	INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 20;
-	$fdata["strName"] = "INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa";
+	$fdata["Index"] = 21;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO___InteNopa");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR____G__PROCESOS_TERMINADOS_SIN_PAG___InteNopa");
 	$fdata["FieldType"] = 6;
 
 
@@ -3021,7 +3100,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteNopa";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa";
 
 	
 	
@@ -3140,16 +3219,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO - InteNopa";
-//	INTERESES DE MULTAS - H. NOVEDADES - InteNove
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR  - G. PROCESOS TERMINADOS SIN PAG - InteNopa";
+//	INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 21;
-	$fdata["strName"] = "INTERESES DE MULTAS - H. NOVEDADES - InteNove";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS___H__NOVEDADES___InteNove";
+	$fdata["Index"] = 22;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS___H__NOVEDADES___InteNove");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR___H__NOVEDADES___InteNove");
 	$fdata["FieldType"] = 6;
 
 
@@ -3160,7 +3239,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteNove";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS - H. NOVEDADES - InteNove";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove";
 
 	
 	
@@ -3279,16 +3358,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS - H. NOVEDADES - InteNove"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS - H. NOVEDADES - InteNove";
-//	INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR - H. NOVEDADES - InteNove";
+//	INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 22;
-	$fdata["strName"] = "INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
-	$fdata["GoodName"] = "INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota";
+	$fdata["Index"] = 23;
+	$fdata["strName"] = "INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
+	$fdata["GoodName"] = "INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","INTERESES_DE_MULTA_POR_COBRAR___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H____InteTota");
 	$fdata["FieldType"] = 6;
 
 
@@ -3299,7 +3378,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "InteTota";
 
 	
-		$fdata["FullName"] = "INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
+		$fdata["FullName"] = "INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
 
 	
 	
@@ -3418,16 +3497,16 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
-//	 COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte
+	$tdatacertificado_del_resumen_por_periodo["INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "INTERESES DE MULTA POR COBRAR - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) - InteTota";
+//	COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 23;
-	$fdata["strName"] = " COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte";
-	$fdata["GoodName"] = "_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte";
+	$fdata["Index"] = 24;
+	$fdata["strName"] = "COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte";
+	$fdata["GoodName"] = "COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","_COSTAS_DE_MULTAS___C__SALDO_FINAL_MES_ANTERIOR___CostAnte");
+	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","COSTAS_DE_MULTA_POR_COBRAR___C__SALDO_FINAL_MES_ANTERIOR___CostAnte");
 	$fdata["FieldType"] = 6;
 
 
@@ -3438,7 +3517,7 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 		$fdata["strField"] = "CostAnte";
 
 	
-		$fdata["FullName"] = " COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte";
+		$fdata["FullName"] = "COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte";
 
 	
 	
@@ -3557,2069 +3636,8 @@ $tdatacertificado_del_resumen_por_periodo[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacertificado_del_resumen_por_periodo[" COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = " COSTAS DE MULTAS - C. SALDO FINAL MES ANTERIOR - CostAnte";
-//	 COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 24;
-	$fdata["strName"] = " COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu";
-	$fdata["GoodName"] = "_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","_COSTAS_DE_MULTAS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___CostActu");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CostActu";
-
-	
-		$fdata["FullName"] = " COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo[" COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = " COSTAS DE MULTAS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - CostActu";
-//	COSTAS DE MULTAS - E. RECAUDO - CostReca
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 25;
-	$fdata["strName"] = "COSTAS DE MULTAS - E. RECAUDO - CostReca";
-	$fdata["GoodName"] = "COSTAS_DE_MULTAS___E__RECAUDO___CostReca";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","COSTAS_DE_MULTAS___E__RECAUDO___CostReca");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CostReca";
-
-	
-		$fdata["FullName"] = "COSTAS DE MULTAS - E. RECAUDO - CostReca";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["COSTAS DE MULTAS - E. RECAUDO - CostReca"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "COSTAS DE MULTAS - E. RECAUDO - CostReca";
-//	COSTAS DE MULTAS - F.TRASLADOS - CostTras
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 26;
-	$fdata["strName"] = "COSTAS DE MULTAS - F.TRASLADOS - CostTras";
-	$fdata["GoodName"] = "COSTAS_DE_MULTAS___F_TRASLADOS___CostTras";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","COSTAS_DE_MULTAS___F_TRASLADOS___CostTras");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CostTras";
-
-	
-		$fdata["FullName"] = "COSTAS DE MULTAS - F.TRASLADOS - CostTras";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["COSTAS DE MULTAS - F.TRASLADOS - CostTras"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "COSTAS DE MULTAS - F.TRASLADOS - CostTras";
-//	COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 27;
-	$fdata["strName"] = "COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa";
-	$fdata["GoodName"] = "COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","COSTAS_DE_MULTAS___G__PROCESOS_TERMINADOS_SIN_PAGO__CostNopa");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CostNopa";
-
-	
-		$fdata["FullName"] = "COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "COSTAS DE MULTAS - G. PROCESOS TERMINADOS SIN PAGO -CostNopa";
-//	COSTAS DE MULTAS - H. NOVEDADES - CostNove
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 28;
-	$fdata["strName"] = "COSTAS DE MULTAS - H. NOVEDADES - CostNove";
-	$fdata["GoodName"] = "COSTAS_DE_MULTAS___H__NOVEDADES___CostNove";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","COSTAS_DE_MULTAS___H__NOVEDADES___CostNove");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CostNove";
-
-	
-		$fdata["FullName"] = "COSTAS DE MULTAS - H. NOVEDADES - CostNove";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["COSTAS DE MULTAS - H. NOVEDADES - CostNove"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "COSTAS DE MULTAS - H. NOVEDADES - CostNove";
-//	COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 29;
-	$fdata["strName"] = "COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota";
-	$fdata["GoodName"] = "COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","COSTAS_DE_MULTAS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___CostTota");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CostTota";
-
-	
-		$fdata["FullName"] = "COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "COSTAS DE MULTAS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H - CostTota";
-//	 DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 30;
-	$fdata["strName"] = " DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte";
-	$fdata["GoodName"] = "_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","_DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___C__SALDO_FINAL_MES_ANTERIOR___DeteAnte");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DeteAnte";
-
-	
-		$fdata["FullName"] = " DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo[" DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = " DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - C. SALDO FINAL MES ANTERIOR - DeteAnte";
-//	DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 31;
-	$fdata["strName"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu";
-	$fdata["GoodName"] = "DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___D__PROCESOS_RECIBIDOS__NUEVOS_INTER__Y_COSTAS___DeteActu");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DeteActu";
-
-	
-		$fdata["FullName"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - D. PROCESOS RECIBIDOS, NUEVOS INTER. Y COSTAS - DeteActu";
-//	DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 32;
-	$fdata["strName"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota";
-	$fdata["GoodName"] = "DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","DETERIORO_DE_CARTERA_INGRESOS_NO_TRIBUTARIOS___I__SALDO_FINAL_COBRO_COACTIVO_PERIODO_ACTUAL_C_D_E_F_G_H___DeteTota");
-	$fdata["FieldType"] = 6;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DeteTota";
-
-	
-		$fdata["FullName"] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Number");
-
-	
-	
-	
-	
-	
-	
-	
-		$vdata["DecimalDigits"] = 0;
-
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "DETERIORO DE CARTERA INGRESOS NO TRIBUTARIOS - I. SALDO FINAL COBRO COACTIVO PERIODO ACTUAL(C+D-E+F-G+H) -DeteTota";
-//	Director
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 33;
-	$fdata["strName"] = "Director";
-	$fdata["GoodName"] = "Director";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","Director");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Director";
-
-	
-		$fdata["FullName"] = "Director";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["Director"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "Director";
-//	DirectorCargo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 34;
-	$fdata["strName"] = "DirectorCargo";
-	$fdata["GoodName"] = "DirectorCargo";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","DirectorCargo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DirectorCargo";
-
-	
-		$fdata["FullName"] = "DirectorCargo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["DirectorCargo"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "DirectorCargo";
-//	Abogado
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 35;
-	$fdata["strName"] = "Abogado";
-	$fdata["GoodName"] = "Abogado";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","Abogado");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Abogado";
-
-	
-		$fdata["FullName"] = "Abogado";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["Abogado"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "Abogado";
-//	AbogadoCargo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 36;
-	$fdata["strName"] = "AbogadoCargo";
-	$fdata["GoodName"] = "AbogadoCargo";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","AbogadoCargo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "AbogadoCargo";
-
-	
-		$fdata["FullName"] = "AbogadoCargo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["AbogadoCargo"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "AbogadoCargo";
-//	Contador
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 37;
-	$fdata["strName"] = "Contador";
-	$fdata["GoodName"] = "Contador";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","Contador");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Contador";
-
-	
-		$fdata["FullName"] = "Contador";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["Contador"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "Contador";
-//	ContadorCargo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 38;
-	$fdata["strName"] = "ContadorCargo";
-	$fdata["GoodName"] = "ContadorCargo";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Certificado_del_Resumen_por_Periodo","ContadorCargo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "ContadorCargo";
-
-	
-		$fdata["FullName"] = "ContadorCargo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacertificado_del_resumen_por_periodo["ContadorCargo"] = $fdata;
-		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "ContadorCargo";
+	$tdatacertificado_del_resumen_por_periodo["COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte"] = $fdata;
+		$tdatacertificado_del_resumen_por_periodo[".searchableFields"][] = "COSTAS DE MULTA POR COBRAR - C. SALDO FINAL MES ANTERIOR - CostAnte";
 
 
 $tables_data["Certificado del Resumen por Periodo"]=&$tdatacertificado_del_resumen_por_periodo;
@@ -5654,7 +3672,7 @@ require_once( getabspath( "include/certificado_del_resumen_por_periodo_ops.php" 
 	
 		;
 
-																																						
+																								
 
 $tdatacertificado_del_resumen_por_periodo[".sqlquery"] = $queryData_certificado_del_resumen_por_periodo;
 

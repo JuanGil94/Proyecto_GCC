@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2535_1721142599";
+$projectBuildKey = "2564_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2535";
+$projectBuildNumber = "2564";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -906,6 +906,7 @@ $tableCaptions["Spanish"]["Intereses_por_Proceso"] = "Intereses por Proceso";
 $tableCaptions["Spanish"]["Listado_Medidas_Cautelares"] = "Listado Medidas Cautelares";
 $tableCaptions["Spanish"]["Presunci_n_Prescripci_n"] = "Presunción Prescripción";
 $tableCaptions["Spanish"]["Intereses_por_Proceso_Report"] = "Intereses por Proceso Report";
+$tableCaptions["Spanish"]["Certificado_del_Resumen_Mensual"] = "Certificado del Resumen Mensual";
 $tableCaptions["Spanish"]["Certificado_del_Resumen_por_Periodo"] = "Certificado del Resumen por Periodo";
 
 

@@ -361,7 +361,7 @@ $tdatachequeos[".orderindexes"] = array();
 
 
 
-$tdatachequeos[".sqlHead"] = "SELECT '' AS CantidadLetras,  '' AS ObligacionLetras,  '' AS Dias,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  FORMAT(Obligacion, 'C', 'es-CO') Obligacion,  FORMAT(Costas, 'C', 'es-CO') Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId";
+$tdatachequeos[".sqlHead"] = "SELECT '' AS CantidadLetras,  '' AS ObligacionLetras,  '' AS Dias,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  FORMAT(Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(Costas, 'C', 'es-CO') AS Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId";
 $tdatachequeos[".sqlFrom"] = "FROM dbo.Chequeos";
 $tdatachequeos[".sqlWhereExpr"] = "(SeccionalId in (:session.SeccionalesWhere))";
 $tdatachequeos[".sqlTail"] = "";
@@ -6836,7 +6836,7 @@ function createSqlQuery_chequeos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "'' AS CantidadLetras,  '' AS ObligacionLetras,  '' AS Dias,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  FORMAT(Obligacion, 'C', 'es-CO') Obligacion,  FORMAT(Costas, 'C', 'es-CO') Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId";
+$proto0["m_strFieldList"] = "'' AS CantidadLetras,  '' AS ObligacionLetras,  '' AS Dias,  ConceptoId,  AbogadoId,  Fecha,  DespachoId,  Origen,  Providencia,  Ejecutoria,  PrimeraCopia,  Autentica,  PrestaMeritoEjecutivo,  Clara,  Expresa,  ActualmenteExigible,  CompetenciaDEAJ,  FaltaRequisitos,  FaltaCompetencia,  PorPrescripcion,  SeccionalId,  Folios,  SeccionalIdDestino,  Observaciones,  Procesado,  Tipo,  FechaSancion,  Cantidad,  FORMAT(Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(Costas, 'C', 'es-CO') AS Costas,  Remisorio,  CarteraTipoId,  MinJusticia,  Aprobado,  AprobadoPor,  FechaAprobacion,  Plazo,  NaturalezaId,  Sigobius,  Monto,  TramiteId,  Fisico,  Digital,  ChequeoId";
 $proto0["m_strFrom"] = "FROM dbo.Chequeos";
 $proto0["m_strWhere"] = "(SeccionalId in (:session.SeccionalesWhere))";
 $proto0["m_strOrderBy"] = "ORDER BY ChequeoId DESC";

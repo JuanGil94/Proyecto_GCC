@@ -1,2 +1,2 @@
 
-Runner.pages.PageSettings.addPageEvent('dbo.Correspondencias',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){this.on('afterSave',function(formObj,fieldControlsArr,pageObj){swal({icon:"success",text:"Se ingresa el Oficio Correctamente y se creo el Oficio en sigobius"})});});
+Runner.pages.PageSettings.addPageEvent('dbo.Correspondencias',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){this.on('afterSave',function(formObj,fieldControlsArr,pageObj){swal({icon:"success",text:"Se ingresa el Oficio Correctamente y se creo el Oficio en sigobius"}).then(function(value){switch(value){default:location.reload();break;}});});});

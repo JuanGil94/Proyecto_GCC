@@ -138,6 +138,7 @@ function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 unset($values["CantidadLetras"]);
 unset($values["Dias"]);
 $values["Fecha"]=now();
+//$values['CarteraTipoId']=1; //se quema ya que la cartera siempre es Corriente=1
 $consulta=DB::Query("SELECT * FROM Empresas");
         while( $date = $consulta->fetchAssoc() ){
 						$maxSal=$date["MaximoSalarios"];
@@ -480,6 +481,7 @@ unset($values["CantidadLetras"]);
 unset($values["Dias"]);
 $values["Fecha"]=now();
 $values["Obligacion"]=floatval($values["Obligacion"]);
+//$values['CarteraTipoId']=1; //se quema ya que la cartera siempre es Corriente=1
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -732,7 +734,7 @@ function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
 {
 
 		$strWhereClause = whereAdd($strWhereClause, "SeccionalId in (".$_SESSION["Seccionales"].")");
-
+//echo $strSQL;
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

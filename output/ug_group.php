@@ -147,6 +147,7 @@ $nonAdminTablesArr[] = "Intereses por Proceso";
 $nonAdminTablesArr[] = "Listado Medidas Cautelares";
 $nonAdminTablesArr[] = "Presunción Prescripción";
 $nonAdminTablesArr[] = "Intereses por Proceso Report";
+$nonAdminTablesArr[] = "Certificado del Resumen Mensual";
 $nonAdminTablesArr[] = "Certificado del Resumen por Periodo";
 
 $ug_connection = $cman->getForUserGroups();
