@@ -45,6 +45,10 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Dias"] = true;
 		$this->events["dbo_Chequeos_snippet2"] = true;
 		$this->events["Resumen_Mensual"] = true;
+		$this->events["BDME_Actualizaci_n_Desde"] = true;
+		$this->events["BDME_Actualizaci_n_Hasta"] = true;
+		$this->events["BDME_Actualizaci_n_Sansionado"] = true;
+		$this->events["BDME_Actualizaci_n_Document_San"] = true;
 
 
 
@@ -737,6 +741,52 @@ echo "<label class='r-edit-label control-label'>Tipo de Expediente</label>";
 	{
 	// Put your code here.
 echo "<label value='".$_SESSION["fechaIn"]."' style='margin-right: 20px;'>Seleccione Fecha: </label><br><input type='month' id='fechaIn'></input>"
+	;
+}
+	function event_BDME_Actualizaci_n_Desde(&$params)
+	{
+	// Obtener el último día del mes anterior
+$ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
+
+// Mostrar el input con el valor calculado
+echo "<input type='month' id='BDME_Actualiza_desdeId' name='desde' value='" . date('Y-m', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
+
+   // Agregar el script de validación
+    echo "
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            var monthField = document.getElementById('BDME_Actualiza_desdeId');
+            if (!monthField.value) {
+                alert('El campo \"Desde\" es obligatorio.');
+                monthField.focus();
+                event.preventDefault();
+            }
+        });
+    });
+    </script>";
+	;
+}
+	function event_BDME_Actualizaci_n_Hasta(&$params)
+	{
+	
+echo "<label for='BDME_Actualiza_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
+echo "<input type='month' id='BDME_Actualiza_hastaId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_BDME_Actualizaci_n_Sansionado(&$params)
+	{
+	//echo "<label value='".$_SESSION["BDME_Actualiza_Sancionado"]."' style='margin-right: 20px;'>Sancionado: </label><br><input type='text' id='BDME_Actualiza_SancionadoId'></input>"
+
+echo "<label for='BDME_Actualiza_SancionadoId' style='margin-right: 20px;'>Sancionado: </label><br>";
+echo "<input type='text' id='BDME_Actualiza_SancionadoId' value=''>";
+
+	;
+}
+	function event_BDME_Actualizaci_n_Document_San(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='BDME_Actualiza_Doc_SancionadoId'></input>"
 	;
 }
 

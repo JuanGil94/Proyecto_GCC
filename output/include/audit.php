@@ -948,6 +948,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="BDME Actualización DataChild")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1847,6 +1851,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Certificado del Resumen por Periodo")
+		{
+			return false;
+		}
+		if($table=="BDME Actualización DataChild")
 		{
 			return false;
 		}

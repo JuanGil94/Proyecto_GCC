@@ -149,6 +149,7 @@ $nonAdminTablesArr[] = "Presunción Prescripción";
 $nonAdminTablesArr[] = "Intereses por Proceso Report";
 $nonAdminTablesArr[] = "Certificado del Resumen Mensual";
 $nonAdminTablesArr[] = "Certificado del Resumen por Periodo";
+$nonAdminTablesArr[] = "BDME Actualización DataChild";
 
 $ug_connection = $cman->getForUserGroups();
 

@@ -296,6 +296,16 @@ if($buttId=='fichaTecnica')
 	}
 	buttonHandler_fichaTecnica($params);
 }
+if($buttId=='BDME_Actualiza_Buscar')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_BDME_Actualiza_Buscar($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -2760,6 +2770,88 @@ $comando = '"C:\Program Files\LibreOffice\program\soffice.bin" --convert-to pdf 
 // Ejecutar el comando
 $resultado = shell_exec($comando);
 ;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_BDME_Actualiza_Buscar($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+			// Calcular el primer y último día del mes anterior
+$primerDiaDelMesAnterior = date('Y-m-01', strtotime('first day of last month'));
+$ultimoDiaDelMesAnterior = date('Y-m-t', strtotime('first day of last month'));
+
+// Obtener los valores de los parámetros
+$desde = isset($params["desde"]) ? $params["desde"] : '';
+$hasta = isset($params["hasta"]) ? $params["hasta"] : '';
+
+// Si 'desde' está vacío, usar el primer día del mes anterior
+if (empty($desde)) {
+    $desde = $primerDiaDelMesAnterior;
+}
+
+// Si 'hasta' está vacío, usar el último día del mes anterior
+if (empty($hasta)) {
+    $hasta = $ultimoDiaDelMesAnterior;
+}
+
+
+		// Guardar los valores recibidos en variables de sesión
+    $_SESSION['desde'] = $params["desde"].'-01';
+    $_SESSION['hasta'] = $params["hasta"].'-01';
+    $_SESSION['sancionado'] = $params["sancionado"];
+    $_SESSION['doc_sancionado'] = $params["doc_sancionado"];
+
+    echo "Desde: " . $_SESSION['desde'] . "<br>";
+    echo "Hasta: " . $_SESSION['hasta'] . "<br>";
+    echo "Sancionado: " . $_SESSION['sancionado'] . "<br>";
+    echo "Doc Sancionado: " . $_SESSION['doc_sancionado'] . "<br>";;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

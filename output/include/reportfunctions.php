@@ -937,6 +937,10 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="BDME Actualización DataChild")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1729,6 +1733,10 @@ function getCaptionTable($table)
 	if($table=="Certificado del Resumen por Periodo")
 	{
 		return "Certificado del Resumen por Periodo";
+	}
+	if($table=="BDME Actualización DataChild")
+	{
+		return "BDME Actualización DataChild";
 	}
 	return $table;
 }
