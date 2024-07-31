@@ -473,6 +473,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("certificado_del_resumen_por_periodo" == $shortTName )
 		return true;
+	if ("bdme_actualizaci_n_datachild" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1738,6 +1740,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Certificado del Resumen por Periodo";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Actualización DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Actualización DataChild";
+	}
 	return $arr;
 }
 
@@ -1882,6 +1893,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Intereses por Proceso Report";
 	$arr[]="Certificado del Resumen Mensual";
 	$arr[]="Certificado del Resumen por Periodo";
+	$arr[]="BDME Actualización DataChild";
 	return $arr;
 }
 
@@ -3182,6 +3194,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Certificado del Resumen por Periodo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Actualización DataChild" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

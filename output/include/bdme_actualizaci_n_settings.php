@@ -6,11 +6,11 @@ $tdatabdme_actualizaci_n[".OwnerID"] = "";
 $tdatabdme_actualizaci_n[".OriginalTable"] = "BDME Actualización";
 
 
-$tdatabdme_actualizaci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_actualizaci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_actualizaci_n[".originalPagesByType"] = $tdatabdme_actualizaci_n[".pagesByType"];
-$tdatabdme_actualizaci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_actualizaci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_actualizaci_n[".originalPages"] = $tdatabdme_actualizaci_n[".pages"];
-$tdatabdme_actualizaci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_actualizaci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_actualizaci_n[".originalDefaultPages"] = $tdatabdme_actualizaci_n[".defaultPages"];
 
 //	field labels
@@ -55,6 +55,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbdme_actualizaci_n["Spanish"]["Estado"] = "Estado";
 	$fieldToolTipsbdme_actualizaci_n["Spanish"]["Estado"] = "";
 	$placeHoldersbdme_actualizaci_n["Spanish"]["Estado"] = "";
+	$fieldLabelsbdme_actualizaci_n["Spanish"]["SancionadoId"] = "Sancionado Id";
+	$fieldToolTipsbdme_actualizaci_n["Spanish"]["SancionadoId"] = "";
+	$placeHoldersbdme_actualizaci_n["Spanish"]["SancionadoId"] = "";
 	if (count($fieldToolTipsbdme_actualizaci_n["Spanish"]))
 		$tdatabdme_actualizaci_n[".isUseToolTips"] = true;
 }
@@ -152,7 +155,7 @@ $tdatabdme_actualizaci_n[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																													
+																																																																																																
 
 $tdatabdme_actualizaci_n[".ajaxCodeSnippetAdded"] = false;
 
@@ -182,6 +185,7 @@ $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Sancionado";
 $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Deuda";
 $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Actualizacion";
 $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Estado";
+$tdatabdme_actualizaci_n[".googleLikeFields"][] = "SancionadoId";
 
 
 
@@ -1615,6 +1619,144 @@ $tdatabdme_actualizaci_n[".hideMobileList"] = array();
 
 	$tdatabdme_actualizaci_n["Estado"] = $fdata;
 		$tdatabdme_actualizaci_n[".searchableFields"][] = "Estado";
+//	SancionadoId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "SancionadoId";
+	$fdata["GoodName"] = "SancionadoId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("BDME_Actualizaci_n","SancionadoId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "SancionadoId";
+
+	
+		$fdata["FullName"] = "SancionadoId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatabdme_actualizaci_n["SancionadoId"] = $fdata;
+		$tdatabdme_actualizaci_n[".searchableFields"][] = "SancionadoId";
 
 
 $tables_data["BDME Actualización"]=&$tdatabdme_actualizaci_n;
@@ -1632,6 +1774,36 @@ changeTextControlsToDate( "BDME Actualización" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["BDME Actualización"] = array();
+//	BDME Actualización DataChild
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="BDME Actualización DataChild";
+		$detailsParam["dOriginalTable"] = "BDME Actualización DataChild";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "bdme_actualizaci_n_datachild";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BDME_Actualizaci_n_DataChild");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["BDME Actualización"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["BDME Actualización"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["BDME Actualización"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["BDME Actualización"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["BDME Actualización"][$dIndex]["detailKeys"][]="SancionadoId";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1649,7 +1821,7 @@ require_once( getabspath( "include/bdme_actualizaci_n_ops.php" ) );
 	
 		;
 
-										
+											
 
 $tdatabdme_actualizaci_n[".sqlquery"] = $queryData_bdme_actualizaci_n;
 

@@ -3806,6 +3806,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "certificado_del_resumen_mensual" ] = "Certificado del Resumen Mensual";
 	$projectEntities[ "Certificado del Resumen por Periodo" ] = array( "url" => "certificado_del_resumen_por_periodo", "type" => 6 );
 	$projectEntitiesReverse[ "certificado_del_resumen_por_periodo" ] = "Certificado del Resumen por Periodo";
+	$projectEntities[ "BDME Actualización DataChild" ] = array( "url" => "bdme_actualizaci_n_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_actualizaci_n_datachild" ] = "BDME Actualización DataChild";
 }
 
 function findTable( $table ) {
