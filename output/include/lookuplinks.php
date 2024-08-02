@@ -1111,6 +1111,153 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["bdme_actualizaci_n_datachild.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["bdme_actualizaci_n_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Actualización DataChild", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.AbogadoId"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C3"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C3"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C3"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "C3", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C4"] )) {
+			$lookupTableLinks["dbo.Estados"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C4"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C4"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "C4", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C5"] )) {
+			$lookupTableLinks["dbo.Etapas"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C5"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C5"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "C5", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C7"] )) {
+			$lookupTableLinks["dbo.Motivos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C7"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.C7"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "C7", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["bdme_cancelaci_n_acuerdo_de_pago_datachild.SeccionalId"]["edit"] = array("table" => "BDME Cancelación Acuerdo de Pago DataChild", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["bdme_excluidos_datachild.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["bdme_excluidos_datachild.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["bdme_excluidos_datachild.SeccionalId"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["bdme_excluidos_datachild.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["bdme_excluidos_datachild.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["bdme_excluidos_datachild.AbogadoId"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["bdme_excluidos_datachild.C3"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["bdme_excluidos_datachild.C3"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["bdme_excluidos_datachild.C3"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "C3", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["bdme_excluidos_datachild.C4"] )) {
+			$lookupTableLinks["dbo.Estados"]["bdme_excluidos_datachild.C4"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["bdme_excluidos_datachild.C4"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "C4", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["bdme_excluidos_datachild.C5"] )) {
+			$lookupTableLinks["dbo.Etapas"]["bdme_excluidos_datachild.C5"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["bdme_excluidos_datachild.C5"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "C5", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["bdme_excluidos_datachild.C7"] )) {
+			$lookupTableLinks["dbo.Motivos"]["bdme_excluidos_datachild.C7"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["bdme_excluidos_datachild.C7"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "C7", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["bdme_excluidos_datachild.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["bdme_excluidos_datachild.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["bdme_excluidos_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Excluidos DataChild", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.SeccionalId"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.AbogadoId"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C3"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C3"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C3"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "C3", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C4"] )) {
+			$lookupTableLinks["dbo.Estados"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C4"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C4"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "C4", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C5"] )) {
+			$lookupTableLinks["dbo.Etapas"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C5"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C5"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "C5", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C7"] )) {
+			$lookupTableLinks["dbo.Motivos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C7"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.C7"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "C7", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "CarteraTipoId", "page" => "edit");
 }
 
 ?>

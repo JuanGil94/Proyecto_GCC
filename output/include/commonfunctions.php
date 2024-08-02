@@ -445,17 +445,17 @@ function checkTableName($shortTName )
 		return true;
 	if ("bdme_actualizaci_n" == $shortTName )
 		return true;
-	if ("bdme_gu_a_del_deudor_moroso" == $shortTName )
+	if ("bdme_gu_a_del_deudor_moroso1" == $shortTName )
 		return true;
-	if ("bdme_incumplimiento_acuerdo_de_pago_semestral" == $shortTName )
+	if ("bdme_incumplimiento_acuerdo_de_pago_semestral1" == $shortTName )
 		return true;
 	if ("bdme_retiros" == $shortTName )
 		return true;
 	if ("bdme_reporte_semestral" == $shortTName )
 		return true;
-	if ("bdme_cancelaci_n_acuerdo_de_pago" == $shortTName )
+	if ("bdme_cancelaci_n_acuerdo_de_pago1" == $shortTName )
 		return true;
-	if ("bdme_excluidos" == $shortTName )
+	if ("bdme_excluidos1" == $shortTName )
 		return true;
 	if ("base_de_datos___historico" == $shortTName )
 		return true;
@@ -474,6 +474,12 @@ function checkTableName($shortTName )
 	if ("certificado_del_resumen_por_periodo" == $shortTName )
 		return true;
 	if ("bdme_actualizaci_n_datachild" == $shortTName )
+		return true;
+	if ("bdme_cancelaci_n_acuerdo_de_pago_datachild" == $shortTName )
+		return true;
+	if ("bdme_excluidos_datachild" == $shortTName )
+		return true;
+	if ("bdme_incumplimiento_acuerdo_de_pago_semestral_datachild" == $shortTName )
 		return true;
 	return false;
 }
@@ -1749,6 +1755,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="BDME Actualización DataChild";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Cancelación Acuerdo de Pago DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Cancelación Acuerdo de Pago DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Excluidos DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Excluidos DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Incumplimiento Acuerdo de Pago Semestral DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+	}
 	return $arr;
 }
 
@@ -1894,6 +1927,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Certificado del Resumen Mensual";
 	$arr[]="Certificado del Resumen por Periodo";
 	$arr[]="BDME Actualización DataChild";
+	$arr[]="BDME Cancelación Acuerdo de Pago DataChild";
+	$arr[]="BDME Excluidos DataChild";
+	$arr[]="BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
 	return $arr;
 }
 
@@ -3199,6 +3235,21 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Actualización DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Cancelación Acuerdo de Pago DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Excluidos DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

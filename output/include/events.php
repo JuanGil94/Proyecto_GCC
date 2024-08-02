@@ -49,6 +49,15 @@ class class_GlobalEvents extends eventsBase
 		$this->events["BDME_Actualizaci_n_Hasta"] = true;
 		$this->events["BDME_Actualizaci_n_Sansionado"] = true;
 		$this->events["BDME_Actualizaci_n_Document_San"] = true;
+		$this->events["BDME_Cancelaci_n_Acuerdo_de_Pago_Desde"] = true;
+		$this->events["BDME_Cancelaci_n_Acuerdo_de_Pago_Hasta"] = true;
+		$this->events["BDME_Excluidos_Mes"] = true;
+		$this->events["BDME_Excluidos_Sancionado"] = true;
+		$this->events["BDME_Excluidos_Documento"] = true;
+		$this->events["BDME_Excluidos_DataChild_Total"] = true;
+		$this->events["BDME_Excluidos_DataChild_snippet"] = true;
+		$this->events["BDME_Gu_a_del_Deudor_Moroso_Mes"] = true;
+		$this->events["BDME_Incumplimiento_Acuerdo_de_Pago_Semestral_Mes"] = true;
 
 
 
@@ -787,6 +796,173 @@ echo "<input type='text' id='BDME_Actualiza_SancionadoId' value=''>";
 	function event_BDME_Actualizaci_n_Document_San(&$params)
 	{
 	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='BDME_Actualiza_Doc_SancionadoId'></input>"
+	;
+}
+	function event_BDME_Cancelaci_n_Acuerdo_de_Pago_Desde(&$params)
+	{
+	// Obtener el último día del mes anterior
+$ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
+
+// Mostrar el input con el valor calculado
+echo "<input type='month' id='BDME_Cancelacion_desdeId' name='desde' value='" . date('Y-m', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
+
+  
+	;
+}
+	function event_BDME_Cancelaci_n_Acuerdo_de_Pago_Hasta(&$params)
+	{
+	echo "<label for='BDME_Cancelacion_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
+echo "<input type='month' id='BDME_Cancelacion_hastaId' name='hasta' value='" . date('Y-m') . "' required><br>";
+
+	;
+}
+	function event_BDME_Excluidos_Mes(&$params)
+	{
+	echo "<label for='BDME_Excluidos_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='BDME_Excluidos_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_BDME_Excluidos_Sancionado(&$params)
+	{
+	echo "<label for='BDME_Excluidos_SancionadoId' style='margin-right: 20px;'>Sancionado: </label><br>";
+echo "<input type='text' id='BDME_Excluidos_SancionadoId' value=''>";
+	;
+}
+	function event_BDME_Excluidos_Documento(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='BDME_Excluidos_Doc_SancionadoId'></input>"
+	;
+}
+	function event_BDME_Excluidos_DataChild_Total(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = "
+    SELECT 
+        SUM([Extent1].[Obligacion] + [Extent1].[Costas] + [Extent1].[Intereses]) AS [TotalC6]
+    FROM (
+        SELECT 
+            [SancionadosPorProcesoView].[ProcesoId] AS [ProcesoId], 
+            [SancionadosPorProcesoView].[SancionadoId] AS [SancionadoId], 
+            [SancionadosPorProcesoView].[AbogadoId] AS [AbogadoId], 
+            [SancionadosPorProcesoView].[Fecha] AS [Fecha], 
+            [SancionadosPorProcesoView].[Numero] AS [Numero], 
+            [SancionadosPorProcesoView].[Providencia] AS [Providencia], 
+            [SancionadosPorProcesoView].[Ejecutoria] AS [Ejecutoria], 
+            [SancionadosPorProcesoView].[ConceptoId] AS [ConceptoId], 
+            [SancionadosPorProcesoView].[EstadoId] AS [EstadoId], 
+            [SancionadosPorProcesoView].[EtapaId] AS [EtapaId], 
+            [SancionadosPorProcesoView].[Obligacion] AS [Obligacion], 
+            [SancionadosPorProcesoView].[Costas] AS [Costas], 
+            [SancionadosPorProcesoView].[Intereses] AS [Intereses], 
+            [SancionadosPorProcesoView].[Terminacion] AS [Terminacion], 
+            [SancionadosPorProcesoView].[MotivoId] AS [MotivoId], 
+            [SancionadosPorProcesoView].[Observaciones] AS [Observaciones], 
+            [SancionadosPorProcesoView].[SeccionalId] AS [SeccionalId], 
+            [SancionadosPorProcesoView].[MinJusticia] AS [MinJusticia], 
+            [SancionadosPorProcesoView].[CarteraTipoId] AS [CarteraTipoId], 
+            [SancionadosPorProcesoView].[Acuerdo] AS [Acuerdo], 
+            [SancionadosPorProcesoView].[Incumplimiento] AS [Incumplimiento], 
+            [SancionadosPorProcesoView].[Radicado] AS [Radicado], 
+            [SancionadosPorProcesoView].[Origen] AS [Origen], 
+            [SancionadosPorProcesoView].[Despacho] AS [Despacho]
+        FROM [dbo].[SancionadosPorProcesoView] AS [SancionadosPorProcesoView]
+    ) AS [Extent1]
+    WHERE ([Extent1].[SancionadoId] = $sancionadoId);
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalC6'];
+
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+
+
+
+
+	;
+}
+	function event_BDME_Excluidos_DataChild_snippet(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = "
+    SELECT 
+        COUNT([Extent1].[ProcesoId]) AS [TotalProcesos]
+    FROM (
+        SELECT 
+            [SancionadosPorProcesoView].[ProcesoId] AS [ProcesoId], 
+            [SancionadosPorProcesoView].[SancionadoId] AS [SancionadoId], 
+            [SancionadosPorProcesoView].[AbogadoId] AS [AbogadoId], 
+            [SancionadosPorProcesoView].[Fecha] AS [Fecha], 
+            [SancionadosPorProcesoView].[Numero] AS [Numero], 
+            [SancionadosPorProcesoView].[Providencia] AS [Providencia], 
+            [SancionadosPorProcesoView].[Ejecutoria] AS [Ejecutoria], 
+            [SancionadosPorProcesoView].[ConceptoId] AS [ConceptoId], 
+            [SancionadosPorProcesoView].[EstadoId] AS [EstadoId], 
+            [SancionadosPorProcesoView].[EtapaId] AS [EtapaId], 
+            [SancionadosPorProcesoView].[Obligacion] AS [Obligacion], 
+            [SancionadosPorProcesoView].[Costas] AS [Costas], 
+            [SancionadosPorProcesoView].[Intereses] AS [Intereses], 
+            [SancionadosPorProcesoView].[Terminacion] AS [Terminacion], 
+            [SancionadosPorProcesoView].[MotivoId] AS [MotivoId], 
+            [SancionadosPorProcesoView].[Observaciones] AS [Observaciones], 
+            [SancionadosPorProcesoView].[SeccionalId] AS [SeccionalId], 
+            [SancionadosPorProcesoView].[MinJusticia] AS [MinJusticia], 
+            [SancionadosPorProcesoView].[CarteraTipoId] AS [CarteraTipoId], 
+            [SancionadosPorProcesoView].[Acuerdo] AS [Acuerdo], 
+            [SancionadosPorProcesoView].[Incumplimiento] AS [Incumplimiento], 
+            [SancionadosPorProcesoView].[Radicado] AS [Radicado], 
+            [SancionadosPorProcesoView].[Origen] AS [Origen], 
+            [SancionadosPorProcesoView].[Despacho] AS [Despacho]
+        FROM [dbo].[SancionadosPorProcesoView] AS [SancionadosPorProcesoView]
+    ) AS [Extent1]
+    WHERE ([Extent1].[SancionadoId] = $sancionadoId);
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalProcesos = $row['TotalProcesos'];
+
+// Imprimir el valor formateado
+echo "<strong>" ."Procesos: ". $totalProcesos . "</strong>";
+
+	;
+}
+	function event_BDME_Gu_a_del_Deudor_Moroso_Mes(&$params)
+	{
+	echo "<label for='BDME_Guia_Deudor_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='BDME_Guia_Deudor_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_BDME_Incumplimiento_Acuerdo_de_Pago_Semestral_Mes(&$params)
+	{
+	echo "<label for='BDME_Incumplimiento_pago_semestral_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='BDME_Incumplimiento_pago_semestral_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
 	;
 }
 

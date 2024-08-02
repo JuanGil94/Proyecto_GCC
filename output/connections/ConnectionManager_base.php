@@ -379,6 +379,9 @@ class ConnectionManager_Base
 		$connectionsIds["Certificado del Resumen Mensual"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Certificado del Resumen por Periodo"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BDME Actualización DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Cancelación Acuerdo de Pago DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Excluidos DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Incumplimiento Acuerdo de Pago Semestral DataChild"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar';if(!pageObj.buttonEventBefore['Buscar']){pageObj.buttonEventBefore['Buscar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var desde=$('#BDME_Cancelacion_desdeId').val();var hasta=$('#BDME_Cancelacion_hastaId').val();params["Cancelacion_desde"]=desde;params["Cancelacion_hasta"]=hasta;}}
+if(!pageObj.buttonEventAfter['Buscar']){pageObj.buttonEventAfter['Buscar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Buscar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar"+"_"+Runner.genId();var button_Buscar=new Runner.form.Button({id:this.id,btnName:"Buscar"});button_Buscar.init({args:[pageObj,proxy,pageid]});});};

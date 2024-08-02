@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar3"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar3';if(!pageObj.buttonEventBefore['Buscar3']){pageObj.buttonEventBefore['Buscar3']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var mesIncumplimiento=$('#BDME_Incumplimiento_pago_semestral_MesId').val();params["mesIncumplimiento"]=mesIncumplimiento;}}
+if(!pageObj.buttonEventAfter['Buscar3']){pageObj.buttonEventAfter['Buscar3']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Buscar3"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar3"+"_"+Runner.genId();var button_Buscar3=new Runner.form.Button({id:this.id,btnName:"Buscar3"});button_Buscar3.init({args:[pageObj,proxy,pageid]});});};

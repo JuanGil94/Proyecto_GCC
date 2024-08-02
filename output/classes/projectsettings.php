@@ -3778,18 +3778,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dbo_despachos5" ] = "dbo.Despachos5";
 	$projectEntities[ "BDME Actualización" ] = array( "url" => "bdme_actualizaci_n", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_actualizaci_n" ] = "BDME Actualización";
-	$projectEntities[ "BDME Guía del Deudor Moroso" ] = array( "url" => "bdme_gu_a_del_deudor_moroso", "type" => 6 );
-	$projectEntitiesReverse[ "bdme_gu_a_del_deudor_moroso" ] = "BDME Guía del Deudor Moroso";
-	$projectEntities[ "BDME Incumplimiento Acuerdo de Pago Semestral" ] = array( "url" => "bdme_incumplimiento_acuerdo_de_pago_semestral", "type" => 6 );
-	$projectEntitiesReverse[ "bdme_incumplimiento_acuerdo_de_pago_semestral" ] = "BDME Incumplimiento Acuerdo de Pago Semestral";
+	$projectEntities[ "BDME Guía del Deudor Moroso" ] = array( "url" => "bdme_gu_a_del_deudor_moroso1", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_gu_a_del_deudor_moroso1" ] = "BDME Guía del Deudor Moroso";
+	$projectEntities[ "BDME Incumplimiento Acuerdo de Pago Semestral" ] = array( "url" => "bdme_incumplimiento_acuerdo_de_pago_semestral1", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_incumplimiento_acuerdo_de_pago_semestral1" ] = "BDME Incumplimiento Acuerdo de Pago Semestral";
 	$projectEntities[ "BDME Retiros" ] = array( "url" => "bdme_retiros", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_retiros" ] = "BDME Retiros";
 	$projectEntities[ "BDME Reporte Semestral" ] = array( "url" => "bdme_reporte_semestral", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_reporte_semestral" ] = "BDME Reporte Semestral";
-	$projectEntities[ "BDME Cancelación Acuerdo de Pago" ] = array( "url" => "bdme_cancelaci_n_acuerdo_de_pago", "type" => 6 );
-	$projectEntitiesReverse[ "bdme_cancelaci_n_acuerdo_de_pago" ] = "BDME Cancelación Acuerdo de Pago";
-	$projectEntities[ "BDME Excluidos" ] = array( "url" => "bdme_excluidos", "type" => 6 );
-	$projectEntitiesReverse[ "bdme_excluidos" ] = "BDME Excluidos";
+	$projectEntities[ "BDME Cancelación Acuerdo de Pago" ] = array( "url" => "bdme_cancelaci_n_acuerdo_de_pago1", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_cancelaci_n_acuerdo_de_pago1" ] = "BDME Cancelación Acuerdo de Pago";
+	$projectEntities[ "BDME Excluidos" ] = array( "url" => "bdme_excluidos1", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_excluidos1" ] = "BDME Excluidos";
 	$projectEntities[ "Base de Datos - Historico" ] = array( "url" => "base_de_datos___historico", "type" => 6 );
 	$projectEntitiesReverse[ "base_de_datos___historico" ] = "Base de Datos - Historico";
 	$projectEntities[ "Deterioro de Cartera por Proceso" ] = array( "url" => "deterioro_de_cartera_por_proceso", "type" => 6 );
@@ -3808,6 +3808,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "certificado_del_resumen_por_periodo" ] = "Certificado del Resumen por Periodo";
 	$projectEntities[ "BDME Actualización DataChild" ] = array( "url" => "bdme_actualizaci_n_datachild", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_actualizaci_n_datachild" ] = "BDME Actualización DataChild";
+	$projectEntities[ "BDME Cancelación Acuerdo de Pago DataChild" ] = array( "url" => "bdme_cancelaci_n_acuerdo_de_pago_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_cancelaci_n_acuerdo_de_pago_datachild" ] = "BDME Cancelación Acuerdo de Pago DataChild";
+	$projectEntities[ "BDME Excluidos DataChild" ] = array( "url" => "bdme_excluidos_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_excluidos_datachild" ] = "BDME Excluidos DataChild";
+	$projectEntities[ "BDME Incumplimiento Acuerdo de Pago Semestral DataChild" ] = array( "url" => "bdme_incumplimiento_acuerdo_de_pago_semestral_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_incumplimiento_acuerdo_de_pago_semestral_datachild" ] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
 }
 
 function findTable( $table ) {
