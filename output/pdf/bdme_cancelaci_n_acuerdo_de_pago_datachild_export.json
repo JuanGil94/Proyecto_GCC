@@ -1,0 +1,192 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel BDME_Cancelaci_n_Acuerdo_de_Pago_DataChild export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$C1_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$C2_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$C3_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$C4_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$C5_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$C6_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$C7_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$Radicado_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$Incumplimiento_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

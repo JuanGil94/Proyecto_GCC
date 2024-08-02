@@ -1728,7 +1728,7 @@ pdfDocument = {
 				
 			{BEGIN C6_fieldfootercolumn}
 			{BEGIN C6_showtotal}
-				{ text: 'Total: ' },
+				{ text: 'Total: $ ' },
 				{"text":{$C6_total},"hidden":"{$item_hide_simple_grid_field29}"}
 			{END C6_showtotal}
 		{END C6_fieldfootercolumn},

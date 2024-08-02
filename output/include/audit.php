@@ -952,6 +952,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="BDME Cancelación Acuerdo de Pago DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Excluidos DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1855,6 +1867,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="BDME Actualización DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Cancelación Acuerdo de Pago DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Excluidos DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
 		{
 			return false;
 		}

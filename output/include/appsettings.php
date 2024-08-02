@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2570_1721142599";
+$projectBuildKey = "2607_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2570";
+$projectBuildNumber = "2607";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -909,6 +909,9 @@ $tableCaptions["Spanish"]["Intereses_por_Proceso_Report"] = "Intereses por Proce
 $tableCaptions["Spanish"]["Certificado_del_Resumen_Mensual"] = "Certificado del Resumen Mensual";
 $tableCaptions["Spanish"]["Certificado_del_Resumen_por_Periodo"] = "Certificado del Resumen por Periodo";
 $tableCaptions["Spanish"]["BDME_Actualizaci_n_DataChild"] = "BDME Actualización DataChild";
+$tableCaptions["Spanish"]["BDME_Cancelaci_n_Acuerdo_de_Pago_DataChild"] = "BDME Cancelación Acuerdo de Pago DataChild";
+$tableCaptions["Spanish"]["BDME_Excluidos_DataChild"] = "BDME Excluidos DataChild";
+$tableCaptions["Spanish"]["BDME_Incumplimiento_Acuerdo_de_Pago_Semestral_DataChild"] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
 
 
 $globalEvents = new class_GlobalEvents;

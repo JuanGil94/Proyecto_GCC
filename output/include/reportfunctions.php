@@ -941,6 +941,18 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="BDME Cancelación Acuerdo de Pago DataChild")
+		{
+			return 1;
+		}
+		if($table=="BDME Excluidos DataChild")
+		{
+			return 1;
+		}
+		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1737,6 +1749,18 @@ function getCaptionTable($table)
 	if($table=="BDME Actualización DataChild")
 	{
 		return "BDME Actualización DataChild";
+	}
+	if($table=="BDME Cancelación Acuerdo de Pago DataChild")
+	{
+		return "BDME Cancelación Acuerdo de Pago DataChild";
+	}
+	if($table=="BDME Excluidos DataChild")
+	{
+		return "BDME Excluidos DataChild";
+	}
+	if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
+	{
+		return "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
 	}
 	return $table;
 }

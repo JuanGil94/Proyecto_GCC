@@ -150,6 +150,9 @@ $nonAdminTablesArr[] = "Intereses por Proceso Report";
 $nonAdminTablesArr[] = "Certificado del Resumen Mensual";
 $nonAdminTablesArr[] = "Certificado del Resumen por Periodo";
 $nonAdminTablesArr[] = "BDME Actualización DataChild";
+$nonAdminTablesArr[] = "BDME Cancelación Acuerdo de Pago DataChild";
+$nonAdminTablesArr[] = "BDME Excluidos DataChild";
+$nonAdminTablesArr[] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
 
 $ug_connection = $cman->getForUserGroups();
 

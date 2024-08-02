@@ -152,8 +152,13 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event BDME_Gu_a_del_Deudor_Moroso_Mes}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":""},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

@@ -1954,7 +1954,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("bdme_gu_a_del_deudor_moroso", " " . "BDME Guía del Deudor Moroso");
+$tables[$table] = array("bdme_gu_a_del_deudor_moroso1", " " . "BDME Guía del Deudor Moroso");
 $table = "BDME Incumplimiento Acuerdo de Pago Semestral";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -1971,7 +1971,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("bdme_incumplimiento_acuerdo_de_pago_semestral", " " . "BDME Incumplimiento Acuerdo de Pago Semestral");
+$tables[$table] = array("bdme_incumplimiento_acuerdo_de_pago_semestral1", " " . "BDME Incumplimiento Acuerdo de Pago Semestral");
 $table = "BDME Retiros";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -2022,7 +2022,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("bdme_cancelaci_n_acuerdo_de_pago", " " . "BDME Cancelación Acuerdo de Pago");
+$tables[$table] = array("bdme_cancelaci_n_acuerdo_de_pago1", " " . "BDME Cancelación Acuerdo de Pago");
 $table = "BDME Excluidos";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -2039,7 +2039,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("bdme_excluidos", " " . "BDME Excluidos");
+$tables[$table] = array("bdme_excluidos1", " " . "BDME Excluidos");
 $table = "Base de Datos - Historico";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -2185,6 +2185,57 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("bdme_actualizaci_n_datachild", " " . "BDME Actualización DataChild");
+$table = "BDME Cancelación Acuerdo de Pago DataChild";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("bdme_cancelaci_n_acuerdo_de_pago_datachild", " " . "BDME Cancelación Acuerdo de Pago DataChild");
+$table = "BDME Excluidos DataChild";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("bdme_excluidos_datachild", " " . "BDME Excluidos DataChild");
+$table = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("bdme_incumplimiento_acuerdo_de_pago_semestral_datachild", " " . "BDME Incumplimiento Acuerdo de Pago Semestral DataChild");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";
