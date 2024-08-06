@@ -157,96 +157,156 @@ pdfDocument = {
 					],
 				{END standalone_page}
 
-																[
-	{
-		colSpan: 4,
-		border: [ false, false, false, false ],
-		stack: [
-			{
-				table: {
-					body: [
-						[
-							
-							{
-								text: [ {$report_cross_type}, { text: {$report_cross_field}, style: 'data-field'}],
-								style: 'data-label',
-							},
-							{
-								colSpan: {$group_x_count},
-								text: {$group_x_label},
-								style: 'field-label',
-							},
-							{BEGIN cross_totals}
-							{
-								text: ' ',
-							},
-							{END cross_totals}
-							{BEGIN fake_header_cells}
-							{},
-							{END fake_header_cells}							
-						],
-						[
-							{
-								text: {$group_y_label},
-								style: 'field-label',
-							},
-							{BEGIN group_header}
-							{
-								text: {$gr_value},
-								style: 'x-label',
-							},			
-							{END group_header}
-							{BEGIN cross_totals}
-							{
-								text: {$totals},
-								style: 'x-summary-label',
-							},			
-							{END cross_totals}
-						],
-					{BEGIN grid_row}
-						[
-							{
-								text: {$group_y},
-								style: 'y-label',
-							},
-							{BEGIN row_record}
-							{	
-								text: {$row_value},
-								style: 'data',
-							},
-							{END row_record}
-							{BEGIN cross_totals}
-							{
-								text: {$row_summary},
-								style: 'summary',
-							},
-							{END cross_totals}			
-						],
-					{END grid_row}
-					{BEGIN cross_totals}
-						[
-							{
-								text: {$totals},
-								style: 'y-summary-label',
-							},
-							{BEGIN col_summary}
-							{
-								text: {$col_summary},
-								style: 'summary',
-							},		
-							{END col_summary}
-							{
-								text: {$total_summary},
-								style: 'summary',
-							},	
-						],		
-					{END cross_totals}
-					]
-				}
-			}
-		]
-	}
-],
+																
+
+
+{BEGIN grid_row}
+	{BEGIN Ano_newgroup}
+		[
+								{
+				text: '{$jslabel Intereses_por_Proceso_Report Ano }',
+				style: "blackshade",
+				alignment: '{$Ano_align}',
+			},
+											{
+				text: '{$jslabel Intereses_por_Proceso_Report Mes }',
+				style: "blackshade",
+				alignment: '{$Mes_align}',
+			},
+											{
+				text: '{$jslabel Intereses_por_Proceso_Report Intereses }',
+				style: "blackshade",
+				alignment: '{$Intereses_align}',
+			},
+											{
+				text: '{$jslabel Intereses_por_Proceso_Report Proceso }',
+				style: "blackshade",
+				alignment: '{$Proceso_align}',
+			},
+					
+																							],
+	
+	[
+													{
+					colSpan: 4,
+					text: {$Ano_grval},
+					style: "header_1"
+				},
+																									],
+	{END Ano_newgroup}
+	{BEGIN Mes_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+																{
+					colSpan: 3,
+					text: {$Mes_grval},
+					style: "header_2"
+				},
+																				],
+	{END Mes_newgroup}
+	{BEGIN Intereses_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+																{
+					colSpan: 2,
+					text: {$Intereses_grval},
+					style: "header_3"
+				},
+															],
+	{END Intereses_newgroup}
+	{BEGIN Proceso_newgroup}
+	
+	[
+									{
+					text: '',
+					style: "group_1"
+				},
+												{
+					text: '',
+					style: "group_2"
+				},
+												{
+					text: '',
+					style: "group_3"
+				},
+																{
+					colSpan: 1,
+					text: {$Proceso_grval},
+					style:"header_4"
+				},
+										],
+	{END Proceso_newgroup}
+
+
+
+		{BEGIN Proceso_endgroup}
+
+	
+	
+	
+	
+	
+	{END Proceso_endgroup}
+			{BEGIN Intereses_endgroup}
+
+		[
+								{
+				text: "",
+				style: "group_1"
+			},
+						{
+				text: "",
+				style: "group_2"
+			},
+					
+																		{
+				colSpan: 2,
+				text: [
+					'Resumen de {$jslabel Intereses_por_Proceso_Report Intereses } ', 
+					{$Intereses_grval},
+					' - ', 
+					{$groupIntereses_total_cnt}, 
+					' Registros totales'
+				],
+				style: 'group_3',
+			},
+											],
+	
+	
+	
+	
+	
+	{END Intereses_endgroup}
+				{BEGIN Ano_endgroup}
+
+	
+	
+	
+	
+	
+	{END Ano_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+
 
 
 									]

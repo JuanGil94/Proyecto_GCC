@@ -1,0 +1,392 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel BDME_Retiros search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN SancionadoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="SancionadoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="SancionadoId" data-fieldname="SancionadoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SancionadoId}">
+		{$label BDME_Retiros SancionadoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_SancionadoId}
+	</div>
+	<div class="r-search-field">
+		{$SancionadoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SancionadoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END SancionadoId_fieldblock}
+											
+{BEGIN Seccional_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Seccional}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Seccional{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Seccional" data-fieldname="Seccional" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Seccional}">
+		{$label BDME_Retiros Seccional }	</label>
+	<div class="r-search-option">
+		{$searchtype_Seccional}
+	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol1}
+	</div>
+	
+</div>
+
+{END Seccional_fieldblock}
+											
+{BEGIN Concepto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Concepto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Concepto" data-fieldname="Concepto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Concepto}">
+		{$label BDME_Retiros Concepto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Concepto}
+	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Concepto_fieldblock}
+											
+{BEGIN TipoDeudor_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TipoDeudor}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="TipoDeudor{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="TipoDeudor" data-fieldname="TipoDeudor" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_TipoDeudor}">
+		{$label BDME_Retiros TipoDeudor }	</label>
+	<div class="r-search-option">
+		{$searchtype_TipoDeudor}
+	</div>
+	<div class="r-search-field">
+		{$TipoDeudor_editcontrol}	</div>
+	<div class="r-search-field">
+		{$TipoDeudor_editcontrol1}
+	</div>
+	
+</div>
+
+{END TipoDeudor_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label BDME_Retiros Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Documento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Documento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Documento" data-fieldname="Documento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Documento}">
+		{$label BDME_Retiros Documento }	</label>
+	<div class="r-search-option">
+		{$searchtype_Documento}
+	</div>
+	<div class="r-search-field">
+		{$Documento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Documento_editcontrol1}
+	</div>
+	
+</div>
+
+{END Documento_fieldblock}
+											
+{BEGIN TipoDocumento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_TipoDocumento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="TipoDocumento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="TipoDocumento" data-fieldname="TipoDocumento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_TipoDocumento}">
+		{$label BDME_Retiros TipoDocumento }	</label>
+	<div class="r-search-option">
+		{$searchtype_TipoDocumento}
+	</div>
+	<div class="r-search-field">
+		{$TipoDocumento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$TipoDocumento_editcontrol1}
+	</div>
+	
+</div>
+
+{END TipoDocumento_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Sancionado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Sancionado}">
+		{$label BDME_Retiros Sancionado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Sancionado}
+	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Sancionado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Sancionado_fieldblock}
+											
+{BEGIN Deuda_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Deuda}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Deuda{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Deuda" data-fieldname="Deuda" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Deuda}">
+		{$label BDME_Retiros Deuda }	</label>
+	<div class="r-search-option">
+		{$searchtype_Deuda}
+	</div>
+	<div class="r-search-field">
+		{$Deuda_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Deuda_editcontrol1}
+	</div>
+	
+</div>
+
+{END Deuda_fieldblock}
+											
+{BEGIN Causal_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Causal}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Causal{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="Causal" data-fieldname="Causal" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Causal}">
+		{$label BDME_Retiros Causal }	</label>
+	<div class="r-search-option">
+		{$searchtype_Causal}
+	</div>
+	<div class="r-search-field">
+		{$Causal_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Causal_editcontrol1}
+	</div>
+	
+</div>
+
+{END Causal_fieldblock}
+											
+{BEGIN Estado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Estado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Estado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Estado" data-fieldname="Estado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Estado}">
+		{$label BDME_Retiros Estado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Estado}
+	</div>
+	<div class="r-search-field">
+		{$Estado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Estado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Estado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

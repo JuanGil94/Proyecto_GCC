@@ -3782,8 +3782,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "bdme_gu_a_del_deudor_moroso1" ] = "BDME Guía del Deudor Moroso";
 	$projectEntities[ "BDME Incumplimiento Acuerdo de Pago Semestral" ] = array( "url" => "bdme_incumplimiento_acuerdo_de_pago_semestral1", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_incumplimiento_acuerdo_de_pago_semestral1" ] = "BDME Incumplimiento Acuerdo de Pago Semestral";
-	$projectEntities[ "BDME Retiros" ] = array( "url" => "bdme_retiros", "type" => 6 );
-	$projectEntitiesReverse[ "bdme_retiros" ] = "BDME Retiros";
+	$projectEntities[ "BDME Retiros" ] = array( "url" => "bdme_retiros1", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_retiros1" ] = "BDME Retiros";
 	$projectEntities[ "BDME Reporte Semestral" ] = array( "url" => "bdme_reporte_semestral", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_reporte_semestral" ] = "BDME Reporte Semestral";
 	$projectEntities[ "BDME Cancelación Acuerdo de Pago" ] = array( "url" => "bdme_cancelaci_n_acuerdo_de_pago1", "type" => 6 );
@@ -3800,8 +3800,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "listado_medidas_cautelares" ] = "Listado Medidas Cautelares";
 	$projectEntities[ "Presunción Prescripción" ] = array( "url" => "presunci_n_prescripci_n", "type" => 6 );
 	$projectEntitiesReverse[ "presunci_n_prescripci_n" ] = "Presunción Prescripción";
-	$projectEntities[ "Intereses por Proceso Report" ] = array( "url" => "intereses_por_proceso_report", "type" => 8 );
-	$projectEntitiesReverse[ "intereses_por_proceso_report" ] = "Intereses por Proceso Report";
 	$projectEntities[ "Certificado del Resumen Mensual" ] = array( "url" => "certificado_del_resumen_mensual", "type" => 6 );
 	$projectEntitiesReverse[ "certificado_del_resumen_mensual" ] = "Certificado del Resumen Mensual";
 	$projectEntities[ "Certificado del Resumen por Periodo" ] = array( "url" => "certificado_del_resumen_por_periodo", "type" => 6 );
@@ -3814,6 +3812,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "bdme_excluidos_datachild" ] = "BDME Excluidos DataChild";
 	$projectEntities[ "BDME Incumplimiento Acuerdo de Pago Semestral DataChild" ] = array( "url" => "bdme_incumplimiento_acuerdo_de_pago_semestral_datachild", "type" => 6 );
 	$projectEntitiesReverse[ "bdme_incumplimiento_acuerdo_de_pago_semestral_datachild" ] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+	$projectEntities[ "BDME Reporte Semestral Datachild" ] = array( "url" => "bdme_reporte_semestral_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_reporte_semestral_datachild" ] = "BDME Reporte Semestral Datachild";
+	$projectEntities[ "BDME Retiros DataChild" ] = array( "url" => "bdme_retiros_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_retiros_datachild" ] = "BDME Retiros DataChild";
+	$projectEntities[ "dbo.BusquedasPropiedades" ] = array( "url" => "busquedaspropiedades", "type" => 0 );
+	$projectEntitiesReverse[ "busquedaspropiedades" ] = "dbo.BusquedasPropiedades";
+	$projectEntities[ "dbo.ProcesosView1" ] = array( "url" => "procesosview1", "type" => 0 );
+	$projectEntitiesReverse[ "procesosview1" ] = "dbo.ProcesosView1";
 }
 
 function findTable( $table ) {

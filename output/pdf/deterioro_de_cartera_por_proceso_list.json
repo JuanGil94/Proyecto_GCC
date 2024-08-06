@@ -220,6 +220,55 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Mes}","hidden":"{$item_hide_snippet5}","isHtml":true},
+				
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -1454,8 +1503,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Contar}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1766,8 +1817,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Saldo}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1792,8 +1845,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Recobrable}","hidden":"{$item_hide_snippet2}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1896,8 +1951,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_VPN}","hidden":"{$item_hide_snippet3}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1922,8 +1979,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Deterioro}","hidden":"{$item_hide_snippet4}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["BuscarAno"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='BuscarAno';if(!pageObj.buttonEventBefore['BuscarAno']){pageObj.buttonEventBefore['BuscarAno']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var ano_interes=$('#ano_oculto').val();params['ano_interes']=ano_interes;}}
+if(!pageObj.buttonEventAfter['BuscarAno']){pageObj.buttonEventAfter['BuscarAno']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="BuscarAno"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="BuscarAno"+"_"+Runner.genId();var button_BuscarAno=new Runner.form.Button({id:this.id,btnName:"BuscarAno"});button_BuscarAno.init({args:[pageObj,proxy,pageid]});});};

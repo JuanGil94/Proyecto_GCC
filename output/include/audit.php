@@ -936,10 +936,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="Intereses por Proceso Report")
-		{
-			return false;
-		}
 		if($table=="Certificado del Resumen Mensual")
 		{
 			return false;
@@ -961,6 +957,22 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Reporte Semestral Datachild")
+		{
+			return false;
+		}
+		if($table=="BDME Retiros DataChild")
+		{
+			return false;
+		}
+		if($table=="dbo.BusquedasPropiedades")
+		{
+			return false;
+		}
+		if($table=="dbo.ProcesosView1")
 		{
 			return false;
 		}
@@ -1854,10 +1866,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="Intereses por Proceso Report")
-		{
-			return false;
-		}
 		if($table=="Certificado del Resumen Mensual")
 		{
 			return false;
@@ -1879,6 +1887,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
+		{
+			return false;
+		}
+		if($table=="BDME Reporte Semestral Datachild")
+		{
+			return false;
+		}
+		if($table=="BDME Retiros DataChild")
+		{
+			return false;
+		}
+		if($table=="dbo.BusquedasPropiedades")
+		{
+			return false;
+		}
+		if($table=="dbo.ProcesosView1")
 		{
 			return false;
 		}

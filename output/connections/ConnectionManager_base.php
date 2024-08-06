@@ -375,13 +375,16 @@ class ConnectionManager_Base
 		$connectionsIds["Intereses por Proceso"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Listado Medidas Cautelares"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Presunción Prescripción"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["Intereses por Proceso Report"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Certificado del Resumen Mensual"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Certificado del Resumen por Periodo"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BDME Actualización DataChild"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BDME Cancelación Acuerdo de Pago DataChild"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BDME Excluidos DataChild"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BDME Incumplimiento Acuerdo de Pago Semestral DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Reporte Semestral Datachild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Retiros DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.BusquedasPropiedades"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.ProcesosView1"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

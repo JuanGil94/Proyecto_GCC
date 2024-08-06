@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["BuscarDeteMes"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='BuscarDeteMes';if(!pageObj.buttonEventBefore['BuscarDeteMes']){pageObj.buttonEventBefore['BuscarDeteMes']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var deterioro_mes=$('#BDME_Reporte_Deterioro_MesId').val();params['deterioro_mes']=deterioro_mes;}}
+if(!pageObj.buttonEventAfter['BuscarDeteMes']){pageObj.buttonEventAfter['BuscarDeteMes']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="BuscarDeteMes"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="BuscarDeteMes"+"_"+Runner.genId();var button_BuscarDeteMes=new Runner.form.Button({id:this.id,btnName:"BuscarDeteMes"});button_BuscarDeteMes.init({args:[pageObj,proxy,pageid]});});};

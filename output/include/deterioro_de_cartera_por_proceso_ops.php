@@ -12,7 +12,7 @@ VALUES
 	);
 				$topsdeterioro_de_cartera_por_proceso["selectList"] = array(
 		"subtype" => "sql",
-		"sql" => "exec [dbo].[Deterioro_Pivot] @Fecha='2021-02-01 00:00:00',@UserName='cthomasb'"
+		"sql" => "exec [dbo].[Deterioro_Pivot] @Fecha=':session.deterioro_mes',@UserName=':session.UserNameF'"
 	);
 		$tables_data["Deterioro de Cartera por Proceso"][".operations"] = &$topsdeterioro_de_cartera_por_proceso;
 ?>

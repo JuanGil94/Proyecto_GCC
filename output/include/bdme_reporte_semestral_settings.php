@@ -6,11 +6,11 @@ $tdatabdme_reporte_semestral[".OwnerID"] = "";
 $tdatabdme_reporte_semestral[".OriginalTable"] = "BDME Reporte Semestral";
 
 
-$tdatabdme_reporte_semestral[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_reporte_semestral[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_reporte_semestral[".originalPagesByType"] = $tdatabdme_reporte_semestral[".pagesByType"];
-$tdatabdme_reporte_semestral[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_reporte_semestral[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_reporte_semestral[".originalPages"] = $tdatabdme_reporte_semestral[".pages"];
-$tdatabdme_reporte_semestral[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_reporte_semestral[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_reporte_semestral[".originalDefaultPages"] = $tdatabdme_reporte_semestral[".defaultPages"];
 
 //	field labels
@@ -52,6 +52,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbdme_reporte_semestral["Spanish"]["Estado"] = "Estado";
 	$fieldToolTipsbdme_reporte_semestral["Spanish"]["Estado"] = "";
 	$placeHoldersbdme_reporte_semestral["Spanish"]["Estado"] = "";
+	$fieldLabelsbdme_reporte_semestral["Spanish"]["SancionadoId"] = "Sancionado Id";
+	$fieldToolTipsbdme_reporte_semestral["Spanish"]["SancionadoId"] = "";
+	$placeHoldersbdme_reporte_semestral["Spanish"]["SancionadoId"] = "";
 	if (count($fieldToolTipsbdme_reporte_semestral["Spanish"]))
 		$tdatabdme_reporte_semestral[".isUseToolTips"] = true;
 }
@@ -149,7 +152,7 @@ $tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																												
+																																																																																																																											
 
 $tdatabdme_reporte_semestral[".ajaxCodeSnippetAdded"] = false;
 
@@ -178,6 +181,7 @@ $tdatabdme_reporte_semestral[".googleLikeFields"][] = "TipoDocumento";
 $tdatabdme_reporte_semestral[".googleLikeFields"][] = "Sancionado";
 $tdatabdme_reporte_semestral[".googleLikeFields"][] = "Deuda";
 $tdatabdme_reporte_semestral[".googleLikeFields"][] = "Estado";
+$tdatabdme_reporte_semestral[".googleLikeFields"][] = "SancionadoId";
 
 
 
@@ -1476,6 +1480,144 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 
 	$tdatabdme_reporte_semestral["Estado"] = $fdata;
 		$tdatabdme_reporte_semestral[".searchableFields"][] = "Estado";
+//	SancionadoId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "SancionadoId";
+	$fdata["GoodName"] = "SancionadoId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("BDME_Reporte_Semestral","SancionadoId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "SancionadoId";
+
+	
+		$fdata["FullName"] = "SancionadoId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatabdme_reporte_semestral["SancionadoId"] = $fdata;
+		$tdatabdme_reporte_semestral[".searchableFields"][] = "SancionadoId";
 
 
 $tables_data["BDME Reporte Semestral"]=&$tdatabdme_reporte_semestral;
@@ -1493,6 +1635,36 @@ changeTextControlsToDate( "BDME Reporte Semestral" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["BDME Reporte Semestral"] = array();
+//	BDME Reporte Semestral Datachild
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="BDME Reporte Semestral Datachild";
+		$detailsParam["dOriginalTable"] = "BDME Reporte Semestral Datachild";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "bdme_reporte_semestral_datachild";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BDME_Reporte_Semestral_Datachild");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["BDME Reporte Semestral"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["BDME Reporte Semestral"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["BDME Reporte Semestral"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["BDME Reporte Semestral"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["BDME Reporte Semestral"][$dIndex]["detailKeys"][]="SancionadoId";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1510,7 +1682,7 @@ require_once( getabspath( "include/bdme_reporte_semestral_ops.php" ) );
 	
 		;
 
-									
+										
 
 $tdatabdme_reporte_semestral[".sqlquery"] = $queryData_bdme_reporte_semestral;
 

@@ -706,6 +706,30 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class="			col-md-6
+	
+">
+		 
+		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" >
+{$event Deterioro_de_Cartera_por_Proceso_Mes}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="BuscarDeteMes" href="javascript:void(0)" typeid="ib" >
+							Buscar Dete Mes			</a>
+</span>
+		</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -1742,7 +1766,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1760,7 +1785,10 @@
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Deterioro_de_Cartera_por_Proceso_Contar}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
@@ -1940,7 +1968,10 @@
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Deterioro_de_Cartera_por_Proceso_Saldo}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field12}
 									{BEGIN cellblock_grid_footcell_field13}
@@ -1955,7 +1986,10 @@
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Deterioro_de_Cartera_por_Proceso_Recobrable}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field13}
 									{BEGIN cellblock_grid_footcell_field14}
@@ -2015,7 +2049,10 @@
 	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Deterioro_de_Cartera_por_Proceso_VPN}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field17}
 									{BEGIN cellblock_grid_footcell_field18}
@@ -2030,7 +2067,10 @@
 	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Deterioro_de_Cartera_por_Proceso_Deterioro}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field18}
 							</tr>

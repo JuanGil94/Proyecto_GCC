@@ -58,6 +58,26 @@ class class_GlobalEvents extends eventsBase
 		$this->events["BDME_Excluidos_DataChild_snippet"] = true;
 		$this->events["BDME_Gu_a_del_Deudor_Moroso_Mes"] = true;
 		$this->events["BDME_Incumplimiento_Acuerdo_de_Pago_Semestral_Mes"] = true;
+		$this->events["BDME_Reporte_Semestral_Mes"] = true;
+		$this->events["BDME_Reporte_Semestral_Sancionado"] = true;
+		$this->events["BDME_Reporte_Semestral_Documento"] = true;
+		$this->events["BDME_Reporte_Semestral_Datachild_Contar"] = true;
+		$this->events["BDME_Reporte_Semestral_Datachild_Total"] = true;
+		$this->events["BDME_Retiros_Desde"] = true;
+		$this->events["BDME_Retiros_Hasta"] = true;
+		$this->events["BDME_Retiros_DataChild_Contar"] = true;
+		$this->events["BDME_Retiros_DataChild_Total"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_Contar"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_Saldo"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_Recobrable"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_VPN"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_Deterioro"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_Mes"] = true;
+		$this->events["Intereses_por_Proceso_Ano"] = true;
+		$this->events["Listado_Medidas_Cautelares_Sancionado"] = true;
+		$this->events["Listado_Medidas_Cautelares_Documento"] = true;
+		$this->events["Listado_Medidas_Cautelares_Total"] = true;
+		$this->events["Listado_Medidas_Cautelares_Total_Rematado"] = true;
 
 
 
@@ -963,6 +983,596 @@ echo "<input type='month' id='BDME_Guia_Deudor_MesId' name='hasta' value='" . da
 	{
 	echo "<label for='BDME_Incumplimiento_pago_semestral_MesId' style='margin-right: 20px;'>Mes: </label><br>";
 echo "<input type='month' id='BDME_Incumplimiento_pago_semestral_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_BDME_Reporte_Semestral_Mes(&$params)
+	{
+	echo "<label for='BDME_Reporte_Semestral_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='BDME_Reporte_Semestral_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_BDME_Reporte_Semestral_Sancionado(&$params)
+	{
+	echo "<label for='BDME_Reporte_Semestral_SancionadoId' style='margin-right: 20px;'>Sancionado: </label><br>";
+echo "<input type='text' id='BDME_Reporte_Semestral_SancionadoId' value=''>";
+	;
+}
+	function event_BDME_Reporte_Semestral_Documento(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='BDME_Reporte_Semestral_Doc_SancionadoId'></input>"
+	;
+}
+	function event_BDME_Reporte_Semestral_Datachild_Contar(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = "
+SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalC6'];
+
+
+// Imprimir el valor formateado
+echo "<strong>" ."Procesos: ". $totalC6 . "</strong>";
+
+	;
+}
+	function event_BDME_Reporte_Semestral_Datachild_Total(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = "
+SELECT SUM(Obligacion + Costas + Intereses) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalC6'];
+
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+
+
+
+
+
+	;
+}
+	function event_BDME_Retiros_Desde(&$params)
+	{
+	// Obtener el último día del mes anterior
+$ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
+
+// Mostrar el input con el valor calculado
+echo "<input type='month' id='BDME_Retiros_desdeId' name='desde' value='" . date('Y-m', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
+
+	;
+}
+	function event_BDME_Retiros_Hasta(&$params)
+	{
+	
+echo "<label for='BDME_Retiros_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
+echo "<input type='month' id='BDME_Retiros_hastaId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_BDME_Retiros_DataChild_Contar(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = "
+SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalC6'];
+
+
+// Imprimir el valor formateado
+echo "<strong>" ."Procesos: ". $totalC6 . "</strong>";
+
+	;
+}
+	function event_BDME_Retiros_DataChild_Total(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = "
+SELECT SUM(Obligacion + Costas + Intereses) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalC6'];
+
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_Contar(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$mes_deterioro = $_SESSION['deterioro_mes'];
+
+$sql = "
+DECLARE @CarteraTipoId INT;
+DECLARE @SeccionalId INT;
+DECLARE @Fecha    DATE;
+-- Obtener los valores de las variables
+SELECT @CarteraTipoId = CarteraTipoId, @SeccionalId = SeccionalId
+FROM UserProfile
+WHERE UserProfile.UserName = '$user_id';
+SET @Fecha = EOMONTH('$mes_deterioro');
+-- Consultar los datos
+SELECT COUNT(Saldo) AS Procesos,
+       SUM(Subquery.Saldo) AS TotalSaldo, 
+       SUM(Subquery.Recobrable) AS TotalRecobrable,
+       SUM(Subquery.VPN) AS VPN, 
+       SUM(Subquery.Deterioro) AS Deterioro
+FROM (
+    SELECT 
+        Deterioro.Rel_Saldo AS Saldo,
+        Deterioro.Rel_Recobrable AS Recobrable,
+        Deterioro.Rel_VPN AS VPN,
+        Deterioro.Rel_Deterioro AS Deterioro
+    FROM Historicos Procesos
+    INNER JOIN Deterioro ON Procesos.ProcesoId = Deterioro.ProcesoId
+    INNER JOIN Conceptos ON Procesos.ConceptoId = Conceptos.ConceptoId
+    WHERE 
+        Procesos.SeccionalId = @SeccionalId
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND Deterioro.Fecha = @Fecha  
+        AND Procesos.Hasta = @Fecha  
+) AS Subquery;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['Procesos'];
+
+
+// Imprimir el valor formateado
+echo "<strong>" ."Procesos: ". $totalC6 ."</strong>";
+
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_Saldo(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$mes_deterioro = $_SESSION['deterioro_mes'];
+
+$sql = "
+DECLARE @CarteraTipoId INT;
+DECLARE @SeccionalId INT;
+DECLARE @Fecha    DATE;
+-- Obtener los valores de las variables
+SELECT @CarteraTipoId = CarteraTipoId, @SeccionalId = SeccionalId
+FROM UserProfile
+WHERE UserProfile.UserName = '$user_id';
+SET @Fecha = EOMONTH('$mes_deterioro');
+-- Consultar los datos
+SELECT COUNT(Saldo) AS Procesos,
+       SUM(Subquery.Saldo) AS TotalSaldo, 
+       SUM(Subquery.Recobrable) AS TotalRecobrable,
+       SUM(Subquery.VPN) AS VPN, 
+       SUM(Subquery.Deterioro) AS Deterioro
+FROM (
+    SELECT 
+        Deterioro.Rel_Saldo AS Saldo,
+        Deterioro.Rel_Recobrable AS Recobrable,
+        Deterioro.Rel_VPN AS VPN,
+        Deterioro.Rel_Deterioro AS Deterioro
+    FROM Historicos Procesos
+    INNER JOIN Deterioro ON Procesos.ProcesoId = Deterioro.ProcesoId
+    INNER JOIN Conceptos ON Procesos.ConceptoId = Conceptos.ConceptoId
+    WHERE 
+        Procesos.SeccionalId = @SeccionalId
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND Deterioro.Fecha = @Fecha  
+        AND Procesos.Hasta = @Fecha  
+) AS Subquery;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalSaldo'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+
+
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_Recobrable(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$mes_deterioro = $_SESSION['deterioro_mes'];
+
+$sql = "
+DECLARE @CarteraTipoId INT;
+DECLARE @SeccionalId INT;
+DECLARE @Fecha    DATE;
+-- Obtener los valores de las variables
+SELECT @CarteraTipoId = CarteraTipoId, @SeccionalId = SeccionalId
+FROM UserProfile
+WHERE UserProfile.UserName = '$user_id';
+SET @Fecha = EOMONTH('$mes_deterioro');
+-- Consultar los datos
+SELECT COUNT(Saldo) AS Procesos,
+       SUM(Subquery.Saldo) AS TotalSaldo, 
+       SUM(Subquery.Recobrable) AS TotalRecobrable,
+       SUM(Subquery.VPN) AS VPN, 
+       SUM(Subquery.Deterioro) AS Deterioro
+FROM (
+    SELECT 
+        Deterioro.Rel_Saldo AS Saldo,
+        Deterioro.Rel_Recobrable AS Recobrable,
+        Deterioro.Rel_VPN AS VPN,
+        Deterioro.Rel_Deterioro AS Deterioro
+    FROM Historicos Procesos
+    INNER JOIN Deterioro ON Procesos.ProcesoId = Deterioro.ProcesoId
+    INNER JOIN Conceptos ON Procesos.ConceptoId = Conceptos.ConceptoId
+    WHERE 
+        Procesos.SeccionalId = @SeccionalId
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND Deterioro.Fecha = @Fecha  
+        AND Procesos.Hasta = @Fecha  
+) AS Subquery;
+";
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalRecobrable'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_VPN(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$mes_deterioro = $_SESSION['deterioro_mes'];
+
+// Obtener el valor del campo 'mes'
+$deterioro_mes = isset($_POST['mes']) ? $_POST['mes'] : '';
+// Ejecutar la consulta SQL
+/*$sql = "
+SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+";*/
+
+$sql = "
+DECLARE @CarteraTipoId INT;
+DECLARE @SeccionalId INT;
+DECLARE @Fecha    DATE;
+-- Obtener los valores de las variables
+SELECT @CarteraTipoId = CarteraTipoId, @SeccionalId = SeccionalId
+FROM UserProfile
+WHERE UserProfile.UserName = '$user_id';
+SET @Fecha = EOMONTH('$mes_deterioro');
+-- Consultar los datos
+SELECT COUNT(Saldo) AS Procesos,
+       SUM(Subquery.Saldo) AS TotalSaldo, 
+       SUM(Subquery.Recobrable) AS TotalRecobrable,
+       SUM(Subquery.VPN) AS VPN, 
+       SUM(Subquery.Deterioro) AS Deterioro
+FROM (
+    SELECT 
+        Deterioro.Rel_Saldo AS Saldo,
+        Deterioro.Rel_Recobrable AS Recobrable,
+        Deterioro.Rel_VPN AS VPN,
+        Deterioro.Rel_Deterioro AS Deterioro
+    FROM Historicos Procesos
+    INNER JOIN Deterioro ON Procesos.ProcesoId = Deterioro.ProcesoId
+    INNER JOIN Conceptos ON Procesos.ConceptoId = Conceptos.ConceptoId
+    WHERE 
+        Procesos.SeccionalId = @SeccionalId
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND Deterioro.Fecha = @Fecha  
+        AND Procesos.Hasta = @Fecha  
+) AS Subquery;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['VPN'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_Deterioro(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$mes_deterioro = $_SESSION['deterioro_mes'];
+
+// Obtener el valor del campo 'mes'
+$deterioro_mes = isset($_POST['mes']) ? $_POST['mes'] : '';
+// Ejecutar la consulta SQL
+/*$sql = "
+SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+";*/
+
+$sql = "
+DECLARE @CarteraTipoId INT;
+DECLARE @SeccionalId INT;
+DECLARE @Fecha    DATE;
+-- Obtener los valores de las variables
+SELECT @CarteraTipoId = CarteraTipoId, @SeccionalId = SeccionalId
+FROM UserProfile
+WHERE UserProfile.UserName = '$user_id';
+SET @Fecha = EOMONTH('$mes_deterioro');
+-- Consultar los datos
+SELECT COUNT(Saldo) AS Procesos,
+       SUM(Subquery.Saldo) AS TotalSaldo, 
+       SUM(Subquery.Recobrable) AS TotalRecobrable,
+       SUM(Subquery.VPN) AS VPN, 
+       SUM(Subquery.Deterioro) AS Deterioro
+FROM (
+    SELECT 
+        Deterioro.Rel_Saldo AS Saldo,
+        Deterioro.Rel_Recobrable AS Recobrable,
+        Deterioro.Rel_VPN AS VPN,
+        Deterioro.Rel_Deterioro AS Deterioro
+    FROM Historicos Procesos
+    INNER JOIN Deterioro ON Procesos.ProcesoId = Deterioro.ProcesoId
+    INNER JOIN Conceptos ON Procesos.ConceptoId = Conceptos.ConceptoId
+    WHERE 
+        Procesos.SeccionalId = @SeccionalId
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND Deterioro.Fecha = @Fecha  
+        AND Procesos.Hasta = @Fecha  
+) AS Subquery;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['Deterioro'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_Mes(&$params)
+	{
+	echo "<label for='BDME_Reporte_Deterioro_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='BDME_Reporte_Deterioro_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Intereses_por_Proceso_Ano(&$params)
+	{
+	    echo "<label for='BDME_Reporte_Intereses_AnoId' style='margin-right: 20px;'>Año: </label><br>";
+    echo "<input type='month' id='BDME_Reporte_Intereses_AnoId' name='ano' value='" . date('Y-m') . "' required><br>";
+
+    // Agrega el script de JavaScript para manejar la extracción del año
+    echo "
+    <script>
+        document.getElementById('BDME_Reporte_Intereses_AnoId').addEventListener('change', function() {
+            var ano_interes = this.value;
+            var ano = ano_interes.split('-')[0];
+            var ano_interes_int = parseInt(ano, 10);
+            console.log('El año de interés como entero es:', ano_interes_int);
+            // Aquí puedes hacer algo con el año extraído, por ejemplo, asignarlo a un campo oculto
+            document.getElementById('ano_oculto').value = ano_interes_int;
+        });
+    </script>
+    ";
+
+    // Si necesitas un campo oculto para almacenar el año
+    echo "<input type='hidden' id='ano_oculto' name='ano_oculto' value=''>";
+	;
+}
+	function event_Listado_Medidas_Cautelares_Sancionado(&$params)
+	{
+	echo "<label for='Medidas_SancionadoId' style='margin-right: 20px;'>Sancionado: </label><br>";
+echo "<input type='text' id='Medidas_SancionadoId' value=''>";
+	;
+}
+	function event_Listado_Medidas_Cautelares_Documento(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='Medidas_Doc_SancionadoId'></input>"
+	;
+}
+	function event_Listado_Medidas_Cautelares_Total(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$medidas_sancionado_total = $_SESSION['medidas_sancionado'];
+$medidas_sancionado_doc_total = $_SESSION['medidas_documento']; 
+
+$sql = "
+SELECT SUM(Avalúo) AS TotalAvaluo, SUM(Subquery.[Valor Rematado]) AS TotalValorRematado
+FROM (
+    SELECT 
+        Propiedades.Avaluo AS Avalúo,
+        Medidas.Valor AS [Valor Rematado]
+    FROM 
+        ProcesosView1 
+    INNER JOIN
+        Medidas ON ProcesosView1.ProcesoId = Medidas.ProcesoId 
+    INNER JOIN
+        Propiedades ON Medidas.PropiedadId = Propiedades.PropiedadId 
+    LEFT OUTER JOIN
+        Ciudades ON Propiedades.CiudadId = Ciudades.CiudadId
+    WHERE 
+        ProcesosView1.Sancionado LIKE '%$medidas_sancionado_total%' 
+        AND ProcesosView1.SancionadoDocumento LIKE '%$medidas_sancionado_doc_total%' 
+        AND ProcesosView1.EstadoId <> 6
+) AS Subquery;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalAvaluo'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Listado_Medidas_Cautelares_Total_Rematado(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$medidas_sancionado_total = $_SESSION['medidas_sancionado'];
+$medidas_sancionado_doc_total = $_SESSION['medidas_documento']; 
+
+$sql = "
+SELECT SUM(Avalúo) AS TotalAvaluo, SUM(Subquery.[Valor Rematado]) AS TotalValorRematado
+FROM (
+    SELECT 
+        Propiedades.Avaluo AS Avalúo,
+        Medidas.Valor AS [Valor Rematado]
+    FROM 
+        ProcesosView1 
+    INNER JOIN
+        Medidas ON ProcesosView1.ProcesoId = Medidas.ProcesoId 
+    INNER JOIN
+        Propiedades ON Medidas.PropiedadId = Propiedades.PropiedadId 
+    LEFT OUTER JOIN
+        Ciudades ON Propiedades.CiudadId = Ciudades.CiudadId
+    WHERE 
+        ProcesosView1.Sancionado LIKE '%$medidas_sancionado_total%' 
+        AND ProcesosView1.SancionadoDocumento LIKE '%$medidas_sancionado_doc_total%' 
+        AND ProcesosView1.EstadoId <> 6
+) AS Subquery;
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['TotalValorRematado'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
 	;
 }
 

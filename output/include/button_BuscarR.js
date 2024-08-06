@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["BuscarR"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='BuscarR';if(!pageObj.buttonEventBefore['BuscarR']){pageObj.buttonEventBefore['BuscarR']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var mesSemestral=$('#BDME_Reporte_Semestral_MesId').val();var sancionado_report_Semestral=$('#BDME_Reporte_Semestral_SancionadoId').val();var doc_sancionado_report_semestral=$('#BDME_Reporte_Semestral_Doc_SancionadoId').val();params['mes_report_Semestral']=mesSemestral;params['sancionado_report_Semestral']=sancionado_report_Semestral;params['doc_sancionado_report_semestral']=doc_sancionado_report_semestral;}}
+if(!pageObj.buttonEventAfter['BuscarR']){pageObj.buttonEventAfter['BuscarR']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="BuscarR"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="BuscarR"+"_"+Runner.genId();var button_BuscarR=new Runner.form.Button({id:this.id,btnName:"BuscarR"});button_BuscarR.init({args:[pageObj,proxy,pageid]});});};

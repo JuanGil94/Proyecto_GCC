@@ -642,8 +642,6 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("Intereses por Proceso" == $this->chrt_array['tables'][0])
-			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
@@ -655,6 +653,14 @@ class Chart
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.BusquedasPropiedades" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.ProcesosView1" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

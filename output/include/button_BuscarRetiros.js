@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["BuscarRetiros"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='BuscarRetiros';if(!pageObj.buttonEventBefore['BuscarRetiros']){pageObj.buttonEventBefore['BuscarRetiros']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var retiros_desde=$('#BDME_Retiros_desdeId').val();var retiros_hasta=$('#BDME_Retiros_hastaId').val();params['retiros_desde']=retiros_desde;params['retiros_hasta']=retiros_hasta;}}
+if(!pageObj.buttonEventAfter['BuscarRetiros']){pageObj.buttonEventAfter['BuscarRetiros']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="BuscarRetiros"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="BuscarRetiros"+"_"+Runner.genId();var button_BuscarRetiros=new Runner.form.Button({id:this.id,btnName:"BuscarRetiros"});button_BuscarRetiros.init({args:[pageObj,proxy,pageid]});});};

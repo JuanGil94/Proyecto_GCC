@@ -449,7 +449,7 @@ function checkTableName($shortTName )
 		return true;
 	if ("bdme_incumplimiento_acuerdo_de_pago_semestral1" == $shortTName )
 		return true;
-	if ("bdme_retiros" == $shortTName )
+	if ("bdme_retiros1" == $shortTName )
 		return true;
 	if ("bdme_reporte_semestral" == $shortTName )
 		return true;
@@ -467,8 +467,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("presunci_n_prescripci_n" == $shortTName )
 		return true;
-	if ("intereses_por_proceso_report" == $shortTName )
-		return true;
 	if ("certificado_del_resumen_mensual" == $shortTName )
 		return true;
 	if ("certificado_del_resumen_por_periodo" == $shortTName )
@@ -480,6 +478,14 @@ function checkTableName($shortTName )
 	if ("bdme_excluidos_datachild" == $shortTName )
 		return true;
 	if ("bdme_incumplimiento_acuerdo_de_pago_semestral_datachild" == $shortTName )
+		return true;
+	if ("bdme_reporte_semestral_datachild" == $shortTName )
+		return true;
+	if ("bdme_retiros_datachild" == $shortTName )
+		return true;
+	if ("busquedaspropiedades" == $shortTName )
+		return true;
+	if ("procesosview1" == $shortTName )
 		return true;
 	return false;
 }
@@ -1721,15 +1727,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Intereses por Proceso Report");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="Intereses por Proceso Report";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("Certificado del Resumen Mensual");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -1781,6 +1778,42 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Reporte Semestral Datachild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Reporte Semestral Datachild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Retiros DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Retiros DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.BusquedasPropiedades");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.BusquedasPropiedades";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosView1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ProcesosView1";
 	}
 	return $arr;
 }
@@ -1923,13 +1956,16 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Intereses por Proceso";
 	$arr[]="Listado Medidas Cautelares";
 	$arr[]="Presunción Prescripción";
-	$arr[]="Intereses por Proceso Report";
 	$arr[]="Certificado del Resumen Mensual";
 	$arr[]="Certificado del Resumen por Periodo";
 	$arr[]="BDME Actualización DataChild";
 	$arr[]="BDME Cancelación Acuerdo de Pago DataChild";
 	$arr[]="BDME Excluidos DataChild";
 	$arr[]="BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+	$arr[]="BDME Reporte Semestral Datachild";
+	$arr[]="BDME Retiros DataChild";
+	$arr[]="dbo.BusquedasPropiedades";
+	$arr[]="dbo.ProcesosView1";
 	return $arr;
 }
 
@@ -3219,11 +3255,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="Intereses por Proceso Report" )
-	{
-//	default permissions
-		return "SP".$extraPerm;
-	}
 	if( $table=="Certificado del Resumen Mensual" )
 	{
 //	default permissions
@@ -3250,6 +3281,26 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Reporte Semestral Datachild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Retiros DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.BusquedasPropiedades" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.ProcesosView1" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

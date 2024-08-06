@@ -12,7 +12,7 @@ VALUES
 	);
 				$topsbdme_retiros["selectList"] = array(
 		"subtype" => "sql",
-		"sql" => "exec [dbo].[BDMERetiros] @Desde='2023-06-14 00:00:00',@Hasta='2023-06-14 00:00:00',@UserName='lajaime'"
+		"sql" => "exec [dbo].[BDMERetiros] @Desde=':session.retiros_desde',@Hasta=':session.retiros_hasta',@UserName=':session.UserNameF'"
 	);
 		$tables_data["BDME Retiros"][".operations"] = &$topsbdme_retiros;
 ?>
