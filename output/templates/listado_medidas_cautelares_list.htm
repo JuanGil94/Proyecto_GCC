@@ -675,11 +675,23 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event Listado_Medidas_Cautelares_Sancionado}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event Listado_Medidas_Cautelares_Documento}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="BuscarMedidas" href="javascript:void(0)" typeid="ib" >
+							Buscar Medidas			</a>
+</span>
+			{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -1988,7 +2000,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -2003,7 +2016,8 @@
 		 r-ori-vert		 {$Seccional_class}	"
 
 	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2018,7 +2032,8 @@
 		 r-ori-vert		 {$Concepto_class}	"
 
 	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2033,7 +2048,8 @@
 		 r-ori-vert		 {$Numero_class}	"
 
 	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2048,7 +2064,8 @@
 		 r-ori-vert		 {$Sancionado_class}	"
 
 	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2063,7 +2080,8 @@
 		 r-ori-vert		 {$No__Documento_class}	"
 
 	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2078,7 +2096,8 @@
 		 r-ori-vert		 {$TipoPropiedad_class}	"
 
 	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2093,7 +2112,8 @@
 		 r-ori-vert		 {$Propiedad_class}	"
 
 	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2108,7 +2128,8 @@
 		 r-ori-vert		 {$Ciudad_class}	"
 
 	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2123,7 +2144,8 @@
 		 r-ori-vert		 {$Matr_cula_Placa_Registro_class}	"
 
 	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"		data-control-cell
+	
 	>
 
 	
@@ -2141,7 +2163,10 @@
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Listado_Medidas_Cautelares_Total}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field9}
 									{BEGIN cellblock_grid_footcell_field10}
@@ -2306,7 +2331,10 @@
 	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Listado_Medidas_Cautelares_Total_Rematado}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field20}
 									{BEGIN cellblock_grid_footcell_field21}

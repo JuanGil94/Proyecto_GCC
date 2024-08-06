@@ -179,7 +179,7 @@ $tdatadeterioro_de_cartera_por_proceso[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																												
+																																																																																																																											
 
 $tdatadeterioro_de_cartera_por_proceso[".ajaxCodeSnippetAdded"] = false;
 
@@ -2970,6 +2970,7 @@ $tdatadeterioro_de_cartera_por_proceso[".sqlquery"] = $queryData_deterioro_de_ca
 
 
 
-$tdatadeterioro_de_cartera_por_proceso[".hasEvents"] = false;
+include_once(getabspath("include/deterioro_de_cartera_por_proceso_events.php"));
+$tdatadeterioro_de_cartera_por_proceso[".hasEvents"] = true;
 
 ?>

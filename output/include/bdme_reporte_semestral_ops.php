@@ -12,7 +12,7 @@ VALUES
 	);
 				$topsbdme_reporte_semestral["selectList"] = array(
 		"subtype" => "sql",
-		"sql" => "exec [dbo].[BDMESemestral] @Mes='2024-07-01 00:00:00',@UserName='cthomasb',@Documento='1022322897',@Sancionado=''"
+		"sql" => "exec [dbo].[BDMESemestral] @Mes=':session.mes_report_Semestral',@UserName=':session.UserNameF',@Documento=':session.doc_sancionado_report_semestral',@Sancionado=':session.sancionado_report_Semestral'"
 	);
 		$tables_data["BDME Reporte Semestral"][".operations"] = &$topsbdme_reporte_semestral;
 ?>

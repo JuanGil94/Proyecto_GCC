@@ -134,7 +134,7 @@ $tdataintereses_por_proceso_report[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																												
+																																																																																																																								
 
 $tdataintereses_por_proceso_report[".ajaxCodeSnippetAdded"] = false;
 
@@ -146,7 +146,7 @@ $tdataintereses_por_proceso_report[".addPageEvents"] = false;
 $tdataintereses_por_proceso_report[".isUseTimeForSearch"] = false;
 
 
-$tdataintereses_por_proceso_report[".badgeColor"] = "CFAE83";
+$tdataintereses_por_proceso_report[".badgeColor"] = "3CB371";
 
 
 $tdataintereses_por_proceso_report[".allSearchFields"] = array();

@@ -152,8 +152,16 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event BDME_Retiros_Desde}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":"{$event BDME_Retiros_Hasta}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+				
+			{"text":""},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

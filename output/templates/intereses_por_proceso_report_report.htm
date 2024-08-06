@@ -533,49 +533,49 @@
 		width: 100%;
 	}
 			td.group_1{
-			background-color: #90ee90;
+			background-color: #B0E0E6;
 		}
 		td.nbgroup_1{
-			background-color: #90ee90;
+			background-color: #B0E0E6;
 		}
 		td.header_1 {
-			background-color: #90ee90; 
+			background-color: #B0E0E6; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_2{
-			background-color: #add8e6;
+			background-color: #E0FFFF;
 		}
 		td.nbgroup_2{
-			background-color: #add8e6;
+			background-color: #E0FFFF;
 		}
 		td.header_2 {
-			background-color: #add8e6; 
+			background-color: #E0FFFF; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_3{
-			background-color: #ffb6c1;
+			background-color: #E0FFFF;
 		}
 		td.nbgroup_3{
-			background-color: #ffb6c1;
+			background-color: #E0FFFF;
 		}
 		td.header_3 {
-			background-color: #ffb6c1; 
+			background-color: #E0FFFF; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
 		}
 			td.group_4{
-			background-color: #fffacd;
+			background-color: #E0FFFF;
 		}
 		td.nbgroup_4{
-			background-color: #fffacd;
+			background-color: #E0FFFF;
 		}
 		td.header_4 {
-			background-color: #fffacd; 
+			background-color: #E0FFFF; 
 			font-size: 120%;
 			padding: 2px 8px;
 			font-weight: bold;
@@ -594,58 +594,137 @@
 	</style>
 
 <div class="rnr-cw-grid rnr-s-2 asbuttons {$pageStyleName}" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
-						<table id="crossTable{$id}" class="bs-crosstab table table-striped">
-		<thead>
-			{BEGIN grid_header}
-			<tr>
-				<th class="bs-cross-datasel">
-				<div class="form-inline">
-					{$select_group}
-					{$select_data}
-				</div>
-				</th>
-				<th class="bs-cross-xsel" {$xselcell_attrs}>
-					{$select_group_x}
-				</th>
-				{BEGIN cross_totals}
-				<th class="r-top-cross-row bs-cross-xsel">&nbsp;</th>
-				{END cross_totals}
-			</tr>
-			<tr class="bs-cross-colheaders">
-				<th >{$select_group_y}</th>
-				{BEGIN group_header}
-				<th class="bs-cross-colheadercell {$gr_x_class}">{$gr_value}</th>
-				{END group_header}
-				{BEGIN cross_totals}
-				<th class="bs-cross-colheadercell bs-cross-totalsname" id="totals1_{$id}">{$totals}</th>
-				{END cross_totals}
-			</tr>
-			{END grid_header}
-		</thead>
-		<tbody>		
+					
+
+
+<table class="table table-hover table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<tbody>
 	{BEGIN grid_row}
-			<tr>
-				<td class="bs-cross-rowheadercell {$gr_y_class}">{$group_y}</td>
-				{BEGIN row_record}
-					<td  id="{$id_data}_{$id}" class="{$row_value_class}">{$row_value}</td>
-				{END row_record}
-				{BEGIN cross_totals}
-				<td class="bs-cross-rowsummary {$summary_class}" id="{$id_row_summary}_{$id}">{$row_summary}</td>
-				{END cross_totals}
-			</tr>
+			{BEGIN Ano_newgroup}
+				<tr class="group-headers">
+										<td class="blackshade {$fieldclass_Ano}">{$label Intereses_por_Proceso_Report Ano }</td>
+														<td class="blackshade {$fieldclass_Mes}">{$label Intereses_por_Proceso_Report Mes }</td>
+														<td class="blackshade {$fieldclass_Intereses}">{$label Intereses_por_Proceso_Report Intereses }</td>
+														<td class="blackshade {$fieldclass_Proceso}">{$label Intereses_por_Proceso_Report Proceso }</td>
+							
+																																	</tr>
+		
+		<tr class="group-spliter-1"  >
+																							<td colspan="4" class="header_1">
+				<font >
+				{$xAno_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field" {$item_report_group_field} data-pageid="{$pageid}" data-field="Ano" data-fieldname="Ano" >
+{$Ano_grval}
+</span>				</font>
+			</td>
+																																																											</tr>
+		{END Ano_newgroup}
+			{BEGIN Mes_newgroup}
+		
+		<tr class="group-spliter-2"  >
+																		<td class=" group_1" >&nbsp;</td>
+																											<td colspan="3" class="header_2">
+				<font >
+				{$xMes_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field1" {$item_report_group_field1} data-pageid="{$pageid}" data-field="Mes" data-fieldname="Mes" >
+{$Mes_grval}
+</span>				</font>
+			</td>
+																																												</tr>
+		{END Mes_newgroup}
+			{BEGIN Intereses_newgroup}
+		
+		<tr class="group-spliter-3"  >
+																		<td class=" group_1" >&nbsp;</td>
+																						<td class=" group_2" >&nbsp;</td>
+																											<td colspan="2" class="header_3">
+				<font >
+				{$xIntereses_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" >
+{$Intereses_grval}
+</span>				</font>
+			</td>
+																													</tr>
+		{END Intereses_newgroup}
+			{BEGIN Proceso_newgroup}
+		
+		<tr class="group-spliter-4" {$rowattrs} >
+																		<td class=" group_1" >&nbsp;</td>
+																						<td class=" group_2" >&nbsp;</td>
+																						<td class=" group_3" >&nbsp;</td>
+																											<td colspan="1" class="header_4">
+				<font>
+				{$xProceso_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="Proceso" data-fieldname="Proceso" >
+{$Proceso_grval}
+</span>				</font>
+			</td>
+														</tr>
+		{END Proceso_newgroup}
+	
+	
+				{BEGIN Proceso_endgroup}
+		<tr class="summaryrow" style="display:none; height:0px;" >
+										<td class="group_1" style="border-top: none;"></td>
+							<td class="group_2" style="border-top: none;"></td>
+							<td class="group_3" style="border-top: none;"></td>
+							
+																															<td  class="group_4" colspan=1 >
+				Resumen de&nbsp;{$label Intereses_por_Proceso_Report Proceso }&nbsp;{$Proceso_grval}
+					- <span class="summary-4" data-type="summary">{$groupProceso_total_cnt}
+					</span> Registros totales			</td>
+									</tr>
+
+	
+	
+	
+	
+	{END Proceso_endgroup}
+						{BEGIN Intereses_endgroup}
+		<tr class="summaryrow"  >
+										<td class="group_1" style="border-top: none;"></td>
+							<td class="group_2" style="border-top: none;"></td>
+							
+																								<td  class="group_3" colspan=2 >
+				Resumen de&nbsp;{$label Intereses_por_Proceso_Report Intereses }&nbsp;{$Intereses_grval}
+					- <span class="summary-3" data-type="summary">{$groupIntereses_total_cnt}
+					</span> Registros totales			</td>
+																</tr>
+
+	
+	
+	
+	
+	{END Intereses_endgroup}
+									{BEGIN Ano_endgroup}
+		<tr class="summaryrow" style="display:none; height:0px;" >
+			
+										<td  class="group_1" colspan=4 >
+				Resumen de&nbsp;{$label Intereses_por_Proceso_Report Ano }&nbsp;{$Ano_grval}
+					- <span class="summary-1" data-type="summary">{$groupAno_total_cnt}
+					</span> Registros totales			</td>
+																														</tr>
+
+	
+	
+	
+	
+	{END Ano_endgroup}
+			
 	{END grid_row}
 
-		{BEGIN cross_totals}
-			<tr class="bs-cross-colsummary" >
-				<td  class="bs-cross-rowheadercell bs-cross-totalsname" id="totals2_{$id}">{$totals}</td>
-				{BEGIN col_summary}
-					<td id="{$id_col_summary}_{$id}" class="bs-cross-colsummary {$summary_class}">{$col_summary}</td>
-				{END col_summary}
-				<td id="id_total_summary_{$id}" class="bs-cross-totalsummary {$summary_class}">{$total_summary}</td>
-			</tr>
-		{END cross_totals}		
-		</tbody>	
-	</table>		</div>
+
+	
+
+
+    
+
+
+	</tbody>
+</table>
+
+
+		</div>
 	{END grid_block}	</div>
 <div class="r-below">
 					{BEGIN below-grid_block}

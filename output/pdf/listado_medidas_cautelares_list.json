@@ -194,8 +194,16 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Listado_Medidas_Cautelares_Sancionado}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":"{$event Listado_Medidas_Cautelares_Documento}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+				
+			{"text":""},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -1932,8 +1940,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Listado_Medidas_Cautelares_Total}","hidden":"{$item_hide_snippet2}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -2218,8 +2228,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Listado_Medidas_Cautelares_Total_Rematado}","hidden":"{$item_hide_snippet3}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["BuscarMedidas"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='BuscarMedidas';if(!pageObj.buttonEventBefore['BuscarMedidas']){pageObj.buttonEventBefore['BuscarMedidas']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var medidas_sancionado=$('#Medidas_SancionadoId').val();var medidas_documento=$('#Medidas_Doc_SancionadoId').val();params['medidas_sancionado']=medidas_sancionado;params['medidas_documento']=medidas_documento;}}
+if(!pageObj.buttonEventAfter['BuscarMedidas']){pageObj.buttonEventAfter['BuscarMedidas']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="BuscarMedidas"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="BuscarMedidas"+"_"+Runner.genId();var button_BuscarMedidas=new Runner.form.Button({id:this.id,btnName:"BuscarMedidas"});button_BuscarMedidas.init({args:[pageObj,proxy,pageid]});});};

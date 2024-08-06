@@ -925,10 +925,6 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="Intereses por Proceso Report")
-		{
-			return 1;
-		}
 		if($table=="Certificado del Resumen Mensual")
 		{
 			return 1;
@@ -950,6 +946,22 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
+		{
+			return 1;
+		}
+		if($table=="BDME Reporte Semestral Datachild")
+		{
+			return 1;
+		}
+		if($table=="BDME Retiros DataChild")
+		{
+			return 1;
+		}
+		if($table=="dbo.BusquedasPropiedades")
+		{
+			return 1;
+		}
+		if($table=="dbo.ProcesosView1")
 		{
 			return 1;
 		}
@@ -1734,10 +1746,6 @@ function getCaptionTable($table)
 	{
 		return "Presunción Prescripción";
 	}
-	if($table=="Intereses por Proceso Report")
-	{
-		return "Intereses por Proceso Report";
-	}
 	if($table=="Certificado del Resumen Mensual")
 	{
 		return "Certificado del Resumen Mensual";
@@ -1761,6 +1769,22 @@ function getCaptionTable($table)
 	if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild")
 	{
 		return "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+	}
+	if($table=="BDME Reporte Semestral Datachild")
+	{
+		return "BDME Reporte Semestral Datachild";
+	}
+	if($table=="BDME Retiros DataChild")
+	{
+		return "BDME Retiros DataChild";
+	}
+	if($table=="dbo.BusquedasPropiedades")
+	{
+		return "Busquedas Propiedades";
+	}
+	if($table=="dbo.ProcesosView1")
+	{
+		return "Procesos View1";
 	}
 	return $table;
 }
@@ -3949,6 +3973,30 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.Despachos5";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.BusquedasPropiedades");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.BusquedasPropiedades";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.BusquedasPropiedades";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosView1");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.ProcesosView1";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.ProcesosView1";
 	}
 	return $arr;
 }

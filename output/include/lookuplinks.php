@@ -1258,6 +1258,125 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["bdme_incumplimiento_acuerdo_de_pago_semestral_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Incumplimiento Acuerdo de Pago Semestral DataChild", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral_datachild.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral_datachild.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral_datachild.SeccionalId"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["bdme_reporte_semestral_datachild.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["bdme_reporte_semestral_datachild.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["bdme_reporte_semestral_datachild.AbogadoId"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["bdme_reporte_semestral_datachild.C3"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["bdme_reporte_semestral_datachild.C3"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["bdme_reporte_semestral_datachild.C3"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "C3", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["bdme_reporte_semestral_datachild.C4"] )) {
+			$lookupTableLinks["dbo.Estados"]["bdme_reporte_semestral_datachild.C4"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["bdme_reporte_semestral_datachild.C4"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "C4", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["bdme_reporte_semestral_datachild.C5"] )) {
+			$lookupTableLinks["dbo.Etapas"]["bdme_reporte_semestral_datachild.C5"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["bdme_reporte_semestral_datachild.C5"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "C5", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["bdme_reporte_semestral_datachild.C7"] )) {
+			$lookupTableLinks["dbo.Motivos"]["bdme_reporte_semestral_datachild.C7"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["bdme_reporte_semestral_datachild.C7"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "C7", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["bdme_reporte_semestral_datachild.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["bdme_reporte_semestral_datachild.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["bdme_reporte_semestral_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Reporte Semestral Datachild", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["bdme_retiros_datachild.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["bdme_retiros_datachild.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["bdme_retiros_datachild.SeccionalId"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["bdme_retiros_datachild.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["bdme_retiros_datachild.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["bdme_retiros_datachild.AbogadoId"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["bdme_retiros_datachild.C3"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["bdme_retiros_datachild.C3"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["bdme_retiros_datachild.C3"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "C3", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["bdme_retiros_datachild.C4"] )) {
+			$lookupTableLinks["dbo.Estados"]["bdme_retiros_datachild.C4"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["bdme_retiros_datachild.C4"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "C4", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["bdme_retiros_datachild.C5"] )) {
+			$lookupTableLinks["dbo.Etapas"]["bdme_retiros_datachild.C5"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["bdme_retiros_datachild.C5"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "C5", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["bdme_retiros_datachild.C7"] )) {
+			$lookupTableLinks["dbo.Motivos"]["bdme_retiros_datachild.C7"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["bdme_retiros_datachild.C7"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "C7", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["bdme_retiros_datachild.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["bdme_retiros_datachild.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["bdme_retiros_datachild.CarteraTipoId"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["bdme_retiros_datachild.CORREO"] )) {
+			$lookupTableLinks["dbo.Abogados"]["bdme_retiros_datachild.CORREO"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["bdme_retiros_datachild.CORREO"]["edit"] = array("table" => "BDME Retiros DataChild", "field" => "CORREO", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Busquedas"] ) ) {
+			$lookupTableLinks["dbo.Busquedas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Busquedas"]["busquedaspropiedades.BusquedaId"] )) {
+			$lookupTableLinks["dbo.Busquedas"]["busquedaspropiedades.BusquedaId"] = array();
+		}
+		$lookupTableLinks["dbo.Busquedas"]["busquedaspropiedades.BusquedaId"]["edit"] = array("table" => "dbo.BusquedasPropiedades", "field" => "BusquedaId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Propiedades"] ) ) {
+			$lookupTableLinks["dbo.Propiedades"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Propiedades"]["busquedaspropiedades.PropiedadId"] )) {
+			$lookupTableLinks["dbo.Propiedades"]["busquedaspropiedades.PropiedadId"] = array();
+		}
+		$lookupTableLinks["dbo.Propiedades"]["busquedaspropiedades.PropiedadId"]["edit"] = array("table" => "dbo.BusquedasPropiedades", "field" => "PropiedadId", "page" => "edit");
 }
 
 ?>

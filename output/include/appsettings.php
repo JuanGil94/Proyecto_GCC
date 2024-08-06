@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2607_1721142599";
+$projectBuildKey = "2651_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2607";
+$projectBuildNumber = "2651";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -905,13 +905,16 @@ $tableCaptions["Spanish"]["Deterioro_de_Cartera_por_Proceso"] = "Deterioro de Ca
 $tableCaptions["Spanish"]["Intereses_por_Proceso"] = "Intereses por Proceso";
 $tableCaptions["Spanish"]["Listado_Medidas_Cautelares"] = "Listado Medidas Cautelares";
 $tableCaptions["Spanish"]["Presunci_n_Prescripci_n"] = "Presunción Prescripción";
-$tableCaptions["Spanish"]["Intereses_por_Proceso_Report"] = "Intereses por Proceso Report";
 $tableCaptions["Spanish"]["Certificado_del_Resumen_Mensual"] = "Certificado del Resumen Mensual";
 $tableCaptions["Spanish"]["Certificado_del_Resumen_por_Periodo"] = "Certificado del Resumen por Periodo";
 $tableCaptions["Spanish"]["BDME_Actualizaci_n_DataChild"] = "BDME Actualización DataChild";
 $tableCaptions["Spanish"]["BDME_Cancelaci_n_Acuerdo_de_Pago_DataChild"] = "BDME Cancelación Acuerdo de Pago DataChild";
 $tableCaptions["Spanish"]["BDME_Excluidos_DataChild"] = "BDME Excluidos DataChild";
 $tableCaptions["Spanish"]["BDME_Incumplimiento_Acuerdo_de_Pago_Semestral_DataChild"] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+$tableCaptions["Spanish"]["BDME_Reporte_Semestral_Datachild"] = "BDME Reporte Semestral Datachild";
+$tableCaptions["Spanish"]["BDME_Retiros_DataChild"] = "BDME Retiros DataChild";
+$tableCaptions["Spanish"]["dbo_BusquedasPropiedades"] = "Busquedas Propiedades";
+$tableCaptions["Spanish"]["dbo_ProcesosView1"] = "Procesos View1";
 
 
 $globalEvents = new class_GlobalEvents;

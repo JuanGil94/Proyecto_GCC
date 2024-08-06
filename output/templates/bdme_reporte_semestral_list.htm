@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
 						</div>
 		{END searchCtrlBlock_Seccional}
+																{BEGIN searchCtrlBlock_SancionadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
+			<label>{$label BDME_Reporte_Semestral SancionadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
+						</div>
+		{END searchCtrlBlock_SancionadoId}
 																{BEGIN searchCtrlBlock_Estado}
 
 
@@ -477,11 +490,26 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event BDME_Reporte_Semestral_Mes}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event BDME_Reporte_Semestral_Sancionado}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" >
+{$event BDME_Reporte_Semestral_Documento}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="BuscarR" href="javascript:void(0)" typeid="ib" >
+							Buscar			</a>
+</span>
+			{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -529,6 +557,29 @@
 	</div>
 		
 	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Detalles de impresión	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_bdme_reporte_semestral_datachild}
+			<div>
+				<label for="printDetailsbdme_reporte_semestral_datachild{$id}">
+					<input type="checkbox" value="bdme_reporte_semestral_datachild" id="printDetailsbdme_reporte_semestral_datachild{$id}" checked>
+					BDME Reporte Semestral Datachild				</label>
+			</div>
+			{END print_details_bdme_reporte_semestral_datachild}
+						</div>
+</div>
+{END print_details}
 				 
 					</li>
 											<li class="divider" role="separator"></li>
@@ -601,16 +652,16 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Estado"]:before {
 		content: "{$label BDME_Reporte_Semestral Estado}";
 	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="1"
+	data-body-height="2"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -637,6 +688,21 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_details}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -863,13 +929,13 @@
 	</th>
 	{END cellblock_grid_headcell_field8}
 							</tr>
-															
+																				
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -897,6 +963,48 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bdme_reporte_semestral_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
+		
+		
+	{BEGIN bdme_reporte_semestral_datachild_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$bdme_reporte_semestral_datachild_link_attrs} data-short-details="bdme_reporte_semestral_datachild"
+		class="{$bdme_reporte_semestral_datachild_dlink_class}" 
+		title="{$caption BDME_Reporte_Semestral_Datachild }"			>
+								
+			</a>
+	</span>
+	{END bdme_reporte_semestral_datachild_dtable_link}
+
+
+	
+	</td>
+	{END cellblock_grid_cell_details}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -1087,12 +1195,40 @@
 	</td>
 	{END cellblock_grid_cell_field8}
 							</tr>
+											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+				
+							">
+									{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="bdme_reporte_semestral_datachild"
+			data-details-bdme_reporte_semestral_datachild	>
+		<span data-details-inside data-short-table="bdme_reporte_semestral_datachild">
+			</span>
+		<div data-details-preview>
+	</div>
+</div>
+	
+	</td>
+	{END cellblock_grid_cell_dpreview}
+							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow
@@ -1112,6 +1248,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	

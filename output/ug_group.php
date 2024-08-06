@@ -146,13 +146,16 @@ $nonAdminTablesArr[] = "Deterioro de Cartera por Proceso";
 $nonAdminTablesArr[] = "Intereses por Proceso";
 $nonAdminTablesArr[] = "Listado Medidas Cautelares";
 $nonAdminTablesArr[] = "Presunción Prescripción";
-$nonAdminTablesArr[] = "Intereses por Proceso Report";
 $nonAdminTablesArr[] = "Certificado del Resumen Mensual";
 $nonAdminTablesArr[] = "Certificado del Resumen por Periodo";
 $nonAdminTablesArr[] = "BDME Actualización DataChild";
 $nonAdminTablesArr[] = "BDME Cancelación Acuerdo de Pago DataChild";
 $nonAdminTablesArr[] = "BDME Excluidos DataChild";
 $nonAdminTablesArr[] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
+$nonAdminTablesArr[] = "BDME Reporte Semestral Datachild";
+$nonAdminTablesArr[] = "BDME Retiros DataChild";
+$nonAdminTablesArr[] = "dbo.BusquedasPropiedades";
+$nonAdminTablesArr[] = "dbo.ProcesosView1";
 
 $ug_connection = $cman->getForUserGroups();
 
