@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_export_field23}"},
 				
 				
@@ -128,6 +125,9 @@ pdfDocument = {
 				
 				
 			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
 			{"text":{$Competencia_pdfvalue},"hidden":"{$item_hide_export_field4}"},

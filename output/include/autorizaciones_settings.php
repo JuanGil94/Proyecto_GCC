@@ -25,9 +25,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsautorizaciones["Spanish"] = array();
 	$placeHoldersautorizaciones["Spanish"] = array();
 	$pageTitlesautorizaciones["Spanish"] = array();
-	$fieldLabelsautorizaciones["Spanish"]["Fecha"] = "F. Creación";
-	$fieldToolTipsautorizaciones["Spanish"]["Fecha"] = "";
-	$placeHoldersautorizaciones["Spanish"]["Fecha"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Tipo"] = "Tipo";
 	$fieldToolTipsautorizaciones["Spanish"]["Tipo"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Tipo"] = "";
@@ -49,6 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsautorizaciones["Spanish"]["Concepto"] = "Concepto";
 	$fieldToolTipsautorizaciones["Spanish"]["Concepto"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Concepto"] = "";
+	$fieldLabelsautorizaciones["Spanish"]["Fecha"] = "F. Creación";
+	$fieldToolTipsautorizaciones["Spanish"]["Fecha"] = "";
+	$placeHoldersautorizaciones["Spanish"]["Fecha"] = "";
 	$fieldLabelsautorizaciones["Spanish"]["Competencia"] = "Competencia";
 	$fieldToolTipsautorizaciones["Spanish"]["Competencia"] = "";
 	$placeHoldersautorizaciones["Spanish"]["Competencia"] = "";
@@ -215,9 +215,9 @@ $tdataautorizaciones[".strOrderBy"] = $tstrOrderBy;
 $tdataautorizaciones[".orderindexes"] = array();
 
 
-$tdataautorizaciones[".sqlHead"] = "	SELECT C.ChequeoId,  S.Seccional,  co.Concepto,  t.Tipo,  C.Cantidad,  FORMAT(C.Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(C.Costas, 'C', 'es-CO') AS Costas,  C.Fecha,  d.Codigo + ' -  ' +d.Despacho AS Competencia";
+$tdataautorizaciones[".sqlHead"] = "  	SELECT C.ChequeoId,  S.Seccional,  co.Concepto,  t.Tipo,  C.Cantidad,  FORMAT(C.Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(C.Costas, 'C', 'es-CO') AS Costas,  C.Fecha,  d.Codigo + ' -  ' +d.Despacho AS Competencia";
 $tdataautorizaciones[".sqlFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.Conceptos AS co ON C.ConceptoId = co.ConceptoId  INNER JOIN dbo.tipoCobro AS t ON C.Tipo = t.TipoId  INNER JOIN dbo.Despachos AS d ON C.DespachoId = d.DespachoId";
-$tdataautorizaciones[".sqlWhereExpr"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)";
+$tdataautorizaciones[".sqlWhereExpr"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.TramiteId =2) AND (C.SeccionalId=:session.SeccionalUser)";
 $tdataautorizaciones[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -1683,19 +1683,19 @@ require_once(getabspath("classes/sql.php"));
 function createSqlQuery_autorizaciones()
 {
 $proto0=array();
-$proto0["m_strHead"] = "	SELECT";
+$proto0["m_strHead"] = "  	SELECT";
 $proto0["m_strFieldList"] = "C.ChequeoId,  S.Seccional,  co.Concepto,  t.Tipo,  C.Cantidad,  FORMAT(C.Obligacion, 'C', 'es-CO') AS Obligacion,  FORMAT(C.Costas, 'C', 'es-CO') AS Costas,  C.Fecha,  d.Codigo + ' -  ' +d.Despacho AS Competencia";
 $proto0["m_strFrom"] = "FROM dbo.Chequeos AS C  INNER JOIN dbo.Seccionales AS S ON C.SeccionalId = S.SeccionalId  INNER JOIN dbo.Conceptos AS co ON C.ConceptoId = co.ConceptoId  INNER JOIN dbo.tipoCobro AS t ON C.Tipo = t.TipoId  INNER JOIN dbo.Despachos AS d ON C.DespachoId = d.DespachoId";
-$proto0["m_strWhere"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)";
+$proto0["m_strWhere"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.TramiteId =2) AND (C.SeccionalId=:session.SeccionalUser)";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)";
+$proto2["m_sql"] = "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.TramiteId =2) AND (C.SeccionalId=:session.SeccionalUser)";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =:sesion.SeccionalUser) AND (C.TramiteId =2)"
+	"m_sql" => "(C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.TramiteId =2) AND (C.SeccionalId=:session.SeccionalUser)"
 ));
 
 $proto2["m_column"]=$obj;
@@ -1755,17 +1755,17 @@ $obj = new SQLLogicalExpr($proto8);
 
 			$proto2["m_contained"][]=$obj;
 						$proto10=array();
-$proto10["m_sql"] = "C.SeccionalId =:sesion.SeccionalUser";
+$proto10["m_sql"] = "C.TramiteId =2";
 $proto10["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "SeccionalId",
+	"m_strName" => "TramiteId",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
 $proto10["m_column"]=$obj;
 $proto10["m_contained"] = array();
-$proto10["m_strCase"] = "=:sesion.SeccionalUser";
+$proto10["m_strCase"] = "=2";
 $proto10["m_havingmode"] = false;
 $proto10["m_inBrackets"] = true;
 $proto10["m_useAlias"] = false;
@@ -1773,17 +1773,17 @@ $obj = new SQLLogicalExpr($proto10);
 
 			$proto2["m_contained"][]=$obj;
 						$proto12=array();
-$proto12["m_sql"] = "C.TramiteId =2";
+$proto12["m_sql"] = "C.SeccionalId=:session.SeccionalUser";
 $proto12["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "TramiteId",
+	"m_strName" => "SeccionalId",
 	"m_strTable" => "C",
 	"m_srcTableName" => "dbo.Autorizaciones"
 ));
 
 $proto12["m_column"]=$obj;
 $proto12["m_contained"] = array();
-$proto12["m_strCase"] = "=2";
+$proto12["m_strCase"] = "=:session.SeccionalUser";
 $proto12["m_havingmode"] = false;
 $proto12["m_inBrackets"] = true;
 $proto12["m_useAlias"] = false;

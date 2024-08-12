@@ -128,6 +128,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Competencia}</span>
 						</div>
 		{END searchCtrlBlock_Competencia}
+																{BEGIN searchCtrlBlock_Fecha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
+			<label>{$label dbo_Autorizaciones Fecha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
+						</div>
+		{END searchCtrlBlock_Fecha}
 																{BEGIN searchCtrlBlock_Concepto}
 
 
@@ -180,19 +193,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
 						</div>
 		{END searchCtrlBlock_Obligacion}
-																{BEGIN searchCtrlBlock_Fecha}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
-			<label>{$label dbo_Autorizaciones Fecha }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
-						</div>
-		{END searchCtrlBlock_Fecha}
 																{BEGIN searchCtrlBlock_Costas}
 
 
@@ -723,16 +723,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
-					<span>{$label dbo_Autorizaciones Fecha }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Seccional" checked="checked" value="1" data-field="Seccional" data-fieldname="Seccional">
 					<span>{$label dbo_Autorizaciones Seccional }</span>
 				</label>
@@ -745,6 +735,16 @@
 				<label>
 					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
 					<span>{$label dbo_Autorizaciones Concepto }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_Autorizaciones Fecha }</span>
 				</label>
 			</div>
 					</a>
@@ -979,31 +979,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-			data-field="Fecha"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Fecha_fieldheadercolumn}
-	{BEGIN Fecha_fieldheader}
-	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
-	{$label dbo_Autorizaciones Fecha }	{$arrow_icon_Fecha}
-	</SPAN>
-	{END Fecha_fieldheader}
-{END Fecha_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
 									{BEGIN cellblock_grid_headcell_field24}
 	<th
 	
@@ -1075,17 +1050,42 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Competencia_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="Competencia"
+			data-field="Fecha"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN Fecha_fieldheadercolumn}
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label dbo_Autorizaciones Fecha }	{$arrow_icon_Fecha}
+	</SPAN>
+	{END Fecha_fieldheader}
+{END Fecha_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+			data-field="Competencia"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN Competencia_fieldheadercolumn}
 	{BEGIN Competencia_fieldheader}
-	<SPAN {$Competencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia">
+	<SPAN {$Competencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia">
 	{$label dbo_Autorizaciones Competencia }	{$arrow_icon_Competencia}
 	</SPAN>
 	{END Competencia_fieldheader}
@@ -1093,7 +1093,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field8}
 							</tr>
 																				
 					{END grid_header}
@@ -1254,27 +1254,6 @@
 {END Costas_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-			data-field="Fecha"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Fecha_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
-{$Fecha_value}
-</span>
-{END Fecha_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
 									{BEGIN cellblock_grid_cell_field24}
 	<td
 	
@@ -1338,21 +1317,42 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Competencia_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="Competencia"
+			data-field="Fecha"
 	
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN Fecha_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
+{$Fecha_value}
+</span>
+{END Fecha_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+			data-field="Competencia"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN Competencia_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia" data-default-width >
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia" data-default-width >
 {$Competencia_value}
 </span>
 {END Competencia_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field8}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1488,21 +1488,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field7}
-									{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
 									{BEGIN cellblock_grid_footcell_field24}
 	<td
 	
@@ -1554,7 +1539,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Competencia_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
@@ -1563,6 +1548,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="autorizaciones_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
 							</tr>
 					
 					</tfoot>

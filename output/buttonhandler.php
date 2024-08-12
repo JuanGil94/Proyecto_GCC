@@ -919,8 +919,23 @@ function buttonHandler_New_Button2($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+$data = $button->getCurrentRecord();
+if ($params["txt"]==1){
+	$consulta2=DB::Exec("UPDATE Chequeos
+              SET 
+                  Aprobado = 1, 
+                  AprobadoPor = '".$_SESSION["UserNameF"]."', 
+                  FechaAprobacion = GETDATE()
+            WHERE(ChequeoId = ".$data["ChequeoId"].")");
+            if ($consulta2) {
+						$result["txt"]=1;
+                    } 
+             else {
+								  // Hubo un error en la ejecución de la consulta
+								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
+								  //exit();
+                   }
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -2635,6 +2650,9 @@ function buttonHandler_New_Button12($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	// Put your code here.
 //$result["txt"] = $params["txt"]." world!";
+
+//exec [dbo].[Procesos_Reasignar] @UserName=N'cthomasb',@AbogadoId=3237,@SeccionalId=1030,@CarteraTipoId=1
+
 global $dal;
 while ( $data = $button->getNextSelectedRecord() ) {
   // set ReportsTo field to 'Bob Smith'
@@ -2793,8 +2811,16 @@ function buttonHandler_Resumen_Mensual1($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$_SESSION["fechaIn"]=$params["txt"].'-01';
-;
+	include_once (getabspath("plantillaGCC.php"));
+$reportDate=$params["reportDate"]+'-01';
+$objeto=new certificadoMensual($reportDate,$_SESSION["UserNameF"]);
+$objeto->reporteMensual();
+$comando = '"C:\Program Files\LibreOffice\program\soffice.bin" --convert-to pdf --outdir "templates_GCC\caratulas" "templates_GCC\Resumen_Mensual_Final.docx"';
+//chdir("C:\Projects\Proyecto_GCC\output\templates_GCC") ;
+//$directorioActual = getcwd();//mostrar directorio donde se ejecuta el comando
+//echo "Directorio Actual".$directorioActual;
+// Ejecutar el comando
+$resultado = shell_exec($comando);;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
