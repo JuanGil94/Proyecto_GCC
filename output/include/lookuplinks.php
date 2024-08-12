@@ -1377,6 +1377,62 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Propiedades"]["busquedaspropiedades.PropiedadId"] = array();
 		}
 		$lookupTableLinks["dbo.Propiedades"]["busquedaspropiedades.PropiedadId"]["edit"] = array("table" => "dbo.BusquedasPropiedades", "field" => "PropiedadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["obligaciones_de_dificil_recaudo.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["obligaciones_de_dificil_recaudo.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["obligaciones_de_dificil_recaudo.ConceptoId"]["edit"] = array("table" => "Obligaciones de Dificil Recaudo", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["obligaciones_de_dificil_recaudo.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["obligaciones_de_dificil_recaudo.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["obligaciones_de_dificil_recaudo.EstadoId"]["edit"] = array("table" => "Obligaciones de Dificil Recaudo", "field" => "EstadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["reportes1.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["reportes1.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["reportes1.SeccionalId"]["edit"] = array("table" => "Reportes", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["reportes1.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["reportes1.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["reportes1.CarteraTipoId"]["edit"] = array("table" => "Reportes", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["reportes1.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["reportes1.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["reportes1.ConceptoId"]["edit"] = array("table" => "Reportes", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["reportes1.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["reportes1.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["reportes1.EstadoId"]["edit"] = array("table" => "Reportes", "field" => "EstadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Etapas"] ) ) {
+			$lookupTableLinks["dbo.Etapas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Etapas"]["reportes1.EtapaId"] )) {
+			$lookupTableLinks["dbo.Etapas"]["reportes1.EtapaId"] = array();
+		}
+		$lookupTableLinks["dbo.Etapas"]["reportes1.EtapaId"]["edit"] = array("table" => "Reportes", "field" => "EtapaId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Motivos"] ) ) {
+			$lookupTableLinks["dbo.Motivos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Motivos"]["reportes1.MotivoId"] )) {
+			$lookupTableLinks["dbo.Motivos"]["reportes1.MotivoId"] = array();
+		}
+		$lookupTableLinks["dbo.Motivos"]["reportes1.MotivoId"]["edit"] = array("table" => "Reportes", "field" => "MotivoId", "page" => "edit");
 }
 
 ?>

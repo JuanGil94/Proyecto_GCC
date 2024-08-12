@@ -1,0 +1,2190 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_PagoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoId}" {$filterRow_attrs_PagoId}>
+			<label>{$label Recaudos_por_A_os PagoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoId}</span>
+						</div>
+		{END searchCtrlBlock_PagoId}
+																{BEGIN searchCtrlBlock_NumeroConsignacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_NumeroConsignacion}" {$filterRow_attrs_NumeroConsignacion}>
+			<label>{$label Recaudos_por_A_os NumeroConsignacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_NumeroConsignacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_NumeroConsignacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_NumeroConsignacion}</span>
+						</div>
+		{END searchCtrlBlock_NumeroConsignacion}
+																{BEGIN searchCtrlBlock_Abogado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Abogado}" {$filterRow_attrs_Abogado}>
+			<label>{$label Recaudos_por_A_os Abogado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
+						</div>
+		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_MesNumero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_MesNumero}" {$filterRow_attrs_MesNumero}>
+			<label>{$label Recaudos_por_A_os MesNumero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_MesNumero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_MesNumero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_MesNumero}</span>
+						</div>
+		{END searchCtrlBlock_MesNumero}
+																{BEGIN searchCtrlBlock_CarteraTipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipo}" {$filterRow_attrs_CarteraTipo}>
+			<label>{$label Recaudos_por_A_os CarteraTipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipo}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipo}
+																{BEGIN searchCtrlBlock_Pago}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Pago}" {$filterRow_attrs_Pago}>
+			<label>{$label Recaudos_por_A_os Pago }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Pago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Pago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Pago}</span>
+						</div>
+		{END searchCtrlBlock_Pago}
+																{BEGIN searchCtrlBlock_PagoTerm}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoTerm}" {$filterRow_attrs_PagoTerm}>
+			<label>{$label Recaudos_por_A_os PagoTerm }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoTerm}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoTerm}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoTerm}</span>
+						</div>
+		{END searchCtrlBlock_PagoTerm}
+																{BEGIN searchCtrlBlock_PagoMayo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoMayo}" {$filterRow_attrs_PagoMayo}>
+			<label>{$label Recaudos_por_A_os PagoMayo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoMayo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoMayo}</span>
+						</div>
+		{END searchCtrlBlock_PagoMayo}
+																{BEGIN searchCtrlBlock_PagoInte}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoInte}" {$filterRow_attrs_PagoInte}>
+			<label>{$label Recaudos_por_A_os PagoInte }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoInte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoInte}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoInte}</span>
+						</div>
+		{END searchCtrlBlock_PagoInte}
+																{BEGIN searchCtrlBlock_PagoCost}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoCost}" {$filterRow_attrs_PagoCost}>
+			<label>{$label Recaudos_por_A_os PagoCost }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoCost}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoCost}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoCost}</span>
+						</div>
+		{END searchCtrlBlock_PagoCost}
+																{BEGIN searchCtrlBlock_PagoObli}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_PagoObli}" {$filterRow_attrs_PagoObli}>
+			<label>{$label Recaudos_por_A_os PagoObli }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_PagoObli}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_PagoObli}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_PagoObli}</span>
+						</div>
+		{END searchCtrlBlock_PagoObli}
+																{BEGIN searchCtrlBlock_Registro}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Registro}" {$filterRow_attrs_Registro}>
+			<label>{$label Recaudos_por_A_os Registro }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Registro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Registro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Registro}</span>
+						</div>
+		{END searchCtrlBlock_Registro}
+																{BEGIN searchCtrlBlock_Fecha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
+			<label>{$label Recaudos_por_A_os Fecha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
+						</div>
+		{END searchCtrlBlock_Fecha}
+																{BEGIN searchCtrlBlock_Banco}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Banco}" {$filterRow_attrs_Banco}>
+			<label>{$label Recaudos_por_A_os Banco }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Banco}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Banco}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Banco}</span>
+						</div>
+		{END searchCtrlBlock_Banco}
+																{BEGIN searchCtrlBlock_Cuenta}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Cuenta}" {$filterRow_attrs_Cuenta}>
+			<label>{$label Recaudos_por_A_os Cuenta }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Cuenta}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Cuenta}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Cuenta}</span>
+						</div>
+		{END searchCtrlBlock_Cuenta}
+																{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label Recaudos_por_A_os Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_Seccional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
+			<label>{$label Recaudos_por_A_os Seccional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
+						</div>
+		{END searchCtrlBlock_Seccional}
+																{BEGIN searchCtrlBlock_SancionadoDocumento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SancionadoDocumento}" {$filterRow_attrs_SancionadoDocumento}>
+			<label>{$label Recaudos_por_A_os SancionadoDocumento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SancionadoDocumento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoDocumento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoDocumento}</span>
+						</div>
+		{END searchCtrlBlock_SancionadoDocumento}
+																{BEGIN searchCtrlBlock_Sancionado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sancionado}" {$filterRow_attrs_Sancionado}>
+			<label>{$label Recaudos_por_A_os Sancionado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sancionado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sancionado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sancionado}</span>
+						</div>
+		{END searchCtrlBlock_Sancionado}
+																{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label Recaudos_por_A_os Numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_TipoRecaudo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_TipoRecaudo}" {$filterRow_attrs_TipoRecaudo}>
+			<label>{$label Recaudos_por_A_os TipoRecaudo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_TipoRecaudo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_TipoRecaudo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_TipoRecaudo}</span>
+						</div>
+		{END searchCtrlBlock_TipoRecaudo}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="recaudos_por_a_os_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="recaudos_por_a_os_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="snippet" data-itemid="snippet6" {$item_snippet6} data-pageid="{$pageid}" >
+{$event Recaudos_por_A_os_Ano}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Buscar5" href="javascript:void(0)" typeid="ib" >
+							Buscar			</a>
+</span>
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="recaudos_por_a_os_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir todas las páginas							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="recaudos_por_a_os_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Resultados por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="TipoRecaudo"]:before {
+		content: "{$label Recaudos_por_A_os TipoRecaudo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
+		content: "{$label Recaudos_por_A_os Numero}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sancionado"]:before {
+		content: "{$label Recaudos_por_A_os Sancionado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoDocumento"]:before {
+		content: "{$label Recaudos_por_A_os SancionadoDocumento}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
+		content: "{$label Recaudos_por_A_os Seccional}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
+		content: "{$label Recaudos_por_A_os Concepto}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cuenta"]:before {
+		content: "{$label Recaudos_por_A_os Cuenta}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Banco"]:before {
+		content: "{$label Recaudos_por_A_os Banco}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
+		content: "{$label Recaudos_por_A_os Fecha}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Registro"]:before {
+		content: "{$label Recaudos_por_A_os Registro}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoObli"]:before {
+		content: "{$label Recaudos_por_A_os PagoObli}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoCost"]:before {
+		content: "{$label Recaudos_por_A_os PagoCost}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoInte"]:before {
+		content: "{$label Recaudos_por_A_os PagoInte}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoMayo"]:before {
+		content: "{$label Recaudos_por_A_os PagoMayo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PagoTerm"]:before {
+		content: "{$label Recaudos_por_A_os PagoTerm}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Pago"]:before {
+		content: "{$label Recaudos_por_A_os Pago}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipo"]:before {
+		content: "{$label Recaudos_por_A_os CarteraTipo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MesNumero"]:before {
+		content: "{$label Recaudos_por_A_os MesNumero}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
+		content: "{$label Recaudos_por_A_os Abogado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="NumeroConsignacion"]:before {
+		content: "{$label Recaudos_por_A_os NumeroConsignacion}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldheadercolumn}
+	{BEGIN CarteraTipo_fieldheader}
+	<SPAN {$CarteraTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+	{$label Recaudos_por_A_os CarteraTipo }	{$arrow_icon_CarteraTipo}
+	</SPAN>
+	{END CarteraTipo_fieldheader}
+{END CarteraTipo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldheadercolumn}
+	{BEGIN Seccional_fieldheader}
+	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+	{$label Recaudos_por_A_os Seccional }	{$arrow_icon_Seccional}
+	</SPAN>
+	{END Seccional_fieldheader}
+{END Seccional_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MesNumero_class}	"
+
+			data-field="MesNumero"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MesNumero_fieldheadercolumn}
+	{BEGIN MesNumero_fieldheader}
+	<SPAN {$MesNumero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MesNumero" data-fieldname="MesNumero">
+	{$label Recaudos_por_A_os MesNumero }	{$arrow_icon_MesNumero}
+	</SPAN>
+	{END MesNumero_fieldheader}
+{END MesNumero_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label Recaudos_por_A_os Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$TipoRecaudo_class}	"
+
+			data-field="TipoRecaudo"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN TipoRecaudo_fieldheadercolumn}
+	{BEGIN TipoRecaudo_fieldheader}
+	<SPAN {$TipoRecaudo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TipoRecaudo" data-fieldname="TipoRecaudo">
+	{$label Recaudos_por_A_os TipoRecaudo }	{$arrow_icon_TipoRecaudo}
+	</SPAN>
+	{END TipoRecaudo_fieldheader}
+{END TipoRecaudo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+			data-field="Registro"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Registro_fieldheadercolumn}
+	{BEGIN Registro_fieldheader}
+	<SPAN {$Registro_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Registro" data-fieldname="Registro">
+	{$label Recaudos_por_A_os Registro }	{$arrow_icon_Registro}
+	</SPAN>
+	{END Registro_fieldheader}
+{END Registro_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Fecha_class}	"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Fecha_fieldheadercolumn}
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label Recaudos_por_A_os Fecha }	{$arrow_icon_Fecha}
+	</SPAN>
+	{END Fecha_fieldheader}
+{END Fecha_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cuenta_class}	"
+
+			data-field="Cuenta"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cuenta_fieldheadercolumn}
+	{BEGIN Cuenta_fieldheader}
+	<SPAN {$Cuenta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta">
+	{$label Recaudos_por_A_os Cuenta }	{$arrow_icon_Cuenta}
+	</SPAN>
+	{END Cuenta_fieldheader}
+{END Cuenta_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NumeroConsignacion_class}	"
+
+			data-field="NumeroConsignacion"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NumeroConsignacion_fieldheadercolumn}
+	{BEGIN NumeroConsignacion_fieldheader}
+	<SPAN {$NumeroConsignacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NumeroConsignacion" data-fieldname="NumeroConsignacion">
+	{$label Recaudos_por_A_os NumeroConsignacion }	{$arrow_icon_NumeroConsignacion}
+	</SPAN>
+	{END NumeroConsignacion_fieldheader}
+{END NumeroConsignacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Banco_class}	"
+
+			data-field="Banco"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Banco_fieldheadercolumn}
+	{BEGIN Banco_fieldheader}
+	<SPAN {$Banco_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Banco" data-fieldname="Banco">
+	{$label Recaudos_por_A_os Banco }	{$arrow_icon_Banco}
+	</SPAN>
+	{END Banco_fieldheader}
+{END Banco_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldheadercolumn}
+	{BEGIN Numero_fieldheader}
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	{$label Recaudos_por_A_os Numero }	{$arrow_icon_Numero}
+	</SPAN>
+	{END Numero_fieldheader}
+{END Numero_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoDocumento_class}	"
+
+			data-field="SancionadoDocumento"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SancionadoDocumento_fieldheadercolumn}
+	{BEGIN SancionadoDocumento_fieldheader}
+	<SPAN {$SancionadoDocumento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoDocumento" data-fieldname="SancionadoDocumento">
+	{$label Recaudos_por_A_os SancionadoDocumento }	{$arrow_icon_SancionadoDocumento}
+	</SPAN>
+	{END SancionadoDocumento_fieldheader}
+{END SancionadoDocumento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sancionado_fieldheadercolumn}
+	{BEGIN Sancionado_fieldheader}
+	<SPAN {$Sancionado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
+	{$label Recaudos_por_A_os Sancionado }	{$arrow_icon_Sancionado}
+	</SPAN>
+	{END Sancionado_fieldheader}
+{END Sancionado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoObli_class}	"
+
+			data-field="PagoObli"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoObli_fieldheadercolumn}
+	{BEGIN PagoObli_fieldheader}
+	<SPAN {$PagoObli_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoObli" data-fieldname="PagoObli">
+	{$label Recaudos_por_A_os PagoObli }	{$arrow_icon_PagoObli}
+	</SPAN>
+	{END PagoObli_fieldheader}
+{END PagoObli_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoCost_class}	"
+
+			data-field="PagoCost"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoCost_fieldheadercolumn}
+	{BEGIN PagoCost_fieldheader}
+	<SPAN {$PagoCost_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoCost" data-fieldname="PagoCost">
+	{$label Recaudos_por_A_os PagoCost }	{$arrow_icon_PagoCost}
+	</SPAN>
+	{END PagoCost_fieldheader}
+{END PagoCost_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoInte_class}	"
+
+			data-field="PagoInte"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoInte_fieldheadercolumn}
+	{BEGIN PagoInte_fieldheader}
+	<SPAN {$PagoInte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoInte" data-fieldname="PagoInte">
+	{$label Recaudos_por_A_os PagoInte }	{$arrow_icon_PagoInte}
+	</SPAN>
+	{END PagoInte_fieldheader}
+{END PagoInte_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoMayo_class}	"
+
+			data-field="PagoMayo"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoMayo_fieldheadercolumn}
+	{BEGIN PagoMayo_fieldheader}
+	<SPAN {$PagoMayo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoMayo" data-fieldname="PagoMayo">
+	{$label Recaudos_por_A_os PagoMayo }	{$arrow_icon_PagoMayo}
+	</SPAN>
+	{END PagoMayo_fieldheader}
+{END PagoMayo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoTerm_class}	"
+
+			data-field="PagoTerm"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoTerm_fieldheadercolumn}
+	{BEGIN PagoTerm_fieldheader}
+	<SPAN {$PagoTerm_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoTerm" data-fieldname="PagoTerm">
+	{$label Recaudos_por_A_os PagoTerm }	{$arrow_icon_PagoTerm}
+	</SPAN>
+	{END PagoTerm_fieldheader}
+{END PagoTerm_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Pago_class}	"
+
+			data-field="Pago"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pago_fieldheadercolumn}
+	{BEGIN Pago_fieldheader}
+	<SPAN {$Pago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pago" data-fieldname="Pago">
+	{$label Recaudos_por_A_os Pago }	{$arrow_icon_Pago}
+	</SPAN>
+	{END Pago_fieldheader}
+{END Pago_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldheadercolumn}
+	{BEGIN Abogado_fieldheader}
+	<SPAN {$Abogado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+	{$label Recaudos_por_A_os Abogado }	{$arrow_icon_Abogado}
+	</SPAN>
+	{END Abogado_fieldheader}
+{END Abogado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo" data-default-width >
+{$CarteraTipo_value}
+</span>
+{END CarteraTipo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
+{$Seccional_value}
+</span>
+{END Seccional_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MesNumero_class}	"
+
+			data-field="MesNumero"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN MesNumero_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MesNumero" data-fieldname="MesNumero" data-default-width >
+{$MesNumero_value}
+</span>
+{END MesNumero_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
+</span>
+{END Concepto_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$TipoRecaudo_class}	"
+
+			data-field="TipoRecaudo"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN TipoRecaudo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TipoRecaudo" data-fieldname="TipoRecaudo" data-default-width >
+{$TipoRecaudo_value}
+</span>
+{END TipoRecaudo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+			data-field="Registro"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Registro_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Registro" data-fieldname="Registro" data-default-width >
+{$Registro_value}
+</span>
+{END Registro_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Fecha_class}	"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Fecha_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
+{$Fecha_value}
+</span>
+{END Fecha_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cuenta_class}	"
+
+			data-field="Cuenta"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cuenta_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuenta" data-fieldname="Cuenta" data-default-width >
+{$Cuenta_value}
+</span>
+{END Cuenta_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NumeroConsignacion_class}	"
+
+			data-field="NumeroConsignacion"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN NumeroConsignacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="NumeroConsignacion" data-fieldname="NumeroConsignacion" data-default-width >
+{$NumeroConsignacion_value}
+</span>
+{END NumeroConsignacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Banco_class}	"
+
+			data-field="Banco"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Banco_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Banco" data-fieldname="Banco" data-default-width >
+{$Banco_value}
+</span>
+{END Banco_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero" data-default-width >
+{$Numero_value}
+</span>
+{END Numero_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoDocumento_class}	"
+
+			data-field="SancionadoDocumento"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SancionadoDocumento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoDocumento" data-fieldname="SancionadoDocumento" data-default-width >
+{$SancionadoDocumento_value}
+</span>
+{END SancionadoDocumento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sancionado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado" data-default-width >
+{$Sancionado_value}
+</span>
+{END Sancionado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoObli_class}	"
+
+			data-field="PagoObli"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoObli_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoObli" data-fieldname="PagoObli" data-default-width >
+{$PagoObli_value}
+</span>
+{END PagoObli_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoCost_class}	"
+
+			data-field="PagoCost"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoCost_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoCost" data-fieldname="PagoCost" data-default-width >
+{$PagoCost_value}
+</span>
+{END PagoCost_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoInte_class}	"
+
+			data-field="PagoInte"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoInte_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoInte" data-fieldname="PagoInte" data-default-width >
+{$PagoInte_value}
+</span>
+{END PagoInte_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoMayo_class}	"
+
+			data-field="PagoMayo"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoMayo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoMayo" data-fieldname="PagoMayo" data-default-width >
+{$PagoMayo_value}
+</span>
+{END PagoMayo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoTerm_class}	"
+
+			data-field="PagoTerm"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PagoTerm_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PagoTerm" data-fieldname="PagoTerm" data-default-width >
+{$PagoTerm_value}
+</span>
+{END PagoTerm_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Pago_class}	"
+
+			data-field="Pago"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pago_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pago" data-fieldname="Pago" data-default-width >
+{$Pago_value}
+</span>
+{END Pago_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" data-default-width >
+{$Abogado_value}
+</span>
+{END Abogado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$MesNumero_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$TipoRecaudo_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Registro_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Fecha_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cuenta_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$NumeroConsignacion_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Banco_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoDocumento_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoObli_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Recaudos_por_A_os_Obligacion}
+</span>	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoCost_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Recaudos_por_A_os_Costas}
+</span>	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoInte_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Recaudos_por_A_os_Inte}
+</span>	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoMayo_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	 
+		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event global__pageObject_}
+</span>	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$PagoTerm_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	 
+		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Recaudos_por_A_os_Recaudo_Terminado}
+</span>	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Pago_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	 
+		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Recaudos_por_A_os_Total_Recaudo}
+</span>	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="recaudos_por_a_os_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

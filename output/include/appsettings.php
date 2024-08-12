@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2674_1721142599";
+$projectBuildKey = "2689_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2674";
+$projectBuildNumber = "2689";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -915,6 +915,12 @@ $tableCaptions["Spanish"]["BDME_Reporte_Semestral_Datachild"] = "BDME Reporte Se
 $tableCaptions["Spanish"]["BDME_Retiros_DataChild"] = "BDME Retiros DataChild";
 $tableCaptions["Spanish"]["dbo_BusquedasPropiedades"] = "Busquedas Propiedades";
 $tableCaptions["Spanish"]["dbo_ProcesosView1"] = "Procesos View1";
+$tableCaptions["Spanish"]["Obligaciones_de_Dificil_Recaudo"] = "Obligaciones de Dificil Recaudo";
+$tableCaptions["Spanish"]["Privados_de_la_Libertad"] = "Privados de la Libertad";
+$tableCaptions["Spanish"]["Recaudos_por_A_os"] = "Recaudos por Años";
+$tableCaptions["Spanish"]["Reportes"] = "Reportes";
+$tableCaptions["Spanish"]["Reportes_DataChild_prescritos_con_resoluci_n_expedida_Solidarios"] = "Reportes DataChild prescritos con resolución expedida_Solidarios";
+$tableCaptions["Spanish"]["Reportes_DataChild_prescritos_con_resoluci_n_expedida_Solidarios_Bienes"] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 
 
 $globalEvents = new class_GlobalEvents;

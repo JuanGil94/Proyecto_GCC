@@ -25,7 +25,9 @@
 function BeforeProcessList($pageObject)
 {
 
-		    // Verifica si hay un registro maestro disponible
+		   
+set_time_limit(0); // Elimina la restricción de timeout/ Place event code here.
+ // Verifica si hay un registro maestro disponible
     $data = $pageObject->getMasterRecord();
     
     if ($data) {
@@ -36,8 +38,7 @@ function BeforeProcessList($pageObject)
         $_SESSION['SancionadoIdData'] = $sancionadoId;
     }
 
-
-// Place event code here.
+	
 // Use "Add Action" button to add code snippets.
 ;
 } // function BeforeProcessList

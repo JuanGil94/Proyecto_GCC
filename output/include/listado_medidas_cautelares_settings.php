@@ -191,7 +191,7 @@ $tdatalistado_medidas_cautelares[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																											
+																																																																																																																																							
 
 $tdatalistado_medidas_cautelares[".ajaxCodeSnippetAdded"] = false;
 
@@ -3450,6 +3450,7 @@ $tdatalistado_medidas_cautelares[".sqlquery"] = $queryData_listado_medidas_caute
 
 
 
-$tdatalistado_medidas_cautelares[".hasEvents"] = false;
+include_once(getabspath("include/listado_medidas_cautelares_events.php"));
+$tdatalistado_medidas_cautelares[".hasEvents"] = true;
 
 ?>

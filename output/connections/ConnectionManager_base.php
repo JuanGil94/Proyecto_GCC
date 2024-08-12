@@ -385,6 +385,12 @@ class ConnectionManager_Base
 		$connectionsIds["BDME Retiros DataChild"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.BusquedasPropiedades"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ProcesosView1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Obligaciones de Dificil Recaudo"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Privados de la Libertad"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Recaudos por Años"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Reportes"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Reportes DataChild prescritos con resolución expedida_Solidarios"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

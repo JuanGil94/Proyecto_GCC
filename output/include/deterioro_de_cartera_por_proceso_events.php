@@ -23,7 +23,7 @@
 function BeforeProcessList($pageObject)
 {
 
-		
+		set_time_limit(0); // Elimina la restricción de timeout
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;

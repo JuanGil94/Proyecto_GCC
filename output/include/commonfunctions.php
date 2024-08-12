@@ -487,6 +487,18 @@ function checkTableName($shortTName )
 		return true;
 	if ("procesosview1" == $shortTName )
 		return true;
+	if ("obligaciones_de_dificil_recaudo" == $shortTName )
+		return true;
+	if ("privados_de_la_libertad" == $shortTName )
+		return true;
+	if ("recaudos_por_a_os" == $shortTName )
+		return true;
+	if ("reportes1" == $shortTName )
+		return true;
+	if ("reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios" == $shortTName )
+		return true;
+	if ("reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1815,6 +1827,60 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.ProcesosView1";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Obligaciones de Dificil Recaudo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Obligaciones de Dificil Recaudo";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Privados de la Libertad");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Privados de la Libertad";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Recaudos por Años");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Recaudos por Años";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Reportes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Reportes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Reportes DataChild prescritos con resolución expedida_Solidarios");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
+	}
 	return $arr;
 }
 
@@ -1966,6 +2032,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="BDME Retiros DataChild";
 	$arr[]="dbo.BusquedasPropiedades";
 	$arr[]="dbo.ProcesosView1";
+	$arr[]="Obligaciones de Dificil Recaudo";
+	$arr[]="Privados de la Libertad";
+	$arr[]="Recaudos por Años";
+	$arr[]="Reportes";
+	$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios";
+	$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 	return $arr;
 }
 
@@ -3301,6 +3373,36 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosView1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Obligaciones de Dificil Recaudo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Privados de la Libertad" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Recaudos por Años" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Reportes" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Reportes DataChild prescritos con resolución expedida_Solidarios" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

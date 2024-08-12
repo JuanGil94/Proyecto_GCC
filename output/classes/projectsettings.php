@@ -3820,6 +3820,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "busquedaspropiedades" ] = "dbo.BusquedasPropiedades";
 	$projectEntities[ "dbo.ProcesosView1" ] = array( "url" => "procesosview1", "type" => 0 );
 	$projectEntitiesReverse[ "procesosview1" ] = "dbo.ProcesosView1";
+	$projectEntities[ "Obligaciones de Dificil Recaudo" ] = array( "url" => "obligaciones_de_dificil_recaudo", "type" => 6 );
+	$projectEntitiesReverse[ "obligaciones_de_dificil_recaudo" ] = "Obligaciones de Dificil Recaudo";
+	$projectEntities[ "Privados de la Libertad" ] = array( "url" => "privados_de_la_libertad", "type" => 6 );
+	$projectEntitiesReverse[ "privados_de_la_libertad" ] = "Privados de la Libertad";
+	$projectEntities[ "Recaudos por Años" ] = array( "url" => "recaudos_por_a_os", "type" => 6 );
+	$projectEntitiesReverse[ "recaudos_por_a_os" ] = "Recaudos por Años";
+	$projectEntities[ "Reportes" ] = array( "url" => "reportes1", "type" => 6 );
+	$projectEntitiesReverse[ "reportes1" ] = "Reportes";
+	$projectEntities[ "Reportes DataChild prescritos con resolución expedida_Solidarios" ] = array( "url" => "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios", "type" => 6 );
+	$projectEntitiesReverse[ "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios" ] = "Reportes DataChild prescritos con resolución expedida_Solidarios";
+	$projectEntities[ "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes" ] = array( "url" => "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes", "type" => 6 );
+	$projectEntitiesReverse[ "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes" ] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 }
 
 function findTable( $table ) {
