@@ -1,8 +1,8 @@
 <?php
-$strTableName="dbo.Reportes1";
+$strTableName="Reportes";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="dbo.Reportes";
+$strOriginalTableName="Reportes";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

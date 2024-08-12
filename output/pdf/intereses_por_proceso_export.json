@@ -109,13 +109,52 @@ pdfDocument = {
 			{"text":{$Proceso_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$Ano_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$Mes_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 				
-			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Enero_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Febrero_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Marzo_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Abril_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Mayo_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Junio_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Julio_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Agosto_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Septiembre_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Octubre_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Noviembre_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Diciembre_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$TotalIntereses_pdfvalue},"hidden":"{$item_hide_export_field16}"},
 				
 		  ],
   "border": [ false, false, false, false ],

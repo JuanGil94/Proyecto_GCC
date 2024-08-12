@@ -976,6 +976,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Obligaciones de Dificil Recaudo")
+		{
+			return false;
+		}
+		if($table=="Privados de la Libertad")
+		{
+			return false;
+		}
+		if($table=="Recaudos por Años")
+		{
+			return false;
+		}
+		if($table=="Reportes")
+		{
+			return false;
+		}
+		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios")
+		{
+			return false;
+		}
+		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1903,6 +1927,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.ProcesosView1")
+		{
+			return false;
+		}
+		if($table=="Obligaciones de Dificil Recaudo")
+		{
+			return false;
+		}
+		if($table=="Privados de la Libertad")
+		{
+			return false;
+		}
+		if($table=="Recaudos por Años")
+		{
+			return false;
+		}
+		if($table=="Reportes")
+		{
+			return false;
+		}
+		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios")
+		{
+			return false;
+		}
+		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes")
 		{
 			return false;
 		}

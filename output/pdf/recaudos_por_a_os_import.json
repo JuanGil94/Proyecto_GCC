@@ -1,0 +1,189 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Recaudos_por_A_os import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$TipoRecaudo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$SancionadoDocumento_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Cuenta_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Banco_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$PagoObli_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$PagoCost_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$PagoInte_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$PagoMayo_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$PagoTerm_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$Pago_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$CarteraTipo_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+				
+			{"text":{$MesNumero_pdfvalue},"hidden":"{$item_hide_import_field18}"},
+				
+				
+			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_import_field19}"},
+				
+				
+			{"text":{$NumeroConsignacion_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

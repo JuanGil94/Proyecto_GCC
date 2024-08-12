@@ -57,6 +57,104 @@
      
          
 
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+
+
+
+{BEGIN filter_control_SeccionalId}
+
+	<div class="panel panel-info filter-field filter-SeccionalId-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_SeccionalId}
+			<a href="#" class="filter-clear filter-clear-SeccionalId" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_SeccionalId}
+			{$label Reportes SeccionalId }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_SeccionalId}
+		<li class="list-group-item filter-values filter-values-SeccionalId {$collapsedClass_SeccionalId} {$visibilityClass_SeccionalId}">
+			{$SeccionalId_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_SeccionalId}
+
+			{BEGIN filter_button_showmore_SeccionalId}
+		<li class="list-group-item filter-show-more {$collapsedClass_SeccionalId} {$showMoreBtnClass_SeccionalId}">
+			<a class="filter-show-more-link filterShowMore_SeccionalId" href="#">{$show_n_more_SeccionalId}</a>
+		</li>
+		{END filter_button_showmore_SeccionalId}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_SeccionalId}
+
+
+
+
+
+
+{BEGIN filter_control_CarteraTipoId}
+
+	<div class="panel panel-info filter-field filter-CarteraTipoId-container">
+		<div class="panel-heading filter-expander">
+													<span class="filter-indicator glyphicon glyphicon-triangle-bottom"></span>
+
+		
+			{BEGIN clearLink_CarteraTipoId}
+			<a href="#" class="filter-clear filter-clear-CarteraTipoId" title="borrar">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			{END clearLink_CarteraTipoId}
+			{$label Reportes CarteraTipoId }		</div>
+		<ul class="list-group">
+					{BEGIN filterCtrlBlock_CarteraTipoId}
+		<li class="list-group-item filter-values filter-values-CarteraTipoId {$collapsedClass_CarteraTipoId} {$visibilityClass_CarteraTipoId}">
+			{$CarteraTipoId_filter}
+						
+					
+					</li>
+		{END filterCtrlBlock_CarteraTipoId}
+
+			{BEGIN filter_button_showmore_CarteraTipoId}
+		<li class="list-group-item filter-show-more {$collapsedClass_CarteraTipoId} {$showMoreBtnClass_CarteraTipoId}">
+			<a class="filter-show-more-link filterShowMore_CarteraTipoId" href="#">{$show_n_more_CarteraTipoId}</a>
+		</li>
+		{END filter_button_showmore_CarteraTipoId}
+	
+
+
+	
+
+			</ul>
+	</div>
+
+{END filter_control_CarteraTipoId}
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
+		
+ 
+
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
@@ -102,58 +200,396 @@
 				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
 		</div>
 		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Dias}
+																		{BEGIN searchCtrlBlock_ProcesoId}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Dias}" {$filterRow_attrs_Dias}>
-			<label>{$label dbo_Reportes1 Dias }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Dias}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Dias}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Dias}</span>
-						</div>
-		{END searchCtrlBlock_Dias}
-																{BEGIN searchCtrlBlock_Reporte}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Reporte}" {$filterRow_attrs_Reporte}>
-			<label>{$label dbo_Reportes1 Reporte }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_ProcesoId}" {$filterRow_attrs_ProcesoId}>
+			<label>{$label Reportes ProcesoId }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Reporte}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Reporte}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Reporte}</span>
+								<span class="rnr-searchtype">{$searchtype_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ProcesoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ProcesoId}</span>
 						</div>
-		{END searchCtrlBlock_Reporte}
-																{BEGIN searchCtrlBlock_OficioId}
+		{END searchCtrlBlock_ProcesoId}
+																{BEGIN searchCtrlBlock_Prescripcion}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_OficioId}" {$filterRow_attrs_OficioId}>
-			<label>{$label dbo_Reportes1 OficioId }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_Prescripcion}" {$filterRow_attrs_Prescripcion}>
+			<label>{$label Reportes Prescripcion }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_OficioId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_OficioId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_OficioId}</span>
+								<span class="rnr-searchtype">{$searchtype_Prescripcion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Prescripcion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Prescripcion}</span>
 						</div>
-		{END searchCtrlBlock_OficioId}
-																{BEGIN searchCtrlBlock_Minimo}
+		{END searchCtrlBlock_Prescripcion}
+																{BEGIN searchCtrlBlock_Observaciones}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Minimo}" {$filterRow_attrs_Minimo}>
-			<label>{$label dbo_Reportes1 Minimo }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_Observaciones}" {$filterRow_attrs_Observaciones}>
+			<label>{$label Reportes Observaciones }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Minimo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Minimo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Minimo}</span>
+								<span class="rnr-searchtype">{$searchtype_Observaciones}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Observaciones}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
 						</div>
-		{END searchCtrlBlock_Minimo}
+		{END searchCtrlBlock_Observaciones}
+																{BEGIN searchCtrlBlock_MotivoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_MotivoId}" {$filterRow_attrs_MotivoId}>
+			<label>{$label Reportes MotivoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_MotivoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_MotivoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_MotivoId}</span>
+						</div>
+		{END searchCtrlBlock_MotivoId}
+																{BEGIN searchCtrlBlock_CalificacionId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CalificacionId}" {$filterRow_attrs_CalificacionId}>
+			<label>{$label Reportes CalificacionId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CalificacionId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CalificacionId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CalificacionId}</span>
+						</div>
+		{END searchCtrlBlock_CalificacionId}
+																{BEGIN searchCtrlBlock_Terminacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Terminacion}" {$filterRow_attrs_Terminacion}>
+			<label>{$label Reportes Terminacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Terminacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Terminacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Terminacion}</span>
+						</div>
+		{END searchCtrlBlock_Terminacion}
+																{BEGIN searchCtrlBlock_Incumplimiento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Incumplimiento}" {$filterRow_attrs_Incumplimiento}>
+			<label>{$label Reportes Incumplimiento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Incumplimiento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Incumplimiento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Incumplimiento}</span>
+						</div>
+		{END searchCtrlBlock_Incumplimiento}
+																{BEGIN searchCtrlBlock_Acuerdo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Acuerdo}" {$filterRow_attrs_Acuerdo}>
+			<label>{$label Reportes Acuerdo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Acuerdo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Acuerdo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Acuerdo}</span>
+						</div>
+		{END searchCtrlBlock_Acuerdo}
+																{BEGIN searchCtrlBlock_Notificacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Notificacion}" {$filterRow_attrs_Notificacion}>
+			<label>{$label Reportes Notificacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Notificacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Notificacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Notificacion}</span>
+						</div>
+		{END searchCtrlBlock_Notificacion}
+																{BEGIN searchCtrlBlock_Ejecutoria}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Ejecutoria}" {$filterRow_attrs_Ejecutoria}>
+			<label>{$label Reportes Ejecutoria }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Ejecutoria}</span>
+						</div>
+		{END searchCtrlBlock_Ejecutoria}
+																{BEGIN searchCtrlBlock_Providencia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Providencia}" {$filterRow_attrs_Providencia}>
+			<label>{$label Reportes Providencia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Providencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Providencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Providencia}</span>
+						</div>
+		{END searchCtrlBlock_Providencia}
+																{BEGIN searchCtrlBlock_Radicado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Radicado}" {$filterRow_attrs_Radicado}>
+			<label>{$label Reportes Radicado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Radicado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Radicado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Radicado}</span>
+						</div>
+		{END searchCtrlBlock_Radicado}
+																{BEGIN searchCtrlBlock_Folios}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Folios}" {$filterRow_attrs_Folios}>
+			<label>{$label Reportes Folios }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Folios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Folios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Folios}</span>
+						</div>
+		{END searchCtrlBlock_Folios}
+																{BEGIN searchCtrlBlock_Saldo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Saldo}" {$filterRow_attrs_Saldo}>
+			<label>{$label Reportes Saldo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Saldo}</span>
+						</div>
+		{END searchCtrlBlock_Saldo}
+																{BEGIN searchCtrlBlock_Recaudo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Recaudo}" {$filterRow_attrs_Recaudo}>
+			<label>{$label Reportes Recaudo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Recaudo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Recaudo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Recaudo}</span>
+						</div>
+		{END searchCtrlBlock_Recaudo}
+																{BEGIN searchCtrlBlock_Intereses}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Intereses}" {$filterRow_attrs_Intereses}>
+			<label>{$label Reportes Intereses }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Intereses}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Intereses}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Intereses}</span>
+						</div>
+		{END searchCtrlBlock_Intereses}
+																{BEGIN searchCtrlBlock_Costas}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Costas}" {$filterRow_attrs_Costas}>
+			<label>{$label Reportes Costas }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Costas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Costas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
+						</div>
+		{END searchCtrlBlock_Costas}
+																{BEGIN searchCtrlBlock_Obligacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Obligacion}" {$filterRow_attrs_Obligacion}>
+			<label>{$label Reportes Obligacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
+						</div>
+		{END searchCtrlBlock_Obligacion}
+																{BEGIN searchCtrlBlock_ActuacionId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ActuacionId}" {$filterRow_attrs_ActuacionId}>
+			<label>{$label Reportes ActuacionId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ActuacionId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ActuacionId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ActuacionId}</span>
+						</div>
+		{END searchCtrlBlock_ActuacionId}
+																{BEGIN searchCtrlBlock_EtapaId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_EtapaId}" {$filterRow_attrs_EtapaId}>
+			<label>{$label Reportes EtapaId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_EtapaId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_EtapaId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_EtapaId}</span>
+						</div>
+		{END searchCtrlBlock_EtapaId}
+																{BEGIN searchCtrlBlock_EstadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_EstadoId}" {$filterRow_attrs_EstadoId}>
+			<label>{$label Reportes EstadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_EstadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_EstadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_EstadoId}</span>
+						</div>
+		{END searchCtrlBlock_EstadoId}
+																{BEGIN searchCtrlBlock_ConceptoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ConceptoId}" {$filterRow_attrs_ConceptoId}>
+			<label>{$label Reportes ConceptoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ConceptoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ConceptoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
+						</div>
+		{END searchCtrlBlock_ConceptoId}
+																{BEGIN searchCtrlBlock_DespachoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_DespachoId}" {$filterRow_attrs_DespachoId}>
+			<label>{$label Reportes DespachoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_DespachoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_DespachoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_DespachoId}</span>
+						</div>
+		{END searchCtrlBlock_DespachoId}
+																{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label Reportes Numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_Fecha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
+			<label>{$label Reportes Fecha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
+						</div>
+		{END searchCtrlBlock_Fecha}
+																{BEGIN searchCtrlBlock_Sancionado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sancionado}" {$filterRow_attrs_Sancionado}>
+			<label>{$label Reportes Sancionado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sancionado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sancionado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sancionado}</span>
+						</div>
+		{END searchCtrlBlock_Sancionado}
+																{BEGIN searchCtrlBlock_SancionadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
+			<label>{$label Reportes SancionadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
+						</div>
+		{END searchCtrlBlock_SancionadoId}
+																{BEGIN searchCtrlBlock_AbogadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_AbogadoId}" {$filterRow_attrs_AbogadoId}>
+			<label>{$label Reportes AbogadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_AbogadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_AbogadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
+						</div>
+		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_CarteraTipoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
+			<label>{$label Reportes CarteraTipoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipoId}
+																{BEGIN searchCtrlBlock_SeccionalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
+			<label>{$label Reportes SeccionalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
+						</div>
+		{END searchCtrlBlock_SeccionalId}
 		
 
 	</div>
@@ -245,23 +681,7 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-							{BEGIN exportselected_link}
-	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
-				
-		Exportar seleccionados		
-		</a>
-	</li>
-{END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
-							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="reportes1_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
 		Búsqueda avanzada		
@@ -302,6 +722,70 @@
 					</ul>
 	</span>
 </span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
 			</span>
 		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
@@ -385,21 +869,17 @@
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="reportes1_add.php{$stateLink_full}" data-popup >
-							Añadir nuevo			</a>
-</span>
-{END add_link}
-	 
-		{BEGIN deleteselected_link}
-<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event Reportes_snippet_checklist}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event Reportes_seccional_Cartera}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
-	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Borrar artículos seleccionados			</a>
+	" id="Enviar" href="javascript:void(0)" typeid="ib" >
+							Enviar			</a>
 </span>
-{END deleteselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -447,18 +927,30 @@
 		</div>
 	</div>
 		
-		 
-	<div class="row">
-		<div class="col-md-4">
-			&nbsp;
-		</div>
-		<div class="col-md-8">
-			<label style="color: gray;" for="printSelection{$id}">
-			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
-			Imprimir la selección			</label>
-		</div>
 	</div>
-	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Detalles de impresión	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios}
+			<div>
+				<label for="printDetailsreportes_datachild_prescritos_con_resoluci_n_expedida_solidarios{$id}">
+					<input type="checkbox" value="reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios" id="printDetailsreportes_datachild_prescritos_con_resoluci_n_expedida_solidarios{$id}" checked>
+					Reportes DataChild prescritos con resolución expedida_Solidarios				</label>
+			</div>
+			{END print_details_reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios}
+						</div>
+</div>
+{END print_details}
 				 
 					</li>
 											<li class="divider" role="separator"></li>
@@ -504,48 +996,83 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Reporte"]:before {
-		content: "{$label dbo_Reportes1 Reporte}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ProcesoId"]:before {
+		content: "{$label Reportes ProcesoId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="OficioId"]:before {
-		content: "{$label dbo_Reportes1 OficioId}";
+							[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sancionado"]:before {
+		content: "{$label Reportes Sancionado}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
-		content: "{$label dbo_Reportes1 Dias}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
+		content: "{$label Reportes Fecha}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Minimo"]:before {
-		content: "{$label dbo_Reportes1 Minimo}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
+		content: "{$label Reportes Numero}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
+		content: "{$label Reportes ConceptoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EstadoId"]:before {
+		content: "{$label Reportes EstadoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EtapaId"]:before {
+		content: "{$label Reportes EtapaId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ActuacionId"]:before {
+		content: "{$label Reportes ActuacionId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion"]:before {
+		content: "{$label Reportes Obligacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Costas"]:before {
+		content: "{$label Reportes Costas}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Intereses"]:before {
+		content: "{$label Reportes Intereses}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo"]:before {
+		content: "{$label Reportes Recaudo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Saldo"]:before {
+		content: "{$label Reportes Saldo}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Radicado"]:before {
+		content: "{$label Reportes Radicado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Providencia"]:before {
+		content: "{$label Reportes Providencia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ejecutoria"]:before {
+		content: "{$label Reportes Ejecutoria}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Notificacion"]:before {
+		content: "{$label Reportes Notificacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Acuerdo"]:before {
+		content: "{$label Reportes Acuerdo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Incumplimiento"]:before {
+		content: "{$label Reportes Incumplimiento}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Terminacion"]:before {
+		content: "{$label Reportes Terminacion}";
+	}
+						[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Prescripcion"]:before {
+		content: "{$label Reportes Prescripcion}";
 	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="1"
+	data-body-height="2"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
 									{BEGIN cellblock_grid_headcell_checkbox}
 	<th
 	
@@ -568,27 +1095,42 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_details}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Reporte_class}	"
+		 r-ori-vert		 {$ProcesoId_class}	"
 
-			data-field="Reporte"
+			data-field="ProcesoId"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Reporte_fieldheadercolumn}
-	{BEGIN Reporte_fieldheader}
-	<SPAN {$Reporte_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporte" data-fieldname="Reporte">
-	{$label dbo_Reportes1 Reporte }	{$arrow_icon_Reporte}
+		{BEGIN ProcesoId_fieldheadercolumn}
+	{BEGIN ProcesoId_fieldheader}
+	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
+	{$label Reportes ProcesoId }	{$arrow_icon_ProcesoId}
 	</SPAN>
-	{END Reporte_fieldheader}
-{END Reporte_fieldheadercolumn}
+	{END ProcesoId_fieldheader}
+{END ProcesoId_fieldheadercolumn}
 
 	
 	</th>
@@ -599,21 +1141,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OficioId_class}	"
+		 r-ori-vert		 {$ConceptoId_class}	"
 
-			data-field="OficioId"
+			data-field="ConceptoId"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN OficioId_fieldheadercolumn}
-	{BEGIN OficioId_fieldheader}
-	<SPAN {$OficioId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioId" data-fieldname="OficioId">
-	{$label dbo_Reportes1 OficioId }	{$arrow_icon_OficioId}
+		{BEGIN ConceptoId_fieldheadercolumn}
+	{BEGIN ConceptoId_fieldheader}
+	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
+	{$label Reportes ConceptoId }	{$arrow_icon_ConceptoId}
 	</SPAN>
-	{END OficioId_fieldheader}
-{END OficioId_fieldheadercolumn}
+	{END ConceptoId_fieldheader}
+{END ConceptoId_fieldheadercolumn}
 
 	
 	</th>
@@ -624,21 +1166,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Dias_class}	"
+		 r-ori-vert		 {$Numero_class}	"
 
-			data-field="Dias"
+			data-field="Numero"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Dias_fieldheadercolumn}
-	{BEGIN Dias_fieldheader}
-	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
-	{$label dbo_Reportes1 Dias }	{$arrow_icon_Dias}
+		{BEGIN Numero_fieldheadercolumn}
+	{BEGIN Numero_fieldheader}
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	{$label Reportes Numero }	{$arrow_icon_Numero}
 	</SPAN>
-	{END Dias_fieldheader}
-{END Dias_fieldheadercolumn}
+	{END Numero_fieldheader}
+{END Numero_fieldheadercolumn}
 
 	
 	</th>
@@ -649,63 +1191,461 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Minimo_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="Minimo"
+			data-field="Fecha"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Minimo_fieldheadercolumn}
-	{BEGIN Minimo_fieldheader}
-	<SPAN {$Minimo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minimo" data-fieldname="Minimo">
-	{$label dbo_Reportes1 Minimo }	{$arrow_icon_Minimo}
+		{BEGIN Fecha_fieldheadercolumn}
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label Reportes Fecha }	{$arrow_icon_Fecha}
 	</SPAN>
-	{END Minimo_fieldheader}
-{END Minimo_fieldheadercolumn}
+	{END Fecha_fieldheader}
+{END Fecha_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sancionado_fieldheadercolumn}
+	{BEGIN Sancionado_fieldheader}
+	<SPAN {$Sancionado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
+	{$label Reportes Sancionado }	{$arrow_icon_Sancionado}
+	</SPAN>
+	{END Sancionado_fieldheader}
+{END Sancionado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Providencia_class}	"
+
+			data-field="Providencia"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Providencia_fieldheadercolumn}
+	{BEGIN Providencia_fieldheader}
+	<SPAN {$Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
+	{$label Reportes Providencia }	{$arrow_icon_Providencia}
+	</SPAN>
+	{END Providencia_fieldheader}
+{END Providencia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+			data-field="Ejecutoria"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_fieldheadercolumn}
+	{BEGIN Ejecutoria_fieldheader}
+	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+	{$label Reportes Ejecutoria }	{$arrow_icon_Ejecutoria}
+	</SPAN>
+	{END Ejecutoria_fieldheader}
+{END Ejecutoria_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+			data-field="Prescripcion"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prescripcion_fieldheadercolumn}
+	{BEGIN Prescripcion_fieldheader}
+	<SPAN {$Prescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion">
+	{$label Reportes Prescripcion }	{$arrow_icon_Prescripcion}
+	</SPAN>
+	{END Prescripcion_fieldheader}
+{END Prescripcion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_fieldheadercolumn}
+	{BEGIN Obligacion_fieldheader}
+	<SPAN {$Obligacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+	{$label Reportes Obligacion }	{$arrow_icon_Obligacion}
+	</SPAN>
+	{END Obligacion_fieldheader}
+{END Obligacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Costas_fieldheadercolumn}
+	{BEGIN Costas_fieldheader}
+	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+	{$label Reportes Costas }	{$arrow_icon_Costas}
+	</SPAN>
+	{END Costas_fieldheader}
+{END Costas_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_fieldheadercolumn}
+	{BEGIN Intereses_fieldheader}
+	<SPAN {$Intereses_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+	{$label Reportes Intereses }	{$arrow_icon_Intereses}
+	</SPAN>
+	{END Intereses_fieldheader}
+{END Intereses_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_class}	"
+
+			data-field="Recaudo"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Recaudo_fieldheadercolumn}
+	{BEGIN Recaudo_fieldheader}
+	<SPAN {$Recaudo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo">
+	{$label Reportes Recaudo }	{$arrow_icon_Recaudo}
+	</SPAN>
+	{END Recaudo_fieldheader}
+{END Recaudo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldheadercolumn}
+	{BEGIN Saldo_fieldheader}
+	<SPAN {$Saldo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo">
+	{$label Reportes Saldo }	{$arrow_icon_Saldo}
+	</SPAN>
+	{END Saldo_fieldheader}
+{END Saldo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Radicado_class}	"
+
+			data-field="Radicado"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Radicado_fieldheadercolumn}
+	{BEGIN Radicado_fieldheader}
+	<SPAN {$Radicado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Radicado" data-fieldname="Radicado">
+	{$label Reportes Radicado }	{$arrow_icon_Radicado}
+	</SPAN>
+	{END Radicado_fieldheader}
+{END Radicado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EstadoId_class}	"
+
+			data-field="EstadoId"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EstadoId_fieldheadercolumn}
+	{BEGIN EstadoId_fieldheader}
+	<SPAN {$EstadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoId" data-fieldname="EstadoId">
+	{$label Reportes EstadoId }	{$arrow_icon_EstadoId}
+	</SPAN>
+	{END EstadoId_fieldheader}
+{END EstadoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EtapaId_class}	"
+
+			data-field="EtapaId"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EtapaId_fieldheadercolumn}
+	{BEGIN EtapaId_fieldheader}
+	<SPAN {$EtapaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId">
+	{$label Reportes EtapaId }	{$arrow_icon_EtapaId}
+	</SPAN>
+	{END EtapaId_fieldheader}
+{END EtapaId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActuacionId_class}	"
+
+			data-field="ActuacionId"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ActuacionId_fieldheadercolumn}
+	{BEGIN ActuacionId_fieldheader}
+	<SPAN {$ActuacionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActuacionId" data-fieldname="ActuacionId">
+	{$label Reportes ActuacionId }	{$arrow_icon_ActuacionId}
+	</SPAN>
+	{END ActuacionId_fieldheader}
+{END ActuacionId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Notificacion_class}	"
+
+			data-field="Notificacion"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Notificacion_fieldheadercolumn}
+	{BEGIN Notificacion_fieldheader}
+	<SPAN {$Notificacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Notificacion" data-fieldname="Notificacion">
+	{$label Reportes Notificacion }	{$arrow_icon_Notificacion}
+	</SPAN>
+	{END Notificacion_fieldheader}
+{END Notificacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Acuerdo_class}	"
+
+			data-field="Acuerdo"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Acuerdo_fieldheadercolumn}
+	{BEGIN Acuerdo_fieldheader}
+	<SPAN {$Acuerdo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo">
+	{$label Reportes Acuerdo }	{$arrow_icon_Acuerdo}
+	</SPAN>
+	{END Acuerdo_fieldheader}
+{END Acuerdo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Incumplimiento_class}	"
+
+			data-field="Incumplimiento"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Incumplimiento_fieldheadercolumn}
+	{BEGIN Incumplimiento_fieldheader}
+	<SPAN {$Incumplimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento">
+	{$label Reportes Incumplimiento }	{$arrow_icon_Incumplimiento}
+	</SPAN>
+	{END Incumplimiento_fieldheader}
+{END Incumplimiento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+									{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Terminacion_class}	"
+
+			data-field="Terminacion"
+	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Terminacion_fieldheadercolumn}
+	{BEGIN Terminacion_fieldheader}
+	<SPAN {$Terminacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Terminacion" data-fieldname="Terminacion">
+	{$label Reportes Terminacion }	{$arrow_icon_Terminacion}
+	</SPAN>
+	{END Terminacion_fieldheader}
+{END Terminacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field20}
 							</tr>
-															
+																				
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN edit_column}
-{BEGIN edit_link}
-<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="reportes1_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
-				
-								</a>
-</span>
-{END edit_link}
-{END edit_column}
-	
-	</td>
-	{END cellblock_grid_cell_icons}
 									{BEGIN cellblock_grid_cell_checkbox}
 	<td
 	
@@ -730,25 +1670,67 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
+		
+		
+	{BEGIN reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_link_attrs} data-short-details="reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios"
+		class="{$reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_dlink_class}" 
+		title="{$caption Reportes_DataChild_prescritos_con_resoluci_n_expedida_Solidarios }"			>
+								
+			</a>
+	</span>
+	{END reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_dtable_link}
+
+
+	
+	</td>
+	{END cellblock_grid_cell_details}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Reporte_class}	"
+		 r-ori-vert		 {$ProcesoId_class}	"
 
-			data-field="Reporte"
+			data-field="ProcesoId"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Reporte_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reporte" data-fieldname="Reporte" data-default-width >
-{$Reporte_value}
+		{BEGIN ProcesoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId" data-default-width >
+{$ProcesoId_value}
 </span>
-{END Reporte_fieldcolumn}	
+{END ProcesoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -757,19 +1739,19 @@
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OficioId_class}	"
+		 r-ori-vert		 {$ConceptoId_class}	"
 
-			data-field="OficioId"
+			data-field="ConceptoId"
 	
 	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN OficioId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioId" data-fieldname="OficioId" data-default-width >
-{$OficioId_value}
+		{BEGIN ConceptoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId" data-default-width >
+{$ConceptoId_value}
 </span>
-{END OficioId_fieldcolumn}	
+{END ConceptoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
@@ -778,19 +1760,19 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Dias_class}	"
+		 r-ori-vert		 {$Numero_class}	"
 
-			data-field="Dias"
+			data-field="Numero"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Dias_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias" data-default-width >
-{$Dias_value}
+		{BEGIN Numero_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero" data-default-width >
+{$Numero_value}
 </span>
-{END Dias_fieldcolumn}	
+{END Numero_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field3}
@@ -799,47 +1781,417 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Minimo_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
-			data-field="Minimo"
+			data-field="Fecha"
 	
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Minimo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Minimo" data-fieldname="Minimo" data-default-width >
-{$Minimo_value}
+		{BEGIN Fecha_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
+{$Fecha_value}
 </span>
-{END Minimo_fieldcolumn}	
+{END Fecha_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sancionado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado" data-default-width >
+{$Sancionado_value}
+</span>
+{END Sancionado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Providencia_class}	"
+
+			data-field="Providencia"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Providencia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia" data-default-width >
+{$Providencia_value}
+</span>
+{END Providencia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+			data-field="Ejecutoria"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria" data-default-width >
+{$Ejecutoria_value}
+</span>
+{END Ejecutoria_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+			data-field="Prescripcion"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prescripcion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion" data-default-width >
+{$Prescripcion_value}
+</span>
+{END Prescripcion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" data-default-width >
+{$Obligacion_value}
+</span>
+{END Obligacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Costas_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" data-default-width >
+{$Costas_value}
+</span>
+{END Costas_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" data-default-width >
+{$Intereses_value}
+</span>
+{END Intereses_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_class}	"
+
+			data-field="Recaudo"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Recaudo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo" data-default-width >
+{$Recaudo_value}
+</span>
+{END Recaudo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo" data-default-width >
+{$Saldo_value}
+</span>
+{END Saldo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Radicado_class}	"
+
+			data-field="Radicado"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Radicado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Radicado" data-fieldname="Radicado" data-default-width >
+{$Radicado_value}
+</span>
+{END Radicado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EstadoId_class}	"
+
+			data-field="EstadoId"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EstadoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoId" data-fieldname="EstadoId" data-default-width >
+{$EstadoId_value}
+</span>
+{END EstadoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EtapaId_class}	"
+
+			data-field="EtapaId"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EtapaId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId" data-default-width >
+{$EtapaId_value}
+</span>
+{END EtapaId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActuacionId_class}	"
+
+			data-field="ActuacionId"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ActuacionId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActuacionId" data-fieldname="ActuacionId" data-default-width >
+{$ActuacionId_value}
+</span>
+{END ActuacionId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Notificacion_class}	"
+
+			data-field="Notificacion"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Notificacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Notificacion" data-fieldname="Notificacion" data-default-width >
+{$Notificacion_value}
+</span>
+{END Notificacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Acuerdo_class}	"
+
+			data-field="Acuerdo"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Acuerdo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo" data-default-width >
+{$Acuerdo_value}
+</span>
+{END Acuerdo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Incumplimiento_class}	"
+
+			data-field="Incumplimiento"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Incumplimiento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento" data-default-width >
+{$Incumplimiento_value}
+</span>
+{END Incumplimiento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+									{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Terminacion_class}	"
+
+			data-field="Terminacion"
+	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Terminacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Terminacion" data-fieldname="Terminacion" data-default-width >
+{$Terminacion_value}
+</span>
+{END Terminacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field20}
+							</tr>
+											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+				
+							">
+									{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios"
+			data-details-reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios	>
+		<span data-details-inside data-short-table="reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios">
+			</span>
+		<div data-details-preview>
+	</div>
+</div>
+	
+	</td>
+	{END cellblock_grid_cell_dpreview}
 							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow
 							">
-									{BEGIN cellblock_grid_footcell_icons}
-	<td
-	
-	{$cell_grid_footcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons}
 									{BEGIN cellblock_grid_footcell_checkbox}
 	<td
 	
@@ -855,13 +2207,28 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Reporte_class}	"
+		 r-ori-vert		 {$ProcesoId_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
@@ -876,7 +2243,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$OficioId_class}	"
+		 r-ori-vert		 {$ConceptoId_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
@@ -891,7 +2258,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Dias_class}	"
+		 r-ori-vert		 {$Numero_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
@@ -906,7 +2273,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Minimo_class}	"
+		 r-ori-vert		 {$Fecha_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
@@ -915,6 +2282,261 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Providencia_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Costas_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Recaudo_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Radicado_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EstadoId_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EtapaId_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ActuacionId_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Notificacion_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Acuerdo_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Incumplimiento_class}	"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+									{BEGIN cellblock_grid_footcell_field20}
+	<td
+	
+	{$cell_grid_footcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Terminacion_class}	"
+
+	
+	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="reportes1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field20}
 							</tr>
 					
 					</tfoot>

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Enviar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Enviar';if(!pageObj.buttonEventBefore['Enviar']){pageObj.buttonEventBefore['Enviar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var select_reportid=$('#Reporte_selecionid').val();var cartera_id_report=$('#Reporte_Carteraid').val();var seccional_id_report=$('#Reporte_Seccionalid').val();params['select_reportid']=select_reportid;params['cartera_id_report']=cartera_id_report;params['seccional_id_report']=seccional_id_report;}}
+if(!pageObj.buttonEventAfter['Enviar']){pageObj.buttonEventAfter['Enviar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Enviar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Enviar"+"_"+Runner.genId();var button_Enviar=new Runner.form.Button({id:this.id,btnName:"Enviar"});button_Enviar.init({args:[pageObj,proxy,pageid]});});};

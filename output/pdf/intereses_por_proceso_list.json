@@ -79,6 +79,36 @@ pdfDocument = {
 										{BEGIN col_grid_4}
 					"%",
 					{END col_grid_4}
+										{BEGIN col_grid_5}
+					"%",
+					{END col_grid_5}
+										{BEGIN col_grid_6}
+					"%",
+					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
+										{BEGIN col_grid_13}
+					"%",
+					{END col_grid_13}
+										{BEGIN col_grid_14}
+					"%",
+					{END col_grid_14}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -137,8 +167,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Intereses_por_Proceso_Cartera_Seccional}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -286,7 +318,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Intereses_por_Proceso Proceso }","hidden":"{$item_hide_simple_grid_field4}","bold":true},
+			{"text":"{$jslabel Intereses_por_Proceso Proceso }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -301,7 +333,7 @@ pdfDocument = {
 	cellId: 'headcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Ano',
+			fieldName: 'Enero',
 				style: 'headcell',
 		
 		
@@ -315,11 +347,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Intereses_por_Proceso Ano }","hidden":"{$item_hide_simple_grid_field5}","bold":true},
+			{"text":"{$jslabel Intereses_por_Proceso Enero }","hidden":"{$item_hide_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Ano_align}',
+              "alignment": '{$Enero_align}',
      
       
       },
@@ -330,7 +362,7 @@ pdfDocument = {
 	cellId: 'headcell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Mes',
+			fieldName: 'Febrero',
 				style: 'headcell',
 		
 		
@@ -344,11 +376,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Intereses_por_Proceso Mes }","hidden":"{$item_hide_simple_grid_field6}","bold":true},
+			{"text":"{$jslabel Intereses_por_Proceso Febrero }","hidden":"{$item_hide_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Mes_align}',
+              "alignment": '{$Febrero_align}',
      
       
       },
@@ -359,7 +391,7 @@ pdfDocument = {
 	cellId: 'headcell_field3',
 	col:0,
 	row:0,
-			fieldName: 'Intereses',
+			fieldName: 'Marzo',
 				style: 'headcell',
 		
 		
@@ -373,16 +405,306 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Intereses_por_Proceso Intereses }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel Intereses_por_Proceso Marzo }","hidden":"{$item_hide_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Intereses_align}',
+              "alignment": '{$Marzo_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
+{
+	cellId: 'headcell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Abril',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Abril }","hidden":"{$item_hide_grid_field18}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Abril_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Mayo',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Mayo }","hidden":"{$item_hide_grid_field19}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Mayo_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Junio',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Junio }","hidden":"{$item_hide_grid_field20}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Junio_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Julio',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Julio }","hidden":"{$item_hide_grid_field21}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Julio_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
+{
+	cellId: 'headcell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Agosto',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Agosto }","hidden":"{$item_hide_grid_field22}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Agosto_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
+{
+	cellId: 'headcell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Septiembre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Septiembre }","hidden":"{$item_hide_grid_field23}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Septiembre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Octubre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Octubre }","hidden":"{$item_hide_grid_field24}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Octubre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			fieldName: 'Noviembre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Noviembre }","hidden":"{$item_hide_grid_field25}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Noviembre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
+{
+	cellId: 'headcell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Diciembre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso Diciembre }","hidden":"{$item_hide_grid_field26}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Diciembre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'TotalIntereses',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Intereses_por_Proceso TotalIntereses }","hidden":"{$item_hide_grid_field27}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$TotalIntereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
 											],
 				{END row_grid_0}
 		
@@ -454,7 +776,7 @@ pdfDocument = {
 	cellId: 'cell_field1',
 	col:0,
 	row:0,
-			fieldName: 'Ano',
+			fieldName: 'Enero',
 				style: 'bodycell',
 		
 		
@@ -468,11 +790,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Ano_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+			{"text":{$Enero_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Ano_align}',
+              "alignment": '{$Enero_align}',
      
       
       },
@@ -483,7 +805,7 @@ pdfDocument = {
 	cellId: 'cell_field2',
 	col:0,
 	row:0,
-			fieldName: 'Mes',
+			fieldName: 'Febrero',
 				style: 'bodycell',
 		
 		
@@ -497,11 +819,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Mes_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+			{"text":{$Febrero_pdfvalue},"hidden":"{$item_hide_grid_field4}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Mes_align}',
+              "alignment": '{$Febrero_align}',
      
       
       },
@@ -512,7 +834,7 @@ pdfDocument = {
 	cellId: 'cell_field3',
 	col:0,
 	row:0,
-			fieldName: 'Intereses',
+			fieldName: 'Marzo',
 				style: 'bodycell',
 		
 		
@@ -526,16 +848,306 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+			{"text":{$Marzo_pdfvalue},"hidden":"{$item_hide_grid_field5}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Intereses_align}',
+              "alignment": '{$Marzo_align}',
      
       
       },
 
 {END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'Abril',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Abril_pdfvalue},"hidden":"{$item_hide_grid_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Abril_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Mayo',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Mayo_pdfvalue},"hidden":"{$item_hide_grid_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Mayo_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'Junio',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Junio_pdfvalue},"hidden":"{$item_hide_grid_field8}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Junio_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Julio',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Julio_pdfvalue},"hidden":"{$item_hide_grid_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Julio_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
+{
+	cellId: 'cell_field8',
+	col:0,
+	row:0,
+			fieldName: 'Agosto',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Agosto_pdfvalue},"hidden":"{$item_hide_grid_field10}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Agosto_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
+{
+	cellId: 'cell_field9',
+	col:0,
+	row:0,
+			fieldName: 'Septiembre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Septiembre_pdfvalue},"hidden":"{$item_hide_grid_field11}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Septiembre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'Octubre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Octubre_pdfvalue},"hidden":"{$item_hide_grid_field12}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Octubre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+			fieldName: 'Noviembre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Noviembre_pdfvalue},"hidden":"{$item_hide_grid_field13}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Noviembre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
+{
+	cellId: 'cell_field12',
+	col:0,
+	row:0,
+			fieldName: 'Diciembre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Diciembre_pdfvalue},"hidden":"{$item_hide_grid_field14}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Diciembre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'TotalIntereses',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$TotalIntereses_pdfvalue},"hidden":"{$item_hide_grid_field15}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$TotalIntereses_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
 											],
 				{END row_grid_1}
 		
@@ -614,8 +1226,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Enero}","hidden":"{$item_hide_snippet2}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -640,8 +1254,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Febreo}","hidden":"{$item_hide_snippet3}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -666,8 +1282,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Marzo}","hidden":"{$item_hide_snippet4}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -675,6 +1293,286 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field3}
+																							{BEGIN cellblock_grid_footcell_field4}
+{
+	cellId: 'footcell_field4',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Abril}","hidden":"{$item_hide_snippet5}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field4}
+																							{BEGIN cellblock_grid_footcell_field5}
+{
+	cellId: 'footcell_field5',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Mayo}","hidden":"{$item_hide_snippet6}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field5}
+																							{BEGIN cellblock_grid_footcell_field6}
+{
+	cellId: 'footcell_field6',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Junio}","hidden":"{$item_hide_snippet7}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field6}
+																							{BEGIN cellblock_grid_footcell_field7}
+{
+	cellId: 'footcell_field7',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Junio1}","hidden":"{$item_hide_snippet8}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field7}
+																							{BEGIN cellblock_grid_footcell_field8}
+{
+	cellId: 'footcell_field8',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Agosto}","hidden":"{$item_hide_snippet9}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field8}
+																							{BEGIN cellblock_grid_footcell_field9}
+{
+	cellId: 'footcell_field9',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Septiembre}","hidden":"{$item_hide_snippet10}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field9}
+																							{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Octubre}","hidden":"{$item_hide_snippet11}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field10}
+																							{BEGIN cellblock_grid_footcell_field11}
+{
+	cellId: 'footcell_field11',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Noviembre}","hidden":"{$item_hide_snippet12}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field11}
+																							{BEGIN cellblock_grid_footcell_field12}
+{
+	cellId: 'footcell_field12',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Diciembre}","hidden":"{$item_hide_snippet13}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field12}
+																							{BEGIN cellblock_grid_footcell_field13}
+{
+	cellId: 'footcell_field13',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Intereses_por_Proceso_Total_Intereses_Total}","hidden":"{$item_hide_snippet14}","isHtml":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field13}
 											],
 				{END row_grid_2}
 		

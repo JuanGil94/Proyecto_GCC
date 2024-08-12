@@ -156,6 +156,12 @@ $nonAdminTablesArr[] = "BDME Reporte Semestral Datachild";
 $nonAdminTablesArr[] = "BDME Retiros DataChild";
 $nonAdminTablesArr[] = "dbo.BusquedasPropiedades";
 $nonAdminTablesArr[] = "dbo.ProcesosView1";
+$nonAdminTablesArr[] = "Obligaciones de Dificil Recaudo";
+$nonAdminTablesArr[] = "Privados de la Libertad";
+$nonAdminTablesArr[] = "Recaudos por Años";
+$nonAdminTablesArr[] = "Reportes";
+$nonAdminTablesArr[] = "Reportes DataChild prescritos con resolución expedida_Solidarios";
+$nonAdminTablesArr[] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 
 $ug_connection = $cman->getForUserGroups();
 

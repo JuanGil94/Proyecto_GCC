@@ -23,7 +23,7 @@
 function BeforeProcessList($pageObject)
 {
 
-		
+			set_time_limit(0); // Elimina la restricción de timeout
     // Verifica si hay un registro maestro disponible
     $data = $pageObject->getMasterRecord();
     

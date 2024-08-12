@@ -965,6 +965,30 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="Obligaciones de Dificil Recaudo")
+		{
+			return 1;
+		}
+		if($table=="Privados de la Libertad")
+		{
+			return 1;
+		}
+		if($table=="Recaudos por Años")
+		{
+			return 1;
+		}
+		if($table=="Reportes")
+		{
+			return 1;
+		}
+		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios")
+		{
+			return 1;
+		}
+		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1785,6 +1809,30 @@ function getCaptionTable($table)
 	if($table=="dbo.ProcesosView1")
 	{
 		return "Procesos View1";
+	}
+	if($table=="Obligaciones de Dificil Recaudo")
+	{
+		return "Obligaciones de Dificil Recaudo";
+	}
+	if($table=="Privados de la Libertad")
+	{
+		return "Privados de la Libertad";
+	}
+	if($table=="Recaudos por Años")
+	{
+		return "Recaudos por Años";
+	}
+	if($table=="Reportes")
+	{
+		return "Reportes";
+	}
+	if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios")
+	{
+		return "Reportes DataChild prescritos con resolución expedida_Solidarios";
+	}
+	if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes")
+	{
+		return "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 	}
 	return $table;
 }
