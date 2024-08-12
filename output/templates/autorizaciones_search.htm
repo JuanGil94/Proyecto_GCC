@@ -94,28 +94,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN Fecha_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Fecha{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
-		{$label dbo_Autorizaciones Fecha }	</label>
-	<div class="r-search-option">
-		{$searchtype_Fecha}
-	</div>
-	<div class="r-search-field">
-		{$Fecha_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Fecha_editcontrol1}
-	</div>
-	
-</div>
-
-{END Fecha_fieldblock}
-											
 {BEGIN Tipo_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Tipo}  r-horizontal-field form-horizontal" 	
@@ -269,6 +247,28 @@
 </div>
 
 {END Concepto_fieldblock}
+											
+{BEGIN Fecha_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
+		{$label dbo_Autorizaciones Fecha }	</label>
+	<div class="r-search-option">
+		{$searchtype_Fecha}
+	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol1}
+	</div>
+	
+</div>
+
+{END Fecha_fieldblock}
 											
 {BEGIN Competencia_fieldblock}
 

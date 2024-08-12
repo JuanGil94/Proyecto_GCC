@@ -112,6 +112,7 @@ while( $date = $consulta->fetchAssoc() )
 	$_SESSION["CarteraTipoId"]=$date["CarteraTipoId"];
 	$_SESSION["SeccionalUser"]=$date["SeccionalId"];
 }
+echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
 $_SESSION["UserId"]=$userId;
 //createNotification( array( "message" => "New category added: ", "title" => "New category", "icon" => "fa-envelope") );  
 //buscar las seccionales pertenecientes al UserId
@@ -450,7 +451,7 @@ echo "Your message";
 	// Put your code here.
 $str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
 //select values from the database
-$strSQL = "select * from Abogados ORDER BY Abogado ASC";
+$strSQL = "select * from Abogados WHERE SeccionalId=".$_SESSION["SeccionalUser"]."  ORDER BY Abogado ASC";
 $rs = db_query($strSQL);
 while ($data = db_fetch_array($rs)){
 $str.="<option value='".$data['AbogadoId']."'>".$data['Abogado']."</option>";

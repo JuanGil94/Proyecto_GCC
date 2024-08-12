@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
 			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
 				
 				
@@ -188,6 +185,9 @@ pdfDocument = {
 				
 				
 			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
 			{"text":{$Competencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},

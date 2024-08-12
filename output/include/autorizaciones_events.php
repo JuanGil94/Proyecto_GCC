@@ -16,6 +16,8 @@
 
 		$this->events["CustomAdd"]=true;
 
+		$this->events["BeforeDelete"]=true;
+
 
 	}
 
@@ -129,6 +131,85 @@ return true;
 
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record deleted
+function BeforeDelete($where, &$deleted_values, &$message, $pageObject)
+{
+
+		//WHERE (C.CarteraTipoId =1) AND (C.Procesado <>1) AND (C.Aprobado <>1) AND (C.SeccionalId =1022) AND (C.TramiteId =2)
+echo $_SESSION["Seccionales"];
+$strWhereClause = whereAdd($strWhereClause, "C.SeccionalId in (".$_SESSION["Seccionales"].")");
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeDelete
+
 		
 		
 		

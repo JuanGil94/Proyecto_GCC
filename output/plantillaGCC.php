@@ -1130,5 +1130,472 @@ class fichaTecnica {
         return $bienes;
     }
 }
+class certificadoMensual{ 
+    public $reportDate;
+    public $UserNameF;
+    public function __construct($reportDate,$UserNameF){
+        $this->reportDate=$reportDate;
+        $this->UserNameF=$UserNameF;
+    }
+    public function process(){
+        //echo $_SESSION["SeccionalesWhere"];
+        //echo $_SESSION["Seccionales"];
+        $consulta=DB::Query("SELECT * FROM Seccionales WHERE SeccionalId in (".$_SESSION["Seccionales"].")");
+        while( $date = $consulta->fetchAssoc()){
+            $seccionales[]=$date["Seccional"];
+        }
+        //print_r($seccionales);
 
+        $count=0;
+        $rs=DB::Query("exec dbo.Procesos_Resumen @UserName='".$this->UserNameF."',@Mes='".$this->reportDate."',@Millones=0");
+        while ($data = db_fetch_array($rs)) {
+            //echo $data;
+            //echo json_encode($data, JSON_PRETTY_PRINT);
+            foreach ($data as $data2){
+                $array[$count]=$data;
+                //print_r($data2);
+            }
+            $count++;
+            //echo "Columna1: " . $data["Columna1"] . ", Columna2: " . $data["Columna2"];
+        }
+        $data_seccional='';
+        foreach ($array as $key=>$dataa){
+            //echo $dataa["Seccional"];
+            foreach($seccionales as $seccional){
+                //echo "<br>Seccional: ".$seccional."<br>";
+                if ($dataa["Seccional"]==$seccional){
+                    $array_keys[$key]=$seccional;
+                    //echo $key. "y la seecional es: ".$dataa["Seccional"]; 
+                }
+            }
+        }
+        //print_r($array_keys);
+        // Nuevo array donde agruparemos las keys por ciudad
+        $arrayAgrupado = array();
+
+        // Recorrer el array original
+        foreach ($array_keys as $key => $ciudad) {
+            // Si la ciudad no existe en el array agrupado, la inicializamos como un array vacío
+            if (!isset($arrayAgrupado[$ciudad])) {
+                $arrayAgrupado[$ciudad] = array();
+            }
+            
+            // Añadir la key al array correspondiente a la ciudad
+            $arrayAgrupado[$ciudad][] = $key;
+        }
+
+        foreach ($arrayAgrupado as $ciudad=>$id){
+            //echo "<br>".$ciudad." - ".$id."<br>";
+            //echo $id[0];
+            $info[$ciudad]=array(
+                "Seccional"=>$array[$id[0]]["Seccional"],
+                "Desde"=>$array[$id[0]]["Desde"],
+                "Hasta"=>$array[$id[0]]["Hasta"],
+                "pa"=>intval($array[$id[0]]["ProcAnte"]),
+                "oa"=>floatval($array[$id[0]]["ObliAnte"]),
+                "ca"=>floatval($array[$id[0]]["CostAnte"]),
+                "ia"=>floatval($array[$id[0]]["InteAnte"]),
+                "pb"=>floatval($array[$id[0]]["ProcActu"]),
+                "ob"=>floatval($array[$id[0]]["ObliActu"]),
+                "cb"=>floatval($array[$id[0]]["CostActu"]),
+                "ib"=>floatval($array[$id[0]]["InteActu"]),
+                "pc"=>floatval($array[$id[0]]["ProcReca"]),
+                "oc"=>floatval($array[$id[0]]["ObliReca"]),
+                "cc"=>floatval($array[$id[0]]["CostReca"]),
+                "ic"=>floatval($array[$id[0]]["InteReca"]),
+                "pd"=>floatval($array[$id[0]]["ProcTras"]),
+                "od"=>floatval($array[$id[0]]["ObliTras"]),
+                "cd"=>floatval($array[$id[0]]["CostTras"]),
+                "id"=>floatval($array[$id[0]]["InteTras"]),
+                "pe"=>floatval($array[$id[0]]["ProcNopa"]),
+                "oe"=>floatval($array[$id[0]]["ObliNopa"]),
+                "ce"=>floatval($array[$id[0]]["CostNopa"]),
+                "ie"=>floatval($array[$id[0]]["InteNopa"]),
+                "pf"=>floatval($array[$id[0]]["ProcNove"]),
+                "of"=>floatval($array[$id[0]]["ObliNove"]),
+                "cf"=>floatval($array[$id[0]]["CostNove"]),
+                "if"=>floatval($array[$id[0]]["InteNove"]),
+                "pg"=>floatval($array[$id[0]]["ProcMayo"]),
+                "og"=>floatval($array[$id[0]]["ObliMayo"]),
+                "cg"=>floatval($array[$id[0]]["CostMayo"]),
+                "ig"=>floatval($array[$id[0]]["InteMayo"]),
+                "ProcTota"=>floatval($array[$id[0]]["ProcTota"]),
+                "ObliTota"=>floatval($array[$id[0]]["ObliTota"]),
+                "CostTota"=>floatval($array[$id[0]]["CostTota"]),
+                "InteTota"=>floatval($array[$id[0]]["InteTota"]),
+                "DeteAnte"=>floatval($array[$id[0]]["DeteAnte"]),
+                "DeteTota"=>floatval($array[$id[0]]["DeteTota"]),
+                "DeteActu"=>floatval($array[$id[0]]["DeteActu"]),
+                "CarteraTipo"=>$array[$id[0]]["CarteraTipo"],
+                "ContadorCargo"=>$array[$id[0]]["ContadorCargo"],
+                "Contador"=>$array[$id[0]]["Contador"],
+                "Director"=>$array[$id[0]]["Director"],
+                "DirectorCargo"=>$array[$id[0]]["DirectorCargo"],
+                "Abogado"=>$array[$id[0]]["Abogado"],
+                "AbogadoCargo"=>$array[$id[0]]["AbogadoCargo"],
+                "date"=>now(),
+            );
+            $info[$ciudad]["sumRec"]=0;
+            $info[$ciudad]["sumNov"]=0;
+            $info[$ciudad]["sumCol"]=$info[$ciudad]["od"]+$info[$ciudad]["id"]+$info["cd"];
+            $info[$ciudad]["sumCol1"]=$info[$ciudad]["oe"]+$info[$ciudad]["ie"]+$info["ce"];
+            $info[$ciudad]["sumTot"]=$info[$ciudad]["DeteAnte"]+$info[$ciudad]["DeteActu"]-$info[$ciudad]["sumRec"]+$info[$ciudad]["sumCol"]-$info[$ciudad]["sumCol1"]+$info[$ciudad]["sumNov"];
+            //REINTEGROS
+            $info[$ciudad]["pa1"]=intval($array[$id[1]]["ProcAnte"]);
+            $info[$ciudad]["oa1"]=floatval($array[$id[1]]["ObliAnte"]);
+            $info[$ciudad]["ca1"]=floatval($array[$id[1]]["CostAnte"]);
+            $info[$ciudad]["ia1"]=floatval($array[$id[1]]["InteAnte"]);
+            $info[$ciudad]["pb1"]=floatval($array[$id[1]]["ProcActu"]);
+            $info[$ciudad]["ob1"]=floatval($array[$id[1]]["ObliActu"]);
+            $info[$ciudad]["cb1"]=floatval($array[$id[1]]["CostActu"]);
+            $info[$ciudad]["ib1"]=floatval($array[$id[1]]["InteActu"]);
+            $info[$ciudad]["pc1"]=floatval($array[$id[1]]["ProcReca"]);
+            $info[$ciudad]["oc1"]=floatval($array[$id[1]]["ObliReca"]);
+            $info[$ciudad]["cc1"]=floatval($array[$id[1]]["CostReca"]);
+            $info[$ciudad]["ic1"]=floatval($array[$id[1]]["InteReca"]);
+            $info[$ciudad]["pd1"]=floatval($array[$id[1]]["ProcTras"]);
+            $info[$ciudad]["od1"]=floatval($array[$id[1]]["ObliTras"]);
+            $info[$ciudad]["cd1"]=floatval($array[$id[1]]["CostTras"]);
+            $info[$ciudad]["id1"]=floatval($array[$id[1]]["InteTras"]);
+            $info[$ciudad]["pe1"]=floatval($array[$id[1]]["ProcNopa"]);
+            $info[$ciudad]["oe1"]=floatval($array[$id[1]]["ObliNopa"]);
+            $info[$ciudad]["ce1"]=floatval($array[$id[1]]["CostNopa"]);
+            $info[$ciudad]["ie1"]=floatval($array[$id[1]]["InteNopa"]);
+            $info[$ciudad]["pf1"]=floatval($array[$id[1]]["ProcNove"]);
+            $info[$ciudad]["of1"]=floatval($array[$id[1]]["ObliNove"]);
+            $info[$ciudad]["cf1"]=floatval($array[$id[1]]["CostNove"]);
+            $info[$ciudad]["if1"]=floatval($array[$id[1]]["InteNove"]);
+            $info[$ciudad]["pg1"]=floatval($array[$id[1]]["ProcMayo"]);
+            $info[$ciudad]["og1"]=floatval($array[$id[1]]["ObliMayo"]);
+            $info[$ciudad]["cg1"]=floatval($array[$id[1]]["CostMayo"]);
+            $info[$ciudad]["ig1"]=floatval($array[$id[1]]["InteMayo"]);
+            $info[$ciudad]["DeteAnteR"]=floatval($array[$id[1]]["DeteAnte"]);
+            $info[$ciudad]["DeteActuR"]=floatval($array[$id[1]]["DeteActu"]);
+            $info[$ciudad]["sumRecR"]=0;
+            $info[$ciudad]["sumNovR"]=0;
+            //INC[$ciudad]APACIDADES
+            $info[$ciudad]["pa2"]=intval($array[$id[2]]["ProcAnte"]);        
+            $info[$ciudad]["oa2"]=floatval($array[$id[2]]["ObliAnte"]);
+            $info[$ciudad]["ca2"]=floatval($array[$id[2]]["CostAnte"]);
+            $info[$ciudad]["ia2"]=floatval($array[$id[2]]["InteAnte"]);
+            $info[$ciudad]["pb2"]=floatval($array[$id[2]]["ProcActu"]);
+            $info[$ciudad]["ob2"]=floatval($array[$id[2]]["ObliActu"]);
+            $info[$ciudad]["cb2"]=floatval($array[$id[2]]["CostActu"]);
+            $info[$ciudad]["ib2"]=floatval($array[$id[2]]["InteActu"]);
+            $info[$ciudad]["pc2"]=floatval($array[$id[2]]["ProcReca"]);
+            $info[$ciudad]["oc2"]=floatval($array[$id[2]]["ObliReca"]);
+            $info[$ciudad]["cc2"]=floatval($array[$id[2]]["CostReca"]);
+            $info[$ciudad]["ic2"]=floatval($array[$id[2]]["InteReca"]);
+            $info[$ciudad]["pd2"]=floatval($array[$id[2]]["ProcTras"]);
+            $info[$ciudad]["od2"]=floatval($array[$id[2]]["ObliTras"]);
+            $info[$ciudad]["cd2"]=floatval($array[$id[2]]["CostTras"]);
+            $info[$ciudad]["id2"]=floatval($array[$id[2]]["InteTras"]);
+            $info[$ciudad]["pe2"]=floatval($array[$id[2]]["ProcNopa"]);
+            $info[$ciudad]["oe2"]=floatval($array[$id[2]]["ObliNopa"]);
+            $info[$ciudad]["ce2"]=floatval($array[$id[2]]["CostNopa"]);
+            $info[$ciudad]["ie2"]=floatval($array[$id[2]]["InteNopa"]);
+            $info[$ciudad]["pf2"]=floatval($array[$id[2]]["ProcNove"]);
+            $info[$ciudad]["of2"]=floatval($array[$id[2]]["ObliNove"]);
+            $info[$ciudad]["cf2"]=floatval($array[$id[2]]["CostNove"]);
+            $info[$ciudad]["if2"]=floatval($array[$id[2]]["InteNove"]);
+            $info[$ciudad]["pg2"]=floatval($array[$id[2]]["ProcMayo"]);
+            $info[$ciudad]["og2"]=floatval($array[$id[2]]["ObliMayo"]);
+            $info[$ciudad]["cg2"]=floatval($array[$id[2]]["CostMayo"]);
+            $info[$ciudad]["ig2"]=floatval($array[$id[2]]["InteMayo"]);
+            $info[$ciudad]["sumColR"]=$info[$ciudad]["od1"]+$info[$ciudad]["id1"]+$info[$ciudad]["cd1"]+$info[$ciudad]["od2"]+$info[$ciudad]["id2"]+$info[$ciudad]["cd2"];
+            $info[$ciudad]["sumCol1R"]=$info[$ciudad]["oe1"]+$info[$ciudad]["ie1"]+$info[$ciudad]["ce1"]+$info[$ciudad]["oe2"]+$info[$ciudad]["ie2"]+$info[$ciudad]["ce2"];
+            $info[$ciudad]["sumtotR"]=$info[$ciudad]["DeteAnteR"]+$info[$ciudad]["DeteActuR"]-$info[$ciudad]["sumRecR"]+$info[$ciudad]["sumColR"]-$info[$ciudad]["sumCol1R"]+$info[$ciudad]["sumNovR"];
+            $info[$ciudad]["sp"]=$info[$ciudad]["pa"]+$info[$ciudad]["pa1"]+$info[$ciudad]["pa2"];
+            $info[$ciudad]["sumCasB"]=$info[$ciudad]["oa"]+$info[$ciudad]["ia"]+$info[$ciudad]["ca"]+$info[$ciudad]["oa1"]+$info[$ciudad]["ia1"]+$info[$ciudad]["ca1"]+$info[$ciudad]["oa2"]+$info[$ciudad]["ia2"]+$info[$ciudad]["ca2"];
+            $info[$ciudad]["sumTT"]=$info[$ciudad]["sumCasB"]-$info[$ciudad]["DeteAnte"]-$info[$ciudad]["DeteAnteR"];
+            $info[$ciudad]["spb"]=$info[$ciudad]["pb"]+$info[$ciudad]["pb1"]+$info[$ciudad]["pb2"];
+            $info[$ciudad]["sumCasB1"]=$info[$ciudad]["ob"]+$info[$ciudad]["ib"]+$info[$ciudad]["cb"]+$info[$ciudad]["ob1"]+$info[$ciudad]["ib1"]+$info[$ciudad]["cb1"]+$info[$ciudad]["ob2"]+$info[$ciudad]["ib2"]+$info[$ciudad]["cb2"];
+            $info[$ciudad]["sumTT1"]=$info[$ciudad]["sumCasB1"]-$info[$ciudad]["DeteActu"]-$info[$ciudad]["DeteActuR"];
+            $info[$ciudad]["spc"]=$info[$ciudad]["pc"]+$info[$ciudad]["pc1"]+$info[$ciudad]["pc2"];
+            $info[$ciudad]["sumCasB2"]=0;
+            $info[$ciudad]["spd"]=$info[$ciudad]["pd"]+$info[$ciudad]["pd1"]+$info[$ciudad]["pd2"];
+            $info[$ciudad]["sumTT2"]=$info[$ciudad]["sumCasB2"]-$info[$ciudad]["sumRecR"]-$info[$ciudad]["sumRec"];
+            $info[$ciudad]["sumCasB3"]=$info[$ciudad]["od"]+$info[$ciudad]["id"]+$info[$ciudad]["cd"]+$info[$ciudad]["od1"]+$info[$ciudad]["id1"]+$info[$ciudad]["cd1"]+$info[$ciudad]["od2"]+$info[$ciudad]["id2"]+$info[$ciudad]["cd2"];
+            $info[$ciudad]["spe"]=$info[$ciudad]["pe"]+$info[$ciudad]["pe1"]+$info[$ciudad]["pe2"];
+            $info[$ciudad]["sumCasB4"]=$info[$ciudad]["oe"]+$info[$ciudad]["ie"]+$info[$ciudad]["ce"]+$info[$ciudad]["oe1"]+$info[$ciudad]["ie1"]+$info[$ciudad]["ce1"]+$info[$ciudad]["oe2"]+$info["ie2"]+$info[$ciudad]["ce2"];
+            $info[$ciudad]["spf"]=$info[$ciudad]["pf"]+$info[$ciudad]["pf1"]+$info[$ciudad]["pf2"];
+            $info[$ciudad]["sumtotA"]=$info[$ciudad]["sumCasB"]+$info[$ciudad]["sumCasB1"]-$info[$ciudad]["sumCasB2"]+$info[$ciudad]["sumCasB3"]-$info[$ciudad]["sumCasB4"]+$info[$ciudad]["sumNovR"];
+            $info[$ciudad]["sumtotB"]=$info[$ciudad]["sumTT"]+$info[$ciudad]["sumTT1"]-$info[$ciudad]["sumTT2"]+0-$info[$ciudad]["sumCol1R"]+$info[$ciudad]["sumNovR"];
+        }
+        //print_r($info);
+        //echo "<pre>";
+        //print_r($arrayAgrupado);
+        //echo "</pre>";
+        //MULTAS
+        echo "Seccional".$array[0]["Seccional"];
+        $info["RESUMEN"]=array(
+            "Seccional"=>$array[0]["Seccional"],
+            "Desde"=>$array[0]["Desde"],
+            "Hasta"=>$array[0]["Hasta"],
+            "pa"=>intval($array[0]["ProcAnte"]),
+            "oa"=>floatval($array[0]["ObliAnte"]),
+            "ca"=>floatval($array[0]["CostAnte"]),
+            "ia"=>floatval($array[0]["InteAnte"]),
+            "pb"=>floatval($array[0]["ProcActu"]),
+            "ob"=>floatval($array[0]["ObliActu"]),
+            "cb"=>floatval($array[0]["CostActu"]),
+            "ib"=>floatval($array[0]["InteActu"]),
+            "pc"=>floatval($array[0]["ProcReca"]),
+            "oc"=>floatval($array[0]["ObliReca"]),
+            "cc"=>floatval($array[0]["CostReca"]),
+            "ic"=>floatval($array[0]["InteReca"]),
+            "pd"=>floatval($array[0]["ProcTras"]),
+            "od"=>floatval($array[0]["ObliTras"]),
+            "cd"=>floatval($array[0]["CostTras"]),
+            "id"=>floatval($array[0]["InteTras"]),
+            "pe"=>floatval($array[0]["ProcNopa"]),
+            "oe"=>floatval($array[0]["ObliNopa"]),
+            "ce"=>floatval($array[0]["CostNopa"]),
+            "ie"=>floatval($array[0]["InteNopa"]),
+            "pf"=>floatval($array[0]["ProcNove"]),
+            "of"=>floatval($array[0]["ObliNove"]),
+            "cf"=>floatval($array[0]["CostNove"]),
+            "if"=>floatval($array[0]["InteNove"]),
+            "pg"=>floatval($array[0]["ProcMayo"]),
+            "og"=>floatval($array[0]["ObliMayo"]),
+            "cg"=>floatval($array[0]["CostMayo"]),
+            "ig"=>floatval($array[0]["InteMayo"]),
+            "ProcTota"=>floatval($array[0]["ProcTota"]),
+            "ObliTota"=>floatval($array[0]["ObliTota"]),
+            "CostTota"=>floatval($array[0]["CostTota"]),
+            "InteTota"=>floatval($array[0]["InteTota"]),
+            "DeteAnte"=>floatval($array[0]["DeteAnte"]),
+            "DeteTota"=>floatval($array[0]["DeteTota"]),
+            "DeteActu"=>floatval($array[0]["DeteActu"]),
+            "CarteraTipo"=>$array[0]["CarteraTipo"],
+            "ContadorCargo"=>$array[0]["ContadorCargo"],
+            "Contador"=>$array[0]["Contador"],
+            "Director"=>$array[0]["Director"],
+            "DirectorCargo"=>$array[0]["DirectorCargo"],
+            "Abogado"=>$array[0]["Abogado"],
+            "AbogadoCargo"=>$array[0]["AbogadoCargo"],
+            "date"=>now(),
+        );
+        $info["RESUMEN"]["sumRec"]=0;
+        $info["RESUMEN"]["sumNov"]=0;
+        $info["RESUMEN"]["sumCol"]=$info["od"]+$info["id"]+$info["cd"];
+        $info["RESUMEN"]["sumCol1"]=$info["oe"]+$info["ie"]+$info["ce"];
+        $info["RESUMEN"]["sumTot"]=$info["DeteAnte"]+$info["DeteActu"]-$info["sumRec"]+$info["sumCol"]-$info["sumCol1"]+$info["sumNov"];
+        //REINTEGROS
+        $info["RESUMEN"]["pa1"]=intval($array[1]["ProcAnte"]);
+        $info["RESUMEN"]["oa1"]=floatval($array[1]["ObliAnte"]);
+        $info["RESUMEN"]["ca1"]=floatval($array[1]["CostAnte"]);
+        $info["RESUMEN"]["ia1"]=floatval($array[1]["InteAnte"]);
+        $info["RESUMEN"]["pb1"]=floatval($array[1]["ProcActu"]);
+        $info["RESUMEN"]["ob1"]=floatval($array[1]["ObliActu"]);
+        $info["RESUMEN"]["cb1"]=floatval($array[1]["CostActu"]);
+        $info["RESUMEN"]["ib1"]=floatval($array[1]["InteActu"]);
+        $info["RESUMEN"]["pc1"]=floatval($array[1]["ProcReca"]);
+        $info["RESUMEN"]["oc1"]=floatval($array[1]["ObliReca"]);
+        $info["RESUMEN"]["cc1"]=floatval($array[1]["CostReca"]);
+        $info["RESUMEN"]["ic1"]=floatval($array[1]["InteReca"]);
+        $info["RESUMEN"]["pd1"]=floatval($array[1]["ProcTras"]);
+        $info["RESUMEN"]["od1"]=floatval($array[1]["ObliTras"]);
+        $info["RESUMEN"]["cd1"]=floatval($array[1]["CostTras"]);
+        $info["RESUMEN"]["id1"]=floatval($array[1]["InteTras"]);
+        $info["RESUMEN"]["pe1"]=floatval($array[1]["ProcNopa"]);
+        $info["RESUMEN"]["oe1"]=floatval($array[1]["ObliNopa"]);
+        $info["RESUMEN"]["ce1"]=floatval($array[1]["CostNopa"]);
+        $info["RESUMEN"]["ie1"]=floatval($array[1]["InteNopa"]);
+        $info["RESUMEN"]["pf1"]=floatval($array[1]["ProcNove"]);
+        $info["RESUMEN"]["of1"]=floatval($array[1]["ObliNove"]);
+        $info["RESUMEN"]["cf1"]=floatval($array[1]["CostNove"]);
+        $info["RESUMEN"]["if1"]=floatval($array[1]["InteNove"]);
+        $info["RESUMEN"]["pg1"]=floatval($array[1]["ProcMayo"]);
+        $info["RESUMEN"]["og1"]=floatval($array[1]["ObliMayo"]);
+        $info["RESUMEN"]["cg1"]=floatval($array[1]["CostMayo"]);
+        $info["RESUMEN"]["ig1"]=floatval($array[1]["InteMayo"]);
+        $info["RESUMEN"]["DeteAnteR"]=floatval($array[1]["DeteAnte"]);
+        $info["RESUMEN"]["DeteActuR"]=floatval($array[1]["DeteActu"]);
+        $info["RESUMEN"]["sumRecR"]=0;
+        $info["RESUMEN"]["sumNovR"]=0;
+        //INCAPACIDADES
+        $info["RESUMEN"]["pa2"]=intval($array[2]["ProcAnte"]);        
+        $info["RESUMEN"]["oa2"]=floatval($array[2]["ObliAnte"]);
+        $info["RESUMEN"]["ca2"]=floatval($array[2]["CostAnte"]);
+        $info["RESUMEN"]["ia2"]=floatval($array[2]["InteAnte"]);
+        $info["RESUMEN"]["pb2"]=floatval($array[2]["ProcActu"]);
+        $info["RESUMEN"]["ob2"]=floatval($array[2]["ObliActu"]);
+        $info["RESUMEN"]["cb2"]=floatval($array[2]["CostActu"]);
+        $info["RESUMEN"]["ib2"]=floatval($array[2]["InteActu"]);
+        $info["RESUMEN"]["pc2"]=floatval($array[2]["ProcReca"]);
+        $info["RESUMEN"]["oc2"]=floatval($array[2]["ObliReca"]);
+        $info["RESUMEN"]["cc2"]=floatval($array[2]["CostReca"]);
+        $info["RESUMEN"]["ic2"]=floatval($array[2]["InteReca"]);
+        $info["RESUMEN"]["pd2"]=floatval($array[2]["ProcTras"]);
+        $info["RESUMEN"]["od2"]=floatval($array[2]["ObliTras"]);
+        $info["RESUMEN"]["cd2"]=floatval($array[2]["CostTras"]);
+        $info["RESUMEN"]["id2"]=floatval($array[2]["InteTras"]);
+        $info["RESUMEN"]["pe2"]=floatval($array[2]["ProcNopa"]);
+        $info["RESUMEN"]["oe2"]=floatval($array[2]["ObliNopa"]);
+        $info["RESUMEN"]["ce2"]=floatval($array[2]["CostNopa"]);
+        $info["RESUMEN"]["ie2"]=floatval($array[2]["InteNopa"]);
+        $info["RESUMEN"]["pf2"]=floatval($array[2]["ProcNove"]);
+        $info["RESUMEN"]["of2"]=floatval($array[2]["ObliNove"]);
+        $info["RESUMEN"]["cf2"]=floatval($array[2]["CostNove"]);
+        $info["RESUMEN"]["if2"]=floatval($array[2]["InteNove"]);
+        $info["RESUMEN"]["pg2"]=floatval($array[2]["ProcMayo"]);
+        $info["RESUMEN"]["og2"]=floatval($array[2]["ObliMayo"]);
+        $info["RESUMEN"]["cg2"]=floatval($array[2]["CostMayo"]);
+        $info["RESUMEN"]["ig2"]=floatval($array[2]["InteMayo"]);
+        $info["RESUMEN"]["sumColR"]=$info["RESUMEN"]["od1"]+$info["RESUMEN"]["id1"]+$info["RESUMEN"]["cd1"]+$info["RESUMEN"]["od2"]+$info["RESUMEN"]["id2"]+$info["RESUMEN"]["cd2"];
+        $info["RESUMEN"]["sumCol1R"]=$info["RESUMEN"]["oe1"]+$info["RESUMEN"]["ie1"]+$info["RESUMEN"]["ce1"]+$info["RESUMEN"]["oe2"]+$info["RESUMEN"]["ie2"]+$info["RESUMEN"]["ce2"];
+        $info["RESUMEN"]["sumtotR"]=$info["RESUMEN"]["DeteAnteR"]+$info["RESUMEN"]["DeteActuR"]-$info["RESUMEN"]["sumRecR"]+$info["RESUMEN"]["sumColR"]-$info["RESUMEN"]["sumCol1R"]+$info["RESUMEN"]["sumNovR"];
+        $info["RESUMEN"]["sp"]=$info["RESUMEN"]["pa"]+$info["RESUMEN"]["pa1"]+$info["RESUMEN"]["pa2"];
+        $info["RESUMEN"]["sumCasB"]=$info["RESUMEN"]["oa"]+$info["RESUMEN"]["ia"]+$info["RESUMEN"]["ca"]+$info["RESUMEN"]["oa1"]+$info["RESUMEN"]["ia1"]+$info["RESUMEN"]["ca1"]+$info["RESUMEN"]["oa2"]+$info["RESUMEN"]["ia2"]+$info["RESUMEN"]["ca2"];
+        $info["RESUMEN"]["sumTT"]=$info["RESUMEN"]["sumCasB"]-$info["RESUMEN"]["DeteAnte"]-$info["RESUMEN"]["DeteAnteR"];
+        $info["RESUMEN"]["spb"]=$info["RESUMEN"]["pb"]+$info["RESUMEN"]["pb1"]+$info["RESUMEN"]["pb2"];
+        $info["RESUMEN"]["sumCasB1"]=$info["RESUMEN"]["ob"]+$info["RESUMEN"]["ib"]+$info["RESUMEN"]["cb"]+$info["RESUMEN"]["ob1"]+$info["RESUMEN"]["ib1"]+$info["RESUMEN"]["cb1"]+$info["RESUMEN"]["ob2"]+$info["RESUMEN"]["ib2"]+$info["RESUMEN"]["cb2"];
+        $info["RESUMEN"]["sumTT1"]=$info["RESUMEN"]["sumCasB1"]-$info["RESUMEN"]["DeteActu"]-$info["RESUMEN"]["DeteActuR"];
+        $info["RESUMEN"]["spc"]=$info["RESUMEN"]["pc"]+$info["RESUMEN"]["pc1"]+$info["RESUMEN"]["pc2"];
+        $info["RESUMEN"]["sumCasB2"]=0;
+        $info["RESUMEN"]["spd"]=$info["RESUMEN"]["pd"]+$info["RESUMEN"]["pd1"]+$info["RESUMEN"]["pd2"];
+        $info["RESUMEN"]["sumTT2"]=$info["RESUMEN"]["sumCasB2"]-$info["RESUMEN"]["sumRecR"]-$info["RESUMEN"]["sumRec"];
+        $info["RESUMEN"]["sumCasB3"]=$info["RESUMEN"]["od"]+$info["RESUMEN"]["id"]+$info["RESUMEN"]["cd"]+$info["RESUMEN"]["od1"]+$info["RESUMEN"]["id1"]+$info["RESUMEN"]["cd1"]+$info["RESUMEN"]["od2"]+$info["RESUMEN"]["id2"]+$info["RESUMEN"]["cd2"];
+        $info["RESUMEN"]["spe"]=$info["RESUMEN"]["pe"]+$info["RESUMEN"]["pe1"]+$info["RESUMEN"]["pe2"];
+        $info["RESUMEN"]["sumCasB4"]=$info["RESUMEN"]["oe"]+$info["RESUMEN"]["ie"]+$info["RESUMEN"]["ce"]+$info["RESUMEN"]["oe1"]+$info["RESUMEN"]["ie1"]+$info["RESUMEN"]["ce1"]+$info["RESUMEN"]["oe2"]+$info["RESUMEN"]["ie2"]+$info["RESUMEN"]["ce2"];
+        $info["RESUMEN"]["spf"]=$info["RESUMEN"]["pf"]+$info["RESUMEN"]["pf1"]+$info["RESUMEN"]["pf2"];
+        $info["RESUMEN"]["sumtotA"]=$info["RESUMEN"]["sumCasB"]+$info["RESUMEN"]["sumCasB1"]-$info["RESUMEN"]["sumCasB2"]+$info["RESUMEN"]["sumCasB3"]-$info["RESUMEN"]["sumCasB4"]+$info["RESUMEN"]["sumNovR"];
+        $info["RESUMEN"]["sumtotB"]=$info["RESUMEN"]["sumTT"]+$info["RESUMEN"]["sumTT1"]-$info["RESUMEN"]["sumTT2"]+0-$info["RESUMEN"]["sumCol1R"]+$info["RESUMEN"]["sumNovR"];
+        //count($array)
+        //print_r($array[1]);
+        //echo "Numero de arrays: ".count($array);
+        return $info;
+    }
+    
+    function mergeDocx($docxFiles, $output) {
+        $outputZip = new ZipArchive;
+        if ($outputZip->open($output, ZipArchive::CREATE) !== TRUE) {
+            exit("No se puede abrir el archivo de salida <$output>\n");
+        }
+    
+        // Copiar archivos del primer DOCX al archivo de salida
+        $zip1 = new ZipArchive;
+        if ($zip1->open($docxFiles[0]) === TRUE) {
+            for ($i = 0; $i < $zip1->numFiles; $i++) {
+                $file = $zip1->getNameIndex($i);
+                $outputZip->addFromString($file, $zip1->getFromName($file));
+            }
+    
+            // Fusionar document.xml del primer archivo
+            $doc1 = new DOMDocument;
+            $doc1->loadXML($zip1->getFromName('word/document.xml'));
+            $zip1->close();
+        } else {
+            exit("No se puede abrir el archivo DOCX: " . $docxFiles[0] . "\n");
+        }
+    
+        // Procesar los archivos restantes
+        for ($j = 1; $j < count($docxFiles); $j++) {
+            $zip = new ZipArchive;
+            if ($zip->open($docxFiles[$j]) === TRUE) {
+                // Crear un salto de página antes de agregar el nuevo documento
+                $paragraph = $doc1->createElement('w:p');
+                $run = $doc1->createElement('w:r');
+                $br = $doc1->createElement('w:br');
+                $br->setAttribute('w:type', 'page');
+                $run->appendChild($br);
+                $paragraph->appendChild($run);
+                $body1 = $doc1->getElementsByTagName('body')->item(0);
+                $body1->appendChild($paragraph);
+    
+                // Fusionar document.xml del archivo actual
+                $doc2 = new DOMDocument;
+                $doc2->loadXML($zip->getFromName('word/document.xml'));
+                $body2 = $doc2->getElementsByTagName('body')->item(0);
+    
+                foreach ($body2->childNodes as $child) {
+                    $node = $doc1->importNode($child, true);
+                    $body1->appendChild($node);
+                }
+    
+                // Copiar todos los archivos del DOCX al archivo de salida, excepto document.xml
+                for ($i = 0; $i < $zip->numFiles; $i++) {
+                    $file = $zip->getNameIndex($i);
+                    if ($file !== 'word/document.xml') {
+                        $outputZip->addFromString($file, $zip->getFromName($file));
+                    }
+                }
+    
+                $zip->close();
+            } else {
+                exit("No se puede abrir el archivo DOCX: " . $docxFiles[$j] . "\n");
+            }
+        }
+    
+        // Guardar el document.xml fusionado en el archivo de salida
+        $outputZip->addFromString('word/document.xml', $doc1->saveXML());
+        $outputZip->close();
+        //echo "Documentos unificados en $output\n";
+    }
+    public function reporteMensual(){
+        //echo "Entro";
+        $info=$this->process();
+        //echo "Numero de ciudades: ".count($info)."<br>";
+        foreach($info as $ciudad=>$data)
+        {
+            //echo count()
+            //echo "<br>".$data["Seccional"]."<br>";
+            $templatePath = 'templates_GCC/Plantilla_CertificadoMensual.docx';
+            $templateProcessor = new TemplateProcessor($templatePath);
+            $variables = $templateProcessor->getVariables();
+            //print_r($info);
+            //print_r($variables);
+            $templateProcessor->setValue('Seccional',$data["Seccional"]);
+            $templateProcessor->setValue('Desde',$data["Desde"]);
+            $templateProcessor->setValue('Hasta',$data["Hasta"]);
+            $templateProcessor->setValue('date',$data["date"]);
+            $templateProcessor->setValue('Abogado',trim($data["Abogado"]));
+            $templateProcessor->setValue('Contador',trim($data["Contador"]));
+            $templateProcessor->setValue('Director',trim($data["Director"]));
+            //se relaiza el siguiente paso con el fin de detecatr las variables XML (Cuestion anormal ya que no deberia tomar la variabel XML)
+            foreach($variables as $variable){
+                //echo "La variable es:".$variable." y la reemplazo por: ".$info[$variable]."<br>";
+                $templateProcessor->setValue($variable,round(floatval($data[$variable])));
+                preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
+                //print_r($matches);
+                $resultados = $matches[1];
+                //print_r ($resultados);
+                //echo count($resultados);
+                for($i=0;$i<count($resultados);$i++){
+                    $resultadoF.=$resultados[$i];
+                }
+                $templateProcessor->setValue($resultadoF,round(floatval($data[$resultadoF])));
+                //echo "La variable es:".$resultadoF." y la reemplazo por: ".$info[$resultadoF]."<br>";
+                 //echo "La variable es:".$variable." y la reemplazo por: ".$variable."<br>";
+                //echo "Value: ".$resultadoF."<br>";
+                /*
+                if ($info[$resultadoF]==!NULL){
+                    echo "La variable es:".$resultadoF." y la reemplazo por: ".$info[$resultadoF]."<br>";
+                    $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
+                    //echo "Set Values";
+                }
+                */
+                //$var[]=$resultadoF;
+                $resultadoF='';
+                //$resultados = $matches[1];
+                //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
+            }
+            $seccional = str_replace('"', '',$data["Seccional"]);
+            //$seccional=$info["Seccional"];
+            //$templateProcessor->saveAs('templates_GCC/CerficadoMensual_'.$info["Seccional"].'.docx');
+            $templateProcessor->saveAs('templates_GCC/CertificadoMensual_'.$seccional.'.docx');
+        }
+            foreach($info as $ciudad=>$data)
+            {
+                $seccional = str_replace('"', '',$data["Seccional"]);
+                $docxFiles []='templates_GCC/CertificadoMensual_'.$seccional.'.docx';
+            //$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_'.strval($i).'.docx';
+            }
+            //echo "Numero de Documentos: ".count($docxFiles)."<br>";
+        //$docxFiles = array('templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx','templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx');
+        $salida = 'templates_GCC/Resumen_Mensual_Final.docx';
+        $this->mergeDocx($docxFiles, $salida);
+    }
+}
 ?>
