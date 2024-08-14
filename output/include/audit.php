@@ -1000,6 +1000,34 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Transacciones Usuario")
+		{
+			return false;
+		}
+		if($table=="Indicadores de Gestión")
+		{
+			return false;
+		}
+		if($table=="Tablero de Control")
+		{
+			return false;
+		}
+		if($table=="Tablero de Control Total Procesos")
+		{
+			return false;
+		}
+		if($table=="Tableros_RecaudoSeccional")
+		{
+			return false;
+		}
+		if($table=="Total Procesos")
+		{
+			return false;
+		}
+		if($table=="Total Recaudado")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -1951,6 +1979,34 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes")
+		{
+			return false;
+		}
+		if($table=="Transacciones Usuario")
+		{
+			return false;
+		}
+		if($table=="Indicadores de Gestión")
+		{
+			return false;
+		}
+		if($table=="Tablero de Control")
+		{
+			return false;
+		}
+		if($table=="Tablero de Control Total Procesos")
+		{
+			return false;
+		}
+		if($table=="Tableros_RecaudoSeccional")
+		{
+			return false;
+		}
+		if($table=="Total Procesos")
+		{
+			return false;
+		}
+		if($table=="Total Recaudado")
 		{
 			return false;
 		}

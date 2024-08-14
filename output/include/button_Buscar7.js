@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar7"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar7';if(!pageObj.buttonEventBefore['Buscar7']){pageObj.buttonEventBefore['Buscar7']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var presucion_pres_mes=$('#Presuncion_pres_MesId').val();params['presucion_pres_mes']=presucion_pres_mes;}}
+if(!pageObj.buttonEventAfter['Buscar7']){pageObj.buttonEventAfter['Buscar7']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Buscar7"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar7"+"_"+Runner.genId();var button_Buscar7=new Runner.form.Button({id:this.id,btnName:"Buscar7"});button_Buscar7.init({args:[pageObj,proxy,pageid]});});};

@@ -110,6 +110,15 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Intereses_por_Proceso_Total_Noviembre"] = true;
 		$this->events["Intereses_por_Proceso_Total_Diciembre"] = true;
 		$this->events["Intereses_por_Proceso_Total_Intereses_Total"] = true;
+		$this->events["Transacciones_Usuario_Ano"] = true;
+		$this->events["Presunci_n_Prescripci_n_Mes"] = true;
+		$this->events["Indicadores_de_Gesti_n_Ano"] = true;
+		$this->events["Indicadores_de_Gesti_n_Total_Procesos"] = true;
+		$this->events["Indicadores_de_Gesti_n_Valor"] = true;
+		$this->events["Indicadores_de_Gesti_n_Recaudo"] = true;
+		$this->events["Indicadores_de_Gesti_n_Saldo"] = true;
+		$this->events["Tablero_de_Control_Desde"] = true;
+		$this->events["Tablero_de_Control_Hasta"] = true;
 
 
 
@@ -3562,6 +3571,599 @@ $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
 echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Transacciones_Usuario_Ano(&$params)
+	{
+	echo "<label for='Transacciones_Usuario_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='Transacciones_Usuario_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Presunci_n_Prescripci_n_Mes(&$params)
+	{
+	echo "<label for='Presuncion_pres_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='Presuncion_pres_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Indicadores_de_Gesti_n_Ano(&$params)
+	{
+	echo "<label for='Recaudo_Ano_Id' style='margin-right: 20px;'>Año: </label><br>";
+
+$years = range(1990, strftime("%Y", time()));
+echo "<select id='yearSelect'>";
+echo"<option>Select Year</option>";
+foreach($years as $year) :
+echo "<option value='$year'>$year</option>";
+endforeach;
+echo "</select>";
+echo "<input type='text' id='Indicadores_Ano_Id' name='Ano' value ='' style='display:none;' required><br>";
+
+echo "<script>
+    document.getElementById('yearSelect').addEventListener('change', function() {
+        var selectedYear = this.value;
+        document.getElementById('Indicadores_Ano_Id').value = selectedYear;
+    });
+</script>";
+	;
+}
+	function event_Indicadores_de_Gesti_n_Total_Procesos(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$ano_gestion = $_SESSION['indicadores_ano'];
+
+$sql = "
+DECLARE @Ano INT = '$ano_gestion';
+DECLARE @Username VARCHAR(30) =  '$user_id';
+
+DECLARE @CarteraTipoId INT = (
+    SELECT CarteraTipoId
+    FROM UserProfile
+    WHERE UserProfile.UserName = @Username
+);
+
+WITH ProcesosData AS (
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha) AS Ano,
+        MONTH(Procesos.Fecha) AS MesNumero,
+        DATENAME(MONTH, Procesos.Fecha) AS Mes,
+        COUNT(*) AS Procesos,
+        SUM(Procesos.Obligacion) AS Valor,
+        0 AS Recaudo
+    FROM Procesos
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE YEAR(Procesos.Fecha) = @Ano
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha),
+        MONTH(Procesos.Fecha),
+        DATENAME(MONTH, Procesos.Fecha)
+    
+    UNION ALL
+    
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro) AS Ano,
+        MONTH(Pagos.Registro) AS MesNumero,
+        DATENAME(MONTH, Pagos.Registro) AS Mes,
+        0 AS Procesos,
+        0 AS Valor,
+        SUM(Pagos.Pago) AS Recaudo
+    FROM Pagos1 Pagos
+    INNER JOIN Procesos ON Pagos.ProcesoId = Procesos.ProcesoId
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Cuentas ON Pagos.CuentaId = Cuentas.CuentaId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE Cuentas.Activa = 1
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND YEAR(Pagos.Registro) = @Ano
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro),
+        MONTH(Pagos.Registro),
+        DATENAME(MONTH, Pagos.Registro)
+)
+
+-- Totalización
+SELECT 
+    'TOTAL' AS Seccional,
+    'TOTAL' AS Juzgados,
+    NULL AS Mes,
+    SUM(Procesos) AS Procesos,
+    SUM(Valor) AS Valor,
+    SUM(Recaudo) AS Recaudo,
+    SUM(Valor) - SUM(Recaudo) AS Saldo
+FROM (
+    SELECT 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END AS Juzgados,
+        A.Mes,
+        SUM(A.Procesos) AS Procesos,
+        SUM(A.Valor) AS Valor,
+        SUM(A.Recaudo) AS Recaudo,
+        SUM(A.Valor) - SUM(A.Recaudo) AS Saldo
+    FROM ProcesosData A
+    WHERE A.Despacho LIKE '%PENAL%'
+    GROUP BY 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END,
+        A.MesNumero,
+        A.Mes
+) AS Totales;
+
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['Procesos'];
+
+
+// Imprimir el valor formateado
+echo "<strong>" ."Procesos: ". $totalC6 ."</strong>";
+
+	;
+}
+	function event_Indicadores_de_Gesti_n_Valor(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$ano_gestion = $_SESSION['indicadores_ano'];
+
+$sql = "
+DECLARE @Ano INT = '$ano_gestion';
+DECLARE @Username VARCHAR(30) =  '$user_id';
+
+DECLARE @CarteraTipoId INT = (
+    SELECT CarteraTipoId
+    FROM UserProfile
+    WHERE UserProfile.UserName = @Username
+);
+
+WITH ProcesosData AS (
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha) AS Ano,
+        MONTH(Procesos.Fecha) AS MesNumero,
+        DATENAME(MONTH, Procesos.Fecha) AS Mes,
+        COUNT(*) AS Procesos,
+        SUM(Procesos.Obligacion) AS Valor,
+        0 AS Recaudo
+    FROM Procesos
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE YEAR(Procesos.Fecha) = @Ano
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha),
+        MONTH(Procesos.Fecha),
+        DATENAME(MONTH, Procesos.Fecha)
+    
+    UNION ALL
+    
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro) AS Ano,
+        MONTH(Pagos.Registro) AS MesNumero,
+        DATENAME(MONTH, Pagos.Registro) AS Mes,
+        0 AS Procesos,
+        0 AS Valor,
+        SUM(Pagos.Pago) AS Recaudo
+    FROM Pagos1 Pagos
+    INNER JOIN Procesos ON Pagos.ProcesoId = Procesos.ProcesoId
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Cuentas ON Pagos.CuentaId = Cuentas.CuentaId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE Cuentas.Activa = 1
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND YEAR(Pagos.Registro) = @Ano
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro),
+        MONTH(Pagos.Registro),
+        DATENAME(MONTH, Pagos.Registro)
+)
+
+-- Totalización
+SELECT 
+    'TOTAL' AS Seccional,
+    'TOTAL' AS Juzgados,
+    NULL AS Mes,
+    SUM(Procesos) AS Procesos,
+    SUM(Valor) AS Valor,
+    SUM(Recaudo) AS Recaudo,
+    SUM(Valor) - SUM(Recaudo) AS Saldo
+FROM (
+    SELECT 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END AS Juzgados,
+        A.Mes,
+        SUM(A.Procesos) AS Procesos,
+        SUM(A.Valor) AS Valor,
+        SUM(A.Recaudo) AS Recaudo,
+        SUM(A.Valor) - SUM(A.Recaudo) AS Saldo
+    FROM ProcesosData A
+    WHERE A.Despacho LIKE '%PENAL%'
+    GROUP BY 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END,
+        A.MesNumero,
+        A.Mes
+) AS Totales;
+
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['Valor'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+
+	;
+}
+	function event_Indicadores_de_Gesti_n_Recaudo(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$ano_gestion = $_SESSION['indicadores_ano'];
+
+$sql = "
+DECLARE @Ano INT = '$ano_gestion';
+DECLARE @Username VARCHAR(30) =  '$user_id';
+
+DECLARE @CarteraTipoId INT = (
+    SELECT CarteraTipoId
+    FROM UserProfile
+    WHERE UserProfile.UserName = @Username
+);
+
+WITH ProcesosData AS (
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha) AS Ano,
+        MONTH(Procesos.Fecha) AS MesNumero,
+        DATENAME(MONTH, Procesos.Fecha) AS Mes,
+        COUNT(*) AS Procesos,
+        SUM(Procesos.Obligacion) AS Valor,
+        0 AS Recaudo
+    FROM Procesos
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE YEAR(Procesos.Fecha) = @Ano
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha),
+        MONTH(Procesos.Fecha),
+        DATENAME(MONTH, Procesos.Fecha)
+    
+    UNION ALL
+    
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro) AS Ano,
+        MONTH(Pagos.Registro) AS MesNumero,
+        DATENAME(MONTH, Pagos.Registro) AS Mes,
+        0 AS Procesos,
+        0 AS Valor,
+        SUM(Pagos.Pago) AS Recaudo
+    FROM Pagos1 Pagos
+    INNER JOIN Procesos ON Pagos.ProcesoId = Procesos.ProcesoId
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Cuentas ON Pagos.CuentaId = Cuentas.CuentaId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE Cuentas.Activa = 1
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND YEAR(Pagos.Registro) = @Ano
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro),
+        MONTH(Pagos.Registro),
+        DATENAME(MONTH, Pagos.Registro)
+)
+
+-- Totalización
+SELECT 
+    'TOTAL' AS Seccional,
+    'TOTAL' AS Juzgados,
+    NULL AS Mes,
+    SUM(Procesos) AS Procesos,
+    SUM(Valor) AS Valor,
+    SUM(Recaudo) AS Recaudo,
+    SUM(Valor) - SUM(Recaudo) AS Saldo
+FROM (
+    SELECT 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END AS Juzgados,
+        A.Mes,
+        SUM(A.Procesos) AS Procesos,
+        SUM(A.Valor) AS Valor,
+        SUM(A.Recaudo) AS Recaudo,
+        SUM(A.Valor) - SUM(A.Recaudo) AS Saldo
+    FROM ProcesosData A
+    WHERE A.Despacho LIKE '%PENAL%'
+    GROUP BY 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END,
+        A.MesNumero,
+        A.Mes
+) AS Totales;
+
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['Recaudo'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Indicadores_de_Gesti_n_Saldo(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de user
+// Acceder a la variable de sesión
+$user_id = $_SESSION['UserNameF'];
+$ano_gestion = $_SESSION['indicadores_ano'];
+
+$sql = "DECLARE @Ano INT = '$ano_gestion';
+DECLARE @Username VARCHAR(30) =  '$user_id';
+
+DECLARE @CarteraTipoId INT = (
+    SELECT CarteraTipoId
+    FROM UserProfile
+    WHERE UserProfile.UserName = @Username
+);
+
+WITH ProcesosData AS (
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha) AS Ano,
+        MONTH(Procesos.Fecha) AS MesNumero,
+        DATENAME(MONTH, Procesos.Fecha) AS Mes,
+        COUNT(*) AS Procesos,
+        SUM(Procesos.Obligacion) AS Valor,
+        0 AS Recaudo
+    FROM Procesos
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE YEAR(Procesos.Fecha) = @Ano
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Procesos.Fecha),
+        MONTH(Procesos.Fecha),
+        DATENAME(MONTH, Procesos.Fecha)
+    
+    UNION ALL
+    
+    SELECT 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro) AS Ano,
+        MONTH(Pagos.Registro) AS MesNumero,
+        DATENAME(MONTH, Pagos.Registro) AS Mes,
+        0 AS Procesos,
+        0 AS Valor,
+        SUM(Pagos.Pago) AS Recaudo
+    FROM Pagos1 Pagos
+    INNER JOIN Procesos ON Pagos.ProcesoId = Procesos.ProcesoId
+    INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+    INNER JOIN Cuentas ON Pagos.CuentaId = Cuentas.CuentaId
+    INNER JOIN Despachos ON Procesos.DespachoId = Despachos.DespachoId
+    WHERE Cuentas.Activa = 1
+        AND Procesos.CarteraTipoId = @CarteraTipoId
+        AND YEAR(Pagos.Registro) = @Ano
+    GROUP BY 
+        Seccionales.Seccional,
+        Despachos.Codigo,
+        Despachos.Despacho,
+        YEAR(Pagos.Registro),
+        MONTH(Pagos.Registro),
+        DATENAME(MONTH, Pagos.Registro)
+)
+
+-- Totalización
+SELECT 
+    'TOTAL' AS Seccional,
+    'TOTAL' AS Juzgados,
+    NULL AS Mes,
+    SUM(Procesos) AS Procesos,
+    SUM(Valor) AS Valor,
+    SUM(Recaudo) AS Recaudo,
+    SUM(Valor) - SUM(Recaudo) AS Saldo
+FROM (
+    SELECT 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END AS Juzgados,
+        A.Mes,
+        SUM(A.Procesos) AS Procesos,
+        SUM(A.Valor) AS Valor,
+        SUM(A.Recaudo) AS Recaudo,
+        SUM(A.Valor) - SUM(A.Recaudo) AS Saldo
+    FROM ProcesosData A
+    WHERE A.Despacho LIKE '%PENAL%'
+    GROUP BY 
+        A.Seccional,
+        CASE 
+            WHEN A.Despacho LIKE '%CIRCUITO%' THEN 'CIRCUITO'
+            WHEN A.Despacho LIKE '%MUNICIPAL%' THEN 'MUNICIPALES'
+            WHEN A.Despacho LIKE '%CORTE%' THEN 'CORTE SUPREMA'
+            WHEN A.Despacho LIKE '%TRIBUNAL%' THEN 'TRIBUNALES'
+            WHEN A.Despacho LIKE '%ESPECIALIZADO%' THEN 'ESPECIALIZADOS'
+            WHEN A.Despacho LIKE '%MENORES%' THEN 'MENORES'
+            WHEN A.Despacho LIKE '%GARANTÍA%' THEN 'GARANTIAS'
+            WHEN A.Despacho LIKE '%ADOLESCENTES%' THEN 'ADOLESCENTES'
+            ELSE A.Despacho
+        END,
+        A.MesNumero,
+        A.Mes
+) AS Totales;
+
+";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalC6 = $row['Saldo'];
+
+// Formatear el número con puntos como separadores de miles
+$formattedValue = number_format($totalC6, 0, '', '.');
+
+// Agregar el signo de pesos
+$formattedValueWithCurrency = "$" . $formattedValue;
+
+// Imprimir el valor formateado
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+	;
+}
+	function event_Tablero_de_Control_Desde(&$params)
+	{
+	echo "<label for='Tablero_de_control_desdeId' style='margin-right: 20px;'>Desde: </label><br>";
+echo "<input type='month' id='Tablero_de_control_desdeId' name='tablero_control_desde' value='' required><br>";
+	;
+}
+	function event_Tablero_de_Control_Hasta(&$params)
+	{
+	echo "<label for='Tablero_de_control_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
+echo "<input type='month' id='Tablero_de_control_hastaId' name='tablero_control_hasta' value='' required><br>";
 	;
 }
 

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar9"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar9';if(!pageObj.buttonEventBefore['Buscar9']){pageObj.buttonEventBefore['Buscar9']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var tablero_control_desde=$('#Tablero_de_control_desdeId').val();var tablero_control_hasta=$('#Tablero_de_control_hastaId').val();params['tablero_control_desde']=tablero_control_desde;params['tablero_control_hasta']=tablero_control_hasta;}}
+if(!pageObj.buttonEventAfter['Buscar9']){pageObj.buttonEventAfter['Buscar9']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Buscar9"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar9"+"_"+Runner.genId();var button_Buscar9=new Runner.form.Button({id:this.id,btnName:"Buscar9"});button_Buscar9.init({args:[pageObj,proxy,pageid]});});};

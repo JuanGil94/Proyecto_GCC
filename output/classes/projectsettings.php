@@ -3832,6 +3832,20 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios" ] = "Reportes DataChild prescritos con resolución expedida_Solidarios";
 	$projectEntities[ "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes" ] = array( "url" => "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes", "type" => 6 );
 	$projectEntitiesReverse[ "reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes" ] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
+	$projectEntities[ "Transacciones Usuario" ] = array( "url" => "transacciones_usuario", "type" => 6 );
+	$projectEntitiesReverse[ "transacciones_usuario" ] = "Transacciones Usuario";
+	$projectEntities[ "Indicadores de Gestión" ] = array( "url" => "indicadores_de_gesti_n", "type" => 6 );
+	$projectEntitiesReverse[ "indicadores_de_gesti_n" ] = "Indicadores de Gestión";
+	$projectEntities[ "Tablero de Control" ] = array( "url" => "tablero_de_control", "type" => 6 );
+	$projectEntitiesReverse[ "tablero_de_control" ] = "Tablero de Control";
+	$projectEntities[ "Tablero de Control Total Procesos" ] = array( "url" => "tablero_de_control_total_procesos", "type" => 6 );
+	$projectEntitiesReverse[ "tablero_de_control_total_procesos" ] = "Tablero de Control Total Procesos";
+	$projectEntities[ "Tableros_RecaudoSeccional" ] = array( "url" => "tableros_recaudoseccional", "type" => 6 );
+	$projectEntitiesReverse[ "tableros_recaudoseccional" ] = "Tableros_RecaudoSeccional";
+	$projectEntities[ "Total Procesos" ] = array( "url" => "total_procesos", "type" => 9 );
+	$projectEntitiesReverse[ "total_procesos" ] = "Total Procesos";
+	$projectEntities[ "Total Recaudado" ] = array( "url" => "total_recaudado", "type" => 9 );
+	$projectEntitiesReverse[ "total_recaudado" ] = "Total Recaudado";
 }
 
 function findTable( $table ) {

@@ -12,7 +12,7 @@ VALUES
 	);
 				$topspresunci_n_prescripci_n["selectList"] = array(
 		"subtype" => "sql",
-		"sql" => "exec [dbo].[Procesos_Prescripcion] @UserName='cthomasb',@Mes='2024-05-01 00:00:00'"
+		"sql" => "exec [dbo].[Procesos_Prescripcion] @UserName=':session.UserNameF',@Mes=':session.presucion_pres_mes'"
 	);
 		$tables_data["Presunción Prescripción"][".operations"] = &$topspresunci_n_prescripci_n;
 ?>

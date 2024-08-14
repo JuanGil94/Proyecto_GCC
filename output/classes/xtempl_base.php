@@ -138,6 +138,16 @@ class XTempl_Base
 
 		if( !$hideAddedCharts ) //#9607 1. Temporary fix
 		{
+			$this->assign_function("total_procesos_chart","xt_showchart",
+			array(
+				"chartName"=>"total_procesos",
+				"table"=>"Total Procesos",
+				"ctype"=>"2DDoughnut"));
+			$this->assign_function("total_recaudado_chart","xt_showchart",
+			array(
+				"chartName"=>"total_recaudado",
+				"table"=>"Total Recaudado",
+				"ctype"=>"2DDoughnut"));
 		}
 
 
