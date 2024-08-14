@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar8"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar8';if(!pageObj.buttonEventBefore['Buscar8']){pageObj.buttonEventBefore['Buscar8']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var indicadores_ano=$('#Indicadores_Ano_Id').val();params['indicadores_ano']=indicadores_ano;}}
+if(!pageObj.buttonEventAfter['Buscar8']){pageObj.buttonEventAfter['Buscar8']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Buscar8"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar8"+"_"+Runner.genId();var button_Buscar8=new Runner.form.Button({id:this.id,btnName:"Buscar8"});button_Buscar8.init({args:[pageObj,proxy,pageid]});});};

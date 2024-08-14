@@ -674,6 +674,20 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("Tablero de Control Total Procesos" == $this->chrt_array['tables'][0])
+			return true;
+		if("Tableros_RecaudoSeccional" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

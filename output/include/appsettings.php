@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2689_1721142599";
+$projectBuildKey = "2698_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2689";
+$projectBuildNumber = "2698";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -921,6 +921,13 @@ $tableCaptions["Spanish"]["Recaudos_por_A_os"] = "Recaudos por Años";
 $tableCaptions["Spanish"]["Reportes"] = "Reportes";
 $tableCaptions["Spanish"]["Reportes_DataChild_prescritos_con_resoluci_n_expedida_Solidarios"] = "Reportes DataChild prescritos con resolución expedida_Solidarios";
 $tableCaptions["Spanish"]["Reportes_DataChild_prescritos_con_resoluci_n_expedida_Solidarios_Bienes"] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
+$tableCaptions["Spanish"]["Transacciones_Usuario"] = "Transacciones Usuario";
+$tableCaptions["Spanish"]["Indicadores_de_Gesti_n"] = "Indicadores de Gestión";
+$tableCaptions["Spanish"]["Tablero_de_Control"] = "Tablero de Control";
+$tableCaptions["Spanish"]["Tablero_de_Control_Total_Procesos"] = "Tablero de Control Total Procesos";
+$tableCaptions["Spanish"]["Tableros_RecaudoSeccional"] = "Tableros RecaudoSeccional";
+$tableCaptions["Spanish"]["Total_Procesos"] = "Total Procesos";
+$tableCaptions["Spanish"]["Total_Recaudado"] = "Total Recaudado";
 
 
 $globalEvents = new class_GlobalEvents;

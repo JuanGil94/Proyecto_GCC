@@ -64,7 +64,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspresunci_n_prescripci_n["Spanish"]["Saldo"] = "Saldo";
 	$fieldToolTipspresunci_n_prescripci_n["Spanish"]["Saldo"] = "";
 	$placeHolderspresunci_n_prescripci_n["Spanish"]["Saldo"] = "";
-	$fieldLabelspresunci_n_prescripci_n["Spanish"]["Prescripcion"] = "Prescripcion";
+	$fieldLabelspresunci_n_prescripci_n["Spanish"]["Prescripcion"] = "Días Prescripcion";
 	$fieldToolTipspresunci_n_prescripci_n["Spanish"]["Prescripcion"] = "";
 	$placeHolderspresunci_n_prescripci_n["Spanish"]["Prescripcion"] = "";
 	if (count($fieldToolTipspresunci_n_prescripci_n["Spanish"]))
@@ -164,7 +164,7 @@ $tdatapresunci_n_prescripci_n[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																							
+																																																																																																																																																			
 
 $tdatapresunci_n_prescripci_n[".ajaxCodeSnippetAdded"] = false;
 

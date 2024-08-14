@@ -167,8 +167,13 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event Presunci_n_Prescripci_n_Mes}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":""},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

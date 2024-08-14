@@ -499,6 +499,20 @@ function checkTableName($shortTName )
 		return true;
 	if ("reportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes" == $shortTName )
 		return true;
+	if ("transacciones_usuario" == $shortTName )
+		return true;
+	if ("indicadores_de_gesti_n" == $shortTName )
+		return true;
+	if ("tablero_de_control" == $shortTName )
+		return true;
+	if ("tablero_de_control_total_procesos" == $shortTName )
+		return true;
+	if ("tableros_recaudoseccional" == $shortTName )
+		return true;
+	if ("total_procesos" == $shortTName )
+		return true;
+	if ("total_recaudado" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -1881,6 +1895,69 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Transacciones Usuario");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Transacciones Usuario";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Indicadores de Gestión");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Indicadores de Gestión";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tablero de Control");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tablero de Control";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tablero de Control Total Procesos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tablero de Control Total Procesos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tableros_RecaudoSeccional");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tableros_RecaudoSeccional";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Total Procesos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Total Procesos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Total Recaudado");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Total Recaudado";
+	}
 	return $arr;
 }
 
@@ -2038,6 +2115,13 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Reportes";
 	$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios";
 	$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
+	$arr[]="Transacciones Usuario";
+	$arr[]="Indicadores de Gestión";
+	$arr[]="Tablero de Control";
+	$arr[]="Tablero de Control Total Procesos";
+	$arr[]="Tableros_RecaudoSeccional";
+	$arr[]="Total Procesos";
+	$arr[]="Total Recaudado";
 	return $arr;
 }
 
@@ -2081,6 +2165,10 @@ function GetFullFieldName($field, $table = "", $addAs = true, $connection = null
  */
 function GetChartType($shorttable)
 {
+	if($shorttable=="total_procesos")
+		return "2DDoughnut";
+	if($shorttable=="total_recaudado")
+		return "2DDoughnut";
 	return "";
 }
 
@@ -3406,6 +3494,41 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Transacciones Usuario" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Indicadores de Gestión" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Tablero de Control" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Tablero de Control Total Procesos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Tableros_RecaudoSeccional" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Total Procesos" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="Total Recaudado" )
+	{
+//	default permissions
+		return "S".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

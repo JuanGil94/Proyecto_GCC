@@ -1677,6 +1677,20 @@ class CrossTableWebReport
 			$isDB = true;
 		if("" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("Tablero de Control Total Procesos" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("Tableros_RecaudoSeccional" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

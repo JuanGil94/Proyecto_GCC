@@ -391,6 +391,13 @@ class ConnectionManager_Base
 		$connectionsIds["Reportes"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Reportes DataChild prescritos con resolución expedida_Solidarios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Transacciones Usuario"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Indicadores de Gestión"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Tablero de Control"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Tablero de Control Total Procesos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Tableros_RecaudoSeccional"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Total Procesos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Total Recaudado"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

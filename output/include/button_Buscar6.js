@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar6"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar6';if(!pageObj.buttonEventBefore['Buscar6']){pageObj.buttonEventBefore['Buscar6']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var transacciones_ano_mes=$('#Transacciones_Usuario_MesId').val();params['transacciones_ano_mes']=transacciones_ano_mes;}}
+if(!pageObj.buttonEventAfter['Buscar6']){pageObj.buttonEventAfter['Buscar6']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;window.location.reload();}}
+$('a[id="Buscar6"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar6"+"_"+Runner.genId();var button_Buscar6=new Runner.form.Button({id:this.id,btnName:"Buscar6"});button_Buscar6.init({args:[pageObj,proxy,pageid]});});};

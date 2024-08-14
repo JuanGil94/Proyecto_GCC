@@ -989,6 +989,34 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="Transacciones Usuario")
+		{
+			return 1;
+		}
+		if($table=="Indicadores de Gestión")
+		{
+			return 1;
+		}
+		if($table=="Tablero de Control")
+		{
+			return 1;
+		}
+		if($table=="Tablero de Control Total Procesos")
+		{
+			return 1;
+		}
+		if($table=="Tableros_RecaudoSeccional")
+		{
+			return 1;
+		}
+		if($table=="Total Procesos")
+		{
+			return 1;
+		}
+		if($table=="Total Recaudado")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1833,6 +1861,34 @@ function getCaptionTable($table)
 	if($table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes")
 	{
 		return "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
+	}
+	if($table=="Transacciones Usuario")
+	{
+		return "Transacciones Usuario";
+	}
+	if($table=="Indicadores de Gestión")
+	{
+		return "Indicadores de Gestión";
+	}
+	if($table=="Tablero de Control")
+	{
+		return "Tablero de Control";
+	}
+	if($table=="Tablero de Control Total Procesos")
+	{
+		return "Tablero de Control Total Procesos";
+	}
+	if($table=="Tableros_RecaudoSeccional")
+	{
+		return "Tableros RecaudoSeccional";
+	}
+	if($table=="Total Procesos")
+	{
+		return "Total Procesos";
+	}
+	if($table=="Total Recaudado")
+	{
+		return "Total Recaudado";
 	}
 	return $table;
 }
