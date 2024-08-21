@@ -119,6 +119,10 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Indicadores_de_Gesti_n_Saldo"] = true;
 		$this->events["Tablero_de_Control_Desde"] = true;
 		$this->events["Tablero_de_Control_Hasta"] = true;
+		$this->events["Tablero_de_Control_Cartera"] = true;
+		$this->events["Tablero_de_Control_GESTION_CARTERA_SECCIONAL"] = true;
+		$this->events["Tablero_de_Control_GESTION_DESDE"] = true;
+		$this->events["Tablero_de_Control_GESTION_HASTA"] = true;
 
 
 
@@ -4164,6 +4168,91 @@ echo "<input type='month' id='Tablero_de_control_desdeId' name='tablero_control_
 	{
 	echo "<label for='Tablero_de_control_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
 echo "<input type='month' id='Tablero_de_control_hastaId' name='tablero_control_hasta' value='' required><br>";
+	;
+}
+	function event_Tablero_de_Control_Cartera(&$params)
+	{
+	echo '<label for="cartera">Seleccione Cartera: </label>';
+echo '<select name="Tablero_Reporte_Cartera" id="Tablero_Reporte_Carteraid">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+	;
+}
+	function event_Tablero_de_Control_GESTION_CARTERA_SECCIONAL(&$params)
+	{
+	echo '<label for="cartera">Seleccione Cartera</label>';
+echo '<select name="Tablero_Cartera_gestion" id="Tablero_Cartera_gestion">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+	
+
+echo '<label for="seccional">Seleccione Seccional</label>';
+echo '<select name="Tablero_Seccional_gestion" id="Tablero_Seccional_gestion">';
+echo '<option value="0">Seleccione Seccional</option>';
+
+$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row = $result->fetchAssoc()) {
+        $seccionalId = $row['SeccionalId'];
+        $seccional = $row['Seccional'];
+        echo "<option value='$seccionalId'>$seccional</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+echo '</select>';
+
+	;
+}
+	function event_Tablero_de_Control_GESTION_DESDE(&$params)
+	{
+	echo "<label for='Tablero_de_control_gestion_desdeId' style='margin-right: 20px;'>Desde: </label><br>";
+echo "<input type='month' id='Tablero_de_control_gestion_desdeId' name='Tablero_de_control_gestion_desdeId' value='' required><br>";
+
+
+
+	;
+}
+	function event_Tablero_de_Control_GESTION_HASTA(&$params)
+	{
+	echo "<label for='Tablero_de_control_gestion_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
+echo "<input type='month' id='Tablero_de_control_gestion_hastaId' name='Tablero_de_control_gestion_hastaId' value='' required><br>";
 	;
 }
 

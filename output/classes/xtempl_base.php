@@ -148,6 +148,21 @@ class XTempl_Base
 				"chartName"=>"total_recaudado",
 				"table"=>"Total Recaudado",
 				"ctype"=>"2DDoughnut"));
+			$this->assign_function("procesos___mes_chart","xt_showchart",
+			array(
+				"chartName"=>"procesos___mes",
+				"table"=>"Procesos - Mes",
+				"ctype"=>"Line"));
+			$this->assign_function("recaudo___mes_chart","xt_showchart",
+			array(
+				"chartName"=>"recaudo___mes",
+				"table"=>"Recaudo - Mes",
+				"ctype"=>"Line"));
+			$this->assign_function("actuaciones_por_mes_chart","xt_showchart",
+			array(
+				"chartName"=>"actuaciones_por_mes",
+				"table"=>"Actuaciones Por Mes",
+				"ctype"=>"2DColumn"));
 		}
 
 

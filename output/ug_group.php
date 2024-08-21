@@ -164,11 +164,15 @@ $nonAdminTablesArr[] = "Reportes DataChild prescritos con resolución expedida_S
 $nonAdminTablesArr[] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 $nonAdminTablesArr[] = "Transacciones Usuario";
 $nonAdminTablesArr[] = "Indicadores de Gestión";
-$nonAdminTablesArr[] = "Tablero de Control";
+$nonAdminTablesArr[] = "Tablero de Control General";
 $nonAdminTablesArr[] = "Tablero de Control Total Procesos";
 $nonAdminTablesArr[] = "Tableros_RecaudoSeccional";
 $nonAdminTablesArr[] = "Total Procesos";
 $nonAdminTablesArr[] = "Total Recaudado";
+$nonAdminTablesArr[] = "Procesos - Mes";
+$nonAdminTablesArr[] = "Recaudo - Mes";
+$nonAdminTablesArr[] = "Tablero de Control Gestión";
+$nonAdminTablesArr[] = "Actuaciones Por Mes";
 
 $ug_connection = $cman->getForUserGroups();
 

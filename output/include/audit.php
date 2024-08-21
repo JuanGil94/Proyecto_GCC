@@ -1008,7 +1008,7 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="Tablero de Control")
+		if($table=="Tablero de Control General")
 		{
 			return false;
 		}
@@ -1025,6 +1025,22 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="Total Recaudado")
+		{
+			return false;
+		}
+		if($table=="Procesos - Mes")
+		{
+			return false;
+		}
+		if($table=="Recaudo - Mes")
+		{
+			return false;
+		}
+		if($table=="Tablero de Control Gestión")
+		{
+			return false;
+		}
+		if($table=="Actuaciones Por Mes")
 		{
 			return false;
 		}
@@ -1990,7 +2006,7 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="Tablero de Control")
+		if($table=="Tablero de Control General")
 		{
 			return false;
 		}
@@ -2007,6 +2023,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Total Recaudado")
+		{
+			return false;
+		}
+		if($table=="Procesos - Mes")
+		{
+			return false;
+		}
+		if($table=="Recaudo - Mes")
+		{
+			return false;
+		}
+		if($table=="Tablero de Control Gestión")
+		{
+			return false;
+		}
+		if($table=="Actuaciones Por Mes")
 		{
 			return false;
 		}

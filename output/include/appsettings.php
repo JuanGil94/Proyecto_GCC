@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2698_1721142599";
+$projectBuildKey = "2713_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2698";
+$projectBuildNumber = "2713";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -923,11 +923,15 @@ $tableCaptions["Spanish"]["Reportes_DataChild_prescritos_con_resoluci_n_expedida
 $tableCaptions["Spanish"]["Reportes_DataChild_prescritos_con_resoluci_n_expedida_Solidarios_Bienes"] = "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 $tableCaptions["Spanish"]["Transacciones_Usuario"] = "Transacciones Usuario";
 $tableCaptions["Spanish"]["Indicadores_de_Gesti_n"] = "Indicadores de Gestión";
-$tableCaptions["Spanish"]["Tablero_de_Control"] = "Tablero de Control";
+$tableCaptions["Spanish"]["Tablero_de_Control_General"] = "Tablero de Control General";
 $tableCaptions["Spanish"]["Tablero_de_Control_Total_Procesos"] = "Tablero de Control Total Procesos";
 $tableCaptions["Spanish"]["Tableros_RecaudoSeccional"] = "Tableros RecaudoSeccional";
 $tableCaptions["Spanish"]["Total_Procesos"] = "Total Procesos";
 $tableCaptions["Spanish"]["Total_Recaudado"] = "Total Recaudado";
+$tableCaptions["Spanish"]["Procesos___Mes"] = "Procesos - Mes";
+$tableCaptions["Spanish"]["Recaudo___Mes"] = "Recaudo - Mes";
+$tableCaptions["Spanish"]["Tablero_de_Control_Gesti_n"] = "Tablero de Control Gestión";
+$tableCaptions["Spanish"]["Actuaciones_Por_Mes"] = "Actuaciones Por Mes";
 
 
 $globalEvents = new class_GlobalEvents;
