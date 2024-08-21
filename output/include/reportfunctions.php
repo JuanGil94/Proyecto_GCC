@@ -997,7 +997,7 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
-		if($table=="Tablero de Control")
+		if($table=="Tablero de Control General")
 		{
 			return 1;
 		}
@@ -1014,6 +1014,22 @@ function testAdvSearch($table)
 			return 1;
 		}
 		if($table=="Total Recaudado")
+		{
+			return 1;
+		}
+		if($table=="Procesos - Mes")
+		{
+			return 1;
+		}
+		if($table=="Recaudo - Mes")
+		{
+			return 1;
+		}
+		if($table=="Tablero de Control Gestión")
+		{
+			return 1;
+		}
+		if($table=="Actuaciones Por Mes")
 		{
 			return 1;
 		}
@@ -1870,9 +1886,9 @@ function getCaptionTable($table)
 	{
 		return "Indicadores de Gestión";
 	}
-	if($table=="Tablero de Control")
+	if($table=="Tablero de Control General")
 	{
-		return "Tablero de Control";
+		return "Tablero de Control General";
 	}
 	if($table=="Tablero de Control Total Procesos")
 	{
@@ -1889,6 +1905,22 @@ function getCaptionTable($table)
 	if($table=="Total Recaudado")
 	{
 		return "Total Recaudado";
+	}
+	if($table=="Procesos - Mes")
+	{
+		return "Procesos - Mes";
+	}
+	if($table=="Recaudo - Mes")
+	{
+		return "Recaudo - Mes";
+	}
+	if($table=="Tablero de Control Gestión")
+	{
+		return "Tablero de Control Gestión";
+	}
+	if($table=="Actuaciones Por Mes")
+	{
+		return "Actuaciones Por Mes";
 	}
 	return $table;
 }

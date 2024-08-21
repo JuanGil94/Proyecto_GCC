@@ -12,7 +12,7 @@ VALUES
 	);
 				$topstotal_procesos["selectList"] = array(
 		"subtype" => "sql",
-		"sql" => "DECLARE @CarteraTipoId INT      = 1;
+		"sql" => "DECLARE @CarteraTipoId INT      = ':session.tablero_control_cartera';
 DECLARE @Desde  DATE = ':session.tablero_control_desdeid';
 DECLARE @Hasta   DATE = ':session.tablero_control_hastaid';
 

@@ -3836,8 +3836,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "transacciones_usuario" ] = "Transacciones Usuario";
 	$projectEntities[ "Indicadores de Gestión" ] = array( "url" => "indicadores_de_gesti_n", "type" => 6 );
 	$projectEntitiesReverse[ "indicadores_de_gesti_n" ] = "Indicadores de Gestión";
-	$projectEntities[ "Tablero de Control" ] = array( "url" => "tablero_de_control", "type" => 6 );
-	$projectEntitiesReverse[ "tablero_de_control" ] = "Tablero de Control";
+	$projectEntities[ "Tablero de Control General" ] = array( "url" => "tablero_de_control_general", "type" => 6 );
+	$projectEntitiesReverse[ "tablero_de_control_general" ] = "Tablero de Control General";
 	$projectEntities[ "Tablero de Control Total Procesos" ] = array( "url" => "tablero_de_control_total_procesos", "type" => 6 );
 	$projectEntitiesReverse[ "tablero_de_control_total_procesos" ] = "Tablero de Control Total Procesos";
 	$projectEntities[ "Tableros_RecaudoSeccional" ] = array( "url" => "tableros_recaudoseccional", "type" => 6 );
@@ -3846,6 +3846,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "total_procesos" ] = "Total Procesos";
 	$projectEntities[ "Total Recaudado" ] = array( "url" => "total_recaudado", "type" => 9 );
 	$projectEntitiesReverse[ "total_recaudado" ] = "Total Recaudado";
+	$projectEntities[ "Procesos - Mes" ] = array( "url" => "procesos___mes", "type" => 9 );
+	$projectEntitiesReverse[ "procesos___mes" ] = "Procesos - Mes";
+	$projectEntities[ "Recaudo - Mes" ] = array( "url" => "recaudo___mes", "type" => 9 );
+	$projectEntitiesReverse[ "recaudo___mes" ] = "Recaudo - Mes";
+	$projectEntities[ "Tablero de Control Gestión" ] = array( "url" => "tablero_de_control_gesti_n", "type" => 6 );
+	$projectEntitiesReverse[ "tablero_de_control_gesti_n" ] = "Tablero de Control Gestión";
+	$projectEntities[ "Actuaciones Por Mes" ] = array( "url" => "actuaciones_por_mes", "type" => 9 );
+	$projectEntitiesReverse[ "actuaciones_por_mes" ] = "Actuaciones Por Mes";
 }
 
 function findTable( $table ) {

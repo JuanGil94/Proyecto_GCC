@@ -2431,7 +2431,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("indicadores_de_gesti_n", " " . "Indicadores de Gestión");
-$table = "Tablero de Control";
+$table = "Tablero de Control General";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -2447,7 +2447,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("tablero_de_control", " " . "Tablero de Control");
+$tables[$table] = array("tablero_de_control_general", " " . "Tablero de Control General");
 $table = "Tablero de Control Total Procesos";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -2496,6 +2496,44 @@ if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($t
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("total_recaudado", " " . "Total Recaudado");
+$table = "Procesos - Mes";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("procesos___mes", " " . "Procesos - Mes");
+$table = "Recaudo - Mes";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("recaudo___mes", " " . "Recaudo - Mes");
+$table = "Tablero de Control Gestión";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("tablero_de_control_gesti_n", " " . "Tablero de Control Gestión");
+$table = "Actuaciones Por Mes";
+$mask="";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("actuaciones_por_mes", " " . "Actuaciones Por Mes");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

@@ -503,7 +503,7 @@ function checkTableName($shortTName )
 		return true;
 	if ("indicadores_de_gesti_n" == $shortTName )
 		return true;
-	if ("tablero_de_control" == $shortTName )
+	if ("tablero_de_control_general" == $shortTName )
 		return true;
 	if ("tablero_de_control_total_procesos" == $shortTName )
 		return true;
@@ -512,6 +512,14 @@ function checkTableName($shortTName )
 	if ("total_procesos" == $shortTName )
 		return true;
 	if ("total_recaudado" == $shortTName )
+		return true;
+	if ("procesos___mes" == $shortTName )
+		return true;
+	if ("recaudo___mes" == $shortTName )
+		return true;
+	if ("tablero_de_control_gesti_n" == $shortTName )
+		return true;
+	if ("actuaciones_por_mes" == $shortTName )
 		return true;
 	return false;
 }
@@ -1915,12 +1923,12 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Tablero de Control");
+		$strPerm = GetUserPermissions("Tablero de Control General");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="Tablero de Control";
+		$arr[]="Tablero de Control General";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -1957,6 +1965,42 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="Total Recaudado";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Procesos - Mes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Procesos - Mes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Recaudo - Mes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Recaudo - Mes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Tablero de Control Gestión");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Tablero de Control Gestión";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Actuaciones Por Mes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Actuaciones Por Mes";
 	}
 	return $arr;
 }
@@ -2117,11 +2161,15 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes";
 	$arr[]="Transacciones Usuario";
 	$arr[]="Indicadores de Gestión";
-	$arr[]="Tablero de Control";
+	$arr[]="Tablero de Control General";
 	$arr[]="Tablero de Control Total Procesos";
 	$arr[]="Tableros_RecaudoSeccional";
 	$arr[]="Total Procesos";
 	$arr[]="Total Recaudado";
+	$arr[]="Procesos - Mes";
+	$arr[]="Recaudo - Mes";
+	$arr[]="Tablero de Control Gestión";
+	$arr[]="Actuaciones Por Mes";
 	return $arr;
 }
 
@@ -2169,6 +2217,12 @@ function GetChartType($shorttable)
 		return "2DDoughnut";
 	if($shorttable=="total_recaudado")
 		return "2DDoughnut";
+	if($shorttable=="procesos___mes")
+		return "Line";
+	if($shorttable=="recaudo___mes")
+		return "Line";
+	if($shorttable=="actuaciones_por_mes")
+		return "2DColumn";
 	return "";
 }
 
@@ -3505,7 +3559,7 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="Tablero de Control" )
+	if( $table=="Tablero de Control General" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -3526,6 +3580,26 @@ function GetUserPermissionsStatic( $table )
 		return "S".$extraPerm;
 	}
 	if( $table=="Total Recaudado" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="Procesos - Mes" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="Recaudo - Mes" )
+	{
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="Tablero de Control Gestión" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Actuaciones Por Mes" )
 	{
 //	default permissions
 		return "S".$extraPerm;
