@@ -1391,6 +1391,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
 				
+				
+			{"text":"   \n<script>\n$(document).ready(function() {\n    $('#BDME_Cancelacion_desdeId').val(sessionStorage.getItem('desde'));\n    $('#BDME_Cancelacion_hastaId').val(sessionStorage.getItem('hasta'));\n});\n\n</script>\n\n\n","hidden":"{$item_hide_text}","isHtml":true},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',

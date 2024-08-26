@@ -486,6 +486,16 @@ if($buttId=='Buscar10')
 	}
 	buttonHandler_Buscar10($params);
 }
+if($buttId=='Buscar11')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Buscar11($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -3030,7 +3040,7 @@ function buttonHandler_BDME_Actualiza_Buscar($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 			// Calcular el primer y último día del mes anterior
-$primerDiaDelMesAnterior = date('Y-m-01', strtotime('first day of last month'));
+$primerDiaDelMesAnterior = date('Y-m-d', strtotime('first day of last month'));
 $ultimoDiaDelMesAnterior = date('Y-m-t', strtotime('first day of last month'));
 
 // Obtener los valores de los parámetros
@@ -3049,15 +3059,12 @@ if (empty($hasta)) {
 
 
 		// Guardar los valores recibidos en variables de sesión
-    $_SESSION['desde'] = $params["desde"].'-01';
-    $_SESSION['hasta'] = $params["hasta"].'-01';
+    $_SESSION['desde'] = $params["desde"];
+    $_SESSION['hasta'] = $params["hasta"];
     $_SESSION['sancionado'] = $params["sancionado"];
     $_SESSION['doc_sancionado'] = $params["doc_sancionado"];
 
-    echo "Desde: " . $_SESSION['desde'] . "<br>";
-    echo "Hasta: " . $_SESSION['hasta'] . "<br>";
-    echo "Sancionado: " . $_SESSION['sancionado'] . "<br>";
-    echo "Doc Sancionado: " . $_SESSION['doc_sancionado'] . "<br>";;
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -3131,12 +3138,10 @@ if (empty($hasta)) {
 
 
 		// Guardar los valores recibidos en variables de sesión
-    $_SESSION['Cancelacion_desde'] = $params["Cancelacion_desde"].'-01';
-    $_SESSION['Cancelacion_hasta'] = $params["Cancelacion_hasta"].'-01';
+    $_SESSION['Cancelacion_desde'] = $params["Cancelacion_desde"];
+    $_SESSION['Cancelacion_hasta'] = $params["Cancelacion_hasta"];
 
 
-    echo "Desde: " . $_SESSION['Cancelacion_desde'] . "<br>";
-    echo "Hasta: " . $_SESSION['Cancelacion_hasta'] . "<br>";
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -3193,7 +3198,7 @@ function buttonHandler_Buscar1($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 			
 		// Guardar los valores recibidos en variables de sesión
-    $_SESSION['mesExcluidos'] = $params["mesExcluidos"].'-01';
+    $_SESSION['mesExcluidos'] = $params["mesExcluidos"];
     $_SESSION['sancionadoExcluidos'] = $params["sancionadoExcluidos"];
     $_SESSION['documentoExcluidos'] = $params["documentoExcluidos"];
 
@@ -3252,7 +3257,7 @@ function buttonHandler_Buscar2($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$_SESSION['mesDeudor'] = $params["mesDeudor"].'-01';
+	$_SESSION['mesDeudor'] = $params["mesDeudor"];
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -3307,7 +3312,7 @@ function buttonHandler_Buscar3($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$_SESSION['mesIncumplimiento'] = $params["mesIncumplimiento"].'-01';
+	$_SESSION['mesIncumplimiento'] = $params["mesIncumplimiento"];
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -3364,7 +3369,7 @@ function buttonHandler_BuscarR($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	
 		// Guardar los valores recibidos en variables de sesión
-    $_SESSION['mes_report_Semestral'] = $params['mes_report_Semestral'].'-01';
+    $_SESSION['mes_report_Semestral'] = $params['mes_report_Semestral'];
     $_SESSION['sancionado_report_Semestral'] = $params['sancionado_report_Semestral'];
     $_SESSION['doc_sancionado_report_semestral'] = $params['doc_sancionado_report_semestral'];
 ;
@@ -3422,8 +3427,8 @@ function buttonHandler_BuscarRetiros($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 		
-	$_SESSION['retiros_desde'] = $params['retiros_desde'].'-01';
-	$_SESSION['retiros_hasta'] = $params['retiros_hasta'].'-01';;
+	$_SESSION['retiros_desde'] = $params['retiros_desde'];
+	$_SESSION['retiros_hasta'] = $params['retiros_hasta'];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -4156,43 +4161,21 @@ function buttonHandler_Buscar9($params)
         $currentDate->modify('-1 month'); // Resta un mes a la fecha actual
         $defaultValue = $currentDate->format('Y-m'); // Formato YYYY-MM
 				 $_SESSION['tablero_control_desdeid'] = $defaultValue.'-01';
-    } else if (isset($params['tablero_control_desde'])) {
-    $fecha = $params['tablero_control_desde'];
-
-    // Verificar si el valor está en el formato YYYY-MM
-    if (preg_match('/^\d{4}-(0[1-9]|1[0-2])$/', $fecha)) {
-        // Si el formato es correcto, agregar el día 01 y guardarlo en la sesión
-        $_SESSION['tablero_control_desdeid'] = $fecha . '-01';
-    } else {
-        // Si el formato es incorrecto, usar la fecha del mes pasado como valor por defecto
-        $currentDate = new DateTime();
-        $currentDate->modify('-1 month'); // Resta un mes a la fecha actual
-        $defaultValue = $currentDate->format('Y-m'); // Formato YYYY-MM
-        $_SESSION['tablero_control_desdeid'] = $defaultValue . '-01';
-    }
-}
+    }else{
+				$_SESSION['tablero_control_desdeid'] = $params['tablero_control_desde'].'-01';
+		 }
 		    // Calcula el valor predeterminado para 'tablero_control_hasta'
     if (empty($params['tablero_control_hasta'])) {
         $currentDate = new DateTime();
         //$currentDate->modify('last day of this month'); // Último día del mes actual
         $defaultHasta = $currentDate->format('Y-m-d'); // Formato YYYY-MM-DD
 				 $_SESSION['tablero_control_hastaid'] = $defaultHasta;
-    } if (isset($params['tablero_control_hasta'])) {
-    $fecha2 = $params['tablero_control_hasta'];
+    }else{
+				$_SESSION['tablero_control_hastaid'] = $params['tablero_control_hasta'].'-01';
+		 }
 
-    // Verificar si el valor está en el formato YYYY-MM
-    if (preg_match('/^\d{4}-(0[1-9]|1[0-2])$/', $fecha2)) {
-        // Si el formato es correcto, agregar el día 01 y guardarlo en la sesión
-        $_SESSION['tablero_control_hastaid'] = $fecha2 . '-01';
-    } else {
-        // Si el formato es incorrecto, usar la fecha del mes pasado como valor por defecto
-        $currentDate = new DateTime();
-        $currentDate->modify('-1 month'); // Resta un mes a la fecha actual
-        $defaultValue = $currentDate->format('Y-m'); // Formato YYYY-MM
-        $_SESSION['tablero_control_hastaid'] = $defaultValue . '-01';
-    }
-}
 		
+
 
     ;
 	RunnerContext::pop();
@@ -4313,6 +4296,106 @@ $cartera = $row['CarteraTipoId'];
 $seccional = $row['SeccionalId'];
 $_SESSION['tablero_control_cartera'] = $cartera;
 $_SESSION['tablero_control_seccionalid'] = $seccional;
+}
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Buscar11($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	$_SESSION['mesHistorico'] = $params['mesHistorico'];
+
+
+$username = $_SESSION["UserNameF"];
+
+
+//DECLARE @Cartera INT = ':session.cateraid';
+//DECLARE @Seccional INT =':session.seccionalid';   
+
+		if (isset($params['cartera_id_report']) && $params['cartera_id_report'] != '0') {
+    // Guardar el valor en una variable de sesión
+			$_SESSION['cateraid']  = $params['cartera_id_report'];
+		}
+
+// Verificar si el parámetro 'seccional_id_report' está definido y si su valor es diferente de 0
+if (isset($params['seccional_id_report']) && $params['seccional_id_report'] != '0') {
+    // Guardar el valor en una variable de sesión
+    $_SESSION['seccionalid']  = $params['seccional_id_report'];
+		// Verificar si el parámetro 'seccional_id_report' está definido y si su valor es diferente de 0
+
+} else{
+	
+	//$setSessionValues();
+$sql = "SELECT TOP (1) 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[UserName] AS [UserName], 
+    [Extent1].[HorarioId] AS [HorarioId], 
+    [Extent1].[SeccionalId] AS SeccionalId, 
+    [Extent1].[AbogadoId] AS [AbogadoId], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[CarteraTipoId] AS CarteraTipoId, 
+    [Extent1].[Fecha] AS [Fecha], 
+    [Extent1].[Nombre] AS [Nombre]
+    FROM [dbo].[UserProfile] AS [Extent1]
+    WHERE [Extent1].[UserName] = '$username'";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$cartera = $row['CarteraTipoId'];
+$seccional = $row['SeccionalId'];
+$_SESSION['cateraid'] = $cartera;
+$_SESSION['seccionalid'] = $seccional;
 }
 ;
 	RunnerContext::pop();

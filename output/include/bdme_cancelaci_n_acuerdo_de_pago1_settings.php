@@ -155,7 +155,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																						
+																																																																																																																																																									
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".ajaxCodeSnippetAdded"] = false;
 
@@ -185,7 +185,6 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".googleLikeFields"][] = "Sancionado";
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".googleLikeFields"][] = "Deuda";
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".googleLikeFields"][] = "Causal";
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".googleLikeFields"][] = "Estado";
-$tdatabdme_cancelaci_n_acuerdo_de_pago1[".googleLikeFields"][] = "SancionadoId";
 
 
 

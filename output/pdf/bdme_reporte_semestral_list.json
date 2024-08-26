@@ -207,6 +207,50 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -1298,6 +1342,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"<script>\n$(document).ready(function() {\n    $('#BDME_Reporte_Semestral_MesId').val(sessionStorage.getItem('mesSemestral'));\n    $('#BDME_Reporte_Semestral_SancionadoId').val(sessionStorage.getItem('sancionado_report_Semestral'));\n    $('#BDME_Reporte_Semestral_Doc_SancionadoId').val(sessionStorage.getItem('doc_sancionado_report_semestral'));\n});\n\n</script>","hidden":"{$item_hide_text}","isHtml":true},
+				
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
 				

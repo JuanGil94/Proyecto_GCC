@@ -1654,7 +1654,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event BDME_Reporte_Semestral_Datachild_Contar}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{"text":"\n    <strong>\n        {$total_table}\n    </strong>\n","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1760,7 +1760,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event BDME_Reporte_Semestral_Datachild_Total}","hidden":"{$item_hide_snippet1}","isHtml":true},
+			{"text":"\n    <strong>\n         {$total_sum}\n    </strong>","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],

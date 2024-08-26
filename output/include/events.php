@@ -123,6 +123,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Tablero_de_Control_GESTION_CARTERA_SECCIONAL"] = true;
 		$this->events["Tablero_de_Control_GESTION_DESDE"] = true;
 		$this->events["Tablero_de_Control_GESTION_HASTA"] = true;
+		$this->events["Base_de_Datos___Historico_snippet"] = true;
+		$this->events["Base_de_Datos___Historico_Seccional_Cartera"] = true;
 
 
 
@@ -824,7 +826,7 @@ echo "<label value='".$_SESSION["fechaIn"]."' style='margin-right: 20px;'>Selecc
 $ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
 
 // Mostrar el input con el valor calculado
-echo "<input type='month' id='BDME_Actualiza_desdeId' name='desde' value='" . date('Y-m', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
+echo "<input type='date' id='BDME_Actualiza_desdeId' name='desde' value='" . date('Y-m-d', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
 
    // Agregar el script de validación
     echo "
@@ -847,7 +849,7 @@ echo "<input type='month' id='BDME_Actualiza_desdeId' name='desde' value='" . da
 	{
 	
 echo "<label for='BDME_Actualiza_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
-echo "<input type='month' id='BDME_Actualiza_hastaId' name='hasta' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Actualiza_hastaId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_BDME_Actualizaci_n_Sansionado(&$params)
@@ -870,7 +872,7 @@ echo "<input type='text' id='BDME_Actualiza_SancionadoId' value=''>";
 $ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
 
 // Mostrar el input con el valor calculado
-echo "<input type='month' id='BDME_Cancelacion_desdeId' name='desde' value='" . date('Y-m', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
+echo "<input type='date' id='BDME_Cancelacion_desdeId' name='desde' value='" . date('Y-m-d', strtotime($ultimo_dia_mes_anterior)) . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 
   
 	;
@@ -878,14 +880,14 @@ echo "<input type='month' id='BDME_Cancelacion_desdeId' name='desde' value='" . 
 	function event_BDME_Cancelaci_n_Acuerdo_de_Pago_Hasta(&$params)
 	{
 	echo "<label for='BDME_Cancelacion_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
-echo "<input type='month' id='BDME_Cancelacion_hastaId' name='hasta' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Cancelacion_hastaId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 
 	;
 }
 	function event_BDME_Excluidos_Mes(&$params)
 	{
 	echo "<label for='BDME_Excluidos_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='month' id='BDME_Excluidos_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Excluidos_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_BDME_Excluidos_Sancionado(&$params)
@@ -1022,19 +1024,19 @@ echo "<strong>" ."Procesos: ". $totalProcesos . "</strong>";
 	function event_BDME_Gu_a_del_Deudor_Moroso_Mes(&$params)
 	{
 	echo "<label for='BDME_Guia_Deudor_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='month' id='BDME_Guia_Deudor_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Guia_Deudor_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_BDME_Incumplimiento_Acuerdo_de_Pago_Semestral_Mes(&$params)
 	{
 	echo "<label for='BDME_Incumplimiento_pago_semestral_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='month' id='BDME_Incumplimiento_pago_semestral_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Incumplimiento_pago_semestral_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_BDME_Reporte_Semestral_Mes(&$params)
 	{
 	echo "<label for='BDME_Reporte_Semestral_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='month' id='BDME_Reporte_Semestral_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Reporte_Semestral_MesId' name='mes' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}' required><br>";
 	;
 }
 	function event_BDME_Reporte_Semestral_Sancionado(&$params)
@@ -1114,9 +1116,10 @@ echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
 	{
 	// Obtener el último día del mes anterior
 $ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
-
+echo "<label for='BDME_Retiros_desdeId' style='margin-right: 20px;'>Desde: </label><br>";
 // Mostrar el input con el valor calculado
-echo "<input type='month' id='BDME_Retiros_desdeId' name='desde' value='" . date('Y-m', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
+echo "<input type='date' id='BDME_Retiros_desdeId' name='desde' value='" . date('Y-m-d', strtotime($ultimo_dia_mes_anterior)) . "' pattern='\\d{4}-\\d{2}-\\d{2}' required><br>";
+
 
 	;
 }
@@ -1124,7 +1127,7 @@ echo "<input type='month' id='BDME_Retiros_desdeId' name='desde' value='" . date
 	{
 	
 echo "<label for='BDME_Retiros_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
-echo "<input type='month' id='BDME_Retiros_hastaId' name='hasta' value='" . date('Y-m') . "' required><br>";
+echo "<input type='date' id='BDME_Retiros_hastaId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}' required><br>";
 	;
 }
 	function event_BDME_Retiros_DataChild_Contar(&$params)
@@ -4253,6 +4256,71 @@ echo "<input type='month' id='Tablero_de_control_gestion_desdeId' name='Tablero_
 	{
 	echo "<label for='Tablero_de_control_gestion_hastaId' style='margin-right: 20px;'>Hasta: </label><br>";
 echo "<input type='month' id='Tablero_de_control_gestion_hastaId' name='Tablero_de_control_gestion_hastaId' value='' required><br>";
+	;
+}
+	function event_Base_de_Datos___Historico_snippet(&$params)
+	{
+	echo "<label for='BD_Historico_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='date' id='BD_Historico_MesId' name='mes' value='" . date('Y-m-d') . "' required><br>";
+	;
+}
+	function event_Base_de_Datos___Historico_Seccional_Cartera(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+// Ejecutar la consulta
+
+
+//if($U_user == cthomasb){
+
+  
+echo'<br>';
+echo '<label for="cartera">Seleccione Cartera</label>';
+echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+
+echo '<label for="seccional">Seleccione Seccional</label>';
+echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
+echo '<option value="0">Seleccione Seccional</option>';
+
+$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row = $result->fetchAssoc()) {
+        $seccionalId = $row['SeccionalId'];
+        $seccional = $row['Seccional'];
+        echo "<option value='$seccionalId'>$seccional</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+echo '</select>';
+
+echo'</br>';
+
+//}
 	;
 }
 

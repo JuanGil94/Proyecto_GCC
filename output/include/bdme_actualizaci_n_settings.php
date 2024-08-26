@@ -155,7 +155,7 @@ $tdatabdme_actualizaci_n[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																						
+																																																																																																																																																									
 
 $tdatabdme_actualizaci_n[".ajaxCodeSnippetAdded"] = false;
 
@@ -185,7 +185,6 @@ $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Sancionado";
 $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Deuda";
 $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Actualizacion";
 $tdatabdme_actualizaci_n[".googleLikeFields"][] = "Estado";
-$tdatabdme_actualizaci_n[".googleLikeFields"][] = "SancionadoId";
 
 
 

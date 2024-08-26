@@ -1062,6 +1062,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades1"]["dbo_despachos5.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades1"]["dbo_despachos5.CiudadId"]["edit"] = array("table" => "dbo.Despachos5", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["base_de_datos___historico.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["base_de_datos___historico.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["base_de_datos___historico.ConceptoId"]["edit"] = array("table" => "Base de Datos - Historico", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["base_de_datos___historico.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["base_de_datos___historico.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["base_de_datos___historico.EstadoId"]["edit"] = array("table" => "Base de Datos - Historico", "field" => "EstadoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
 			$lookupTableLinks["dbo.Seccionales"] = array();
 		}

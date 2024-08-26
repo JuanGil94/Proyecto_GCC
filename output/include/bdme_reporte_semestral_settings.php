@@ -152,7 +152,7 @@ $tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																						
+																																																																																																																																																									
 
 $tdatabdme_reporte_semestral[".ajaxCodeSnippetAdded"] = false;
 
@@ -181,7 +181,6 @@ $tdatabdme_reporte_semestral[".googleLikeFields"][] = "TipoDocumento";
 $tdatabdme_reporte_semestral[".googleLikeFields"][] = "Sancionado";
 $tdatabdme_reporte_semestral[".googleLikeFields"][] = "Deuda";
 $tdatabdme_reporte_semestral[".googleLikeFields"][] = "Estado";
-$tdatabdme_reporte_semestral[".googleLikeFields"][] = "SancionadoId";
 
 
 
@@ -1688,6 +1687,7 @@ $tdatabdme_reporte_semestral[".sqlquery"] = $queryData_bdme_reporte_semestral;
 
 
 
-$tdatabdme_reporte_semestral[".hasEvents"] = false;
+include_once(getabspath("include/bdme_reporte_semestral_events.php"));
+$tdatabdme_reporte_semestral[".hasEvents"] = true;
 
 ?>

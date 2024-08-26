@@ -175,18 +175,6 @@ pdfDocument = {
 			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
-			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
 			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
@@ -203,6 +191,12 @@ pdfDocument = {
 				
 				
 			{"text":{$SancionadoDocumento_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
 				
 		  ],
   "border": [ false, false, false, false ],

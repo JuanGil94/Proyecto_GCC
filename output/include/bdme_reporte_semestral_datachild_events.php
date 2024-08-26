@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeShowList"]=true;
+
 
 	}
 
@@ -75,6 +77,143 @@ function BeforeProcessList($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, $pageObject)
+{
+
+		
+		$sancionadoId = $_SESSION['SancionadoIdData_report_Semestral'];
+
+    // Ejecutar la consulta
+    $rs = CustomQuery("
+				SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+    ");
+
+    // Generar el HTML de la tabla
+    $tableHTML = '<table class="custom-table">
+        <thead>
+            <tr>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>';
+
+    while($record = db_fetch_array($rs)) {
+        $tableHTML .= '<tr>';
+        $tableHTML .= '<td>' . htmlspecialchars($record['TotalC6']) . '</td>';
+        $tableHTML .= '</tr>';
+    }
+
+    $tableHTML .= '</tbody></table>';
+		
+		// Ejecutar la consulta
+$rs2 = CustomQuery("
+    SELECT SUM(Obligacion + Costas + Intereses) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+");
+
+// Generar el HTML2 de la tabla
+$tableHTML2 = '<table class="custom-table">
+    <thead>
+        <tr>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>';
+
+// Verificar si se obtuvo un resultado
+if ($record2 = db_fetch_array($rs2)) {
+    $tableHTML2 .= '<tr>';
+    
+    // Formatear el número con puntos como separadores de miles
+    $formattedValue = number_format($record2['TotalC6'], 0, '', '.');
+    
+    // Agregar el signo de pesos
+    $formattedValueWithCurrency = "$" . $formattedValue;
+
+    // Añadir el valor formateado a la tabla
+    $tableHTML2 .= '<td>' . htmlspecialchars($formattedValueWithCurrency) . '</td>';
+    $tableHTML2 .= '</tr>';
+} else {
+    // Manejar el caso donde no hay resultados
+    $tableHTML2 .= '<tr><td>No se encontraron resultados</td></tr>';
+}
+
+$tableHTML2 .= '</tbody></table>';
+
+    // Asignar el HTML generado al objeto xt
+    $xt->assign("total_table", $tableHTML);
+		$xt->assign("total_sum", $tableHTML2);
+
+
+
+
+;
+} // function BeforeShowList
+
 		
 		
 		

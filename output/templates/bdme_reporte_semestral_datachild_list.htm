@@ -1906,9 +1906,13 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event BDME_Reporte_Semestral_Datachild_Contar}
-</span>	
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	
+    <strong>
+        {$total_table}
+    </strong>
+</span>
+	
 	</td>
 	{END cellblock_grid_footcell_field1}
 									{BEGIN cellblock_grid_footcell_field2}
@@ -1969,9 +1973,12 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event BDME_Reporte_Semestral_Datachild_Total}
-</span>	
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	
+    <strong>
+         {$total_sum}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field5}
 									{BEGIN cellblock_grid_footcell_field6}

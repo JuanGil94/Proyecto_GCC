@@ -155,7 +155,7 @@ $tdatabdme_retiros1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																						
+																																																																																																																																																									
 
 $tdatabdme_retiros1[".ajaxCodeSnippetAdded"] = false;
 
@@ -1827,6 +1827,7 @@ $tdatabdme_retiros1[".sqlquery"] = $queryData_bdme_retiros1;
 
 
 
-$tdatabdme_retiros1[".hasEvents"] = false;
+include_once(getabspath("include/bdme_retiros1_events.php"));
+$tdatabdme_retiros1[".hasEvents"] = true;
 
 ?>
