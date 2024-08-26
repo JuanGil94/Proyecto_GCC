@@ -115,6 +115,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
 						</div>
 		{END searchCtrlBlock_ConceptoId}
+																{BEGIN searchCtrlBlock_CarteraTipoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
+			<label>{$label Base_de_Datos___Historico CarteraTipoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipoId}
+																{BEGIN searchCtrlBlock_SeccionalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
+			<label>{$label Base_de_Datos___Historico SeccionalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
+						</div>
+		{END searchCtrlBlock_SeccionalId}
 																{BEGIN searchCtrlBlock_SancionadoDocumento}
 
 
@@ -193,58 +219,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
 						</div>
 		{END searchCtrlBlock_Fecha}
-																{BEGIN searchCtrlBlock_Saldo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Saldo}" {$filterRow_attrs_Saldo}>
-			<label>{$label Base_de_Datos___Historico Saldo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Saldo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Saldo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Saldo}</span>
-						</div>
-		{END searchCtrlBlock_Saldo}
-																{BEGIN searchCtrlBlock_Intereses}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Intereses}" {$filterRow_attrs_Intereses}>
-			<label>{$label Base_de_Datos___Historico Intereses }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Intereses}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Intereses}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Intereses}</span>
-						</div>
-		{END searchCtrlBlock_Intereses}
-																{BEGIN searchCtrlBlock_Costas}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Costas}" {$filterRow_attrs_Costas}>
-			<label>{$label Base_de_Datos___Historico Costas }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Costas}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Costas}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
-						</div>
-		{END searchCtrlBlock_Costas}
-																{BEGIN searchCtrlBlock_Obligacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Obligacion}" {$filterRow_attrs_Obligacion}>
-			<label>{$label Base_de_Datos___Historico Obligacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Obligacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
-						</div>
-		{END searchCtrlBlock_Obligacion}
 																{BEGIN searchCtrlBlock_Numero}
 
 
@@ -330,6 +304,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -354,6 +334,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="base_de_datos___historico_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -362,12 +351,22 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="base_de_datos___historico_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
 				
-		Búsqueda avanzada		
+		Mostrar panel de búsqueda		
 		</a>
 	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
 							<li role="separator" class="divider"></li>							{BEGIN export_link}
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
@@ -529,11 +528,23 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event Base_de_Datos___Historico_snippet}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event Base_de_Datos___Historico_Seccional_Cartera}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Buscar11" href="javascript:void(0)" typeid="ib" >
+							Buscar			</a>
+</span>
+			{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
@@ -665,7 +676,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoDocumento"]:before {
 		content: "{$label Base_de_Datos___Historico SancionadoDocumento}";
 	}
-	}
+			}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -1569,7 +1580,7 @@
 			 
 				<div 
 	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
-	class="r-align-center r-ori-vert			col-md-12
+	class="r-align-center			col-md-12
 	
 ">
 		 
@@ -1578,6 +1589,15 @@
 {$pagination}
 </span>
 {END pagination_block}
+	 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	<script>
+$(document).ready(function() {
+    $('#Reporte_Carteraid').val(sessionStorage.getItem('cartera_id_report'));
+    $('#Reporte_Seccionalid').val(sessionStorage.getItem('seccional_id_report'));
+$('#BD_Historico_MesId').val(sessionStorage.getItem('mesHistorico'));
+});
+</script></span>
 		</div>					</div>
 			</div>		
 {END below-grid_block}

@@ -1391,6 +1391,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
 				
+				
+			{"text":"<script>\n$(document).ready(function() {\n    $('#BDME_Retiros_desdeId').val(sessionStorage.getItem('retiros_desde'));\n    $('#BDME_Retiros_hastaId').val(sessionStorage.getItem('retiros_hasta'));\n});\n\n</script>","hidden":"{$item_hide_text}","isHtml":true},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',

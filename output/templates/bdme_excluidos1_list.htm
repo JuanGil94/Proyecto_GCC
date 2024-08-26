@@ -308,6 +308,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="bdme_excluidos1_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -316,12 +325,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="bdme_excluidos1_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -1461,7 +1464,7 @@
 			 
 				<div 
 	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
-	class="r-align-center r-ori-vert			col-md-12
+	class="r-align-center			col-md-12
 	
 ">
 		 
@@ -1470,6 +1473,13 @@
 {$pagination}
 </span>
 {END pagination_block}
+	 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	<script>
+$(document).ready(function() {
+    $('#BDME_Excluidos_MesId').val(sessionStorage.getItem('mes'));
+});
+</script></span>
 		</div>					</div>
 			</div>		
 {END below-grid_block}

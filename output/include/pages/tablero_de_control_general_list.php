@@ -784,7 +784,6 @@ $(document).ready(function() {
     $(\'#Tablero_de_control_desdeId\').val(sessionStorage.getItem(\'tablero_control_desde\'));
     $(\'#Tablero_de_control_hastaId\').val(sessionStorage.getItem(\'tablero_control_hasta\'));
     $(\'#Tablero_Reporte_Carteraid\').val(sessionStorage.getItem(\'tablero_control_cartera\'));
-    //$(\'#Tablero_Seccional_general\').val(sessionStorage.getItem(\'tablero_control_seccional\'));
 });
 </script>
 ',

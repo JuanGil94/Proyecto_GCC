@@ -25,10 +25,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsbase_de_datos___historico["Spanish"] = array();
 	$placeHoldersbase_de_datos___historico["Spanish"] = array();
 	$pageTitlesbase_de_datos___historico["Spanish"] = array();
-	$fieldLabelsbase_de_datos___historico["Spanish"]["ConceptoId"] = "Concepto Id";
+	$fieldLabelsbase_de_datos___historico["Spanish"]["ConceptoId"] = "Concepto";
 	$fieldToolTipsbase_de_datos___historico["Spanish"]["ConceptoId"] = "";
 	$placeHoldersbase_de_datos___historico["Spanish"]["ConceptoId"] = "";
-	$fieldLabelsbase_de_datos___historico["Spanish"]["EstadoId"] = "Estado Id";
+	$fieldLabelsbase_de_datos___historico["Spanish"]["EstadoId"] = "Estado";
 	$fieldToolTipsbase_de_datos___historico["Spanish"]["EstadoId"] = "";
 	$placeHoldersbase_de_datos___historico["Spanish"]["EstadoId"] = "";
 	$fieldLabelsbase_de_datos___historico["Spanish"]["Numero"] = "Numero";
@@ -64,6 +64,12 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbase_de_datos___historico["Spanish"]["SancionadoDocumento"] = "Sancionado Documento";
 	$fieldToolTipsbase_de_datos___historico["Spanish"]["SancionadoDocumento"] = "";
 	$placeHoldersbase_de_datos___historico["Spanish"]["SancionadoDocumento"] = "";
+	$fieldLabelsbase_de_datos___historico["Spanish"]["SeccionalId"] = "Seccional";
+	$fieldToolTipsbase_de_datos___historico["Spanish"]["SeccionalId"] = "";
+	$placeHoldersbase_de_datos___historico["Spanish"]["SeccionalId"] = "";
+	$fieldLabelsbase_de_datos___historico["Spanish"]["CarteraTipoId"] = "Cartera Tipo";
+	$fieldToolTipsbase_de_datos___historico["Spanish"]["CarteraTipoId"] = "";
+	$placeHoldersbase_de_datos___historico["Spanish"]["CarteraTipoId"] = "";
 	if (count($fieldToolTipsbase_de_datos___historico["Spanish"]))
 		$tdatabase_de_datos___historico[".isUseToolTips"] = true;
 }
@@ -161,7 +167,7 @@ $tdatabase_de_datos___historico[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																						
+																																																																																																																																																									
 
 $tdatabase_de_datos___historico[".ajaxCodeSnippetAdded"] = false;
 
@@ -184,16 +190,14 @@ $tdatabase_de_datos___historico[".googleLikeFields"] = array();
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "ConceptoId";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "EstadoId";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "Numero";
-$tdatabase_de_datos___historico[".googleLikeFields"][] = "Obligacion";
-$tdatabase_de_datos___historico[".googleLikeFields"][] = "Costas";
-$tdatabase_de_datos___historico[".googleLikeFields"][] = "Intereses";
-$tdatabase_de_datos___historico[".googleLikeFields"][] = "Saldo";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "Fecha";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "Ejecutoria";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "Notificacion";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "Sancionado";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "SancionadoTipoDocumento";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "SancionadoDocumento";
+$tdatabase_de_datos___historico[".googleLikeFields"][] = "SeccionalId";
+$tdatabase_de_datos___historico[".googleLikeFields"][] = "CarteraTipoId";
 
 
 
@@ -323,11 +327,152 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "ConceptoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
 	$edata = array("EditFormat" => "Text field");
 
 	
@@ -374,11 +519,58 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 	
 	
 	
-	$fdata["EditFormats"]["edit"] = $edata;
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
@@ -461,11 +653,152 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Estados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EstadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Estado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
 	$edata = array("EditFormat" => "Text field");
 
 	
@@ -512,11 +845,58 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 	
 	
 	
-	$fdata["EditFormats"]["edit"] = $edata;
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
@@ -2059,6 +2439,282 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 
 	$tdatabase_de_datos___historico["SancionadoDocumento"] = $fdata;
 		$tdatabase_de_datos___historico[".searchableFields"][] = "SancionadoDocumento";
+//	SeccionalId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 14;
+	$fdata["strName"] = "SeccionalId";
+	$fdata["GoodName"] = "SeccionalId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Base_de_Datos___Historico","SeccionalId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "SeccionalId";
+
+	
+		$fdata["FullName"] = "SeccionalId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatabase_de_datos___historico["SeccionalId"] = $fdata;
+		$tdatabase_de_datos___historico[".searchableFields"][] = "SeccionalId";
+//	CarteraTipoId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "CarteraTipoId";
+	$fdata["GoodName"] = "CarteraTipoId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Base_de_Datos___Historico","CarteraTipoId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "CarteraTipoId";
+
+	
+		$fdata["FullName"] = "CarteraTipoId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatabase_de_datos___historico["CarteraTipoId"] = $fdata;
+		$tdatabase_de_datos___historico[".searchableFields"][] = "CarteraTipoId";
 
 
 $tables_data["Base de Datos - Historico"]=&$tdatabase_de_datos___historico;
@@ -2093,12 +2749,13 @@ require_once( getabspath( "include/base_de_datos___historico_ops.php" ) );
 	
 		;
 
-													
+															
 
 $tdatabase_de_datos___historico[".sqlquery"] = $queryData_base_de_datos___historico;
 
 
 
-$tdatabase_de_datos___historico[".hasEvents"] = false;
+include_once(getabspath("include/base_de_datos___historico_events.php"));
+$tdatabase_de_datos___historico[".hasEvents"] = true;
 
 ?>

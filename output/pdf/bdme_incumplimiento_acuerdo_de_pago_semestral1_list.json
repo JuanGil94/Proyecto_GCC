@@ -1298,6 +1298,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
 				
+				
+			{"text":"<script>\n$(document).ready(function() {\n    $('#BDME_Incumplimiento_pago_semestral_MesId').val(sessionStorage.getItem('mesIncumplimiento'));\n});\n</script>","hidden":"{$item_hide_text}","isHtml":true},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',

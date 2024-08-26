@@ -195,9 +195,6 @@ pdfDocument = {
 				
 			{"text":{$Estado_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
-				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

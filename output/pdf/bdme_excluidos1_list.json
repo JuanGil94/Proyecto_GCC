@@ -1255,6 +1255,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
 				
+				
+			{"text":"<script>\n$(document).ready(function() {\n    $('#BDME_Excluidos_MesId').val(sessionStorage.getItem('mes'));\n});\n</script>","hidden":"{$item_hide_text}","isHtml":true},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
