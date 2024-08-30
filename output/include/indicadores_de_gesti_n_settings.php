@@ -185,6 +185,7 @@ $tdataindicadores_de_gesti_n[".geocodingEnabled"] = false;
 
 
 
+$tdataindicadores_de_gesti_n[".isDisplayLoading"] = true;
 
 
 

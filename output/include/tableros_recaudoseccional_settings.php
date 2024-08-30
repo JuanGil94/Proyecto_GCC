@@ -172,6 +172,7 @@ $tdatatableros_recaudoseccional[".geocodingEnabled"] = false;
 
 
 
+$tdatatableros_recaudoseccional[".isDisplayLoading"] = true;
 
 
 

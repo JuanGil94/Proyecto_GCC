@@ -238,6 +238,9 @@ pdfDocument = {
 			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Mes}","hidden":"{$item_hide_snippet5}","isHtml":true},
 				
 				
+			{"text":"{$event Deterioro_de_Cartera_por_Proceso_cartera_seccional}","hidden":"{$item_hide_snippet6}","isHtml":true},
+				
+				
 			{"text":""},
 				
 		  ],
@@ -1240,6 +1243,9 @@ pdfDocument = {
 				
 			{"text":{$Rel_Porcentaje_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
 				
+				
+			{"text":"<p>%</p>","hidden":"{$item_hide_text}","isHtml":true},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Rel_Porcentaje_align}',
@@ -1384,6 +1390,9 @@ pdfDocument = {
 		
 				
 			{"text":{$Rel_Tasa_pdfvalue},"hidden":"{$item_hide_simple_grid_field16}"},
+				
+				
+			{"text":"<p>%</p>","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],

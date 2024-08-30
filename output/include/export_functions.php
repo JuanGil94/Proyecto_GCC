@@ -1,7 +1,6 @@
 <?php
 
-require_once getabspath( "plugins/PHPExcel/IOFactory.php" );
-require_once getabspath( "include/export_functions_excel.php" );
+require_once getabspath( "include/phpspreadsheet_int.php" );
 
 function ExportToExcel($rs, $pageSize, $pageObj)
 {

@@ -27,6 +27,8 @@ class class_GlobalEvents extends eventsBase
 
 		$this->events["AfterUnsuccessfulLogin"]=true;
 
+		$this->events["BeforeProcessMenu"]=true;
+
 
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
@@ -125,6 +127,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Tablero_de_Control_GESTION_HASTA"] = true;
 		$this->events["Base_de_Datos___Historico_snippet"] = true;
 		$this->events["Base_de_Datos___Historico_Seccional_Cartera"] = true;
+		$this->events["Deterioro_de_Cartera_por_Proceso_cartera_seccional"] = true;
 
 
 
@@ -465,6 +468,59 @@ $message="Contraseña incorrecta";
 ;
 } // function AfterUnsuccessfulLogin
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+				// Welcome page: Before process
+function BeforeProcessMenu($pageObject)
+{
+
+		
+    // Obtener la URL completa de la página actual
+    $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    // Analizar la URL y obtener el path
+    $parsedUrl = parse_url($currentUrl);
+    $path = $parsedUrl['path'];
+		 
+    // Mostrar el path actual
+    //echo "El path actual es: " . $path;
+
+		if ($_SESSION['ventanaWebpath'] != $path) {
+    $_SESSION['ventanaWebpath'] = $path;
+   
+		}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeProcessMenu
+
+		
+		
+		
+		
+		
 		
 		
 		
@@ -2449,23 +2505,69 @@ echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
 }
 	function event_Recaudos_por_A_os_Ano(&$params)
 	{
-	echo "<label for='Recaudo_Ano_Id' style='margin-right: 20px;'>Año: </label><br>";
+	
+echo "<label for='Recaudo_Ano_Id' style='margin-right: 20px;'>Año: </label>";
+// Put your code here.
+echo'<input type="text" id="selectedYear" placeholder="Año seleccionado" readonly>';
+echo '<button id="yearSelectorButton">Seleccionar Año</button>';
+echo '<div id="yearDropdown" style="display: none; position: absolute; border: 1px solid #ccc; background-color: white; z-index: 1000;">
+    <div id="yearGrid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 10px;"></div>
+</div>';
 
-$years = range(2014, strftime("%Y", time()));
-echo "<select id='yearSelect'>";
-echo"<option>Select Year</option>";
-foreach($years as $year) :
-echo "<option value='$year'>$year</option>";
-endforeach;
-echo "</select>";
-echo "<input type='text' id='Recaudo_Ano_Id' name='Ano' value ='' style='display:none;' required><br>";
+echo'<script>
+function createYearGrid(startYear) {
+    var yearGrid = document.getElementById("yearGrid");
+    var currentYear = new Date().getFullYear();
 
-echo "<script>
-    document.getElementById('yearSelect').addEventListener('change', function() {
-        var selectedYear = this.value;
-        document.getElementById('Recaudo_Ano_Id').value = selectedYear;
+    for (var year = startYear; year <= currentYear; year++) {
+        var yearButton = document.createElement("div");
+        yearButton.className = "year-button";
+        yearButton.textContent = year;
+        yearButton.style.border = "1px solid #ccc";
+        yearButton.style.padding = "10px";
+        yearButton.style.textAlign = "center";
+        yearButton.style.cursor = "pointer";
+        yearButton.style.backgroundColor = "#f9f9f9";
+        yearButton.style.borderRadius = "5px";
+        
+        yearButton.addEventListener("click", function() {
+            document.getElementById("selectedYear").value = this.textContent;
+            document.getElementById("yearDropdown").style.display = "none";
+            highlightSelectedYear(this);
+        });
+
+        yearGrid.appendChild(yearButton);
+    }
+}
+
+function highlightSelectedYear(selectedButton) {
+    var buttons = document.querySelectorAll(".year-button");
+    buttons.forEach(function(button) {
+        button.style.backgroundColor = "#f9f9f9"; // Restablecer color de fondo
     });
-</script>";
+    selectedButton.style.backgroundColor = "#add8e6"; // Resaltar el año seleccionado
+}
+
+// Mostrar u ocultar el dropdown
+document.getElementById("yearSelectorButton").addEventListener("click", function() {
+    var dropdown = document.getElementById("yearDropdown");
+    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+});
+
+// Ocultar el dropdown si se hace clic fuera de él
+window.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("yearDropdown");
+    var button = document.getElementById("yearSelectorButton");
+    if (!dropdown.contains(event.target) && event.target !== button) {
+        dropdown.style.display = "none";
+    }
+});
+
+// Crear la cuadrícula de años desde 2000 hasta el año actual
+createYearGrid(2000);
+
+</script>';
+
 	;
 }
 	function event_Reportes_snippet_checklist(&$params)
@@ -4321,6 +4423,58 @@ echo '</select>';
 echo'</br>';
 
 //}
+	;
+}
+	function event_Deterioro_de_Cartera_por_Proceso_cartera_seccional(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+  
+echo'<br>';
+echo '<label for="cartera">Seleccione Cartera</label>';
+echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+
+echo '<label for="seccional">Seleccione Seccional</label>';
+echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
+echo '<option value="0">Seleccione Seccional</option>';
+
+$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row = $result->fetchAssoc()) {
+        $seccionalId = $row['SeccionalId'];
+        $seccional = $row['Seccional'];
+        echo "<option value='$seccionalId'>$seccional</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+echo '</select>';
+
+echo'</br>';
 	;
 }
 

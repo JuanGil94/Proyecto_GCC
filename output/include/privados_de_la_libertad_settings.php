@@ -75,6 +75,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdataprivados_de_la_libertad[".NCSearch"] = true;
 
 
+	$tdataprivados_de_la_libertad[".scrollGridBody"] = true;
 
 $tdataprivados_de_la_libertad[".shortTableName"] = "privados_de_la_libertad";
 $tdataprivados_de_la_libertad[".nSecOptions"] = 0;
@@ -212,6 +213,7 @@ $tdataprivados_de_la_libertad[".geocodingEnabled"] = false;
 
 
 
+$tdataprivados_de_la_libertad[".isDisplayLoading"] = true;
 
 
 

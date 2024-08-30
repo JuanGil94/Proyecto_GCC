@@ -63,6 +63,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_reporte_semestral[".NCSearch"] = true;
 
 
+	$tdatabdme_reporte_semestral[".scrollGridBody"] = true;
 
 $tdatabdme_reporte_semestral[".shortTableName"] = "bdme_reporte_semestral";
 $tdatabdme_reporte_semestral[".nSecOptions"] = 0;
@@ -195,6 +196,7 @@ $tdatabdme_reporte_semestral[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_reporte_semestral[".isDisplayLoading"] = true;
 
 
 

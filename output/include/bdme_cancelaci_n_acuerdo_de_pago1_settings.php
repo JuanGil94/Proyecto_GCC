@@ -66,6 +66,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_cancelaci_n_acuerdo_de_pago1[".NCSearch"] = true;
 
 
+	$tdatabdme_cancelaci_n_acuerdo_de_pago1[".scrollGridBody"] = true;
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".shortTableName"] = "bdme_cancelaci_n_acuerdo_de_pago1";
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".nSecOptions"] = 0;
@@ -199,6 +200,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_cancelaci_n_acuerdo_de_pago1[".isDisplayLoading"] = true;
 
 
 
@@ -1826,6 +1828,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".sqlquery"] = $queryData_bdme_cancelaci
 
 
 
-$tdatabdme_cancelaci_n_acuerdo_de_pago1[".hasEvents"] = false;
+include_once(getabspath("include/bdme_cancelaci_n_acuerdo_de_pago1_events.php"));
+$tdatabdme_cancelaci_n_acuerdo_de_pago1[".hasEvents"] = true;
 
 ?>

@@ -623,9 +623,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1389,10 +1386,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_pagination}"},
-				
-				
 			{"text":"<script>\n$(document).ready(function() {\n    $('#BDME_Retiros_desdeId').val(sessionStorage.getItem('retiros_desde'));\n    $('#BDME_Retiros_hastaId').val(sessionStorage.getItem('retiros_hasta'));\n});\n\n</script>","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
 				
 		  ],
   "border": [ false, false, false, false ],

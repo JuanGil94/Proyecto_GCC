@@ -1026,7 +1026,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bdme_retiros1_list"		data-control-cell
@@ -1045,20 +1045,6 @@
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
-	 
-		
-		
-	{BEGIN bdme_retiros_datachild_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$bdme_retiros_datachild_link_attrs} data-short-details="bdme_retiros_datachild"
-		class="{$bdme_retiros_datachild_dlink_class}" 
-		title="{$caption BDME_Retiros_DataChild }"			>
-								
-			</a>
-	</span>
-	{END bdme_retiros_datachild_dtable_link}
-
-
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1509,12 +1495,6 @@
 	
 ">
 		 
-		{BEGIN pagination_block}
-<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
-{$pagination}
-</span>
-{END pagination_block}
-	 
 		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
 	<script>
 $(document).ready(function() {
@@ -1523,6 +1503,12 @@ $(document).ready(function() {
 });
 
 </script></span>
+	 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
 		</div>					</div>
 			</div>		
 {END below-grid_block}

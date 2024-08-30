@@ -102,6 +102,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_retiros_datachild[".NCSearch"] = true;
 
 
+	$tdatabdme_retiros_datachild[".scrollGridBody"] = true;
 
 $tdatabdme_retiros_datachild[".shortTableName"] = "bdme_retiros_datachild";
 $tdatabdme_retiros_datachild[".nSecOptions"] = 0;
@@ -248,13 +249,14 @@ $tdatabdme_retiros_datachild[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_retiros_datachild[".isDisplayLoading"] = true;
 
 
 
 
 
 
-$tdatabdme_retiros_datachild[".pageSize"] = 20;
+$tdatabdme_retiros_datachild[".pageSize"] = 30;
 
 $tdatabdme_retiros_datachild[".warnLeavingPages"] = true;
 

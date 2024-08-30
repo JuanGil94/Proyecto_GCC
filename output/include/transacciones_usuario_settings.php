@@ -173,13 +173,14 @@ $tdatatransacciones_usuario[".geocodingEnabled"] = false;
 
 
 
+$tdatatransacciones_usuario[".isDisplayLoading"] = true;
 
 
 
 
 
 
-$tdatatransacciones_usuario[".pageSize"] = 20;
+$tdatatransacciones_usuario[".pageSize"] = 50;
 
 $tdatatransacciones_usuario[".warnLeavingPages"] = true;
 

@@ -1671,7 +1671,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event BDME_Retiros_DataChild_Contar}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{"text":"{$total_table}","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1777,7 +1777,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event BDME_Retiros_DataChild_Total}","hidden":"{$item_hide_snippet1}","isHtml":true},
+			{"text":"{$total_sum}\n\n","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],

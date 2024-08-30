@@ -3484,7 +3484,52 @@ function buttonHandler_BuscarDeteMes($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 		
-	$_SESSION['deterioro_mes'] = $params['deterioro_mes'].'-01';;
+ 	
+	$_SESSION['deterioro_mes'] = $params['deterioro_mes'].'-01';
+
+	$username = $_SESSION["UserNameF"];
+
+
+//DECLARE @Cartera INT = ':session.cateraid';
+//DECLARE @Seccional INT =':session.seccionalid';   
+
+		if (isset($params['cartera_id_report']) && $params['cartera_id_report'] != '0') {
+    // Guardar el valor en una variable de sesión
+			$_SESSION['cateraid']  = $params['cartera_id_report'];
+		}
+
+// Verificar si el parámetro 'seccional_id_report' está definido y si su valor es diferente de 0
+if (isset($params['seccional_id_report']) && $params['seccional_id_report'] != '0') {
+    // Guardar el valor en una variable de sesión
+    $_SESSION['seccionalid']  = $params['seccional_id_report'];
+		// Verificar si el parámetro 'seccional_id_report' está definido y si su valor es diferente de 0
+
+} else{
+	
+	//$setSessionValues();
+$sql = "SELECT TOP (1) 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[UserName] AS [UserName], 
+    [Extent1].[HorarioId] AS [HorarioId], 
+    [Extent1].[SeccionalId] AS SeccionalId, 
+    [Extent1].[AbogadoId] AS [AbogadoId], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[CarteraTipoId] AS CarteraTipoId, 
+    [Extent1].[Fecha] AS [Fecha], 
+    [Extent1].[Nombre] AS [Nombre]
+    FROM [dbo].[UserProfile] AS [Extent1]
+    WHERE [Extent1].[UserName] = '$username'";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$cartera = $row['CarteraTipoId'];
+$seccional = $row['SeccionalId'];
+$_SESSION['cateraid'] = $cartera;
+$_SESSION['seccionalid'] = $seccional;
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -3811,7 +3856,33 @@ function buttonHandler_Buscar5($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-		 $_SESSION['recaudo_ano'] = $params['recaudo_ano'];
+		 	 
+
+	// Obtener el año actual
+$currentYear = date("Y");
+
+
+//$_SESSION['recaudo_ano'] = $params['recaudo_ano'];
+
+// Verificar si 'recaudo_ano' está presente en $params
+if (isset($params['recaudo_ano'])) {
+    $recaudoAno = $params['recaudo_ano'];
+
+    // Validar que el valor sea un número de 4 dígitos y que esté dentro del rango permitido
+    if (is_numeric($recaudoAno) && strlen($recaudoAno) == 4 && $recaudoAno >= 2000 && $recaudoAno <= $currentYear) {
+        // El valor es un año válido, continúa con el procesamiento
+				 $_SESSION['recaudo_ano'] = $params['recaudo_ano'];
+        // Aquí puedes colocar el resto de tu lógica
+    } else {
+        // El valor no es válido, detén el procesamiento
+        // Puedes lanzar un error, redirigir o mostrar un mensaje de advertencia
+        echo("El valor del año es inválido o ha sido alterado.");
+    }
+} else {
+    // Si no está presente 'recaudo_ano', manejar el error
+    //echo("El parámetro 'recaudo_ano' es requerido.");
+}
+
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -4352,7 +4423,19 @@ function buttonHandler_Buscar11($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$_SESSION['mesHistorico'] = $params['mesHistorico'];
+	//$_SESSION['mesHistorico'] = $params['mesHistorico'];
+
+// Suponiendo que $params['mesHistorico'] está en formato 'YYYY-MM-DD'
+$fecha = $params['mesHistorico'];
+
+// Crear un objeto DateTime a partir de la fecha
+$date = new DateTime($fecha);
+
+// Modificar la fecha para que sea el último día del mes
+$date->modify('last day of this month');
+
+// Asignar el resultado en formato 'YYYY-MM-DD' a la variable de sesión
+$_SESSION['mesHistorico'] = $date->format('Y-m-d');
 
 
 $username = $_SESSION["UserNameF"];

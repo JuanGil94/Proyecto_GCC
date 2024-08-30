@@ -177,6 +177,7 @@ $tdatatotal_procesos[".geocodingEnabled"] = false;
 $tdatatotal_procesos[".chartType"] = "2DDoughnut";
 // end of chart settings
 
+$tdatatotal_procesos[".isDisplayLoading"] = true;
 
 
 

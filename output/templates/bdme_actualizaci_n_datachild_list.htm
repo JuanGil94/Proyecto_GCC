@@ -447,12 +447,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
-				{$simpleSearchFieldCombo}			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
-				{$simpleSearchTypeCombo}			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -486,7 +480,7 @@
 		</button>
 		<ul class="dropdown-menu">
 								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="bdme_actualizaci_n_datachild_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				<a   href="bdme_actualizaci_n_datachild_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup  title="" >
 				
 		Búsqueda avanzada		
 		</a>
@@ -772,195 +766,6 @@
 															</ul>
 </span>
 {END print_friendly}
-	 
-		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
-	 showHide	 reorder	keep-open btn-group"
-	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
-	>
-	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
-	<ul role="menu" class="dropdown-menu dropdown-left">
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_C3" checked="checked" value="1" data-field="C3" data-fieldname="C3">
-					<span>{$label BDME_Actualizaci_n_DataChild C3 }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
-					<span>{$label BDME_Actualizaci_n_DataChild Numero }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_C2" checked="checked" value="1" data-field="C2" data-fieldname="C2">
-					<span>{$label BDME_Actualizaci_n_DataChild C2 }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
-					<span>{$label BDME_Actualizaci_n_DataChild Providencia }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
-					<span>{$label BDME_Actualizaci_n_DataChild Ejecutoria }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_C6" checked="checked" value="1" data-field="C6" data-fieldname="C6">
-					<span>{$label BDME_Actualizaci_n_DataChild C6 }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_C4" checked="checked" value="1" data-field="C4" data-fieldname="C4">
-					<span>{$label BDME_Actualizaci_n_DataChild C4 }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_C5" checked="checked" value="1" data-field="C5" data-fieldname="C5">
-					<span>{$label BDME_Actualizaci_n_DataChild C5 }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SeccionalId" checked="checked" value="1" data-field="SeccionalId" data-fieldname="SeccionalId">
-					<span>{$label BDME_Actualizaci_n_DataChild SeccionalId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_CarteraTipoId" checked="checked" value="1" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
-					<span>{$label BDME_Actualizaci_n_DataChild CarteraTipoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_AbogadoId" checked="checked" value="1" data-field="AbogadoId" data-fieldname="AbogadoId">
-					<span>{$label BDME_Actualizaci_n_DataChild AbogadoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Acuerdo" checked="checked" value="1" data-field="Acuerdo" data-fieldname="Acuerdo">
-					<span>{$label BDME_Actualizaci_n_DataChild Acuerdo }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Incumplimiento" checked="checked" value="1" data-field="Incumplimiento" data-fieldname="Incumplimiento">
-					<span>{$label BDME_Actualizaci_n_DataChild Incumplimiento }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Terminacion" checked="checked" value="1" data-field="Terminacion" data-fieldname="Terminacion">
-					<span>{$label BDME_Actualizaci_n_DataChild Terminacion }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Radicado" checked="checked" value="1" data-field="Radicado" data-fieldname="Radicado">
-					<span>{$label BDME_Actualizaci_n_DataChild Radicado }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Origen" checked="checked" value="1" data-field="Origen" data-fieldname="Origen">
-					<span>{$label BDME_Actualizaci_n_DataChild Origen }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_C7" checked="checked" value="1" data-field="C7" data-fieldname="C7">
-					<span>{$label BDME_Actualizaci_n_DataChild C7 }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
-					<span>{$label BDME_Actualizaci_n_DataChild Observaciones }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-			</ul>
-</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

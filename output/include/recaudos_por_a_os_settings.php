@@ -96,6 +96,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatarecaudos_por_a_os[".NCSearch"] = true;
 
 
+	$tdatarecaudos_por_a_os[".scrollGridBody"] = true;
 
 $tdatarecaudos_por_a_os[".shortTableName"] = "recaudos_por_a_os";
 $tdatarecaudos_por_a_os[".nSecOptions"] = 0;
@@ -240,6 +241,7 @@ $tdatarecaudos_por_a_os[".geocodingEnabled"] = false;
 
 
 
+$tdatarecaudos_por_a_os[".isDisplayLoading"] = true;
 
 
 

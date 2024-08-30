@@ -172,6 +172,7 @@ $tdatatablero_de_control_gesti_n[".geocodingEnabled"] = false;
 
 
 
+$tdatatablero_de_control_gesti_n[".isDisplayLoading"] = true;
 
 
 

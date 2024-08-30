@@ -99,6 +99,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_actualizaci_n_datachild[".NCSearch"] = true;
 
 
+	$tdatabdme_actualizaci_n_datachild[".scrollGridBody"] = true;
 
 $tdatabdme_actualizaci_n_datachild[".shortTableName"] = "bdme_actualizaci_n_datachild";
 $tdatabdme_actualizaci_n_datachild[".nSecOptions"] = 0;
@@ -244,8 +245,8 @@ $tdatabdme_actualizaci_n_datachild[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_actualizaci_n_datachild[".isDisplayLoading"] = true;
 
-$tdatabdme_actualizaci_n_datachild[".isResizeColumns"] = true;
 
 
 

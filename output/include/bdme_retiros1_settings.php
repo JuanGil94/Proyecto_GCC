@@ -66,6 +66,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_retiros1[".NCSearch"] = true;
 
 
+	$tdatabdme_retiros1[".scrollGridBody"] = true;
 
 $tdatabdme_retiros1[".shortTableName"] = "bdme_retiros1";
 $tdatabdme_retiros1[".nSecOptions"] = 0;
@@ -200,13 +201,14 @@ $tdatabdme_retiros1[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_retiros1[".isDisplayLoading"] = true;
 
 
 
 
 
 
-$tdatabdme_retiros1[".pageSize"] = 20;
+$tdatabdme_retiros1[".pageSize"] = 30;
 
 $tdatabdme_retiros1[".warnLeavingPages"] = true;
 

@@ -63,6 +63,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".NCSearch"] = true;
 
 
+	$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".scrollGridBody"] = true;
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".shortTableName"] = "bdme_incumplimiento_acuerdo_de_pago_semestral1";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".nSecOptions"] = 0;
@@ -196,8 +197,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".geocodingEnabled"] = fals
 
 
 
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".isDisplayLoading"] = true;
 
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".isResizeColumns"] = true;
 
 
 

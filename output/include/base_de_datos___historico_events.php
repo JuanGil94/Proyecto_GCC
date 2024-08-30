@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeShowList"]=true;
+
 
 	}
 
@@ -24,7 +26,25 @@ function BeforeProcessList($pageObject)
 {
 
 		
-	set_time_limit(0); // Elimina la restricción de timeout
+
+ 	set_time_limit(0); // Elimina la restricción de timeout
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+    // Obtener la URL completa de la página actual
+    $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    // Analizar la URL y obtener el path
+    $parsedUrl = parse_url($currentUrl);
+    $path = $parsedUrl['path'];
+		 
+    // Mostrar el path actual
+    //echo "El path actual es: " . $path;
+
+		if ($_SESSION['ventanaWebpath'] != $path) {
+    $_SESSION['ventanaWebpath'] = $path;
+		 
+		}
 ;
 } // function BeforeProcessList
 
@@ -65,6 +85,230 @@ function BeforeProcessList($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, $pageObject)
+{
+
+		
+ 
+		$hasta = $_SESSION['mesHistorico'];
+		$cartera = $_SESSION['cateraid'];
+		$seccional = $_SESSION['seccionalid'];
+
+    // Ejecutar la consulta
+    $rs = CustomQuery("
+				SELECT SUM([Obligacion] + [Costas] + [Intereses]) as TotalC6 
+FROM (
+    SELECT 
+        [Obligacion], 
+        [Costas], 
+        [Intereses]
+    FROM 
+        [dbo].[HistoricosView1]
+    WHERE 
+        [CarteraTipoId] = '$cartera' 
+        AND [SeccionalId] = '$seccional'
+        AND [Hasta] = '$hasta'
+) AS [FilteredResults];
+    ");
+
+
+    while($record = db_fetch_array($rs)) {
+
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record['TotalC6'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+
+    }
+
+
+
+
+		////////////////////////OBLIGACION/////////////////////////////////////
+
+		    // Ejecutar la consulta
+    $rs2 = CustomQuery("
+				SELECT SUM([Obligacion]) as TotalC6 
+FROM (
+    SELECT 
+        [Obligacion], 
+        [Costas], 
+        [Intereses]
+    FROM 
+        [dbo].[HistoricosView1]
+    WHERE 
+        [CarteraTipoId] = '$cartera' 
+        AND [SeccionalId] = '$seccional'
+        AND [Hasta] = '$hasta'
+) AS [FilteredResults];
+    ");
+
+    // Generar el HTML de la tabla
+
+    while($record2 = db_fetch_array($rs2)) {
+    
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record2['TotalC6'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML2 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+
+    }
+
+		
+		
+		////////////////////////COSTAS/////////////////////////////////////
+
+		    // Ejecutar la consulta
+    $rs3 = CustomQuery("
+				SELECT SUM([Costas]) as TotalC6 
+FROM (
+    SELECT 
+        [Obligacion], 
+        [Costas], 
+        [Intereses]
+    FROM 
+        [dbo].[HistoricosView1]
+    WHERE 
+        [CarteraTipoId] = '$cartera' 
+        AND [SeccionalId] = '$seccional'
+        AND [Hasta] = '$hasta'
+) AS [FilteredResults];
+    ");
+
+
+    while($record3 = db_fetch_array($rs3)) {
+    
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record3['TotalC6'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML3 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+  
+    }
+
+  
+		
+				////////////////////////INTERESES/////////////////////////////////////
+
+		    // Ejecutar la consulta
+    $rs4 = CustomQuery("
+				SELECT SUM([Intereses]) as TotalC6 
+FROM (
+    SELECT 
+        [Obligacion], 
+        [Costas], 
+        [Intereses]
+    FROM 
+        [dbo].[HistoricosView1]
+    WHERE 
+        [CarteraTipoId] = '$cartera' 
+        AND [SeccionalId] = '$seccional'
+        AND [Hasta] = '$hasta'
+) AS [FilteredResults];
+    ");
+
+
+    while($record4 = db_fetch_array($rs4)) {
+ 
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record4['TotalC6'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML4 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+        
+    }
+
+
+    // Asignar el HTML generado al objeto xt
+		$xt->assign("total_saldo_intereses", $tableHTML4);
+		$xt->assign("total_saldo_costas", $tableHTML3);
+		$xt->assign("total_saldo_obligacion", $tableHTML2);
+    $xt->assign("total_saldo_historico", $tableHTML);
+		
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowList
+
 		
 		
 		

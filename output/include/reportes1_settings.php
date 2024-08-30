@@ -123,6 +123,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatareportes1[".NCSearch"] = true;
 
 
+	$tdatareportes1[".scrollGridBody"] = true;
 
 $tdatareportes1[".shortTableName"] = "reportes1";
 $tdatareportes1[".nSecOptions"] = 0;
@@ -276,6 +277,7 @@ $tdatareportes1[".geocodingEnabled"] = false;
 
 
 
+$tdatareportes1[".isDisplayLoading"] = true;
 
 
 

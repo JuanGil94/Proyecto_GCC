@@ -60,6 +60,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_excluidos1[".NCSearch"] = true;
 
 
+	$tdatabdme_excluidos1[".scrollGridBody"] = true;
 
 $tdatabdme_excluidos1[".shortTableName"] = "bdme_excluidos1";
 $tdatabdme_excluidos1[".nSecOptions"] = 0;
@@ -192,8 +193,8 @@ $tdatabdme_excluidos1[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_excluidos1[".isDisplayLoading"] = true;
 
-$tdatabdme_excluidos1[".isResizeColumns"] = true;
 
 
 

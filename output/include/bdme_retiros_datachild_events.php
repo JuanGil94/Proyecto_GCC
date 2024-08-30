@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeShowList"]=true;
+
 
 	}
 
@@ -75,6 +77,104 @@ function BeforeProcessList($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, $pageObject)
+{
+
+		set_time_limit(0); // Elimina la restricción de timeout
+
+$sancionadoId = intval($_SESSION['SancionadoIdData_report_Retiro']);
+
+// Ejecutar la primera consulta SQL
+$sql = CustomQuery("
+SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+");
+
+$record = db_fetch_array($sql);
+$tableHTML = '<strong>' . htmlspecialchars($record['TotalC6']) . '</strong>';
+
+// Ejecutar la segunda consulta SQL
+$sql1 = CustomQuery("
+SELECT SUM(Obligacion + Costas + Intereses) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
+");
+
+$record = db_fetch_array($sql1);
+$tableHTML2 = '<strong>' . htmlspecialchars($record['TotalC6']) . '</strong>';
+
+// Asignar el HTML generado al objeto xt
+$xt->assign("total_table", $tableHTML);
+$xt->assign("total_sum", $tableHTML2);
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowList
+
 		
 		
 		

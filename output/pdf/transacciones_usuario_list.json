@@ -626,7 +626,7 @@ pdfDocument = {
 				
 			{BEGIN OficioCount_fieldfootercolumn}
 			{BEGIN OficioCount_showtotal}
-				{ text: 'Contar ' },
+				{ text: 'Total ' },
 				{"text":{$OficioCount_total},"hidden":"{$item_hide_grid_field_totals}"}
 			{END OficioCount_showtotal}
 		{END OficioCount_fieldfootercolumn},
