@@ -1859,7 +1859,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Recaudos_por_A_os_Obligacion}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{"text":"    <strong>\n        {$total_table}\n    </strong>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1887,7 +1887,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Recaudos_por_A_os_Costas}","hidden":"{$item_hide_snippet1}","isHtml":true},
+			{"text":"    <strong>\n        {$total_costas}\n    </strong>","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1915,7 +1915,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Recaudos_por_A_os_Inte}","hidden":"{$item_hide_snippet2}","isHtml":true},
+			{"text":"    <strong>\n        {$total_intereses}\n    </strong>","hidden":"{$item_hide_text2}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1943,7 +1943,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event global__pageObject_}","hidden":"{$item_hide_snippet3}","isHtml":true},
+			{"text":"    <strong>\n        {$total_mayo}\n    </strong>","hidden":"{$item_hide_text3}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1971,7 +1971,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Recaudos_por_A_os_Recaudo_Terminado}","hidden":"{$item_hide_snippet4}","isHtml":true},
+			{"text":"    <strong>\n        {$total_terminado}\n    </strong>","hidden":"{$item_hide_text4}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1999,7 +1999,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Recaudos_por_A_os_Total_Recaudo}","hidden":"{$item_hide_snippet5}","isHtml":true},
+			{"text":"    <strong>\n        {$total_recaudo}\n    </strong>","hidden":"{$item_hide_text5}","isHtml":true},
 				
 		  ],
   "border": [ true, true, true, true ],

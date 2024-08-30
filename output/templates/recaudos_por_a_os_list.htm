@@ -458,6 +458,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="recaudos_por_a_os_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -466,12 +475,22 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="recaudos_por_a_os_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
 				
-		Búsqueda avanzada		
+		Mostrar panel de búsqueda		
 		</a>
 	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
 							<li role="separator" class="divider"></li>							{BEGIN export_link}
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
@@ -2038,9 +2057,11 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Recaudos_por_A_os_Obligacion}
-</span>	
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_table}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field13}
 									{BEGIN cellblock_grid_footcell_field14}
@@ -2056,9 +2077,11 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Recaudos_por_A_os_Costas}
-</span>	
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_costas}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field14}
 									{BEGIN cellblock_grid_footcell_field15}
@@ -2074,9 +2097,11 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Recaudos_por_A_os_Inte}
-</span>	
+		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_intereses}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field15}
 									{BEGIN cellblock_grid_footcell_field16}
@@ -2092,9 +2117,11 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event global__pageObject_}
-</span>	
+		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_mayo}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field16}
 									{BEGIN cellblock_grid_footcell_field17}
@@ -2110,9 +2137,11 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Recaudos_por_A_os_Recaudo_Terminado}
-</span>	
+		<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_terminado}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field17}
 									{BEGIN cellblock_grid_footcell_field18}
@@ -2128,9 +2157,11 @@
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Recaudos_por_A_os_Total_Recaudo}
-</span>	
+		<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_recaudo}
+    </strong></span>
+	
 	</td>
 	{END cellblock_grid_footcell_field18}
 									{BEGIN cellblock_grid_footcell_field19}

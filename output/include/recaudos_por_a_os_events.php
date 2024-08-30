@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeShowList"]=true;
+
 
 	}
 
@@ -25,8 +27,21 @@ function BeforeProcessList($pageObject)
 
 			set_time_limit(0); // Elimina la restricción de timeout
 
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+      // Obtener la URL completa de la página actual
+    $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    // Analizar la URL y obtener el path
+    $parsedUrl = parse_url($currentUrl);
+    $path = $parsedUrl['path'];
+		 
+    // Mostrar el path actual
+    //echo "El path actual es: " . $path;
+
+   if ($_SESSION['ventanaWebpath'] != $path) {
+    $_SESSION['ventanaWebpath'] = $path;
+    unset($_SESSION['recaudo_ano']);
+		}
+
 ;
 } // function BeforeProcessList
 
@@ -67,6 +82,424 @@ function BeforeProcessList($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowList(&$xt, &$templatefile, $pageObject)
+{
+
+		// Obtener el valor de user
+// Acceder a la variable de sesión
+$ano_recaudo = $_SESSION['recaudo_ano'];
+
+// Ejecutar la consulta
+    $rs = CustomQuery("
+				SELECT COUNT(Procesos) AS Procesos,
+				SUM(PagoObli) AS PagoObli,
+       SUM(Subquery.PagoCost) AS PagoCost, 
+       SUM(Subquery.PagoInte) AS PagoInte,
+       SUM(Subquery.PagoMayo) AS PagoMayo, 
+       SUM(Subquery.PagoTerm) AS PagoTerm,
+	   SUM(Subquery.Pago) AS Pago
+FROM (
+
+        SELECT Pagos1.PagoId, 
+			   case when Pagos1.TipoRecaudoId=1 then 'Consignación voluntaria' else case when Pagos1.TipoRecaudoId=2 then 'Depósito Judicial' else 'Remate' end end TipoRecaudo,
+               ProcesosView1.Numero AS Procesos, 
+							  Pagos1.PagoObli AS PagoObli, 
+               Pagos1.PagoCost AS PagoCost, 
+               Pagos1.PagoInte AS PagoInte, 
+               Pagos1.PagoMayo AS PagoMayo, 
+               Pagos1.PagoTerm AS PagoTerm, 
+               Pagos1.PagoObli + Pagos1.PagoCost + Pagos1.PagoInte + Pagos1.PagoMayo + Pagos1.PagoTerm AS Pago, 
+               CarteraTipos.CarteraTipo, 
+               MONTH(Pagos1.Registro) MesNumero,
+               ProcesosView1.Abogado,
+			   Pagos1.Numero NumeroConsignacion 
+        FROM Cuentas
+             INNER JOIN Pagos1 ON Cuentas.CuentaId = Pagos1.CuentaId
+             INNER JOIN ProcesosView1 ON Pagos1.ProcesoId = ProcesosView1.ProcesoId
+             INNER JOIN Bancos ON Cuentas.BancoId = Bancos.BancoId
+             INNER JOIN CarteraTipos ON CASE
+                                            WHEN '$ano_recaudo' <= 2019
+                                                 AND ProcesosView1.CarteraTipoId = 5
+                                            THEN 1
+                                            ELSE ProcesosView1.CarteraTipoId
+                                        END = CarteraTipos.CarteraTipoId
+        WHERE(YEAR(Pagos1.Registro) = '$ano_recaudo')) 
+	AS Subquery;
+    ");
+    
+
+
+    while($record = db_fetch_array($rs)) {
+   
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record['PagoObli'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+        
+    }
+
+    
+
+   //////////////////////COSTAS///////////////////////
+		
+       $rs2 = CustomQuery("
+				SELECT COUNT(Procesos) AS Procesos,
+				SUM(PagoObli) AS PagoObli,
+       SUM(Subquery.PagoCost) AS PagoCost, 
+       SUM(Subquery.PagoInte) AS PagoInte,
+       SUM(Subquery.PagoMayo) AS PagoMayo, 
+       SUM(Subquery.PagoTerm) AS PagoTerm,
+	   SUM(Subquery.Pago) AS Pago
+FROM (
+
+        SELECT Pagos1.PagoId, 
+			   case when Pagos1.TipoRecaudoId=1 then 'Consignación voluntaria' else case when Pagos1.TipoRecaudoId=2 then 'Depósito Judicial' else 'Remate' end end TipoRecaudo,
+               ProcesosView1.Numero AS Procesos, 
+							  Pagos1.PagoObli AS PagoObli, 
+               Pagos1.PagoCost AS PagoCost, 
+               Pagos1.PagoInte AS PagoInte, 
+               Pagos1.PagoMayo AS PagoMayo, 
+               Pagos1.PagoTerm AS PagoTerm, 
+               Pagos1.PagoObli + Pagos1.PagoCost + Pagos1.PagoInte + Pagos1.PagoMayo + Pagos1.PagoTerm AS Pago, 
+               CarteraTipos.CarteraTipo, 
+               MONTH(Pagos1.Registro) MesNumero,
+               ProcesosView1.Abogado,
+			   Pagos1.Numero NumeroConsignacion 
+        FROM Cuentas
+             INNER JOIN Pagos1 ON Cuentas.CuentaId = Pagos1.CuentaId
+             INNER JOIN ProcesosView1 ON Pagos1.ProcesoId = ProcesosView1.ProcesoId
+             INNER JOIN Bancos ON Cuentas.BancoId = Bancos.BancoId
+             INNER JOIN CarteraTipos ON CASE
+                                            WHEN '$ano_recaudo' <= 2019
+                                                 AND ProcesosView1.CarteraTipoId = 5
+                                            THEN 1
+                                            ELSE ProcesosView1.CarteraTipoId
+                                        END = CarteraTipos.CarteraTipoId
+        WHERE(YEAR(Pagos1.Registro) = '$ano_recaudo')) 
+	AS Subquery;
+    ");
+    
+
+
+    while($record2 = db_fetch_array($rs2)) {
+  
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record2['PagoCost'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML2 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+        
+    }
+
+
+
+   //////////////////////INTERESES///////////////////////
+		
+       $rs3 = CustomQuery("
+				SELECT COUNT(Procesos) AS Procesos,
+				SUM(PagoObli) AS PagoObli,
+       SUM(Subquery.PagoCost) AS PagoCost, 
+       SUM(Subquery.PagoInte) AS PagoInte,
+       SUM(Subquery.PagoMayo) AS PagoMayo, 
+       SUM(Subquery.PagoTerm) AS PagoTerm,
+	   SUM(Subquery.Pago) AS Pago
+FROM (
+
+        SELECT Pagos1.PagoId, 
+			   case when Pagos1.TipoRecaudoId=1 then 'Consignación voluntaria' else case when Pagos1.TipoRecaudoId=2 then 'Depósito Judicial' else 'Remate' end end TipoRecaudo,
+               ProcesosView1.Numero AS Procesos, 
+							  Pagos1.PagoObli AS PagoObli, 
+               Pagos1.PagoCost AS PagoCost, 
+               Pagos1.PagoInte AS PagoInte, 
+               Pagos1.PagoMayo AS PagoMayo, 
+               Pagos1.PagoTerm AS PagoTerm, 
+               Pagos1.PagoObli + Pagos1.PagoCost + Pagos1.PagoInte + Pagos1.PagoMayo + Pagos1.PagoTerm AS Pago, 
+               CarteraTipos.CarteraTipo, 
+               MONTH(Pagos1.Registro) MesNumero,
+               ProcesosView1.Abogado,
+			   Pagos1.Numero NumeroConsignacion 
+        FROM Cuentas
+             INNER JOIN Pagos1 ON Cuentas.CuentaId = Pagos1.CuentaId
+             INNER JOIN ProcesosView1 ON Pagos1.ProcesoId = ProcesosView1.ProcesoId
+             INNER JOIN Bancos ON Cuentas.BancoId = Bancos.BancoId
+             INNER JOIN CarteraTipos ON CASE
+                                            WHEN '$ano_recaudo' <= 2019
+                                                 AND ProcesosView1.CarteraTipoId = 5
+                                            THEN 1
+                                            ELSE ProcesosView1.CarteraTipoId
+                                        END = CarteraTipos.CarteraTipoId
+        WHERE(YEAR(Pagos1.Registro) = '$ano_recaudo')) 
+	AS Subquery;
+    ");
+    
+
+
+
+    while($record3 = db_fetch_array($rs3)) {
+        
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record3['PagoInte'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML3 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+        
+    }
+
+
+
+		   //////////////////////MAYOR RECAUDO///////////////////////
+		
+       $rs4 = CustomQuery("
+				SELECT COUNT(Procesos) AS Procesos,
+				SUM(PagoObli) AS PagoObli,
+       SUM(Subquery.PagoCost) AS PagoCost, 
+       SUM(Subquery.PagoInte) AS PagoInte,
+       SUM(Subquery.PagoMayo) AS PagoMayo, 
+       SUM(Subquery.PagoTerm) AS PagoTerm,
+	   SUM(Subquery.Pago) AS Pago
+FROM (
+
+        SELECT Pagos1.PagoId, 
+			   case when Pagos1.TipoRecaudoId=1 then 'Consignación voluntaria' else case when Pagos1.TipoRecaudoId=2 then 'Depósito Judicial' else 'Remate' end end TipoRecaudo,
+               ProcesosView1.Numero AS Procesos, 
+							  Pagos1.PagoObli AS PagoObli, 
+               Pagos1.PagoCost AS PagoCost, 
+               Pagos1.PagoInte AS PagoInte, 
+               Pagos1.PagoMayo AS PagoMayo, 
+               Pagos1.PagoTerm AS PagoTerm, 
+               Pagos1.PagoObli + Pagos1.PagoCost + Pagos1.PagoInte + Pagos1.PagoMayo + Pagos1.PagoTerm AS Pago, 
+               CarteraTipos.CarteraTipo, 
+               MONTH(Pagos1.Registro) MesNumero,
+               ProcesosView1.Abogado,
+			   Pagos1.Numero NumeroConsignacion 
+        FROM Cuentas
+             INNER JOIN Pagos1 ON Cuentas.CuentaId = Pagos1.CuentaId
+             INNER JOIN ProcesosView1 ON Pagos1.ProcesoId = ProcesosView1.ProcesoId
+             INNER JOIN Bancos ON Cuentas.BancoId = Bancos.BancoId
+             INNER JOIN CarteraTipos ON CASE
+                                            WHEN '$ano_recaudo' <= 2019
+                                                 AND ProcesosView1.CarteraTipoId = 5
+                                            THEN 1
+                                            ELSE ProcesosView1.CarteraTipoId
+                                        END = CarteraTipos.CarteraTipoId
+        WHERE(YEAR(Pagos1.Registro) = '$ano_recaudo')) 
+	AS Subquery;
+    ");
+    
+
+
+
+    while($record4 = db_fetch_array($rs4)) {
+
+				 // Formatear el número con puntos como separadores de miles
+				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
+				$formattedValue = number_format($record4['PagoMayo'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML4 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+
+    }
+
+  
+
+				   //////////////////////RECAUDO TERMINADO///////////////////////
+		
+       $rs5 = CustomQuery("
+				SELECT COUNT(Procesos) AS Procesos,
+				SUM(PagoObli) AS PagoObli,
+       SUM(Subquery.PagoCost) AS PagoCost, 
+       SUM(Subquery.PagoInte) AS PagoInte,
+       SUM(Subquery.PagoMayo) AS PagoMayo, 
+       SUM(Subquery.PagoTerm) AS PagoTerm,
+	   SUM(Subquery.Pago) AS Pago
+FROM (
+
+        SELECT Pagos1.PagoId, 
+			   case when Pagos1.TipoRecaudoId=1 then 'Consignación voluntaria' else case when Pagos1.TipoRecaudoId=2 then 'Depósito Judicial' else 'Remate' end end TipoRecaudo,
+               ProcesosView1.Numero AS Procesos, 
+							  Pagos1.PagoObli AS PagoObli, 
+               Pagos1.PagoCost AS PagoCost, 
+               Pagos1.PagoInte AS PagoInte, 
+               Pagos1.PagoMayo AS PagoMayo, 
+               Pagos1.PagoTerm AS PagoTerm, 
+               Pagos1.PagoObli + Pagos1.PagoCost + Pagos1.PagoInte + Pagos1.PagoMayo + Pagos1.PagoTerm AS Pago, 
+               CarteraTipos.CarteraTipo, 
+               MONTH(Pagos1.Registro) MesNumero,
+               ProcesosView1.Abogado,
+			   Pagos1.Numero NumeroConsignacion 
+        FROM Cuentas
+             INNER JOIN Pagos1 ON Cuentas.CuentaId = Pagos1.CuentaId
+             INNER JOIN ProcesosView1 ON Pagos1.ProcesoId = ProcesosView1.ProcesoId
+             INNER JOIN Bancos ON Cuentas.BancoId = Bancos.BancoId
+             INNER JOIN CarteraTipos ON CASE
+                                            WHEN '$ano_recaudo' <= 2019
+                                                 AND ProcesosView1.CarteraTipoId = 5
+                                            THEN 1
+                                            ELSE ProcesosView1.CarteraTipoId
+                                        END = CarteraTipos.CarteraTipoId
+        WHERE(YEAR(Pagos1.Registro) = '$ano_recaudo')) 
+	AS Subquery;
+    ");
+    
+
+
+    while($record5 = db_fetch_array($rs5)) {
+
+				 // Formatear el número con puntos como separadores de miles
+				$formattedValue = number_format($record5['PagoTerm'], 2, ',', '.');
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML5 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
+
+    }
+
+
+				   //////////////////////TOTAL RECAUDO///////////////////////
+		
+       $rs6 = CustomQuery("
+				SELECT COUNT(Procesos) AS Procesos,
+				SUM(PagoObli) AS PagoObli,
+       SUM(Subquery.PagoCost) AS PagoCost, 
+       SUM(Subquery.PagoInte) AS PagoInte,
+       SUM(Subquery.PagoMayo) AS PagoMayo, 
+       SUM(Subquery.PagoTerm) AS PagoTerm,
+	   SUM(Subquery.Pago) AS Pago
+FROM (
+
+        SELECT Pagos1.PagoId, 
+			   case when Pagos1.TipoRecaudoId=1 then 'Consignación voluntaria' else case when Pagos1.TipoRecaudoId=2 then 'Depósito Judicial' else 'Remate' end end TipoRecaudo,
+               ProcesosView1.Numero AS Procesos, 
+							  Pagos1.PagoObli AS PagoObli, 
+               Pagos1.PagoCost AS PagoCost, 
+               Pagos1.PagoInte AS PagoInte, 
+               Pagos1.PagoMayo AS PagoMayo, 
+               Pagos1.PagoTerm AS PagoTerm, 
+               Pagos1.PagoObli + Pagos1.PagoCost + Pagos1.PagoInte + Pagos1.PagoMayo + Pagos1.PagoTerm AS Pago, 
+               CarteraTipos.CarteraTipo, 
+               MONTH(Pagos1.Registro) MesNumero,
+               ProcesosView1.Abogado,
+			   Pagos1.Numero NumeroConsignacion 
+        FROM Cuentas
+             INNER JOIN Pagos1 ON Cuentas.CuentaId = Pagos1.CuentaId
+             INNER JOIN ProcesosView1 ON Pagos1.ProcesoId = ProcesosView1.ProcesoId
+             INNER JOIN Bancos ON Cuentas.BancoId = Bancos.BancoId
+             INNER JOIN CarteraTipos ON CASE
+                                            WHEN '$ano_recaudo' <= 2019
+                                                 AND ProcesosView1.CarteraTipoId = 5
+                                            THEN 1
+                                            ELSE ProcesosView1.CarteraTipoId
+                                        END = CarteraTipos.CarteraTipoId
+        WHERE(YEAR(Pagos1.Registro) = '$ano_recaudo')) 
+	AS Subquery;
+    ");
+    
+
+    while($record6 = db_fetch_array($rs6)) {
+
+				$formattedValue = number_format($record6['Pago'], 2, ',', '.');
+
+    
+					// Agregar el signo de pesos
+				$formattedValueWithCurrency = "$" . $formattedValue;
+        $tableHTML6 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '<strong>';
+
+    }
+
+
+
+
+
+$xt->assign("total_table", $tableHTML);
+$xt->assign("total_costas", $tableHTML2);
+$xt->assign("total_intereses", $tableHTML3);
+$xt->assign("total_mayo", $tableHTML4);
+$xt->assign("total_terminado", $tableHTML5);
+$xt->assign("total_recaudo", $tableHTML6);
+
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowList
+
 		
 		
 		

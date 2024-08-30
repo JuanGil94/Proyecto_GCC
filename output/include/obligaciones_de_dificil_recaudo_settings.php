@@ -78,6 +78,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdataobligaciones_de_dificil_recaudo[".NCSearch"] = true;
 
 
+	$tdataobligaciones_de_dificil_recaudo[".scrollGridBody"] = true;
 
 $tdataobligaciones_de_dificil_recaudo[".shortTableName"] = "obligaciones_de_dificil_recaudo";
 $tdataobligaciones_de_dificil_recaudo[".nSecOptions"] = 0;
@@ -216,6 +217,7 @@ $tdataobligaciones_de_dificil_recaudo[".geocodingEnabled"] = false;
 
 
 
+$tdataobligaciones_de_dificil_recaudo[".isDisplayLoading"] = true;
 
 
 

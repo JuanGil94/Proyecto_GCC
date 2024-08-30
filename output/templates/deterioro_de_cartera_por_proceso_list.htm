@@ -718,6 +718,9 @@
 		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" >
 {$event Deterioro_de_Cartera_por_Proceso_Mes}
 </span>	 
+		<span data-itemtype="snippet" data-itemid="snippet6" {$item_snippet6} data-pageid="{$pageid}" >
+{$event Deterioro_de_Cartera_por_Proceso_cartera_seccional}
+</span>	 
 		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="BuscarDeteMes" href="javascript:void(0)" typeid="ib" >
@@ -1584,7 +1587,7 @@
 	{$cell_grid_cell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Rel_Porcentaje_class}	"
+				 {$Rel_Porcentaje_class}	"
 
 			data-field="Rel_Porcentaje"
 	
@@ -1596,7 +1599,10 @@
 <span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rel_Porcentaje" data-fieldname="Rel_Porcentaje" data-default-width >
 {$Rel_Porcentaje_value}
 </span>
-{END Rel_Porcentaje_fieldcolumn}	
+{END Rel_Porcentaje_fieldcolumn}	 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	<p>%</p></span>
+	
 	</td>
 	{END cellblock_grid_cell_field11}
 									{BEGIN cellblock_grid_cell_field12}
@@ -1689,7 +1695,7 @@
 	{$cell_grid_cell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Rel_Tasa_class}	"
+				 {$Rel_Tasa_class}	"
 
 			data-field="Rel_Tasa"
 	
@@ -1701,7 +1707,10 @@
 <span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rel_Tasa" data-fieldname="Rel_Tasa" data-default-width >
 {$Rel_Tasa_value}
 </span>
-{END Rel_Tasa_fieldcolumn}	
+{END Rel_Tasa_fieldcolumn}	 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	<p>%</p></span>
+	
 	</td>
 	{END cellblock_grid_cell_field16}
 									{BEGIN cellblock_grid_cell_field17}

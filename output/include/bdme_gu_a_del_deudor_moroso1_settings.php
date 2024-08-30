@@ -60,6 +60,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_gu_a_del_deudor_moroso1[".NCSearch"] = true;
 
 
+	$tdatabdme_gu_a_del_deudor_moroso1[".scrollGridBody"] = true;
 
 $tdatabdme_gu_a_del_deudor_moroso1[".shortTableName"] = "bdme_gu_a_del_deudor_moroso1";
 $tdatabdme_gu_a_del_deudor_moroso1[".nSecOptions"] = 0;
@@ -192,6 +193,7 @@ $tdatabdme_gu_a_del_deudor_moroso1[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_gu_a_del_deudor_moroso1[".isDisplayLoading"] = true;
 
 
 

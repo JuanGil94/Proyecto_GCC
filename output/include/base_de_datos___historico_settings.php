@@ -78,6 +78,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabase_de_datos___historico[".NCSearch"] = true;
 
 
+	$tdatabase_de_datos___historico[".scrollGridBody"] = true;
 
 $tdatabase_de_datos___historico[".shortTableName"] = "base_de_datos___historico";
 $tdatabase_de_datos___historico[".nSecOptions"] = 0;
@@ -212,6 +213,7 @@ $tdatabase_de_datos___historico[".geocodingEnabled"] = false;
 
 
 
+$tdatabase_de_datos___historico[".isDisplayLoading"] = true;
 
 
 

@@ -99,6 +99,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".NCSearch"] = true;
 
 
+	$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".scrollGridBody"] = true;
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".shortTableName"] = "bdme_incumplimiento_acuerdo_de_pago_semestral_datachild";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".nSecOptions"] = 0;
@@ -244,6 +245,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".geocodingEnabled
 
 
 
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".isDisplayLoading"] = true;
 
 
 

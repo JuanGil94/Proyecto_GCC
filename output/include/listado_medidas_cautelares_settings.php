@@ -102,6 +102,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatalistado_medidas_cautelares[".NCSearch"] = true;
 
 
+	$tdatalistado_medidas_cautelares[".scrollGridBody"] = true;
 
 $tdatalistado_medidas_cautelares[".shortTableName"] = "listado_medidas_cautelares";
 $tdatalistado_medidas_cautelares[".nSecOptions"] = 0;
@@ -248,6 +249,7 @@ $tdatalistado_medidas_cautelares[".geocodingEnabled"] = false;
 
 
 
+$tdatalistado_medidas_cautelares[".isDisplayLoading"] = true;
 
 
 

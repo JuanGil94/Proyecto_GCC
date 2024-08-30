@@ -99,6 +99,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".NCSearch"] = true;
 
 
+	$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".scrollGridBody"] = true;
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".shortTableName"] = "bdme_cancelaci_n_acuerdo_de_pago_datachild";
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".nSecOptions"] = 0;
@@ -244,6 +245,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".isDisplayLoading"] = true;
 
 
 

@@ -84,6 +84,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdataintereses_por_proceso[".NCSearch"] = true;
 
 
+	$tdataintereses_por_proceso[".scrollGridBody"] = true;
 
 $tdataintereses_por_proceso[".shortTableName"] = "intereses_por_proceso";
 $tdataintereses_por_proceso[".nSecOptions"] = 0;
@@ -224,6 +225,7 @@ $tdataintereses_por_proceso[".geocodingEnabled"] = false;
 
 
 
+$tdataintereses_por_proceso[".isDisplayLoading"] = true;
 
 
 

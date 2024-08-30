@@ -99,6 +99,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_reporte_semestral_datachild[".NCSearch"] = true;
 
 
+	$tdatabdme_reporte_semestral_datachild[".scrollGridBody"] = true;
 
 $tdatabdme_reporte_semestral_datachild[".shortTableName"] = "bdme_reporte_semestral_datachild";
 $tdatabdme_reporte_semestral_datachild[".nSecOptions"] = 0;
@@ -244,13 +245,14 @@ $tdatabdme_reporte_semestral_datachild[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_reporte_semestral_datachild[".isDisplayLoading"] = true;
 
 
 
 
 
 
-$tdatabdme_reporte_semestral_datachild[".pageSize"] = 20;
+$tdatabdme_reporte_semestral_datachild[".pageSize"] = 10;
 
 $tdatabdme_reporte_semestral_datachild[".warnLeavingPages"] = true;
 

@@ -304,12 +304,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
-				{$simpleSearchFieldCombo}			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
-				{$simpleSearchTypeCombo}			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -1365,7 +1359,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1380,7 +1375,8 @@
 		 r-ori-vert		 {$ConceptoId_class}	"
 
 	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"		data-control-cell
+	
 	>
 
 	
@@ -1395,7 +1391,8 @@
 		 r-ori-vert		 {$EstadoId_class}	"
 
 	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"		data-control-cell
+	
 	>
 
 	
@@ -1410,7 +1407,8 @@
 		 r-ori-vert		 {$Numero_class}	"
 
 	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"		data-control-cell
+	
 	>
 
 	
@@ -1428,6 +1426,11 @@
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_saldo_obligacion}
+    </strong></span>
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
@@ -1443,6 +1446,12 @@
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	
+    <strong>
+        {$total_saldo_costas}
+    </strong></span>
 	
 	</td>
 	{END cellblock_grid_footcell_field4}
@@ -1458,6 +1467,12 @@
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	
+    <strong>
+        {$total_saldo_intereses}
+    </strong></span>
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
@@ -1473,6 +1488,11 @@
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	    <strong>
+        {$total_saldo_historico}
+    </strong></span>
 	
 	</td>
 	{END cellblock_grid_footcell_field6}

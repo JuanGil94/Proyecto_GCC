@@ -66,6 +66,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatabdme_actualizaci_n[".NCSearch"] = true;
 
 
+	$tdatabdme_actualizaci_n[".scrollGridBody"] = true;
 
 $tdatabdme_actualizaci_n[".shortTableName"] = "bdme_actualizaci_n";
 $tdatabdme_actualizaci_n[".nSecOptions"] = 0;
@@ -199,6 +200,7 @@ $tdatabdme_actualizaci_n[".geocodingEnabled"] = false;
 
 
 
+$tdatabdme_actualizaci_n[".isDisplayLoading"] = true;
 
 
 
@@ -1826,6 +1828,7 @@ $tdatabdme_actualizaci_n[".sqlquery"] = $queryData_bdme_actualizaci_n;
 
 
 
-$tdatabdme_actualizaci_n[".hasEvents"] = false;
+include_once(getabspath("include/bdme_actualizaci_n_events.php"));
+$tdatabdme_actualizaci_n[".hasEvents"] = true;
 
 ?>

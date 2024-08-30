@@ -188,6 +188,7 @@ $tdatatablero_de_control_general[".geocodingEnabled"] = false;
 
 
 
+$tdatatablero_de_control_general[".isDisplayLoading"] = true;
 
 
 

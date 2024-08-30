@@ -177,6 +177,7 @@ $tdatatotal_recaudado[".geocodingEnabled"] = false;
 $tdatatotal_recaudado[".chartType"] = "2DDoughnut";
 // end of chart settings
 
+$tdatatotal_recaudado[".isDisplayLoading"] = true;
 
 
 

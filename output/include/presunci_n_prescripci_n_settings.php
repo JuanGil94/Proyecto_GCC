@@ -75,6 +75,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatapresunci_n_prescripci_n[".NCSearch"] = true;
 
 
+	$tdatapresunci_n_prescripci_n[".scrollGridBody"] = true;
 
 $tdatapresunci_n_prescripci_n[".shortTableName"] = "presunci_n_prescripci_n";
 $tdatapresunci_n_prescripci_n[".nSecOptions"] = 0;
@@ -212,6 +213,7 @@ $tdatapresunci_n_prescripci_n[".geocodingEnabled"] = false;
 
 
 
+$tdatapresunci_n_prescripci_n[".isDisplayLoading"] = true;
 
 
 

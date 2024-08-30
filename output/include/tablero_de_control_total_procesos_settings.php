@@ -172,6 +172,7 @@ $tdatatablero_de_control_total_procesos[".geocodingEnabled"] = false;
 
 
 
+$tdatatablero_de_control_total_procesos[".isDisplayLoading"] = true;
 
 
 
