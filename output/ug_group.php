@@ -173,6 +173,10 @@ $nonAdminTablesArr[] = "Procesos - Mes";
 $nonAdminTablesArr[] = "Recaudo - Mes";
 $nonAdminTablesArr[] = "Tablero de Control Gestión";
 $nonAdminTablesArr[] = "Actuaciones Por Mes";
+$nonAdminTablesArr[] = "dbo.ProcesosSancionados";
+$nonAdminTablesArr[] = "BienesInmuebles";
+$nonAdminTablesArr[] = "BienesMuebles";
+$nonAdminTablesArr[] = "BienesEfectivo";
 
 $ug_connection = $cman->getForUserGroups();
 

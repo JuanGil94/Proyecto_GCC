@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2736_1721142599";
+$projectBuildKey = "2811_1721142599";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2736";
+$projectBuildNumber = "2811";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -932,6 +932,10 @@ $tableCaptions["Spanish"]["Procesos___Mes"] = "Procesos - Mes";
 $tableCaptions["Spanish"]["Recaudo___Mes"] = "Recaudo - Mes";
 $tableCaptions["Spanish"]["Tablero_de_Control_Gesti_n"] = "Tablero de Control Gestión";
 $tableCaptions["Spanish"]["Actuaciones_Por_Mes"] = "Actuaciones Por Mes";
+$tableCaptions["Spanish"]["dbo_ProcesosSancionados"] = "Procesos Sancionados";
+$tableCaptions["Spanish"]["BienesInmuebles"] = "Bienes Inmuebles";
+$tableCaptions["Spanish"]["BienesMuebles"] = "Bienes Muebles";
+$tableCaptions["Spanish"]["BienesEfectivo"] = "Bienes Efectivo";
 
 
 $globalEvents = new class_GlobalEvents;

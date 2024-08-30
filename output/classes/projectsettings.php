@@ -3854,6 +3854,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "tablero_de_control_gesti_n" ] = "Tablero de Control Gestión";
 	$projectEntities[ "Actuaciones Por Mes" ] = array( "url" => "actuaciones_por_mes", "type" => 9 );
 	$projectEntitiesReverse[ "actuaciones_por_mes" ] = "Actuaciones Por Mes";
+	$projectEntities[ "dbo.ProcesosSancionados" ] = array( "url" => "dbo_procesossancionados", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_procesossancionados" ] = "dbo.ProcesosSancionados";
+	$projectEntities[ "BienesInmuebles" ] = array( "url" => "bienesinmuebles", "type" => 1 );
+	$projectEntitiesReverse[ "bienesinmuebles" ] = "BienesInmuebles";
+	$projectEntities[ "BienesMuebles" ] = array( "url" => "bienesmuebles", "type" => 1 );
+	$projectEntitiesReverse[ "bienesmuebles" ] = "BienesMuebles";
+	$projectEntities[ "BienesEfectivo" ] = array( "url" => "bienesefectivo", "type" => 1 );
+	$projectEntitiesReverse[ "bienesefectivo" ] = "BienesEfectivo";
 }
 
 function findTable( $table ) {

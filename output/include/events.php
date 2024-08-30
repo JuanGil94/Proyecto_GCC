@@ -548,9 +548,9 @@ if ($data = $pageObject->getMasterRecord())
 */
 $data = $pageObject->getMasterRecord();
 //$data["ProcesoId"];
-echo '<label for="miInput">No. Proceso: </label><input for="miInput" id="procesoId" value="'.$data["ProcesoId"].'" readonly></input>';
+echo '<input for="miInput" id="procesoId" value="'.$data["ProcesoId"].'" style="display: none;" readonly></input>';
 echo '<label for="miInput">Abono Inicial: </label>
-<input type="number" id="abono" name="" style="" value=0>
+<input type="number" id="abono" name="" style="width: 100px;" value=0>
 <label for="miLista">Periodo: </label>
 <select id="periodo" name="">
     <option value="1">MENSUAL</option>
@@ -559,7 +559,7 @@ echo '<label for="miInput">Abono Inicial: </label>
     <option value="4">SEMESTRAL</option>
 </select>
 <label for="miInput">No. Cuotas: </label>
-<input type="number" id="noCuotas" name="" style="" value=1>
+<input type="number" id="noCuotas" name="" style="width: 60px;" value=1>
 <label for="fechaSeleccionada">Fecha Inicial:</label>
 <input type="date" id="fechaInicial" name="fecha">
 <script>

@@ -375,7 +375,7 @@ $tdataprocesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -13179,24 +13179,6 @@ $masterTablesData["dbo.Procesos"] = array();
 	$masterTablesData["dbo.Procesos"][8]["masterKeys"][]="MotivoId";
 				$masterTablesData["dbo.Procesos"][8]["detailKeys"] = array();
 	$masterTablesData["dbo.Procesos"][8]["detailKeys"][]="MotivoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Sancionados";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Sancionados";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "sancionados";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Procesos"][9] = $masterParams;
-				$masterTablesData["dbo.Procesos"][9]["masterKeys"] = array();
-	$masterTablesData["dbo.Procesos"][9]["masterKeys"][]="SancionadoId";
-				$masterTablesData["dbo.Procesos"][9]["detailKeys"] = array();
-	$masterTablesData["dbo.Procesos"][9]["detailKeys"][]="SancionadoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

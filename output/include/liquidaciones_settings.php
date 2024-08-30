@@ -6,11 +6,11 @@ $tdataliquidaciones[".OwnerID"] = "";
 $tdataliquidaciones[".OriginalTable"] = "dbo.Liquidaciones";
 
 
-$tdataliquidaciones[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataliquidaciones[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataliquidaciones[".originalPagesByType"] = $tdataliquidaciones[".pagesByType"];
-$tdataliquidaciones[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataliquidaciones[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataliquidaciones[".originalPages"] = $tdataliquidaciones[".pages"];
-$tdataliquidaciones[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataliquidaciones[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataliquidaciones[".originalDefaultPages"] = $tdataliquidaciones[".defaultPages"];
 
 //	field labels
@@ -104,7 +104,7 @@ if( $pages[PAGE_ADD] ) {
 $tdataliquidaciones[".add"] = true;
 $tdataliquidaciones[".afterAddAction"] = 1;
 $tdataliquidaciones[".closePopupAfterAdd"] = 1;
-$tdataliquidaciones[".afterAddActionDetTable"] = "";
+$tdataliquidaciones[".afterAddActionDetTable"] = "Detail tables not found!";
 }
 
 if( $pages[PAGE_LIST] ) {

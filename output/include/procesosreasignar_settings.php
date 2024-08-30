@@ -374,7 +374,7 @@ $tdataprocesosreasignar[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdataprocesosreasignar[".ajaxCodeSnippetAdded"] = false;
 
@@ -12983,24 +12983,6 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	//endif
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Sancionados";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Sancionados";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "sancionados";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][3] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][3]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][3]["masterKeys"][]="SancionadoId";
-				$masterTablesData["dbo.ProcesosReasignar"][3]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][3]["detailKeys"][]="SancionadoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
 			$strOriginalDetailsTable="dbo.Conceptos";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="dbo.Conceptos";
@@ -13010,11 +12992,11 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][4] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][4]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][4]["masterKeys"][]="ConceptoId";
-				$masterTablesData["dbo.ProcesosReasignar"][4]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][4]["detailKeys"][]="ConceptoId";
+					$masterTablesData["dbo.ProcesosReasignar"][3] = $masterParams;
+				$masterTablesData["dbo.ProcesosReasignar"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][3]["masterKeys"][]="ConceptoId";
+				$masterTablesData["dbo.ProcesosReasignar"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][3]["detailKeys"][]="ConceptoId";
 		
 	//endif
 	
@@ -13028,11 +13010,11 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][5] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][5]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][5]["masterKeys"][]="EstadoId";
-				$masterTablesData["dbo.ProcesosReasignar"][5]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][5]["detailKeys"][]="EstadoId";
+					$masterTablesData["dbo.ProcesosReasignar"][4] = $masterParams;
+				$masterTablesData["dbo.ProcesosReasignar"][4]["masterKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][4]["masterKeys"][]="EstadoId";
+				$masterTablesData["dbo.ProcesosReasignar"][4]["detailKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][4]["detailKeys"][]="EstadoId";
 		
 	//endif
 	
@@ -13046,11 +13028,11 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][6] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][6]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][6]["masterKeys"][]="MotivoId";
-				$masterTablesData["dbo.ProcesosReasignar"][6]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][6]["detailKeys"][]="MotivoId";
+					$masterTablesData["dbo.ProcesosReasignar"][5] = $masterParams;
+				$masterTablesData["dbo.ProcesosReasignar"][5]["masterKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][5]["masterKeys"][]="MotivoId";
+				$masterTablesData["dbo.ProcesosReasignar"][5]["detailKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][5]["detailKeys"][]="MotivoId";
 		
 	//endif
 	
@@ -13064,11 +13046,11 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][7] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][7]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][7]["masterKeys"][]="ImportacionId";
-				$masterTablesData["dbo.ProcesosReasignar"][7]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][7]["detailKeys"][]="ImportacionId";
+					$masterTablesData["dbo.ProcesosReasignar"][6] = $masterParams;
+				$masterTablesData["dbo.ProcesosReasignar"][6]["masterKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][6]["masterKeys"][]="ImportacionId";
+				$masterTablesData["dbo.ProcesosReasignar"][6]["detailKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][6]["detailKeys"][]="ImportacionId";
 		
 	//endif
 	
@@ -13082,11 +13064,11 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][8] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][8]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][8]["masterKeys"][]="ActuacionId";
-				$masterTablesData["dbo.ProcesosReasignar"][8]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][8]["detailKeys"][]="ActuacionId";
+					$masterTablesData["dbo.ProcesosReasignar"][7] = $masterParams;
+				$masterTablesData["dbo.ProcesosReasignar"][7]["masterKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][7]["masterKeys"][]="ActuacionId";
+				$masterTablesData["dbo.ProcesosReasignar"][7]["detailKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][7]["detailKeys"][]="ActuacionId";
 		
 	//endif
 	
@@ -13100,11 +13082,11 @@ $masterTablesData["dbo.ProcesosReasignar"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.ProcesosReasignar"][9] = $masterParams;
-				$masterTablesData["dbo.ProcesosReasignar"][9]["masterKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][9]["masterKeys"][]="NaturalezaId";
-				$masterTablesData["dbo.ProcesosReasignar"][9]["detailKeys"] = array();
-	$masterTablesData["dbo.ProcesosReasignar"][9]["detailKeys"][]="NaturalezaId";
+					$masterTablesData["dbo.ProcesosReasignar"][8] = $masterParams;
+				$masterTablesData["dbo.ProcesosReasignar"][8]["masterKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][8]["masterKeys"][]="NaturalezaId";
+				$masterTablesData["dbo.ProcesosReasignar"][8]["detailKeys"] = array();
+	$masterTablesData["dbo.ProcesosReasignar"][8]["detailKeys"][]="NaturalezaId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

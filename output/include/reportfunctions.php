@@ -1033,6 +1033,22 @@ function testAdvSearch($table)
 		{
 			return 1;
 		}
+		if($table=="dbo.ProcesosSancionados")
+		{
+			return 1;
+		}
+		if($table=="BienesInmuebles")
+		{
+			return 1;
+		}
+		if($table=="BienesMuebles")
+		{
+			return 1;
+		}
+		if($table=="BienesEfectivo")
+		{
+			return 1;
+		}
 	}
 	elseif(is_wr_db())
 	{
@@ -1921,6 +1937,22 @@ function getCaptionTable($table)
 	if($table=="Actuaciones Por Mes")
 	{
 		return "Actuaciones Por Mes";
+	}
+	if($table=="dbo.ProcesosSancionados")
+	{
+		return "Procesos Sancionados";
+	}
+	if($table=="BienesInmuebles")
+	{
+		return "Bienes Inmuebles";
+	}
+	if($table=="BienesMuebles")
+	{
+		return "Bienes Muebles";
+	}
+	if($table=="BienesEfectivo")
+	{
+		return "Bienes Efectivo";
 	}
 	return $table;
 }
@@ -4133,6 +4165,54 @@ function GetTablesListReport()
 		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
 		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
 			$arr[]="dbo.ProcesosView1";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosSancionados");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="dbo.ProcesosSancionados";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="dbo.ProcesosSancionados";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("BienesInmuebles");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="BienesInmuebles";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="BienesInmuebles";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("BienesMuebles");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="BienesMuebles";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="BienesMuebles";
+	}
+	if( Security::permissionsAvailable() ) {
+		$strPerm = GetUserPermissions("BienesEfectivo");
+		$securityFlag = strpos($strPerm, "P") !== false || strpos($strPerm, "S") !== false;
+	}
+	if($securityFlag)
+	{
+		$value="BienesEfectivo";
+		if(substr($value,-6)!="_audit" && substr($value,-8)!="_locking" && substr($value,-9)!="_ugrights" && substr($value,-9)!="_uggroups"
+		&& substr($value,-10)!="_ugmembers" && $value!="admin_rights" && $value!="admin_users"
+		&& $value!="admin_members" && $value!="webreports" && $value!="webreport_style" && $value!="webreport_settings" && $value!="webreport_admin" && $value!="webreport_sql")
+			$arr[]="BienesEfectivo";
 	}
 	return $arr;
 }
