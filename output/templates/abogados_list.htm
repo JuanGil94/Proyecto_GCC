@@ -1596,6 +1596,25 @@
 	{END procesosreasignar_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN _dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$_link_attrs} data-short-details=""
+		class="{$_dlink_class}" 
+		title="{$caption dbo_Procesos1 }"			>
+								
+									{BEGIN _childcount}
+				<span class="details-badge badge _badge" {$_childnumber_attr}>
+					{$_childnumber}				
+				</span>
+				{END _childcount}
+						</a>
+	</span>
+	{END _dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1889,9 +1908,9 @@
 	>
 
 	 
-						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar"
-			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar	>
+							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar,"
+			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar			data-details-	>
 		<span data-details-inside data-short-table="reporteclasificacioncartera">
 			</span>
 		<span data-details-inside data-short-table="procesossinnotificareport">
@@ -1900,10 +1919,13 @@
 			</span>
 		<span data-details-inside data-short-table="procesosreasignar">
 			</span>
+		<span data-details-inside data-short-table="">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			

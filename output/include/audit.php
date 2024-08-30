@@ -1044,6 +1044,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.ProcesosSancionados")
+		{
+			return true;
+		}
+		if($table=="BienesInmuebles")
+		{
+			return false;
+		}
+		if($table=="BienesMuebles")
+		{
+			return false;
+		}
+		if($table=="BienesEfectivo")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2039,6 +2055,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Actuaciones Por Mes")
+		{
+			return false;
+		}
+		if($table=="dbo.ProcesosSancionados")
+		{
+			return true;
+		}
+		if($table=="BienesInmuebles")
+		{
+			return false;
+		}
+		if($table=="BienesMuebles")
+		{
+			return false;
+		}
+		if($table=="BienesEfectivo")
 		{
 			return false;
 		}

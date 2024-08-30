@@ -402,6 +402,10 @@ class ConnectionManager_Base
 		$connectionsIds["Recaudo - Mes"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Tablero de Control Gestión"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Actuaciones Por Mes"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.ProcesosSancionados"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BienesInmuebles"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BienesMuebles"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BienesEfectivo"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

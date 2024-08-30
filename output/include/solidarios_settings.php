@@ -131,7 +131,7 @@ $tdatasolidarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
 
 $tdatasolidarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -758,24 +758,6 @@ $masterTablesData["dbo.Solidarios"] = array();
 	//endif
 	
 	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Sancionados";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Sancionados";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "sancionados";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Solidarios"][1] = $masterParams;
-				$masterTablesData["dbo.Solidarios"][1]["masterKeys"] = array();
-	$masterTablesData["dbo.Solidarios"][1]["masterKeys"][]="SancionadoId";
-				$masterTablesData["dbo.Solidarios"][1]["detailKeys"] = array();
-	$masterTablesData["dbo.Solidarios"][1]["detailKeys"][]="SancionadoId";
-		
-	//endif
-	
-	//if !@t.bReportCrossTab
 			$strOriginalDetailsTable="dbo.Procesos";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="dbo.ProcesosReasignar";
@@ -785,11 +767,11 @@ $masterTablesData["dbo.Solidarios"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Solidarios"][2] = $masterParams;
-				$masterTablesData["dbo.Solidarios"][2]["masterKeys"] = array();
-	$masterTablesData["dbo.Solidarios"][2]["masterKeys"][]="ProcesoId";
-				$masterTablesData["dbo.Solidarios"][2]["detailKeys"] = array();
-	$masterTablesData["dbo.Solidarios"][2]["detailKeys"][]="ProcesoId";
+					$masterTablesData["dbo.Solidarios"][1] = $masterParams;
+				$masterTablesData["dbo.Solidarios"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Solidarios"][1]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Solidarios"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Solidarios"][1]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

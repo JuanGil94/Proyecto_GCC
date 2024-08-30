@@ -1,0 +1,2699 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
+		
+ 
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_Fecha}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
+			<label>{$label dbo_ProcesosSancionados Fecha }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
+						</div>
+		{END searchCtrlBlock_Fecha}
+																{BEGIN searchCtrlBlock_SancionadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
+			<label>{$label dbo_ProcesosSancionados SancionadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
+						</div>
+		{END searchCtrlBlock_SancionadoId}
+																{BEGIN searchCtrlBlock_Motivo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Motivo}" {$filterRow_attrs_Motivo}>
+			<label>{$label dbo_ProcesosSancionados Motivo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Motivo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Motivo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Motivo}</span>
+						</div>
+		{END searchCtrlBlock_Motivo}
+																{BEGIN searchCtrlBlock_Despacho}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Despacho}" {$filterRow_attrs_Despacho}>
+			<label>{$label dbo_ProcesosSancionados Despacho }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Despacho}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Despacho}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Despacho}</span>
+						</div>
+		{END searchCtrlBlock_Despacho}
+																{BEGIN searchCtrlBlock_Abogado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Abogado}" {$filterRow_attrs_Abogado}>
+			<label>{$label dbo_ProcesosSancionados Abogado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
+						</div>
+		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_CarteraTipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipo}" {$filterRow_attrs_CarteraTipo}>
+			<label>{$label dbo_ProcesosSancionados CarteraTipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipo}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipo}
+																{BEGIN searchCtrlBlock_Seccional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
+			<label>{$label dbo_ProcesosSancionados Seccional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
+						</div>
+		{END searchCtrlBlock_Seccional}
+																{BEGIN searchCtrlBlock_Etapa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Etapa}" {$filterRow_attrs_Etapa}>
+			<label>{$label dbo_ProcesosSancionados Etapa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Etapa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Etapa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Etapa}</span>
+						</div>
+		{END searchCtrlBlock_Etapa}
+																{BEGIN searchCtrlBlock_Estado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Estado}" {$filterRow_attrs_Estado}>
+			<label>{$label dbo_ProcesosSancionados Estado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Estado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Estado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Estado}</span>
+						</div>
+		{END searchCtrlBlock_Estado}
+																{BEGIN searchCtrlBlock_Saldo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Saldo}" {$filterRow_attrs_Saldo}>
+			<label>{$label dbo_ProcesosSancionados Saldo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Saldo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Saldo}</span>
+						</div>
+		{END searchCtrlBlock_Saldo}
+																{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label dbo_ProcesosSancionados Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_Incumplimiento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Incumplimiento}" {$filterRow_attrs_Incumplimiento}>
+			<label>{$label dbo_ProcesosSancionados Incumplimiento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Incumplimiento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Incumplimiento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Incumplimiento}</span>
+						</div>
+		{END searchCtrlBlock_Incumplimiento}
+																{BEGIN searchCtrlBlock_Terminacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Terminacion}" {$filterRow_attrs_Terminacion}>
+			<label>{$label dbo_ProcesosSancionados Terminacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Terminacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Terminacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Terminacion}</span>
+						</div>
+		{END searchCtrlBlock_Terminacion}
+																{BEGIN searchCtrlBlock_Acuerdo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Acuerdo}" {$filterRow_attrs_Acuerdo}>
+			<label>{$label dbo_ProcesosSancionados Acuerdo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Acuerdo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Acuerdo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Acuerdo}</span>
+						</div>
+		{END searchCtrlBlock_Acuerdo}
+																{BEGIN searchCtrlBlock_Providencia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Providencia}" {$filterRow_attrs_Providencia}>
+			<label>{$label dbo_ProcesosSancionados Providencia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Providencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Providencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Providencia}</span>
+						</div>
+		{END searchCtrlBlock_Providencia}
+																{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label dbo_ProcesosSancionados Numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_Ejecutoria}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Ejecutoria}" {$filterRow_attrs_Ejecutoria}>
+			<label>{$label dbo_ProcesosSancionados Ejecutoria }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Ejecutoria}</span>
+						</div>
+		{END searchCtrlBlock_Ejecutoria}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		Exportar seleccionados		
+		</a>
+	</li>
+{END exportselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="dbo_procesossancionados_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="dbo_procesossancionados_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="custom_button" data-itemid="custom_button3" {$item_custom_button3} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="CierreMes" href="javascript:void(0)" typeid="ib" >
+							Cierre Mes			</a>
+</span>
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Añadir nuevo			</a>
+</span>
+{END inlineadd_link}
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="dbo_procesossancionados_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir todas las páginas							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="dbo_procesossancionados_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Detalles de impresión	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_correspondencias}
+			<div>
+				<label for="printDetailscorrespondencias{$id}">
+					<input type="checkbox" value="correspondencias" id="printDetailscorrespondencias{$id}" checked>
+					Correspondencias				</label>
+			</div>
+			{END print_details_correspondencias}
+														{BEGIN print_details_solidarios}
+			<div>
+				<label for="printDetailssolidarios{$id}">
+					<input type="checkbox" value="solidarios" id="printDetailssolidarios{$id}" checked>
+					Solidarios				</label>
+			</div>
+			{END print_details_solidarios}
+														{BEGIN print_details_llamadas}
+			<div>
+				<label for="printDetailsllamadas{$id}">
+					<input type="checkbox" value="llamadas" id="printDetailsllamadas{$id}" checked>
+					Llamadas				</label>
+			</div>
+			{END print_details_llamadas}
+														{BEGIN print_details_medidas}
+			<div>
+				<label for="printDetailsmedidas{$id}">
+					<input type="checkbox" value="medidas" id="printDetailsmedidas{$id}" checked>
+					Medidas				</label>
+			</div>
+			{END print_details_medidas}
+														{BEGIN print_details_acuerdos}
+			<div>
+				<label for="printDetailsacuerdos{$id}">
+					<input type="checkbox" value="acuerdos" id="printDetailsacuerdos{$id}" checked>
+					Acuerdos				</label>
+			</div>
+			{END print_details_acuerdos}
+														{BEGIN print_details_pagos1}
+			<div>
+				<label for="printDetailspagos1{$id}">
+					<input type="checkbox" value="pagos1" id="printDetailspagos1{$id}" checked>
+					Pagos1				</label>
+			</div>
+			{END print_details_pagos1}
+														{BEGIN print_details_intereses}
+			<div>
+				<label for="printDetailsintereses{$id}">
+					<input type="checkbox" value="intereses" id="printDetailsintereses{$id}" checked>
+					Intereses				</label>
+			</div>
+			{END print_details_intereses}
+														{BEGIN print_details_reasignaciones}
+			<div>
+				<label for="printDetailsreasignaciones{$id}">
+					<input type="checkbox" value="reasignaciones" id="printDetailsreasignaciones{$id}" checked>
+					Reasignaciones				</label>
+			</div>
+			{END print_details_reasignaciones}
+														{BEGIN print_details_suspensiones1}
+			<div>
+				<label for="printDetailssuspensiones1{$id}">
+					<input type="checkbox" value="suspensiones1" id="printDetailssuspensiones1{$id}" checked>
+					Suspensiones1				</label>
+			</div>
+			{END print_details_suspensiones1}
+														{BEGIN print_details_interrupciones}
+			<div>
+				<label for="printDetailsinterrupciones{$id}">
+					<input type="checkbox" value="interrupciones" id="printDetailsinterrupciones{$id}" checked>
+					Interrupciones				</label>
+			</div>
+			{END print_details_interrupciones}
+														{BEGIN print_details_reliquidaciones}
+			<div>
+				<label for="printDetailsreliquidaciones{$id}">
+					<input type="checkbox" value="reliquidaciones" id="printDetailsreliquidaciones{$id}" checked>
+					Reliquidaciones				</label>
+			</div>
+			{END print_details_reliquidaciones}
+														{BEGIN print_details_liquidaciones}
+			<div>
+				<label for="printDetailsliquidaciones{$id}">
+					<input type="checkbox" value="liquidaciones" id="printDetailsliquidaciones{$id}" checked>
+					Liquidaciones				</label>
+			</div>
+			{END print_details_liquidaciones}
+														{BEGIN print_details_fechas}
+			<div>
+				<label for="printDetailsfechas{$id}">
+					<input type="checkbox" value="fechas" id="printDetailsfechas{$id}" checked>
+					Fechas				</label>
+			</div>
+			{END print_details_fechas}
+														{BEGIN print_details_auditoriasprocesosview}
+			<div>
+				<label for="printDetailsauditoriasprocesosview{$id}">
+					<input type="checkbox" value="auditoriasprocesosview" id="printDetailsauditoriasprocesosview{$id}" checked>
+					Auditorias Procesos View				</label>
+			</div>
+			{END print_details_auditoriasprocesosview}
+						</div>
+</div>
+{END print_details}
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Resultados por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
+					<span>{$label dbo_ProcesosSancionados Numero }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
+					<span>{$label dbo_ProcesosSancionados Fecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Providencia" checked="checked" value="1" data-field="Providencia" data-fieldname="Providencia">
+					<span>{$label dbo_ProcesosSancionados Providencia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+					<span>{$label dbo_ProcesosSancionados Ejecutoria }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Acuerdo" checked="checked" value="1" data-field="Acuerdo" data-fieldname="Acuerdo">
+					<span>{$label dbo_ProcesosSancionados Acuerdo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Incumplimiento" checked="checked" value="1" data-field="Incumplimiento" data-fieldname="Incumplimiento">
+					<span>{$label dbo_ProcesosSancionados Incumplimiento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Terminacion" checked="checked" value="1" data-field="Terminacion" data-fieldname="Terminacion">
+					<span>{$label dbo_ProcesosSancionados Terminacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
+					<span>{$label dbo_ProcesosSancionados Concepto }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Saldo" checked="checked" value="1" data-field="Saldo" data-fieldname="Saldo">
+					<span>{$label dbo_ProcesosSancionados Saldo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Estado" checked="checked" value="1" data-field="Estado" data-fieldname="Estado">
+					<span>{$label dbo_ProcesosSancionados Estado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Etapa" checked="checked" value="1" data-field="Etapa" data-fieldname="Etapa">
+					<span>{$label dbo_ProcesosSancionados Etapa }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Seccional" checked="checked" value="1" data-field="Seccional" data-fieldname="Seccional">
+					<span>{$label dbo_ProcesosSancionados Seccional }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CarteraTipo" checked="checked" value="1" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+					<span>{$label dbo_ProcesosSancionados CarteraTipo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Abogado" checked="checked" value="1" data-field="Abogado" data-fieldname="Abogado">
+					<span>{$label dbo_ProcesosSancionados Abogado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Despacho" checked="checked" value="1" data-field="Despacho" data-fieldname="Despacho">
+					<span>{$label dbo_ProcesosSancionados Despacho }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Motivo" checked="checked" value="1" data-field="Motivo" data-fieldname="Motivo">
+					<span>{$label dbo_ProcesosSancionados Motivo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
+					<span>{$label dbo_ProcesosSancionados SancionadoId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
+		</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
+		content: "{$label dbo_ProcesosSancionados SancionadoId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
+		content: "{$label dbo_ProcesosSancionados Concepto}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
+		content: "{$label dbo_ProcesosSancionados Numero}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
+		content: "{$label dbo_ProcesosSancionados Fecha}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Providencia"]:before {
+		content: "{$label dbo_ProcesosSancionados Providencia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Ejecutoria"]:before {
+		content: "{$label dbo_ProcesosSancionados Ejecutoria}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Saldo"]:before {
+		content: "{$label dbo_ProcesosSancionados Saldo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Estado"]:before {
+		content: "{$label dbo_ProcesosSancionados Estado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Etapa"]:before {
+		content: "{$label dbo_ProcesosSancionados Etapa}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
+		content: "{$label dbo_ProcesosSancionados Seccional}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipo"]:before {
+		content: "{$label dbo_ProcesosSancionados CarteraTipo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
+		content: "{$label dbo_ProcesosSancionados Abogado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Acuerdo"]:before {
+		content: "{$label dbo_ProcesosSancionados Acuerdo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Incumplimiento"]:before {
+		content: "{$label dbo_ProcesosSancionados Incumplimiento}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Terminacion"]:before {
+		content: "{$label dbo_ProcesosSancionados Terminacion}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Despacho"]:before {
+		content: "{$label dbo_ProcesosSancionados Despacho}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Motivo"]:before {
+		content: "{$label dbo_ProcesosSancionados Motivo}";
+	}
+		}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="2"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_details}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldheadercolumn}
+	{BEGIN Numero_fieldheader}
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	{$label dbo_ProcesosSancionados Numero }	{$arrow_icon_Numero}
+	</SPAN>
+	{END Numero_fieldheader}
+{END Numero_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Fecha_class}	"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Fecha_fieldheadercolumn}
+	{BEGIN Fecha_fieldheader}
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	{$label dbo_ProcesosSancionados Fecha }	{$arrow_icon_Fecha}
+	</SPAN>
+	{END Fecha_fieldheader}
+{END Fecha_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Providencia_class}	"
+
+			data-field="Providencia"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Providencia_fieldheadercolumn}
+	{BEGIN Providencia_fieldheader}
+	<SPAN {$Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
+	{$label dbo_ProcesosSancionados Providencia }	{$arrow_icon_Providencia}
+	</SPAN>
+	{END Providencia_fieldheader}
+{END Providencia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+			data-field="Ejecutoria"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_fieldheadercolumn}
+	{BEGIN Ejecutoria_fieldheader}
+	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+	{$label dbo_ProcesosSancionados Ejecutoria }	{$arrow_icon_Ejecutoria}
+	</SPAN>
+	{END Ejecutoria_fieldheader}
+{END Ejecutoria_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Acuerdo_class}	"
+
+			data-field="Acuerdo"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Acuerdo_fieldheadercolumn}
+	{BEGIN Acuerdo_fieldheader}
+	<SPAN {$Acuerdo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo">
+	{$label dbo_ProcesosSancionados Acuerdo }	{$arrow_icon_Acuerdo}
+	</SPAN>
+	{END Acuerdo_fieldheader}
+{END Acuerdo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Incumplimiento_class}	"
+
+			data-field="Incumplimiento"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Incumplimiento_fieldheadercolumn}
+	{BEGIN Incumplimiento_fieldheader}
+	<SPAN {$Incumplimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento">
+	{$label dbo_ProcesosSancionados Incumplimiento }	{$arrow_icon_Incumplimiento}
+	</SPAN>
+	{END Incumplimiento_fieldheader}
+{END Incumplimiento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Terminacion_class}	"
+
+			data-field="Terminacion"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Terminacion_fieldheadercolumn}
+	{BEGIN Terminacion_fieldheader}
+	<SPAN {$Terminacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Terminacion" data-fieldname="Terminacion">
+	{$label dbo_ProcesosSancionados Terminacion }	{$arrow_icon_Terminacion}
+	</SPAN>
+	{END Terminacion_fieldheader}
+{END Terminacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label dbo_ProcesosSancionados Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldheadercolumn}
+	{BEGIN Saldo_fieldheader}
+	<SPAN {$Saldo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo">
+	{$label dbo_ProcesosSancionados Saldo }	{$arrow_icon_Saldo}
+	</SPAN>
+	{END Saldo_fieldheader}
+{END Saldo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Estado_class}	"
+
+			data-field="Estado"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Estado_fieldheadercolumn}
+	{BEGIN Estado_fieldheader}
+	<SPAN {$Estado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Estado" data-fieldname="Estado">
+	{$label dbo_ProcesosSancionados Estado }	{$arrow_icon_Estado}
+	</SPAN>
+	{END Estado_fieldheader}
+{END Estado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Etapa_class}	"
+
+			data-field="Etapa"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Etapa_fieldheadercolumn}
+	{BEGIN Etapa_fieldheader}
+	<SPAN {$Etapa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Etapa" data-fieldname="Etapa">
+	{$label dbo_ProcesosSancionados Etapa }	{$arrow_icon_Etapa}
+	</SPAN>
+	{END Etapa_fieldheader}
+{END Etapa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldheadercolumn}
+	{BEGIN Seccional_fieldheader}
+	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label4" {$item_grid_field_label4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+	{$label dbo_ProcesosSancionados Seccional }	{$arrow_icon_Seccional}
+	</SPAN>
+	{END Seccional_fieldheader}
+{END Seccional_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldheadercolumn}
+	{BEGIN CarteraTipo_fieldheader}
+	<SPAN {$CarteraTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label5" {$item_grid_field_label5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+	{$label dbo_ProcesosSancionados CarteraTipo }	{$arrow_icon_CarteraTipo}
+	</SPAN>
+	{END CarteraTipo_fieldheader}
+{END CarteraTipo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldheadercolumn}
+	{BEGIN Abogado_fieldheader}
+	<SPAN {$Abogado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label6" {$item_grid_field_label6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+	{$label dbo_ProcesosSancionados Abogado }	{$arrow_icon_Abogado}
+	</SPAN>
+	{END Abogado_fieldheader}
+{END Abogado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Despacho_class}	"
+
+			data-field="Despacho"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Despacho_fieldheadercolumn}
+	{BEGIN Despacho_fieldheader}
+	<SPAN {$Despacho_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label7" {$item_grid_field_label7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Despacho" data-fieldname="Despacho">
+	{$label dbo_ProcesosSancionados Despacho }	{$arrow_icon_Despacho}
+	</SPAN>
+	{END Despacho_fieldheader}
+{END Despacho_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Motivo_class}	"
+
+			data-field="Motivo"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Motivo_fieldheadercolumn}
+	{BEGIN Motivo_fieldheader}
+	<SPAN {$Motivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label8" {$item_grid_field_label8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Motivo" data-fieldname="Motivo">
+	{$label dbo_ProcesosSancionados Motivo }	{$arrow_icon_Motivo}
+	</SPAN>
+	{END Motivo_fieldheader}
+{END Motivo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoId_class}	"
+
+			data-field="SancionadoId"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SancionadoId_fieldheadercolumn}
+	{BEGIN SancionadoId_fieldheader}
+	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label9" {$item_grid_field_label9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
+	{$label dbo_ProcesosSancionados SancionadoId }	{$arrow_icon_SancionadoId}
+	</SPAN>
+	{END SancionadoId_fieldheader}
+{END SancionadoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+							</tr>
+																				
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_icons}
+	<td
+	
+	{$cell_grid_cell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Cancelar" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancelar" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	
+	</td>
+	{END cellblock_grid_cell_icons}
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+										<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	 
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-th-list"></span>
+					</a>
+{END dtables_link}
+	 
+		
+		
+	{BEGIN acuerdos_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$acuerdos_link_attrs} data-short-details="acuerdos"
+		class="{$acuerdos_dlink_class}" 
+		title="{$caption dbo_Acuerdos }"			>
+								
+									{BEGIN acuerdos_childcount}
+				<span class="details-badge badge acuerdos_badge" {$acuerdos_childnumber_attr}>
+					{$acuerdos_childnumber}				
+				</span>
+				{END acuerdos_childcount}
+						</a>
+	</span>
+	{END acuerdos_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN correspondencias_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$correspondencias_link_attrs} data-short-details="correspondencias"
+		class="{$correspondencias_dlink_class}" 
+		title="{$caption dbo_Correspondencias }"			>
+								
+									{BEGIN correspondencias_childcount}
+				<span class="details-badge badge correspondencias_badge" {$correspondencias_childnumber_attr}>
+					{$correspondencias_childnumber}				
+				</span>
+				{END correspondencias_childcount}
+						</a>
+	</span>
+	{END correspondencias_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN fechas_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$fechas_link_attrs} data-short-details="fechas"
+		class="{$fechas_dlink_class}" 
+		title="{$caption dbo_Fechas }"			>
+								
+									{BEGIN fechas_childcount}
+				<span class="details-badge badge fechas_badge" {$fechas_childnumber_attr}>
+					{$fechas_childnumber}				
+				</span>
+				{END fechas_childcount}
+						</a>
+	</span>
+	{END fechas_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN intereses_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$intereses_link_attrs} data-short-details="intereses"
+		class="{$intereses_dlink_class}" 
+		title="{$caption dbo_Intereses }"			>
+								
+									{BEGIN intereses_childcount}
+				<span class="details-badge badge intereses_badge" {$intereses_childnumber_attr}>
+					{$intereses_childnumber}				
+				</span>
+				{END intereses_childcount}
+						</a>
+	</span>
+	{END intereses_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN interrupciones_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$interrupciones_link_attrs} data-short-details="interrupciones"
+		class="{$interrupciones_dlink_class}" 
+		title="{$caption dbo_Interrupciones }"			>
+								
+									{BEGIN interrupciones_childcount}
+				<span class="details-badge badge interrupciones_badge" {$interrupciones_childnumber_attr}>
+					{$interrupciones_childnumber}				
+				</span>
+				{END interrupciones_childcount}
+						</a>
+	</span>
+	{END interrupciones_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN liquidaciones_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$liquidaciones_link_attrs} data-short-details="liquidaciones"
+		class="{$liquidaciones_dlink_class}" 
+		title="{$caption dbo_Liquidaciones }"			>
+								
+									{BEGIN liquidaciones_childcount}
+				<span class="details-badge badge liquidaciones_badge" {$liquidaciones_childnumber_attr}>
+					{$liquidaciones_childnumber}				
+				</span>
+				{END liquidaciones_childcount}
+						</a>
+	</span>
+	{END liquidaciones_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN llamadas_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link6" {$item_grid_details_link6} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$llamadas_link_attrs} data-short-details="llamadas"
+		class="{$llamadas_dlink_class}" 
+		title="{$caption dbo_Llamadas }"			>
+								
+									{BEGIN llamadas_childcount}
+				<span class="details-badge badge llamadas_badge" {$llamadas_childnumber_attr}>
+					{$llamadas_childnumber}				
+				</span>
+				{END llamadas_childcount}
+						</a>
+	</span>
+	{END llamadas_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN medidas_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link7" {$item_grid_details_link7} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$medidas_link_attrs} data-short-details="medidas"
+		class="{$medidas_dlink_class}" 
+		title="{$caption dbo_Medidas }"			>
+								
+									{BEGIN medidas_childcount}
+				<span class="details-badge badge medidas_badge" {$medidas_childnumber_attr}>
+					{$medidas_childnumber}				
+				</span>
+				{END medidas_childcount}
+						</a>
+	</span>
+	{END medidas_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN pagos1_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link8" {$item_grid_details_link8} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$pagos1_link_attrs} data-short-details="pagos1"
+		class="{$pagos1_dlink_class}" 
+		title="{$caption dbo_Pagos1 }"			>
+								
+									{BEGIN pagos1_childcount}
+				<span class="details-badge badge pagos1_badge" {$pagos1_childnumber_attr}>
+					{$pagos1_childnumber}				
+				</span>
+				{END pagos1_childcount}
+						</a>
+	</span>
+	{END pagos1_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN reasignaciones_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link9" {$item_grid_details_link9} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$reasignaciones_link_attrs} data-short-details="reasignaciones"
+		class="{$reasignaciones_dlink_class}" 
+		title="{$caption dbo_Reasignaciones }"			>
+								
+									{BEGIN reasignaciones_childcount}
+				<span class="details-badge badge reasignaciones_badge" {$reasignaciones_childnumber_attr}>
+					{$reasignaciones_childnumber}				
+				</span>
+				{END reasignaciones_childcount}
+						</a>
+	</span>
+	{END reasignaciones_dtable_link}
+
+
+	 
+		
+		
+	{BEGIN solidarios_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link10" {$item_grid_details_link10} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$solidarios_link_attrs} data-short-details="solidarios"
+		class="{$solidarios_dlink_class}" 
+		title="{$caption dbo_Solidarios }"			>
+								
+									{BEGIN solidarios_childcount}
+				<span class="details-badge badge solidarios_badge" {$solidarios_childnumber_attr}>
+					{$solidarios_childnumber}				
+				</span>
+				{END solidarios_childcount}
+						</a>
+	</span>
+	{END solidarios_dtable_link}
+
+
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Ver Saldo Actual" class="btn btn-default   
+	" id="New_Button1" href="javascript:void(0)" typeid="ib" >
+					<span class="glyphicon glyphicon-usd"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button1" {$item_custom_button1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Subir Archivos" class="btn btn-default   
+	" id="New_Button7" href="javascript:void(0)" typeid="ib" >
+					<span class="glyphicon glyphicon-upload"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="caratulaProcesos" {$item_caratulaProcesos} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Ver Caratula" class="btn btn-default   
+	" id="New_Button8" href="javascript:void(0)" typeid="ib" >
+					<span class="fa fa-print"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button2" {$item_custom_button2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="ConceptoAbogado" class="btn btn-default   
+	" id="ConceptoAbogado" href="javascript:void(0)" typeid="ib" >
+					<span class="fa fa-file-text-o"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button4" {$item_custom_button4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="maxTime" href="javascript:void(0)" typeid="ib" >
+					<span class="glyphicon glyphicon-plus"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button5" {$item_custom_button5} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Ficha Tecnica" class="btn btn-default   
+	" id="fichaTecnica" href="javascript:void(0)" typeid="ib" >
+					<span class="glyphicon glyphicon-file"></span>
+										</a>
+</span>
+	
+	</td>
+										{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero" data-default-width >
+{$Numero_value}
+</span>
+{END Numero_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Fecha_class}	"
+
+			data-field="Fecha"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Fecha_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
+{$Fecha_value}
+</span>
+{END Fecha_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Providencia_class}	"
+
+			data-field="Providencia"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Providencia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia" data-default-width >
+{$Providencia_value}
+</span>
+{END Providencia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+			data-field="Ejecutoria"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejecutoria_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria" data-default-width >
+{$Ejecutoria_value}
+</span>
+{END Ejecutoria_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Acuerdo_class}	"
+
+			data-field="Acuerdo"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Acuerdo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo" data-default-width >
+{$Acuerdo_value}
+</span>
+{END Acuerdo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Incumplimiento_class}	"
+
+			data-field="Incumplimiento"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Incumplimiento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento" data-default-width >
+{$Incumplimiento_value}
+</span>
+{END Incumplimiento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Terminacion_class}	"
+
+			data-field="Terminacion"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Terminacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Terminacion" data-fieldname="Terminacion" data-default-width >
+{$Terminacion_value}
+</span>
+{END Terminacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
+</span>
+{END Concepto_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+			data-field="Saldo"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saldo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo" data-default-width >
+{$Saldo_value}
+</span>
+{END Saldo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Estado_class}	"
+
+			data-field="Estado"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Estado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Estado" data-fieldname="Estado" data-default-width >
+{$Estado_value}
+</span>
+{END Estado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Etapa_class}	"
+
+			data-field="Etapa"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Etapa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Etapa" data-fieldname="Etapa" data-default-width >
+{$Etapa_value}
+</span>
+{END Etapa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
+{$Seccional_value}
+</span>
+{END Seccional_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo" data-default-width >
+{$CarteraTipo_value}
+</span>
+{END CarteraTipo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" data-default-width >
+{$Abogado_value}
+</span>
+{END Abogado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Despacho_class}	"
+
+			data-field="Despacho"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Despacho_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Despacho" data-fieldname="Despacho" data-default-width >
+{$Despacho_value}
+</span>
+{END Despacho_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Motivo_class}	"
+
+			data-field="Motivo"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Motivo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field8" {$item_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Motivo" data-fieldname="Motivo" data-default-width >
+{$Motivo_value}
+</span>
+{END Motivo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoId_class}	"
+
+			data-field="SancionadoId"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SancionadoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field9" {$item_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
+{$SancionadoId_value}
+</span>
+{END SancionadoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+							</tr>
+											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+				
+							">
+									{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+																<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="correspondencias,fechas,solidarios,llamadas,medidas,liquidaciones,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,auditoriasprocesosview"
+			data-details-correspondencias			data-details-fechas			data-details-solidarios			data-details-llamadas			data-details-medidas			data-details-liquidaciones			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-auditoriasprocesosview	>
+		<span data-details-inside data-short-table="correspondencias">
+			</span>
+		<span data-details-inside data-short-table="fechas">
+			</span>
+		<span data-details-inside data-short-table="solidarios">
+			</span>
+		<span data-details-inside data-short-table="llamadas">
+			</span>
+		<span data-details-inside data-short-table="medidas">
+			</span>
+		<span data-details-inside data-short-table="liquidaciones">
+			</span>
+		<span data-details-inside data-short-table="acuerdos">
+			</span>
+		<span data-details-inside data-short-table="pagos1">
+			</span>
+		<span data-details-inside data-short-table="intereses">
+			</span>
+		<span data-details-inside data-short-table="reasignaciones">
+			</span>
+		<span data-details-inside data-short-table="suspensiones1">
+			</span>
+		<span data-details-inside data-short-table="interrupciones">
+			</span>
+		<span data-details-inside data-short-table="reliquidaciones">
+			</span>
+		<span data-details-inside data-short-table="auditoriasprocesosview">
+			</span>
+		<div data-details-preview>
+	</div>
+</div>
+	 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			
+	</td>
+	{END cellblock_grid_cell_dpreview}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_icons}
+	<td
+	
+	{$cell_grid_footcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_icons}
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Fecha_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Providencia_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Ejecutoria_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Acuerdo_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Incumplimiento_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+									{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Terminacion_class}	"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Saldo_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Estado_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Etapa_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Despacho_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Motivo_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoId_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

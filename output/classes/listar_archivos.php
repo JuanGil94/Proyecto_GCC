@@ -31,7 +31,8 @@ else if(isset($_GET["w2"])){
     //echo  "Valor del Proceso: ".$phpVar1;
     // Ruta de la carpeta que deseas listar
     $rutaCarpeta = $phpVar1;
-    //echo "Holaaaaa";
+    if (is_dir($rutaCarpeta)){
+            //echo "Holaaaaa";
     // Obtener la lista de archivos en la carpeta
     $archivos = scandir($rutaCarpeta);
 
@@ -63,6 +64,15 @@ else if(isset($_GET["w2"])){
             </script>';
     }
     echo "</ul>";
+    }
+    else {
+        echo "<ul>";
+        echo '<li>';
+        echo "<label>No se encuentra archivos</label>";
+        echo '</li>';  
+        echo "</ul>";
+    }
+
 } 
 
 ?>

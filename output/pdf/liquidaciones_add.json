@@ -183,6 +183,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_Liquidaciones InteresesPlazo }","bold":true},{"text":{$InteresesPlazo_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Liquidaciones LiquidacionId }","bold":true},{"text":{$LiquidacionId_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

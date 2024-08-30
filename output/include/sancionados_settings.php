@@ -31,7 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssancionados["Spanish"]["Sancionado"] = "Sancionado";
 	$fieldToolTipssancionados["Spanish"]["Sancionado"] = "";
 	$placeHolderssancionados["Spanish"]["Sancionado"] = "";
-	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "Tipo Documento Id";
+	$fieldLabelssancionados["Spanish"]["TipoDocumentoId"] = "T. Documento";
 	$fieldToolTipssancionados["Spanish"]["TipoDocumentoId"] = "";
 	$placeHolderssancionados["Spanish"]["TipoDocumentoId"] = "";
 	$fieldLabelssancionados["Spanish"]["Documento"] = "Documento";
@@ -63,6 +63,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatasancionados[".NCSearch"] = true;
 
 
+	$tdatasancionados[".scrollGridBody"] = true;
 
 $tdatasancionados[".shortTableName"] = "sancionados";
 $tdatasancionados[".nSecOptions"] = 0;
@@ -197,6 +198,7 @@ $tdatasancionados[".geocodingEnabled"] = false;
 
 
 
+$tdatasancionados[".isDisplayLoading"] = true;
 
 
 
@@ -680,7 +682,7 @@ $tdatasancionados[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1150,7 +1152,7 @@ $tdatasancionados[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Checkbox");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1166,7 +1168,8 @@ $tdatasancionados[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["NeedEncode"] = true;
+
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1177,7 +1180,7 @@ $tdatasancionados[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Checkbox");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1187,6 +1190,34 @@ $tdatasancionados[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Genero";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "GeneroId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Genero";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1710,21 +1741,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Procesos
+//	dbo.ProcesosSancionados
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Procesos";
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosSancionados";
 		$detailsParam["dOriginalTable"] = "dbo.Procesos";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "procesos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Procesos");
+	$detailsParam["dShortTable"] = "dbo_procesossancionados";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosSancionados");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1740,21 +1771,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Propiedades
+//	BienesInmuebles
 	
 	
 
 		$dIndex = 2;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Propiedades";
+	$detailsParam["dDataSourceTable"]="BienesInmuebles";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "propiedades";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades");
+	$detailsParam["dShortTable"] = "bienesinmuebles";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BienesInmuebles");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1770,21 +1801,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Solidarios
+//	BienesMuebles
 	
 	
 
 		$dIndex = 3;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Solidarios";
-		$detailsParam["dOriginalTable"] = "dbo.Solidarios";
+	$detailsParam["dDataSourceTable"]="BienesMuebles";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "solidarios";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Solidarios");
+	$detailsParam["dShortTable"] = "bienesmuebles";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BienesMuebles");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1800,21 +1831,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.ProcesosReasignar
+//	BienesEfectivo
 	
 	
 
 		$dIndex = 4;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
-		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+	$detailsParam["dDataSourceTable"]="BienesEfectivo";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "procesosreasignar";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
+	$detailsParam["dShortTable"] = "bienesefectivo";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BienesEfectivo");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

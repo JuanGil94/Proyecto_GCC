@@ -796,6 +796,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"] = array();
 		}
 		$lookupTableLinks["dbo.TiposDocumentos"]["sancionados.TipoDocumentoId"]["edit"] = array("table" => "dbo.Sancionados", "field" => "TipoDocumentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Genero"] ) ) {
+			$lookupTableLinks["dbo.Genero"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Genero"]["sancionados.Masculino"] )) {
+			$lookupTableLinks["dbo.Genero"]["sancionados.Masculino"] = array();
+		}
+		$lookupTableLinks["dbo.Genero"]["sancionados.Masculino"]["edit"] = array("table" => "dbo.Sancionados", "field" => "Masculino", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
 			$lookupTableLinks["dbo.Procesos"] = array();
 		}
@@ -1447,6 +1454,55 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Motivos"]["reportes1.MotivoId"] = array();
 		}
 		$lookupTableLinks["dbo.Motivos"]["reportes1.MotivoId"]["edit"] = array("table" => "Reportes", "field" => "MotivoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["dbo_procesossancionados.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["dbo_procesossancionados.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["dbo_procesossancionados.SancionadoId"]["edit"] = array("table" => "dbo.ProcesosSancionados", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["bienesinmuebles.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["bienesinmuebles.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["bienesinmuebles.SancionadoId"]["edit"] = array("table" => "BienesInmuebles", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"] ) ) {
+			$lookupTableLinks["dbo.Ciudades3"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"]["bienesinmuebles.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades3"]["bienesinmuebles.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades3"]["bienesinmuebles.CiudadId"]["edit"] = array("table" => "BienesInmuebles", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["bienesmuebles.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["bienesmuebles.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["bienesmuebles.SancionadoId"]["edit"] = array("table" => "BienesMuebles", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"] ) ) {
+			$lookupTableLinks["dbo.Ciudades3"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"]["bienesmuebles.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades3"]["bienesmuebles.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades3"]["bienesmuebles.CiudadId"]["edit"] = array("table" => "BienesMuebles", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
+			$lookupTableLinks["dbo.Sancionados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["bienesefectivo.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["bienesefectivo.SancionadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Sancionados"]["bienesefectivo.SancionadoId"]["edit"] = array("table" => "BienesEfectivo", "field" => "SancionadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"] ) ) {
+			$lookupTableLinks["dbo.Ciudades3"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"]["bienesefectivo.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades3"]["bienesefectivo.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades3"]["bienesefectivo.CiudadId"]["edit"] = array("table" => "BienesEfectivo", "field" => "CiudadId", "page" => "edit");
 }
 
 ?>

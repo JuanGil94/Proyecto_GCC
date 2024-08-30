@@ -31,7 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdirecciones["Spanish"]["SancionadoId"] = "Sancionado Id";
 	$fieldToolTipsdirecciones["Spanish"]["SancionadoId"] = "";
 	$placeHoldersdirecciones["Spanish"]["SancionadoId"] = "";
-	$fieldLabelsdirecciones["Spanish"]["CarcelId"] = "Carcel Id";
+	$fieldLabelsdirecciones["Spanish"]["CarcelId"] = "Cárcel";
 	$fieldToolTipsdirecciones["Spanish"]["CarcelId"] = "";
 	$placeHoldersdirecciones["Spanish"]["CarcelId"] = "";
 	$fieldLabelsdirecciones["Spanish"]["CiudadId"] = "Ciudad Id";
@@ -533,7 +533,7 @@ $tdatadirecciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -696,7 +696,7 @@ $tdatadirecciones[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

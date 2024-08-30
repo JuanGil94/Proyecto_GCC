@@ -158,6 +158,12 @@ $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$values["ProcesoId
 				{
             $obligacion=$date["Obligacion"];
 						 $obligacionTotal=$date["ObligacionInicial"]+$date["CostasInicial"]+$date["InteresesInicial"];
+						 $sancionadoId=$date["SancionadoId"];
+        }
+$consulta=DB::Query("SELECT * FROM Sancionados WHERE SancionadoId=".$sancionadoId."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+						$sancionado=$date["Sancionado"];
         }
 $consulta=DB::Query("SELECT dbo.Num2Text(".$obligacion.") Obligacion, dbo.Num2Text(".$obligacionTotal.") obligacionTotal");
         while( $date = $consulta->fetchAssoc() )
@@ -205,6 +211,7 @@ if (curl_errno($curl)) {
 		return false;
 }
 else{
+
 // Imprimir la respuesta del servicio web
 //echo "<br>Valor del metodo NuevaCorrespondencia: ".$response2."<br>";
 $xml = new SimpleXMLElement($response2);
@@ -218,7 +225,8 @@ $curl = curl_init();
  $objeto->funcGlobal();
 //$rutaArchivo = 'Plantilla_1097.docx';
 $noDirecciones=$objeto->getNoDirecciones();
-//echo "Numero de direcciones: ".$noDirecciones.var_dump($noDirecciones);
+if ($noDirecciones>1){
+  //echo "Numero de direcciones: ".$noDirecciones.var_dump($noDirecciones);
 $noDirecciones=$noDirecciones-1;//porque las plantillas son XXX_0
 //$docxFiles = array();
 for ($i=0;$i<=$noDirecciones;$i++){
@@ -290,10 +298,13 @@ function mergeDocx($docxFiles, $output) {
     $outputZip->close();
     //echo "Documentos unificados en $output\n";
 }
-
 //$docxFiles = array('templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx','templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx');
 $salida = 'templates_GCC/ArchivoF_'.$values["ProcesoId"].'_'.$values["OficioId"].'.docx';
 mergeDocx($docxFiles, $salida);
+}
+else{
+  $rutaArchivo = 'templates_GCC/ArchivoF_'.$values["ProcesoId"].'_'.$values["OficioId"].'.docx'; 
+}
 $rutaArchivo = 'templates_GCC/ArchivoF_'.$values["ProcesoId"].'_'.$values["OficioId"].'.docx';
 $bytesDocumento = file_get_contents($rutaArchivo);
 $base64 = base64_encode($bytesDocumento);
@@ -330,7 +341,7 @@ curl_setopt_array($curl, array(
       <Estado>0</Estado>
       <DespachoDestino></DespachoDestino>
       <Vocativo>-1</Vocativo>
-      <Apellido>'.$despachoJuez.'</Apellido>
+      <Apellido>'.$sancionado.'</Apellido>
       <Nombre>'.$despachoJuez.'</Nombre>
       <NumeroDocumento>12345</NumeroDocumento>
       <Sexo>0</Sexo>
@@ -363,7 +374,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 
 $response = curl_exec($curl);
 if ($response == false) {
-    echo 'Error en la solicitud cURL: ' . curl_error($curl);
+    //echo 'Error en la solicitud cURL: ' . curl_error($curl);
 		return false;
 } else {
 //echo '<br>Respuesta de la API Metodo Actualizar Correspondencia: ' . $response;
@@ -392,13 +403,17 @@ $xml = new SimpleXMLElement($response);
 				$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
 				$response=$oficio->process();
 				if ($response==true){
-					//echo '<script>alert("Se agrega la correspondencia correctamente")</script>';
+					//echo '<script>alert("Response Oficio->Process true")</script>';
 					return true;
 				}
 				else{
+					//echo '<script>alert("Response Oficio->Process false")</script>';
 					return false;
 				}
-    } else {
+    } elseif($ultimosCaracteres=='') {
+					echo "<script>alert('El codigo obtenido es el: ".$radicadoF." pero no se logro conectividad, intentelo de nuevo')</script>";
+				}
+				else{
 				 echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
         return false;
     }

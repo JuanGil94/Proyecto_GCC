@@ -31,14 +31,22 @@ class diccionario {
             $info["Fecha"]=$date["fechahoy"];
             $info["fecha"]=$date["fechahoy"];
         }
-        $consulta=DB::Query("SELECT C.Radicado AS 'Sigobius',
+        $consulta=DB::Query("SELECT MAX(Cuota) AS PlazoNum,dbo.Num2Text(MAX(Cuota)) AS PlazoLetras, dbo.Num2Text(FLOOR(MAX(Total))) AS CuotaLiquidaLetras,FORMAT(MAX(Total), 'C', 'es-CO') AS CuotaLiquida  FROM Acuerdos WHERE ProcesoId=".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $info["PlazoLetras"]=$date["PlazoLetras"];
+            $info["PlazoNum"]=$date["PlazoNum"];
+            $info["CuotaLiquidaLetras"]=$date["CuotaLiquidaLetras"];
+            $info["CuotaLiquida"]=$date["CuotaLiquida"];
+        }
+        $consulta=DB::Query("SELECT TOP 1 C.Radicado AS 'Sigobius',
         FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'Fecha',
         FORMAT(C.Fecha, 'dd \de MMMM \de yyyy', 'es-ES') AS 'FechaDiezDias',
         C.Observaciones AS 'Observaciones',
 		O.Oficio AS 'Oficio'
         FROM Correspondencias  C
         INNER JOIN Oficios O ON O.OficioId = C.OficioId
-        WHERE O.OficioId =".$oficioId."AND C.ProcesoId =".$procesoId);
+        WHERE O.OficioId =".$oficioId."AND C.ProcesoId =".$procesoId." ORDER BY C.CorrespondenciaId DESC");
         while( $date = $consulta->fetchAssoc() )
 		{
             $info["Observaciones"]=$date["Observaciones"];
@@ -84,12 +92,12 @@ class diccionario {
         WHERE OficioId =".$oficioId." AND  C.ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
-            $info["usuario"]=$date["usuario"];
+            //$info["usuario"]=$date["usuario"];
             $info["Ano"]=$date["Ano"];
             $info["Dia"]=$date["Dia"];
             $info["Mes"]=$date["Mes"];
         }
-
+        $info["usuario"]=$_SESSION["UserNameF"];
         $consulta=DB::Query("SELECT
         IIF (SA.Masculino=1,'identificado','identificada') AS 'identificado',
         IIF (SA.Masculino=1,'al señor','a la señora') AS 'alsenor',
@@ -365,6 +373,8 @@ class diccionario {
             'Recaudo' => '',
             'ObligacionLetras'=>'',
             'ObligacionTotalLetras'=>'',
+            'PlazoLetras',
+            'PlazoNum',
         );
         $this->variables=$variables;
             //$numVariables=count(array_keys($variables));
@@ -393,7 +403,7 @@ class diccionario {
         return $direcciones;
     }
     public function tablaAcuerdo(){
-        $consulta=DB::Query("SELECT Cuota,Fecha,Capital,Intereses,Costas,InteresesPlazo,Total 
+        $consulta=DB::Query("SELECT Cuota,FORMAT(CONVERT(DATE, Fecha), 'dd/MM/yyyy') as Fecha,FORMAT(Capital, 'C', 'es-CO') AS Capital,FORMAT(Intereses, 'C', 'es-CO') AS Intereses,FORMAT(Costas, 'C', 'es-CO') AS Costas,FORMAT(InteresesPlazo, 'C', 'es-CO') AS InteresesPlazo,FORMAT(Total, 'C', 'es-CO') AS Total 
         from Acuerdos WHERE ProcesoId=".$this->procesoId);
         //print_r($info);
         while( $date = $consulta->fetchAssoc() )
@@ -404,6 +414,19 @@ class diccionario {
         }
         //print_r($acuerdo);
         return $acuerdo;
+    }
+    public function tablaAcuerdoSum(){
+        $consulta=DB::Query("SELECT FORMAT(SUM(Capital), 'C', 'es-CO') AS sumCapital,FORMAT(SUM(Intereses), 'C', 'es-CO') AS sumIntereses,FORMAT(SUM(Costas), 'C', 'es-CO') AS sumCostas,FORMAT(SUM(InteresesPlazo), 'C', 'es-CO') AS sumInteresesPlazo,FORMAT(SUM(Total), 'C', 'es-CO') AS sumTotal 
+        from Acuerdos WHERE ProcesoId=".$this->procesoId);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            //echo $date["Cuota"]; 
+            $acuerdoSum[]=$date;
+            //$cuotas[]=$date["Cuota"];
+        }
+        //print_r($acuerdo);
+        return $acuerdoSum;
     }
     public function getVariables(){
         return $this->variables;
@@ -422,16 +445,22 @@ class plantillas extends diccionario{
         $this->sigobius=$sigobius;
     }
     public function funcGlobal(){
+        if ($this->oficioId==4566){
+            $this->acuerPago();
+        }
+        else {
         $info=parent::process($this->procesoId,$this->oficioId,$this->sigobius,$this->obligacionLetras,$this->obligacionTotalLetras);
         $direcciones=parent::direcciones();
+        //echo "Valor del Oficio: ".$this->oficioId;
         $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
         // Crear un objeto TemplateProcessor
         $templateProcessor = new TemplateProcessor($templatePath);
         $variables = $templateProcessor->getVariables();
         //echo count($variables);
-        //print_r($variables);
+        
+    //print_r($variables);
         $case=count($direcciones);
-        if($case>0){
+        if($case>1){
             foreach( $direcciones as $key=>$dato){
                 $templateProcessor = new TemplateProcessor($templatePath);
                 $direccion=$dato;
@@ -476,33 +505,74 @@ class plantillas extends diccionario{
                 //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
             }
 
-            $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->procesoId.'_'.$this->oficioId.'.docx');
+            $templateProcessor->saveAs('templates_GCC/ArchivoF_'.$this->procesoId.'_'.$this->oficioId.'.docx');
         }
+        }
+    }
+    public function acuerPago(){
+        $info=parent::process($this->procesoId,$this->oficioId,$this->sigobius,$this->obligacionLetras,$this->obligacionTotalLetras);
+        $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
+        // Crear un objeto TemplateProcessor
+        $templateProcessor = new TemplateProcessor($templatePath);
+        //$variables = $templateProcessor->getVariables();
+        $templateProcessor->setValue('Sigobius',$info['Sigobius']);
+        $templateProcessor->setValue('Ciudad',$info['Ciudad']);
+        $templateProcessor->setValue('fecha',$info['fecha']);
+        $templateProcessor->setValue('Seccional',$info['Seccional']);
+        $templateProcessor->setValue('Numero',$info['Numero']);
+        $templateProcessor->setValue('Número',$info['Numero']);
+        $templateProcessor->setValue('identificado',$info['identificado']);
+        $templateProcessor->setValue('tipodocumento',$info['tipodocumento']);
+        $templateProcessor->setValue('Abogado',$info['Abogado']);
+        $templateProcessor->setValue('abogadoejecutor',$info['abogadoejecutor']);
+        $templateProcessor->setValue('SECCIONAL',$info['Seccional']);
+        $templateProcessor->setValue('elabogadoejecutor',$info['elabogadoejecutor']);
+        $templateProcessor->setValue('SeccionalCorreo',$info['SeccionalCorreo']);
+        $templateProcessor->setValue('SeccionalDireccion',$info['SeccionalDireccion']);
+        $templateProcessor->setValue('PlazoNum',$info['PlazoNum']);
+        $templateProcessor->setValue('PlazoLetras',$info['PlazoLetras']);
+        $templateProcessor->setValue('CuotaLiquidaLetras',$info['CuotaLiquidaLetras']);
+        $templateProcessor->setValue('CuotaLiquida',$info['CuotaLiquida']);
+        $templateProcessor->setValue('Senor',$info['Senor']);
+        $templateProcessor->setValue('deudor',$info['Sancionado']);
+        $templateProcessor->setValue('tipodocumento',$info['tipodocumento']);
+        $templateProcessor->setValue('documento',$info['documento']);
+        $templateProcessor->setValue('Deudor',$info['Sancionado']);
+        $templateProcessor->setValue('SeccionalTelefono',$info['SeccionalTelefono']);
+        $templateProcessor->setValue('Fecha',$info['Fecha']);
+        $templateProcessor->setValue('AbogadoEjecutor',$info['AbogadoEjecutor']);
+        $templateProcessor->setValue('USUARIO',$info['usuario']);
+        $templateProcessor->setValue('PiePagina',$info['PiePagina']);
+        $acuerdo=parent::tablaAcuerdo();
+        $acuerdoSum=parent::tablaAcuerdoSum();
+        $templateProcessor->cloneRow('rowValue', count($acuerdo));
+        $count=1;
+        foreach($acuerdo as $date){
+            //Cuota,Fecha,Capital,Intereses,Costas,InteresesPlazo,Total 
+            //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
+            $templateProcessor->setValue('rowValue#'.$count, htmlspecialchars($date["Cuota"]));
+            $templateProcessor->setValue('Fecha \@ dd/MM/yyyy#'.$count, htmlspecialchars($date["Fecha"]));
+            $templateProcessor->setValue('Capital#'.$count, htmlspecialchars($date["Capital"]));
+            $templateProcessor->setValue('Intereses#'.$count, htmlspecialchars($date["Intereses"]));
+            $templateProcessor->setValue('Costas#'.$count, htmlspecialchars($date["Costas"]));
+            $templateProcessor->setValue('InteresesPlazo#'.$count, htmlspecialchars($date["InteresesPlazo"]));
+            $templateProcessor->setValue('Total#'.$count, htmlspecialchars($date["Total"]));
+            $count++;
+        }
+        foreach($acuerdoSum as $date){
+            //Cuota,Fecha,Capital,Intereses,Costas,InteresesPlazo,Total 
+            //$templateWord->setValues(array('rowValue#'.$date["Cuota"] => htmlspecialchars($date["Cuota"]),'Capital#'.$date["Cuota"]=>htmlspecialchars($date["Capital"])));
+            $templateProcessor->setValue('totalCapital',htmlspecialchars($date["sumCapital"]));
+            $templateProcessor->setValue('totalInt', htmlspecialchars($date["sumIntereses"]));
+            $templateProcessor->setValue('totalCos', htmlspecialchars($date["sumCostas"]));
+            $templateProcessor->setValue('totalIntPlaz', htmlspecialchars($date["sumInteresesPlazo"]));
+            $templateProcessor->setValue('fullTotal', htmlspecialchars($date["sumTotal"]));
+        }
+        $templateProcessor->saveAs('templates_GCC/ArchivoF_'.$this->procesoId.'_'.$this->oficioId.'.docx'); 
     }
     public function getNoDirecciones(){
         return $this->noDirecciones;
     }
-    /*
-    public function acuPagoSig() {
-        function calcularPagoMensual($tasa, $nper, $va) {
-            // Convertir la tasa de interés anual a la tasa de interés por período
-            $tasa_periodo = $tasa / 12 / 100; // Dividir por 12 para obtener la tasa mensual
-        
-            // Calcular el pago mensual utilizando la fórmula de amortización de préstamos
-            $pago = ($tasa_periodo * $va) / (1 - pow(1 + $tasa_periodo, -$nper));
-        
-            return $pago;
-        }
-        
-        // Ejemplo de uso
-        $tasaInteresAnual = 12; // Tasa de interés anual
-        $plazoEnMeses = 12; // Número total de pagos del préstamo
-        $valorPrestamo = 7377170; // Valor presente del préstamo
-        $pagoMensual = calcularPagoMensual($tasaInteresAnual, $plazoEnMeses, $valorPrestamo);
-        
-        echo "El pago mensual necesario es: " . number_format($pagoMensual, 2);
-    } 
-    */
 }
 class plantillaCaratulas extends diccionario{
     public function caratulaProceso($procesoId,$oficioId) {
@@ -804,13 +874,12 @@ class diccionarioChequeo{
 		{
             $info["AbogadoEjecutor"]=$date["AbogadoEjecutor"];
             $info["Abogado"]=$date["Abogado"];
-            $info["Usuario"]=$date["Usuario"];
             $info["CUI"]=$date["CUI"];
             $info["FechaProvidencia"]=$date["FechaProvidencia"];
             $info["Obligacion"]=$date["Obligacion"];
             $info["FechaEjecutoria"]=$date["FechaEjecutoria"];
         }
-        
+        $info["usuario"]=$_SESSION["UserNameF"];
         $consulta=DB::Query("SELECT  D.Despacho AS 'Despacho', 
         Juez AS 'DespachoJuez',
         Direccion AS 'DespachoDireccion',

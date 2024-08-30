@@ -521,6 +521,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("actuaciones_por_mes" == $shortTName )
 		return true;
+	if ("dbo_procesossancionados" == $shortTName )
+		return true;
+	if ("bienesinmuebles" == $shortTName )
+		return true;
+	if ("bienesmuebles" == $shortTName )
+		return true;
+	if ("bienesefectivo" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2002,6 +2010,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Actuaciones Por Mes";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosSancionados");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ProcesosSancionados";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BienesInmuebles");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BienesInmuebles";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BienesMuebles");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BienesMuebles";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BienesEfectivo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BienesEfectivo";
+	}
 	return $arr;
 }
 
@@ -2170,6 +2214,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Recaudo - Mes";
 	$arr[]="Tablero de Control Gestión";
 	$arr[]="Actuaciones Por Mes";
+	$arr[]="dbo.ProcesosSancionados";
+	$arr[]="BienesInmuebles";
+	$arr[]="BienesMuebles";
+	$arr[]="BienesEfectivo";
 	return $arr;
 }
 
@@ -3603,6 +3651,26 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "S".$extraPerm;
+	}
+	if( $table=="dbo.ProcesosSancionados" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BienesInmuebles" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BienesMuebles" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BienesEfectivo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

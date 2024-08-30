@@ -57,179 +57,32 @@
      
          
 
-			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
-				{$menu main}			</div>
-		
- 
-
 			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
 				<!-- Begin Search panel content -->
 <div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Búsqueda			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
-			</ul>
-		</div>
-
-
-		</div>
 	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
 
 
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Celular}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Celular}" {$filterRow_attrs_Celular}>
-			<label>{$label dbo_Sancionados Celular }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Celular}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Celular}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Celular}</span>
-						</div>
-		{END searchCtrlBlock_Celular}
-																{BEGIN searchCtrlBlock_TipoDocumentoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_TipoDocumentoId}" {$filterRow_attrs_TipoDocumentoId}>
-			<label>{$label dbo_Sancionados TipoDocumentoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_TipoDocumentoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_TipoDocumentoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_TipoDocumentoId}</span>
-						</div>
-		{END searchCtrlBlock_TipoDocumentoId}
-																{BEGIN searchCtrlBlock_SancionadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
-			<label>{$label dbo_Sancionados SancionadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
-						</div>
-		{END searchCtrlBlock_SancionadoId}
-																{BEGIN searchCtrlBlock_Sancionado}
+																		{BEGIN searchCtrlBlock_Sancionado}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_Sancionado}" {$filterRow_attrs_Sancionado}>
 			<label>{$label dbo_Sancionados Sancionado }</label>
 
-							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Sancionado}</span>
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_Sancionado}</span>
 								<span class="rnr-searchcontrol">{$searchcontrol_Sancionado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Sancionado}</span>
 						</div>
 		{END searchCtrlBlock_Sancionado}
-																{BEGIN searchCtrlBlock_PrivadoLibertad}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_PrivadoLibertad}" {$filterRow_attrs_PrivadoLibertad}>
-			<label>{$label dbo_Sancionados PrivadoLibertad }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_PrivadoLibertad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_PrivadoLibertad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_PrivadoLibertad}</span>
-						</div>
-		{END searchCtrlBlock_PrivadoLibertad}
-																{BEGIN searchCtrlBlock_Observaciones}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Observaciones}" {$filterRow_attrs_Observaciones}>
-			<label>{$label dbo_Sancionados Observaciones }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Observaciones}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Observaciones}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
-						</div>
-		{END searchCtrlBlock_Observaciones}
-																{BEGIN searchCtrlBlock_Masculino}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Masculino}" {$filterRow_attrs_Masculino}>
-			<label>{$label dbo_Sancionados Masculino }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Masculino}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Masculino}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Masculino}</span>
-						</div>
-		{END searchCtrlBlock_Masculino}
-																{BEGIN searchCtrlBlock_Fallecimiento}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Fallecimiento}" {$filterRow_attrs_Fallecimiento}>
-			<label>{$label dbo_Sancionados Fallecimiento }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Fallecimiento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Fallecimiento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Fallecimiento}</span>
-						</div>
-		{END searchCtrlBlock_Fallecimiento}
-																{BEGIN searchCtrlBlock_Email}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Email}" {$filterRow_attrs_Email}>
-			<label>{$label dbo_Sancionados Email }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Email}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Email}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Email}</span>
-						</div>
-		{END searchCtrlBlock_Email}
 																{BEGIN searchCtrlBlock_Documento}
 
 
 		<div class="form-group srchPanelRow {$filterRow_class_Documento}" {$filterRow_attrs_Documento}>
 			<label>{$label dbo_Sancionados Documento }</label>
 
-							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Documento}</span>
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_Documento}</span>
 								<span class="rnr-searchcontrol">{$searchcontrol_Documento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Documento}</span>
 						</div>
 		{END searchCtrlBlock_Documento}
 		
@@ -244,6 +97,25 @@
 </div>
 <!-- End Search panel content -->
 			</div>
+		
+ 
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
 		
     {END left_block}
 </div>				</div>
@@ -291,6 +163,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -361,6 +239,20 @@
 		</a>
 	</li>
 {END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN saveSeachButton}
+	<li data-itemtype="save_search" data-itemid="save_search" {$item_save_search} data-pageid="{$pageid}" data-small >
+				<a  href="#" id="saveSearch{$id}"  title="" >
+				
+		Grabar búsqueda		
+		</a>
+	</li>
+{END saveSeachButton}
+							<li role="separator" class="divider"></li>							{BEGIN savedSeachesButton}
+<li data-itemtype="saved_searches" data-itemid="saved_searches" {$item_saved_searches} data-pageid="{$pageid}">
+	<a {$saveSearchButtonAttrs} id="savedSearches{$id}">Búsquedas grabadas:</a>
+	<ul class="rnr-saved-searches rnr-list" id ="savedSearchedList{$id}"></ul>
+</li>
+{END savedSeachesButton}
 							<li role="separator" class="divider"></li>							{BEGIN export_link}
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
@@ -544,7 +436,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="sancionados_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="sancionados_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -643,27 +535,6 @@
 					Direcciones				</label>
 			</div>
 			{END print_details_direcciones}
-														{BEGIN print_details_procesos}
-			<div>
-				<label for="printDetailsprocesos{$id}">
-					<input type="checkbox" value="procesos" id="printDetailsprocesos{$id}" checked>
-					Procesos				</label>
-			</div>
-			{END print_details_procesos}
-														{BEGIN print_details_propiedades}
-			<div>
-				<label for="printDetailspropiedades{$id}">
-					<input type="checkbox" value="propiedades" id="printDetailspropiedades{$id}" checked>
-					Propiedades				</label>
-			</div>
-			{END print_details_propiedades}
-														{BEGIN print_details_solidarios}
-			<div>
-				<label for="printDetailssolidarios{$id}">
-					<input type="checkbox" value="solidarios" id="printDetailssolidarios{$id}" checked>
-					Solidarios				</label>
-			</div>
-			{END print_details_solidarios}
 																						{BEGIN print_details_alertmandpago}
 			<div>
 				<label for="printDetailsalertmandpago{$id}">
@@ -734,13 +605,34 @@
 					Reporte Corporación Especialidad				</label>
 			</div>
 			{END print_details_reportecorporaci_nespecialidad}
-														{BEGIN print_details_procesosreasignar}
+														{BEGIN print_details_dbo_procesossancionados}
 			<div>
-				<label for="printDetailsprocesosreasignar{$id}">
-					<input type="checkbox" value="procesosreasignar" id="printDetailsprocesosreasignar{$id}" checked>
-					Procesos Reasignar				</label>
+				<label for="printDetailsdbo_procesossancionados{$id}">
+					<input type="checkbox" value="dbo_procesossancionados" id="printDetailsdbo_procesossancionados{$id}" checked>
+					Procesos Sancionados				</label>
 			</div>
-			{END print_details_procesosreasignar}
+			{END print_details_dbo_procesossancionados}
+														{BEGIN print_details_bienesinmuebles}
+			<div>
+				<label for="printDetailsbienesinmuebles{$id}">
+					<input type="checkbox" value="bienesinmuebles" id="printDetailsbienesinmuebles{$id}" checked>
+					Bienes Inmuebles				</label>
+			</div>
+			{END print_details_bienesinmuebles}
+														{BEGIN print_details_bienesmuebles}
+			<div>
+				<label for="printDetailsbienesmuebles{$id}">
+					<input type="checkbox" value="bienesmuebles" id="printDetailsbienesmuebles{$id}" checked>
+					Bienes Muebles				</label>
+			</div>
+			{END print_details_bienesmuebles}
+														{BEGIN print_details_bienesefectivo}
+			<div>
+				<label for="printDetailsbienesefectivo{$id}">
+					<input type="checkbox" value="bienesefectivo" id="printDetailsbienesefectivo{$id}" checked>
+					Bienes Efectivo				</label>
+			</div>
+			{END print_details_bienesefectivo}
 						</div>
 </div>
 {END print_details}
@@ -789,9 +681,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
-		content: "{$label dbo_Sancionados SancionadoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sancionado"]:before {
 		content: "{$label dbo_Sancionados Sancionado}";
 	}
@@ -886,67 +775,17 @@
 	
 	</th>
 	{END cellblock_grid_headcell_details}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldheadercolumn}
-	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
-	{$label dbo_Sancionados SancionadoId }	{$arrow_icon_SancionadoId}
-	</SPAN>
-	{END SancionadoId_fieldheader}
-{END SancionadoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Sancionado_class}	"
-
-			data-field="Sancionado"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Sancionado_fieldheadercolumn}
-	{BEGIN Sancionado_fieldheader}
-	<SPAN {$Sancionado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
-	{$label dbo_Sancionados Sancionado }	{$arrow_icon_Sancionado}
-	</SPAN>
-	{END Sancionado_fieldheader}
-{END Sancionado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$TipoDocumentoId_class}	"
 
 			data-field="TipoDocumentoId"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -960,18 +799,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
-	{$cell_grid_headcell_field3}
+	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Documento_class}	"
 
 			data-field="Documento"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -985,6 +824,31 @@
 
 	
 	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sancionado_fieldheadercolumn}
+	{BEGIN Sancionado_fieldheader}
+	<SPAN {$Sancionado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
+	{$label dbo_Sancionados Sancionado }	{$arrow_icon_Sancionado}
+	</SPAN>
+	{END Sancionado_fieldheader}
+{END Sancionado_fieldheadercolumn}
+
+	
+	</th>
 	{END cellblock_grid_headcell_field3}
 									{BEGIN cellblock_grid_headcell_field4}
 	<th
@@ -992,21 +856,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$Masculino_class}	"
 
-			data-field="Email"
+			data-field="Masculino"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Email_fieldheadercolumn}
-	{BEGIN Email_fieldheader}
-	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
-	{$label dbo_Sancionados Email }	{$arrow_icon_Email}
+		{BEGIN Masculino_fieldheadercolumn}
+	{BEGIN Masculino_fieldheader}
+	<SPAN {$Masculino_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino">
+	{$label dbo_Sancionados Masculino }	{$arrow_icon_Masculino}
 	</SPAN>
-	{END Email_fieldheader}
-{END Email_fieldheadercolumn}
+	{END Masculino_fieldheader}
+{END Masculino_fieldheadercolumn}
 
 	
 	</th>
@@ -1042,21 +906,21 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Masculino_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
-			data-field="Masculino"
+			data-field="Email"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Masculino_fieldheadercolumn}
-	{BEGIN Masculino_fieldheader}
-	<SPAN {$Masculino_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino">
-	{$label dbo_Sancionados Masculino }	{$arrow_icon_Masculino}
+		{BEGIN Email_fieldheadercolumn}
+	{BEGIN Email_fieldheader}
+	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
+	{$label dbo_Sancionados Email }	{$arrow_icon_Email}
 	</SPAN>
-	{END Masculino_fieldheader}
-{END Masculino_fieldheadercolumn}
+	{END Email_fieldheader}
+{END Email_fieldheadercolumn}
 
 	
 	</th>
@@ -1165,7 +1029,7 @@
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
-	 glyphicon glyphicon-pencil" href="sancionados_edit.php?{$editlink}" {$editlink_attrs} title="Editar" >		
+	 glyphicon glyphicon-pencil" href="sancionados_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>
@@ -1224,7 +1088,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"		data-control-cell
@@ -1243,290 +1107,20 @@
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
-	 
-		
-		
-	{BEGIN _dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$_link_attrs} data-short-details=""
-		class="{$_dlink_class}" 
-		title="{$caption dbo_Procesos1 }"			>
-								
-									{BEGIN _childcount}
-				<span class="details-badge badge _badge" {$_childnumber_attr}>
-					{$_childnumber}				
-				</span>
-				{END _childcount}
-						</a>
-	</span>
-	{END _dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertmandpago_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertmandpago_link_attrs} data-short-details="alertmandpago"
-		class="{$alertmandpago_dlink_class}" 
-		title="{$caption dbo_AlertMandPago }"			>
-								
-									{BEGIN alertmandpago_childcount}
-				<span class="details-badge badge alertmandpago_badge" {$alertmandpago_childnumber_attr}>
-					{$alertmandpago_childnumber}				
-				</span>
-				{END alertmandpago_childcount}
-						</a>
-	</span>
-	{END alertmandpago_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertnotmandpago_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertnotmandpago_link_attrs} data-short-details="alertnotmandpago"
-		class="{$alertnotmandpago_dlink_class}" 
-		title="{$caption AlertNotMandPago }"			>
-								
-									{BEGIN alertnotmandpago_childcount}
-				<span class="details-badge badge alertnotmandpago_badge" {$alertnotmandpago_childnumber_attr}>
-					{$alertnotmandpago_childnumber}				
-				</span>
-				{END alertnotmandpago_childcount}
-						</a>
-	</span>
-	{END alertnotmandpago_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertincacupago_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertincacupago_link_attrs} data-short-details="alertincacupago"
-		class="{$alertincacupago_dlink_class}" 
-		title="{$caption AlertIncAcuPago }"			>
-								
-									{BEGIN alertincacupago_childcount}
-				<span class="details-badge badge alertincacupago_badge" {$alertincacupago_childnumber_attr}>
-					{$alertincacupago_childnumber}				
-				</span>
-				{END alertincacupago_childcount}
-						</a>
-	</span>
-	{END alertincacupago_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertsinpersuasivo_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertsinpersuasivo_link_attrs} data-short-details="alertsinpersuasivo"
-		class="{$alertsinpersuasivo_dlink_class}" 
-		title="{$caption AlertSinPersuasivo }"			>
-								
-									{BEGIN alertsinpersuasivo_childcount}
-				<span class="details-badge badge alertsinpersuasivo_badge" {$alertsinpersuasivo_childnumber_attr}>
-					{$alertsinpersuasivo_childnumber}				
-				</span>
-				{END alertsinpersuasivo_childcount}
-						</a>
-	</span>
-	{END alertsinpersuasivo_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertbusqbienes_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertbusqbienes_link_attrs} data-short-details="alertbusqbienes"
-		class="{$alertbusqbienes_dlink_class}" 
-		title="{$caption AlertBusqBienes }"			>
-								
-									{BEGIN alertbusqbienes_childcount}
-				<span class="details-badge badge alertbusqbienes_badge" {$alertbusqbienes_childnumber_attr}>
-					{$alertbusqbienes_childnumber}				
-				</span>
-				{END alertbusqbienes_childcount}
-						</a>
-	</span>
-	{END alertbusqbienes_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertsegadelante_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link6" {$item_grid_details_link6} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertsegadelante_link_attrs} data-short-details="alertsegadelante"
-		class="{$alertsegadelante_dlink_class}" 
-		title="{$caption AlertSegAdelante }"			>
-								
-									{BEGIN alertsegadelante_childcount}
-				<span class="details-badge badge alertsegadelante_badge" {$alertsegadelante_childnumber_attr}>
-					{$alertsegadelante_childnumber}				
-				</span>
-				{END alertsegadelante_childcount}
-						</a>
-	</span>
-	{END alertsegadelante_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertintsusp_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link7" {$item_grid_details_link7} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertintsusp_link_attrs} data-short-details="alertintsusp"
-		class="{$alertintsusp_dlink_class}" 
-		title="{$caption AlertIntSusp }"			>
-								
-									{BEGIN alertintsusp_childcount}
-				<span class="details-badge badge alertintsusp_badge" {$alertintsusp_childnumber_attr}>
-					{$alertintsusp_childnumber}				
-				</span>
-				{END alertintsusp_childcount}
-						</a>
-	</span>
-	{END alertintsusp_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN reporteclasificacioncartera_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link8" {$item_grid_details_link8} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$reporteclasificacioncartera_link_attrs} data-short-details="reporteclasificacioncartera"
-		class="{$reporteclasificacioncartera_dlink_class}" 
-		title="{$caption dbo_ReporteClasificacionCartera }"			>
-								
-									{BEGIN reporteclasificacioncartera_childcount}
-				<span class="details-badge badge reporteclasificacioncartera_badge" {$reporteclasificacioncartera_childnumber_attr}>
-					{$reporteclasificacioncartera_childnumber}				
-				</span>
-				{END reporteclasificacioncartera_childcount}
-						</a>
-	</span>
-	{END reporteclasificacioncartera_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesossinnotificareport_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link9" {$item_grid_details_link9} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesossinnotificareport_link_attrs} data-short-details="procesossinnotificareport"
-		class="{$procesossinnotificareport_dlink_class}" 
-		title="{$caption dbo_ProcesosSinNotificaReport }"			>
-								
-									{BEGIN procesossinnotificareport_childcount}
-				<span class="details-badge badge procesossinnotificareport_badge" {$procesossinnotificareport_childnumber_attr}>
-					{$procesossinnotificareport_childnumber}				
-				</span>
-				{END procesossinnotificareport_childcount}
-						</a>
-	</span>
-	{END procesossinnotificareport_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN reportecorporaci_nespecialidad_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link10" {$item_grid_details_link10} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$reportecorporaci_nespecialidad_link_attrs} data-short-details="reportecorporaci_nespecialidad"
-		class="{$reportecorporaci_nespecialidad_dlink_class}" 
-		title="{$caption dbo_ReporteCorporaci_nEspecialidad }"			>
-								
-									{BEGIN reportecorporaci_nespecialidad_childcount}
-				<span class="details-badge badge reportecorporaci_nespecialidad_badge" {$reportecorporaci_nespecialidad_childnumber_attr}>
-					{$reportecorporaci_nespecialidad_childnumber}				
-				</span>
-				{END reportecorporaci_nespecialidad_childcount}
-						</a>
-	</span>
-	{END reportecorporaci_nespecialidad_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesosreasignar_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link11" {$item_grid_details_link11} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesosreasignar_link_attrs} data-short-details="procesosreasignar"
-		class="{$procesosreasignar_dlink_class}" 
-		title="{$caption dbo_ProcesosReasignar }"			>
-								
-									{BEGIN procesosreasignar_childcount}
-				<span class="details-badge badge procesosreasignar_badge" {$procesosreasignar_childnumber_attr}>
-					{$procesosreasignar_childnumber}				
-				</span>
-				{END procesosreasignar_childcount}
-						</a>
-	</span>
-	{END procesosreasignar_dtable_link}
-
-
 	
 	</td>
 	{END cellblock_grid_cell_details}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
-{$SancionadoId_value}
-</span>
-{END SancionadoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
 	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Sancionado_class}	"
-
-			data-field="Sancionado"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Sancionado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado" data-default-width >
-{$Sancionado_value}
-</span>
-{END Sancionado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$TipoDocumentoId_class}	"
 
 			data-field="TipoDocumentoId"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1536,18 +1130,18 @@
 </span>
 {END TipoDocumentoId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Documento_class}	"
 
 			data-field="Documento"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1557,6 +1151,27 @@
 </span>
 {END Documento_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Sancionado_class}	"
+
+			data-field="Sancionado"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Sancionado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado" data-default-width >
+{$Sancionado_value}
+</span>
+{END Sancionado_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field3}
 									{BEGIN cellblock_grid_cell_field4}
 	<td
@@ -1564,11 +1179,32 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Masculino_class}	"
+
+			data-field="Masculino"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Masculino_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino" data-default-width >
+{$Masculino_value}
+</span>
+{END Masculino_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$Email_class}	"
 
 			data-field="Email"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1578,18 +1214,18 @@
 </span>
 {END Email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Celular_class}	"
 
 			data-field="Celular"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1598,27 +1234,6 @@
 {$Celular_value}
 </span>
 {END Celular_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Masculino_class}	"
-
-			data-field="Masculino"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Masculino_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masculino" data-fieldname="Masculino" data-default-width >
-{$Masculino_value}
-</span>
-{END Masculino_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
 									{BEGIN cellblock_grid_cell_field7}
@@ -1701,16 +1316,12 @@
 	>
 
 	 
-																		<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="direcciones,procesos,propiedades,solidarios,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar"
-			data-details-direcciones			data-details-procesos			data-details-propiedades			data-details-solidarios			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar	>
+																		<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="dbo_procesossancionados,direcciones,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,bienesinmuebles,bienesmuebles,bienesefectivo"
+			data-details-dbo_procesossancionados			data-details-direcciones			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-bienesinmuebles			data-details-bienesmuebles			data-details-bienesefectivo	>
+		<span data-details-inside data-short-table="dbo_procesossancionados">
+			</span>
 		<span data-details-inside data-short-table="direcciones">
-			</span>
-		<span data-details-inside data-short-table="procesos">
-			</span>
-		<span data-details-inside data-short-table="propiedades">
-			</span>
-		<span data-details-inside data-short-table="solidarios">
 			</span>
 		<span data-details-inside data-short-table="">
 			</span>
@@ -1734,7 +1345,11 @@
 			</span>
 		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
 			</span>
-		<span data-details-inside data-short-table="procesosreasignar">
+		<span data-details-inside data-short-table="bienesinmuebles">
+			</span>
+		<span data-details-inside data-short-table="bienesmuebles">
+			</span>
+		<span data-details-inside data-short-table="bienesefectivo">
 			</span>
 		<div data-details-preview>
 	</div>
@@ -1819,7 +1434,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$TipoDocumentoId_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1834,7 +1449,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Sancionado_class}	"
+		 r-ori-vert		 {$Documento_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1849,7 +1464,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$TipoDocumentoId_class}	"
+		 r-ori-vert		 {$Sancionado_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1864,7 +1479,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Documento_class}	"
+		 r-ori-vert		 {$Masculino_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1879,7 +1494,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$Celular_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1894,7 +1509,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Celular_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1909,7 +1524,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Masculino_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1924,7 +1539,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Observaciones_class}	"
+		 r-ori-vert		 {$Fallecimiento_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1939,7 +1554,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Fallecimiento_class}	"
+		 r-ori-vert		 {$PrivadoLibertad_class}	"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1954,7 +1569,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PrivadoLibertad_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	

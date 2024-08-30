@@ -1,0 +1,568 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_ProcesosSancionados search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Fecha_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Fecha{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Fecha}">
+		{$label dbo_ProcesosSancionados Fecha }	</label>
+	<div class="r-search-option">
+		{$searchtype_Fecha}
+	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Fecha_editcontrol1}
+	</div>
+	
+</div>
+
+{END Fecha_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label dbo_ProcesosSancionados Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN Providencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Providencia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Providencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Providencia" data-fieldname="Providencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Providencia}">
+		{$label dbo_ProcesosSancionados Providencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_Providencia}
+	</div>
+	<div class="r-search-field">
+		{$Providencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Providencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END Providencia_fieldblock}
+											
+{BEGIN Ejecutoria_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ejecutoria}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Ejecutoria{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Ejecutoria" data-fieldname="Ejecutoria" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Ejecutoria}">
+		{$label dbo_ProcesosSancionados Ejecutoria }	</label>
+	<div class="r-search-option">
+		{$searchtype_Ejecutoria}
+	</div>
+	<div class="r-search-field">
+		{$Ejecutoria_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Ejecutoria_editcontrol1}
+	</div>
+	
+</div>
+
+{END Ejecutoria_fieldblock}
+											
+{BEGIN Terminacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terminacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Terminacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="Terminacion" data-fieldname="Terminacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Terminacion}">
+		{$label dbo_ProcesosSancionados Terminacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Terminacion}
+	</div>
+	<div class="r-search-field">
+		{$Terminacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Terminacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Terminacion_fieldblock}
+											
+{BEGIN Observaciones_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Observaciones}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Observaciones{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field23" {$item_integrated_search_field23} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Observaciones}">
+		{$label dbo_ProcesosSancionados Observaciones }	</label>
+	<div class="r-search-option">
+		{$searchtype_Observaciones}
+	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Observaciones_editcontrol1}
+	</div>
+	
+</div>
+
+{END Observaciones_fieldblock}
+											
+{BEGIN Radicado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Radicado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Radicado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field30" {$item_integrated_search_field30} data-pageid="{$pageid}" data-field="Radicado" data-fieldname="Radicado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Radicado}">
+		{$label dbo_ProcesosSancionados Radicado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Radicado}
+	</div>
+	<div class="r-search-field">
+		{$Radicado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Radicado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Radicado_fieldblock}
+											
+{BEGIN Acuerdo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Acuerdo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Acuerdo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field32" {$item_integrated_search_field32} data-pageid="{$pageid}" data-field="Acuerdo" data-fieldname="Acuerdo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Acuerdo}">
+		{$label dbo_ProcesosSancionados Acuerdo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Acuerdo}
+	</div>
+	<div class="r-search-field">
+		{$Acuerdo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Acuerdo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Acuerdo_fieldblock}
+											
+{BEGIN Incumplimiento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Incumplimiento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Incumplimiento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field33" {$item_integrated_search_field33} data-pageid="{$pageid}" data-field="Incumplimiento" data-fieldname="Incumplimiento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Incumplimiento}">
+		{$label dbo_ProcesosSancionados Incumplimiento }	</label>
+	<div class="r-search-option">
+		{$searchtype_Incumplimiento}
+	</div>
+	<div class="r-search-field">
+		{$Incumplimiento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Incumplimiento_editcontrol1}
+	</div>
+	
+</div>
+
+{END Incumplimiento_fieldblock}
+											
+{BEGIN Concepto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Concepto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Concepto" data-fieldname="Concepto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Concepto}">
+		{$label dbo_ProcesosSancionados Concepto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Concepto}
+	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Concepto_fieldblock}
+											
+{BEGIN Saldo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Saldo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Saldo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Saldo" data-fieldname="Saldo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Saldo}">
+		{$label dbo_ProcesosSancionados Saldo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Saldo}
+	</div>
+	<div class="r-search-field">
+		{$Saldo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Saldo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Saldo_fieldblock}
+											
+{BEGIN Estado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Estado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Estado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Estado" data-fieldname="Estado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Estado}">
+		{$label dbo_ProcesosSancionados Estado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Estado}
+	</div>
+	<div class="r-search-field">
+		{$Estado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Estado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Estado_fieldblock}
+											
+{BEGIN Etapa_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Etapa}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Etapa{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Etapa" data-fieldname="Etapa" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Etapa}">
+		{$label dbo_ProcesosSancionados Etapa }	</label>
+	<div class="r-search-option">
+		{$searchtype_Etapa}
+	</div>
+	<div class="r-search-field">
+		{$Etapa_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Etapa_editcontrol1}
+	</div>
+	
+</div>
+
+{END Etapa_fieldblock}
+											
+{BEGIN Seccional_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Seccional}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Seccional{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Seccional" data-fieldname="Seccional" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Seccional}">
+		{$label dbo_ProcesosSancionados Seccional }	</label>
+	<div class="r-search-option">
+		{$searchtype_Seccional}
+	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Seccional_editcontrol1}
+	</div>
+	
+</div>
+
+{END Seccional_fieldblock}
+											
+{BEGIN CarteraTipo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="CarteraTipo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="CarteraTipo" data-fieldname="CarteraTipo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_CarteraTipo}">
+		{$label dbo_ProcesosSancionados CarteraTipo }	</label>
+	<div class="r-search-option">
+		{$searchtype_CarteraTipo}
+	</div>
+	<div class="r-search-field">
+		{$CarteraTipo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$CarteraTipo_editcontrol1}
+	</div>
+	
+</div>
+
+{END CarteraTipo_fieldblock}
+											
+{BEGIN Abogado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Abogado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Abogado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="Abogado" data-fieldname="Abogado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Abogado}">
+		{$label dbo_ProcesosSancionados Abogado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Abogado}
+	</div>
+	<div class="r-search-field">
+		{$Abogado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Abogado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Abogado_fieldblock}
+											
+{BEGIN Despacho_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Despacho}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Despacho{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="Despacho" data-fieldname="Despacho" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Despacho}">
+		{$label dbo_ProcesosSancionados Despacho }	</label>
+	<div class="r-search-option">
+		{$searchtype_Despacho}
+	</div>
+	<div class="r-search-field">
+		{$Despacho_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Despacho_editcontrol1}
+	</div>
+	
+</div>
+
+{END Despacho_fieldblock}
+											
+{BEGIN Motivo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Motivo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Motivo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="Motivo" data-fieldname="Motivo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Motivo}">
+		{$label dbo_ProcesosSancionados Motivo }	</label>
+	<div class="r-search-option">
+		{$searchtype_Motivo}
+	</div>
+	<div class="r-search-field">
+		{$Motivo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Motivo_editcontrol1}
+	</div>
+	
+</div>
+
+{END Motivo_fieldblock}
+											
+{BEGIN SancionadoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="SancionadoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="SancionadoId" data-fieldname="SancionadoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_SancionadoId}">
+		{$label dbo_ProcesosSancionados SancionadoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_SancionadoId}
+	</div>
+	<div class="r-search-field">
+		{$SancionadoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$SancionadoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END SancionadoId_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

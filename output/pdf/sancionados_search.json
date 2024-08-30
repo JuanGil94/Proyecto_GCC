@@ -166,34 +166,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"text":{$TipoDocumentoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
 			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$Celular_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$Fallecimiento_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
-			{"text":{$PrivadoLibertad_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 		  ],
   "border": [ false, false, false, false ],

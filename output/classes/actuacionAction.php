@@ -5,8 +5,7 @@ include_once (getabspath("../include/dbcommon.php"));
 class coreOficios {
     public $actuacionId,$procesoId,$intereses,$fechaLiqui,$fechaAct,$fecha,
     $resolucion,$radicado,$observaciones,$oficioId,$etapaId,$estadoId,$motivoId,$interesesDiferencial;
-    public function __construct($actuacionId,$procesoId,$fecha,$resolucion,$radicado,
-    $observaciones,$userId,$etapaId,$estadoId,$motivoId){
+    public function __construct($actuacionId,$procesoId,$fecha,$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId){
         $this->actuacionId=$actuacionId;
         $this->procesoId=$procesoId;
         $this->fechaLiqui=date("d-m-Y");
@@ -22,6 +21,9 @@ class coreOficios {
     }
     public function process(){
         switch ($this->actuacionId) {
+                case "0":
+                    return true;
+                break;
                 case "4":
                     $recalcular=new reliquidacion($this->procesoId);
                     $meses = $recalcular->Calcular();
@@ -43,11 +45,9 @@ class coreOficios {
                         echo "Ocurrio un error en el Insert Fechas debido a: ".DB::LastError(); 
                         return false;
                     }
-
                     return true;
                 break;
                 case "5":
-                    //echo "Actuacion Nunmero 5";
                     $resultado["response"]=DB::Exec("UPDATE Procesos set EtapaId=".$this->etapaId.",ActuacionId=".$this->actuacionId.",Observaciones='".$this->observaciones."' where ProcesoId=".$this->procesoId);
                         if (!$resultado["response"]){
                             echo "Ocurrio un error en el Update debido a: ".DB::LastError(); 
