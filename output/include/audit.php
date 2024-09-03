@@ -1060,6 +1060,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.tipoTasas")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2071,6 +2075,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="BienesEfectivo")
+		{
+			return false;
+		}
+		if($table=="dbo.tipoTasas")
 		{
 			return false;
 		}

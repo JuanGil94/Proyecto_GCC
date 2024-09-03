@@ -190,15 +190,13 @@ $tdatatasas_tributarias[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY TasaId desc";
+$tstrOrderBy = "ORDER BY Desde DESC";
 $tdatatasas_tributarias[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatasas_tributarias[".orderindexes"] = array();
-	$tdatatasas_tributarias[".orderindexes"][] = array(1, (0 ? "ASC" : "DESC"), "TasaId");
 
 
-
-$tdatatasas_tributarias[".sqlHead"] = "  SELECT TasaId,  	Desde AS 'Fecha de inicio',  	Hasta,  	Tasa,  	IIF(Tasas.Tipo=1,'Tasas Tributarias',IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL))) AS 'Tipo de Tasas'";
+$tdatatasas_tributarias[".sqlHead"] = "SELECT TasaId,  	FORMAT(CONVERT(DATE, Desde), 'dd/MM/yyyy') AS 'Fecha de inicio',  	Hasta,  	Tasa,  	IIF(Tasas.Tipo=1,'Tasas Tributarias',IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL))) AS 'Tipo de Tasas'";
 $tdatatasas_tributarias[".sqlFrom"] = "FROM dbo.Tasas";
 $tdatatasas_tributarias[".sqlWhereExpr"] = "Tasas.Tipo =1";
 $tdatatasas_tributarias[".sqlTail"] = "";
@@ -404,9 +402,9 @@ $tdatatasas_tributarias[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "Fecha de inicio";
 	$fdata["GoodName"] = "Fecha_de_inicio";
-	$fdata["ownerTable"] = "dbo.Tasas";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("Tasas_Tributarias","Fecha_de_inicio");
-	$fdata["FieldType"] = 7;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -417,7 +415,7 @@ $tdatatasas_tributarias[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Desde";
+	$fdata["FullName"] = "FORMAT(CONVERT(DATE, Desde), 'dd/MM/yyyy')";
 
 	
 	
@@ -511,7 +509,7 @@ $tdatatasas_tributarias[".hideMobileList"] = array();
 		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
 // the end of search options settings
 
 
@@ -990,11 +988,11 @@ require_once(getabspath("classes/sql.php"));
 function createSqlQuery_tasas_tributarias()
 {
 $proto0=array();
-$proto0["m_strHead"] = "  SELECT";
-$proto0["m_strFieldList"] = "TasaId,  	Desde AS 'Fecha de inicio',  	Hasta,  	Tasa,  	IIF(Tasas.Tipo=1,'Tasas Tributarias',IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL))) AS 'Tipo de Tasas'";
+$proto0["m_strHead"] = "SELECT";
+$proto0["m_strFieldList"] = "TasaId,  	FORMAT(CONVERT(DATE, Desde), 'dd/MM/yyyy') AS 'Fecha de inicio',  	Hasta,  	Tasa,  	IIF(Tasas.Tipo=1,'Tasas Tributarias',IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL))) AS 'Tipo de Tasas'";
 $proto0["m_strFrom"] = "FROM dbo.Tasas";
 $proto0["m_strWhere"] = "Tasas.Tipo =1";
-$proto0["m_strOrderBy"] = "ORDER BY TasaId desc";
+$proto0["m_strOrderBy"] = "ORDER BY Desde DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -1048,41 +1046,37 @@ $obj = new SQLFieldListItem($proto6);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Desde",
-	"m_strTable" => "dbo.Tasas",
-	"m_srcTableName" => "Tasas Tributarias"
+			$proto9=array();
+$proto9["m_functiontype"] = "SQLF_CUSTOM";
+$proto9["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "CONVERT(DATE, Desde)"
 ));
 
-$proto8["m_sql"] = "Desde";
+$proto9["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'dd/MM/yyyy'"
+));
+
+$proto9["m_arguments"][]=$obj;
+$proto9["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto9);
+
+$proto8["m_sql"] = "FORMAT(CONVERT(DATE, Desde), 'dd/MM/yyyy')";
 $proto8["m_srcTableName"] = "Tasas Tributarias";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "Fecha de inicio";
 $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto10=array();
+						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Hasta",
 	"m_strTable" => "dbo.Tasas",
 	"m_srcTableName" => "Tasas Tributarias"
 ));
 
-$proto10["m_sql"] = "Hasta";
-$proto10["m_srcTableName"] = "Tasas Tributarias";
-$proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
-$obj = new SQLFieldListItem($proto10);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto12=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Tasa",
-	"m_strTable" => "dbo.Tasas",
-	"m_srcTableName" => "Tasas Tributarias"
-));
-
-$proto12["m_sql"] = "Tasa";
+$proto12["m_sql"] = "Hasta";
 $proto12["m_srcTableName"] = "Tasas Tributarias";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1090,84 +1084,98 @@ $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
-			$proto15=array();
-$proto15["m_functiontype"] = "SQLF_CUSTOM";
-$proto15["m_arguments"] = array();
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "Tasas.Tipo=1"
-));
-
-$proto15["m_arguments"][]=$obj;
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "'Tasas Tributarias'"
-));
-
-$proto15["m_arguments"][]=$obj;
-						$obj = new SQLNonParsed(array(
-	"m_sql" => "IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL))"
-));
-
-$proto15["m_arguments"][]=$obj;
-$proto15["m_strFunctionName"] = "IIF";
-$obj = new SQLFunctionCall($proto15);
-
-$proto14["m_sql"] = "IIF(Tasas.Tipo=1,'Tasas Tributarias',IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL)))";
-$proto14["m_srcTableName"] = "Tasas Tributarias";
-$proto14["m_expr"]=$obj;
-$proto14["m_alias"] = "Tipo de Tasas";
-$obj = new SQLFieldListItem($proto14);
-
-$proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto19=array();
-$proto19["m_link"] = "SQLL_MAIN";
-			$proto20=array();
-$proto20["m_strName"] = "dbo.Tasas";
-$proto20["m_srcTableName"] = "Tasas Tributarias";
-$proto20["m_columns"] = array();
-$proto20["m_columns"][] = "TasaId";
-$proto20["m_columns"][] = "Desde";
-$proto20["m_columns"][] = "Hasta";
-$proto20["m_columns"][] = "Tasa";
-$proto20["m_columns"][] = "Tipo";
-$obj = new SQLTable($proto20);
-
-$proto19["m_table"] = $obj;
-$proto19["m_sql"] = "dbo.Tasas";
-$proto19["m_alias"] = "";
-$proto19["m_srcTableName"] = "Tasas Tributarias";
-$proto21=array();
-$proto21["m_sql"] = "";
-$proto21["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
-));
-
-$proto21["m_column"]=$obj;
-$proto21["m_contained"] = array();
-$proto21["m_strCase"] = "";
-$proto21["m_havingmode"] = false;
-$proto21["m_inBrackets"] = false;
-$proto21["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto21);
-
-$proto19["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto19);
-
-$proto0["m_fromlist"][]=$obj;
-$proto0["m_groupby"] = array();
-$proto0["m_orderby"] = array();
-												$proto23=array();
-						$obj = new SQLField(array(
-	"m_strName" => "TasaId",
+			$obj = new SQLField(array(
+	"m_strName" => "Tasa",
 	"m_strTable" => "dbo.Tasas",
 	"m_srcTableName" => "Tasas Tributarias"
 ));
 
+$proto14["m_sql"] = "Tasa";
+$proto14["m_srcTableName"] = "Tasas Tributarias";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "";
+$obj = new SQLFieldListItem($proto14);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto16=array();
+			$proto17=array();
+$proto17["m_functiontype"] = "SQLF_CUSTOM";
+$proto17["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Tasas.Tipo=1"
+));
+
+$proto17["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'Tasas Tributarias'"
+));
+
+$proto17["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL))"
+));
+
+$proto17["m_arguments"][]=$obj;
+$proto17["m_strFunctionName"] = "IIF";
+$obj = new SQLFunctionCall($proto17);
+
+$proto16["m_sql"] = "IIF(Tasas.Tipo=1,'Tasas Tributarias',IIF(Tasas.Tipo=2,'Tasas TES (Deterioro de Cartera)',  	IIF (Tasas.Tipo=3,'Tasas Comerciales',NULL)))";
+$proto16["m_srcTableName"] = "Tasas Tributarias";
+$proto16["m_expr"]=$obj;
+$proto16["m_alias"] = "Tipo de Tasas";
+$obj = new SQLFieldListItem($proto16);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto21=array();
+$proto21["m_link"] = "SQLL_MAIN";
+			$proto22=array();
+$proto22["m_strName"] = "dbo.Tasas";
+$proto22["m_srcTableName"] = "Tasas Tributarias";
+$proto22["m_columns"] = array();
+$proto22["m_columns"][] = "TasaId";
+$proto22["m_columns"][] = "Desde";
+$proto22["m_columns"][] = "Hasta";
+$proto22["m_columns"][] = "Tasa";
+$proto22["m_columns"][] = "Tipo";
+$obj = new SQLTable($proto22);
+
+$proto21["m_table"] = $obj;
+$proto21["m_sql"] = "dbo.Tasas";
+$proto21["m_alias"] = "";
+$proto21["m_srcTableName"] = "Tasas Tributarias";
+$proto23=array();
+$proto23["m_sql"] = "";
+$proto23["m_uniontype"] = "SQLL_UNKNOWN";
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
+));
+
 $proto23["m_column"]=$obj;
-$proto23["m_bAsc"] = 0;
-$proto23["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto23);
+$proto23["m_contained"] = array();
+$proto23["m_strCase"] = "";
+$proto23["m_havingmode"] = false;
+$proto23["m_inBrackets"] = false;
+$proto23["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto23);
+
+$proto21["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto21);
+
+$proto0["m_fromlist"][]=$obj;
+$proto0["m_groupby"] = array();
+$proto0["m_orderby"] = array();
+												$proto25=array();
+						$obj = new SQLField(array(
+	"m_strName" => "Desde",
+	"m_strTable" => "dbo.Tasas",
+	"m_srcTableName" => "Tasas Tributarias"
+));
+
+$proto25["m_column"]=$obj;
+$proto25["m_bAsc"] = 0;
+$proto25["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto25);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="Tasas Tributarias";		
@@ -1187,6 +1195,7 @@ $tdatatasas_tributarias[".sqlquery"] = $queryData_tasas_tributarias;
 
 
 
-$tdatatasas_tributarias[".hasEvents"] = false;
+include_once(getabspath("include/tasas_tributarias_events.php"));
+$tdatatasas_tributarias[".hasEvents"] = true;
 
 ?>

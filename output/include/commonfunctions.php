@@ -529,6 +529,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("bienesefectivo" == $shortTName )
 		return true;
+	if ("tipotasas" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2046,6 +2048,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="BienesEfectivo";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.tipoTasas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.tipoTasas";
+	}
 	return $arr;
 }
 
@@ -2218,6 +2229,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="BienesInmuebles";
 	$arr[]="BienesMuebles";
 	$arr[]="BienesEfectivo";
+	$arr[]="dbo.tipoTasas";
 	return $arr;
 }
 
@@ -3668,6 +3680,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BienesEfectivo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.tipoTasas" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

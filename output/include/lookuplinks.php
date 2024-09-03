@@ -96,6 +96,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Conceptos"]["naturalezas.ConceptoId"] = array();
 		}
 		$lookupTableLinks["dbo.Conceptos"]["naturalezas.ConceptoId"]["edit"] = array("table" => "dbo.Naturalezas", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.tipoTasas"] ) ) {
+			$lookupTableLinks["dbo.tipoTasas"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.tipoTasas"]["naturalezas.TasaTipo"] )) {
+			$lookupTableLinks["dbo.tipoTasas"]["naturalezas.TasaTipo"] = array();
+		}
+		$lookupTableLinks["dbo.tipoTasas"]["naturalezas.TasaTipo"]["edit"] = array("table" => "dbo.Naturalezas", "field" => "TasaTipo", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Actuaciones"] ) ) {
 			$lookupTableLinks["dbo.Actuaciones"] = array();
 		}

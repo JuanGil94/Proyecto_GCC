@@ -177,6 +177,7 @@ $nonAdminTablesArr[] = "dbo.ProcesosSancionados";
 $nonAdminTablesArr[] = "BienesInmuebles";
 $nonAdminTablesArr[] = "BienesMuebles";
 $nonAdminTablesArr[] = "BienesEfectivo";
+$nonAdminTablesArr[] = "dbo.tipoTasas";
 
 $ug_connection = $cman->getForUserGroups();
 

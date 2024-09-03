@@ -1707,6 +1707,8 @@ class CrossTableWebReport
 			$isDB = true;
 		if("dbo.Propiedades" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("dbo.tipoTasas" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	
