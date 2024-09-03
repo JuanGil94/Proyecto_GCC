@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2843_1721142599";
+$projectBuildKey = "2863_1725380875";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2843";
+$projectBuildNumber = "2863";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -890,7 +890,6 @@ $tableCaptions["Spanish"]["dbo_Ciudades3"] = "Ciudades3";
 $tableCaptions["Spanish"]["dbo_Uvbs"] = "Uvbs";
 $tableCaptions["Spanish"]["Resumen_Mensual"] = "Resumen Mensual";
 $tableCaptions["Spanish"]["dbo_tipoRecaudo"] = "Tipo Recaudo";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_Despachos2"] = "Despachos2";
 $tableCaptions["Spanish"]["dbo_Despachos5"] = "Despachos5";
 $tableCaptions["Spanish"]["BDME_Actualizaci_n"] = "BDME Actualización";
@@ -936,6 +935,8 @@ $tableCaptions["Spanish"]["dbo_ProcesosSancionados"] = "Procesos Sancionados";
 $tableCaptions["Spanish"]["BienesInmuebles"] = "Bienes Inmuebles";
 $tableCaptions["Spanish"]["BienesMuebles"] = "Bienes Muebles";
 $tableCaptions["Spanish"]["BienesEfectivo"] = "Bienes Efectivo";
+$tableCaptions["Spanish"]["dbo_tipoTasas"] = "Tipo Tasas";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -162,7 +162,7 @@ while( $date = $consulta->fetchAssoc() )
 	$_SESSION["CarteraTipoId"]=$date["CarteraTipoId"];
 	$_SESSION["SeccionalUser"]=$date["SeccionalId"];
 }
-echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
+//echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
 $_SESSION["UserId"]=$userId;
 //createNotification( array( "message" => "New category added: ", "title" => "New category", "icon" => "fa-envelope") );  
 //buscar las seccionales pertenecientes al UserId
@@ -204,7 +204,7 @@ while( $date = $consulta->fetchAssoc() )
 	$conteo=$date["Cantidad"];
 }
 if ($conteo>0){
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "http://localhost:8086/dbo_procesosprescritos_list.php",null, $username,"" );
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "http://192.168.209.48:8090/dbo_procesosprescritos_list.php",null, $username,"" );
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=2
@@ -228,7 +228,7 @@ while( $date = $consulta->fetchAssoc() )
 	$conteo=$date["Cantidad"];
 }
 if ($conteo>0){
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertmandpago_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "http://192.168.209.48:8090/alertmandpago_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=4
@@ -252,7 +252,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-NotificacionMandamientoDePago", "ALERTA NOTIFICACION MANDAMIENTO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertnotmandpago_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-NotificacionMandamientoDePago", "ALERTA NOTIFICACION MANDAMIENTO DE PAGO", "glyphicon-tag", "http://192.168.209.48:8090/alertnotmandpago_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=5
@@ -275,7 +275,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-IncumplimientoAcuerdoDePago", "ALERTA NOTIFICACION INCUMPLIMIENTO DE ACUERDO DE PAGO", "glyphicon-tag", "http://localhost:8086/alertincacupago_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-IncumplimientoAcuerdoDePago", "ALERTA NOTIFICACION INCUMPLIMIENTO DE ACUERDO DE PAGO", "glyphicon-tag", "http://192.168.209.48:8090/alertincacupago_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=6
@@ -298,7 +298,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Oficio Persuasivo", "ALERTA NOTIFICACION SIN OFICIO PERSUASIVO", "glyphicon-tag", "http://localhost:8086/alertsinpersuasivo_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Oficio Persuasivo", "ALERTA NOTIFICACION SIN OFICIO PERSUASIVO", "glyphicon-tag", "http://192.168.209.48:8090/alertsinpersuasivo_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=7
@@ -326,7 +326,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Busquedad de Bienes", "ALERTA NOTIFICACION SIN BUSQUEDAD DE BIENES", "glyphicon-tag", "http://localhost:8086/alertbusqbienes_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Busquedad de Bienes", "ALERTA NOTIFICACION SIN BUSQUEDAD DE BIENES", "glyphicon-tag", "http://192.168.209.48:8090/alertbusqbienes_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=8
@@ -359,7 +359,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Resolucion Seguir Adelante", "ALERTA SIN RESOLUCION SEGUIR ADELANTE", "glyphicon-tag", "http://localhost:8086/alertsegadelante_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Resolucion Seguir Adelante", "ALERTA SIN RESOLUCION SEGUIR ADELANTE", "glyphicon-tag", "http://192.168.209.48:8090/alertsegadelante_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=9
@@ -379,7 +379,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Interrumpidos/Suspendidos", "ALERTA INTERRUMPIDOS/SUSPENDIDOS", "glyphicon-tag", "http://localhost:8086/alertintsusp_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Interrumpidos/Suspendidos", "ALERTA INTERRUMPIDOS/SUSPENDIDOS", "glyphicon-tag", "http://192.168.209.48:8090/alertintsusp_list.php",null,$username,"");
 }
 
 

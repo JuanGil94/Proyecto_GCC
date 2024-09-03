@@ -1410,81 +1410,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="seccionales_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN abogados_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$abogados_link_attrs} data-short-details="abogados"
-		class="{$abogados_dlink_class}" 
-		title="{$caption dbo_Abogados }"			>
-								
-									{BEGIN abogados_childcount}
-				<span class="details-badge badge abogados_badge" {$abogados_childnumber_attr}>
-					{$abogados_childnumber}				
-				</span>
-				{END abogados_childcount}
-						</a>
-	</span>
-	{END abogados_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesosreasignar_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesosreasignar_link_attrs} data-short-details="procesosreasignar"
-		class="{$procesosreasignar_dlink_class}" 
-		title="{$caption dbo_ProcesosReasignar }"			>
-								
-									{BEGIN procesosreasignar_childcount}
-				<span class="details-badge badge procesosreasignar_badge" {$procesosreasignar_childnumber_attr}>
-					{$procesosreasignar_childnumber}				
-				</span>
-				{END procesosreasignar_childcount}
-						</a>
-	</span>
-	{END procesosreasignar_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN _dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$_link_attrs} data-short-details=""
-		class="{$_dlink_class}" 
-		title="{$caption dbo_Procesos1 }"			>
-								
-									{BEGIN _childcount}
-				<span class="details-badge badge _badge" {$_childnumber_attr}>
-					{$_childnumber}				
-				</span>
-				{END _childcount}
-						</a>
-	</span>
-	{END _dtable_link}
-
 
 	
 	</td>
@@ -1667,25 +1598,13 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-				<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="procesosreasignar,"
-			data-details-procesosreasignar			data-details-	>
-		<span data-details-inside data-short-table="procesosreasignar">
-			</span>
-		<span data-details-inside data-short-table="">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			
+	
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>

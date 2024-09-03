@@ -1,9 +1,4 @@
 <?php
-class MiClase {
-    public function saludar() {
-        echo "Hola desde MiClase";
-    }
-}
 class CalendarioAnual {
     private $anio;
     private $meses;

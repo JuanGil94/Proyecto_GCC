@@ -12,14 +12,18 @@ class diccionario {
         $this->procesoId=$procesoId;
         $this->oficioId=$oficioId;
         $this->sigobius=$sigobius;
-        $consulta=DB::Query("SELECT S.Seccional AS 'Seccional' FROM Seccionales S
+        $consulta=DB::Query("SELECT S.Seccional AS 'Seccional',* FROM Seccionales S
         INNER JOIN Procesos P ON P.SeccionalId = S.SeccionalId
         where P.ProcesoId =".$procesoId);
         //print_r($info);
         while( $date = $consulta->fetchAssoc() )
 		{
             $info=array(
-                "Seccional"=>$date["Seccional"]
+                "Seccional"=>$date["Seccional"],
+                "Corporacion"=>$date["Corporacion"],
+                "Unidad"=>$date["Unidad"],
+                "Oficina"=>$date["Oficina"],
+                "Serie"=>$date["Serie"],
             );
         }
         $info["Sigobius"]=$this->sigobius;
@@ -367,14 +371,17 @@ class diccionario {
             'Abogado' => '',
             'AbogadoEjecutor' => '',
             'ElAbogadoEjecutor' => '',
-            'usuario' => '',
             'FechaAcuerdo' => '',
             'Plazo' => '',
             'Recaudo' => '',
             'ObligacionLetras'=>'',
             'ObligacionTotalLetras'=>'',
-            'PlazoLetras',
-            'PlazoNum',
+            'PlazoLetras'=>'',
+            'PlazoNum'=>'',
+            "Corporacion"=>'',
+            "Unidad"=>'',
+            "Oficina"=>'',
+            "Serie"=>'',
         );
         $this->variables=$variables;
             //$numVariables=count(array_keys($variables));
@@ -592,6 +599,10 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('Despacho',$value["Despacho"]);
             $templateWord->setValue('Obligacion',$value["Obligacion"]);
             $templateWord->setValue('Radicado',$value["Radicado"]);
+            $templateWord->setValue('Corporacion',$value["Corporacion"]);
+            $templateWord->setValue('Unidad',$value["Unidad"]);
+            $templateWord->setValue('Oficina',$value["Oficina"]);
+            $templateWord->setValue('Serie',$value["Serie"]);
             $templateWord->saveAs('templates_GCC/carProceso'.$this->procesoId.'.docx');
               
     }

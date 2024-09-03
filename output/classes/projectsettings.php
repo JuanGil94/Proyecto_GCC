@@ -3862,6 +3862,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "bienesmuebles" ] = "BienesMuebles";
 	$projectEntities[ "BienesEfectivo" ] = array( "url" => "bienesefectivo", "type" => 1 );
 	$projectEntitiesReverse[ "bienesefectivo" ] = "BienesEfectivo";
+	$projectEntities[ "dbo.tipoTasas" ] = array( "url" => "tipotasas", "type" => 0 );
+	$projectEntitiesReverse[ "tipotasas" ] = "dbo.tipoTasas";
 }
 
 function findTable( $table ) {
