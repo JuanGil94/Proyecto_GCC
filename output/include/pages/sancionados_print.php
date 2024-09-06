@@ -1,10 +1,10 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'dbo.Direcciones' => array( 'displayPreview' => 1 ),
-'dbo.ProcesosSancionados' => array( 'displayPreview' => 1 ),
 'BienesInmuebles' => array( 'displayPreview' => 1 ),
 'BienesMuebles' => array( 'displayPreview' => 1 ),
-'BienesEfectivo' => array( 'displayPreview' => 1 ) ),
+'BienesEfectivo' => array( 'displayPreview' => 1 ),
+'dbo.ProcesosSancionados' => array( 'displayPreview' => 1 ) ),
 'master' => array( 'dbo.TiposDocumentos' => array( 'preview' => true ) ),
 'totals' => array( 'SancionadoId' => array( 'totalsType' => '' ),
 'Sancionado' => array( 'totalsType' => '' ),

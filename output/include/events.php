@@ -128,6 +128,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Base_de_Datos___Historico_snippet"] = true;
 		$this->events["Base_de_Datos___Historico_Seccional_Cartera"] = true;
 		$this->events["Deterioro_de_Cartera_por_Proceso_cartera_seccional"] = true;
+		$this->events["dbo_ProcesosSancionados_SumProcesos"] = true;
+		$this->events["dbo_ProcesosSancionados_SumSaldo"] = true;
 
 
 
@@ -4475,6 +4477,78 @@ if ($result) {
 echo '</select>';
 
 echo'</br>';
+	;
+}
+	function event_dbo_ProcesosSancionados_SumProcesos(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = 
+"SELECT
+p.SancionadoId, COUNT(*) SumProcesos
+FROM dbo.Procesos AS p
+LEFT OUTER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId
+LEFT OUTER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId
+LEFT OUTER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId
+LEFT OUTER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId
+LEFT OUTER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId
+LEFT OUTER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId
+LEFT OUTER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId
+LEFT OUTER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId
+WHERE p.SancionadoId=$sancionadoId
+GROUP BY p.SancionadoId ";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalProcesos = $row['SumProcesos'];
+
+// Imprimir el valor formateado
+echo "<strong>" ."No. Procesos: ". $totalProcesos . "</strong>";
+
+	;
+}
+	function event_dbo_ProcesosSancionados_SumSaldo(&$params)
+	{
+	global $pageObject;
+
+// Obtener el valor de SancionadoId
+$data = $pageObject->getMasterRecord();
+$sancionadoId = $data["SancionadoId"];
+
+// Ejecutar la consulta SQL
+$sql = 
+"SELECT
+p.SancionadoId, FORMAT(ROUND(SUM(p.Intereses+p.Obligacion+p.Costas),0), 'C', 'es-CO') SumProcesos
+FROM dbo.Procesos AS p
+LEFT OUTER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId
+LEFT OUTER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId
+LEFT OUTER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId
+LEFT OUTER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId
+LEFT OUTER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId
+LEFT OUTER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId
+LEFT OUTER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId
+LEFT OUTER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId
+WHERE p.SancionadoId=$sancionadoId
+GROUP BY p.SancionadoId";
+
+// Ejecutar la consulta
+$result = DB::Query($sql);
+
+// Obtener el resultado
+$row = $result->fetchAssoc();
+$totalProcesos = $row['SumProcesos'];
+
+// Imprimir el valor formateado
+echo "<strong>". $totalProcesos . "</strong>";
+
 	;
 }
 

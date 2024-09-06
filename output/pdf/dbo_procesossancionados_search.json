@@ -217,10 +217,10 @@ pdfDocument = {
 			{"text":{$Despacho_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
 				
-			{"text":{$Motivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
-				
-				
 			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
 				
 		  ],
   "border": [ false, false, false, false ],

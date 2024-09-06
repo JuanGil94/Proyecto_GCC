@@ -129,6 +129,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
 						</div>
 		{END searchCtrlBlock_Fecha}
+																{BEGIN searchCtrlBlock_Email}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Email}" {$filterRow_attrs_Email}>
+			<label>{$label dbo_ProcesosSancionados Email }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Email}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Email}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Email}</span>
+						</div>
+		{END searchCtrlBlock_Email}
 																{BEGIN searchCtrlBlock_SancionadoId}
 
 
@@ -142,19 +155,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
 						</div>
 		{END searchCtrlBlock_SancionadoId}
-																{BEGIN searchCtrlBlock_Motivo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Motivo}" {$filterRow_attrs_Motivo}>
-			<label>{$label dbo_ProcesosSancionados Motivo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Motivo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Motivo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Motivo}</span>
-						</div>
-		{END searchCtrlBlock_Motivo}
 																{BEGIN searchCtrlBlock_Despacho}
 
 
@@ -639,17 +639,11 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		<span data-itemtype="custom_button" data-itemid="custom_button3" {$item_custom_button3} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="CierreMes" href="javascript:void(0)" typeid="ib" >
-							Cierre Mes			</a>
-</span>
-	 
 		{BEGIN inlineadd_link}
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
@@ -860,6 +854,16 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
+					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
+					<span>{$label dbo_ProcesosSancionados Concepto }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
 					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
 					<span>{$label dbo_ProcesosSancionados Numero }</span>
 				</label>
@@ -892,46 +896,6 @@
 				<label>
 					<input type="checkbox" id="hide_Ejecutoria" checked="checked" value="1" data-field="Ejecutoria" data-fieldname="Ejecutoria">
 					<span>{$label dbo_ProcesosSancionados Ejecutoria }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Acuerdo" checked="checked" value="1" data-field="Acuerdo" data-fieldname="Acuerdo">
-					<span>{$label dbo_ProcesosSancionados Acuerdo }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Incumplimiento" checked="checked" value="1" data-field="Incumplimiento" data-fieldname="Incumplimiento">
-					<span>{$label dbo_ProcesosSancionados Incumplimiento }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Terminacion" checked="checked" value="1" data-field="Terminacion" data-fieldname="Terminacion">
-					<span>{$label dbo_ProcesosSancionados Terminacion }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
-					<span>{$label dbo_ProcesosSancionados Concepto }</span>
 				</label>
 			</div>
 					</a>
@@ -1000,8 +964,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Despacho" checked="checked" value="1" data-field="Despacho" data-fieldname="Despacho">
-					<span>{$label dbo_ProcesosSancionados Despacho }</span>
+					<input type="checkbox" id="hide_Email" checked="checked" value="1" data-field="Email" data-fieldname="Email">
+					<span>{$label dbo_ProcesosSancionados Email }</span>
 				</label>
 			</div>
 					</a>
@@ -1010,18 +974,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Motivo" checked="checked" value="1" data-field="Motivo" data-fieldname="Motivo">
-					<span>{$label dbo_ProcesosSancionados Motivo }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
-					<span>{$label dbo_ProcesosSancionados SancionadoId }</span>
+					<input type="checkbox" id="hide_Acuerdo" checked="checked" value="1" data-field="Acuerdo" data-fieldname="Acuerdo">
+					<span>{$label dbo_ProcesosSancionados Acuerdo }</span>
 				</label>
 			</div>
 					</a>
@@ -1043,9 +997,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
-		content: "{$label dbo_ProcesosSancionados SancionadoId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
 		content: "{$label dbo_ProcesosSancionados Concepto}";
 	}
@@ -1082,28 +1033,19 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Acuerdo"]:before {
 		content: "{$label dbo_ProcesosSancionados Acuerdo}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Incumplimiento"]:before {
-		content: "{$label dbo_ProcesosSancionados Incumplimiento}";
+								[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Email"]:before {
+		content: "{$label dbo_ProcesosSancionados Email}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Terminacion"]:before {
-		content: "{$label dbo_ProcesosSancionados Terminacion}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Despacho"]:before {
-		content: "{$label dbo_ProcesosSancionados Despacho}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Motivo"]:before {
-		content: "{$label dbo_ProcesosSancionados Motivo}";
-	}
-		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
-	data-body-height="2"
+	data-body-height="1"
 >
 						<thead>
 			{BEGIN grid_header}
 			
-																														<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
 									{$gridHeader_class}
 					
 								r-gridrow
@@ -1152,11 +1094,21 @@
 	{$cell_grid_headcell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$Concepto_class}	"
 
+			data-field="Concepto"
 	
 	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label dbo_ProcesosSancionados Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
 
 	
 	</th>
@@ -1267,111 +1219,11 @@
 	{$cell_grid_headcell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Acuerdo_class}	"
-
-			data-field="Acuerdo"
-	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Acuerdo_fieldheadercolumn}
-	{BEGIN Acuerdo_fieldheader}
-	<SPAN {$Acuerdo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo">
-	{$label dbo_ProcesosSancionados Acuerdo }	{$arrow_icon_Acuerdo}
-	</SPAN>
-	{END Acuerdo_fieldheader}
-{END Acuerdo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field17}
-									{BEGIN cellblock_grid_headcell_field18}
-	<th
-	
-	{$cell_grid_headcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Incumplimiento_class}	"
-
-			data-field="Incumplimiento"
-	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Incumplimiento_fieldheadercolumn}
-	{BEGIN Incumplimiento_fieldheader}
-	<SPAN {$Incumplimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento">
-	{$label dbo_ProcesosSancionados Incumplimiento }	{$arrow_icon_Incumplimiento}
-	</SPAN>
-	{END Incumplimiento_fieldheader}
-{END Incumplimiento_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field18}
-									{BEGIN cellblock_grid_headcell_field23}
-	<th
-	
-	{$cell_grid_headcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Terminacion_class}	"
-
-			data-field="Terminacion"
-	
-	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Terminacion_fieldheadercolumn}
-	{BEGIN Terminacion_fieldheader}
-	<SPAN {$Terminacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Terminacion" data-fieldname="Terminacion">
-	{$label dbo_ProcesosSancionados Terminacion }	{$arrow_icon_Terminacion}
-	</SPAN>
-	{END Terminacion_fieldheader}
-{END Terminacion_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field23}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Concepto_class}	"
-
-			data-field="Concepto"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Concepto_fieldheadercolumn}
-	{BEGIN Concepto_fieldheader}
-	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
-	{$label dbo_ProcesosSancionados Concepto }	{$arrow_icon_Concepto}
-	</SPAN>
-	{END Concepto_fieldheader}
-{END Concepto_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Saldo_class}	"
 
 			data-field="Saldo"
 	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1385,18 +1237,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
 	<th
 	
-	{$cell_grid_headcell_field3}
+	{$cell_grid_headcell_field18}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Estado_class}	"
 
 			data-field="Estado"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1410,18 +1262,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field18}
+									{BEGIN cellblock_grid_headcell_field23}
 	<th
 	
-	{$cell_grid_headcell_field4}
+	{$cell_grid_headcell_field23}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Etapa_class}	"
 
 			data-field="Etapa"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1435,18 +1287,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
-									{BEGIN cellblock_grid_headcell_field5}
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
-	{$cell_grid_headcell_field5}
+	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Seccional_class}	"
 
 			data-field="Seccional"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1460,18 +1312,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$CarteraTipo_class}	"
 
 			data-field="CarteraTipo"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1485,18 +1337,18 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
 	<th
 	
-	{$cell_grid_headcell_field7}
+	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Abogado_class}	"
 
 			data-field="Abogado"
 	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1510,90 +1362,65 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
 	<th
 	
-	{$cell_grid_headcell_field8}
+	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Despacho_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
-			data-field="Despacho"
+			data-field="Email"
 	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Despacho_fieldheadercolumn}
-	{BEGIN Despacho_fieldheader}
-	<SPAN {$Despacho_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label7" {$item_grid_field_label7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Despacho" data-fieldname="Despacho">
-	{$label dbo_ProcesosSancionados Despacho }	{$arrow_icon_Despacho}
+		{BEGIN Email_fieldheadercolumn}
+	{BEGIN Email_fieldheader}
+	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label8" {$item_grid_field_label8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
+	{$label dbo_ProcesosSancionados Email }	{$arrow_icon_Email}
 	</SPAN>
-	{END Despacho_fieldheader}
-{END Despacho_fieldheadercolumn}
+	{END Email_fieldheader}
+{END Email_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field8}
-									{BEGIN cellblock_grid_headcell_field9}
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
 	<th
 	
-	{$cell_grid_headcell_field9}
+	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Motivo_class}	"
+		 r-ori-vert		 {$Acuerdo_class}	"
 
-			data-field="Motivo"
+			data-field="Acuerdo"
 	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Motivo_fieldheadercolumn}
-	{BEGIN Motivo_fieldheader}
-	<SPAN {$Motivo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label8" {$item_grid_field_label8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Motivo" data-fieldname="Motivo">
-	{$label dbo_ProcesosSancionados Motivo }	{$arrow_icon_Motivo}
+		{BEGIN Acuerdo_fieldheadercolumn}
+	{BEGIN Acuerdo_fieldheader}
+	<SPAN {$Acuerdo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo">
+	{$label dbo_ProcesosSancionados Acuerdo }	{$arrow_icon_Acuerdo}
 	</SPAN>
-	{END Motivo_fieldheader}
-{END Motivo_fieldheadercolumn}
+	{END Acuerdo_fieldheader}
+{END Acuerdo_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldheadercolumn}
-	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label9" {$item_grid_field_label9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
-	{$label dbo_ProcesosSancionados SancionadoId }	{$arrow_icon_SancionadoId}
-	</SPAN>
-	{END SancionadoId_fieldheader}
-{END SancionadoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
+	{END cellblock_grid_headcell_field5}
 							</tr>
-																				
+															
 					{END grid_header}
 			</thead>
 															<tbody>
 					{BEGIN grid_row}
 							
-																																			<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
 				
 								r-gridrow
 							">
@@ -1646,283 +1473,28 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-										<td
+									{BEGIN cellblock_grid_cell_details}
+	<td
 	
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert		 {$Concepto_class}	"
 
+			data-field="Concepto"
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
 	>
 
 	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN acuerdos_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$acuerdos_link_attrs} data-short-details="acuerdos"
-		class="{$acuerdos_dlink_class}" 
-		title="{$caption dbo_Acuerdos }"			>
-								
-									{BEGIN acuerdos_childcount}
-				<span class="details-badge badge acuerdos_badge" {$acuerdos_childnumber_attr}>
-					{$acuerdos_childnumber}				
-				</span>
-				{END acuerdos_childcount}
-						</a>
-	</span>
-	{END acuerdos_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN correspondencias_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$correspondencias_link_attrs} data-short-details="correspondencias"
-		class="{$correspondencias_dlink_class}" 
-		title="{$caption dbo_Correspondencias }"			>
-								
-									{BEGIN correspondencias_childcount}
-				<span class="details-badge badge correspondencias_badge" {$correspondencias_childnumber_attr}>
-					{$correspondencias_childnumber}				
-				</span>
-				{END correspondencias_childcount}
-						</a>
-	</span>
-	{END correspondencias_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN fechas_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$fechas_link_attrs} data-short-details="fechas"
-		class="{$fechas_dlink_class}" 
-		title="{$caption dbo_Fechas }"			>
-								
-									{BEGIN fechas_childcount}
-				<span class="details-badge badge fechas_badge" {$fechas_childnumber_attr}>
-					{$fechas_childnumber}				
-				</span>
-				{END fechas_childcount}
-						</a>
-	</span>
-	{END fechas_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN intereses_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$intereses_link_attrs} data-short-details="intereses"
-		class="{$intereses_dlink_class}" 
-		title="{$caption dbo_Intereses }"			>
-								
-									{BEGIN intereses_childcount}
-				<span class="details-badge badge intereses_badge" {$intereses_childnumber_attr}>
-					{$intereses_childnumber}				
-				</span>
-				{END intereses_childcount}
-						</a>
-	</span>
-	{END intereses_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN interrupciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$interrupciones_link_attrs} data-short-details="interrupciones"
-		class="{$interrupciones_dlink_class}" 
-		title="{$caption dbo_Interrupciones }"			>
-								
-									{BEGIN interrupciones_childcount}
-				<span class="details-badge badge interrupciones_badge" {$interrupciones_childnumber_attr}>
-					{$interrupciones_childnumber}				
-				</span>
-				{END interrupciones_childcount}
-						</a>
-	</span>
-	{END interrupciones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN liquidaciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$liquidaciones_link_attrs} data-short-details="liquidaciones"
-		class="{$liquidaciones_dlink_class}" 
-		title="{$caption dbo_Liquidaciones }"			>
-								
-									{BEGIN liquidaciones_childcount}
-				<span class="details-badge badge liquidaciones_badge" {$liquidaciones_childnumber_attr}>
-					{$liquidaciones_childnumber}				
-				</span>
-				{END liquidaciones_childcount}
-						</a>
-	</span>
-	{END liquidaciones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN llamadas_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link6" {$item_grid_details_link6} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$llamadas_link_attrs} data-short-details="llamadas"
-		class="{$llamadas_dlink_class}" 
-		title="{$caption dbo_Llamadas }"			>
-								
-									{BEGIN llamadas_childcount}
-				<span class="details-badge badge llamadas_badge" {$llamadas_childnumber_attr}>
-					{$llamadas_childnumber}				
-				</span>
-				{END llamadas_childcount}
-						</a>
-	</span>
-	{END llamadas_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN medidas_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link7" {$item_grid_details_link7} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$medidas_link_attrs} data-short-details="medidas"
-		class="{$medidas_dlink_class}" 
-		title="{$caption dbo_Medidas }"			>
-								
-									{BEGIN medidas_childcount}
-				<span class="details-badge badge medidas_badge" {$medidas_childnumber_attr}>
-					{$medidas_childnumber}				
-				</span>
-				{END medidas_childcount}
-						</a>
-	</span>
-	{END medidas_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN pagos1_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link8" {$item_grid_details_link8} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$pagos1_link_attrs} data-short-details="pagos1"
-		class="{$pagos1_dlink_class}" 
-		title="{$caption dbo_Pagos1 }"			>
-								
-									{BEGIN pagos1_childcount}
-				<span class="details-badge badge pagos1_badge" {$pagos1_childnumber_attr}>
-					{$pagos1_childnumber}				
-				</span>
-				{END pagos1_childcount}
-						</a>
-	</span>
-	{END pagos1_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN reasignaciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link9" {$item_grid_details_link9} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$reasignaciones_link_attrs} data-short-details="reasignaciones"
-		class="{$reasignaciones_dlink_class}" 
-		title="{$caption dbo_Reasignaciones }"			>
-								
-									{BEGIN reasignaciones_childcount}
-				<span class="details-badge badge reasignaciones_badge" {$reasignaciones_childnumber_attr}>
-					{$reasignaciones_childnumber}				
-				</span>
-				{END reasignaciones_childcount}
-						</a>
-	</span>
-	{END reasignaciones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN solidarios_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link10" {$item_grid_details_link10} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$solidarios_link_attrs} data-short-details="solidarios"
-		class="{$solidarios_dlink_class}" 
-		title="{$caption dbo_Solidarios }"			>
-								
-									{BEGIN solidarios_childcount}
-				<span class="details-badge badge solidarios_badge" {$solidarios_childnumber_attr}>
-					{$solidarios_childnumber}				
-				</span>
-				{END solidarios_childcount}
-						</a>
-	</span>
-	{END solidarios_dtable_link}
-
-
-	 
-		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver Saldo Actual" class="btn btn-default   
-	" id="New_Button1" href="javascript:void(0)" typeid="ib" >
-					<span class="glyphicon glyphicon-usd"></span>
-										</a>
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
 </span>
-	 
-		<span data-itemtype="custom_button" data-itemid="custom_button1" {$item_custom_button1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Subir Archivos" class="btn btn-default   
-	" id="New_Button7" href="javascript:void(0)" typeid="ib" >
-					<span class="glyphicon glyphicon-upload"></span>
-										</a>
-</span>
-	 
-		<span data-itemtype="custom_button" data-itemid="caratulaProcesos" {$item_caratulaProcesos} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ver Caratula" class="btn btn-default   
-	" id="New_Button8" href="javascript:void(0)" typeid="ib" >
-					<span class="fa fa-print"></span>
-										</a>
-</span>
-	 
-		<span data-itemtype="custom_button" data-itemid="custom_button2" {$item_custom_button2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="ConceptoAbogado" class="btn btn-default   
-	" id="ConceptoAbogado" href="javascript:void(0)" typeid="ib" >
-					<span class="fa fa-file-text-o"></span>
-										</a>
-</span>
-	 
-		<span data-itemtype="custom_button" data-itemid="custom_button4" {$item_custom_button4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="maxTime" href="javascript:void(0)" typeid="ib" >
-					<span class="glyphicon glyphicon-plus"></span>
-										</a>
-</span>
-	 
-		<span data-itemtype="custom_button" data-itemid="custom_button5" {$item_custom_button5} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Ficha Tecnica" class="btn btn-default   
-	" id="fichaTecnica" href="javascript:void(0)" typeid="ib" >
-					<span class="glyphicon glyphicon-file"></span>
-										</a>
-</span>
-	
+{END Concepto_fieldcolumn}	
 	</td>
-										{BEGIN cellblock_grid_cell_field1}
+	{END cellblock_grid_cell_details}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
 	{$cell_grid_cell_field1}
@@ -2012,95 +1584,11 @@
 	{$cell_grid_cell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Acuerdo_class}	"
-
-			data-field="Acuerdo"
-	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Acuerdo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo" data-default-width >
-{$Acuerdo_value}
-</span>
-{END Acuerdo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field17}
-									{BEGIN cellblock_grid_cell_field18}
-	<td
-	
-	{$cell_grid_cell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Incumplimiento_class}	"
-
-			data-field="Incumplimiento"
-	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Incumplimiento_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento" data-default-width >
-{$Incumplimiento_value}
-</span>
-{END Incumplimiento_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field18}
-									{BEGIN cellblock_grid_cell_field23}
-	<td
-	
-	{$cell_grid_cell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Terminacion_class}	"
-
-			data-field="Terminacion"
-	
-	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Terminacion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Terminacion" data-fieldname="Terminacion" data-default-width >
-{$Terminacion_value}
-</span>
-{END Terminacion_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field23}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Concepto_class}	"
-
-			data-field="Concepto"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Concepto_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
-{$Concepto_value}
-</span>
-{END Concepto_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Saldo_class}	"
 
 			data-field="Saldo"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2110,18 +1598,18 @@
 </span>
 {END Saldo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field18}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Estado_class}	"
 
 			data-field="Estado"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2131,18 +1619,18 @@
 </span>
 {END Estado_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field18}
+									{BEGIN cellblock_grid_cell_field23}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field23}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Etapa_class}	"
 
 			data-field="Etapa"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2152,18 +1640,18 @@
 </span>
 {END Etapa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Seccional_class}	"
 
 			data-field="Seccional"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2173,18 +1661,18 @@
 </span>
 {END Seccional_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$CarteraTipo_class}	"
 
 			data-field="CarteraTipo"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2194,18 +1682,18 @@
 </span>
 {END CarteraTipo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Abogado_class}	"
 
 			data-field="Abogado"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2215,144 +1703,56 @@
 </span>
 {END Abogado_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Despacho_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
-			data-field="Despacho"
+			data-field="Email"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Despacho_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Despacho" data-fieldname="Despacho" data-default-width >
-{$Despacho_value}
+		{BEGIN Email_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field8" {$item_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email" data-default-width >
+{$Email_value}
 </span>
-{END Despacho_fieldcolumn}	
+{END Email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
-									{BEGIN cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Motivo_class}	"
+		 r-ori-vert		 {$Acuerdo_class}	"
 
-			data-field="Motivo"
+			data-field="Acuerdo"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Motivo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field8" {$item_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Motivo" data-fieldname="Motivo" data-default-width >
-{$Motivo_value}
+		{BEGIN Acuerdo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo" data-default-width >
+{$Acuerdo_value}
 </span>
-{END Motivo_fieldcolumn}	
+{END Acuerdo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field9" {$item_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
-{$SancionadoId_value}
-</span>
-{END SancionadoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
-							</tr>
-											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
-				
-							">
-									{BEGIN cellblock_grid_cell_dpreview}
-	<td
-	
-	{$cell_grid_cell_dpreview}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-																<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="correspondencias,fechas,solidarios,llamadas,medidas,liquidaciones,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,auditoriasprocesosview"
-			data-details-correspondencias			data-details-fechas			data-details-solidarios			data-details-llamadas			data-details-medidas			data-details-liquidaciones			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-auditoriasprocesosview	>
-		<span data-details-inside data-short-table="correspondencias">
-			</span>
-		<span data-details-inside data-short-table="fechas">
-			</span>
-		<span data-details-inside data-short-table="solidarios">
-			</span>
-		<span data-details-inside data-short-table="llamadas">
-			</span>
-		<span data-details-inside data-short-table="medidas">
-			</span>
-		<span data-details-inside data-short-table="liquidaciones">
-			</span>
-		<span data-details-inside data-short-table="acuerdos">
-			</span>
-		<span data-details-inside data-short-table="pagos1">
-			</span>
-		<span data-details-inside data-short-table="intereses">
-			</span>
-		<span data-details-inside data-short-table="reasignaciones">
-			</span>
-		<span data-details-inside data-short-table="suspensiones1">
-			</span>
-		<span data-details-inside data-short-table="interrupciones">
-			</span>
-		<span data-details-inside data-short-table="reliquidaciones">
-			</span>
-		<span data-details-inside data-short-table="auditoriasprocesosview">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			
-	</td>
-	{END cellblock_grid_cell_dpreview}
+	{END cellblock_grid_cell_field5}
 							</tr>
 										
 											{END grid_row}
 					</tbody>
 													<tfoot>
 			
-																																													<tr {$rowattrs} {$row_grid_3} class="{$rowclass}
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 									{$gridFooter_class}
 					
 								r-gridrow
@@ -2366,7 +1766,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -2381,7 +1782,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -2393,10 +1795,11 @@
 	{$cell_grid_footcell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$Concepto_class}	"
 
 	
-	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -2414,7 +1817,10 @@
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_ProcesosSancionados_SumProcesos}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field1}
 									{BEGIN cellblock_grid_footcell_field12}
@@ -2468,13 +1874,16 @@
 	{$cell_grid_footcell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Acuerdo_class}	"
+		 r-ori-vert		 {$Saldo_class}	"
 
 	
 	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_ProcesosSancionados_SumSaldo}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field17}
 									{BEGIN cellblock_grid_footcell_field18}
@@ -2483,7 +1892,7 @@
 	{$cell_grid_footcell_field18}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Incumplimiento_class}	"
+		 r-ori-vert		 {$Estado_class}	"
 
 	
 	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2498,7 +1907,7 @@
 	{$cell_grid_footcell_field23}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Terminacion_class}	"
+		 r-ori-vert		 {$Etapa_class}	"
 
 	
 	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2513,7 +1922,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Concepto_class}	"
+		 r-ori-vert		 {$Seccional_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2528,7 +1937,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Saldo_class}	"
+		 r-ori-vert		 {$CarteraTipo_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2543,7 +1952,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Estado_class}	"
+		 r-ori-vert		 {$Abogado_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2558,7 +1967,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Etapa_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2573,7 +1982,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Seccional_class}	"
+		 r-ori-vert		 {$Acuerdo_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2588,7 +1997,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CarteraTipo_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2603,7 +2012,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Abogado_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2618,7 +2027,7 @@
 	{$cell_grid_footcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Despacho_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2627,28 +2036,13 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
-									{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Motivo_class}	"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
 									{BEGIN cellblock_grid_footcell_field10}
 	<td
 	
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
@@ -2657,6 +2051,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
 							</tr>
 					
 					</tfoot>

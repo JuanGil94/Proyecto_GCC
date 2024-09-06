@@ -468,28 +468,6 @@
 
 {END Despacho_fieldblock}
 											
-{BEGIN Motivo_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Motivo}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Motivo{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="Motivo" data-fieldname="Motivo" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Motivo}">
-		{$label dbo_ProcesosSancionados Motivo }	</label>
-	<div class="r-search-option">
-		{$searchtype_Motivo}
-	</div>
-	<div class="r-search-field">
-		{$Motivo_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Motivo_editcontrol1}
-	</div>
-	
-</div>
-
-{END Motivo_fieldblock}
-											
 {BEGIN SancionadoId_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoId}  r-horizontal-field form-horizontal" 	
@@ -511,6 +489,28 @@
 </div>
 
 {END SancionadoId_fieldblock}
+											
+{BEGIN Email_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Email}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Email{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="Email" data-fieldname="Email" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Email}">
+		{$label dbo_ProcesosSancionados Email }	</label>
+	<div class="r-search-option">
+		{$searchtype_Email}
+	</div>
+	<div class="r-search-field">
+		{$Email_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Email_editcontrol1}
+	</div>
+	
+</div>
+
+{END Email_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

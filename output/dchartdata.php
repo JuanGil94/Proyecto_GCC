@@ -6,7 +6,6 @@
     require_once("classes/charts.php");
 	require_once(getabspath("include/xml.php"));
 	require_once(getabspath("classes/searchclause.php"));
-	include_once("include/reportfunctions.php");
 	
 
 if( Security::hasLogin() ) {

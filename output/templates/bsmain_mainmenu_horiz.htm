@@ -1969,13 +1969,17 @@ navbar-nav
 								</ul>
 			</li>
 			{END item92_menulink}
-				
+				</ul>
+	</li>
+	{END item61_menulink}
+	
+	
+	{BEGIN item95_menulink}
+	<li class=" {$item95_current}">
 		
-					{BEGIN item95_menulink}
-			<li class=" {$item95_current}">
-				
 <a {$item95_menulink_attrs} title="{$item95_tooltip}" 
-				data-menu-h
+			data-menu-top
+			data-menu-h
 		data-menu-link
 >
 	<span class="
@@ -1987,11 +1991,8 @@ navbar-nav
 			</span>
 	</a>
 
-			</li>
-			{END item95_menulink}
-				</ul>
 	</li>
-	{END item61_menulink}
+	{END item95_menulink}
 	
 	
 	{BEGIN item96_menulink}
@@ -2307,25 +2308,4 @@ navbar-nav
 
 	</li>
 	{END item110_menulink}
-	
-	
-	{BEGIN item111_menulink}
-	<li class=" {$item111_current}">
-		
-<a {$item111_menulink_attrs} title="{$item111_tooltip}" 
-			data-menu-top
-			data-menu-h
-		data-menu-link
->
-	<span class="
-	r-menu-link
-		"> 
-		<span class="r-menu-title">
-		{$item111_icon} {$item111_title}
-		</span>
-			</span>
-	</a>
-
-	</li>
-	{END item111_menulink}
 </ul>

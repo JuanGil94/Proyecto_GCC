@@ -627,7 +627,6 @@ $globalSettings["useCookieBanner"] = 0 != 0;
 
 $globalSettings["htmlEmailTemplates"] = array();
 
-$globalSettings["isAddWebRep"] = true;
 
 $globalSettings["createLoginPage"] = true;
 $globalSettings["userGroupCount"] = 1;
@@ -700,7 +699,6 @@ $wr_pagestylepath = "OfficeOffice";
 $wr_is_standalone = false;
 $WRAdminPagePassword = "";
 
-$WRAdminPagePassword = "webreports";
 
 
 /**
@@ -748,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2863_1725380875";
+$projectBuildKey = "2885_1725380875";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2863";
+$projectBuildNumber = "2885";
 
 $mlang_messages = array();
 $mlang_charsets = array();

@@ -898,74 +898,10 @@ pdfDocument = {
 	
 			
 	
-			"stack": [
+			"text": [
 		
-				
-			 {BEGIN details_correspondencias}
-			{$displayDetailTable_correspondencias }
-		{END details_correspondencias},
-				
-				
-			 {BEGIN details_solidarios}
-			{$displayDetailTable_solidarios }
-		{END details_solidarios},
-				
-				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
-				
-				
-			 {BEGIN details_llamadas}
-			{$displayDetailTable_llamadas }
-		{END details_llamadas},
-				
-				
-			 {BEGIN details_medidas}
-			{$displayDetailTable_medidas }
-		{END details_medidas},
-				
-				
-			 {BEGIN details_acuerdos}
-			{$displayDetailTable_acuerdos }
-		{END details_acuerdos},
-				
-				
-			 {BEGIN details_pagos1}
-			{$displayDetailTable_pagos1 }
-		{END details_pagos1},
-				
-				
-			 {BEGIN details_intereses}
-			{$displayDetailTable_intereses }
-		{END details_intereses},
-				
-				
-			 {BEGIN details_reasignaciones}
-			{$displayDetailTable_reasignaciones }
-		{END details_reasignaciones},
-				
-				
-			 {BEGIN details_suspensiones1}
-			{$displayDetailTable_suspensiones1 }
-		{END details_suspensiones1},
-				
-				
-			 {BEGIN details_interrupciones}
-			{$displayDetailTable_interrupciones }
-		{END details_interrupciones},
-				
-				
-			 {BEGIN details_reliquidaciones}
-			{$displayDetailTable_reliquidaciones }
-		{END details_reliquidaciones},
-				
-				
-			 {BEGIN details_liquidaciones}
-			{$displayDetailTable_liquidaciones }
-		{END details_liquidaciones},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

@@ -6,11 +6,11 @@ $tdatatasas_tributarias[".OwnerID"] = "";
 $tdatatasas_tributarias[".OriginalTable"] = "dbo.Tasas";
 
 
-$tdatatasas_tributarias[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatatasas_tributarias[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatatasas_tributarias[".originalPagesByType"] = $tdatatasas_tributarias[".pagesByType"];
-$tdatatasas_tributarias[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatatasas_tributarias[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatatasas_tributarias[".originalPages"] = $tdatatasas_tributarias[".pages"];
-$tdatatasas_tributarias[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatatasas_tributarias[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatatasas_tributarias[".originalDefaultPages"] = $tdatatasas_tributarias[".defaultPages"];
 
 //	field labels

@@ -134,13 +134,10 @@ pdfDocument = {
 													{BEGIN row_grid_1}
 							"%",
 							{END row_grid_1}
+													{END grid_row}
 																								{BEGIN row_grid_2}
 							"%",
 							{END row_grid_2}
-													{END grid_row}
-																								{BEGIN row_grid_3}
-							"%",
-							{END row_grid_3}
 															],
 							
 				body: [
@@ -229,9 +226,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":""},
-				
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
 				
@@ -349,6 +343,7 @@ pdfDocument = {
 	cellId: 'headcell_details',
 	col:0,
 	row:0,
+			fieldName: 'Concepto',
 				style: 'headcell',
 		
 		
@@ -361,10 +356,12 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$jslabel dbo_ProcesosSancionados Concepto }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Concepto_align}',
      
       
       },
@@ -491,122 +488,6 @@ pdfDocument = {
 	cellId: 'headcell_field17',
 	col:0,
 	row:0,
-			fieldName: 'Acuerdo',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosSancionados Acuerdo }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Acuerdo_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
-{
-	cellId: 'headcell_field18',
-	col:0,
-	row:0,
-			fieldName: 'Incumplimiento',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosSancionados Incumplimiento }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Incumplimiento_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field23}
-{
-	cellId: 'headcell_field23',
-	col:0,
-	row:0,
-			fieldName: 'Terminacion',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosSancionados Terminacion }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Terminacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field23}
-																							{BEGIN cellblock_grid_headcell_field}
-{
-	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'Concepto',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosSancionados Concepto }","hidden":"{$item_hide_grid_field_label}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Concepto_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field2}
-{
-	cellId: 'headcell_field2',
-	col:0,
-	row:0,
 			fieldName: 'Saldo',
 				style: 'headcell',
 		
@@ -630,10 +511,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field18',
 	col:0,
 	row:0,
 			fieldName: 'Estado',
@@ -659,10 +540,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field23}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field23',
 	col:0,
 	row:0,
 			fieldName: 'Etapa',
@@ -688,10 +569,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field23}
+																							{BEGIN cellblock_grid_headcell_field}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field',
 	col:0,
 	row:0,
 			fieldName: 'Seccional',
@@ -717,10 +598,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'CarteraTipo',
@@ -746,10 +627,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Abogado',
@@ -775,13 +656,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
-			fieldName: 'Despacho',
+			fieldName: 'Email',
 				style: 'headcell',
 		
 		
@@ -795,27 +676,30 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosSancionados Despacho }","hidden":"{$item_hide_grid_field_label7}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosSancionados Email }","hidden":"{$item_hide_grid_field_label8}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Despacho_align}',
+              "alignment": '{$Email_align}',
      
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
-			fieldName: 'Motivo',
+			fieldName: 'Acuerdo',
 				style: 'headcell',
 		
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_headcell_field5}
+			colSpan: {$colspan_grid_headcell_field5},
+			{END colspan_grid_headcell_field5}
 		
 		
 	
@@ -824,46 +708,47 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosSancionados Motivo }","hidden":"{$item_hide_grid_field_label8}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosSancionados Acuerdo }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Motivo_align}',
+              "alignment": '{$Acuerdo_align}',
      
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
-{
-	cellId: 'headcell_field10',
-	col:0,
-	row:0,
-			fieldName: 'SancionadoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_ProcesosSancionados SancionadoId }","hidden":"{$item_hide_grid_field_label9}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field10}
-											],
+{END cellblock_grid_headcell_field5}
+																		{ 
+				cellId: 'headcell_field5',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'headcell_field5',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+														{ 
+				cellId: 'headcell_field5',
+				row:  0,
+				col:  3,
+				text: ''
+			},
+														{ 
+				cellId: 'headcell_field5',
+				row:  0,
+				col:  4,
+				text: ''
+			},
+														{ 
+				cellId: 'headcell_field5',
+				row:  0,
+				col:  5,
+				text: ''
+			},
+							],
 				{END row_grid_0}
 		
 			
@@ -933,6 +818,7 @@ pdfDocument = {
 	cellId: 'cell_details',
 	col:0,
 	row:0,
+			fieldName: 'Concepto',
 				style: 'bodycell',
 		
 		
@@ -946,62 +832,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link4}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link5}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link6}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link7}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link8}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link9}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link10}"},
-				
-				
-			{"text":""},
-				
-				
-			{"text":""},
-				
-				
-			{"text":""},
-				
-				
-			{"text":""},
-				
-				
-			{"text":""},
-				
-				
-			{"text":""},
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Concepto_align}',
      
       
       },
@@ -1128,122 +963,6 @@ pdfDocument = {
 	cellId: 'cell_field17',
 	col:0,
 	row:0,
-			fieldName: 'Acuerdo',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Acuerdo_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
-{
-	cellId: 'cell_field18',
-	col:0,
-	row:0,
-			fieldName: 'Incumplimiento',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Incumplimiento_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Incumplimiento_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field23}
-{
-	cellId: 'cell_field23',
-	col:0,
-	row:0,
-			fieldName: 'Terminacion',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Terminacion_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field23}
-																							{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'Concepto',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Concepto_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field2}
-{
-	cellId: 'cell_field2',
-	col:0,
-	row:0,
 			fieldName: 'Saldo',
 				style: 'bodycell',
 		
@@ -1267,10 +986,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field18',
 	col:0,
 	row:0,
 			fieldName: 'Estado',
@@ -1296,10 +1015,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field23}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field23',
 	col:0,
 	row:0,
 			fieldName: 'Etapa',
@@ -1325,10 +1044,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field23}
+																							{BEGIN cellblock_grid_cell_field}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field',
 	col:0,
 	row:0,
 			fieldName: 'Seccional',
@@ -1354,10 +1073,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'CarteraTipo',
@@ -1383,10 +1102,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Abogado',
@@ -1412,13 +1131,13 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
-			fieldName: 'Despacho',
+			fieldName: 'Email',
 				style: 'bodycell',
 		
 		
@@ -1432,27 +1151,30 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Despacho_pdfvalue},"hidden":"{$item_hide_grid_field7}"},
+			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_grid_field8}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Despacho_align}',
+              "alignment": '{$Email_align}',
      
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
-			fieldName: 'Motivo',
+			fieldName: 'Acuerdo',
 				style: 'bodycell',
 		
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_cell_field5}
+			colSpan: {$colspan_grid_cell_field5},
+			{END colspan_grid_cell_field5}
 		
 		
 	
@@ -1461,269 +1183,54 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Motivo_pdfvalue},"hidden":"{$item_hide_grid_field8}"},
+			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Motivo_align}',
+              "alignment": '{$Acuerdo_align}',
      
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
-{
-	cellId: 'cell_field10',
-	col:0,
-	row:0,
-			fieldName: 'SancionadoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_grid_field9}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field10}
-											],
-				{END row_grid_1}
-						{BEGIN row_grid_2}
-				[
-																{BEGIN cellblock_grid_cell_dpreview}
-{
-	cellId: 'cell_dpreview',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-					{BEGIN colspan_grid_cell_dpreview}
-			colSpan: {$colspan_grid_cell_dpreview},
-			{END colspan_grid_cell_dpreview}
-		
-		
-	
-			
-	
-			"stack": [
-		
-				
-			 {BEGIN details_correspondencias}
-			{$displayDetailTable_correspondencias }
-		{END details_correspondencias},
-				
-				
-			 {BEGIN details_fechas}
-			{$displayDetailTable_fechas }
-		{END details_fechas},
-				
-				
-			 {BEGIN details_solidarios}
-			{$displayDetailTable_solidarios }
-		{END details_solidarios},
-				
-				
-			 {BEGIN details_llamadas}
-			{$displayDetailTable_llamadas }
-		{END details_llamadas},
-				
-				
-			 {BEGIN details_medidas}
-			{$displayDetailTable_medidas }
-		{END details_medidas},
-				
-				
-			 {BEGIN details_liquidaciones}
-			{$displayDetailTable_liquidaciones }
-		{END details_liquidaciones},
-				
-				
-			 {BEGIN details_acuerdos}
-			{$displayDetailTable_acuerdos }
-		{END details_acuerdos},
-				
-				
-			 {BEGIN details_pagos1}
-			{$displayDetailTable_pagos1 }
-		{END details_pagos1},
-				
-				
-			 {BEGIN details_intereses}
-			{$displayDetailTable_intereses }
-		{END details_intereses},
-				
-				
-			 {BEGIN details_reasignaciones}
-			{$displayDetailTable_reasignaciones }
-		{END details_reasignaciones},
-				
-				
-			 {BEGIN details_suspensiones1}
-			{$displayDetailTable_suspensiones1 }
-		{END details_suspensiones1},
-				
-				
-			 {BEGIN details_interrupciones}
-			{$displayDetailTable_interrupciones }
-		{END details_interrupciones},
-				
-				
-			 {BEGIN details_reliquidaciones}
-			{$displayDetailTable_reliquidaciones }
-		{END details_reliquidaciones},
-				
-				
-			 {BEGIN details_auditoriasprocesosview}
-			{$displayDetailTable_auditoriasprocesosview }
-		{END details_auditoriasprocesosview},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_dpreview}
+{END cellblock_grid_cell_field5}
 																		{ 
-				cellId: 'cell_dpreview',
+				cellId: 'cell_field5',
 				row:  0,
 				col:  1,
 				text: ''
 			},
 														{ 
-				cellId: 'cell_dpreview',
+				cellId: 'cell_field5',
 				row:  0,
 				col:  2,
 				text: ''
 			},
 														{ 
-				cellId: 'cell_dpreview',
+				cellId: 'cell_field5',
 				row:  0,
 				col:  3,
 				text: ''
 			},
 														{ 
-				cellId: 'cell_dpreview',
+				cellId: 'cell_field5',
 				row:  0,
 				col:  4,
 				text: ''
 			},
 														{ 
-				cellId: 'cell_dpreview',
+				cellId: 'cell_field5',
 				row:  0,
 				col:  5,
 				text: ''
 			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  6,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  7,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  8,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  9,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  10,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  11,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  12,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  13,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  14,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  15,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  16,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  17,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  18,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  19,
-				text: ''
-			},
 							],
-				{END row_grid_2}
+				{END row_grid_1}
 		
 		{END grid_record}
 	{END grid_row}
 			
 					
-				{BEGIN row_grid_3}
+				{BEGIN row_grid_2}
 				[
 																{BEGIN cellblock_grid_footcell_icons}
 {
@@ -1820,8 +1327,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event dbo_ProcesosSancionados_SumProcesos}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1924,8 +1433,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event dbo_ProcesosSancionados_SumSaldo}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -2193,32 +1704,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field8}
-																							{BEGIN cellblock_grid_footcell_field9}
-{
-	cellId: 'footcell_field9',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field9}
 																							{BEGIN cellblock_grid_footcell_field10}
 {
 	cellId: 'footcell_field10',
@@ -2245,8 +1730,34 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field10}
+																							{BEGIN cellblock_grid_footcell_field9}
+{
+	cellId: 'footcell_field9',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field9}
 											],
-				{END row_grid_3}
+				{END row_grid_2}
 		
 				
 									]

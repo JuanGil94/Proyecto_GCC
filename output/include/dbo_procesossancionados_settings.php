@@ -46,7 +46,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdbo_procesossancionados["Spanish"]["Radicado"] = "Radicado";
 	$fieldToolTipsdbo_procesossancionados["Spanish"]["Radicado"] = "";
 	$placeHoldersdbo_procesossancionados["Spanish"]["Radicado"] = "";
-	$fieldLabelsdbo_procesossancionados["Spanish"]["Acuerdo"] = "F. Acuerdo Pago";
+	$fieldLabelsdbo_procesossancionados["Spanish"]["Acuerdo"] = "Acuerdo";
 	$fieldToolTipsdbo_procesossancionados["Spanish"]["Acuerdo"] = "";
 	$placeHoldersdbo_procesossancionados["Spanish"]["Acuerdo"] = "";
 	$fieldLabelsdbo_procesossancionados["Spanish"]["Incumplimiento"] = "F.Incumplimiento";
@@ -67,7 +67,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdbo_procesossancionados["Spanish"]["Seccional"] = "Seccional";
 	$fieldToolTipsdbo_procesossancionados["Spanish"]["Seccional"] = "";
 	$placeHoldersdbo_procesossancionados["Spanish"]["Seccional"] = "";
-	$fieldLabelsdbo_procesossancionados["Spanish"]["CarteraTipo"] = "Cartera Tipo";
+	$fieldLabelsdbo_procesossancionados["Spanish"]["CarteraTipo"] = "Tipo de Cartera";
 	$fieldToolTipsdbo_procesossancionados["Spanish"]["CarteraTipo"] = "";
 	$placeHoldersdbo_procesossancionados["Spanish"]["CarteraTipo"] = "";
 	$fieldLabelsdbo_procesossancionados["Spanish"]["Abogado"] = "Abogado";
@@ -76,12 +76,12 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdbo_procesossancionados["Spanish"]["Despacho"] = "Despacho";
 	$fieldToolTipsdbo_procesossancionados["Spanish"]["Despacho"] = "";
 	$placeHoldersdbo_procesossancionados["Spanish"]["Despacho"] = "";
-	$fieldLabelsdbo_procesossancionados["Spanish"]["Motivo"] = "Motivo";
-	$fieldToolTipsdbo_procesossancionados["Spanish"]["Motivo"] = "";
-	$placeHoldersdbo_procesossancionados["Spanish"]["Motivo"] = "";
 	$fieldLabelsdbo_procesossancionados["Spanish"]["SancionadoId"] = "Deudor";
 	$fieldToolTipsdbo_procesossancionados["Spanish"]["SancionadoId"] = "";
 	$placeHoldersdbo_procesossancionados["Spanish"]["SancionadoId"] = "";
+	$fieldLabelsdbo_procesossancionados["Spanish"]["Email"] = "Email";
+	$fieldToolTipsdbo_procesossancionados["Spanish"]["Email"] = "";
+	$placeHoldersdbo_procesossancionados["Spanish"]["Email"] = "";
 	if (count($fieldToolTipsdbo_procesossancionados["Spanish"]))
 		$tdatadbo_procesossancionados[".isUseToolTips"] = true;
 }
@@ -217,8 +217,8 @@ $tdatadbo_procesossancionados[".googleLikeFields"][] = "Incumplimiento";
 $tdatadbo_procesossancionados[".googleLikeFields"][] = "Terminacion";
 $tdatadbo_procesossancionados[".googleLikeFields"][] = "Radicado";
 $tdatadbo_procesossancionados[".googleLikeFields"][] = "Despacho";
-$tdatadbo_procesossancionados[".googleLikeFields"][] = "Motivo";
 $tdatadbo_procesossancionados[".googleLikeFields"][] = "Observaciones";
+$tdatadbo_procesossancionados[".googleLikeFields"][] = "Email";
 
 
 
@@ -254,8 +254,8 @@ $tdatadbo_procesossancionados[".strOrderBy"] = $tstrOrderBy;
 $tdatadbo_procesossancionados[".orderindexes"] = array();
 
 
-$tdatadbo_procesossancionados[".sqlHead"] = "SELECT p.SancionadoId,  c.Concepto,  p.Numero,  p.Fecha,  p.Providencia,  p.Ejecutoria,  (p.Obligacion+p.Intereses+p.Costas) AS Saldo,  e.Estado,  et.Etapa,  s.Seccional,  ca.CarteraTipo,  a.Abogado,  p.Acuerdo,  p.Incumplimiento,  p.Terminacion,  p.Radicado,  d.Despacho,  m.Motivo,  p.Observaciones";
-$tdatadbo_procesossancionados[".sqlFrom"] = "FROM dbo.Procesos AS p  INNER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId  INNER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId  INNER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId  INNER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId  INNER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId  INNER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId  INNER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId  INNER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId";
+$tdatadbo_procesossancionados[".sqlHead"] = "SELECT p.SancionadoId,  c.Concepto,  p.Numero,  p.Fecha,  p.Providencia,  p.Ejecutoria,  (p.Obligacion+p.Intereses+p.Costas) AS Saldo,  e.Estado,  et.Etapa,  s.Seccional,  ca.CarteraTipo,  a.Abogado,  p.Acuerdo,  p.Incumplimiento,  p.Terminacion,  p.Radicado,  d.Despacho,  p.Observaciones,  a.Email";
+$tdatadbo_procesossancionados[".sqlFrom"] = "FROM dbo.Procesos AS p  LEFT OUTER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId  LEFT OUTER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId  LEFT OUTER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId  LEFT OUTER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId  LEFT OUTER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId  LEFT OUTER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId  LEFT OUTER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId  LEFT OUTER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId";
 $tdatadbo_procesossancionados[".sqlWhereExpr"] = "";
 $tdatadbo_procesossancionados[".sqlTail"] = "";
 
@@ -641,7 +641,7 @@ $tdatadbo_procesossancionados[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -657,8 +657,7 @@ $tdatadbo_procesossancionados[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -2680,146 +2679,10 @@ $tdatadbo_procesossancionados[".hideMobileList"] = array();
 
 	$tdatadbo_procesossancionados["Despacho"] = $fdata;
 		$tdatadbo_procesossancionados[".searchableFields"][] = "Despacho";
-//	Motivo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 18;
-	$fdata["strName"] = "Motivo";
-	$fdata["GoodName"] = "Motivo";
-	$fdata["ownerTable"] = "dbo.Motivos";
-	$fdata["Label"] = GetFieldLabel("dbo_ProcesosSancionados","Motivo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Motivo";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "m.Motivo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatadbo_procesossancionados["Motivo"] = $fdata;
-		$tdatadbo_procesossancionados[".searchableFields"][] = "Motivo";
 //	Observaciones
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
+	$fdata["Index"] = 18;
 	$fdata["strName"] = "Observaciones";
 	$fdata["GoodName"] = "Observaciones";
 	$fdata["ownerTable"] = "dbo.Procesos";
@@ -2957,6 +2820,142 @@ $tdatadbo_procesossancionados[".hideMobileList"] = array();
 
 	$tdatadbo_procesossancionados["Observaciones"] = $fdata;
 		$tdatadbo_procesossancionados[".searchableFields"][] = "Observaciones";
+//	Email
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "Email";
+	$fdata["GoodName"] = "Email";
+	$fdata["ownerTable"] = "dbo.Abogados";
+	$fdata["Label"] = GetFieldLabel("dbo_ProcesosSancionados","Email");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Email";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "a.Email";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatadbo_procesossancionados["Email"] = $fdata;
+		$tdatadbo_procesossancionados[".searchableFields"][] = "Email";
 
 
 $tables_data["dbo.ProcesosSancionados"]=&$tdatadbo_procesossancionados;
@@ -3019,8 +3018,8 @@ function createSqlQuery_dbo_procesossancionados()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "p.SancionadoId,  c.Concepto,  p.Numero,  p.Fecha,  p.Providencia,  p.Ejecutoria,  (p.Obligacion+p.Intereses+p.Costas) AS Saldo,  e.Estado,  et.Etapa,  s.Seccional,  ca.CarteraTipo,  a.Abogado,  p.Acuerdo,  p.Incumplimiento,  p.Terminacion,  p.Radicado,  d.Despacho,  m.Motivo,  p.Observaciones";
-$proto0["m_strFrom"] = "FROM dbo.Procesos AS p  INNER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId  INNER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId  INNER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId  INNER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId  INNER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId  INNER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId  INNER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId  INNER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId";
+$proto0["m_strFieldList"] = "p.SancionadoId,  c.Concepto,  p.Numero,  p.Fecha,  p.Providencia,  p.Ejecutoria,  (p.Obligacion+p.Intereses+p.Costas) AS Saldo,  e.Estado,  et.Etapa,  s.Seccional,  ca.CarteraTipo,  a.Abogado,  p.Acuerdo,  p.Incumplimiento,  p.Terminacion,  p.Radicado,  d.Despacho,  p.Observaciones,  a.Email";
+$proto0["m_strFrom"] = "FROM dbo.Procesos AS p  LEFT OUTER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId  LEFT OUTER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId  LEFT OUTER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId  LEFT OUTER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId  LEFT OUTER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId  LEFT OUTER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId  LEFT OUTER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId  LEFT OUTER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -3297,12 +3296,12 @@ $obj = new SQLFieldListItem($proto38);
 $proto0["m_fieldlist"][]=$obj;
 						$proto40=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Motivo",
-	"m_strTable" => "m",
+	"m_strName" => "Observaciones",
+	"m_strTable" => "p",
 	"m_srcTableName" => "dbo.ProcesosSancionados"
 ));
 
-$proto40["m_sql"] = "m.Motivo";
+$proto40["m_sql"] = "p.Observaciones";
 $proto40["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto40["m_expr"]=$obj;
 $proto40["m_alias"] = "";
@@ -3311,12 +3310,12 @@ $obj = new SQLFieldListItem($proto40);
 $proto0["m_fieldlist"][]=$obj;
 						$proto42=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Observaciones",
-	"m_strTable" => "p",
+	"m_strName" => "Email",
+	"m_strTable" => "a",
 	"m_srcTableName" => "dbo.ProcesosSancionados"
 ));
 
-$proto42["m_sql"] = "p.Observaciones";
+$proto42["m_sql"] = "a.Email";
 $proto42["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto42["m_expr"]=$obj;
 $proto42["m_alias"] = "";
@@ -3440,7 +3439,7 @@ $obj = new SQLFromListItem($proto44);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto48=array();
-$proto48["m_link"] = "SQLL_INNERJOIN";
+$proto48["m_link"] = "SQLL_LEFTJOIN";
 			$proto49=array();
 $proto49["m_strName"] = "dbo.Conceptos";
 $proto49["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3452,7 +3451,7 @@ $proto49["m_columns"][] = "Cuenta";
 $obj = new SQLTable($proto49);
 
 $proto48["m_table"] = $obj;
-$proto48["m_sql"] = "INNER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId";
+$proto48["m_sql"] = "LEFT OUTER JOIN dbo.Conceptos AS c ON p.ConceptoId = c.ConceptoId";
 $proto48["m_alias"] = "c";
 $proto48["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto50=array();
@@ -3477,7 +3476,7 @@ $obj = new SQLFromListItem($proto48);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto52=array();
-$proto52["m_link"] = "SQLL_INNERJOIN";
+$proto52["m_link"] = "SQLL_LEFTJOIN";
 			$proto53=array();
 $proto53["m_strName"] = "dbo.Estados";
 $proto53["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3488,7 +3487,7 @@ $proto53["m_columns"][] = "Tipo";
 $obj = new SQLTable($proto53);
 
 $proto52["m_table"] = $obj;
-$proto52["m_sql"] = "INNER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId";
+$proto52["m_sql"] = "LEFT OUTER JOIN dbo.Estados AS e ON p.EstadoId = e.EstadoId";
 $proto52["m_alias"] = "e";
 $proto52["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto54=array();
@@ -3513,7 +3512,7 @@ $obj = new SQLFromListItem($proto52);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto56=array();
-$proto56["m_link"] = "SQLL_INNERJOIN";
+$proto56["m_link"] = "SQLL_LEFTJOIN";
 			$proto57=array();
 $proto57["m_strName"] = "dbo.Etapas";
 $proto57["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3523,7 +3522,7 @@ $proto57["m_columns"][] = "Etapa";
 $obj = new SQLTable($proto57);
 
 $proto56["m_table"] = $obj;
-$proto56["m_sql"] = "INNER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId";
+$proto56["m_sql"] = "LEFT OUTER JOIN dbo.Etapas AS et ON p.EtapaId = et.EtapaId";
 $proto56["m_alias"] = "et";
 $proto56["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto58=array();
@@ -3548,7 +3547,7 @@ $obj = new SQLFromListItem($proto56);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto60=array();
-$proto60["m_link"] = "SQLL_INNERJOIN";
+$proto60["m_link"] = "SQLL_LEFTJOIN";
 			$proto61=array();
 $proto61["m_strName"] = "dbo.Seccionales";
 $proto61["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3579,7 +3578,7 @@ $proto61["m_columns"][] = "Subserie";
 $obj = new SQLTable($proto61);
 
 $proto60["m_table"] = $obj;
-$proto60["m_sql"] = "INNER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId";
+$proto60["m_sql"] = "LEFT OUTER JOIN dbo.Seccionales AS s ON p.SeccionalId = s.SeccionalId";
 $proto60["m_alias"] = "s";
 $proto60["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto62=array();
@@ -3604,7 +3603,7 @@ $obj = new SQLFromListItem($proto60);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto64=array();
-$proto64["m_link"] = "SQLL_INNERJOIN";
+$proto64["m_link"] = "SQLL_LEFTJOIN";
 			$proto65=array();
 $proto65["m_strName"] = "dbo.CarteraTipos";
 $proto65["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3616,7 +3615,7 @@ $proto65["m_columns"][] = "Prescrita";
 $obj = new SQLTable($proto65);
 
 $proto64["m_table"] = $obj;
-$proto64["m_sql"] = "INNER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId";
+$proto64["m_sql"] = "LEFT OUTER JOIN dbo.CarteraTipos AS ca ON p.CarteraTipoId = ca.CarteraTipoId";
 $proto64["m_alias"] = "ca";
 $proto64["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto66=array();
@@ -3641,7 +3640,7 @@ $obj = new SQLFromListItem($proto64);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto68=array();
-$proto68["m_link"] = "SQLL_INNERJOIN";
+$proto68["m_link"] = "SQLL_LEFTJOIN";
 			$proto69=array();
 $proto69["m_strName"] = "dbo.Abogados";
 $proto69["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3662,7 +3661,7 @@ $proto69["m_columns"][] = "Codificador";
 $obj = new SQLTable($proto69);
 
 $proto68["m_table"] = $obj;
-$proto68["m_sql"] = "INNER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId";
+$proto68["m_sql"] = "LEFT OUTER JOIN dbo.Abogados AS a ON p.AbogadoId = a.AbogadoId";
 $proto68["m_alias"] = "a";
 $proto68["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto70=array();
@@ -3687,7 +3686,7 @@ $obj = new SQLFromListItem($proto68);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto72=array();
-$proto72["m_link"] = "SQLL_INNERJOIN";
+$proto72["m_link"] = "SQLL_LEFTJOIN";
 			$proto73=array();
 $proto73["m_strName"] = "dbo.Despachos";
 $proto73["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3706,7 +3705,7 @@ $proto73["m_columns"][] = "Direccion";
 $obj = new SQLTable($proto73);
 
 $proto72["m_table"] = $obj;
-$proto72["m_sql"] = "INNER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId";
+$proto72["m_sql"] = "LEFT OUTER JOIN dbo.Despachos AS d ON p.DespachoId = d.DespachoId";
 $proto72["m_alias"] = "d";
 $proto72["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto74=array();
@@ -3731,7 +3730,7 @@ $obj = new SQLFromListItem($proto72);
 
 $proto0["m_fromlist"][]=$obj;
 												$proto76=array();
-$proto76["m_link"] = "SQLL_INNERJOIN";
+$proto76["m_link"] = "SQLL_LEFTJOIN";
 			$proto77=array();
 $proto77["m_strName"] = "dbo.Motivos";
 $proto77["m_srcTableName"] = "dbo.ProcesosSancionados";
@@ -3741,7 +3740,7 @@ $proto77["m_columns"][] = "Motivo";
 $obj = new SQLTable($proto77);
 
 $proto76["m_table"] = $obj;
-$proto76["m_sql"] = "INNER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId";
+$proto76["m_sql"] = "LEFT OUTER JOIN dbo.Motivos AS m ON p.MotivoId = m.MotivoId";
 $proto76["m_alias"] = "m";
 $proto76["m_srcTableName"] = "dbo.ProcesosSancionados";
 $proto78=array();

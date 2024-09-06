@@ -466,19 +466,19 @@
 	{$cell_grid_headcell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Motivo_class}	"
+		 r-ori-vert		 {$SancionadoId_class}	"
 
-			data-field="Motivo"
+			data-field="SancionadoId"
 	
 	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Motivo_fieldheadercolumn}
+		{BEGIN SancionadoId_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Motivo" data-fieldname="Motivo">
-	{$label dbo_ProcesosSancionados Motivo }	</span>
-{END Motivo_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
+	{$label dbo_ProcesosSancionados SancionadoId }	</span>
+{END SancionadoId_fieldheadercolumn}
 
 	
 	</th>
@@ -489,19 +489,19 @@
 	{$cell_grid_headcell_field18}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
-			data-field="SancionadoId"
+			data-field="Email"
 	
 	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SancionadoId_fieldheadercolumn}
+		{BEGIN Email_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
-	{$label dbo_ProcesosSancionados SancionadoId }	</span>
-{END SancionadoId_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
+	{$label dbo_ProcesosSancionados Email }	</span>
+{END Email_fieldheadercolumn}
 
 	
 	</th>
@@ -905,32 +905,11 @@
 	{$cell_grid_cell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Motivo_class}	"
-
-			data-field="Motivo"
-	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Motivo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Motivo" data-fieldname="Motivo" data-default-width >
-{$Motivo_value}
-</span>
-{END Motivo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field17}
-									{BEGIN cellblock_grid_cell_field18}
-	<td
-	
-	{$cell_grid_cell_field18}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$SancionadoId_class}	"
 
 			data-field="SancionadoId"
 	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -939,6 +918,27 @@
 {$SancionadoId_value}
 </span>
 {END SancionadoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Email_class}	"
+
+			data-field="Email"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Email_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email" data-default-width >
+{$Email_value}
+</span>
+{END Email_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field18}
 							</tr>
@@ -1228,7 +1228,7 @@
 	{$cell_grid_footcell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Motivo_class}	"
+		 r-ori-vert		 {$SancionadoId_class}	"
 
 	
 	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_masterprint"	
@@ -1243,7 +1243,7 @@
 	{$cell_grid_footcell_field18}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
 	
 	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="dbo_procesossancionados_masterprint"	
