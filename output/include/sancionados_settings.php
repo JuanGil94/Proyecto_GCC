@@ -1741,41 +1741,11 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.ProcesosSancionados
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.ProcesosSancionados";
-		$detailsParam["dOriginalTable"] = "dbo.Procesos";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "dbo_procesossancionados";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosSancionados");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
-
-				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
 //	BienesInmuebles
 	
 	
 
-		$dIndex = 2;
+		$dIndex = 1;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="BienesInmuebles";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
@@ -1805,7 +1775,7 @@ $detailsTablesData["dbo.Sancionados"] = array();
 	
 	
 
-		$dIndex = 3;
+		$dIndex = 2;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="BienesMuebles";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
@@ -1835,7 +1805,7 @@ $detailsTablesData["dbo.Sancionados"] = array();
 	
 	
 
-		$dIndex = 4;
+		$dIndex = 3;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="BienesEfectivo";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
@@ -1846,6 +1816,36 @@ $detailsTablesData["dbo.Sancionados"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "bienesefectivo";
 	$detailsParam["dCaptionTable"] = GetTableCaption("BienesEfectivo");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.ProcesosSancionados
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.ProcesosSancionados";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "dbo_procesossancionados";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosSancionados");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

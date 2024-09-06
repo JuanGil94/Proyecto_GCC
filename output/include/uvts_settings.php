@@ -6,11 +6,11 @@ $tdatauvts[".OwnerID"] = "";
 $tdatauvts[".OriginalTable"] = "dbo.Uvts";
 
 
-$tdatauvts[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatauvts[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatauvts[".originalPagesByType"] = $tdatauvts[".pagesByType"];
-$tdatauvts[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatauvts[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatauvts[".originalPages"] = $tdatauvts[".pages"];
-$tdatauvts[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatauvts[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatauvts[".originalDefaultPages"] = $tdatauvts[".defaultPages"];
 
 //	field labels
@@ -182,10 +182,12 @@ $tdatauvts[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY UvtId DESC";
 $tdatauvts[".strOrderBy"] = $tstrOrderBy;
 
 $tdatauvts[".orderindexes"] = array();
+	$tdatauvts[".orderindexes"][] = array(1, (0 ? "ASC" : "DESC"), "UvtId");
+
 
 
 $tdatauvts[".sqlHead"] = "SELECT UvtId,  	Ano,  	Uvt";
@@ -701,7 +703,7 @@ $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "UvtId,  	Ano,  	Uvt";
 $proto0["m_strFrom"] = "FROM dbo.Uvts";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY UvtId DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -817,6 +819,19 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto16=array();
+						$obj = new SQLField(array(
+	"m_strName" => "UvtId",
+	"m_strTable" => "dbo.Uvts",
+	"m_srcTableName" => "dbo.Uvts"
+));
+
+$proto16["m_column"]=$obj;
+$proto16["m_bAsc"] = 0;
+$proto16["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto16);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Uvts";		
 $obj = new SQLQuery($proto0);
 

@@ -6,11 +6,11 @@ $tdatasalarios[".OwnerID"] = "";
 $tdatasalarios[".OriginalTable"] = "dbo.Salarios";
 
 
-$tdatasalarios[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatasalarios[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatasalarios[".originalPagesByType"] = $tdatasalarios[".pagesByType"];
-$tdatasalarios[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatasalarios[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatasalarios[".originalPages"] = $tdatasalarios[".pages"];
-$tdatasalarios[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatasalarios[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatasalarios[".originalDefaultPages"] = $tdatasalarios[".defaultPages"];
 
 //	field labels
@@ -190,7 +190,7 @@ $tdatasalarios[".orderindexes"] = array();
 
 
 
-$tdatasalarios[".sqlHead"] = "SELECT SalarioId,  Ano,  Salario";
+$tdatasalarios[".sqlHead"] = "SELECT SalarioId,  Ano,  FORMAT(Salario, 'C', 'es-CO') Salario";
 $tdatasalarios[".sqlFrom"] = "FROM dbo.Salarios";
 $tdatasalarios[".sqlWhereExpr"] = "";
 $tdatasalarios[".sqlTail"] = "";
@@ -523,9 +523,9 @@ $tdatasalarios[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Salario";
 	$fdata["GoodName"] = "Salario";
-	$fdata["ownerTable"] = "dbo.Salarios";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Salarios","Salario");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -537,7 +537,7 @@ $tdatasalarios[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Salario";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Salario";
+	$fdata["FullName"] = "FORMAT(Salario, 'C', 'es-CO')";
 
 	
 	
@@ -699,7 +699,7 @@ function createSqlQuery_salarios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SalarioId,  Ano,  Salario";
+$proto0["m_strFieldList"] = "SalarioId,  Ano,  FORMAT(Salario, 'C', 'es-CO') Salario";
 $proto0["m_strFrom"] = "FROM dbo.Salarios";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY Ano DESC";
@@ -768,67 +768,82 @@ $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Salario",
-	"m_strTable" => "dbo.Salarios",
-	"m_srcTableName" => "dbo.Salarios"
+			$proto11=array();
+$proto11["m_functiontype"] = "SQLF_CUSTOM";
+$proto11["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Salario"
 ));
 
-$proto10["m_sql"] = "Salario";
+$proto11["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto11["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto11["m_arguments"][]=$obj;
+$proto11["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto11);
+
+$proto10["m_sql"] = "FORMAT(Salario, 'C', 'es-CO')";
 $proto10["m_srcTableName"] = "dbo.Salarios";
 $proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
+$proto10["m_alias"] = "Salario";
 $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto12=array();
-$proto12["m_link"] = "SQLL_MAIN";
-			$proto13=array();
-$proto13["m_strName"] = "dbo.Salarios";
-$proto13["m_srcTableName"] = "dbo.Salarios";
-$proto13["m_columns"] = array();
-$proto13["m_columns"][] = "SalarioId";
-$proto13["m_columns"][] = "Ano";
-$proto13["m_columns"][] = "Salario";
-$obj = new SQLTable($proto13);
+												$proto15=array();
+$proto15["m_link"] = "SQLL_MAIN";
+			$proto16=array();
+$proto16["m_strName"] = "dbo.Salarios";
+$proto16["m_srcTableName"] = "dbo.Salarios";
+$proto16["m_columns"] = array();
+$proto16["m_columns"][] = "SalarioId";
+$proto16["m_columns"][] = "Ano";
+$proto16["m_columns"][] = "Salario";
+$obj = new SQLTable($proto16);
 
-$proto12["m_table"] = $obj;
-$proto12["m_sql"] = "dbo.Salarios";
-$proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "dbo.Salarios";
-$proto14=array();
-$proto14["m_sql"] = "";
-$proto14["m_uniontype"] = "SQLL_UNKNOWN";
+$proto15["m_table"] = $obj;
+$proto15["m_sql"] = "dbo.Salarios";
+$proto15["m_alias"] = "";
+$proto15["m_srcTableName"] = "dbo.Salarios";
+$proto17=array();
+$proto17["m_sql"] = "";
+$proto17["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto14["m_column"]=$obj;
-$proto14["m_contained"] = array();
-$proto14["m_strCase"] = "";
-$proto14["m_havingmode"] = false;
-$proto14["m_inBrackets"] = false;
-$proto14["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto14);
+$proto17["m_column"]=$obj;
+$proto17["m_contained"] = array();
+$proto17["m_strCase"] = "";
+$proto17["m_havingmode"] = false;
+$proto17["m_inBrackets"] = false;
+$proto17["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto17);
 
-$proto12["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto12);
+$proto15["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto15);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto16=array();
+												$proto19=array();
 						$obj = new SQLField(array(
 	"m_strName" => "Ano",
 	"m_strTable" => "dbo.Salarios",
 	"m_srcTableName" => "dbo.Salarios"
 ));
 
-$proto16["m_column"]=$obj;
-$proto16["m_bAsc"] = 0;
-$proto16["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto16);
+$proto19["m_column"]=$obj;
+$proto19["m_bAsc"] = 0;
+$proto19["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto19);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Salarios";		

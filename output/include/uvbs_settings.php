@@ -170,6 +170,7 @@ $tdatauvbs[".geocodingEnabled"] = false;
 
 
 
+$tdatauvbs[".isResizeColumns"] = true;
 
 
 
@@ -181,10 +182,12 @@ $tdatauvbs[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY Ano DESC";
 $tdatauvbs[".strOrderBy"] = $tstrOrderBy;
 
 $tdatauvbs[".orderindexes"] = array();
+	$tdatauvbs[".orderindexes"][] = array(2, (0 ? "ASC" : "DESC"), "Ano");
+
 
 
 $tdatauvbs[".sqlHead"] = "SELECT UvbId,  	Ano,  	Uvb";
@@ -700,7 +703,7 @@ $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "UvbId,  	Ano,  	Uvb";
 $proto0["m_strFrom"] = "FROM dbo.Uvbs";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY Ano DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -816,6 +819,19 @@ $obj = new SQLFromListItem($proto12);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto16=array();
+						$obj = new SQLField(array(
+	"m_strName" => "Ano",
+	"m_strTable" => "dbo.Uvbs",
+	"m_srcTableName" => "dbo.Uvbs"
+));
+
+$proto16["m_column"]=$obj;
+$proto16["m_bAsc"] = 0;
+$proto16["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto16);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Uvbs";		
 $obj = new SQLQuery($proto0);
 
