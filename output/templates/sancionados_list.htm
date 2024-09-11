@@ -626,13 +626,13 @@
 					Bienes Muebles				</label>
 			</div>
 			{END print_details_bienesmuebles}
-														{BEGIN print_details_bienesefectivo}
+																						{BEGIN print_details_productos_bancarios}
 			<div>
-				<label for="printDetailsbienesefectivo{$id}">
-					<input type="checkbox" value="bienesefectivo" id="printDetailsbienesefectivo{$id}" checked>
-					Bienes Efectivo				</label>
+				<label for="printDetailsproductos_bancarios{$id}">
+					<input type="checkbox" value="productos_bancarios" id="printDetailsproductos_bancarios{$id}" checked>
+					Productos Bancarios				</label>
 			</div>
-			{END print_details_bienesefectivo}
+			{END print_details_productos_bancarios}
 						</div>
 </div>
 {END print_details}
@@ -1316,9 +1316,9 @@
 	>
 
 	 
-																		<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="dbo_procesossancionados,direcciones,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,bienesinmuebles,bienesmuebles,bienesefectivo"
-			data-details-dbo_procesossancionados			data-details-direcciones			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-bienesinmuebles			data-details-bienesmuebles			data-details-bienesefectivo	>
+																			<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="dbo_procesossancionados,direcciones,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,bienesinmuebles,bienesmuebles,,productos_bancarios"
+			data-details-dbo_procesossancionados			data-details-direcciones			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-bienesinmuebles			data-details-bienesmuebles			data-details-			data-details-productos_bancarios	>
 		<span data-details-inside data-short-table="dbo_procesossancionados">
 			</span>
 		<span data-details-inside data-short-table="direcciones">
@@ -1349,12 +1349,15 @@
 			</span>
 		<span data-details-inside data-short-table="bienesmuebles">
 			</span>
-		<span data-details-inside data-short-table="bienesefectivo">
+		<span data-details-inside data-short-table="">
+			</span>
+		<span data-details-inside data-short-table="productos_bancarios">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

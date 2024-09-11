@@ -87,6 +87,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$tdatacorrespondencias1[".NCSearch"] = true;
 
 
+	$tdatacorrespondencias1[".scrollGridBody"] = true;
 
 $tdatacorrespondencias1[".shortTableName"] = "correspondencias1";
 $tdatacorrespondencias1[".nSecOptions"] = 0;
@@ -176,7 +177,7 @@ $tdatacorrespondencias1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																									
+																																																																																																																																																												
 
 $tdatacorrespondencias1[".ajaxCodeSnippetAdded"] = false;
 
@@ -230,7 +231,6 @@ $tdatacorrespondencias1[".geocodingEnabled"] = false;
 
 
 
-$tdatacorrespondencias1[".isResizeColumns"] = true;
 
 
 
@@ -248,9 +248,9 @@ $tdatacorrespondencias1[".strOrderBy"] = $tstrOrderBy;
 $tdatacorrespondencias1[".orderindexes"] = array();
 
 
-$tdatacorrespondencias1[".sqlHead"] = "SELECT NumeroMinjusticia 'N.Minjusticia',  S.Sancionado AS 'Deudor',  ' ' AS 'Solidario',  TD.TipoDocumento AS 'T.Documento',  S.Documento AS 'Documento',  C.Concepto AS 'Concepto',   P.Numero AS 'N.Proceso',  P.Origen AS 'No.Radicado Origen',  SE.Seccional AS 'Competencia',   P.Fecha AS 'F.Creación',  P.Providencia AS 'F.Providencia',  P.Ejecutoria AS 'F.Ejecutoria',  P.Obligacion AS 'Obligacion',  P.Costas AS 'Costas',  P.Intereses AS 'Intereses',  P.Acuerdo AS 'F.Acuerdo Pago',  E.Estado AS 'Estado',  A.Abogado AS 'Abogado'";
-$tdatacorrespondencias1[".sqlFrom"] = "from  Procesos P   INNER JOIN Sancionados S ON S.SancionadoId = P.SancionadoId  INNER JOIN TiposDocumentos TD ON TD.TipoDocumentoId = S.TipoDocumentoId  INNER JOIN Conceptos C ON C.ConceptoId = P.ConceptoId   INNER JOIN Estados E ON E.EstadoId = P.EstadoId  INNER JOIN Abogados A ON A.AbogadoId = P.AbogadoId  INNER JOIN Seccionales SE ON SE.SeccionalId = P.SeccionalId  INNER JOIN CarteraTipos CA ON CA.CarteraTipoId = P.CarteraTipoId";
-$tdatacorrespondencias1[".sqlWhereExpr"] = "P.SeccionalId = 2 AND  P.CarteraTipoId IN (1) and P.EstadoId <>6";
+$tdatacorrespondencias1[".sqlHead"] = "SELECT P.NumeroMinjusticia AS [N.Minjusticia],  S.Sancionado AS Deudor,  ' ' AS Solidario,  TD.TipoDocumento AS [T.Documento],  S.Documento AS Documento,  C.Concepto AS Concepto,  P.Numero AS [N.Proceso],  P.Origen AS [No.Radicado Origen],  SE.Seccional AS Competencia,  P.Fecha AS [F.Creación],  P.Providencia AS [F.Providencia],  P.Ejecutoria AS [F.Ejecutoria],  P.Obligacion AS Obligacion,  P.Costas AS Costas,  P.Intereses AS Intereses,  P.Acuerdo AS [F.Acuerdo Pago],  E.Estado AS Estado,  A.Abogado AS Abogado";
+$tdatacorrespondencias1[".sqlFrom"] = "FROM dbo.Procesos AS P  INNER JOIN dbo.Sancionados AS S ON P.SancionadoId = S.SancionadoId  INNER JOIN dbo.TiposDocumentos AS TD ON S.TipoDocumentoId = TD.TipoDocumentoId  INNER JOIN dbo.Conceptos AS C ON P.ConceptoId = C.ConceptoId  INNER JOIN dbo.Estados AS E ON P.EstadoId = E.EstadoId  INNER JOIN dbo.Abogados AS A ON P.AbogadoId = A.AbogadoId  INNER JOIN dbo.Seccionales AS SE ON P.SeccionalId = SE.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON P.CarteraTipoId = CA.CarteraTipoId";
+$tdatacorrespondencias1[".sqlWhereExpr"] = "(P.SeccionalId = 2) AND (P.CarteraTipoId IN (1)) AND (P.EstadoId <>6)";
 $tdatacorrespondencias1[".sqlTail"] = "";
 
 
@@ -314,7 +314,7 @@ $tdatacorrespondencias1[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "NumeroMinjusticia";
+	$fdata["FullName"] = "P.NumeroMinjusticia";
 
 	
 	
@@ -2802,18 +2802,18 @@ function createSqlQuery_correspondencias1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "NumeroMinjusticia 'N.Minjusticia',  S.Sancionado AS 'Deudor',  ' ' AS 'Solidario',  TD.TipoDocumento AS 'T.Documento',  S.Documento AS 'Documento',  C.Concepto AS 'Concepto',   P.Numero AS 'N.Proceso',  P.Origen AS 'No.Radicado Origen',  SE.Seccional AS 'Competencia',   P.Fecha AS 'F.Creación',  P.Providencia AS 'F.Providencia',  P.Ejecutoria AS 'F.Ejecutoria',  P.Obligacion AS 'Obligacion',  P.Costas AS 'Costas',  P.Intereses AS 'Intereses',  P.Acuerdo AS 'F.Acuerdo Pago',  E.Estado AS 'Estado',  A.Abogado AS 'Abogado'";
-$proto0["m_strFrom"] = "from  Procesos P   INNER JOIN Sancionados S ON S.SancionadoId = P.SancionadoId  INNER JOIN TiposDocumentos TD ON TD.TipoDocumentoId = S.TipoDocumentoId  INNER JOIN Conceptos C ON C.ConceptoId = P.ConceptoId   INNER JOIN Estados E ON E.EstadoId = P.EstadoId  INNER JOIN Abogados A ON A.AbogadoId = P.AbogadoId  INNER JOIN Seccionales SE ON SE.SeccionalId = P.SeccionalId  INNER JOIN CarteraTipos CA ON CA.CarteraTipoId = P.CarteraTipoId";
-$proto0["m_strWhere"] = "P.SeccionalId = 2 AND  P.CarteraTipoId IN (1) and P.EstadoId <>6";
+$proto0["m_strFieldList"] = "P.NumeroMinjusticia AS [N.Minjusticia],  S.Sancionado AS Deudor,  ' ' AS Solidario,  TD.TipoDocumento AS [T.Documento],  S.Documento AS Documento,  C.Concepto AS Concepto,  P.Numero AS [N.Proceso],  P.Origen AS [No.Radicado Origen],  SE.Seccional AS Competencia,  P.Fecha AS [F.Creación],  P.Providencia AS [F.Providencia],  P.Ejecutoria AS [F.Ejecutoria],  P.Obligacion AS Obligacion,  P.Costas AS Costas,  P.Intereses AS Intereses,  P.Acuerdo AS [F.Acuerdo Pago],  E.Estado AS Estado,  A.Abogado AS Abogado";
+$proto0["m_strFrom"] = "FROM dbo.Procesos AS P  INNER JOIN dbo.Sancionados AS S ON P.SancionadoId = S.SancionadoId  INNER JOIN dbo.TiposDocumentos AS TD ON S.TipoDocumentoId = TD.TipoDocumentoId  INNER JOIN dbo.Conceptos AS C ON P.ConceptoId = C.ConceptoId  INNER JOIN dbo.Estados AS E ON P.EstadoId = E.EstadoId  INNER JOIN dbo.Abogados AS A ON P.AbogadoId = A.AbogadoId  INNER JOIN dbo.Seccionales AS SE ON P.SeccionalId = SE.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON P.CarteraTipoId = CA.CarteraTipoId";
+$proto0["m_strWhere"] = "(P.SeccionalId = 2) AND (P.CarteraTipoId IN (1)) AND (P.EstadoId <>6)";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "P.SeccionalId = 2 AND  P.CarteraTipoId IN (1) and P.EstadoId <>6";
+$proto2["m_sql"] = "(P.SeccionalId = 2) AND (P.CarteraTipoId IN (1)) AND (P.EstadoId <>6)";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "P.SeccionalId = 2 AND  P.CarteraTipoId IN (1) and P.EstadoId <>6"
+	"m_sql" => "(P.SeccionalId = 2) AND (P.CarteraTipoId IN (1)) AND (P.EstadoId <>6)"
 ));
 
 $proto2["m_column"]=$obj;
@@ -2831,7 +2831,7 @@ $proto4["m_column"]=$obj;
 $proto4["m_contained"] = array();
 $proto4["m_strCase"] = "= 2";
 $proto4["m_havingmode"] = false;
-$proto4["m_inBrackets"] = false;
+$proto4["m_inBrackets"] = true;
 $proto4["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto4);
 
@@ -2849,7 +2849,7 @@ $proto6["m_column"]=$obj;
 $proto6["m_contained"] = array();
 $proto6["m_strCase"] = "IN (1)";
 $proto6["m_havingmode"] = false;
-$proto6["m_inBrackets"] = false;
+$proto6["m_inBrackets"] = true;
 $proto6["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto6);
 
@@ -2867,7 +2867,7 @@ $proto8["m_column"]=$obj;
 $proto8["m_contained"] = array();
 $proto8["m_strCase"] = "<>6";
 $proto8["m_havingmode"] = false;
-$proto8["m_inBrackets"] = false;
+$proto8["m_inBrackets"] = true;
 $proto8["m_useAlias"] = false;
 $obj = new SQLLogicalExpr($proto8);
 
@@ -2903,7 +2903,7 @@ $proto0["m_fieldlist"] = array();
 	"m_srcTableName" => "dbo.Correspondencias1"
 ));
 
-$proto12["m_sql"] = "NumeroMinjusticia";
+$proto12["m_sql"] = "P.NumeroMinjusticia";
 $proto12["m_srcTableName"] = "dbo.Correspondencias1";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "N.Minjusticia";
@@ -3240,7 +3240,7 @@ $proto49["m_columns"][] = "SeccionalIdOrigen";
 $obj = new SQLTable($proto49);
 
 $proto48["m_table"] = $obj;
-$proto48["m_sql"] = "Procesos P";
+$proto48["m_sql"] = "dbo.Procesos AS P";
 $proto48["m_alias"] = "P";
 $proto48["m_srcTableName"] = "dbo.Correspondencias1";
 $proto50=array();
@@ -3281,7 +3281,7 @@ $proto53["m_columns"][] = "PrivadoLibertad";
 $obj = new SQLTable($proto53);
 
 $proto52["m_table"] = $obj;
-$proto52["m_sql"] = "INNER JOIN Sancionados S ON S.SancionadoId = P.SancionadoId";
+$proto52["m_sql"] = "INNER JOIN dbo.Sancionados AS S ON P.SancionadoId = S.SancionadoId";
 $proto52["m_alias"] = "S";
 $proto52["m_srcTableName"] = "dbo.Correspondencias1";
 $proto54=array();
@@ -3318,7 +3318,7 @@ $proto57["m_columns"][] = "Juridica";
 $obj = new SQLTable($proto57);
 
 $proto56["m_table"] = $obj;
-$proto56["m_sql"] = "INNER JOIN TiposDocumentos TD ON TD.TipoDocumentoId = S.TipoDocumentoId";
+$proto56["m_sql"] = "INNER JOIN dbo.TiposDocumentos AS TD ON S.TipoDocumentoId = TD.TipoDocumentoId";
 $proto56["m_alias"] = "TD";
 $proto56["m_srcTableName"] = "dbo.Correspondencias1";
 $proto58=array();
@@ -3355,7 +3355,7 @@ $proto61["m_columns"][] = "Cuenta";
 $obj = new SQLTable($proto61);
 
 $proto60["m_table"] = $obj;
-$proto60["m_sql"] = "INNER JOIN Conceptos C ON C.ConceptoId = P.ConceptoId";
+$proto60["m_sql"] = "INNER JOIN dbo.Conceptos AS C ON P.ConceptoId = C.ConceptoId";
 $proto60["m_alias"] = "C";
 $proto60["m_srcTableName"] = "dbo.Correspondencias1";
 $proto62=array();
@@ -3391,7 +3391,7 @@ $proto65["m_columns"][] = "Tipo";
 $obj = new SQLTable($proto65);
 
 $proto64["m_table"] = $obj;
-$proto64["m_sql"] = "INNER JOIN Estados E ON E.EstadoId = P.EstadoId";
+$proto64["m_sql"] = "INNER JOIN dbo.Estados AS E ON P.EstadoId = E.EstadoId";
 $proto64["m_alias"] = "E";
 $proto64["m_srcTableName"] = "dbo.Correspondencias1";
 $proto66=array();
@@ -3437,7 +3437,7 @@ $proto69["m_columns"][] = "Codificador";
 $obj = new SQLTable($proto69);
 
 $proto68["m_table"] = $obj;
-$proto68["m_sql"] = "INNER JOIN Abogados A ON A.AbogadoId = P.AbogadoId";
+$proto68["m_sql"] = "INNER JOIN dbo.Abogados AS A ON P.AbogadoId = A.AbogadoId";
 $proto68["m_alias"] = "A";
 $proto68["m_srcTableName"] = "dbo.Correspondencias1";
 $proto70=array();
@@ -3493,7 +3493,7 @@ $proto73["m_columns"][] = "Subserie";
 $obj = new SQLTable($proto73);
 
 $proto72["m_table"] = $obj;
-$proto72["m_sql"] = "INNER JOIN Seccionales SE ON SE.SeccionalId = P.SeccionalId";
+$proto72["m_sql"] = "INNER JOIN dbo.Seccionales AS SE ON P.SeccionalId = SE.SeccionalId";
 $proto72["m_alias"] = "SE";
 $proto72["m_srcTableName"] = "dbo.Correspondencias1";
 $proto74=array();
@@ -3530,7 +3530,7 @@ $proto77["m_columns"][] = "Prescrita";
 $obj = new SQLTable($proto77);
 
 $proto76["m_table"] = $obj;
-$proto76["m_sql"] = "INNER JOIN CarteraTipos CA ON CA.CarteraTipoId = P.CarteraTipoId";
+$proto76["m_sql"] = "INNER JOIN dbo.CarteraTipos AS CA ON P.CarteraTipoId = CA.CarteraTipoId";
 $proto76["m_alias"] = "CA";
 $proto76["m_srcTableName"] = "dbo.Correspondencias1";
 $proto78=array();

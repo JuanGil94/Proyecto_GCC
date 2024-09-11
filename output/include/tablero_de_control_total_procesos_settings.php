@@ -134,7 +134,7 @@ $tdatatablero_de_control_total_procesos[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																									
+																																																																																																																																																												
 
 $tdatatablero_de_control_total_procesos[".ajaxCodeSnippetAdded"] = false;
 

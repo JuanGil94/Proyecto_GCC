@@ -405,7 +405,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.ProcesosSancionados"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BienesInmuebles"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["BienesMuebles"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["BienesEfectivo"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Productos Bancarios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.tipoTasas"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;

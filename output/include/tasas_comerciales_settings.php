@@ -6,11 +6,11 @@ $tdatatasas_comerciales[".OwnerID"] = "";
 $tdatatasas_comerciales[".OriginalTable"] = "dbo.Tasas";
 
 
-$tdatatasas_comerciales[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatatasas_comerciales[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatatasas_comerciales[".originalPagesByType"] = $tdatatasas_comerciales[".pagesByType"];
-$tdatatasas_comerciales[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatatasas_comerciales[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatatasas_comerciales[".originalPages"] = $tdatatasas_comerciales[".pages"];
-$tdatatasas_comerciales[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatatasas_comerciales[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatatasas_comerciales[".originalDefaultPages"] = $tdatatasas_comerciales[".defaultPages"];
 
 //	field labels
@@ -137,7 +137,7 @@ $tdatatasas_comerciales[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																									
+																																																																																																																																																												
 
 $tdatatasas_comerciales[".ajaxCodeSnippetAdded"] = false;
 
