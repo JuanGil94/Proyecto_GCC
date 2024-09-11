@@ -153,7 +153,7 @@ $tdatasancionados[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																								
 
 $tdatasancionados[".ajaxCodeSnippetAdded"] = false;
 
@@ -1801,21 +1801,21 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
-//	BienesEfectivo
+//	Productos Bancarios
 	
 	
 
 		$dIndex = 3;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="BienesEfectivo";
+	$detailsParam["dDataSourceTable"]="Productos Bancarios";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "bienesefectivo";
-	$detailsParam["dCaptionTable"] = GetTableCaption("BienesEfectivo");
+	$detailsParam["dShortTable"] = "productos_bancarios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Productos_Bancarios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

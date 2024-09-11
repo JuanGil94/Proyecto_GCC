@@ -1056,7 +1056,7 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="BienesEfectivo")
+		if($table=="Productos Bancarios")
 		{
 			return false;
 		}
@@ -2074,7 +2074,7 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="BienesEfectivo")
+		if($table=="Productos Bancarios")
 		{
 			return false;
 		}

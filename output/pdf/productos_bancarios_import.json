@@ -1,0 +1,150 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Productos_Bancarios import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Descripci_n_del_Bien_Inmueble_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Matr_cula_Inmobiliaria_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Aval_o_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Direcci_n_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$CiudadId_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$PropiedadId_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

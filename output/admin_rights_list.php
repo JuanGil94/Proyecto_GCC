@@ -2585,7 +2585,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("bienesmuebles", " " . "Bienes Muebles");
-$table = "BienesEfectivo";
+$table = "Productos Bancarios";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -2601,7 +2601,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("bienesefectivo", " " . "Bienes Efectivo");
+$tables[$table] = array("productos_bancarios", " " . "Productos Bancarios");
 $table = "dbo.tipoTasas";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )

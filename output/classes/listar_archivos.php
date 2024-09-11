@@ -1,4 +1,6 @@
 <?php
+//session_start();
+//print_r($_SESSION);
 if (isset($_GET["w1"])) {
     $phpVar1 = $_GET["w1"];
     //echo  "Valor del Proceso: ".$phpVar1;
@@ -16,6 +18,7 @@ if (isset($_GET["w1"])) {
     foreach ($archivos as $archivo) {
         //$ruta_completa = "classes/".$rutaCarpeta."/".$archivo; //Ruta para trabajar localmente
         $ruta_completa = "http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo;
+        //$ruta_completa = $_SESSION['BeforePath']."/archivosSubidos/".$rutaCarpeta."/".$archivo;
         //echo "<li>$archivo</li>";
         //echo "Value: ".$ruta_completa;
         echo '<li>';
@@ -48,6 +51,7 @@ else if(isset($_GET["w2"])){
         //echo "Value: ".$ruta_completa;
         //$url_pdf='http://localhost:8086/classes/'.$rutaCarpeta.'/'.$archivo.''; //se usa cuando se hacen pruebas locales
         $url_pdf="http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo; //se usa para cuando se publica con una IP
+        //$url_pdf=$_SESSION['BeforePath']."/archivosSubidos/".$rutaCarpeta."/".$archivo; //se usa para cuando se publica con una IP
         echo '<li>';
                 //echo $archivo;
                 // Agregar enlace de descarga

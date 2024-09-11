@@ -3860,8 +3860,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "bienesinmuebles" ] = "BienesInmuebles";
 	$projectEntities[ "BienesMuebles" ] = array( "url" => "bienesmuebles", "type" => 1 );
 	$projectEntitiesReverse[ "bienesmuebles" ] = "BienesMuebles";
-	$projectEntities[ "BienesEfectivo" ] = array( "url" => "bienesefectivo", "type" => 1 );
-	$projectEntitiesReverse[ "bienesefectivo" ] = "BienesEfectivo";
+	$projectEntities[ "Productos Bancarios" ] = array( "url" => "productos_bancarios", "type" => 1 );
+	$projectEntitiesReverse[ "productos_bancarios" ] = "Productos Bancarios";
 	$projectEntities[ "dbo.tipoTasas" ] = array( "url" => "tipotasas", "type" => 0 );
 	$projectEntitiesReverse[ "tipotasas" ] = "dbo.tipoTasas";
 }

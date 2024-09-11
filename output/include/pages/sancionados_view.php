@@ -6,7 +6,7 @@
 'previewPageId' => '' ),
 'BienesMuebles' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'BienesEfectivo' => array( 'displayPreview' => 2,
+'Productos Bancarios' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.ProcesosSancionados' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),

@@ -6,11 +6,11 @@ $tdatatasas_tes__deterioro_de_cartera_[".OwnerID"] = "";
 $tdatatasas_tes__deterioro_de_cartera_[".OriginalTable"] = "dbo.Tasas";
 
 
-$tdatatasas_tes__deterioro_de_cartera_[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatatasas_tes__deterioro_de_cartera_[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatatasas_tes__deterioro_de_cartera_[".originalPagesByType"] = $tdatatasas_tes__deterioro_de_cartera_[".pagesByType"];
-$tdatatasas_tes__deterioro_de_cartera_[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatatasas_tes__deterioro_de_cartera_[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatatasas_tes__deterioro_de_cartera_[".originalPages"] = $tdatatasas_tes__deterioro_de_cartera_[".pages"];
-$tdatatasas_tes__deterioro_de_cartera_[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatatasas_tes__deterioro_de_cartera_[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatatasas_tes__deterioro_de_cartera_[".originalDefaultPages"] = $tdatatasas_tes__deterioro_de_cartera_[".defaultPages"];
 
 //	field labels
@@ -137,7 +137,7 @@ $tdatatasas_tes__deterioro_de_cartera_[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																									
+																																																																																																																																																												
 
 $tdatatasas_tes__deterioro_de_cartera_[".ajaxCodeSnippetAdded"] = false;
 

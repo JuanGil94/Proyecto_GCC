@@ -1499,17 +1499,17 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
 			$lookupTableLinks["dbo.Sancionados"] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.Sancionados"]["bienesefectivo.SancionadoId"] )) {
-			$lookupTableLinks["dbo.Sancionados"]["bienesefectivo.SancionadoId"] = array();
+		if( !isset( $lookupTableLinks["dbo.Sancionados"]["productos_bancarios.SancionadoId"] )) {
+			$lookupTableLinks["dbo.Sancionados"]["productos_bancarios.SancionadoId"] = array();
 		}
-		$lookupTableLinks["dbo.Sancionados"]["bienesefectivo.SancionadoId"]["edit"] = array("table" => "BienesEfectivo", "field" => "SancionadoId", "page" => "edit");
+		$lookupTableLinks["dbo.Sancionados"]["productos_bancarios.SancionadoId"]["edit"] = array("table" => "Productos Bancarios", "field" => "SancionadoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Ciudades3"] ) ) {
 			$lookupTableLinks["dbo.Ciudades3"] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.Ciudades3"]["bienesefectivo.CiudadId"] )) {
-			$lookupTableLinks["dbo.Ciudades3"]["bienesefectivo.CiudadId"] = array();
+		if( !isset( $lookupTableLinks["dbo.Ciudades3"]["productos_bancarios.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades3"]["productos_bancarios.CiudadId"] = array();
 		}
-		$lookupTableLinks["dbo.Ciudades3"]["bienesefectivo.CiudadId"]["edit"] = array("table" => "BienesEfectivo", "field" => "CiudadId", "page" => "edit");
+		$lookupTableLinks["dbo.Ciudades3"]["productos_bancarios.CiudadId"]["edit"] = array("table" => "Productos Bancarios", "field" => "CiudadId", "page" => "edit");
 }
 
 ?>

@@ -130,6 +130,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Deterioro_de_Cartera_por_Proceso_cartera_seccional"] = true;
 		$this->events["dbo_ProcesosSancionados_SumProcesos"] = true;
 		$this->events["dbo_ProcesosSancionados_SumSaldo"] = true;
+		$this->events["dbo_Correspondencias1_snippet"] = true;
 
 
 
@@ -147,7 +148,29 @@ class class_GlobalEvents extends eventsBase
 function AfterSuccessfulLogin($username, $password, &$data, $pageObject)
 {
 
-		//echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
+		{ // Obtener la URL completa de la página actual
+$currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+ 
+// Analizar la URL y obtener el esquema, el host, el puerto y el path
+$parsedUrl = parse_url($currentUrl);
+ 
+// Obtener el esquema (http, https)
+$scheme = isset($parsedUrl['scheme']) ? $parsedUrl['scheme'] . '://' : '';
+ 
+// Obtener el host (dominio)
+$host = isset($parsedUrl['host']) ? $parsedUrl['host'] : ''; }
+ 
+// Obtener el puerto si está presente
+$port = isset($parsedUrl['port']) ? ':' . $parsedUrl['port'] : '';
+ 
+// Concatenar esquema, host y puerto para obtener la parte antes del path
+$beforePath = $scheme . $host . $port;
+ 
+//SE GUARDA LA URL 
+$_SESSION['BeforePath'] = $beforePath;
+
+
+//echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
 //phpinfo();
 $arraySeccionales=array();
 $arrayCiudades=array();
@@ -206,7 +229,7 @@ while( $date = $consulta->fetchAssoc() )
 	$conteo=$date["Cantidad"];
 }
 if ($conteo>0){
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "http://192.168.209.48:8090/dbo_procesosprescritos_list.php",null, $username,"" );
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Prescripcion", "ALERTA PRESCRIPCION", "glyphicon-tag", "".$_SESSION['BeforePath']."/dbo_procesosprescritos_list.php",null, $username,"" );
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=2
@@ -230,7 +253,7 @@ while( $date = $consulta->fetchAssoc() )
 	$conteo=$date["Cantidad"];
 }
 if ($conteo>0){
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "http://192.168.209.48:8090/alertmandpago_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-MandamientoDePago", "ALERTA MANDAMIENTO DE PAGO", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertmandpago_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=4
@@ -254,7 +277,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-NotificacionMandamientoDePago", "ALERTA NOTIFICACION MANDAMIENTO DE PAGO", "glyphicon-tag", "http://192.168.209.48:8090/alertnotmandpago_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-NotificacionMandamientoDePago", "ALERTA NOTIFICACION MANDAMIENTO DE PAGO", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertnotmandpago_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=5
@@ -277,7 +300,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-IncumplimientoAcuerdoDePago", "ALERTA NOTIFICACION INCUMPLIMIENTO DE ACUERDO DE PAGO", "glyphicon-tag", "http://192.168.209.48:8090/alertincacupago_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-IncumplimientoAcuerdoDePago", "ALERTA NOTIFICACION INCUMPLIMIENTO DE ACUERDO DE PAGO", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertincacupago_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=6
@@ -300,7 +323,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Oficio Persuasivo", "ALERTA NOTIFICACION SIN OFICIO PERSUASIVO", "glyphicon-tag", "http://192.168.209.48:8090/alertsinpersuasivo_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Oficio Persuasivo", "ALERTA NOTIFICACION SIN OFICIO PERSUASIVO", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertsinpersuasivo_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=7
@@ -328,7 +351,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Busquedad de Bienes", "ALERTA NOTIFICACION SIN BUSQUEDAD DE BIENES", "glyphicon-tag", "http://192.168.209.48:8090/alertbusqbienes_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Busquedad de Bienes", "ALERTA NOTIFICACION SIN BUSQUEDAD DE BIENES", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertbusqbienes_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=8
@@ -361,7 +384,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Resolucion Seguir Adelante", "ALERTA SIN RESOLUCION SEGUIR ADELANTE", "glyphicon-tag", "http://192.168.209.48:8090/alertsegadelante_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Sin Resolucion Seguir Adelante", "ALERTA SIN RESOLUCION SEGUIR ADELANTE", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertsegadelante_list.php",null,$username,"");
 }
 //
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=9
@@ -381,7 +404,7 @@ while( $date = $consulta->fetchAssoc() )
 }
 if ($conteo>0){
 	//$message, $title = null, $icon = null, $url = null, $expire = null, $user = null, $provider = null 
-	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Interrumpidos/Suspendidos", "ALERTA INTERRUMPIDOS/SUSPENDIDOS", "glyphicon-tag", "http://192.168.209.48:8090/alertintsusp_list.php",null,$username,"");
+	addNotification( "Tiene ".$conteo." Procesos notificados por Alerta-Interrumpidos/Suspendidos", "ALERTA INTERRUMPIDOS/SUSPENDIDOS", "glyphicon-tag", "".$_SESSION['BeforePath']."/alertintsusp_list.php",null,$username,"");
 }
 
 
@@ -553,8 +576,7 @@ echo "Your message";
 }
 	function event_dbo_Correspondencias_snippet(&$params)
 	{
-	// Put your code here.
-$str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
+	$str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
 //select values from the database
 $strSQL = "select * from Abogados WHERE SeccionalId=".$_SESSION["SeccionalUser"]."  ORDER BY Abogado ASC";
 $rs = db_query($strSQL);
@@ -563,9 +585,6 @@ $str.="<option value='".$data['AbogadoId']."'>".$data['Abogado']."</option>";
 }
 $str.="</select>";
 echo $str;
-
-
-
 	;
 }
 	function event_dbo_Chequeos_snippet1(&$params)
@@ -4549,6 +4568,21 @@ $totalProcesos = $row['SumProcesos'];
 // Imprimir el valor formateado
 echo "<strong>". $totalProcesos . "</strong>";
 
+	;
+}
+	function event_dbo_Correspondencias1_snippet(&$params)
+	{
+	// Put your code here.
+$str= "<select id='abogaId'; style='width: 320px; display: inline-block; margin: 3px; ' class='form-control'>";
+$str2="<label style='margin: 3px;'>Resolución: </label><input style='margin: 3px;'></input><label style='margin: 3px;'>Radicado: </label><input style='margin: 3px;'></input><label style='margin: 3px;'>Observaciones: </label><input style='margin: 3px;'></input>";
+//select values from the database
+$strSQL = "SELECT * FROM Oficios WHERE Activo=1";
+$rs = db_query($strSQL);
+while ($data = db_fetch_array($rs)){
+$str.="<option value='".$data['Oficio']."'>".$data['Oficio']."</option>";
+}
+$str.="</select>";
+echo $str.$str2;
 	;
 }
 

@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2885_1725380875";
+$projectBuildKey = "2913_1726064835";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2885";
+$projectBuildNumber = "2913";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -932,7 +932,7 @@ $tableCaptions["Spanish"]["Actuaciones_Por_Mes"] = "Actuaciones Por Mes";
 $tableCaptions["Spanish"]["dbo_ProcesosSancionados"] = "Procesos Sancionados";
 $tableCaptions["Spanish"]["BienesInmuebles"] = "Bienes Inmuebles";
 $tableCaptions["Spanish"]["BienesMuebles"] = "Bienes Muebles";
-$tableCaptions["Spanish"]["BienesEfectivo"] = "Bienes Efectivo";
+$tableCaptions["Spanish"]["Productos_Bancarios"] = "Productos Bancarios";
 $tableCaptions["Spanish"]["dbo_tipoTasas"] = "Tipo Tasas";
 $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 

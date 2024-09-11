@@ -943,7 +943,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "37";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Oficios No Sigobius";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.Oficios1";
@@ -962,7 +962,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Oficios1";
+	$menuNode["title"] = "Oficios No Sigobius";
 
 
 

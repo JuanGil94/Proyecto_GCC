@@ -527,7 +527,7 @@ function checkTableName($shortTName )
 		return true;
 	if ("bienesmuebles" == $shortTName )
 		return true;
-	if ("bienesefectivo" == $shortTName )
+	if ("productos_bancarios" == $shortTName )
 		return true;
 	if ("tipotasas" == $shortTName )
 		return true;
@@ -2041,12 +2041,12 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("BienesEfectivo");
+		$strPerm = GetUserPermissions("Productos Bancarios");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="BienesEfectivo";
+		$arr[]="Productos Bancarios";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -2228,7 +2228,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ProcesosSancionados";
 	$arr[]="BienesInmuebles";
 	$arr[]="BienesMuebles";
-	$arr[]="BienesEfectivo";
+	$arr[]="Productos Bancarios";
 	$arr[]="dbo.tipoTasas";
 	return $arr;
 }
@@ -3679,7 +3679,7 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="BienesEfectivo" )
+	if( $table=="Productos Bancarios" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

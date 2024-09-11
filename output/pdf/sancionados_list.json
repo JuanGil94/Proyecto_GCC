@@ -1088,9 +1088,14 @@ pdfDocument = {
 		{END details_bienesmuebles},
 				
 				
-			 {BEGIN details_bienesefectivo}
-			{$displayDetailTable_bienesefectivo }
-		{END details_bienesefectivo},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
+				
+			 {BEGIN details_productos_bancarios}
+			{$displayDetailTable_productos_bancarios }
+		{END details_productos_bancarios},
 				
 		  ],
   "border": [ true, true, true, true ],

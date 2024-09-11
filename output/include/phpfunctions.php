@@ -996,31 +996,31 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 				if($table=="dbo.ProcesosPrescritos" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="dbo.AlertMandPago" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="AlertNotMandPago" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="AlertIncAcuPago" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="AlertSinPersuasivo" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
 //echo "<a href='http://192.168.209.48:8090/procesos_list.php?qs=".$numero."~Numero&f=all' target='_blank'>".$numero."</a>";
 
 //$url = "https://www.ejemplo.com";
@@ -1038,25 +1038,25 @@ function openInNewTab(url) {
 				if($table=="AlertBusqBienes" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="AlertSegAdelante" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="AlertIntSusp" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 				if($table=="dbo.ProcesosSancionados" && $field=="Numero")
 	{
 		$numero=$value;
-$value='<a href="http://192.168.209.48:8090/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 	return $value;
