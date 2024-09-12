@@ -178,6 +178,18 @@ $nonAdminTablesArr[] = "BienesInmuebles";
 $nonAdminTablesArr[] = "BienesMuebles";
 $nonAdminTablesArr[] = "Productos Bancarios";
 $nonAdminTablesArr[] = "dbo.tipoTasas";
+$nonAdminTablesArr[] = "Acuerdo de Pago";
+$nonAdminTablesArr[] = "Listado de Chequeos";
+$nonAdminTablesArr[] = "Listado de Chequeo Sancionado DataChild";
+$nonAdminTablesArr[] = "Listado de Chequeo Oficios DataChild";
+$nonAdminTablesArr[] = "Listado de Chequeo Motivo devolucion DataChild";
+$nonAdminTablesArr[] = "Clasificaciones -- Cartera";
+$nonAdminTablesArr[] = "Corporaciones - Especialidades";
+$nonAdminTablesArr[] = "Mandamientos de pago Automaticos";
+$nonAdminTablesArr[] = "Prescripciones Automática";
+$nonAdminTablesArr[] = "Procesos Sin Notificación";
+$nonAdminTablesArr[] = "Remanentes-";
+$nonAdminTablesArr[] = "Prueba Archivo Plano";
 
 $ug_connection = $cman->getForUserGroups();
 

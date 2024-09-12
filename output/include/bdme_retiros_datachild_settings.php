@@ -192,7 +192,7 @@ $tdatabdme_retiros_datachild[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_retiros_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -256,7 +256,7 @@ $tdatabdme_retiros_datachild[".isDisplayLoading"] = true;
 
 
 
-$tdatabdme_retiros_datachild[".pageSize"] = 30;
+$tdatabdme_retiros_datachild[".pageSize"] = 2000;
 
 $tdatabdme_retiros_datachild[".warnLeavingPages"] = true;
 
@@ -1408,7 +1408,7 @@ $tdatabdme_retiros_datachild[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1424,8 +1424,7 @@ $tdatabdme_retiros_datachild[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

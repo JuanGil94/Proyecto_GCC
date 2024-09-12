@@ -144,12 +144,6 @@ pdfDocument = {
 				
 			{"text":{$SancionadoDocumento_pdfvalue},"hidden":"{$item_hide_import_field12}"},
 				
-				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field13}"},
-				
-				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_import_field14}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

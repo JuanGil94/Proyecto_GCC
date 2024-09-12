@@ -28,10 +28,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbdme_gu_a_del_deudor_moroso1["Spanish"]["Seccional"] = "Seccional";
 	$fieldToolTipsbdme_gu_a_del_deudor_moroso1["Spanish"]["Seccional"] = "";
 	$placeHoldersbdme_gu_a_del_deudor_moroso1["Spanish"]["Seccional"] = "";
-	$fieldLabelsbdme_gu_a_del_deudor_moroso1["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsbdme_gu_a_del_deudor_moroso1["Spanish"]["Codigo"] = "Codigo Entidad";
 	$fieldToolTipsbdme_gu_a_del_deudor_moroso1["Spanish"]["Codigo"] = "";
 	$placeHoldersbdme_gu_a_del_deudor_moroso1["Spanish"]["Codigo"] = "";
-	$fieldLabelsbdme_gu_a_del_deudor_moroso1["Spanish"]["Numero"] = "Numero";
+	$fieldLabelsbdme_gu_a_del_deudor_moroso1["Spanish"]["Numero"] = "Numero Obligación";
 	$fieldToolTipsbdme_gu_a_del_deudor_moroso1["Spanish"]["Numero"] = "";
 	$placeHoldersbdme_gu_a_del_deudor_moroso1["Spanish"]["Numero"] = "";
 	$fieldLabelsbdme_gu_a_del_deudor_moroso1["Spanish"]["Direccion"] = "Direccion";
@@ -150,7 +150,7 @@ $tdatabdme_gu_a_del_deudor_moroso1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatabdme_gu_a_del_deudor_moroso1[".ajaxCodeSnippetAdded"] = false;
 
@@ -200,7 +200,7 @@ $tdatabdme_gu_a_del_deudor_moroso1[".isDisplayLoading"] = true;
 
 
 
-$tdatabdme_gu_a_del_deudor_moroso1[".pageSize"] = 20;
+$tdatabdme_gu_a_del_deudor_moroso1[".pageSize"] = 100;
 
 $tdatabdme_gu_a_del_deudor_moroso1[".warnLeavingPages"] = true;
 
@@ -1514,6 +1514,7 @@ $tdatabdme_gu_a_del_deudor_moroso1[".sqlquery"] = $queryData_bdme_gu_a_del_deudo
 
 
 
-$tdatabdme_gu_a_del_deudor_moroso1[".hasEvents"] = false;
+include_once(getabspath("include/bdme_gu_a_del_deudor_moroso1_events.php"));
+$tdatabdme_gu_a_del_deudor_moroso1[".hasEvents"] = true;
 
 ?>

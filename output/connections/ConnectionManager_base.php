@@ -407,6 +407,18 @@ class ConnectionManager_Base
 		$connectionsIds["BienesMuebles"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Productos Bancarios"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.tipoTasas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Acuerdo de Pago"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Listado de Chequeos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Listado de Chequeo Sancionado DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Listado de Chequeo Oficios DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Listado de Chequeo Motivo devolucion DataChild"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Clasificaciones -- Cartera"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Corporaciones - Especialidades"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Mandamientos de pago Automaticos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Prescripciones Automática"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Procesos Sin Notificación"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Remanentes-"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Prueba Archivo Plano"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

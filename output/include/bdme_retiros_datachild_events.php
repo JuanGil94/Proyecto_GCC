@@ -145,12 +145,12 @@ function BeforeProcessList($pageObject)
 function BeforeShowList(&$xt, &$templatefile, $pageObject)
 {
 
-		set_time_limit(0); // Elimina la restricción de timeout
+		//set_time_limit(0); // Elimina la restricción de timeout
 
-$sancionadoId = intval($_SESSION['SancionadoIdData_report_Retiro']);
+//$sancionadoId = intval($_SESSION['SancionadoIdData_report_Retiro']);
 
 // Ejecutar la primera consulta SQL
-$sql = CustomQuery("
+/*$sql = CustomQuery("
 SELECT COUNT(ProcesoId) as TotalC6 FROM SancionadosPorProcesoView WHERE SancionadoId = $sancionadoId;
 ");
 
@@ -167,7 +167,7 @@ $tableHTML2 = '<strong>' . htmlspecialchars($record['TotalC6']) . '</strong>';
 
 // Asignar el HTML generado al objeto xt
 $xt->assign("total_table", $tableHTML);
-$xt->assign("total_sum", $tableHTML2);
+$xt->assign("total_sum", $tableHTML2);*/
 
 
 // Place event code here.

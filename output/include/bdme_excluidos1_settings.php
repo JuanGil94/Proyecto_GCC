@@ -150,7 +150,7 @@ $tdatabdme_excluidos1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatabdme_excluidos1[".ajaxCodeSnippetAdded"] = false;
 
@@ -178,7 +178,6 @@ $tdatabdme_excluidos1[".googleLikeFields"][] = "SancionadoTipoDocumento";
 $tdatabdme_excluidos1[".googleLikeFields"][] = "Sancionado";
 $tdatabdme_excluidos1[".googleLikeFields"][] = "Deuda";
 $tdatabdme_excluidos1[".googleLikeFields"][] = "Estado";
-$tdatabdme_excluidos1[".googleLikeFields"][] = "SancionadoId";
 
 
 
@@ -556,7 +555,7 @@ $tdatabdme_excluidos1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -572,8 +571,7 @@ $tdatabdme_excluidos1[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

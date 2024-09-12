@@ -109,15 +109,6 @@ pdfDocument = {
 			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
-			{"text":{$C1_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				
@@ -152,9 +143,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field15}"},
-				
-				
-			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_export_field16}"},
 				
 				
 			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field17}"},

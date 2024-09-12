@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "2913_1726064835";
+$projectBuildKey = "2946_1726097705";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "2913";
+$projectBuildNumber = "2946";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -934,7 +934,19 @@ $tableCaptions["Spanish"]["BienesInmuebles"] = "Bienes Inmuebles";
 $tableCaptions["Spanish"]["BienesMuebles"] = "Bienes Muebles";
 $tableCaptions["Spanish"]["Productos_Bancarios"] = "Productos Bancarios";
 $tableCaptions["Spanish"]["dbo_tipoTasas"] = "Tipo Tasas";
+$tableCaptions["Spanish"]["Acuerdo_de_Pago"] = "Acuerdo de Pago";
+$tableCaptions["Spanish"]["Listado_de_Chequeos"] = "Listado de Chequeos";
+$tableCaptions["Spanish"]["Listado_de_Chequeo_Sancionado_DataChild"] = "Listado de Chequeo Sancionado DataChild";
+$tableCaptions["Spanish"]["Listado_de_Chequeo_Oficios_DataChild"] = "Listado de Chequeo Oficios DataChild";
+$tableCaptions["Spanish"]["Listado_de_Chequeo_Motivo_devolucion_DataChild"] = "Listado de Chequeo Motivo devolucion DataChild";
+$tableCaptions["Spanish"]["Clasificaciones____Cartera"] = "Clasificaciones -- Cartera";
+$tableCaptions["Spanish"]["Corporaciones___Especialidades"] = "Corporaciones - Especialidades";
+$tableCaptions["Spanish"]["Mandamientos_de_pago_Automaticos"] = "Mandamientos de pago Automaticos";
 $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
+$tableCaptions["Spanish"]["Prescripciones_Autom_tica"] = "Prescripciones Automática";
+$tableCaptions["Spanish"]["Procesos_Sin_Notificaci_n"] = "Procesos Sin Notificación";
+$tableCaptions["Spanish"]["Remanentes_"] = "Remanentes-";
+$tableCaptions["Spanish"]["Prueba_Archivo_Plano"] = "Prueba Archivo Plano";
 
 
 $globalEvents = new class_GlobalEvents;

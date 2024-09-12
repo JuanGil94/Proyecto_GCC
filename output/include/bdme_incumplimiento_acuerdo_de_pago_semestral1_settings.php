@@ -153,7 +153,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".isUseAjaxSuggest"] = fals
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".ajaxCodeSnippetAdded"] = false;
 
@@ -1690,6 +1690,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".sqlquery"] = $queryData_b
 
 
 
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".hasEvents"] = false;
+include_once(getabspath("include/bdme_incumplimiento_acuerdo_de_pago_semestral1_events.php"));
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".hasEvents"] = true;
 
 ?>

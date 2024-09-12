@@ -189,7 +189,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".isUseAjaxSuggest
 
 
 
-																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -210,9 +210,6 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".requiredSearchFi
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"] = array();
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "SeccionalId";
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "SancionadoId";
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "ProcesoId";
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "C1";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "AbogadoId";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "Numero";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "C2";
@@ -225,7 +222,6 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "Terminacion";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "C7";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "Observaciones";
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "MinJusticia";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "CarteraTipoId";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "Acuerdo";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".googleLikeFields"][] = "Radicado";
@@ -252,7 +248,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".isDisplayLoading
 
 
 
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pageSize"] = 20;
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pageSize"] = 2000;
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".warnLeavingPages"] = true;
 
@@ -1404,7 +1400,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1420,8 +1416,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

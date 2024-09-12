@@ -1,0 +1,171 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Listado_de_Chequeos import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$ID_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$Persuasivo_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$AbogadoId1_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$TramiteId_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$Fisico_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$Digital_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

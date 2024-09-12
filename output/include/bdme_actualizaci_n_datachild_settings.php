@@ -189,7 +189,7 @@ $tdatabdme_actualizaci_n_datachild[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_actualizaci_n_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -252,7 +252,7 @@ $tdatabdme_actualizaci_n_datachild[".isDisplayLoading"] = true;
 
 
 
-$tdatabdme_actualizaci_n_datachild[".pageSize"] = 20;
+$tdatabdme_actualizaci_n_datachild[".pageSize"] = 2000;
 
 $tdatabdme_actualizaci_n_datachild[".warnLeavingPages"] = true;
 

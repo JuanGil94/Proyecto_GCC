@@ -484,6 +484,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="bdme_retiros_datachild_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -492,12 +501,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="bdme_retiros_datachild_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -1948,13 +1951,20 @@
 	class="
 		 r-ori-vert		 {$Numero_class}	"
 
+			data-field="Numero"
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bdme_retiros_datachild_list"	
 	>
 
 	 
-		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
-	{$total_table}</span>
+		{BEGIN Numero_fieldfootercolumn}
+{BEGIN Numero_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals" {$item_grid_field_totals} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+		{$Numero_total}
+</span>
+{END Numero_showtotal}
+{END Numero_fieldfootercolumn}
+
 	
 	</td>
 	{END cellblock_grid_footcell_field1}
@@ -2011,15 +2021,20 @@
 	class="
 		 r-ori-vert		 {$C6_class}	"
 
+			data-field="C6"
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bdme_retiros_datachild_list"	
 	>
 
 	 
-		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
-	{$total_sum}
-
+		{BEGIN C6_fieldfootercolumn}
+{BEGIN C6_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals1" {$item_grid_field_totals1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="C6" data-fieldname="C6">
+	$	{$C6_total}
 </span>
+{END C6_showtotal}
+{END C6_fieldfootercolumn}
+
 	
 	</td>
 	{END cellblock_grid_footcell_field5}

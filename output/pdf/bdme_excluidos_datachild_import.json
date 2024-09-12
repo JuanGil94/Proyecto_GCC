@@ -109,15 +109,6 @@ pdfDocument = {
 			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field}"},
 				
 				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_import_field1}"},
-				
-				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_import_field2}"},
-				
-				
-			{"text":{$C1_pdfvalue},"hidden":"{$item_hide_import_field3}"},
-				
-				
 			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_import_field4}"},
 				
 				
@@ -145,31 +136,7 @@ pdfDocument = {
 			{"text":{$C6_pdfvalue},"hidden":"{$item_hide_import_field12}"},
 				
 				
-			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_import_field13}"},
-				
-				
-			{"text":{$C7_pdfvalue},"hidden":"{$item_hide_import_field14}"},
-				
-				
-			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field15}"},
-				
-				
-			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_import_field16}"},
-				
-				
 			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_import_field17}"},
-				
-				
-			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_import_field18}"},
-				
-				
-			{"text":{$Radicado_pdfvalue},"hidden":"{$item_hide_import_field19}"},
-				
-				
-			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_import_field20}"},
-				
-				
-			{"text":{$Incumplimiento_pdfvalue},"hidden":"{$item_hide_import_field21}"},
 				
 		  ],
   "border": [ false, false, false, false ],

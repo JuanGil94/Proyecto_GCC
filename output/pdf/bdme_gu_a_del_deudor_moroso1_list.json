@@ -275,35 +275,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'Seccional',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel BDME_Gu_a_del_Deudor_Moroso Seccional }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Seccional_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Codigo',
 				style: 'headcell',
 		
@@ -318,7 +289,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Gu_a_del_Deudor_Moroso Codigo }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel BDME_Gu_a_del_Deudor_Moroso Codigo }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -327,10 +298,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Numero',
@@ -347,11 +318,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Gu_a_del_Deudor_Moroso Numero }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel BDME_Gu_a_del_Deudor_Moroso Numero }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Numero_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
+{
+	cellId: 'headcell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel BDME_Gu_a_del_Deudor_Moroso Seccional }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Seccional_align}',
      
       
       },
@@ -604,35 +604,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'Seccional',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Seccional_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
 			fieldName: 'Codigo',
 				style: 'bodycell',
 		
@@ -656,10 +627,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Numero',
@@ -681,6 +652,35 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Numero_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
+{
+	cellId: 'cell_field2',
+	col:0,
+	row:0,
+			fieldName: 'Seccional',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Seccional_align}',
      
       
       },

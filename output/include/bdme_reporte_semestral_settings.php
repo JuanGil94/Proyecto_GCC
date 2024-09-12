@@ -153,7 +153,7 @@ $tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatabdme_reporte_semestral[".ajaxCodeSnippetAdded"] = false;
 
@@ -317,7 +317,7 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -327,6 +327,34 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Seccionales";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "Seccional";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Seccional";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -341,10 +369,8 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -370,7 +396,7 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

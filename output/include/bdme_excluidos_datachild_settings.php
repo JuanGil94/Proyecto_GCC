@@ -189,7 +189,7 @@ $tdatabdme_excluidos_datachild[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_excluidos_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -210,9 +210,6 @@ $tdatabdme_excluidos_datachild[".requiredSearchFields"] = array();
 
 $tdatabdme_excluidos_datachild[".googleLikeFields"] = array();
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "SeccionalId";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "SancionadoId";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "ProcesoId";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C1";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "AbogadoId";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Numero";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C2";
@@ -222,15 +219,7 @@ $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C3";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C4";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C5";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C6";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Terminacion";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "C7";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Observaciones";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "MinJusticia";
 $tdatabdme_excluidos_datachild[".googleLikeFields"][] = "CarteraTipoId";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Acuerdo";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Radicado";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Origen";
-$tdatabdme_excluidos_datachild[".googleLikeFields"][] = "Incumplimiento";
 
 
 
@@ -252,7 +241,7 @@ $tdatabdme_excluidos_datachild[".isDisplayLoading"] = true;
 
 
 
-$tdatabdme_excluidos_datachild[".pageSize"] = 20;
+$tdatabdme_excluidos_datachild[".pageSize"] = 2000;
 
 $tdatabdme_excluidos_datachild[".warnLeavingPages"] = true;
 
@@ -1404,7 +1393,7 @@ $tdatabdme_excluidos_datachild[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1420,8 +1409,7 @@ $tdatabdme_excluidos_datachild[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

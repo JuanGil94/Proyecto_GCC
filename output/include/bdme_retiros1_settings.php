@@ -156,7 +156,7 @@ $tdatabdme_retiros1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatabdme_retiros1[".ajaxCodeSnippetAdded"] = false;
 
@@ -176,7 +176,6 @@ $tdatabdme_retiros1[".filterFields"] = array();
 $tdatabdme_retiros1[".requiredSearchFields"] = array();
 
 $tdatabdme_retiros1[".googleLikeFields"] = array();
-$tdatabdme_retiros1[".googleLikeFields"][] = "SancionadoId";
 $tdatabdme_retiros1[".googleLikeFields"][] = "Seccional";
 $tdatabdme_retiros1[".googleLikeFields"][] = "Concepto";
 $tdatabdme_retiros1[".googleLikeFields"][] = "TipoDeudor";

@@ -189,7 +189,7 @@ $tdatabdme_reporte_semestral_datachild[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_reporte_semestral_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -210,9 +210,6 @@ $tdatabdme_reporte_semestral_datachild[".requiredSearchFields"] = array();
 
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"] = array();
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "SeccionalId";
-$tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "SancionadoId";
-$tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "ProcesoId";
-$tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "C1";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "AbogadoId";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "Numero";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "C2";
@@ -225,7 +222,6 @@ $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "C6";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "Terminacion";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "C7";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "Observaciones";
-$tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "MinJusticia";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "CarteraTipoId";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "Acuerdo";
 $tdatabdme_reporte_semestral_datachild[".googleLikeFields"][] = "Radicado";
@@ -252,7 +248,7 @@ $tdatabdme_reporte_semestral_datachild[".isDisplayLoading"] = true;
 
 
 
-$tdatabdme_reporte_semestral_datachild[".pageSize"] = 10;
+$tdatabdme_reporte_semestral_datachild[".pageSize"] = 2000;
 
 $tdatabdme_reporte_semestral_datachild[".warnLeavingPages"] = true;
 
@@ -507,7 +503,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -517,6 +513,36 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 1;
+	$edata["LookupTable"] = "";
+	$edata["LookupConnId"] = "";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+		$edata["SimpleAdd"] = true;
+
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -532,17 +558,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -554,7 +577,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -564,6 +587,33 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Seccionales";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "SeccionalId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Seccional";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -579,17 +629,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -610,7 +657,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1294,7 +1341,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1304,6 +1351,34 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Abogados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "AbogadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Abogado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -1319,17 +1394,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -1350,7 +1422,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1404,7 +1476,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1420,8 +1492,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -2169,7 +2240,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2179,6 +2250,34 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "ConceptoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2194,17 +2293,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2225,7 +2321,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2495,7 +2591,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2505,6 +2601,34 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Estados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EstadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Estado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2520,17 +2644,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2551,7 +2672,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2821,7 +2942,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2831,6 +2952,34 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Etapas";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EtapaId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Etapa";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2846,17 +2995,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2877,7 +3023,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -4015,7 +4161,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -4025,6 +4171,34 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.CarteraTipos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarteraTipoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "CarteraTipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -4040,17 +4214,14 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -4071,7 +4242,7 @@ $tdatabdme_reporte_semestral_datachild[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

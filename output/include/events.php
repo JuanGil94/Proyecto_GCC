@@ -131,6 +131,13 @@ class class_GlobalEvents extends eventsBase
 		$this->events["dbo_ProcesosSancionados_SumProcesos"] = true;
 		$this->events["dbo_ProcesosSancionados_SumSaldo"] = true;
 		$this->events["dbo_Correspondencias1_snippet"] = true;
+		$this->events["Acuerdos_de_Pago_Mes"] = true;
+		$this->events["Listado_de_Chequeos_Mes"] = true;
+		$this->events["Clasificaciones____Cartera_Mes"] = true;
+		$this->events["Corporaciones___Especialidades_Mes"] = true;
+		$this->events["Mandamientos_de_pago_Automaticos_Mes"] = true;
+		$this->events["Prescripciones_Autom_tica_Mes"] = true;
+		$this->events["Remanentes_Mes"] = true;
 
 
 
@@ -980,7 +987,7 @@ echo "<input type='text' id='BDME_Excluidos_SancionadoId' value=''>";
 }
 	function event_BDME_Excluidos_DataChild_Total(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de SancionadoId
 $data = $pageObject->getMasterRecord();
@@ -1036,7 +1043,7 @@ $formattedValue = number_format($totalC6, 0, '', '.');
 $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 
 
 
@@ -1045,7 +1052,7 @@ echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
 }
 	function event_BDME_Excluidos_DataChild_snippet(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de SancionadoId
 $data = $pageObject->getMasterRecord();
@@ -1094,7 +1101,7 @@ $row = $result->fetchAssoc();
 $totalProcesos = $row['TotalProcesos'];
 
 // Imprimir el valor formateado
-echo "<strong>" ."Procesos: ". $totalProcesos . "</strong>";
+echo "<strong>" ."Procesos: ". $totalProcesos . "</strong>";*/
 
 	;
 }
@@ -4583,6 +4590,48 @@ $str.="<option value='".$data['Oficio']."'>".$data['Oficio']."</option>";
 }
 $str.="</select>";
 echo $str.$str2;
+	;
+}
+	function event_Acuerdos_de_Pago_Mes(&$params)
+	{
+	echo "<label for='Acuerdo_pago_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='Acuerdo_pago_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Listado_de_Chequeos_Mes(&$params)
+	{
+	echo "<label for='Chequeos_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='date' id='Chequeos_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+	;
+}
+	function event_Clasificaciones____Cartera_Mes(&$params)
+	{
+	echo "<label for='Clasificaciones_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='date' id='Clasificaciones_MesId' name='Mes' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+	;
+}
+	function event_Corporaciones___Especialidades_Mes(&$params)
+	{
+	echo "<label for='corporacion_Especialidad_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='corporacion_Especialidad_MesId' name='hasta' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Mandamientos_de_pago_Automaticos_Mes(&$params)
+	{
+	echo "<label for='Mandamientos_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='date' id='Mandamientos_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+	;
+}
+	function event_Prescripciones_Autom_tica_Mes(&$params)
+	{
+	echo "<label for='Prescripciones_Autom_tica_Mes' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='date' id='Prescripciones_Autom_tica_Mes' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+	;
+}
+	function event_Remanentes_Mes(&$params)
+	{
+	echo "<label for='Remanentes_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='date' id='Remanentes_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 
