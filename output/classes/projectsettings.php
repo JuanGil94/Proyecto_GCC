@@ -3864,6 +3864,30 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "productos_bancarios" ] = "Productos Bancarios";
 	$projectEntities[ "dbo.tipoTasas" ] = array( "url" => "tipotasas", "type" => 0 );
 	$projectEntitiesReverse[ "tipotasas" ] = "dbo.tipoTasas";
+	$projectEntities[ "Acuerdo de Pago" ] = array( "url" => "acuerdo_de_pago", "type" => 6 );
+	$projectEntitiesReverse[ "acuerdo_de_pago" ] = "Acuerdo de Pago";
+	$projectEntities[ "Listado de Chequeos" ] = array( "url" => "listado_de_chequeos", "type" => 6 );
+	$projectEntitiesReverse[ "listado_de_chequeos" ] = "Listado de Chequeos";
+	$projectEntities[ "Listado de Chequeo Sancionado DataChild" ] = array( "url" => "listado_de_chequeo_sancionado_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "listado_de_chequeo_sancionado_datachild" ] = "Listado de Chequeo Sancionado DataChild";
+	$projectEntities[ "Listado de Chequeo Oficios DataChild" ] = array( "url" => "listado_de_chequeo_oficios_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "listado_de_chequeo_oficios_datachild" ] = "Listado de Chequeo Oficios DataChild";
+	$projectEntities[ "Listado de Chequeo Motivo devolucion DataChild" ] = array( "url" => "listado_de_chequeo_motivo_devolucion_datachild", "type" => 6 );
+	$projectEntitiesReverse[ "listado_de_chequeo_motivo_devolucion_datachild" ] = "Listado de Chequeo Motivo devolucion DataChild";
+	$projectEntities[ "Clasificaciones -- Cartera" ] = array( "url" => "clasificaciones____cartera", "type" => 6 );
+	$projectEntitiesReverse[ "clasificaciones____cartera" ] = "Clasificaciones -- Cartera";
+	$projectEntities[ "Corporaciones - Especialidades" ] = array( "url" => "corporaciones___especialidades", "type" => 6 );
+	$projectEntitiesReverse[ "corporaciones___especialidades" ] = "Corporaciones - Especialidades";
+	$projectEntities[ "Mandamientos de pago Automaticos" ] = array( "url" => "mandamientos_de_pago_automaticos", "type" => 6 );
+	$projectEntitiesReverse[ "mandamientos_de_pago_automaticos" ] = "Mandamientos de pago Automaticos";
+	$projectEntities[ "Prescripciones Automática" ] = array( "url" => "prescripciones_autom_tica", "type" => 6 );
+	$projectEntitiesReverse[ "prescripciones_autom_tica" ] = "Prescripciones Automática";
+	$projectEntities[ "Procesos Sin Notificación" ] = array( "url" => "procesos_sin_notificaci_n", "type" => 6 );
+	$projectEntitiesReverse[ "procesos_sin_notificaci_n" ] = "Procesos Sin Notificación";
+	$projectEntities[ "Remanentes-" ] = array( "url" => "remanentes_", "type" => 6 );
+	$projectEntitiesReverse[ "remanentes_" ] = "Remanentes-";
+	$projectEntities[ "Prueba Archivo Plano" ] = array( "url" => "prueba_archivo_plano", "type" => 6 );
+	$projectEntitiesReverse[ "prueba_archivo_plano" ] = "Prueba Archivo Plano";
 }
 
 function findTable( $table ) {

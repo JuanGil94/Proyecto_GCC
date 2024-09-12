@@ -180,7 +180,7 @@ $tdatadeterioro_de_cartera_por_proceso[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatadeterioro_de_cartera_por_proceso[".ajaxCodeSnippetAdded"] = false;
 

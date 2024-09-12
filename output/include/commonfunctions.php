@@ -531,6 +531,30 @@ function checkTableName($shortTName )
 		return true;
 	if ("tipotasas" == $shortTName )
 		return true;
+	if ("acuerdo_de_pago" == $shortTName )
+		return true;
+	if ("listado_de_chequeos" == $shortTName )
+		return true;
+	if ("listado_de_chequeo_sancionado_datachild" == $shortTName )
+		return true;
+	if ("listado_de_chequeo_oficios_datachild" == $shortTName )
+		return true;
+	if ("listado_de_chequeo_motivo_devolucion_datachild" == $shortTName )
+		return true;
+	if ("clasificaciones____cartera" == $shortTName )
+		return true;
+	if ("corporaciones___especialidades" == $shortTName )
+		return true;
+	if ("mandamientos_de_pago_automaticos" == $shortTName )
+		return true;
+	if ("prescripciones_autom_tica" == $shortTName )
+		return true;
+	if ("procesos_sin_notificaci_n" == $shortTName )
+		return true;
+	if ("remanentes_" == $shortTName )
+		return true;
+	if ("prueba_archivo_plano" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2057,6 +2081,114 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.tipoTasas";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Acuerdo de Pago");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Acuerdo de Pago";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Listado de Chequeos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Listado de Chequeos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Listado de Chequeo Sancionado DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Listado de Chequeo Sancionado DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Listado de Chequeo Oficios DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Listado de Chequeo Oficios DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Listado de Chequeo Motivo devolucion DataChild");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Listado de Chequeo Motivo devolucion DataChild";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Clasificaciones -- Cartera");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Clasificaciones -- Cartera";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Corporaciones - Especialidades");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Corporaciones - Especialidades";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Mandamientos de pago Automaticos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Mandamientos de pago Automaticos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Prescripciones Automática");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Prescripciones Automática";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Procesos Sin Notificación");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Procesos Sin Notificación";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Remanentes-");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Remanentes-";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Prueba Archivo Plano");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Prueba Archivo Plano";
+	}
 	return $arr;
 }
 
@@ -2230,6 +2362,18 @@ function GetTablesListWithoutSecurity()
 	$arr[]="BienesMuebles";
 	$arr[]="Productos Bancarios";
 	$arr[]="dbo.tipoTasas";
+	$arr[]="Acuerdo de Pago";
+	$arr[]="Listado de Chequeos";
+	$arr[]="Listado de Chequeo Sancionado DataChild";
+	$arr[]="Listado de Chequeo Oficios DataChild";
+	$arr[]="Listado de Chequeo Motivo devolucion DataChild";
+	$arr[]="Clasificaciones -- Cartera";
+	$arr[]="Corporaciones - Especialidades";
+	$arr[]="Mandamientos de pago Automaticos";
+	$arr[]="Prescripciones Automática";
+	$arr[]="Procesos Sin Notificación";
+	$arr[]="Remanentes-";
+	$arr[]="Prueba Archivo Plano";
 	return $arr;
 }
 
@@ -3685,6 +3829,66 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.tipoTasas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Acuerdo de Pago" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Listado de Chequeos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Listado de Chequeo Sancionado DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Listado de Chequeo Oficios DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Listado de Chequeo Motivo devolucion DataChild" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Clasificaciones -- Cartera" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Corporaciones - Especialidades" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Mandamientos de pago Automaticos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Prescripciones Automática" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Procesos Sin Notificación" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Remanentes-" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Prueba Archivo Plano" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

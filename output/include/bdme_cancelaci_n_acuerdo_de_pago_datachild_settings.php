@@ -189,7 +189,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -252,7 +252,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".isDisplayLoading"] = true;
 
 
 
-$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pageSize"] = 20;
+$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pageSize"] = 2000;
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".warnLeavingPages"] = true;
 

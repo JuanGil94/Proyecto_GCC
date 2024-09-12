@@ -1109,6 +1109,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Numero',
 				style: 'footcell',
 		
 		
@@ -1124,9 +1125,17 @@ pdfDocument = {
 				
 			{"text":"{$event BDME_Excluidos_DataChild_snippet}","hidden":"{$item_hide_snippet1}","isHtml":true},
 				
+				
+			{BEGIN Numero_fieldfootercolumn}
+			{BEGIN Numero_showtotal}
+				{ text: ' ' },
+				{"text":{$Numero_total},"hidden":"{$item_hide_grid_field_totals}"}
+			{END Numero_showtotal}
+		{END Numero_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Numero_align}',
      
       
       },
@@ -1215,6 +1224,7 @@ pdfDocument = {
 	cellId: 'footcell_field5',
 	col:0,
 	row:0,
+			fieldName: 'C6',
 				style: 'footcell',
 		
 		
@@ -1230,9 +1240,17 @@ pdfDocument = {
 				
 			{"text":"{$event BDME_Excluidos_DataChild_Total}","hidden":"{$item_hide_snippet}","isHtml":true},
 				
+				
+			{BEGIN C6_fieldfootercolumn}
+			{BEGIN C6_showtotal}
+				{ text: '$ ' },
+				{"text":{$C6_total},"hidden":"{$item_hide_grid_field_totals1}"}
+			{END C6_showtotal}
+		{END C6_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$C6_align}',
      
       
       },

@@ -1064,6 +1064,54 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Acuerdo de Pago")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeos")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeo Sancionado DataChild")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeo Oficios DataChild")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeo Motivo devolucion DataChild")
+		{
+			return false;
+		}
+		if($table=="Clasificaciones -- Cartera")
+		{
+			return false;
+		}
+		if($table=="Corporaciones - Especialidades")
+		{
+			return false;
+		}
+		if($table=="Mandamientos de pago Automaticos")
+		{
+			return false;
+		}
+		if($table=="Prescripciones Automática")
+		{
+			return false;
+		}
+		if($table=="Procesos Sin Notificación")
+		{
+			return false;
+		}
+		if($table=="Remanentes-")
+		{
+			return false;
+		}
+		if($table=="Prueba Archivo Plano")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2079,6 +2127,54 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.tipoTasas")
+		{
+			return false;
+		}
+		if($table=="Acuerdo de Pago")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeos")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeo Sancionado DataChild")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeo Oficios DataChild")
+		{
+			return false;
+		}
+		if($table=="Listado de Chequeo Motivo devolucion DataChild")
+		{
+			return false;
+		}
+		if($table=="Clasificaciones -- Cartera")
+		{
+			return false;
+		}
+		if($table=="Corporaciones - Especialidades")
+		{
+			return false;
+		}
+		if($table=="Mandamientos de pago Automaticos")
+		{
+			return false;
+		}
+		if($table=="Prescripciones Automática")
+		{
+			return false;
+		}
+		if($table=="Procesos Sin Notificación")
+		{
+			return false;
+		}
+		if($table=="Remanentes-")
+		{
+			return false;
+		}
+		if($table=="Prueba Archivo Plano")
 		{
 			return false;
 		}

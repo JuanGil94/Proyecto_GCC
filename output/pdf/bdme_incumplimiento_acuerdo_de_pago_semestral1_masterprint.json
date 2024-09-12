@@ -91,9 +91,6 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
-										{BEGIN col_grid_9}
-					"%",
-					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -236,7 +233,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Seccional }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Seccional }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -265,7 +262,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Concepto }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Concepto }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -294,7 +291,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral TipoDeudor }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral TipoDeudor }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -323,7 +320,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Numero }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Numero }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -352,7 +349,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Documento }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Documento }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -381,7 +378,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral TipoDocumento }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral TipoDocumento }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -410,7 +407,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Sancionado }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Sancionado }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -439,7 +436,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Deuda }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Deuda }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -468,7 +465,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Estado }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral Estado }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -478,35 +475,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
-{
-	cellId: 'headcell_field9',
-	col:0,
-	row:0,
-			fieldName: 'SancionadoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel BDME_Incumplimiento_Acuerdo_de_Pago_Semestral SancionadoId }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field9}
 											],
 				{END row_grid_0}
 		
@@ -777,35 +745,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
-{
-	cellId: 'cell_field9',
-	col:0,
-	row:0,
-			fieldName: 'SancionadoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field9}
 											],
 				{END row_grid_1}
 		
@@ -1049,32 +988,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field8}
-																							{BEGIN cellblock_grid_footcell_field9}
-{
-	cellId: 'footcell_field9',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field9}
 											],
 				{END row_grid_2}
 		

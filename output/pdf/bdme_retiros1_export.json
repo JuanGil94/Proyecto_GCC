@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				

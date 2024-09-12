@@ -168,7 +168,7 @@ $tdatabase_de_datos___historico[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																												
+																																																																																																																																																																																				
 
 $tdatabase_de_datos___historico[".ajaxCodeSnippetAdded"] = false;
 
@@ -197,8 +197,6 @@ $tdatabase_de_datos___historico[".googleLikeFields"][] = "Notificacion";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "Sancionado";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "SancionadoTipoDocumento";
 $tdatabase_de_datos___historico[".googleLikeFields"][] = "SancionadoDocumento";
-$tdatabase_de_datos___historico[".googleLikeFields"][] = "SeccionalId";
-$tdatabase_de_datos___historico[".googleLikeFields"][] = "CarteraTipoId";
 
 
 
@@ -958,7 +956,7 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -974,8 +972,7 @@ $tdatabase_de_datos___historico[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
