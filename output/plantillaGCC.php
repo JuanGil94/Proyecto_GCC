@@ -155,7 +155,7 @@ class diccionario {
         INNER JOIN Sancionados SA ON SA.SancionadoId = D.SancionadoId
         INNER JOIN Procesos P ON SA.SancionadoId = P.SancionadoId
         INNER JOIN Ciudades CI ON CI.CiudadId =D.CiudadId
-        where P.ProcesoId =".$procesoId);
+        where D.Activa=1 and  P.ProcesoId =".$procesoId);
         while( $date = $consulta->fetchAssoc() )
 		{
             $info["SancionadoCiudad"]=$date["SancionadoCiudad"];

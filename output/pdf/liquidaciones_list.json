@@ -262,22 +262,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event dbo_Liquidaciones_snippet1}","hidden":"{$item_hide_snippet1}","isHtml":true},
-				
-				
-			{"text":"{$event SumIntereses}","hidden":"{$item_hide_snippet3}","isHtml":true},
-				
-				
-			{"text":"{$event SumCostas}","hidden":"{$item_hide_snippet2}","isHtml":true},
-				
-				
-			{"text":"{$event SumIntPlazo}","hidden":"{$item_hide_snippet4}","isHtml":true},
-				
-				
-			{"text":"{$event SumCuota}","hidden":"{$item_hide_snippet5}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      
@@ -976,8 +962,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event dbo_Liquidaciones_snippet1}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1002,8 +990,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event SumIntereses}","hidden":"{$item_hide_snippet3}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1028,8 +1018,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event SumCostas}","hidden":"{$item_hide_snippet2}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1054,8 +1046,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event SumIntPlazo}","hidden":"{$item_hide_snippet4}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1080,8 +1074,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event SumCuota}","hidden":"{$item_hide_snippet5}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
