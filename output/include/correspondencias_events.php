@@ -111,9 +111,11 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 		include_once (getabspath("classes/actuacionAction.php"));
 include_once (getabspath("classes/pruebaJuan.php"));
 include_once (getabspath("plantillaGCC.php"));
-//SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS
+//SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS Y VARIABLES PARA TRAMITAR LAS VALIDACIONES, INSERT Y UPDATE
 global $pageObject;
 $data = $pageObject->getMasterRecord();
+$oficioId=$values['OficioId'];
+$procesoId=$values["ProcesoId"];
 //echo "El AbogadoId del proceso es: ".$data["AbogadoId"];
 if($data["AbogadoId"]==$_SESSION["AbogadoId"]){
 $response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$values['OficioId']);
@@ -121,13 +123,39 @@ $response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$values['O
 				{
 					$actuacionId=$date["ActuacionId"];
 				}
-$response=DB::Query("SELECT EtapaId, EstadoId, MotivoId FROM Actuaciones WHERE ActuacionId=".$actuacionId);
+$response=DB::Query("SELECT * FROM Empresas WHERE EmpresaId=1");
+		while( $date = $response->fetchAssoc() )
+				{
+					$fechaCierre=$date["Cierre"];
+				}
+$fechaCierreDT=new DateTime($fechaCierre);
+$desde = clone $fechaCierreDT; // Clonamos el objeto para no modificar la original
+$desde->modify('+1 day'); // Añadir 1 día
+$hasta = clone $desde; // Clonamos nuevamente para modificar la fecha
+$hasta->modify('+1 month'); // Añadir 1 mes
+$hasta->modify('-1 day');   // Restar 1 día
+$desde=$desde->format('Y-m-d'); //SE calcula fecha desde
+$hasta=$hasta->format('Y-m-d'); //SE calcula fecha Hasta
+$fecha=now();
+$response=DB::Query("SELECT Salario FROM Salarios WHERE (Ano=YEAR('".$hasta."'))");
+		while( $date = $response->fetchAssoc() )
+				{
+					$minimoMnesual=$date["Salario"];
+				}
+
+$response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as EstadoId, ISNULL(MotivoId,0) as MotivoId,(CASE
+                               WHEN EstadoId = 6
+                                    AND MotivoId = 1
+                               THEN 1
+                               ELSE 0
+                           END) as TermPago FROM Actuaciones WHERE ActuacionId=".$actuacionId);
 		//print_r($actuacionId);
 		while( $date = $response->fetchAssoc() )
 				{
 					$etapaId=$date["EtapaId"];
 					$estadoId=$date["EstadoId"];
 					$motivoId=$date["MotivoId"];
+					$terminacionPago=$date["TermPago"];
 				}
 $consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=(SELECT AbogadoId from Procesos where ProcesoId=".$values["ProcesoId"].")");
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
@@ -148,10 +176,12 @@ $consulta=DB::Query("SELECT  D.Despacho AS 'Despacho',
 				{
             $despachoJuez=$date["DespachoJuez"];
         }
-$consulta=DB::Query("SELECT * FROM Oficios WHERE OficioId=".$values["OficioId"]."");
+$consulta=DB::Query("SELECT ISNULL(OficioIdRequisito, 0) as OficioIdRequisito,* FROM Oficios WHERE OficioId=".$values["OficioId"]."");
         while( $date = $consulta->fetchAssoc() )
 				{
-            $asunto=$date["Oficio"];
+						$asunto=$date["Oficio"];
+						$flagSigob=$date["Sigobius"];
+						$oficReq=$date["OficioIdRequisito"];
         }
 $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$values["ProcesoId"]."");
         while( $date = $consulta->fetchAssoc() )
@@ -159,7 +189,40 @@ $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$values["ProcesoId
             $obligacion=$date["Obligacion"];
 						 $obligacionTotal=$date["ObligacionInicial"]+$date["CostasInicial"]+$date["InteresesInicial"];
 						 $sancionadoId=$date["SancionadoId"];
+						 $competenciaId=$date["CompetenciaId"];
+						 $estadoAct=$date["EstadoId"];
+						 $incumplimiento=$date["Incumplimiento"];
+						 $acuerdo=$date["Acuerdo"];
+						 $prescripcion=$date["Dias"];
+						 $terminacion=$date["Terminacion"];
+						 $traslado=$date["Traslado"];
+						 $error=$date["Error"];
+						 $carteraTipoId=$date["CarteraTipoId"];
         }
+$consulta=DB::Query("SELECT * FROM ProcesosView1 WHERE ProcesoId=".$values["ProcesoId"]."");
+        while( $date = $consulta->fetchAssoc() )
+				{
+            $saldo=$date["Saldo"];
+						 $obligacionPv1=$date["Obligacion"];
+						 $interesesPv1=$date["Intereses"];
+						 $costasPv1=$date["Costas"];
+						 $estadoAct=$date["EstadoId"];
+						 $incumplimiento=$date["Incumplimiento"];
+						 $acuerdo=$date["Acuerdo"];
+        }
+$consulta=DB::Query("SELECT SuspensionId
+            FROM suspensiones
+            WHERE CONVERT(DATE, GETDATE()) BETWEEN Desde AND Hasta");
+        while( $date = $consulta->fetchAssoc() )
+				{
+						$suspensionId=$date["SuspensionId"];
+        }
+if ($suspensionId==''){
+	$suspensionTerm=0;
+}
+else{
+	$suspensionTerm=1;
+}
 $consulta=DB::Query("SELECT * FROM Sancionados WHERE SancionadoId=".$sancionadoId."");
         while( $date = $consulta->fetchAssoc() )
 				{
@@ -171,8 +234,132 @@ $consulta=DB::Query("SELECT dbo.Num2Text(".$obligacion.") Obligacion, dbo.Num2Te
             $obligacion=$date["Obligacion"];
 						 $obligacionTotal=$date["obligacionTotal"];
         }
+if ($oficReq!=0){
+	$consulta=DB::Query("SELECT * FROM Correspondencias WHERE OficioId=".$oficReq." AND ProcesoId=".$values["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() )
+				{
+           $oficioIdR=$date["OficioId"];
+        }
+	if ($oficioIdR==''){
+		$consulta=DB::Query("SELECT * FROM Oficios WHERE OficioId=".$oficReq);
+        while( $date = $consulta->fetchAssoc() )
+				{
+           $oficioR=$date["Oficio"];
+        }
+			echo "<script>alert('Para generar este oficio es necesario haber generado el oficio ".$oficioR." con anterioridad.')</script>";
+			return false;
+	}
 
-//CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
+}
+//SE REALIZAN VALIDACIONES BASADOS EN LAS VARIABLES OBTENIDAS
+if ($estadoAct==6 && $suspensionTerm==1){ // No puede genera Terminación del Proceso porque estamos en Suspensión de Términos
+	echo "<script>alert('Este proceso no se puede TERMINAR porque aún estamos en SUSPENSIÓN DE TÉRMINOS.')</script>";
+	return false;	
+}
+if ($incumplimiento=='NULL' && $actuacionId==1049){ //Anulación de Incumplimiento de Acuerdo de Pago
+	echo "<script>alert('No se puede ANULAR EL INCUMPLIMIENTO DE ACUERDO DE PAGO porque el proceso no tiene INCUMPLIMIENTO DE ACUERDO DE PAGO..')</script>";
+	return false;	
+}
+if ($acuerdo=='NULL' && ($actuacionId==1056 || $actuacionId==1057)){ //Reversión de Acuerdo de Pago
+	echo "<script>alert('No se puede REVERSAR EL ACUERDO DE PAGO porque el proceso NO TIENE ACUERDO DE PAGO.')</script>";
+	return false;	
+}
+if ($terminacionPago==1 && ($obligacionPv1+$interesesPv1+$costasPv1)-$minimoMnesual >0 ){ 
+	echo "<script>alert('Este proceso no se puede TERMINAR POR PAGO porque aún tiene saldo pendiente.')</script>";
+	return false;	
+}
+if ($actuacionId==25 && $prescripcion>0){ //Aún no termina por prescripción
+	echo "<script>alert('Este proceso no se puede TERMINAR POR PRESCRIPCIÓN porque aún no se cumple el período.')</script>";
+	return false;	
+}
+if ($estadoAct==6 && $actuacionId!=1033){ // TERMINADO Y NO SE ESTA REVOCANDO LA TERMINACION
+	$consulta=DB::Query("SELECT Estados.Estado
+                            FROM Estados
+                                 INNER JOIN Procesos ON Estados.EstadoId = Procesos.EstadoId
+                            WHERE Procesos.ProcesoId =".$values["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() )
+				{
+						$estado=$date["Estado"];
+        }
+	echo "<script>alert('No se puede cambiar el estado porque el proceso esta ".$estado."')</script>";
+	return false;	
+}
+if ($actuacionId==25 && $prescripcion>0){ //Aún no termina por prescripción
+	echo "<script>alert('Este proceso no se puede TERMINAR POR PRESCRIPCIÓN porque aún no se cumple el período.')</script>";
+	return false;	
+}
+if ($actuacionId==14 && $motivoId==11 && $competenciaId=='NULL'){ //TRASLADO DE PROCESOS (Termina el proceso por traslado y lo crea en la nueva sucursal (competencia))
+		echo "<script>alert('El proceso no se puede trasladar porque no se le ha asignado la COMPETENCIA.')</script>";
+		return false;
+}
+if ($actuacionId==1038 && $motivoId==14){ //TRASLADO DE CARTERA PRESCRITA A CARTERA ACTIVA (Termina el proceso DE CARTERA PRESCRITA y lo crea en la CARTERA ACTIVA)
+		$consulta=DB::Query("SELECT CarteraTipos.Prescrita
+                    FROM Procesos
+                         INNER JOIN CarteraTipos ON Procesos.CarteraTipoId = CarteraTipos.CarteraTipoId
+                    WHERE(Procesos.ProcesoId =".$values["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() )
+				{
+						$carteraPres=$date["Prescrita"];
+        }
+		if($carteraPres==0){
+			echo "<script>alert('El proceso no se puede trasladar de cartera PRESCRITA porque esta en una cartera ACTIVA.')</script>";
+			return false;
+		}
+}
+/*
+if ($actuacionId==20){ //SE HABILITA PROVISIONALMENTE POR SOLICITUD DE DON LUIS ALBERTO 25-04-2020 -- Se deshabilitó el 05 ene 2023 para el NUEVO PROCESO DE ACUERDOS DE PAGO
+		echo "<script>alert('El ACUERDO DE PAGO solamente se puede hacer por el PROCEDIMIENTO DE ACUERDO DE PAGO.')</script>";
+		return false;
+}
+*/
+if ($estadoAct==5){
+	$actuacionIds = [1035, 1037, 1031, 1044, 1045, 1051];
+	$oficioIds = [4453, 4454, 4480, 4490, 3270, 4436, 4438, 4557];
+	if (!in_array($actuacionId, $actuacionIds) && !in_array($oficioId, $oficioIds)){
+		echo "<script>alert('A un proceso INTERRUMPIDO solo se le pueden hacer actuaciones/oficios de MEDIDAS CAUTELARES o BÚSQUEDA DE BIENES.')</script>";
+		return false;
+	}
+}
+if ($estadoId==4 || $estadoId==5){ //SE HABILITA PROVISIONALMENTE POR SOLICITUD DE DON LUIS ALBERTO 25-04-2020 -- Se deshabilitó el 05 ene 2023 para el NUEVO PROCESO DE ACUERDOS DE PAGO
+		if ($estadoAct==6){
+		echo "<script>alert('El proceso no se puede SUSPENDER ó INTERRUMPIR porque está TERMINADO.')</script>";
+		return false;
+	}
+}
+$actuacionIds = [1031, 1044, 1051];
+if ($estadoId==2 && in_array($actuacionId, $actuacionIds)){ //SE HABILITA PROVISIONALMENTE POR SOLICITUD DE DON LUIS ALBERTO 25-04-2020 -- Se deshabilitó el 05 ene 2023 para el NUEVO PROCESO DE ACUERDOS DE PAGO
+		if ($estadoAct==4 || $estadoAct==5){
+		echo "<script>alert('No se puede revocar la SUSPENSIÓN/INTERRUPCIÓN porque el proceso no está SUSPENDIDO/INTERRUMPIDO.')</script>";
+		return false;
+	}
+}
+if (($estadoAct==5 || $estadoAct==4) && $sancionadoId!=292340){
+	if ($estadoId==4 || $estadoId==5){
+		echo "<script>alert('El proceso no se puede SUSPENDER/INTERRUMPIR porque está SUSPENDIDO/INTERRUMPIDO.')</script>";
+		return false;
+	}
+}
+//echo "Valor de flag: ".$flagSigob;
+//return false;
+if ($flagSigob==0){
+	$_SESSION["Radicado"]='';
+	$_SESSION["token"]='';
+	$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
+				$response=$oficio->process();
+				if ($response==true){
+					//echo '<script>alert("Response Oficio->Process true")</script>';
+					return true;
+				}
+				else{
+					//echo '<script>alert("Response Oficio->Process false")</script>';
+					return false;
+				}
+	//echo "Entroooo";
+	//$objeto=new plantillaHtml($values["ProcesoId"],$values["OficioId"],$obligacion,$obligacionTotal,$radicadoF);
+	//$objeto->functGlobal();
+}
+else{
+  //CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
 //la url de la conexion a Sigob
 $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
 //Parametro a enviar para consumir el metodo
@@ -412,11 +599,13 @@ $xml = new SimpleXMLElement($response);
 				}
     } elseif($ultimosCaracteres=='') {
 					echo "<script>alert('El codigo obtenido es el: ".$radicadoF." pero no se logro conectividad, intentelo de nuevo')</script>";
+					return false;
 				}
 				else{
 				 echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
         return false;
     }
+}
 }
 }
 }

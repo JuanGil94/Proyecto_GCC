@@ -722,25 +722,10 @@
 			 
 				<div 
 	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
-		 
-		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
-{$event dbo_Liquidaciones_snippet1}
-</span>	 
-		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" >
-{$event SumIntereses}
-</span>	 
-		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" >
-{$event SumCostas}
-</span>	 
-		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" >
-{$event SumIntPlazo}
-</span>	 
-		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" >
-{$event SumCuota}
-</span>		</div>			 
+			</div>			 
 				<div 
 	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
 	class="r-align-right r-ori-vert			col-md-6
@@ -1236,7 +1221,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1251,7 +1237,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1266,7 +1253,8 @@
 		 r-ori-vert		 {$Cuota_class}	"
 
 	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"		data-control-cell
+	
 	>
 
 	
@@ -1281,7 +1269,8 @@
 		 r-ori-vert		 {$Fecha_class}	"
 
 	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"		data-control-cell
+	
 	>
 
 	
@@ -1299,7 +1288,10 @@
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Liquidaciones_snippet1}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field3}
@@ -1314,7 +1306,10 @@
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event SumIntereses}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
@@ -1329,7 +1324,10 @@
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event SumCostas}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field4}
 									{BEGIN cellblock_grid_footcell_field5}
@@ -1344,7 +1342,10 @@
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event SumIntPlazo}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field5}
 									{BEGIN cellblock_grid_footcell_field6}
@@ -1359,7 +1360,10 @@
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="liquidaciones_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event SumCuota}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field6}
 							</tr>
