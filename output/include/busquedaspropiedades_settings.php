@@ -152,7 +152,7 @@ $tdatabusquedaspropiedades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																				
+																																																																																																																																																																																																						
 
 $tdatabusquedaspropiedades[".ajaxCodeSnippetAdded"] = false;
 

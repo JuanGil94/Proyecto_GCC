@@ -25,7 +25,7 @@ function BeforeProcessList($pageObject)
 
 		
 set_time_limit(0); // Elimina la restricción de timeout
-
+$this->conn->CommandTimeout = 600;
  	    // Obtener la URL completa de la página actual
     $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
