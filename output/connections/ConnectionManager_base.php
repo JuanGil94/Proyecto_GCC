@@ -419,6 +419,9 @@ class ConnectionManager_Base
 		$connectionsIds["Procesos Sin Notificación"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Remanentes-"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Prueba Archivo Plano"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consulta Pública"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consulta Pública Notificación Detalle"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consulta Pública Generación Desprendible"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

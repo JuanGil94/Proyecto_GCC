@@ -138,6 +138,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Mandamientos_de_pago_Automaticos_Mes"] = true;
 		$this->events["Prescripciones_Autom_tica_Mes"] = true;
 		$this->events["Remanentes_Mes"] = true;
+		$this->events["Consulta_P_blica_Documento"] = true;
+		$this->events["Consulta_P_blica_Generaci_n_Desprendible_Documento"] = true;
 
 
 
@@ -4391,7 +4393,7 @@ echo "<input type='month' id='Tablero_de_control_gestion_hastaId' name='Tablero_
 	function event_Base_de_Datos___Historico_snippet(&$params)
 	{
 	echo "<label for='BD_Historico_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='date' id='BD_Historico_MesId' name='mes' value='" . date('Y-m-d') . "' required><br>";
+echo "<input type='month' id='BD_Historico_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
 	;
 }
 	function event_Base_de_Datos___Historico_Seccional_Cartera(&$params)
@@ -4632,6 +4634,16 @@ echo "<input type='date' id='Prescripciones_Autom_tica_Mes' name='hasta' value='
 	{
 	echo "<label for='Remanentes_MesId' style='margin-right: 20px;'>Mes: </label><br>";
 echo "<input type='date' id='Remanentes_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+	;
+}
+	function event_Consulta_P_blica_Documento(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento de identidad: </label><br><input type='number' id='Consulta_Doc_SancionadoId'></input>"
+	;
+}
+	function event_Consulta_P_blica_Generaci_n_Desprendible_Documento(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='Desprendible_Doc_SancionadoId'></input>"
 	;
 }
 

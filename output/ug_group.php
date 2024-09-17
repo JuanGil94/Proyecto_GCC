@@ -190,6 +190,9 @@ $nonAdminTablesArr[] = "Prescripciones Automática";
 $nonAdminTablesArr[] = "Procesos Sin Notificación";
 $nonAdminTablesArr[] = "Remanentes-";
 $nonAdminTablesArr[] = "Prueba Archivo Plano";
+$nonAdminTablesArr[] = "Consulta Pública";
+$nonAdminTablesArr[] = "Consulta Pública Notificación Detalle";
+$nonAdminTablesArr[] = "Consulta Pública Generación Desprendible";
 
 $ug_connection = $cman->getForUserGroups();
 

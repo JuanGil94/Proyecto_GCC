@@ -349,7 +349,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Sancionado }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Sancionado }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -378,7 +378,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Concepto }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Concepto }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -407,7 +407,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago SancionadoDocumento }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago SancionadoDocumento }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -436,7 +436,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Saldo }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Saldo }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -465,7 +465,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Recaudo }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Recaudo }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -494,7 +494,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Acuerdo }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Acuerdo }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -523,7 +523,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Cuotas }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Cuotas }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -552,7 +552,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago ValorCuota }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago ValorCuota }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -581,7 +581,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Abono }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Abono }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -610,7 +610,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago UltimoPago }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago UltimoPago }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -639,7 +639,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Dias }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Dias }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -668,7 +668,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Notificacion }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Notificacion }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -697,7 +697,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago Incumplimiento }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago Incumplimiento }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -726,7 +726,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Acuerdo_de_Pago UltimaFecha }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel Acuerdo_de_Pago UltimaFecha }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1304,6 +1304,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'Numero',
 				style: 'footcell',
 		
 		
@@ -1316,10 +1317,17 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{BEGIN Numero_fieldfootercolumn}
+			{BEGIN Numero_showtotal}
+				{ text: 'Contar ' },
+				{"text":{$Numero_total},"hidden":"{$item_hide_simple_grid_field20}"}
+			{END Numero_showtotal}
+		{END Numero_fieldfootercolumn},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Numero_align}',
      
       
       },

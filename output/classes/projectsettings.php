@@ -3888,6 +3888,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "remanentes_" ] = "Remanentes-";
 	$projectEntities[ "Prueba Archivo Plano" ] = array( "url" => "prueba_archivo_plano", "type" => 6 );
 	$projectEntitiesReverse[ "prueba_archivo_plano" ] = "Prueba Archivo Plano";
+	$projectEntities[ "Consulta Pública" ] = array( "url" => "consulta_p_blica", "type" => 6 );
+	$projectEntitiesReverse[ "consulta_p_blica" ] = "Consulta Pública";
+	$projectEntities[ "Consulta Pública Notificación Detalle" ] = array( "url" => "consulta_p_blica_notificaci_n_detalle", "type" => 6 );
+	$projectEntitiesReverse[ "consulta_p_blica_notificaci_n_detalle" ] = "Consulta Pública Notificación Detalle";
+	$projectEntities[ "Consulta Pública Generación Desprendible" ] = array( "url" => "consulta_p_blica_generaci_n_desprendible", "type" => 6 );
+	$projectEntitiesReverse[ "consulta_p_blica_generaci_n_desprendible" ] = "Consulta Pública Generación Desprendible";
 }
 
 function findTable( $table ) {

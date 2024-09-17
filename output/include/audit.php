@@ -1112,6 +1112,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Consulta Pública")
+		{
+			return false;
+		}
+		if($table=="Consulta Pública Notificación Detalle")
+		{
+			return false;
+		}
+		if($table=="Consulta Pública Generación Desprendible")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2175,6 +2187,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Prueba Archivo Plano")
+		{
+			return false;
+		}
+		if($table=="Consulta Pública")
+		{
+			return false;
+		}
+		if($table=="Consulta Pública Notificación Detalle")
+		{
+			return false;
+		}
+		if($table=="Consulta Pública Generación Desprendible")
 		{
 			return false;
 		}

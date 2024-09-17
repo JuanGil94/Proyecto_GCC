@@ -1053,7 +1053,12 @@ $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Nu
 $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
-				if($table=="BDME Excluidos" && $field=="Numero")
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="list")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1063,7 +1068,17 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
-				if($table=="Base de Datos - Historico" && $field=="Numero")
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="masterlist")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1073,7 +1088,7 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
-				if($table=="BDME Excluidos DataChild" && $field=="Numero")
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="masterprint")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1083,7 +1098,12 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
-				if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" && $field=="Numero")
+				if($table=="Base de Datos - Historico" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="Base de Datos - Historico" && $field=="Numero" && $ptype=="list")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1093,7 +1113,22 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
-				if($table=="BDME Reporte Semestral Datachild" && $field=="Numero")
+				if($table=="Base de Datos - Historico" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="Base de Datos - Historico" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="Deterioro de Cartera por Proceso" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="Deterioro de Cartera por Proceso" && $field=="Numero" && $ptype=="list")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1103,7 +1138,17 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
-				if($table=="BDME Retiros DataChild" && $field=="Numero")
+				if($table=="Deterioro de Cartera por Proceso" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="Deterioro de Cartera por Proceso" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="Listado Medidas Cautelares" && $field=="Numero" && $ptype=="list")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1111,6 +1156,131 @@ $beforePath = $_SESSION['BeforePath'];
 // Generar el hipervínculo en HTML
 $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
 ;
+		return $value;
+	}
+				if($table=="BDME Excluidos DataChild" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Excluidos DataChild" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="BDME Excluidos DataChild" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Excluidos DataChild" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Reporte Semestral Datachild" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Reporte Semestral Datachild" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="BDME Reporte Semestral Datachild" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Reporte Semestral Datachild" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Retiros DataChild" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Retiros DataChild" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="BDME Retiros DataChild" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Retiros DataChild" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="Obligaciones de Dificil Recaudo" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="Obligaciones de Dificil Recaudo" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="Obligaciones de Dificil Recaudo" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="Obligaciones de Dificil Recaudo" && $field=="Numero" && $ptype=="export")
+	{
+		;
 		return $value;
 	}
 				if($table=="dbo.ProcesosSancionados" && $field=="Numero")
@@ -1119,7 +1289,67 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
-				if($table=="Listado de Chequeos" && $field=="Numero")
+				if($table=="Acuerdo de Pago" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="Acuerdo de Pago" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="Acuerdo de Pago" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="Acuerdo de Pago" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="Listado de Chequeos" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="Listado de Chequeos" && $field=="Numero" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="Listado de Chequeos" && $field=="Numero" && $ptype=="print")
+	{
+		;
+		return $value;
+	}
+				if($table=="Listado de Chequeos" && $field=="Numero" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="Listado de Chequeos" && $field=="Numero" && $ptype=="masterlist")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="Listado de Chequeos" && $field=="Numero" && $ptype=="masterprint")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
