@@ -645,7 +645,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Recobrable }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Recobrable }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -674,7 +674,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Rel_Meses }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Rel_Meses }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -703,7 +703,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Rel_Alicuotas }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
+			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Rel_Alicuotas }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -732,7 +732,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Rel_Tasa }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Rel_Tasa }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -761,7 +761,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso VPN }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
+			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso VPN }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -790,7 +790,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Deterioro }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
+			{"text":"{$jslabel Deterioro_de_Cartera_por_Proceso Deterioro }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1686,6 +1686,7 @@ pdfDocument = {
 	cellId: 'footcell_field12',
 	col:0,
 	row:0,
+			fieldName: 'Saldo',
 				style: 'footcell',
 		
 		
@@ -1698,10 +1699,17 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{BEGIN Saldo_fieldfootercolumn}
+			{BEGIN Saldo_showtotal}
+				{ text: 'Total ' },
+				{"text":{$Saldo_total},"hidden":"{$item_hide_simple_grid_field32}"}
+			{END Saldo_showtotal}
+		{END Saldo_fieldfootercolumn},
+				
+		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Saldo_align}',
      
       
       },

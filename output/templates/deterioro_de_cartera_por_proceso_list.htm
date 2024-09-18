@@ -432,6 +432,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="deterioro_de_cartera_por_proceso_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -440,12 +449,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="deterioro_de_cartera_por_proceso_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -1611,13 +1614,16 @@
 	{$cell_grid_cell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Saldo_class}	"
+				 {$Saldo_class}	"
 
 			data-field="Saldo"
 	
 	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text4" {$item_text4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	$</span>
 	 
 		{BEGIN Saldo_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo" data-default-width >
@@ -1632,13 +1638,16 @@
 	{$cell_grid_cell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Recobrable_class}	"
+				 {$Recobrable_class}	"
 
 			data-field="Recobrable"
 	
 	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	$</span>
 	 
 		{BEGIN Recobrable_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recobrable" data-fieldname="Recobrable" data-default-width >
@@ -1674,13 +1683,16 @@
 	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Rel_Alicuotas_class}	"
+				 {$Rel_Alicuotas_class}	"
 
 			data-field="Rel_Alicuotas"
 	
 	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	$</span>
 	 
 		{BEGIN Rel_Alicuotas_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rel_Alicuotas" data-fieldname="Rel_Alicuotas" data-default-width >
@@ -1719,13 +1731,16 @@
 	{$cell_grid_cell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$VPN_class}	"
+				 {$VPN_class}	"
 
 			data-field="VPN"
 	
 	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	$</span>
 	 
 		{BEGIN VPN_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="VPN" data-fieldname="VPN" data-default-width >
@@ -1740,13 +1755,16 @@
 	{$cell_grid_cell_field18}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Deterioro_class}	"
+				 {$Deterioro_class}	"
 
 			data-field="Deterioro"
 	
 	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text6" {$item_text6} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	$</span>
 	 
 		{BEGIN Deterioro_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Deterioro" data-fieldname="Deterioro" data-default-width >
@@ -1790,14 +1808,21 @@
 	class="
 		 r-ori-vert		 {$Numero_class}	"
 
+			data-field="Numero"
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Deterioro_de_Cartera_por_Proceso_Contar}
-</span>	
+		{BEGIN Numero_fieldfootercolumn}
+{BEGIN Numero_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals" {$item_grid_field_totals} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+		{$Numero_total}
+</span>
+{END Numero_showtotal}
+{END Numero_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
@@ -1973,14 +1998,21 @@
 	class="
 		 r-ori-vert		 {$Saldo_class}	"
 
+			data-field="Saldo"
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Deterioro_de_Cartera_por_Proceso_Saldo}
-</span>	
+		{BEGIN Saldo_fieldfootercolumn}
+{BEGIN Saldo_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals1" {$item_grid_field_totals1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saldo" data-fieldname="Saldo">
+	$	{$Saldo_total}
+</span>
+{END Saldo_showtotal}
+{END Saldo_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field12}
 									{BEGIN cellblock_grid_footcell_field13}
@@ -1991,14 +2023,21 @@
 	class="
 		 r-ori-vert		 {$Recobrable_class}	"
 
+			data-field="Recobrable"
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Deterioro_de_Cartera_por_Proceso_Recobrable}
-</span>	
+		{BEGIN Recobrable_fieldfootercolumn}
+{BEGIN Recobrable_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals2" {$item_grid_field_totals2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recobrable" data-fieldname="Recobrable">
+	$	{$Recobrable_total}
+</span>
+{END Recobrable_showtotal}
+{END Recobrable_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field13}
 									{BEGIN cellblock_grid_footcell_field14}
@@ -2054,14 +2093,21 @@
 	class="
 		 r-ori-vert		 {$VPN_class}	"
 
+			data-field="VPN"
 	
 	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Deterioro_de_Cartera_por_Proceso_VPN}
-</span>	
+		{BEGIN VPN_fieldfootercolumn}
+{BEGIN VPN_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals3" {$item_grid_field_totals3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="VPN" data-fieldname="VPN">
+	$	{$VPN_total}
+</span>
+{END VPN_showtotal}
+{END VPN_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field17}
 									{BEGIN cellblock_grid_footcell_field18}
@@ -2072,14 +2118,21 @@
 	class="
 		 r-ori-vert		 {$Deterioro_class}	"
 
+			data-field="Deterioro"
 	
 	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="deterioro_de_cartera_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Deterioro_de_Cartera_por_Proceso_Deterioro}
-</span>	
+		{BEGIN Deterioro_fieldfootercolumn}
+{BEGIN Deterioro_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals4" {$item_grid_field_totals4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Deterioro" data-fieldname="Deterioro">
+	$	{$Deterioro_total}
+</span>
+{END Deterioro_showtotal}
+{END Deterioro_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field18}
 							</tr>

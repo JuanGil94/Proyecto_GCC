@@ -140,6 +140,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Remanentes_Mes"] = true;
 		$this->events["Consulta_P_blica_Documento"] = true;
 		$this->events["Consulta_P_blica_Generaci_n_Desprendible_Documento"] = true;
+		$this->events["Procesos_Sin_Notificaci_n_cartera_seccional"] = true;
 
 
 
@@ -1582,25 +1583,68 @@ echo "<input type='month' id='BDME_Reporte_Deterioro_MesId' name='mes' value='" 
 }
 	function event_Intereses_por_Proceso_Ano(&$params)
 	{
-	    echo "<label for='BDME_Reporte_Intereses_AnoId' style='margin-right: 20px;'>Año: </label><br>";
-    echo "<input type='month' id='BDME_Reporte_Intereses_AnoId' name='ano' value='" . date('Y-m') . "' required><br>";
+	echo "<label for='Reporte_Intereses_AnoId' style='margin-right: 20px;'>Año: </label>";
+// Put your code here.
+echo'<input type="text" id="selectedYear" placeholder="Año seleccionado" readonly>';
+echo '<button id="yearSelectorButton">Seleccionar Año</button>';
+echo '<div id="yearDropdown" style="display: none; position: absolute; border: 1px solid #ccc; background-color: white; z-index: 1000;">
+    <div id="yearGrid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 10px;"></div>
+</div>';
 
-    // Agrega el script de JavaScript para manejar la extracción del año
-    echo "
-    <script>
-        document.getElementById('BDME_Reporte_Intereses_AnoId').addEventListener('change', function() {
-            var ano_interes = this.value;
-            var ano = ano_interes.split('-')[0];
-            var ano_interes_int = parseInt(ano, 10);
-            console.log('El año de interés como entero es:', ano_interes_int);
-            // Aquí puedes hacer algo con el año extraído, por ejemplo, asignarlo a un campo oculto
-            document.getElementById('ano_oculto').value = ano_interes_int;
+echo'<script>
+function createYearGrid(startYear) {
+    var yearGrid = document.getElementById("yearGrid");
+    var currentYear = new Date().getFullYear();
+
+    for (var year = startYear; year <= currentYear; year++) {
+        var yearButton = document.createElement("div");
+        yearButton.className = "year-button";
+        yearButton.textContent = year;
+        yearButton.style.border = "1px solid #ccc";
+        yearButton.style.padding = "10px";
+        yearButton.style.textAlign = "center";
+        yearButton.style.cursor = "pointer";
+        yearButton.style.backgroundColor = "#f9f9f9";
+        yearButton.style.borderRadius = "5px";
+        
+        yearButton.addEventListener("click", function() {
+            document.getElementById("selectedYear").value = this.textContent;
+            document.getElementById("yearDropdown").style.display = "none";
+            highlightSelectedYear(this);
         });
-    </script>
-    ";
 
-    // Si necesitas un campo oculto para almacenar el año
-    echo "<input type='hidden' id='ano_oculto' name='ano_oculto' value=''>";
+        yearGrid.appendChild(yearButton);
+    }
+}
+
+function highlightSelectedYear(selectedButton) {
+    var buttons = document.querySelectorAll(".year-button");
+    buttons.forEach(function(button) {
+        button.style.backgroundColor = "#f9f9f9"; // Restablecer color de fondo
+    });
+    selectedButton.style.backgroundColor = "#add8e6"; // Resaltar el año seleccionado
+}
+
+// Mostrar u ocultar el dropdown
+document.getElementById("yearSelectorButton").addEventListener("click", function() {
+    var dropdown = document.getElementById("yearDropdown");
+    dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+});
+
+// Ocultar el dropdown si se hace clic fuera de él
+window.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("yearDropdown");
+    var button = document.getElementById("yearSelectorButton");
+    if (!dropdown.contains(event.target) && event.target !== button) {
+        dropdown.style.display = "none";
+    }
+});
+
+// Crear la cuadrícula de años desde 2000 hasta el año actual
+createYearGrid(2000);
+
+</script>';
+
 	;
 }
 	function event_Listado_Medidas_Cautelares_Sancionado(&$params)
@@ -2739,7 +2783,7 @@ echo '</select>';
 }
 	function event_Intereses_por_Proceso_Total_Enero(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -2806,12 +2850,12 @@ $formattedValue = number_format($totalC6, 0, '', '.');
 $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 	;
 }
 	function event_Intereses_por_Proceso_Total_Febreo(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -2878,12 +2922,12 @@ $formattedValue = number_format($totalC6, 0, '', '.');
 $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 	;
 }
 	function event_Intereses_por_Proceso_Total_Marzo(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -2950,12 +2994,12 @@ $formattedValue = number_format($totalC6, 0, '', '.');
 $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 	;
 }
 	function event_Intereses_por_Proceso_Total_Abril(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -3022,12 +3066,12 @@ $formattedValue = number_format($totalC6, 0, '', '.');
 $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 	;
 }
 	function event_Intereses_por_Proceso_Total_Mayo(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -3094,12 +3138,12 @@ $formattedValue = number_format($totalC6, 0, '', '.');
 $formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 	;
 }
 	function event_Intereses_por_Proceso_Total_Junio(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -3160,13 +3204,13 @@ $totalC6 = $row['TotalJunio'];
 
 
 // Formatear el número con puntos como separadores de miles
-$formattedValue = number_format($totalC6, 0, '', '.');
+$formattedValue = number_format($totalC6, 0, '', '.');*/
 
 // Agregar el signo de pesos
-$formattedValueWithCurrency = "$" . $formattedValue;
+/*$formattedValueWithCurrency = "$" . $formattedValue;
 
 // Imprimir el valor formateado
-echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";
+echo "<strong>" ."Total: ". $formattedValueWithCurrency . "</strong>";*/
 	;
 }
 	function event_Intereses_por_Proceso_Total_Junio1(&$params)
@@ -4603,7 +4647,7 @@ echo "<input type='month' id='Acuerdo_pago_MesId' name='mes' value='" . date('Y-
 	function event_Listado_de_Chequeos_Mes(&$params)
 	{
 	echo "<label for='Chequeos_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='date' id='Chequeos_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+echo "<input type='month' id='Chequeos_MesId' name='hasta' value='" . date('Y-m') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_Clasificaciones____Cartera_Mes(&$params)
@@ -4644,6 +4688,58 @@ echo "<input type='date' id='Remanentes_MesId' name='hasta' value='" . date('Y-m
 	function event_Consulta_P_blica_Generaci_n_Desprendible_Documento(&$params)
 	{
 	echo "<label value='' style='margin-right: 20px;'>Documento: </label><br><input type='number' id='Desprendible_Doc_SancionadoId'></input>"
+	;
+}
+	function event_Procesos_Sin_Notificaci_n_cartera_seccional(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+  
+echo'<br>';
+echo '<label for="cartera">Seleccione Cartera</label>';
+echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+
+echo '<label for="seccional">Seleccione Seccional</label>';
+echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
+echo '<option value="0">Seleccione Seccional</option>';
+
+$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row = $result->fetchAssoc()) {
+        $seccionalId = $row['SeccionalId'];
+        $seccional = $row['Seccional'];
+        echo "<option value='$seccionalId'>$seccional</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+echo '</select>';
+
+echo'</br>';
 	;
 }
 

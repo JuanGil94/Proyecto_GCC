@@ -26,6 +26,24 @@ function BeforeProcessList($pageObject)
 		set_time_limit(0); // Elimina la restricción de timeout
 // Place event code here.
 // Use "Add Action" button to add code snippets.
+
+	    // Obtener la URL completa de la página actual
+    $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+    // Analizar la URL y obtener el path
+    $parsedUrl = parse_url($currentUrl);
+    $path = $parsedUrl['path'];
+		 
+    // Mostrar el path actual
+    //echo "El path actual es: " . $path;
+
+		if ($_SESSION['ventanaWebpath'] != $path) {
+    $_SESSION['ventanaWebpath'] = $path;
+			unset($_SESSION['deterioro_mes']);
+			unset($_SESSION['cartera_id_report']);
+			unset($_SESSION['seccional_id_report']);
+		 
+		}
 ;
 } // function BeforeProcessList
 

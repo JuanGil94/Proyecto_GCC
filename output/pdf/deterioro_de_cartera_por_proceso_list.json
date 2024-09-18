@@ -1273,6 +1273,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text4}","isHtml":true},
+				
+				
 			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
 				
 		  ],
@@ -1301,6 +1304,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"$","hidden":"{$item_hide_text3}","isHtml":true},
+				
 				
 			{"text":{$Recobrable_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
 				
@@ -1359,6 +1365,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"$","hidden":"{$item_hide_text2}","isHtml":true},
+				
 				
 			{"text":{$Rel_Alicuotas_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
 				
@@ -1421,6 +1430,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text5}","isHtml":true},
+				
+				
 			{"text":{$VPN_pdfvalue},"hidden":"{$item_hide_simple_grid_field17}"},
 				
 		  ],
@@ -1449,6 +1461,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"$","hidden":"{$item_hide_text6}","isHtml":true},
+				
 				
 			{"text":{$Deterioro_pdfvalue},"hidden":"{$item_hide_simple_grid_field18}"},
 				
@@ -1500,6 +1515,7 @@ pdfDocument = {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
+			fieldName: 'Numero',
 				style: 'footcell',
 		
 		
@@ -1513,11 +1529,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Contar}","hidden":"{$item_hide_snippet}","isHtml":true},
+			{BEGIN Numero_fieldfootercolumn}
+			{BEGIN Numero_showtotal}
+				{ text: ' ' },
+				{"text":{$Numero_total},"hidden":"{$item_hide_grid_field_totals}"}
+			{END Numero_showtotal}
+		{END Numero_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Numero_align}',
      
       
       },
@@ -1814,6 +1835,7 @@ pdfDocument = {
 	cellId: 'footcell_field12',
 	col:0,
 	row:0,
+			fieldName: 'Saldo',
 				style: 'footcell',
 		
 		
@@ -1827,11 +1849,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Saldo}","hidden":"{$item_hide_snippet1}","isHtml":true},
+			{BEGIN Saldo_fieldfootercolumn}
+			{BEGIN Saldo_showtotal}
+				{ text: '$ ' },
+				{"text":{$Saldo_total},"hidden":"{$item_hide_grid_field_totals1}"}
+			{END Saldo_showtotal}
+		{END Saldo_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Saldo_align}',
      
       
       },
@@ -1842,6 +1869,7 @@ pdfDocument = {
 	cellId: 'footcell_field13',
 	col:0,
 	row:0,
+			fieldName: 'Recobrable',
 				style: 'footcell',
 		
 		
@@ -1855,11 +1883,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Recobrable}","hidden":"{$item_hide_snippet2}","isHtml":true},
+			{BEGIN Recobrable_fieldfootercolumn}
+			{BEGIN Recobrable_showtotal}
+				{ text: '$ ' },
+				{"text":{$Recobrable_total},"hidden":"{$item_hide_grid_field_totals2}"}
+			{END Recobrable_showtotal}
+		{END Recobrable_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Recobrable_align}',
      
       
       },
@@ -1948,6 +1981,7 @@ pdfDocument = {
 	cellId: 'footcell_field17',
 	col:0,
 	row:0,
+			fieldName: 'VPN',
 				style: 'footcell',
 		
 		
@@ -1961,11 +1995,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Deterioro_de_Cartera_por_Proceso_VPN}","hidden":"{$item_hide_snippet3}","isHtml":true},
+			{BEGIN VPN_fieldfootercolumn}
+			{BEGIN VPN_showtotal}
+				{ text: '$ ' },
+				{"text":{$VPN_total},"hidden":"{$item_hide_grid_field_totals3}"}
+			{END VPN_showtotal}
+		{END VPN_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$VPN_align}',
      
       
       },
@@ -1976,6 +2015,7 @@ pdfDocument = {
 	cellId: 'footcell_field18',
 	col:0,
 	row:0,
+			fieldName: 'Deterioro',
 				style: 'footcell',
 		
 		
@@ -1989,11 +2029,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Deterioro_de_Cartera_por_Proceso_Deterioro}","hidden":"{$item_hide_snippet4}","isHtml":true},
+			{BEGIN Deterioro_fieldfootercolumn}
+			{BEGIN Deterioro_showtotal}
+				{ text: '$ ' },
+				{"text":{$Deterioro_total},"hidden":"{$item_hide_grid_field_totals4}"}
+			{END Deterioro_showtotal}
+		{END Deterioro_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Deterioro_align}',
      
       
       },

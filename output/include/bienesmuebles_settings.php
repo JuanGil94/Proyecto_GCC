@@ -146,7 +146,7 @@ $tdatabienesmuebles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdatabienesmuebles[".ajaxCodeSnippetAdded"] = false;
 
