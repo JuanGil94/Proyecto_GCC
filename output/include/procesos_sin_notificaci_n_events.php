@@ -39,6 +39,9 @@ function BeforeProcessList($pageObject)
 
 		if ($_SESSION['ventanaWebpath'] != $path) {
     $_SESSION['ventanaWebpath'] = $path;
+			unset($_SESSION['cartera_id_report_noti']);
+			unset($_SESSION['seccional_id_report_noti']);
+		 
 		}
 
 ;

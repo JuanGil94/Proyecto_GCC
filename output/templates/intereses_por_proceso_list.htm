@@ -284,45 +284,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Enero}</span>
 						</div>
 		{END searchCtrlBlock_Enero}
-																{BEGIN searchCtrlBlock_Seccional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
-			<label>{$label Intereses_por_Proceso Seccional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
-						</div>
-		{END searchCtrlBlock_Seccional}
-																{BEGIN searchCtrlBlock_SeccionalId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
-			<label>{$label Intereses_por_Proceso SeccionalId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
-						</div>
-		{END searchCtrlBlock_SeccionalId}
-																{BEGIN searchCtrlBlock_CarteraTipoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
-			<label>{$label Intereses_por_Proceso CarteraTipoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
-						</div>
-		{END searchCtrlBlock_CarteraTipoId}
 		
 
 	</div>
@@ -406,6 +367,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="intereses_por_proceso_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -414,12 +384,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="intereses_por_proceso_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -1527,8 +1491,9 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Enero_class}	"
+				 {$Enero_class}	"
 
+			data-field="Enero"
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
@@ -1536,7 +1501,16 @@
 	 
 		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
 {$event Intereses_por_Proceso_Total_Enero}
-</span>	
+</span>	 
+		{BEGIN Enero_fieldfootercolumn}
+{BEGIN Enero_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals" {$item_grid_field_totals} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Enero" data-fieldname="Enero">
+	$	{$Enero_total}
+</span>
+{END Enero_showtotal}
+{END Enero_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field1}
 									{BEGIN cellblock_grid_footcell_field2}
@@ -1545,8 +1519,9 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Febrero_class}	"
+				 {$Febrero_class}	"
 
+			data-field="Febrero"
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
@@ -1554,7 +1529,16 @@
 	 
 		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
 {$event Intereses_por_Proceso_Total_Febreo}
-</span>	
+</span>	 
+		{BEGIN Febrero_fieldfootercolumn}
+{BEGIN Febrero_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals1" {$item_grid_field_totals1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Febrero" data-fieldname="Febrero">
+	$	{$Febrero_total}
+</span>
+{END Febrero_showtotal}
+{END Febrero_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field3}
@@ -1563,8 +1547,9 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Marzo_class}	"
+				 {$Marzo_class}	"
 
+			data-field="Marzo"
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
@@ -1572,7 +1557,16 @@
 	 
 		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
 {$event Intereses_por_Proceso_Total_Marzo}
-</span>	
+</span>	 
+		{BEGIN Marzo_fieldfootercolumn}
+{BEGIN Marzo_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals2" {$item_grid_field_totals2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Marzo" data-fieldname="Marzo">
+	$	{$Marzo_total}
+</span>
+{END Marzo_showtotal}
+{END Marzo_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
@@ -1581,8 +1575,9 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Abril_class}	"
+				 {$Abril_class}	"
 
+			data-field="Abril"
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
@@ -1590,7 +1585,16 @@
 	 
 		<span data-itemtype="snippet" data-itemid="snippet5" {$item_snippet5} data-pageid="{$pageid}" data-record-id="{$recId}" >
 {$event Intereses_por_Proceso_Total_Abril}
-</span>	
+</span>	 
+		{BEGIN Abril_fieldfootercolumn}
+{BEGIN Abril_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals3" {$item_grid_field_totals3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abril" data-fieldname="Abril">
+	$	{$Abril_total}
+</span>
+{END Abril_showtotal}
+{END Abril_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field4}
 									{BEGIN cellblock_grid_footcell_field5}
@@ -1599,8 +1603,9 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Mayo_class}	"
+				 {$Mayo_class}	"
 
+			data-field="Mayo"
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
@@ -1608,7 +1613,16 @@
 	 
 		<span data-itemtype="snippet" data-itemid="snippet6" {$item_snippet6} data-pageid="{$pageid}" data-record-id="{$recId}" >
 {$event Intereses_por_Proceso_Total_Mayo}
-</span>	
+</span>	 
+		{BEGIN Mayo_fieldfootercolumn}
+{BEGIN Mayo_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals4" {$item_grid_field_totals4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Mayo" data-fieldname="Mayo">
+	$	{$Mayo_total}
+</span>
+{END Mayo_showtotal}
+{END Mayo_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field5}
 									{BEGIN cellblock_grid_footcell_field6}
@@ -1617,8 +1631,9 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Junio_class}	"
+				 {$Junio_class}	"
 
+			data-field="Junio"
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
@@ -1626,7 +1641,16 @@
 	 
 		<span data-itemtype="snippet" data-itemid="snippet7" {$item_snippet7} data-pageid="{$pageid}" data-record-id="{$recId}" >
 {$event Intereses_por_Proceso_Total_Junio}
-</span>	
+</span>	 
+		{BEGIN Junio_fieldfootercolumn}
+{BEGIN Junio_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals5" {$item_grid_field_totals5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Junio" data-fieldname="Junio">
+	$	{$Junio_total}
+</span>
+{END Junio_showtotal}
+{END Junio_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field6}
 									{BEGIN cellblock_grid_footcell_field7}
@@ -1637,14 +1661,21 @@
 	class="
 		 r-ori-vert		 {$Julio_class}	"
 
+			data-field="Julio"
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet8" {$item_snippet8} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Junio1}
-</span>	
+		{BEGIN Julio_fieldfootercolumn}
+{BEGIN Julio_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals6" {$item_grid_field_totals6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Julio" data-fieldname="Julio">
+	$	{$Julio_total}
+</span>
+{END Julio_showtotal}
+{END Julio_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field7}
 									{BEGIN cellblock_grid_footcell_field8}
@@ -1655,14 +1686,21 @@
 	class="
 		 r-ori-vert		 {$Agosto_class}	"
 
+			data-field="Agosto"
 	
 	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet9" {$item_snippet9} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Agosto}
-</span>	
+		{BEGIN Agosto_fieldfootercolumn}
+{BEGIN Agosto_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals7" {$item_grid_field_totals7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Agosto" data-fieldname="Agosto">
+	$	{$Agosto_total}
+</span>
+{END Agosto_showtotal}
+{END Agosto_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field8}
 									{BEGIN cellblock_grid_footcell_field9}
@@ -1673,14 +1711,21 @@
 	class="
 		 r-ori-vert		 {$Septiembre_class}	"
 
+			data-field="Septiembre"
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet10" {$item_snippet10} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Septiembre}
-</span>	
+		{BEGIN Septiembre_fieldfootercolumn}
+{BEGIN Septiembre_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals8" {$item_grid_field_totals8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Septiembre" data-fieldname="Septiembre">
+	$	{$Septiembre_total}
+</span>
+{END Septiembre_showtotal}
+{END Septiembre_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field9}
 									{BEGIN cellblock_grid_footcell_field10}
@@ -1691,14 +1736,21 @@
 	class="
 		 r-ori-vert		 {$Octubre_class}	"
 
+			data-field="Octubre"
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet11" {$item_snippet11} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Octubre}
-</span>	
+		{BEGIN Octubre_fieldfootercolumn}
+{BEGIN Octubre_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals9" {$item_grid_field_totals9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Octubre" data-fieldname="Octubre">
+	$	{$Octubre_total}
+</span>
+{END Octubre_showtotal}
+{END Octubre_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field10}
 									{BEGIN cellblock_grid_footcell_field11}
@@ -1709,14 +1761,21 @@
 	class="
 		 r-ori-vert		 {$Noviembre_class}	"
 
+			data-field="Noviembre"
 	
 	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet12" {$item_snippet12} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Noviembre}
-</span>	
+		{BEGIN Noviembre_fieldfootercolumn}
+{BEGIN Noviembre_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals10" {$item_grid_field_totals10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Noviembre" data-fieldname="Noviembre">
+	$	{$Noviembre_total}
+</span>
+{END Noviembre_showtotal}
+{END Noviembre_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field11}
 									{BEGIN cellblock_grid_footcell_field12}
@@ -1727,14 +1786,21 @@
 	class="
 		 r-ori-vert		 {$Diciembre_class}	"
 
+			data-field="Diciembre"
 	
 	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet13" {$item_snippet13} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Diciembre}
-</span>	
+		{BEGIN Diciembre_fieldfootercolumn}
+{BEGIN Diciembre_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals11" {$item_grid_field_totals11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Diciembre" data-fieldname="Diciembre">
+	$	{$Diciembre_total}
+</span>
+{END Diciembre_showtotal}
+{END Diciembre_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field12}
 									{BEGIN cellblock_grid_footcell_field13}
@@ -1745,14 +1811,21 @@
 	class="
 		 r-ori-vert		 {$TotalIntereses_class}	"
 
+			data-field="TotalIntereses"
 	
 	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="intereses_por_proceso_list"	
 	>
 
 	 
-		<span data-itemtype="snippet" data-itemid="snippet14" {$item_snippet14} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Intereses_por_Proceso_Total_Intereses_Total}
-</span>	
+		{BEGIN TotalIntereses_fieldfootercolumn}
+{BEGIN TotalIntereses_showtotal}
+<span data-itemtype="grid_field_totals" data-itemid="grid_field_totals12" {$item_grid_field_totals12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TotalIntereses" data-fieldname="TotalIntereses">
+	$	{$TotalIntereses_total}
+</span>
+{END TotalIntereses_showtotal}
+{END TotalIntereses_fieldfootercolumn}
+
+	
 	</td>
 	{END cellblock_grid_footcell_field13}
 							</tr>

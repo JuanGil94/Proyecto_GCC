@@ -1214,6 +1214,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Enero',
 				style: 'footcell',
 		
 		
@@ -1229,9 +1230,17 @@ pdfDocument = {
 				
 			{"text":"{$event Intereses_por_Proceso_Total_Enero}","hidden":"{$item_hide_snippet2}","isHtml":true},
 				
+				
+			{BEGIN Enero_fieldfootercolumn}
+			{BEGIN Enero_showtotal}
+				{ text: '$ ' },
+				{"text":{$Enero_total},"hidden":"{$item_hide_grid_field_totals}"}
+			{END Enero_showtotal}
+		{END Enero_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Enero_align}',
      
       
       },
@@ -1242,6 +1251,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'Febrero',
 				style: 'footcell',
 		
 		
@@ -1257,9 +1267,17 @@ pdfDocument = {
 				
 			{"text":"{$event Intereses_por_Proceso_Total_Febreo}","hidden":"{$item_hide_snippet3}","isHtml":true},
 				
+				
+			{BEGIN Febrero_fieldfootercolumn}
+			{BEGIN Febrero_showtotal}
+				{ text: '$ ' },
+				{"text":{$Febrero_total},"hidden":"{$item_hide_grid_field_totals1}"}
+			{END Febrero_showtotal}
+		{END Febrero_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Febrero_align}',
      
       
       },
@@ -1270,6 +1288,7 @@ pdfDocument = {
 	cellId: 'footcell_field3',
 	col:0,
 	row:0,
+			fieldName: 'Marzo',
 				style: 'footcell',
 		
 		
@@ -1285,9 +1304,17 @@ pdfDocument = {
 				
 			{"text":"{$event Intereses_por_Proceso_Total_Marzo}","hidden":"{$item_hide_snippet4}","isHtml":true},
 				
+				
+			{BEGIN Marzo_fieldfootercolumn}
+			{BEGIN Marzo_showtotal}
+				{ text: '$ ' },
+				{"text":{$Marzo_total},"hidden":"{$item_hide_grid_field_totals2}"}
+			{END Marzo_showtotal}
+		{END Marzo_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Marzo_align}',
      
       
       },
@@ -1298,6 +1325,7 @@ pdfDocument = {
 	cellId: 'footcell_field4',
 	col:0,
 	row:0,
+			fieldName: 'Abril',
 				style: 'footcell',
 		
 		
@@ -1313,9 +1341,17 @@ pdfDocument = {
 				
 			{"text":"{$event Intereses_por_Proceso_Total_Abril}","hidden":"{$item_hide_snippet5}","isHtml":true},
 				
+				
+			{BEGIN Abril_fieldfootercolumn}
+			{BEGIN Abril_showtotal}
+				{ text: '$ ' },
+				{"text":{$Abril_total},"hidden":"{$item_hide_grid_field_totals3}"}
+			{END Abril_showtotal}
+		{END Abril_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Abril_align}',
      
       
       },
@@ -1326,6 +1362,7 @@ pdfDocument = {
 	cellId: 'footcell_field5',
 	col:0,
 	row:0,
+			fieldName: 'Mayo',
 				style: 'footcell',
 		
 		
@@ -1341,9 +1378,17 @@ pdfDocument = {
 				
 			{"text":"{$event Intereses_por_Proceso_Total_Mayo}","hidden":"{$item_hide_snippet6}","isHtml":true},
 				
+				
+			{BEGIN Mayo_fieldfootercolumn}
+			{BEGIN Mayo_showtotal}
+				{ text: '$ ' },
+				{"text":{$Mayo_total},"hidden":"{$item_hide_grid_field_totals4}"}
+			{END Mayo_showtotal}
+		{END Mayo_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Mayo_align}',
      
       
       },
@@ -1354,6 +1399,7 @@ pdfDocument = {
 	cellId: 'footcell_field6',
 	col:0,
 	row:0,
+			fieldName: 'Junio',
 				style: 'footcell',
 		
 		
@@ -1369,9 +1415,17 @@ pdfDocument = {
 				
 			{"text":"{$event Intereses_por_Proceso_Total_Junio}","hidden":"{$item_hide_snippet7}","isHtml":true},
 				
+				
+			{BEGIN Junio_fieldfootercolumn}
+			{BEGIN Junio_showtotal}
+				{ text: '$ ' },
+				{"text":{$Junio_total},"hidden":"{$item_hide_grid_field_totals5}"}
+			{END Junio_showtotal}
+		{END Junio_fieldfootercolumn},
+				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Junio_align}',
      
       
       },
@@ -1382,6 +1436,7 @@ pdfDocument = {
 	cellId: 'footcell_field7',
 	col:0,
 	row:0,
+			fieldName: 'Julio',
 				style: 'footcell',
 		
 		
@@ -1395,11 +1450,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Junio1}","hidden":"{$item_hide_snippet8}","isHtml":true},
+			{BEGIN Julio_fieldfootercolumn}
+			{BEGIN Julio_showtotal}
+				{ text: '$ ' },
+				{"text":{$Julio_total},"hidden":"{$item_hide_grid_field_totals6}"}
+			{END Julio_showtotal}
+		{END Julio_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Julio_align}',
      
       
       },
@@ -1410,6 +1470,7 @@ pdfDocument = {
 	cellId: 'footcell_field8',
 	col:0,
 	row:0,
+			fieldName: 'Agosto',
 				style: 'footcell',
 		
 		
@@ -1423,11 +1484,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Agosto}","hidden":"{$item_hide_snippet9}","isHtml":true},
+			{BEGIN Agosto_fieldfootercolumn}
+			{BEGIN Agosto_showtotal}
+				{ text: '$ ' },
+				{"text":{$Agosto_total},"hidden":"{$item_hide_grid_field_totals7}"}
+			{END Agosto_showtotal}
+		{END Agosto_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Agosto_align}',
      
       
       },
@@ -1438,6 +1504,7 @@ pdfDocument = {
 	cellId: 'footcell_field9',
 	col:0,
 	row:0,
+			fieldName: 'Septiembre',
 				style: 'footcell',
 		
 		
@@ -1451,11 +1518,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Septiembre}","hidden":"{$item_hide_snippet10}","isHtml":true},
+			{BEGIN Septiembre_fieldfootercolumn}
+			{BEGIN Septiembre_showtotal}
+				{ text: '$ ' },
+				{"text":{$Septiembre_total},"hidden":"{$item_hide_grid_field_totals8}"}
+			{END Septiembre_showtotal}
+		{END Septiembre_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Septiembre_align}',
      
       
       },
@@ -1466,6 +1538,7 @@ pdfDocument = {
 	cellId: 'footcell_field10',
 	col:0,
 	row:0,
+			fieldName: 'Octubre',
 				style: 'footcell',
 		
 		
@@ -1479,11 +1552,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Octubre}","hidden":"{$item_hide_snippet11}","isHtml":true},
+			{BEGIN Octubre_fieldfootercolumn}
+			{BEGIN Octubre_showtotal}
+				{ text: '$ ' },
+				{"text":{$Octubre_total},"hidden":"{$item_hide_grid_field_totals9}"}
+			{END Octubre_showtotal}
+		{END Octubre_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Octubre_align}',
      
       
       },
@@ -1494,6 +1572,7 @@ pdfDocument = {
 	cellId: 'footcell_field11',
 	col:0,
 	row:0,
+			fieldName: 'Noviembre',
 				style: 'footcell',
 		
 		
@@ -1507,11 +1586,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Noviembre}","hidden":"{$item_hide_snippet12}","isHtml":true},
+			{BEGIN Noviembre_fieldfootercolumn}
+			{BEGIN Noviembre_showtotal}
+				{ text: '$ ' },
+				{"text":{$Noviembre_total},"hidden":"{$item_hide_grid_field_totals10}"}
+			{END Noviembre_showtotal}
+		{END Noviembre_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Noviembre_align}',
      
       
       },
@@ -1522,6 +1606,7 @@ pdfDocument = {
 	cellId: 'footcell_field12',
 	col:0,
 	row:0,
+			fieldName: 'Diciembre',
 				style: 'footcell',
 		
 		
@@ -1535,11 +1620,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Diciembre}","hidden":"{$item_hide_snippet13}","isHtml":true},
+			{BEGIN Diciembre_fieldfootercolumn}
+			{BEGIN Diciembre_showtotal}
+				{ text: '$ ' },
+				{"text":{$Diciembre_total},"hidden":"{$item_hide_grid_field_totals11}"}
+			{END Diciembre_showtotal}
+		{END Diciembre_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Diciembre_align}',
      
       
       },
@@ -1550,6 +1640,7 @@ pdfDocument = {
 	cellId: 'footcell_field13',
 	col:0,
 	row:0,
+			fieldName: 'TotalIntereses',
 				style: 'footcell',
 		
 		
@@ -1563,11 +1654,16 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Intereses_Total}","hidden":"{$item_hide_snippet14}","isHtml":true},
+			{BEGIN TotalIntereses_fieldfootercolumn}
+			{BEGIN TotalIntereses_showtotal}
+				{ text: '$ ' },
+				{"text":{$TotalIntereses_total},"hidden":"{$item_hide_grid_field_totals12}"}
+			{END TotalIntereses_showtotal}
+		{END TotalIntereses_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$TotalIntereses_align}',
      
       
       },

@@ -109,15 +109,6 @@ pdfDocument = {
 			{"text":{$Proceso_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
-			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
 			{"text":{$Enero_pdfvalue},"hidden":"{$item_hide_export_field4}"},
 				
 				

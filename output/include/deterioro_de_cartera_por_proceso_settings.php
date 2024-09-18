@@ -58,7 +58,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Especialidad"] = "Rel Especialidad";
 	$fieldToolTipsdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Especialidad"] = "";
 	$placeHoldersdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Especialidad"] = "";
-	$fieldLabelsdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Porcentaje"] = "Rel Porcentaje";
+	$fieldLabelsdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Porcentaje"] = "Porcentaje";
 	$fieldToolTipsdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Porcentaje"] = "";
 	$placeHoldersdeterioro_de_cartera_por_proceso["Spanish"]["Rel_Porcentaje"] = "";
 	$fieldLabelsdeterioro_de_cartera_por_proceso["Spanish"]["Saldo"] = "Saldo";
@@ -180,7 +180,7 @@ $tdatadeterioro_de_cartera_por_proceso[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																						
+																																																																																																																																																																																																									
 
 $tdatadeterioro_de_cartera_por_proceso[".ajaxCodeSnippetAdded"] = false;
 
@@ -240,7 +240,7 @@ $tdatadeterioro_de_cartera_por_proceso[".isDisplayLoading"] = true;
 
 
 
-$tdatadeterioro_de_cartera_por_proceso[".pageSize"] = 20;
+$tdatadeterioro_de_cartera_por_proceso[".pageSize"] = 3000;
 
 $tdatadeterioro_de_cartera_por_proceso[".warnLeavingPages"] = true;
 
@@ -830,7 +830,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -1135,7 +1135,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -1440,7 +1440,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -1697,7 +1697,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -1745,7 +1745,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -2050,7 +2050,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -2355,7 +2355,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -2660,7 +2660,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -2965,7 +2965,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -3270,7 +3270,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -3575,7 +3575,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -4364,7 +4364,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	

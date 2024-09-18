@@ -174,7 +174,7 @@ $tdataintereses_por_proceso[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																						
+																																																																																																																																																																																																									
 
 $tdataintereses_por_proceso[".ajaxCodeSnippetAdded"] = false;
 
@@ -194,10 +194,7 @@ $tdataintereses_por_proceso[".filterFields"] = array();
 $tdataintereses_por_proceso[".requiredSearchFields"] = array();
 
 $tdataintereses_por_proceso[".googleLikeFields"] = array();
-$tdataintereses_por_proceso[".googleLikeFields"][] = "CarteraTipoId";
-$tdataintereses_por_proceso[".googleLikeFields"][] = "SeccionalId";
 $tdataintereses_por_proceso[".googleLikeFields"][] = "Proceso";
-$tdataintereses_por_proceso[".googleLikeFields"][] = "Seccional";
 $tdataintereses_por_proceso[".googleLikeFields"][] = "Enero";
 $tdataintereses_por_proceso[".googleLikeFields"][] = "Febrero";
 $tdataintereses_por_proceso[".googleLikeFields"][] = "Marzo";
@@ -232,7 +229,7 @@ $tdataintereses_por_proceso[".isDisplayLoading"] = true;
 
 
 
-$tdataintereses_por_proceso[".pageSize"] = 20;
+$tdataintereses_por_proceso[".pageSize"] = 3000;
 
 $tdataintereses_por_proceso[".warnLeavingPages"] = true;
 
@@ -2684,6 +2681,7 @@ $tdataintereses_por_proceso[".sqlquery"] = $queryData_intereses_por_proceso;
 
 
 
-$tdataintereses_por_proceso[".hasEvents"] = false;
+include_once(getabspath("include/intereses_por_proceso_events.php"));
+$tdataintereses_por_proceso[".hasEvents"] = true;
 
 ?>
