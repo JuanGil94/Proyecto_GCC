@@ -200,7 +200,7 @@ $_SESSION["NaturalezaId"]= $data["NaturalezaId"];
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-		include_once (getabspath("classes/pruebaJuan.php"));
+		include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->Calcular();
 $arrayFechas=$recalcular->getFechas();
@@ -300,7 +300,7 @@ foreach($arrayFechas as $dato=>$valor){
 function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
-		include_once (getabspath("classes/pruebaJuan.php"));
+		include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
 //echo "El valor del PagoId es:".$values["PagoId"]; 

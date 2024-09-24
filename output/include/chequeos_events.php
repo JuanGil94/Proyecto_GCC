@@ -77,6 +77,7 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 	$pageObject->hideItem("button_crear", $recordId);
 	$pageObject->hideItem("grid_edit", $recordId);
 	$pageObject->hideItem("grid_checkbox", $recordId);
+	$pageObject->hideItem("button_subir", $recordId); 
 }
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -137,7 +138,9 @@ function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
 unset($values["Dias"]);
+unset($values["FechaPago"]);
 $values["Fecha"]=now();
+$values["CarteraTipoId"]=1;
 //$values['CarteraTipoId']=1; //se quema ya que la cartera siempre es Corriente=1
 $consulta=DB::Query("SELECT * FROM Empresas");
         while( $date = $consulta->fetchAssoc() ){
@@ -479,7 +482,9 @@ function CustomEdit(&$values, $where, &$oldvalues, &$keys, &$error, $inline, $pa
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
 unset($values["Dias"]);
+unset($values["FechaPago"]);
 $values["Fecha"]=now();
+$values["CarteraTipoId"]=1;
 $values["Obligacion"]=floatval($values["Obligacion"]);
 //$values['CarteraTipoId']=1; //se quema ya que la cartera siempre es Corriente=1
 
@@ -634,6 +639,10 @@ $values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
 //print_r($values);
 
 $length=mb_strlen($values["Origen"], 'UTF-8');
+//echo "Valor de FechaPago: ".$values['FechaPago'];
+if (!empty($values['FechaPago'])){
+	$values['Ejecutoria']=$values['FechaPago'];
+}
 if ($length<23||$length>23){
 	echo '<script>alert ("El numero de Origen debe contener 23 caracteres ")</script>';
 	return false;
@@ -650,7 +659,11 @@ elseif($values['FechaSancion']>now()){
 	echo '<script>alert ("La Fecha Sancion: '.$values['FechaSancion'].' debe ser menor o igual a la Fecha Actual: '.now().'")</script>';
 	return false;
 }
+if ($_SESSION["Obligacion"]==NULL){
+	$values["Obligacion"]=0;
+}
 return true;
+
 
 
 ;
@@ -893,7 +906,9 @@ $values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
 if ($_SESSION["Obligacion"]!=NULL){
 	$values["Obligacion"]=$_SESSION["Obligacion"];
 }
-
+if (!empty($values['FechaPago'])){
+	$values['Ejecutoria']=$values['FechaPago'];
+}
 //print_r($values);
 
 $length=mb_strlen($values["Origen"], 'UTF-8');

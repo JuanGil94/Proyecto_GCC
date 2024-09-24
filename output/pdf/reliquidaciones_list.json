@@ -109,6 +109,15 @@ pdfDocument = {
 										{BEGIN col_grid_14}
 					"%",
 					{END col_grid_14}
+										{BEGIN col_grid_15}
+					"%",
+					{END col_grid_15}
+										{BEGIN col_grid_16}
+					"%",
+					{END col_grid_16}
+										{BEGIN col_grid_17}
+					"%",
+					{END col_grid_17}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -213,6 +222,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_export1}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
@@ -447,7 +459,7 @@ pdfDocument = {
 	cellId: 'headcell_field4',
 	col:0,
 	row:0,
-			fieldName: 'ObliReca',
+			fieldName: 'O__Recaudada',
 				style: 'headcell',
 		
 		
@@ -461,11 +473,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones ObliReca }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones O__Recaudada }","hidden":"{$item_hide_grid_field_label}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObliReca_align}',
+              "alignment": '{$O__Recaudada_align}',
      
       
       },
@@ -476,7 +488,7 @@ pdfDocument = {
 	cellId: 'headcell_field5',
 	col:0,
 	row:0,
-			fieldName: 'ObliNove',
+			fieldName: 'O__Novedad',
 				style: 'headcell',
 		
 		
@@ -490,11 +502,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones ObliNove }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones O__Novedad }","hidden":"{$item_hide_grid_field_label1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObliNove_align}',
+              "alignment": '{$O__Novedad_align}',
      
       
       },
@@ -505,7 +517,7 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
-			fieldName: 'ObliSald',
+			fieldName: 'O__Saldo',
 				style: 'headcell',
 		
 		
@@ -519,11 +531,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones ObliSald }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones O__Saldo }","hidden":"{$item_hide_grid_field_label2}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObliSald_align}',
+              "alignment": '{$O__Saldo_align}',
      
       
       },
@@ -534,7 +546,7 @@ pdfDocument = {
 	cellId: 'headcell_field7',
 	col:0,
 	row:0,
-			fieldName: 'InteReca',
+			fieldName: 'I__Recaudados',
 				style: 'headcell',
 		
 		
@@ -548,11 +560,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones InteReca }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones I__Recaudados }","hidden":"{$item_hide_grid_field_label3}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteReca_align}',
+              "alignment": '{$I__Recaudados_align}',
      
       
       },
@@ -563,7 +575,7 @@ pdfDocument = {
 	cellId: 'headcell_field8',
 	col:0,
 	row:0,
-			fieldName: 'InteNove',
+			fieldName: 'I__Novedades',
 				style: 'headcell',
 		
 		
@@ -577,11 +589,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones InteNove }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones I__Novedades }","hidden":"{$item_hide_grid_field_label4}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteNove_align}',
+              "alignment": '{$I__Novedades_align}',
      
       
       },
@@ -592,7 +604,7 @@ pdfDocument = {
 	cellId: 'headcell_field9',
 	col:0,
 	row:0,
-			fieldName: 'InteSald',
+			fieldName: 'I__Saldo',
 				style: 'headcell',
 		
 		
@@ -606,11 +618,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones InteSald }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones I__Saldo }","hidden":"{$item_hide_grid_field_label5}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteSald_align}',
+              "alignment": '{$I__Saldo_align}',
      
       
       },
@@ -621,7 +633,7 @@ pdfDocument = {
 	cellId: 'headcell_field10',
 	col:0,
 	row:0,
-			fieldName: 'CostReca',
+			fieldName: 'C__Recaudados',
 				style: 'headcell',
 		
 		
@@ -635,11 +647,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones CostReca }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones C__Recaudados }","hidden":"{$item_hide_grid_field_label6}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CostReca_align}',
+              "alignment": '{$C__Recaudados_align}',
      
       
       },
@@ -650,7 +662,7 @@ pdfDocument = {
 	cellId: 'headcell_field11',
 	col:0,
 	row:0,
-			fieldName: 'CostNove',
+			fieldName: 'C__Novedad',
 				style: 'headcell',
 		
 		
@@ -664,11 +676,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones CostNove }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones C__Novedad }","hidden":"{$item_hide_grid_field_label7}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CostNove_align}',
+              "alignment": '{$C__Novedad_align}',
      
       
       },
@@ -679,7 +691,7 @@ pdfDocument = {
 	cellId: 'headcell_field12',
 	col:0,
 	row:0,
-			fieldName: 'CostSald',
+			fieldName: 'C__Saldo',
 				style: 'headcell',
 		
 		
@@ -693,17 +705,61 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Reliquidaciones CostSald }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel dbo_Reliquidaciones C__Saldo }","hidden":"{$item_hide_grid_field_label8}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CostSald_align}',
+              "alignment": '{$C__Saldo_align}',
      
       
       },
 
 {END cellblock_grid_headcell_field12}
-											],
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Saldo_Total',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_headcell_field13}
+			colSpan: {$colspan_grid_headcell_field13},
+			{END colspan_grid_headcell_field13}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Reliquidaciones Saldo_Total }","hidden":"{$item_hide_grid_field_label9}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Saldo_Total_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+																		{ 
+				cellId: 'headcell_field13',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'headcell_field13',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
 				{END row_grid_0}
 		
 			
@@ -731,6 +787,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -889,7 +948,7 @@ pdfDocument = {
 	cellId: 'cell_field4',
 	col:0,
 	row:0,
-			fieldName: 'ObliReca',
+			fieldName: 'O__Recaudada',
 				style: 'bodycell',
 		
 		
@@ -903,11 +962,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
+			{"text":{$O__Recaudada_pdfvalue},"hidden":"{$item_hide_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObliReca_align}',
+              "alignment": '{$O__Recaudada_align}',
      
       
       },
@@ -918,7 +977,7 @@ pdfDocument = {
 	cellId: 'cell_field5',
 	col:0,
 	row:0,
-			fieldName: 'ObliNove',
+			fieldName: 'O__Novedad',
 				style: 'bodycell',
 		
 		
@@ -932,11 +991,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+			{"text":{$O__Novedad_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObliNove_align}',
+              "alignment": '{$O__Novedad_align}',
      
       
       },
@@ -947,7 +1006,7 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
-			fieldName: 'ObliSald',
+			fieldName: 'O__Saldo',
 				style: 'bodycell',
 		
 		
@@ -961,11 +1020,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$ObliSald_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
+			{"text":{$O__Saldo_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ObliSald_align}',
+              "alignment": '{$O__Saldo_align}',
      
       
       },
@@ -976,7 +1035,7 @@ pdfDocument = {
 	cellId: 'cell_field7',
 	col:0,
 	row:0,
-			fieldName: 'InteReca',
+			fieldName: 'I__Recaudados',
 				style: 'bodycell',
 		
 		
@@ -990,11 +1049,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$InteReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
+			{"text":{$I__Recaudados_pdfvalue},"hidden":"{$item_hide_grid_field3}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteReca_align}',
+              "alignment": '{$I__Recaudados_align}',
      
       
       },
@@ -1005,7 +1064,7 @@ pdfDocument = {
 	cellId: 'cell_field8',
 	col:0,
 	row:0,
-			fieldName: 'InteNove',
+			fieldName: 'I__Novedades',
 				style: 'bodycell',
 		
 		
@@ -1019,11 +1078,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$InteNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+			{"text":{$I__Novedades_pdfvalue},"hidden":"{$item_hide_grid_field4}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteNove_align}',
+              "alignment": '{$I__Novedades_align}',
      
       
       },
@@ -1034,7 +1093,7 @@ pdfDocument = {
 	cellId: 'cell_field9',
 	col:0,
 	row:0,
-			fieldName: 'InteSald',
+			fieldName: 'I__Saldo',
 				style: 'bodycell',
 		
 		
@@ -1048,11 +1107,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$InteSald_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
+			{"text":{$I__Saldo_pdfvalue},"hidden":"{$item_hide_grid_field5}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteSald_align}',
+              "alignment": '{$I__Saldo_align}',
      
       
       },
@@ -1063,7 +1122,7 @@ pdfDocument = {
 	cellId: 'cell_field10',
 	col:0,
 	row:0,
-			fieldName: 'CostReca',
+			fieldName: 'C__Recaudados',
 				style: 'bodycell',
 		
 		
@@ -1077,11 +1136,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$CostReca_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
+			{"text":{$C__Recaudados_pdfvalue},"hidden":"{$item_hide_grid_field6}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CostReca_align}',
+              "alignment": '{$C__Recaudados_align}',
      
       
       },
@@ -1092,7 +1151,7 @@ pdfDocument = {
 	cellId: 'cell_field11',
 	col:0,
 	row:0,
-			fieldName: 'CostNove',
+			fieldName: 'C__Novedad',
 				style: 'bodycell',
 		
 		
@@ -1106,11 +1165,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$CostNove_pdfvalue},"hidden":"{$item_hide_simple_grid_field13}"},
+			{"text":{$C__Novedad_pdfvalue},"hidden":"{$item_hide_grid_field7}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CostNove_align}',
+              "alignment": '{$C__Novedad_align}',
      
       
       },
@@ -1121,7 +1180,7 @@ pdfDocument = {
 	cellId: 'cell_field12',
 	col:0,
 	row:0,
-			fieldName: 'CostSald',
+			fieldName: 'C__Saldo',
 				style: 'bodycell',
 		
 		
@@ -1135,17 +1194,61 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$CostSald_pdfvalue},"hidden":"{$item_hide_simple_grid_field14}"},
+			{"text":{$C__Saldo_pdfvalue},"hidden":"{$item_hide_grid_field8}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$CostSald_align}',
+              "alignment": '{$C__Saldo_align}',
      
       
       },
 
 {END cellblock_grid_cell_field12}
-											],
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'Saldo_Total',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+					{BEGIN colspan_grid_cell_field13}
+			colSpan: {$colspan_grid_cell_field13},
+			{END colspan_grid_cell_field13}
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Saldo_Total_pdfvalue},"hidden":"{$item_hide_grid_field9}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Saldo_Total_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
+																		{ 
+				cellId: 'cell_field13',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_field13',
+				row:  0,
+				col:  2,
+				text: ''
+			},
+							],
 				{END row_grid_1}
 		
 		{END grid_record}
@@ -1544,6 +1647,84 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field12}
+																							{BEGIN cellblock_grid_footcell_field13}
+{
+	cellId: 'footcell_field13',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field13}
+																							{BEGIN cellblock_grid_footcell_field14}
+{
+	cellId: 'footcell_field14',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field14}
+																							{BEGIN cellblock_grid_footcell_field15}
+{
+	cellId: 'footcell_field15',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field15}
 											],
 				{END row_grid_2}
 		

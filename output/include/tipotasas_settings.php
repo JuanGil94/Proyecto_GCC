@@ -128,7 +128,7 @@ $tdatatipotasas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																									
+																																																																																																																																																																																																															
 
 $tdatatipotasas[".ajaxCodeSnippetAdded"] = false;
 

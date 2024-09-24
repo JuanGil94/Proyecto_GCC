@@ -109,7 +109,7 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
 		include_once (getabspath("classes/actuacionAction.php"));
-include_once (getabspath("classes/pruebaJuan.php"));
+include_once (getabspath("classes/calcIntereses.php"));
 include_once (getabspath("plantillaGCC.php"));
 //SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS Y VARIABLES PARA TRAMITAR LAS VALIDACIONES, INSERT Y UPDATE
 global $pageObject;

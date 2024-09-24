@@ -40,6 +40,15 @@
 [data-cellid="grid_headcell_checkbox"][data-page="reliquidaciones_list"][data-cellid="grid_headcell_checkbox"][data-page="reliquidaciones_list"][data-cellid="grid_headcell_checkbox"][data-page="reliquidaciones_list"] {
   width: 30px;
 }
+[data-cellid="grid_footcell_field13"][data-page="reliquidaciones_list"][data-cellid="grid_footcell_field13"][data-page="reliquidaciones_list"][data-cellid="grid_footcell_field13"][data-page="reliquidaciones_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field14"][data-page="reliquidaciones_list"][data-cellid="grid_footcell_field14"][data-page="reliquidaciones_list"][data-cellid="grid_footcell_field14"][data-page="reliquidaciones_list"] {
+  white-space: nowrap;
+}
+[data-cellid="grid_footcell_field15"][data-page="reliquidaciones_list"][data-cellid="grid_footcell_field15"][data-page="reliquidaciones_list"][data-cellid="grid_footcell_field15"][data-page="reliquidaciones_list"] {
+  white-space: nowrap;
+}
 [data-cellid="grid_headcell_icons"][data-page="reliquidaciones_list"][data-cellid="grid_headcell_icons"][data-page="reliquidaciones_list"][data-cellid="grid_headcell_icons"][data-page="reliquidaciones_list"] {
   width: 30px;
 }
@@ -50,4 +59,60 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
+[data-page="reliquidaciones_list"][data-itemid="simple_grid_field5"] {
+  color: black;
+    white-space: nowrap;
+}
 
+/* Put  your custom CSS code here */
+
+[data-page="reliquidaciones_list"][data-itemid="grid_field"] {
+  color: black;
+    white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="reliquidaciones_list"][data-itemid="grid_field1"] {
+  color: black;
+    white-space: nowrap;
+}
+/* Put  your custom CSS code here */
+
+[data-page="reliquidaciones_list"][data-itemid="grid_field2"] {
+  color: black;
+    white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="reliquidaciones_list"][data-itemid="grid_field3"] {
+  color: black;
+    white-space: nowrap;
+}
+
+[data-page="reliquidaciones_list"][data-itemid="grid_field4"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-page="reliquidaciones_list"][data-itemid="grid_field5"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-page="reliquidaciones_list"][data-itemid="grid_field6"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-page="reliquidaciones_list"][data-itemid="grid_field7"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-page="reliquidaciones_list"][data-itemid="grid_field8"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-page="reliquidaciones_list"][data-itemid="grid_field9"] {
+  color: black;
+    white-space: nowrap;
+}

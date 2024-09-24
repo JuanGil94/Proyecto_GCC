@@ -213,6 +213,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
 						</div>
 		{END searchCtrlBlock_AbogadoId}
+																{BEGIN searchCtrlBlock_FechaPago}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_FechaPago}" {$filterRow_attrs_FechaPago}>
+			<label>{$label dbo_Chequeos FechaPago }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_FechaPago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_FechaPago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_FechaPago}</span>
+						</div>
+		{END searchCtrlBlock_FechaPago}
 																{BEGIN searchCtrlBlock_Dias}
 
 
@@ -1576,6 +1589,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_FechaPago" checked="checked" value="1" data-field="FechaPago" data-fieldname="FechaPago">
+					<span>{$label dbo_Chequeos FechaPago }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -1595,6 +1618,9 @@
 @media screen and (max-width: 767px) {
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
 		content: "{$label dbo_Chequeos Dias}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="FechaPago"]:before {
+		content: "{$label dbo_Chequeos FechaPago}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
 		content: "{$label dbo_Chequeos ConceptoId}";
@@ -2599,6 +2625,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field30}
+									{BEGIN cellblock_grid_headcell_field31}
+	<th
+	
+	{$cell_grid_headcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$FechaPago_class}	"
+
+			data-field="FechaPago"
+	
+	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN FechaPago_fieldheadercolumn}
+	{BEGIN FechaPago_fieldheader}
+	<SPAN {$FechaPago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label6" {$item_grid_field_label6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FechaPago" data-fieldname="FechaPago">
+	{$label dbo_Chequeos FechaPago }	{$arrow_icon_FechaPago}
+	</SPAN>
+	{END FechaPago_fieldheader}
+{END FechaPago_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field31}
 							</tr>
 																				
 					{END grid_header}
@@ -2700,7 +2751,7 @@
 							Crear			</a>
 </span>
 	 
-		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+		<span data-itemtype="custom_button" data-itemid="button_subir" {$item_button_subir} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Subir Archivo" class="btn btn-default   
 	" id="New_Button5" href="javascript:void(0)" typeid="ib" >
 					<span class="glyphicon glyphicon-upload"></span>
@@ -3423,6 +3474,27 @@
 {END FechaSancion_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field30}
+									{BEGIN cellblock_grid_cell_field31}
+	<td
+	
+	{$cell_grid_cell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$FechaPago_class}	"
+
+			data-field="FechaPago"
+	
+	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN FechaPago_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FechaPago" data-fieldname="FechaPago" data-default-width >
+{$FechaPago_value}
+</span>
+{END FechaPago_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field31}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -4023,6 +4095,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field30}
+									{BEGIN cellblock_grid_footcell_field31}
+	<td
+	
+	{$cell_grid_footcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$FechaPago_class}	"
+
+	
+	data-cellId="grid_footcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="chequeos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field31}
 							</tr>
 					
 					</tfoot>

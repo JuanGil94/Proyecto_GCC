@@ -988,6 +988,16 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="list")
+	{
+		$valuef=$value;
+$consulta=DB::Query("SELECT * FROM CarteraTipos WHERE CarteraTipoId=".$valuef);
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $value=$date["CarteraTipo"];
+        };
+		return $value;
+	}
 				if($table=="dbo.ChequeosSancionados" && $field=="Masculino")
 	{
 		;
@@ -1408,6 +1418,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return 10;
 	}
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="edit")
+	{
+		return "CARTERA CORRIENTE";
+	}
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="add")
+	{
+		return "CARTERA CORRIENTE";
+	}
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="search")
+	{
+		return "CARTERA CORRIENTE";
+	}
 				if($table=="dbo.ChequeosOficios" && $field=="Fecha")
 	{
 		return now();;
@@ -1439,6 +1461,18 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="edit")
+	{
+		return "CARTERA CORRIENTE";
+	}
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="add")
+	{
+		return "CARTERA CORRIENTE";
+	}
+				if($table=="dbo.Chequeos" && $field=="CarteraTipoId" && $ptype=="search")
+	{
+		return "CARTERA CORRIENTE";
+	}
 	return "";
 }
 

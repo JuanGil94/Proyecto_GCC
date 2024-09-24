@@ -175,6 +175,9 @@ pdfDocument = {
 										{BEGIN col_grid_36}
 					"%",
 					{END col_grid_36}
+										{BEGIN col_grid_37}
+					"%",
+					{END col_grid_37}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1410,6 +1413,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field30}
+																							{BEGIN cellblock_grid_headcell_field31}
+{
+	cellId: 'headcell_field31',
+	col:0,
+	row:0,
+			fieldName: 'FechaPago',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos FechaPago }","hidden":"{$item_hide_grid_field_label6}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$FechaPago_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field31}
 											],
 				{END row_grid_0}
 		
@@ -2498,6 +2530,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field30}
+																							{BEGIN cellblock_grid_cell_field31}
+{
+	cellId: 'cell_field31',
+	col:0,
+	row:0,
+			fieldName: 'FechaPago',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$FechaPago_pdfvalue},"hidden":"{$item_hide_grid_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$FechaPago_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field31}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2759,6 +2820,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  36,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  37,
 				text: ''
 			},
 							],
@@ -3732,6 +3799,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field30}
+																							{BEGIN cellblock_grid_footcell_field31}
+{
+	cellId: 'footcell_field31',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field31}
 											],
 				{END row_grid_3}
 		

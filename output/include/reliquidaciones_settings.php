@@ -6,11 +6,11 @@ $tdatareliquidaciones[".OwnerID"] = "";
 $tdatareliquidaciones[".OriginalTable"] = "dbo.Reliquidaciones";
 
 
-$tdatareliquidaciones[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatareliquidaciones[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatareliquidaciones[".originalPagesByType"] = $tdatareliquidaciones[".pagesByType"];
-$tdatareliquidaciones[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatareliquidaciones[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatareliquidaciones[".originalPages"] = $tdatareliquidaciones[".pages"];
-$tdatareliquidaciones[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatareliquidaciones[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatareliquidaciones[".originalDefaultPages"] = $tdatareliquidaciones[".defaultPages"];
 
 //	field labels
@@ -25,12 +25,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsreliquidaciones["Spanish"] = array();
 	$placeHoldersreliquidaciones["Spanish"] = array();
 	$pageTitlesreliquidaciones["Spanish"] = array();
-	$fieldLabelsreliquidaciones["Spanish"]["ReliquidacionId"] = "Reliquidacion Id";
-	$fieldToolTipsreliquidaciones["Spanish"]["ReliquidacionId"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["ReliquidacionId"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["ProcesoId"] = "Proceso Id";
-	$fieldToolTipsreliquidaciones["Spanish"]["ProcesoId"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["ProcesoId"] = "";
 	$fieldLabelsreliquidaciones["Spanish"]["Fecha"] = "Fecha";
 	$fieldToolTipsreliquidaciones["Spanish"]["Fecha"] = "";
 	$placeHoldersreliquidaciones["Spanish"]["Fecha"] = "";
@@ -43,33 +37,42 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsreliquidaciones["Spanish"]["Intereses"] = "Intereses";
 	$fieldToolTipsreliquidaciones["Spanish"]["Intereses"] = "";
 	$placeHoldersreliquidaciones["Spanish"]["Intereses"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["ObliReca"] = "Obli Reca";
-	$fieldToolTipsreliquidaciones["Spanish"]["ObliReca"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["ObliReca"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["ObliNove"] = "Obli Nove";
-	$fieldToolTipsreliquidaciones["Spanish"]["ObliNove"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["ObliNove"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["ObliSald"] = "Obli Sald";
-	$fieldToolTipsreliquidaciones["Spanish"]["ObliSald"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["ObliSald"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["InteReca"] = "Inte Reca";
-	$fieldToolTipsreliquidaciones["Spanish"]["InteReca"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["InteReca"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["InteNove"] = "Inte Nove";
-	$fieldToolTipsreliquidaciones["Spanish"]["InteNove"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["InteNove"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["InteSald"] = "Inte Sald";
-	$fieldToolTipsreliquidaciones["Spanish"]["InteSald"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["InteSald"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["CostReca"] = "Cost Reca";
-	$fieldToolTipsreliquidaciones["Spanish"]["CostReca"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["CostReca"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["CostNove"] = "Cost Nove";
-	$fieldToolTipsreliquidaciones["Spanish"]["CostNove"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["CostNove"] = "";
-	$fieldLabelsreliquidaciones["Spanish"]["CostSald"] = "Cost Sald";
-	$fieldToolTipsreliquidaciones["Spanish"]["CostSald"] = "";
-	$placeHoldersreliquidaciones["Spanish"]["CostSald"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["O__Recaudada"] = "O. Recaudada";
+	$fieldToolTipsreliquidaciones["Spanish"]["O__Recaudada"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["O__Recaudada"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["O__Novedad"] = "O. Novedad";
+	$fieldToolTipsreliquidaciones["Spanish"]["O__Novedad"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["O__Novedad"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["O__Saldo"] = "O. Saldo";
+	$fieldToolTipsreliquidaciones["Spanish"]["O__Saldo"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["O__Saldo"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["I__Recaudados"] = "I. Recaudados";
+	$fieldToolTipsreliquidaciones["Spanish"]["I__Recaudados"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["I__Recaudados"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["I__Novedades"] = "I. Novedades";
+	$fieldToolTipsreliquidaciones["Spanish"]["I__Novedades"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["I__Novedades"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["I__Saldo"] = "I. Saldo";
+	$fieldToolTipsreliquidaciones["Spanish"]["I__Saldo"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["I__Saldo"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["C__Recaudados"] = "C. Recaudados";
+	$fieldToolTipsreliquidaciones["Spanish"]["C__Recaudados"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["C__Recaudados"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["C__Novedad"] = "C. Novedad";
+	$fieldToolTipsreliquidaciones["Spanish"]["C__Novedad"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["C__Novedad"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["C__Saldo"] = "C. Saldo";
+	$fieldToolTipsreliquidaciones["Spanish"]["C__Saldo"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["C__Saldo"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["Saldo_Total"] = "Saldo Total";
+	$fieldToolTipsreliquidaciones["Spanish"]["Saldo_Total"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["Saldo_Total"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["ProcesoId"] = "Proceso Id";
+	$fieldToolTipsreliquidaciones["Spanish"]["ProcesoId"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["ProcesoId"] = "";
+	$fieldLabelsreliquidaciones["Spanish"]["ReliquidacionId"] = "Reliquidacion Id";
+	$fieldToolTipsreliquidaciones["Spanish"]["ReliquidacionId"] = "";
+	$placeHoldersreliquidaciones["Spanish"]["ReliquidacionId"] = "";
 	if (count($fieldToolTipsreliquidaciones["Spanish"]))
 		$tdatareliquidaciones[".isUseToolTips"] = true;
 }
@@ -167,7 +170,7 @@ $tdatareliquidaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdatareliquidaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -193,15 +196,16 @@ $tdatareliquidaciones[".googleLikeFields"][] = "Fecha";
 $tdatareliquidaciones[".googleLikeFields"][] = "Dias";
 $tdatareliquidaciones[".googleLikeFields"][] = "Tasa";
 $tdatareliquidaciones[".googleLikeFields"][] = "Intereses";
-$tdatareliquidaciones[".googleLikeFields"][] = "ObliReca";
-$tdatareliquidaciones[".googleLikeFields"][] = "ObliNove";
-$tdatareliquidaciones[".googleLikeFields"][] = "ObliSald";
-$tdatareliquidaciones[".googleLikeFields"][] = "InteReca";
-$tdatareliquidaciones[".googleLikeFields"][] = "InteNove";
-$tdatareliquidaciones[".googleLikeFields"][] = "InteSald";
-$tdatareliquidaciones[".googleLikeFields"][] = "CostReca";
-$tdatareliquidaciones[".googleLikeFields"][] = "CostNove";
-$tdatareliquidaciones[".googleLikeFields"][] = "CostSald";
+$tdatareliquidaciones[".googleLikeFields"][] = "O. Recaudada";
+$tdatareliquidaciones[".googleLikeFields"][] = "O. Novedad";
+$tdatareliquidaciones[".googleLikeFields"][] = "O. Saldo";
+$tdatareliquidaciones[".googleLikeFields"][] = "I. Recaudados";
+$tdatareliquidaciones[".googleLikeFields"][] = "I. Novedades";
+$tdatareliquidaciones[".googleLikeFields"][] = "I. Saldo";
+$tdatareliquidaciones[".googleLikeFields"][] = "C. Recaudados";
+$tdatareliquidaciones[".googleLikeFields"][] = "C. Novedad";
+$tdatareliquidaciones[".googleLikeFields"][] = "C. Saldo";
+$tdatareliquidaciones[".googleLikeFields"][] = "Saldo Total";
 
 
 
@@ -217,6 +221,7 @@ $tdatareliquidaciones[".geocodingEnabled"] = false;
 
 
 
+$tdatareliquidaciones[".isDisplayLoading"] = true;
 
 $tdatareliquidaciones[".isResizeColumns"] = true;
 
@@ -236,7 +241,7 @@ $tdatareliquidaciones[".strOrderBy"] = $tstrOrderBy;
 $tdatareliquidaciones[".orderindexes"] = array();
 
 
-$tdatareliquidaciones[".sqlHead"] = "SELECT ReliquidacionId,  	ProcesoId,  	Fecha,  	Dias,  	Tasa,  	Intereses,  	ObliReca,  	ObliNove,  	ObliSald,  	InteReca,  	InteNove,  	InteSald,  	CostReca,  	CostNove,  	CostSald";
+$tdatareliquidaciones[".sqlHead"] = "SELECT ReliquidacionId,  	ProcesoId,  	Fecha,  	Dias,  	Tasa,  	FORMAT(Intereses, 'C', 'es-CO') AS Intereses,  	FORMAT(ObliReca, 'C', 'es-CO') AS 'O. Recaudada',   	FORMAT(ObliNove, 'C', 'es-CO') AS 'O. Novedad',  	FORMAT(ObliSald, 'C', 'es-CO') AS 'O. Saldo',  	FORMAT(InteReca,'C', 'es-CO') AS 'I. Recaudados',  	FORMAT(InteNove,'C', 'es-CO') AS 'I. Novedades',  	FORMAT(InteSald,'C', 'es-CO') AS 'I. Saldo',  	FORMAT(CostReca,'C', 'es-CO') AS 'C. Recaudados',  	FORMAT(CostNove,'C','es-CO') AS 'C. Novedad',  	FORMAT(CostSald,'C','es-CO') AS 'C. Saldo',  	FORMAT((CostSald+InteSald+ObliSald),'C','es-CO') AS 'Saldo Total'";
 $tdatareliquidaciones[".sqlFrom"] = "FROM dbo.Reliquidaciones";
 $tdatareliquidaciones[".sqlWhereExpr"] = "";
 $tdatareliquidaciones[".sqlTail"] = "";
@@ -984,9 +989,9 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$fdata["Index"] = 6;
 	$fdata["strName"] = "Intereses";
 	$fdata["GoodName"] = "Intereses";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","Intereses");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -998,7 +1003,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Intereses";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Intereses";
+	$fdata["FullName"] = "FORMAT(Intereses, 'C', 'es-CO')";
 
 	
 	
@@ -1007,7 +1012,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1016,8 +1021,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1063,7 +1067,8 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=19";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1117,27 +1122,26 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 
 	$tdatareliquidaciones["Intereses"] = $fdata;
 		$tdatareliquidaciones[".searchableFields"][] = "Intereses";
-//	ObliReca
+//	O. Recaudada
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 7;
-	$fdata["strName"] = "ObliReca";
-	$fdata["GoodName"] = "ObliReca";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","ObliReca");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "O. Recaudada";
+	$fdata["GoodName"] = "O__Recaudada";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","O__Recaudada");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "ObliReca";
+		$fdata["strField"] = "O. Recaudada";
 
-		$fdata["sourceSingle"] = "ObliReca";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ObliReca";
+	$fdata["FullName"] = "FORMAT(ObliReca, 'C', 'es-CO')";
 
 	
 	
@@ -1146,7 +1150,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1155,8 +1159,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1209,8 +1212,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1254,29 +1256,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["ObliReca"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "ObliReca";
-//	ObliNove
+	$tdatareliquidaciones["O. Recaudada"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "O. Recaudada";
+//	O. Novedad
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 8;
-	$fdata["strName"] = "ObliNove";
-	$fdata["GoodName"] = "ObliNove";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","ObliNove");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "O. Novedad";
+	$fdata["GoodName"] = "O__Novedad";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","O__Novedad");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "ObliNove";
+		$fdata["strField"] = "O. Novedad";
 
-		$fdata["sourceSingle"] = "ObliNove";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ObliNove";
+	$fdata["FullName"] = "FORMAT(ObliNove, 'C', 'es-CO')";
 
 	
 	
@@ -1285,7 +1286,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1294,8 +1295,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1348,8 +1348,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1393,29 +1392,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["ObliNove"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "ObliNove";
-//	ObliSald
+	$tdatareliquidaciones["O. Novedad"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "O. Novedad";
+//	O. Saldo
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 9;
-	$fdata["strName"] = "ObliSald";
-	$fdata["GoodName"] = "ObliSald";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","ObliSald");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "O. Saldo";
+	$fdata["GoodName"] = "O__Saldo";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","O__Saldo");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "ObliSald";
+		$fdata["strField"] = "O. Saldo";
 
-		$fdata["sourceSingle"] = "ObliSald";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ObliSald";
+	$fdata["FullName"] = "FORMAT(ObliSald, 'C', 'es-CO')";
 
 	
 	
@@ -1424,7 +1422,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1433,8 +1431,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1487,8 +1484,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1532,29 +1528,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["ObliSald"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "ObliSald";
-//	InteReca
+	$tdatareliquidaciones["O. Saldo"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "O. Saldo";
+//	I. Recaudados
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 10;
-	$fdata["strName"] = "InteReca";
-	$fdata["GoodName"] = "InteReca";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","InteReca");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "I. Recaudados";
+	$fdata["GoodName"] = "I__Recaudados";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","I__Recaudados");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "InteReca";
+		$fdata["strField"] = "I. Recaudados";
 
-		$fdata["sourceSingle"] = "InteReca";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "InteReca";
+	$fdata["FullName"] = "FORMAT(InteReca,'C', 'es-CO')";
 
 	
 	
@@ -1563,7 +1558,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1572,8 +1567,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1626,8 +1620,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1671,29 +1664,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["InteReca"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "InteReca";
-//	InteNove
+	$tdatareliquidaciones["I. Recaudados"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "I. Recaudados";
+//	I. Novedades
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 11;
-	$fdata["strName"] = "InteNove";
-	$fdata["GoodName"] = "InteNove";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","InteNove");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "I. Novedades";
+	$fdata["GoodName"] = "I__Novedades";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","I__Novedades");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "InteNove";
+		$fdata["strField"] = "I. Novedades";
 
-		$fdata["sourceSingle"] = "InteNove";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "InteNove";
+	$fdata["FullName"] = "FORMAT(InteNove,'C', 'es-CO')";
 
 	
 	
@@ -1702,7 +1694,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1711,8 +1703,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1765,8 +1756,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1810,29 +1800,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["InteNove"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "InteNove";
-//	InteSald
+	$tdatareliquidaciones["I. Novedades"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "I. Novedades";
+//	I. Saldo
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 12;
-	$fdata["strName"] = "InteSald";
-	$fdata["GoodName"] = "InteSald";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","InteSald");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "I. Saldo";
+	$fdata["GoodName"] = "I__Saldo";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","I__Saldo");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "InteSald";
+		$fdata["strField"] = "I. Saldo";
 
-		$fdata["sourceSingle"] = "InteSald";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "InteSald";
+	$fdata["FullName"] = "FORMAT(InteSald,'C', 'es-CO')";
 
 	
 	
@@ -1841,7 +1830,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1850,8 +1839,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -1904,8 +1892,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1949,29 +1936,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["InteSald"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "InteSald";
-//	CostReca
+	$tdatareliquidaciones["I. Saldo"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "I. Saldo";
+//	C. Recaudados
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 13;
-	$fdata["strName"] = "CostReca";
-	$fdata["GoodName"] = "CostReca";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","CostReca");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "C. Recaudados";
+	$fdata["GoodName"] = "C__Recaudados";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","C__Recaudados");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "CostReca";
+		$fdata["strField"] = "C. Recaudados";
 
-		$fdata["sourceSingle"] = "CostReca";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CostReca";
+	$fdata["FullName"] = "FORMAT(CostReca,'C', 'es-CO')";
 
 	
 	
@@ -1980,7 +1966,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -1989,8 +1975,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -2043,8 +2028,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -2088,29 +2072,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["CostReca"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "CostReca";
-//	CostNove
+	$tdatareliquidaciones["C. Recaudados"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "C. Recaudados";
+//	C. Novedad
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 14;
-	$fdata["strName"] = "CostNove";
-	$fdata["GoodName"] = "CostNove";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","CostNove");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "C. Novedad";
+	$fdata["GoodName"] = "C__Novedad";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","C__Novedad");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "CostNove";
+		$fdata["strField"] = "C. Novedad";
 
-		$fdata["sourceSingle"] = "CostNove";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CostNove";
+	$fdata["FullName"] = "FORMAT(CostNove,'C','es-CO')";
 
 	
 	
@@ -2119,7 +2102,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -2128,8 +2111,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -2182,8 +2164,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -2227,29 +2208,28 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["CostNove"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "CostNove";
-//	CostSald
+	$tdatareliquidaciones["C. Novedad"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "C. Novedad";
+//	C. Saldo
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 15;
-	$fdata["strName"] = "CostSald";
-	$fdata["GoodName"] = "CostSald";
-	$fdata["ownerTable"] = "dbo.Reliquidaciones";
-	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","CostSald");
-	$fdata["FieldType"] = 6;
+	$fdata["strName"] = "C. Saldo";
+	$fdata["GoodName"] = "C__Saldo";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","C__Saldo");
+	$fdata["FieldType"] = 202;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "CostSald";
+		$fdata["strField"] = "C. Saldo";
 
-		$fdata["sourceSingle"] = "CostSald";
-
+	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CostSald";
+	$fdata["FullName"] = "FORMAT(CostSald,'C','es-CO')";
 
 	
 	
@@ -2258,7 +2238,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -2267,8 +2247,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -2321,8 +2300,7 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -2366,8 +2344,144 @@ $tdatareliquidaciones[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatareliquidaciones["CostSald"] = $fdata;
-		$tdatareliquidaciones[".searchableFields"][] = "CostSald";
+	$tdatareliquidaciones["C. Saldo"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "C. Saldo";
+//	Saldo Total
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "Saldo Total";
+	$fdata["GoodName"] = "Saldo_Total";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Reliquidaciones","Saldo_Total");
+	$fdata["FieldType"] = 202;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Saldo Total";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "FORMAT((CostSald+InteSald+ObliSald),'C','es-CO')";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatareliquidaciones["Saldo Total"] = $fdata;
+		$tdatareliquidaciones[".searchableFields"][] = "Saldo Total";
 
 
 $tables_data["dbo.Reliquidaciones"]=&$tdatareliquidaciones;
@@ -2430,7 +2544,7 @@ function createSqlQuery_reliquidaciones()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ReliquidacionId,  	ProcesoId,  	Fecha,  	Dias,  	Tasa,  	Intereses,  	ObliReca,  	ObliNove,  	ObliSald,  	InteReca,  	InteNove,  	InteSald,  	CostReca,  	CostNove,  	CostSald";
+$proto0["m_strFieldList"] = "ReliquidacionId,  	ProcesoId,  	Fecha,  	Dias,  	Tasa,  	FORMAT(Intereses, 'C', 'es-CO') AS Intereses,  	FORMAT(ObliReca, 'C', 'es-CO') AS 'O. Recaudada',   	FORMAT(ObliNove, 'C', 'es-CO') AS 'O. Novedad',  	FORMAT(ObliSald, 'C', 'es-CO') AS 'O. Saldo',  	FORMAT(InteReca,'C', 'es-CO') AS 'I. Recaudados',  	FORMAT(InteNove,'C', 'es-CO') AS 'I. Novedades',  	FORMAT(InteSald,'C', 'es-CO') AS 'I. Saldo',  	FORMAT(CostReca,'C', 'es-CO') AS 'C. Recaudados',  	FORMAT(CostNove,'C','es-CO') AS 'C. Novedad',  	FORMAT(CostSald,'C','es-CO') AS 'C. Saldo',  	FORMAT((CostSald+InteSald+ObliSald),'C','es-CO') AS 'Saldo Total'";
 $proto0["m_strFrom"] = "FROM dbo.Reliquidaciones";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2541,190 +2655,369 @@ $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Intereses",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+			$proto17=array();
+$proto17["m_functiontype"] = "SQLF_CUSTOM";
+$proto17["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Intereses"
 ));
 
-$proto16["m_sql"] = "Intereses";
+$proto17["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto17["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto17["m_arguments"][]=$obj;
+$proto17["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto17);
+
+$proto16["m_sql"] = "FORMAT(Intereses, 'C', 'es-CO')";
 $proto16["m_srcTableName"] = "dbo.Reliquidaciones";
 $proto16["m_expr"]=$obj;
-$proto16["m_alias"] = "";
+$proto16["m_alias"] = "Intereses";
 $obj = new SQLFieldListItem($proto16);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto18=array();
-			$obj = new SQLField(array(
-	"m_strName" => "ObliReca",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+						$proto21=array();
+			$proto22=array();
+$proto22["m_functiontype"] = "SQLF_CUSTOM";
+$proto22["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "ObliReca"
 ));
 
-$proto18["m_sql"] = "ObliReca";
-$proto18["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto18["m_expr"]=$obj;
-$proto18["m_alias"] = "";
-$obj = new SQLFieldListItem($proto18);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto20=array();
-			$obj = new SQLField(array(
-	"m_strName" => "ObliNove",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+$proto22["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
 ));
 
-$proto20["m_sql"] = "ObliNove";
-$proto20["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto20["m_expr"]=$obj;
-$proto20["m_alias"] = "";
-$obj = new SQLFieldListItem($proto20);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto22=array();
-			$obj = new SQLField(array(
-	"m_strName" => "ObliSald",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+$proto22["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
 ));
 
-$proto22["m_sql"] = "ObliSald";
-$proto22["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto22["m_expr"]=$obj;
-$proto22["m_alias"] = "";
-$obj = new SQLFieldListItem($proto22);
+$proto22["m_arguments"][]=$obj;
+$proto22["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto22);
 
-$proto0["m_fieldlist"][]=$obj;
-						$proto24=array();
-			$obj = new SQLField(array(
-	"m_strName" => "InteReca",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
-));
-
-$proto24["m_sql"] = "InteReca";
-$proto24["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto24["m_expr"]=$obj;
-$proto24["m_alias"] = "";
-$obj = new SQLFieldListItem($proto24);
+$proto21["m_sql"] = "FORMAT(ObliReca, 'C', 'es-CO')";
+$proto21["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto21["m_expr"]=$obj;
+$proto21["m_alias"] = "O. Recaudada";
+$obj = new SQLFieldListItem($proto21);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
-			$obj = new SQLField(array(
-	"m_strName" => "InteNove",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+			$proto27=array();
+$proto27["m_functiontype"] = "SQLF_CUSTOM";
+$proto27["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "ObliNove"
 ));
 
-$proto26["m_sql"] = "InteNove";
+$proto27["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto27["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto27["m_arguments"][]=$obj;
+$proto27["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto27);
+
+$proto26["m_sql"] = "FORMAT(ObliNove, 'C', 'es-CO')";
 $proto26["m_srcTableName"] = "dbo.Reliquidaciones";
 $proto26["m_expr"]=$obj;
-$proto26["m_alias"] = "";
+$proto26["m_alias"] = "O. Novedad";
 $obj = new SQLFieldListItem($proto26);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto28=array();
-			$obj = new SQLField(array(
-	"m_strName" => "InteSald",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+						$proto31=array();
+			$proto32=array();
+$proto32["m_functiontype"] = "SQLF_CUSTOM";
+$proto32["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "ObliSald"
 ));
 
-$proto28["m_sql"] = "InteSald";
-$proto28["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto28["m_expr"]=$obj;
-$proto28["m_alias"] = "";
-$obj = new SQLFieldListItem($proto28);
+$proto32["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto32["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto32["m_arguments"][]=$obj;
+$proto32["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto32);
+
+$proto31["m_sql"] = "FORMAT(ObliSald, 'C', 'es-CO')";
+$proto31["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto31["m_expr"]=$obj;
+$proto31["m_alias"] = "O. Saldo";
+$obj = new SQLFieldListItem($proto31);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto30=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CostReca",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+						$proto36=array();
+			$proto37=array();
+$proto37["m_functiontype"] = "SQLF_CUSTOM";
+$proto37["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "InteReca"
 ));
 
-$proto30["m_sql"] = "CostReca";
-$proto30["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto30["m_expr"]=$obj;
-$proto30["m_alias"] = "";
-$obj = new SQLFieldListItem($proto30);
+$proto37["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto37["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto37["m_arguments"][]=$obj;
+$proto37["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto37);
+
+$proto36["m_sql"] = "FORMAT(InteReca,'C', 'es-CO')";
+$proto36["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto36["m_expr"]=$obj;
+$proto36["m_alias"] = "I. Recaudados";
+$obj = new SQLFieldListItem($proto36);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto32=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CostNove",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+						$proto41=array();
+			$proto42=array();
+$proto42["m_functiontype"] = "SQLF_CUSTOM";
+$proto42["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "InteNove"
 ));
 
-$proto32["m_sql"] = "CostNove";
-$proto32["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto32["m_expr"]=$obj;
-$proto32["m_alias"] = "";
-$obj = new SQLFieldListItem($proto32);
+$proto42["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto42["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto42["m_arguments"][]=$obj;
+$proto42["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto42);
+
+$proto41["m_sql"] = "FORMAT(InteNove,'C', 'es-CO')";
+$proto41["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto41["m_expr"]=$obj;
+$proto41["m_alias"] = "I. Novedades";
+$obj = new SQLFieldListItem($proto41);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto34=array();
-			$obj = new SQLField(array(
-	"m_strName" => "CostSald",
-	"m_strTable" => "dbo.Reliquidaciones",
-	"m_srcTableName" => "dbo.Reliquidaciones"
+						$proto46=array();
+			$proto47=array();
+$proto47["m_functiontype"] = "SQLF_CUSTOM";
+$proto47["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "InteSald"
 ));
 
-$proto34["m_sql"] = "CostSald";
-$proto34["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto34["m_expr"]=$obj;
-$proto34["m_alias"] = "";
-$obj = new SQLFieldListItem($proto34);
+$proto47["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto47["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto47["m_arguments"][]=$obj;
+$proto47["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto47);
+
+$proto46["m_sql"] = "FORMAT(InteSald,'C', 'es-CO')";
+$proto46["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto46["m_expr"]=$obj;
+$proto46["m_alias"] = "I. Saldo";
+$obj = new SQLFieldListItem($proto46);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto51=array();
+			$proto52=array();
+$proto52["m_functiontype"] = "SQLF_CUSTOM";
+$proto52["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "CostReca"
+));
+
+$proto52["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto52["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto52["m_arguments"][]=$obj;
+$proto52["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto52);
+
+$proto51["m_sql"] = "FORMAT(CostReca,'C', 'es-CO')";
+$proto51["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto51["m_expr"]=$obj;
+$proto51["m_alias"] = "C. Recaudados";
+$obj = new SQLFieldListItem($proto51);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto56=array();
+			$proto57=array();
+$proto57["m_functiontype"] = "SQLF_CUSTOM";
+$proto57["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "CostNove"
+));
+
+$proto57["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto57["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto57["m_arguments"][]=$obj;
+$proto57["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto57);
+
+$proto56["m_sql"] = "FORMAT(CostNove,'C','es-CO')";
+$proto56["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto56["m_expr"]=$obj;
+$proto56["m_alias"] = "C. Novedad";
+$obj = new SQLFieldListItem($proto56);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto61=array();
+			$proto62=array();
+$proto62["m_functiontype"] = "SQLF_CUSTOM";
+$proto62["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "CostSald"
+));
+
+$proto62["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto62["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto62["m_arguments"][]=$obj;
+$proto62["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto62);
+
+$proto61["m_sql"] = "FORMAT(CostSald,'C','es-CO')";
+$proto61["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto61["m_expr"]=$obj;
+$proto61["m_alias"] = "C. Saldo";
+$obj = new SQLFieldListItem($proto61);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto66=array();
+			$proto67=array();
+$proto67["m_functiontype"] = "SQLF_CUSTOM";
+$proto67["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "(CostSald+InteSald+ObliSald)"
+));
+
+$proto67["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C'"
+));
+
+$proto67["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto67["m_arguments"][]=$obj;
+$proto67["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto67);
+
+$proto66["m_sql"] = "FORMAT((CostSald+InteSald+ObliSald),'C','es-CO')";
+$proto66["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto66["m_expr"]=$obj;
+$proto66["m_alias"] = "Saldo Total";
+$obj = new SQLFieldListItem($proto66);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto36=array();
-$proto36["m_link"] = "SQLL_MAIN";
-			$proto37=array();
-$proto37["m_strName"] = "dbo.Reliquidaciones";
-$proto37["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto37["m_columns"] = array();
-$proto37["m_columns"][] = "ReliquidacionId";
-$proto37["m_columns"][] = "ProcesoId";
-$proto37["m_columns"][] = "Fecha";
-$proto37["m_columns"][] = "Dias";
-$proto37["m_columns"][] = "Tasa";
-$proto37["m_columns"][] = "Intereses";
-$proto37["m_columns"][] = "ObliReca";
-$proto37["m_columns"][] = "ObliNove";
-$proto37["m_columns"][] = "ObliSald";
-$proto37["m_columns"][] = "InteReca";
-$proto37["m_columns"][] = "InteNove";
-$proto37["m_columns"][] = "InteSald";
-$proto37["m_columns"][] = "CostReca";
-$proto37["m_columns"][] = "CostNove";
-$proto37["m_columns"][] = "CostSald";
-$obj = new SQLTable($proto37);
+												$proto71=array();
+$proto71["m_link"] = "SQLL_MAIN";
+			$proto72=array();
+$proto72["m_strName"] = "dbo.Reliquidaciones";
+$proto72["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto72["m_columns"] = array();
+$proto72["m_columns"][] = "ReliquidacionId";
+$proto72["m_columns"][] = "ProcesoId";
+$proto72["m_columns"][] = "Fecha";
+$proto72["m_columns"][] = "Dias";
+$proto72["m_columns"][] = "Tasa";
+$proto72["m_columns"][] = "Intereses";
+$proto72["m_columns"][] = "ObliReca";
+$proto72["m_columns"][] = "ObliNove";
+$proto72["m_columns"][] = "ObliSald";
+$proto72["m_columns"][] = "InteReca";
+$proto72["m_columns"][] = "InteNove";
+$proto72["m_columns"][] = "InteSald";
+$proto72["m_columns"][] = "CostReca";
+$proto72["m_columns"][] = "CostNove";
+$proto72["m_columns"][] = "CostSald";
+$obj = new SQLTable($proto72);
 
-$proto36["m_table"] = $obj;
-$proto36["m_sql"] = "dbo.Reliquidaciones";
-$proto36["m_alias"] = "";
-$proto36["m_srcTableName"] = "dbo.Reliquidaciones";
-$proto38=array();
-$proto38["m_sql"] = "";
-$proto38["m_uniontype"] = "SQLL_UNKNOWN";
+$proto71["m_table"] = $obj;
+$proto71["m_sql"] = "dbo.Reliquidaciones";
+$proto71["m_alias"] = "";
+$proto71["m_srcTableName"] = "dbo.Reliquidaciones";
+$proto73=array();
+$proto73["m_sql"] = "";
+$proto73["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto38["m_column"]=$obj;
-$proto38["m_contained"] = array();
-$proto38["m_strCase"] = "";
-$proto38["m_havingmode"] = false;
-$proto38["m_inBrackets"] = false;
-$proto38["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto38);
+$proto73["m_column"]=$obj;
+$proto73["m_contained"] = array();
+$proto73["m_strCase"] = "";
+$proto73["m_havingmode"] = false;
+$proto73["m_inBrackets"] = false;
+$proto73["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto73);
 
-$proto36["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto36);
+$proto71["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto71);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2740,7 +3033,7 @@ $queryData_reliquidaciones = createSqlQuery_reliquidaciones();
 	
 		;
 
-															
+																
 
 $tdatareliquidaciones[".sqlquery"] = $queryData_reliquidaciones;
 
