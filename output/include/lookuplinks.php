@@ -201,13 +201,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.tipoCobro"]["chequeos.Tipo"] = array();
 		}
 		$lookupTableLinks["dbo.tipoCobro"]["chequeos.Tipo"]["edit"] = array("table" => "dbo.Chequeos", "field" => "Tipo", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
-			$lookupTableLinks["dbo.CarteraTipos"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["chequeos.CarteraTipoId"] )) {
-			$lookupTableLinks["dbo.CarteraTipos"]["chequeos.CarteraTipoId"] = array();
-		}
-		$lookupTableLinks["dbo.CarteraTipos"]["chequeos.CarteraTipoId"]["edit"] = array("table" => "dbo.Chequeos", "field" => "CarteraTipoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Naturalezas"] ) ) {
 			$lookupTableLinks["dbo.Naturalezas"] = array();
 		}

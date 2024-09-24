@@ -375,7 +375,7 @@ $tdataprocesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -12862,41 +12862,11 @@ $detailsTablesData["dbo.Procesos"] = array();
 				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Reliquidaciones
-	
-	
-
-		$dIndex = 9;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Reliquidaciones";
-		$detailsParam["dOriginalTable"] = "dbo.Reliquidaciones";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "reliquidaciones";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Reliquidaciones");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Procesos"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
 //	dbo.Correspondencias
 	
 	
 
-		$dIndex = 10;
+		$dIndex = 9;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Correspondencias";
 		$detailsParam["dOriginalTable"] = "dbo.Correspondencias";
@@ -12926,7 +12896,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 11;
+		$dIndex = 10;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Liquidaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Liquidaciones";
@@ -12956,7 +12926,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 12;
+		$dIndex = 11;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Fechas";
 		$detailsParam["dOriginalTable"] = "dbo.Fechas";
@@ -12986,7 +12956,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 13;
+		$dIndex = 12;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.AuditoriasProcesosView";
 		$detailsParam["dOriginalTable"] = "dbo.AuditoriasProcesosView";
@@ -12997,6 +12967,36 @@ $detailsTablesData["dbo.Procesos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "auditoriasprocesosview";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_AuditoriasProcesosView");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Procesos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"][]="ProcesoId";
+
+				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
+//	dbo.Reliquidaciones
+	
+	
+
+		$dIndex = 13;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Reliquidaciones";
+		$detailsParam["dOriginalTable"] = "dbo.Reliquidaciones";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "reliquidaciones";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Reliquidaciones");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

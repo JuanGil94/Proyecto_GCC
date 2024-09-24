@@ -327,6 +327,9 @@ pdfDocument = {
 			"stack": [
 		
 				
+			{"hidden":"{$item_hide_integrated_edit_field31}","stack":[{"text":"{$jslabel dbo_Chequeos FechaPago }","bold":true},{"text":{$FechaPago_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Chequeos Providencia }","bold":true},{"text":{$Providencia_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

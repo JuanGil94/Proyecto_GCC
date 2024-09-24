@@ -717,6 +717,18 @@ if( $eventId == 'Ejecutoria_event' && "dbo.Chequeos" == $table )
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
 	fieldEventHandler_Ejecutoria_event( $params );
 }
+if( $eventId == 'TramiteId_event' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_TramiteId_event( $params );
+}
+if( $eventId == 'ConceptoId_event' && "dbo.Chequeos" == $table )
+{
+	require_once("include/chequeos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Chequeos");
+	fieldEventHandler_ConceptoId_event( $params );
+}
 
 
 
@@ -773,8 +785,9 @@ function buttonHandler_New_Button($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	$data = $button->getCurrentRecord();
 $params["ChequeoId"]=$data["ChequeoId"];
+$abogadoId=$data["AbogadoId"];
 if ($data["Plazo"]<now()){
-if ($data["TramiteId"]!= 1){
+if ($data["TramiteId"]== 2){
 $carteraTipoId=1;
 $rs=DB::Query("declare @p2 int
 set @p2=0
@@ -844,7 +857,7 @@ if ($result["total"]!=null){
 		} 
 		else {
 			 // Hubo un error en la ejecución de la consulta
-			 echo "Error al ejecutar la consulta: " . DB::LastError();
+			 echo "Error al ejecutar la consulta 1: " . DB::LastError();
 			 exit();
 		}
 		}
@@ -926,7 +939,7 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 						while( $data = $rs->fetchAssoc() )
 						{
 							$procesoId=$data["ProcesoId"];
-							$abogadoId=$data["AbogadoId"];
+							//$abogadoId=$data["AbogadoId"];
 						}
 				DB::Exec("UPDATE Procesos SET Dias=ISNULL(dbo.InterrupcionesSumaView.Dias, 0) + dbo.Suspensiones_GetBy_Periodo(CASE WHEN Procesos.Incumplimiento IS NULL OR
                          Procesos.Incumplimiento < Procesos.Acuerdo OR
@@ -945,8 +958,9 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 					//echo "El insert en reasiganciones se realizo correctamnete";
 				}
 				else{
-				echo "Error al ejecutar la consulta: " . DB::LastError();
-				return false;
+				echo "Error al ejecutar la consulta2: " . DB::LastError();
+				$result["reas"]=1;
+				exit();
 				}
 				$path="classes/".$procesoId;
 				$path1="classes/".$params["ChequeoId"];
@@ -970,7 +984,7 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 			//echo "Se realiza la insercion del Proceso con exito";
 		} else {
 			 // Hubo un error en la ejecución de la consulta
-			 echo "Error al ejecutar la consulta: " . DB::LastError();
+			 echo "Error al ejecutar la consulta3: " . DB::LastError();
 			 exit();
 		}
 		$rs8 = DB::Select("Procesos", "ChequeoId=".$params["ChequeoId"]);
@@ -997,7 +1011,7 @@ if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and
 			//echo "Se realiza la insercion del Proceso con exito";
 					} else {
 							// Hubo un error en la ejecución de la consulta
-							echo "Error al ejecutar la consulta: " . DB::LastError();
+							echo "Error al ejecutar la consulta4: " . DB::LastError();
 								exit();
 						}
 			}
@@ -1121,7 +1135,7 @@ function buttonHandler_New_Button1($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	include_once (getabspath("classes/pruebaJuan.php"));
+	include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
 $meses = $recalcular->Calcular();
 $result["total"]=$recalcular->getSuma();;
@@ -1580,7 +1594,7 @@ function buttonHandler_Liquidar($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	include_once (getabspath("classes/pruebaJuan.php"));
+	include_once (getabspath("classes/calcIntereses.php"));
 include_once (getabspath("classes/acuerdoPago.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
 //global $pageObject;
@@ -1912,16 +1926,10 @@ function buttonHandler_New_Button7($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	/*
-include_once (getabspath("classes/upload.php"));
-$archivo = $_FILES['archivo'];
-$nombre = $archivo['name'];
-$tipo = $archivo['type'];
-
-print_r($archivo);
-$objeto=new Files ($params["ProcesoId"]);
-echo $objeto->upload();
-*/;
+	$data = $button->getCurrentRecord();
+$result["ProcesoId"]=$data["ProcesoId"];
+/////////////new//////////////////
+// Put your code here.;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -2276,7 +2284,7 @@ function buttonHandler_CierreMes($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	include_once (getabspath("classes/pruebaJuan.php"));
+	include_once (getabspath("classes/calcIntereses.php"));
 ini_set('max_execution_time', 0); //quitar el timeout de ejecucion de script
 $consulta=DB::Query("SELECT Cierre FROM Empresas WHERE EmpresaId = 1");
         while($date=$consulta->fetchAssoc()){
@@ -5946,6 +5954,64 @@ $day = $dateComponents[2];
 $result["anno"]=$year ;
 $result["mes"]=intval($month);
 $result["dia"]=intval($day);
+}
+
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_TramiteId_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	if ($params['value']==3 || $params['value']==4 || $params['value']==5){
+	$result["flag"]=1;
+};
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_ConceptoId_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	if ($params['value']==5){
+	$result["flag"]=1;
 }
 
 ;

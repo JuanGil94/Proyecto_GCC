@@ -199,6 +199,9 @@ pdfDocument = {
 										{BEGIN col_grid_44}
 					"%",
 					{END col_grid_44}
+										{BEGIN col_grid_45}
+					"%",
+					{END col_grid_45}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1629,6 +1632,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field43}
+																							{BEGIN cellblock_grid_headcell_field44}
+{
+	cellId: 'headcell_field44',
+	col:0,
+	row:0,
+			fieldName: 'FechaPago',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos FechaPago }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$FechaPago_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field44}
 											],
 				{END row_grid_0}
 		
@@ -2942,6 +2974,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field43}
+																							{BEGIN cellblock_grid_cell_field44}
+{
+	cellId: 'cell_field44',
+	col:0,
+	row:0,
+			fieldName: 'FechaPago',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$FechaPago_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$FechaPago_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field44}
 											],
 				{END row_grid_1}
 		
@@ -4121,6 +4182,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field43}
+																							{BEGIN cellblock_grid_footcell_field44}
+{
+	cellId: 'footcell_field44',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field44}
 											],
 				{END row_grid_2}
 		

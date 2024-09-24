@@ -134,7 +134,7 @@ $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios[".isUseAj
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios[".ajaxCodeSnippetAdded"] = false;
 

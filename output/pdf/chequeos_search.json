@@ -297,6 +297,9 @@ pdfDocument = {
 				
 			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_integrated_search_field43}"},
 				
+				
+			{"text":{$FechaPago_pdfvalue},"hidden":"{$item_hide_integrated_search_field44}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -199,6 +199,9 @@ pdfDocument = {
 										{BEGIN col_grid_44}
 					"%",
 					{END col_grid_44}
+										{BEGIN col_grid_45}
+					"%",
+					{END col_grid_45}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -369,7 +372,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos ConceptoId }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos ConceptoId }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -398,7 +401,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos AbogadoId }","hidden":"{$item_hide_simple_grid_field45}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos AbogadoId }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -427,7 +430,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Fecha }","hidden":"{$item_hide_simple_grid_field46}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Fecha }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -456,7 +459,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos DespachoId }","hidden":"{$item_hide_simple_grid_field47}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos DespachoId }","hidden":"{$item_hide_simple_grid_field48}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -485,7 +488,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Origen }","hidden":"{$item_hide_simple_grid_field48}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Origen }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -514,7 +517,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Providencia }","hidden":"{$item_hide_simple_grid_field49}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Providencia }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -543,7 +546,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Ejecutoria }","hidden":"{$item_hide_simple_grid_field50}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Ejecutoria }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -572,7 +575,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos PrimeraCopia }","hidden":"{$item_hide_simple_grid_field51}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos PrimeraCopia }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -601,7 +604,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Autentica }","hidden":"{$item_hide_simple_grid_field52}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Autentica }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -630,7 +633,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos PrestaMeritoEjecutivo }","hidden":"{$item_hide_simple_grid_field53}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos PrestaMeritoEjecutivo }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -659,7 +662,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Clara }","hidden":"{$item_hide_simple_grid_field54}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Clara }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -688,7 +691,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Expresa }","hidden":"{$item_hide_simple_grid_field55}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Expresa }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -717,7 +720,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos ActualmenteExigible }","hidden":"{$item_hide_simple_grid_field56}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos ActualmenteExigible }","hidden":"{$item_hide_simple_grid_field57}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -746,7 +749,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos CompetenciaDEAJ }","hidden":"{$item_hide_simple_grid_field57}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos CompetenciaDEAJ }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -775,7 +778,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos FaltaRequisitos }","hidden":"{$item_hide_simple_grid_field58}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos FaltaRequisitos }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -804,7 +807,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos FaltaCompetencia }","hidden":"{$item_hide_simple_grid_field59}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos FaltaCompetencia }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -833,7 +836,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos PorPrescripcion }","hidden":"{$item_hide_simple_grid_field60}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos PorPrescripcion }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -862,7 +865,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos SeccionalId }","hidden":"{$item_hide_simple_grid_field61}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos SeccionalId }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -891,7 +894,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Folios }","hidden":"{$item_hide_simple_grid_field62}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Folios }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -920,7 +923,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos SeccionalIdDestino }","hidden":"{$item_hide_simple_grid_field63}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos SeccionalIdDestino }","hidden":"{$item_hide_simple_grid_field64}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -949,7 +952,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Observaciones }","hidden":"{$item_hide_simple_grid_field64}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Observaciones }","hidden":"{$item_hide_simple_grid_field65}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -978,7 +981,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Procesado }","hidden":"{$item_hide_simple_grid_field65}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Procesado }","hidden":"{$item_hide_simple_grid_field66}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1007,7 +1010,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Tipo }","hidden":"{$item_hide_simple_grid_field66}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Tipo }","hidden":"{$item_hide_simple_grid_field67}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1036,7 +1039,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos FechaSancion }","hidden":"{$item_hide_simple_grid_field67}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos FechaSancion }","hidden":"{$item_hide_simple_grid_field68}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1065,7 +1068,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Cantidad }","hidden":"{$item_hide_simple_grid_field68}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Cantidad }","hidden":"{$item_hide_simple_grid_field69}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1094,7 +1097,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Obligacion }","hidden":"{$item_hide_simple_grid_field69}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Obligacion }","hidden":"{$item_hide_simple_grid_field70}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1123,7 +1126,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Costas }","hidden":"{$item_hide_simple_grid_field70}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Costas }","hidden":"{$item_hide_simple_grid_field71}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1152,7 +1155,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Remisorio }","hidden":"{$item_hide_simple_grid_field71}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Remisorio }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1181,7 +1184,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field72}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos CarteraTipoId }","hidden":"{$item_hide_simple_grid_field73}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1210,7 +1213,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos MinJusticia }","hidden":"{$item_hide_simple_grid_field73}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos MinJusticia }","hidden":"{$item_hide_simple_grid_field74}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1239,7 +1242,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Aprobado }","hidden":"{$item_hide_simple_grid_field74}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Aprobado }","hidden":"{$item_hide_simple_grid_field75}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1268,7 +1271,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos AprobadoPor }","hidden":"{$item_hide_simple_grid_field75}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos AprobadoPor }","hidden":"{$item_hide_simple_grid_field76}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1297,7 +1300,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos FechaAprobacion }","hidden":"{$item_hide_simple_grid_field76}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos FechaAprobacion }","hidden":"{$item_hide_simple_grid_field77}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1326,7 +1329,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Plazo }","hidden":"{$item_hide_simple_grid_field77}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Plazo }","hidden":"{$item_hide_simple_grid_field78}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1355,7 +1358,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos NaturalezaId }","hidden":"{$item_hide_simple_grid_field78}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos NaturalezaId }","hidden":"{$item_hide_simple_grid_field79}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1384,7 +1387,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Sigobius }","hidden":"{$item_hide_simple_grid_field79}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Sigobius }","hidden":"{$item_hide_simple_grid_field80}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1413,7 +1416,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Monto }","hidden":"{$item_hide_simple_grid_field80}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Monto }","hidden":"{$item_hide_simple_grid_field81}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1442,7 +1445,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos TramiteId }","hidden":"{$item_hide_simple_grid_field81}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos TramiteId }","hidden":"{$item_hide_simple_grid_field82}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1471,7 +1474,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Fisico }","hidden":"{$item_hide_simple_grid_field82}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Fisico }","hidden":"{$item_hide_simple_grid_field83}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1500,7 +1503,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Digital }","hidden":"{$item_hide_simple_grid_field83}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Digital }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1529,7 +1532,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos ChequeoId }","hidden":"{$item_hide_simple_grid_field84}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos ChequeoId }","hidden":"{$item_hide_simple_grid_field85}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1558,7 +1561,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos CantidadLetras }","hidden":"{$item_hide_simple_grid_field85}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos CantidadLetras }","hidden":"{$item_hide_simple_grid_field86}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1587,7 +1590,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","hidden":"{$item_hide_simple_grid_field86}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos ObligacionLetras }","hidden":"{$item_hide_simple_grid_field87}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1616,7 +1619,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Chequeos Dias }","hidden":"{$item_hide_simple_grid_field87}","bold":true},
+			{"text":"{$jslabel dbo_Chequeos Dias }","hidden":"{$item_hide_simple_grid_field88}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1626,6 +1629,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field43}
+																							{BEGIN cellblock_grid_headcell_field44}
+{
+	cellId: 'headcell_field44',
+	col:0,
+	row:0,
+			fieldName: 'FechaPago',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Chequeos FechaPago }","hidden":"{$item_hide_simple_grid_field89}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$FechaPago_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field44}
 											],
 				{END row_grid_0}
 		
@@ -2939,6 +2971,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field43}
+																							{BEGIN cellblock_grid_cell_field44}
+{
+	cellId: 'cell_field44',
+	col:0,
+	row:0,
+			fieldName: 'FechaPago',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$FechaPago_pdfvalue},"hidden":"{$item_hide_simple_grid_field44}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$FechaPago_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field44}
 											],
 				{END row_grid_1}
 		
@@ -4118,6 +4179,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field43}
+																							{BEGIN cellblock_grid_footcell_field44}
+{
+	cellId: 'footcell_field44',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field44}
 											],
 				{END row_grid_2}
 		

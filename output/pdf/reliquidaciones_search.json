@@ -166,12 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$ReliquidacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
 			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
@@ -184,31 +178,40 @@ pdfDocument = {
 			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"text":{$ObliReca_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+			{"text":{$O__Recaudada_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$ObliNove_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+			{"text":{$O__Novedad_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"text":{$ObliSald_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+			{"text":{$O__Saldo_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$InteReca_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+			{"text":{$I__Recaudados_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
-			{"text":{$InteNove_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+			{"text":{$I__Novedades_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 				
-			{"text":{$InteSald_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+			{"text":{$I__Saldo_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				
-			{"text":{$CostReca_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+			{"text":{$C__Recaudados_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
 				
 				
-			{"text":{$CostNove_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+			{"text":{$C__Novedad_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
 				
-			{"text":{$CostSald_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+			{"text":{$C__Saldo_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$Saldo_Total_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$ReliquidacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
 				
 		  ],
   "border": [ false, false, false, false ],

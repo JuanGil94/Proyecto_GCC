@@ -1,5 +1,5 @@
 <?php
-include_once (getabspath("pruebaJuan.php"));
+include_once (getabspath("calcIntereses.php"));
 include_once (getabspath("../include/dbcommon.php"));
 //require_once("../include/dbcommon.php");
 class coreOficios {
