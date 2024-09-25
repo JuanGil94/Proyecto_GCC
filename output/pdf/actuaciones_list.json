@@ -202,6 +202,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_update_selected}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -230,9 +233,6 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_columns_control}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -2891,5 +2891,109 @@ function getMenuNodes_main($menuNodesObject)
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "112";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.Motivos1";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-fire";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Motivos1";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "113";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.Etapas1";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-barcode";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Etapas1";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "114";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.Estados1";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-earphone";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Estados1";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "115";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "dbo.Aplazamientos";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Aplazamientos";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
 }
 ?>

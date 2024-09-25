@@ -740,6 +740,14 @@ class Chart
 			return true;
 		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.Motivos" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Etapas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Estados" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Aplazamientos" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

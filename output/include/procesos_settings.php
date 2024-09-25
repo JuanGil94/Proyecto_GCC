@@ -375,7 +375,7 @@ $tdataprocesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -13179,6 +13179,42 @@ $masterTablesData["dbo.Procesos"] = array();
 	$masterTablesData["dbo.Procesos"][8]["masterKeys"][]="MotivoId";
 				$masterTablesData["dbo.Procesos"][8]["detailKeys"] = array();
 	$masterTablesData["dbo.Procesos"][8]["detailKeys"][]="MotivoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Motivos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Motivos1";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "motivos1";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Procesos"][9] = $masterParams;
+				$masterTablesData["dbo.Procesos"][9]["masterKeys"] = array();
+	$masterTablesData["dbo.Procesos"][9]["masterKeys"][]="MotivoId";
+				$masterTablesData["dbo.Procesos"][9]["detailKeys"] = array();
+	$masterTablesData["dbo.Procesos"][9]["detailKeys"][]="MotivoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Estados";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Estados1";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "estados1";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Procesos"][10] = $masterParams;
+				$masterTablesData["dbo.Procesos"][10]["masterKeys"] = array();
+	$masterTablesData["dbo.Procesos"][10]["masterKeys"][]="EstadoId";
+				$masterTablesData["dbo.Procesos"][10]["detailKeys"] = array();
+	$masterTablesData["dbo.Procesos"][10]["detailKeys"][]="EstadoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

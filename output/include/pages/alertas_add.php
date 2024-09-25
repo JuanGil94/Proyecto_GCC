@@ -1,5 +1,7 @@
 <?php
-			$optionsArray = array( 'master' => array( 'dbo.AlertasTipos' => array( 'preview' => false ),
+			$optionsArray = array( 'details' => array( 'dbo.Aplazamientos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'master' => array( 'dbo.AlertasTipos' => array( 'preview' => false ),
 'dbo.Actuaciones' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'AlertaTipoId',

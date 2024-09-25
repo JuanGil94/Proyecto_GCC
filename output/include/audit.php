@@ -1132,6 +1132,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Motivos1")
+		{
+			return false;
+		}
+		if($table=="dbo.Etapas1")
+		{
+			return true;
+		}
+		if($table=="dbo.Estados1")
+		{
+			return true;
+		}
+		if($table=="dbo.Aplazamientos")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2215,6 +2231,22 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.Propiedades2")
+		{
+			return false;
+		}
+		if($table=="dbo.Motivos1")
+		{
+			return false;
+		}
+		if($table=="dbo.Etapas1")
+		{
+			return true;
+		}
+		if($table=="dbo.Estados1")
+		{
+			return true;
+		}
+		if($table=="dbo.Aplazamientos")
 		{
 			return false;
 		}

@@ -3898,6 +3898,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "pagos2" ] = "dbo.Pagos2";
 	$projectEntities[ "dbo.Propiedades2" ] = array( "url" => "propiedades2", "type" => 1 );
 	$projectEntitiesReverse[ "propiedades2" ] = "dbo.Propiedades2";
+	$projectEntities[ "dbo.Motivos1" ] = array( "url" => "motivos1", "type" => 1 );
+	$projectEntitiesReverse[ "motivos1" ] = "dbo.Motivos1";
+	$projectEntities[ "dbo.Etapas1" ] = array( "url" => "etapas1", "type" => 1 );
+	$projectEntitiesReverse[ "etapas1" ] = "dbo.Etapas1";
+	$projectEntities[ "dbo.Estados1" ] = array( "url" => "estados1", "type" => 1 );
+	$projectEntitiesReverse[ "estados1" ] = "dbo.Estados1";
+	$projectEntities[ "dbo.Aplazamientos" ] = array( "url" => "aplazamientos", "type" => 0 );
+	$projectEntitiesReverse[ "aplazamientos" ] = "dbo.Aplazamientos";
 }
 
 function findTable( $table ) {

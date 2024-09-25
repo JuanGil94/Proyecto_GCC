@@ -424,6 +424,10 @@ class ConnectionManager_Base
 		$connectionsIds["Consulta Pública Generación Desprendible"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Pagos2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Propiedades2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Motivos1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Etapas1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Estados1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Aplazamientos"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

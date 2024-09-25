@@ -195,6 +195,10 @@ $nonAdminTablesArr[] = "Consulta Pública Notificación Detalle";
 $nonAdminTablesArr[] = "Consulta Pública Generación Desprendible";
 $nonAdminTablesArr[] = "dbo.Pagos2";
 $nonAdminTablesArr[] = "dbo.Propiedades2";
+$nonAdminTablesArr[] = "dbo.Motivos1";
+$nonAdminTablesArr[] = "dbo.Etapas1";
+$nonAdminTablesArr[] = "dbo.Estados1";
+$nonAdminTablesArr[] = "dbo.Aplazamientos";
 
 $ug_connection = $cman->getForUserGroups();
 
