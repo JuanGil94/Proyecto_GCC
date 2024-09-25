@@ -565,6 +565,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("propiedades2" == $shortTName )
 		return true;
+	if ("motivos1" == $shortTName )
+		return true;
+	if ("etapas1" == $shortTName )
+		return true;
+	if ("estados1" == $shortTName )
+		return true;
+	if ("aplazamientos" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2244,6 +2252,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Propiedades2";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Motivos1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Motivos1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Etapas1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Etapas1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Estados1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Estados1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Aplazamientos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Aplazamientos";
+	}
 	return $arr;
 }
 
@@ -2434,6 +2478,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Consulta Pública Generación Desprendible";
 	$arr[]="dbo.Pagos2";
 	$arr[]="dbo.Propiedades2";
+	$arr[]="dbo.Motivos1";
+	$arr[]="dbo.Etapas1";
+	$arr[]="dbo.Estados1";
+	$arr[]="dbo.Aplazamientos";
 	return $arr;
 }
 
@@ -3974,6 +4022,26 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Propiedades2" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Motivos1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Etapas1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Estados1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Aplazamientos" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

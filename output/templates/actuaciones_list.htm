@@ -250,6 +250,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="actuaciones_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -274,13 +283,7 @@
 		</a>
 	</li>
 {END deleteselected_link}
-							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="actuaciones_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
-							{BEGIN searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
@@ -479,7 +482,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="actuaciones_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="actuaciones_add.php{$stateLink_full}" data-popup >
 							Añadir nuevo			</a>
 </span>
 {END add_link}
@@ -499,6 +502,14 @@
 							Borrar artículos seleccionados			</a>
 </span>
 {END deleteselected_link}
+	 
+		{BEGIN updateselected_link}
+<span data-itemtype="update_selected" data-itemid="update_selected" {$item_update_selected} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="actuaciones_edit.php{$stateLink_full}" {$updateselectedlink_attrs} disabled >
+							Actualizar los seleccionados			</a>
+</span>
+{END updateselected_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
@@ -716,65 +727,6 @@
 															</ul>
 </span>
 {END print_friendly}
-	 
-		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
-	 showHide	 reorder	keep-open btn-group"
-	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
-	>
-	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
-	<ul role="menu" class="dropdown-menu dropdown-left">
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Actuacion" checked="checked" value="1" data-field="Actuacion" data-fieldname="Actuacion">
-					<span>{$label dbo_Actuaciones Actuacion }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_EstadoId" checked="checked" value="1" data-field="EstadoId" data-fieldname="EstadoId">
-					<span>{$label dbo_Actuaciones EstadoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_EtapaId" checked="checked" value="1" data-field="EtapaId" data-fieldname="EtapaId">
-					<span>{$label dbo_Actuaciones EtapaId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_MotivoId" checked="checked" value="1" data-field="MotivoId" data-fieldname="MotivoId">
-					<span>{$label dbo_Actuaciones MotivoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Intereses" checked="checked" value="1" data-field="Intereses" data-fieldname="Intereses">
-					<span>{$label dbo_Actuaciones Intereses }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-			</ul>
-</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

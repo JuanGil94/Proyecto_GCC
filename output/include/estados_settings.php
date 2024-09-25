@@ -188,7 +188,7 @@ $tdataestados[".strOrderBy"] = $tstrOrderBy;
 $tdataestados[".orderindexes"] = array();
 
 
-$tdataestados[".sqlHead"] = "SELECT EstadoId,  	Estado,  	Tipo";
+$tdataestados[".sqlHead"] = "SELECT *";
 $tdataestados[".sqlFrom"] = "FROM dbo.Estados";
 $tdataestados[".sqlWhereExpr"] = "";
 $tdataestados[".sqlTail"] = "";
@@ -242,7 +242,7 @@ $tdataestados[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "EstadoId";
 	$fdata["GoodName"] = "EstadoId";
-	$fdata["ownerTable"] = "dbo.Estados";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Estados","EstadoId");
 	$fdata["FieldType"] = 3;
 
@@ -256,8 +256,7 @@ $tdataestados[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "EstadoId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "EstadoId";
+		$fdata["FullName"] = "EstadoId";
 
 	
 	
@@ -383,7 +382,7 @@ $tdataestados[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "Estado";
 	$fdata["GoodName"] = "Estado";
-	$fdata["ownerTable"] = "dbo.Estados";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Estados","Estado");
 	$fdata["FieldType"] = 200;
 
@@ -396,8 +395,7 @@ $tdataestados[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Estado";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Estado";
+		$fdata["FullName"] = "Estado";
 
 	
 	
@@ -521,7 +519,7 @@ $tdataestados[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Tipo";
 	$fdata["GoodName"] = "Tipo";
-	$fdata["ownerTable"] = "dbo.Estados";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Estados","Tipo");
 	$fdata["FieldType"] = 3;
 
@@ -534,8 +532,7 @@ $tdataestados[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Tipo";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Tipo";
+		$fdata["FullName"] = "Tipo";
 
 	
 	
@@ -757,7 +754,7 @@ function createSqlQuery_estados()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "EstadoId,  	Estado,  	Tipo";
+$proto0["m_strFieldList"] = "*";
 $proto0["m_strFrom"] = "FROM dbo.Estados";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -798,80 +795,50 @@ $obj = new SQLLogicalExpr($proto4);
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
-			$obj = new SQLField(array(
-	"m_strName" => "EstadoId",
-	"m_strTable" => "dbo.Estados",
-	"m_srcTableName" => "dbo.Estados"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "*"
 ));
 
-$proto6["m_sql"] = "EstadoId";
+$proto6["m_sql"] = "*";
 $proto6["m_srcTableName"] = "dbo.Estados";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto8=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Estado",
-	"m_strTable" => "dbo.Estados",
-	"m_srcTableName" => "dbo.Estados"
-));
-
-$proto8["m_sql"] = "Estado";
-$proto8["m_srcTableName"] = "dbo.Estados";
-$proto8["m_expr"]=$obj;
-$proto8["m_alias"] = "";
-$obj = new SQLFieldListItem($proto8);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Tipo",
-	"m_strTable" => "dbo.Estados",
-	"m_srcTableName" => "dbo.Estados"
-));
-
-$proto10["m_sql"] = "Tipo";
-$proto10["m_srcTableName"] = "dbo.Estados";
-$proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
-$obj = new SQLFieldListItem($proto10);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto12=array();
-$proto12["m_link"] = "SQLL_MAIN";
-			$proto13=array();
-$proto13["m_strName"] = "dbo.Estados";
-$proto13["m_srcTableName"] = "dbo.Estados";
-$proto13["m_columns"] = array();
-$proto13["m_columns"][] = "EstadoId";
-$proto13["m_columns"][] = "Estado";
-$proto13["m_columns"][] = "Tipo";
-$obj = new SQLTable($proto13);
+												$proto8=array();
+$proto8["m_link"] = "SQLL_MAIN";
+			$proto9=array();
+$proto9["m_strName"] = "dbo.Estados";
+$proto9["m_srcTableName"] = "dbo.Estados";
+$proto9["m_columns"] = array();
+$proto9["m_columns"][] = "EstadoId";
+$proto9["m_columns"][] = "Estado";
+$proto9["m_columns"][] = "Tipo";
+$obj = new SQLTable($proto9);
 
-$proto12["m_table"] = $obj;
-$proto12["m_sql"] = "dbo.Estados";
-$proto12["m_alias"] = "";
-$proto12["m_srcTableName"] = "dbo.Estados";
-$proto14=array();
-$proto14["m_sql"] = "";
-$proto14["m_uniontype"] = "SQLL_UNKNOWN";
+$proto8["m_table"] = $obj;
+$proto8["m_sql"] = "dbo.Estados";
+$proto8["m_alias"] = "";
+$proto8["m_srcTableName"] = "dbo.Estados";
+$proto10=array();
+$proto10["m_sql"] = "";
+$proto10["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto14["m_column"]=$obj;
-$proto14["m_contained"] = array();
-$proto14["m_strCase"] = "";
-$proto14["m_havingmode"] = false;
-$proto14["m_inBrackets"] = false;
-$proto14["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto14);
+$proto10["m_column"]=$obj;
+$proto10["m_contained"] = array();
+$proto10["m_strCase"] = "";
+$proto10["m_havingmode"] = false;
+$proto10["m_inBrackets"] = false;
+$proto10["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto10);
 
-$proto12["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto12);
+$proto8["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto8);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

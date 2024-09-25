@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$ActuacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$Actuacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				

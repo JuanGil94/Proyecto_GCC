@@ -1158,6 +1158,16 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 		;
 		return $value;
 	}
+				if($table=="Intereses por Proceso" && $field=="Proceso" && $ptype=="list")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
 				if($table=="Listado Medidas Cautelares" && $field=="Numero" && $ptype=="list")
 	{
 		$numero = $value;

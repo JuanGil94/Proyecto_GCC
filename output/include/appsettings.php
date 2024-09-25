@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3080_1726097705";
+$projectBuildKey = "3126_1726097705";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3080";
+$projectBuildNumber = "3126";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -952,6 +952,10 @@ $tableCaptions["Spanish"]["Consulta_P_blica_Notificaci_n_Detalle"] = "Consulta P
 $tableCaptions["Spanish"]["Consulta_P_blica_Generaci_n_Desprendible"] = "Consulta Pública Generación Desprendible";
 $tableCaptions["Spanish"]["dbo_Pagos2"] = "Pagos2";
 $tableCaptions["Spanish"]["dbo_Propiedades2"] = "Propiedades2";
+$tableCaptions["Spanish"]["dbo_Motivos1"] = "Motivos1";
+$tableCaptions["Spanish"]["dbo_Etapas1"] = "Etapas1";
+$tableCaptions["Spanish"]["dbo_Estados1"] = "Estados1";
+$tableCaptions["Spanish"]["dbo_Aplazamientos"] = "Aplazamientos";
 
 
 $globalEvents = new class_GlobalEvents;

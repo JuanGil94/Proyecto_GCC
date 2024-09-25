@@ -117,6 +117,18 @@ pdfDocument = {
 				
 			{"text":"","background":"#E8926F","hidden":"{$item_hide_welcome_item3}"},
 				
+				
+			{"text":"","background":"#5F9EA0","hidden":"{$item_hide_welcome_item4}"},
+				
+				
+			{"text":"","background":"#8FBC8B","hidden":"{$item_hide_welcome_item5}"},
+				
+				
+			{"text":"","background":"#8FBC8B","hidden":"{$item_hide_welcome_item6}"},
+				
+				
+			{"text":"","background":"#9ACD32","hidden":"{$item_hide_welcome_item7}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -2678,7 +2678,12 @@ echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
@@ -2730,16 +2735,16 @@ $U_user = $_SESSION["UserNameF"];
 
 // Ejecutar la consulta
 
-
-if($U_user == cthomasb){
-
-  
-
 echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Reporte_Cartera" id="Reporte_Carteraid_interes">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
@@ -2761,7 +2766,10 @@ echo '<label for="seccional">Seleccione Seccional</label>';
 echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid_interes">';
 echo '<option value="0">Seleccione Seccional</option>';
 
-$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 if ($result) {
@@ -2777,9 +2785,6 @@ if ($result) {
 
 echo '</select>';
 
-
-
-}
 	;
 }
 	function event_Intereses_por_Proceso_Total_Enero(&$params)
@@ -4352,11 +4357,19 @@ echo "<input type='month' id='Tablero_de_control_hastaId' name='tablero_control_
 }
 	function event_Tablero_de_Control_Cartera(&$params)
 	{
-	echo '<label for="cartera">Seleccione Cartera: </label>';
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+echo '<label for="cartera">Seleccione Cartera: </label>';
 echo '<select name="Tablero_Reporte_Cartera" id="Tablero_Reporte_Carteraid">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
@@ -4376,11 +4389,19 @@ echo '</select>';
 }
 	function event_Tablero_de_Control_GESTION_CARTERA_SECCIONAL(&$params)
 	{
-	echo '<label for="cartera">Seleccione Cartera</label>';
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Tablero_Cartera_gestion" id="Tablero_Cartera_gestion">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
@@ -4402,7 +4423,10 @@ echo '<label for="seccional">Seleccione Seccional</label>';
 echo '<select name="Tablero_Seccional_gestion" id="Tablero_Seccional_gestion">';
 echo '<option value="0">Seleccione Seccional</option>';
 
-$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 if ($result) {
@@ -4451,7 +4475,13 @@ echo '<button id="toggle-checkboxes">Mostrar Carteras</button>';
 
 
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
+
 $result1 = DB::Query($sql1);
 
 echo '<div id="checkbox-container" class="checkbox-container" style="display: none;">';
@@ -4501,7 +4531,12 @@ echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
@@ -4523,7 +4558,12 @@ echo '<label for="seccional">Seleccione Seccional</label>';
 echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
 echo '<option value="0">Seleccione Seccional</option>';
 
-$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
+
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 if ($result) {
@@ -4692,7 +4732,12 @@ echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
@@ -4714,7 +4759,10 @@ echo '<label for="seccional">Seleccione Seccional</label>';
 echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
 echo '<option value="0">Seleccione Seccional</option>';
 
-$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 if ($result) {
@@ -4794,7 +4842,12 @@ echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
 echo '<option value="0">Seleccione cartera</option>';
 
-$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
 $result1 = DB::Query($sql1);
 // Verificar si el resultado es válido
 if ($result1) {
