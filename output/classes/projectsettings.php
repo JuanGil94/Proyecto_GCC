@@ -3894,6 +3894,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "consulta_p_blica_notificaci_n_detalle" ] = "Consulta Pública Notificación Detalle";
 	$projectEntities[ "Consulta Pública Generación Desprendible" ] = array( "url" => "consulta_p_blica_generaci_n_desprendible", "type" => 6 );
 	$projectEntitiesReverse[ "consulta_p_blica_generaci_n_desprendible" ] = "Consulta Pública Generación Desprendible";
+	$projectEntities[ "dbo.Pagos2" ] = array( "url" => "pagos2", "type" => 1 );
+	$projectEntitiesReverse[ "pagos2" ] = "dbo.Pagos2";
+	$projectEntities[ "dbo.Propiedades2" ] = array( "url" => "propiedades2", "type" => 1 );
+	$projectEntitiesReverse[ "propiedades2" ] = "dbo.Propiedades2";
 }
 
 function findTable( $table ) {

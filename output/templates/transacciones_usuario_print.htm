@@ -97,7 +97,7 @@
 	 
 		{BEGIN CarteraTipo_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
 	{$label Transacciones_Usuario CarteraTipo }	</span>
 {END CarteraTipo_fieldheadercolumn}
 
@@ -120,7 +120,7 @@
 	 
 		{BEGIN Oficio_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Oficio" data-fieldname="Oficio">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Oficio" data-fieldname="Oficio">
 	{$label Transacciones_Usuario Oficio }	</span>
 {END Oficio_fieldheadercolumn}
 
@@ -143,7 +143,7 @@
 	 
 		{BEGIN OficioCount_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioCount" data-fieldname="OficioCount">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioCount" data-fieldname="OficioCount">
 	{$label Transacciones_Usuario OficioCount }	</span>
 {END OficioCount_fieldheadercolumn}
 
@@ -166,13 +166,36 @@
 	 
 		{BEGIN Nombre_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre">
 	{$label Transacciones_Usuario Nombre }	</span>
 {END Nombre_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+	{$label Transacciones_Usuario Seccional }	</span>
+{END Seccional_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
 							</tr>
 															
 					{END grid_header}
@@ -268,6 +291,27 @@
 {END Nombre_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
+{$Seccional_value}
+</span>
+{END Seccional_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
 							</tr>
 										
 											</tbody>
@@ -339,6 +383,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="transacciones_usuario_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

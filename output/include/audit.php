@@ -1124,6 +1124,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Pagos2")
+		{
+			return true;
+		}
+		if($table=="dbo.Propiedades2")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2199,6 +2207,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Consulta Pública Generación Desprendible")
+		{
+			return false;
+		}
+		if($table=="dbo.Pagos2")
+		{
+			return true;
+		}
+		if($table=="dbo.Propiedades2")
 		{
 			return false;
 		}

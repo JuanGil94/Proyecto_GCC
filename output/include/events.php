@@ -141,6 +141,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Consulta_P_blica_Documento"] = true;
 		$this->events["Consulta_P_blica_Generaci_n_Desprendible_Documento"] = true;
 		$this->events["Procesos_Sin_Notificaci_n_cartera_seccional"] = true;
+		$this->events["Base_de_Datos___Historico_seccional_check"] = true;
+		$this->events["Obligaciones_de_Dificil_Recaudo_Cartera_Seccional"] = true;
 
 
 
@@ -1772,7 +1774,7 @@ echo "<input type='text' id='ultimo_dia' name='ultimo_dia' value='" . $ultimo_di
 }
 	function event_Obligaciones_de_Dificil_Recaudo_Total_Procesos(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -1831,7 +1833,7 @@ $totalC6 = $row['TotalProcesos'];
 
 
 // Imprimir el valor formateado
-echo "<strong>" ."Procesos: ". $totalC6 ."</strong>";
+echo "<strong>" ."Procesos: ". $totalC6 ."</strong>";*/
 	;
 }
 	function event_Obligaciones_de_Dificil_Recaudo_Obligacion_Total(&$params)
@@ -2670,11 +2672,8 @@ $U_user = $_SESSION["UserNameF"];
 
 // Ejecutar la consulta
 
-
-if($U_user == cthomasb){
-
   
-
+echo'<br>';
 echo '<label for="cartera">Seleccione Cartera</label>';
 echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
 echo '<option value="0">Seleccione cartera</option>';
@@ -2695,13 +2694,17 @@ if ($result1) {
 
 
 echo '</select>';
-	
+echo'</br>';	
 
 echo '<label for="seccional">Seleccione Seccional</label>';
 echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
 echo '<option value="0">Seleccione Seccional</option>';
 
-$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
+
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 if ($result) {
@@ -2717,9 +2720,7 @@ if ($result) {
 
 echo '</select>';
 
-
-
-}
+echo'</br>';
 	;
 }
 	function event_Intereses_por_Proceso_Cartera_Seccional(&$params)
@@ -3791,7 +3792,7 @@ echo "<script>
 }
 	function event_Indicadores_de_Gesti_n_Total_Procesos(&$params)
 	{
-	global $pageObject;
+	/*global $pageObject;
 
 // Obtener el valor de user
 // Acceder a la variable de sesión
@@ -3919,7 +3920,7 @@ $totalC6 = $row['Procesos'];
 
 
 // Imprimir el valor formateado
-echo "<strong>" ."Procesos: ". $totalC6 ."</strong>";
+echo "<strong>" ."Procesos: ". $totalC6 ."</strong>";*/
 
 	;
 }
@@ -4446,57 +4447,47 @@ echo "<input type='month' id='BD_Historico_MesId' name='mes' value='" . date('Y-
 $U_user = $_SESSION["UserNameF"];
 
 // Ejecutar la consulta
+echo '<button id="toggle-checkboxes">Mostrar Carteras</button>';
 
 
-//if($U_user == cthomasb){
-
-  
-echo'<br>';
-echo '<label for="cartera">Seleccione Cartera</label>';
-echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
-echo '<option value="0">Seleccione cartera</option>';
 
 $sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
 $result1 = DB::Query($sql1);
-// Verificar si el resultado es válido
+
+echo '<div id="checkbox-container" class="checkbox-container" style="display: none;">';
+echo "<label for='' style='margin-right: 40px;'>Seleccione Cartera: </label><br>";
 if ($result1) {
     // Fetch each row as an associative array
     while ($row1 = $result1->fetchAssoc()) {
         $carteraId = $row1['CarteraTipoId'];
         $cartera = $row1['CarteraTipo'];
-        echo "<option value='$carteraId'>$cartera</option>";
+        
+        // Genera el checkbox en lugar de un option
+        echo "<div class='checkbox-item'>";
+        echo "<input type='checkbox' id='cartera_$carteraId' name='cartera[]' value='$carteraId'>";
+        echo "<label for='cartera_$carteraId'>$cartera</label>";
+        echo "</div>";
     }
 } else {
-    echo "<option value=''>Error en la consulta</option>";
+    echo "<div>Error en la consulta</div>";
 }
+echo '</div>';
 
 
-echo '</select>';
-echo'</br>';	
-
-echo '<label for="seccional">Seleccione Seccional</label>';
-echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
-echo '<option value="0">Seleccione Seccional</option>';
-
-$sql = "SELECT SeccionalId, Seccional FROM Seccionales";
-$result = DB::Query($sql);
-// Verificar si el resultado es válido
-if ($result) {
-    // Fetch each row as an associative array
-    while ($row = $result->fetchAssoc()) {
-        $seccionalId = $row['SeccionalId'];
-        $seccional = $row['Seccional'];
-        echo "<option value='$seccionalId'>$seccional</option>";
+echo "<script>document.getElementById('toggle-checkboxes').addEventListener('click', function() {
+    var container = document.getElementById('checkbox-container');
+    
+    // Alterna la visibilidad del contenedor
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'flex'; // Mostrar el contenedor
+        this.textContent = 'Ocultar Carteras'; // Cambiar el texto del botón
+    } else {
+        container.style.display = 'none'; // Ocultar el contenedor
+        this.textContent = 'Mostrar Carteras'; // Cambiar el texto del botón
     }
-} else {
-    echo "<option value=''>Error en la consulta</option>";
-}
+});
+ </script>";
 
-echo '</select>';
-
-echo'</br>';
-
-//}
 	;
 }
 	function event_Deterioro_de_Cartera_por_Proceso_cartera_seccional(&$params)
@@ -4724,6 +4715,112 @@ echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
 echo '<option value="0">Seleccione Seccional</option>';
 
 $sql = "SELECT SeccionalId, Seccional FROM Seccionales";
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row = $result->fetchAssoc()) {
+        $seccionalId = $row['SeccionalId'];
+        $seccional = $row['Seccional'];
+        echo "<option value='$seccionalId'>$seccional</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+echo '</select>';
+
+echo'</br>';
+	;
+}
+	function event_Base_de_Datos___Historico_seccional_check(&$params)
+	{
+	$U_user = $_SESSION["UserNameF"];
+
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
+
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+
+echo '<button id="toggle-checkboxes_seccional">Mostrar Seccionales</button>';
+echo '<div id="checkbox-container_seccional" class="checkbox-container" style="display: none;">';
+echo "<label for='' style='margin-right: 20px;'>Seccional: </label><br>";
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row1 = $result->fetchAssoc()) {
+        $seccionalId = $row1['SeccionalId'];
+        $seccional = $row1['Seccional'];
+        
+        // Genera el checkbox en lugar de un option
+        echo "<div class='checkbox-item'>";
+        echo "<input type='checkbox' id='seccional_$seccionalId' name='seccional[]' value='$seccionalId'>";
+        echo "<label for='seccional_$seccionalId'>$seccional</label>";
+        echo "</div>";
+    }
+} else {
+    echo "<div>Error en la consulta</div>";
+}
+echo '</div>';
+
+echo "<script>document.getElementById('toggle-checkboxes_seccional').addEventListener('click', function() {
+    var container = document.getElementById('checkbox-container_seccional');
+    
+    // Alterna la visibilidad del contenedor
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'flex'; // Mostrar el contenedor
+        this.textContent = 'Ocultar Seccionales'; // Cambiar el texto del botón
+    } else {
+        container.style.display = 'none'; // Ocultar el contenedor
+        this.textContent = 'Mostrar Seccionales'; // Cambiar el texto del botón
+    }
+});
+ </script>";
+
+	;
+}
+	function event_Obligaciones_de_Dificil_Recaudo_Cartera_Seccional(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+// Ejecutar la consulta
+
+  
+echo'<br>';
+echo '<label for="cartera">Seleccione Cartera</label>';
+echo '<select name="Reporte_Cartera" id="Reporte_Carteraid">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select CarteraTipoId, CarteraTipo from CarteraTipos";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+
+echo '<label for="seccional">Seleccione Seccional</label>';
+echo '<select name="Reporte_Seccional" id="Reporte_Seccionalid">';
+echo '<option value="0">Seleccione Seccional</option>';
+
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
+
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 if ($result) {

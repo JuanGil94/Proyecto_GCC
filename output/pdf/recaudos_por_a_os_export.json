@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$TipoRecaudo_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				

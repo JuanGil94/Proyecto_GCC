@@ -234,6 +234,18 @@ pdfDocument = {
 				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
 				
+				
+			{"text":{$CarteraTipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
+				
+				
+			{"text":{$Res__Embargo_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
+				
+				
+			{"text":{$F__Remate_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
+				
+				
+			{"text":{$Res__Remate_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

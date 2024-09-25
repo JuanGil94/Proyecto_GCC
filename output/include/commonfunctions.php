@@ -561,6 +561,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("consulta_p_blica_generaci_n_desprendible" == $shortTName )
 		return true;
+	if ("pagos2" == $shortTName )
+		return true;
+	if ("propiedades2" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2222,6 +2226,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Consulta Pública Generación Desprendible";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Pagos2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Pagos2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Propiedades2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Propiedades2";
+	}
 	return $arr;
 }
 
@@ -2410,6 +2432,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Consulta Pública";
 	$arr[]="Consulta Pública Notificación Detalle";
 	$arr[]="Consulta Pública Generación Desprendible";
+	$arr[]="dbo.Pagos2";
+	$arr[]="dbo.Propiedades2";
 	return $arr;
 }
 
@@ -3940,6 +3964,16 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Consulta Pública Generación Desprendible" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Pagos2" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Propiedades2" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

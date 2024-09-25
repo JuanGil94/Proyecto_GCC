@@ -13,6 +13,9 @@
 [data-cellid="grid_headcell_checkbox"][data-page="transacciones_usuario_list"][data-cellid="grid_headcell_checkbox"][data-page="transacciones_usuario_list"][data-cellid="grid_headcell_checkbox"][data-page="transacciones_usuario_list"] {
   width: 30px;
 }
+[data-cellid="grid_footcell_field4"][data-page="transacciones_usuario_list"][data-cellid="grid_footcell_field4"][data-page="transacciones_usuario_list"][data-cellid="grid_footcell_field4"][data-page="transacciones_usuario_list"] {
+  white-space: nowrap;
+}
 [data-page="transacciones_usuario_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

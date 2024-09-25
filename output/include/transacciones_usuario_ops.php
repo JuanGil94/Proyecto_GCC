@@ -6,7 +6,7 @@ $topstransacciones_usuario = array();
 DECLARE @Ano INT = YEAR(@Fecha)
 DECLARE @Mes INT = MONTH(@Fecha)
 
-SELECT CarteraTipo,Oficio,COUNT(*) AS OficioCount,Nombre
+SELECT CarteraTipo,Oficio,COUNT(*) AS OficioCount,Nombre,Seccional
 FROM (
     SELECT CarteraTipos.CarteraTipo, 
            Seccionales.Seccional, 
@@ -49,7 +49,7 @@ FROM (
           AND YEAR(CONVERT(DATE, Auditorias.Fecha)) = @Ano
           AND MONTH(CONVERT(DATE, Auditorias.Fecha)) = @Mes
 ) AS SubQuery
-GROUP BY Nombre,Oficio,CarteraTipo;"
+GROUP BY Nombre,Oficio,CarteraTipo,Seccional;"
 	);
 		$tables_data["Transacciones Usuario"][".operations"] = &$topstransacciones_usuario;
 ?>

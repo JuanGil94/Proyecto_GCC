@@ -25,9 +25,7 @@
 function BeforeProcessList($pageObject)
 {
 
-		
-
- 	set_time_limit(0); // Elimina la restricción de timeout
+		 	set_time_limit(0); // Elimina la restricción de timeout
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
@@ -43,7 +41,38 @@ function BeforeProcessList($pageObject)
 
 		if ($_SESSION['ventanaWebpath'] != $path) {
     $_SESSION['ventanaWebpath'] = $path;
-		 
+				unset($_SESSION['cartera_id_report']);
+				unset($_SESSION['seccional_id_report']);
+				unset($_SESSION['cartera1']);
+			unset($_SESSION['cartera2']);
+			unset($_SESSION['cartera3']); 
+			unset($_SESSION['cartera4']);
+			unset($_SESSION['cartera5']);
+			unset($_SESSION['seccional1']);
+			unset($_SESSION['seccional2']);
+			unset($_SESSION['seccional3']); 
+			unset($_SESSION['seccional4']);
+			unset($_SESSION['seccional5']);
+			unset($_SESSION['seccional6']);
+			unset($_SESSION['seccional7']);
+			unset($_SESSION['seccional8']); 
+			unset($_SESSION['seccional9']);
+			unset($_SESSION['seccional10']);
+			unset($_SESSION['seccional11']);
+			unset($_SESSION['seccional12']);
+			unset($_SESSION['seccional13']); 
+			unset($_SESSION['seccional14']);
+			unset($_SESSION['seccional15']);
+			unset($_SESSION['seccional16']);
+			unset($_SESSION['seccional17']);
+			unset($_SESSION['seccional18']); 
+			unset($_SESSION['seccional19']);
+			unset($_SESSION['seccional20']);
+			unset($_SESSION['seccional21']);
+			unset($_SESSION['seccional22']);
+			unset($_SESSION['seccional23']); 
+			unset($_SESSION['seccional24']);
+			unset($_SESSION['seccional25']);
 		}
 ;
 } // function BeforeProcessList
@@ -154,158 +183,167 @@ function BeforeShowList(&$xt, &$templatefile, $pageObject)
 {
 
 		
- 
-		$hasta = $_SESSION['mesHistorico'];
-		$cartera = $_SESSION['cateraid'];
-		$seccional = $_SESSION['seccionalid'];
 
-    // Ejecutar la consulta
-    $rs = CustomQuery("
-				SELECT SUM([Obligacion] + [Costas] + [Intereses]) as TotalC6 
-FROM (
-    SELECT 
-        [Obligacion], 
-        [Costas], 
-        [Intereses]
-    FROM 
-        [dbo].[HistoricosView1]
-    WHERE 
-        [CarteraTipoId] = '$cartera' 
-        AND [SeccionalId] = '$seccional'
-        AND [Hasta] = '$hasta'
-) AS [FilteredResults];
-    ");
+$hasta = $_SESSION['mesHistorico'];
+$Cartera = $_SESSION['cartera1'];
+$Cartera2 = $_SESSION['cartera2'];
+$Cartera3 = $_SESSION['cartera3'];
+$Cartera4 = $_SESSION['cartera4'];
+$Cartera5 = $_SESSION['cartera5'];
+$Seccional = $_SESSION['seccional1'];
+$Seccional2 = $_SESSION['seccional2'];
+$Seccional3 = $_SESSION['seccional3'];
+$Seccional4 = $_SESSION['seccional4'];
+$Seccional5 = $_SESSION['seccional5'];
+$Seccional6 = $_SESSION['seccional6'];
+$Seccional7 = $_SESSION['seccional7'];
+$Seccional8 = $_SESSION['seccional8'];
+$Seccional9 = $_SESSION['seccional9'];
+$Seccional10 = $_SESSION['seccional10'];
+$Seccional11 = $_SESSION['seccional11'];
+$Seccional12 = $_SESSION['seccional12'];
+$Seccional13 = $_SESSION['seccional13'];
+$Seccional14 = $_SESSION['seccional14'];
+$Seccional15 = $_SESSION['seccional15'];
+$Seccional16 = $_SESSION['seccional16'];
+$Seccional17 = $_SESSION['seccional17'];
+$Seccional18 = $_SESSION['seccional18'];
+$Seccional19 = $_SESSION['seccional19'];
+$Seccional20 = $_SESSION['seccional20'];
+$Seccional21 = $_SESSION['seccional21'];
+$Seccional22 = $_SESSION['seccional22'];
+$Seccional23 = $_SESSION['seccional23'];
+$Seccional24 = $_SESSION['seccional24'];
+$Seccional25 = $_SESSION['seccional25'];
 
+$rs = CustomQuery("
+    SELECT SUM([Obligacion] + [Costas] + [Intereses]) as TotalC6,
+           SUM([Obligacion]) as TotalObligacion,
+           SUM([Costas]) as TotalCostas,
+           SUM([Intereses]) as TotalIntereses
+    FROM [dbo].[HistoricosView1]
+    WHERE CAST([CarteraTipoId] AS VARCHAR) IN ('$Cartera', '$Cartera2', '$Cartera3', '$Cartera4', '$Cartera5')
+    AND CAST([SeccionalId] AS VARCHAR) IN ('$Seccional', '$Seccional2', '$Seccional3','$Seccional4','$Seccional2','$Seccional2','$Seccional3','$Seccional4','$Seccional5','$Seccional6','$Seccional7','$Seccional8','$Seccional9','$Seccional10','$Seccional11','$Seccional12','$Seccional13','$Seccional14','$Seccional15','$Seccional16','$Seccional17','$Seccional18','$Seccional19','$Seccional20','$Seccional21','$Seccional22','$Seccional23','$Seccional24','$Seccional25')
+    AND [Hasta] = '$hasta'
+");
 
-    while($record = db_fetch_array($rs)) {
+if($record = db_fetch_array($rs)) {
+    $tableHTML11 = '<strong>' . "$" . number_format($record['TotalC6'], 2, ',', '.') . '</strong>';
+    $tableHTML22 = '<strong>' . "$" . number_format($record['TotalObligacion'], 2, ',', '.') . '</strong>';
+    $tableHTML33 = '<strong>' . "$" . number_format($record['TotalCostas'], 2, ',', '.') . '</strong>';
+    $tableHTML44 = '<strong>' . "$" . number_format($record['TotalIntereses'], 2, ',', '.') . '</strong>';
+}
 
-				 // Formatear el número con puntos como separadores de miles
-				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
-				$formattedValue = number_format($record['TotalC6'], 2, ',', '.');
+// Asignar valores a PHPRunner
+$xt->assign("total_saldo_historico", $tableHTML11);
+$xt->assign("total_saldo_obligacion", $tableHTML22);
+$xt->assign("total_saldo_costas", $tableHTML33);
+$xt->assign("total_saldo_intereses", $tableHTML44);
 
-    
-					// Agregar el signo de pesos
-				$formattedValueWithCurrency = "$" . $formattedValue;
-        $tableHTML .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
-
-    }
-
-
-
-
-		////////////////////////OBLIGACION/////////////////////////////////////
-
-		    // Ejecutar la consulta
-    $rs2 = CustomQuery("
-				SELECT SUM([Obligacion]) as TotalC6 
-FROM (
-    SELECT 
-        [Obligacion], 
-        [Costas], 
-        [Intereses]
-    FROM 
-        [dbo].[HistoricosView1]
-    WHERE 
-        [CarteraTipoId] = '$cartera' 
-        AND [SeccionalId] = '$seccional'
-        AND [Hasta] = '$hasta'
-) AS [FilteredResults];
-    ");
-
-    // Generar el HTML de la tabla
-
-    while($record2 = db_fetch_array($rs2)) {
-    
-				 // Formatear el número con puntos como separadores de miles
-				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
-				$formattedValue = number_format($record2['TotalC6'], 2, ',', '.');
-
-    
-					// Agregar el signo de pesos
-				$formattedValueWithCurrency = "$" . $formattedValue;
-        $tableHTML2 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
-
-    }
-
-		
-		
-		////////////////////////COSTAS/////////////////////////////////////
-
-		    // Ejecutar la consulta
-    $rs3 = CustomQuery("
-				SELECT SUM([Costas]) as TotalC6 
-FROM (
-    SELECT 
-        [Obligacion], 
-        [Costas], 
-        [Intereses]
-    FROM 
-        [dbo].[HistoricosView1]
-    WHERE 
-        [CarteraTipoId] = '$cartera' 
-        AND [SeccionalId] = '$seccional'
-        AND [Hasta] = '$hasta'
-) AS [FilteredResults];
-    ");
-
-
-    while($record3 = db_fetch_array($rs3)) {
-    
-				 // Formatear el número con puntos como separadores de miles
-				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
-				$formattedValue = number_format($record3['TotalC6'], 2, ',', '.');
-
-    
-					// Agregar el signo de pesos
-				$formattedValueWithCurrency = "$" . $formattedValue;
-        $tableHTML3 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
-  
-    }
-
-  
-		
-				////////////////////////INTERESES/////////////////////////////////////
-
-		    // Ejecutar la consulta
-    $rs4 = CustomQuery("
-				SELECT SUM([Intereses]) as TotalC6 
-FROM (
-    SELECT 
-        [Obligacion], 
-        [Costas], 
-        [Intereses]
-    FROM 
-        [dbo].[HistoricosView1]
-    WHERE 
-        [CarteraTipoId] = '$cartera' 
-        AND [SeccionalId] = '$seccional'
-        AND [Hasta] = '$hasta'
-) AS [FilteredResults];
-    ");
-
-
-    while($record4 = db_fetch_array($rs4)) {
- 
-				 // Formatear el número con puntos como separadores de miles
-				//$formattedValue = number_format($record['TotalC6'], 0, '', '.');
-				$formattedValue = number_format($record4['TotalC6'], 2, ',', '.');
-
-    
-					// Agregar el signo de pesos
-				$formattedValueWithCurrency = "$" . $formattedValue;
-        $tableHTML4 .= '<strong>' . htmlspecialchars($formattedValueWithCurrency) . '</strong>';
-        
-    }
-
-
-    // Asignar el HTML generado al objeto xt
-		$xt->assign("total_saldo_intereses", $tableHTML4);
-		$xt->assign("total_saldo_costas", $tableHTML3);
-		$xt->assign("total_saldo_obligacion", $tableHTML2);
-    $xt->assign("total_saldo_historico", $tableHTML);
-		
 // Place event code here.
 // Use "Add Action" button to add code snippets.
+
+
+
+// Cartera y Seccionales guardadas en variables de sesión
+$carteras = [
+    'cartera1' => $_SESSION['cartera1'],
+    'cartera2' => $_SESSION['cartera2'],
+    'cartera3' => $_SESSION['cartera3'],
+    'cartera4' => $_SESSION['cartera4'],
+    'cartera5' => $_SESSION['cartera5']
+];
+
+$seccionales = [
+    'seccional1' => $_SESSION['seccional1'],
+    'seccional2' => $_SESSION['seccional2'],
+    'seccional3' => $_SESSION['seccional3'],
+    'seccional4' => $_SESSION['seccional4'],
+    'seccional5' => $_SESSION['seccional5'],
+    'seccional6' => $_SESSION['seccional6'],
+    'seccional7' => $_SESSION['seccional7'],
+    'seccional8' => $_SESSION['seccional8'],
+    'seccional9' => $_SESSION['seccional9'],
+    'seccional10' => $_SESSION['seccional10'],
+    'seccional11' => $_SESSION['seccional11'],
+    'seccional12' => $_SESSION['seccional12'],
+    'seccional13' => $_SESSION['seccional13'],
+    'seccional14' => $_SESSION['seccional14'],
+    'seccional15' => $_SESSION['seccional15'],
+    'seccional16' => $_SESSION['seccional16'],
+    'seccional17' => $_SESSION['seccional17'],
+    'seccional18' => $_SESSION['seccional18'],
+    'seccional19' => $_SESSION['seccional19'],
+    'seccional20' => $_SESSION['seccional20'],
+    'seccional21' => $_SESSION['seccional21'],
+    'seccional22' => $_SESSION['seccional22'],
+    'seccional23' => $_SESSION['seccional23'],
+    'seccional24' => $_SESSION['seccional24'],
+    'seccional25' => $_SESSION['seccional25']
+];
+
+// Contenedor principal
+//echo '<div class="container">';
+
+// Mostrar carteras no vacías
+//echo '<div class="carteras">';
+//echo '<h3>Carteras</h3>';
+
+// Contenedor principal
+$tableHTML77 = '';  // Inicializar la variable para concatenar los resultados
+
+foreach ($carteras as $key => $cartera) {
+    if (!empty($cartera)) {
+        // Ejecutar la consulta
+        $rs2 = CustomQuery("SELECT CarteraTipo FROM CarteraTipos WHERE CarteraTipoId = '$cartera' ");
+        
+        // Obtener el resultado
+        if ($record = db_fetch_array($rs2)) {
+            // Concatenar los resultados en $tableHTML77
+            $tableHTML77 .= '<label>' . htmlspecialchars($record['CarteraTipo']) . '</label><br>';
+        } else {
+            // Si no encuentra resultados, mostrar un mensaje opcional
+            $tableHTML77 .= '<label>Error: Cartera no encontrada</label><br>';
+        }
+    }
+}
+
+// Asignar todo el contenido concatenado al contenedor
+$xt->assign("cartera_select", $tableHTML77);
+
+//echo '</div>';
+
+// Mostrar seccionales no vacías
+//echo '<div class="seccionales">';
+//echo '<h3>Seccionales</h3>';
+
+// Contenedor principal
+$tableHTML88 = '';  // Inicializar la variable para concatenar los resultados
+
+
+foreach ($seccionales as $key2 => $seccional) {
+    if (!empty($seccional)) {
+        //echo '<label>' . htmlspecialchars($key) . ': ' . htmlspecialchars($seccional) . '</label><br>';
+				        // Ejecutar la consulta
+        $rs3 = CustomQuery("SELECT Seccional FROM Seccionales WHERE SeccionalId = '$seccional' ");
+
+				        // Obtener el resultado
+        if ($record2 = db_fetch_array($rs3)) {
+            // Concatenar los resultados en $tableHTML77
+            $tableHTML88 .= '<label>' . htmlspecialchars($record2['Seccional']) . '</label><br>';
+        } else {
+            // Si no encuentra resultados, mostrar un mensaje opcional
+            $tableHTML88 .= '<label>Error: Seccional no encontrada</label><br>';
+        }
+
+    }
+}
+//echo '</div>';
+
+//echo '</div>';
+
+$xt->assign("seccional_select", $tableHTML88);
+
 ;
 } // function BeforeShowList
 

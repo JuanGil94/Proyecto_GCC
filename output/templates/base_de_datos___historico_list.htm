@@ -115,6 +115,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
 						</div>
 		{END searchCtrlBlock_ConceptoId}
+																{BEGIN searchCtrlBlock_CarteraTipoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
+			<label>{$label Base_de_Datos___Historico CarteraTipoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipoId}
+																{BEGIN searchCtrlBlock_SeccionalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
+			<label>{$label Base_de_Datos___Historico SeccionalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
+						</div>
+		{END searchCtrlBlock_SeccionalId}
 																{BEGIN searchCtrlBlock_SancionadoDocumento}
 
 
@@ -276,6 +302,102 @@
 {END crumb}
 </ol>
 {END breadcrumb}			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="text5" {$item_text5} data-topcell-item-type="text" >
+				<span data-itemtype="text" data-itemid="text5" {$item_text5} data-pageid="{$pageid}" data-small > 
+	<style>
+/* Contenedor principal de los checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los checkboxes se acomoden en varias filas si es necesario */
+    gap: 15px; /* Espacio entre cada checkbox */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es extenso */
+    max-width: 100%; /* Se ajusta al 100% del ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Estilos para los checkbox */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 150px; /* Cada checkbox ocupa al menos 150px de ancho, pero puede crecer */
+    min-width: 120px; /* Evita que los elementos se hagan demasiado pequeños */
+}
+
+/* Estilos para la etiqueta del checkbox */
+.checkbox-item label {
+    margin-left: 10px;
+}
+
+/* Estilos del checkbox */
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Espacio entre el checkbox y el label */
+}
+
+/* Contenedor principal que alinea los items horizontalmente */
+.form-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 20px; /* Espacio entre cada item */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada item (Cartera y Seccional) */
+.form-item {
+    display: flex;
+    flex-direction: row; /* Mantiene el label y el select en la misma línea */
+    align-items: center; /* Centra verticalmente el label con el select */
+}
+
+/* Estilo para los labels */
+.form-item label {
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre el label y el select */
+}
+
+/* Estilo para los selects */
+.form-item select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Estilos para el contenedor de checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los checkboxes se ajusten en varias líneas si es necesario */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 100%; /* Se adapta al ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Estilos para los items individuales (checkbox + label) */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 150px; /* Controla el ancho mínimo de cada item */
+    min-width: 120px;
+}
+
+/* Estilos para los inputs (checkboxes) */
+.checkbox-item input[type="checkbox"] {
+    margin-right: 8px; /* Espacio entre el checkbox y el label */
+}
+
+</style>
+</span>
+			</span>
 							 
 							 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
@@ -496,21 +618,26 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
-{$event Base_de_Datos___Historico_snippet}
-</span>	 
-		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
-{$event Base_de_Datos___Historico_Seccional_Cartera}
-</span>	 
-		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="Buscar11" href="javascript:void(0)" typeid="ib" >
-							Buscar			</a>
+		<span data-itemtype="text" data-itemid="text6" {$item_text6} data-pageid="{$pageid}" data-small > 
+	
+<div class="form-container">
+    <!-- Título y select para Cartera -->
+    <div class="form-item">
+        <label for="cartera_select">Cartera:</label>
+        {$cartera_select} <!-- Aquí se inserta el select de Cartera -->
+    </div>
+
+    <!-- Título y select para Seccional -->
+    <div class="form-item">
+        <label for="seccional_select">Seccional:</label>
+        {$seccional_select} <!-- Aquí se inserta el select de Seccional -->
+    </div>
+</div>
 </span>
 			{END firstAboveGridCell}	
 	</div>			 
@@ -591,6 +718,45 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="			col-md-12
+	
+">
+		 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" >
+{$event Base_de_Datos___Historico_Seccional_Cartera}
+</span>	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" >
+{$event Base_de_Datos___Historico_seccional_check}
+</span>		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="			col-md-12
+	
+">
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event Base_de_Datos___Historico_snippet}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Buscar11" href="javascript:void(0)" typeid="ib" >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button1" {$item_custom_button1} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Reiniciar" href="javascript:void(0)" typeid="ib" >
+							Reiniciar			</a>
+</span>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -644,7 +810,13 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoDocumento"]:before {
 		content: "{$label Base_de_Datos___Historico SancionadoDocumento}";
 	}
-			}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalId"]:before {
+		content: "{$label Base_de_Datos___Historico SeccionalId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipoId"]:before {
+		content: "{$label Base_de_Datos___Historico CarteraTipoId}";
+	}
+	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -1005,6 +1177,56 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldheadercolumn}
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label Base_de_Datos___Historico SeccionalId }	{$arrow_icon_SeccionalId}
+	</SPAN>
+	{END SeccionalId_fieldheader}
+{END SeccionalId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldheadercolumn}
+	{BEGIN CarteraTipoId_fieldheader}
+	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+	{$label Base_de_Datos___Historico CarteraTipoId }	{$arrow_icon_CarteraTipoId}
+	</SPAN>
+	{END CarteraTipoId_fieldheader}
+{END CarteraTipoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
 							</tr>
 															
 					{END grid_header}
@@ -1313,6 +1535,48 @@
 {END SancionadoDocumento_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
+{$SeccionalId_value}
+</span>
+{END SeccionalId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+			data-field="CarteraTipoId"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-default-width >
+{$CarteraTipoId_value}
+</span>
+{END CarteraTipoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
 							</tr>
 										
 											{END grid_row}
@@ -1560,6 +1824,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipoId_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="base_de_datos___historico_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
 							</tr>
 					
 					</tfoot>
@@ -1587,9 +1881,61 @@
 		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
 	<script>
 $(document).ready(function() {
-    $('#Reporte_Carteraid').val(sessionStorage.getItem('cartera_id_report'));
-    $('#Reporte_Seccionalid').val(sessionStorage.getItem('seccional_id_report'));
 $('#BD_Historico_MesId').val(sessionStorage.getItem('mesHistorico'));
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    // Recuperar el estado de los checkboxes desde Session Storage
+    for (var i = 1; i <= 5; i++) {
+        var cartera = sessionStorage.getItem('cartera_' + i);
+        if (cartera) {
+            $('#cartera_' + cartera).prop('checked', true);
+        }
+    }
+
+    // Almacenar el estado de los checkboxes en Session Storage
+    $('input[name="cartera[]"]').change(function() {
+        // Limpiar el Session Storage para las carteras
+        for (var i = 1; i <= 5; i++) {
+            sessionStorage.removeItem('cartera_' + i);
+        }
+
+        // Guardar los checkboxes seleccionados
+        $('input[name="cartera[]"]:checked').each(function(index) {
+            if (index < 5) { // Limitar a las primeras 5 carteras
+                sessionStorage.setItem('cartera_' + (index + 1), $(this).val());
+            }
+        });
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    // Recuperar el estado de los checkboxes desde Session Storage
+    for (var i = 1; i <= 25; i++) {
+        var seccional= sessionStorage.getItem('seccional_' + i);
+        if (seccional) {
+            $('#seccional_' + seccional).prop('checked', true);
+        }
+    }
+
+    // Almacenar el estado de los checkboxes en Session Storage
+    $('input[name="seccional[]"]').change(function() {
+        // Limpiar el Session Storage para las seccionales
+        for (var i = 1; i <= 25; i++) {
+            sessionStorage.removeItem('seccional_' + i);
+        }
+
+        // Guardar los checkboxes seleccionados
+        $('input[name="seccional[]"]:checked').each(function(index) {
+            if (index < 25) { // Limitar a las primeras 25 seccionales
+                sessionStorage.setItem('seccional_' + (index + 1), $(this).val());
+            }
+        });
+    });
 });
 </script></span>
 		</div>					</div>

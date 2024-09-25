@@ -1080,10 +1080,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event Indicadores_de_Gesti_n_Valor}","hidden":"{$item_hide_snippet2}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1108,10 +1106,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event Indicadores_de_Gesti_n_Recaudo}","hidden":"{$item_hide_snippet3}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -1136,10 +1132,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event Indicadores_de_Gesti_n_Saldo}","hidden":"{$item_hide_snippet4}","isHtml":true},
-				
-		  ],
+				'',
+	  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
