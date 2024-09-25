@@ -422,6 +422,8 @@ class ConnectionManager_Base
 		$connectionsIds["Consulta Pública"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Consulta Pública Notificación Detalle"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Consulta Pública Generación Desprendible"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Pagos2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Propiedades2"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

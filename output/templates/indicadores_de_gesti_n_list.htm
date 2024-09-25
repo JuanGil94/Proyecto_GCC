@@ -276,6 +276,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="indicadores_de_gesti_n_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -284,12 +293,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="indicadores_de_gesti_n_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -1262,10 +1265,7 @@
 	data-cellId="grid_footcell_checkbox6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicadores_de_gesti_n_list"	
 	>
 
-	 
-		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Indicadores_de_Gesti_n_Valor}
-</span>	
+	
 	</td>
 	{END cellblock_grid_footcell_checkbox6}
 									{BEGIN cellblock_grid_footcell_checkbox7}
@@ -1280,10 +1280,7 @@
 	data-cellId="grid_footcell_checkbox7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicadores_de_gesti_n_list"	
 	>
 
-	 
-		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Indicadores_de_Gesti_n_Recaudo}
-</span>	
+	
 	</td>
 	{END cellblock_grid_footcell_checkbox7}
 									{BEGIN cellblock_grid_footcell_checkbox8}
@@ -1298,10 +1295,7 @@
 	data-cellId="grid_footcell_checkbox8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="indicadores_de_gesti_n_list"	
 	>
 
-	 
-		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
-{$event Indicadores_de_Gesti_n_Saldo}
-</span>	
+	
 	</td>
 	{END cellblock_grid_footcell_checkbox8}
 							</tr>

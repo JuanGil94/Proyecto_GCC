@@ -25,7 +25,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"] = array();
 	$placeHoldersbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"] = array();
 	$pageTitlesbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"] = array();
-	$fieldLabelsbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelsbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipsbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"]["SeccionalId"] = "";
 	$placeHoldersbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"]["SeccionalId"] = "";
 	$fieldLabelsbdme_incumplimiento_acuerdo_de_pago_semestral_datachild["Spanish"]["SancionadoId"] = "Sancionado Id";
@@ -189,7 +189,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".isUseAjaxSuggest
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -503,7 +503,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -513,6 +513,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Seccionales";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "SeccionalId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Seccional";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -528,17 +556,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -550,7 +575,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -560,6 +585,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Seccionales";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "SeccionalId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Seccional";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -575,17 +628,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -606,7 +656,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -616,7 +666,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "SeccionalId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2271,7 +2322,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2281,6 +2332,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "ConceptoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2296,17 +2375,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2318,7 +2394,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2328,6 +2404,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "ConceptoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2343,17 +2447,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2374,7 +2475,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2597,7 +2698,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2607,6 +2708,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Estados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EstadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Estado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2622,17 +2751,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2644,7 +2770,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2654,6 +2780,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Estados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EstadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Estado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2669,17 +2823,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2700,7 +2851,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2710,7 +2861,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "SeccionalId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -2923,7 +3075,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2933,6 +3085,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Etapas";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EtapaId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Etapa";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2948,17 +3128,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -2970,7 +3147,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2980,6 +3157,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Etapas";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "EtapaId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Etapa";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -2995,17 +3200,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -3026,7 +3228,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3036,7 +3238,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "SeccionalId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -3526,7 +3729,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3536,6 +3739,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Motivos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "MotivoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Motivo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "MotivoId";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -3551,17 +3782,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -3573,7 +3801,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3583,6 +3811,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Motivos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "MotivoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Motivo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "MotivoId";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -3598,17 +3854,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -3629,7 +3882,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -3639,7 +3892,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "SeccionalId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -4117,7 +4371,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -4127,6 +4381,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.CarteraTipos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarteraTipoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "CarteraTipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -4142,17 +4424,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -4164,7 +4443,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	$fdata["EditFormats"]["add"] = $edata;
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -4174,6 +4453,34 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.CarteraTipos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarteraTipoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "CarteraTipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -4189,17 +4496,14 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -4220,7 +4524,7 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -4230,7 +4534,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".hideMobileList"]
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "SeccionalId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;

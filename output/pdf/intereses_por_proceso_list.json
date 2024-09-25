@@ -1228,9 +1228,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Enero}","hidden":"{$item_hide_snippet2}","isHtml":true},
-				
-				
 			{BEGIN Enero_fieldfootercolumn}
 			{BEGIN Enero_showtotal}
 				{ text: '$ ' },
@@ -1264,9 +1261,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event Intereses_por_Proceso_Total_Febreo}","hidden":"{$item_hide_snippet3}","isHtml":true},
-				
 				
 			{BEGIN Febrero_fieldfootercolumn}
 			{BEGIN Febrero_showtotal}
@@ -1302,9 +1296,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Marzo}","hidden":"{$item_hide_snippet4}","isHtml":true},
-				
-				
 			{BEGIN Marzo_fieldfootercolumn}
 			{BEGIN Marzo_showtotal}
 				{ text: '$ ' },
@@ -1338,9 +1329,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event Intereses_por_Proceso_Total_Abril}","hidden":"{$item_hide_snippet5}","isHtml":true},
-				
 				
 			{BEGIN Abril_fieldfootercolumn}
 			{BEGIN Abril_showtotal}
@@ -1376,9 +1364,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Intereses_por_Proceso_Total_Mayo}","hidden":"{$item_hide_snippet6}","isHtml":true},
-				
-				
 			{BEGIN Mayo_fieldfootercolumn}
 			{BEGIN Mayo_showtotal}
 				{ text: '$ ' },
@@ -1412,9 +1397,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"{$event Intereses_por_Proceso_Total_Junio}","hidden":"{$item_hide_snippet7}","isHtml":true},
-				
 				
 			{BEGIN Junio_fieldfootercolumn}
 			{BEGIN Junio_showtotal}

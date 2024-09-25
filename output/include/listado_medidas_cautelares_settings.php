@@ -94,6 +94,18 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelslistado_medidas_cautelares["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipslistado_medidas_cautelares["Spanish"]["Observaciones"] = "";
 	$placeHolderslistado_medidas_cautelares["Spanish"]["Observaciones"] = "";
+	$fieldLabelslistado_medidas_cautelares["Spanish"]["CarteraTipo"] = "Cartera Tipo";
+	$fieldToolTipslistado_medidas_cautelares["Spanish"]["CarteraTipo"] = "";
+	$placeHolderslistado_medidas_cautelares["Spanish"]["CarteraTipo"] = "";
+	$fieldLabelslistado_medidas_cautelares["Spanish"]["Res__Embargo"] = "Res. Embargo";
+	$fieldToolTipslistado_medidas_cautelares["Spanish"]["Res__Embargo"] = "";
+	$placeHolderslistado_medidas_cautelares["Spanish"]["Res__Embargo"] = "";
+	$fieldLabelslistado_medidas_cautelares["Spanish"]["F__Remate"] = "F. Remate";
+	$fieldToolTipslistado_medidas_cautelares["Spanish"]["F__Remate"] = "";
+	$placeHolderslistado_medidas_cautelares["Spanish"]["F__Remate"] = "";
+	$fieldLabelslistado_medidas_cautelares["Spanish"]["Res__Remate"] = "Res. Remate";
+	$fieldToolTipslistado_medidas_cautelares["Spanish"]["Res__Remate"] = "";
+	$placeHolderslistado_medidas_cautelares["Spanish"]["Res__Remate"] = "";
 	if (count($fieldToolTipslistado_medidas_cautelares["Spanish"]))
 		$tdatalistado_medidas_cautelares[".isUseToolTips"] = true;
 }
@@ -192,7 +204,7 @@ $tdatalistado_medidas_cautelares[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																															
+																																																																																																																																																																																																																		
 
 $tdatalistado_medidas_cautelares[".ajaxCodeSnippetAdded"] = false;
 
@@ -212,6 +224,7 @@ $tdatalistado_medidas_cautelares[".filterFields"] = array();
 $tdatalistado_medidas_cautelares[".requiredSearchFields"] = array();
 
 $tdatalistado_medidas_cautelares[".googleLikeFields"] = array();
+$tdatalistado_medidas_cautelares[".googleLikeFields"][] = "CarteraTipo";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Seccional";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Concepto";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Numero";
@@ -223,6 +236,7 @@ $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Ciudad";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Matrícula/Placa/Registro";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Avalúo";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "F. Embargo";
+$tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Res. Embargo";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Secuestrado";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "F. Secuestro";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Secuestre";
@@ -231,6 +245,8 @@ $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Dir. Secuestre";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Tel. Secuestre";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Comisión";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Aviso Remate";
+$tdatalistado_medidas_cautelares[".googleLikeFields"][] = "F. Remate";
+$tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Res. Remate";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Aprobación";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Valor Rematado";
 $tdatalistado_medidas_cautelares[".googleLikeFields"][] = "Dilig. Entrega";
@@ -315,10 +331,380 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 
 
 
-//	Seccional
+//	CarteraTipo
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
+	$fdata["strName"] = "CarteraTipo";
+	$fdata["GoodName"] = "CarteraTipo";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Listado_Medidas_Cautelares","CarteraTipo");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "CarteraTipo";
+
+	
+		$fdata["FullName"] = "CarteraTipo";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.CarteraTipos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarteraTipo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "CarteraTipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.CarteraTipos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarteraTipo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "CarteraTipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.CarteraTipos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarteraTipo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "CarteraTipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = true;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalistado_medidas_cautelares["CarteraTipo"] = $fdata;
+		$tdatalistado_medidas_cautelares[".searchableFields"][] = "CarteraTipo";
+//	Seccional
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "Seccional";
 	$fdata["GoodName"] = "Seccional";
 	$fdata["ownerTable"] = "";
@@ -453,7 +839,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Concepto
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 2;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "Concepto";
 	$fdata["GoodName"] = "Concepto";
 	$fdata["ownerTable"] = "";
@@ -505,7 +891,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -515,6 +901,34 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "Concepto";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -529,10 +943,8 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -558,7 +970,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -588,7 +1000,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Numero
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "Numero";
 	$fdata["GoodName"] = "Numero";
 	$fdata["ownerTable"] = "";
@@ -879,7 +1291,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Sancionado
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "Sancionado";
 	$fdata["GoodName"] = "Sancionado";
 	$fdata["ownerTable"] = "";
@@ -926,12 +1338,81 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -941,6 +1422,33 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Sancionados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Sancionado";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Sancionado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -955,10 +1463,8 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -975,16 +1481,154 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Sancionados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Sancionado";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Sancionado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Sancionados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Sancionado";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Sancionado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1014,7 +1658,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	No. Documento
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "No. Documento";
 	$fdata["GoodName"] = "No__Documento";
 	$fdata["ownerTable"] = "";
@@ -1149,7 +1793,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	TipoPropiedad
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "TipoPropiedad";
 	$fdata["GoodName"] = "TipoPropiedad";
 	$fdata["ownerTable"] = "";
@@ -1196,12 +1840,81 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1211,6 +1924,34 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Propiedades2";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "TipoPropiedad";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "TipoPropiedadName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -1226,17 +1967,14 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -1248,16 +1986,160 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Propiedades2";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "TipoPropiedad";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "TipoPropiedadName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Propiedades2";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "TipoPropiedad";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "TipoPropiedadName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1287,7 +2169,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Propiedad
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "Propiedad";
 	$fdata["GoodName"] = "Propiedad";
 	$fdata["ownerTable"] = "";
@@ -1422,7 +2304,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Ciudad
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 8;
+	$fdata["Index"] = 9;
 	$fdata["strName"] = "Ciudad";
 	$fdata["GoodName"] = "Ciudad";
 	$fdata["ownerTable"] = "";
@@ -1557,7 +2439,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Matrícula/Placa/Registro
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 9;
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "Matrícula/Placa/Registro";
 	$fdata["GoodName"] = "Matr_cula_Placa_Registro";
 	$fdata["ownerTable"] = "";
@@ -1692,7 +2574,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Avalúo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 10;
+	$fdata["Index"] = 11;
 	$fdata["strName"] = "Avalúo";
 	$fdata["GoodName"] = "Aval_o";
 	$fdata["ownerTable"] = "";
@@ -1831,7 +2713,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	F. Embargo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 12;
 	$fdata["strName"] = "F. Embargo";
 	$fdata["GoodName"] = "F__Embargo";
 	$fdata["ownerTable"] = "";
@@ -1966,10 +2848,145 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 
 	$tdatalistado_medidas_cautelares["F. Embargo"] = $fdata;
 		$tdatalistado_medidas_cautelares[".searchableFields"][] = "F. Embargo";
+//	Res. Embargo
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "Res. Embargo";
+	$fdata["GoodName"] = "Res__Embargo";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Listado_Medidas_Cautelares","Res__Embargo");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Res. Embargo";
+
+	
+		$fdata["FullName"] = "Res. Embargo";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalistado_medidas_cautelares["Res. Embargo"] = $fdata;
+		$tdatalistado_medidas_cautelares[".searchableFields"][] = "Res. Embargo";
 //	Secuestrado
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 12;
+	$fdata["Index"] = 14;
 	$fdata["strName"] = "Secuestrado";
 	$fdata["GoodName"] = "Secuestrado";
 	$fdata["ownerTable"] = "";
@@ -2099,7 +3116,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	F. Secuestro
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 13;
+	$fdata["Index"] = 15;
 	$fdata["strName"] = "F. Secuestro";
 	$fdata["GoodName"] = "F__Secuestro";
 	$fdata["ownerTable"] = "";
@@ -2237,7 +3254,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Secuestre
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 14;
+	$fdata["Index"] = 16;
 	$fdata["strName"] = "Secuestre";
 	$fdata["GoodName"] = "Secuestre";
 	$fdata["ownerTable"] = "";
@@ -2372,7 +3389,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Doc. Secuestre
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 15;
+	$fdata["Index"] = 17;
 	$fdata["strName"] = "Doc. Secuestre";
 	$fdata["GoodName"] = "Doc__Secuestre";
 	$fdata["ownerTable"] = "";
@@ -2507,7 +3524,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Dir. Secuestre
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 16;
+	$fdata["Index"] = 18;
 	$fdata["strName"] = "Dir. Secuestre";
 	$fdata["GoodName"] = "Dir__Secuestre";
 	$fdata["ownerTable"] = "";
@@ -2642,7 +3659,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Tel. Secuestre
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 17;
+	$fdata["Index"] = 19;
 	$fdata["strName"] = "Tel. Secuestre";
 	$fdata["GoodName"] = "Tel__Secuestre";
 	$fdata["ownerTable"] = "";
@@ -2777,7 +3794,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Comisión
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 18;
+	$fdata["Index"] = 20;
 	$fdata["strName"] = "Comisión";
 	$fdata["GoodName"] = "Comisi_n";
 	$fdata["ownerTable"] = "";
@@ -2907,7 +3924,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Aviso Remate
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
+	$fdata["Index"] = 21;
 	$fdata["strName"] = "Aviso Remate";
 	$fdata["GoodName"] = "Aviso_Remate";
 	$fdata["ownerTable"] = "";
@@ -3034,10 +4051,283 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 
 	$tdatalistado_medidas_cautelares["Aviso Remate"] = $fdata;
 		$tdatalistado_medidas_cautelares[".searchableFields"][] = "Aviso Remate";
+//	F. Remate
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 22;
+	$fdata["strName"] = "F. Remate";
+	$fdata["GoodName"] = "F__Remate";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Listado_Medidas_Cautelares","F__Remate");
+	$fdata["FieldType"] = 135;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "F. Remate";
+
+	
+		$fdata["FullName"] = "F. Remate";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Short Date");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Date");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+		$edata["DateEditType"] = 13;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
+
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalistado_medidas_cautelares["F. Remate"] = $fdata;
+		$tdatalistado_medidas_cautelares[".searchableFields"][] = "F. Remate";
+//	Res. Remate
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 23;
+	$fdata["strName"] = "Res. Remate";
+	$fdata["GoodName"] = "Res__Remate";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Listado_Medidas_Cautelares","Res__Remate");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Res. Remate";
+
+	
+		$fdata["FullName"] = "Res. Remate";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatalistado_medidas_cautelares["Res. Remate"] = $fdata;
+		$tdatalistado_medidas_cautelares[".searchableFields"][] = "Res. Remate";
 //	Aprobación
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 20;
+	$fdata["Index"] = 24;
 	$fdata["strName"] = "Aprobación";
 	$fdata["GoodName"] = "Aprobaci_n";
 	$fdata["ownerTable"] = "";
@@ -3167,7 +4457,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Valor Rematado
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 21;
+	$fdata["Index"] = 25;
 	$fdata["strName"] = "Valor Rematado";
 	$fdata["GoodName"] = "Valor_Rematado";
 	$fdata["ownerTable"] = "";
@@ -3306,7 +4596,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Dilig. Entrega
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 22;
+	$fdata["Index"] = 26;
 	$fdata["strName"] = "Dilig. Entrega";
 	$fdata["GoodName"] = "Dilig__Entrega";
 	$fdata["ownerTable"] = "";
@@ -3436,7 +4726,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 //	Observaciones
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 23;
+	$fdata["Index"] = 27;
 	$fdata["strName"] = "Observaciones";
 	$fdata["GoodName"] = "Observaciones";
 	$fdata["ownerTable"] = "";
@@ -3602,7 +4892,7 @@ require_once( getabspath( "include/listado_medidas_cautelares_ops.php" ) );
 	
 		;
 
-																							
+																											
 
 $tdatalistado_medidas_cautelares[".sqlquery"] = $queryData_listado_medidas_cautelares;
 

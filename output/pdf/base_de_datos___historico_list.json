@@ -106,6 +106,12 @@ pdfDocument = {
 										{BEGIN col_grid_13}
 					"%",
 					{END col_grid_13}
+										{BEGIN col_grid_14}
+					"%",
+					{END col_grid_14}
+										{BEGIN col_grid_15}
+					"%",
+					{END col_grid_15}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -165,13 +171,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Base_de_Datos___Historico_snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
-				
-			{"text":"{$event Base_de_Datos___Historico_Seccional_Cartera}","hidden":"{$item_hide_snippet1}","isHtml":true},
-				
-				
-			{"text":""},
+			{"text":"\n<div class=\"form-container\">\n    <!-- Título y select para Cartera -->\n    <div class=\"form-item\">\n        <label for=\"cartera_select\">Cartera:</label>\n        {$cartera_select} <!-- Aquí se inserta el select de Cartera -->\n    </div>\n\n    <!-- Título y select para Seccional -->\n    <div class=\"form-item\">\n        <label for=\"seccional_select\">Seccional:</label>\n        {$seccional_select} <!-- Aquí se inserta el select de Seccional -->\n    </div>\n</div>\n","hidden":"{$item_hide_text6}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -210,6 +210,79 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Base_de_Datos___Historico_Seccional_Cartera}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+				
+			{"text":"{$event Base_de_Datos___Historico_seccional_check}","hidden":"{$item_hide_snippet2}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Base_de_Datos___Historico_snippet}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c4',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}
@@ -630,6 +703,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Base_de_Datos___Historico SeccionalId }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$SeccionalId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
+{
+	cellId: 'headcell_field14',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel Base_de_Datos___Historico CarteraTipoId }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$CarteraTipoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field14}
 											],
 				{END row_grid_0}
 		
@@ -1044,6 +1175,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
+{
+	cellId: 'cell_field13',
+	col:0,
+	row:0,
+			fieldName: 'SeccionalId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$SeccionalId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
+{
+	cellId: 'cell_field14',
+	col:0,
+	row:0,
+			fieldName: 'CarteraTipoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$CarteraTipoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field14}
 											],
 				{END row_grid_1}
 		
@@ -1425,6 +1614,58 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field12}
+																							{BEGIN cellblock_grid_footcell_field13}
+{
+	cellId: 'footcell_field13',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field13}
+																							{BEGIN cellblock_grid_footcell_field14}
+{
+	cellId: 'footcell_field14',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field14}
 											],
 				{END row_grid_2}
 		
@@ -1469,7 +1710,7 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_pagination}"},
 				
 				
-			{"text":"<script>\n$(document).ready(function() {\n    $('#Reporte_Carteraid').val(sessionStorage.getItem('cartera_id_report'));\n    $('#Reporte_Seccionalid').val(sessionStorage.getItem('seccional_id_report'));\n$('#BD_Historico_MesId').val(sessionStorage.getItem('mesHistorico'));\n});\n</script>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"<script>\n$(document).ready(function() {\n$('#BD_Historico_MesId').val(sessionStorage.getItem('mesHistorico'));\n});\n</script>\n\n<script>\n$(document).ready(function() {\n    // Recuperar el estado de los checkboxes desde Session Storage\n    for (var i = 1; i <= 5; i++) {\n        var cartera = sessionStorage.getItem('cartera_' + i);\n        if (cartera) {\n            $('#cartera_' + cartera).prop('checked', true);\n        }\n    }\n\n    // Almacenar el estado de los checkboxes en Session Storage\n    $('input[name=\"cartera[]\"]').change(function() {\n        // Limpiar el Session Storage para las carteras\n        for (var i = 1; i <= 5; i++) {\n            sessionStorage.removeItem('cartera_' + i);\n        }\n\n        // Guardar los checkboxes seleccionados\n        $('input[name=\"cartera[]\"]:checked').each(function(index) {\n            if (index < 5) { // Limitar a las primeras 5 carteras\n                sessionStorage.setItem('cartera_' + (index + 1), $(this).val());\n            }\n        });\n    });\n});\n</script>\n\n<script>\n$(document).ready(function() {\n    // Recuperar el estado de los checkboxes desde Session Storage\n    for (var i = 1; i <= 25; i++) {\n        var seccional= sessionStorage.getItem('seccional_' + i);\n        if (seccional) {\n            $('#seccional_' + seccional).prop('checked', true);\n        }\n    }\n\n    // Almacenar el estado de los checkboxes en Session Storage\n    $('input[name=\"seccional[]\"]').change(function() {\n        // Limpiar el Session Storage para las seccionales\n        for (var i = 1; i <= 25; i++) {\n            sessionStorage.removeItem('seccional_' + i);\n        }\n\n        // Guardar los checkboxes seleccionados\n        $('input[name=\"seccional[]\"]:checked').each(function(index) {\n            if (index < 25) { // Limitar a las primeras 25 seccionales\n                sessionStorage.setItem('seccional_' + (index + 1), $(this).val());\n            }\n        });\n    });\n});\n</script>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

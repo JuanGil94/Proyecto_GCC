@@ -46,9 +46,13 @@
 'Notificacion',
 'Sancionado',
 'SancionadoTipoDocumento',
-'SancionadoDocumento' ),
+'SancionadoDocumento',
+'SeccionalId',
+'CarteraTipoId' ),
 'searchRequiredFields' => array(  ),
 'searchPanelFields' => array( 'ConceptoId',
+'CarteraTipoId',
+'SeccionalId',
 'SancionadoDocumento',
 'SancionadoTipoDocumento',
 'Sancionado',
@@ -85,18 +89,25 @@
 'SancionadoTipoDocumento' => array( 'simple_grid_field11',
 'simple_grid_field24' ),
 'SancionadoDocumento' => array( 'simple_grid_field12',
-'simple_grid_field25' ) ),
+'simple_grid_field25' ),
+'SeccionalId' => array( 'grid_field',
+'grid_field_label' ),
+'CarteraTipoId' => array( 'grid_field1',
+'grid_field_label1' ) ),
 'hideEmptyFields' => array(  ) ),
 'pageLinks' => array( 'edit' => false,
 'add' => false,
 'view' => false,
 'print' => true ),
-'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'snippet',
-'snippet1',
-'custom_button',
+'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'text6',
 'details_found',
 'page_size',
-'print_panel' ),
+'print_panel',
+'snippet1',
+'snippet2',
+'snippet',
+'custom_button',
+'custom_button1' ),
 'below-grid' => array( 'pagination',
 'text' ),
 'left' => array( 'logo',
@@ -106,6 +117,7 @@
 'supertop' => array( 'expand_menu_button',
 'collapse_button',
 'breadcrumb',
+'text5',
 'simple_search',
 'advsearch_link',
 'list_options',
@@ -143,15 +155,22 @@
 'simple_grid_field25',
 'simple_grid_field12',
 'grid_checkbox_head',
-'grid_checkbox' ),
+'grid_checkbox',
+'grid_field_label',
+'grid_field',
+'grid_field_label1',
+'grid_field1' ),
 'top' => array(  ) ),
 'formXtTags' => array( 'top' => array(  ) ),
-'itemForms' => array( 'snippet' => 'above-grid',
-'snippet1' => 'above-grid',
-'custom_button' => 'above-grid',
+'itemForms' => array( 'text6' => 'above-grid',
 'details_found' => 'above-grid',
 'page_size' => 'above-grid',
 'print_panel' => 'above-grid',
+'snippet1' => 'above-grid',
+'snippet2' => 'above-grid',
+'snippet' => 'above-grid',
+'custom_button' => 'above-grid',
+'custom_button1' => 'above-grid',
 'pagination' => 'below-grid',
 'text' => 'below-grid',
 'logo' => 'left',
@@ -161,6 +180,7 @@
 'expand_menu_button' => 'supertop',
 'collapse_button' => 'supertop',
 'breadcrumb' => 'supertop',
+'text5' => 'supertop',
 'simple_search' => 'supertop',
 'advsearch_link' => 'supertop',
 'list_options' => 'supertop',
@@ -198,7 +218,11 @@
 'simple_grid_field25' => 'grid',
 'simple_grid_field12' => 'grid',
 'grid_checkbox_head' => 'grid',
-'grid_checkbox' => 'grid' ),
+'grid_checkbox' => 'grid',
+'grid_field_label' => 'grid',
+'grid_field' => 'grid',
+'grid_field_label1' => 'grid',
+'grid_field1' => 'grid' ),
 'itemLocations' => array( 'simple_grid_field13' => array( 'location' => 'grid',
 'cellId' => 'headcell_field' ),
 'simple_grid_field' => array( 'location' => 'grid',
@@ -262,7 +286,15 @@
 'grid_checkbox_head' => array( 'location' => 'grid',
 'cellId' => 'headcell_checkbox' ),
 'grid_checkbox' => array( 'location' => 'grid',
-'cellId' => 'cell_checkbox' ) ),
+'cellId' => 'cell_checkbox' ),
+'grid_field_label' => array( 'location' => 'grid',
+'cellId' => 'headcell_field13' ),
+'grid_field' => array( 'location' => 'grid',
+'cellId' => 'cell_field13' ),
+'grid_field_label1' => array( 'location' => 'grid',
+'cellId' => 'headcell_field14' ),
+'grid_field1' => array( 'location' => 'grid',
+'cellId' => 'cell_field14' ) ),
 'itemVisiblity' => array( 'breadcrumb' => 5,
 'expand_menu_button' => 2,
 'print_panel' => 5,
@@ -308,7 +340,9 @@
 'simple_grid_field9',
 'simple_grid_field10',
 'simple_grid_field11',
-'simple_grid_field12' ),
+'simple_grid_field12',
+'grid_field',
+'grid_field1' ),
 'search_panel_field' => array( 'search_panel_field',
 'search_panel_field1',
 'search_panel_field2',
@@ -317,7 +351,9 @@
 'search_panel_field9',
 'search_panel_field10',
 'search_panel_field11',
-'search_panel_field12' ),
+'search_panel_field12',
+'search_panel_field3',
+'search_panel_field4' ),
 'advsearch_link' => array( 'advsearch_link' ),
 'grid_field_label' => array( 'simple_grid_field13',
 'simple_grid_field14',
@@ -331,17 +367,23 @@
 'simple_grid_field22',
 'simple_grid_field23',
 'simple_grid_field24',
-'simple_grid_field25' ),
+'simple_grid_field25',
+'grid_field_label',
+'grid_field_label1' ),
 'show_search_panel' => array( 'show_search_panel' ),
 'hide_search_panel' => array( 'hide_search_panel' ),
 'text' => array( 'text',
 'text1',
 'text2',
 'text3',
-'text4' ),
+'text4',
+'text5',
+'text6' ),
 'snippet' => array( 'snippet',
-'snippet1' ),
-'custom_button' => array( 'custom_button' ),
+'snippet1',
+'snippet2' ),
+'custom_button' => array( 'custom_button',
+'custom_button1' ),
 'expand_button' => array( 'expand_button' ) ),
 'cellMaps' => array( 'grid' => array( 'cells' => array( 'headcell_checkbox' => array( 'cols' => array( 0 ),
 'rows' => array( 0 ),
@@ -425,6 +467,18 @@
 'rows' => array( 0 ),
 'tags' => array( 'SancionadoDocumento_fieldheadercolumn' ),
 'items' => array( 'simple_grid_field25' ),
+'fixedAtServer' => false,
+'fixedAtClient' => false ),
+'headcell_field13' => array( 'cols' => array( 14 ),
+'rows' => array( 0 ),
+'tags' => array( 'SeccionalId_fieldheadercolumn' ),
+'items' => array( 'grid_field_label' ),
+'fixedAtServer' => false,
+'fixedAtClient' => false ),
+'headcell_field14' => array( 'cols' => array( 15 ),
+'rows' => array( 0 ),
+'tags' => array( 'CarteraTipoId_fieldheadercolumn' ),
+'items' => array( 'grid_field_label1' ),
 'fixedAtServer' => false,
 'fixedAtClient' => false ),
 'cell_checkbox' => array( 'cols' => array( 0 ),
@@ -511,6 +565,18 @@
 'items' => array( 'simple_grid_field12' ),
 'fixedAtServer' => false,
 'fixedAtClient' => false ),
+'cell_field13' => array( 'cols' => array( 14 ),
+'rows' => array( 1 ),
+'tags' => array( 'SeccionalId_fieldcolumn' ),
+'items' => array( 'grid_field' ),
+'fixedAtServer' => false,
+'fixedAtClient' => false ),
+'cell_field14' => array( 'cols' => array( 15 ),
+'rows' => array( 1 ),
+'tags' => array( 'CarteraTipoId_fieldcolumn' ),
+'items' => array( 'grid_field1' ),
+'fixedAtServer' => false,
+'fixedAtClient' => false ),
 'footcell_checkbox' => array( 'cols' => array( 0 ),
 'rows' => array( 2 ),
 'tags' => array(  ),
@@ -594,8 +660,20 @@
 'tags' => array(  ),
 'items' => array(  ),
 'fixedAtServer' => false,
+'fixedAtClient' => false ),
+'footcell_field13' => array( 'cols' => array( 14 ),
+'rows' => array( 2 ),
+'tags' => array(  ),
+'items' => array(  ),
+'fixedAtServer' => false,
+'fixedAtClient' => false ),
+'footcell_field14' => array( 'cols' => array( 15 ),
+'rows' => array( 2 ),
+'tags' => array(  ),
+'items' => array(  ),
+'fixedAtServer' => false,
 'fixedAtClient' => false ) ),
-'width' => 14,
+'width' => 16,
 'height' => 3 ) ) ),
 'loginForm' => array( 'loginForm' => 1 ),
 'page' => array( 'verticalBar' => true,
@@ -607,13 +685,15 @@
 'gridType' => 0,
 'recsPerRow' => 1,
 'hasCustomButtons' => true,
-'customButtons' => array( 'Buscar11' ),
+'customButtons' => array( 'Buscar11',
+'Reiniciar' ),
 'hasNotifications' => true ),
 'misc' => array( 'type' => 'list',
 'breadcrumb' => true ),
 'events' => array( 'maps' => array(  ),
 'mapsData' => array(  ),
-'buttons' => array( 'Buscar11' ) ),
+'buttons' => array( 'Buscar11',
+'Reiniciar' ) ),
 'dataGrid' => array( 'groupFields' => array(  ) ) );
 			$pageArray = array( 'id' => 'list',
 'type' => 'list',
@@ -623,15 +703,26 @@
 'forms' => array( 'above-grid' => array( 'modelId' => 'list-above-grid',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ),
 array( 'cell' => 'c2' ) ),
-'section' => '' ) ),
+'section' => '' ),
+array( 'section' => '',
+'cells' => array( array( 'cell' => 'c',
+'colspan' => 2 ) ) ),
+array( 'section' => '',
+'cells' => array( array( 'cell' => 'c4',
+'colspan' => 2 ) ) ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
-'items' => array( 'snippet',
-'snippet1',
-'custom_button' ) ),
+'items' => array( 'text6' ) ),
 'c2' => array( 'model' => 'c2',
 'items' => array( 'details_found',
 'page_size',
-'print_panel' ) ) ),
+'print_panel' ) ),
+'c' => array( 'model' => 'c1',
+'items' => array( 'snippet1',
+'snippet2' ) ),
+'c4' => array( 'model' => 'c1',
+'items' => array( 'snippet',
+'custom_button',
+'custom_button1' ) ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ),
 'below-grid' => array( 'modelId' => 'list-below-grid',
@@ -662,7 +753,8 @@ array( 'cell' => 'c2' ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
 'items' => array( 'expand_menu_button',
 'collapse_button',
-'breadcrumb' ) ),
+'breadcrumb',
+'text5' ) ),
 'c2' => array( 'model' => 'c2',
 'items' => array( 'simple_search',
 'advsearch_link',
@@ -687,7 +779,9 @@ array( 'cell' => 'headcell_field8' ),
 array( 'cell' => 'headcell_field9' ),
 array( 'cell' => 'headcell_field10' ),
 array( 'cell' => 'headcell_field11' ),
-array( 'cell' => 'headcell_field12' ) ) ),
+array( 'cell' => 'headcell_field12' ),
+array( 'cell' => 'headcell_field13' ),
+array( 'cell' => 'headcell_field14' ) ) ),
 array( 'section' => 'body',
 'cells' => array( array( 'cell' => 'cell_checkbox' ),
 array( 'cell' => 'cell_field' ),
@@ -702,7 +796,9 @@ array( 'cell' => 'cell_field8' ),
 array( 'cell' => 'cell_field9' ),
 array( 'cell' => 'cell_field10' ),
 array( 'cell' => 'cell_field11' ),
-array( 'cell' => 'cell_field12' ) ) ),
+array( 'cell' => 'cell_field12' ),
+array( 'cell' => 'cell_field13' ),
+array( 'cell' => 'cell_field14' ) ) ),
 array( 'section' => 'foot',
 'cells' => array( array( 'cell' => 'footcell_checkbox' ),
 array( 'cell' => 'footcell_field' ),
@@ -717,7 +813,9 @@ array( 'cell' => 'footcell_field8' ),
 array( 'cell' => 'footcell_field9' ),
 array( 'cell' => 'footcell_field10' ),
 array( 'cell' => 'footcell_field11' ),
-array( 'cell' => 'footcell_field12' ) ) ) ),
+array( 'cell' => 'footcell_field12' ),
+array( 'cell' => 'footcell_field13' ),
+array( 'cell' => 'footcell_field14' ) ) ) ),
 'cells' => array( 'headcell_field' => array( 'model' => 'headcell_field',
 'items' => array( 'simple_grid_field13' ),
 'field' => 'ConceptoId',
@@ -853,6 +951,26 @@ array( 'cell' => 'footcell_field12' ) ) ) ),
 'cell_checkbox' => array( 'model' => 'cell_checkbox',
 'items' => array( 'grid_checkbox' ) ),
 'footcell_checkbox' => array( 'model' => 'footcell_checkbox',
+'items' => array(  ) ),
+'headcell_field13' => array( 'model' => 'headcell_field',
+'items' => array( 'grid_field_label' ),
+'field' => 'SeccionalId',
+'columnName' => 'field' ),
+'cell_field13' => array( 'model' => 'cell_field',
+'items' => array( 'grid_field' ),
+'field' => 'SeccionalId',
+'columnName' => 'field' ),
+'footcell_field13' => array( 'model' => 'footcell_field',
+'items' => array(  ) ),
+'headcell_field14' => array( 'model' => 'headcell_field',
+'items' => array( 'grid_field_label1' ),
+'field' => 'CarteraTipoId',
+'columnName' => 'field' ),
+'cell_field14' => array( 'model' => 'cell_field',
+'items' => array( 'grid_field1' ),
+'field' => 'CarteraTipoId',
+'columnName' => 'field' ),
+'footcell_field14' => array( 'model' => 'footcell_field',
 'items' => array(  ) ) ),
 'deferredItems' => array(  ),
 'recsPerRow' => 1 ),
@@ -872,6 +990,8 @@ array( 'cell' => 'footcell_field12' ) ) ) ),
 'grid_checkbox_head' => array( 'type' => 'grid_checkbox_head' ),
 'search_panel' => array( 'type' => 'search_panel',
 'items' => array( 'search_panel_field',
+'search_panel_field4',
+'search_panel_field3',
 'search_panel_field12',
 'search_panel_field11',
 'search_panel_field10',
@@ -1049,9 +1169,61 @@ array( 'cell' => 'footcell_field12' ) ) ) ),
 'text' => array( 'type' => 'text',
 'label' => array( 'text' => '<script>
 $(document).ready(function() {
-    $(\'#Reporte_Carteraid\').val(sessionStorage.getItem(\'cartera_id_report\'));
-    $(\'#Reporte_Seccionalid\').val(sessionStorage.getItem(\'seccional_id_report\'));
 $(\'#BD_Historico_MesId\').val(sessionStorage.getItem(\'mesHistorico\'));
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    // Recuperar el estado de los checkboxes desde Session Storage
+    for (var i = 1; i <= 5; i++) {
+        var cartera = sessionStorage.getItem(\'cartera_\' + i);
+        if (cartera) {
+            $(\'#cartera_\' + cartera).prop(\'checked\', true);
+        }
+    }
+
+    // Almacenar el estado de los checkboxes en Session Storage
+    $(\'input[name="cartera[]"]\').change(function() {
+        // Limpiar el Session Storage para las carteras
+        for (var i = 1; i <= 5; i++) {
+            sessionStorage.removeItem(\'cartera_\' + i);
+        }
+
+        // Guardar los checkboxes seleccionados
+        $(\'input[name="cartera[]"]:checked\').each(function(index) {
+            if (index < 5) { // Limitar a las primeras 5 carteras
+                sessionStorage.setItem(\'cartera_\' + (index + 1), $(this).val());
+            }
+        });
+    });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+    // Recuperar el estado de los checkboxes desde Session Storage
+    for (var i = 1; i <= 25; i++) {
+        var seccional= sessionStorage.getItem(\'seccional_\' + i);
+        if (seccional) {
+            $(\'#seccional_\' + seccional).prop(\'checked\', true);
+        }
+    }
+
+    // Almacenar el estado de los checkboxes en Session Storage
+    $(\'input[name="seccional[]"]\').change(function() {
+        // Limpiar el Session Storage para las seccionales
+        for (var i = 1; i <= 25; i++) {
+            sessionStorage.removeItem(\'seccional_\' + i);
+        }
+
+        // Guardar los checkboxes seleccionados
+        $(\'input[name="seccional[]"]:checked\').each(function(index) {
+            if (index < 25) { // Limitar a las primeras 25 seccionales
+                sessionStorage.setItem(\'seccional_\' + (index + 1), $(this).val());
+            }
+        });
+    });
 });
 </script>',
 'type' => 0 ),
@@ -1094,6 +1266,147 @@ $(\'#BD_Historico_MesId\').val(sessionStorage.getItem(\'mesHistorico\'));
     </strong>',
 'type' => 0 ),
 'editedByRte' => false ),
+'grid_field' => array( 'field' => 'SeccionalId',
+'type' => 'grid_field',
+'inlineAdd' => false,
+'inlineEdit' => false ),
+'grid_field_label' => array( 'type' => 'grid_field_label',
+'field' => 'SeccionalId' ),
+'grid_field1' => array( 'field' => 'CarteraTipoId',
+'type' => 'grid_field',
+'inlineAdd' => false,
+'inlineEdit' => false ),
+'grid_field_label1' => array( 'type' => 'grid_field_label',
+'field' => 'CarteraTipoId' ),
+'search_panel_field3' => array( 'field' => 'SeccionalId',
+'type' => 'search_panel_field',
+'alwaysOnPanel' => false,
+'required' => false ),
+'search_panel_field4' => array( 'field' => 'CarteraTipoId',
+'type' => 'search_panel_field',
+'alwaysOnPanel' => false,
+'required' => false ),
+'text5' => array( 'type' => 'text',
+'label' => array( 'text' => '<style>
+/* Contenedor principal de los checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los checkboxes se acomoden en varias filas si es necesario */
+    gap: 15px; /* Espacio entre cada checkbox */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es extenso */
+    max-width: 100%; /* Se ajusta al 100% del ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Estilos para los checkbox */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 150px; /* Cada checkbox ocupa al menos 150px de ancho, pero puede crecer */
+    min-width: 120px; /* Evita que los elementos se hagan demasiado pequeños */
+}
+
+/* Estilos para la etiqueta del checkbox */
+.checkbox-item label {
+    margin-left: 10px;
+}
+
+/* Estilos del checkbox */
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px; /* Espacio entre el checkbox y el label */
+}
+
+/* Contenedor principal que alinea los items horizontalmente */
+.form-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    gap: 20px; /* Espacio entre cada item */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada item (Cartera y Seccional) */
+.form-item {
+    display: flex;
+    flex-direction: row; /* Mantiene el label y el select en la misma línea */
+    align-items: center; /* Centra verticalmente el label con el select */
+}
+
+/* Estilo para los labels */
+.form-item label {
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre el label y el select */
+}
+
+/* Estilo para los selects */
+.form-item select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Estilos para el contenedor de checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los checkboxes se ajusten en varias líneas si es necesario */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 100%; /* Se adapta al ancho disponible */
+    box-sizing: border-box;
+}
+
+/* Estilos para los items individuales (checkbox + label) */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 150px; /* Controla el ancho mínimo de cada item */
+    min-width: 120px;
+}
+
+/* Estilos para los inputs (checkboxes) */
+.checkbox-item input[type="checkbox"] {
+    margin-right: 8px; /* Espacio entre el checkbox y el label */
+}
+
+</style>
+',
+'type' => 0 ),
+'editedByRte' => false ),
+'text6' => array( 'type' => 'text',
+'label' => array( 'text' => '
+<div class="form-container">
+    <!-- Título y select para Cartera -->
+    <div class="form-item">
+        <label for="cartera_select">Cartera:</label>
+        {$cartera_select} <!-- Aquí se inserta el select de Cartera -->
+    </div>
+
+    <!-- Título y select para Seccional -->
+    <div class="form-item">
+        <label for="seccional_select">Seccional:</label>
+        {$seccional_select} <!-- Aquí se inserta el select de Seccional -->
+    </div>
+</div>
+',
+'type' => 0 ),
+'editedByRte' => false ),
+'snippet2' => array( 'eventId' => 'Base_de_Datos___Historico_seccional_check',
+'label' => array( 'text' => 'Base_de_Datos___Historico_seccional_check',
+'type' => 0 ),
+'type' => 'snippet' ),
+'custom_button1' => array( 'eventId' => 'Reiniciar',
+'label' => array( 'text' => 'Reiniciar',
+'type' => 0 ),
+'type' => 'custom_button' ),
 'expand_button' => array( 'type' => 'expand_button' ) ),
 'dbProps' => array(  ),
 'spreadsheetGrid' => false,

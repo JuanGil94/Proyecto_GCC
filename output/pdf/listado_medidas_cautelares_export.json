@@ -174,6 +174,18 @@ pdfDocument = {
 				
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field22}"},
 				
+				
+			{"text":{$CarteraTipo_pdfvalue},"hidden":"{$item_hide_export_field23}"},
+				
+				
+			{"text":{$Res__Embargo_pdfvalue},"hidden":"{$item_hide_export_field24}"},
+				
+				
+			{"text":{$F__Remate_pdfvalue},"hidden":"{$item_hide_export_field25}"},
+				
+				
+			{"text":{$Res__Remate_pdfvalue},"hidden":"{$item_hide_export_field26}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

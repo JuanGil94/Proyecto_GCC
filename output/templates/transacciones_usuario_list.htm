@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipo}</span>
 						</div>
 		{END searchCtrlBlock_CarteraTipo}
+																{BEGIN searchCtrlBlock_Seccional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
+			<label>{$label Transacciones_Usuario Seccional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
+						</div>
+		{END searchCtrlBlock_Seccional}
 																{BEGIN searchCtrlBlock_Nombre}
 
 
@@ -224,6 +237,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="transacciones_usuario_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -232,12 +254,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="transacciones_usuario_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -533,6 +549,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Nombre"]:before {
 		content: "{$label Transacciones_Usuario Nombre}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
+		content: "{$label Transacciones_Usuario Seccional}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
@@ -650,11 +669,36 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldheadercolumn}
+	{BEGIN Seccional_fieldheader}
+	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
+	{$label Transacciones_Usuario Seccional }	{$arrow_icon_Seccional}
+	</SPAN>
+	{END Seccional_fieldheader}
+{END Seccional_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$OficioCount_class}	"
 
 			data-field="OficioCount"
 	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -668,7 +712,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field3}
+	{END cellblock_grid_headcell_field4}
 							</tr>
 															
 					{END grid_header}
@@ -773,11 +817,32 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+			data-field="Seccional"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Seccional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
+{$Seccional_value}
+</span>
+{END Seccional_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$OficioCount_class}	"
 
 			data-field="OficioCount"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -787,7 +852,7 @@
 </span>
 {END OficioCount_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field4}
 							</tr>
 										
 											{END grid_row}
@@ -869,25 +934,41 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$Seccional_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="transacciones_usuario_list"		data-control-cell
+	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$OficioCount_class}	"
 
 			data-field="OficioCount"
 	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="transacciones_usuario_list"	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="transacciones_usuario_list"	
 	>
 
 	 
 		{BEGIN OficioCount_fieldfootercolumn}
 {BEGIN OficioCount_showtotal}
 <span data-itemtype="grid_field_totals" data-itemid="grid_field_totals" {$item_grid_field_totals} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="OficioCount" data-fieldname="OficioCount">
-	Total	{$OficioCount_total}
+	Total: 	{$OficioCount_total}
 </span>
 {END OficioCount_showtotal}
 {END OficioCount_fieldfootercolumn}
 
 	
 	</td>
-	{END cellblock_grid_footcell_field3}
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

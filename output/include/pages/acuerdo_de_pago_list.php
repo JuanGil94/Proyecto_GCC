@@ -956,7 +956,13 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'cell_field6' => array( 'model' => 'cell_field',
 'items' => array( 'text5',
 'simple_grid_field6' ),
-'width' => '20px',
+'width' => '100px',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+    white-space: nowrap;
+}',
 'field' => 'Saldo',
 'columnName' => 'field' ),
 'footcell_field6' => array( 'model' => 'footcell_field',
@@ -968,6 +974,13 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'cell_field7' => array( 'model' => 'cell_field',
 'items' => array( 'text4',
 'simple_grid_field7' ),
+'width' => '100px',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+    white-space: nowrap;
+}',
 'field' => 'Recaudo',
 'columnName' => 'field' ),
 'footcell_field7' => array( 'model' => 'footcell_field',
@@ -999,6 +1012,13 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'cell_field10' => array( 'model' => 'cell_field',
 'items' => array( 'text3',
 'simple_grid_field10' ),
+'width' => '100px',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+    white-space: nowrap;
+}',
 'field' => 'ValorCuota',
 'columnName' => 'field' ),
 'footcell_field10' => array( 'model' => 'footcell_field',
@@ -1010,6 +1030,13 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'cell_field11' => array( 'model' => 'cell_field',
 'items' => array( 'text2',
 'simple_grid_field11' ),
+'width' => '100px',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+    white-space: nowrap;
+}',
 'field' => 'Abono',
 'columnName' => 'field' ),
 'footcell_field11' => array( 'model' => 'footcell_field',
@@ -1021,6 +1048,13 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'cell_field12' => array( 'model' => 'cell_field',
 'items' => array( 'text',
 'simple_grid_field12' ),
+'width' => '100px',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+    white-space: nowrap;
+}',
 'field' => 'UltimoPago',
 'columnName' => 'field' ),
 'footcell_field12' => array( 'model' => 'footcell_field',
@@ -1178,7 +1212,8 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'clickSort' => true ),
 'search_panel_field3' => array( 'field' => 'Sancionado',
 'type' => 'search_panel_field',
-'required' => false ),
+'required' => false,
+'alwaysOnPanel' => false ),
 'simple_grid_field4' => array( 'field' => 'Concepto',
 'type' => 'grid_field',
 'inlineAdd' => false,
@@ -1186,7 +1221,8 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'clickSort' => true ),
 'search_panel_field4' => array( 'field' => 'Concepto',
 'type' => 'search_panel_field',
-'required' => false ),
+'required' => false,
+'alwaysOnPanel' => false ),
 'simple_grid_field5' => array( 'field' => 'SancionadoDocumento',
 'type' => 'grid_field',
 'inlineAdd' => false,
@@ -1359,24 +1395,24 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'label' => array( 'type' => 0,
 'text' => '$' ) ),
 'text' => array( 'type' => 'text',
-'label' => array( 'text' => '<p>$</p>',
-'type' => 0 ),
+'label' => array( 'type' => 0,
+'text' => '$' ),
 'editedByRte' => false ),
 'text2' => array( 'type' => 'text',
-'label' => array( 'text' => '<p>$</p>',
-'type' => 0 ),
+'label' => array( 'type' => 0,
+'text' => '$' ),
 'editedByRte' => false ),
 'text3' => array( 'type' => 'text',
-'label' => array( 'text' => '<p>$</p>',
-'type' => 0 ),
+'label' => array( 'type' => 0,
+'text' => '$' ),
 'editedByRte' => false ),
 'text4' => array( 'type' => 'text',
-'label' => array( 'text' => '<p>$</p>',
-'type' => 0 ),
+'label' => array( 'type' => 0,
+'text' => '$' ),
 'editedByRte' => false ),
 'text5' => array( 'type' => 'text',
-'label' => array( 'text' => '<p>$</p>',
-'type' => 0 ),
+'label' => array( 'type' => 0,
+'text' => '$' ),
 'editedByRte' => false ),
 'expand_button' => array( 'type' => 'expand_button' ) ),
 'dbProps' => array(  ),

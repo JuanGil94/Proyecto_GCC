@@ -656,6 +656,16 @@ if($buttId=='Buscar19')
 	}
 	buttonHandler_Buscar19($params);
 }
+if($buttId=='Reiniciar')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Reiniciar($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -3908,14 +3918,14 @@ function buttonHandler_Buscar4($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-		
-	//$mes_actual = date('Y-m'); // Obtiene el mes actual en formato 'YYYY-MM'
+		//$mes_actual = date('Y-m'); // Obtiene el mes actual en formato 'YYYY-MM'
 	$date = new DateTime($params['difire_mes'].'-01'); // Crea un objeto DateTime para el primer día del mes
 	$date->modify('last day of this month'); // Modifica la fecha al último día del mes
 	$ultimo_dia = $date->format('Y-m-d'); // Formatea la fecha al formato 'YYYY-MM-DD'
 
 	$_SESSION['difire_mes'] = $ultimo_dia;
-
+	$_SESSION['cartera_obligacion'] = $params['cartera_id_report'];
+	$_SESSION['seccional_obligacion'] = $params['seccional_id_report'];
 	;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -4593,9 +4603,7 @@ function buttonHandler_Buscar11($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	//$_SESSION['mesHistorico'] = $params['mesHistorico'];
-
-// Suponiendo que $params['mesHistorico'] está en formato 'YYYY-MM-DD'
+	// Suponiendo que $params['mesHistorico'] está en formato 'YYYY-MM-DD'
 $fecha = $params['mesHistorico'].'-01';
 
 // Crear un objeto DateTime a partir de la fecha
@@ -4610,46 +4618,30 @@ $_SESSION['mesHistorico'] = $date->format('Y-m-d');
 
 $username = $_SESSION["UserNameF"];
 
+$carterasSeleccionadas = $params["selectedCarteras"];
 
-//DECLARE @Cartera INT = ':session.cateraid';
-//DECLARE @Seccional INT =':session.seccionalid';   
+if (!empty($carterasSeleccionadas)) {
+    foreach ($carterasSeleccionadas as $index => $carteraId) {
+        if ($index < 5) { // Limitar a las primeras 5 carteras
+            $_SESSION["cartera" . ($index + 1)] = $carteraId; // Almacenar en variables de sesión
+            echo "Cartera seleccionada: " . htmlspecialchars($carteraId) . "<br>";
+        }
+    }
+} else {
+    echo "No se seleccionó ninguna cartera.";
+}
 
-		if (isset($params['cartera_id_report']) && $params['cartera_id_report'] != '0') {
-    // Guardar el valor en una variable de sesión
-			$_SESSION['cateraid']  = $params['cartera_id_report'];
-		}
+$seccionalesSeleccionados = $params["selectedSeccionales"];
 
-// Verificar si el parámetro 'seccional_id_report' está definido y si su valor es diferente de 0
-if (isset($params['seccional_id_report']) && $params['seccional_id_report'] != '0') {
-    // Guardar el valor en una variable de sesión
-    $_SESSION['seccionalid']  = $params['seccional_id_report'];
-		// Verificar si el parámetro 'seccional_id_report' está definido y si su valor es diferente de 0
-
-} else{
-	
-	//$setSessionValues();
-$sql = "SELECT TOP (1) 
-    [Extent1].[UserId] AS [UserId], 
-    [Extent1].[UserName] AS [UserName], 
-    [Extent1].[HorarioId] AS [HorarioId], 
-    [Extent1].[SeccionalId] AS SeccionalId, 
-    [Extent1].[AbogadoId] AS [AbogadoId], 
-    [Extent1].[Email] AS [Email], 
-    [Extent1].[CarteraTipoId] AS CarteraTipoId, 
-    [Extent1].[Fecha] AS [Fecha], 
-    [Extent1].[Nombre] AS [Nombre]
-    FROM [dbo].[UserProfile] AS [Extent1]
-    WHERE [Extent1].[UserName] = '$username'";
-
-// Ejecutar la consulta
-$result = DB::Query($sql);
-
-// Obtener el resultado
-$row = $result->fetchAssoc();
-$cartera = $row['CarteraTipoId'];
-$seccional = $row['SeccionalId'];
-$_SESSION['cateraid'] = $cartera;
-$_SESSION['seccionalid'] = $seccional;
+if (!empty($seccionalesSeleccionados)) {
+    foreach ($seccionalesSeleccionados as $index2 => $seccionalId) {
+        if ($index2 < 25) { // Limitar a las primeras 5 carteras
+            $_SESSION["seccional" . ($index2 + 1)] = $seccionalId; // Almacenar en variables de sesión
+            echo "Seccional seleccionado: " . htmlspecialchars($seccionalId) . "<br>";
+        }
+    }
+} else {
+    echo "No se seleccionó ninguna Seccional.";
 }
 ;
 	RunnerContext::pop();
@@ -5654,6 +5646,95 @@ $seccional = $row['SeccionalId'];
 $_SESSION['cartera_id_report_noti'] = $cartera;
 $_SESSION['seccional_id_report_noti'] = $seccional;
 };
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Reiniciar($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+
+			unset($_SESSION['cartera1']);
+			unset($_SESSION['cartera2']);
+			unset($_SESSION['cartera3']); 
+			unset($_SESSION['cartera4']);
+			unset($_SESSION['cartera5']);
+			
+			unset($_SESSION['seccional1']);
+			unset($_SESSION['seccional2']);
+			unset($_SESSION['seccional3']); 
+			unset($_SESSION['seccional4']);
+			unset($_SESSION['seccional5']);
+			unset($_SESSION['seccional6']);
+			unset($_SESSION['seccional7']);
+			unset($_SESSION['seccional8']); 
+			unset($_SESSION['seccional9']);
+			unset($_SESSION['seccional10']);
+			unset($_SESSION['seccional11']);
+			unset($_SESSION['seccional12']);
+			unset($_SESSION['seccional13']); 
+			unset($_SESSION['seccional14']);
+			unset($_SESSION['seccional15']);
+			unset($_SESSION['seccional16']);
+			unset($_SESSION['seccional17']);
+			unset($_SESSION['seccional18']); 
+			unset($_SESSION['seccional19']);
+			unset($_SESSION['seccional20']);
+			unset($_SESSION['seccional21']);
+			unset($_SESSION['seccional22']);
+			unset($_SESSION['seccional23']); 
+			unset($_SESSION['seccional24']);
+			unset($_SESSION['seccional25']);
+			
+			;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

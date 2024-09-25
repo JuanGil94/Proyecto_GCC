@@ -68,9 +68,10 @@ VALUES
     [HistoricosView2].[Prescripcion] AS [Prescripcion], 
     [HistoricosView2].[Rel_Deterioro] AS [Rel_Deterioro]
     FROM [dbo].[HistoricosView2] AS [HistoricosView2]) AS [Extent1]
-    WHERE ([Extent1].[CarteraTipoId] = ':session.cateraid') AND ([Extent1].[SeccionalId] = ':session.seccionalid') AND ([Extent1].[Hasta] = ':session.difire_mes')
+    WHERE ([Extent1].[CarteraTipoId] = ':session.cartera_obligacion') AND ([Extent1].[SeccionalId] = ':session.seccional_obligacion') AND ([Extent1].[Hasta] = ':session.difire_mes')
     )  AS [Project1]
-	ORDER BY [Project1].[SeccionalId] ASC, [Project1].[Numero]"
+	ORDER BY [Project1].[SeccionalId] ASC, [Project1].[Numero]
+"
 	);
 		$tables_data["Obligaciones de Dificil Recaudo"][".operations"] = &$topsobligaciones_de_dificil_recaudo;
 ?>

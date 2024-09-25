@@ -106,9 +106,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$TipoDocumento_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
@@ -136,16 +133,10 @@ pdfDocument = {
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field9}"},
 				
 				
-			{"text":{$PrivadoLibertad_pdfvalue},"hidden":"{$item_hide_export_field10}"},
-				
-				
 			{"text":{$Estado_pdfvalue},"hidden":"{$item_hide_export_field11}"},
 				
 				
 			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_export_field12}"},
-				
-				
-			{"text":{$EstadoId_pdfvalue},"hidden":"{$item_hide_export_field13}"},
 				
 		  ],
   "border": [ false, false, false, false ],

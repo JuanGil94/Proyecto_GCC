@@ -86,10 +86,10 @@ pdfDocument = {
 					"%",
 					{END col_grid_6}
 										{BEGIN col_grid_7}
-					20,
+					100,
 					{END col_grid_7}
 										{BEGIN col_grid_8}
-					"%",
+					100,
 					{END col_grid_8}
 										{BEGIN col_grid_9}
 					"%",
@@ -98,16 +98,16 @@ pdfDocument = {
 					"%",
 					{END col_grid_10}
 										{BEGIN col_grid_11}
-					"%",
+					100,
 					{END col_grid_11}
 										{BEGIN col_grid_12}
-					"%",
+					100,
 					{END col_grid_12}
 										{BEGIN col_grid_13}
 					"%",
 					{END col_grid_13}
 										{BEGIN col_grid_14}
-					"%",
+					100,
 					{END col_grid_14}
 										{BEGIN col_grid_15}
 					"%",
@@ -985,7 +985,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<p>$</p>","hidden":"{$item_hide_text5}","isHtml":true},
+			{"text":"$","hidden":"{$item_hide_text5}","isHtml":true},
 				
 				
 			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
@@ -1017,7 +1017,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<p>$</p>","hidden":"{$item_hide_text4}","isHtml":true},
+			{"text":"$","hidden":"{$item_hide_text4}","isHtml":true},
 				
 				
 			{"text":{$Recaudo_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
@@ -1107,7 +1107,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<p>$</p>","hidden":"{$item_hide_text3}","isHtml":true},
+			{"text":"$","hidden":"{$item_hide_text3}","isHtml":true},
 				
 				
 			{"text":{$ValorCuota_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
@@ -1139,7 +1139,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<p>$</p>","hidden":"{$item_hide_text2}","isHtml":true},
+			{"text":"$","hidden":"{$item_hide_text2}","isHtml":true},
 				
 				
 			{"text":{$Abono_pdfvalue},"hidden":"{$item_hide_simple_grid_field11}"},
@@ -1200,7 +1200,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"<p>$</p>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"$","hidden":"{$item_hide_text}","isHtml":true},
 				
 				
 			{"text":{$UltimoPago_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},

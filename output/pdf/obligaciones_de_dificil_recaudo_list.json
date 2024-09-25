@@ -159,10 +159,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Mes}","hidden":"{$item_hide_snippet}","isHtml":true},
-				
-				
-			{"text":""},
+			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Cartera_Seccional}","hidden":"{$item_hide_snippet7}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -194,6 +191,55 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
 		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Mes}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      
@@ -959,7 +1005,6 @@ pdfDocument = {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
-			fieldName: 'ConceptoId',
 				style: 'footcell',
 		
 		
@@ -975,7 +1020,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$ConceptoId_align}',
+              "alignment": 'left',
      
       
       },
@@ -986,7 +1031,6 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
-			fieldName: 'EstadoId',
 				style: 'footcell',
 		
 		
@@ -1002,7 +1046,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$EstadoId_align}',
+              "alignment": 'left',
      
       
       },
@@ -1027,7 +1071,12 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Total_Procesos}","hidden":"{$item_hide_snippet1}","isHtml":true},
+			{BEGIN Numero_fieldfootercolumn}
+			{BEGIN Numero_showtotal}
+				{ text: ' ' },
+				{"text":{$Numero_total},"hidden":"{$item_hide_grid_field_totals}"}
+			{END Numero_showtotal}
+		{END Numero_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1056,7 +1105,12 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Obligacion_Total}","hidden":"{$item_hide_snippet2}","isHtml":true},
+			{BEGIN Obligacion_fieldfootercolumn}
+			{BEGIN Obligacion_showtotal}
+				{ text: '$ ' },
+				{"text":{$Obligacion_total},"hidden":"{$item_hide_grid_field_totals1}"}
+			{END Obligacion_showtotal}
+		{END Obligacion_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1085,7 +1139,12 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Total_Costas}","hidden":"{$item_hide_snippet3}","isHtml":true},
+			{BEGIN Costas_fieldfootercolumn}
+			{BEGIN Costas_showtotal}
+				{ text: '$ ' },
+				{"text":{$Costas_total},"hidden":"{$item_hide_grid_field_totals2}"}
+			{END Costas_showtotal}
+		{END Costas_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1114,7 +1173,12 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Total_Intereses}","hidden":"{$item_hide_snippet4}","isHtml":true},
+			{BEGIN Intereses_fieldfootercolumn}
+			{BEGIN Intereses_showtotal}
+				{ text: '$ ' },
+				{"text":{$Intereses_total},"hidden":"{$item_hide_grid_field_totals3}"}
+			{END Intereses_showtotal}
+		{END Intereses_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1143,7 +1207,12 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Total_Saldo}","hidden":"{$item_hide_snippet5}","isHtml":true},
+			{BEGIN Saldo_fieldfootercolumn}
+			{BEGIN Saldo_showtotal}
+				{ text: '$ ' },
+				{"text":{$Saldo_total},"hidden":"{$item_hide_grid_field_totals4}"}
+			{END Saldo_showtotal}
+		{END Saldo_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1172,7 +1241,12 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$event Obligaciones_de_Dificil_Recaudo_Total_Deterioro}","hidden":"{$item_hide_snippet6}","isHtml":true},
+			{BEGIN Rel_Deterioro_fieldfootercolumn}
+			{BEGIN Rel_Deterioro_showtotal}
+				{ text: '$ ' },
+				{"text":{$Rel_Deterioro_total},"hidden":"{$item_hide_grid_field_totals5}"}
+			{END Rel_Deterioro_showtotal}
+		{END Rel_Deterioro_fieldfootercolumn},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -1187,7 +1261,6 @@ pdfDocument = {
 	cellId: 'footcell_field8',
 	col:0,
 	row:0,
-			fieldName: 'Sancionado',
 				style: 'footcell',
 		
 		
@@ -1203,7 +1276,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Sancionado_align}',
+              "alignment": 'left',
      
       
       },
@@ -1214,7 +1287,6 @@ pdfDocument = {
 	cellId: 'footcell_field9',
 	col:0,
 	row:0,
-			fieldName: 'SancionadoTipoDocumento',
 				style: 'footcell',
 		
 		
@@ -1230,7 +1302,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoTipoDocumento_align}',
+              "alignment": 'left',
      
       
       },
@@ -1241,7 +1313,6 @@ pdfDocument = {
 	cellId: 'footcell_field10',
 	col:0,
 	row:0,
-			fieldName: 'SancionadoDocumento',
 				style: 'footcell',
 		
 		
@@ -1257,7 +1328,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$SancionadoDocumento_align}',
+              "alignment": 'left',
      
       
       },

@@ -115,6 +115,58 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
 						</div>
 		{END searchCtrlBlock_Seccional}
+																{BEGIN searchCtrlBlock_Res__Remate}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Res__Remate}" {$filterRow_attrs_Res__Remate}>
+			<label>{$label Listado_Medidas_Cautelares Res__Remate }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Res__Remate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Res__Remate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Res__Remate}</span>
+						</div>
+		{END searchCtrlBlock_Res__Remate}
+																{BEGIN searchCtrlBlock_F__Remate}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_F__Remate}" {$filterRow_attrs_F__Remate}>
+			<label>{$label Listado_Medidas_Cautelares F__Remate }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_F__Remate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_F__Remate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_F__Remate}</span>
+						</div>
+		{END searchCtrlBlock_F__Remate}
+																{BEGIN searchCtrlBlock_Res__Embargo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Res__Embargo}" {$filterRow_attrs_Res__Embargo}>
+			<label>{$label Listado_Medidas_Cautelares Res__Embargo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Res__Embargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Res__Embargo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Res__Embargo}</span>
+						</div>
+		{END searchCtrlBlock_Res__Embargo}
+																{BEGIN searchCtrlBlock_CarteraTipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipo}" {$filterRow_attrs_CarteraTipo}>
+			<label>{$label Listado_Medidas_Cautelares CarteraTipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipo}</span>
+						</div>
+		{END searchCtrlBlock_CarteraTipo}
 																{BEGIN searchCtrlBlock_Observaciones}
 
 
@@ -484,6 +536,15 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="listado_medidas_cautelares_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -492,12 +553,6 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="listado_medidas_cautelares_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
 							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
@@ -784,7 +839,10 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipo"]:before {
+		content: "{$label Listado_Medidas_Cautelares CarteraTipo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
 		content: "{$label Listado_Medidas_Cautelares Seccional}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
@@ -817,6 +875,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="F__Embargo"]:before {
 		content: "{$label Listado_Medidas_Cautelares F__Embargo}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Res__Embargo"]:before {
+		content: "{$label Listado_Medidas_Cautelares Res__Embargo}";
+	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Secuestrado"]:before {
 		content: "{$label Listado_Medidas_Cautelares Secuestrado}";
 	}
@@ -840,6 +901,12 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Aviso_Remate"]:before {
 		content: "{$label Listado_Medidas_Cautelares Aviso_Remate}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="F__Remate"]:before {
+		content: "{$label Listado_Medidas_Cautelares F__Remate}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Res__Remate"]:before {
+		content: "{$label Listado_Medidas_Cautelares Res__Remate}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Aprobaci_n"]:before {
 		content: "{$label Listado_Medidas_Cautelares Aprobaci_n}";
@@ -1462,6 +1529,106 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field22}
+									{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldheadercolumn}
+	{BEGIN CarteraTipo_fieldheader}
+	<SPAN {$CarteraTipo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo">
+	{$label Listado_Medidas_Cautelares CarteraTipo }	{$arrow_icon_CarteraTipo}
+	</SPAN>
+	{END CarteraTipo_fieldheader}
+{END CarteraTipo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+									{BEGIN cellblock_grid_headcell_field24}
+	<th
+	
+	{$cell_grid_headcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Res__Embargo_class}	"
+
+			data-field="Res__Embargo"
+	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Res__Embargo_fieldheadercolumn}
+	{BEGIN Res__Embargo_fieldheader}
+	<SPAN {$Res__Embargo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Res__Embargo" data-fieldname="Res. Embargo">
+	{$label Listado_Medidas_Cautelares Res__Embargo }	{$arrow_icon_Res__Embargo}
+	</SPAN>
+	{END Res__Embargo_fieldheader}
+{END Res__Embargo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field24}
+									{BEGIN cellblock_grid_headcell_field25}
+	<th
+	
+	{$cell_grid_headcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F__Remate_class}	"
+
+			data-field="F__Remate"
+	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F__Remate_fieldheadercolumn}
+	{BEGIN F__Remate_fieldheader}
+	<SPAN {$F__Remate_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F__Remate" data-fieldname="F. Remate">
+	{$label Listado_Medidas_Cautelares F__Remate }	{$arrow_icon_F__Remate}
+	</SPAN>
+	{END F__Remate_fieldheader}
+{END F__Remate_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field25}
+									{BEGIN cellblock_grid_headcell_field26}
+	<th
+	
+	{$cell_grid_headcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Res__Remate_class}	"
+
+			data-field="Res__Remate"
+	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Res__Remate_fieldheadercolumn}
+	{BEGIN Res__Remate_fieldheader}
+	<SPAN {$Res__Remate_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Res__Remate" data-fieldname="Res. Remate">
+	{$label Listado_Medidas_Cautelares Res__Remate }	{$arrow_icon_Res__Remate}
+	</SPAN>
+	{END Res__Remate_fieldheader}
+{END Res__Remate_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field26}
 							</tr>
 															
 					{END grid_header}
@@ -1980,6 +2147,90 @@
 {END Observaciones_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field22}
+									{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+			data-field="CarteraTipo"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CarteraTipo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipo" data-fieldname="CarteraTipo" data-default-width >
+{$CarteraTipo_value}
+</span>
+{END CarteraTipo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+									{BEGIN cellblock_grid_cell_field24}
+	<td
+	
+	{$cell_grid_cell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Res__Embargo_class}	"
+
+			data-field="Res__Embargo"
+	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Res__Embargo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Res__Embargo" data-fieldname="Res. Embargo" data-default-width >
+{$Res__Embargo_value}
+</span>
+{END Res__Embargo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field24}
+									{BEGIN cellblock_grid_cell_field25}
+	<td
+	
+	{$cell_grid_cell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F__Remate_class}	"
+
+			data-field="F__Remate"
+	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F__Remate_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F__Remate" data-fieldname="F. Remate" data-default-width >
+{$F__Remate_value}
+</span>
+{END F__Remate_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field25}
+									{BEGIN cellblock_grid_cell_field26}
+	<td
+	
+	{$cell_grid_cell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Res__Remate_class}	"
+
+			data-field="Res__Remate"
+	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Res__Remate_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Res__Remate" data-fieldname="Res. Remate" data-default-width >
+{$Res__Remate_value}
+</span>
+{END Res__Remate_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field26}
 							</tr>
 										
 											{END grid_row}
@@ -2367,6 +2618,66 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field22}
+									{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CarteraTipo_class}	"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+									{BEGIN cellblock_grid_footcell_field24}
+	<td
+	
+	{$cell_grid_footcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Res__Embargo_class}	"
+
+	
+	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field24}
+									{BEGIN cellblock_grid_footcell_field25}
+	<td
+	
+	{$cell_grid_footcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F__Remate_class}	"
+
+	
+	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field25}
+									{BEGIN cellblock_grid_footcell_field26}
+	<td
+	
+	{$cell_grid_footcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Res__Remate_class}	"
+
+	
+	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="listado_medidas_cautelares_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field26}
 							</tr>
 					
 					</tfoot>

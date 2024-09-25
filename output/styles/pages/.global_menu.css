@@ -4,6 +4,12 @@
 [data-page=".global_menu"][data-itemid="welcome_item1"] > .bs-welcome-header {
   background-color: #D2AF80;
 }
+[data-page=".global_menu"][data-itemid="welcome_item2"] > .bs-welcome-header {
+  background-color: #00C2C5;
+}
+[data-page=".global_menu"][data-itemid="welcome_item3"] > .bs-welcome-header {
+  background-color: #E8926F;
+}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

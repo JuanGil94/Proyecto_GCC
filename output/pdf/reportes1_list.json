@@ -130,9 +130,6 @@ pdfDocument = {
 										{BEGIN col_grid_21}
 					"%",
 					{END col_grid_21}
-										{BEGIN col_grid_22}
-					"%",
-					{END col_grid_22}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -314,35 +311,6 @@ pdfDocument = {
 	cellId: 'headcell_field',
 	col:0,
 	row:0,
-			fieldName: 'ProcesoId',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel Reportes ProcesoId }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ProcesoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-																							{BEGIN cellblock_grid_headcell_field1}
-{
-	cellId: 'headcell_field1',
-	col:0,
-	row:0,
 			fieldName: 'ConceptoId',
 				style: 'headcell',
 		
@@ -357,7 +325,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes ConceptoId }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel Reportes ConceptoId }","hidden":"{$item_hide_simple_grid_field}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -366,10 +334,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field1}
-																							{BEGIN cellblock_grid_headcell_field2}
+{END cellblock_grid_headcell_field}
+																							{BEGIN cellblock_grid_headcell_field1}
 {
-	cellId: 'headcell_field2',
+	cellId: 'headcell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Numero',
@@ -395,10 +363,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field2}
-																							{BEGIN cellblock_grid_headcell_field3}
+{END cellblock_grid_headcell_field1}
+																							{BEGIN cellblock_grid_headcell_field2}
 {
-	cellId: 'headcell_field3',
+	cellId: 'headcell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Fecha',
@@ -415,7 +383,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Fecha }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel Reportes Fecha }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -424,10 +392,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field3}
-																							{BEGIN cellblock_grid_headcell_field4}
+{END cellblock_grid_headcell_field2}
+																							{BEGIN cellblock_grid_headcell_field3}
 {
-	cellId: 'headcell_field4',
+	cellId: 'headcell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Sancionado',
@@ -444,7 +412,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Sancionado }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+			{"text":"{$jslabel Reportes Sancionado }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -453,10 +421,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
+{END cellblock_grid_headcell_field3}
+																							{BEGIN cellblock_grid_headcell_field4}
 {
-	cellId: 'headcell_field5',
+	cellId: 'headcell_field4',
 	col:0,
 	row:0,
 			fieldName: 'Providencia',
@@ -473,7 +441,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Providencia }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel Reportes Providencia }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -482,10 +450,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'Ejecutoria',
@@ -502,7 +470,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Ejecutoria }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+			{"text":"{$jslabel Reportes Ejecutoria }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -511,10 +479,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'Prescripcion',
@@ -531,7 +499,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Prescripcion }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel Reportes Prescripcion }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -540,10 +508,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field7}
-																							{BEGIN cellblock_grid_headcell_field8}
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
 {
-	cellId: 'headcell_field8',
+	cellId: 'headcell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Obligacion',
@@ -560,7 +528,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Obligacion }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel Reportes Obligacion }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -569,10 +537,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field8}
-																							{BEGIN cellblock_grid_headcell_field9}
+{END cellblock_grid_headcell_field7}
+																							{BEGIN cellblock_grid_headcell_field8}
 {
-	cellId: 'headcell_field9',
+	cellId: 'headcell_field8',
 	col:0,
 	row:0,
 			fieldName: 'Costas',
@@ -589,7 +557,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Costas }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel Reportes Costas }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -598,10 +566,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
+{END cellblock_grid_headcell_field8}
+																							{BEGIN cellblock_grid_headcell_field9}
 {
-	cellId: 'headcell_field10',
+	cellId: 'headcell_field9',
 	col:0,
 	row:0,
 			fieldName: 'Intereses',
@@ -618,7 +586,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Intereses }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
+			{"text":"{$jslabel Reportes Intereses }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -627,10 +595,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field10}
-																							{BEGIN cellblock_grid_headcell_field11}
+{END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
 {
-	cellId: 'headcell_field11',
+	cellId: 'headcell_field10',
 	col:0,
 	row:0,
 			fieldName: 'Recaudo',
@@ -647,7 +615,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Recaudo }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+			{"text":"{$jslabel Reportes Recaudo }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -656,10 +624,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'headcell_field12',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'Saldo',
@@ -676,7 +644,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Saldo }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
+			{"text":"{$jslabel Reportes Saldo }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -685,10 +653,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field12}
-																							{BEGIN cellblock_grid_headcell_field13}
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'headcell_field13',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 			fieldName: 'Radicado',
@@ -705,7 +673,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Radicado }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
+			{"text":"{$jslabel Reportes Radicado }","hidden":"{$item_hide_simple_grid_field36}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -714,10 +682,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field13}
-																							{BEGIN cellblock_grid_headcell_field14}
+{END cellblock_grid_headcell_field12}
+																							{BEGIN cellblock_grid_headcell_field13}
 {
-	cellId: 'headcell_field14',
+	cellId: 'headcell_field13',
 	col:0,
 	row:0,
 			fieldName: 'EstadoId',
@@ -734,7 +702,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes EstadoId }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
+			{"text":"{$jslabel Reportes EstadoId }","hidden":"{$item_hide_simple_grid_field37}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -743,10 +711,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field14}
-																							{BEGIN cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field13}
+																							{BEGIN cellblock_grid_headcell_field14}
 {
-	cellId: 'headcell_field15',
+	cellId: 'headcell_field14',
 	col:0,
 	row:0,
 			fieldName: 'EtapaId',
@@ -763,7 +731,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes EtapaId }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
+			{"text":"{$jslabel Reportes EtapaId }","hidden":"{$item_hide_simple_grid_field38}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -772,10 +740,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field15}
-																							{BEGIN cellblock_grid_headcell_field16}
+{END cellblock_grid_headcell_field14}
+																							{BEGIN cellblock_grid_headcell_field15}
 {
-	cellId: 'headcell_field16',
+	cellId: 'headcell_field15',
 	col:0,
 	row:0,
 			fieldName: 'ActuacionId',
@@ -792,7 +760,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes ActuacionId }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
+			{"text":"{$jslabel Reportes ActuacionId }","hidden":"{$item_hide_simple_grid_field39}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -801,10 +769,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field16}
-																							{BEGIN cellblock_grid_headcell_field17}
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
 {
-	cellId: 'headcell_field17',
+	cellId: 'headcell_field16',
 	col:0,
 	row:0,
 			fieldName: 'Notificacion',
@@ -821,7 +789,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Notificacion }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
+			{"text":"{$jslabel Reportes Notificacion }","hidden":"{$item_hide_simple_grid_field40}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -830,10 +798,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field17}
-																							{BEGIN cellblock_grid_headcell_field18}
+{END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
 {
-	cellId: 'headcell_field18',
+	cellId: 'headcell_field17',
 	col:0,
 	row:0,
 			fieldName: 'Acuerdo',
@@ -850,7 +818,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Acuerdo }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
+			{"text":"{$jslabel Reportes Acuerdo }","hidden":"{$item_hide_simple_grid_field41}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -859,10 +827,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field18}
-																							{BEGIN cellblock_grid_headcell_field19}
+{END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
 {
-	cellId: 'headcell_field19',
+	cellId: 'headcell_field18',
 	col:0,
 	row:0,
 			fieldName: 'Incumplimiento',
@@ -879,7 +847,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Incumplimiento }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
+			{"text":"{$jslabel Reportes Incumplimiento }","hidden":"{$item_hide_simple_grid_field42}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -888,10 +856,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field19}
-																							{BEGIN cellblock_grid_headcell_field20}
+{END cellblock_grid_headcell_field18}
+																							{BEGIN cellblock_grid_headcell_field19}
 {
-	cellId: 'headcell_field20',
+	cellId: 'headcell_field19',
 	col:0,
 	row:0,
 			fieldName: 'Terminacion',
@@ -908,7 +876,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel Reportes Terminacion }","hidden":"{$item_hide_simple_grid_field44}","bold":true},
+			{"text":"{$jslabel Reportes Terminacion }","hidden":"{$item_hide_simple_grid_field43}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -917,7 +885,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field20}
+{END cellblock_grid_headcell_field19}
 											],
 				{END row_grid_0}
 		
@@ -991,35 +959,6 @@ pdfDocument = {
 	cellId: 'cell_field',
 	col:0,
 	row:0,
-			fieldName: 'ProcesoId',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$ProcesoId_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-																							{BEGIN cellblock_grid_cell_field1}
-{
-	cellId: 'cell_field1',
-	col:0,
-	row:0,
 			fieldName: 'ConceptoId',
 				style: 'bodycell',
 		
@@ -1043,10 +982,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field1}
-																							{BEGIN cellblock_grid_cell_field2}
+{END cellblock_grid_cell_field}
+																							{BEGIN cellblock_grid_cell_field1}
 {
-	cellId: 'cell_field2',
+	cellId: 'cell_field1',
 	col:0,
 	row:0,
 			fieldName: 'Numero',
@@ -1072,10 +1011,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field2}
-																							{BEGIN cellblock_grid_cell_field3}
+{END cellblock_grid_cell_field1}
+																							{BEGIN cellblock_grid_cell_field2}
 {
-	cellId: 'cell_field3',
+	cellId: 'cell_field2',
 	col:0,
 	row:0,
 			fieldName: 'Fecha',
@@ -1101,10 +1040,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field2}
+																							{BEGIN cellblock_grid_cell_field3}
 {
-	cellId: 'cell_field4',
+	cellId: 'cell_field3',
 	col:0,
 	row:0,
 			fieldName: 'Sancionado',
@@ -1130,10 +1069,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
+{END cellblock_grid_cell_field3}
+																							{BEGIN cellblock_grid_cell_field4}
 {
-	cellId: 'cell_field5',
+	cellId: 'cell_field4',
 	col:0,
 	row:0,
 			fieldName: 'Providencia',
@@ -1159,10 +1098,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'Ejecutoria',
@@ -1188,10 +1127,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'Prescripcion',
@@ -1217,10 +1156,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field7}
-																							{BEGIN cellblock_grid_cell_field8}
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
 {
-	cellId: 'cell_field8',
+	cellId: 'cell_field7',
 	col:0,
 	row:0,
 			fieldName: 'Obligacion',
@@ -1246,10 +1185,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field8}
-																							{BEGIN cellblock_grid_cell_field9}
+{END cellblock_grid_cell_field7}
+																							{BEGIN cellblock_grid_cell_field8}
 {
-	cellId: 'cell_field9',
+	cellId: 'cell_field8',
 	col:0,
 	row:0,
 			fieldName: 'Costas',
@@ -1275,10 +1214,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
+{END cellblock_grid_cell_field8}
+																							{BEGIN cellblock_grid_cell_field9}
 {
-	cellId: 'cell_field10',
+	cellId: 'cell_field9',
 	col:0,
 	row:0,
 			fieldName: 'Intereses',
@@ -1304,10 +1243,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field10}
-																							{BEGIN cellblock_grid_cell_field11}
+{END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
 {
-	cellId: 'cell_field11',
+	cellId: 'cell_field10',
 	col:0,
 	row:0,
 			fieldName: 'Recaudo',
@@ -1333,10 +1272,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
 {
-	cellId: 'cell_field12',
+	cellId: 'cell_field11',
 	col:0,
 	row:0,
 			fieldName: 'Saldo',
@@ -1362,10 +1301,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field12}
-																							{BEGIN cellblock_grid_cell_field13}
+{END cellblock_grid_cell_field11}
+																							{BEGIN cellblock_grid_cell_field12}
 {
-	cellId: 'cell_field13',
+	cellId: 'cell_field12',
 	col:0,
 	row:0,
 			fieldName: 'Radicado',
@@ -1391,10 +1330,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field13}
-																							{BEGIN cellblock_grid_cell_field14}
+{END cellblock_grid_cell_field12}
+																							{BEGIN cellblock_grid_cell_field13}
 {
-	cellId: 'cell_field14',
+	cellId: 'cell_field13',
 	col:0,
 	row:0,
 			fieldName: 'EstadoId',
@@ -1420,10 +1359,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field13}
+																							{BEGIN cellblock_grid_cell_field14}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field14',
 	col:0,
 	row:0,
 			fieldName: 'EtapaId',
@@ -1449,10 +1388,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field15}
-																							{BEGIN cellblock_grid_cell_field16}
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
 {
-	cellId: 'cell_field16',
+	cellId: 'cell_field15',
 	col:0,
 	row:0,
 			fieldName: 'ActuacionId',
@@ -1478,10 +1417,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field16}
-																							{BEGIN cellblock_grid_cell_field17}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field17',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			fieldName: 'Notificacion',
@@ -1507,10 +1446,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field17}
-																							{BEGIN cellblock_grid_cell_field18}
+{END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
 {
-	cellId: 'cell_field18',
+	cellId: 'cell_field17',
 	col:0,
 	row:0,
 			fieldName: 'Acuerdo',
@@ -1536,10 +1475,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field18}
-																							{BEGIN cellblock_grid_cell_field19}
+{END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
 {
-	cellId: 'cell_field19',
+	cellId: 'cell_field18',
 	col:0,
 	row:0,
 			fieldName: 'Incumplimiento',
@@ -1565,10 +1504,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field19}
-																							{BEGIN cellblock_grid_cell_field20}
+{END cellblock_grid_cell_field18}
+																							{BEGIN cellblock_grid_cell_field19}
 {
-	cellId: 'cell_field20',
+	cellId: 'cell_field19',
 	col:0,
 	row:0,
 			fieldName: 'Terminacion',
@@ -1594,7 +1533,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field20}
+{END cellblock_grid_cell_field19}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -1756,12 +1695,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  21,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  22,
 				text: ''
 			},
 							],
@@ -2345,32 +2278,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field19}
-																							{BEGIN cellblock_grid_footcell_field20}
-{
-	cellId: 'footcell_field20',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field20}
 											],
 				{END row_grid_3}
 		

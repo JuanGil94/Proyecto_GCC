@@ -166,21 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
-			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
 			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
@@ -188,9 +173,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 				
 			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
@@ -242,15 +224,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
-				
-				
-			{"text":{$CalificacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
-				
-				
-			{"text":{$MotivoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
-				
-				
-			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
 				
 				
 			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},

@@ -193,6 +193,8 @@ $nonAdminTablesArr[] = "Prueba Archivo Plano";
 $nonAdminTablesArr[] = "Consulta Pública";
 $nonAdminTablesArr[] = "Consulta Pública Notificación Detalle";
 $nonAdminTablesArr[] = "Consulta Pública Generación Desprendible";
+$nonAdminTablesArr[] = "dbo.Pagos2";
+$nonAdminTablesArr[] = "dbo.Propiedades2";
 
 $ug_connection = $cman->getForUserGroups();
 
