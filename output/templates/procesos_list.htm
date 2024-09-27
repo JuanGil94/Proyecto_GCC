@@ -1305,8 +1305,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_InteresesCalculados" checked="checked" value="1" data-field="InteresesCalculados" data-fieldname="InteresesCalculados">
-					<span>{$label dbo_Procesos InteresesCalculados }</span>
+					<input type="checkbox" id="hide_Intereses" checked="checked" value="1" data-field="Intereses" data-fieldname="Intereses">
+					<span>{$label dbo_Procesos Intereses }</span>
 				</label>
 			</div>
 					</a>
@@ -1574,6 +1574,21 @@
 			</ul>
 </div>
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -1639,7 +1654,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Dias"]:before {
 		content: "{$label dbo_Procesos Dias}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Intereses"]:before {
+		content: "{$label dbo_Procesos Intereses}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo"]:before {
 		content: "{$label dbo_Procesos Recaudo}";
 	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Terminacion"]:before {
@@ -1681,10 +1699,7 @@
 									[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MinjusticiaId"]:before {
 		content: "{$label dbo_Procesos MinjusticiaId}";
 	}
-									[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="InteresesCalculados"]:before {
-		content: "{$label dbo_Procesos InteresesCalculados}";
-	}
-							[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObligacionCreacion"]:before {
+														[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ObligacionCreacion"]:before {
 		content: "{$label dbo_Procesos ObligacionCreacion}";
 	}
 					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Plazo"]:before {
@@ -1779,7 +1794,7 @@
 	 
 		{BEGIN ConceptoId_fieldheadercolumn}
 	{BEGIN ConceptoId_fieldheader}
-	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
+	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
 	{$label dbo_Procesos ConceptoId }	{$arrow_icon_ConceptoId}
 	</SPAN>
 	{END ConceptoId_fieldheader}
@@ -1804,7 +1819,7 @@
 	 
 		{BEGIN Numero_fieldheadercolumn}
 	{BEGIN Numero_fieldheader}
-	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
 	{$label dbo_Procesos Numero }	{$arrow_icon_Numero}
 	</SPAN>
 	{END Numero_fieldheader}
@@ -1829,7 +1844,7 @@
 	 
 		{BEGIN SancionadoId_fieldheadercolumn}
 	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
+	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
 	{$label dbo_Procesos SancionadoId }	{$arrow_icon_SancionadoId}
 	</SPAN>
 	{END SancionadoId_fieldheader}
@@ -1854,7 +1869,7 @@
 	 
 		{BEGIN ObligacionInicial_fieldheadercolumn}
 	{BEGIN ObligacionInicial_fieldheader}
-	<SPAN {$ObligacionInicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionInicial" data-fieldname="ObligacionInicial">
+	<SPAN {$ObligacionInicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionInicial" data-fieldname="ObligacionInicial">
 	{$label dbo_Procesos ObligacionInicial }	{$arrow_icon_ObligacionInicial}
 	</SPAN>
 	{END ObligacionInicial_fieldheader}
@@ -1879,7 +1894,7 @@
 	 
 		{BEGIN CostasInicial_fieldheadercolumn}
 	{BEGIN CostasInicial_fieldheader}
-	<SPAN {$CostasInicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostasInicial" data-fieldname="CostasInicial">
+	<SPAN {$CostasInicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostasInicial" data-fieldname="CostasInicial">
 	{$label dbo_Procesos CostasInicial }	{$arrow_icon_CostasInicial}
 	</SPAN>
 	{END CostasInicial_fieldheader}
@@ -1904,7 +1919,7 @@
 	 
 		{BEGIN InteresesInicial_fieldheadercolumn}
 	{BEGIN InteresesInicial_fieldheader}
-	<SPAN {$InteresesInicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesInicial" data-fieldname="InteresesInicial">
+	<SPAN {$InteresesInicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesInicial" data-fieldname="InteresesInicial">
 	{$label dbo_Procesos InteresesInicial }	{$arrow_icon_InteresesInicial}
 	</SPAN>
 	{END InteresesInicial_fieldheader}
@@ -1929,7 +1944,7 @@
 	 
 		{BEGIN Recaudo_fieldheadercolumn}
 	{BEGIN Recaudo_fieldheader}
-	<SPAN {$Recaudo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo">
+	<SPAN {$Recaudo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo">
 	{$label dbo_Procesos Recaudo }	{$arrow_icon_Recaudo}
 	</SPAN>
 	{END Recaudo_fieldheader}
@@ -1944,21 +1959,21 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ObligacionCreacion_class}	"
+		 r-ori-vert		 {$Obligacion_class}	"
 
-			data-field="ObligacionCreacion"
+			data-field="Obligacion"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ObligacionCreacion_fieldheadercolumn}
-	{BEGIN ObligacionCreacion_fieldheader}
-	<SPAN {$ObligacionCreacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion">
-	{$label dbo_Procesos ObligacionCreacion }	{$arrow_icon_ObligacionCreacion}
+		{BEGIN Obligacion_fieldheadercolumn}
+	{BEGIN Obligacion_fieldheader}
+	<SPAN {$Obligacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+	{$label dbo_Procesos Obligacion }	{$arrow_icon_Obligacion}
 	</SPAN>
-	{END ObligacionCreacion_fieldheader}
-{END ObligacionCreacion_fieldheadercolumn}
+	{END Obligacion_fieldheader}
+{END Obligacion_fieldheadercolumn}
 
 	
 	</th>
@@ -1979,7 +1994,7 @@
 	 
 		{BEGIN Costas_fieldheadercolumn}
 	{BEGIN Costas_fieldheader}
-	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
 	{$label dbo_Procesos Costas }	{$arrow_icon_Costas}
 	</SPAN>
 	{END Costas_fieldheader}
@@ -1994,21 +2009,21 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$InteresesCalculados_class}	"
+		 r-ori-vert		 {$Intereses_class}	"
 
-			data-field="InteresesCalculados"
+			data-field="Intereses"
 	
 	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN InteresesCalculados_fieldheadercolumn}
-	{BEGIN InteresesCalculados_fieldheader}
-	<SPAN {$InteresesCalculados_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesCalculados" data-fieldname="InteresesCalculados">
-	{$label dbo_Procesos InteresesCalculados }	{$arrow_icon_InteresesCalculados}
+		{BEGIN Intereses_fieldheadercolumn}
+	{BEGIN Intereses_fieldheader}
+	<SPAN {$Intereses_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+	{$label dbo_Procesos Intereses }	{$arrow_icon_Intereses}
 	</SPAN>
-	{END InteresesCalculados_fieldheader}
-{END InteresesCalculados_fieldheadercolumn}
+	{END Intereses_fieldheader}
+{END Intereses_fieldheadercolumn}
 
 	
 	</th>
@@ -2019,21 +2034,21 @@
 	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Obligacion_class}	"
+		 r-ori-vert		 {$ObligacionCreacion_class}	"
 
-			data-field="Obligacion"
+			data-field="ObligacionCreacion"
 	
 	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Obligacion_fieldheadercolumn}
-	{BEGIN Obligacion_fieldheader}
-	<SPAN {$Obligacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
-	{$label dbo_Procesos Obligacion }	{$arrow_icon_Obligacion}
+		{BEGIN ObligacionCreacion_fieldheadercolumn}
+	{BEGIN ObligacionCreacion_fieldheader}
+	<SPAN {$ObligacionCreacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion">
+	{$label dbo_Procesos ObligacionCreacion }	{$arrow_icon_ObligacionCreacion}
 	</SPAN>
-	{END Obligacion_fieldheader}
-{END Obligacion_fieldheadercolumn}
+	{END ObligacionCreacion_fieldheader}
+{END ObligacionCreacion_fieldheadercolumn}
 
 	
 	</th>
@@ -2079,7 +2094,7 @@
 	 
 		{BEGIN Fecha_fieldheadercolumn}
 	{BEGIN Fecha_fieldheader}
-	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
+	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
 	{$label dbo_Procesos Fecha }	{$arrow_icon_Fecha}
 	</SPAN>
 	{END Fecha_fieldheader}
@@ -2104,7 +2119,7 @@
 	 
 		{BEGIN Providencia_fieldheadercolumn}
 	{BEGIN Providencia_fieldheader}
-	<SPAN {$Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
+	<SPAN {$Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Providencia" data-fieldname="Providencia">
 	{$label dbo_Procesos Providencia }	{$arrow_icon_Providencia}
 	</SPAN>
 	{END Providencia_fieldheader}
@@ -2129,7 +2144,7 @@
 	 
 		{BEGIN Ejecutoria_fieldheadercolumn}
 	{BEGIN Ejecutoria_fieldheader}
-	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
+	<SPAN {$Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejecutoria" data-fieldname="Ejecutoria">
 	{$label dbo_Procesos Ejecutoria }	{$arrow_icon_Ejecutoria}
 	</SPAN>
 	{END Ejecutoria_fieldheader}
@@ -2154,7 +2169,7 @@
 	 
 		{BEGIN Plazo_fieldheadercolumn}
 	{BEGIN Plazo_fieldheader}
-	<SPAN {$Plazo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plazo" data-fieldname="Plazo">
+	<SPAN {$Plazo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plazo" data-fieldname="Plazo">
 	{$label dbo_Procesos Plazo }	{$arrow_icon_Plazo}
 	</SPAN>
 	{END Plazo_fieldheader}
@@ -2179,7 +2194,7 @@
 	 
 		{BEGIN Notificacion_fieldheadercolumn}
 	{BEGIN Notificacion_fieldheader}
-	<SPAN {$Notificacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Notificacion" data-fieldname="Notificacion">
+	<SPAN {$Notificacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Notificacion" data-fieldname="Notificacion">
 	{$label dbo_Procesos Notificacion }	{$arrow_icon_Notificacion}
 	</SPAN>
 	{END Notificacion_fieldheader}
@@ -2204,7 +2219,7 @@
 	 
 		{BEGIN Acuerdo_fieldheadercolumn}
 	{BEGIN Acuerdo_fieldheader}
-	<SPAN {$Acuerdo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo">
+	<SPAN {$Acuerdo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Acuerdo" data-fieldname="Acuerdo">
 	{$label dbo_Procesos Acuerdo }	{$arrow_icon_Acuerdo}
 	</SPAN>
 	{END Acuerdo_fieldheader}
@@ -2229,7 +2244,7 @@
 	 
 		{BEGIN Incumplimiento_fieldheadercolumn}
 	{BEGIN Incumplimiento_fieldheader}
-	<SPAN {$Incumplimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento">
+	<SPAN {$Incumplimiento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Incumplimiento" data-fieldname="Incumplimiento">
 	{$label dbo_Procesos Incumplimiento }	{$arrow_icon_Incumplimiento}
 	</SPAN>
 	{END Incumplimiento_fieldheader}
@@ -2254,7 +2269,7 @@
 	 
 		{BEGIN Liquidacion_fieldheadercolumn}
 	{BEGIN Liquidacion_fieldheader}
-	<SPAN {$Liquidacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Liquidacion" data-fieldname="Liquidacion">
+	<SPAN {$Liquidacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Liquidacion" data-fieldname="Liquidacion">
 	{$label dbo_Procesos Liquidacion }	{$arrow_icon_Liquidacion}
 	</SPAN>
 	{END Liquidacion_fieldheader}
@@ -2279,7 +2294,7 @@
 	 
 		{BEGIN Dias_fieldheadercolumn}
 	{BEGIN Dias_fieldheader}
-	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
+	<SPAN {$Dias_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dias" data-fieldname="Dias">
 	{$label dbo_Procesos Dias }	{$arrow_icon_Dias}
 	</SPAN>
 	{END Dias_fieldheader}
@@ -2304,7 +2319,7 @@
 	 
 		{BEGIN EstadoId_fieldheadercolumn}
 	{BEGIN EstadoId_fieldheader}
-	<SPAN {$EstadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoId" data-fieldname="EstadoId">
+	<SPAN {$EstadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoId" data-fieldname="EstadoId">
 	{$label dbo_Procesos EstadoId }	{$arrow_icon_EstadoId}
 	</SPAN>
 	{END EstadoId_fieldheader}
@@ -2329,7 +2344,7 @@
 	 
 		{BEGIN EtapaId_fieldheadercolumn}
 	{BEGIN EtapaId_fieldheader}
-	<SPAN {$EtapaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId">
+	<SPAN {$EtapaId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EtapaId" data-fieldname="EtapaId">
 	{$label dbo_Procesos EtapaId }	{$arrow_icon_EtapaId}
 	</SPAN>
 	{END EtapaId_fieldheader}
@@ -2379,7 +2394,7 @@
 	 
 		{BEGIN MotivoId_fieldheadercolumn}
 	{BEGIN MotivoId_fieldheader}
-	<SPAN {$MotivoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MotivoId" data-fieldname="MotivoId">
+	<SPAN {$MotivoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MotivoId" data-fieldname="MotivoId">
 	{$label dbo_Procesos MotivoId }	{$arrow_icon_MotivoId}
 	</SPAN>
 	{END MotivoId_fieldheader}
@@ -2404,7 +2419,7 @@
 	 
 		{BEGIN ActuacionId_fieldheadercolumn}
 	{BEGIN ActuacionId_fieldheader}
-	<SPAN {$ActuacionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActuacionId" data-fieldname="ActuacionId">
+	<SPAN {$ActuacionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ActuacionId" data-fieldname="ActuacionId">
 	{$label dbo_Procesos ActuacionId }	{$arrow_icon_ActuacionId}
 	</SPAN>
 	{END ActuacionId_fieldheader}
@@ -2429,7 +2444,7 @@
 	 
 		{BEGIN Origen_fieldheadercolumn}
 	{BEGIN Origen_fieldheader}
-	<SPAN {$Origen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Origen" data-fieldname="Origen">
+	<SPAN {$Origen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Origen" data-fieldname="Origen">
 	{$label dbo_Procesos Origen }	{$arrow_icon_Origen}
 	</SPAN>
 	{END Origen_fieldheader}
@@ -2454,7 +2469,7 @@
 	 
 		{BEGIN DespachoId_fieldheadercolumn}
 	{BEGIN DespachoId_fieldheader}
-	<SPAN {$DespachoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
+	<SPAN {$DespachoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="DespachoId" data-fieldname="DespachoId">
 	{$label dbo_Procesos DespachoId }	{$arrow_icon_DespachoId}
 	</SPAN>
 	{END DespachoId_fieldheader}
@@ -2479,7 +2494,7 @@
 	 
 		{BEGIN Folios_fieldheadercolumn}
 	{BEGIN Folios_fieldheader}
-	<SPAN {$Folios_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Folios" data-fieldname="Folios">
+	<SPAN {$Folios_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Folios" data-fieldname="Folios">
 	{$label dbo_Procesos Folios }	{$arrow_icon_Folios}
 	</SPAN>
 	{END Folios_fieldheader}
@@ -2504,7 +2519,7 @@
 	 
 		{BEGIN MinJusticia_fieldheadercolumn}
 	{BEGIN MinJusticia_fieldheader}
-	<SPAN {$MinJusticia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MinJusticia" data-fieldname="MinJusticia">
+	<SPAN {$MinJusticia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="MinJusticia" data-fieldname="MinJusticia">
 	{$label dbo_Procesos MinJusticia }	{$arrow_icon_MinJusticia}
 	</SPAN>
 	{END MinJusticia_fieldheader}
@@ -2554,7 +2569,7 @@
 	 
 		{BEGIN AbogadoId_fieldheadercolumn}
 	{BEGIN AbogadoId_fieldheader}
-	<SPAN {$AbogadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
+	<SPAN {$AbogadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
 	{$label dbo_Procesos AbogadoId }	{$arrow_icon_AbogadoId}
 	</SPAN>
 	{END AbogadoId_fieldheader}
@@ -2579,7 +2594,7 @@
 	 
 		{BEGIN CarteraTipoId_fieldheadercolumn}
 	{BEGIN CarteraTipoId_fieldheader}
-	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
+	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
 	{$label dbo_Procesos CarteraTipoId }	{$arrow_icon_CarteraTipoId}
 	</SPAN>
 	{END CarteraTipoId_fieldheader}
@@ -2604,7 +2619,7 @@
 	 
 		{BEGIN SeccionalId_fieldheadercolumn}
 	{BEGIN SeccionalId_fieldheader}
-	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
 	{$label dbo_Procesos SeccionalId }	{$arrow_icon_SeccionalId}
 	</SPAN>
 	{END SeccionalId_fieldheader}
@@ -2629,7 +2644,7 @@
 	 
 		{BEGIN ProcesoId_fieldheadercolumn}
 	{BEGIN ProcesoId_fieldheader}
-	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
+	<SPAN {$ProcesoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ProcesoId" data-fieldname="ProcesoId">
 	{$label dbo_Procesos ProcesoId }	{$arrow_icon_ProcesoId}
 	</SPAN>
 	{END ProcesoId_fieldheader}
@@ -2638,23 +2653,23 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field34}
-									{BEGIN cellblock_grid_headcell_field36}
+									{BEGIN cellblock_grid_headcell_field35}
 	<th
 	
-	{$cell_grid_headcell_field36}
+	{$cell_grid_headcell_field35}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Prescripcion_class}	"
 
 			data-field="Prescripcion"
 	
-	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN Prescripcion_fieldheadercolumn}
 	{BEGIN Prescripcion_fieldheader}
-	<SPAN {$Prescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion">
+	<SPAN {$Prescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion">
 	{$label dbo_Procesos Prescripcion }	{$arrow_icon_Prescripcion}
 	</SPAN>
 	{END Prescripcion_fieldheader}
@@ -2662,7 +2677,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field36}
+	{END cellblock_grid_headcell_field35}
 							</tr>
 																				
 					{END grid_header}
@@ -2754,7 +2769,7 @@
 		title="Mostrar detalles"
 				
 	>
-					<span class="glyphicon glyphicon-th-list"></span>
+					<span class="glyphicon glyphicon-chevron-down"></span>
 					</a>
 {END dtables_link}
 	 
@@ -2786,17 +2801,17 @@
 										</a>
 </span>
 	 
-		<span data-itemtype="custom_button" data-itemid="custom_button4" {$item_custom_button4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Añadir Tiempo Adicional" class="btn btn-default   
-	" id="maxTime" href="javascript:void(0)" typeid="ib" >
-					<span class="glyphicon glyphicon-plus"></span>
-										</a>
-</span>
-	 
 		<span data-itemtype="custom_button" data-itemid="custom_button5" {$item_custom_button5} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Ficha Tecnica" class="btn btn-default   
 	" id="fichaTecnica" href="javascript:void(0)" typeid="ib" >
 					<span class="glyphicon glyphicon-file"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button4" {$item_custom_button4} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Añadir Tiempo Adicional" class="btn btn-default   
+	" id="maxTime" href="javascript:void(0)" typeid="ib" >
+					<span class="glyphicon glyphicon-plus"></span>
 										</a>
 </span>
 	
@@ -2879,7 +2894,7 @@
 
 	 
 		{BEGIN ObligacionInicial_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionInicial" data-fieldname="ObligacionInicial" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="ObligacionInicial" data-fieldname="ObligacionInicial" data-default-width >
 {$ObligacionInicial_value}
 </span>
 {END ObligacionInicial_fieldcolumn}	
@@ -2900,7 +2915,7 @@
 
 	 
 		{BEGIN CostasInicial_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CostasInicial" data-fieldname="CostasInicial" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="CostasInicial" data-fieldname="CostasInicial" data-default-width >
 {$CostasInicial_value}
 </span>
 {END CostasInicial_fieldcolumn}	
@@ -2921,7 +2936,7 @@
 
 	 
 		{BEGIN InteresesInicial_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesInicial" data-fieldname="InteresesInicial" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="InteresesInicial" data-fieldname="InteresesInicial" data-default-width >
 {$InteresesInicial_value}
 </span>
 {END InteresesInicial_fieldcolumn}	
@@ -2942,7 +2957,7 @@
 
 	 
 		{BEGIN Recaudo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="Recaudo" data-fieldname="Recaudo" data-default-width >
 {$Recaudo_value}
 </span>
 {END Recaudo_fieldcolumn}	
@@ -2963,7 +2978,7 @@
 
 	 
 		{BEGIN Obligacion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" data-default-width >
 {$Obligacion_value}
 </span>
 {END Obligacion_fieldcolumn}	
@@ -2984,7 +2999,7 @@
 
 	 
 		{BEGIN Costas_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" data-default-width >
 {$Costas_value}
 </span>
 {END Costas_fieldcolumn}	
@@ -2996,19 +3011,19 @@
 	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$InteresesCalculados_class}	"
+		 r-ori-vert		 {$Intereses_class}	"
 
-			data-field="InteresesCalculados"
+			data-field="Intereses"
 	
 	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN InteresesCalculados_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesCalculados" data-fieldname="InteresesCalculados" data-default-width >
-{$InteresesCalculados_value}
+		{BEGIN Intereses_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" data-default-width >
+{$Intereses_value}
 </span>
-{END InteresesCalculados_fieldcolumn}	
+{END Intereses_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field9}
 									{BEGIN cellblock_grid_cell_field10}
@@ -3026,7 +3041,7 @@
 
 	 
 		{BEGIN ObligacionCreacion_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-page="procesos_list" data-record-id="{$recId}" data-field="ObligacionCreacion" data-fieldname="ObligacionCreacion" data-default-width >
 {$ObligacionCreacion_value}
 </span>
 {END ObligacionCreacion_fieldcolumn}	
@@ -3536,17 +3551,17 @@
 {END ProcesoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field34}
-									{BEGIN cellblock_grid_cell_field36}
+									{BEGIN cellblock_grid_cell_field35}
 	<td
 	
-	{$cell_grid_cell_field36}
+	{$cell_grid_cell_field35}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Prescripcion_class}	"
 
 			data-field="Prescripcion"
 	
-	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -3556,7 +3571,7 @@
 </span>
 {END Prescripcion_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field36}
+	{END cellblock_grid_cell_field35}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -3791,7 +3806,7 @@
 	{$cell_grid_footcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$ObligacionCreacion_class}	"
+		 r-ori-vert		 {$Obligacion_class}	"
 
 	
 	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3821,7 +3836,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$InteresesCalculados_class}	"
+		 r-ori-vert		 {$Intereses_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
@@ -3836,7 +3851,7 @@
 	{$cell_grid_footcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Obligacion_class}	"
+		 r-ori-vert		 {$ObligacionCreacion_class}	"
 
 	
 	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	

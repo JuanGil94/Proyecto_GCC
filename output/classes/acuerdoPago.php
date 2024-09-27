@@ -103,22 +103,25 @@ class AcuerdoPago{
                         $cuota=0;
                         $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
-                        //$costPor=round(($costas/($obligacion+$costas+$sumIntCost))*$abono,4);
+                        $costPor=round(($costas/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
-                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
+                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costPor,$intPlazoA,$valorCuotaA);
                         $fecha->modify('+1 month');
                         /////////
+                        //echo "value ingresado=".$sumIntCost."<br>";
+                        // se resta las porcionalidades a los valores reales
                         $obligacion=$obligacion-$obliFA;
                         $sumIntCost=$sumIntCost-$intCostFA;
+                        $costas=$costas-$costPor;
 
                         $obliF=$obligacion/$noCuotas;
                         $intCostF=$sumIntCost/$noCuotas;
                         $costas=$costas/$noCuotas;
                         $pagoMensual = calcularPagoMensual($tasaInteresAnual, $noCuotas, $obligacion);
                         $varPlazo = round($pagoMensual, 2);
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -140,8 +143,8 @@ class AcuerdoPago{
                         $costas=$costas/$noCuotas;
                         $pagoMensual = calcularPagoMensual($tasaInteresAnual, $noCuotas, $obligacion);
                         $varPlazo = round($pagoMensual, 2);
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -161,19 +164,21 @@ class AcuerdoPago{
                 }
                 break;
             case 2:
-                if ($noCuotas<30){
+                if ($noCuotas<=30){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
                         $cuota=0;
                         $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $costPor=round(($costas/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
-                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
-                        $fecha->modify('+2 month');
+                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costPor,$intPlazoA,$valorCuotaA);
+                        $fecha->modify('+1 month');
                         /////////
                         $obligacion=$obligacion-$obliFA;
                         $sumIntCost=$sumIntCost-$intCostFA;
+                        $costas=$costas-$costPor;
 
                         $obliF=$obligacion/$noCuotas;
                         $intCostF=$sumIntCost/$noCuotas;
@@ -182,8 +187,8 @@ class AcuerdoPago{
                         $cuotaBimestral = calcularCuotaBimestral($tasaInteresAnual, $obligacion, $noCuotas);
                         
                         $varPlazo = round($cuotaBimestral, 2);  
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -206,8 +211,8 @@ class AcuerdoPago{
                         $cuotaBimestral = calcularCuotaBimestral($tasaInteresAnual, $obligacion, $noCuotas);
                         
                         $varPlazo = round($cuotaBimestral, 2);  
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -227,19 +232,21 @@ class AcuerdoPago{
                 }
                 break;
             case 3:
-                if ($noCuotas<20){
+                if ($noCuotas<=20){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
                         $cuota=0;
                         $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $costPor=round(($costas/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
-                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
-                        $fecha->modify('+3 month');
+                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costPor,$intPlazoA,$valorCuotaA);
+                        $fecha->modify('+1 month');
                         /////////
                         $obligacion=$obligacion-$obliFA;
                         $sumIntCost=$sumIntCost-$intCostFA;
+                        $costas=$costas-$costPor;
 
                         //echo $fecha->format('Y-m-d')."<br>";
                         $obliF=$obligacion/$noCuotas;
@@ -249,8 +256,8 @@ class AcuerdoPago{
                         $cuotaBimestral = calcularCuotaTrimestral($tasaInteresAnual, $obligacion, $noCuotas);
                         
                         $varPlazo = round($cuotaBimestral, 2);  
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -275,8 +282,8 @@ class AcuerdoPago{
                         $cuotaBimestral = calcularCuotaTrimestral($tasaInteresAnual, $obligacion, $noCuotas);
                         
                         $varPlazo = round($cuotaBimestral, 2);  
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -296,19 +303,21 @@ class AcuerdoPago{
                 }
                 break;
             case 4:
-                if ($noCuotas<10){
+                if ($noCuotas<=10){
                     if(!empty($this->abono)){
                         $fecha= new DateTime ($this->fechaInicial);
                         $cuota=0;
                         $obliFA=round(($obligacion/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intCostFA=round(($sumIntCost/($obligacion+$costas+$sumIntCost))*$abono,2);
+                        $costPor=round(($costas/($obligacion+$costas+$sumIntCost))*$abono,2);
                         $intPlazoA=0;
                         $valorCuotaA=$abono;
-                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costas,$intPlazoA,$valorCuotaA);
-                        $fecha->modify('+3 month');
+                        $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliFA,$intCostFA,$costPor,$intPlazoA,$valorCuotaA);
+                        $fecha->modify('+1 month');
                         /////////
                         $obligacion=$obligacion-$obliFA;
                         $sumIntCost=$sumIntCost-$intCostFA;
+                        $costas=$costas-$costPor;
 
                         $obliF=$obligacion/$noCuotas;
                         $intCostF=$sumIntCost/$noCuotas;
@@ -317,8 +326,8 @@ class AcuerdoPago{
                         $cuotaBimestral = calcularCuotaSemestral($tasaInteresAnual, $obligacion, $noCuotas);
                         
                         $varPlazo = round($cuotaBimestral, 2);  
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;
@@ -343,8 +352,8 @@ class AcuerdoPago{
                         $cuotaBimestral = calcularCuotaSemestral($tasaInteresAnual, $obligacion, $noCuotas);
                         
                         $varPlazo = round($cuotaBimestral, 2);  
-                        $valorCuota=$intCostF+$varPlazo;
-                        $intPlazo=round($valorCuota-($obliF+$intCostF),2);
+                        $valorCuota=$intCostF+$varPlazo+$costas;
+                        $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
                             $valorCuota=$obliF+$intCostF;

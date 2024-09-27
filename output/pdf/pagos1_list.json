@@ -88,6 +88,9 @@ pdfDocument = {
 										{BEGIN col_grid_7}
 					"%",
 					{END col_grid_7}
+										{BEGIN col_grid_8}
+					"%",
+					{END col_grid_8}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -195,9 +198,6 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_delete}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -469,7 +469,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Pagos1 TipoRecaudoId }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
+			{"text":"{$jslabel dbo_Pagos1 TipoRecaudoId }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -479,6 +479,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
+{
+	cellId: 'headcell_field6',
+	col:0,
+	row:0,
+			fieldName: 'ProcesoId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Pagos1 ProcesoId }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ProcesoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
 											],
 				{END row_grid_0}
 		
@@ -505,9 +534,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
@@ -721,6 +747,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
+{
+	cellId: 'cell_field6',
+	col:0,
+	row:0,
+			fieldName: 'ProcesoId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_simple_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$ProcesoId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
 											],
 				{END row_grid_1}
 		
@@ -938,6 +993,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field5}
+																							{BEGIN cellblock_grid_footcell_field6}
+{
+	cellId: 'footcell_field6',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field6}
 											],
 				{END row_grid_2}
 		

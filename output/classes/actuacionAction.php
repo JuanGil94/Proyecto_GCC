@@ -41,7 +41,7 @@ class coreOficios {
                 break;
                 case "4":
                     $recalcular=new reliquidacion($this->procesoId);
-                    $meses = $recalcular->Calcular();
+                    $meses = $recalcular->Calcular(date('Y-m-d'));
                     $this->intereses=$recalcular->getInteresesSuma();
                     $consulta=DB::Query("SELECT ISNULL(Intereses,0) AS Intereses, ISNULL(InteresesInicial,0) AS InteresesInicial FROM Procesos WHERE ProcesoId=".$this->procesoId);
                     while( $date = $consulta->fetchAssoc() ){
@@ -120,7 +120,7 @@ class coreOficios {
                 case "21": //Incumplimiento Acuerdo de pago
                     if ($infoP["EstadoIdP"]==3){
                         $recalcular=new reliquidacion($this->procesoId);
-                        $meses = $recalcular->Calcular();
+                        $meses = $recalcular->Calcular(date('Y-m-d'));
                         $this->intereses=$recalcular->getInteresesSuma();
                         $consulta=DB::Query("SELECT ISNULL(Intereses,0) AS Intereses, ISNULL(InteresesInicial,0) AS InteresesInicial FROM Procesos WHERE ProcesoId=".$this->procesoId);
                         while( $date = $consulta->fetchAssoc() ){
