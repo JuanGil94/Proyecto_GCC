@@ -187,19 +187,14 @@ $tdataempresas[".filterFields"] = array();
 $tdataempresas[".requiredSearchFields"] = array();
 
 $tdataempresas[".googleLikeFields"] = array();
-$tdataempresas[".googleLikeFields"][] = "EmpresaId";
 $tdataempresas[".googleLikeFields"][] = "Empresa";
 $tdataempresas[".googleLikeFields"][] = "Cierre";
-$tdataempresas[".googleLikeFields"][] = "ValorMaximo";
 $tdataempresas[".googleLikeFields"][] = "MaximoPesos";
 $tdataempresas[".googleLikeFields"][] = "MaximoSalarios";
 $tdataempresas[".googleLikeFields"][] = "MaximoUvt";
 $tdataempresas[".googleLikeFields"][] = "EmailAprobador";
 $tdataempresas[".googleLikeFields"][] = "Tope";
 $tdataempresas[".googleLikeFields"][] = "DiasPersuasivo";
-$tdataempresas[".googleLikeFields"][] = "CarteraEspecialUvt";
-$tdataempresas[".googleLikeFields"][] = "TasaDTN";
-$tdataempresas[".googleLikeFields"][] = "TasaCivil";
 $tdataempresas[".googleLikeFields"][] = "InteresesPlazo";
 $tdataempresas[".googleLikeFields"][] = "MaximoUvb";
 
@@ -494,7 +489,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -517,7 +513,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -620,10 +617,10 @@ $tdataempresas[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Date");
+	$edata = array("EditFormat" => "Text field");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -632,7 +629,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -642,20 +640,20 @@ $tdataempresas[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
+	
+	
+			$edata["HTML5InuptType"] = "text";
 
-	
-	
-	
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -910,7 +908,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -933,7 +932,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1049,7 +1049,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1072,7 +1073,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1188,7 +1190,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1211,7 +1214,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1326,7 +1330,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1338,7 +1343,7 @@ $tdataempresas[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "email";
 
 		$edata["EditParams"] = "";
 			$edata["EditParams"].= " maxlength=200";
@@ -1349,7 +1354,9 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Email");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1465,7 +1472,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1488,7 +1496,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1603,7 +1612,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1626,7 +1636,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1881,7 +1892,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1904,7 +1916,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2020,7 +2033,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2043,7 +2057,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2291,7 +2306,8 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2314,7 +2330,8 @@ $tdataempresas[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$PresupuestoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$Ano_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				

@@ -151,7 +151,6 @@ $tdataespecialidades[".filterFields"] = array();
 $tdataespecialidades[".requiredSearchFields"] = array();
 
 $tdataespecialidades[".googleLikeFields"] = array();
-$tdataespecialidades[".googleLikeFields"][] = "EspecialidadId";
 $tdataespecialidades[".googleLikeFields"][] = "Codigo";
 $tdataespecialidades[".googleLikeFields"][] = "Especialidad";
 
@@ -584,7 +583,8 @@ $tdataespecialidades[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -607,7 +607,8 @@ $tdataespecialidades[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

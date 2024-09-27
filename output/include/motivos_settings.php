@@ -148,7 +148,6 @@ $tdatamotivos[".filterFields"] = array();
 $tdatamotivos[".requiredSearchFields"] = array();
 
 $tdatamotivos[".googleLikeFields"] = array();
-$tdatamotivos[".googleLikeFields"][] = "MotivoId";
 $tdatamotivos[".googleLikeFields"][] = "Motivo";
 
 
@@ -442,7 +441,8 @@ $tdatamotivos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -465,7 +465,8 @@ $tdatamotivos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

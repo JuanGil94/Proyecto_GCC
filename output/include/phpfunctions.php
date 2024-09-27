@@ -1003,6 +1003,11 @@ $consulta=DB::Query("SELECT * FROM CarteraTipos WHERE CarteraTipoId=".$valuef);
 		;
 		return $value;
 	}
+				if($table=="dbo.Cuentas" && $field=="ConceptoId" && $ptype=="list")
+	{
+		;
+		return $value;
+	}
 				if($table=="dbo.ProcesosPrescritos" && $field=="Numero")
 	{
 		$numero=$value;
@@ -1424,6 +1429,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="dbo.Presupuestos" && $field=="Ano" && $ptype=="edit")
+	{
+		return strftime("%Y-%m-%d");
+	}
+				if($table=="dbo.Presupuestos" && $field=="Ano" && $ptype=="add")
+	{
+		return strftime("%Y");
+	}
+				if($table=="dbo.Presupuestos" && $field=="Ano" && $ptype=="search")
+	{
+		return strftime("%Y-%m-%d");
+	}
 				if($table=="dbo.Chequeos" && $field=="Dias")
 	{
 		return 10;

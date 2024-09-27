@@ -2649,20 +2649,29 @@ createYearGrid(2000);
 	function event_Reportes_snippet_checklist(&$params)
 	{
 	// Put your code here.
-    echo '
 
-      <label for="lang">Reporte</label>
-      <select name="Reporte: " id="Reporte_selecionid">
-        <option value="">Seleccione el reporte a consultar</option>
-        <option value="1">3.1 PRESCRITOS CON RESOLUCIÓN EXPEDIDA</option>
-        <option value="2">3.2 PRESCRITOS SIN RESOLUCION EXPEDIDA</option>
-        <option value="3">3.3 PERSUASIVO SIN MANDAMIENTO PAGO</option>
-        <option value="4">3.4 MEDIDAS CAUTELARES SIN ACUERDO PAGO</option>
-        <option value="5">3.5 MEDIDAS CAUTELARES CON ACUERDO DE PAGO</option>
-        <option value="6">3.6 SIN ACTUACION JURIDICA ALGUNA</option>
-        <option value="7">3.7 SIN BÚSQUEDA DE BIENES</option>
-      </select>
-		';
+echo '<label for="Reporte">Reporte</label>';
+echo '<select name="Reporte" id="Reporte_selecionid">';
+echo '<option value="0">Seleccione el reporte a consultar</option>';
+
+$sql11 = "Select ReporteId, Reporte from Reportes";
+$result11 = DB::Query($sql11);
+// Verificar si el resultado es válido
+if ($result11) {
+    // Fetch each row as an associative array
+    while ($row11 = $result11->fetchAssoc()) {
+        $reporteId = $row11['ReporteId'];
+        $reporte = $row11['Reporte'];
+        echo "<option value='$reporteId'>$reporte</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+
 	;
 }
 	function event_Reportes_seccional_Cartera(&$params)

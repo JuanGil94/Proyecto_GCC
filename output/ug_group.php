@@ -199,6 +199,12 @@ $nonAdminTablesArr[] = "dbo.Motivos1";
 $nonAdminTablesArr[] = "dbo.Etapas1";
 $nonAdminTablesArr[] = "dbo.Estados1";
 $nonAdminTablesArr[] = "dbo.Aplazamientos";
+$nonAdminTablesArr[] = "dbo.Seccionales1";
+$nonAdminTablesArr[] = "dbo.Naturalezas1";
+$nonAdminTablesArr[] = "dbo.Calificaciones";
+$nonAdminTablesArr[] = "dbo.Niveles1";
+$nonAdminTablesArr[] = "dbo.Niveles2";
+$nonAdminTablesArr[] = "dbo.Conceptos2";
 
 $ug_connection = $cman->getForUserGroups();
 

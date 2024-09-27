@@ -148,7 +148,6 @@ $tdataalertastipos[".filterFields"] = array();
 $tdataalertastipos[".requiredSearchFields"] = array();
 
 $tdataalertastipos[".googleLikeFields"] = array();
-$tdataalertastipos[".googleLikeFields"][] = "AlertaTipoId";
 $tdataalertastipos[".googleLikeFields"][] = "AlertaTipo";
 
 
@@ -442,7 +441,8 @@ $tdataalertastipos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -465,7 +465,8 @@ $tdataalertastipos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

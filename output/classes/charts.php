@@ -748,6 +748,18 @@ class Chart
 			return true;
 		if("dbo.Aplazamientos" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.Seccionales" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Naturalezas" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Calificaciones" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Niveles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Niveles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Conceptos" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

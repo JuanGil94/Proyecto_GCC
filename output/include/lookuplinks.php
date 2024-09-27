@@ -124,6 +124,41 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"] = array();
 		}
 		$lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"]["edit"] = array("table" => "dbo.Ciudades", "field" => "DepartamentoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Departamentos"] ) ) {
+			$lookupTableLinks["dbo.Departamentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"] )) {
+			$lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"] = array();
+		}
+		$lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"]["add"] = array("table" => "dbo.Ciudades", "field" => "DepartamentoId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Departamentos"] ) ) {
+			$lookupTableLinks["dbo.Departamentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"] )) {
+			$lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"] = array();
+		}
+		$lookupTableLinks["dbo.Departamentos"]["ciudades.DepartamentoId"]["search"] = array("table" => "dbo.Ciudades", "field" => "DepartamentoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] )) {
+			$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"]["edit"] = array("table" => "dbo.Despachos", "field" => "Codigo", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] )) {
+			$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"]["add"] = array("table" => "dbo.Despachos", "field" => "Codigo", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] )) {
+			$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"]["search"] = array("table" => "dbo.Despachos", "field" => "Codigo", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
 			$lookupTableLinks["dbo.Ciudades1"] = array();
 		}
@@ -131,6 +166,41 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"]["edit"] = array("table" => "dbo.Despachos", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
+			$lookupTableLinks["dbo.Ciudades1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"]["add"] = array("table" => "dbo.Despachos", "field" => "CiudadId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
+			$lookupTableLinks["dbo.Ciudades1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades1"]["despachos.CiudadId"]["search"] = array("table" => "dbo.Despachos", "field" => "CiudadId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Juez"] )) {
+			$lookupTableLinks["dbo.Despachos"]["despachos.Juez"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["despachos.Juez"]["edit"] = array("table" => "dbo.Despachos", "field" => "Juez", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Juez"] )) {
+			$lookupTableLinks["dbo.Despachos"]["despachos.Juez"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["despachos.Juez"]["add"] = array("table" => "dbo.Despachos", "field" => "Juez", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
+			$lookupTableLinks["dbo.Despachos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Juez"] )) {
+			$lookupTableLinks["dbo.Despachos"]["despachos.Juez"] = array();
+		}
+		$lookupTableLinks["dbo.Despachos"]["despachos.Juez"]["search"] = array("table" => "dbo.Despachos", "field" => "Juez", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
@@ -145,6 +215,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.tipoTasas"]["naturalezas.TasaTipo"] = array();
 		}
 		$lookupTableLinks["dbo.tipoTasas"]["naturalezas.TasaTipo"]["edit"] = array("table" => "dbo.Naturalezas", "field" => "TasaTipo", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Niveles2"] ) ) {
+			$lookupTableLinks["dbo.Niveles2"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Niveles2"]["niveles.Nivel"] )) {
+			$lookupTableLinks["dbo.Niveles2"]["niveles.Nivel"] = array();
+		}
+		$lookupTableLinks["dbo.Niveles2"]["niveles.Nivel"]["edit"] = array("table" => "dbo.Niveles", "field" => "Nivel", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Niveles1"] ) ) {
+			$lookupTableLinks["dbo.Niveles1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Niveles1"]["niveles.Clasificacion"] )) {
+			$lookupTableLinks["dbo.Niveles1"]["niveles.Clasificacion"] = array();
+		}
+		$lookupTableLinks["dbo.Niveles1"]["niveles.Clasificacion"]["edit"] = array("table" => "dbo.Niveles", "field" => "Clasificacion", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Actuaciones"] ) ) {
 			$lookupTableLinks["dbo.Actuaciones"] = array();
 		}
@@ -152,13 +236,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Actuaciones"]["oficios.ActuacionId"] = array();
 		}
 		$lookupTableLinks["dbo.Actuaciones"]["oficios.ActuacionId"]["edit"] = array("table" => "dbo.Oficios", "field" => "ActuacionId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
-			$lookupTableLinks["dbo.Conceptos"] = array();
+		if( !isset( $lookupTableLinks["dbo.Conceptos2"] ) ) {
+			$lookupTableLinks["dbo.Conceptos2"] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.Conceptos"]["operaciones.ConceptoId"] )) {
-			$lookupTableLinks["dbo.Conceptos"]["operaciones.ConceptoId"] = array();
+		if( !isset( $lookupTableLinks["dbo.Conceptos2"]["operaciones.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos2"]["operaciones.ConceptoId"] = array();
 		}
-		$lookupTableLinks["dbo.Conceptos"]["operaciones.ConceptoId"]["edit"] = array("table" => "dbo.Operaciones", "field" => "ConceptoId", "page" => "edit");
+		$lookupTableLinks["dbo.Conceptos2"]["operaciones.ConceptoId"]["edit"] = array("table" => "dbo.Operaciones", "field" => "ConceptoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
 			$lookupTableLinks["dbo.CarteraTipos"] = array();
 		}
@@ -460,20 +544,62 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Bancos"]["cuentas.BancoId"] = array();
 		}
 		$lookupTableLinks["dbo.Bancos"]["cuentas.BancoId"]["edit"] = array("table" => "dbo.Cuentas", "field" => "BancoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
-			$lookupTableLinks["dbo.Seccionales"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccionales1"] ) ) {
+			$lookupTableLinks["dbo.Seccionales1"] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.Seccionales"]["cuentas.SeccionalId"] )) {
-			$lookupTableLinks["dbo.Seccionales"]["cuentas.SeccionalId"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] = array();
 		}
-		$lookupTableLinks["dbo.Seccionales"]["cuentas.SeccionalId"]["edit"] = array("table" => "dbo.Cuentas", "field" => "SeccionalId", "page" => "edit");
+		$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"]["edit"] = array("table" => "dbo.Cuentas", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales1"] ) ) {
+			$lookupTableLinks["dbo.Seccionales1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"]["add"] = array("table" => "dbo.Cuentas", "field" => "SeccionalId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Seccionales1"] ) ) {
+			$lookupTableLinks["dbo.Seccionales1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"]["search"] = array("table" => "dbo.Cuentas", "field" => "SeccionalId", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
 		if( !isset( $lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"] )) {
 			$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"] = array();
 		}
-		$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"]["edit"] = array("table" => "dbo.Cuentas", "field" => "ConceptoId", "page" => "edit");
+		$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"]["add"] = array("table" => "dbo.Cuentas", "field" => "ConceptoId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"]["search"] = array("table" => "dbo.Cuentas", "field" => "ConceptoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Naturalezas1"] ) ) {
+			$lookupTableLinks["dbo.Naturalezas1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"] )) {
+			$lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"] = array();
+		}
+		$lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"]["edit"] = array("table" => "dbo.Cuentas", "field" => "NaturalezaId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Naturalezas1"] ) ) {
+			$lookupTableLinks["dbo.Naturalezas1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"] )) {
+			$lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"] = array();
+		}
+		$lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"]["add"] = array("table" => "dbo.Cuentas", "field" => "NaturalezaId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Naturalezas1"] ) ) {
+			$lookupTableLinks["dbo.Naturalezas1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"] )) {
+			$lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"] = array();
+		}
+		$lookupTableLinks["dbo.Naturalezas1"]["cuentas.NaturalezaId"]["search"] = array("table" => "dbo.Cuentas", "field" => "NaturalezaId", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
 			$lookupTableLinks["dbo.Procesos"] = array();
 		}
@@ -782,6 +908,48 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Oficios"]["oficios_sigobius.OficioIdRequisito"] = array();
 		}
 		$lookupTableLinks["dbo.Oficios"]["oficios_sigobius.OficioIdRequisito"]["edit"] = array("table" => "dbo.Oficios Sigobius", "field" => "OficioIdRequisito", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"] )) {
+			$lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"]["edit"] = array("table" => "dbo.Carceles", "field" => "CarcelId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"] )) {
+			$lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"]["add"] = array("table" => "dbo.Carceles", "field" => "CarcelId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"] )) {
+			$lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["carceles.CarcelId"]["search"] = array("table" => "dbo.Carceles", "field" => "CarcelId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["carceles.Carcel"] )) {
+			$lookupTableLinks["dbo.Carceles"]["carceles.Carcel"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["carceles.Carcel"]["edit"] = array("table" => "dbo.Carceles", "field" => "Carcel", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["carceles.Carcel"] )) {
+			$lookupTableLinks["dbo.Carceles"]["carceles.Carcel"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["carceles.Carcel"]["add"] = array("table" => "dbo.Carceles", "field" => "Carcel", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Carceles"] ) ) {
+			$lookupTableLinks["dbo.Carceles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Carceles"]["carceles.Carcel"] )) {
+			$lookupTableLinks["dbo.Carceles"]["carceles.Carcel"] = array();
+		}
+		$lookupTableLinks["dbo.Carceles"]["carceles.Carcel"]["search"] = array("table" => "dbo.Carceles", "field" => "Carcel", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
 			$lookupTableLinks["dbo.Ciudades1"] = array();
 		}
@@ -789,6 +957,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"]["edit"] = array("table" => "dbo.Carceles", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
+			$lookupTableLinks["dbo.Ciudades1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"]["add"] = array("table" => "dbo.Carceles", "field" => "CiudadId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
+			$lookupTableLinks["dbo.Ciudades1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades1"]["carceles.CiudadId"]["search"] = array("table" => "dbo.Carceles", "field" => "CiudadId", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.AlertasTipos"] ) ) {
 			$lookupTableLinks["dbo.AlertasTipos"] = array();
 		}
@@ -2819,6 +3001,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Oficios"]["aplazamientos.OficioId"] = array();
 		}
 		$lookupTableLinks["dbo.Oficios"]["aplazamientos.OficioId"]["search"] = array("table" => "dbo.Aplazamientos", "field" => "OficioId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Niveles"] ) ) {
+			$lookupTableLinks["dbo.Niveles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Niveles"]["niveles1.Clasificacion"] )) {
+			$lookupTableLinks["dbo.Niveles"]["niveles1.Clasificacion"] = array();
+		}
+		$lookupTableLinks["dbo.Niveles"]["niveles1.Clasificacion"]["edit"] = array("table" => "dbo.Niveles1", "field" => "Clasificacion", "page" => "edit");
 }
 
 ?>

@@ -151,9 +151,7 @@ $tdataestados[".filterFields"] = array();
 $tdataestados[".requiredSearchFields"] = array();
 
 $tdataestados[".googleLikeFields"] = array();
-$tdataestados[".googleLikeFields"][] = "EstadoId";
 $tdataestados[".googleLikeFields"][] = "Estado";
-$tdataestados[".googleLikeFields"][] = "Tipo";
 
 
 
@@ -444,7 +442,8 @@ $tdataestados[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -467,7 +466,8 @@ $tdataestados[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

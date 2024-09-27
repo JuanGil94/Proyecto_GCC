@@ -148,7 +148,6 @@ $tdataentidades[".filterFields"] = array();
 $tdataentidades[".requiredSearchFields"] = array();
 
 $tdataentidades[".googleLikeFields"] = array();
-$tdataentidades[".googleLikeFields"][] = "EntidadId";
 $tdataentidades[".googleLikeFields"][] = "Entidad";
 
 
@@ -442,7 +441,8 @@ $tdataentidades[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -465,7 +465,8 @@ $tdataentidades[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

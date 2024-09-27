@@ -3906,6 +3906,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "estados1" ] = "dbo.Estados1";
 	$projectEntities[ "dbo.Aplazamientos" ] = array( "url" => "aplazamientos", "type" => 0 );
 	$projectEntitiesReverse[ "aplazamientos" ] = "dbo.Aplazamientos";
+	$projectEntities[ "dbo.Seccionales1" ] = array( "url" => "seccionales1", "type" => 1 );
+	$projectEntitiesReverse[ "seccionales1" ] = "dbo.Seccionales1";
+	$projectEntities[ "dbo.Naturalezas1" ] = array( "url" => "naturalezas1", "type" => 1 );
+	$projectEntitiesReverse[ "naturalezas1" ] = "dbo.Naturalezas1";
+	$projectEntities[ "dbo.Calificaciones" ] = array( "url" => "calificaciones", "type" => 0 );
+	$projectEntitiesReverse[ "calificaciones" ] = "dbo.Calificaciones";
+	$projectEntities[ "dbo.Niveles1" ] = array( "url" => "niveles1", "type" => 1 );
+	$projectEntitiesReverse[ "niveles1" ] = "dbo.Niveles1";
+	$projectEntities[ "dbo.Niveles2" ] = array( "url" => "niveles2", "type" => 1 );
+	$projectEntitiesReverse[ "niveles2" ] = "dbo.Niveles2";
+	$projectEntities[ "dbo.Conceptos2" ] = array( "url" => "conceptos2", "type" => 1 );
+	$projectEntitiesReverse[ "conceptos2" ] = "dbo.Conceptos2";
 }
 
 function findTable( $table ) {

@@ -148,7 +148,6 @@ $tdataetapas[".filterFields"] = array();
 $tdataetapas[".requiredSearchFields"] = array();
 
 $tdataetapas[".googleLikeFields"] = array();
-$tdataetapas[".googleLikeFields"][] = "EtapaId";
 $tdataetapas[".googleLikeFields"][] = "Etapa";
 
 
@@ -442,7 +441,8 @@ $tdataetapas[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -465,7 +465,8 @@ $tdataetapas[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

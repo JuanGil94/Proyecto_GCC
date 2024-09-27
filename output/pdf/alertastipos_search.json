@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$AlertaTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$AlertaTipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 		  ],

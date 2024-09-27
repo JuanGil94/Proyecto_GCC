@@ -2976,6 +2976,108 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("aplazamientos", " " . "Aplazamientos");
+$table = "dbo.Seccionales1";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("seccionales1", " " . "Seccionales1");
+$table = "dbo.Naturalezas1";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("naturalezas1", " " . "Naturalezas1");
+$table = "dbo.Calificaciones";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("calificaciones", " " . "Calificaciones");
+$table = "dbo.Niveles1";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("niveles1", " " . "Niveles1");
+$table = "dbo.Niveles2";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("niveles2", " " . "Niveles2");
+$table = "dbo.Conceptos2";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("conceptos2", " " . "Conceptos2");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

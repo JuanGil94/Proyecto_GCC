@@ -151,7 +151,6 @@ $tdatafestivos[".filterFields"] = array();
 $tdatafestivos[".requiredSearchFields"] = array();
 
 $tdatafestivos[".googleLikeFields"] = array();
-$tdatafestivos[".googleLikeFields"][] = "FestivoId";
 $tdatafestivos[".googleLikeFields"][] = "Festivo";
 $tdatafestivos[".googleLikeFields"][] = "Fecha";
 
@@ -446,7 +445,8 @@ $tdatafestivos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -469,7 +469,8 @@ $tdatafestivos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -575,7 +576,7 @@ $tdatafestivos[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -584,7 +585,8 @@ $tdatafestivos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -594,7 +596,7 @@ $tdatafestivos[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 24;
 	$edata["LastYearFactor"] = 0;
 
@@ -607,7 +609,8 @@ $tdatafestivos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

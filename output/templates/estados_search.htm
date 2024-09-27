@@ -86,6 +86,7 @@
 	{$cell_grid_c3}
 	class=" r-ori-vert"
 	
+			data-single
 				data-fullwidth
 		
 			data-cellId="grid_c3" data-pageid="{$pageid}"
@@ -94,28 +95,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN EstadoId_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_EstadoId}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="EstadoId{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="EstadoId" data-fieldname="EstadoId" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_EstadoId}">
-		{$label dbo_Estados EstadoId }	</label>
-	<div class="r-search-option">
-		{$searchtype_EstadoId}
-	</div>
-	<div class="r-search-field">
-		{$EstadoId_editcontrol}	</div>
-	<div class="r-search-field">
-		{$EstadoId_editcontrol1}
-	</div>
-	
-</div>
-
-{END EstadoId_fieldblock}
-											
 {BEGIN Estado_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Estado}  r-horizontal-field form-horizontal" 	
@@ -137,28 +116,6 @@
 </div>
 
 {END Estado_fieldblock}
-											
-{BEGIN Tipo_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Tipo}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="Tipo{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Tipo" data-fieldname="Tipo" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_Tipo}">
-		{$label dbo_Estados Tipo }	</label>
-	<div class="r-search-option">
-		{$searchtype_Tipo}
-	</div>
-	<div class="r-search-field">
-		{$Tipo_editcontrol}	</div>
-	<div class="r-search-field">
-		{$Tipo_editcontrol1}
-	</div>
-	
-</div>
-
-{END Tipo_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

@@ -157,7 +157,6 @@ $tdatatest[".filterFields"] = array();
 $tdatatest[".requiredSearchFields"] = array();
 
 $tdatatest[".googleLikeFields"] = array();
-$tdatatest[".googleLikeFields"][] = "TestId";
 $tdatatest[".googleLikeFields"][] = "Test";
 $tdatatest[".googleLikeFields"][] = "Nivel";
 $tdatatest[".googleLikeFields"][] = "Descripcion";
@@ -869,7 +868,8 @@ $tdatatest[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -892,7 +892,8 @@ $tdatatest[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

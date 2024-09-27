@@ -157,7 +157,6 @@ $tdatapresupuestos[".filterFields"] = array();
 $tdatapresupuestos[".requiredSearchFields"] = array();
 
 $tdatapresupuestos[".googleLikeFields"] = array();
-$tdatapresupuestos[".googleLikeFields"][] = "PresupuestoId";
 $tdatapresupuestos[".googleLikeFields"][] = "Ano";
 $tdatapresupuestos[".googleLikeFields"][] = "SeccionalId";
 $tdatapresupuestos[".googleLikeFields"][] = "Meta";
@@ -425,7 +424,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Number");
 
 	
 	
@@ -434,7 +433,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["DecimalDigits"] = 0;
+
 	
 	
 	
@@ -448,6 +448,78 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 0;
+
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 0;
+
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 0;
+
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -465,7 +537,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -477,7 +550,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -488,7 +561,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -498,16 +572,110 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "number";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "number";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -517,7 +685,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "PresupuestoId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -631,7 +800,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -651,7 +821,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -767,7 +938,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -790,7 +962,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -905,7 +1078,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -917,7 +1091,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -928,7 +1102,8 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

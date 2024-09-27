@@ -175,12 +175,9 @@ $tdatadespachos[".filterFields"] = array();
 $tdatadespachos[".requiredSearchFields"] = array();
 
 $tdatadespachos[".googleLikeFields"] = array();
-$tdatadespachos[".googleLikeFields"][] = "DespachoId";
 $tdatadespachos[".googleLikeFields"][] = "Codigo";
 $tdatadespachos[".googleLikeFields"][] = "Despacho";
 $tdatadespachos[".googleLikeFields"][] = "CiudadId";
-$tdatadespachos[".googleLikeFields"][] = "Especialidad";
-$tdatadespachos[".googleLikeFields"][] = "Subespecialidad";
 $tdatadespachos[".googleLikeFields"][] = "Activo";
 $tdatadespachos[".googleLikeFields"][] = "Juez";
 $tdatadespachos[".googleLikeFields"][] = "Correo";
@@ -461,12 +458,127 @@ $tdatadespachos[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterlist"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterprint"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -476,6 +588,33 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Despachos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Codigo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Codigo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -490,11 +629,8 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=12";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -511,16 +647,154 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Despachos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Codigo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Codigo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Despachos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Codigo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Codigo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -616,7 +890,8 @@ $tdatadespachos[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -639,7 +914,8 @@ $tdatadespachos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -658,7 +934,7 @@ $tdatadespachos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -737,6 +1013,121 @@ $tdatadespachos[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterlist"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterprint"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -755,9 +1146,9 @@ $tdatadespachos[".hideMobileList"] = array();
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Ciudades1";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 1;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 1;
 
 	
 		
@@ -777,12 +1168,12 @@ $tdatadespachos[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -802,7 +1193,8 @@ $tdatadespachos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -812,10 +1204,152 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Ciudades1";
+			$edata["autoCompleteFieldsOnEdit"] = 1;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "CiudadId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Ciudad/Municipio";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Ciudades1";
+			$edata["autoCompleteFieldsOnEdit"] = 1;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "CiudadId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Ciudad/Municipio";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
@@ -1308,12 +1842,127 @@ $tdatadespachos[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterlist"] = $vdata;
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterprint"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1323,6 +1972,33 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Despachos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Juez";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Juez";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -1337,11 +2013,8 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1358,16 +2031,154 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Despachos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Juez";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Juez";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Despachos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Juez";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Juez";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1475,7 +2286,7 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "email";
 
 		$edata["EditParams"] = "";
 			$edata["EditParams"].= " maxlength=80";
@@ -1486,7 +2297,8 @@ $tdatadespachos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Email");
+							
 	
 //	End validation
 

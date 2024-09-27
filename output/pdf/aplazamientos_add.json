@@ -160,9 +160,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Aplazamientos AlertaId }","bold":true},{"text":{$AlertaId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Aplazamientos Aplazamiento }","bold":true},{"text":{$Aplazamiento_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -170,9 +167,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Aplazamientos OficioId }","bold":true},{"text":{$OficioId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Aplazamientos AplazamientoId }","bold":true},{"text":{$AplazamientoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

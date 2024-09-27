@@ -166,13 +166,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$CuentaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$Cuenta_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$BancoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
 			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
