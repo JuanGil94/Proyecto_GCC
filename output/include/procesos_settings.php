@@ -82,7 +82,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsprocesos["Spanish"]["Dias"] = "Prescripcion dias";
 	$fieldToolTipsprocesos["Spanish"]["Dias"] = "";
 	$placeHoldersprocesos["Spanish"]["Dias"] = "";
-	$fieldLabelsprocesos["Spanish"]["Intereses"] = "Intereses";
+	$fieldLabelsprocesos["Spanish"]["Intereses"] = "Inte.Saldo";
 	$fieldToolTipsprocesos["Spanish"]["Intereses"] = "";
 	$placeHoldersprocesos["Spanish"]["Intereses"] = "";
 	$fieldLabelsprocesos["Spanish"]["Recaudo"] = "Recaudo";
@@ -375,7 +375,7 @@ $tdataprocesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -12710,41 +12710,11 @@ $detailsTablesData["dbo.Procesos"] = array();
 				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Pagos1
-	
-	
-
-		$dIndex = 4;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Pagos1";
-		$detailsParam["dOriginalTable"] = "dbo.Pagos1";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "pagos1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Pagos1");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Procesos"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
 //	dbo.Intereses
 	
 	
 
-		$dIndex = 5;
+		$dIndex = 4;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Intereses";
 		$detailsParam["dOriginalTable"] = "dbo.Intereses";
@@ -12774,7 +12744,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 6;
+		$dIndex = 5;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Reasignaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Reasignaciones";
@@ -12804,7 +12774,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 7;
+		$dIndex = 6;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Suspensiones1";
 		$detailsParam["dOriginalTable"] = "dbo.Suspensiones";
@@ -12834,7 +12804,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 8;
+		$dIndex = 7;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Interrupciones";
 		$detailsParam["dOriginalTable"] = "dbo.Interrupciones";
@@ -12864,7 +12834,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 9;
+		$dIndex = 8;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Correspondencias";
 		$detailsParam["dOriginalTable"] = "dbo.Correspondencias";
@@ -12894,7 +12864,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 10;
+		$dIndex = 9;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Liquidaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Liquidaciones";
@@ -12924,7 +12894,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 11;
+		$dIndex = 10;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Fechas";
 		$detailsParam["dOriginalTable"] = "dbo.Fechas";
@@ -12954,7 +12924,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 12;
+		$dIndex = 11;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.AuditoriasProcesosView";
 		$detailsParam["dOriginalTable"] = "dbo.AuditoriasProcesosView";
@@ -12984,7 +12954,7 @@ $detailsTablesData["dbo.Procesos"] = array();
 	
 	
 
-		$dIndex = 13;
+		$dIndex = 12;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Reliquidaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Reliquidaciones";
@@ -12995,6 +12965,36 @@ $detailsTablesData["dbo.Procesos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "reliquidaciones";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Reliquidaciones");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Procesos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Procesos"][$dIndex]["masterKeys"][]="ProcesoId";
+
+				$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Procesos"][$dIndex]["detailKeys"][]="ProcesoId";
+//	dbo.Pagos1
+	
+	
+
+		$dIndex = 13;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Pagos1";
+		$detailsParam["dOriginalTable"] = "dbo.Pagos1";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "pagos1";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Pagos1");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

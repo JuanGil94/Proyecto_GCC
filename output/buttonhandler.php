@@ -739,6 +739,12 @@ if( $eventId == 'ConceptoId_event' && "dbo.Chequeos" == $table )
 	$cipherer = new RunnerCipherer("dbo.Chequeos");
 	fieldEventHandler_ConceptoId_event( $params );
 }
+if( $eventId == 'Pago_event' && "dbo.Pagos1" == $table )
+{
+	require_once("include/pagos1_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Pagos1");
+	fieldEventHandler_Pago_event( $params );
+}
 
 
 
@@ -1147,7 +1153,7 @@ function buttonHandler_New_Button1($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
-$meses = $recalcular->Calcular();
+$meses = $recalcular->Calcular(date('Y-m-d'));
 $result["total"]=$recalcular->getSuma();;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -1613,9 +1619,11 @@ $recalcular=new reliquidacion($params["ProcesoId"]);
 //$data = $ajax->getCurrentRecord();
 //$result["record"] = $data;
 //print_r($data);
-$recalcular->CalcularAcuerdo($params["fechaInicial"]);
+//$recalcular->CalcularAcuerdo($params["fechaInicial"]);
+$recalcular->Calcular($params["fechaInicial"]);
 //$recalcular->Calcular();
-$obligacionInicial=$recalcular->obligacionInicial;
+//$obligacionInicial=$recalcular->obligacionInicial;
+$obligacionInicial=$recalcular->obligacionSaldo;
 $costas=$recalcular->costas;
 $costSumInt=$recalcular->getInterSumCost();
 $result["total"]=$costSumInt;
@@ -6095,6 +6103,37 @@ function fieldEventHandler_ConceptoId_event( $params )
 	$result["flag"]=1;
 }
 
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Pago_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+$formato_cop = '$' . number_format($params["value"], 0, ',', '.');
+
+$result["upper"] =$formato_cop ;
 ;
 	RunnerContext::pop();
 	

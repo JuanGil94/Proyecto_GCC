@@ -121,34 +121,10 @@ pdfDocument = {
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
 				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field1}"},
-				
-				
-			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_export_field7}"},
-				
-				
-			{"text":{$PagoObli_pdfvalue},"hidden":"{$item_hide_export_field8}"},
-				
-				
-			{"text":{$PagoCost_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
-			{"text":{$PagoInte_pdfvalue},"hidden":"{$item_hide_export_field10}"},
-				
-				
-			{"text":{$PagoMayo_pdfvalue},"hidden":"{$item_hide_export_field11}"},
-				
-				
-			{"text":{$PagoTerm_pdfvalue},"hidden":"{$item_hide_export_field12}"},
-				
-				
-			{"text":{$PagoIdOrig_pdfvalue},"hidden":"{$item_hide_export_field13}"},
-				
-				
-			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
-				
-				
 			{"text":{$TipoRecaudoId_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

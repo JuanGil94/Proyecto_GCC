@@ -236,6 +236,27 @@
 
 
 {END Observaciones_fieldblock}
+											
+{BEGIN ProcesoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ProcesoId}  r-vertical-field" 
+	data-signal-error-for="ProcesoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="ProcesoId" data-fieldname="ProcesoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ProcesoId}">
+		{BEGIN ProcesoId_label}{$label dbo_Pagos1 ProcesoId }{END ProcesoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$ProcesoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ProcesoId" {$tooltipAttr dbo_Pagos1 ProcesoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Pagos1 ProcesoId }		</div>
+	</div>
+</div>
+
+
+{END ProcesoId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

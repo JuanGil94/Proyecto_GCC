@@ -509,20 +509,6 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Procesos"]["acuerdos.ProcesoId"] = array();
 		}
 		$lookupTableLinks["dbo.Procesos"]["acuerdos.ProcesoId"]["edit"] = array("table" => "dbo.Acuerdos", "field" => "ProcesoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Pagos1"] ) ) {
-			$lookupTableLinks["dbo.Pagos1"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Pagos1"]["pagos1.PagoId"] )) {
-			$lookupTableLinks["dbo.Pagos1"]["pagos1.PagoId"] = array();
-		}
-		$lookupTableLinks["dbo.Pagos1"]["pagos1.PagoId"]["edit"] = array("table" => "dbo.Pagos1", "field" => "PagoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
-			$lookupTableLinks["dbo.Procesos"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Procesos"]["pagos1.ProcesoId"] )) {
-			$lookupTableLinks["dbo.Procesos"]["pagos1.ProcesoId"] = array();
-		}
-		$lookupTableLinks["dbo.Procesos"]["pagos1.ProcesoId"]["edit"] = array("table" => "dbo.Pagos1", "field" => "ProcesoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Cuentas"] ) ) {
 			$lookupTableLinks["dbo.Cuentas"] = array();
 		}
@@ -537,6 +523,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.tipoRecaudo"]["pagos1.TipoRecaudoId"] = array();
 		}
 		$lookupTableLinks["dbo.tipoRecaudo"]["pagos1.TipoRecaudoId"]["edit"] = array("table" => "dbo.Pagos1", "field" => "TipoRecaudoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
+			$lookupTableLinks["dbo.Procesos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Procesos"]["pagos1.ProcesoId"] )) {
+			$lookupTableLinks["dbo.Procesos"]["pagos1.ProcesoId"] = array();
+		}
+		$lookupTableLinks["dbo.Procesos"]["pagos1.ProcesoId"]["edit"] = array("table" => "dbo.Pagos1", "field" => "ProcesoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Bancos"] ) ) {
 			$lookupTableLinks["dbo.Bancos"] = array();
 		}

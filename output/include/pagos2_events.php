@@ -202,7 +202,7 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 
 		include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($values["ProcesoId"]);
-$recalcular->Calcular();
+$recalcular->Calcular(date('Y-m-d'));
 $arrayFechas=$recalcular->getFechas();
 //print_r($arrayFechas);
 foreach($arrayFechas as $dato=>$valor){
@@ -304,7 +304,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
 //echo "El valor del PagoId es:".$values["PagoId"]; 
-$recalcular->Calcular();
+$recalcular->Calcular(date('Y-m-d'));
 //$proxy["saved"]=true;
 //echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
 /*

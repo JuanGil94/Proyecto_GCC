@@ -10,7 +10,6 @@
 'dbo.Liquidaciones' => array( 'displayPreview' => 1 ),
 'dbo.Llamadas' => array( 'displayPreview' => 1 ),
 'dbo.Medidas' => array( 'displayPreview' => 1 ),
-'dbo.Pagos1' => array( 'displayPreview' => 1 ),
 'dbo.Reasignaciones' => array( 'displayPreview' => 1 ),
 'dbo.Solidarios' => array( 'displayPreview' => 1 ) ),
 'master' => array( 'dbo.Seccionales' => array( 'preview' => true ),

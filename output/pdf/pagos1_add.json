@@ -177,6 +177,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_Pagos1 Observaciones }","bold":true},{"text":{$Observaciones_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_Pagos1 ProcesoId }","bold":true},{"text":{$ProcesoId_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',

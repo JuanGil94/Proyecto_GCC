@@ -131,7 +131,7 @@ $tdataprueba_archivo_plano[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																		
+																																																																																																																																																																																																																								
 
 $tdataprueba_archivo_plano[".ajaxCodeSnippetAdded"] = false;
 

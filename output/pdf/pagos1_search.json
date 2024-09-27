@@ -166,12 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
-			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
 			{"text":{$CuentaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
@@ -187,28 +181,10 @@ pdfDocument = {
 			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$PagoObli_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
-			{"text":{$PagoCost_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
-				
-				
-			{"text":{$PagoInte_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
-				
-				
-			{"text":{$PagoMayo_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
-				
-				
-			{"text":{$PagoTerm_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
-				
-				
-			{"text":{$PagoIdOrig_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
-				
-				
 			{"text":{$TipoRecaudoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

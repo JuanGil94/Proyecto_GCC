@@ -374,7 +374,7 @@ $tdataprocesosreasignar[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
 
 $tdataprocesosreasignar[".ajaxCodeSnippetAdded"] = false;
 
@@ -12828,41 +12828,11 @@ $detailsTablesData["dbo.ProcesosReasignar"] = array();
 				$detailsTablesData["dbo.ProcesosReasignar"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.ProcesosReasignar"][$dIndex]["detailKeys"][]="ProcesoId";
-//	dbo.Pagos1
-	
-	
-
-		$dIndex = 8;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Pagos1";
-		$detailsParam["dOriginalTable"] = "dbo.Pagos1";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "pagos1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Pagos1");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.ProcesosReasignar"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.ProcesosReasignar"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosReasignar"][$dIndex]["masterKeys"][]="ProcesoId";
-
-				$detailsTablesData["dbo.ProcesosReasignar"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.ProcesosReasignar"][$dIndex]["detailKeys"][]="ProcesoId";
 //	dbo.Reasignaciones
 	
 	
 
-		$dIndex = 9;
+		$dIndex = 8;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Reasignaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Reasignaciones";
@@ -12892,7 +12862,7 @@ $detailsTablesData["dbo.ProcesosReasignar"] = array();
 	
 	
 
-		$dIndex = 10;
+		$dIndex = 9;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Solidarios";
 		$detailsParam["dOriginalTable"] = "dbo.Solidarios";

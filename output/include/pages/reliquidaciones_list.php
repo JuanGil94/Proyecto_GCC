@@ -1097,7 +1097,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'clickSort' => true,
 'customCSS' => '/* Put  your custom CSS code here */
 :host {
-  color: black;
     white-space: nowrap;
 }
 ' ),
@@ -1128,7 +1127,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'customCSS' => '/* Put  your custom CSS code here */
 
 :host {
-  color: black;
     white-space: nowrap;
 }
 ' ),
@@ -1142,7 +1140,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'customCSS' => '/* Put  your custom CSS code here */
 
 :host {
-  color: black;
     white-space: nowrap;
 }' ),
 'grid_field_label1' => array( 'type' => 'grid_field_label',
@@ -1155,7 +1152,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'customCSS' => '/* Put  your custom CSS code here */
 
 :host {
-  color: black;
     white-space: nowrap;
 }
 ' ),
@@ -1169,7 +1165,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'customCSS' => '/* Put  your custom CSS code here */
 
 :host {
-  color: black;
     white-space: nowrap;
 }
 ' ),
@@ -1181,7 +1176,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'customCSS' => ':host {
-  color: black;
     white-space: nowrap;
 }' ),
 'grid_field_label4' => array( 'type' => 'grid_field_label',
@@ -1192,7 +1186,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'customCSS' => ':host {
-  color: black;
     white-space: nowrap;
 }' ),
 'grid_field_label5' => array( 'type' => 'grid_field_label',
@@ -1203,7 +1196,7 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'customCSS' => ':host {
-  color: black;
+
     white-space: nowrap;
 }' ),
 'grid_field_label6' => array( 'type' => 'grid_field_label',
@@ -1214,7 +1207,7 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'customCSS' => ':host {
-  color: black;
+
     white-space: nowrap;
 }' ),
 'grid_field_label7' => array( 'type' => 'grid_field_label',
@@ -1225,7 +1218,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'customCSS' => ':host {
-  color: black;
     white-space: nowrap;
 }' ),
 'grid_field_label8' => array( 'type' => 'grid_field_label',
@@ -1236,7 +1228,6 @@ array( 'cell' => 'footcell_field15' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'customCSS' => ':host {
-  color: black;
     white-space: nowrap;
 }' ),
 'grid_field_label9' => array( 'type' => 'grid_field_label',

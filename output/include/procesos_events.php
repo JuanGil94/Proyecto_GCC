@@ -59,7 +59,18 @@
 function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 {
 
-		//$record["hovercss"]='background:yellow;';
+		
+$record['ObligacionInicial_css'].='background:#ffffe0';
+$record['CostasInicial_css'].='background:#ffffe0';
+$record['InteresesInicial_css'].='background:#ffffe0';
+
+$record['Obligacion_css'].='background: #ffe0e0';
+$record['Costas_css'].='background:#e0f7fa';
+$record['Intereses_css'].='background:#e0f7fa';
+
+$record['ObligacionCreacion_css'].='background:#e0f7fa';
+
+//$record["hovercss"]='background:yellow;';
 //addNotification( "It's time to check your mail", "Mail check", "glyphicon-envelope", "https://mail.google.com", null, null, true );
 /*
 $_SESSION["AbogadoId"];
