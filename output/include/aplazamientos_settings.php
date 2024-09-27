@@ -25,10 +25,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsaplazamientos["Spanish"] = array();
 	$placeHoldersaplazamientos["Spanish"] = array();
 	$pageTitlesaplazamientos["Spanish"] = array();
-	$fieldLabelsaplazamientos["Spanish"]["AplazamientoId"] = "Aplazamiento Id";
+	$fieldLabelsaplazamientos["Spanish"]["AplazamientoId"] = "Aplazamiento";
 	$fieldToolTipsaplazamientos["Spanish"]["AplazamientoId"] = "";
 	$placeHoldersaplazamientos["Spanish"]["AplazamientoId"] = "";
-	$fieldLabelsaplazamientos["Spanish"]["AlertaId"] = "Alerta Id";
+	$fieldLabelsaplazamientos["Spanish"]["AlertaId"] = "Alerta";
 	$fieldToolTipsaplazamientos["Spanish"]["AlertaId"] = "";
 	$placeHoldersaplazamientos["Spanish"]["AlertaId"] = "";
 	$fieldLabelsaplazamientos["Spanish"]["Aplazamiento"] = "Aplazamiento";
@@ -37,7 +37,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsaplazamientos["Spanish"]["Dias"] = "Dias";
 	$fieldToolTipsaplazamientos["Spanish"]["Dias"] = "";
 	$placeHoldersaplazamientos["Spanish"]["Dias"] = "";
-	$fieldLabelsaplazamientos["Spanish"]["OficioId"] = "Oficio Id";
+	$fieldLabelsaplazamientos["Spanish"]["OficioId"] = "Oficio";
 	$fieldToolTipsaplazamientos["Spanish"]["OficioId"] = "";
 	$placeHoldersaplazamientos["Spanish"]["OficioId"] = "";
 	if (count($fieldToolTipsaplazamientos["Spanish"]))

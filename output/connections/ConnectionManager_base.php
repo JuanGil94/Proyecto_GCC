@@ -428,6 +428,12 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Etapas1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Estados1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Aplazamientos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Seccionales1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Naturalezas1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Calificaciones"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Niveles1"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Niveles2"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Conceptos2"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -187,8 +187,6 @@ $tdataoperaciones[".filterFields"] = array();
 $tdataoperaciones[".requiredSearchFields"] = array();
 
 $tdataoperaciones[".googleLikeFields"] = array();
-$tdataoperaciones[".googleLikeFields"][] = "OperacionId";
-$tdataoperaciones[".googleLikeFields"][] = "Columna";
 $tdataoperaciones[".googleLikeFields"][] = "ConceptoId";
 $tdataoperaciones[".googleLikeFields"][] = "ConcCodi";
 $tdataoperaciones[".googleLikeFields"][] = "Operacion";
@@ -632,7 +630,7 @@ $tdataoperaciones[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Conceptos";
+	$edata["LookupTable"] = "dbo.Conceptos2";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -660,7 +658,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -680,7 +679,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -933,7 +933,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -956,7 +957,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1071,7 +1073,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1094,7 +1097,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1623,7 +1627,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1646,7 +1651,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2203,7 +2209,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2223,7 +2230,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -2366,7 +2374,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2386,7 +2395,8 @@ $tdataoperaciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

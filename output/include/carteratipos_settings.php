@@ -154,7 +154,6 @@ $tdatacarteratipos[".filterFields"] = array();
 $tdatacarteratipos[".requiredSearchFields"] = array();
 
 $tdatacarteratipos[".googleLikeFields"] = array();
-$tdatacarteratipos[".googleLikeFields"][] = "CarteraTipoId";
 $tdatacarteratipos[".googleLikeFields"][] = "CarteraTipo";
 $tdatacarteratipos[".googleLikeFields"][] = "Color";
 $tdatacarteratipos[".googleLikeFields"][] = "Prescrita";

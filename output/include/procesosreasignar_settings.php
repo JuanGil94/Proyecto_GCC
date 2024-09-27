@@ -3745,9 +3745,8 @@ $tdataprocesosreasignar[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
+				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Calificaciones";
-	$edata["LookupConnId"] = "GCC_at_S00001_CCAD01";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -3766,8 +3765,7 @@ $tdataprocesosreasignar[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	

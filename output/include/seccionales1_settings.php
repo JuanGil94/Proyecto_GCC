@@ -25,75 +25,15 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsseccionales1["Spanish"] = array();
 	$placeHoldersseccionales1["Spanish"] = array();
 	$pageTitlesseccionales1["Spanish"] = array();
-	$fieldLabelsseccionales1["Spanish"]["SeccionalId"] = "Seccional Id";
-	$fieldToolTipsseccionales1["Spanish"]["SeccionalId"] = "";
-	$placeHoldersseccionales1["Spanish"]["SeccionalId"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Codigo"] = "Codigo";
-	$fieldToolTipsseccionales1["Spanish"]["Codigo"] = "";
-	$placeHoldersseccionales1["Spanish"]["Codigo"] = "";
 	$fieldLabelsseccionales1["Spanish"]["Seccional"] = "Seccional";
 	$fieldToolTipsseccionales1["Spanish"]["Seccional"] = "";
 	$placeHoldersseccionales1["Spanish"]["Seccional"] = "";
-	$fieldLabelsseccionales1["Spanish"]["NIT"] = "NIT";
-	$fieldToolTipsseccionales1["Spanish"]["NIT"] = "";
-	$placeHoldersseccionales1["Spanish"]["NIT"] = "";
-	$fieldLabelsseccionales1["Spanish"]["CiudadId"] = "Ciudad";
-	$fieldToolTipsseccionales1["Spanish"]["CiudadId"] = "";
-	$placeHoldersseccionales1["Spanish"]["CiudadId"] = "";
-	$fieldLabelsseccionales1["Spanish"]["PiePagina"] = "Pie Pagina";
-	$fieldToolTipsseccionales1["Spanish"]["PiePagina"] = "";
-	$placeHoldersseccionales1["Spanish"]["PiePagina"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Sigobius"] = "Sigobius";
-	$fieldToolTipsseccionales1["Spanish"]["Sigobius"] = "";
-	$placeHoldersseccionales1["Spanish"]["Sigobius"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Email"] = "Email";
-	$fieldToolTipsseccionales1["Spanish"]["Email"] = "";
-	$placeHoldersseccionales1["Spanish"]["Email"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Direccion"] = "Direccion";
-	$fieldToolTipsseccionales1["Spanish"]["Direccion"] = "";
-	$placeHoldersseccionales1["Spanish"]["Direccion"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Telefonos"] = "Telefonos";
-	$fieldToolTipsseccionales1["Spanish"]["Telefonos"] = "";
-	$placeHoldersseccionales1["Spanish"]["Telefonos"] = "";
-	$fieldLabelsseccionales1["Spanish"]["PCI"] = "PCI";
-	$fieldToolTipsseccionales1["Spanish"]["PCI"] = "";
-	$placeHoldersseccionales1["Spanish"]["PCI"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Contador"] = "Contador";
-	$fieldToolTipsseccionales1["Spanish"]["Contador"] = "";
-	$placeHoldersseccionales1["Spanish"]["Contador"] = "";
-	$fieldLabelsseccionales1["Spanish"]["ContadorCargo"] = "Cargo Contador";
-	$fieldToolTipsseccionales1["Spanish"]["ContadorCargo"] = "";
-	$placeHoldersseccionales1["Spanish"]["ContadorCargo"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Director"] = "Director";
-	$fieldToolTipsseccionales1["Spanish"]["Director"] = "";
-	$placeHoldersseccionales1["Spanish"]["Director"] = "";
-	$fieldLabelsseccionales1["Spanish"]["DirectorCargo"] = "Cargo Director";
-	$fieldToolTipsseccionales1["Spanish"]["DirectorCargo"] = "";
-	$placeHoldersseccionales1["Spanish"]["DirectorCargo"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Abogado"] = "Abogado";
-	$fieldToolTipsseccionales1["Spanish"]["Abogado"] = "";
-	$placeHoldersseccionales1["Spanish"]["Abogado"] = "";
-	$fieldLabelsseccionales1["Spanish"]["AbogadoCargo"] = "Cargo Abogado";
-	$fieldToolTipsseccionales1["Spanish"]["AbogadoCargo"] = "";
-	$placeHoldersseccionales1["Spanish"]["AbogadoCargo"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Formato"] = "Imprimir Formato";
-	$fieldToolTipsseccionales1["Spanish"]["Formato"] = "";
-	$placeHoldersseccionales1["Spanish"]["Formato"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Corporacion"] = "Corporacion";
-	$fieldToolTipsseccionales1["Spanish"]["Corporacion"] = "";
-	$placeHoldersseccionales1["Spanish"]["Corporacion"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Unidad"] = "Unidad Administrativa";
-	$fieldToolTipsseccionales1["Spanish"]["Unidad"] = "";
-	$placeHoldersseccionales1["Spanish"]["Unidad"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Oficina"] = "Oficina";
-	$fieldToolTipsseccionales1["Spanish"]["Oficina"] = "";
-	$placeHoldersseccionales1["Spanish"]["Oficina"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Serie"] = "Serie";
-	$fieldToolTipsseccionales1["Spanish"]["Serie"] = "";
-	$placeHoldersseccionales1["Spanish"]["Serie"] = "";
-	$fieldLabelsseccionales1["Spanish"]["Subserie"] = "Subserie";
-	$fieldToolTipsseccionales1["Spanish"]["Subserie"] = "";
-	$placeHoldersseccionales1["Spanish"]["Subserie"] = "";
+	$fieldLabelsseccionales1["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldToolTipsseccionales1["Spanish"]["SeccionalId"] = "";
+	$placeHoldersseccionales1["Spanish"]["SeccionalId"] = "";
+	$fieldLabelsseccionales1["Spanish"]["Seccional1"] = "Seccional1";
+	$fieldToolTipsseccionales1["Spanish"]["Seccional1"] = "";
+	$placeHoldersseccionales1["Spanish"]["Seccional1"] = "";
 	if (count($fieldToolTipsseccionales1["Spanish"]))
 		$tdataseccionales1[".isUseToolTips"] = true;
 }
@@ -191,7 +131,7 @@ $tdataseccionales1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																					
+																																																																																																																																																																																																																		
 
 $tdataseccionales1[".ajaxCodeSnippetAdded"] = false;
 
@@ -203,7 +143,7 @@ $tdataseccionales1[".addPageEvents"] = false;
 $tdataseccionales1[".isUseTimeForSearch"] = false;
 
 
-$tdataseccionales1[".badgeColor"] = "3CB371";
+$tdataseccionales1[".badgeColor"] = "778899";
 
 
 $tdataseccionales1[".allSearchFields"] = array();
@@ -211,29 +151,9 @@ $tdataseccionales1[".filterFields"] = array();
 $tdataseccionales1[".requiredSearchFields"] = array();
 
 $tdataseccionales1[".googleLikeFields"] = array();
-$tdataseccionales1[".googleLikeFields"][] = "SeccionalId";
-$tdataseccionales1[".googleLikeFields"][] = "Codigo";
 $tdataseccionales1[".googleLikeFields"][] = "Seccional";
-$tdataseccionales1[".googleLikeFields"][] = "NIT";
-$tdataseccionales1[".googleLikeFields"][] = "CiudadId";
-$tdataseccionales1[".googleLikeFields"][] = "PiePagina";
-$tdataseccionales1[".googleLikeFields"][] = "Sigobius";
-$tdataseccionales1[".googleLikeFields"][] = "Email";
-$tdataseccionales1[".googleLikeFields"][] = "Direccion";
-$tdataseccionales1[".googleLikeFields"][] = "Telefonos";
-$tdataseccionales1[".googleLikeFields"][] = "PCI";
-$tdataseccionales1[".googleLikeFields"][] = "Contador";
-$tdataseccionales1[".googleLikeFields"][] = "ContadorCargo";
-$tdataseccionales1[".googleLikeFields"][] = "Director";
-$tdataseccionales1[".googleLikeFields"][] = "DirectorCargo";
-$tdataseccionales1[".googleLikeFields"][] = "Abogado";
-$tdataseccionales1[".googleLikeFields"][] = "AbogadoCargo";
-$tdataseccionales1[".googleLikeFields"][] = "Formato";
-$tdataseccionales1[".googleLikeFields"][] = "Corporacion";
-$tdataseccionales1[".googleLikeFields"][] = "Unidad";
-$tdataseccionales1[".googleLikeFields"][] = "Oficina";
-$tdataseccionales1[".googleLikeFields"][] = "Serie";
-$tdataseccionales1[".googleLikeFields"][] = "Subserie";
+$tdataseccionales1[".googleLikeFields"][] = "SeccionalId";
+$tdataseccionales1[".googleLikeFields"][] = "Seccional1";
 
 
 
@@ -262,15 +182,13 @@ $tdataseccionales1[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY Seccional ASC";
+$tstrOrderBy = "";
 $tdataseccionales1[".strOrderBy"] = $tstrOrderBy;
 
 $tdataseccionales1[".orderindexes"] = array();
-	$tdataseccionales1[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "Seccional");
 
 
-
-$tdataseccionales1[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$tdataseccionales1[".sqlHead"] = "SELECT ' ' AS Seccional,  ' ' AS SeccionalId,  ' ' as [Seccional1]  UNION ALL   SELECT  case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end AS Seccional1,  SeccionalId AS SeccionalId1,  Seccional AS Seccional11";
 $tdataseccionales1[".sqlFrom"] = "FROM dbo.Seccionales";
 $tdataseccionales1[".sqlWhereExpr"] = "";
 $tdataseccionales1[".sqlTail"] = "";
@@ -318,13 +236,150 @@ $tdataseccionales1[".hideMobileList"] = array();
 
 
 
-//	SeccionalId
+//	Seccional
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
+	$fdata["strName"] = "Seccional";
+	$fdata["GoodName"] = "Seccional";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Seccional");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Seccional";
+
+		$fdata["sourceSingle"] = "Seccional";
+
+		$fdata["FullName"] = "Seccional";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataseccionales1["Seccional"] = $fdata;
+		$tdataseccionales1[".searchableFields"][] = "Seccional";
+//	SeccionalId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "SeccionalId";
 	$fdata["GoodName"] = "SeccionalId";
-	$fdata["ownerTable"] = "dbo.Seccionales";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","SeccionalId");
 	$fdata["FieldType"] = 3;
 
@@ -338,8 +393,7 @@ $tdataseccionales1[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "SeccionalId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "SeccionalId";
+		$fdata["FullName"] = "SeccionalId";
 
 	
 	
@@ -459,152 +513,14 @@ $tdataseccionales1[".hideMobileList"] = array();
 
 	$tdataseccionales1["SeccionalId"] = $fdata;
 		$tdataseccionales1[".searchableFields"][] = "SeccionalId";
-//	Codigo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 2;
-	$fdata["strName"] = "Codigo";
-	$fdata["GoodName"] = "Codigo";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Codigo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Codigo";
-
-		$fdata["sourceSingle"] = "Codigo";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Codigo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=23";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Codigo"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Codigo";
-//	Seccional
+//	Seccional1
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "Seccional";
-	$fdata["GoodName"] = "Seccional";
+	$fdata["strName"] = "Seccional1";
+	$fdata["GoodName"] = "Seccional1";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Seccional");
+	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Seccional1");
 	$fdata["FieldType"] = 200;
 
 
@@ -612,12 +528,10 @@ $tdataseccionales1[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Seccional";
+		$fdata["strField"] = "Seccional1";
 
-		$fdata["sourceSingle"] = "Seccional";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
+	
+		$fdata["FullName"] = "Seccional1";
 
 	
 	
@@ -681,447 +595,7 @@ $tdataseccionales1[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Seccional"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Seccional";
-//	NIT
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 4;
-	$fdata["strName"] = "NIT";
-	$fdata["GoodName"] = "NIT";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","NIT");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "NIT";
-
-		$fdata["sourceSingle"] = "NIT";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "NIT";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=20";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["NIT"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "NIT";
-//	CiudadId
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 5;
-	$fdata["strName"] = "CiudadId";
-	$fdata["GoodName"] = "CiudadId";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","CiudadId");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "CiudadId";
-
-		$fdata["sourceSingle"] = "CiudadId";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "CiudadId";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Ciudades1";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
 		
-	$edata["LinkField"] = "CiudadId";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Ciudad/Municipio";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-							
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["CiudadId"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "CiudadId";
-//	PiePagina
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 6;
-	$fdata["strName"] = "PiePagina";
-	$fdata["GoodName"] = "PiePagina";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","PiePagina");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "PiePagina";
-
-		$fdata["sourceSingle"] = "PiePagina";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "PiePagina";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=200";
-
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1172,2348 +646,8 @@ $tdataseccionales1[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataseccionales1["PiePagina"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "PiePagina";
-//	Sigobius
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 7;
-	$fdata["strName"] = "Sigobius";
-	$fdata["GoodName"] = "Sigobius";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Sigobius");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Sigobius";
-
-		$fdata["sourceSingle"] = "Sigobius";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Sigobius";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=20";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Sigobius"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Sigobius";
-//	Email
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 8;
-	$fdata["strName"] = "Email";
-	$fdata["GoodName"] = "Email";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Email");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Email";
-
-		$fdata["sourceSingle"] = "Email";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Email";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Email"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Email";
-//	Direccion
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 9;
-	$fdata["strName"] = "Direccion";
-	$fdata["GoodName"] = "Direccion";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Direccion");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Direccion";
-
-		$fdata["sourceSingle"] = "Direccion";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Direccion";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=200";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Direccion"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Direccion";
-//	Telefonos
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 10;
-	$fdata["strName"] = "Telefonos";
-	$fdata["GoodName"] = "Telefonos";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Telefonos");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Telefonos";
-
-		$fdata["sourceSingle"] = "Telefonos";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Telefonos";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Telefonos"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Telefonos";
-//	PCI
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 11;
-	$fdata["strName"] = "PCI";
-	$fdata["GoodName"] = "PCI";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","PCI");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "PCI";
-
-		$fdata["sourceSingle"] = "PCI";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "PCI";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=20";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["PCI"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "PCI";
-//	Contador
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 12;
-	$fdata["strName"] = "Contador";
-	$fdata["GoodName"] = "Contador";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Contador");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Contador";
-
-		$fdata["sourceSingle"] = "Contador";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Contador";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Contador"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Contador";
-//	ContadorCargo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 13;
-	$fdata["strName"] = "ContadorCargo";
-	$fdata["GoodName"] = "ContadorCargo";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","ContadorCargo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "ContadorCargo";
-
-		$fdata["sourceSingle"] = "ContadorCargo";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ContadorCargo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["ContadorCargo"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "ContadorCargo";
-//	Director
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 14;
-	$fdata["strName"] = "Director";
-	$fdata["GoodName"] = "Director";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Director");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Director";
-
-		$fdata["sourceSingle"] = "Director";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Director";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Director"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Director";
-//	DirectorCargo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 15;
-	$fdata["strName"] = "DirectorCargo";
-	$fdata["GoodName"] = "DirectorCargo";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","DirectorCargo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "DirectorCargo";
-
-		$fdata["sourceSingle"] = "DirectorCargo";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "DirectorCargo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["DirectorCargo"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "DirectorCargo";
-//	Abogado
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 16;
-	$fdata["strName"] = "Abogado";
-	$fdata["GoodName"] = "Abogado";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Abogado");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Abogado";
-
-		$fdata["sourceSingle"] = "Abogado";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Abogado";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Abogado"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Abogado";
-//	AbogadoCargo
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 17;
-	$fdata["strName"] = "AbogadoCargo";
-	$fdata["GoodName"] = "AbogadoCargo";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","AbogadoCargo");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "AbogadoCargo";
-
-		$fdata["sourceSingle"] = "AbogadoCargo";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "AbogadoCargo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["AbogadoCargo"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "AbogadoCargo";
-//	Formato
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 18;
-	$fdata["strName"] = "Formato";
-	$fdata["GoodName"] = "Formato";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Formato");
-	$fdata["FieldType"] = 11;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Formato";
-
-		$fdata["sourceSingle"] = "Formato";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Formato";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Checkbox");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Checkbox");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-				$fdata["filterFormat"] = "Options list";
-		$fdata["showCollapsed"] = false;
-
-	
-	
-	
-		$fdata["filterCheckedMessageType"] = "Text";
-	$fdata["filterCheckedMessageText"] = "Checked";
-	$fdata["filterUncheckedMessageType"] = "Text";
-	$fdata["filterUncheckedMessageText"] = "Unchecked";
-
-//end of Filters settings
-
-
-	$tdataseccionales1["Formato"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Formato";
-//	Corporacion
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 19;
-	$fdata["strName"] = "Corporacion";
-	$fdata["GoodName"] = "Corporacion";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Corporacion");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Corporacion";
-
-		$fdata["sourceSingle"] = "Corporacion";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Corporacion";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=100";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Corporacion"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Corporacion";
-//	Unidad
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 20;
-	$fdata["strName"] = "Unidad";
-	$fdata["GoodName"] = "Unidad";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Unidad");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Unidad";
-
-		$fdata["sourceSingle"] = "Unidad";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Unidad";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Unidad"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Unidad";
-//	Oficina
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 21;
-	$fdata["strName"] = "Oficina";
-	$fdata["GoodName"] = "Oficina";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Oficina");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Oficina";
-
-		$fdata["sourceSingle"] = "Oficina";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Oficina";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Oficina"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Oficina";
-//	Serie
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 22;
-	$fdata["strName"] = "Serie";
-	$fdata["GoodName"] = "Serie";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Serie");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Serie";
-
-		$fdata["sourceSingle"] = "Serie";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Serie";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Serie"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Serie";
-//	Subserie
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 23;
-	$fdata["strName"] = "Subserie";
-	$fdata["GoodName"] = "Subserie";
-	$fdata["ownerTable"] = "dbo.Seccionales";
-	$fdata["Label"] = GetFieldLabel("dbo_Seccionales1","Subserie");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Subserie";
-
-		$fdata["sourceSingle"] = "Subserie";
-
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Subserie";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=50";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataseccionales1["Subserie"] = $fdata;
-		$tdataseccionales1[".searchableFields"][] = "Subserie";
+	$tdataseccionales1["Seccional1"] = $fdata;
+		$tdataseccionales1[".searchableFields"][] = "Seccional1";
 
 
 $tables_data["dbo.Seccionales1"]=&$tdataseccionales1;
@@ -3558,10 +692,10 @@ function createSqlQuery_seccionales1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$proto0["m_strFieldList"] = "' ' AS Seccional,  ' ' AS SeccionalId,  ' ' as [Seccional1]  UNION ALL   SELECT  case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end AS Seccional1,  SeccionalId AS SeccionalId1,  Seccional AS Seccional11";
 $proto0["m_strFrom"] = "FROM dbo.Seccionales";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY Seccional ASC";
+$proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -3599,395 +733,126 @@ $obj = new SQLLogicalExpr($proto4);
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "' '"
+));
+
+$proto6["m_sql"] = "' '";
+$proto6["m_srcTableName"] = "dbo.Seccionales1";
+$proto6["m_expr"]=$obj;
+$proto6["m_alias"] = "Seccional";
+$obj = new SQLFieldListItem($proto6);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto8=array();
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "' '"
+));
+
+$proto8["m_sql"] = "' '";
+$proto8["m_srcTableName"] = "dbo.Seccionales1";
+$proto8["m_expr"]=$obj;
+$proto8["m_alias"] = "SeccionalId";
+$obj = new SQLFieldListItem($proto8);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto10=array();
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "' ' as [Seccional1]  UNION ALL   SELECT  case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end"
+));
+
+$proto10["m_sql"] = "' ' as [Seccional1]  UNION ALL   SELECT  case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
+$proto10["m_srcTableName"] = "dbo.Seccionales1";
+$proto10["m_expr"]=$obj;
+$proto10["m_alias"] = "Seccional1";
+$obj = new SQLFieldListItem($proto10);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "SeccionalId",
 	"m_strTable" => "dbo.Seccionales",
 	"m_srcTableName" => "dbo.Seccionales1"
 ));
 
-$proto6["m_sql"] = "SeccionalId";
-$proto6["m_srcTableName"] = "dbo.Seccionales1";
-$proto6["m_expr"]=$obj;
-$proto6["m_alias"] = "";
-$obj = new SQLFieldListItem($proto6);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto8=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Codigo",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto8["m_sql"] = "Codigo";
-$proto8["m_srcTableName"] = "dbo.Seccionales1";
-$proto8["m_expr"]=$obj;
-$proto8["m_alias"] = "";
-$obj = new SQLFieldListItem($proto8);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto10=array();
-			$obj = new SQLNonParsed(array(
-	"m_sql" => "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end"
-));
-
-$proto10["m_sql"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
-$proto10["m_srcTableName"] = "dbo.Seccionales1";
-$proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "Seccional";
-$obj = new SQLFieldListItem($proto10);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto12=array();
-			$obj = new SQLField(array(
-	"m_strName" => "NIT",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto12["m_sql"] = "NIT";
+$proto12["m_sql"] = "SeccionalId";
 $proto12["m_srcTableName"] = "dbo.Seccionales1";
 $proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "";
+$proto12["m_alias"] = "SeccionalId1";
 $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "CiudadId",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto14["m_sql"] = "CiudadId";
-$proto14["m_srcTableName"] = "dbo.Seccionales1";
-$proto14["m_expr"]=$obj;
-$proto14["m_alias"] = "";
-$obj = new SQLFieldListItem($proto14);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto16=array();
-			$obj = new SQLField(array(
-	"m_strName" => "PiePagina",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto16["m_sql"] = "PiePagina";
-$proto16["m_srcTableName"] = "dbo.Seccionales1";
-$proto16["m_expr"]=$obj;
-$proto16["m_alias"] = "";
-$obj = new SQLFieldListItem($proto16);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto18=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Sigobius",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto18["m_sql"] = "Sigobius";
-$proto18["m_srcTableName"] = "dbo.Seccionales1";
-$proto18["m_expr"]=$obj;
-$proto18["m_alias"] = "";
-$obj = new SQLFieldListItem($proto18);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto20=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Email",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto20["m_sql"] = "Email";
-$proto20["m_srcTableName"] = "dbo.Seccionales1";
-$proto20["m_expr"]=$obj;
-$proto20["m_alias"] = "";
-$obj = new SQLFieldListItem($proto20);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto22=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Direccion",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto22["m_sql"] = "Direccion";
-$proto22["m_srcTableName"] = "dbo.Seccionales1";
-$proto22["m_expr"]=$obj;
-$proto22["m_alias"] = "";
-$obj = new SQLFieldListItem($proto22);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto24=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Telefonos",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto24["m_sql"] = "Telefonos";
-$proto24["m_srcTableName"] = "dbo.Seccionales1";
-$proto24["m_expr"]=$obj;
-$proto24["m_alias"] = "";
-$obj = new SQLFieldListItem($proto24);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto26=array();
-			$obj = new SQLField(array(
-	"m_strName" => "PCI",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto26["m_sql"] = "PCI";
-$proto26["m_srcTableName"] = "dbo.Seccionales1";
-$proto26["m_expr"]=$obj;
-$proto26["m_alias"] = "";
-$obj = new SQLFieldListItem($proto26);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto28=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Contador",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto28["m_sql"] = "Contador";
-$proto28["m_srcTableName"] = "dbo.Seccionales1";
-$proto28["m_expr"]=$obj;
-$proto28["m_alias"] = "";
-$obj = new SQLFieldListItem($proto28);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto30=array();
-			$obj = new SQLField(array(
-	"m_strName" => "ContadorCargo",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto30["m_sql"] = "ContadorCargo";
-$proto30["m_srcTableName"] = "dbo.Seccionales1";
-$proto30["m_expr"]=$obj;
-$proto30["m_alias"] = "";
-$obj = new SQLFieldListItem($proto30);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto32=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Director",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto32["m_sql"] = "Director";
-$proto32["m_srcTableName"] = "dbo.Seccionales1";
-$proto32["m_expr"]=$obj;
-$proto32["m_alias"] = "";
-$obj = new SQLFieldListItem($proto32);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto34=array();
-			$obj = new SQLField(array(
-	"m_strName" => "DirectorCargo",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto34["m_sql"] = "DirectorCargo";
-$proto34["m_srcTableName"] = "dbo.Seccionales1";
-$proto34["m_expr"]=$obj;
-$proto34["m_alias"] = "";
-$obj = new SQLFieldListItem($proto34);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto36=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Abogado",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto36["m_sql"] = "Abogado";
-$proto36["m_srcTableName"] = "dbo.Seccionales1";
-$proto36["m_expr"]=$obj;
-$proto36["m_alias"] = "";
-$obj = new SQLFieldListItem($proto36);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto38=array();
-			$obj = new SQLField(array(
-	"m_strName" => "AbogadoCargo",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto38["m_sql"] = "AbogadoCargo";
-$proto38["m_srcTableName"] = "dbo.Seccionales1";
-$proto38["m_expr"]=$obj;
-$proto38["m_alias"] = "";
-$obj = new SQLFieldListItem($proto38);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto40=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Formato",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto40["m_sql"] = "Formato";
-$proto40["m_srcTableName"] = "dbo.Seccionales1";
-$proto40["m_expr"]=$obj;
-$proto40["m_alias"] = "";
-$obj = new SQLFieldListItem($proto40);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto42=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Corporacion",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto42["m_sql"] = "Corporacion";
-$proto42["m_srcTableName"] = "dbo.Seccionales1";
-$proto42["m_expr"]=$obj;
-$proto42["m_alias"] = "";
-$obj = new SQLFieldListItem($proto42);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto44=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Unidad",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto44["m_sql"] = "Unidad";
-$proto44["m_srcTableName"] = "dbo.Seccionales1";
-$proto44["m_expr"]=$obj;
-$proto44["m_alias"] = "";
-$obj = new SQLFieldListItem($proto44);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto46=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Oficina",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto46["m_sql"] = "Oficina";
-$proto46["m_srcTableName"] = "dbo.Seccionales1";
-$proto46["m_expr"]=$obj;
-$proto46["m_alias"] = "";
-$obj = new SQLFieldListItem($proto46);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto48=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Serie",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto48["m_sql"] = "Serie";
-$proto48["m_srcTableName"] = "dbo.Seccionales1";
-$proto48["m_expr"]=$obj;
-$proto48["m_alias"] = "";
-$obj = new SQLFieldListItem($proto48);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto50=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Subserie",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales1"
-));
-
-$proto50["m_sql"] = "Subserie";
-$proto50["m_srcTableName"] = "dbo.Seccionales1";
-$proto50["m_expr"]=$obj;
-$proto50["m_alias"] = "";
-$obj = new SQLFieldListItem($proto50);
-
-$proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto52=array();
-$proto52["m_link"] = "SQLL_MAIN";
-			$proto53=array();
-$proto53["m_strName"] = "dbo.Seccionales";
-$proto53["m_srcTableName"] = "dbo.Seccionales1";
-$proto53["m_columns"] = array();
-$proto53["m_columns"][] = "SeccionalId";
-$proto53["m_columns"][] = "Codigo";
-$proto53["m_columns"][] = "Seccional";
-$proto53["m_columns"][] = "NIT";
-$proto53["m_columns"][] = "CiudadId";
-$proto53["m_columns"][] = "PiePagina";
-$proto53["m_columns"][] = "Sigobius";
-$proto53["m_columns"][] = "Email";
-$proto53["m_columns"][] = "Direccion";
-$proto53["m_columns"][] = "Telefonos";
-$proto53["m_columns"][] = "PCI";
-$proto53["m_columns"][] = "Contador";
-$proto53["m_columns"][] = "ContadorCargo";
-$proto53["m_columns"][] = "Director";
-$proto53["m_columns"][] = "DirectorCargo";
-$proto53["m_columns"][] = "Abogado";
-$proto53["m_columns"][] = "AbogadoCargo";
-$proto53["m_columns"][] = "Formato";
-$proto53["m_columns"][] = "Corporacion";
-$proto53["m_columns"][] = "Unidad";
-$proto53["m_columns"][] = "Oficina";
-$proto53["m_columns"][] = "Serie";
-$proto53["m_columns"][] = "Subserie";
-$obj = new SQLTable($proto53);
-
-$proto52["m_table"] = $obj;
-$proto52["m_sql"] = "dbo.Seccionales";
-$proto52["m_alias"] = "";
-$proto52["m_srcTableName"] = "dbo.Seccionales1";
-$proto54=array();
-$proto54["m_sql"] = "";
-$proto54["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
-));
-
-$proto54["m_column"]=$obj;
-$proto54["m_contained"] = array();
-$proto54["m_strCase"] = "";
-$proto54["m_havingmode"] = false;
-$proto54["m_inBrackets"] = false;
-$proto54["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto54);
-
-$proto52["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto52);
-
-$proto0["m_fromlist"][]=$obj;
-$proto0["m_groupby"] = array();
-$proto0["m_orderby"] = array();
-												$proto56=array();
-						$obj = new SQLField(array(
 	"m_strName" => "Seccional",
 	"m_strTable" => "dbo.Seccionales",
 	"m_srcTableName" => "dbo.Seccionales1"
 ));
 
-$proto56["m_column"]=$obj;
-$proto56["m_bAsc"] = 1;
-$proto56["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto56);
+$proto14["m_sql"] = "Seccional";
+$proto14["m_srcTableName"] = "dbo.Seccionales1";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "Seccional11";
+$obj = new SQLFieldListItem($proto14);
 
-$proto0["m_orderby"][]=$obj;					
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto16=array();
+$proto16["m_link"] = "SQLL_MAIN";
+			$proto17=array();
+$proto17["m_strName"] = "dbo.Seccionales";
+$proto17["m_srcTableName"] = "dbo.Seccionales1";
+$proto17["m_columns"] = array();
+$proto17["m_columns"][] = "SeccionalId";
+$proto17["m_columns"][] = "Codigo";
+$proto17["m_columns"][] = "Seccional";
+$proto17["m_columns"][] = "NIT";
+$proto17["m_columns"][] = "CiudadId";
+$proto17["m_columns"][] = "PiePagina";
+$proto17["m_columns"][] = "Sigobius";
+$proto17["m_columns"][] = "Email";
+$proto17["m_columns"][] = "Direccion";
+$proto17["m_columns"][] = "Telefonos";
+$proto17["m_columns"][] = "PCI";
+$proto17["m_columns"][] = "Contador";
+$proto17["m_columns"][] = "ContadorCargo";
+$proto17["m_columns"][] = "Director";
+$proto17["m_columns"][] = "DirectorCargo";
+$proto17["m_columns"][] = "Abogado";
+$proto17["m_columns"][] = "AbogadoCargo";
+$proto17["m_columns"][] = "Formato";
+$proto17["m_columns"][] = "Corporacion";
+$proto17["m_columns"][] = "Unidad";
+$proto17["m_columns"][] = "Oficina";
+$proto17["m_columns"][] = "Serie";
+$proto17["m_columns"][] = "Subserie";
+$obj = new SQLTable($proto17);
+
+$proto16["m_table"] = $obj;
+$proto16["m_sql"] = "dbo.Seccionales";
+$proto16["m_alias"] = "";
+$proto16["m_srcTableName"] = "dbo.Seccionales1";
+$proto18=array();
+$proto18["m_sql"] = "";
+$proto18["m_uniontype"] = "SQLL_UNKNOWN";
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
+));
+
+$proto18["m_column"]=$obj;
+$proto18["m_contained"] = array();
+$proto18["m_strCase"] = "";
+$proto18["m_havingmode"] = false;
+$proto18["m_inBrackets"] = false;
+$proto18["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto18);
+
+$proto16["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto16);
+
+$proto0["m_fromlist"][]=$obj;
+$proto0["m_groupby"] = array();
+$proto0["m_orderby"] = array();
 $proto0["m_srcTableName"]="dbo.Seccionales1";		
 $obj = new SQLQuery($proto0);
 
@@ -3999,7 +864,7 @@ $queryData_seccionales1 = createSqlQuery_seccionales1();
 	
 		;
 
-																							
+			
 
 $tdataseccionales1[".sqlquery"] = $queryData_seccionales1;
 

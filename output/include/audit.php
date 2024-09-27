@@ -1148,6 +1148,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Seccionales1")
+		{
+			return true;
+		}
+		if($table=="dbo.Naturalezas1")
+		{
+			return true;
+		}
+		if($table=="dbo.Calificaciones")
+		{
+			return false;
+		}
+		if($table=="dbo.Niveles1")
+		{
+			return true;
+		}
+		if($table=="dbo.Niveles2")
+		{
+			return true;
+		}
+		if($table=="dbo.Conceptos2")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2249,6 +2273,30 @@ class AuditTrailFile
 		if($table=="dbo.Aplazamientos")
 		{
 			return false;
+		}
+		if($table=="dbo.Seccionales1")
+		{
+			return true;
+		}
+		if($table=="dbo.Naturalezas1")
+		{
+			return true;
+		}
+		if($table=="dbo.Calificaciones")
+		{
+			return false;
+		}
+		if($table=="dbo.Niveles1")
+		{
+			return true;
+		}
+		if($table=="dbo.Niveles2")
+		{
+			return true;
+		}
+		if($table=="dbo.Conceptos2")
+		{
+			return true;
 		}
 	}
 

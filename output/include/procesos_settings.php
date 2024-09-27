@@ -375,7 +375,7 @@ $tdataprocesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdataprocesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -3747,9 +3747,8 @@ $tdataprocesos[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 1;
+				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Calificaciones";
-	$edata["LookupConnId"] = "GCC_at_S00001_CCAD01";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -3768,8 +3767,7 @@ $tdataprocesos[".hideMobileList"] = array();
 	
 	
 	
-		$edata["SimpleAdd"] = true;
-
+	
 
 	
 	
@@ -13215,6 +13213,24 @@ $masterTablesData["dbo.Procesos"] = array();
 	$masterTablesData["dbo.Procesos"][10]["masterKeys"][]="EstadoId";
 				$masterTablesData["dbo.Procesos"][10]["detailKeys"] = array();
 	$masterTablesData["dbo.Procesos"][10]["detailKeys"][]="EstadoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Calificaciones";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Calificaciones";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "calificaciones";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Procesos"][11] = $masterParams;
+				$masterTablesData["dbo.Procesos"][11]["masterKeys"] = array();
+	$masterTablesData["dbo.Procesos"][11]["masterKeys"][]="CalificacionId";
+				$masterTablesData["dbo.Procesos"][11]["detailKeys"] = array();
+	$masterTablesData["dbo.Procesos"][11]["detailKeys"][]="CalificacionId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

@@ -157,7 +157,6 @@ $tdatareportes[".filterFields"] = array();
 $tdatareportes[".requiredSearchFields"] = array();
 
 $tdatareportes[".googleLikeFields"] = array();
-$tdatareportes[".googleLikeFields"][] = "ReporteId";
 $tdatareportes[".googleLikeFields"][] = "Reporte";
 $tdatareportes[".googleLikeFields"][] = "OficioId";
 $tdatareportes[".googleLikeFields"][] = "Dias";
@@ -620,7 +619,8 @@ $tdatareportes[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -640,7 +640,8 @@ $tdatareportes[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -755,7 +756,8 @@ $tdatareportes[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -767,7 +769,7 @@ $tdatareportes[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -778,7 +780,8 @@ $tdatareportes[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -894,7 +897,8 @@ $tdatareportes[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -906,7 +910,7 @@ $tdatareportes[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
+			$edata["HTML5InuptType"] = "number";
 
 		$edata["EditParams"] = "";
 		
@@ -917,7 +921,8 @@ $tdatareportes[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

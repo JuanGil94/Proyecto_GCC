@@ -151,7 +151,6 @@ $tdatadepartamentos[".filterFields"] = array();
 $tdatadepartamentos[".requiredSearchFields"] = array();
 
 $tdatadepartamentos[".googleLikeFields"] = array();
-$tdatadepartamentos[".googleLikeFields"][] = "DepartamentoId";
 $tdatadepartamentos[".googleLikeFields"][] = "Codigo";
 $tdatadepartamentos[".googleLikeFields"][] = "Departamento";
 

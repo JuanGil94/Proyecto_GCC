@@ -151,7 +151,6 @@ $tdatamotivosdevoluciones[".filterFields"] = array();
 $tdatamotivosdevoluciones[".requiredSearchFields"] = array();
 
 $tdatamotivosdevoluciones[".googleLikeFields"] = array();
-$tdatamotivosdevoluciones[".googleLikeFields"][] = "MotivoDevolucionId";
 $tdatamotivosdevoluciones[".googleLikeFields"][] = "MotivoDevolucion";
 $tdatamotivosdevoluciones[".googleLikeFields"][] = "Activo";
 
@@ -446,7 +445,8 @@ $tdatamotivosdevoluciones[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -469,7 +469,8 @@ $tdatamotivosdevoluciones[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 

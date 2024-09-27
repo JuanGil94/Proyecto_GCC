@@ -166,9 +166,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$FestivoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$Festivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				

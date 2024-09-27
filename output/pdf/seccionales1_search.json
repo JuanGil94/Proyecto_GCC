@@ -169,70 +169,10 @@ pdfDocument = {
 			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
 			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
-			{"text":{$NIT_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$CiudadId_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
-				
-				
-			{"text":{$PiePagina_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
-				
-				
-			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
-				
-				
-			{"text":{$Direccion_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
-			{"text":{$Telefonos_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
-				
-				
-			{"text":{$PCI_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
-				
-				
-			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
-				
-				
-			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
-				
-				
-			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
-				
-				
-			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
-				
-				
-			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
-				
-				
-			{"text":{$AbogadoCargo_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
-				
-				
-			{"text":{$Formato_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
-				
-				
-			{"text":{$Corporacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
-				
-				
-			{"text":{$Unidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
-				
-				
-			{"text":{$Oficina_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
-				
-				
-			{"text":{$Serie_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
-				
-				
-			{"text":{$Subserie_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
+			{"text":{$Seccional1_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 		  ],
   "border": [ false, false, false, false ],

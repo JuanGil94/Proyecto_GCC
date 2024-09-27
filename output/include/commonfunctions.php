@@ -573,6 +573,18 @@ function checkTableName($shortTName )
 		return true;
 	if ("aplazamientos" == $shortTName )
 		return true;
+	if ("seccionales1" == $shortTName )
+		return true;
+	if ("naturalezas1" == $shortTName )
+		return true;
+	if ("calificaciones" == $shortTName )
+		return true;
+	if ("niveles1" == $shortTName )
+		return true;
+	if ("niveles2" == $shortTName )
+		return true;
+	if ("conceptos2" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2288,6 +2300,60 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Aplazamientos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Seccionales1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Seccionales1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Naturalezas1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Naturalezas1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Calificaciones");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Calificaciones";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Niveles1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Niveles1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Niveles2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Niveles2";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Conceptos2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Conceptos2";
+	}
 	return $arr;
 }
 
@@ -2482,6 +2548,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Etapas1";
 	$arr[]="dbo.Estados1";
 	$arr[]="dbo.Aplazamientos";
+	$arr[]="dbo.Seccionales1";
+	$arr[]="dbo.Naturalezas1";
+	$arr[]="dbo.Calificaciones";
+	$arr[]="dbo.Niveles1";
+	$arr[]="dbo.Niveles2";
+	$arr[]="dbo.Conceptos2";
 	return $arr;
 }
 
@@ -4045,6 +4117,36 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Seccionales1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Naturalezas1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Calificaciones" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Niveles1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Niveles2" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Conceptos2" )
+	{
+//	default permissions
+		return "".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
