@@ -411,7 +411,7 @@ class diccionario {
     }
     public function tablaAcuerdo(){
         $consulta=DB::Query("SELECT Cuota,FORMAT(CONVERT(DATE, Fecha), 'dd/MM/yyyy') as Fecha,FORMAT(Capital, 'C', 'es-CO') AS Capital,FORMAT(Intereses, 'C', 'es-CO') AS Intereses,FORMAT(Costas, 'C', 'es-CO') AS Costas,FORMAT(InteresesPlazo, 'C', 'es-CO') AS InteresesPlazo,FORMAT(Total, 'C', 'es-CO') AS Total 
-        from Acuerdos WHERE ProcesoId=".$this->procesoId);
+        from Liquidaciones WHERE ProcesoId=".$this->procesoId);
         //print_r($info);
         while( $date = $consulta->fetchAssoc() )
 		{
@@ -424,7 +424,7 @@ class diccionario {
     }
     public function tablaAcuerdoSum(){
         $consulta=DB::Query("SELECT FORMAT(SUM(Capital), 'C', 'es-CO') AS sumCapital,FORMAT(SUM(Intereses), 'C', 'es-CO') AS sumIntereses,FORMAT(SUM(Costas), 'C', 'es-CO') AS sumCostas,FORMAT(SUM(InteresesPlazo), 'C', 'es-CO') AS sumInteresesPlazo,FORMAT(SUM(Total), 'C', 'es-CO') AS sumTotal 
-        from Acuerdos WHERE ProcesoId=".$this->procesoId);
+        from Liquidaciones WHERE ProcesoId=".$this->procesoId);
         //print_r($info);
         while( $date = $consulta->fetchAssoc() )
 		{
@@ -730,6 +730,7 @@ class plantillaCaratulas extends diccionario{
             $infoC["PiePagina"]=$date["PiePagina"];
             $infoC["Seccional"]=$date["Seccional"];
             $infoC["Remisorio"]=$date["Remisorio"];
+            $infoC["ChequeoObservaciones"]=$date["Observaciones"];
         }
             //$infoC["Obligacion"]='$'.number_format($infoC["Obligacion"],2);
             $templateWord = new TemplateProcessor('templates_GCC/Plantilla_Caratula.docx');
@@ -757,6 +758,7 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('PiePagina',$infoC["PiePagina"]);
             $templateWord->setValue('Seccional',$infoC["Seccional"]);
             $templateWord->setValue('Remisorio',$infoC["Remisorio"]);
+            $templateWord->setValue('ObserChequeo',$infoC["ChequeoObservaciones"]);
             $templateWord->saveAs('templates_GCC/carChequeo'.$chequeoId.'.docx');
     }
 }
@@ -1678,4 +1680,3 @@ class certificadoMensual{
         $this->mergeDocx($docxFiles, $salida);
     }
 }
-?>

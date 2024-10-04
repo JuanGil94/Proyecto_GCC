@@ -2882,7 +2882,7 @@ pdfDocument = {
 	cellId: 'headcell_field83',
 	col:0,
 	row:0,
-			fieldName: 'Prescripcion',
+			fieldName: 'SaldoFinal',
 				style: 'headcell',
 		
 		
@@ -2896,11 +2896,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Procesos Prescripcion }","hidden":"{$item_hide_simple_grid_field167}","bold":true},
+			{"text":"{$jslabel dbo_Procesos SaldoFinal }","hidden":"{$item_hide_simple_grid_field167}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Prescripcion_align}',
+              "alignment": '{$SaldoFinal_align}',
      
       
       },
@@ -5355,7 +5355,7 @@ pdfDocument = {
 	cellId: 'cell_field83',
 	col:0,
 	row:0,
-			fieldName: 'Prescripcion',
+			fieldName: 'SaldoFinal',
 				style: 'bodycell',
 		
 		
@@ -5369,11 +5369,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_simple_grid_field83}"},
+			{"text":{$SaldoFinal_pdfvalue},"hidden":"{$item_hide_simple_grid_field83}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Prescripcion_align}',
+              "alignment": '{$SaldoFinal_align}',
      
       
       },

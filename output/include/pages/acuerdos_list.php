@@ -6,7 +6,7 @@
 'addToBottom' => false,
 'delete' => false,
 'updateSelected' => false,
-'addInPopup' => true,
+'addInPopup' => null,
 'editInPopup' => null,
 'viewInPopup' => null,
 'clickSort' => true,
@@ -67,11 +67,10 @@
 'simple_grid_field15' ) ),
 'hideEmptyFields' => array(  ) ),
 'pageLinks' => array( 'edit' => false,
-'add' => true,
+'add' => false,
 'view' => false,
 'print' => true ),
-'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'add',
-'inline_add',
+'layoutHelper' => array( 'formItems' => array( 'formItems' => array( 'above-grid' => array( 'inline_add',
 'details_found',
 'page_size',
 'print_panel',
@@ -111,8 +110,7 @@
 'grid_inline_cancel' ) ),
 'formXtTags' => array( 'below-grid' => array( 'pagination' ),
 'top' => array( 'mastertable_block' ) ),
-'itemForms' => array( 'add' => 'above-grid',
-'inline_add' => 'above-grid',
+'itemForms' => array( 'inline_add' => 'above-grid',
 'details_found' => 'above-grid',
 'page_size' => 'above-grid',
 'print_panel' => 'above-grid',
@@ -219,7 +217,6 @@
 'changepassword_link' => array( 'changepassword_link' ),
 'expand_menu_button' => array( 'expand_menu_button' ),
 'collapse_button' => array( 'collapse_button' ),
-'add' => array( 'add' ),
 'print_panel' => array( 'print_panel' ),
 'print_scope' => array( 'print_scope' ),
 'print_button' => array( 'print_button' ),
@@ -466,8 +463,7 @@
 array( 'cell' => 'c2' ) ),
 'section' => '' ) ),
 'cells' => array( 'c1' => array( 'model' => 'c1',
-'items' => array( 'add',
-'inline_add' ) ),
+'items' => array( 'inline_add' ) ),
 'c2' => array( 'model' => 'c2',
 'items' => array( 'details_found',
 'page_size',
@@ -711,8 +707,6 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'changepassword_link' => array( 'type' => 'changepassword_link' ),
 'expand_menu_button' => array( 'type' => 'expand_menu_button' ),
 'collapse_button' => array( 'type' => 'collapse_button' ),
-'add' => array( 'type' => 'add',
-'popup' => true ),
 'print_panel' => array( 'type' => 'print_panel',
 'items' => array( 'print_scope',
 'print_records',
@@ -772,7 +766,13 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  white-space: nowrap;
+}
+' ),
 'simple_grid_field11' => array( 'type' => 'grid_field_label',
 'field' => 'Capital',
 'clickSort' => true ),
@@ -780,7 +780,13 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  white-space: nowrap;
+}
+' ),
 'simple_grid_field12' => array( 'type' => 'grid_field_label',
 'field' => 'Intereses',
 'clickSort' => true ),
@@ -788,7 +794,13 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'simple_grid_field13' => array( 'type' => 'grid_field_label',
 'field' => 'Cuota',
 'clickSort' => true ),
@@ -796,7 +808,13 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'simple_grid_field14' => array( 'type' => 'grid_field_label',
 'field' => 'Costas',
 'clickSort' => true ),
@@ -804,7 +822,13 @@ array( 'cell' => 'footcell_field7' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'simple_grid_field15' => array( 'type' => 'grid_field_label',
 'field' => 'InteresesPlazo',
 'clickSort' => true ),

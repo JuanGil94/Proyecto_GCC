@@ -41,6 +41,7 @@ $dalTableChequeos["Monto"] = array("type"=>6,"varname"=>"Monto", "name" => "Mont
 $dalTableChequeos["TramiteId"] = array("type"=>3,"varname"=>"TramiteId", "name" => "TramiteId", "autoInc" => "0");
 $dalTableChequeos["Fisico"] = array("type"=>11,"varname"=>"Fisico", "name" => "Fisico", "autoInc" => "0");
 $dalTableChequeos["Digital"] = array("type"=>11,"varname"=>"Digital", "name" => "Digital", "autoInc" => "0");
+$dalTableChequeos["Dias"] = array("type"=>3,"varname"=>"Dias", "name" => "Dias", "autoInc" => "0");
 $dalTableChequeos["ChequeoId"]["key"]=true;
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_Chequeos"] = &$dalTableChequeos;

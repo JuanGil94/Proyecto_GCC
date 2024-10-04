@@ -228,7 +228,7 @@ $consulta=DB::Query("SELECT * FROM Sancionados WHERE SancionadoId=".$sancionadoI
 				{
 						$sancionado=$date["Sancionado"];
         }
-$consulta=DB::Query("SELECT dbo.Num2Text(".$obligacion.") Obligacion, dbo.Num2Text(".$obligacionTotal.") obligacionTotal");
+$consulta=DB::Query("SELECT dbo.Money2Text(".$obligacion.") Obligacion, dbo.Money2Text(".$obligacionTotal.") obligacionTotal");
         while( $date = $consulta->fetchAssoc() )
 				{
             $obligacion=$date["Obligacion"];
@@ -249,9 +249,27 @@ if ($oficReq!=0){
 			echo "<script>alert('Para generar este oficio es necesario haber generado el oficio ".$oficioR." con anterioridad.')</script>";
 			return false;
 	}
-
 }
+		$consulta=DB::Query("SELECT TOP 1 Correspondencias.Fecha as Fecha,* 
+		FROM Correspondencias
+		INNER JOIN Oficios ON Oficios.OficioId=Correspondencias.OficioId
+		where Oficios.Oficio like '_PERSUASIVO%' and ProcesoId=".$values["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() )
+				{
+           $fechaPersu=$date["Fecha"];
+        }
 //SE REALIZAN VALIDACIONES BASADOS EN LAS VARIABLES OBTENIDAS
+if ($values['OficioId']==1105 || $values['OficioId']==4328){
+	$fechaPersu=new DateTime($fechaPersu);
+	$fechaActual=new DateTime($values['Fecha']);
+	// Agregar 15 días
+	$fechaPersu->modify('+15 days');
+	//echo "Valor fecha format: ".$fechaPersu->format('Y-m-d')." y el valor de la fecha actual=".$fechaActual->format('Y-m-d');
+	if ($fechaActual<=$fechaPersu){
+		echo "<script>alert('Recordar que el Oficio Resolución Mandamiento de Pago debe ser asociado despues de 15 días del Oficio Persuasivo')</script>";
+		//return false;
+	}
+}
 if ($estadoAct==6 && $suspensionTerm==1){ // No puede genera Terminación del Proceso porque estamos en Suspensión de Términos
 	echo "<script>alert('Este proceso no se puede TERMINAR porque aún estamos en SUSPENSIÓN DE TÉRMINOS.')</script>";
 	return false;	

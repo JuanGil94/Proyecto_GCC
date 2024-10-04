@@ -704,11 +704,23 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'snippet1' => array( 'eventId' => 'dbo_Liquidaciones_snippet1',
 'label' => array( 'text' => 'dbo_Liquidaciones_snippet1',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  white-space: nowrap;
+}
+' ),
 'simple_grid_field11' => array( 'type' => 'grid_field_label',
 'field' => 'Intereses',
 'clickSort' => true ),
@@ -716,11 +728,23 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'snippet3' => array( 'eventId' => 'SumIntereses',
 'label' => array( 'text' => 'SumIntereses',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'simple_grid_field12' => array( 'type' => 'grid_field_label',
 'field' => 'Costas',
 'clickSort' => true ),
@@ -728,11 +752,23 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'type' => 'grid_field',
 'inlineAdd' => false,
 'inlineEdit' => false,
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+ white-space: nowrap;
+}
+' ),
 'snippet2' => array( 'eventId' => 'SumCostas',
 'label' => array( 'text' => 'SumCostas',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'simple_grid_field13' => array( 'type' => 'grid_field_label',
 'field' => 'InteresesPlazo',
 'clickSort' => true ),
@@ -743,11 +779,23 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'label' => array( 'field' => 'InteresesPlazo',
 'table' => 'dbo.Liquidaciones',
 'type' => 3 ),
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'snippet4' => array( 'eventId' => 'SumIntPlazo',
 'label' => array( 'text' => 'SumIntPlazo',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'simple_grid_field14' => array( 'type' => 'grid_field_label',
 'field' => 'Total',
 'clickSort' => true ),
@@ -758,11 +806,23 @@ array( 'cell' => 'footcell_field6' ) ) ) ),
 'label' => array( 'field' => 'Total',
 'table' => 'dbo.Liquidaciones',
 'type' => 3 ),
-'clickSort' => true ),
+'clickSort' => true,
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'snippet5' => array( 'eventId' => 'SumCuota',
 'label' => array( 'text' => 'SumCuota',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+   white-space: nowrap;
+}
+' ),
 'grid_checkbox_head' => array( 'type' => 'grid_checkbox_head' ),
 'grid_checkbox' => array( 'type' => 'grid_checkbox' ),
 'search_panel_field' => array( 'field' => 'Capital',

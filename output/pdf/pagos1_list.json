@@ -854,8 +854,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event dbo_Pagos1_snippet}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -932,8 +934,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"{$event dbo_Pagos1_Sum}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

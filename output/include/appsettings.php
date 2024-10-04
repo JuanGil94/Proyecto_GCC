@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3236_1726097705";
+$projectBuildKey = "3327_1727893910";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3236";
+$projectBuildNumber = "3327";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -942,7 +942,6 @@ $tableCaptions["Spanish"]["Listado_de_Chequeo_Motivo_devolucion_DataChild"] = "L
 $tableCaptions["Spanish"]["Clasificaciones____Cartera"] = "Clasificaciones -- Cartera";
 $tableCaptions["Spanish"]["Corporaciones___Especialidades"] = "Corporaciones - Especialidades";
 $tableCaptions["Spanish"]["Mandamientos_de_pago_Automaticos"] = "Mandamientos de pago Automaticos";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["Prescripciones_Autom_tica"] = "Prescripciones Automática";
 $tableCaptions["Spanish"]["Procesos_Sin_Notificaci_n"] = "Procesos Sin Notificación";
 $tableCaptions["Spanish"]["Remanentes_"] = "Remanentes-";
@@ -962,6 +961,7 @@ $tableCaptions["Spanish"]["dbo_Calificaciones"] = "Calificaciones";
 $tableCaptions["Spanish"]["dbo_Niveles1"] = "Niveles1";
 $tableCaptions["Spanish"]["dbo_Niveles2"] = "Niveles2";
 $tableCaptions["Spanish"]["dbo_Conceptos2"] = "Conceptos2";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 
 
 $globalEvents = new class_GlobalEvents;
