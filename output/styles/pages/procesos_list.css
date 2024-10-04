@@ -103,19 +103,13 @@
 [data-cellid="grid_footcell_field34"][data-page="procesos_list"][data-cellid="grid_footcell_field34"][data-page="procesos_list"][data-cellid="grid_footcell_field34"][data-page="procesos_list"] {
   white-space: nowrap;
 }
-[data-cellid="grid_footcell_field35"][data-page="procesos_list"][data-cellid="grid_footcell_field35"][data-page="procesos_list"][data-cellid="grid_footcell_field35"][data-page="procesos_list"] {
+[data-cellid="grid_cell_details"][data-page="procesos_list"][data-cellid="grid_cell_details"][data-page="procesos_list"][data-cellid="grid_cell_details"][data-page="procesos_list"] {
   white-space: nowrap;
-}
-[data-cellid="grid_headcell_checkbox"][data-page="procesos_list"][data-cellid="grid_headcell_checkbox"][data-page="procesos_list"][data-cellid="grid_headcell_checkbox"][data-page="procesos_list"] {
-  width: 30px;
 }
 [data-cellid="grid_headcell_icons"][data-page="procesos_list"][data-cellid="grid_headcell_icons"][data-page="procesos_list"][data-cellid="grid_headcell_icons"][data-page="procesos_list"] {
   width: 30px;
 }
 [data-cellid="grid_cell_icons"][data-page="procesos_list"][data-cellid="grid_cell_icons"][data-page="procesos_list"][data-cellid="grid_cell_icons"][data-page="procesos_list"] {
-  white-space: nowrap;
-}
-[data-cellid="grid_cell_details"][data-page="procesos_list"][data-cellid="grid_cell_details"][data-page="procesos_list"][data-cellid="grid_cell_details"][data-page="procesos_list"] {
   white-space: nowrap;
 }
 [data-page="procesos_list"][data-itemid="page_image_ash8f23hr"] {
@@ -164,7 +158,7 @@
 /* Put  your custom CSS code here */
 
 [data-page="procesos_list"][data-itemid="simple_grid_field25"] {
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 /* Put  your custom CSS code here */

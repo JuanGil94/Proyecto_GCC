@@ -502,19 +502,11 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	class=" r-ori-vert			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="acuerdos_add.php{$stateLink_full}" data-popup >
-							Añadir nuevo			</a>
-</span>
-{END add_link}
-	 
 		{BEGIN inlineadd_link}
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
@@ -1129,7 +1121,7 @@
 
 	 
 		{BEGIN Capital_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Capital" data-fieldname="Capital" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="Capital" data-fieldname="Capital" data-default-width >
 {$Capital_value}
 </span>
 {END Capital_fieldcolumn}	
@@ -1150,7 +1142,7 @@
 
 	 
 		{BEGIN Intereses_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" data-default-width >
 {$Intereses_value}
 </span>
 {END Intereses_fieldcolumn}	
@@ -1171,7 +1163,7 @@
 
 	 
 		{BEGIN Cuota_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuota" data-fieldname="Cuota" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="Cuota" data-fieldname="Cuota" data-default-width >
 {$Cuota_value}
 </span>
 {END Cuota_fieldcolumn}	
@@ -1192,7 +1184,7 @@
 
 	 
 		{BEGIN Costas_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" data-default-width >
 {$Costas_value}
 </span>
 {END Costas_fieldcolumn}	
@@ -1213,7 +1205,7 @@
 
 	 
 		{BEGIN InteresesPlazo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesPlazo" data-fieldname="InteresesPlazo" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="InteresesPlazo" data-fieldname="InteresesPlazo" data-default-width >
 {$InteresesPlazo_value}
 </span>
 {END InteresesPlazo_fieldcolumn}	

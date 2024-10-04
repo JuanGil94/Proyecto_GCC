@@ -201,14 +201,29 @@ class coreOficios {
                     if (!$resultado["response"]){
                         echo "Ocurrio un error debido a: ".DB::LastError(); 
                         return false;
+                    }
+                    $resultado["response"]=DB::Exec("UPDATE Procesos SET Dias=ISNULL(dbo.InterrupcionesSumaView.Dias, 0) + dbo.Suspensiones_GetBy_Periodo(CASE WHEN Procesos.Incumplimiento IS NULL OR
+                         Procesos.Incumplimiento < Procesos.Acuerdo OR
+                         Procesos.Incumplimiento < Procesos.Notificacion THEN CASE WHEN Procesos.Acuerdo IS NULL OR
+                         Procesos.Acuerdo < Procesos.Notificacion THEN CASE WHEN Procesos.Notificacion IS NULL THEN Procesos.Ejecutoria ELSE Procesos.Notificacion END ELSE Procesos.Acuerdo END ELSE Procesos.Incumplimiento END, 
+                         GETDATE(), Procesos.SeccionalId) + DATEDIFF(day, GETDATE(), DATEADD(year, CASE WHEN Procesos.ConceptoId = 5 THEN 3 ELSE 5 END, CASE WHEN Procesos.Incumplimiento IS NULL OR
+                         Procesos.Incumplimiento < Procesos.Acuerdo OR
+                         Procesos.Incumplimiento < Procesos.Notificacion THEN CASE WHEN Procesos.Acuerdo IS NULL OR
+                         Procesos.Acuerdo < Procesos.Notificacion THEN CASE WHEN Procesos.Notificacion IS NULL THEN Procesos.Ejecutoria ELSE Procesos.Notificacion END ELSE Procesos.Acuerdo END ELSE Procesos.Incumplimiento END))
+						 FROM Procesos
+						 LEFT JOIN dbo.InterrupcionesSumaView ON dbo.Procesos.ProcesoId = dbo.InterrupcionesSumaView.ProcesoId
+						 WHERE Procesos.ProcesoId=".$this->procesoId);
+                    if (!$resultado["response"]){
+                        echo "Ocurrio un error en calcular los dias de Prescripción debido a: ".DB::LastError(); 
+                        return false;
                     } 
                     return true;
                 break;
                 case "29":
                     //echo "Actuacion Nunmero 29";
-                    $resultado["response"]=DB::Exec("UPDATE Procesos set Suspension=".$this->fechaLiqui."EstadoId =".$this->estadoId.",Observaciones='".$this->observaciones."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
+                    $resultado["response"]=DB::Exec("UPDATE Procesos set Suspension='".$this->fechaLiqui."',EstadoId =".$this->estadoId.",Observaciones='".$this->observaciones."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                     if (!$resultado["response"]){
-                        echo "Ocurrio un error debido a: ".DB::LastError(); 
+                        echo "Ocurrio un error debido a esto : ".DB::LastError(); 
                         return false;
                     }
                     return true;
@@ -356,7 +371,6 @@ class coreOficios {
                 break;
                 case "1043":
                     //echo "Actuacion Nunmero 1043";
-                    
                     $resultado["response"]=DB::Exec("UPDATE Procesos set Suspension=".$this->fechaLiqui." EstadoId =".$this->estadoId.",Observaciones='".$this->observaciones."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                     if (!$resultado["response"]){
                         echo "Ocurrio un error debido a: ".DB::LastError(); 

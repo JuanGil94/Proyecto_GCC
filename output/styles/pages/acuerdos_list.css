@@ -35,4 +35,33 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
+
+[data-page="acuerdos_list"][data-itemid="simple_grid_field4"] {
+  white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="acuerdos_list"][data-itemid="simple_grid_field5"] {
+  white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="acuerdos_list"][data-itemid="simple_grid_field6"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="acuerdos_list"][data-itemid="simple_grid_field7"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="acuerdos_list"][data-itemid="simple_grid_field8"] {
+   white-space: nowrap;
+}
 

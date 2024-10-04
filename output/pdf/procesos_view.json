@@ -276,7 +276,7 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field29}","stack":[{"text":"{$jslabel dbo_Procesos Liquidacion }","bold":true},{"text":{$Liquidacion_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel dbo_Procesos Prescripcion }","bold":true},{"text":{$Prescripcion_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel dbo_Procesos SaldoFinal }","bold":true},{"text":{$SaldoFinal_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -2016,6 +2016,7 @@ $proto41["m_columns"][] = "Monto";
 $proto41["m_columns"][] = "TramiteId";
 $proto41["m_columns"][] = "Fisico";
 $proto41["m_columns"][] = "Digital";
+$proto41["m_columns"][] = "Dias";
 $obj = new SQLTable($proto41);
 
 $proto40["m_table"] = $obj;

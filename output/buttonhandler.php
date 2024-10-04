@@ -1741,10 +1741,54 @@ function buttonHandler_Generar_Acuerdo_de_Pago($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("classes/acuerdoPago.php"));
-$acuerdoP=new AcuerdoPagoFinal($params["ProcesoId"]);
-//echo "antes del proceso".$result["Total"]."<br>";
-$result["Total"]=$acuerdoP->insertAcuerdo();
-//echo "despues del Proceso".$result["Total"]."y es un tipo".var_dump($result["Total"]);
+include_once (getabspath("classes/actuacionAction.php"));
+
+$response=DB::Query("SELECT count(*) countAcuerdo FROM Acuerdos where ProcesoId=".$params["ProcesoId"]);
+		//print_r($actuacionId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$countAcuerdo=$date["countAcuerdo"];
+				}
+if ($countAcuerdo>0){
+	//echo "<script>alert('Actualmente ya se tiene un acuerdo de Pago')</script>";
+	//return false;
+	$result["Total"]=false;
+	//$result["Acuerdo"]=true;
+}
+else{
+	$acuerdoP=new AcuerdoPagoFinal($params["ProcesoId"]);
+	$result["Total"]=$acuerdoP->insertAcuerdo();
+	//echo "antes del proceso".$result["Total"]."<br>";
+	$actuacionId=20;
+		$rs2=DB::Exec("INSERT INTO Correspondencias VALUES (".$params["ProcesoId"].",4567,'".now()."',0,NULL,NULL,NULL,NULL,NULL,NULL)");
+		if (!$rs2) {
+			 echo "Error al ejecutar la consulta de Insert Correspondencia: " . DB::LastError();
+			 return false;
+		} 
+	$response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as EstadoId, ISNULL(MotivoId,0) as MotivoId,(CASE
+                               WHEN EstadoId = 6
+                                    AND MotivoId = 1
+                               THEN 1
+                               ELSE 0
+                           END) as TermPago FROM Actuaciones WHERE ActuacionId=".$actuacionId);
+		//print_r($actuacionId);
+	while( $date = $response->fetchAssoc() )
+				{
+					$etapaId=$date["EtapaId"];
+					$estadoId=$date["EstadoId"];
+					$motivoId=$date["MotivoId"];
+				}
+	$oficio=new coreOficios($actuacionId,$params["ProcesoId"],now(),'','','','',$etapaId,$estadoId,$motivoId);
+				$result["Total"]=$oficio->process();
+				//echo "despues del CoreOficios".$result["Total"]."<br>";
+				if ($result["Total"]){
+					//echo '<script>alert("Response True")</script>';
+				}
+				else{
+					echo '<script>alert("Response false")</script>';
+					return false;
+				}
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -5899,6 +5943,10 @@ function fieldEventHandler_cantidadLetras( $params )
 	
 // Sample:
 $result["valor"]=$params["value"];
+
+$formato_cop = '$' . number_format($params["value"], 0, ',', '.');
+
+$result["upper"] =$formato_cop ;
 ;
 	RunnerContext::pop();
 	

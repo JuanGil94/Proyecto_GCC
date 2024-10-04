@@ -3266,6 +3266,7 @@ $proto54["m_columns"][] = "Monto";
 $proto54["m_columns"][] = "TramiteId";
 $proto54["m_columns"][] = "Fisico";
 $proto54["m_columns"][] = "Digital";
+$proto54["m_columns"][] = "Dias";
 $obj = new SQLTable($proto54);
 
 $proto53["m_table"] = $obj;

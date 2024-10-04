@@ -143,6 +143,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Procesos_Sin_Notificaci_n_cartera_seccional"] = true;
 		$this->events["Base_de_Datos___Historico_seccional_check"] = true;
 		$this->events["Obligaciones_de_Dificil_Recaudo_Cartera_Seccional"] = true;
+		$this->events["dbo_Pagos1_Sum"] = true;
+		$this->events["dbo_Pagos1_snippet"] = true;
 
 
 
@@ -4899,6 +4901,38 @@ if ($result) {
 echo '</select>';
 
 echo'</br>';
+	;
+}
+	function event_dbo_Pagos1_Sum(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT FORMAT(SUM(Pago), 'C', 'es-CO') sumPagos FROM Pagos1 where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $sumPagos=$date["sumPagos"];
+        }
+echo "<strong>".$sumPagos."</strong>";// Put your code here.
+
+	;
+}
+	function event_dbo_Pagos1_snippet(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT count(*) numPagos FROM Pagos1 where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $numPagos=$date["numPagos"];
+        }
+echo "<strong>".$numPagos."</strong>";// Put your code here.
+
 	;
 }
 

@@ -35,4 +35,63 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="simple_grid_field4"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="snippet1"] {
+  white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="simple_grid_field5"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="snippet3"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="simple_grid_field7"] {
+ white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="snippet2"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="simple_grid_field8"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="snippet4"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="simple_grid_field6"] {
+   white-space: nowrap;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="liquidaciones_list"][data-itemid="snippet5"] {
+   white-space: nowrap;
+}
 

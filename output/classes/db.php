@@ -354,8 +354,6 @@ class DB
 		$dalTables[ $conn->connId ] = array();
 		if( "GCC_at_S00001_CCAD01" == $conn->connId )
 		{
-			$dalTables[$conn->connId][] = array("name" => "_20", "varname" => "GCC_at_S00001_CCAD01_dbo__20", "altvarname" => "_20", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-			$dalTables[$conn->connId][] = array("name" => "_Juzgados", "varname" => "GCC_at_S00001_CCAD01_dbo__Juzgados", "altvarname" => "_Juzgados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Abogados", "varname" => "GCC_at_S00001_CCAD01_dbo_Abogados", "altvarname" => "Abogados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Actas", "varname" => "GCC_at_S00001_CCAD01_dbo_Actas", "altvarname" => "Actas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Actuaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Actuaciones", "altvarname" => "Actuaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
@@ -364,7 +362,6 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "AlertasTipos", "varname" => "GCC_at_S00001_CCAD01_dbo_AlertasTipos", "altvarname" => "AlertasTipos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Aplazamientos", "varname" => "GCC_at_S00001_CCAD01_dbo_Aplazamientos", "altvarname" => "Aplazamientos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Auditorias", "varname" => "GCC_at_S00001_CCAD01_dbo_Auditorias", "altvarname" => "Auditorias", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-			$dalTables[$conn->connId][] = array("name" => "AuditoriasDetalle", "varname" => "GCC_at_S00001_CCAD01_dbo_AuditoriasDetalle", "altvarname" => "AuditoriasDetalle", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "AuditoriasProcesosView", "varname" => "GCC_at_S00001_CCAD01_dbo_AuditoriasProcesosView", "altvarname" => "AuditoriasProcesosView", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Ayudas", "varname" => "GCC_at_S00001_CCAD01_dbo_Ayudas", "altvarname" => "Ayudas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Bancos", "varname" => "GCC_at_S00001_CCAD01_dbo_Bancos", "altvarname" => "Bancos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
@@ -389,7 +386,6 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "Empresas", "varname" => "GCC_at_S00001_CCAD01_dbo_Empresas", "altvarname" => "Empresas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Entidades", "varname" => "GCC_at_S00001_CCAD01_dbo_Entidades", "altvarname" => "Entidades", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Especialidades", "varname" => "GCC_at_S00001_CCAD01_dbo_Especialidades", "altvarname" => "Especialidades", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-			$dalTables[$conn->connId][] = array("name" => "EstadisticaProcesosView", "varname" => "GCC_at_S00001_CCAD01_dbo_EstadisticaProcesosView", "altvarname" => "EstadisticaProcesosView", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Estados", "varname" => "GCC_at_S00001_CCAD01_dbo_Estados", "altvarname" => "Estados", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Etapas", "varname" => "GCC_at_S00001_CCAD01_dbo_Etapas", "altvarname" => "Etapas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Fechas", "varname" => "GCC_at_S00001_CCAD01_dbo_Fechas", "altvarname" => "Fechas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
@@ -425,7 +421,6 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "ProcesosView1", "varname" => "GCC_at_S00001_CCAD01_dbo_ProcesosView1", "altvarname" => "ProcesosView1", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Propiedades", "varname" => "GCC_at_S00001_CCAD01_dbo_Propiedades", "altvarname" => "Propiedades", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Reasignaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Reasignaciones", "altvarname" => "Reasignaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
-			$dalTables[$conn->connId][] = array("name" => "RecaudosDetalles", "varname" => "GCC_at_S00001_CCAD01_dbo_RecaudosDetalles", "altvarname" => "RecaudosDetalles", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Reliquidaciones", "varname" => "GCC_at_S00001_CCAD01_dbo_Reliquidaciones", "altvarname" => "Reliquidaciones", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Remanentes", "varname" => "GCC_at_S00001_CCAD01_dbo_Remanentes", "altvarname" => "Remanentes", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 			$dalTables[$conn->connId][] = array("name" => "Reportes", "varname" => "GCC_at_S00001_CCAD01_dbo_Reportes", "altvarname" => "Reportes", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

@@ -137,7 +137,7 @@ function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
-unset($values["Dias"]);
+//unset($values["Dias"]);
 unset($values["FechaPago"]);
 $values["Fecha"]=now();
 $values["CarteraTipoId"]=1;
@@ -481,11 +481,11 @@ function CustomEdit(&$values, $where, &$oldvalues, &$keys, &$error, $inline, $pa
 
 		unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
 unset($values["CantidadLetras"]);
-unset($values["Dias"]);
+//unset($values["Dias"]);
 unset($values["FechaPago"]);
 $values["Fecha"]=now();
 $values["CarteraTipoId"]=1;
-$values["Obligacion"]=floatval($values["Obligacion"]);
+//$values["Obligacion"]=floatval($values["Obligacion"]);
 //$values['CarteraTipoId']=1; //se quema ya que la cartera siempre es Corriente=1
 
 // Place event code here.
@@ -634,24 +634,70 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 		//echo "Value del campo: ".$recordId;
 // Place event code here.
 // Use "Add Action" button to add code snippets.
-$values["Obligacion"]=$_SESSION["Obligacion"];
+//$values["Obligacion"]=$_SESSION["Obligacion"];
+function convertirAPuntoFlotante($valor) {
+    // Eliminar el símbolo de moneda y los espacios
+    $valorLimpio = str_replace(['$', ' ', '.'], '', $valor);
+    // Reemplazar la coma por un punto para que los decimales sean correctos
+    $valorLimpio = str_replace(',', '.', $valorLimpio);
+    // Convertir el valor a un número flotante
+		return $valorLimpio;
+}
+$valor=convertirAPuntoFlotante($values['Obligacion']);
+$valor=preg_replace('/[^0-9.]/', '', $valor); // se limpia todo loq ue no es numero y .
+//echo "Valor: ".$valor;
+//var_dump($valor);
+$valor=floatval($valor);
+//var_dump($valor);
+$values['Obligacion']=$valor;
+//echo "Value de Obligacion=".$values['Obligacion'];
 $values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
 //print_r($values);
-
 $length=mb_strlen($values["Origen"], 'UTF-8');
 //echo "Valor de FechaPago: ".$values['FechaPago'];
 if (!empty($values['FechaPago'])){
 	$values['Ejecutoria']=$values['FechaPago'];
 }
+
+if ($values['TramiteId']==2){
+if ($values['PrimeraCopia']==0){
+	echo '<script>alert ("La etapa Preliminar debe tener Primera Copia")</script>';
+	return false;
+}
+if ($values['Autentica']==0){
+	echo '<script>alert ("La etapa Preliminar ser Autentica")</script>';
+	return false;
+}
+if ($values['PrestaMeritoEjecutivo']==0){
+	echo '<script>alert ("La etapa Preliminar debe tener Presta Merito Ejecutivo")</script>';
+	return false;
+}
+if ($values['Expresa']==0){
+	echo '<script>alert ("La etapa Preliminar debe ser Expresa")</script>';
+	return false;
+}
+if ($values['CompetenciaDEAJ']==0){
+	echo '<script>alert ("La etapa Preliminar debe tener Competencia")</script>';
+	return false;
+}
+if ($values['ActualmenteExigible']==0){
+	echo '<script>alert ("La etapa Preliminar debe ser Actualmente Exigible")</script>';
+	return false;
+}
+if ($values['Clara']==0){
+	echo '<script>alert ("La etapa Preliminar debe ser Clara)</script>';
+	return false;
+}
+}
 if ($length<23||$length>23){
 	echo '<script>alert ("El numero de Origen debe contener 23 caracteres ")</script>';
 	return false;
 }
-elseif($values['Ejecutoria']<$values['Providencia']){
+elseif(($values['Ejecutoria']<$values['Providencia'])&&$values['ConceptoId']!=5){
 	echo '<script>alert ("La Fecha Ejecutoria: '.$values['Ejecutoria'].' debe ser mayor o igual a la Fecha Providencia: '.$values['Providencia'].'")</script>';
 	return false;
 }
-elseif($values['Ejecutoria']>$values['Plazo']){
+elseif(($values['Ejecutoria']>$values['Plazo'])&&$values['ConceptoId']!=5){
 	echo '<script>alert ("La Fecha Ejecutoria: '.$values['Ejecutoria'].' debe ser menor o igual a la Fecha Plazo: '.$values['Plazo'].'")</script>';
 	return false;
 }
@@ -659,9 +705,11 @@ elseif($values['FechaSancion']>now()){
 	echo '<script>alert ("La Fecha Sancion: '.$values['FechaSancion'].' debe ser menor o igual a la Fecha Actual: '.now().'")</script>';
 	return false;
 }
+/*
 if ($_SESSION["Obligacion"]==NULL){
 	$values["Obligacion"]=0;
 }
+*/
 return true;
 
 
@@ -899,19 +947,66 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $
 {
 
 		//print_r($values);
+function convertirAPuntoFlotante($valor) {
+    // Eliminar el símbolo de moneda y los espacios
+    $valorLimpio = str_replace(['$', ' ', '.'], '', $valor);
+    // Reemplazar la coma por un punto para que los decimales sean correctos
+    $valorLimpio = str_replace(',', '.', $valorLimpio);
+    // Convertir el valor a un número flotante
+		return $valorLimpio;
+}
+$valor=convertirAPuntoFlotante($values['Obligacion']);
+$valor=preg_replace('/[^0-9.]/', '', $valor); // se limpia todo loq ue no es numero y .
+//echo "Valor: ".$valor;
+//var_dump($valor);
+$valor=floatval($valor);
+//var_dump($valor);
+$values['Obligacion']=$valor;
 $values["Remisorio"]=mb_strtoupper($values["Remisorio"], 'UTF-8');
 //$values["Obligacion"]=$_SESSION["Obligacion"];
 //echo $_SESSION["Obligacion"];
-
+/*
 if ($_SESSION["Obligacion"]!=NULL){
-	$values["Obligacion"]=$_SESSION["Obligacion"];
+	$_SESSION["Obligacion"]=$values["Obligacion"];
 }
+*/
+//$_SESSION["Obligacion"]=$values["Obligacion"];
 if (!empty($values['FechaPago'])){
 	$values['Ejecutoria']=$values['FechaPago'];
 }
 //print_r($values);
 
 $length=mb_strlen($values["Origen"], 'UTF-8');
+if ($values['TramiteId']==2){
+	if ($values['PrimeraCopia']==0){
+	echo '<script>alert ("La etapa Preliminar debe tener Primera Copia")</script>';
+	return false;
+}
+	if ($values['Autentica']==0){
+	echo '<script>alert ("La etapa Preliminar ser Autentica")</script>';
+	return false;
+}
+if ($values['PrestaMeritoEjecutivo']==0){
+	echo '<script>alert ("La etapa Preliminar debe tener Presta Merito Ejecutivo")</script>';
+	return false;
+}
+if ($values['Expresa']==0){
+	echo '<script>alert ("La etapa Preliminar debe ser Expresa")</script>';
+	return false;
+}
+if ($values['CompetenciaDEAJ']==0){
+	echo '<script>alert ("La etapa Preliminar debe tener Competencia")</script>';
+	return false;
+}
+if ($values['ActualmenteExigible']==0){
+	echo '<script>alert ("La etapa Preliminar debe ser Actualmente Exigible")</script>';
+	return false;
+}
+if ($values['Clara']==0){
+	echo '<script>alert ("La etapa Preliminar debe ser Clara)</script>';
+	return false;
+}
+}
 if ($length<23||$length>23){
 	echo '<script>alert ("El numero de Origen debe contener 23 caracteres ")</script>';
 	return false;

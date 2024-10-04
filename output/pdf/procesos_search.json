@@ -190,9 +190,6 @@ pdfDocument = {
 			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
-			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
-				
-				
 			{"text":{$EstadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				
@@ -200,12 +197,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
-				
-				
-			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
-				
-				
-			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
 				
 				
 			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
@@ -226,40 +217,13 @@ pdfDocument = {
 			{"text":{$Recaudo_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
 				
 				
-			{"text":{$CalificacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
-				
-				
 			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
 				
 				
 			{"text":{$MotivoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
 				
 				
-			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
-				
-				
-			{"text":{$Cuotas_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
-				
-				
-			{"text":{$Abono_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
-				
-				
-			{"text":{$Inicio_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
-				
-				
-			{"text":{$VlrCuota_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
-				
-				
-			{"text":{$VlrIntereses_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
-				
-				
-			{"text":{$Garantia_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},
-				
-				
 			{"text":{$Radicado_pdfvalue},"hidden":"{$item_hide_integrated_search_field30}"},
-				
-				
-			{"text":{$Remisorio_pdfvalue},"hidden":"{$item_hide_integrated_search_field31}"},
 				
 				
 			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_integrated_search_field32}"},
@@ -271,28 +235,7 @@ pdfDocument = {
 			{"text":{$Notificacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field34}"},
 				
 				
-			{"text":{$Suspension_pdfvalue},"hidden":"{$item_hide_integrated_search_field35}"},
-				
-				
-			{"text":{$Traslado_pdfvalue},"hidden":"{$item_hide_integrated_search_field36}"},
-				
-				
-			{"text":{$Error_pdfvalue},"hidden":"{$item_hide_integrated_search_field37}"},
-				
-				
 			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field38}"},
-				
-				
-			{"text":{$ConceptoAbogado_pdfvalue},"hidden":"{$item_hide_integrated_search_field39}"},
-				
-				
-			{"text":{$Origen_pdfvalue},"hidden":"{$item_hide_integrated_search_field40}"},
-				
-				
-			{"text":{$Carpeta_pdfvalue},"hidden":"{$item_hide_integrated_search_field41}"},
-				
-				
-			{"text":{$ImportacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field42}"},
 				
 				
 			{"text":{$ActuacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field43}"},
@@ -307,112 +250,13 @@ pdfDocument = {
 			{"text":{$InteresesInicial_pdfvalue},"hidden":"{$item_hide_integrated_search_field46}"},
 				
 				
-			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_integrated_search_field47}"},
-				
-				
-			{"text":{$Revocatoria_pdfvalue},"hidden":"{$item_hide_integrated_search_field48}"},
-				
-				
-			{"text":{$Mayor_pdfvalue},"hidden":"{$item_hide_integrated_search_field49}"},
-				
-				
-			{"text":{$NotificacionValidada_pdfvalue},"hidden":"{$item_hide_integrated_search_field50}"},
-				
-				
-			{"text":{$Validado_pdfvalue},"hidden":"{$item_hide_integrated_search_field51}"},
-				
-				
-			{"text":{$Seleccionado_pdfvalue},"hidden":"{$item_hide_integrated_search_field52}"},
-				
-				
-			{"text":{$CompetenciaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field53}"},
-				
-				
-			{"text":{$MinjusticiaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field54}"},
-				
-				
-			{"text":{$SeleccionadoPor_pdfvalue},"hidden":"{$item_hide_integrated_search_field55}"},
-				
-				
-			{"text":{$Subsanar_pdfvalue},"hidden":"{$item_hide_integrated_search_field56}"},
-				
-				
-			{"text":{$NumeroMinjusticia_pdfvalue},"hidden":"{$item_hide_integrated_search_field57}"},
-				
-				
-			{"text":{$ProcesoIdOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field58}"},
-				
-				
-			{"text":{$SeleccionadoFecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field59}"},
-				
-				
-			{"text":{$InteresesIniciales_pdfvalue},"hidden":"{$item_hide_integrated_search_field60}"},
-				
-				
-			{"text":{$InteresesCalculados_pdfvalue},"hidden":"{$item_hide_integrated_search_field61}"},
-				
-				
-			{"text":{$ProcesoIdDestino_pdfvalue},"hidden":"{$item_hide_integrated_search_field62}"},
-				
-				
-			{"text":{$RecaudoMinjusticia_pdfvalue},"hidden":"{$item_hide_integrated_search_field63}"},
-				
-				
-			{"text":{$RecaudoTerminado_pdfvalue},"hidden":"{$item_hide_integrated_search_field64}"},
-				
-				
-			{"text":{$Persuasivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field65}"},
-				
-				
-			{"text":{$ObligacionCreacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field66}"},
-				
-				
-			{"text":{$InteresesCreacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field67}"},
-				
-				
-			{"text":{$CostasCreacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field68}"},
-				
-				
 			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field69}"},
 				
 				
 			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field70}"},
 				
 				
-			{"text":{$TrasladoCartera_pdfvalue},"hidden":"{$item_hide_integrated_search_field71}"},
-				
-				
-			{"text":{$CarteraTipoIdOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field72}"},
-				
-				
-			{"text":{$TrasladoConcepto_pdfvalue},"hidden":"{$item_hide_integrated_search_field73}"},
-				
-				
-			{"text":{$ConceptoIdOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field74}"},
-				
-				
-			{"text":{$AutorizadoPlazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field75}"},
-				
-				
-			{"text":{$AutorizadoFecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field76}"},
-				
-				
-			{"text":{$AutorizadoPor_pdfvalue},"hidden":"{$item_hide_integrated_search_field77}"},
-				
-				
-			{"text":{$Reliquidacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field78}"},
-				
-				
-			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field79}"},
-				
-				
-			{"text":{$VlrCostas_pdfvalue},"hidden":"{$item_hide_integrated_search_field80}"},
-				
-				
-			{"text":{$VlrInteresesPlazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field81}"},
-				
-				
-			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field82}"},
+			{"text":{$SaldoFinal_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 		  ],
   "border": [ false, false, false, false ],

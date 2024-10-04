@@ -211,7 +211,7 @@ pdfDocument = {
 			{"text":{$Liquidacion_pdfvalue},"hidden":"{$item_hide_export_field29}"},
 				
 				
-			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_export_field30}"},
+			{"text":{$SaldoFinal_pdfvalue},"hidden":"{$item_hide_export_field30}"},
 				
 		  ],
   "border": [ false, false, false, false ],

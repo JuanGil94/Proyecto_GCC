@@ -1090,7 +1090,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1105,7 +1106,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1123,7 +1125,10 @@
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Pagos1_snippet}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field}
 									{BEGIN cellblock_grid_footcell_field1}
@@ -1168,7 +1173,10 @@
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="pagos1_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Pagos1_Sum}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
