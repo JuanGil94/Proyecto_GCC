@@ -585,6 +585,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("conceptos2" == $shortTName )
 		return true;
+	if ("propiedadesmedidas" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2354,6 +2356,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Conceptos2";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.PropiedadesMedidas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.PropiedadesMedidas";
+	}
 	return $arr;
 }
 
@@ -2554,6 +2565,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Niveles1";
 	$arr[]="dbo.Niveles2";
 	$arr[]="dbo.Conceptos2";
+	$arr[]="dbo.PropiedadesMedidas";
 	return $arr;
 }
 
@@ -4147,6 +4159,11 @@ function GetUserPermissionsStatic( $table )
 	{
 //	default permissions
 		return "".$extraPerm;
+	}
+	if( $table=="dbo.PropiedadesMedidas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

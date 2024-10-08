@@ -1172,6 +1172,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="dbo.PropiedadesMedidas")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2297,6 +2301,10 @@ class AuditTrailFile
 		if($table=="dbo.Conceptos2")
 		{
 			return true;
+		}
+		if($table=="dbo.PropiedadesMedidas")
+		{
+			return false;
 		}
 	}
 

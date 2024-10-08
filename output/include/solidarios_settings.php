@@ -6,11 +6,11 @@ $tdatasolidarios[".OwnerID"] = "";
 $tdatasolidarios[".OriginalTable"] = "dbo.Solidarios";
 
 
-$tdatasolidarios[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatasolidarios[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatasolidarios[".originalPagesByType"] = $tdatasolidarios[".pagesByType"];
-$tdatasolidarios[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatasolidarios[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatasolidarios[".originalPages"] = $tdatasolidarios[".pages"];
-$tdatasolidarios[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatasolidarios[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatasolidarios[".originalDefaultPages"] = $tdatasolidarios[".defaultPages"];
 
 //	field labels
@@ -131,7 +131,7 @@ $tdatasolidarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdatasolidarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -731,6 +731,96 @@ changeTextControlsToDate( "dbo.Solidarios" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Solidarios"] = array();
+//	dbo.Propiedades1
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Propiedades1";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedades1";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades1");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Solidarios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Solidarios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Solidarios"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.Propiedades3
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Propiedades3";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedades3";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades3");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Solidarios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Solidarios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Solidarios"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.Propiedades
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Propiedades";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedades";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Solidarios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Solidarios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Solidarios"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"][]="SancionadoId";
 //endif
 
 // tables which are master tables for current table (detail)

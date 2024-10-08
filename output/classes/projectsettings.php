@@ -3918,6 +3918,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "niveles2" ] = "dbo.Niveles2";
 	$projectEntities[ "dbo.Conceptos2" ] = array( "url" => "conceptos2", "type" => 1 );
 	$projectEntitiesReverse[ "conceptos2" ] = "dbo.Conceptos2";
+	$projectEntities[ "dbo.PropiedadesMedidas" ] = array( "url" => "propiedadesmedidas", "type" => 1 );
+	$projectEntitiesReverse[ "propiedadesmedidas" ] = "dbo.PropiedadesMedidas";
 }
 
 function findTable( $table ) {

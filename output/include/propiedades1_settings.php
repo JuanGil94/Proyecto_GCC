@@ -6,9 +6,9 @@ $tdatapropiedades1[".OwnerID"] = "";
 $tdatapropiedades1[".OriginalTable"] = "dbo.Propiedades";
 
 
-$tdatapropiedades1[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatapropiedades1[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\",\"list2\",\"list3\",\"list4\",\"list5\",\"list6\",\"list7\",\"list8\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatapropiedades1[".originalPagesByType"] = $tdatapropiedades1[".pagesByType"];
-$tdatapropiedades1[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatapropiedades1[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\",\"list2\",\"list3\",\"list4\",\"list5\",\"list6\",\"list7\",\"list8\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatapropiedades1[".originalPages"] = $tdatapropiedades1[".pages"];
 $tdatapropiedades1[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatapropiedades1[".originalDefaultPages"] = $tdatapropiedades1[".defaultPages"];
@@ -144,7 +144,7 @@ $tdatapropiedades1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatapropiedades1[".ajaxCodeSnippetAdded"] = false;
 
@@ -156,7 +156,7 @@ $tdatapropiedades1[".addPageEvents"] = false;
 $tdatapropiedades1[".isUseTimeForSearch"] = false;
 
 
-$tdatapropiedades1[".badgeColor"] = "00C2C5";
+$tdatapropiedades1[".badgeColor"] = "00c2c5";
 
 
 $tdatapropiedades1[".allSearchFields"] = array();
@@ -1272,6 +1272,24 @@ $masterTablesData["dbo.Propiedades1"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Solidarios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Solidarios";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "solidarios";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Propiedades1"][0] = $masterParams;
+				$masterTablesData["dbo.Propiedades1"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.Propiedades1"][0]["masterKeys"][]="SancionadoId";
+				$masterTablesData["dbo.Propiedades1"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.Propiedades1"][0]["detailKeys"][]="SancionadoId";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

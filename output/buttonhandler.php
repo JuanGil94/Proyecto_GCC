@@ -745,6 +745,12 @@ if( $eventId == 'Pago_event' && "dbo.Pagos1" == $table )
 	$cipherer = new RunnerCipherer("dbo.Pagos1");
 	fieldEventHandler_Pago_event( $params );
 }
+if( $eventId == 'PrivadoLibertad_event_click' && "dbo.Sancionados" == $table )
+{
+	require_once("include/sancionados_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Sancionados");
+	fieldEventHandler_PrivadoLibertad_event_click( $params );
+}
 
 
 
@@ -1499,7 +1505,24 @@ function buttonHandler_New_Button4($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	    ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - INICIO
+	include_once (getabspath("plantillaGCC.php"));
+$IdValue = $params["oficioId"];
+ 
+// Sanitizar el valor para evitar inyecciones SQL
+$IdValue = addslashes($IdValue);
+$consulta=DB::Query("SELECT * FROM Oficios where OficioId=".$IdValue);
+        //print_r($info);
+        while( $date = $consulta->fetchAssoc() )
+				{
+					$archivo=$date["Archivo"];
+        }
+if (strpos($archivo, '<') === 0) {
+    $objeto= new plantillas($params["procesoId"],$params["oficioId"],'','','');
+		$archivoFinal=$objeto->html($archivo);
+	  $result["resultado"]=$archivoFinal;
+}
+else{
+    ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - INICIO
     // URL del servicio web ASMX
     $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerDocumentoCorrespondencia';
 
@@ -1541,6 +1564,7 @@ function buttonHandler_New_Button4($params)
 		$result["total"]=$response;
     // Cerrar la sesión cURL
     curl_close($curl);
+}
 		//$params["URL"]=$response;
 		//echo $response;
 		//var_dump($response);
@@ -6121,6 +6145,9 @@ function fieldEventHandler_TramiteId_event( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	if ($params['value']==3 || $params['value']==4 || $params['value']==5){
 	$result["flag"]=1;
+}
+if($params['value']==1 || $params['value']==5 ){
+	$result["flag2"]=1;
 };
 	RunnerContext::pop();
 	
@@ -6183,6 +6210,34 @@ $formato_cop = '$' . number_format($params["value"], 0, ',', '.');
 
 $result["upper"] =$formato_cop ;
 ;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_PrivadoLibertad_event_click( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	if ($params['value']=='on'){
+	$result["flag"]=1;
+};
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

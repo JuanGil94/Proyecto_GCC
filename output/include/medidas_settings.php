@@ -180,7 +180,7 @@ $tdatamedidas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdatamedidas[".ajaxCodeSnippetAdded"] = false;
 
@@ -662,7 +662,7 @@ $tdatamedidas[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -672,6 +672,35 @@ $tdatamedidas[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.PropiedadesMedidas";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "PropiedadId";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Propiedad";
+
+				$edata["LookupWhere"] = "SancionadoId=:session.SancionadoId";
+
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -687,17 +716,14 @@ $tdatamedidas[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -3386,6 +3412,7 @@ $tdatamedidas[".sqlquery"] = $queryData_medidas;
 
 
 
-$tdatamedidas[".hasEvents"] = false;
+include_once(getabspath("include/medidas_events.php"));
+$tdatamedidas[".hasEvents"] = true;
 
 ?>

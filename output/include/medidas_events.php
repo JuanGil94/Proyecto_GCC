@@ -12,11 +12,7 @@
 	function __construct()
 	{
 	// fill list of events
-		$this->events["CustomAdd"]=true;
-
-		$this->events["BeforeMoveNextList"]=true;
-
-		$this->events["ProcessValuesAdd"]=true;
+		$this->events["BeforeProcessAdd"]=true;
 
 
 	}
@@ -25,230 +21,59 @@
 
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				// Custom add
-function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
+				// Add page: Before process
+function BeforeProcessAdd($pageObject)
 {
 
-		/*
-$procesoId=$values['ProcesoId'];
-$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId =".$procesoId);
-        while( $date = $consulta->fetchAssoc() )
-		{
-            $sancionadoId=$date["SancionadoId"];
-        }
-$_SESSION["SancionadoId"]=$sancionadoId;
-*/
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-
-return true;
-;
-} // function CustomAdd
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				// List page: After record processed
-function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
-{
-
-		/*
-$data = $button->getCurrentRecord();
-$procesoId=$data["ProcesoId"];
-//$procesoId=$data['ProcesoId'];
-echo "<script>alert('Value".$procesoId."');</script>";
-echo "<script>console.log('Value".$procesoId."');</script>";
-$consulta=DB::Query("SELECT TOP 1 * FROM Procesos WHERE ProcesoId =".$procesoId);
-        while( $date = $consulta->fetchAssoc() )
-		{
-            $sancionadoId=$date["SancionadoId"];
-        }
-$_SESSION["SancionadoId"]=$sancionadoId;
-*/
-
-;
-} // function BeforeMoveNextList
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-				// Process record values
-function ProcessValuesAdd(&$values, $pageObject)
-{
-
-		$data = $button->getCurrentRecord();
-$procesoId=$values["ProcesoId"];
-//$procesoId=$data['ProcesoId'];
-echo "<script>alert('Value".$procesoId."');</script>";
-echo "<script>console.log('Value".$procesoId."');</script>";
-$consulta=DB::Query("SELECT TOP 1 * FROM Procesos WHERE ProcesoId =".$procesoId);
-        while( $date = $consulta->fetchAssoc() )
-		{
-            $sancionadoId=$date["SancionadoId"];
-        }
-$_SESSION["SancionadoId"]=$sancionadoId;
-
+		    // Verifica si hay un registro maestro disponible
+    $data = $pageObject->getMasterRecord();
+ 
+		//echo($data['SancionadoId']);
+    if ($data) {
+        // Obtiene el ID del sancionado
+        $sancionadoId = $data["SancionadoId"];
+        // Almacena el ID en la sesión
+        $_SESSION['SancionadoId'] = $sancionadoId;
+    }
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;
-} // function ProcessValuesAdd
+} // function BeforeProcessAdd
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

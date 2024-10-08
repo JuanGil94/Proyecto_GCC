@@ -103,6 +103,9 @@ pdfDocument = {
 										{BEGIN col_grid_12}
 					"%",
 					{END col_grid_12}
+										{BEGIN col_grid_13}
+					"%",
+					{END col_grid_13}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -619,6 +622,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field}
+{
+	cellId: 'headcell_field',
+	col:0,
+	row:0,
+			fieldName: 'Carcel',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Sancionados Carcel }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Carcel_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field}
 											],
 				{END row_grid_0}
 		
@@ -988,6 +1020,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field}
+{
+	cellId: 'cell_field',
+	col:0,
+	row:0,
+			fieldName: 'Carcel',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Carcel_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Carcel_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -1097,6 +1158,11 @@ pdfDocument = {
 			{$displayDetailTable_productos_bancarios }
 		{END details_productos_bancarios},
 				
+				
+			 {BEGIN details_propiedadesmedidas}
+			{$displayDetailTable_propiedadesmedidas }
+		{END details_propiedadesmedidas},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1175,6 +1241,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  12,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  13,
 				text: ''
 			},
 							],
@@ -1524,6 +1596,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field9}
+																							{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field10}
 											],
 				{END row_grid_3}
 		

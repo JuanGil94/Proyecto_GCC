@@ -216,6 +216,27 @@
 
 {END PrivadoLibertad_fieldblock}
 											
+{BEGIN Carcel_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Carcel}  r-vertical-field" 
+	data-signal-error-for="Carcel{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Carcel" data-fieldname="Carcel" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Carcel}">
+		{BEGIN Carcel_label}{$label dbo_Sancionados Carcel }{END Carcel_label}
+	</label>
+	<div class="r-edit-field">
+		{$Carcel_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Carcel" {$tooltipAttr dbo_Sancionados Carcel } >
+		<div class="text-muted" >
+		{$tooltip dbo_Sancionados Carcel }		</div>
+	</div>
+</div>
+
+
+{END Carcel_fieldblock}
+											
 {BEGIN Celular_fieldblock}
 
 

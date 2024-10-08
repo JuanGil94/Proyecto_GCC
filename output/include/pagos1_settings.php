@@ -145,7 +145,7 @@ $tdatapagos1[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																												
-					
+																	
 
 $tdatapagos1[".ajaxCodeSnippetAdded"] = false;
 
@@ -791,8 +791,7 @@ $tdatapagos1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Currency");
-							
+	
 	
 //	End validation
 

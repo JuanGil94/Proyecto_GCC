@@ -22,6 +22,12 @@
 [data-cellid="grid_headcell_checkbox"][data-page="propiedades3_list"][data-cellid="grid_headcell_checkbox"][data-page="propiedades3_list"][data-cellid="grid_headcell_checkbox"][data-page="propiedades3_list"] {
   width: 30px;
 }
+[data-cellid="grid_headcell_icons"][data-page="propiedades3_list"][data-cellid="grid_headcell_icons"][data-page="propiedades3_list"][data-cellid="grid_headcell_icons"][data-page="propiedades3_list"] {
+  width: 30px;
+}
+[data-cellid="grid_cell_icons"][data-page="propiedades3_list"][data-cellid="grid_cell_icons"][data-page="propiedades3_list"][data-cellid="grid_cell_icons"][data-page="propiedades3_list"] {
+  white-space: nowrap;
+}
 [data-page="propiedades3_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
