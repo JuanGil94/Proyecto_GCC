@@ -137,7 +137,7 @@ $tdatatasas_comerciales[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																								
+																																																																																																																																																																																																																														
 
 $tdatatasas_comerciales[".ajaxCodeSnippetAdded"] = false;
 
@@ -709,7 +709,7 @@ $tdatatasas_comerciales[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 14;
+		$vdata["DecimalDigits"] = 10;
 
 	
 	

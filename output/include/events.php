@@ -217,14 +217,14 @@ $arraySeccionales=implode(",",$arraySeccionales);
 
 //Se asignan las Seccionales d elos usuarios logueados a la variable Global
 $_SESSION["Seccionales"]=$arraySeccionales;
-
+/*
 $consulta=DB::Query("SELECT * from Seccionales where SeccionalId in (".$arraySeccionales.")");
 while( $date = $consulta->fetchAssoc() )
 {
 	$arrayCiudades[]=intval($date["CiudadId"]);
 }
 $_SESSION["Ciudades"]=$arrayCiudades;
-
+*/
 
 DB::Delete("usugcc__noti", "[user]='$username'" ); //borrar las notificacione sexistenten para insertar las nuevas
 //Se crea la alerta si se encuentra procesos a notificar segun AlertaTipoId=1

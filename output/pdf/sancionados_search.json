@@ -171,6 +171,9 @@ pdfDocument = {
 				
 			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
+				
+			{"text":{$Carcel_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

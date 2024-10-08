@@ -1,5 +1,11 @@
 <?php
-			$optionsArray = array( 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
+			$optionsArray = array( 'details' => array( 'dbo.Propiedades1' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Propiedades3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Propiedades' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
+'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
 'dbo.ProcesosReasignar' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'SancionadoId' ),

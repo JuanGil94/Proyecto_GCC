@@ -137,6 +137,28 @@
 </div>
 
 {END Documento_fieldblock}
+											
+{BEGIN Carcel_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Carcel}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Carcel{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="Carcel" data-fieldname="Carcel" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Carcel}">
+		{$label dbo_Sancionados Carcel }	</label>
+	<div class="r-search-option">
+		{$searchtype_Carcel}
+	</div>
+	<div class="r-search-field">
+		{$Carcel_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Carcel_editcontrol1}
+	</div>
+	
+</div>
+
+{END Carcel_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

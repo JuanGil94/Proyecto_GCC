@@ -580,6 +580,23 @@ class plantillas extends diccionario{
     public function getNoDirecciones(){
         return $this->noDirecciones;
     }
+    public function html($archivo){
+        preg_match_all('/\{([^}]*)\}/', $archivo, $matches);
+        // $matches[1] contiene todas las palabras encontradas dentro de {}
+        //print_r($matches[1]);
+        //echo $archivo;
+        $info=parent::process($this->procesoId,$this->oficioId,$this->sigobius,$this->obligacionLetras,$this->obligacionTotalLetras);
+        foreach($matches[1] as $variable){
+            if ($variable==!NULL){
+                $archivo=str_replace($variable, $info[$variable], $archivo);
+        }
+
+        }
+        //echo "Archivo Final:".$archivo;
+        return $archivo;
+        
+        
+    }
 }
 class plantillaCaratulas extends diccionario{
     public function caratulaProceso($procesoId,$oficioId) {

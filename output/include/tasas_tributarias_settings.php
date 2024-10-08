@@ -137,7 +137,7 @@ $tdatatasas_tributarias[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																								
+																																																																																																																																																																																																																														
 
 $tdatatasas_tributarias[".ajaxCodeSnippetAdded"] = false;
 
@@ -709,7 +709,7 @@ $tdatatasas_tributarias[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 14;
+		$vdata["DecimalDigits"] = 10;
 
 	
 	

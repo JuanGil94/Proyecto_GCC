@@ -195,6 +195,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Sancionados PrivadoLibertad }","bold":true},{"text":{$PrivadoLibertad_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel dbo_Sancionados Carcel }","bold":true},{"text":{$Carcel_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

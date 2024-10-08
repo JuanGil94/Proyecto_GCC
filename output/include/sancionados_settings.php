@@ -55,6 +55,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssancionados["Spanish"]["PrivadoLibertad"] = "Privado Libertad";
 	$fieldToolTipssancionados["Spanish"]["PrivadoLibertad"] = "";
 	$placeHolderssancionados["Spanish"]["PrivadoLibertad"] = "";
+	$fieldLabelssancionados["Spanish"]["Carcel"] = "Carcel";
+	$fieldToolTipssancionados["Spanish"]["Carcel"] = "";
+	$placeHolderssancionados["Spanish"]["Carcel"] = "";
 	if (count($fieldToolTipssancionados["Spanish"]))
 		$tdatasancionados[".isUseToolTips"] = true;
 }
@@ -153,13 +156,14 @@ $tdatasancionados[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+					
 
 $tdatasancionados[".ajaxCodeSnippetAdded"] = false;
 
-$tdatasancionados[".buttonsAdded"] = false;
+$tdatasancionados[".buttonsAdded"] = true;
 
-$tdatasancionados[".addPageEvents"] = false;
+$tdatasancionados[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatasancionados[".isUseTimeForSearch"] = false;
@@ -183,6 +187,7 @@ $tdatasancionados[".googleLikeFields"][] = "Masculino";
 $tdatasancionados[".googleLikeFields"][] = "Observaciones";
 $tdatasancionados[".googleLikeFields"][] = "Fallecimiento";
 $tdatasancionados[".googleLikeFields"][] = "PrivadoLibertad";
+$tdatasancionados[".googleLikeFields"][] = "Carcel";
 
 
 
@@ -219,7 +224,7 @@ $tdatasancionados[".orderindexes"] = array();
 
 
 
-$tdatasancionados[".sqlHead"] = "SELECT SancionadoId,  Sancionado,  TipoDocumentoId,  Documento,  Email,  Celular,  Masculino,  Observaciones,  Fallecimiento,  PrivadoLibertad";
+$tdatasancionados[".sqlHead"] = "SELECT SancionadoId,  Sancionado,  TipoDocumentoId,  Documento,  Email,  Celular,  Masculino,  Observaciones,  Fallecimiento,  PrivadoLibertad,  '' AS Carcel";
 $tdatasancionados[".sqlFrom"] = "FROM dbo.Sancionados";
 $tdatasancionados[".sqlWhereExpr"] = "";
 $tdatasancionados[".sqlTail"] = "";
@@ -1626,7 +1631,10 @@ $tdatasancionados[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "PrivadoLibertad_event_click", "type" => "click" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1694,6 +1702,168 @@ $tdatasancionados[".hideMobileList"] = array();
 
 	$tdatasancionados["PrivadoLibertad"] = $fdata;
 		$tdatasancionados[".searchableFields"][] = "PrivadoLibertad";
+//	Carcel
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "Carcel";
+	$fdata["GoodName"] = "Carcel";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_Sancionados","Carcel");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Carcel";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "''";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Carceles";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "CarcelId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Carcel";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatasancionados["Carcel"] = $fdata;
+		$tdatasancionados[".searchableFields"][] = "Carcel";
 
 
 $tables_data["dbo.Sancionados"]=&$tdatasancionados;
@@ -1861,6 +2031,36 @@ $detailsTablesData["dbo.Sancionados"] = array();
 				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
+//	dbo.PropiedadesMedidas
+	
+	
+
+		$dIndex = 5;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.PropiedadesMedidas";
+		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "propiedadesmedidas";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_PropiedadesMedidas");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Sancionados"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["masterKeys"][]="SancionadoId";
+
+				$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Sancionados"][$dIndex]["detailKeys"][]="SancionadoId";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1906,7 +2106,7 @@ function createSqlQuery_sancionados()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SancionadoId,  Sancionado,  TipoDocumentoId,  Documento,  Email,  Celular,  Masculino,  Observaciones,  Fallecimiento,  PrivadoLibertad";
+$proto0["m_strFieldList"] = "SancionadoId,  Sancionado,  TipoDocumentoId,  Documento,  Email,  Celular,  Masculino,  Observaciones,  Fallecimiento,  PrivadoLibertad,  '' AS Carcel";
 $proto0["m_strFrom"] = "FROM dbo.Sancionados";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY SancionadoId DESC";
@@ -2086,61 +2286,73 @@ $proto24["m_alias"] = "";
 $obj = new SQLFieldListItem($proto24);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto26=array();
-$proto26["m_link"] = "SQLL_MAIN";
-			$proto27=array();
-$proto27["m_strName"] = "dbo.Sancionados";
-$proto27["m_srcTableName"] = "dbo.Sancionados";
-$proto27["m_columns"] = array();
-$proto27["m_columns"][] = "SancionadoId";
-$proto27["m_columns"][] = "Sancionado";
-$proto27["m_columns"][] = "TipoDocumentoId";
-$proto27["m_columns"][] = "Documento";
-$proto27["m_columns"][] = "Email";
-$proto27["m_columns"][] = "Celular";
-$proto27["m_columns"][] = "Masculino";
-$proto27["m_columns"][] = "Observaciones";
-$proto27["m_columns"][] = "Fallecimiento";
-$proto27["m_columns"][] = "PrivadoLibertad";
-$obj = new SQLTable($proto27);
+						$proto26=array();
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "''"
+));
 
-$proto26["m_table"] = $obj;
-$proto26["m_sql"] = "dbo.Sancionados";
-$proto26["m_alias"] = "";
+$proto26["m_sql"] = "''";
 $proto26["m_srcTableName"] = "dbo.Sancionados";
-$proto28=array();
-$proto28["m_sql"] = "";
-$proto28["m_uniontype"] = "SQLL_UNKNOWN";
+$proto26["m_expr"]=$obj;
+$proto26["m_alias"] = "Carcel";
+$obj = new SQLFieldListItem($proto26);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto28=array();
+$proto28["m_link"] = "SQLL_MAIN";
+			$proto29=array();
+$proto29["m_strName"] = "dbo.Sancionados";
+$proto29["m_srcTableName"] = "dbo.Sancionados";
+$proto29["m_columns"] = array();
+$proto29["m_columns"][] = "SancionadoId";
+$proto29["m_columns"][] = "Sancionado";
+$proto29["m_columns"][] = "TipoDocumentoId";
+$proto29["m_columns"][] = "Documento";
+$proto29["m_columns"][] = "Email";
+$proto29["m_columns"][] = "Celular";
+$proto29["m_columns"][] = "Masculino";
+$proto29["m_columns"][] = "Observaciones";
+$proto29["m_columns"][] = "Fallecimiento";
+$proto29["m_columns"][] = "PrivadoLibertad";
+$obj = new SQLTable($proto29);
+
+$proto28["m_table"] = $obj;
+$proto28["m_sql"] = "dbo.Sancionados";
+$proto28["m_alias"] = "";
+$proto28["m_srcTableName"] = "dbo.Sancionados";
+$proto30=array();
+$proto30["m_sql"] = "";
+$proto30["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto28["m_column"]=$obj;
-$proto28["m_contained"] = array();
-$proto28["m_strCase"] = "";
-$proto28["m_havingmode"] = false;
-$proto28["m_inBrackets"] = false;
-$proto28["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto28);
+$proto30["m_column"]=$obj;
+$proto30["m_contained"] = array();
+$proto30["m_strCase"] = "";
+$proto30["m_havingmode"] = false;
+$proto30["m_inBrackets"] = false;
+$proto30["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto30);
 
-$proto26["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto26);
+$proto28["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto28);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto30=array();
+												$proto32=array();
 						$obj = new SQLField(array(
 	"m_strName" => "SancionadoId",
 	"m_strTable" => "dbo.Sancionados",
 	"m_srcTableName" => "dbo.Sancionados"
 ));
 
-$proto30["m_column"]=$obj;
-$proto30["m_bAsc"] = 0;
-$proto30["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto30);
+$proto32["m_column"]=$obj;
+$proto32["m_bAsc"] = 0;
+$proto32["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto32);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Sancionados";		
@@ -2154,12 +2366,13 @@ $queryData_sancionados = createSqlQuery_sancionados();
 	
 		;
 
-										
+											
 
 $tdatasancionados[".sqlquery"] = $queryData_sancionados;
 
 
 
-$tdatasancionados[".hasEvents"] = false;
+include_once(getabspath("include/sancionados_events.php"));
+$tdatasancionados[".hasEvents"] = true;
 
 ?>

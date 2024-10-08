@@ -137,7 +137,7 @@ $tdatatasas_tes__deterioro_de_cartera_[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																								
+																																																																																																																																																																																																																														
 
 $tdatatasas_tes__deterioro_de_cartera_[".ajaxCodeSnippetAdded"] = false;
 
@@ -709,7 +709,7 @@ $tdatatasas_tes__deterioro_de_cartera_[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 14;
+		$vdata["DecimalDigits"] = 10;
 
 	
 	

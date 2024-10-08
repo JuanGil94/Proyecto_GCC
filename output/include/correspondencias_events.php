@@ -118,7 +118,7 @@ $oficioId=$values['OficioId'];
 $procesoId=$values["ProcesoId"];
 //echo "El AbogadoId del proceso es: ".$data["AbogadoId"];
 if($data["AbogadoId"]==$_SESSION["AbogadoId"]){
-$response=DB::Query("SELECT ActuacionId FROM Oficios WHERE OficioId=".$values['OficioId']);
+$response=DB::Query("SELECT ISNULL(ActuacionId,0) AS ActuacionId FROM Oficios WHERE OficioId=".$values['OficioId']);
 		while( $date = $response->fetchAssoc() )
 				{
 					$actuacionId=$date["ActuacionId"];

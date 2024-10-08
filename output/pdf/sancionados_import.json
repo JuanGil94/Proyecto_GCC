@@ -135,6 +135,9 @@ pdfDocument = {
 				
 			{"text":{$PrivadoLibertad_pdfvalue},"hidden":"{$item_hide_import_field9}"},
 				
+				
+			{"text":{$Carcel_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

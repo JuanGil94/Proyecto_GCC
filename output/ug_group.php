@@ -205,6 +205,7 @@ $nonAdminTablesArr[] = "dbo.Calificaciones";
 $nonAdminTablesArr[] = "dbo.Niveles1";
 $nonAdminTablesArr[] = "dbo.Niveles2";
 $nonAdminTablesArr[] = "dbo.Conceptos2";
+$nonAdminTablesArr[] = "dbo.PropiedadesMedidas";
 
 $ug_connection = $cman->getForUserGroups();
 

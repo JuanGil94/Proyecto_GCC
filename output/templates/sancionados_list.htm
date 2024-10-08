@@ -74,6 +74,17 @@
 								<span class="rnr-searchcontrol">{$searchcontrol_Sancionado}</span>
 						</div>
 		{END searchCtrlBlock_Sancionado}
+																{BEGIN searchCtrlBlock_Carcel}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Carcel}" {$filterRow_attrs_Carcel}>
+			<label>{$label dbo_Sancionados Carcel }</label>
+
+			
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_Carcel}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Carcel}</span>
+						</div>
+		{END searchCtrlBlock_Carcel}
 																{BEGIN searchCtrlBlock_Documento}
 
 
@@ -633,6 +644,13 @@
 					Productos Bancarios				</label>
 			</div>
 			{END print_details_productos_bancarios}
+														{BEGIN print_details_propiedadesmedidas}
+			<div>
+				<label for="printDetailspropiedadesmedidas{$id}">
+					<input type="checkbox" value="propiedadesmedidas" id="printDetailspropiedadesmedidas{$id}" checked>
+					Propiedades Medidas				</label>
+			</div>
+			{END print_details_propiedadesmedidas}
 						</div>
 </div>
 {END print_details}
@@ -707,6 +725,9 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PrivadoLibertad"]:before {
 		content: "{$label dbo_Sancionados PrivadoLibertad}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Carcel"]:before {
+		content: "{$label dbo_Sancionados Carcel}";
 	}
 	}
 </style>
@@ -1000,6 +1021,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Carcel_class}	"
+
+			data-field="Carcel"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Carcel_fieldheadercolumn}
+	{BEGIN Carcel_fieldheader}
+	<SPAN {$Carcel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Carcel" data-fieldname="Carcel">
+	{$label dbo_Sancionados Carcel }	{$arrow_icon_Carcel}
+	</SPAN>
+	{END Carcel_fieldheader}
+{END Carcel_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
 							</tr>
 																				
 					{END grid_header}
@@ -1299,6 +1345,27 @@
 {END PrivadoLibertad_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Carcel_class}	"
+
+			data-field="Carcel"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Carcel_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Carcel" data-fieldname="Carcel" data-default-width >
+{$Carcel_value}
+</span>
+{END Carcel_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1316,9 +1383,9 @@
 	>
 
 	 
-																			<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="dbo_procesossancionados,direcciones,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,bienesinmuebles,bienesmuebles,,productos_bancarios"
-			data-details-dbo_procesossancionados			data-details-direcciones			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-bienesinmuebles			data-details-bienesmuebles			data-details-			data-details-productos_bancarios	>
+																				<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="dbo_procesossancionados,direcciones,,alertmandpago,alertnotmandpago,alertincacupago,alertsinpersuasivo,alertbusqbienes,alertsegadelante,alertintsusp,reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,bienesinmuebles,bienesmuebles,,productos_bancarios,propiedadesmedidas"
+			data-details-dbo_procesossancionados			data-details-direcciones			data-details-			data-details-alertmandpago			data-details-alertnotmandpago			data-details-alertincacupago			data-details-alertsinpersuasivo			data-details-alertbusqbienes			data-details-alertsegadelante			data-details-alertintsusp			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-bienesinmuebles			data-details-bienesmuebles			data-details-			data-details-productos_bancarios			data-details-propiedadesmedidas	>
 		<span data-details-inside data-short-table="dbo_procesossancionados">
 			</span>
 		<span data-details-inside data-short-table="direcciones">
@@ -1353,10 +1420,13 @@
 			</span>
 		<span data-details-inside data-short-table="productos_bancarios">
 			</span>
+		<span data-details-inside data-short-table="propiedadesmedidas">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 
@@ -1572,7 +1642,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+		 r-ori-vert		 {$Carcel_class}	"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
@@ -1581,6 +1651,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
 							</tr>
 					
 					</tfoot>

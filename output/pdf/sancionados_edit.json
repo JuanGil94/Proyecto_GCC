@@ -175,6 +175,9 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_Sancionados PrivadoLibertad }","bold":true},{"text":{$PrivadoLibertad_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Sancionados Carcel }","bold":true},{"text":{$Carcel_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Sancionados Celular }","bold":true},{"text":{$Celular_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

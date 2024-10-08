@@ -1,5 +1,11 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'dbo.Propiedades1' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Propiedades3' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Propiedades' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
 'dbo.ProcesosReasignar' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'SancionadoId' ),
