@@ -3920,6 +3920,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "conceptos2" ] = "dbo.Conceptos2";
 	$projectEntities[ "dbo.PropiedadesMedidas" ] = array( "url" => "propiedadesmedidas", "type" => 1 );
 	$projectEntitiesReverse[ "propiedadesmedidas" ] = "dbo.PropiedadesMedidas";
+	$projectEntities[ "Consolidado por Conceptos" ] = array( "url" => "consolidado_por_conceptos", "type" => 6 );
+	$projectEntitiesReverse[ "consolidado_por_conceptos" ] = "Consolidado por Conceptos";
+	$projectEntities[ "Movimiento Mensual" ] = array( "url" => "movimiento_mensual", "type" => 6 );
+	$projectEntitiesReverse[ "movimiento_mensual" ] = "Movimiento Mensual";
 }
 
 function findTable( $table ) {

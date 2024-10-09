@@ -1,0 +1,174 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Movimiento_Mensual export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Numero1_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$CodigoTipoDocumento_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$CarteraTipo_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Desde_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Hasta_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

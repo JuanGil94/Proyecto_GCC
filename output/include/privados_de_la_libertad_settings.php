@@ -165,7 +165,7 @@ $tdataprivados_de_la_libertad[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																													
 
 $tdataprivados_de_la_libertad[".ajaxCodeSnippetAdded"] = false;
 
@@ -1213,7 +1213,7 @@ $tdataprivados_de_la_libertad[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1229,8 +1229,7 @@ $tdataprivados_de_la_libertad[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

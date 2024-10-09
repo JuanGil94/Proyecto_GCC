@@ -206,6 +206,8 @@ $nonAdminTablesArr[] = "dbo.Niveles1";
 $nonAdminTablesArr[] = "dbo.Niveles2";
 $nonAdminTablesArr[] = "dbo.Conceptos2";
 $nonAdminTablesArr[] = "dbo.PropiedadesMedidas";
+$nonAdminTablesArr[] = "Consolidado por Conceptos";
+$nonAdminTablesArr[] = "Movimiento Mensual";
 
 $ug_connection = $cman->getForUserGroups();
 

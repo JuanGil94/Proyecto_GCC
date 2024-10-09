@@ -587,6 +587,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("propiedadesmedidas" == $shortTName )
 		return true;
+	if ("consolidado_por_conceptos" == $shortTName )
+		return true;
+	if ("movimiento_mensual" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2365,6 +2369,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.PropiedadesMedidas";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Consolidado por Conceptos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Consolidado por Conceptos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Movimiento Mensual");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Movimiento Mensual";
+	}
 	return $arr;
 }
 
@@ -2566,6 +2588,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Niveles2";
 	$arr[]="dbo.Conceptos2";
 	$arr[]="dbo.PropiedadesMedidas";
+	$arr[]="Consolidado por Conceptos";
+	$arr[]="Movimiento Mensual";
 	return $arr;
 }
 
@@ -4161,6 +4185,16 @@ function GetUserPermissionsStatic( $table )
 		return "".$extraPerm;
 	}
 	if( $table=="dbo.PropiedadesMedidas" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Consolidado por Conceptos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Movimiento Mensual" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
