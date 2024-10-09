@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["reiniciar1"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='reiniciar1';if(!pageObj.buttonEventBefore['reiniciar1']){pageObj.buttonEventBefore['reiniciar1']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";}}
+if(!pageObj.buttonEventAfter['reiniciar1']){pageObj.buttonEventAfter['reiniciar1']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";sessionStorage.removeItem('movimiento_tipo_id');pageObj.toggleItem("snippet2",false);window.location.reload();}}
+$('a[id="reiniciar1"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="reiniciar1"+"_"+Runner.genId();var button_reiniciar1=new Runner.form.Button({id:this.id,btnName:"reiniciar1"});button_reiniciar1.init({args:[pageObj,proxy,pageid]});});};

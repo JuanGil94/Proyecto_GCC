@@ -168,6 +168,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"{$event Presunci_n_Prescripci_n_cartera_seccional}","hidden":"{$item_hide_snippet1}","isHtml":true},
+				
+				
 			{"text":"{$event Presunci_n_Prescripci_n_Mes}","hidden":"{$item_hide_snippet}","isHtml":true},
 				
 				

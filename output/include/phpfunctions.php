@@ -1183,6 +1183,16 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
+				if($table=="Presunción Prescripción" && $field=="Numero")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
 				if($table=="BDME Excluidos DataChild" && $field=="Numero" && $ptype=="view")
 	{
 		;
@@ -1308,6 +1318,16 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 		;
 		return $value;
 	}
+				if($table=="Privados de la Libertad" && $field=="Proceso")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
 				if($table=="dbo.ProcesosSancionados" && $field=="Numero")
 	{
 		$numero=$value;
@@ -1385,6 +1405,26 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 		return $value;
 	}
 				if($table=="Clasificaciones -- Cartera" && $field=="Numero")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="Remanentes-" && $field=="Numero")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
+				if($table=="Remanentes-" && $field=="ProcesoOrigen")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];

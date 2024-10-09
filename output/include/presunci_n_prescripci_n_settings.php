@@ -165,7 +165,7 @@ $tdatapresunci_n_prescripci_n[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																													
 
 $tdatapresunci_n_prescripci_n[".ajaxCodeSnippetAdded"] = false;
 
@@ -846,7 +846,7 @@ $tdatapresunci_n_prescripci_n[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -862,8 +862,7 @@ $tdatapresunci_n_prescripci_n[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

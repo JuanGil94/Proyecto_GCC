@@ -145,6 +145,12 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Obligaciones_de_Dificil_Recaudo_Cartera_Seccional"] = true;
 		$this->events["dbo_Pagos1_Sum"] = true;
 		$this->events["dbo_Pagos1_snippet"] = true;
+		$this->events["Presunci_n_Prescripci_n_cartera_seccional"] = true;
+		$this->events["Consolidado_por_Conceptos_Cartera"] = true;
+		$this->events["Consolidado_por_Conceptos_mes"] = true;
+		$this->events["MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Mes"] = true;
+		$this->events["MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_cartera_Seccional"] = true;
+		$this->events["MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Tipo"] = true;
 
 
 
@@ -4719,7 +4725,7 @@ echo "<input type='date' id='Prescripciones_Autom_tica_Mes' name='hasta' value='
 	function event_Remanentes_Mes(&$params)
 	{
 	echo "<label for='Remanentes_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='date' id='Remanentes_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+echo "<input type='month' id='Remanentes_MesId' name='hasta' value='" . date('Y-m') . "' pattern='\\d{4}-\\d{2}'  required><br>";
 	;
 }
 	function event_Consulta_P_blica_Documento(&$params)
@@ -4933,6 +4939,194 @@ $consulta=DB::Query("SELECT count(*) numPagos FROM Pagos1 where ProcesoId=".$pro
         }
 echo "<strong>".$numPagos."</strong>";// Put your code here.
 
+	;
+}
+	function event_Presunci_n_Prescripci_n_cartera_seccional(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+  
+echo'<br>';
+echo '<label for="Presuncion_Cartera">Seleccione Cartera: </label>';
+echo '<select name="Movimiento_Cartera" id="Presuncion_Cartera">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+	;
+}
+	function event_Consolidado_por_Conceptos_Cartera(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+echo '<label for="cartera">Seleccione Cartera: </label>';
+echo '<select name="Consolidado_Reporte_Cartera" id="Consolidado_Reporte_Cartera">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+	;
+}
+	function event_Consolidado_por_Conceptos_mes(&$params)
+	{
+	echo "<label for='Consolidado_MesId' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Consolidado_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Mes(&$params)
+	{
+	echo "<label for='Movimiento_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='Movimiento_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_cartera_Seccional(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+  
+echo'<br>';
+echo '<label for="cartera">Seleccione Cartera: </label>';
+echo '<select name="Movimiento_Cartera" id="Movimiento_Cartera">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+echo'</br>';	
+
+echo '<label for="seccional">Seleccione Seccional: </label>';
+echo '<select name="Movimiento_Seccional" id="Movimiento_Seccional">';
+echo '<option value="0">Seleccione Seccional</option>';
+
+
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
+
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row = $result->fetchAssoc()) {
+        $seccionalId = $row['SeccionalId'];
+        $seccional = $row['Seccional'];
+        echo "<option value='$seccionalId'>$seccional</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+echo '</select>';
+
+echo'</br>';
+	;
+}
+	function event_MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Tipo(&$params)
+	{
+	$movimiento = [
+    '1' => 'NUEVOS',
+    '2' => 'RECAUDOS',
+    '3' => 'TERMINADOS POR PAGO',
+    '4' => 'TERMINADOS RESOLUCION CAUSAS DIFERENTES A PAGO',
+    '5' => 'TERMINADOS RESOLUCION CAUSAS DIFERENTES A PAGO',
+    '51' => 'TERMINADOS POR TRASLADO A OTRA SECCIONAL',
+    '61' => 'NOVEDADES MENOR VALOR',
+    '63' => 'NOVEDADES MENOR VALOR',
+    '65' => 'NOVEDADES MENOR VALOR',
+    '62' => 'NOVEDADES MAYOR VALOR',
+    '64' => 'NOVEDADES MAYOR VALOR',
+    '66' => 'NOVEDADES MAYOR VALOR',
+    '7' => 'TERMINADOS MAYOR VALOR RECAUDADO',
+    '8' => 'TERMINADOS MENOR VALOR RECAUDADO',
+    '9' => 'RECAUDO DE PROCESOS EN ESTADO TERMINADO',
+    '10' => 'INTERESES GENERADOS',
+    '11' => 'REVOCATORIA DE TERMINACIÓN',
+    '12' => 'VARIACIÓN DETERIORO CARTERA',
+    '13' => 'VARIACIÓN DETERIORO CARTERA',
+    '14' => 'DETERIORO CARTERA DE REVOCATORIA DE TERMINACIÓN',
+    '53' => 'TRASLADOS A OTRA CARTERA',
+    '54' => 'TRASLADADOS DESDE OTRA CARTERA',
+    '55' => 'TRASLADOS A OTRO CONCEPTO',
+    '56' => 'TRASLADADOS DESDE OTRO CONCEPTO',
+    '57' => 'TRASLADOS A OTRA SECCIONAL',
+    '58' => 'RECIBIDOS POR TRASLADADO DESDE OTRA SECCIONAL',
+];
+
+
+// Obtener los valores de la sesión
+$selected_movimientos = $_SESSION['consul_mov'];
+
+// Generar el select list
+echo '<select name="movimiento" id="movimiento_Tipoid">';
+echo '<option value=""></option>';
+foreach ($selected_movimientos as $id) {
+				
+    if (isset($movimiento[$id])) {
+        echo '<option value="' . $id . '">' . $movimiento[$id] . '</option>';
+    }
+}
+echo '</select>';
 	;
 }
 

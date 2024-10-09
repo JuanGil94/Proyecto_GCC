@@ -1176,6 +1176,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Consolidado por Conceptos")
+		{
+			return false;
+		}
+		if($table=="Movimiento Mensual")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2303,6 +2311,14 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.PropiedadesMedidas")
+		{
+			return false;
+		}
+		if($table=="Consolidado por Conceptos")
+		{
+			return false;
+		}
+		if($table=="Movimiento Mensual")
 		{
 			return false;
 		}

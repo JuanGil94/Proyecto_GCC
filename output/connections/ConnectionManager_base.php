@@ -435,6 +435,8 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Niveles2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Conceptos2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.PropiedadesMedidas"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consolidado por Conceptos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Movimiento Mensual"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

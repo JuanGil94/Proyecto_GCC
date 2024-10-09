@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3372_1727893910";
+$projectBuildKey = "3399_1727893910";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3372";
+$projectBuildNumber = "3399";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -963,6 +963,8 @@ $tableCaptions["Spanish"]["dbo_Niveles2"] = "Niveles2";
 $tableCaptions["Spanish"]["dbo_Conceptos2"] = "Conceptos2";
 $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_PropiedadesMedidas"] = "Propiedades Medidas";
+$tableCaptions["Spanish"]["Consolidado_por_Conceptos"] = "Consolidado por Conceptos";
+$tableCaptions["Spanish"]["Movimiento_Mensual"] = "Movimiento Mensual";
 
 
 $globalEvents = new class_GlobalEvents;

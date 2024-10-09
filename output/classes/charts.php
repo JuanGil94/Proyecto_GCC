@@ -762,6 +762,10 @@ class Chart
 			return true;
 		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
 			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 
