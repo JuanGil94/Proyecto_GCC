@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["imprimir7"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='imprimir7';if(!pageObj.buttonEventBefore['imprimir7']){pageObj.buttonEventBefore['imprimir7']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['imprimir7']){pageObj.buttonEventAfter['imprimir7']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var contenido=document.getElementById('miContenedor').innerHTML;var nuevaVentana=window.open('','_blank','width=800,height=600');nuevaVentana.document.write('<html><head><title>rama judicial</title>');nuevaVentana.document.write('<style>body { font-size: 16px; }</style>');nuevaVentana.document.write('</head><body>');nuevaVentana.document.write(contenido);nuevaVentana.document.write('</body></html>');nuevaVentana.document.close();nuevaVentana.print();}}
+$('a[id="imprimir7"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="imprimir7"+"_"+Runner.genId();var button_imprimir7=new Runner.form.Button({id:this.id,btnName:"imprimir7"});button_imprimir7.init({args:[pageObj,proxy,pageid]});});};

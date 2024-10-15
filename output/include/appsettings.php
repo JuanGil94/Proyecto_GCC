@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3399_1727893910";
+$projectBuildKey = "3418_1727893910";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3399";
+$projectBuildNumber = "3418";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -965,6 +965,12 @@ $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_PropiedadesMedidas"] = "Propiedades Medidas";
 $tableCaptions["Spanish"]["Consolidado_por_Conceptos"] = "Consolidado por Conceptos";
 $tableCaptions["Spanish"]["Movimiento_Mensual"] = "Movimiento Mensual";
+$tableCaptions["Spanish"]["Informe_ejecutivo_de_Gesti_n"] = "Informe ejecutivo de Gestión";
+$tableCaptions["Spanish"]["Cumplimiento_de_metas_de_Recaudo"] = "Cumplimiento de metas de Recaudo";
+$tableCaptions["Spanish"]["Indicadores_de_b_squeda"] = "Indicadores de búsqueda";
+$tableCaptions["Spanish"]["Indicadores_Recaudos"] = "Indicadores Recaudos";
+$tableCaptions["Spanish"]["Indicadores_Sin_Actuaciones"] = "Indicadores Sin Actuaciones";
+$tableCaptions["Spanish"]["Test_de_Deterioro__Resumen_"] = "Test de Deterioro (Resumen)";
 
 
 $globalEvents = new class_GlobalEvents;

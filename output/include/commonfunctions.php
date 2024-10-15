@@ -591,6 +591,18 @@ function checkTableName($shortTName )
 		return true;
 	if ("movimiento_mensual" == $shortTName )
 		return true;
+	if ("informe_ejecutivo_de_gesti_n" == $shortTName )
+		return true;
+	if ("cumplimiento_de_metas_de_recaudo" == $shortTName )
+		return true;
+	if ("indicadores_de_b_squeda" == $shortTName )
+		return true;
+	if ("indicadores_recaudos" == $shortTName )
+		return true;
+	if ("indicadores_sin_actuaciones" == $shortTName )
+		return true;
+	if ("test_de_deterioro__resumen_" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2387,6 +2399,60 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Movimiento Mensual";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Informe ejecutivo de Gestión");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Informe ejecutivo de Gestión";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Cumplimiento de metas de Recaudo");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Cumplimiento de metas de Recaudo";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Indicadores de búsqueda");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Indicadores de búsqueda";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Indicadores Recaudos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Indicadores Recaudos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Indicadores Sin Actuaciones");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Indicadores Sin Actuaciones";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Test de Deterioro (Resumen)");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Test de Deterioro (Resumen)";
+	}
 	return $arr;
 }
 
@@ -2590,6 +2656,12 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.PropiedadesMedidas";
 	$arr[]="Consolidado por Conceptos";
 	$arr[]="Movimiento Mensual";
+	$arr[]="Informe ejecutivo de Gestión";
+	$arr[]="Cumplimiento de metas de Recaudo";
+	$arr[]="Indicadores de búsqueda";
+	$arr[]="Indicadores Recaudos";
+	$arr[]="Indicadores Sin Actuaciones";
+	$arr[]="Test de Deterioro (Resumen)";
 	return $arr;
 }
 
@@ -4195,6 +4267,36 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Movimiento Mensual" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Informe ejecutivo de Gestión" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Cumplimiento de metas de Recaudo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Indicadores de búsqueda" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Indicadores Recaudos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Indicadores Sin Actuaciones" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Test de Deterioro (Resumen)" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

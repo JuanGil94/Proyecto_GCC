@@ -134,7 +134,7 @@ $tdatatableros_recaudoseccional[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																													
+																																																																																																																																																																																																																																																																																	
 
 $tdatatableros_recaudoseccional[".ajaxCodeSnippetAdded"] = false;
 

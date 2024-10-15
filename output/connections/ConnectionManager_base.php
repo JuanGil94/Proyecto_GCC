@@ -437,6 +437,12 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.PropiedadesMedidas"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Consolidado por Conceptos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Movimiento Mensual"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Informe ejecutivo de Gestión"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Cumplimiento de metas de Recaudo"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Indicadores de búsqueda"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Indicadores Recaudos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Indicadores Sin Actuaciones"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Test de Deterioro (Resumen)"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

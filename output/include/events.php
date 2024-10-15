@@ -151,6 +151,15 @@ class class_GlobalEvents extends eventsBase
 		$this->events["MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Mes"] = true;
 		$this->events["MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_cartera_Seccional"] = true;
 		$this->events["MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Tipo"] = true;
+		$this->events["Informe_ejecutivo_de_Gesti_n_cartera"] = true;
+		$this->events["Informe_ejecutivo_de_Gesti_n_desde"] = true;
+		$this->events["Informe_ejecutivo_de_Gesti_n_hasta"] = true;
+		$this->events["Cumplimiento_de_metas_de_Recaudo_Mes"] = true;
+		$this->events["Indicadores_de_b_squeda_Mes"] = true;
+		$this->events["Indicadores_Recaudos_desde"] = true;
+		$this->events["Indicadores_Recaudos_hasta"] = true;
+		$this->events["Indicadores_Sin_Actuaciones_mes"] = true;
+		$this->events["Test_de_Deterioro__Resumen__buscar"] = true;
 
 
 
@@ -5127,6 +5136,90 @@ foreach ($selected_movimientos as $id) {
     }
 }
 echo '</select>';
+	;
+}
+	function event_Informe_ejecutivo_de_Gesti_n_cartera(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+  
+echo'<br>';
+echo '<label for="cartera">Seleccione Cartera</label>';
+echo '<select name="Ejecutivo_Cartera" id="Ejecutivo_Cartera">';
+echo '<option value="0">Seleccione cartera</option>';
+
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
+$result1 = DB::Query($sql1);
+// Verificar si el resultado es válido
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        echo "<option value='$carteraId'>$cartera</option>";
+    }
+} else {
+    echo "<option value=''>Error en la consulta</option>";
+}
+
+
+echo '</select>';
+
+echo'</br>';
+	;
+}
+	function event_Informe_ejecutivo_de_Gesti_n_desde(&$params)
+	{
+	echo "<label for='Ejecutivo_desde_MesId' style='margin-right: 20px;'>Desde: </label>";
+echo "<input type='month' id='Ejecutivo_desde_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Informe_ejecutivo_de_Gesti_n_hasta(&$params)
+	{
+	echo "<label for='Ejecutivo_hasta_MesId' style='margin-right: 20px;'>Hasta: </label>";
+echo "<input type='month' id='Ejecutivo_hasta_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Cumplimiento_de_metas_de_Recaudo_Mes(&$params)
+	{
+	echo "<label for='Cumplimiento_MesId' style='margin-right: 20px;'>Mes: </label><br>";
+echo "<input type='month' id='Cumplimiento_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Indicadores_de_b_squeda_Mes(&$params)
+	{
+	echo "<label for='Indicadores_Busqueda_MesId' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Indicadores_Busqueda_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Indicadores_Recaudos_desde(&$params)
+	{
+	echo "<label for='Indicadores_Recaudo_MesId_desde' style='margin-right: 20px;'>Desde: </label>";
+echo "<input type='month' id='Indicadores_Recaudo_MesId_desde' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Indicadores_Recaudos_hasta(&$params)
+	{
+	echo "<label for='Indicadores_Recaudo_MesId_hasta' style='margin-right: 20px;'>Hasta: </label>";
+echo "<input type='month' id='Indicadores_Recaudo_MesId_hasta' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Indicadores_Sin_Actuaciones_mes(&$params)
+	{
+	echo "<label for='Indicadores_sin_actuacion_MesId' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Indicadores_sin_actuacion_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Test_de_Deterioro__Resumen__buscar(&$params)
+	{
+	echo "<label for='Test_Deterioro_MesId' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Test_Deterioro_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
 	;
 }
 
