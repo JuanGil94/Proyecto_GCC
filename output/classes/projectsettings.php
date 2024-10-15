@@ -3924,6 +3924,18 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "consolidado_por_conceptos" ] = "Consolidado por Conceptos";
 	$projectEntities[ "Movimiento Mensual" ] = array( "url" => "movimiento_mensual", "type" => 6 );
 	$projectEntitiesReverse[ "movimiento_mensual" ] = "Movimiento Mensual";
+	$projectEntities[ "Informe ejecutivo de Gestión" ] = array( "url" => "informe_ejecutivo_de_gesti_n", "type" => 6 );
+	$projectEntitiesReverse[ "informe_ejecutivo_de_gesti_n" ] = "Informe ejecutivo de Gestión";
+	$projectEntities[ "Cumplimiento de metas de Recaudo" ] = array( "url" => "cumplimiento_de_metas_de_recaudo", "type" => 6 );
+	$projectEntitiesReverse[ "cumplimiento_de_metas_de_recaudo" ] = "Cumplimiento de metas de Recaudo";
+	$projectEntities[ "Indicadores de búsqueda" ] = array( "url" => "indicadores_de_b_squeda", "type" => 6 );
+	$projectEntitiesReverse[ "indicadores_de_b_squeda" ] = "Indicadores de búsqueda";
+	$projectEntities[ "Indicadores Recaudos" ] = array( "url" => "indicadores_recaudos", "type" => 6 );
+	$projectEntitiesReverse[ "indicadores_recaudos" ] = "Indicadores Recaudos";
+	$projectEntities[ "Indicadores Sin Actuaciones" ] = array( "url" => "indicadores_sin_actuaciones", "type" => 6 );
+	$projectEntitiesReverse[ "indicadores_sin_actuaciones" ] = "Indicadores Sin Actuaciones";
+	$projectEntities[ "Test de Deterioro (Resumen)" ] = array( "url" => "test_de_deterioro__resumen_", "type" => 6 );
+	$projectEntitiesReverse[ "test_de_deterioro__resumen_" ] = "Test de Deterioro (Resumen)";
 }
 
 function findTable( $table ) {

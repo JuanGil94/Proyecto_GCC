@@ -208,6 +208,12 @@ $nonAdminTablesArr[] = "dbo.Conceptos2";
 $nonAdminTablesArr[] = "dbo.PropiedadesMedidas";
 $nonAdminTablesArr[] = "Consolidado por Conceptos";
 $nonAdminTablesArr[] = "Movimiento Mensual";
+$nonAdminTablesArr[] = "Informe ejecutivo de Gestión";
+$nonAdminTablesArr[] = "Cumplimiento de metas de Recaudo";
+$nonAdminTablesArr[] = "Indicadores de búsqueda";
+$nonAdminTablesArr[] = "Indicadores Recaudos";
+$nonAdminTablesArr[] = "Indicadores Sin Actuaciones";
+$nonAdminTablesArr[] = "Test de Deterioro (Resumen)";
 
 $ug_connection = $cman->getForUserGroups();
 

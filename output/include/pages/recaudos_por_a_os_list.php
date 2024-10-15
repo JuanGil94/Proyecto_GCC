@@ -1507,9 +1507,10 @@ array( 'cell' => 'footcell_field19' ) ) ) ),
 'type' => 0 ),
 'type' => 'snippet' ),
 'custom_button' => array( 'eventId' => 'Buscar5',
-'label' => array( 'text' => 'Buscar',
-'type' => 0 ),
-'type' => 'custom_button' ),
+'label' => array( 'type' => 0,
+'text' => '' ),
+'type' => 'custom_button',
+'icon' => array( 'glyph' => 'search' ) ),
 'text' => array( 'type' => 'text',
 'label' => array( 'text' => '    <strong>
         {$total_table}

@@ -556,9 +556,10 @@ array( 'cell' => 'footcell_field3' ) ) ) ),
 'type' => 0 ),
 'type' => 'snippet' ),
 'custom_button' => array( 'eventId' => 'Buscar10',
-'label' => array( 'text' => 'Buscar',
-'type' => 0 ),
-'type' => 'custom_button' ),
+'label' => array( 'type' => 0,
+'text' => '' ),
+'type' => 'custom_button',
+'icon' => array( 'glyph' => 'search' ) ),
 'text' => array( 'type' => 'text',
 'label' => array( 'text' => '<style>
 /* Estilo general para las tablas */

@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Buscar26"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Buscar26';if(!pageObj.buttonEventBefore['Buscar26']){pageObj.buttonEventBefore['Buscar26']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['Buscar26']){pageObj.buttonEventAfter['Buscar26']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var contenido=document.getElementById('miContenedor').innerHTML;var nuevaVentana=window.open('','_blank','width=850,height=1100');nuevaVentana.document.write('<html>');nuevaVentana.document.write('<style>body { font-size: 16px; }</style>');nuevaVentana.document.write('</head><body>');nuevaVentana.document.write(contenido);nuevaVentana.document.write('</body></html>');nuevaVentana.document.close();nuevaVentana.print();}}
+$('a[id="Buscar26"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Buscar26"+"_"+Runner.genId();var button_Buscar26=new Runner.form.Button({id:this.id,btnName:"Buscar26"});button_Buscar26.init({args:[pageObj,proxy,pageid]});});};

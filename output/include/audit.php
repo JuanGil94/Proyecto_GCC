@@ -1184,6 +1184,30 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Informe ejecutivo de Gestión")
+		{
+			return false;
+		}
+		if($table=="Cumplimiento de metas de Recaudo")
+		{
+			return false;
+		}
+		if($table=="Indicadores de búsqueda")
+		{
+			return false;
+		}
+		if($table=="Indicadores Recaudos")
+		{
+			return false;
+		}
+		if($table=="Indicadores Sin Actuaciones")
+		{
+			return false;
+		}
+		if($table=="Test de Deterioro (Resumen)")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2319,6 +2343,30 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Movimiento Mensual")
+		{
+			return false;
+		}
+		if($table=="Informe ejecutivo de Gestión")
+		{
+			return false;
+		}
+		if($table=="Cumplimiento de metas de Recaudo")
+		{
+			return false;
+		}
+		if($table=="Indicadores de búsqueda")
+		{
+			return false;
+		}
+		if($table=="Indicadores Recaudos")
+		{
+			return false;
+		}
+		if($table=="Indicadores Sin Actuaciones")
+		{
+			return false;
+		}
+		if($table=="Test de Deterioro (Resumen)")
 		{
 			return false;
 		}
