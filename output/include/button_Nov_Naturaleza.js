@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov_Naturaleza"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov_Naturaleza';if(!pageObj.buttonEventBefore['Nov_Naturaleza']){pageObj.buttonEventBefore['Nov_Naturaleza']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov_Naturaleza']){pageObj.buttonEventAfter['Nov_Naturaleza']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov_Naturaleza"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov_Naturaleza"+"_"+Runner.genId();var button_Nov_Naturaleza=new Runner.form.Button({id:this.id,btnName:"Nov_Naturaleza"});button_Nov_Naturaleza.init({args:[pageObj,proxy,pageid]});});};

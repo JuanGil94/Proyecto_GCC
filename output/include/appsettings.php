@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3418_1727893910";
+$projectBuildKey = "3486_1727893910";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3418";
+$projectBuildNumber = "3486";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -971,6 +971,7 @@ $tableCaptions["Spanish"]["Indicadores_de_b_squeda"] = "Indicadores de búsqueda
 $tableCaptions["Spanish"]["Indicadores_Recaudos"] = "Indicadores Recaudos";
 $tableCaptions["Spanish"]["Indicadores_Sin_Actuaciones"] = "Indicadores Sin Actuaciones";
 $tableCaptions["Spanish"]["Test_de_Deterioro__Resumen_"] = "Test de Deterioro (Resumen)";
+$tableCaptions["Spanish"]["dbo_Novedades"] = "Novedades";
 
 
 $globalEvents = new class_GlobalEvents;

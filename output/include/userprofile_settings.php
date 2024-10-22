@@ -149,7 +149,7 @@ $tdatauserprofile[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																	
+																																																																																																																																																																																																																																																																																																																														
 
 $tdatauserprofile[".ajaxCodeSnippetAdded"] = false;
 
@@ -1612,6 +1612,36 @@ $detailsTablesData["dbo.UserProfile"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "auditorias";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Auditorias");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UserProfile"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"][]="UserId";
+
+				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="UserId";
+//	dbo.Novedades
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.Novedades";
+		$detailsParam["dOriginalTable"] = "dbo.Novedades";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "novedades";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Novedades");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

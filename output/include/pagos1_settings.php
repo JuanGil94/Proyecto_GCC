@@ -144,12 +144,11 @@ $tdatapagos1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																												
-																																																																																																																							
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatapagos1[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapagos1[".buttonsAdded"] = true;
+$tdatapagos1[".buttonsAdded"] = false;
 
 $tdatapagos1[".addPageEvents"] = true;
 
@@ -762,10 +761,7 @@ $tdatapagos1[".hideMobileList"] = array();
 
 
 	
-		$eventsData = array();
-	$eventsData[] = array( "name" => "Pago_event", "type" => "change" );
-	$edata["fieldEvents"] = $eventsData;
-
+	
 
 
 

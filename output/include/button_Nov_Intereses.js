@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov_Intereses"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov_Intereses';if(!pageObj.buttonEventBefore['Nov_Intereses']){pageObj.buttonEventBefore['Nov_Intereses']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov_Intereses']){pageObj.buttonEventAfter['Nov_Intereses']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov_Intereses"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov_Intereses"+"_"+Runner.genId();var button_Nov_Intereses=new Runner.form.Button({id:this.id,btnName:"Nov_Intereses"});button_Nov_Intereses.init({args:[pageObj,proxy,pageid]});});};

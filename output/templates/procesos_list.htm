@@ -1171,6 +1171,13 @@
 					Auditorias Procesos View				</label>
 			</div>
 			{END print_details_auditoriasprocesosview}
+														{BEGIN print_details_novedades}
+			<div>
+				<label for="printDetailsnovedades{$id}">
+					<input type="checkbox" value="novedades" id="printDetailsnovedades{$id}" checked>
+					Novedades				</label>
+			</div>
+			{END print_details_novedades}
 						</div>
 </div>
 {END print_details}
@@ -3474,9 +3481,9 @@
 	>
 
 	 
-																<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="correspondencias,fechas,solidarios,llamadas,medidas,liquidaciones,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,auditoriasprocesosview"
-			data-details-correspondencias			data-details-fechas			data-details-solidarios			data-details-llamadas			data-details-medidas			data-details-liquidaciones			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-auditoriasprocesosview	>
+																	<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="correspondencias,fechas,solidarios,llamadas,medidas,liquidaciones,acuerdos,pagos1,intereses,reasignaciones,suspensiones1,interrupciones,reliquidaciones,auditoriasprocesosview,novedades"
+			data-details-correspondencias			data-details-fechas			data-details-solidarios			data-details-llamadas			data-details-medidas			data-details-liquidaciones			data-details-acuerdos			data-details-pagos1			data-details-intereses			data-details-reasignaciones			data-details-suspensiones1			data-details-interrupciones			data-details-reliquidaciones			data-details-auditoriasprocesosview			data-details-novedades	>
 		<span data-details-inside data-short-table="correspondencias">
 			</span>
 		<span data-details-inside data-short-table="fechas">
@@ -3505,10 +3512,13 @@
 			</span>
 		<span data-details-inside data-short-table="auditoriasprocesosview">
 			</span>
+		<span data-details-inside data-short-table="novedades">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

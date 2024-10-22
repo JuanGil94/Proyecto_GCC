@@ -6,6 +6,7 @@ else if(result["Errr"]===1){swal("Info",result["mensaje"],"info");}
 else if(result["reas"]===1){swal("Warning","No se puede crear el proceso sin abogado asignado","warning");}
 else if(result["Dev"]===1){swal("Warning","No se puede crear el Proceso si esta en tramite Devolucion, Duplicado, Inaplicación, Traslado y Otro","warning");}
 else if(result["total"]){swal({icon:"success",text:"Se crea el proceso Correctamente"}).then(function(value){switch(value){default:location.reload();break;}});}
+else if(result["ObliCero"]===1){swal("Warning","La obligación del Proceso debe ser mayor a 0","warning");}
 else{swal("Warning","El Proceso debe contener un Sancionado!","warning");}}}
 $('a[id="New_Button"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
 this.id="New_Button"+"_"+Runner.genId();var button_New_Button=new Runner.form.Button({id:this.id,btnName:"New_Button"});button_New_Button.init({args:[pageObj,proxy,pageid]});});};

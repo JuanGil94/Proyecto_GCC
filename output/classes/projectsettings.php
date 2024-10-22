@@ -3936,6 +3936,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "indicadores_sin_actuaciones" ] = "Indicadores Sin Actuaciones";
 	$projectEntities[ "Test de Deterioro (Resumen)" ] = array( "url" => "test_de_deterioro__resumen_", "type" => 6 );
 	$projectEntitiesReverse[ "test_de_deterioro__resumen_" ] = "Test de Deterioro (Resumen)";
+	$projectEntities[ "dbo.Novedades" ] = array( "url" => "novedades", "type" => 0 );
+	$projectEntitiesReverse[ "novedades" ] = "dbo.Novedades";
 }
 
 function findTable( $table ) {
