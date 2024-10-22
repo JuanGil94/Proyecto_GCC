@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov_Costas"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov_Costas';if(!pageObj.buttonEventBefore['Nov_Costas']){pageObj.buttonEventBefore['Nov_Costas']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov_Costas']){pageObj.buttonEventAfter['Nov_Costas']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov_Costas"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov_Costas"+"_"+Runner.genId();var button_Nov_Costas=new Runner.form.Button({id:this.id,btnName:"Nov_Costas"});button_Nov_Costas.init({args:[pageObj,proxy,pageid]});});};

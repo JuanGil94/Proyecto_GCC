@@ -128,7 +128,7 @@ $tdatacorporacionesview[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																	
+																																																																																																																																																																																																																																																																																																																														
 
 $tdatacorporacionesview[".ajaxCodeSnippetAdded"] = false;
 

@@ -3029,6 +3029,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades"]["propiedadesmedidas.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades"]["propiedadesmedidas.CiudadId"]["edit"] = array("table" => "dbo.PropiedadesMedidas", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
+			$lookupTableLinks["dbo.Procesos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Procesos"]["novedades.ProcesoId"] )) {
+			$lookupTableLinks["dbo.Procesos"]["novedades.ProcesoId"] = array();
+		}
+		$lookupTableLinks["dbo.Procesos"]["novedades.ProcesoId"]["edit"] = array("table" => "dbo.Novedades", "field" => "ProcesoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["novedades.UserId"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["novedades.UserId"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["novedades.UserId"]["edit"] = array("table" => "dbo.Novedades", "field" => "UserId", "page" => "edit");
 }
 
 ?>

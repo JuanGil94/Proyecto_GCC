@@ -1208,6 +1208,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Novedades")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2367,6 +2371,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Test de Deterioro (Resumen)")
+		{
+			return false;
+		}
+		if($table=="dbo.Novedades")
 		{
 			return false;
 		}

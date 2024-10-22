@@ -27,6 +27,8 @@
 'dbo.Reliquidaciones' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Pagos1' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.Novedades' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Seccionales' => array( 'preview' => false ),
 'dbo.Abogados' => array( 'preview' => false ),

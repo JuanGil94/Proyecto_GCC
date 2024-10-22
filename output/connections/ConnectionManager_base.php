@@ -443,6 +443,7 @@ class ConnectionManager_Base
 		$connectionsIds["Indicadores Recaudos"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Indicadores Sin Actuaciones"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Test de Deterioro (Resumen)"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Novedades"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

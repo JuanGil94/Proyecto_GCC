@@ -160,6 +160,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Indicadores_Recaudos_hasta"] = true;
 		$this->events["Indicadores_Sin_Actuaciones_mes"] = true;
 		$this->events["Test_de_Deterioro__Resumen__buscar"] = true;
+		$this->events["label_Novedad"] = true;
 
 
 
@@ -5220,6 +5221,15 @@ echo "<input type='month' id='Indicadores_sin_actuacion_MesId' name='mes' value=
 	{
 	echo "<label for='Test_Deterioro_MesId' style='margin-right: 20px;'>Mes: </label>";
 echo "<input type='month' id='Test_Deterioro_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_label_Novedad(&$params)
+	{
+	// Put your code here.
+global $pageObject;
+$data = $pageObject->getMasterRecord();
+//$data["ProcesoId"];
+echo '<strong>Novedades:</strong><input for="miInput" id="procesoId" value="'.$data["ProcesoId"].'" style="display: none;" readonly></input>';
 	;
 }
 

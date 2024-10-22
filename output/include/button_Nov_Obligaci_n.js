@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov_Obligaci_n"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov_Obligaci_n';if(!pageObj.buttonEventBefore['Nov_Obligaci_n']){pageObj.buttonEventBefore['Nov_Obligaci_n']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov_Obligaci_n']){pageObj.buttonEventAfter['Nov_Obligaci_n']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov_Obligaci_n"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov_Obligaci_n"+"_"+Runner.genId();var button_Nov_Obligaci_n=new Runner.form.Button({id:this.id,btnName:"Nov_Obligaci_n"});button_Nov_Obligaci_n.init({args:[pageObj,proxy,pageid]});});};

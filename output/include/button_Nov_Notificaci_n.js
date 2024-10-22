@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov_Notificaci_n"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov_Notificaci_n';if(!pageObj.buttonEventBefore['Nov_Notificaci_n']){pageObj.buttonEventBefore['Nov_Notificaci_n']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov_Notificaci_n']){pageObj.buttonEventAfter['Nov_Notificaci_n']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov_Notificaci_n"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov_Notificaci_n"+"_"+Runner.genId();var button_Nov_Notificaci_n=new Runner.form.Button({id:this.id,btnName:"Nov_Notificaci_n"});button_Nov_Notificaci_n.init({args:[pageObj,proxy,pageid]});});};

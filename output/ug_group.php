@@ -214,6 +214,7 @@ $nonAdminTablesArr[] = "Indicadores de búsqueda";
 $nonAdminTablesArr[] = "Indicadores Recaudos";
 $nonAdminTablesArr[] = "Indicadores Sin Actuaciones";
 $nonAdminTablesArr[] = "Test de Deterioro (Resumen)";
+$nonAdminTablesArr[] = "dbo.Novedades";
 
 $ug_connection = $cman->getForUserGroups();
 

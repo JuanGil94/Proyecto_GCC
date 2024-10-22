@@ -603,6 +603,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("test_de_deterioro__resumen_" == $shortTName )
 		return true;
+	if ("novedades" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2453,6 +2455,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Test de Deterioro (Resumen)";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Novedades");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Novedades";
+	}
 	return $arr;
 }
 
@@ -2662,6 +2673,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Indicadores Recaudos";
 	$arr[]="Indicadores Sin Actuaciones";
 	$arr[]="Test de Deterioro (Resumen)";
+	$arr[]="dbo.Novedades";
 	return $arr;
 }
 
@@ -4297,6 +4309,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Test de Deterioro (Resumen)" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Novedades" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

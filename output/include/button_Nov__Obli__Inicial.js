@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov__Obli__Inicial"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov__Obli__Inicial';if(!pageObj.buttonEventBefore['Nov__Obli__Inicial']){pageObj.buttonEventBefore['Nov__Obli__Inicial']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov__Obli__Inicial']){pageObj.buttonEventAfter['Nov__Obli__Inicial']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov__Obli__Inicial"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov__Obli__Inicial"+"_"+Runner.genId();var button_Nov__Obli__Inicial=new Runner.form.Button({id:this.id,btnName:"Nov__Obli__Inicial"});button_Nov__Obli__Inicial.init({args:[pageObj,proxy,pageid]});});};

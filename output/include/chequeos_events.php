@@ -79,6 +79,7 @@ function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
 	$pageObject->hideItem("grid_checkbox", $recordId);
 	$pageObject->hideItem("button_subir", $recordId); 
 }
+
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;
@@ -686,6 +687,26 @@ if ($values['ActualmenteExigible']==0){
 }
 if ($values['Clara']==0){
 	echo '<script>alert ("La etapa Preliminar debe ser Clara)</script>';
+	return false;
+}
+if ($values['FaltaCompetencia']==1){
+	echo '<script>alert ("Si esta en tramite Apertura, no le puede Faltar Competencia")</script>';
+	return false;
+}
+if ($values['FaltaRequisitos']==1){
+	echo '<script>alert ("Si esta en tramite Apertura, no le puede Faltar Requisitos")</script>';
+	return false;
+}
+if ($values['PorPrescripcion']==1){
+	echo '<script>alert ("Si esta en tramite Apertura, no puede ser Por Prescripcion")</script>';
+	return false;
+}
+if ($values['FaltaRequisitos']==1){
+	echo '<script>alert ("Si esta en tramite Apertura, no le puede Faltar Requisitos")</script>';
+	return false;
+}
+if ($values['MinJusticia']==1){
+	echo '<script>alert ("Si esta en tramite Apertura, no se puede marcar MinJusticia")</script>';
 	return false;
 }
 }

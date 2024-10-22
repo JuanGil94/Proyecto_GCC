@@ -158,7 +158,7 @@ $tdataprescritos_report[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																	
+																																																																																																																																																																																																																																																																																																																														
 
 $tdataprescritos_report[".ajaxCodeSnippetAdded"] = false;
 

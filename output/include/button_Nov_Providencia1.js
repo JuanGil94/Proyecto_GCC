@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Nov_Providencia1"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Nov_Providencia1';if(!pageObj.buttonEventBefore['Nov_Providencia1']){pageObj.buttonEventBefore['Nov_Providencia1']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['Nov_Providencia1']){pageObj.buttonEventAfter['Nov_Providencia1']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="Nov_Providencia1"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Nov_Providencia1"+"_"+Runner.genId();var button_Nov_Providencia1=new Runner.form.Button({id:this.id,btnName:"Nov_Providencia1"});button_Nov_Providencia1.init({args:[pageObj,proxy,pageid]});});};
