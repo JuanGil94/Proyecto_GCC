@@ -1,0 +1,2380 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-list"   
+		>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="300px" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expandir" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
+		
+ 
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+
+	<div class="panel-heading">
+		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Búsqueda			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_Costas}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Costas}" {$filterRow_attrs_Costas}>
+			<label>{$label dbo_ProcesosCorrespondencias Costas }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Costas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Costas}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
+						</div>
+		{END searchCtrlBlock_Costas}
+																{BEGIN searchCtrlBlock_Abogado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Abogado}" {$filterRow_attrs_Abogado}>
+			<label>{$label dbo_ProcesosCorrespondencias Abogado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Abogado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
+						</div>
+		{END searchCtrlBlock_Abogado}
+																{BEGIN searchCtrlBlock_Estado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Estado}" {$filterRow_attrs_Estado}>
+			<label>{$label dbo_ProcesosCorrespondencias Estado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Estado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Estado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Estado}</span>
+						</div>
+		{END searchCtrlBlock_Estado}
+																{BEGIN searchCtrlBlock_F_Acuerdo_Pago}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_F_Acuerdo_Pago}" {$filterRow_attrs_F_Acuerdo_Pago}>
+			<label>{$label dbo_ProcesosCorrespondencias F_Acuerdo_Pago }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_F_Acuerdo_Pago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_F_Acuerdo_Pago}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_F_Acuerdo_Pago}</span>
+						</div>
+		{END searchCtrlBlock_F_Acuerdo_Pago}
+																{BEGIN searchCtrlBlock_F_Ejecutoria}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_F_Ejecutoria}" {$filterRow_attrs_F_Ejecutoria}>
+			<label>{$label dbo_ProcesosCorrespondencias F_Ejecutoria }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_F_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_F_Ejecutoria}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_F_Ejecutoria}</span>
+						</div>
+		{END searchCtrlBlock_F_Ejecutoria}
+																{BEGIN searchCtrlBlock_F_Providencia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_F_Providencia}" {$filterRow_attrs_F_Providencia}>
+			<label>{$label dbo_ProcesosCorrespondencias F_Providencia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_F_Providencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_F_Providencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_F_Providencia}</span>
+						</div>
+		{END searchCtrlBlock_F_Providencia}
+																{BEGIN searchCtrlBlock_F_Creaci_n}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_F_Creaci_n}" {$filterRow_attrs_F_Creaci_n}>
+			<label>{$label dbo_ProcesosCorrespondencias F_Creaci_n }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_F_Creaci_n}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_F_Creaci_n}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_F_Creaci_n}</span>
+						</div>
+		{END searchCtrlBlock_F_Creaci_n}
+																{BEGIN searchCtrlBlock_Competencia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Competencia}" {$filterRow_attrs_Competencia}>
+			<label>{$label dbo_ProcesosCorrespondencias Competencia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Competencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Competencia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Competencia}</span>
+						</div>
+		{END searchCtrlBlock_Competencia}
+																{BEGIN searchCtrlBlock_No_Radicado_Origen}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_No_Radicado_Origen}" {$filterRow_attrs_No_Radicado_Origen}>
+			<label>{$label dbo_ProcesosCorrespondencias No_Radicado_Origen }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_No_Radicado_Origen}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_No_Radicado_Origen}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_No_Radicado_Origen}</span>
+						</div>
+		{END searchCtrlBlock_No_Radicado_Origen}
+																{BEGIN searchCtrlBlock_Concepto}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
+			<label>{$label dbo_ProcesosCorrespondencias Concepto }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
+						</div>
+		{END searchCtrlBlock_Concepto}
+																{BEGIN searchCtrlBlock_Documento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Documento}" {$filterRow_attrs_Documento}>
+			<label>{$label dbo_ProcesosCorrespondencias Documento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Documento}</span>
+						</div>
+		{END searchCtrlBlock_Documento}
+																{BEGIN searchCtrlBlock_T_Documento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_T_Documento}" {$filterRow_attrs_T_Documento}>
+			<label>{$label dbo_ProcesosCorrespondencias T_Documento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_T_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_T_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_T_Documento}</span>
+						</div>
+		{END searchCtrlBlock_T_Documento}
+																{BEGIN searchCtrlBlock_Solidario}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Solidario}" {$filterRow_attrs_Solidario}>
+			<label>{$label dbo_ProcesosCorrespondencias Solidario }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Solidario}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Solidario}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Solidario}</span>
+						</div>
+		{END searchCtrlBlock_Solidario}
+																{BEGIN searchCtrlBlock_Deudor}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Deudor}" {$filterRow_attrs_Deudor}>
+			<label>{$label dbo_ProcesosCorrespondencias Deudor }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Deudor}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Deudor}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Deudor}</span>
+						</div>
+		{END searchCtrlBlock_Deudor}
+																{BEGIN searchCtrlBlock_N_Minjusticia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_N_Minjusticia}" {$filterRow_attrs_N_Minjusticia}>
+			<label>{$label dbo_ProcesosCorrespondencias N_Minjusticia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_N_Minjusticia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_N_Minjusticia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_N_Minjusticia}</span>
+						</div>
+		{END searchCtrlBlock_N_Minjusticia}
+																{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label dbo_ProcesosCorrespondencias Numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_Obligacion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Obligacion}" {$filterRow_attrs_Obligacion}>
+			<label>{$label dbo_ProcesosCorrespondencias Obligacion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
+						</div>
+		{END searchCtrlBlock_Obligacion}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="expand_menu_button" {$item_expand_menu_button} data-topcell-item-type="expand_menu_button" >
+				<span data-itemtype="expand_menu_button" data-itemid="expand_menu_button" {$item_expand_menu_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Muestrame el menu" class="btn-link   
+	 glyphicon glyphicon-menu-hamburger" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Encubrir" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		Exportar seleccionados		
+		</a>
+	</li>
+{END exportselected_link}
+							{BEGIN deleteselected_link}
+	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
+				
+		Borrar articulos seleccionados		
+		</a>
+	</li>
+{END deleteselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="procesoscorrespondencias_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Búsqueda avanzada		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar panel de búsqueda		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		Exportar resultados		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="procesoscorrespondencias_import.php{$stateLink_full}"  title="" >
+				
+		Importar		
+		</a>
+	</li>
+{END import_link}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
+				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="fa fa-bell"></i>
+		<span class="badge badge-warning" ></span>
+	</button>
+	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+		<div class="r-noti-header">
+			<span class="r-noti-h-text">
+				Notificaciones			</span>
+			<!--
+			<a class="r-noti-all">
+				see all
+			</a>
+			-->
+			<a class="r-noti-close" href="#">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+		<div class="r-noti-messages">
+		</div>
+	</div>
+	
+<script type="text/x-tmpl" id="noti-message">
+	<a draggable="false" class="r-noti-message" 
+		{% if (o.url ) { %} 
+			href="{%=o.url%}" 
+		{% } %}
+		>
+		<span class="r-noti-img">
+			{% if (o.iconType == 'fa') { %}
+			<span class="fa {%=o.icon%}"></span>
+			{% } else if (o.iconType == 'bs') { %}
+			<span class="glyphicon {%=o.icon%}"></span>
+			{% } else if (o.icon) { %}
+			<img src="{%=o.icon%}">
+			{% } %}
+		</span>
+		<span class="r-noti-text">
+			<span class="r-noti-title">
+				{% if (o.title) { %}
+					<span class="r-noti-title-text">
+						{%=o.title%}
+					</span>
+				{% } %}
+				<span class="r-noti-when">
+					{%=o.time%}
+				</span>
+			</span>
+			<span class="r-noti-body">
+				{%=o.message%}
+			</span>
+		</span>
+		{% if (o.new) { %}
+		<span class="r-noti-new">
+			<span class="fa fa-circle"></span>
+		</span>
+		{% } %}
+	</a>
+</script>	
+
+</div>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Conectar			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN userinfo_link}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil del usuario		
+		</a>
+	</li>
+{END userinfo_link}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Desconectarse		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Cambiar contraseña		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+			</div>		
+{END top_block}
+						</div>
+											<div class="r-above">
+					{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event dbo_Correspondencias1_snippet}
+</span>	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Generar" href="javascript:void(0)" typeid="ib" >
+							Generar			</a>
+</span>
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			Rango:		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="procesoscorrespondencias_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									Imprimir todas las páginas							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="procesoscorrespondencias_print.php?{$crosstable_attrs}">
+				Imprimir esta página			</label>
+		</div>
+	</div>
+		
+		 
+	<div class="row">
+		<div class="col-md-4">
+			&nbsp;
+		</div>
+		<div class="col-md-8">
+			<label style="color: gray;" for="printSelection{$id}">
+			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
+			Imprimir la selección			</label>
+		</div>
+	</div>
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Detalles de impresión	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_correspondencias}
+			<div>
+				<label for="printDetailscorrespondencias{$id}">
+					<input type="checkbox" value="correspondencias" id="printDetailscorrespondencias{$id}" checked>
+					Correspondencias				</label>
+			</div>
+			{END print_details_correspondencias}
+														{BEGIN print_details_solidarios}
+			<div>
+				<label for="printDetailssolidarios{$id}">
+					<input type="checkbox" value="solidarios" id="printDetailssolidarios{$id}" checked>
+					Solidarios				</label>
+			</div>
+			{END print_details_solidarios}
+														{BEGIN print_details_llamadas}
+			<div>
+				<label for="printDetailsllamadas{$id}">
+					<input type="checkbox" value="llamadas" id="printDetailsllamadas{$id}" checked>
+					Llamadas				</label>
+			</div>
+			{END print_details_llamadas}
+														{BEGIN print_details_medidas}
+			<div>
+				<label for="printDetailsmedidas{$id}">
+					<input type="checkbox" value="medidas" id="printDetailsmedidas{$id}" checked>
+					Medidas				</label>
+			</div>
+			{END print_details_medidas}
+														{BEGIN print_details_acuerdos}
+			<div>
+				<label for="printDetailsacuerdos{$id}">
+					<input type="checkbox" value="acuerdos" id="printDetailsacuerdos{$id}" checked>
+					Acuerdos				</label>
+			</div>
+			{END print_details_acuerdos}
+														{BEGIN print_details_pagos1}
+			<div>
+				<label for="printDetailspagos1{$id}">
+					<input type="checkbox" value="pagos1" id="printDetailspagos1{$id}" checked>
+					Pagos1				</label>
+			</div>
+			{END print_details_pagos1}
+														{BEGIN print_details_intereses}
+			<div>
+				<label for="printDetailsintereses{$id}">
+					<input type="checkbox" value="intereses" id="printDetailsintereses{$id}" checked>
+					Intereses				</label>
+			</div>
+			{END print_details_intereses}
+														{BEGIN print_details_reasignaciones}
+			<div>
+				<label for="printDetailsreasignaciones{$id}">
+					<input type="checkbox" value="reasignaciones" id="printDetailsreasignaciones{$id}" checked>
+					Reasignaciones				</label>
+			</div>
+			{END print_details_reasignaciones}
+														{BEGIN print_details_suspensiones1}
+			<div>
+				<label for="printDetailssuspensiones1{$id}">
+					<input type="checkbox" value="suspensiones1" id="printDetailssuspensiones1{$id}" checked>
+					Suspensiones1				</label>
+			</div>
+			{END print_details_suspensiones1}
+														{BEGIN print_details_interrupciones}
+			<div>
+				<label for="printDetailsinterrupciones{$id}">
+					<input type="checkbox" value="interrupciones" id="printDetailsinterrupciones{$id}" checked>
+					Interrupciones				</label>
+			</div>
+			{END print_details_interrupciones}
+														{BEGIN print_details_reliquidaciones}
+			<div>
+				<label for="printDetailsreliquidaciones{$id}">
+					<input type="checkbox" value="reliquidaciones" id="printDetailsreliquidaciones{$id}" checked>
+					Reliquidaciones				</label>
+			</div>
+			{END print_details_reliquidaciones}
+														{BEGIN print_details_liquidaciones}
+			<div>
+				<label for="printDetailsliquidaciones{$id}">
+					<input type="checkbox" value="liquidaciones" id="printDetailsliquidaciones{$id}" checked>
+					Liquidaciones				</label>
+			</div>
+			{END print_details_liquidaciones}
+														{BEGIN print_details_fechas}
+			<div>
+				<label for="printDetailsfechas{$id}">
+					<input type="checkbox" value="fechas" id="printDetailsfechas{$id}" checked>
+					Fechas				</label>
+			</div>
+			{END print_details_fechas}
+														{BEGIN print_details_auditoriasprocesosview}
+			<div>
+				<label for="printDetailsauditoriasprocesosview{$id}">
+					<input type="checkbox" value="auditoriasprocesosview" id="printDetailsauditoriasprocesosview{$id}" checked>
+					Auditorias Procesos View				</label>
+			</div>
+			{END print_details_auditoriasprocesosview}
+														{BEGIN print_details_novedades}
+			<div>
+				<label for="printDetailsnovedades{$id}">
+					<input type="checkbox" value="novedades" id="printDetailsnovedades{$id}" checked>
+					Novedades				</label>
+			</div>
+			{END print_details_novedades}
+						</div>
+</div>
+{END print_details}
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					Resultados por página							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							Imprimir			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_N_Minjusticia" checked="checked" value="1" data-field="N_Minjusticia" data-fieldname="N.Minjusticia">
+					<span>{$label dbo_ProcesosCorrespondencias N_Minjusticia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Deudor" checked="checked" value="1" data-field="Deudor" data-fieldname="Deudor">
+					<span>{$label dbo_ProcesosCorrespondencias Deudor }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Solidario" checked="checked" value="1" data-field="Solidario" data-fieldname="Solidario">
+					<span>{$label dbo_ProcesosCorrespondencias Solidario }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_T_Documento" checked="checked" value="1" data-field="T_Documento" data-fieldname="T.Documento">
+					<span>{$label dbo_ProcesosCorrespondencias T_Documento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Documento" checked="checked" value="1" data-field="Documento" data-fieldname="Documento">
+					<span>{$label dbo_ProcesosCorrespondencias Documento }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Concepto" checked="checked" value="1" data-field="Concepto" data-fieldname="Concepto">
+					<span>{$label dbo_ProcesosCorrespondencias Concepto }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Numero" checked="checked" value="1" data-field="Numero" data-fieldname="Numero">
+					<span>{$label dbo_ProcesosCorrespondencias Numero }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_No_Radicado_Origen" checked="checked" value="1" data-field="No_Radicado_Origen" data-fieldname="No.Radicado Origen">
+					<span>{$label dbo_ProcesosCorrespondencias No_Radicado_Origen }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Competencia" checked="checked" value="1" data-field="Competencia" data-fieldname="Competencia">
+					<span>{$label dbo_ProcesosCorrespondencias Competencia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_F_Creaci_n" checked="checked" value="1" data-field="F_Creaci_n" data-fieldname="F.Creación">
+					<span>{$label dbo_ProcesosCorrespondencias F_Creaci_n }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_F_Providencia" checked="checked" value="1" data-field="F_Providencia" data-fieldname="F.Providencia">
+					<span>{$label dbo_ProcesosCorrespondencias F_Providencia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_F_Ejecutoria" checked="checked" value="1" data-field="F_Ejecutoria" data-fieldname="F.Ejecutoria">
+					<span>{$label dbo_ProcesosCorrespondencias F_Ejecutoria }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Obligacion" checked="checked" value="1" data-field="Obligacion" data-fieldname="Obligacion">
+					<span>{$label dbo_ProcesosCorrespondencias Obligacion }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Costas" checked="checked" value="1" data-field="Costas" data-fieldname="Costas">
+					<span>{$label dbo_ProcesosCorrespondencias Costas }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Intereses" checked="checked" value="1" data-field="Intereses" data-fieldname="Intereses">
+					<span>{$label dbo_ProcesosCorrespondencias Intereses }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_F_Acuerdo_Pago" checked="checked" value="1" data-field="F_Acuerdo_Pago" data-fieldname="F.Acuerdo Pago">
+					<span>{$label dbo_ProcesosCorrespondencias F_Acuerdo_Pago }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Estado" checked="checked" value="1" data-field="Estado" data-fieldname="Estado">
+					<span>{$label dbo_ProcesosCorrespondencias Estado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Abogado" checked="checked" value="1" data-field="Abogado" data-fieldname="Abogado">
+					<span>{$label dbo_ProcesosCorrespondencias Abogado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
+			</div>		
+{END above-grid_block}
+	</div>
+<div class="r-grid">
+	{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+					{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="N_Minjusticia"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias N_Minjusticia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Deudor"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Deudor}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Solidario"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Solidario}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="T_Documento"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias T_Documento}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Documento"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Documento}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Concepto}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Numero}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="No_Radicado_Origen"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias No_Radicado_Origen}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Competencia"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Competencia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="F_Creaci_n"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias F_Creaci_n}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="F_Providencia"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias F_Providencia}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="F_Ejecutoria"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias F_Ejecutoria}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Obligacion}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Costas"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Costas}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Intereses"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Intereses}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="F_Acuerdo_Pago"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias F_Acuerdo_Pago}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Estado"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Estado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Abogado}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
+	cellpadding="0"
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+			
+																									<tr {$rowattrs} {$row_grid_0} class="{$rowclass}
+									{$gridHeader_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+									{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$N_Minjusticia_class}	"
+
+			data-field="N_Minjusticia"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN N_Minjusticia_fieldheadercolumn}
+	{BEGIN N_Minjusticia_fieldheader}
+	<SPAN {$N_Minjusticia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field4" {$item_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="N_Minjusticia" data-fieldname="N.Minjusticia">
+	{$label dbo_ProcesosCorrespondencias N_Minjusticia }	{$arrow_icon_N_Minjusticia}
+	</SPAN>
+	{END N_Minjusticia_fieldheader}
+{END N_Minjusticia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Deudor_class}	"
+
+			data-field="Deudor"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Deudor_fieldheadercolumn}
+	{BEGIN Deudor_fieldheader}
+	<SPAN {$Deudor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field17" {$item_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Deudor" data-fieldname="Deudor">
+	{$label dbo_ProcesosCorrespondencias Deudor }	{$arrow_icon_Deudor}
+	</SPAN>
+	{END Deudor_fieldheader}
+{END Deudor_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Solidario_class}	"
+
+			data-field="Solidario"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Solidario_fieldheadercolumn}
+	{BEGIN Solidario_fieldheader}
+	<SPAN {$Solidario_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field18" {$item_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Solidario" data-fieldname="Solidario">
+	{$label dbo_ProcesosCorrespondencias Solidario }	{$arrow_icon_Solidario}
+	</SPAN>
+	{END Solidario_fieldheader}
+{END Solidario_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$T_Documento_class}	"
+
+			data-field="T_Documento"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN T_Documento_fieldheadercolumn}
+	{BEGIN T_Documento_fieldheader}
+	<SPAN {$T_Documento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field19" {$item_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="T_Documento" data-fieldname="T.Documento">
+	{$label dbo_ProcesosCorrespondencias T_Documento }	{$arrow_icon_T_Documento}
+	</SPAN>
+	{END T_Documento_fieldheader}
+{END T_Documento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_fieldheadercolumn}
+	{BEGIN Documento_fieldheader}
+	<SPAN {$Documento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field20" {$item_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento">
+	{$label dbo_ProcesosCorrespondencias Documento }	{$arrow_icon_Documento}
+	</SPAN>
+	{END Documento_fieldheader}
+{END Documento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+									{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldheadercolumn}
+	{BEGIN Concepto_fieldheader}
+	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field21" {$item_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
+	{$label dbo_ProcesosCorrespondencias Concepto }	{$arrow_icon_Concepto}
+	</SPAN>
+	{END Concepto_fieldheader}
+{END Concepto_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldheadercolumn}
+	{BEGIN Numero_fieldheader}
+	<SPAN {$Numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field22" {$item_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero">
+	{$label dbo_ProcesosCorrespondencias Numero }	{$arrow_icon_Numero}
+	</SPAN>
+	{END Numero_fieldheader}
+{END Numero_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$No_Radicado_Origen_class}	"
+
+			data-field="No_Radicado_Origen"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN No_Radicado_Origen_fieldheadercolumn}
+	{BEGIN No_Radicado_Origen_fieldheader}
+	<SPAN {$No_Radicado_Origen_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field23" {$item_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="No_Radicado_Origen" data-fieldname="No.Radicado Origen">
+	{$label dbo_ProcesosCorrespondencias No_Radicado_Origen }	{$arrow_icon_No_Radicado_Origen}
+	</SPAN>
+	{END No_Radicado_Origen_fieldheader}
+{END No_Radicado_Origen_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+			data-field="Competencia"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Competencia_fieldheadercolumn}
+	{BEGIN Competencia_fieldheader}
+	<SPAN {$Competencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field24" {$item_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia">
+	{$label dbo_ProcesosCorrespondencias Competencia }	{$arrow_icon_Competencia}
+	</SPAN>
+	{END Competencia_fieldheader}
+{END Competencia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+									{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Creaci_n_class}	"
+
+			data-field="F_Creaci_n"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Creaci_n_fieldheadercolumn}
+	{BEGIN F_Creaci_n_fieldheader}
+	<SPAN {$F_Creaci_n_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field25" {$item_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Creaci_n" data-fieldname="F.Creación">
+	{$label dbo_ProcesosCorrespondencias F_Creaci_n }	{$arrow_icon_F_Creaci_n}
+	</SPAN>
+	{END F_Creaci_n_fieldheader}
+{END F_Creaci_n_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Providencia_class}	"
+
+			data-field="F_Providencia"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Providencia_fieldheadercolumn}
+	{BEGIN F_Providencia_fieldheader}
+	<SPAN {$F_Providencia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field26" {$item_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Providencia" data-fieldname="F.Providencia">
+	{$label dbo_ProcesosCorrespondencias F_Providencia }	{$arrow_icon_F_Providencia}
+	</SPAN>
+	{END F_Providencia_fieldheader}
+{END F_Providencia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Ejecutoria_class}	"
+
+			data-field="F_Ejecutoria"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Ejecutoria_fieldheadercolumn}
+	{BEGIN F_Ejecutoria_fieldheader}
+	<SPAN {$F_Ejecutoria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field27" {$item_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Ejecutoria" data-fieldname="F.Ejecutoria">
+	{$label dbo_ProcesosCorrespondencias F_Ejecutoria }	{$arrow_icon_F_Ejecutoria}
+	</SPAN>
+	{END F_Ejecutoria_fieldheader}
+{END F_Ejecutoria_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+									{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_fieldheadercolumn}
+	{BEGIN Obligacion_fieldheader}
+	<SPAN {$Obligacion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion">
+	{$label dbo_ProcesosCorrespondencias Obligacion }	{$arrow_icon_Obligacion}
+	</SPAN>
+	{END Obligacion_fieldheader}
+{END Obligacion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Costas_fieldheadercolumn}
+	{BEGIN Costas_fieldheader}
+	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+	{$label dbo_ProcesosCorrespondencias Costas }	{$arrow_icon_Costas}
+	</SPAN>
+	{END Costas_fieldheader}
+{END Costas_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+									{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_fieldheadercolumn}
+	{BEGIN Intereses_fieldheader}
+	<SPAN {$Intereses_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field28" {$item_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+	{$label dbo_ProcesosCorrespondencias Intereses }	{$arrow_icon_Intereses}
+	</SPAN>
+	{END Intereses_fieldheader}
+{END Intereses_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+									{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Acuerdo_Pago_class}	"
+
+			data-field="F_Acuerdo_Pago"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Acuerdo_Pago_fieldheadercolumn}
+	{BEGIN F_Acuerdo_Pago_fieldheader}
+	<SPAN {$F_Acuerdo_Pago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field29" {$item_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Acuerdo_Pago" data-fieldname="F.Acuerdo Pago">
+	{$label dbo_ProcesosCorrespondencias F_Acuerdo_Pago }	{$arrow_icon_F_Acuerdo_Pago}
+	</SPAN>
+	{END F_Acuerdo_Pago_fieldheader}
+{END F_Acuerdo_Pago_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Estado_class}	"
+
+			data-field="Estado"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Estado_fieldheadercolumn}
+	{BEGIN Estado_fieldheader}
+	<SPAN {$Estado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field30" {$item_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Estado" data-fieldname="Estado">
+	{$label dbo_ProcesosCorrespondencias Estado }	{$arrow_icon_Estado}
+	</SPAN>
+	{END Estado_fieldheader}
+{END Estado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+									{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldheadercolumn}
+	{BEGIN Abogado_fieldheader}
+	<SPAN {$Abogado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field31" {$item_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado">
+	{$label dbo_ProcesosCorrespondencias Abogado }	{$arrow_icon_Abogado}
+	</SPAN>
+	{END Abogado_fieldheader}
+{END Abogado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+							</tr>
+															
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+							
+																														<tr {$rowattrs} {$row_grid_1} class="{$rowclass}
+				
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+									{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$N_Minjusticia_class}	"
+
+			data-field="N_Minjusticia"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN N_Minjusticia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="N_Minjusticia" data-fieldname="N.Minjusticia" data-default-width >
+{$N_Minjusticia_value}
+</span>
+{END N_Minjusticia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Deudor_class}	"
+
+			data-field="Deudor"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Deudor_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Deudor" data-fieldname="Deudor" data-default-width >
+{$Deudor_value}
+</span>
+{END Deudor_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Solidario_class}	"
+
+			data-field="Solidario"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Solidario_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Solidario" data-fieldname="Solidario" data-default-width >
+{$Solidario_value}
+</span>
+{END Solidario_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$T_Documento_class}	"
+
+			data-field="T_Documento"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN T_Documento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field5" {$item_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="T_Documento" data-fieldname="T.Documento" data-default-width >
+{$T_Documento_value}
+</span>
+{END T_Documento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field7" {$item_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento" data-default-width >
+{$Documento_value}
+</span>
+{END Documento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+			data-field="Concepto"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Concepto_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field8" {$item_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
+{$Concepto_value}
+</span>
+{END Concepto_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+			data-field="Numero"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Numero_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Numero" data-fieldname="Numero" data-default-width >
+{$Numero_value}
+</span>
+{END Numero_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$No_Radicado_Origen_class}	"
+
+			data-field="No_Radicado_Origen"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN No_Radicado_Origen_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field9" {$item_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="No_Radicado_Origen" data-fieldname="No.Radicado Origen" data-default-width >
+{$No_Radicado_Origen_value}
+</span>
+{END No_Radicado_Origen_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+			data-field="Competencia"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Competencia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field10" {$item_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Competencia" data-fieldname="Competencia" data-default-width >
+{$Competencia_value}
+</span>
+{END Competencia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+									{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Creaci_n_class}	"
+
+			data-field="F_Creaci_n"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Creaci_n_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field11" {$item_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Creaci_n" data-fieldname="F.Creación" data-default-width >
+{$F_Creaci_n_value}
+</span>
+{END F_Creaci_n_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Providencia_class}	"
+
+			data-field="F_Providencia"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Providencia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field12" {$item_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Providencia" data-fieldname="F.Providencia" data-default-width >
+{$F_Providencia_value}
+</span>
+{END F_Providencia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+									{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Ejecutoria_class}	"
+
+			data-field="F_Ejecutoria"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Ejecutoria_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field13" {$item_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Ejecutoria" data-fieldname="F.Ejecutoria" data-default-width >
+{$F_Ejecutoria_value}
+</span>
+{END F_Ejecutoria_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+									{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+			data-field="Obligacion"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obligacion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-page="procesoscorrespondencias_list" data-record-id="{$recId}" data-field="Obligacion" data-fieldname="Obligacion" data-default-width >
+{$Obligacion_value}
+</span>
+{END Obligacion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+									{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Costas_class}	"
+
+			data-field="Costas"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Costas_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-page="procesoscorrespondencias_list" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas" data-default-width >
+{$Costas_value}
+</span>
+{END Costas_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+									{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+			data-field="Intereses"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Intereses_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-page="procesoscorrespondencias_list" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses" data-default-width >
+{$Intereses_value}
+</span>
+{END Intereses_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+									{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Acuerdo_Pago_class}	"
+
+			data-field="F_Acuerdo_Pago"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN F_Acuerdo_Pago_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field14" {$item_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="F_Acuerdo_Pago" data-fieldname="F.Acuerdo Pago" data-default-width >
+{$F_Acuerdo_Pago_value}
+</span>
+{END F_Acuerdo_Pago_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Estado_class}	"
+
+			data-field="Estado"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Estado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field15" {$item_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Estado" data-fieldname="Estado" data-default-width >
+{$Estado_value}
+</span>
+{END Estado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+									{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+			data-field="Abogado"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Abogado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field16" {$item_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Abogado" data-fieldname="Abogado" data-default-width >
+{$Abogado_value}
+</span>
+{END Abogado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+							</tr>
+										
+											{END grid_row}
+					</tbody>
+													<tfoot>
+			
+																																			<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
+									{$gridFooter_class}
+					
+								r-gridrow
+							">
+									{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+									{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$N_Minjusticia_class}	"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Deudor_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Solidario_class}	"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$T_Documento_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Concepto_class}	"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Numero_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$No_Radicado_Origen_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Competencia_class}	"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+									{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Creaci_n_class}	"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Providencia_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+									{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Ejecutoria_class}	"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+									{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Obligacion_class}	"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+									{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Costas_class}	"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+									{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Intereses_class}	"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+									{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$F_Acuerdo_Pago_class}	"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Estado_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+									{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Abogado_class}	"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+	</div>
+<div class="r-below">
+					{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+			</div>		
+{END below-grid_block}
+	</div>
+
+
+
+
+										{$footer}
+				</div>
+			</div>
+			<div class="r-body-shadow">
+			</div>
+		</div>
+	{END body}
+	</body>
+</html>

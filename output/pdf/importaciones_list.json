@@ -1156,6 +1156,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link12}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link13}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1890,6 +1893,11 @@ pdfDocument = {
 			 {BEGIN details_procesosreasignar}
 			{$displayDetailTable_procesosreasignar }
 		{END details_procesosreasignar},
+				
+				
+			 {BEGIN details_procesoscorrespondencias}
+			{$displayDetailTable_procesoscorrespondencias }
+		{END details_procesoscorrespondencias},
 				
 		  ],
   "border": [ true, true, true, true ],

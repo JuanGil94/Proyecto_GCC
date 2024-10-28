@@ -746,9 +746,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3486_1727893910";
+$projectBuildKey = "3550_1729858152";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3486";
+$projectBuildNumber = "3550";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -841,7 +841,6 @@ $tableCaptions["Spanish"]["dbo_Direcciones"] = "Direcciones";
 $tableCaptions["Spanish"]["dbo_Propiedades"] = "Propiedades";
 $tableCaptions["Spanish"]["dbo_Propiedades1"] = "Propiedades1";
 $tableCaptions["Spanish"]["dbo_Propiedades3"] = "Propiedades3";
-$tableCaptions["Spanish"]["dbo_Correspondencias1"] = "Correspondencias1";
 $tableCaptions["Spanish"]["dbo_Bancos"] = "Bancos";
 $tableCaptions["Spanish"]["dbo_Motivos"] = "Motivos";
 $tableCaptions["Spanish"]["dbo_Oficios_Sigobius"] = "Oficios Sigobius";
@@ -961,7 +960,6 @@ $tableCaptions["Spanish"]["dbo_Calificaciones"] = "Calificaciones";
 $tableCaptions["Spanish"]["dbo_Niveles1"] = "Niveles1";
 $tableCaptions["Spanish"]["dbo_Niveles2"] = "Niveles2";
 $tableCaptions["Spanish"]["dbo_Conceptos2"] = "Conceptos2";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_PropiedadesMedidas"] = "Propiedades Medidas";
 $tableCaptions["Spanish"]["Consolidado_por_Conceptos"] = "Consolidado por Conceptos";
 $tableCaptions["Spanish"]["Movimiento_Mensual"] = "Movimiento Mensual";
@@ -972,6 +970,8 @@ $tableCaptions["Spanish"]["Indicadores_Recaudos"] = "Indicadores Recaudos";
 $tableCaptions["Spanish"]["Indicadores_Sin_Actuaciones"] = "Indicadores Sin Actuaciones";
 $tableCaptions["Spanish"]["Test_de_Deterioro__Resumen_"] = "Test de Deterioro (Resumen)";
 $tableCaptions["Spanish"]["dbo_Novedades"] = "Novedades";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
+$tableCaptions["Spanish"]["dbo_ProcesosCorrespondencias"] = "Procesos Correspondencias";
 
 
 $globalEvents = new class_GlobalEvents;

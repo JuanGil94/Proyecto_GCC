@@ -355,6 +355,11 @@ pdfDocument = {
 			{$displayDetailTable_procesos }
 		{END details_procesos},
 				
+				
+			 {BEGIN details_procesoscorrespondencias}
+			{$displayDetailTable_procesoscorrespondencias }
+		{END details_procesoscorrespondencias},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

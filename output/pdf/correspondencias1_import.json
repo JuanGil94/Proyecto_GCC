@@ -106,58 +106,37 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":{$N_Minjusticia_pdfvalue},"hidden":"{$item_hide_import_field}"},
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_import_field18}"},
 				
 				
-			{"text":{$Deudor_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+			{"text":{$CorrespondenciaId_pdfvalue},"hidden":"{$item_hide_import_field}"},
 				
 				
-			{"text":{$Solidario_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+			{"text":{$OficioId_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				
-			{"text":{$T_Documento_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_import_field2}"},
 				
 				
-			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_import_field3}"},
 				
 				
-			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_import_field4}"},
 				
 				
-			{"text":{$N_Proceso_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+			{"text":{$Resolucion_pdfvalue},"hidden":"{$item_hide_import_field5}"},
 				
 				
-			{"text":{$No_Radicado_Origen_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+			{"text":{$Codigo_pdfvalue},"hidden":"{$item_hide_import_field6}"},
 				
 				
-			{"text":{$Competencia_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+			{"text":{$Radicado_pdfvalue},"hidden":"{$item_hide_import_field7}"},
 				
 				
-			{"text":{$F_Creaci_n_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+			{"text":{$UserId_pdfvalue},"hidden":"{$item_hide_import_field8}"},
 				
 				
-			{"text":{$F_Providencia_pdfvalue},"hidden":"{$item_hide_import_field10}"},
-				
-				
-			{"text":{$F_Ejecutoria_pdfvalue},"hidden":"{$item_hide_import_field11}"},
-				
-				
-			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_import_field12}"},
-				
-				
-			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_import_field13}"},
-				
-				
-			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_import_field14}"},
-				
-				
-			{"text":{$F_Acuerdo_Pago_pdfvalue},"hidden":"{$item_hide_import_field15}"},
-				
-				
-			{"text":{$Estado_pdfvalue},"hidden":"{$item_hide_import_field16}"},
-				
-				
-			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_import_field9}"},
 				
 		  ],
   "border": [ false, false, false, false ],

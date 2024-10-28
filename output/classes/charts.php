@@ -518,8 +518,6 @@ class Chart
 			return true;
 		if("dbo.Propiedades" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.Correspondencias" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Bancos" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Motivos" == $this->chrt_array['tables'][0])
@@ -779,6 +777,8 @@ class Chart
 		if("" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Novedades" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.Procesos" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

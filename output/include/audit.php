@@ -688,10 +688,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="dbo.Correspondencias1")
-		{
-			return false;
-		}
 		if($table=="dbo.Bancos")
 		{
 			return false;
@@ -1211,6 +1207,10 @@ class AuditTrailTable
 		if($table=="dbo.Novedades")
 		{
 			return false;
+		}
+		if($table=="dbo.ProcesosCorrespondencias")
+		{
+			return true;
 		}
 	}
 
@@ -1854,10 +1854,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="dbo.Correspondencias1")
-		{
-			return false;
-		}
 		if($table=="dbo.Bancos")
 		{
 			return false;
@@ -2377,6 +2373,10 @@ class AuditTrailFile
 		if($table=="dbo.Novedades")
 		{
 			return false;
+		}
+		if($table=="dbo.ProcesosCorrespondencias")
+		{
+			return true;
 		}
 	}
 

@@ -4684,13 +4684,13 @@ echo "<strong>". $totalProcesos . "</strong>";
 	function event_dbo_Correspondencias1_snippet(&$params)
 	{
 	// Put your code here.
-$str= "<select id='abogaId'; style='width: 320px; display: inline-block; margin: 3px; ' class='form-control'>";
-$str2="<label style='margin: 3px;'>Resolución: </label><input style='margin: 3px;'></input><label style='margin: 3px;'>Radicado: </label><input style='margin: 3px;'></input><label style='margin: 3px;'>Observaciones: </label><input style='margin: 3px;'></input>";
+$str= "<select id='oficioId'; style='width: 320px; display: inline-block; margin: 3px; ' class='form-control'>";
+$str2="<label style='margin: 3px;'>Resolución: </label><input id='resolucion' style='margin: 3px;'></input><label style='margin: 3px;'>Radicado: </label><input id='radicado' style='margin: 3px;'></input><label style='margin: 3px;'>Observaciones: </label><input id='observaciones' style='margin: 3px;'></input>";
 //select values from the database
 $strSQL = "SELECT * FROM Oficios WHERE Activo=1";
 $rs = db_query($strSQL);
 while ($data = db_fetch_array($rs)){
-$str.="<option value='".$data['Oficio']."'>".$data['Oficio']."</option>";
+$str.="<option value='".$data['OficioId']."'>".$data['Oficio']."</option>";
 }
 $str.="</select>";
 echo $str.$str2;

@@ -584,6 +584,13 @@
 					Procesos Reasignar				</label>
 			</div>
 			{END print_details_procesosreasignar}
+														{BEGIN print_details_procesoscorrespondencias}
+			<div>
+				<label for="printDetailsprocesoscorrespondencias{$id}">
+					<input type="checkbox" value="procesoscorrespondencias" id="printDetailsprocesoscorrespondencias{$id}" checked>
+					Procesos Correspondencias				</label>
+			</div>
+			{END print_details_procesoscorrespondencias}
 						</div>
 </div>
 {END print_details}
@@ -947,6 +954,25 @@
 	{END _dtable_link}
 
 
+	 
+		
+		
+	{BEGIN procesoscorrespondencias_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link6" {$item_grid_details_link6} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$procesoscorrespondencias_link_attrs} data-short-details="procesoscorrespondencias"
+		class="{$procesoscorrespondencias_dlink_class}" 
+		title="{$caption dbo_ProcesosCorrespondencias }"			>
+								
+									{BEGIN procesoscorrespondencias_childcount}
+				<span class="details-badge badge procesoscorrespondencias_badge" {$procesoscorrespondencias_childnumber_attr}>
+					{$procesoscorrespondencias_childnumber}				
+				</span>
+				{END procesoscorrespondencias_childcount}
+						</a>
+	</span>
+	{END procesoscorrespondencias_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -988,9 +1014,9 @@
 	>
 
 	 
-							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar,"
-			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar			data-details-	>
+								<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar,,procesoscorrespondencias"
+			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar			data-details-			data-details-procesoscorrespondencias	>
 		<span data-details-inside data-short-table="reporteclasificacioncartera">
 			</span>
 		<span data-details-inside data-short-table="procesossinnotificareport">
@@ -1001,10 +1027,13 @@
 			</span>
 		<span data-details-inside data-short-table="">
 			</span>
+		<span data-details-inside data-short-table="procesoscorrespondencias">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 
