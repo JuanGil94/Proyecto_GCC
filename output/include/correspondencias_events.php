@@ -380,6 +380,7 @@ else{
   //CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
 //la url de la conexion a Sigob
 $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
+//$url = 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
 //Parametro a enviar para consumir el metodo
 $data = array(
     'Despacho' => $despacho,
@@ -517,6 +518,7 @@ $base64 = base64_encode($bytesDocumento);
 //$rutaArchivo2 = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx';
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
+	//CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

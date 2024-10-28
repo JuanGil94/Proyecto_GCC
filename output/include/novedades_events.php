@@ -12,7 +12,6 @@
 	function __construct()
 	{
 	// fill list of events
-		$this->events["BeforeQueryList"]=true;
 
 
 	}
@@ -41,21 +40,7 @@
 		
 		
 		
-				// List page: Before SQL query
-function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
-{
-
-		// Evento "List page: Before SQL query"
-if ($noRecordsFound) {
-    // No mostrar el mensaje "No se hallaron registros"
-    $strWhereClause = "1=0"; // Esto previene que se muestre cualquier consulta.
-}
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-;
-} // function BeforeQueryList
-
+		
 		
 		
 		

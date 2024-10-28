@@ -663,8 +663,16 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      
@@ -926,10 +934,14 @@ pdfDocument = {
 	
 			
 	
-			"text": [
+			"stack": [
 		
-				'',
-	  ],
+				
+			 {BEGIN details_procesoscorrespondencias}
+			{$displayDetailTable_procesoscorrespondencias }
+		{END details_procesoscorrespondencias},
+				
+		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
      

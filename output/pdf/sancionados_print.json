@@ -1022,6 +1022,11 @@ pdfDocument = {
 			{$displayDetailTable_propiedadesmedidas }
 		{END details_propiedadesmedidas},
 				
+				
+			 {BEGIN details_procesoscorrespondencias}
+			{$displayDetailTable_procesoscorrespondencias }
+		{END details_procesoscorrespondencias},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

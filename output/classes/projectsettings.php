@@ -3676,8 +3676,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "propiedades1" ] = "dbo.Propiedades1";
 	$projectEntities[ "dbo.Propiedades3" ] = array( "url" => "propiedades3", "type" => 1 );
 	$projectEntitiesReverse[ "propiedades3" ] = "dbo.Propiedades3";
-	$projectEntities[ "dbo.Correspondencias1" ] = array( "url" => "correspondencias1", "type" => 1 );
-	$projectEntitiesReverse[ "correspondencias1" ] = "dbo.Correspondencias1";
 	$projectEntities[ "dbo.Bancos" ] = array( "url" => "bancos", "type" => 0 );
 	$projectEntitiesReverse[ "bancos" ] = "dbo.Bancos";
 	$projectEntities[ "dbo.Motivos" ] = array( "url" => "motivos", "type" => 0 );
@@ -3938,6 +3936,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "test_de_deterioro__resumen_" ] = "Test de Deterioro (Resumen)";
 	$projectEntities[ "dbo.Novedades" ] = array( "url" => "novedades", "type" => 0 );
 	$projectEntitiesReverse[ "novedades" ] = "dbo.Novedades";
+	$projectEntities[ "dbo.ProcesosCorrespondencias" ] = array( "url" => "procesoscorrespondencias", "type" => 1 );
+	$projectEntitiesReverse[ "procesoscorrespondencias" ] = "dbo.ProcesosCorrespondencias";
 }
 
 function findTable( $table ) {

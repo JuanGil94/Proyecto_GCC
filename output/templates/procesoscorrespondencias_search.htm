@@ -1,0 +1,546 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel dbo_ProcesosCorrespondencias search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Obligacion_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obligacion}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Obligacion{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="Obligacion" data-fieldname="Obligacion" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Obligacion}">
+		{$label dbo_ProcesosCorrespondencias Obligacion }	</label>
+	<div class="r-search-option">
+		{$searchtype_Obligacion}
+	</div>
+	<div class="r-search-field">
+		{$Obligacion_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Obligacion_editcontrol1}
+	</div>
+	
+</div>
+
+{END Obligacion_fieldblock}
+											
+{BEGIN Costas_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Costas}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Costas{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="Costas" data-fieldname="Costas" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Costas}">
+		{$label dbo_ProcesosCorrespondencias Costas }	</label>
+	<div class="r-search-option">
+		{$searchtype_Costas}
+	</div>
+	<div class="r-search-field">
+		{$Costas_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Costas_editcontrol1}
+	</div>
+	
+</div>
+
+{END Costas_fieldblock}
+											
+{BEGIN Intereses_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Intereses}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Intereses{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="Intereses" data-fieldname="Intereses" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Intereses}">
+		{$label dbo_ProcesosCorrespondencias Intereses }	</label>
+	<div class="r-search-option">
+		{$searchtype_Intereses}
+	</div>
+	<div class="r-search-field">
+		{$Intereses_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Intereses_editcontrol1}
+	</div>
+	
+</div>
+
+{END Intereses_fieldblock}
+											
+{BEGIN Numero_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Numero}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Numero{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Numero" data-fieldname="Numero" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Numero}">
+		{$label dbo_ProcesosCorrespondencias Numero }	</label>
+	<div class="r-search-option">
+		{$searchtype_Numero}
+	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Numero_editcontrol1}
+	</div>
+	
+</div>
+
+{END Numero_fieldblock}
+											
+{BEGIN N_Minjusticia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_N_Minjusticia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="N_Minjusticia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="N_Minjusticia" data-fieldname="N.Minjusticia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_N_Minjusticia}">
+		{$label dbo_ProcesosCorrespondencias N_Minjusticia }	</label>
+	<div class="r-search-option">
+		{$searchtype_N_Minjusticia}
+	</div>
+	<div class="r-search-field">
+		{$N_Minjusticia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$N_Minjusticia_editcontrol1}
+	</div>
+	
+</div>
+
+{END N_Minjusticia_fieldblock}
+											
+{BEGIN Deudor_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Deudor}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Deudor{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Deudor" data-fieldname="Deudor" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Deudor}">
+		{$label dbo_ProcesosCorrespondencias Deudor }	</label>
+	<div class="r-search-option">
+		{$searchtype_Deudor}
+	</div>
+	<div class="r-search-field">
+		{$Deudor_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Deudor_editcontrol1}
+	</div>
+	
+</div>
+
+{END Deudor_fieldblock}
+											
+{BEGIN Solidario_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Solidario}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Solidario{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="Solidario" data-fieldname="Solidario" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Solidario}">
+		{$label dbo_ProcesosCorrespondencias Solidario }	</label>
+	<div class="r-search-option">
+		{$searchtype_Solidario}
+	</div>
+	<div class="r-search-field">
+		{$Solidario_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Solidario_editcontrol1}
+	</div>
+	
+</div>
+
+{END Solidario_fieldblock}
+											
+{BEGIN T_Documento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_T_Documento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="T_Documento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="T_Documento" data-fieldname="T.Documento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_T_Documento}">
+		{$label dbo_ProcesosCorrespondencias T_Documento }	</label>
+	<div class="r-search-option">
+		{$searchtype_T_Documento}
+	</div>
+	<div class="r-search-field">
+		{$T_Documento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$T_Documento_editcontrol1}
+	</div>
+	
+</div>
+
+{END T_Documento_fieldblock}
+											
+{BEGIN Documento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Documento}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Documento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="Documento" data-fieldname="Documento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Documento}">
+		{$label dbo_ProcesosCorrespondencias Documento }	</label>
+	<div class="r-search-option">
+		{$searchtype_Documento}
+	</div>
+	<div class="r-search-field">
+		{$Documento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Documento_editcontrol1}
+	</div>
+	
+</div>
+
+{END Documento_fieldblock}
+											
+{BEGIN Concepto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Concepto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Concepto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Concepto" data-fieldname="Concepto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Concepto}">
+		{$label dbo_ProcesosCorrespondencias Concepto }	</label>
+	<div class="r-search-option">
+		{$searchtype_Concepto}
+	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Concepto_editcontrol1}
+	</div>
+	
+</div>
+
+{END Concepto_fieldblock}
+											
+{BEGIN No_Radicado_Origen_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_No_Radicado_Origen}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="No_Radicado_Origen{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="No_Radicado_Origen" data-fieldname="No.Radicado Origen" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_No_Radicado_Origen}">
+		{$label dbo_ProcesosCorrespondencias No_Radicado_Origen }	</label>
+	<div class="r-search-option">
+		{$searchtype_No_Radicado_Origen}
+	</div>
+	<div class="r-search-field">
+		{$No_Radicado_Origen_editcontrol}	</div>
+	<div class="r-search-field">
+		{$No_Radicado_Origen_editcontrol1}
+	</div>
+	
+</div>
+
+{END No_Radicado_Origen_fieldblock}
+											
+{BEGIN Competencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Competencia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Competencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="Competencia" data-fieldname="Competencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Competencia}">
+		{$label dbo_ProcesosCorrespondencias Competencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_Competencia}
+	</div>
+	<div class="r-search-field">
+		{$Competencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Competencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END Competencia_fieldblock}
+											
+{BEGIN F_Creaci_n_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_F_Creaci_n}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="F_Creaci_n{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="F_Creaci_n" data-fieldname="F.Creación" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_F_Creaci_n}">
+		{$label dbo_ProcesosCorrespondencias F_Creaci_n }	</label>
+	<div class="r-search-option">
+		{$searchtype_F_Creaci_n}
+	</div>
+	<div class="r-search-field">
+		{$F_Creaci_n_editcontrol}	</div>
+	<div class="r-search-field">
+		{$F_Creaci_n_editcontrol1}
+	</div>
+	
+</div>
+
+{END F_Creaci_n_fieldblock}
+											
+{BEGIN F_Providencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_F_Providencia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="F_Providencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="F_Providencia" data-fieldname="F.Providencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_F_Providencia}">
+		{$label dbo_ProcesosCorrespondencias F_Providencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_F_Providencia}
+	</div>
+	<div class="r-search-field">
+		{$F_Providencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$F_Providencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END F_Providencia_fieldblock}
+											
+{BEGIN F_Ejecutoria_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_F_Ejecutoria}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="F_Ejecutoria{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="F_Ejecutoria" data-fieldname="F.Ejecutoria" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_F_Ejecutoria}">
+		{$label dbo_ProcesosCorrespondencias F_Ejecutoria }	</label>
+	<div class="r-search-option">
+		{$searchtype_F_Ejecutoria}
+	</div>
+	<div class="r-search-field">
+		{$F_Ejecutoria_editcontrol}	</div>
+	<div class="r-search-field">
+		{$F_Ejecutoria_editcontrol1}
+	</div>
+	
+</div>
+
+{END F_Ejecutoria_fieldblock}
+											
+{BEGIN F_Acuerdo_Pago_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_F_Acuerdo_Pago}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="F_Acuerdo_Pago{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="F_Acuerdo_Pago" data-fieldname="F.Acuerdo Pago" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_F_Acuerdo_Pago}">
+		{$label dbo_ProcesosCorrespondencias F_Acuerdo_Pago }	</label>
+	<div class="r-search-option">
+		{$searchtype_F_Acuerdo_Pago}
+	</div>
+	<div class="r-search-field">
+		{$F_Acuerdo_Pago_editcontrol}	</div>
+	<div class="r-search-field">
+		{$F_Acuerdo_Pago_editcontrol1}
+	</div>
+	
+</div>
+
+{END F_Acuerdo_Pago_fieldblock}
+											
+{BEGIN Estado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Estado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Estado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="Estado" data-fieldname="Estado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Estado}">
+		{$label dbo_ProcesosCorrespondencias Estado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Estado}
+	</div>
+	<div class="r-search-field">
+		{$Estado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Estado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Estado_fieldblock}
+											
+{BEGIN Abogado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Abogado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Abogado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="Abogado" data-fieldname="Abogado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Abogado}">
+		{$label dbo_ProcesosCorrespondencias Abogado }	</label>
+	<div class="r-search-option">
+		{$searchtype_Abogado}
+	</div>
+	<div class="r-search-field">
+		{$Abogado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Abogado_editcontrol1}
+	</div>
+	
+</div>
+
+{END Abogado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reiniciar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancelar			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

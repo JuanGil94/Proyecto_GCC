@@ -85,7 +85,6 @@ $nonAdminTablesArr[] = "dbo.Direcciones";
 $nonAdminTablesArr[] = "dbo.Propiedades";
 $nonAdminTablesArr[] = "dbo.Propiedades1";
 $nonAdminTablesArr[] = "dbo.Propiedades3";
-$nonAdminTablesArr[] = "dbo.Correspondencias1";
 $nonAdminTablesArr[] = "dbo.Bancos";
 $nonAdminTablesArr[] = "dbo.Motivos";
 $nonAdminTablesArr[] = "dbo.Oficios Sigobius";
@@ -215,6 +214,7 @@ $nonAdminTablesArr[] = "Indicadores Recaudos";
 $nonAdminTablesArr[] = "Indicadores Sin Actuaciones";
 $nonAdminTablesArr[] = "Test de Deterioro (Resumen)";
 $nonAdminTablesArr[] = "dbo.Novedades";
+$nonAdminTablesArr[] = "dbo.ProcesosCorrespondencias";
 
 $ug_connection = $cman->getForUserGroups();
 

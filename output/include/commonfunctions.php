@@ -343,8 +343,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("propiedades3" == $shortTName )
 		return true;
-	if ("correspondencias1" == $shortTName )
-		return true;
 	if ("bancos" == $shortTName )
 		return true;
 	if ("motivos" == $shortTName )
@@ -604,6 +602,8 @@ function checkTableName($shortTName )
 	if ("test_de_deterioro__resumen_" == $shortTName )
 		return true;
 	if ("novedades" == $shortTName )
+		return true;
+	if ("procesoscorrespondencias" == $shortTName )
 		return true;
 	return false;
 }
@@ -1284,15 +1284,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Propiedades3";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.Correspondencias1");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.Correspondencias1";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -2464,6 +2455,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Novedades";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.ProcesosCorrespondencias");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.ProcesosCorrespondencias";
+	}
 	return $arr;
 }
 
@@ -2543,7 +2543,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Propiedades";
 	$arr[]="dbo.Propiedades1";
 	$arr[]="dbo.Propiedades3";
-	$arr[]="dbo.Correspondencias1";
 	$arr[]="dbo.Bancos";
 	$arr[]="dbo.Motivos";
 	$arr[]="dbo.Oficios Sigobius";
@@ -2674,6 +2673,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Indicadores Sin Actuaciones";
 	$arr[]="Test de Deterioro (Resumen)";
 	$arr[]="dbo.Novedades";
+	$arr[]="dbo.ProcesosCorrespondencias";
 	return $arr;
 }
 
@@ -3663,11 +3663,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="dbo.Correspondencias1" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
 	if( $table=="dbo.Bancos" )
 	{
 //	default permissions
@@ -4314,6 +4309,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Novedades" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.ProcesosCorrespondencias" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
