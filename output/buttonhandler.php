@@ -1502,6 +1502,30 @@ $resolucion=$params['resolucion'];
 $radicado=$params['radicado'];
 $observaciones=$params['observaciones'];
 $contData=0;
+$contData1=0;
+while ($contData1<count($params["keys"])){
+global $pageObject;
+//echo "Valor de i al ingresar".$contData;
+//$data = $pageObject->getMasterRecord();
+$numProceso=$params["keys"][$contData1]["Numero"];
+//echo "Numero de Procesos: ".$numProceso;
+$response=DB::Query("SELECT * FROM Procesos WHERE Numero='".$numProceso."'");
+		while( $date = $response->fetchAssoc() )
+				{
+					$procesoId=$date["ProcesoId"];
+					$abogadoId=$date["AbogadoId"];
+				}
+$rs2=DB::Exec("INSERT INTO CorrespondenciaMasiva(fecha,proceso,correspondencia,usuario,enviado,observaciones) VALUES (GETDATE(),".$procesoId.",".$oficioId.",'".$userId."',0,'".$observaciones."')");
+				if ($rs2) {
+					 //echo "La consulta se realizó correctamente.";
+				} 
+				else {
+					 // Hubo un error en la ejecución de la consulta
+					 echo "Error al ejecutar el insertoi into a correspondenciasMasivas: " . DB::LastError();
+					 exit();
+				}
+$contData1++;
+}
 //echo "Numero de Registros:".count($params["keys"]);
 //while ( $data = $button->getNextSelectedRecord() ) {
 while ($contData<count($params["keys"])){//SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS Y VARIABLES PARA TRAMITAR LAS VALIDACIONES, INSERT Y UPDATE
@@ -1766,6 +1790,15 @@ if ($flagSigob==0){
 				if ($response==true){
 					$rs2=DB::Exec("INSERT INTO Correspondencias(ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicado."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
 				if ($rs2) {
+						$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1 WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
+						if ($rs2) {
+							 //echo "La consulta se realizó correctamente.";
+						} 
+						else {
+							 // Hubo un error en la ejecución de la consulta
+							 echo "Error al ejecutar el Update en enviado Oficio Sigobius: " . DB::LastError();
+							 exit();
+						}
 					 //echo "La consulta se realizó correctamente.";
 				} 
 				else {
@@ -1956,6 +1989,15 @@ $xml = new SimpleXMLElement($response);
 					//echo '<script>alert("Response Oficio->Process true")</script>';
 					$rs2=DB::Exec("INSERT INTO Correspondencias (ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicadoF."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
 				if ($rs2) {
+								$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1 WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
+						if ($rs2) {
+							 //echo "La consulta se realizó correctamente.";
+						} 
+						else {
+							 // Hubo un error en la ejecución de la consulta
+							 echo "Error al ejecutar el Update en enviado Oficio Sigobius: " . DB::LastError();
+							 exit();
+						}
 					 //echo "La consulta se realizó correctamente.".$rs2;
 				} 
 				else {

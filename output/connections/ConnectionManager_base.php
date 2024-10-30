@@ -444,6 +444,7 @@ class ConnectionManager_Base
 		$connectionsIds["Test de Deterioro (Resumen)"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Novedades"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ProcesosCorrespondencias"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.CorrespondenciaMasiva"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

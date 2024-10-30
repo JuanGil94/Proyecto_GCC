@@ -3043,6 +3043,27 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.UserProfile"]["novedades.UserId"] = array();
 		}
 		$lookupTableLinks["dbo.UserProfile"]["novedades.UserId"]["edit"] = array("table" => "dbo.Novedades", "field" => "UserId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Procesos"] ) ) {
+			$lookupTableLinks["dbo.Procesos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Procesos"]["correspondenciamasiva.proceso"] )) {
+			$lookupTableLinks["dbo.Procesos"]["correspondenciamasiva.proceso"] = array();
+		}
+		$lookupTableLinks["dbo.Procesos"]["correspondenciamasiva.proceso"]["edit"] = array("table" => "dbo.CorrespondenciaMasiva", "field" => "proceso", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Oficios"] ) ) {
+			$lookupTableLinks["dbo.Oficios"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Oficios"]["correspondenciamasiva.correspondencia"] )) {
+			$lookupTableLinks["dbo.Oficios"]["correspondenciamasiva.correspondencia"] = array();
+		}
+		$lookupTableLinks["dbo.Oficios"]["correspondenciamasiva.correspondencia"]["edit"] = array("table" => "dbo.CorrespondenciaMasiva", "field" => "correspondencia", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["correspondenciamasiva.usuario"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["correspondenciamasiva.usuario"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["correspondenciamasiva.usuario"]["edit"] = array("table" => "dbo.CorrespondenciaMasiva", "field" => "usuario", "page" => "edit");
 }
 
 ?>

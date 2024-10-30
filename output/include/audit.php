@@ -1212,6 +1212,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="dbo.CorrespondenciaMasiva")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2377,6 +2381,10 @@ class AuditTrailFile
 		if($table=="dbo.ProcesosCorrespondencias")
 		{
 			return true;
+		}
+		if($table=="dbo.CorrespondenciaMasiva")
+		{
+			return false;
 		}
 	}
 
