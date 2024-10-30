@@ -2767,6 +2767,7 @@ $tdataabogados[".sqlquery"] = $queryData_abogados;
 
 
 
-$tdataabogados[".hasEvents"] = false;
+include_once(getabspath("include/abogados_events.php"));
+$tdataabogados[".hasEvents"] = true;
 
 ?>

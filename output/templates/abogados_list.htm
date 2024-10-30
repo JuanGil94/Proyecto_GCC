@@ -1489,157 +1489,12 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="abogados_list"		data-control-cell
 	
 	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN procesos_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesos_link_attrs} data-short-details="procesos"
-		class="{$procesos_dlink_class}" 
-		title="{$caption dbo_Procesos }"			>
-								
-									{BEGIN procesos_childcount}
-				<span class="details-badge badge procesos_badge" {$procesos_childnumber_attr}>
-					{$procesos_childnumber}				
-				</span>
-				{END procesos_childcount}
-						</a>
-	</span>
-	{END procesos_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN reporteclasificacioncartera_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$reporteclasificacioncartera_link_attrs} data-short-details="reporteclasificacioncartera"
-		class="{$reporteclasificacioncartera_dlink_class}" 
-		title="{$caption dbo_ReporteClasificacionCartera }"			>
-								
-									{BEGIN reporteclasificacioncartera_childcount}
-				<span class="details-badge badge reporteclasificacioncartera_badge" {$reporteclasificacioncartera_childnumber_attr}>
-					{$reporteclasificacioncartera_childnumber}				
-				</span>
-				{END reporteclasificacioncartera_childcount}
-						</a>
-	</span>
-	{END reporteclasificacioncartera_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesossinnotificareport_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesossinnotificareport_link_attrs} data-short-details="procesossinnotificareport"
-		class="{$procesossinnotificareport_dlink_class}" 
-		title="{$caption dbo_ProcesosSinNotificaReport }"			>
-								
-									{BEGIN procesossinnotificareport_childcount}
-				<span class="details-badge badge procesossinnotificareport_badge" {$procesossinnotificareport_childnumber_attr}>
-					{$procesossinnotificareport_childnumber}				
-				</span>
-				{END procesossinnotificareport_childcount}
-						</a>
-	</span>
-	{END procesossinnotificareport_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN reportecorporaci_nespecialidad_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$reportecorporaci_nespecialidad_link_attrs} data-short-details="reportecorporaci_nespecialidad"
-		class="{$reportecorporaci_nespecialidad_dlink_class}" 
-		title="{$caption dbo_ReporteCorporaci_nEspecialidad }"			>
-								
-									{BEGIN reportecorporaci_nespecialidad_childcount}
-				<span class="details-badge badge reportecorporaci_nespecialidad_badge" {$reportecorporaci_nespecialidad_childnumber_attr}>
-					{$reportecorporaci_nespecialidad_childnumber}				
-				</span>
-				{END reportecorporaci_nespecialidad_childcount}
-						</a>
-	</span>
-	{END reportecorporaci_nespecialidad_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesosreasignar_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link4" {$item_grid_details_link4} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesosreasignar_link_attrs} data-short-details="procesosreasignar"
-		class="{$procesosreasignar_dlink_class}" 
-		title="{$caption dbo_ProcesosReasignar }"			>
-								
-									{BEGIN procesosreasignar_childcount}
-				<span class="details-badge badge procesosreasignar_badge" {$procesosreasignar_childnumber_attr}>
-					{$procesosreasignar_childnumber}				
-				</span>
-				{END procesosreasignar_childcount}
-						</a>
-	</span>
-	{END procesosreasignar_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN _dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link5" {$item_grid_details_link5} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$_link_attrs} data-short-details=""
-		class="{$_dlink_class}" 
-		title="{$caption dbo_Procesos1 }"			>
-								
-									{BEGIN _childcount}
-				<span class="details-badge badge _badge" {$_childnumber_attr}>
-					{$_childnumber}				
-				</span>
-				{END _childcount}
-						</a>
-	</span>
-	{END _dtable_link}
-
-
-	 
-		
-		
-	{BEGIN procesoscorrespondencias_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link6" {$item_grid_details_link6} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$procesoscorrespondencias_link_attrs} data-short-details="procesoscorrespondencias"
-		class="{$procesoscorrespondencias_dlink_class}" 
-		title="{$caption dbo_ProcesosCorrespondencias }"			>
-								
-									{BEGIN procesoscorrespondencias_childcount}
-				<span class="details-badge badge procesoscorrespondencias_badge" {$procesoscorrespondencias_childnumber_attr}>
-					{$procesoscorrespondencias_childnumber}				
-				</span>
-				{END procesoscorrespondencias_childcount}
-						</a>
-	</span>
-	{END procesoscorrespondencias_dtable_link}
-
 
 	
 	</td>
@@ -1927,37 +1782,13 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
-	 
-								<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="reporteclasificacioncartera,procesossinnotificareport,reportecorporaci_nespecialidad,procesosreasignar,,procesoscorrespondencias"
-			data-details-reporteclasificacioncartera			data-details-procesossinnotificareport			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar			data-details-			data-details-procesoscorrespondencias	>
-		<span data-details-inside data-short-table="reporteclasificacioncartera">
-			</span>
-		<span data-details-inside data-short-table="procesossinnotificareport">
-			</span>
-		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
-			</span>
-		<span data-details-inside data-short-table="procesosreasignar">
-			</span>
-		<span data-details-inside data-short-table="">
-			</span>
-		<span data-details-inside data-short-table="procesoscorrespondencias">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	 
-			 
-			 
-			 
-			 
-			
+	
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>
