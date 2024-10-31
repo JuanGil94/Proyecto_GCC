@@ -247,6 +247,28 @@
 </div>
 
 {END observaciones_fieldblock}
+											
+{BEGIN radicado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_radicado}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="radicado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="radicado" data-fieldname="radicado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_radicado}">
+		{$label dbo_CorrespondenciaMasiva radicado }	</label>
+	<div class="r-search-option">
+		{$searchtype_radicado}
+	</div>
+	<div class="r-search-field">
+		{$radicado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$radicado_editcontrol1}
+	</div>
+	
+</div>
+
+{END radicado_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

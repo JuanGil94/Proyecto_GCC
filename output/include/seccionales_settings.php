@@ -3829,6 +3829,36 @@ $detailsTablesData["dbo.Seccionales"] = array();
 				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
+//	dbo.UsuariosSeccionales
+	
+	
+
+		$dIndex = 10;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuariosSeccionales";
+		$detailsParam["dOriginalTable"] = "dbo.UsuariosSeccionales";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usuariosseccionales";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuariosSeccionales");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Seccionales"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"][]="SeccionalId";
+
+				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
 //endif
 
 // tables which are master tables for current table (detail)

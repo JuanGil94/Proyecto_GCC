@@ -186,6 +186,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_CorrespondenciaMasiva observaciones }","bold":true},{"text":{$observaciones_pdfvalue}}],"margin":[0,0,0,15]},
 				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_CorrespondenciaMasiva radicado }","bold":true},{"text":{$radicado_pdfvalue}}],"margin":[0,0,0,15]},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

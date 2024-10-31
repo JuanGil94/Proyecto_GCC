@@ -85,6 +85,9 @@ pdfDocument = {
 										{BEGIN col_grid_6}
 					"%",
 					{END col_grid_6}
+										{BEGIN col_grid_7}
+					"%",
+					{END col_grid_7}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -232,7 +235,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva id }","hidden":"{$item_hide_simple_grid_field7}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva id }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -261,7 +264,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva fecha }","hidden":"{$item_hide_simple_grid_field8}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva fecha }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -290,7 +293,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva proceso }","hidden":"{$item_hide_simple_grid_field9}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva proceso }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -319,7 +322,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva correspondencia }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva correspondencia }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -348,7 +351,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva usuario }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva usuario }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -377,7 +380,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva enviado }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva enviado }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -406,7 +409,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_CorrespondenciaMasiva observaciones }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva observaciones }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -416,6 +419,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'radicado',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva radicado }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$radicado_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field7}
 											],
 				{END row_grid_0}
 		
@@ -628,6 +660,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'radicado',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$radicado_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$radicado_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field7}
 											],
 				{END row_grid_1}
 		
@@ -819,6 +880,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field6}
+																							{BEGIN cellblock_grid_footcell_field7}
+{
+	cellId: 'footcell_field7',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field7}
 											],
 				{END row_grid_2}
 		

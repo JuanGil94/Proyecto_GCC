@@ -1515,7 +1515,7 @@ $response=DB::Query("SELECT * FROM Procesos WHERE Numero='".$numProceso."'");
 					$procesoId=$date["ProcesoId"];
 					$abogadoId=$date["AbogadoId"];
 				}
-$rs2=DB::Exec("INSERT INTO CorrespondenciaMasiva(fecha,proceso,correspondencia,usuario,enviado,observaciones) VALUES (GETDATE(),".$procesoId.",".$oficioId.",'".$userId."',0,'".$observaciones."')");
+$rs2=DB::Exec("INSERT INTO CorrespondenciaMasiva(fecha,proceso,correspondencia,usuario,enviado,observaciones,radicado) VALUES (GETDATE(),".$procesoId.",".$oficioId.",'".$userId."',0,'".$observaciones."','')");
 				if ($rs2) {
 					 //echo "La consulta se realizó correctamente.";
 				} 
@@ -1580,7 +1580,7 @@ $response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as 
 					$motivoId=$date["MotivoId"];
 					$terminacionPago=$date["TermPago"];
 				}
-$consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=(SELECT AbogadoId from Procesos where ProcesoId=".$procesoId.")");
+$consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=".$abogadoActual);
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
             while($date=$consulta->fetchAssoc()){
             $despacho=$date["Despacho"];
@@ -1790,7 +1790,7 @@ if ($flagSigob==0){
 				if ($response==true){
 					$rs2=DB::Exec("INSERT INTO Correspondencias(ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicado."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
 				if ($rs2) {
-						$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1 WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
+						$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1,radicado='".$radicado."' WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
 						if ($rs2) {
 							 //echo "La consulta se realizó correctamente.";
 						} 
@@ -1817,7 +1817,6 @@ if ($flagSigob==0){
 else{
 //echo "Abogado Actual: ".$abogadoActual.", Abogado de Proceso:".$abogadoId;
 //exit();
-if ($abogadoActual==$abogadoId){
   //CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
 //la url de la conexion a Sigob
 $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
@@ -1876,10 +1875,12 @@ if ($noDirecciones>1){
   //echo "Numero de direcciones: ".$noDirecciones.var_dump($noDirecciones);
 $noDirecciones=$noDirecciones-1;//porque las plantillas son XXX_0
 //$docxFiles = array();
+$docxFiles=[];
 for ($i=0;$i<=$noDirecciones;$i++){
 	$docxFiles []='templates_GCC/Archivo_'.$procesoId.'_'.$oficioId.'_'.strval($i).'.docx';
 	//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_'.strval($i).'.docx';
 }
+//print_r($docxFiles);
 //$docxFiles = array('templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx','templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx');
 $salida = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx';
 mergeDocx($docxFiles, $salida);
@@ -1989,7 +1990,7 @@ $xml = new SimpleXMLElement($response);
 					//echo '<script>alert("Response Oficio->Process true")</script>';
 					$rs2=DB::Exec("INSERT INTO Correspondencias (ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicadoF."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
 				if ($rs2) {
-								$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1 WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
+								$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1,radicado='".$radicadoF."' WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
 						if ($rs2) {
 							 //echo "La consulta se realizó correctamente.";
 						} 
@@ -2020,10 +2021,6 @@ $xml = new SimpleXMLElement($response);
         return false;
     }
 }
-}
-}else{
-	echo "<script>alert('El Despacho resgistrador no esta autorizado a indicar como firmante al despacho firmante')</script>";
-	return false;
 }
 /*
 else{
@@ -2451,9 +2448,56 @@ $consulta=DB::Query("SELECT * FROM Oficios where OficioId=".$IdValue);
 					$archivo=$date["Archivo"];
         }
 if (strpos($archivo, '<') === 0) {
+	if (isset($params["radicado"]) && !empty($params["radicado"])) {
+    // La variable está llena
+		    ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - INICIO
+    // URL del servicio web ASMX
+    $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerDocumentoCorrespondencia';
+		//$url = 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerDocumentoCorrespondencia';
+    // Datos que deseas enviar en la solicitud POST
+    $data = array(
+        'Codigo' => $params["radicado"],
+        'ConvertirAPDF' => 'TRUE',
+        //'Despacho' => 'DE640',
+        //'Codificador' => '4883',
+        'Contrasena' => '448B8890'
+        // ... Agrega más parámetros según sea necesario
+    );
+
+    // Convertir los datos a formato de cadena
+    $postData = http_build_query($data);
+
+    // Configurar opciones de cURL
+    $options = array(
+        CURLOPT_URL            => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $postData,
+    );
+
+    // Inicializar cURL y configurar opciones
+    $curl = curl_init();
+    curl_setopt_array($curl, $options);
+
+
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+    // Realizar la solicitud cURL y obtener la respuesta
+    $response = curl_exec($curl);
+    // Verificar errores
+    if (curl_errno($curl)) {
+        echo 'Error al realizar la solicitud: ' . curl_error($curl);
+    }
+		$result["total"]=$response;
+    // Cerrar la sesión cURL
+    curl_close($curl);
+}
+else{
     $objeto= new plantillas($params["procesoId"],$params["oficioId"],'','','');
 		$archivoFinal=$objeto->html($archivo);
 	  $result["resultado"]=$archivoFinal;
+}
 }
 else{
     ///////METODO DE CONSUMO DE LA API FUNCIONNADO OK POR LA EXTENSION CURL - INICIO

@@ -195,10 +195,12 @@ $tdatafechas[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY FechaId DESC";
 $tdatafechas[".strOrderBy"] = $tstrOrderBy;
 
 $tdatafechas[".orderindexes"] = array();
+	$tdatafechas[".orderindexes"][] = array(1, (0 ? "ASC" : "DESC"), "FechaId");
+
 
 
 $tdatafechas[".sqlHead"] = "SELECT FechaId,  	ProcesoId,  	ActuacionId,  	Fecha,  	Resolucion,  	Observaciones";
@@ -1233,7 +1235,7 @@ $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "FechaId,  	ProcesoId,  	ActuacionId,  	Fecha,  	Resolucion,  	Observaciones";
 $proto0["m_strFrom"] = "FROM dbo.Fechas";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY FechaId DESC";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -1394,6 +1396,19 @@ $obj = new SQLFromListItem($proto18);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto22=array();
+						$obj = new SQLField(array(
+	"m_strName" => "FechaId",
+	"m_strTable" => "dbo.Fechas",
+	"m_srcTableName" => "dbo.Fechas"
+));
+
+$proto22["m_column"]=$obj;
+$proto22["m_bAsc"] = 0;
+$proto22["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto22);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Fechas";		
 $obj = new SQLQuery($proto0);
 
