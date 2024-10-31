@@ -126,6 +126,9 @@ pdfDocument = {
 				
 			{"text":{$observaciones_pdfvalue},"hidden":"{$item_hide_export_field6}"},
 				
+				
+			{"text":{$radicado_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

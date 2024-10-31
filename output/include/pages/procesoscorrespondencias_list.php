@@ -1185,12 +1185,7 @@ array( 'cell' => 'footcell_field17' ) ) ) ),
 'inlineAdd' => false,
 'inlineEdit' => false,
 'clickSort' => true,
-'customCSS' => '/* Put  your custom CSS code here */
-
-:host {
-  background-color: #e0f7fa;
-  white-space: nowrap;
-}
+'customCSS' => '
 ' ),
 'search_panel_field11' => array( 'field' => 'Obligacion',
 'type' => 'search_panel_field',
@@ -1270,10 +1265,6 @@ array( 'cell' => 'footcell_field17' ) ) ) ),
 'type' => 'grid_field',
 'customCSS' => '/* Put  your custom CSS code here */
 
-:host {
-  background-color: #e0f7fa;
-  white-space: nowrap;
-}
 ',
 'inlineAdd' => false,
 'inlineEdit' => false ),

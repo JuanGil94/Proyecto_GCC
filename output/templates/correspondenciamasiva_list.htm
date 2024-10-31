@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_correspondencia}</span>
 						</div>
 		{END searchCtrlBlock_correspondencia}
+																{BEGIN searchCtrlBlock_radicado}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_radicado}" {$filterRow_attrs_radicado}>
+			<label>{$label dbo_CorrespondenciaMasiva radicado }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_radicado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_radicado}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_radicado}</span>
+						</div>
+		{END searchCtrlBlock_radicado}
 																{BEGIN searchCtrlBlock_observaciones}
 
 
@@ -606,6 +619,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="enviado"]:before {
 		content: "{$label dbo_CorrespondenciaMasiva enviado}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="radicado"]:before {
+		content: "{$label dbo_CorrespondenciaMasiva radicado}";
+	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="observaciones"]:before {
 		content: "{$label dbo_CorrespondenciaMasiva observaciones}";
 	}
@@ -802,11 +818,34 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$radicado_class}	"
+
+			data-field="radicado"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN radicado_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="radicado" data-fieldname="radicado">
+	{$label dbo_CorrespondenciaMasiva radicado }	</span>
+{END radicado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$observaciones_class}	"
 
 			data-field="observaciones"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -820,7 +859,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -991,11 +1030,32 @@
 	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
+		 r-ori-vert		 {$radicado_class}	"
+
+			data-field="radicado"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN radicado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="radicado" data-fieldname="radicado" data-default-width >
+{$radicado_value}
+</span>
+{END radicado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
 		 r-ori-vert		 {$observaciones_class}	"
 
 			data-field="observaciones"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1005,7 +1065,7 @@
 </span>
 {END observaciones_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field7}
 							</tr>
 										
 											{END grid_row}
@@ -1143,7 +1203,7 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$observaciones_class}	"
+		 r-ori-vert		 {$radicado_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="correspondenciamasiva_list"	
@@ -1152,6 +1212,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$observaciones_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="correspondenciamasiva_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

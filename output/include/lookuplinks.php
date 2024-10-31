@@ -3064,6 +3064,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.UserProfile"]["correspondenciamasiva.usuario"] = array();
 		}
 		$lookupTableLinks["dbo.UserProfile"]["correspondenciamasiva.usuario"]["edit"] = array("table" => "dbo.CorrespondenciaMasiva", "field" => "usuario", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["usuariosseccionales.UserId"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["usuariosseccionales.UserId"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["usuariosseccionales.UserId"]["edit"] = array("table" => "dbo.UsuariosSeccionales", "field" => "UserId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["usuariosseccionales.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["usuariosseccionales.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["usuariosseccionales.SeccionalId"]["edit"] = array("table" => "dbo.UsuariosSeccionales", "field" => "SeccionalId", "page" => "edit");
 }
 
 ?>

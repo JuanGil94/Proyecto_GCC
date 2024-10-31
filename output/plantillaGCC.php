@@ -450,6 +450,7 @@ class plantillas extends diccionario{
         $this->obligacionLetras=$obligacionLetras;
         $this->obligacionTotalLetras=$obligacionTotalLetras;
         $this->sigobius=$sigobius;
+        //echo $sigobius;
     }
     public function funcGlobal(){
         if ($this->oficioId==4566){
@@ -458,6 +459,7 @@ class plantillas extends diccionario{
         else {
         $info=parent::process($this->procesoId,$this->oficioId,$this->sigobius,$this->obligacionLetras,$this->obligacionTotalLetras);
         $direcciones=parent::direcciones();
+        //echo "Valor del sigob a insertar en plantillas: ".$info["Sigobius"];
         //echo "Valor del Oficio: ".$this->oficioId;
         $templatePath = 'templates_GCC/Plantilla_'.$this->oficioId.'.docx';
         // Crear un objeto TemplateProcessor
@@ -490,6 +492,7 @@ class plantillas extends diccionario{
                     //$resultados = $matches[1];
                     //$resultadoF=$resultados[0].$resultados[1].$resultados[2].$resultados[3];
                 }
+               // echo "Valor de Sigob antes de crear el archivo".$info["Sigobius"];
                 $templateProcessor->saveAs('templates_GCC/Archivo_'.$this->procesoId.'_'.$this->oficioId.'_'.$key.'.docx');
             }
         }

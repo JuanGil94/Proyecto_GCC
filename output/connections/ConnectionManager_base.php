@@ -445,6 +445,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Novedades"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.ProcesosCorrespondencias"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.CorrespondenciaMasiva"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.UsuariosSeccionales"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

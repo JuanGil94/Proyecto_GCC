@@ -133,6 +133,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_tipoTasas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Tramites;
 	var $tblGCC_at_S00001_CCAD01_dbo_UserProfile;
+	var $tblGCC_at_S00001_CCAD01_dbo_UsuariosSeccionales;
 	var $tblGCC_at_S00001_CCAD01_dbo_usugcc__audit;
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuGCC__users;
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuGCC_uggroups;
@@ -235,6 +236,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "tipoTasas", "varname" => "GCC_at_S00001_CCAD01_dbo_tipoTasas", "altvarname" => "tipoTasas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Tramites", "varname" => "GCC_at_S00001_CCAD01_dbo_Tramites", "altvarname" => "Tramites", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UserProfile", "varname" => "GCC_at_S00001_CCAD01_dbo_UserProfile", "altvarname" => "UserProfile", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "UsuariosSeccionales", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuariosSeccionales", "altvarname" => "UsuariosSeccionales", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "usugcc-_audit", "varname" => "GCC_at_S00001_CCAD01_dbo_usugcc__audit", "altvarname" => "usugcc__audit", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UsuGCC-_users", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuGCC__users", "altvarname" => "UsuGCC__users", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UsuGCC-uggroups", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuGCC_uggroups", "altvarname" => "UsuGCC_uggroups", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");

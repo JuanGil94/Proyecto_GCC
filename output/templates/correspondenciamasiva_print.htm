@@ -97,7 +97,7 @@
 	 
 		{BEGIN id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id" data-fieldname="id">
 	{$label dbo_CorrespondenciaMasiva id }	</span>
 {END id_fieldheadercolumn}
 
@@ -120,7 +120,7 @@
 	 
 		{BEGIN fecha_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fecha" data-fieldname="fecha">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fecha" data-fieldname="fecha">
 	{$label dbo_CorrespondenciaMasiva fecha }	</span>
 {END fecha_fieldheadercolumn}
 
@@ -143,7 +143,7 @@
 	 
 		{BEGIN proceso_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="proceso" data-fieldname="proceso">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="proceso" data-fieldname="proceso">
 	{$label dbo_CorrespondenciaMasiva proceso }	</span>
 {END proceso_fieldheadercolumn}
 
@@ -166,7 +166,7 @@
 	 
 		{BEGIN correspondencia_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="correspondencia" data-fieldname="correspondencia">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="correspondencia" data-fieldname="correspondencia">
 	{$label dbo_CorrespondenciaMasiva correspondencia }	</span>
 {END correspondencia_fieldheadercolumn}
 
@@ -189,7 +189,7 @@
 	 
 		{BEGIN usuario_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usuario" data-fieldname="usuario">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="usuario" data-fieldname="usuario">
 	{$label dbo_CorrespondenciaMasiva usuario }	</span>
 {END usuario_fieldheadercolumn}
 
@@ -212,7 +212,7 @@
 	 
 		{BEGIN enviado_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="enviado" data-fieldname="enviado">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="enviado" data-fieldname="enviado">
 	{$label dbo_CorrespondenciaMasiva enviado }	</span>
 {END enviado_fieldheadercolumn}
 
@@ -235,13 +235,36 @@
 	 
 		{BEGIN observaciones_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="observaciones" data-fieldname="observaciones">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="observaciones" data-fieldname="observaciones">
 	{$label dbo_CorrespondenciaMasiva observaciones }	</span>
 {END observaciones_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$radicado_class}	"
+
+			data-field="radicado"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN radicado_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="radicado" data-fieldname="radicado">
+	{$label dbo_CorrespondenciaMasiva radicado }	</span>
+{END radicado_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -400,6 +423,27 @@
 {END observaciones_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$radicado_class}	"
+
+			data-field="radicado"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN radicado_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="radicado" data-fieldname="radicado" data-default-width >
+{$radicado_value}
+</span>
+{END radicado_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
 							</tr>
 										
 											</tbody>
@@ -516,6 +560,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$radicado_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="correspondenciamasiva_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

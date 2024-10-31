@@ -3940,6 +3940,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "procesoscorrespondencias" ] = "dbo.ProcesosCorrespondencias";
 	$projectEntities[ "dbo.CorrespondenciaMasiva" ] = array( "url" => "correspondenciamasiva", "type" => 0 );
 	$projectEntitiesReverse[ "correspondenciamasiva" ] = "dbo.CorrespondenciaMasiva";
+	$projectEntities[ "dbo.UsuariosSeccionales" ] = array( "url" => "usuariosseccionales", "type" => 0 );
+	$projectEntitiesReverse[ "usuariosseccionales" ] = "dbo.UsuariosSeccionales";
 }
 
 function findTable( $table ) {

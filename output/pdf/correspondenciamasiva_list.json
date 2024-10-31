@@ -91,6 +91,9 @@ pdfDocument = {
 										{BEGIN col_grid_8}
 					"%",
 					{END col_grid_8}
+										{BEGIN col_grid_9}
+					"%",
+					{END col_grid_9}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -430,6 +433,35 @@ pdfDocument = {
 	cellId: 'headcell_field6',
 	col:0,
 	row:0,
+			fieldName: 'radicado',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_CorrespondenciaMasiva radicado }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$radicado_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
 			fieldName: 'observaciones',
 				style: 'headcell',
 		
@@ -453,7 +485,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field7}
 											],
 				{END row_grid_0}
 		
@@ -691,6 +723,35 @@ pdfDocument = {
 	cellId: 'cell_field6',
 	col:0,
 	row:0,
+			fieldName: 'radicado',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$radicado_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$radicado_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
 			fieldName: 'observaciones',
 				style: 'bodycell',
 		
@@ -714,7 +775,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field7}
 											],
 				{END row_grid_1}
 		
@@ -958,6 +1019,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field6}
+																							{BEGIN cellblock_grid_footcell_field7}
+{
+	cellId: 'footcell_field7',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field7}
 											],
 				{END row_grid_2}
 		

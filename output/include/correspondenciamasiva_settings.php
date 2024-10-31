@@ -46,6 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscorrespondenciamasiva["Spanish"]["observaciones"] = "Observaciones";
 	$fieldToolTipscorrespondenciamasiva["Spanish"]["observaciones"] = "";
 	$placeHolderscorrespondenciamasiva["Spanish"]["observaciones"] = "";
+	$fieldLabelscorrespondenciamasiva["Spanish"]["radicado"] = "Radicado";
+	$fieldToolTipscorrespondenciamasiva["Spanish"]["radicado"] = "";
+	$placeHolderscorrespondenciamasiva["Spanish"]["radicado"] = "";
 	if (count($fieldToolTipscorrespondenciamasiva["Spanish"]))
 		$tdatacorrespondenciamasiva[".isUseToolTips"] = true;
 }
@@ -169,6 +172,7 @@ $tdatacorrespondenciamasiva[".googleLikeFields"][] = "proceso";
 $tdatacorrespondenciamasiva[".googleLikeFields"][] = "correspondencia";
 $tdatacorrespondenciamasiva[".googleLikeFields"][] = "usuario";
 $tdatacorrespondenciamasiva[".googleLikeFields"][] = "enviado";
+$tdatacorrespondenciamasiva[".googleLikeFields"][] = "radicado";
 $tdatacorrespondenciamasiva[".googleLikeFields"][] = "observaciones";
 
 
@@ -205,7 +209,7 @@ $tdatacorrespondenciamasiva[".orderindexes"] = array();
 
 
 
-$tdatacorrespondenciamasiva[".sqlHead"] = "SELECT id,  	fecha,  	proceso,  	correspondencia,  	usuario,  	enviado,  	observaciones";
+$tdatacorrespondenciamasiva[".sqlHead"] = "SELECT id,  	fecha,  	proceso,  	correspondencia,  	usuario,  	enviado,  	radicado,  	observaciones";
 $tdatacorrespondenciamasiva[".sqlFrom"] = "FROM dbo.CorrespondenciaMasiva";
 $tdatacorrespondenciamasiva[".sqlWhereExpr"] = "";
 $tdatacorrespondenciamasiva[".sqlTail"] = "";
@@ -1153,10 +1157,146 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 
 	$tdatacorrespondenciamasiva["enviado"] = $fdata;
 		$tdatacorrespondenciamasiva[".searchableFields"][] = "enviado";
-//	observaciones
+//	radicado
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 7;
+	$fdata["strName"] = "radicado";
+	$fdata["GoodName"] = "radicado";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("dbo_CorrespondenciaMasiva","radicado");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "radicado";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "radicado";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacorrespondenciamasiva["radicado"] = $fdata;
+		$tdatacorrespondenciamasiva[".searchableFields"][] = "radicado";
+//	observaciones
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "observaciones";
 	$fdata["GoodName"] = "observaciones";
 	$fdata["ownerTable"] = "dbo.CorrespondenciaMasiva";
@@ -1210,7 +1350,7 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1228,16 +1368,16 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
-	
-			$edata["HTML5InuptType"] = "text";
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
 
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1248,7 +1388,10 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 			
 	
 	
@@ -1334,7 +1477,7 @@ function createSqlQuery_correspondenciamasiva()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	fecha,  	proceso,  	correspondencia,  	usuario,  	enviado,  	observaciones";
+$proto0["m_strFieldList"] = "id,  	fecha,  	proceso,  	correspondencia,  	usuario,  	enviado,  	radicado,  	observaciones";
 $proto0["m_strFrom"] = "FROM dbo.CorrespondenciaMasiva";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY Id DESC";
@@ -1459,71 +1602,83 @@ $obj = new SQLFieldListItem($proto16);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
-			$obj = new SQLField(array(
-	"m_strName" => "observaciones",
-	"m_strTable" => "dbo.CorrespondenciaMasiva",
-	"m_srcTableName" => "dbo.CorrespondenciaMasiva"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "radicado"
 ));
 
-$proto18["m_sql"] = "observaciones";
+$proto18["m_sql"] = "radicado";
 $proto18["m_srcTableName"] = "dbo.CorrespondenciaMasiva";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "dbo.CorrespondenciaMasiva";
-$proto21["m_srcTableName"] = "dbo.CorrespondenciaMasiva";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "id";
-$proto21["m_columns"][] = "fecha";
-$proto21["m_columns"][] = "proceso";
-$proto21["m_columns"][] = "correspondencia";
-$proto21["m_columns"][] = "usuario";
-$proto21["m_columns"][] = "enviado";
-$proto21["m_columns"][] = "observaciones";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "observaciones",
+	"m_strTable" => "dbo.CorrespondenciaMasiva",
+	"m_srcTableName" => "dbo.CorrespondenciaMasiva"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "dbo.CorrespondenciaMasiva";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "observaciones";
 $proto20["m_srcTableName"] = "dbo.CorrespondenciaMasiva";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "dbo.CorrespondenciaMasiva";
+$proto23["m_srcTableName"] = "dbo.CorrespondenciaMasiva";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "id";
+$proto23["m_columns"][] = "fecha";
+$proto23["m_columns"][] = "proceso";
+$proto23["m_columns"][] = "correspondencia";
+$proto23["m_columns"][] = "usuario";
+$proto23["m_columns"][] = "enviado";
+$proto23["m_columns"][] = "observaciones";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "dbo.CorrespondenciaMasiva";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "dbo.CorrespondenciaMasiva";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto24=array();
+												$proto26=array();
 						$obj = new SQLField(array(
 	"m_strName" => "id",
 	"m_strTable" => "dbo.CorrespondenciaMasiva",
 	"m_srcTableName" => "dbo.CorrespondenciaMasiva"
 ));
 
-$proto24["m_column"]=$obj;
-$proto24["m_bAsc"] = 0;
-$proto24["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto24);
+$proto26["m_column"]=$obj;
+$proto26["m_bAsc"] = 0;
+$proto26["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto26);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.CorrespondenciaMasiva";		
@@ -1537,7 +1692,7 @@ $queryData_correspondenciamasiva = createSqlQuery_correspondenciamasiva();
 	
 		;
 
-							
+								
 
 $tdatacorrespondenciamasiva[".sqlquery"] = $queryData_correspondenciamasiva;
 

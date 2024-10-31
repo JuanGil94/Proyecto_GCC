@@ -607,6 +607,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("correspondenciamasiva" == $shortTName )
 		return true;
+	if ("usuariosseccionales" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2475,6 +2477,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.CorrespondenciaMasiva";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.UsuariosSeccionales");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.UsuariosSeccionales";
+	}
 	return $arr;
 }
 
@@ -2686,6 +2697,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Novedades";
 	$arr[]="dbo.ProcesosCorrespondencias";
 	$arr[]="dbo.CorrespondenciaMasiva";
+	$arr[]="dbo.UsuariosSeccionales";
 	return $arr;
 }
 
@@ -4331,6 +4343,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.CorrespondenciaMasiva" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.UsuariosSeccionales" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

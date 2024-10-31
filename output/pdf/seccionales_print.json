@@ -1642,6 +1642,11 @@ pdfDocument = {
 			{$displayDetailTable_procesoscorrespondencias }
 		{END details_procesoscorrespondencias},
 				
+				
+			 {BEGIN details_usuariosseccionales}
+			{$displayDetailTable_usuariosseccionales }
+		{END details_usuariosseccionales},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

@@ -6,11 +6,11 @@ $tdatauserprofile[".OwnerID"] = "";
 $tdatauserprofile[".OriginalTable"] = "dbo.UserProfile";
 
 
-$tdatauserprofile[".pagesByType"] = my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
+$tdatauserprofile[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" );
 $tdatauserprofile[".originalPagesByType"] = $tdatauserprofile[".pagesByType"];
-$tdatauserprofile[".pages"] = types2pages( my_json_decode( "{\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
+$tdatauserprofile[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"]}" ) );
 $tdatauserprofile[".originalPages"] = $tdatauserprofile[".pages"];
-$tdatauserprofile[".defaultPages"] = my_json_decode( "{\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
+$tdatauserprofile[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\"}" );
 $tdatauserprofile[".originalDefaultPages"] = $tdatauserprofile[".defaultPages"];
 
 //	field labels
@@ -675,7 +675,7 @@ $tdatauserprofile[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -780,7 +780,7 @@ $tdatauserprofile[".hideMobileList"] = array();
 		
 	$edata["LinkField"] = "SeccionalId";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "Codigo";
+	$edata["DisplayField"] = "Seccional";
 
 	
 
@@ -838,7 +838,7 @@ $tdatauserprofile[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1001,7 +1001,7 @@ $tdatauserprofile[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1642,6 +1642,36 @@ $detailsTablesData["dbo.UserProfile"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "novedades";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Novedades");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UserProfile"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"][]="UserId";
+
+				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="UserId";
+//	dbo.UsuariosSeccionales
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuariosSeccionales";
+		$detailsParam["dOriginalTable"] = "dbo.UsuariosSeccionales";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usuariosseccionales";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuariosSeccionales");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
