@@ -3942,6 +3942,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "correspondenciamasiva" ] = "dbo.CorrespondenciaMasiva";
 	$projectEntities[ "dbo.UsuariosSeccionales" ] = array( "url" => "usuariosseccionales", "type" => 0 );
 	$projectEntitiesReverse[ "usuariosseccionales" ] = "dbo.UsuariosSeccionales";
+	$projectEntities[ "dbo.UsuariosCarteraTipos" ] = array( "url" => "usuarioscarteratipos", "type" => 0 );
+	$projectEntitiesReverse[ "usuarioscarteratipos" ] = "dbo.UsuariosCarteraTipos";
+	$projectEntities[ "dbo.webpages_Roles" ] = array( "url" => "webpages_roles", "type" => 0 );
+	$projectEntitiesReverse[ "webpages_roles" ] = "dbo.webpages_Roles";
+	$projectEntities[ "dbo.webpages_UsersInRoles" ] = array( "url" => "webpages_usersinroles", "type" => 0 );
+	$projectEntitiesReverse[ "webpages_usersinroles" ] = "dbo.webpages_UsersInRoles";
+	$projectEntities[ "dbo.UsuGCC-ugmembers" ] = array( "url" => "usugcc_ugmembers", "type" => 0 );
+	$projectEntitiesReverse[ "usugcc_ugmembers" ] = "dbo.UsuGCC-ugmembers";
 }
 
 function findTable( $table ) {

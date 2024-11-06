@@ -1,5 +1,6 @@
 <?php
-			$optionsArray = array( 'captcha' => array( 'captcha' => false ),
+			$optionsArray = array( 'master' => array( 'dbo.UsuGCC-ugmembers' => array( 'preview' => false ) ),
+'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Label',
 'Provider',
 'Comment' ),

@@ -110,6 +110,29 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -163,28 +186,16 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_UserProfile UserName }","bold":true},{"text":{$UserName_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_UserProfile HorarioId }","bold":true},{"text":{$HorarioId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_UserProfile SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_UserProfile AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_UserProfile Email }","bold":true},{"text":{$Email_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_UserProfile CarteraTipoId }","bold":true},{"text":{$CarteraTipoId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_UserProfile Fecha }","bold":true},{"text":{$Fecha_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_UserProfile Nombre }","bold":true},{"text":{$Nombre_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel dbo_UserProfile UserId }","bold":true},{"text":{$UserId_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_UserProfile SeccionalId }","bold":true},{"text":{$SeccionalId_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_UserProfile AbogadoId }","bold":true},{"text":{$AbogadoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

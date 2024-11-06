@@ -6,11 +6,11 @@ $tdatausugcc__users[".OwnerID"] = "ID";
 $tdatausugcc__users[".OriginalTable"] = "dbo.UsuGCC-_users";
 
 
-$tdatausugcc__users[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"],\"search\":[\"search\"]}" );
+$tdatausugcc__users[".pagesByType"] = my_json_decode( "{\"edit\":[\"edit\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"search\":[\"search\"]}" );
 $tdatausugcc__users[".originalPagesByType"] = $tdatausugcc__users[".pagesByType"];
-$tdatausugcc__users[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"],\"search\":[\"search\"]}" ) );
+$tdatausugcc__users[".pages"] = types2pages( my_json_decode( "{\"edit\":[\"edit\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"search\":[\"search\"]}" ) );
 $tdatausugcc__users[".originalPages"] = $tdatausugcc__users[".pages"];
-$tdatausugcc__users[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"list\":\"list\",\"search\":\"search\"}" );
+$tdatausugcc__users[".defaultPages"] = my_json_decode( "{\"edit\":\"edit\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"search\":\"search\"}" );
 $tdatausugcc__users[".originalDefaultPages"] = $tdatausugcc__users[".defaultPages"];
 
 //	field labels
@@ -58,6 +58,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc__users["Spanish"]["apikey"] = "Apikey";
 	$fieldToolTipsusugcc__users["Spanish"]["apikey"] = "";
 	$placeHoldersusugcc__users["Spanish"]["apikey"] = "";
+	$pageTitlesusugcc__users["Spanish"]["list"] = "Usuario";
+	$pageTitlesusugcc__users["Spanish"]["edit"] = "Editar estado usuario";
 	if (count($fieldToolTipsusugcc__users["Spanish"]))
 		$tdatausugcc__users[".isUseToolTips"] = true;
 }
@@ -155,7 +157,7 @@ $tdatausugcc__users[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatausugcc__users[".ajaxCodeSnippetAdded"] = false;
 
@@ -167,7 +169,7 @@ $tdatausugcc__users[".addPageEvents"] = false;
 $tdatausugcc__users[".isUseTimeForSearch"] = false;
 
 
-$tdatausugcc__users[".badgeColor"] = "E07878";
+$tdatausugcc__users[".badgeColor"] = "e07878";
 
 
 $tdatausugcc__users[".allSearchFields"] = array();
@@ -1161,7 +1163,7 @@ $tdatausugcc__users[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Checkbox");
 
 	
 	
@@ -1177,8 +1179,7 @@ $tdatausugcc__users[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1189,7 +1190,7 @@ $tdatausugcc__users[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Checkbox");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1213,17 +1214,14 @@ $tdatausugcc__users[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -1243,7 +1241,7 @@ $tdatausugcc__users[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1839,6 +1837,36 @@ changeTextControlsToDate( "dbo.UsuGCC-_users" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.UsuGCC-_users"] = array();
+//	dbo.UsuGCC-ugmembers
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuGCC-ugmembers";
+		$detailsParam["dOriginalTable"] = "dbo.UsuGCC-ugmembers";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usugcc_ugmembers";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuGCC_ugmembers");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UsuGCC-_users"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UsuGCC-_users"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UsuGCC-_users"][$dIndex]["masterKeys"][]="username";
+
+				$detailsTablesData["dbo.UsuGCC-_users"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UsuGCC-_users"][$dIndex]["detailKeys"][]="UserName";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1846,6 +1874,24 @@ $masterTablesData["dbo.UsuGCC-_users"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.UserProfile";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.UserProfile";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "userprofile";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.UsuGCC-_users"][0] = $masterParams;
+				$masterTablesData["dbo.UsuGCC-_users"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.UsuGCC-_users"][0]["masterKeys"][]="UserName";
+				$masterTablesData["dbo.UsuGCC-_users"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.UsuGCC-_users"][0]["detailKeys"][]="username";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

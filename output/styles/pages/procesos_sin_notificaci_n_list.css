@@ -44,4 +44,17 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-cellid="grid_cell_field8"][data-page="procesos_sin_notificaci_n_list"][data-cellid="grid_cell_field8"][data-page="procesos_sin_notificaci_n_list"][data-cellid="grid_cell_field8"][data-page="procesos_sin_notificaci_n_list"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-cellid="grid_cell_field9"][data-page="procesos_sin_notificaci_n_list"][data-cellid="grid_cell_field9"][data-page="procesos_sin_notificaci_n_list"][data-cellid="grid_cell_field9"][data-page="procesos_sin_notificaci_n_list"] {
+  color: black;
+    white-space: nowrap;
+}
+[data-cellid="grid_cell_field10"][data-page="procesos_sin_notificaci_n_list"][data-cellid="grid_cell_field10"][data-page="procesos_sin_notificaci_n_list"][data-cellid="grid_cell_field10"][data-page="procesos_sin_notificaci_n_list"] {
+  color: black;
+    white-space: nowrap;
+}

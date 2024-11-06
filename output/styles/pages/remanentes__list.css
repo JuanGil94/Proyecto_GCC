@@ -47,4 +47,27 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-cellid="grid_cell_field8"][data-page="remanentes__list"][data-cellid="grid_cell_field8"][data-page="remanentes__list"][data-cellid="grid_cell_field8"][data-page="remanentes__list"] {
+  color: black;
+    white-space: nowrap;
+}
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field9"][data-page="remanentes__list"][data-cellid="grid_cell_field9"][data-page="remanentes__list"][data-cellid="grid_cell_field9"][data-page="remanentes__list"] {
+  color: black;
+    white-space: nowrap;
+}
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field10"][data-page="remanentes__list"][data-cellid="grid_cell_field10"][data-page="remanentes__list"][data-cellid="grid_cell_field10"][data-page="remanentes__list"] {
+  color: black;
+    white-space: nowrap;
+}
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field11"][data-page="remanentes__list"][data-cellid="grid_cell_field11"][data-page="remanentes__list"][data-cellid="grid_cell_field11"][data-page="remanentes__list"] {
+  color: black;
+    white-space: nowrap;
+}

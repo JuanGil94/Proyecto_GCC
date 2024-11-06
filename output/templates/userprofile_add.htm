@@ -76,6 +76,14 @@
 </div>
 </div>
 {END message_block}	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
 	</div>		
 {END above-grid_block}
 									{BEGIN grid_block}
@@ -132,69 +140,6 @@
 
 {END UserName_fieldblock}
 											
-{BEGIN HorarioId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_HorarioId}  r-vertical-field" 
-	data-signal-error-for="HorarioId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="HorarioId" data-fieldname="HorarioId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_HorarioId}">
-		{BEGIN HorarioId_label}{$label dbo_UserProfile HorarioId }{END HorarioId_label}
-	</label>
-	<div class="r-edit-field">
-		{$HorarioId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="HorarioId" {$tooltipAttr dbo_UserProfile HorarioId } >
-		<div class="text-muted" >
-		{$tooltip dbo_UserProfile HorarioId }		</div>
-	</div>
-</div>
-
-
-{END HorarioId_fieldblock}
-											
-{BEGIN SeccionalId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
-	data-signal-error-for="SeccionalId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
-		{BEGIN SeccionalId_label}{$label dbo_UserProfile SeccionalId }{END SeccionalId_label}
-	</label>
-	<div class="r-edit-field">
-		{$SeccionalId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_UserProfile SeccionalId } >
-		<div class="text-muted" >
-		{$tooltip dbo_UserProfile SeccionalId }		</div>
-	</div>
-</div>
-
-
-{END SeccionalId_fieldblock}
-											
-{BEGIN AbogadoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
-	data-signal-error-for="AbogadoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
-		{BEGIN AbogadoId_label}{$label dbo_UserProfile AbogadoId }{END AbogadoId_label}
-	</label>
-	<div class="r-edit-field">
-		{$AbogadoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_UserProfile AbogadoId } >
-		<div class="text-muted" >
-		{$tooltip dbo_UserProfile AbogadoId }		</div>
-	</div>
-</div>
-
-
-{END AbogadoId_fieldblock}
-											
 {BEGIN Email_fieldblock}
 
 
@@ -215,48 +160,6 @@
 
 
 {END Email_fieldblock}
-											
-{BEGIN CarteraTipoId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_CarteraTipoId}  r-vertical-field" 
-	data-signal-error-for="CarteraTipoId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_CarteraTipoId}">
-		{BEGIN CarteraTipoId_label}{$label dbo_UserProfile CarteraTipoId }{END CarteraTipoId_label}
-	</label>
-	<div class="r-edit-field">
-		{$CarteraTipoId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="CarteraTipoId" {$tooltipAttr dbo_UserProfile CarteraTipoId } >
-		<div class="text-muted" >
-		{$tooltip dbo_UserProfile CarteraTipoId }		</div>
-	</div>
-</div>
-
-
-{END CarteraTipoId_fieldblock}
-											
-{BEGIN Fecha_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Fecha}  r-vertical-field" 
-	data-signal-error-for="Fecha{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Fecha" data-fieldname="Fecha" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Fecha}">
-		{BEGIN Fecha_label}{$label dbo_UserProfile Fecha }{END Fecha_label}
-	</label>
-	<div class="r-edit-field">
-		{$Fecha_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Fecha" {$tooltipAttr dbo_UserProfile Fecha } >
-		<div class="text-muted" >
-		{$tooltip dbo_UserProfile Fecha }		</div>
-	</div>
-</div>
-
-
-{END Fecha_fieldblock}
 											
 {BEGIN Nombre_fieldblock}
 
@@ -279,26 +182,47 @@
 
 {END Nombre_fieldblock}
 											
-{BEGIN UserId_fieldblock}
+{BEGIN SeccionalId_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_UserId}  r-vertical-field" 
-	data-signal-error-for="UserId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="UserId" data-fieldname="UserId" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_UserId}">
-		{BEGIN UserId_label}{$label dbo_UserProfile UserId }{END UserId_label}
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_UserProfile SeccionalId }{END SeccionalId_label}
 	</label>
 	<div class="r-edit-field">
-		{$UserId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="UserId" {$tooltipAttr dbo_UserProfile UserId } >
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_UserProfile SeccionalId } >
 		<div class="text-muted" >
-		{$tooltip dbo_UserProfile UserId }		</div>
+		{$tooltip dbo_UserProfile SeccionalId }		</div>
 	</div>
 </div>
 
 
-{END UserId_fieldblock}
+{END SeccionalId_fieldblock}
+											
+{BEGIN AbogadoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AbogadoId}  r-vertical-field" 
+	data-signal-error-for="AbogadoId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="AbogadoId" data-fieldname="AbogadoId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_AbogadoId}">
+		{BEGIN AbogadoId_label}{$label dbo_UserProfile AbogadoId }{END AbogadoId_label}
+	</label>
+	<div class="r-edit-field">
+		{$AbogadoId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="AbogadoId" {$tooltipAttr dbo_UserProfile AbogadoId } >
+		<div class="text-muted" >
+		{$tooltip dbo_UserProfile AbogadoId }		</div>
+	</div>
+</div>
+
+
+{END AbogadoId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

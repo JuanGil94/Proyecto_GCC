@@ -576,6 +576,8 @@ $editTextAsDate = false;
  */
 $globalSettings["keepLoggedIn"] = true;
 
+$globalSettings["bEncryptPasswords"] = true;
+$globalSettings["nEncryptPasswordMethod"] = "0";
 
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
@@ -746,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3595_1730386264";
+$projectBuildKey = "3688_1730386264";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3595";
+$projectBuildNumber = "3688";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -974,6 +976,10 @@ $tableCaptions["Spanish"]["dbo_ProcesosCorrespondencias"] = "Procesos Correspond
 $tableCaptions["Spanish"]["dbo_CorrespondenciaMasiva"] = "Correspondencia Masiva";
 $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_UsuariosSeccionales"] = "Usuarios Seccionales";
+$tableCaptions["Spanish"]["dbo_UsuariosCarteraTipos"] = "Usuarios Cartera Tipos";
+$tableCaptions["Spanish"]["dbo_webpages_Roles"] = "Webpages Roles";
+$tableCaptions["Spanish"]["dbo_webpages_UsersInRoles"] = "Webpages UsersInRoles";
+$tableCaptions["Spanish"]["dbo_UsuGCC_ugmembers"] = "Usu GCC-ugmembers";
 
 
 $globalEvents = new class_GlobalEvents;

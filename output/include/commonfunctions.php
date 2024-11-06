@@ -609,6 +609,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("usuariosseccionales" == $shortTName )
 		return true;
+	if ("usuarioscarteratipos" == $shortTName )
+		return true;
+	if ("webpages_roles" == $shortTName )
+		return true;
+	if ("webpages_usersinroles" == $shortTName )
+		return true;
+	if ("usugcc_ugmembers" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2486,6 +2494,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.UsuariosSeccionales";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.UsuariosCarteraTipos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.UsuariosCarteraTipos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.webpages_Roles");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.webpages_Roles";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.webpages_UsersInRoles");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.webpages_UsersInRoles";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.UsuGCC-ugmembers");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.UsuGCC-ugmembers";
+	}
 	return $arr;
 }
 
@@ -2698,6 +2742,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.ProcesosCorrespondencias";
 	$arr[]="dbo.CorrespondenciaMasiva";
 	$arr[]="dbo.UsuariosSeccionales";
+	$arr[]="dbo.UsuariosCarteraTipos";
+	$arr[]="dbo.webpages_Roles";
+	$arr[]="dbo.webpages_UsersInRoles";
+	$arr[]="dbo.UsuGCC-ugmembers";
 	return $arr;
 }
 
@@ -4348,6 +4396,26 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UsuariosSeccionales" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.UsuariosCarteraTipos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.webpages_Roles" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.webpages_UsersInRoles" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.UsuGCC-ugmembers" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

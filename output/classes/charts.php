@@ -784,6 +784,14 @@ class Chart
 			return true;
 		if("dbo.UsuariosSeccionales" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.UsuariosCarteraTipos" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.webpages_Roles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.webpages_UsersInRoles" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.UsuGCC-ugmembers" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

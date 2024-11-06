@@ -6,11 +6,11 @@ $tdatausugcc_uggroups[".OwnerID"] = "";
 $tdatausugcc_uggroups[".OriginalTable"] = "dbo.UsuGCC-uggroups";
 
 
-$tdatausugcc_uggroups[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"]}" );
+$tdatausugcc_uggroups[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"]}" );
 $tdatausugcc_uggroups[".originalPagesByType"] = $tdatausugcc_uggroups[".pagesByType"];
-$tdatausugcc_uggroups[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"]}" ) );
+$tdatausugcc_uggroups[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"]}" ) );
 $tdatausugcc_uggroups[".originalPages"] = $tdatausugcc_uggroups[".pages"];
-$tdatausugcc_uggroups[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"list\":\"list\"}" );
+$tdatausugcc_uggroups[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"list\":\"list\",\"masterlist\":\"masterlist\"}" );
 $tdatausugcc_uggroups[".originalDefaultPages"] = $tdatausugcc_uggroups[".defaultPages"];
 
 //	field labels
@@ -134,7 +134,7 @@ $tdatausugcc_uggroups[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatausugcc_uggroups[".ajaxCodeSnippetAdded"] = false;
 
@@ -146,7 +146,7 @@ $tdatausugcc_uggroups[".addPageEvents"] = false;
 $tdatausugcc_uggroups[".isUseTimeForSearch"] = false;
 
 
-$tdatausugcc_uggroups[".badgeColor"] = "CD853F";
+$tdatausugcc_uggroups[".badgeColor"] = "e07878";
 
 
 $tdatausugcc_uggroups[".allSearchFields"] = array();
@@ -821,6 +821,24 @@ $masterTablesData["dbo.UsuGCC-uggroups"] = array();
 
 
 
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.UsuGCC-ugmembers";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.UsuGCC-ugmembers";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "usugcc_ugmembers";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.UsuGCC-uggroups"][0] = $masterParams;
+				$masterTablesData["dbo.UsuGCC-uggroups"][0]["masterKeys"] = array();
+	$masterTablesData["dbo.UsuGCC-uggroups"][0]["masterKeys"][]="GroupID";
+				$masterTablesData["dbo.UsuGCC-uggroups"][0]["detailKeys"] = array();
+	$masterTablesData["dbo.UsuGCC-uggroups"][0]["detailKeys"][]="GroupID";
+		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

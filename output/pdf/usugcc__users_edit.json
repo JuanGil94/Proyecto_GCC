@@ -163,16 +163,7 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_UsuGCC__users username }","bold":true},{"text":{$username_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_UsuGCC__users password }","bold":true},{"text":{$password_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_UsuGCC__users email }","bold":true},{"text":{$email_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_UsuGCC__users fullname }","bold":true},{"text":{$fullname_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_UsuGCC__users apikey }","bold":true},{"text":{$apikey_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_UsuGCC__users active }","bold":true},{"text":{$active_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -29,6 +29,10 @@ class class_GlobalEvents extends eventsBase
 
 		$this->events["BeforeProcessMenu"]=true;
 
+		$this->events["BeforeLogin"]=true;
+
+		$this->events["BeforeChangePassword"]=true;
+
 
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
@@ -161,6 +165,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Indicadores_Sin_Actuaciones_mes"] = true;
 		$this->events["Test_de_Deterioro__Resumen__buscar"] = true;
 		$this->events["label_Novedad"] = true;
+		$this->events["dbo_UserProfile_INGRESO"] = true;
 
 
 
@@ -503,20 +508,20 @@ if ($conteo>0){
 function AfterUnsuccessfulLogin($username, $password, &$message, $pageObject, $userdata)
 {
 
-		$rs=DB::Query("SELECT username,* FROM [GCC].[dbo].[UsuGCC-_users] WHERE Username='".$username."'");
+		/*$rs=DB::Query("SELECT username,* FROM [GCC].[dbo].[UsuGCC-_users] WHERE Username='".$username."'");
 while( $date = $rs->fetchAssoc() ){
 	$usernameDB=$date["username"];
 	$passwordDB=$date["password"];
-}
+}*/
 //echo "<script>alert('Valorrr: ".$usernameDB."')</script>";
-if ($usernameDB==""){
+/*if ($usernameDB==""){
 $message="El usuario no existe en el sistema";
 }
 else{
 	if ($passwordDB!=$password){
 $message="Contraseña incorrecta";
 		}
-}
+}*/
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -581,6 +586,115 @@ function BeforeProcessMenu($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+				// Before login
+function BeforeLogin(&$username, &$password, &$message, $pageObject, &$values)
+{
+
+		$sql = "SELECT password FROM [UsuGCC-_users] WHERE username = '" . $username . "'";
+$rs = CustomQuery($sql);
+
+if ($data = db_fetch_array($rs)) {
+    //echo "Hash recuperado de la BD: " . $data['password']; // Verifica el hash recuperado
+    if (password_verify($password, $data['password'])) {
+			//if ($password == $data['password']) {
+
+				//$password = $data['password'];
+        echo "Contraseña correcta, autenticación exitosa.";
+        return true;
+    } else {
+        $message = "Contraseña incorrecta.";
+        return false;
+    }
+} else {
+    $message = "Usuario no encontrado.";
+    return false;
+}
+//return true;
+;
+} // function BeforeLogin
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before change password
+function BeforeChangePassword($oldpassword, &$newpassword, $pageObject)
+{
+
+		/*$username = $_SESSION["UserNameF"];
+$sql = "SELECT password FROM [UsuGCC-_users] WHERE username = '" . $username . "'";
+$rs = CustomQuery($sql);
+
+if ($data = db_fetch_array($rs)) {
+    $message = "Hash recuperado de la BD: " . $data['password']; // Verifica el hash recuperado
+    if (password_verify($oldpassword, $data['password'])) {
+			//if ($password == $data['password']) {
+
+				$oldpassword = $data['password'];
+        $message = "Contraseña correcta, autenticación exitosa.";
+        return true;
+    } else {
+        $message = "Contraseña incorrecta.";
+        return false;
+    }
+}*/
+
+return true;
+;
+} // function BeforeChangePassword
+
 		
 		
 		
@@ -3805,7 +3919,7 @@ echo "<input type='month' id='Presuncion_pres_MesId' name='hasta' value='" . dat
 	{
 	echo "<label for='Recaudo_Ano_Id' style='margin-right: 20px;'>Año: </label><br>";
 
-$years = range(1990, strftime("%Y", time()));
+$years = range(2014, strftime("%Y", time()));
 echo "<select id='yearSelect'>";
 echo"<option>Select Year</option>";
 foreach($years as $year) :
@@ -4723,13 +4837,13 @@ echo "<input type='month' id='corporacion_Especialidad_MesId' name='hasta' value
 	function event_Mandamientos_de_pago_Automaticos_Mes(&$params)
 	{
 	echo "<label for='Mandamientos_MesId' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='date' id='Mandamientos_MesId' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+echo "<input type='month' id='Mandamientos_MesId' name='hasta' value='" . date('Y-m') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_Prescripciones_Autom_tica_Mes(&$params)
 	{
 	echo "<label for='Prescripciones_Autom_tica_Mes' style='margin-right: 20px;'>Mes: </label><br>";
-echo "<input type='date' id='Prescripciones_Autom_tica_Mes' name='hasta' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+echo "<input type='month' id='Prescripciones_Autom_tica_Mes' name='hasta' value='" . date('Y-m') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
 	;
 }
 	function event_Remanentes_Mes(&$params)
@@ -5230,6 +5344,13 @@ global $pageObject;
 $data = $pageObject->getMasterRecord();
 //$data["ProcesoId"];
 echo '<strong>Novedades:</strong><input for="miInput" id="procesoId" value="'.$data["ProcesoId"].'" style="display: none;" readonly></input>';
+	;
+}
+	function event_dbo_UserProfile_INGRESO(&$params)
+	{
+	// Put your code here.
+echo '<input type="text" id="miCampoPersonalizado" name="miCampoPersonalizado" placeholder="Ingresa un dato extra">
+';
 	;
 }
 

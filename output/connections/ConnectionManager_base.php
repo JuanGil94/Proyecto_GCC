@@ -446,6 +446,10 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.ProcesosCorrespondencias"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.CorrespondenciaMasiva"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.UsuariosSeccionales"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.UsuariosCarteraTipos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.webpages_Roles"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.webpages_UsersInRoles"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.UsuGCC-ugmembers"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

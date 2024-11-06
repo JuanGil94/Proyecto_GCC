@@ -31,9 +31,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusuariosseccionales["Spanish"]["UserId"] = "User Id";
 	$fieldToolTipsusuariosseccionales["Spanish"]["UserId"] = "";
 	$placeHoldersusuariosseccionales["Spanish"]["UserId"] = "";
-	$fieldLabelsusuariosseccionales["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelsusuariosseccionales["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipsusuariosseccionales["Spanish"]["SeccionalId"] = "";
 	$placeHoldersusuariosseccionales["Spanish"]["SeccionalId"] = "";
+	$pageTitlesusuariosseccionales["Spanish"]["list"] = "Usuario Seccionales";
 	if (count($fieldToolTipsusuariosseccionales["Spanish"]))
 		$tdatausuariosseccionales[".isUseToolTips"] = true;
 }

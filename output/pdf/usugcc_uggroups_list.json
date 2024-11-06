@@ -104,7 +104,51 @@ pdfDocument = {
 							stack: [
 
 																										
-''
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
 ,
 								
 																										
@@ -141,6 +185,9 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_add}"},
 				
 				
+			{"text":"","hidden":"{$item_hide_inline_add}"},
+				
+				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
 		  ],
@@ -168,6 +215,9 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_columns_control}"},
@@ -364,6 +414,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 		  ],
   "border": [ true, true, true, true ],
