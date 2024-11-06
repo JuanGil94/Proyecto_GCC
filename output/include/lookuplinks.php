@@ -3078,6 +3078,41 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["usuariosseccionales.SeccionalId"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["usuariosseccionales.SeccionalId"]["edit"] = array("table" => "dbo.UsuariosSeccionales", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["usuarioscarteratipos.UserId"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["usuarioscarteratipos.UserId"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["usuarioscarteratipos.UserId"]["edit"] = array("table" => "dbo.UsuariosCarteraTipos", "field" => "UserId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["usuarioscarteratipos.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["usuarioscarteratipos.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["usuarioscarteratipos.CarteraTipoId"]["edit"] = array("table" => "dbo.UsuariosCarteraTipos", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["webpages_usersinroles.UserId"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["webpages_usersinroles.UserId"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["webpages_usersinroles.UserId"]["edit"] = array("table" => "dbo.webpages_UsersInRoles", "field" => "UserId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.webpages_Roles"] ) ) {
+			$lookupTableLinks["dbo.webpages_Roles"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.webpages_Roles"]["webpages_usersinroles.RoleId"] )) {
+			$lookupTableLinks["dbo.webpages_Roles"]["webpages_usersinroles.RoleId"] = array();
+		}
+		$lookupTableLinks["dbo.webpages_Roles"]["webpages_usersinroles.RoleId"]["edit"] = array("table" => "dbo.webpages_UsersInRoles", "field" => "RoleId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UsuGCC-uggroups"] ) ) {
+			$lookupTableLinks["dbo.UsuGCC-uggroups"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UsuGCC-uggroups"]["usugcc_ugmembers.GroupID"] )) {
+			$lookupTableLinks["dbo.UsuGCC-uggroups"]["usugcc_ugmembers.GroupID"] = array();
+		}
+		$lookupTableLinks["dbo.UsuGCC-uggroups"]["usugcc_ugmembers.GroupID"]["edit"] = array("table" => "dbo.UsuGCC-ugmembers", "field" => "GroupID", "page" => "edit");
 }
 
 ?>

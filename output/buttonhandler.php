@@ -2,6 +2,17 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -6171,7 +6182,7 @@ function buttonHandler_Buscar16($params)
 	
 
 		// Guardar los valores recibidos en variables de sesión
-    $_SESSION['Mandamientos_MesId'] = $params["Mandamientos_MesId"];
+    $_SESSION['Mandamientos_MesId'] = $params["Mandamientos_MesId"].'-01';
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -6227,7 +6238,7 @@ function buttonHandler_Buscar17($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	// Put your code here.
-    $_SESSION['Prescripciones_Autom_tica_Mes'] = $params["Prescripciones_Autom_tica_Mes"];
+    $_SESSION['Prescripciones_Autom_tica_Mes'] = $params["Prescripciones_Autom_tica_Mes"].'-01';
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);

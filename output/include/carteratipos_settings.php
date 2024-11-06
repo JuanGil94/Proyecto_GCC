@@ -925,6 +925,36 @@ $detailsTablesData["dbo.CarteraTipos"] = array();
 				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
+//	dbo.UsuariosCarteraTipos
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuariosCarteraTipos";
+		$detailsParam["dOriginalTable"] = "dbo.UsuariosCarteraTipos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usuarioscarteratipos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuariosCarteraTipos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"][]="CarteraTipoId";
+
+				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
 //endif
 
 // tables which are master tables for current table (detail)

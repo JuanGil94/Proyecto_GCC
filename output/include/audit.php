@@ -1220,6 +1220,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.UsuariosCarteraTipos")
+		{
+			return false;
+		}
+		if($table=="dbo.webpages_Roles")
+		{
+			return false;
+		}
+		if($table=="dbo.webpages_UsersInRoles")
+		{
+			return false;
+		}
+		if($table=="dbo.UsuGCC-ugmembers")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2391,6 +2407,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.UsuariosSeccionales")
+		{
+			return false;
+		}
+		if($table=="dbo.UsuariosCarteraTipos")
+		{
+			return false;
+		}
+		if($table=="dbo.webpages_Roles")
+		{
+			return false;
+		}
+		if($table=="dbo.webpages_UsersInRoles")
+		{
+			return false;
+		}
+		if($table=="dbo.UsuGCC-ugmembers")
 		{
 			return false;
 		}

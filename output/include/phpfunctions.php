@@ -1517,6 +1517,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserId"];
 	}
+				if($table=="dbo.UserProfile" && $field=="CarteraTipoId")
+	{
+		return 1;
+	}
 	return "";
 }
 

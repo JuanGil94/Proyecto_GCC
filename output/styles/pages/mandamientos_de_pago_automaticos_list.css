@@ -38,4 +38,21 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-cellid="grid_cell_field7"][data-page="mandamientos_de_pago_automaticos_list"][data-cellid="grid_cell_field7"][data-page="mandamientos_de_pago_automaticos_list"][data-cellid="grid_cell_field7"][data-page="mandamientos_de_pago_automaticos_list"] {
+  color: black;
+    white-space: nowrap;
+}
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field8"][data-page="mandamientos_de_pago_automaticos_list"][data-cellid="grid_cell_field8"][data-page="mandamientos_de_pago_automaticos_list"][data-cellid="grid_cell_field8"][data-page="mandamientos_de_pago_automaticos_list"] {
+  color: black;
+    white-space: nowrap;
+}
+/* Put  your custom CSS code here */
+
+[data-cellid="grid_cell_field9"][data-page="mandamientos_de_pago_automaticos_list"][data-cellid="grid_cell_field9"][data-page="mandamientos_de_pago_automaticos_list"][data-cellid="grid_cell_field9"][data-page="mandamientos_de_pago_automaticos_list"] {
+  color: black;
+    white-space: nowrap;
+}

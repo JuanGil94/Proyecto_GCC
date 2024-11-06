@@ -323,7 +323,61 @@
 {$mlp_push}{$mlparam first var first_shown}{$mlparam last var last_shown}{$mlparam total var records_found}{mlang_message DISPLAYING}{$mlp_pop}</span>	 
 		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
 		{$recsPerPage}
-</span>		</div>					</div>
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página para imprimir" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Detalles de impresión	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_usuarioscarteratipos}
+			<div>
+				<label for="printDetailsusuarioscarteratipos{$id}">
+					<input type="checkbox" value="usuarioscarteratipos" id="printDetailsusuarioscarteratipos{$id}" checked>
+					Usuarios Cartera Tipos				</label>
+			</div>
+			{END print_details_usuarioscarteratipos}
+														{BEGIN print_details_usuariosseccionales}
+			<div>
+				<label for="printDetailsusuariosseccionales{$id}">
+					<input type="checkbox" value="usuariosseccionales" id="printDetailsusuariosseccionales{$id}" checked>
+					Usuarios Seccionales				</label>
+			</div>
+			{END print_details_usuariosseccionales}
+														{BEGIN print_details_webpages_usersinroles}
+			<div>
+				<label for="printDetailswebpages_usersinroles{$id}">
+					<input type="checkbox" value="webpages_usersinroles" id="printDetailswebpages_usersinroles{$id}" checked>
+					Webpages UsersInRoles				</label>
+			</div>
+			{END print_details_webpages_usersinroles}
+														{BEGIN print_details_usugcc__users}
+			<div>
+				<label for="printDetailsusugcc__users{$id}">
+					<input type="checkbox" value="usugcc__users" id="printDetailsusugcc__users{$id}" checked>
+					UsuGCC- Users				</label>
+			</div>
+			{END print_details_usugcc__users}
+						</div>
+</div>
+{END print_details}
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -338,9 +392,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="UserId"]:before {
-		content: "{$label dbo_UserProfile UserId}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="UserName"]:before {
 		content: "{$label dbo_UserProfile UserName}";
 	}
@@ -356,13 +407,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Email"]:before {
 		content: "{$label dbo_UserProfile Email}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipoId"]:before {
-		content: "{$label dbo_UserProfile CarteraTipoId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
-		content: "{$label dbo_UserProfile Fecha}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Nombre"]:before {
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Nombre"]:before {
 		content: "{$label dbo_UserProfile Nombre}";
 	}
 	}
@@ -438,21 +483,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UserId_class}	"
+		 r-ori-vert		 {$UserName_class}	"
 
-			data-field="UserId"
+			data-field="UserName"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN UserId_fieldheadercolumn}
-	{BEGIN UserId_fieldheader}
-	<SPAN {$UserId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UserId" data-fieldname="UserId">
-	{$label dbo_UserProfile UserId }	{$arrow_icon_UserId}
+		{BEGIN UserName_fieldheadercolumn}
+	{BEGIN UserName_fieldheader}
+	<SPAN {$UserName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UserName" data-fieldname="UserName">
+	{$label dbo_UserProfile UserName }	{$arrow_icon_UserName}
 	</SPAN>
-	{END UserId_fieldheader}
-{END UserId_fieldheadercolumn}
+	{END UserName_fieldheader}
+{END UserName_fieldheadercolumn}
 
 	
 	</th>
@@ -463,21 +508,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UserName_class}	"
+		 r-ori-vert		 {$Nombre_class}	"
 
-			data-field="UserName"
+			data-field="Nombre"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN UserName_fieldheadercolumn}
-	{BEGIN UserName_fieldheader}
-	<SPAN {$UserName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UserName" data-fieldname="UserName">
-	{$label dbo_UserProfile UserName }	{$arrow_icon_UserName}
+		{BEGIN Nombre_fieldheadercolumn}
+	{BEGIN Nombre_fieldheader}
+	<SPAN {$Nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre">
+	{$label dbo_UserProfile Nombre }	{$arrow_icon_Nombre}
 	</SPAN>
-	{END UserName_fieldheader}
-{END UserName_fieldheadercolumn}
+	{END Nombre_fieldheader}
+{END Nombre_fieldheadercolumn}
 
 	
 	</th>
@@ -488,21 +533,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$HorarioId_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
-			data-field="HorarioId"
+			data-field="Email"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN HorarioId_fieldheadercolumn}
-	{BEGIN HorarioId_fieldheader}
-	<SPAN {$HorarioId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="HorarioId" data-fieldname="HorarioId">
-	{$label dbo_UserProfile HorarioId }	{$arrow_icon_HorarioId}
+		{BEGIN Email_fieldheadercolumn}
+	{BEGIN Email_fieldheader}
+	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
+	{$label dbo_UserProfile Email }	{$arrow_icon_Email}
 	</SPAN>
-	{END HorarioId_fieldheader}
-{END HorarioId_fieldheadercolumn}
+	{END Email_fieldheader}
+{END Email_fieldheadercolumn}
 
 	
 	</th>
@@ -513,21 +558,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
+		 r-ori-vert		 {$HorarioId_class}	"
 
-			data-field="SeccionalId"
+			data-field="HorarioId"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SeccionalId_fieldheadercolumn}
-	{BEGIN SeccionalId_fieldheader}
-	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
-	{$label dbo_UserProfile SeccionalId }	{$arrow_icon_SeccionalId}
+		{BEGIN HorarioId_fieldheadercolumn}
+	{BEGIN HorarioId_fieldheader}
+	<SPAN {$HorarioId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="HorarioId" data-fieldname="HorarioId">
+	{$label dbo_UserProfile HorarioId }	{$arrow_icon_HorarioId}
 	</SPAN>
-	{END SeccionalId_fieldheader}
-{END SeccionalId_fieldheadercolumn}
+	{END HorarioId_fieldheader}
+{END HorarioId_fieldheadercolumn}
 
 	
 	</th>
@@ -548,7 +593,7 @@
 	 
 		{BEGIN AbogadoId_fieldheadercolumn}
 	{BEGIN AbogadoId_fieldheader}
-	<SPAN {$AbogadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
+	<SPAN {$AbogadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AbogadoId" data-fieldname="AbogadoId">
 	{$label dbo_UserProfile AbogadoId }	{$arrow_icon_AbogadoId}
 	</SPAN>
 	{END AbogadoId_fieldheader}
@@ -563,100 +608,25 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$SeccionalId_class}	"
 
-			data-field="Email"
+			data-field="SeccionalId"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Email_fieldheadercolumn}
-	{BEGIN Email_fieldheader}
-	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email">
-	{$label dbo_UserProfile Email }	{$arrow_icon_Email}
+		{BEGIN SeccionalId_fieldheadercolumn}
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label dbo_UserProfile SeccionalId }	{$arrow_icon_SeccionalId}
 	</SPAN>
-	{END Email_fieldheader}
-{END Email_fieldheadercolumn}
+	{END SeccionalId_fieldheader}
+{END SeccionalId_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
-
-			data-field="CarteraTipoId"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN CarteraTipoId_fieldheadercolumn}
-	{BEGIN CarteraTipoId_fieldheader}
-	<SPAN {$CarteraTipoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId">
-	{$label dbo_UserProfile CarteraTipoId }	{$arrow_icon_CarteraTipoId}
-	</SPAN>
-	{END CarteraTipoId_fieldheader}
-{END CarteraTipoId_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-			data-field="Fecha"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Fecha_fieldheadercolumn}
-	{BEGIN Fecha_fieldheader}
-	<SPAN {$Fecha_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha">
-	{$label dbo_UserProfile Fecha }	{$arrow_icon_Fecha}
-	</SPAN>
-	{END Fecha_fieldheader}
-{END Fecha_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-									{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Nombre_class}	"
-
-			data-field="Nombre"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Nombre_fieldheadercolumn}
-	{BEGIN Nombre_fieldheader}
-	<SPAN {$Nombre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre">
-	{$label dbo_UserProfile Nombre }	{$arrow_icon_Nombre}
-	</SPAN>
-	{END Nombre_fieldheader}
-{END Nombre_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
 							</tr>
 																				
 					{END grid_header}
@@ -753,32 +723,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UserId_class}	"
-
-			data-field="UserId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN UserId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="UserId" data-fieldname="UserId" data-default-width >
-{$UserId_value}
-</span>
-{END UserId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$UserName_class}	"
 
 			data-field="UserName"
 	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -788,6 +737,27 @@
 </span>
 {END UserName_fieldcolumn}	
 	</td>
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Nombre_class}	"
+
+			data-field="Nombre"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nombre_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre" data-default-width >
+{$Nombre_value}
+</span>
+{END Nombre_fieldcolumn}	
+	</td>
 	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
 	<td
@@ -795,19 +765,19 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$HorarioId_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
-			data-field="HorarioId"
+			data-field="Email"
 	
 	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN HorarioId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="HorarioId" data-fieldname="HorarioId" data-default-width >
-{$HorarioId_value}
+		{BEGIN Email_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email" data-default-width >
+{$Email_value}
 </span>
-{END HorarioId_fieldcolumn}	
+{END Email_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
 									{BEGIN cellblock_grid_cell_field3}
@@ -816,19 +786,19 @@
 	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
+		 r-ori-vert		 {$HorarioId_class}	"
 
-			data-field="SeccionalId"
+			data-field="HorarioId"
 	
 	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SeccionalId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
-{$SeccionalId_value}
+		{BEGIN HorarioId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="HorarioId" data-fieldname="HorarioId" data-default-width >
+{$HorarioId_value}
 </span>
-{END SeccionalId_fieldcolumn}	
+{END HorarioId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field3}
 									{BEGIN cellblock_grid_cell_field4}
@@ -858,84 +828,21 @@
 	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$SeccionalId_class}	"
 
-			data-field="Email"
+			data-field="SeccionalId"
 	
 	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Email_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email" data-fieldname="Email" data-default-width >
-{$Email_value}
+		{BEGIN SeccionalId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
+{$SeccionalId_value}
 </span>
-{END Email_fieldcolumn}	
+{END SeccionalId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
-
-			data-field="CarteraTipoId"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN CarteraTipoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CarteraTipoId" data-fieldname="CarteraTipoId" data-default-width >
-{$CarteraTipoId_value}
-</span>
-{END CarteraTipoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-			data-field="Fecha"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Fecha_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Fecha" data-fieldname="Fecha" data-default-width >
-{$Fecha_value}
-</span>
-{END Fecha_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-									{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Nombre_class}	"
-
-			data-field="Nombre"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Nombre_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nombre" data-fieldname="Nombre" data-default-width >
-{$Nombre_value}
-</span>
-{END Nombre_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -946,22 +853,28 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="usuariosseccionales"
-			data-details-usuariosseccionales	>
+					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="usuariosseccionales,usuarioscarteratipos,usugcc__users"
+			data-details-usuariosseccionales			data-details-usuarioscarteratipos			data-details-usugcc__users	>
 		<span data-details-inside data-short-table="usuariosseccionales">
+			</span>
+		<span data-details-inside data-short-table="usuarioscarteratipos">
+			</span>
+		<span data-details-inside data-short-table="usugcc__users">
 			</span>
 		<div data-details-preview>
 	</div>
 </div>
-	
+	 
+			 
+			
 	</td>
 	{END cellblock_grid_cell_dpreview}
 							</tr>
@@ -1026,7 +939,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UserId_class}	"
+		 r-ori-vert		 {$UserName_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
@@ -1041,7 +954,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$UserName_class}	"
+		 r-ori-vert		 {$Nombre_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
@@ -1056,7 +969,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$HorarioId_class}	"
+		 r-ori-vert		 {$Email_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
@@ -1071,7 +984,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SeccionalId_class}	"
+		 r-ori-vert		 {$HorarioId_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
@@ -1101,7 +1014,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Email_class}	"
+		 r-ori-vert		 {$SeccionalId_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
@@ -1110,51 +1023,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$CarteraTipoId_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Fecha_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-									{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Nombre_class}	"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="userprofile_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
 							</tr>
 					
 					</tfoot>

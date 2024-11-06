@@ -28,16 +28,16 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsuserprofile["Spanish"]["UserId"] = "User Id";
 	$fieldToolTipsuserprofile["Spanish"]["UserId"] = "";
 	$placeHoldersuserprofile["Spanish"]["UserId"] = "";
-	$fieldLabelsuserprofile["Spanish"]["UserName"] = "User Name";
+	$fieldLabelsuserprofile["Spanish"]["UserName"] = "Nombre de usuario";
 	$fieldToolTipsuserprofile["Spanish"]["UserName"] = "";
 	$placeHoldersuserprofile["Spanish"]["UserName"] = "";
-	$fieldLabelsuserprofile["Spanish"]["HorarioId"] = "Horario Id";
+	$fieldLabelsuserprofile["Spanish"]["HorarioId"] = "Cargo";
 	$fieldToolTipsuserprofile["Spanish"]["HorarioId"] = "";
 	$placeHoldersuserprofile["Spanish"]["HorarioId"] = "";
-	$fieldLabelsuserprofile["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldLabelsuserprofile["Spanish"]["SeccionalId"] = "Seccional";
 	$fieldToolTipsuserprofile["Spanish"]["SeccionalId"] = "";
 	$placeHoldersuserprofile["Spanish"]["SeccionalId"] = "";
-	$fieldLabelsuserprofile["Spanish"]["AbogadoId"] = "Abogado Id";
+	$fieldLabelsuserprofile["Spanish"]["AbogadoId"] = "Abogado";
 	$fieldToolTipsuserprofile["Spanish"]["AbogadoId"] = "";
 	$placeHoldersuserprofile["Spanish"]["AbogadoId"] = "";
 	$fieldLabelsuserprofile["Spanish"]["Email"] = "Email";
@@ -52,6 +52,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsuserprofile["Spanish"]["Nombre"] = "Nombre";
 	$fieldToolTipsuserprofile["Spanish"]["Nombre"] = "";
 	$placeHoldersuserprofile["Spanish"]["Nombre"] = "";
+	$pageTitlesuserprofile["Spanish"]["add"] = "Crear Usuario";
 	if (count($fieldToolTipsuserprofile["Spanish"]))
 		$tdatauserprofile[".isUseToolTips"] = true;
 }
@@ -155,7 +156,7 @@ $tdatauserprofile[".ajaxCodeSnippetAdded"] = false;
 
 $tdatauserprofile[".buttonsAdded"] = false;
 
-$tdatauserprofile[".addPageEvents"] = false;
+$tdatauserprofile[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatauserprofile[".isUseTimeForSearch"] = false;
@@ -799,7 +800,8 @@ $tdatauserprofile[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -819,7 +821,8 @@ $tdatauserprofile[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1277,7 +1280,7 @@ $tdatauserprofile[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1287,7 +1290,8 @@ $tdatauserprofile[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "UserId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1687,6 +1691,96 @@ $detailsTablesData["dbo.UserProfile"] = array();
 				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="UserId";
+//	dbo.UsuariosCarteraTipos
+	
+	
+
+		$dIndex = 3;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuariosCarteraTipos";
+		$detailsParam["dOriginalTable"] = "dbo.UsuariosCarteraTipos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usuarioscarteratipos";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuariosCarteraTipos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UserProfile"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"][]="UserId";
+
+				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="UserId";
+//	dbo.webpages_UsersInRoles
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.webpages_UsersInRoles";
+		$detailsParam["dOriginalTable"] = "dbo.webpages_UsersInRoles";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "webpages_usersinroles";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_webpages_UsersInRoles");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UserProfile"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"][]="UserId";
+
+				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="UserId";
+//	dbo.UsuGCC-_users
+	
+	
+
+		$dIndex = 5;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuGCC-_users";
+		$detailsParam["dOriginalTable"] = "dbo.UsuGCC-_users";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usugcc__users";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuGCC__users");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UserProfile"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"][]="UserName";
+
+				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="username";
 //endif
 
 // tables which are master tables for current table (detail)
@@ -1940,6 +2034,7 @@ $tdatauserprofile[".sqlquery"] = $queryData_userprofile;
 
 
 
-$tdatauserprofile[".hasEvents"] = false;
+include_once(getabspath("include/userprofile_events.php"));
+$tdatauserprofile[".hasEvents"] = true;
 
 ?>

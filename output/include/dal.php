@@ -133,6 +133,7 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_tipoTasas;
 	var $tblGCC_at_S00001_CCAD01_dbo_Tramites;
 	var $tblGCC_at_S00001_CCAD01_dbo_UserProfile;
+	var $tblGCC_at_S00001_CCAD01_dbo_UsuariosCarteraTipos;
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuariosSeccionales;
 	var $tblGCC_at_S00001_CCAD01_dbo_usugcc__audit;
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuGCC__users;
@@ -143,6 +144,8 @@ class tDAL
 	var $tblGCC_at_S00001_CCAD01_dbo_UsuGCC__settings;
 	var $tblGCC_at_S00001_CCAD01_dbo_Uvbs;
 	var $tblGCC_at_S00001_CCAD01_dbo_Uvts;
+	var $tblGCC_at_S00001_CCAD01_dbo_webpages_Roles;
+	var $tblGCC_at_S00001_CCAD01_dbo_webpages_UsersInRoles;
 	var $lstTables;
 	var $Table = array();
 
@@ -236,6 +239,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "tipoTasas", "varname" => "GCC_at_S00001_CCAD01_dbo_tipoTasas", "altvarname" => "tipoTasas", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Tramites", "varname" => "GCC_at_S00001_CCAD01_dbo_Tramites", "altvarname" => "Tramites", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UserProfile", "varname" => "GCC_at_S00001_CCAD01_dbo_UserProfile", "altvarname" => "UserProfile", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "UsuariosCarteraTipos", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuariosCarteraTipos", "altvarname" => "UsuariosCarteraTipos", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UsuariosSeccionales", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuariosSeccionales", "altvarname" => "UsuariosSeccionales", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "usugcc-_audit", "varname" => "GCC_at_S00001_CCAD01_dbo_usugcc__audit", "altvarname" => "usugcc__audit", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "UsuGCC-_users", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuGCC__users", "altvarname" => "UsuGCC__users", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
@@ -246,6 +250,8 @@ class tDAL
 		$this->lstTables[] = array("name" => "UsuGCC__settings", "varname" => "GCC_at_S00001_CCAD01_dbo_UsuGCC__settings", "altvarname" => "UsuGCC__settings", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Uvbs", "varname" => "GCC_at_S00001_CCAD01_dbo_Uvbs", "altvarname" => "Uvbs", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 		$this->lstTables[] = array("name" => "Uvts", "varname" => "GCC_at_S00001_CCAD01_dbo_Uvts", "altvarname" => "Uvts", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "webpages_Roles", "varname" => "GCC_at_S00001_CCAD01_dbo_webpages_Roles", "altvarname" => "webpages_Roles", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
+		$this->lstTables[] = array("name" => "webpages_UsersInRoles", "varname" => "GCC_at_S00001_CCAD01_dbo_webpages_UsersInRoles", "altvarname" => "webpages_UsersInRoles", "connId" => "GCC_at_S00001_CCAD01", "schema" => "dbo", "connName" => "GCC at 192.168.209.48");
 	}
 
 	/**

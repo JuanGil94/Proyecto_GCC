@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('dbo.UserProfile',Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){});Runner.pages.PageSettings.addPageEvent('dbo.UserProfile',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){$("form").submit(function(){var valorPersonalizado=$('#miCampoPersonalizado').val();$("input[name='miCampoOculto']").val(valorPersonalizado);});});

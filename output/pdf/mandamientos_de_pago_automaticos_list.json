@@ -822,6 +822,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
 			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
 				
 		  ],
@@ -851,6 +854,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text1}","isHtml":true},
+				
+				
 			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
 				
 		  ],
@@ -879,6 +885,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"$","hidden":"{$item_hide_text2}","isHtml":true},
+				
 				
 			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_simple_grid_field9}"},
 				

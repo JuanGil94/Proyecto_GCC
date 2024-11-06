@@ -217,6 +217,10 @@ $nonAdminTablesArr[] = "dbo.Novedades";
 $nonAdminTablesArr[] = "dbo.ProcesosCorrespondencias";
 $nonAdminTablesArr[] = "dbo.CorrespondenciaMasiva";
 $nonAdminTablesArr[] = "dbo.UsuariosSeccionales";
+$nonAdminTablesArr[] = "dbo.UsuariosCarteraTipos";
+$nonAdminTablesArr[] = "dbo.webpages_Roles";
+$nonAdminTablesArr[] = "dbo.webpages_UsersInRoles";
+$nonAdminTablesArr[] = "dbo.UsuGCC-ugmembers";
 
 $ug_connection = $cman->getForUserGroups();
 

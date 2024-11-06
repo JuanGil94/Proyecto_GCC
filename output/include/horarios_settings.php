@@ -167,7 +167,7 @@ $tdatahorarios[".buttonsAdded"] = false;
 $tdatahorarios[".addPageEvents"] = false;
 
 // use timepicker for search panel
-$tdatahorarios[".isUseTimeForSearch"] = false;
+$tdatahorarios[".isUseTimeForSearch"] = true;
 
 
 $tdatahorarios[".badgeColor"] = "008B8B";
@@ -1636,7 +1636,7 @@ $tdatahorarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Time");
 
 	
 	
@@ -1651,7 +1651,14 @@ $tdatahorarios[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
 		$vdata["NeedEncode"] = true;
 
 	
@@ -1664,10 +1671,10 @@ $tdatahorarios[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Date");
+	$edata = array("EditFormat" => "Time");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1676,7 +1683,8 @@ $tdatahorarios[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1686,26 +1694,31 @@ $tdatahorarios[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
 	
 	
 	
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Time");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
 	
 			
-	
+				$hours = 24;
+	$edata["FormatTimeAttrs"] = array("useTimePicker" => 1,
+									  "hours" => $hours,
+									  "minutes" => 1,
+									  "showSeconds" => 0);
+
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
@@ -1774,7 +1787,7 @@ $tdatahorarios[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "Time");
 
 	
 	
@@ -1789,7 +1802,14 @@ $tdatahorarios[".hideMobileList"] = array();
 	
 	
 	
-	
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
 		$vdata["NeedEncode"] = true;
 
 	
@@ -1802,10 +1822,10 @@ $tdatahorarios[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Date");
+	$edata = array("EditFormat" => "Time");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1814,7 +1834,8 @@ $tdatahorarios[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1824,26 +1845,31 @@ $tdatahorarios[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 24;
-	$edata["LastYearFactor"] = 0;
-
 	
 	
 	
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Time");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
 	
 			
-	
+				$hours = 24;
+	$edata["FormatTimeAttrs"] = array("useTimePicker" => 1,
+									  "hours" => $hours,
+									  "minutes" => 1,
+									  "showSeconds" => 0);
+
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
