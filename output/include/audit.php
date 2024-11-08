@@ -1108,15 +1108,15 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="Consulta Pública")
+		if($table=="Consulta Publica")
 		{
 			return false;
 		}
-		if($table=="Consulta Pública Notificación Detalle")
+		if($table=="Consulta Publica Notificacion Detalle")
 		{
 			return false;
 		}
-		if($table=="Consulta Pública Generación Desprendible")
+		if($table=="Consulta Publica Generacion Desprendible")
 		{
 			return false;
 		}
@@ -1233,6 +1233,14 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="dbo.UsuGCC-ugmembers")
+		{
+			return false;
+		}
+		if($table=="dbo.despachosSigob")
+		{
+			return false;
+		}
+		if($table=="dbo.codificadoresDespacho")
 		{
 			return false;
 		}
@@ -2298,15 +2306,15 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="Consulta Pública")
+		if($table=="Consulta Publica")
 		{
 			return false;
 		}
-		if($table=="Consulta Pública Notificación Detalle")
+		if($table=="Consulta Publica Notificacion Detalle")
 		{
 			return false;
 		}
-		if($table=="Consulta Pública Generación Desprendible")
+		if($table=="Consulta Publica Generacion Desprendible")
 		{
 			return false;
 		}
@@ -2423,6 +2431,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.UsuGCC-ugmembers")
+		{
+			return false;
+		}
+		if($table=="dbo.despachosSigob")
+		{
+			return false;
+		}
+		if($table=="dbo.codificadoresDespacho")
 		{
 			return false;
 		}

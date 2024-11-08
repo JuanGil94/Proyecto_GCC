@@ -553,11 +553,11 @@ function checkTableName($shortTName )
 		return true;
 	if ("prueba_archivo_plano" == $shortTName )
 		return true;
-	if ("consulta_p_blica" == $shortTName )
+	if ("consulta_publica" == $shortTName )
 		return true;
-	if ("consulta_p_blica_notificaci_n_detalle" == $shortTName )
+	if ("consulta_publica_notificacion_detalle" == $shortTName )
 		return true;
-	if ("consulta_p_blica_generaci_n_desprendible" == $shortTName )
+	if ("consulta_publica_generacion_desprendible" == $shortTName )
 		return true;
 	if ("pagos2" == $shortTName )
 		return true;
@@ -616,6 +616,10 @@ function checkTableName($shortTName )
 	if ("webpages_usersinroles" == $shortTName )
 		return true;
 	if ("usugcc_ugmembers" == $shortTName )
+		return true;
+	if ("despachossigob" == $shortTName )
+		return true;
+	if ("codificadoresdespacho" == $shortTName )
 		return true;
 	return false;
 }
@@ -2244,30 +2248,30 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Consulta Pública");
+		$strPerm = GetUserPermissions("Consulta Publica");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="Consulta Pública";
+		$arr[]="Consulta Publica";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Consulta Pública Notificación Detalle");
+		$strPerm = GetUserPermissions("Consulta Publica Notificacion Detalle");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="Consulta Pública Notificación Detalle";
+		$arr[]="Consulta Publica Notificacion Detalle";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Consulta Pública Generación Desprendible");
+		$strPerm = GetUserPermissions("Consulta Publica Generacion Desprendible");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="Consulta Pública Generación Desprendible";
+		$arr[]="Consulta Publica Generacion Desprendible";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -2530,6 +2534,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.UsuGCC-ugmembers";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.despachosSigob");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.despachosSigob";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.codificadoresDespacho");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.codificadoresDespacho";
+	}
 	return $arr;
 }
 
@@ -2714,9 +2736,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Procesos Sin Notificación";
 	$arr[]="Remanentes-";
 	$arr[]="Prueba Archivo Plano";
-	$arr[]="Consulta Pública";
-	$arr[]="Consulta Pública Notificación Detalle";
-	$arr[]="Consulta Pública Generación Desprendible";
+	$arr[]="Consulta Publica";
+	$arr[]="Consulta Publica Notificacion Detalle";
+	$arr[]="Consulta Publica Generacion Desprendible";
 	$arr[]="dbo.Pagos2";
 	$arr[]="dbo.Propiedades2";
 	$arr[]="dbo.Motivos1";
@@ -2746,6 +2768,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.webpages_Roles";
 	$arr[]="dbo.webpages_UsersInRoles";
 	$arr[]="dbo.UsuGCC-ugmembers";
+	$arr[]="dbo.despachosSigob";
+	$arr[]="dbo.codificadoresDespacho";
 	return $arr;
 }
 
@@ -4260,17 +4284,17 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="Consulta Pública" )
+	if( $table=="Consulta Publica" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="Consulta Pública Notificación Detalle" )
+	if( $table=="Consulta Publica Notificacion Detalle" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
-	if( $table=="Consulta Pública Generación Desprendible" )
+	if( $table=="Consulta Publica Generacion Desprendible" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
@@ -4416,6 +4440,16 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UsuGCC-ugmembers" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.despachosSigob" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.codificadoresDespacho" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -3886,12 +3886,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "remanentes_" ] = "Remanentes-";
 	$projectEntities[ "Prueba Archivo Plano" ] = array( "url" => "prueba_archivo_plano", "type" => 6 );
 	$projectEntitiesReverse[ "prueba_archivo_plano" ] = "Prueba Archivo Plano";
-	$projectEntities[ "Consulta Pública" ] = array( "url" => "consulta_p_blica", "type" => 6 );
-	$projectEntitiesReverse[ "consulta_p_blica" ] = "Consulta Pública";
-	$projectEntities[ "Consulta Pública Notificación Detalle" ] = array( "url" => "consulta_p_blica_notificaci_n_detalle", "type" => 6 );
-	$projectEntitiesReverse[ "consulta_p_blica_notificaci_n_detalle" ] = "Consulta Pública Notificación Detalle";
-	$projectEntities[ "Consulta Pública Generación Desprendible" ] = array( "url" => "consulta_p_blica_generaci_n_desprendible", "type" => 6 );
-	$projectEntitiesReverse[ "consulta_p_blica_generaci_n_desprendible" ] = "Consulta Pública Generación Desprendible";
+	$projectEntities[ "Consulta Publica" ] = array( "url" => "consulta_publica", "type" => 6 );
+	$projectEntitiesReverse[ "consulta_publica" ] = "Consulta Publica";
+	$projectEntities[ "Consulta Publica Notificacion Detalle" ] = array( "url" => "consulta_publica_notificacion_detalle", "type" => 6 );
+	$projectEntitiesReverse[ "consulta_publica_notificacion_detalle" ] = "Consulta Publica Notificacion Detalle";
+	$projectEntities[ "Consulta Publica Generacion Desprendible" ] = array( "url" => "consulta_publica_generacion_desprendible", "type" => 6 );
+	$projectEntitiesReverse[ "consulta_publica_generacion_desprendible" ] = "Consulta Publica Generacion Desprendible";
 	$projectEntities[ "dbo.Pagos2" ] = array( "url" => "pagos2", "type" => 1 );
 	$projectEntitiesReverse[ "pagos2" ] = "dbo.Pagos2";
 	$projectEntities[ "dbo.Propiedades2" ] = array( "url" => "propiedades2", "type" => 1 );
@@ -3950,6 +3950,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "webpages_usersinroles" ] = "dbo.webpages_UsersInRoles";
 	$projectEntities[ "dbo.UsuGCC-ugmembers" ] = array( "url" => "usugcc_ugmembers", "type" => 0 );
 	$projectEntitiesReverse[ "usugcc_ugmembers" ] = "dbo.UsuGCC-ugmembers";
+	$projectEntities[ "dbo.despachosSigob" ] = array( "url" => "despachossigob", "type" => 0 );
+	$projectEntitiesReverse[ "despachossigob" ] = "dbo.despachosSigob";
+	$projectEntities[ "dbo.codificadoresDespacho" ] = array( "url" => "codificadoresdespacho", "type" => 0 );
+	$projectEntitiesReverse[ "codificadoresdespacho" ] = "dbo.codificadoresDespacho";
 }
 
 function findTable( $table ) {

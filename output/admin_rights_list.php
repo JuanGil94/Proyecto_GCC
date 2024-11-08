@@ -2806,7 +2806,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("prueba_archivo_plano", " " . "Prueba Archivo Plano");
-$table = "Consulta Pública";
+$table = "Consulta Publica";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -2822,8 +2822,8 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("consulta_p_blica", " " . "Consulta Pública");
-$table = "Consulta Pública Notificación Detalle";
+$tables[$table] = array("consulta_publica", " " . "Consulta Publica");
+$table = "Consulta Publica Notificacion Detalle";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -2839,8 +2839,8 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("consulta_p_blica_notificaci_n_detalle", " " . "Consulta Pública Notificación Detalle");
-$table = "Consulta Pública Generación Desprendible";
+$tables[$table] = array("consulta_publica_notificacion_detalle", " " . "Consulta Publica Notificacion Detalle");
+$table = "Consulta Publica Generacion Desprendible";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
 	$mask .= "A";
@@ -2856,7 +2856,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("consulta_p_blica_generaci_n_desprendible", " " . "Consulta Pública Generación Desprendible");
+$tables[$table] = array("consulta_publica_generacion_desprendible", " " . "Consulta Publica Generacion Desprendible");
 $table = "dbo.Pagos2";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
@@ -3350,6 +3350,40 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("usugcc_ugmembers", " " . "Usu GCC-ugmembers");
+$table = "dbo.despachosSigob";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("despachossigob", " " . "Despachos Sigob");
+$table = "dbo.codificadoresDespacho";
+$mask="";
+if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
+	$mask .= "A";
+if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
+	$mask .= "E";
+if( pageEnabled($table, 'delete') )
+	$mask .= "D";
+if( pageEnabled($table, 'import') )
+	$mask .= "I";
+if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
+	$mask .= "S";
+if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
+	$mask .= "P";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("codificadoresdespacho", " " . "Codificadores Despacho");
 
 if ( pageEnabled(GLOBAL_PAGES, 'menu') )
 	$pageMask[GLOBAL_PAGES] = "S";

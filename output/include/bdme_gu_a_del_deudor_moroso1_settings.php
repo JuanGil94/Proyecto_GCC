@@ -150,7 +150,7 @@ $tdatabdme_gu_a_del_deudor_moroso1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																							
 
 $tdatabdme_gu_a_del_deudor_moroso1[".ajaxCodeSnippetAdded"] = false;
 

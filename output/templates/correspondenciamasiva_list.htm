@@ -827,9 +827,11 @@
 
 	 
 		{BEGIN radicado_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="radicado" data-fieldname="radicado">
-	{$label dbo_CorrespondenciaMasiva radicado }	</span>
+	{BEGIN radicado_fieldheader}
+	<SPAN {$radicado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="radicado" data-fieldname="radicado">
+	{$label dbo_CorrespondenciaMasiva radicado }	{$arrow_icon_radicado}
+	</SPAN>
+	{END radicado_fieldheader}
 {END radicado_fieldheadercolumn}
 
 	

@@ -96,7 +96,7 @@ $tdataabogados[".showEditInPopup"] = false;
 
 $tdataabogados[".showViewInPopup"] = false;
 
-$tdataabogados[".listAjax"] = false;
+	$tdataabogados[".listAjax"] = true;
 //	temporary
 //$tdataabogados[".listAjax"] = false;
 
@@ -164,13 +164,14 @@ $tdataabogados[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																	
 
 $tdataabogados[".ajaxCodeSnippetAdded"] = false;
 
-$tdataabogados[".buttonsAdded"] = false;
+$tdataabogados[".buttonsAdded"] = true;
 
-$tdataabogados[".addPageEvents"] = false;
+$tdataabogados[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataabogados[".isUseTimeForSearch"] = false;
@@ -1872,7 +1873,7 @@ $tdataabogados[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1880,8 +1881,40 @@ $tdataabogados[".hideMobileList"] = array();
 
 
 	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "DespachoCodificadores", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.despachosSigob";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "codigo";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "nombreCompleto+ ' -  ' + area+' - '+documento";
+
 	
 
+		$edata["CustomDisplay"] = "true";
+
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1896,11 +1929,8 @@ $tdataabogados[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=5";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1926,7 +1956,7 @@ $tdataabogados[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2146,7 +2176,7 @@ $tdataabogados[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2156,6 +2186,34 @@ $tdataabogados[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.codificadoresDespacho";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "codificador";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "nombre";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2170,17 +2228,14 @@ $tdataabogados[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -2200,7 +2255,7 @@ $tdataabogados[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);

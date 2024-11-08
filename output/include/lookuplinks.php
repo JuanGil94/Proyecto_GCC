@@ -54,6 +54,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["abogados.SeccionalId"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["abogados.SeccionalId"]["edit"] = array("table" => "dbo.Abogados", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.despachosSigob"] ) ) {
+			$lookupTableLinks["dbo.despachosSigob"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.despachosSigob"]["abogados.Despacho"] )) {
+			$lookupTableLinks["dbo.despachosSigob"]["abogados.Despacho"] = array();
+		}
+		$lookupTableLinks["dbo.despachosSigob"]["abogados.Despacho"]["edit"] = array("table" => "dbo.Abogados", "field" => "Despacho", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.codificadoresDespacho"] ) ) {
+			$lookupTableLinks["dbo.codificadoresDespacho"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] )) {
+			$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] = array();
+		}
+		$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"]["edit"] = array("table" => "dbo.Abogados", "field" => "Codificador", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Estados1"] ) ) {
 			$lookupTableLinks["dbo.Estados1"] = array();
 		}

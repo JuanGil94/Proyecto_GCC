@@ -17,7 +17,8 @@ if (isset($_GET["w1"])) {
     echo "<ul>";
     foreach ($archivos as $archivo) {
         //$ruta_completa = "classes/".$rutaCarpeta."/".$archivo; //Ruta para trabajar localmente
-        $ruta_completa = "http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo;
+        //$ruta_completa = "http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo;
+        $ruta_completa = "http://localhost:8086/archivosSubidos/".$rutaCarpeta."/".$archivo;
         //$ruta_completa = $_SESSION['BeforePath']."/archivosSubidos/".$rutaCarpeta."/".$archivo;
         //echo "<li>$archivo</li>";
         //echo "Value: ".$ruta_completa;
@@ -49,8 +50,8 @@ else if(isset($_GET["w2"])){
         //$ruta_completa = "http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo; //se usa para cuando se publica con una IP
         //echo "<li>$archivo</li>";
         //echo "Value: ".$ruta_completa;
-        //$url_pdf='http://localhost:8086/classes/'.$rutaCarpeta.'/'.$archivo.''; //se usa cuando se hacen pruebas locales
-        $url_pdf="http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo; //se usa para cuando se publica con una IP
+        $url_pdf='http://localhost:8086/classes/'.$rutaCarpeta.'/'.$archivo.''; //se usa cuando se hacen pruebas locales
+        //$url_pdf="http://192.168.209.48:8090/archivosSubidos/".$rutaCarpeta."/".$archivo; //se usa para cuando se publica con una IP
         //$url_pdf=$_SESSION['BeforePath']."/archivosSubidos/".$rutaCarpeta."/".$archivo; //se usa para cuando se publica con una IP
         echo '<li>';
                 //echo $archivo;
