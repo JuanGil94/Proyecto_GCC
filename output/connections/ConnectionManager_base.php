@@ -418,9 +418,9 @@ class ConnectionManager_Base
 		$connectionsIds["Procesos Sin Notificación"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Remanentes-"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Prueba Archivo Plano"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["Consulta Pública"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["Consulta Pública Notificación Detalle"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["Consulta Pública Generación Desprendible"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consulta Publica"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consulta Publica Notificacion Detalle"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Consulta Publica Generacion Desprendible"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Pagos2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Propiedades2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Motivos1"] = "GCC_at_S00001_CCAD01";
@@ -450,6 +450,8 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.webpages_Roles"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.webpages_UsersInRoles"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.UsuGCC-ugmembers"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.despachosSigob"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.codificadoresDespacho"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

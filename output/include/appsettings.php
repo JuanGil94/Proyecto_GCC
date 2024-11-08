@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3688_1730386264";
+$projectBuildKey = "3724_1731009733";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3688";
+$projectBuildNumber = "3724";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -947,9 +947,9 @@ $tableCaptions["Spanish"]["Prescripciones_Autom_tica"] = "Prescripciones Automá
 $tableCaptions["Spanish"]["Procesos_Sin_Notificaci_n"] = "Procesos Sin Notificación";
 $tableCaptions["Spanish"]["Remanentes_"] = "Remanentes-";
 $tableCaptions["Spanish"]["Prueba_Archivo_Plano"] = "Prueba Archivo Plano";
-$tableCaptions["Spanish"]["Consulta_P_blica"] = "Consulta Pública";
-$tableCaptions["Spanish"]["Consulta_P_blica_Notificaci_n_Detalle"] = "Consulta Pública Notificación Detalle";
-$tableCaptions["Spanish"]["Consulta_P_blica_Generaci_n_Desprendible"] = "Consulta Pública Generación Desprendible";
+$tableCaptions["Spanish"]["Consulta_Publica"] = "Consulta Publica";
+$tableCaptions["Spanish"]["Consulta_Publica_Notificacion_Detalle"] = "Consulta Publica Notificacion Detalle";
+$tableCaptions["Spanish"]["Consulta_Publica_Generacion_Desprendible"] = "Consulta Publica Generacion Desprendible";
 $tableCaptions["Spanish"]["dbo_Pagos2"] = "Pagos2";
 $tableCaptions["Spanish"]["dbo_Propiedades2"] = "Propiedades2";
 $tableCaptions["Spanish"]["dbo_Motivos1"] = "Motivos1";
@@ -974,12 +974,14 @@ $tableCaptions["Spanish"]["Test_de_Deterioro__Resumen_"] = "Test de Deterioro (R
 $tableCaptions["Spanish"]["dbo_Novedades"] = "Novedades";
 $tableCaptions["Spanish"]["dbo_ProcesosCorrespondencias"] = "Procesos Correspondencias";
 $tableCaptions["Spanish"]["dbo_CorrespondenciaMasiva"] = "Correspondencia Masiva";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_UsuariosSeccionales"] = "Usuarios Seccionales";
 $tableCaptions["Spanish"]["dbo_UsuariosCarteraTipos"] = "Usuarios Cartera Tipos";
 $tableCaptions["Spanish"]["dbo_webpages_Roles"] = "Webpages Roles";
 $tableCaptions["Spanish"]["dbo_webpages_UsersInRoles"] = "Webpages UsersInRoles";
 $tableCaptions["Spanish"]["dbo_UsuGCC_ugmembers"] = "Usu GCC-ugmembers";
+$tableCaptions["Spanish"]["dbo_despachosSigob"] = "Despachos Sigob";
+$tableCaptions["Spanish"]["dbo_codificadoresDespacho"] = "Codificadores Despacho";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 
 
 $globalEvents = new class_GlobalEvents;

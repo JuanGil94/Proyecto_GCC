@@ -98,10 +98,12 @@ class coreOficios {
                     return true;
                 break;
                 case "20": //Acuerdo de Pago
-                    //echo "Actuacion Nunmero 15";
-                    //echo "Fecha: ".$this->fecha;
-                    //echo "FechaLiqui: ".$this->fechaLiqui;
-                    $resultado["response"]=DB::Exec("UPDATE Procesos set Acuerdo='".$this->fecha."', Incumplimiento=NULL,EstadoId =3,ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
+                    $consulta=DB::Query("SELECT MAX(Cuota) noCuota,MAX(Total) maxCuota FROM Acuerdos where ProcesoId=".$this->procesoId);
+                    while( $date = $consulta->fetchAssoc() ){
+                        $noCuotas=$date["Intereses"];
+                        $maxCuota=$date["InteresesInicial"];
+                    }
+                    $resultado["response"]=DB::Exec("UPDATE Procesos set Cuotas=".$noCuotas.",VlrCuota='".$maxCuota."'Acuerdo='".$this->fecha."', Incumplimiento=NULL,EstadoId =3,ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                     if (!$resultado["response"]){
                         echo "Ocurrio un error debido aL UPDATE en Procesos: ".DB::LastError(); 
                         return false;

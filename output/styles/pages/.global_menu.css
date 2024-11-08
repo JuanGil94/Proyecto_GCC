@@ -1,21 +1,6 @@
 [data-page=".global_menu"][data-itemid="welcome_item1"] > .bs-welcome-header {
   background-color: #D2AF80;
 }
-[data-page=".global_menu"][data-itemid="welcome_item"] > .bs-welcome-header {
-  background-color: #6B8E23;
-}
-[data-page=".global_menu"][data-itemid="welcome_item2"] > .bs-welcome-header {
-  background-color: #CD5C5C;
-}
-[data-page=".global_menu"][data-itemid="welcome_item3"] > .bs-welcome-header {
-  background-color: #008B8B;
-}
-[data-page=".global_menu"][data-itemid="welcome_item4"] > .bs-welcome-header {
-  background-color: #DC143C;
-}
-[data-page=".global_menu"][data-itemid="welcome_item5"] > .bs-welcome-header {
-  background-color: #BC8F8F;
-}
 [data-page=".global_menu"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

@@ -189,9 +189,9 @@ $nonAdminTablesArr[] = "Prescripciones Automática";
 $nonAdminTablesArr[] = "Procesos Sin Notificación";
 $nonAdminTablesArr[] = "Remanentes-";
 $nonAdminTablesArr[] = "Prueba Archivo Plano";
-$nonAdminTablesArr[] = "Consulta Pública";
-$nonAdminTablesArr[] = "Consulta Pública Notificación Detalle";
-$nonAdminTablesArr[] = "Consulta Pública Generación Desprendible";
+$nonAdminTablesArr[] = "Consulta Publica";
+$nonAdminTablesArr[] = "Consulta Publica Notificacion Detalle";
+$nonAdminTablesArr[] = "Consulta Publica Generacion Desprendible";
 $nonAdminTablesArr[] = "dbo.Pagos2";
 $nonAdminTablesArr[] = "dbo.Propiedades2";
 $nonAdminTablesArr[] = "dbo.Motivos1";
@@ -221,6 +221,8 @@ $nonAdminTablesArr[] = "dbo.UsuariosCarteraTipos";
 $nonAdminTablesArr[] = "dbo.webpages_Roles";
 $nonAdminTablesArr[] = "dbo.webpages_UsersInRoles";
 $nonAdminTablesArr[] = "dbo.UsuGCC-ugmembers";
+$nonAdminTablesArr[] = "dbo.despachosSigob";
+$nonAdminTablesArr[] = "dbo.codificadoresDespacho";
 
 $ug_connection = $cman->getForUserGroups();
 

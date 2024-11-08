@@ -549,7 +549,7 @@ curl_setopt_array($curl, array(
       <DespachoDestino></DespachoDestino>
       <Vocativo>-1</Vocativo>
       <Apellido>'.$sancionado.'</Apellido>
-      <Nombre>'.$despachoJuez.'</Nombre>
+      <Nombre>'.$sancionado.'</Nombre>
       <NumeroDocumento>12345</NumeroDocumento>
       <Sexo>0</Sexo>
       <FechaNacimiento>1977/01/01</FechaNacimiento>

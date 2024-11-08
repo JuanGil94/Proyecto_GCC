@@ -819,7 +819,26 @@ class reliquidacion extends CalendarioAnual{
         //echo "Ingreso a relizar el update con valores: ".$PagoCost.",".$PagoObli.",".$PagoInte.",".$pagoId;
         $resultado["response"]=DB::Exec("UPDATE Pagos1 set PagoCost=".$PagoCost.",PagoObli=".$PagoObli.",PagoInte=".$PagoInte." where PagoId=".$pagoId);
         //$this->resultUpdate=$resultado["response"];
-        
+        $consulta = DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$this->procesoId);
+            while( $date = $consulta->fetchAssoc() )
+            {
+                $intereses=$date["Intereses"];
+                $obligacion=$date["Obligacion"];
+                $costas=$date["Costas"];
+            }
+            $intereses=$intereses-$PagoInte;
+            $obligacion=$obligacion-$PagoObli;
+            $costas=$costas-$PagoCost;
+        $updatePro=DB::Exec("UPDATE Procesos set Obligacion=".$obligacion.",Intereses=".$intereses.",Costas=".$costas." where ProcesoId=".$this->procesoId);
+            //$this->resultUpdate=$resultado["response"];
+        if ($updatePro){
+
+        }
+        else{
+            echo "Error en el update, relacionado con el pago en procesos".DB::LastError();
+            exit();
+        }
+
         if ($resultado["response"]) {
             //echo '<script>alert("Se realiza la actualizacion del pagoId")</script>';
             $consulta = DB::Query("SELECT * FROM Pagos1 WHERE PagoId=".$pagoId);

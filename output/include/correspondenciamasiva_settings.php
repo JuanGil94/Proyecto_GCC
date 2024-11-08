@@ -146,7 +146,7 @@ $tdatacorrespondenciamasiva[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																							
 
 $tdatacorrespondenciamasiva[".ajaxCodeSnippetAdded"] = false;
 
@@ -1163,9 +1163,9 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 	$fdata["Index"] = 7;
 	$fdata["strName"] = "radicado";
 	$fdata["GoodName"] = "radicado";
-	$fdata["ownerTable"] = "";
+	$fdata["ownerTable"] = "dbo.CorrespondenciaMasiva";
 	$fdata["Label"] = GetFieldLabel("dbo_CorrespondenciaMasiva","radicado");
-	$fdata["FieldType"] = 201;
+	$fdata["FieldType"] = 200;
 
 
 	
@@ -1602,8 +1602,10 @@ $obj = new SQLFieldListItem($proto16);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
-			$obj = new SQLNonParsed(array(
-	"m_sql" => "radicado"
+			$obj = new SQLField(array(
+	"m_strName" => "radicado",
+	"m_strTable" => "dbo.CorrespondenciaMasiva",
+	"m_srcTableName" => "dbo.CorrespondenciaMasiva"
 ));
 
 $proto18["m_sql"] = "radicado";
@@ -1641,6 +1643,7 @@ $proto23["m_columns"][] = "correspondencia";
 $proto23["m_columns"][] = "usuario";
 $proto23["m_columns"][] = "enviado";
 $proto23["m_columns"][] = "observaciones";
+$proto23["m_columns"][] = "radicado";
 $obj = new SQLTable($proto23);
 
 $proto22["m_table"] = $obj;

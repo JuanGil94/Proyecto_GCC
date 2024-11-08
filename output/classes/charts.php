@@ -792,6 +792,10 @@ class Chart
 			return true;
 		if("dbo.UsuGCC-ugmembers" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.despachosSigob" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.codificadoresDespacho" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 
