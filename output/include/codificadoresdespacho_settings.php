@@ -34,6 +34,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscodificadoresdespacho["Spanish"]["codificador"] = "Codificador";
 	$fieldToolTipscodificadoresdespacho["Spanish"]["codificador"] = "";
 	$placeHolderscodificadoresdespacho["Spanish"]["codificador"] = "";
+	$fieldLabelscodificadoresdespacho["Spanish"]["despacho"] = "Despacho";
+	$fieldToolTipscodificadoresdespacho["Spanish"]["despacho"] = "";
+	$placeHolderscodificadoresdespacho["Spanish"]["despacho"] = "";
 	if (count($fieldToolTipscodificadoresdespacho["Spanish"]))
 		$tdatacodificadoresdespacho[".isUseToolTips"] = true;
 }
@@ -154,6 +157,7 @@ $tdatacodificadoresdespacho[".googleLikeFields"] = array();
 $tdatacodificadoresdespacho[".googleLikeFields"][] = "id";
 $tdatacodificadoresdespacho[".googleLikeFields"][] = "nombre";
 $tdatacodificadoresdespacho[".googleLikeFields"][] = "codificador";
+$tdatacodificadoresdespacho[".googleLikeFields"][] = "despacho";
 
 
 
@@ -187,7 +191,7 @@ $tdatacodificadoresdespacho[".strOrderBy"] = $tstrOrderBy;
 $tdatacodificadoresdespacho[".orderindexes"] = array();
 
 
-$tdatacodificadoresdespacho[".sqlHead"] = "SELECT id,  	nombre,  	codificador";
+$tdatacodificadoresdespacho[".sqlHead"] = "SELECT id,  	nombre,  	codificador,  	despacho";
 $tdatacodificadoresdespacho[".sqlFrom"] = "FROM dbo.codificadoresDespacho";
 $tdatacodificadoresdespacho[".sqlWhereExpr"] = "";
 $tdatacodificadoresdespacho[".sqlTail"] = "";
@@ -652,6 +656,143 @@ $tdatacodificadoresdespacho[".hideMobileList"] = array();
 
 	$tdatacodificadoresdespacho["codificador"] = $fdata;
 		$tdatacodificadoresdespacho[".searchableFields"][] = "codificador";
+//	despacho
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "despacho";
+	$fdata["GoodName"] = "despacho";
+	$fdata["ownerTable"] = "dbo.codificadoresDespacho";
+	$fdata["Label"] = GetFieldLabel("dbo_codificadoresDespacho","despacho");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "despacho";
+
+		$fdata["sourceSingle"] = "despacho";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "despacho";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacodificadoresdespacho["despacho"] = $fdata;
+		$tdatacodificadoresdespacho[".searchableFields"][] = "despacho";
 
 
 $tables_data["dbo.codificadoresDespacho"]=&$tdatacodificadoresdespacho;
@@ -696,7 +837,7 @@ function createSqlQuery_codificadoresdespacho()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	nombre,  	codificador";
+$proto0["m_strFieldList"] = "id,  	nombre,  	codificador,  	despacho";
 $proto0["m_strFrom"] = "FROM dbo.codificadoresDespacho";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -778,39 +919,54 @@ $proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto12=array();
-$proto12["m_link"] = "SQLL_MAIN";
-			$proto13=array();
-$proto13["m_strName"] = "dbo.codificadoresDespacho";
-$proto13["m_srcTableName"] = "dbo.codificadoresDespacho";
-$proto13["m_columns"] = array();
-$proto13["m_columns"][] = "id";
-$proto13["m_columns"][] = "nombre";
-$proto13["m_columns"][] = "codificador";
-$obj = new SQLTable($proto13);
+						$proto12=array();
+			$obj = new SQLField(array(
+	"m_strName" => "despacho",
+	"m_strTable" => "dbo.codificadoresDespacho",
+	"m_srcTableName" => "dbo.codificadoresDespacho"
+));
 
-$proto12["m_table"] = $obj;
-$proto12["m_sql"] = "dbo.codificadoresDespacho";
-$proto12["m_alias"] = "";
+$proto12["m_sql"] = "despacho";
 $proto12["m_srcTableName"] = "dbo.codificadoresDespacho";
-$proto14=array();
-$proto14["m_sql"] = "";
-$proto14["m_uniontype"] = "SQLL_UNKNOWN";
+$proto12["m_expr"]=$obj;
+$proto12["m_alias"] = "";
+$obj = new SQLFieldListItem($proto12);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto14=array();
+$proto14["m_link"] = "SQLL_MAIN";
+			$proto15=array();
+$proto15["m_strName"] = "dbo.codificadoresDespacho";
+$proto15["m_srcTableName"] = "dbo.codificadoresDespacho";
+$proto15["m_columns"] = array();
+$proto15["m_columns"][] = "id";
+$proto15["m_columns"][] = "nombre";
+$proto15["m_columns"][] = "codificador";
+$proto15["m_columns"][] = "despacho";
+$obj = new SQLTable($proto15);
+
+$proto14["m_table"] = $obj;
+$proto14["m_sql"] = "dbo.codificadoresDespacho";
+$proto14["m_alias"] = "";
+$proto14["m_srcTableName"] = "dbo.codificadoresDespacho";
+$proto16=array();
+$proto16["m_sql"] = "";
+$proto16["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto14["m_column"]=$obj;
-$proto14["m_contained"] = array();
-$proto14["m_strCase"] = "";
-$proto14["m_havingmode"] = false;
-$proto14["m_inBrackets"] = false;
-$proto14["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto14);
+$proto16["m_column"]=$obj;
+$proto16["m_contained"] = array();
+$proto16["m_strCase"] = "";
+$proto16["m_havingmode"] = false;
+$proto16["m_inBrackets"] = false;
+$proto16["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto16);
 
-$proto12["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto12);
+$proto14["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto14);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -826,7 +982,7 @@ $queryData_codificadoresdespacho = createSqlQuery_codificadoresdespacho();
 	
 		;
 
-			
+				
 
 $tdatacodificadoresdespacho[".sqlquery"] = $queryData_codificadoresdespacho;
 

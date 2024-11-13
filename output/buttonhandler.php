@@ -8823,7 +8823,7 @@ function buttonHandler_ActualizarDespachos($params)
 $abogadoApi=new abogadosApi;
 $despachosActivos=$abogadoApi->despachosActivos(); //llenar la tabla despachosSibog
 //$despachosActivos=$abogadoApi->codificadoresDespacho();
-if (despachosActivos){
+if ($despachosActivos){
 	$result["flag"]=1;
 };
 	RunnerContext::pop();
@@ -8879,9 +8879,14 @@ function buttonHandler_Actualizar_Codificadores($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	include_once (getabspath("classes/abogados_API.php"));
+$abogadoApi=new abogadosApi;
+$despacho='CG032';
+$codificadoresDespacho=$abogadoApi->codificadoresDespacho(); //llenar la tabla despachosSibog
+//$despachosActivos=$abogadoApi->codificadoresDespacho();
+if ($codificadoresDespacho){
+	$result["flag"]=1;
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -9308,7 +9313,7 @@ function fieldEventHandler_DespachoCodificadores( $params )
 //exit();
 $abogadoApi=new abogadosApi;
 //$despachosActivos=$abogadoApi->despachosActivos(); //llenar la tabla despachosSibog
-$despachosActivos=$abogadoApi->codificadoresDespacho($params["value"]);
+$despachosActivos=$abogadoApi->codificadoresDespachoProcess($params["value"]);
 ;
 	RunnerContext::pop();
 	

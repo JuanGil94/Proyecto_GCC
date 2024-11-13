@@ -64,9 +64,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsabogados["Spanish"]["Codificador"] = "Codificador";
 	$fieldToolTipsabogados["Spanish"]["Codificador"] = "";
 	$placeHoldersabogados["Spanish"]["Codificador"] = "";
-	$fieldLabelsabogados["Spanish"]["Firma"] = "Firma";
-	$fieldToolTipsabogados["Spanish"]["Firma"] = "";
-	$placeHoldersabogados["Spanish"]["Firma"] = "";
 	if (count($fieldToolTipsabogados["Spanish"]))
 		$tdataabogados[".isUseToolTips"] = true;
 }
@@ -197,7 +194,6 @@ $tdataabogados[".googleLikeFields"][] = "SeccionalId";
 $tdataabogados[".googleLikeFields"][] = "Masculino";
 $tdataabogados[".googleLikeFields"][] = "Activo";
 $tdataabogados[".googleLikeFields"][] = "Despacho";
-$tdataabogados[".googleLikeFields"][] = "Firma";
 $tdataabogados[".googleLikeFields"][] = "Codificador";
 
 
@@ -234,7 +230,7 @@ $tdataabogados[".strOrderBy"] = $tstrOrderBy;
 $tdataabogados[".orderindexes"] = array();
 
 
-$tdataabogados[".sqlHead"] = "SELECT AbogadoId,  	Abogado,  	Documento,  	Tarjeta,  	Direccion,  	Telefonos,  	Celular,  	Email,  	SeccionalId,  	Masculino,  	Activo,  	Despacho,  	''as Firma,  	Codificador";
+$tdataabogados[".sqlHead"] = "SELECT AbogadoId,  	Abogado,  	Documento,  	Tarjeta,  	Direccion,  	Telefonos,  	Celular,  	Email,  	SeccionalId,  	Masculino,  	Activo,  	Despacho,  	Codificador";
 $tdataabogados[".sqlFrom"] = "FROM dbo.Abogados";
 $tdataabogados[".sqlWhereExpr"] = "";
 $tdataabogados[".sqlTail"] = "";
@@ -1909,6 +1905,9 @@ $tdataabogados[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "Codificador";
 
 	
 	
@@ -1983,146 +1982,10 @@ $tdataabogados[".hideMobileList"] = array();
 
 	$tdataabogados["Despacho"] = $fdata;
 		$tdataabogados[".searchableFields"][] = "Despacho";
-//	Firma
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 13;
-	$fdata["strName"] = "Firma";
-	$fdata["GoodName"] = "Firma";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("dbo_Abogados","Firma");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Firma";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "''";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdataabogados["Firma"] = $fdata;
-		$tdataabogados[".searchableFields"][] = "Firma";
 //	Codificador
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 14;
+	$fdata["Index"] = 13;
 	$fdata["strName"] = "Codificador";
 	$fdata["GoodName"] = "Codificador";
 	$fdata["ownerTable"] = "dbo.Abogados";
@@ -2205,7 +2068,10 @@ $tdataabogados[".hideMobileList"] = array();
 	$edata["LookupOrderBy"] = "";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "Despacho", "lookup" => "despacho" );
+
 	
 	
 
@@ -2524,7 +2390,7 @@ function createSqlQuery_abogados()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "AbogadoId,  	Abogado,  	Documento,  	Tarjeta,  	Direccion,  	Telefonos,  	Celular,  	Email,  	SeccionalId,  	Masculino,  	Activo,  	Despacho,  	''as Firma,  	Codificador";
+$proto0["m_strFieldList"] = "AbogadoId,  	Abogado,  	Documento,  	Tarjeta,  	Direccion,  	Telefonos,  	Celular,  	Email,  	SeccionalId,  	Masculino,  	Activo,  	Despacho,  	Codificador";
 $proto0["m_strFrom"] = "FROM dbo.Abogados";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2733,74 +2599,62 @@ $obj = new SQLFieldListItem($proto28);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto30=array();
-			$obj = new SQLNonParsed(array(
-	"m_sql" => "''"
-));
-
-$proto30["m_sql"] = "''";
-$proto30["m_srcTableName"] = "dbo.Abogados";
-$proto30["m_expr"]=$obj;
-$proto30["m_alias"] = "Firma";
-$obj = new SQLFieldListItem($proto30);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto32=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Codificador",
 	"m_strTable" => "dbo.Abogados",
 	"m_srcTableName" => "dbo.Abogados"
 ));
 
-$proto32["m_sql"] = "Codificador";
-$proto32["m_srcTableName"] = "dbo.Abogados";
-$proto32["m_expr"]=$obj;
-$proto32["m_alias"] = "";
-$obj = new SQLFieldListItem($proto32);
+$proto30["m_sql"] = "Codificador";
+$proto30["m_srcTableName"] = "dbo.Abogados";
+$proto30["m_expr"]=$obj;
+$proto30["m_alias"] = "";
+$obj = new SQLFieldListItem($proto30);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto34=array();
-$proto34["m_link"] = "SQLL_MAIN";
-			$proto35=array();
-$proto35["m_strName"] = "dbo.Abogados";
-$proto35["m_srcTableName"] = "dbo.Abogados";
-$proto35["m_columns"] = array();
-$proto35["m_columns"][] = "AbogadoId";
-$proto35["m_columns"][] = "Abogado";
-$proto35["m_columns"][] = "Documento";
-$proto35["m_columns"][] = "Tarjeta";
-$proto35["m_columns"][] = "Direccion";
-$proto35["m_columns"][] = "Telefonos";
-$proto35["m_columns"][] = "Celular";
-$proto35["m_columns"][] = "Email";
-$proto35["m_columns"][] = "SeccionalId";
-$proto35["m_columns"][] = "Masculino";
-$proto35["m_columns"][] = "Activo";
-$proto35["m_columns"][] = "Despacho";
-$proto35["m_columns"][] = "Codificador";
-$obj = new SQLTable($proto35);
+												$proto32=array();
+$proto32["m_link"] = "SQLL_MAIN";
+			$proto33=array();
+$proto33["m_strName"] = "dbo.Abogados";
+$proto33["m_srcTableName"] = "dbo.Abogados";
+$proto33["m_columns"] = array();
+$proto33["m_columns"][] = "AbogadoId";
+$proto33["m_columns"][] = "Abogado";
+$proto33["m_columns"][] = "Documento";
+$proto33["m_columns"][] = "Tarjeta";
+$proto33["m_columns"][] = "Direccion";
+$proto33["m_columns"][] = "Telefonos";
+$proto33["m_columns"][] = "Celular";
+$proto33["m_columns"][] = "Email";
+$proto33["m_columns"][] = "SeccionalId";
+$proto33["m_columns"][] = "Masculino";
+$proto33["m_columns"][] = "Activo";
+$proto33["m_columns"][] = "Despacho";
+$proto33["m_columns"][] = "Codificador";
+$obj = new SQLTable($proto33);
 
-$proto34["m_table"] = $obj;
-$proto34["m_sql"] = "dbo.Abogados";
-$proto34["m_alias"] = "";
-$proto34["m_srcTableName"] = "dbo.Abogados";
-$proto36=array();
-$proto36["m_sql"] = "";
-$proto36["m_uniontype"] = "SQLL_UNKNOWN";
+$proto32["m_table"] = $obj;
+$proto32["m_sql"] = "dbo.Abogados";
+$proto32["m_alias"] = "";
+$proto32["m_srcTableName"] = "dbo.Abogados";
+$proto34=array();
+$proto34["m_sql"] = "";
+$proto34["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto36["m_column"]=$obj;
-$proto36["m_contained"] = array();
-$proto36["m_strCase"] = "";
-$proto36["m_havingmode"] = false;
-$proto36["m_inBrackets"] = false;
-$proto36["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto36);
+$proto34["m_column"]=$obj;
+$proto34["m_contained"] = array();
+$proto34["m_strCase"] = "";
+$proto34["m_havingmode"] = false;
+$proto34["m_inBrackets"] = false;
+$proto34["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto34);
 
-$proto34["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto34);
+$proto32["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto32);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2816,7 +2670,7 @@ $queryData_abogados = createSqlQuery_abogados();
 	
 		;
 
-														
+													
 
 $tdataabogados[".sqlquery"] = $queryData_abogados;
 

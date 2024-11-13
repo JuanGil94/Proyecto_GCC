@@ -620,7 +620,7 @@ if ($data = db_fetch_array($rs)) {
 			//if ($password == $data['password']) {
 
 				//$password = $data['password'];
-        echo "Contraseña correcta, autenticación exitosa.";
+        //echo "Contraseña correcta, autenticación exitosa.";
         return true;
     } else {
         $message = "Contraseña incorrecta.";

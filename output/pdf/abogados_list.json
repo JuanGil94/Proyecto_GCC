@@ -112,9 +112,6 @@ pdfDocument = {
 										{BEGIN col_grid_15}
 					"%",
 					{END col_grid_15}
-										{BEGIN col_grid_16}
-					"%",
-					{END col_grid_16}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -698,35 +695,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field11}
-																							{BEGIN cellblock_grid_headcell_field12}
-{
-	cellId: 'headcell_field12',
-	col:0,
-	row:0,
-			fieldName: 'Firma',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Abogados Firma }","hidden":"{$item_hide_grid_field_label}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Firma_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field12}
 																							{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
@@ -1178,35 +1146,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field11}
-																							{BEGIN cellblock_grid_cell_field12}
-{
-	cellId: 'cell_field12',
-	col:0,
-	row:0,
-			fieldName: 'Firma',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Firma_pdfvalue},"hidden":"{$item_hide_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Firma_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field12}
 																							{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
@@ -1357,12 +1296,6 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  15,
-				text: ''
-			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  16,
 				text: ''
 			},
 							],
@@ -1764,32 +1697,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field11}
-																							{BEGIN cellblock_grid_footcell_field12}
-{
-	cellId: 'footcell_field12',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field12}
 																							{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',

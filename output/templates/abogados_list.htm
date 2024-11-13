@@ -115,19 +115,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Abogado}</span>
 						</div>
 		{END searchCtrlBlock_Abogado}
-																{BEGIN searchCtrlBlock_Firma}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Firma}" {$filterRow_attrs_Firma}>
-			<label>{$label dbo_Abogados Firma }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Firma}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Firma}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Firma}</span>
-						</div>
-		{END searchCtrlBlock_Firma}
 																{BEGIN searchCtrlBlock_Telefonos}
 
 
@@ -613,7 +600,7 @@
 		<span data-itemtype="custom_button" data-itemid="custom_button1" {$item_custom_button1} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="Actualizar_Codificadores" href="javascript:void(0)" typeid="ib" >
-							Actualizar Codificadores			</a>
+							ActualizarCod			</a>
 </span>
 			{END firstAboveGridCell}	
 	</div>			 
@@ -960,16 +947,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Firma" checked="checked" value="1" data-field="Firma" data-fieldname="Firma">
-					<span>{$label dbo_Abogados Firma }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Activo" checked="checked" value="1" data-field="Activo" data-fieldname="Activo">
 					<span>{$label dbo_Abogados Activo }</span>
 				</label>
@@ -1025,9 +1002,6 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Despacho"]:before {
 		content: "{$label dbo_Abogados Despacho}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Firma"]:before {
-		content: "{$label dbo_Abogados Firma}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Codificador"]:before {
 		content: "{$label dbo_Abogados Codificador}";
@@ -1374,31 +1348,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field11}
-									{BEGIN cellblock_grid_headcell_field12}
-	<th
-	
-	{$cell_grid_headcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Firma_class}	"
-
-			data-field="Firma"
-	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Firma_fieldheadercolumn}
-	{BEGIN Firma_fieldheader}
-	<SPAN {$Firma_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Firma" data-fieldname="Firma">
-	{$label dbo_Abogados Firma }	{$arrow_icon_Firma}
-	</SPAN>
-	{END Firma_fieldheader}
-{END Firma_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field12}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -1742,27 +1691,6 @@
 {END Codificador_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field11}
-									{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Firma_class}	"
-
-			data-field="Firma"
-	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Firma_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Firma" data-fieldname="Firma" data-default-width >
-{$Firma_value}
-</span>
-{END Firma_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field12}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -2030,7 +1958,7 @@
 	{$cell_grid_footcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Firma_class}	"
+		 r-ori-vert		 {$Activo_class}	"
 
 	
 	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="abogados_list"	
@@ -2039,21 +1967,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field11}
-									{BEGIN cellblock_grid_footcell_field12}
-	<td
-	
-	{$cell_grid_footcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Activo_class}	"
-
-	
-	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="abogados_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field12}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	

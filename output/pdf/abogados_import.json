@@ -141,9 +141,6 @@ pdfDocument = {
 				
 			{"text":{$Codificador_pdfvalue},"hidden":"{$item_hide_import_field12}"},
 				
-				
-			{"text":{$Firma_pdfvalue},"hidden":"{$item_hide_import_field}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

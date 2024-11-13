@@ -13,6 +13,8 @@
 	{
 	// fill list of events
 
+		$this->events["ProcessValuesEdit"]=true;
+
 
 	}
 
@@ -53,6 +55,89 @@
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Process record values
+function ProcessValuesEdit(&$values, $pageObject)
+{
+
+		include_once (getabspath("classes/abogados_API.php"));
+//echo "Valor. ".$params["value"];
+//exit();
+$abogadoApi=new abogadosApi;
+//$despachosActivos=$abogadoApi->despachosActivos(); //llenar la tabla despachosSibog
+$despachosActivos=$abogadoApi->codificadoresDespachoProcess($values['Despacho']);
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function ProcessValuesEdit
+
 		
 		
 		

@@ -199,7 +199,7 @@ class abogadosApi {
 					 exit();
 				}
     }
-    function codificadoresDespacho($despacho){
+    function codificadoresDespacho(){
         $rs2=DB::Exec("DELETE FROM codificadoresDespacho");
         if ($rs2) {
             //return true;
@@ -208,7 +208,32 @@ class abogadosApi {
              // Hubo un error en la ejecución de la consulta
              echo "Error al borrar la tabla despachosSigob" . DB::LastError();
              exit();
-        }  
+        }
+        $rs2=DB::Exec("DBCC CHECKIDENT ('codificadoresDespacho', RESEED, 0)");  
+        $consulta=DB::Query("SELECT Codigo FROM despachosSigob");
+                    while( $date = $consulta->fetchAssoc() ){
+                        $codigo[]=$date["Codigo"];
+                    }
+        
+                    //print_r($codigo);
+                    //exit();
+        foreach ($codigo as $value){
+            $this->codificadoresDespachoProcess($value);
+            //echo $value."<br>";
+        }
+        return true;
+    }
+    function codificadoresDespachoProcess($despacho){
+        $rs2=DB::Exec("DELETE FROM codificadoresDespacho");
+        if ($rs2) {
+            //return true;
+        } 
+        else {
+             // Hubo un error en la ejecución de la consulta
+             echo "Error al borrar la tabla despachosSigob" . DB::LastError();
+             exit();
+        }
+        $rs2=DB::Exec("DBCC CHECKIDENT ('codificadoresDespacho', RESEED, 0)");  
         $url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/ObtenerCodificadoresPorDespacho';
         $data = array(
             'Contrasena' => '448B8890',
@@ -245,20 +270,39 @@ class abogadosApi {
             $xml=$this->xmlToArray($response);
             $codificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"][0]["CODIGO_CODIF"]["value"];
             $nameCodificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"][0]["DESC_CODIF"]["value"];
-            $this->insertCodificadores($nameCodificador,$codificador);
+            $this->insertCodificadores($nameCodificador,$codificador,$despacho);
             $codificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["CODIGO_CODIF"]["value"];
             $nameCodificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["DESC_CODIF"]["value"];
-            $this->insertCodificadores($nameCodificador,$codificador);
+            $this->insertCodificadores($nameCodificador,$codificador,$despacho);
+
+            //ECHO max(array_keys($xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["CODIGO_CODIF"]));
+
+            
+            for($i=0;$i<=max(array_keys($xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["CODIGO_CODIF"]));$i++){
+                $codificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["CODIGO_CODIF"][$i]["value"];
+                $nameCodificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["DESC_CODIF"][$i]["value"];
+                $this->insertCodificadores($nameCodificador,$codificador,$despacho);
+            }
+            return true;
+            /*
             $codificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["CODIGO_CODIF"][0]["value"];
             $nameCodificador=$xml["DATASET"]["DIFFGR:DIFFGRAM"]["NEWDATASET"]["TABLE"]["DESC_CODIF"][0]["value"];
             $this->insertCodificadores($nameCodificador,$codificador);
-            //$json=json_encode($xml);
-            //print_r($json);
+            $json=json_encode($xml);
+            print_r($json);
             //print_r($xml);
+            */
         }
     }
-    function insertCodificadores($nameCodificador,$codificador){
-        $rs2=DB::Exec("INSERT INTO codificadoresDespacho (nombre,codificador) VALUES ('".$nameCodificador."','".$codificador."')");
+    function insertCodificadores($nameCodificador,$codificador,$despacho){
+        //echo "Despacho: ".$despacho." Nombre del Codificador: ".$nameCodificador." Despacho:".$despacho;
+        if (empty($nameCodificador)) {
+            //echo "Entro vacio";
+            return;
+        }
+        else{
+            //echo "Entro al Insert";
+            $rs2=DB::Exec("INSERT INTO codificadoresDespacho (nombre,codificador,despacho) VALUES ('".$nameCodificador."','".$codificador."','".$despacho."')");
 				if ($rs2) {
 					return true;
 				} 
@@ -267,5 +311,8 @@ class abogadosApi {
 					 echo "Error al ejecutar el insert into a codificadoresDespacho: " . DB::LastError();
 					 exit();
 				}
+        }
+        //exit();
+        
     }
 }
