@@ -114,6 +114,9 @@ pdfDocument = {
 				
 			{"text":{$codificador_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
+				
+			{"text":{$despacho_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

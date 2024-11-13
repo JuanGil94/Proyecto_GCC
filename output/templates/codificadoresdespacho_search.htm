@@ -159,6 +159,28 @@
 </div>
 
 {END codificador_fieldblock}
+											
+{BEGIN despacho_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_despacho}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="despacho{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="despacho" data-fieldname="despacho" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_despacho}">
+		{$label dbo_codificadoresDespacho despacho }	</label>
+	<div class="r-search-option">
+		{$searchtype_despacho}
+	</div>
+	<div class="r-search-field">
+		{$despacho_editcontrol}	</div>
+	<div class="r-search-field">
+		{$despacho_editcontrol1}
+	</div>
+	
+</div>
+
+{END despacho_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
