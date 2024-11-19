@@ -2423,6 +2423,7 @@ $tdatachequeossancionados[".sqlquery"] = $queryData_chequeossancionados;
 
 
 
-$tdatachequeossancionados[".hasEvents"] = false;
+include_once(getabspath("include/chequeossancionados_events.php"));
+$tdatachequeossancionados[".hasEvents"] = true;
 
 ?>

@@ -1,2 +1,2 @@
 
-Runner.pages.PageSettings.addPageEvent('dbo.Procesos',Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){});
+Runner.pages.PageSettings.addPageEvent('dbo.Procesos',Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){$('#ctlSearchFor1').hide();$('#searchButtTop1').hide();$('#simpleSrchFieldsCombo1').on('change',function(){valorSeleccionado=$(this).val();if(valorSeleccionado!==""){$('#ctlSearchFor1').show();$('#searchButtTop1').show();}else{$('#ctlSearchFor1').hide();$('#searchButtTop1').hide();}});;});

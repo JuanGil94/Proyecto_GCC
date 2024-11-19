@@ -1152,11 +1152,11 @@ $abogadoId=$data["AbogadoId"];
 	while( $data = $rs->fetchAssoc() )
 	{
 		$obligacion=$data['Obligacion'];
-		$carteraTipoId=$data["TramiteId"];
+		$tramiteId=$data["TramiteId"];
 	}
 if ($obligacion>0){
 if ($data["Plazo"]<now()){
-if ($carteraTipoId== 2){
+if ($tramiteId== 2){
 $carteraTipoId=1;
 $rs=DB::Query("declare @p2 int
 set @p2=0
@@ -1284,18 +1284,20 @@ if ($result["total"]!=null){
 $rs = DB::Select("Empresas", "EmpresaId=1");
 		while( $data = $rs->fetchAssoc() )
 		{
-			$maxPesos=$data["MaximoPesos"];
-			$maxUvt=$data["MaximoUvt"];
-			$maxSalarios=$data["MaximoSalarios"];
-			$maxUvb=$data["MaximoUvb"];
+			$maxPesos=$data["MaximoPesos"]."<br>";
+			$maxUvt=$data["MaximoUvt"]."<br>";
+			$maxSalarios=$data["MaximoSalarios"]."<br>";
+			$maxUvb=$data["MaximoUvb"]."<br>";
 		}
-if (($conceptoId==1 and $naturalezaId=1) || ($cantidad>$maxUvt and  $tipo==3 and ($conceptoId!=4&&$conceptoId!=5))||($cantidad>$maxSalarios and  $tipo==2 and ($conceptoId!=4&&$conceptoId!=5))||($cantidad>$maxUvb and  $tipo==4 and ($conceptoId!=4&&$conceptoId!=5))||($obligacion>$maxPesos and  $tipo==1 and ($conceptoId!=4&&$conceptoId!=5)) ){
+		
+if (($conceptoId==1 and $naturalezaId==1) || ($cantidad>$maxUvt and  $tipo==3 and ($conceptoId!=4&&$conceptoId!=5))||($cantidad>$maxSalarios and  $tipo==2 and ($conceptoId!=4&&$conceptoId!=5))||($cantidad>$maxUvb and  $tipo==4 and ($conceptoId!=4&&$conceptoId!=5))||($obligacion>$maxPesos and  $tipo==1 and ($conceptoId!=4&&$conceptoId!=5)) ){
 	//echo "Valor de la CarteraTipoId antes: ".$carteraTipoId;
 	$carteraTipoId=5;
 	//echo "<br>Valor de la CarteraTipoId despues: ".$carteraTipoId;
 	//echo "<br>Valor del concepto: ".$conceptoId;
 	//return false;
 }
+
 //echo "<br>Crea el proceso sin problema";
 //return false;
 //Verificacion para crear proceso en cartera Ejemplarizante fin
@@ -8203,9 +8205,32 @@ function buttonHandler_Nov_Notificaci_n($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$notificacion=$date["Notificacion"];
+						$ejecutoria=$date["Ejecutoria"];
+        }
+if (empty($notificacion)){
+	$notificacion=1;
+}
+else{
+	$fechaNotificacion= new DateTime($notificacion);
+	$notificacion=$fechaNotificacion->format('Y-m-d');
+}
+
+$fechaEjecutoria= new DateTime($ejecutoria);
+$ejecutoria=$fechaEjecutoria->format('Y-m-d');
+$dateActual=date('Y-m-d');
+
+$result["fechaActual"]=$dateActual;
+$result["Numero"]=$numero;
+$result["Notificacion"]=$notificacion;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];
+$result["Ejecutoria"]=$ejecutoria;
+$result["Actual"]=$dateActual;;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -8259,9 +8284,17 @@ function buttonHandler_Nov__Obli__Inicial($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$obligacionInicial=$date["ObligacionInicial"];
+        }
+$obligacionInicial=number_format($obligacionInicial,2);
+$result["Numero"]=$numero;
+$result["obligacionInicial"]=$obligacionInicial;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -9224,6 +9257,9 @@ function fieldEventHandler_TramiteId_event( $params )
 }
 if($params['value']==1 || $params['value']==5 ){
 	$result["flag2"]=1;
+}
+if($params['value']==2){
+	$result["flag3"]=1;
 };
 	RunnerContext::pop();
 	

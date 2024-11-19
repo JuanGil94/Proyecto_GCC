@@ -632,10 +632,27 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-		//echo "Value del campo: ".$recordId;
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-//$values["Obligacion"]=$_SESSION["Obligacion"];
+		$ejecutoria=$values['Ejecutoria'];
+$fecha = new DateTime($ejecutoria);
+
+$fechaActual = new DateTime();
+$fechaActual = $fechaActual->format('Y-m-d');
+if ($values["ConceptoId"]!=5){
+	$fecha->modify('+5 years');
+	if ($fecha->format('Y-m-d')<$fechaActual){
+		echo "<script>alert('A la fecha ejecutoria: ".$ejecutoria.", se le suman 5 años mas, dando como resultado la fecha: ".$fecha->format('Y-m-d')." la cual es menor a la fecha actual: ".$fechaActual.", por lo cual el Proceso ya se encuentra Prescrito')</script>";
+		return false;
+}
+}
+else{
+	$fecha->modify('+3 years');
+	if ($fecha->format('Y-m-d')<$fechaActual){
+		echo "<script>alert('A la fecha ejecutoria: ".$ejecutoria.", se le suman 3 años mas, dando como resultado la fecha: ".$fecha->format('Y-m-d').", la cual es menor a la fecha actual: ".$fechaActual.", por lo cual el Proceso por INCAPACIDAD ya se encuentra Prescrito')</script>";
+		return false;
+}
+}
+
+//exit();
 function convertirAPuntoFlotante($valor) {
     // Eliminar el símbolo de moneda y los espacios
     $valorLimpio = str_replace(['$', ' ', '.'], '', $valor);
@@ -726,11 +743,6 @@ elseif($values['FechaSancion']>now()){
 	echo '<script>alert ("La Fecha Sancion: '.$values['FechaSancion'].' debe ser menor o igual a la Fecha Actual: '.now().'")</script>';
 	return false;
 }
-/*
-if ($_SESSION["Obligacion"]==NULL){
-	$values["Obligacion"]=0;
-}
-*/
 return true;
 
 
@@ -968,6 +980,26 @@ function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $
 {
 
 		//print_r($values);
+$ejecutoria=$values['Ejecutoria'];
+$fecha = new DateTime($ejecutoria);
+
+$fechaActual = new DateTime();
+$fechaActual = $fechaActual->format('Y-m-d');
+if ($values["ConceptoId"]!=5){
+	$fecha->modify('+5 years');
+	if ($fecha->format('Y-m-d')<$fechaActual){
+		echo "<script>alert('A la fecha ejecutoria: ".$ejecutoria.", se le suman 5 años mas, dando como resultado la fecha: ".$fecha->format('Y-m-d')." la cual es menor a la fecha actual: ".$fechaActual.", por lo cual el Proceso ya se encuentra Prescrito')</script>";
+		return false;
+}
+}
+else{
+	$fecha->modify('+3 years');
+	if ($fecha->format('Y-m-d')<$fechaActual){
+		echo "<script>alert('A la fecha ejecutoria: ".$ejecutoria.", se le suman 3 años mas, dando como resultado la fecha: ".$fecha->format('Y-m-d').", la cual es menor a la fecha actual: ".$fechaActual.", por lo cual el Proceso por INCAPACIDAD ya se encuentra Prescrito')</script>";
+		return false;
+}
+}
+
 function convertirAPuntoFlotante($valor) {
     // Eliminar el símbolo de moneda y los espacios
     $valorLimpio = str_replace(['$', ' ', '.'], '', $valor);
