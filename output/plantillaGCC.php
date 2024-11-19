@@ -149,6 +149,7 @@ class diccionario {
 		{
             $info["resolucionEmbargo"]=$date["resolucionEmbargo"];
         }
+        /*
         $consulta=DB::Query("SELECT 
         CI.Ciudad AS 'SancionadoCiudad'
         FROM Direcciones D
@@ -160,7 +161,7 @@ class diccionario {
 		{
             $info["SancionadoCiudad"]=$date["SancionadoCiudad"];
         }
-
+        */
         $consulta=DB::Query("SELECT Numero AS 'Numero',
         --FORMAT(Obligacion, 'C', 'es-MX') AS 'Obligacion',
         FORMAT(Obligacion, 'C', 'es-CO')  AS Obligacion,
@@ -390,17 +391,24 @@ class diccionario {
     }
     public function direcciones(){
         $consulta2=DB::Query("SELECT 
-        STUFF(D.Direccion, 1, 1, UPPER(LEFT(D.Direccion, 1))) AS 'Direccion'
+        STUFF(D.Direccion, 1, 1, UPPER(LEFT(D.Direccion, 1))) AS 'Direccion',CI.Ciudad,D.Barrio,D.Telefonos
         FROM Direcciones D
         INNER JOIN Sancionados SA ON SA.SancionadoId = D.SancionadoId
         INNER JOIN Procesos P ON SA.SancionadoId = P.SancionadoId
         INNER JOIN Ciudades CI ON CI.CiudadId =D.CiudadId
         where P.ProcesoId =".$this->procesoId);
+        $i=0;
         while( $date = $consulta2->fetchAssoc() )
 		{
-            $direcciones[]=$date["Direccion"];
+            $direcciones[$i]["Direccion"]=$date["Direccion"];
+            $direcciones[$i]['Ciudad']=$date["Ciudad"];
+            $direcciones[$i]['Barrio']=$date["Barrio"];
+            $direcciones[$i]['Telefonos']=$date["Telefonos"];
+            $i++;
         }
+        //print_r($direcciones);
         //echo "Numero de Direcciones: ".count($direcciones);
+        //exit();
         if (count($direcciones)<1){
             echo "<script>var aceptar=confirm ('El sancionado debe contener por lo menos una direccion');if(aceptar){location.reload();}</script>";
             exit();
@@ -471,9 +479,13 @@ class plantillas extends diccionario{
         $case=count($direcciones);
         if($case>1){
             foreach( $direcciones as $key=>$dato){
+                //echo $key;
+                //print_r ($dato);
+                //exit();
                 $templateProcessor = new TemplateProcessor($templatePath);
                 $direccion=$dato;
-                $templateProcessor->setValue('direccion',$direccion);
+                $templateProcessor->setValue('direccion',$dato["Direccion"]);
+                $templateProcessor->setValue('SancionadoCiudad',$dato["Ciudad"]);
                 foreach($variables as $variable){
                     preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
                     //print_r();

@@ -3438,7 +3438,7 @@ $tdatachequeos[".hideMobileList"] = array();
 	$edata["LinkFieldType"] = 3;
 	$edata["DisplayField"] = "Seccional";
 
-				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalUser)";
+				$edata["LookupWhere"] = "SeccionalId in (:session.SeccionalesWhere)";
 
 
 	
