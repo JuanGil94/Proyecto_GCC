@@ -1235,7 +1235,39 @@ $(document).ready(function() {
 'snippet1' => array( 'eventId' => 'Base_de_Datos___Historico_Seccional_Cartera',
 'label' => array( 'text' => 'Base_de_Datos___Historico_Seccional_Cartera',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+}
+
+
+/* Estilo para el contenedor de checkboxes */
+.checkbox-container {
+    display: flex;             /* Usamos flexbox para organizar los elementos */
+    flex-wrap: wrap;           /* Permite que los elementos se envuelvan cuando no haya espacio suficiente */
+    gap: 10px;                 /* Espacio entre los elementos */
+    margin-top: 10px;          /* Espacio superior */
+}
+
+/* Estilo para cada item de checkbox */
+.checkbox-item {
+    display: flex;             /* Alinea el checkbox con la etiqueta en una fila */
+    align-items: center;       /* Centra el contenido verticalmente */
+    gap: 5px;                  /* Espacio entre el checkbox y la etiqueta */
+    flex: 1 1 200px;           /* Permite que cada checkbox ocupe un máximo de 200px y se ajuste */
+}
+
+/* Limitar el ancho de los elementos para evitar que se estiren demasiado */
+.checkbox-item input {
+    margin: 0;                 /* Elimina márgenes alrededor de los inputs */
+}
+
+/* Asegúrate de que los botones se vean bien */
+button {
+    margin-bottom: 10px;       /* Espacio debajo del botón */
+}' ),
 'custom_button' => array( 'eventId' => 'Buscar11',
 'label' => array( 'type' => 0,
 'text' => '' ),
@@ -1403,7 +1435,40 @@ $(document).ready(function() {
 'snippet2' => array( 'eventId' => 'Base_de_Datos___Historico_seccional_check',
 'label' => array( 'text' => 'Base_de_Datos___Historico_seccional_check',
 'type' => 0 ),
-'type' => 'snippet' ),
+'type' => 'snippet',
+'customCSS' => '/* Put  your custom CSS code here */
+
+
+:host {
+  color: black;
+}
+
+
+/* Estilo para el contenedor de checkboxes */
+.checkbox-container {
+    display: flex;             /* Usamos flexbox para organizar los elementos */
+    flex-wrap: wrap;           /* Permite que los elementos se envuelvan cuando no haya espacio suficiente */
+    gap: 10px;                 /* Espacio entre los elementos */
+    margin-top: 10px;          /* Espacio superior */
+}
+
+/* Estilo para cada item de checkbox */
+.checkbox-item {
+    display: flex;             /* Alinea el checkbox con la etiqueta en una fila */
+    align-items: center;       /* Centra el contenido verticalmente */
+    gap: 5px;                  /* Espacio entre el checkbox y la etiqueta */
+    flex: 1 1 200px;           /* Permite que cada checkbox ocupe un máximo de 200px y se ajuste */
+}
+
+/* Limitar el ancho de los elementos para evitar que se estiren demasiado */
+.checkbox-item input {
+    margin: 0;                 /* Elimina márgenes alrededor de los inputs */
+}
+
+/* Asegúrate de que los botones se vean bien */
+button {
+    margin-bottom: 10px;       /* Espacio debajo del botón */
+}' ),
 'custom_button1' => array( 'eventId' => 'Reiniciar',
 'label' => array( 'type' => 0,
 'text' => '' ),

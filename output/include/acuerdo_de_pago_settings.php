@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsacuerdo_de_pago["Spanish"]["Recaudo"] = "Recaudo";
 	$fieldToolTipsacuerdo_de_pago["Spanish"]["Recaudo"] = "";
 	$placeHoldersacuerdo_de_pago["Spanish"]["Recaudo"] = "";
-	$fieldLabelsacuerdo_de_pago["Spanish"]["Acuerdo"] = "Acuerdo";
+	$fieldLabelsacuerdo_de_pago["Spanish"]["Acuerdo"] = "Fecha Acuerdo";
 	$fieldToolTipsacuerdo_de_pago["Spanish"]["Acuerdo"] = "";
 	$placeHoldersacuerdo_de_pago["Spanish"]["Acuerdo"] = "";
 	$fieldLabelsacuerdo_de_pago["Spanish"]["Cuotas"] = "Cuotas";

@@ -192,6 +192,82 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c4',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$mi_tabla_html}","hidden":"{$item_hide_text}","isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 		
 		]
 	}
@@ -1183,6 +1259,9 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+				
+			{"text":"<script>\n$(document).ready(function() {\n    // Restaura los valores de sessionStorage en los inputs\n    $('#yearSelect').val(sessionStorage.getItem('indicadores_ano_select'));\n });\n</script>","hidden":"{$item_hide_text1}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

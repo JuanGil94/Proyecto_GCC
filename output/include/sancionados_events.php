@@ -22,6 +22,8 @@
 		$this->events["AfterEdit"]=true;
 
 
+		$this->events["BeforeDelete"]=true;
+
 
 	}
 
@@ -109,17 +111,37 @@
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-		$_SESSION["CarcelId"]=$values["Carcel"];
-unset($values["Carcel"]);
+				$_SESSION["CarcelId"]=$values["Carcel"];
+		unset($values["Carcel"]);
 
-//print_r($values);
+$busquedaSanc = $values["Documento"]; 
+
+$sql2 = "SELECT Documento, Sancionado, Masculino, Email FROM Sancionados WHERE Documento = '$busquedaSanc'";
+
+// Ejecutar la consulta
+$result2 = DB::Query($sql2);
+
+// Obtener el resultado
+$row2 = $result2->fetchAssoc();
+
+// Variables a usar
+$id2 = $row2['Documento']; // Verifica que exista 'Documento'
+$Sancionado = $row2['Sancionado'];
+
+ 
+
+if (!empty($id2)) {
+    // Si el sancionado existe
+		$message = "Existe el sancionado '$Sancionado' con Documento '$id2' dentro del sistema.";
+        
+    // Detener el proceso
+   
+} else {
+    // Continuar si no existe
+    return true;
+}
 
 
-
-
-// Place event code here.
-// Use "Add Action" button to add code snippets.
-return true;
 ;
 } // function BeforeAdd
 
@@ -468,6 +490,128 @@ if ($rs2) {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record deleted
+function BeforeDelete($where, &$deleted_values, &$message, $pageObject)
+{
+
+		
+$deleted_values["SancionadoId"];
+
+$IdSancionado = $deleted_values["SancionadoId"];
+
+//print_r($IdSancionado);
+
+  $sql = "select SancionadoId, Numero from Procesos where SancionadoId = '$IdSancionado'";
+
+	// Ejecutar la consulta
+	$result = DB::Query($sql);
+
+	// Obtener el resultado
+	$row = $result->fetchAssoc();
+	$id = $row['SancionadoId'];
+	$numero = $row['Numero'];
+
+
+// Verificar si existen procesos asociados
+if (!empty($id)) {
+    // Si tiene procesos asociados, mostrar la alerta SweetAlert en el frontend
+    //$pageObject->setProxyValue("updated", true);
+
+    // Pasar los datos necesarios al frontend para mostrar la alerta
+    echo "<script>
+        var sancionadoId = '$id';
+        var numero = '$numero';
+        var message = 'Este Sancionado tiene procesos asociados.';
+
+        // Mostrar la alerta de SweetAlert
+        window.onload = function() {
+            swal({
+                title: 'Advertencia',
+                text: message + ' Número de proceso: ' + numero,
+                icon: 'warning',
+                //buttons: true,
+                //dangerMode: true,
+            });
+        }
+    </script>";
+
+    // Detener la eliminación en este punto
+    return false;
+} else {
+		// Si no hay procesos asociados, permitir la eliminación incluyendo si existen registros en tablas Propiedades, Direcicones y Solidarios
+		DB::Delete("Direcciones", "SancionadoId=".$IdSancionado."");
+		DB::Delete("Solidarios", "SancionadoId=".$IdSancionado."");
+		DB::Delete("Propiedades", "SancionadoId=".$IdSancionado."");
+    
+    return true;
+}
+;
+} // function BeforeDelete
+
 		
 		
 		

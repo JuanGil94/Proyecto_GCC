@@ -711,7 +711,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -721,34 +721,6 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Conceptos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "Concepto";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Concepto";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -763,8 +735,10 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -781,7 +755,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -791,34 +765,6 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Conceptos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-		
-	$edata["LinkField"] = "Concepto";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Concepto";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
 
 
 	
@@ -833,8 +779,10 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -863,13 +811,14 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Conceptos";
+	$edata["LookupTable"] = "Deterioro de Cartera por Proceso";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-		
+			$edata["LookupUnique"] = true;
+
 	$edata["LinkField"] = "Concepto";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Concepto";
@@ -877,7 +826,7 @@ $tdatadeterioro_de_cartera_por_proceso[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Concepto";
 
 	
 	
