@@ -694,7 +694,13 @@ array( 'cell' => 'footcell_field5' ) ) ) ),
 'clickSort' => true,
 'label' => array( 'field' => 'Avalúo',
 'table' => 'BienesEfectivo',
-'type' => 3 ) ),
+'type' => 3 ),
+'customCSS' => '/* Put  your custom CSS code here */
+
+:host {
+  color: black;
+    white-space: nowrap;
+}' ),
 'simple_grid_field7' => array( 'type' => 'grid_field_label',
 'field' => 'Avalúo',
 'clickSort' => true ),

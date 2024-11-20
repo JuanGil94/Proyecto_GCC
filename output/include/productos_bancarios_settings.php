@@ -208,9 +208,9 @@ $tdataproductos_bancarios[".strOrderBy"] = $tstrOrderBy;
 $tdataproductos_bancarios[".orderindexes"] = array();
 
 
-$tdataproductos_bancarios[".sqlHead"] = "select dbo.Propiedades.PropiedadId,  Propiedades.SancionadoId,  Propiedades.Propiedad AS [Descripción del Bien Inmueble],  Propiedades.Matricula AS [Matrícula Inmobiliaria],  Propiedades.Avaluo AS [Avalúo],  C.CiudadId,  Propiedades.Direccion AS [Dirección],  Propiedades.Observaciones AS Observaciones";
-$tdataproductos_bancarios[".sqlFrom"] = "FROM dbo.Propiedades  INNER JOIN dbo.Sancionados AS S ON Propiedades.SancionadoId = S.SancionadoId  INNER JOIN dbo.Ciudades AS C ON Propiedades.CiudadId = C.CiudadId  INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
-$tdataproductos_bancarios[".sqlWhereExpr"] = "(Propiedades.TipoPropiedad =3)";
+$tdataproductos_bancarios[".sqlHead"] = "select dbo.Propiedades.PropiedadId,  dbo.Propiedades.SancionadoId,  dbo.Propiedades.Propiedad AS [Descripción del Bien Inmueble],  dbo.Propiedades.Matricula AS [Matrícula Inmobiliaria],  FORMAT(Propiedades.Avaluo, 'C2', 'es-CO')  AS [Avalúo],  C.CiudadId,  dbo.Propiedades.Direccion AS [Dirección],  dbo.Propiedades.Observaciones AS Observaciones";
+$tdataproductos_bancarios[".sqlFrom"] = "FROM dbo.Propiedades  INNER JOIN dbo.Sancionados AS S ON dbo.Propiedades.SancionadoId = S.SancionadoId  INNER JOIN dbo.Ciudades AS C ON dbo.Propiedades.CiudadId = C.CiudadId  INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
+$tdataproductos_bancarios[".sqlWhereExpr"] = "(dbo.Propiedades.TipoPropiedad =3)";
 $tdataproductos_bancarios[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -428,7 +428,7 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "SancionadoId";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Propiedades.SancionadoId";
+	$fdata["FullName"] = "dbo.Propiedades.SancionadoId";
 
 	
 	
@@ -590,7 +590,7 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Propiedades.Propiedad";
+	$fdata["FullName"] = "dbo.Propiedades.Propiedad";
 
 	
 	
@@ -728,7 +728,7 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Propiedades.Matricula";
+	$fdata["FullName"] = "dbo.Propiedades.Matricula";
 
 	
 	
@@ -851,9 +851,9 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "Avalúo";
 	$fdata["GoodName"] = "Aval_o";
-	$fdata["ownerTable"] = "dbo.Propiedades";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("Productos_Bancarios","Aval_o");
-	$fdata["FieldType"] = 6;
+	$fdata["FieldType"] = 202;
 
 
 	
@@ -864,7 +864,7 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Propiedades.Avaluo";
+	$fdata["FullName"] = "FORMAT(Propiedades.Avaluo, 'C2', 'es-CO')";
 
 	
 	
@@ -1170,7 +1170,7 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Propiedades.Direccion";
+	$fdata["FullName"] = "dbo.Propiedades.Direccion";
 
 	
 	
@@ -1307,7 +1307,7 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Observaciones";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Propiedades.Observaciones";
+	$fdata["FullName"] = "dbo.Propiedades.Observaciones";
 
 	
 	
@@ -1489,15 +1489,15 @@ function createSqlQuery_productos_bancarios()
 {
 $proto0=array();
 $proto0["m_strHead"] = "select";
-$proto0["m_strFieldList"] = "dbo.Propiedades.PropiedadId,  Propiedades.SancionadoId,  Propiedades.Propiedad AS [Descripción del Bien Inmueble],  Propiedades.Matricula AS [Matrícula Inmobiliaria],  Propiedades.Avaluo AS [Avalúo],  C.CiudadId,  Propiedades.Direccion AS [Dirección],  Propiedades.Observaciones AS Observaciones";
-$proto0["m_strFrom"] = "FROM dbo.Propiedades  INNER JOIN dbo.Sancionados AS S ON Propiedades.SancionadoId = S.SancionadoId  INNER JOIN dbo.Ciudades AS C ON Propiedades.CiudadId = C.CiudadId  INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
-$proto0["m_strWhere"] = "(Propiedades.TipoPropiedad =3)";
+$proto0["m_strFieldList"] = "dbo.Propiedades.PropiedadId,  dbo.Propiedades.SancionadoId,  dbo.Propiedades.Propiedad AS [Descripción del Bien Inmueble],  dbo.Propiedades.Matricula AS [Matrícula Inmobiliaria],  FORMAT(Propiedades.Avaluo, 'C2', 'es-CO')  AS [Avalúo],  C.CiudadId,  dbo.Propiedades.Direccion AS [Dirección],  dbo.Propiedades.Observaciones AS Observaciones";
+$proto0["m_strFrom"] = "FROM dbo.Propiedades  INNER JOIN dbo.Sancionados AS S ON dbo.Propiedades.SancionadoId = S.SancionadoId  INNER JOIN dbo.Ciudades AS C ON dbo.Propiedades.CiudadId = C.CiudadId  INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
+$proto0["m_strWhere"] = "(dbo.Propiedades.TipoPropiedad =3)";
 $proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "Propiedades.TipoPropiedad =3";
+$proto2["m_sql"] = "dbo.Propiedades.TipoPropiedad =3";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "TipoPropiedad",
@@ -1552,7 +1552,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto8["m_sql"] = "Propiedades.SancionadoId";
+$proto8["m_sql"] = "dbo.Propiedades.SancionadoId";
 $proto8["m_srcTableName"] = "Productos Bancarios";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1566,7 +1566,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto10["m_sql"] = "Propiedades.Propiedad";
+$proto10["m_sql"] = "dbo.Propiedades.Propiedad";
 $proto10["m_srcTableName"] = "Productos Bancarios";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "Descripción del Bien Inmueble";
@@ -1580,7 +1580,7 @@ $proto0["m_fieldlist"][]=$obj;
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto12["m_sql"] = "Propiedades.Matricula";
+$proto12["m_sql"] = "dbo.Propiedades.Matricula";
 $proto12["m_srcTableName"] = "Productos Bancarios";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "Matrícula Inmobiliaria";
@@ -1588,216 +1588,231 @@ $obj = new SQLFieldListItem($proto12);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Avaluo",
-	"m_strTable" => "dbo.Propiedades",
-	"m_srcTableName" => "Productos Bancarios"
+			$proto15=array();
+$proto15["m_functiontype"] = "SQLF_CUSTOM";
+$proto15["m_arguments"] = array();
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "Propiedades.Avaluo"
 ));
 
-$proto14["m_sql"] = "Propiedades.Avaluo";
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'C2'"
+));
+
+$proto15["m_arguments"][]=$obj;
+						$obj = new SQLNonParsed(array(
+	"m_sql" => "'es-CO'"
+));
+
+$proto15["m_arguments"][]=$obj;
+$proto15["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto15);
+
+$proto14["m_sql"] = "FORMAT(Propiedades.Avaluo, 'C2', 'es-CO')";
 $proto14["m_srcTableName"] = "Productos Bancarios";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "Avalúo";
 $obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto16=array();
+						$proto19=array();
 			$obj = new SQLField(array(
 	"m_strName" => "CiudadId",
 	"m_strTable" => "C",
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto16["m_sql"] = "C.CiudadId";
-$proto16["m_srcTableName"] = "Productos Bancarios";
-$proto16["m_expr"]=$obj;
-$proto16["m_alias"] = "";
-$obj = new SQLFieldListItem($proto16);
+$proto19["m_sql"] = "C.CiudadId";
+$proto19["m_srcTableName"] = "Productos Bancarios";
+$proto19["m_expr"]=$obj;
+$proto19["m_alias"] = "";
+$obj = new SQLFieldListItem($proto19);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto18=array();
+						$proto21=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Direccion",
 	"m_strTable" => "dbo.Propiedades",
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto18["m_sql"] = "Propiedades.Direccion";
-$proto18["m_srcTableName"] = "Productos Bancarios";
-$proto18["m_expr"]=$obj;
-$proto18["m_alias"] = "Dirección";
-$obj = new SQLFieldListItem($proto18);
+$proto21["m_sql"] = "dbo.Propiedades.Direccion";
+$proto21["m_srcTableName"] = "Productos Bancarios";
+$proto21["m_expr"]=$obj;
+$proto21["m_alias"] = "Dirección";
+$obj = new SQLFieldListItem($proto21);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto20=array();
+						$proto23=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Observaciones",
 	"m_strTable" => "dbo.Propiedades",
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto20["m_sql"] = "Propiedades.Observaciones";
-$proto20["m_srcTableName"] = "Productos Bancarios";
-$proto20["m_expr"]=$obj;
-$proto20["m_alias"] = "Observaciones";
-$obj = new SQLFieldListItem($proto20);
+$proto23["m_sql"] = "dbo.Propiedades.Observaciones";
+$proto23["m_srcTableName"] = "Productos Bancarios";
+$proto23["m_expr"]=$obj;
+$proto23["m_alias"] = "Observaciones";
+$obj = new SQLFieldListItem($proto23);
 
 $proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto22=array();
-$proto22["m_link"] = "SQLL_MAIN";
-			$proto23=array();
-$proto23["m_strName"] = "dbo.Propiedades";
-$proto23["m_srcTableName"] = "Productos Bancarios";
-$proto23["m_columns"] = array();
-$proto23["m_columns"][] = "PropiedadId";
-$proto23["m_columns"][] = "SancionadoId";
-$proto23["m_columns"][] = "TipoPropiedad";
-$proto23["m_columns"][] = "Propiedad";
-$proto23["m_columns"][] = "Matricula";
-$proto23["m_columns"][] = "Avaluo";
-$proto23["m_columns"][] = "CiudadId";
-$proto23["m_columns"][] = "Direccion";
-$proto23["m_columns"][] = "Observaciones";
-$obj = new SQLTable($proto23);
+												$proto25=array();
+$proto25["m_link"] = "SQLL_MAIN";
+			$proto26=array();
+$proto26["m_strName"] = "dbo.Propiedades";
+$proto26["m_srcTableName"] = "Productos Bancarios";
+$proto26["m_columns"] = array();
+$proto26["m_columns"][] = "PropiedadId";
+$proto26["m_columns"][] = "SancionadoId";
+$proto26["m_columns"][] = "TipoPropiedad";
+$proto26["m_columns"][] = "Propiedad";
+$proto26["m_columns"][] = "Matricula";
+$proto26["m_columns"][] = "Avaluo";
+$proto26["m_columns"][] = "CiudadId";
+$proto26["m_columns"][] = "Direccion";
+$proto26["m_columns"][] = "Observaciones";
+$obj = new SQLTable($proto26);
 
-$proto22["m_table"] = $obj;
-$proto22["m_sql"] = "dbo.Propiedades";
-$proto22["m_alias"] = "";
-$proto22["m_srcTableName"] = "Productos Bancarios";
-$proto24=array();
-$proto24["m_sql"] = "";
-$proto24["m_uniontype"] = "SQLL_UNKNOWN";
+$proto25["m_table"] = $obj;
+$proto25["m_sql"] = "dbo.Propiedades";
+$proto25["m_alias"] = "";
+$proto25["m_srcTableName"] = "Productos Bancarios";
+$proto27=array();
+$proto27["m_sql"] = "";
+$proto27["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto24["m_column"]=$obj;
-$proto24["m_contained"] = array();
-$proto24["m_strCase"] = "";
-$proto24["m_havingmode"] = false;
-$proto24["m_inBrackets"] = false;
-$proto24["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto24);
+$proto27["m_column"]=$obj;
+$proto27["m_contained"] = array();
+$proto27["m_strCase"] = "";
+$proto27["m_havingmode"] = false;
+$proto27["m_inBrackets"] = false;
+$proto27["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto27);
 
-$proto22["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto22);
+$proto25["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto25);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto26=array();
-$proto26["m_link"] = "SQLL_INNERJOIN";
-			$proto27=array();
-$proto27["m_strName"] = "dbo.Sancionados";
-$proto27["m_srcTableName"] = "Productos Bancarios";
-$proto27["m_columns"] = array();
-$proto27["m_columns"][] = "SancionadoId";
-$proto27["m_columns"][] = "Sancionado";
-$proto27["m_columns"][] = "TipoDocumentoId";
-$proto27["m_columns"][] = "Documento";
-$proto27["m_columns"][] = "Email";
-$proto27["m_columns"][] = "Celular";
-$proto27["m_columns"][] = "Masculino";
-$proto27["m_columns"][] = "Observaciones";
-$proto27["m_columns"][] = "Fallecimiento";
-$proto27["m_columns"][] = "PrivadoLibertad";
-$obj = new SQLTable($proto27);
+												$proto29=array();
+$proto29["m_link"] = "SQLL_INNERJOIN";
+			$proto30=array();
+$proto30["m_strName"] = "dbo.Sancionados";
+$proto30["m_srcTableName"] = "Productos Bancarios";
+$proto30["m_columns"] = array();
+$proto30["m_columns"][] = "SancionadoId";
+$proto30["m_columns"][] = "Sancionado";
+$proto30["m_columns"][] = "TipoDocumentoId";
+$proto30["m_columns"][] = "Documento";
+$proto30["m_columns"][] = "Email";
+$proto30["m_columns"][] = "Celular";
+$proto30["m_columns"][] = "Masculino";
+$proto30["m_columns"][] = "Observaciones";
+$proto30["m_columns"][] = "Fallecimiento";
+$proto30["m_columns"][] = "PrivadoLibertad";
+$obj = new SQLTable($proto30);
 
-$proto26["m_table"] = $obj;
-$proto26["m_sql"] = "INNER JOIN dbo.Sancionados AS S ON Propiedades.SancionadoId = S.SancionadoId";
-$proto26["m_alias"] = "S";
-$proto26["m_srcTableName"] = "Productos Bancarios";
-$proto28=array();
-$proto28["m_sql"] = "S.SancionadoId = dbo.Propiedades.SancionadoId";
-$proto28["m_uniontype"] = "SQLL_UNKNOWN";
+$proto29["m_table"] = $obj;
+$proto29["m_sql"] = "INNER JOIN dbo.Sancionados AS S ON dbo.Propiedades.SancionadoId = S.SancionadoId";
+$proto29["m_alias"] = "S";
+$proto29["m_srcTableName"] = "Productos Bancarios";
+$proto31=array();
+$proto31["m_sql"] = "S.SancionadoId = dbo.Propiedades.SancionadoId";
+$proto31["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "SancionadoId",
 	"m_strTable" => "S",
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto28["m_column"]=$obj;
-$proto28["m_contained"] = array();
-$proto28["m_strCase"] = "= dbo.Propiedades.SancionadoId";
-$proto28["m_havingmode"] = false;
-$proto28["m_inBrackets"] = false;
-$proto28["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto28);
+$proto31["m_column"]=$obj;
+$proto31["m_contained"] = array();
+$proto31["m_strCase"] = "= dbo.Propiedades.SancionadoId";
+$proto31["m_havingmode"] = false;
+$proto31["m_inBrackets"] = false;
+$proto31["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto31);
 
-$proto26["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto26);
+$proto29["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto29);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto30=array();
-$proto30["m_link"] = "SQLL_INNERJOIN";
-			$proto31=array();
-$proto31["m_strName"] = "dbo.Ciudades";
-$proto31["m_srcTableName"] = "Productos Bancarios";
-$proto31["m_columns"] = array();
-$proto31["m_columns"][] = "CiudadId";
-$proto31["m_columns"][] = "Codigo";
-$proto31["m_columns"][] = "Ciudad";
-$proto31["m_columns"][] = "DepartamentoId";
-$obj = new SQLTable($proto31);
+												$proto33=array();
+$proto33["m_link"] = "SQLL_INNERJOIN";
+			$proto34=array();
+$proto34["m_strName"] = "dbo.Ciudades";
+$proto34["m_srcTableName"] = "Productos Bancarios";
+$proto34["m_columns"] = array();
+$proto34["m_columns"][] = "CiudadId";
+$proto34["m_columns"][] = "Codigo";
+$proto34["m_columns"][] = "Ciudad";
+$proto34["m_columns"][] = "DepartamentoId";
+$obj = new SQLTable($proto34);
 
-$proto30["m_table"] = $obj;
-$proto30["m_sql"] = "INNER JOIN dbo.Ciudades AS C ON Propiedades.CiudadId = C.CiudadId";
-$proto30["m_alias"] = "C";
-$proto30["m_srcTableName"] = "Productos Bancarios";
-$proto32=array();
-$proto32["m_sql"] = "C.CiudadId = dbo.Propiedades.CiudadId";
-$proto32["m_uniontype"] = "SQLL_UNKNOWN";
+$proto33["m_table"] = $obj;
+$proto33["m_sql"] = "INNER JOIN dbo.Ciudades AS C ON dbo.Propiedades.CiudadId = C.CiudadId";
+$proto33["m_alias"] = "C";
+$proto33["m_srcTableName"] = "Productos Bancarios";
+$proto35=array();
+$proto35["m_sql"] = "C.CiudadId = dbo.Propiedades.CiudadId";
+$proto35["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "CiudadId",
 	"m_strTable" => "C",
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto32["m_column"]=$obj;
-$proto32["m_contained"] = array();
-$proto32["m_strCase"] = "= dbo.Propiedades.CiudadId";
-$proto32["m_havingmode"] = false;
-$proto32["m_inBrackets"] = false;
-$proto32["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto32);
+$proto35["m_column"]=$obj;
+$proto35["m_contained"] = array();
+$proto35["m_strCase"] = "= dbo.Propiedades.CiudadId";
+$proto35["m_havingmode"] = false;
+$proto35["m_inBrackets"] = false;
+$proto35["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto35);
 
-$proto30["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto30);
+$proto33["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto33);
 
 $proto0["m_fromlist"][]=$obj;
-												$proto34=array();
-$proto34["m_link"] = "SQLL_INNERJOIN";
-			$proto35=array();
-$proto35["m_strName"] = "dbo.Departamentos";
-$proto35["m_srcTableName"] = "Productos Bancarios";
-$proto35["m_columns"] = array();
-$proto35["m_columns"][] = "DepartamentoId";
-$proto35["m_columns"][] = "Codigo";
-$proto35["m_columns"][] = "Departamento";
-$obj = new SQLTable($proto35);
+												$proto37=array();
+$proto37["m_link"] = "SQLL_INNERJOIN";
+			$proto38=array();
+$proto38["m_strName"] = "dbo.Departamentos";
+$proto38["m_srcTableName"] = "Productos Bancarios";
+$proto38["m_columns"] = array();
+$proto38["m_columns"][] = "DepartamentoId";
+$proto38["m_columns"][] = "Codigo";
+$proto38["m_columns"][] = "Departamento";
+$obj = new SQLTable($proto38);
 
-$proto34["m_table"] = $obj;
-$proto34["m_sql"] = "INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
-$proto34["m_alias"] = "D";
-$proto34["m_srcTableName"] = "Productos Bancarios";
-$proto36=array();
-$proto36["m_sql"] = "D.DepartamentoId = C.DepartamentoId";
-$proto36["m_uniontype"] = "SQLL_UNKNOWN";
+$proto37["m_table"] = $obj;
+$proto37["m_sql"] = "INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
+$proto37["m_alias"] = "D";
+$proto37["m_srcTableName"] = "Productos Bancarios";
+$proto39=array();
+$proto39["m_sql"] = "D.DepartamentoId = C.DepartamentoId";
+$proto39["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "DepartamentoId",
 	"m_strTable" => "D",
 	"m_srcTableName" => "Productos Bancarios"
 ));
 
-$proto36["m_column"]=$obj;
-$proto36["m_contained"] = array();
-$proto36["m_strCase"] = "= C.DepartamentoId";
-$proto36["m_havingmode"] = false;
-$proto36["m_inBrackets"] = false;
-$proto36["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto36);
+$proto39["m_column"]=$obj;
+$proto39["m_contained"] = array();
+$proto39["m_strCase"] = "= C.DepartamentoId";
+$proto39["m_havingmode"] = false;
+$proto39["m_inBrackets"] = false;
+$proto39["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto39);
 
-$proto34["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto34);
+$proto37["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto37);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

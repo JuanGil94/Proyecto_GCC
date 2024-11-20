@@ -29,4 +29,9 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-page="bienesinmuebles_list"][data-itemid="simple_grid_field2"] {
+  color: black;
+    white-space: nowrap;
+}

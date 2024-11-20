@@ -4612,6 +4612,7 @@ echo "<input type='month' id='BD_Historico_MesId' name='mes' value='" . date('Y-
 $U_user = $_SESSION["UserNameF"];
 
 // Ejecutar la consulta
+echo "<label for='' style='margin-right: 40px;'>Seleccione Cartera: </label><br>";
 echo '<button id="toggle-checkboxes">Mostrar Carteras</button>';
 
 
@@ -4626,7 +4627,6 @@ GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC"
 $result1 = DB::Query($sql1);
 
 echo '<div id="checkbox-container" class="checkbox-container" style="display: none;">';
-echo "<label for='' style='margin-right: 40px;'>Seleccione Cartera: </label><br>";
 if ($result1) {
     // Fetch each row as an associative array
     while ($row1 = $result1->fetchAssoc()) {
@@ -4658,7 +4658,6 @@ echo "<script>document.getElementById('toggle-checkboxes').addEventListener('cli
     }
 });
  </script>";
-
 	;
 }
 	function event_Deterioro_de_Cartera_por_Proceso_cartera_seccional(&$params)
@@ -4934,9 +4933,9 @@ GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
 $result = DB::Query($sql);
 // Verificar si el resultado es válido
 
+echo "<label for='' style='margin-right: 20px;'>Seccional: </label><br>";
 echo '<button id="toggle-checkboxes_seccional">Mostrar Seccionales</button>';
 echo '<div id="checkbox-container_seccional" class="checkbox-container" style="display: none;">';
-echo "<label for='' style='margin-right: 20px;'>Seccional: </label><br>";
 if ($result) {
     // Fetch each row as an associative array
     while ($row1 = $result->fetchAssoc()) {

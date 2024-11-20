@@ -563,6 +563,33 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c5" data-pageid="{$pageid}"	{$cell_above-grid_c5}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	{$mi_tabla_html}</span>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 	</div>
@@ -1313,7 +1340,7 @@
 			 
 				<div 
 	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
-	class="r-align-center r-ori-vert			col-md-12
+	class="r-align-center			col-md-12
 	
 ">
 		 
@@ -1322,6 +1349,14 @@
 {$pagination}
 </span>
 {END pagination_block}
+	 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	<script>
+$(document).ready(function() {
+    // Restaura los valores de sessionStorage en los inputs
+    $('#yearSelect').val(sessionStorage.getItem('indicadores_ano_select'));
+ });
+</script></span>
 		</div>					</div>
 			</div>		
 {END below-grid_block}
