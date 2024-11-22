@@ -201,6 +201,12 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
 		include_once (getabspath("classes/calcIntereses.php"));
+
+$valor = $values["Pago"];
+// Elimina los puntos
+$valor_sin_puntos = str_replace('.', '', $valor);
+$values["Pago"] = $valor_sin_puntos;
+
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->Calcular(date('Y-m-d'));
 $arrayFechas=$recalcular->getFechas();

@@ -408,7 +408,7 @@
 'type' => 'list',
 'layoutId' => 'leftbar',
 'disabled' => 0,
-'default' => 0,
+'default' => 1,
 'forms' => array( 'above-grid' => array( 'modelId' => 'list-above-grid',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ),
 array( 'cell' => 'c2' ) ),

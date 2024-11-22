@@ -6,9 +6,9 @@ $tdatabienesmuebles[".OwnerID"] = "";
 $tdatabienesmuebles[".OriginalTable"] = "dbo.Propiedades";
 
 
-$tdatabienesmuebles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabienesmuebles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabienesmuebles[".originalPagesByType"] = $tdatabienesmuebles[".pagesByType"];
-$tdatabienesmuebles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabienesmuebles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabienesmuebles[".originalPages"] = $tdatabienesmuebles[".pages"];
 $tdatabienesmuebles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabienesmuebles[".originalDefaultPages"] = $tdatabienesmuebles[".defaultPages"];
@@ -146,13 +146,14 @@ $tdatabienesmuebles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+					
 
 $tdatabienesmuebles[".ajaxCodeSnippetAdded"] = false;
 
-$tdatabienesmuebles[".buttonsAdded"] = false;
+$tdatabienesmuebles[".buttonsAdded"] = true;
 
-$tdatabienesmuebles[".addPageEvents"] = false;
+$tdatabienesmuebles[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatabienesmuebles[".isUseTimeForSearch"] = false;
@@ -910,7 +911,10 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -937,7 +941,6 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	

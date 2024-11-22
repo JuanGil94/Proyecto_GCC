@@ -521,6 +521,8 @@ class plantillas extends diccionario{
                 if ($info[$resultadoF]==!NULL){
                 $templateProcessor->setValue($resultadoF,$info[$resultadoF]);
                 }
+                $templateProcessor->setValue('direccion',$direcciones[0]["Direccion"]);
+                $templateProcessor->setValue('SancionadoCiudad',$direcciones[0]["Ciudad"]);
                 //$var[]=$resultadoF;
                 $resultadoF='';
                 //$resultados = $matches[1];

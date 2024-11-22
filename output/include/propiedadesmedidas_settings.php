@@ -149,13 +149,14 @@ $tdatapropiedadesmedidas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+					
 
 $tdatapropiedadesmedidas[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapropiedadesmedidas[".buttonsAdded"] = false;
+$tdatapropiedadesmedidas[".buttonsAdded"] = true;
 
-$tdatapropiedadesmedidas[".addPageEvents"] = false;
+$tdatapropiedadesmedidas[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatapropiedadesmedidas[".isUseTimeForSearch"] = false;
@@ -1048,7 +1049,10 @@ $tdatapropiedadesmedidas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "click" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1074,8 +1078,7 @@ $tdatapropiedadesmedidas[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-							
+	
 	
 //	End validation
 
@@ -1733,6 +1736,7 @@ $tdatapropiedadesmedidas[".sqlquery"] = $queryData_propiedadesmedidas;
 
 
 
-$tdatapropiedadesmedidas[".hasEvents"] = false;
+include_once(getabspath("include/propiedadesmedidas_events.php"));
+$tdatapropiedadesmedidas[".hasEvents"] = true;
 
 ?>

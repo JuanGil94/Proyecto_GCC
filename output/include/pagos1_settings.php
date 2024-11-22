@@ -144,11 +144,12 @@ $tdatapagos1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																	
 
 $tdatapagos1[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapagos1[".buttonsAdded"] = false;
+$tdatapagos1[".buttonsAdded"] = true;
 
 $tdatapagos1[".addPageEvents"] = true;
 
@@ -724,7 +725,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Currency");
 
 	
 	
@@ -733,8 +734,7 @@ $tdatapagos1[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 4;
-
+	
 	
 	
 	
@@ -761,7 +761,10 @@ $tdatapagos1[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Mascara_Recaudos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

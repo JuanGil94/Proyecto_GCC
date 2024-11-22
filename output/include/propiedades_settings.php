@@ -144,13 +144,15 @@ $tdatapropiedades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+		
+				
 
 $tdatapropiedades[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapropiedades[".buttonsAdded"] = false;
+$tdatapropiedades[".buttonsAdded"] = true;
 
-$tdatapropiedades[".addPageEvents"] = false;
+$tdatapropiedades[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatapropiedades[".isUseTimeForSearch"] = false;
@@ -745,7 +747,10 @@ $tdatapropiedades[".hideMobileList"] = array();
 	
 		$vdata["NeedEncode"] = true;
 
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "change" );
+	$vdata["fieldViewEvents"] = $eventsData;
+
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
@@ -763,7 +768,10 @@ $tdatapropiedades[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -790,7 +798,6 @@ $tdatapropiedades[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
