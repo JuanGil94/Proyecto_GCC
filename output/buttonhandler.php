@@ -2,17 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1017,6 +1006,16 @@ if($buttId=='Actualizar_Codificadores')
 	}
 	buttonHandler_Actualizar_Codificadores($params);
 }
+if($buttId=='Validar_Pago')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Validar_Pago($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -1101,6 +1100,48 @@ if( $eventId == 'DespachoCodificadores' && "dbo.Abogados" == $table )
 	require_once("include/abogados_variables.php");
 	$cipherer = new RunnerCipherer("dbo.Abogados");
 	fieldEventHandler_DespachoCodificadores( $params );
+}
+if( $eventId == 'Mascara_Recaudos' && "dbo.Pagos1" == $table )
+{
+	require_once("include/pagos1_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Pagos1");
+	fieldEventHandler_Mascara_Recaudos( $params );
+}
+if( $eventId == 'Avaluo_Mascara' && "dbo.Propiedades" == $table )
+{
+	require_once("include/propiedades_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Propiedades");
+	fieldEventHandler_Avaluo_Mascara( $params );
+}
+if( $eventId == 'Avaluo_Mascara' && "dbo.Propiedades3" == $table )
+{
+	require_once("include/propiedades3_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Propiedades3");
+	fieldEventHandler_Avaluo_Mascara( $params );
+}
+if( $eventId == 'Avaluo_Mascara' && "BienesInmuebles" == $table )
+{
+	require_once("include/bienesinmuebles_variables.php");
+	$cipherer = new RunnerCipherer("BienesInmuebles");
+	fieldEventHandler_Avaluo_Mascara( $params );
+}
+if( $eventId == 'Avaluo_Mascara' && "BienesMuebles" == $table )
+{
+	require_once("include/bienesmuebles_variables.php");
+	$cipherer = new RunnerCipherer("BienesMuebles");
+	fieldEventHandler_Avaluo_Mascara( $params );
+}
+if( $eventId == 'Avaluo_Mascara' && "Productos Bancarios" == $table )
+{
+	require_once("include/productos_bancarios_variables.php");
+	$cipherer = new RunnerCipherer("Productos Bancarios");
+	fieldEventHandler_Avaluo_Mascara( $params );
+}
+if( $eventId == 'Avaluo_Mascara' && "dbo.PropiedadesMedidas" == $table )
+{
+	require_once("include/propiedadesmedidas_variables.php");
+	$cipherer = new RunnerCipherer("dbo.PropiedadesMedidas");
+	fieldEventHandler_Avaluo_Mascara( $params );
 }
 
 
@@ -2135,6 +2176,7 @@ function buttonHandler_New_Button1($params)
 	include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
 $meses = $recalcular->Calcular(date('Y-m-d'));
+//exit();
 $result["total"]=$recalcular->getSuma();;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -8935,6 +8977,60 @@ if ($codificadoresDespacho){
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
 }
+function buttonHandler_Validar_Pago($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
 
 
 		
@@ -9362,6 +9458,58 @@ $abogadoApi=new abogadosApi;
 //$despachosActivos=$abogadoApi->despachosActivos(); //llenar la tabla despachosSibog
 $despachosActivos=$abogadoApi->codificadoresDespachoProcess($params["value"]);
 ;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Mascara_Recaudos( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	$result["upper"] = $params["value"];;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Avaluo_Mascara( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	$result["upper"] = $params["value"];;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

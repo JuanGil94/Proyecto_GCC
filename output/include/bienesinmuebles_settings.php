@@ -6,9 +6,9 @@ $tdatabienesinmuebles[".OwnerID"] = "";
 $tdatabienesinmuebles[".OriginalTable"] = "dbo.Propiedades";
 
 
-$tdatabienesinmuebles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabienesinmuebles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabienesinmuebles[".originalPagesByType"] = $tdatabienesinmuebles[".pagesByType"];
-$tdatabienesinmuebles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabienesinmuebles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabienesinmuebles[".originalPages"] = $tdatabienesinmuebles[".pages"];
 $tdatabienesinmuebles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabienesinmuebles[".originalDefaultPages"] = $tdatabienesinmuebles[".defaultPages"];
@@ -146,13 +146,15 @@ $tdatabienesinmuebles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+		
+				
 
 $tdatabienesinmuebles[".ajaxCodeSnippetAdded"] = false;
 
-$tdatabienesinmuebles[".buttonsAdded"] = false;
+$tdatabienesinmuebles[".buttonsAdded"] = true;
 
-$tdatabienesinmuebles[".addPageEvents"] = false;
+$tdatabienesinmuebles[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatabienesinmuebles[".isUseTimeForSearch"] = false;
@@ -873,7 +875,7 @@ $tdatabienesinmuebles[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -882,8 +884,7 @@ $tdatabienesinmuebles[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
+	
 	
 	
 	
@@ -892,7 +893,10 @@ $tdatabienesinmuebles[".hideMobileList"] = array();
 	
 		$vdata["NeedEncode"] = true;
 
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "click" );
+	$vdata["fieldViewEvents"] = $eventsData;
+
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
@@ -910,7 +914,10 @@ $tdatabienesinmuebles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -937,7 +944,6 @@ $tdatabienesinmuebles[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	

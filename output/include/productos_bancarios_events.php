@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["CustomAdd"]=true;
 
+		$this->events["BeforeAdd"]=true;
+
 
 	}
 
@@ -46,6 +48,87 @@ return true;
 ;
 } // function CustomAdd
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record added
+function BeforeAdd(&$values, &$message, $inline, $pageObject)
+{
+
+		$valor = $values["Avalúo"];
+// Elimina los puntos
+$valor_sin_puntos = str_replace('.', '', $valor);
+$values["Avalúo"] = $valor_sin_puntos;
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeAdd
+
+		
 		
 		
 		

@@ -581,6 +581,7 @@ class reliquidacion extends CalendarioAnual{
                                 //$fechaIns=$annoEje."-".$mes."-".$dia;
                                 $fechaIns=$annoEje."-".$mes."-".$diaCorte;
                                 //echo $fechaIns;
+                                //echo "Obligacion".$obligacion;
                                 //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
                                 $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
                                 $obligacion=$obligacion-$obliPor;
@@ -603,7 +604,7 @@ class reliquidacion extends CalendarioAnual{
                     $costReca=$costPor;
                     $costas=$costas-$costReca;
                     $costSald=$costas;
-                    $obligacion=$obligacion-$obliPor;
+                    //$obligacion=$obligacion-$obliPor;
                     $sumaTotal=$sumaTotalDiaria-$inteReca;
                     $dia=$dia-$diaCorte;
                     //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;

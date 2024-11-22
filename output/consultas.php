@@ -40,4 +40,32 @@ if (isset($_GET["w1"])) {
            echo $obligacion=$date["Obligacion"];
         }
     }
-
+    elseif(isset($_POST["w5"])){
+        $noPago=$_POST["w5"];
+        //echo $noPago;
+        //return;
+        $conuslta = DB::Query("SELECT TOP 1 * FROM Pagos1 WHERE Numero='".$noPago."'");
+        while( $dataSource = $conuslta->fetchAssoc() )
+            {
+                $procesoId=$dataSource["ProcesoId"];
+            }
+        if (empty($procesoId)){
+            //$result["Ok"]=0;
+            echo "El Consecutivo del Banco a ingresar no existe";
+            return;
+        }
+        else{
+            //echo $procesoId;
+            $conuslta = DB::Query("SELECT top 1 * FROM ProcesosView1 WHERE ProcesoId=".$procesoId);
+            
+            while( $dataSource = $conuslta->fetchAssoc() )
+                {   //print_r($dataSource);
+                    $numero=$dataSource["Numero"];
+                    $seccional=$dataSource["Seccional"];
+                    $estado=$dataSource["Estado"];
+                }
+            $mensaje="El Consecutivo del Banco a ingresar ya existe en la seccional ".$seccional." con el número ".$numero." y su estado es: ".$estado;
+            echo $mensaje;
+            return;
+        }
+    }

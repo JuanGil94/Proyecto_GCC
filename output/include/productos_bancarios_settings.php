@@ -146,13 +146,14 @@ $tdataproductos_bancarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+					
 
 $tdataproductos_bancarios[".ajaxCodeSnippetAdded"] = false;
 
-$tdataproductos_bancarios[".buttonsAdded"] = false;
+$tdataproductos_bancarios[".buttonsAdded"] = true;
 
-$tdataproductos_bancarios[".addPageEvents"] = false;
+$tdataproductos_bancarios[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataproductos_bancarios[".isUseTimeForSearch"] = false;
@@ -910,7 +911,10 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -937,7 +941,6 @@ $tdataproductos_bancarios[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	

@@ -144,13 +144,14 @@ $tdatapropiedades3[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+					
 
 $tdatapropiedades3[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapropiedades3[".buttonsAdded"] = false;
+$tdatapropiedades3[".buttonsAdded"] = true;
 
-$tdatapropiedades3[".addPageEvents"] = false;
+$tdatapropiedades3[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatapropiedades3[".isUseTimeForSearch"] = false;
@@ -763,7 +764,10 @@ $tdatapropiedades3[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Avaluo_Mascara", "type" => "click" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -790,7 +794,6 @@ $tdatapropiedades3[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
