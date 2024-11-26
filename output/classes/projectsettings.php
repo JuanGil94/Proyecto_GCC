@@ -3954,6 +3954,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "despachossigob" ] = "dbo.despachosSigob";
 	$projectEntities[ "dbo.codificadoresDespacho" ] = array( "url" => "codificadoresdespacho", "type" => 0 );
 	$projectEntitiesReverse[ "codificadoresdespacho" ] = "dbo.codificadoresDespacho";
+	$projectEntities[ "dbo.Seccional_ProcesosView1" ] = array( "url" => "dbo_seccional_procesosview1", "type" => 1 );
+	$projectEntitiesReverse[ "dbo_seccional_procesosview1" ] = "dbo.Seccional_ProcesosView1";
 }
 
 function findTable( $table ) {

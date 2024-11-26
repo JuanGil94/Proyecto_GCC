@@ -1244,6 +1244,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Seccional_ProcesosView1")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2439,6 +2443,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.codificadoresDespacho")
+		{
+			return false;
+		}
+		if($table=="dbo.Seccional_ProcesosView1")
 		{
 			return false;
 		}

@@ -223,6 +223,7 @@ $nonAdminTablesArr[] = "dbo.webpages_UsersInRoles";
 $nonAdminTablesArr[] = "dbo.UsuGCC-ugmembers";
 $nonAdminTablesArr[] = "dbo.despachosSigob";
 $nonAdminTablesArr[] = "dbo.codificadoresDespacho";
+$nonAdminTablesArr[] = "dbo.Seccional_ProcesosView1";
 
 $ug_connection = $cman->getForUserGroups();
 

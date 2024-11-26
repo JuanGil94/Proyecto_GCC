@@ -1440,14 +1440,13 @@ $tdatarecaudos_por_a_os[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Recaudos por Años";
+	$edata["LookupTable"] = "dbo.Seccional_ProcesosView1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-			$edata["LookupUnique"] = true;
-
+		
 	$edata["LinkField"] = "Seccional";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Seccional";
@@ -1825,7 +1824,7 @@ $tdatarecaudos_por_a_os[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Concepto";
 
 	
 	
@@ -2107,14 +2106,13 @@ $tdatarecaudos_por_a_os[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Recaudos por Años";
+	$edata["LookupTable"] = "dbo.Bancos";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-			$edata["LookupUnique"] = true;
-
+		
 	$edata["LinkField"] = "Banco";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Banco";
@@ -3602,7 +3600,7 @@ $tdatarecaudos_por_a_os[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "CarteraTipo";
 
 	
 	
@@ -4139,7 +4137,7 @@ $tdatarecaudos_por_a_os[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Abogado";
 
 	
 	

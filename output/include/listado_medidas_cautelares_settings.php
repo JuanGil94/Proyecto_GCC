@@ -925,14 +925,13 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Listado Medidas Cautelares";
+	$edata["LookupTable"] = "dbo.Seccional_ProcesosView1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-			$edata["LookupUnique"] = true;
-
+		
 	$edata["LinkField"] = "Seccional";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Seccional";
@@ -1101,7 +1100,7 @@ $tdatalistado_medidas_cautelares[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Concepto";
 
 	
 	

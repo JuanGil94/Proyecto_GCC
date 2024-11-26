@@ -1685,13 +1685,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["listado_medidas_cautelares.CarteraTipo"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["listado_medidas_cautelares.CarteraTipo"]["search"] = array("table" => "Listado Medidas Cautelares", "field" => "CarteraTipo", "page" => "search");
-		if( !isset( $lookupTableLinks["Listado Medidas Cautelares"] ) ) {
-			$lookupTableLinks["Listado Medidas Cautelares"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
 		}
-		if( !isset( $lookupTableLinks["Listado Medidas Cautelares"]["listado_medidas_cautelares.Seccional"] )) {
-			$lookupTableLinks["Listado Medidas Cautelares"]["listado_medidas_cautelares.Seccional"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["listado_medidas_cautelares.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["listado_medidas_cautelares.Seccional"] = array();
 		}
-		$lookupTableLinks["Listado Medidas Cautelares"]["listado_medidas_cautelares.Seccional"]["search"] = array("table" => "Listado Medidas Cautelares", "field" => "Seccional", "page" => "search");
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["listado_medidas_cautelares.Seccional"]["search"] = array("table" => "Listado Medidas Cautelares", "field" => "Seccional", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
@@ -1741,6 +1741,27 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Propiedades2"]["listado_medidas_cautelares.TipoPropiedad"] = array();
 		}
 		$lookupTableLinks["dbo.Propiedades2"]["listado_medidas_cautelares.TipoPropiedad"]["search"] = array("table" => "Listado Medidas Cautelares", "field" => "TipoPropiedad", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
+			$lookupTableLinks["dbo.Seccionales"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales"]["presunci_n_prescripci_n.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccionales"]["presunci_n_prescripci_n.Seccional"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales"]["presunci_n_prescripci_n.Seccional"]["edit"] = array("table" => "Presunción Prescripción", "field" => "Seccional", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["presunci_n_prescripci_n.Concepto"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["presunci_n_prescripci_n.Concepto"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["presunci_n_prescripci_n.Concepto"]["edit"] = array("table" => "Presunción Prescripción", "field" => "Concepto", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["presunci_n_prescripci_n.Abogado"] )) {
+			$lookupTableLinks["dbo.Abogados"]["presunci_n_prescripci_n.Abogado"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["presunci_n_prescripci_n.Abogado"]["edit"] = array("table" => "Presunción Prescripción", "field" => "Abogado", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
 			$lookupTableLinks["dbo.Seccionales"] = array();
 		}
@@ -2490,20 +2511,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Sancionados"]["privados_de_la_libertad.Sancionado"] = array();
 		}
 		$lookupTableLinks["dbo.Sancionados"]["privados_de_la_libertad.Sancionado"]["search"] = array("table" => "Privados de la Libertad", "field" => "Sancionado", "page" => "search");
-		if( !isset( $lookupTableLinks["Privados de la Libertad"] ) ) {
-			$lookupTableLinks["Privados de la Libertad"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
 		}
-		if( !isset( $lookupTableLinks["Privados de la Libertad"]["privados_de_la_libertad.Seccional"] )) {
-			$lookupTableLinks["Privados de la Libertad"]["privados_de_la_libertad.Seccional"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["privados_de_la_libertad.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["privados_de_la_libertad.Seccional"] = array();
 		}
-		$lookupTableLinks["Privados de la Libertad"]["privados_de_la_libertad.Seccional"]["search"] = array("table" => "Privados de la Libertad", "field" => "Seccional", "page" => "search");
-		if( !isset( $lookupTableLinks["Privados de la Libertad"] ) ) {
-			$lookupTableLinks["Privados de la Libertad"] = array();
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["privados_de_la_libertad.Seccional"]["search"] = array("table" => "Privados de la Libertad", "field" => "Seccional", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
 		}
-		if( !isset( $lookupTableLinks["Privados de la Libertad"]["privados_de_la_libertad.Estado"] )) {
-			$lookupTableLinks["Privados de la Libertad"]["privados_de_la_libertad.Estado"] = array();
+		if( !isset( $lookupTableLinks["dbo.Estados"]["privados_de_la_libertad.Estado"] )) {
+			$lookupTableLinks["dbo.Estados"]["privados_de_la_libertad.Estado"] = array();
 		}
-		$lookupTableLinks["Privados de la Libertad"]["privados_de_la_libertad.Estado"]["search"] = array("table" => "Privados de la Libertad", "field" => "Estado", "page" => "search");
+		$lookupTableLinks["dbo.Estados"]["privados_de_la_libertad.Estado"]["search"] = array("table" => "Privados de la Libertad", "field" => "Estado", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
 			$lookupTableLinks["dbo.Sancionados"] = array();
 		}
@@ -2525,13 +2546,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Sancionados"]["recaudos_por_a_os.Sancionado"] = array();
 		}
 		$lookupTableLinks["dbo.Sancionados"]["recaudos_por_a_os.Sancionado"]["search"] = array("table" => "Recaudos por Años", "field" => "Sancionado", "page" => "search");
-		if( !isset( $lookupTableLinks["Recaudos por Años"] ) ) {
-			$lookupTableLinks["Recaudos por Años"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
 		}
-		if( !isset( $lookupTableLinks["Recaudos por Años"]["recaudos_por_a_os.Seccional"] )) {
-			$lookupTableLinks["Recaudos por Años"]["recaudos_por_a_os.Seccional"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["recaudos_por_a_os.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["recaudos_por_a_os.Seccional"] = array();
 		}
-		$lookupTableLinks["Recaudos por Años"]["recaudos_por_a_os.Seccional"]["search"] = array("table" => "Recaudos por Años", "field" => "Seccional", "page" => "search");
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["recaudos_por_a_os.Seccional"]["search"] = array("table" => "Recaudos por Años", "field" => "Seccional", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
@@ -2553,13 +2574,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Conceptos"]["recaudos_por_a_os.Concepto"] = array();
 		}
 		$lookupTableLinks["dbo.Conceptos"]["recaudos_por_a_os.Concepto"]["search"] = array("table" => "Recaudos por Años", "field" => "Concepto", "page" => "search");
-		if( !isset( $lookupTableLinks["Recaudos por Años"] ) ) {
-			$lookupTableLinks["Recaudos por Años"] = array();
+		if( !isset( $lookupTableLinks["dbo.Bancos"] ) ) {
+			$lookupTableLinks["dbo.Bancos"] = array();
 		}
-		if( !isset( $lookupTableLinks["Recaudos por Años"]["recaudos_por_a_os.Banco"] )) {
-			$lookupTableLinks["Recaudos por Años"]["recaudos_por_a_os.Banco"] = array();
+		if( !isset( $lookupTableLinks["dbo.Bancos"]["recaudos_por_a_os.Banco"] )) {
+			$lookupTableLinks["dbo.Bancos"]["recaudos_por_a_os.Banco"] = array();
 		}
-		$lookupTableLinks["Recaudos por Años"]["recaudos_por_a_os.Banco"]["edit"] = array("table" => "Recaudos por Años", "field" => "Banco", "page" => "edit");
+		$lookupTableLinks["dbo.Bancos"]["recaudos_por_a_os.Banco"]["edit"] = array("table" => "Recaudos por Años", "field" => "Banco", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
 			$lookupTableLinks["dbo.CarteraTipos"] = array();
 		}
@@ -2896,6 +2917,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["acuerdo_de_pago.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["acuerdo_de_pago.CarteraTipoId"]["search"] = array("table" => "Acuerdo de Pago", "field" => "CarteraTipoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["acuerdo_de_pago.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["acuerdo_de_pago.Seccional"] = array();
+		}
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["acuerdo_de_pago.Seccional"]["edit"] = array("table" => "Acuerdo de Pago", "field" => "Seccional", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
 			$lookupTableLinks["dbo.Sancionados"] = array();
 		}
@@ -3043,6 +3071,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["prescripciones_autom_tica.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["prescripciones_autom_tica.CarteraTipoId"]["edit"] = array("table" => "Prescripciones Automática", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["prescripciones_autom_tica.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["prescripciones_autom_tica.Seccional"] = array();
+		}
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["prescripciones_autom_tica.Seccional"]["edit"] = array("table" => "Prescripciones Automática", "field" => "Seccional", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["prescripciones_autom_tica.Abogado"] )) {
+			$lookupTableLinks["dbo.Abogados"]["prescripciones_autom_tica.Abogado"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["prescripciones_autom_tica.Abogado"]["edit"] = array("table" => "Prescripciones Automática", "field" => "Abogado", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
@@ -3064,6 +3106,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["procesos_sin_notificaci_n.SeccionalId"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["procesos_sin_notificaci_n.SeccionalId"]["edit"] = array("table" => "Procesos Sin Notificación", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["procesos_sin_notificaci_n.Abogado"] )) {
+			$lookupTableLinks["dbo.Abogados"]["procesos_sin_notificaci_n.Abogado"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["procesos_sin_notificaci_n.Abogado"]["edit"] = array("table" => "Procesos Sin Notificación", "field" => "Abogado", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
@@ -3085,13 +3134,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["remanentes_.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["remanentes_.CarteraTipoId"]["edit"] = array("table" => "Remanentes-", "field" => "CarteraTipoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["Remanentes-"] ) ) {
-			$lookupTableLinks["Remanentes-"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
 		}
-		if( !isset( $lookupTableLinks["Remanentes-"]["remanentes_.Seccional"] )) {
-			$lookupTableLinks["Remanentes-"]["remanentes_.Seccional"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["remanentes_.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["remanentes_.Seccional"] = array();
 		}
-		$lookupTableLinks["Remanentes-"]["remanentes_.Seccional"]["search"] = array("table" => "Remanentes-", "field" => "Seccional", "page" => "search");
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["remanentes_.Seccional"]["search"] = array("table" => "Remanentes-", "field" => "Seccional", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["remanentes_.Abogado"] )) {
+			$lookupTableLinks["dbo.Abogados"]["remanentes_.Abogado"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["remanentes_.Abogado"]["edit"] = array("table" => "Remanentes-", "field" => "Abogado", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}

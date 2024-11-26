@@ -1275,14 +1275,13 @@ $tdataprivados_de_la_libertad[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Privados de la Libertad";
+	$edata["LookupTable"] = "dbo.Seccional_ProcesosView1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-			$edata["LookupUnique"] = true;
-
+		
 	$edata["LinkField"] = "Seccional";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Seccional";
@@ -2398,14 +2397,13 @@ $tdataprivados_de_la_libertad[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Privados de la Libertad";
+	$edata["LookupTable"] = "dbo.Estados";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-			$edata["LookupUnique"] = true;
-
+		
 	$edata["LinkField"] = "Estado";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Estado";
