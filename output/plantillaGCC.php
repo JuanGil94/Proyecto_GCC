@@ -637,6 +637,7 @@ class plantillaCaratulas extends diccionario{
             $templateWord->setValue('Unidad',$value["Unidad"]);
             $templateWord->setValue('Oficina',$value["Oficina"]);
             $templateWord->setValue('Serie',$value["Serie"]);
+            $templateWord->setValue('Radicado',$value["Radicado"]);
             $templateWord->saveAs('templates_GCC/carProceso'.$this->procesoId.'.docx');
               
     }

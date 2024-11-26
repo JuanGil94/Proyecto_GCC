@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscorrespondencias["Spanish"]["ProcesoId"] = "Proceso Id";
 	$fieldToolTipscorrespondencias["Spanish"]["ProcesoId"] = "";
 	$placeHolderscorrespondencias["Spanish"]["ProcesoId"] = "";
-	$fieldLabelscorrespondencias["Spanish"]["OficioId"] = "Oficio Id";
+	$fieldLabelscorrespondencias["Spanish"]["OficioId"] = "Oficio";
 	$fieldToolTipscorrespondencias["Spanish"]["OficioId"] = "";
 	$placeHolderscorrespondencias["Spanish"]["OficioId"] = "";
 	$fieldLabelscorrespondencias["Spanish"]["Fecha"] = "Fecha";

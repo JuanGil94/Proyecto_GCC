@@ -2523,8 +2523,16 @@ function buttonHandler_New_Button4($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("plantillaGCC.php"));
-$IdValue = $params["oficioId"];
- 
+//Traemos lo valores de la fila:
+$data = $button->getCurrentRecord();
+$params["ChequeoId"]=$data["ChequeoId"];
+$params["radicado"] = $data["Radicado"];
+$params["oficioId"] = $data["OficioId"];
+$params["procesoId"] = $data["ProcesoId"];
+
+
+
+$IdValue = $params["oficioId"]; 
 // Sanitizar el valor para evitar inyecciones SQL
 $IdValue = addslashes($IdValue);
 $consulta=DB::Query("SELECT * FROM Oficios where OficioId=".$IdValue);

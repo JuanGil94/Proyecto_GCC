@@ -166,6 +166,11 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Test_de_Deterioro__Resumen__buscar"] = true;
 		$this->events["label_Novedad"] = true;
 		$this->events["dbo_UserProfile_INGRESO"] = true;
+		$this->events["dbo_Acuerdos_snippet"] = true;
+		$this->events["dbo_Acuerdos_snippet1"] = true;
+		$this->events["Sum_Costas_Acuerdos"] = true;
+		$this->events["dbo_Acuerdos_snippet2"] = true;
+		$this->events["dbo_Acuerdos_snippet3"] = true;
 
 
 
@@ -5350,6 +5355,81 @@ echo '<strong>Novedades:</strong><input for="miInput" id="procesoId" value="'.$d
 	// Put your code here.
 echo '<input type="text" id="miCampoPersonalizado" name="miCampoPersonalizado" placeholder="Ingresa un dato extra">
 ';
+	;
+}
+	function event_dbo_Acuerdos_snippet(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT FORMAT(SUM(Capital), 'C', 'es-CO') sumCapital FROM Acuerdos where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $sumCapital=$date["sumCapital"];
+        }
+echo "<strong>".$sumCapital."</strong>";
+	;
+}
+	function event_dbo_Acuerdos_snippet1(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT FORMAT(SUM(Intereses), 'C', 'es-CO') sumIntereses FROM Acuerdos where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $sumIntereses=$date["sumIntereses"];
+        }
+echo "<strong>".$sumIntereses."</strong>";
+	;
+}
+	function event_Sum_Costas_Acuerdos(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT FORMAT(SUM(Costas), 'C', 'es-CO') sumCostas FROM Acuerdos where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $sumCostas=$date["sumCostas"];
+        }
+echo "<strong>".$sumCostas."</strong>";
+	;
+}
+	function event_dbo_Acuerdos_snippet2(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT FORMAT(SUM(InteresesPlazo), 'C', 'es-CO') sumInteresesPlazo FROM Acuerdos where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $sumInteresesPlazo=$date["sumInteresesPlazo"];
+        }
+echo "<strong>".$sumInteresesPlazo."</strong>";
+	;
+}
+	function event_dbo_Acuerdos_snippet3(&$params)
+	{
+	global $pageObject;
+$data = $pageObject->getMasterRecord();
+$procesoId=$data["ProcesoId"];
+// Put your code here.
+
+$consulta=DB::Query("SELECT FORMAT(SUM(Total), 'C', 'es-CO') sumTotal FROM Acuerdos where ProcesoId=".$procesoId."");
+        while( $date = $consulta->fetchAssoc() )
+		{
+            $sumTotal=$date["sumTotal"];
+        }
+echo "<strong>".$sumTotal."</strong>";
 	;
 }
 

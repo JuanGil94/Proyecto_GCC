@@ -614,8 +614,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_AcuerdoId" checked="checked" value="1" data-field="AcuerdoId" data-fieldname="AcuerdoId">
-					<span>{$label dbo_Acuerdos AcuerdoId }</span>
+					<input type="checkbox" id="hide_Cuota" checked="checked" value="1" data-field="Cuota" data-fieldname="Cuota">
+					<span>{$label dbo_Acuerdos Cuota }</span>
 				</label>
 			</div>
 					</a>
@@ -626,16 +626,6 @@
 				<label>
 					<input type="checkbox" id="hide_Fecha" checked="checked" value="1" data-field="Fecha" data-fieldname="Fecha">
 					<span>{$label dbo_Acuerdos Fecha }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_Total" checked="checked" value="1" data-field="Total" data-fieldname="Total">
-					<span>{$label dbo_Acuerdos Total }</span>
 				</label>
 			</div>
 					</a>
@@ -664,16 +654,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Cuota" checked="checked" value="1" data-field="Cuota" data-fieldname="Cuota">
-					<span>{$label dbo_Acuerdos Cuota }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Costas" checked="checked" value="1" data-field="Costas" data-fieldname="Costas">
 					<span>{$label dbo_Acuerdos Costas }</span>
 				</label>
@@ -686,6 +666,16 @@
 				<label>
 					<input type="checkbox" id="hide_InteresesPlazo" checked="checked" value="1" data-field="InteresesPlazo" data-fieldname="InteresesPlazo">
 					<span>{$label dbo_Acuerdos InteresesPlazo }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Total" checked="checked" value="1" data-field="Total" data-fieldname="Total">
+					<span>{$label dbo_Acuerdos Total }</span>
 				</label>
 			</div>
 					</a>
@@ -707,9 +697,6 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="AcuerdoId"]:before {
-		content: "{$label dbo_Acuerdos AcuerdoId}";
-	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
 		content: "{$label dbo_Acuerdos Fecha}";
 	}
@@ -789,21 +776,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcuerdoId_class}	"
+		 r-ori-vert		 {$Cuota_class}	"
 
-			data-field="AcuerdoId"
+			data-field="Cuota"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AcuerdoId_fieldheadercolumn}
-	{BEGIN AcuerdoId_fieldheader}
-	<SPAN {$AcuerdoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcuerdoId" data-fieldname="AcuerdoId">
-	{$label dbo_Acuerdos AcuerdoId }	{$arrow_icon_AcuerdoId}
+		{BEGIN Cuota_fieldheadercolumn}
+	{BEGIN Cuota_fieldheader}
+	<SPAN {$Cuota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuota" data-fieldname="Cuota">
+	{$label dbo_Acuerdos Cuota }	{$arrow_icon_Cuota}
 	</SPAN>
-	{END AcuerdoId_fieldheader}
-{END AcuerdoId_fieldheadercolumn}
+	{END Cuota_fieldheader}
+{END Cuota_fieldheadercolumn}
 
 	
 	</th>
@@ -839,21 +826,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Total_class}	"
+		 r-ori-vert		 {$Capital_class}	"
 
-			data-field="Total"
+			data-field="Capital"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Total_fieldheadercolumn}
-	{BEGIN Total_fieldheader}
-	<SPAN {$Total_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Total" data-fieldname="Total">
-	{$label dbo_Acuerdos Total }	{$arrow_icon_Total}
+		{BEGIN Capital_fieldheadercolumn}
+	{BEGIN Capital_fieldheader}
+	<SPAN {$Capital_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Capital" data-fieldname="Capital">
+	{$label dbo_Acuerdos Capital }	{$arrow_icon_Capital}
 	</SPAN>
-	{END Total_fieldheader}
-{END Total_fieldheadercolumn}
+	{END Capital_fieldheader}
+{END Capital_fieldheadercolumn}
 
 	
 	</th>
@@ -864,21 +851,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Capital_class}	"
+		 r-ori-vert		 {$Intereses_class}	"
 
-			data-field="Capital"
+			data-field="Intereses"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Capital_fieldheadercolumn}
-	{BEGIN Capital_fieldheader}
-	<SPAN {$Capital_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Capital" data-fieldname="Capital">
-	{$label dbo_Acuerdos Capital }	{$arrow_icon_Capital}
+		{BEGIN Intereses_fieldheadercolumn}
+	{BEGIN Intereses_fieldheader}
+	<SPAN {$Intereses_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
+	{$label dbo_Acuerdos Intereses }	{$arrow_icon_Intereses}
 	</SPAN>
-	{END Capital_fieldheader}
-{END Capital_fieldheadercolumn}
+	{END Intereses_fieldheader}
+{END Intereses_fieldheadercolumn}
 
 	
 	</th>
@@ -889,21 +876,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Intereses_class}	"
+		 r-ori-vert		 {$Costas_class}	"
 
-			data-field="Intereses"
+			data-field="Costas"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Intereses_fieldheadercolumn}
-	{BEGIN Intereses_fieldheader}
-	<SPAN {$Intereses_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Intereses" data-fieldname="Intereses">
-	{$label dbo_Acuerdos Intereses }	{$arrow_icon_Intereses}
+		{BEGIN Costas_fieldheadercolumn}
+	{BEGIN Costas_fieldheader}
+	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
+	{$label dbo_Acuerdos Costas }	{$arrow_icon_Costas}
 	</SPAN>
-	{END Intereses_fieldheader}
-{END Intereses_fieldheadercolumn}
+	{END Costas_fieldheader}
+{END Costas_fieldheadercolumn}
 
 	
 	</th>
@@ -914,21 +901,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cuota_class}	"
+		 r-ori-vert		 {$InteresesPlazo_class}	"
 
-			data-field="Cuota"
+			data-field="InteresesPlazo"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Cuota_fieldheadercolumn}
-	{BEGIN Cuota_fieldheader}
-	<SPAN {$Cuota_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cuota" data-fieldname="Cuota">
-	{$label dbo_Acuerdos Cuota }	{$arrow_icon_Cuota}
+		{BEGIN InteresesPlazo_fieldheadercolumn}
+	{BEGIN InteresesPlazo_fieldheader}
+	<SPAN {$InteresesPlazo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesPlazo" data-fieldname="InteresesPlazo">
+	{$label dbo_Acuerdos InteresesPlazo }	{$arrow_icon_InteresesPlazo}
 	</SPAN>
-	{END Cuota_fieldheader}
-{END Cuota_fieldheadercolumn}
+	{END InteresesPlazo_fieldheader}
+{END InteresesPlazo_fieldheadercolumn}
 
 	
 	</th>
@@ -939,50 +926,25 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Costas_class}	"
+		 r-ori-vert		 {$Total_class}	"
 
-			data-field="Costas"
+			data-field="Total"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Costas_fieldheadercolumn}
-	{BEGIN Costas_fieldheader}
-	<SPAN {$Costas_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Costas" data-fieldname="Costas">
-	{$label dbo_Acuerdos Costas }	{$arrow_icon_Costas}
+		{BEGIN Total_fieldheadercolumn}
+	{BEGIN Total_fieldheader}
+	<SPAN {$Total_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Total" data-fieldname="Total">
+	{$label dbo_Acuerdos Total }	{$arrow_icon_Total}
 	</SPAN>
-	{END Costas_fieldheader}
-{END Costas_fieldheadercolumn}
+	{END Total_fieldheader}
+{END Total_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$InteresesPlazo_class}	"
-
-			data-field="InteresesPlazo"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN InteresesPlazo_fieldheadercolumn}
-	{BEGIN InteresesPlazo_fieldheader}
-	<SPAN {$InteresesPlazo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="InteresesPlazo" data-fieldname="InteresesPlazo">
-	{$label dbo_Acuerdos InteresesPlazo }	{$arrow_icon_InteresesPlazo}
-	</SPAN>
-	{END InteresesPlazo_fieldheader}
-{END InteresesPlazo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -1049,19 +1011,19 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcuerdoId_class}	"
+		 r-ori-vert		 {$Cuota_class}	"
 
-			data-field="AcuerdoId"
+			data-field="Cuota"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN AcuerdoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="AcuerdoId" data-fieldname="AcuerdoId" data-default-width >
-{$AcuerdoId_value}
+		{BEGIN Cuota_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="Cuota" data-fieldname="Cuota" data-default-width >
+{$Cuota_value}
 </span>
-{END AcuerdoId_fieldcolumn}	
+{END Cuota_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 									{BEGIN cellblock_grid_cell_field1}
@@ -1091,32 +1053,11 @@
 	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Total_class}	"
-
-			data-field="Total"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Total_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Total" data-fieldname="Total" data-default-width >
-{$Total_value}
-</span>
-{END Total_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Capital_class}	"
 
 			data-field="Capital"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1126,18 +1067,18 @@
 </span>
 {END Capital_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Intereses_class}	"
 
 			data-field="Intereses"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1147,39 +1088,18 @@
 </span>
 {END Intereses_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Cuota_class}	"
-
-			data-field="Cuota"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Cuota_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-page="acuerdos_list" data-record-id="{$recId}" data-field="Cuota" data-fieldname="Cuota" data-default-width >
-{$Cuota_value}
-</span>
-{END Cuota_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Costas_class}	"
 
 			data-field="Costas"
 	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1189,18 +1109,18 @@
 </span>
 {END Costas_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$InteresesPlazo_class}	"
 
 			data-field="InteresesPlazo"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1210,7 +1130,28 @@
 </span>
 {END InteresesPlazo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field5}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Total_class}	"
+
+			data-field="Total"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Total_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Total" data-fieldname="Total" data-default-width >
+{$Total_value}
+</span>
+{END Total_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
 							</tr>
 										
 											{END grid_row}
@@ -1231,7 +1172,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1246,7 +1188,8 @@
 		 r-ori-vert			"
 
 	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
 	>
 
 	
@@ -1258,10 +1201,11 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$AcuerdoId_class}	"
+		 r-ori-vert		 {$Cuota_class}	"
 
 	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"		data-control-cell
+	
 	>
 
 	
@@ -1276,7 +1220,8 @@
 		 r-ori-vert		 {$Fecha_class}	"
 
 	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"		data-control-cell
+	
 	>
 
 	
@@ -1288,13 +1233,16 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Total_class}	"
+		 r-ori-vert		 {$Capital_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Acuerdos_snippet}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field2}
 									{BEGIN cellblock_grid_footcell_field3}
@@ -1303,13 +1251,16 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Capital_class}	"
+		 r-ori-vert		 {$Intereses_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet1" {$item_snippet1} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Acuerdos_snippet1}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field3}
 									{BEGIN cellblock_grid_footcell_field4}
@@ -1318,13 +1269,16 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Intereses_class}	"
+		 r-ori-vert		 {$Costas_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet2" {$item_snippet2} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event Sum_Costas_Acuerdos}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field4}
 									{BEGIN cellblock_grid_footcell_field5}
@@ -1333,13 +1287,16 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Cuota_class}	"
+		 r-ori-vert		 {$InteresesPlazo_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet3" {$item_snippet3} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Acuerdos_snippet2}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field5}
 									{BEGIN cellblock_grid_footcell_field6}
@@ -1348,30 +1305,18 @@
 	{$cell_grid_footcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Costas_class}	"
+		 r-ori-vert		 {$Total_class}	"
 
 	
 	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
 	>
 
-	
+	 
+		<span data-itemtype="snippet" data-itemid="snippet4" {$item_snippet4} data-pageid="{$pageid}" data-record-id="{$recId}" >
+{$event dbo_Acuerdos_snippet3}
+</span>	
 	</td>
 	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$InteresesPlazo_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="acuerdos_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>
