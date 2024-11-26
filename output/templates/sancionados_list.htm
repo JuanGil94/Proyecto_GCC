@@ -736,10 +736,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PrivadoLibertad"]:before {
 		content: "{$label dbo_Sancionados PrivadoLibertad}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Carcel"]:before {
-		content: "{$label dbo_Sancionados Carcel}";
-	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table table-hover table-bordered r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable"
 	cellpadding="0"
@@ -1031,31 +1028,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field9}
-									{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Carcel_class}	"
-
-			data-field="Carcel"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Carcel_fieldheadercolumn}
-	{BEGIN Carcel_fieldheader}
-	<SPAN {$Carcel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Carcel" data-fieldname="Carcel">
-	{$label dbo_Sancionados Carcel }	{$arrow_icon_Carcel}
-	</SPAN>
-	{END Carcel_fieldheader}
-{END Carcel_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
 							</tr>
 																				
 					{END grid_header}
@@ -1355,27 +1327,6 @@
 {END PrivadoLibertad_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field9}
-									{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Carcel_class}	"
-
-			data-field="Carcel"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Carcel_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Carcel" data-fieldname="Carcel" data-default-width >
-{$Carcel_value}
-</span>
-{END Carcel_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -1655,7 +1606,7 @@
 	{$cell_grid_footcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Carcel_class}	"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="sancionados_list"	

@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsacuerdos["Spanish"]["Fecha"] = "Fecha";
 	$fieldToolTipsacuerdos["Spanish"]["Fecha"] = "";
 	$placeHoldersacuerdos["Spanish"]["Fecha"] = "";
-	$fieldLabelsacuerdos["Spanish"]["Total"] = "Total";
+	$fieldLabelsacuerdos["Spanish"]["Total"] = "Valor Cuota";
 	$fieldToolTipsacuerdos["Spanish"]["Total"] = "";
 	$placeHoldersacuerdos["Spanish"]["Total"] = "";
 	$fieldLabelsacuerdos["Spanish"]["Capital"] = "Capital";
@@ -49,7 +49,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsacuerdos["Spanish"]["Costas"] = "Costas";
 	$fieldToolTipsacuerdos["Spanish"]["Costas"] = "";
 	$placeHoldersacuerdos["Spanish"]["Costas"] = "";
-	$fieldLabelsacuerdos["Spanish"]["InteresesPlazo"] = "Intereses Plazo";
+	$fieldLabelsacuerdos["Spanish"]["InteresesPlazo"] = "Intereses de Plazo";
 	$fieldToolTipsacuerdos["Spanish"]["InteresesPlazo"] = "";
 	$placeHoldersacuerdos["Spanish"]["InteresesPlazo"] = "";
 	$pageTitlesacuerdos["Spanish"]["list"] = "Acuerdos de Pago";

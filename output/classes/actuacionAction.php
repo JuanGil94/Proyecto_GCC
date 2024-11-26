@@ -100,12 +100,14 @@ class coreOficios {
                 case "20": //Acuerdo de Pago
                     $consulta=DB::Query("SELECT MAX(Cuota) noCuota,MAX(Total) maxCuota FROM Acuerdos where ProcesoId=".$this->procesoId);
                     while( $date = $consulta->fetchAssoc() ){
-                        $noCuotas=$date["Intereses"];
-                        $maxCuota=$date["InteresesInicial"];
+                        $noCuotas=$date["noCuota"];
+                        $maxCuota=$date["maxCuota"];
                     }
-                    $resultado["response"]=DB::Exec("UPDATE Procesos set Cuotas=".$noCuotas.",VlrCuota='".$maxCuota."'Acuerdo='".$this->fecha."', Incumplimiento=NULL,EstadoId =3,ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
+                    //echo "Numero de Cuotas=".$noCuotas." Valor Cuota=".$maxCuota." Actuación=".$this->actuacionId." ProcesoId=".$this->procesoId;
+                    //exit();
+                    $resultado["response"]=DB::Exec("UPDATE Procesos set Cuotas=".$noCuotas.",VlrCuota='".$maxCuota."',Acuerdo=GETDATE(), Incumplimiento=NULL,EstadoId =3,ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                     if (!$resultado["response"]){
-                        echo "Ocurrio un error debido aL UPDATE en Procesos: ".DB::LastError(); 
+                        echo "Ocurrio un error debido aL UPDATEEE en Procesos: ".DB::LastError(); 
                         return false;
                     } 
                     /*

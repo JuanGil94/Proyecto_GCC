@@ -604,6 +604,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_headcell_field9}
+			colSpan: {$colspan_grid_headcell_field9},
+			{END colspan_grid_headcell_field9}
 		
 		
 	
@@ -622,36 +625,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field}
-{
-	cellId: 'headcell_field',
-	col:0,
-	row:0,
-			fieldName: 'Carcel',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Sancionados Carcel }","hidden":"{$item_hide_grid_field_label}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Carcel_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field}
-											],
+																		{ 
+				cellId: 'headcell_field9',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_0}
 		
 			
@@ -1002,6 +982,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_cell_field9}
+			colSpan: {$colspan_grid_cell_field9},
+			{END colspan_grid_cell_field9}
 		
 		
 	
@@ -1020,36 +1003,13 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field}
-{
-	cellId: 'cell_field',
-	col:0,
-	row:0,
-			fieldName: 'Carcel',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Carcel_pdfvalue},"hidden":"{$item_hide_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Carcel_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field}
-											],
+																		{ 
+				cellId: 'cell_field9',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
 				[
