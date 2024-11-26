@@ -621,6 +621,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("codificadoresdespacho" == $shortTName )
 		return true;
+	if ("dbo_seccional_procesosview1" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2552,6 +2554,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.codificadoresDespacho";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Seccional_ProcesosView1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Seccional_ProcesosView1";
+	}
 	return $arr;
 }
 
@@ -2770,6 +2781,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.UsuGCC-ugmembers";
 	$arr[]="dbo.despachosSigob";
 	$arr[]="dbo.codificadoresDespacho";
+	$arr[]="dbo.Seccional_ProcesosView1";
 	return $arr;
 }
 
@@ -4450,6 +4462,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.codificadoresDespacho" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Seccional_ProcesosView1" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

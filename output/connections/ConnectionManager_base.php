@@ -452,6 +452,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.UsuGCC-ugmembers"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.despachosSigob"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.codificadoresDespacho"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Seccional_ProcesosView1"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

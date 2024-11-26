@@ -796,6 +796,8 @@ class Chart
 			return true;
 		if("dbo.codificadoresDespacho" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.ProcesosView1" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 
