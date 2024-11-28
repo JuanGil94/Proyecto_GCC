@@ -713,7 +713,7 @@ $tdatacodificadoresdespacho[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -731,16 +731,16 @@ $tdatacodificadoresdespacho[".hideMobileList"] = array();
 	
 			$edata["acceptFileTypesHtml"] = "";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
-	
-			$edata["HTML5InuptType"] = "text";
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
 
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -751,7 +751,10 @@ $tdatacodificadoresdespacho[".hideMobileList"] = array();
 	
 //	End validation
 
-	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 600;
+
 			
 	
 	

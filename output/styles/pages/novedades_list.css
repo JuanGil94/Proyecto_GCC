@@ -30,3 +30,24 @@
 }
 
 
+/* Put  your custom CSS code here */
+#sugerencias {
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+ 
+#sugerencias li {
+    padding: 8px;
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+ 
+#sugerencias li:hover {
+    background-color: #f0f0f0; /* Cambia el fondo al pasar el mouse */
+}

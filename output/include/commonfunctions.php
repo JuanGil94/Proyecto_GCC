@@ -623,6 +623,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("dbo_seccional_procesosview1" == $shortTName )
 		return true;
+	if ("tiposnovedades" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2563,6 +2565,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Seccional_ProcesosView1";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.tiposNovedades");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.tiposNovedades";
+	}
 	return $arr;
 }
 
@@ -2782,6 +2793,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.despachosSigob";
 	$arr[]="dbo.codificadoresDespacho";
 	$arr[]="dbo.Seccional_ProcesosView1";
+	$arr[]="dbo.tiposNovedades";
 	return $arr;
 }
 
@@ -4467,6 +4479,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Seccional_ProcesosView1" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.tiposNovedades" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

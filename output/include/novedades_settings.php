@@ -34,16 +34,16 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsnovedades["Spanish"]["ProcesoId"] = "Proceso Id";
 	$fieldToolTipsnovedades["Spanish"]["ProcesoId"] = "";
 	$placeHoldersnovedades["Spanish"]["ProcesoId"] = "";
-	$fieldLabelsnovedades["Spanish"]["Tipo"] = "Tipo";
+	$fieldLabelsnovedades["Spanish"]["Tipo"] = "Tipo Novedad";
 	$fieldToolTipsnovedades["Spanish"]["Tipo"] = "";
 	$placeHoldersnovedades["Spanish"]["Tipo"] = "";
-	$fieldLabelsnovedades["Spanish"]["Anterior"] = "Anterior";
+	$fieldLabelsnovedades["Spanish"]["Anterior"] = "Valor Anterior";
 	$fieldToolTipsnovedades["Spanish"]["Anterior"] = "";
 	$placeHoldersnovedades["Spanish"]["Anterior"] = "";
-	$fieldLabelsnovedades["Spanish"]["Nuevo"] = "Nuevo";
+	$fieldLabelsnovedades["Spanish"]["Nuevo"] = "Valor Nuevo";
 	$fieldToolTipsnovedades["Spanish"]["Nuevo"] = "";
 	$placeHoldersnovedades["Spanish"]["Nuevo"] = "";
-	$fieldLabelsnovedades["Spanish"]["UserId"] = "User Id";
+	$fieldLabelsnovedades["Spanish"]["UserId"] = "Modificado Por";
 	$fieldToolTipsnovedades["Spanish"]["UserId"] = "";
 	$placeHoldersnovedades["Spanish"]["UserId"] = "";
 	$fieldLabelsnovedades["Spanish"]["Observaciones"] = "Observaciones";
@@ -760,7 +760,7 @@ $tdatanovedades[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -770,6 +770,34 @@ $tdatanovedades[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.tiposNovedades";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "TipoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "NombreNovedad";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -784,17 +812,14 @@ $tdatanovedades[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 //	End validation
@@ -814,7 +839,7 @@ $tdatanovedades[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
