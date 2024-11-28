@@ -146,8 +146,8 @@ $tdatabienesmuebles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
-					
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
+																	
 
 $tdatabienesmuebles[".ajaxCodeSnippetAdded"] = false;
 
@@ -1470,6 +1470,24 @@ $masterTablesData["BienesMuebles"] = array();
 	$masterTablesData["BienesMuebles"][0]["masterKeys"][]="SancionadoId";
 				$masterTablesData["BienesMuebles"][0]["detailKeys"] = array();
 	$masterTablesData["BienesMuebles"][0]["detailKeys"][]="SancionadoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Solidarios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Solidarios";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "solidarios";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["BienesMuebles"][1] = $masterParams;
+				$masterTablesData["BienesMuebles"][1]["masterKeys"] = array();
+	$masterTablesData["BienesMuebles"][1]["masterKeys"][]="SancionadoId";
+				$masterTablesData["BienesMuebles"][1]["detailKeys"] = array();
+	$masterTablesData["BienesMuebles"][1]["detailKeys"][]="SancionadoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

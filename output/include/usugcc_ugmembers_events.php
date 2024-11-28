@@ -43,14 +43,14 @@ function BeforeDelete($where, &$deleted_values, &$message, $pageObject)
     
     if ($data) {
         // Obtiene el ID del sancionado
-        $usuario = $data["UserName"];
+        $usuario = $data["username"];
         
     }
 
-		//$username = $deleted_values['username'];
+		$rolid = $deleted_values['GroupID'];
 
 		//$sqlInsert = "INSERT INTO otra_tabla (campo1, campo2) VALUES ('$campo1', '$campo2')";
-		$sqlInsert = "DELETE FROM [UsuGCC-_users] where username = '$usuario')";
+		$sqlInsert = "DELETE FROM [UsuGCC-ugmembers] where username = '$usuario' and GroupID = '$rolid'";
 
  // Enviar un mensaje personalizado al cliente
     

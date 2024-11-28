@@ -532,27 +532,27 @@
 		<input type="checkbox" id="printDetailsToggler{$id}">
 		Detalles de impresión	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
-											{BEGIN print_details_propiedades1}
+											{BEGIN print_details_bienesinmuebles}
 			<div>
-				<label for="printDetailspropiedades1{$id}">
-					<input type="checkbox" value="propiedades1" id="printDetailspropiedades1{$id}" checked>
-					Propiedades1				</label>
+				<label for="printDetailsbienesinmuebles{$id}">
+					<input type="checkbox" value="bienesinmuebles" id="printDetailsbienesinmuebles{$id}" checked>
+					Bienes Inmuebles				</label>
 			</div>
-			{END print_details_propiedades1}
-														{BEGIN print_details_propiedades3}
+			{END print_details_bienesinmuebles}
+														{BEGIN print_details_bienesmuebles}
 			<div>
-				<label for="printDetailspropiedades3{$id}">
-					<input type="checkbox" value="propiedades3" id="printDetailspropiedades3{$id}" checked>
-					Propiedades3				</label>
+				<label for="printDetailsbienesmuebles{$id}">
+					<input type="checkbox" value="bienesmuebles" id="printDetailsbienesmuebles{$id}" checked>
+					Bienes Muebles				</label>
 			</div>
-			{END print_details_propiedades3}
-														{BEGIN print_details_propiedades}
+			{END print_details_bienesmuebles}
+														{BEGIN print_details_productos_bancarios}
 			<div>
-				<label for="printDetailspropiedades{$id}">
-					<input type="checkbox" value="propiedades" id="printDetailspropiedades{$id}" checked>
-					Propiedades				</label>
+				<label for="printDetailsproductos_bancarios{$id}">
+					<input type="checkbox" value="productos_bancarios" id="printDetailsproductos_bancarios{$id}" checked>
+					Productos Bancarios				</label>
 			</div>
-			{END print_details_propiedades}
+			{END print_details_productos_bancarios}
 						</div>
 </div>
 {END print_details}
@@ -803,7 +803,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="solidarios_list"		data-control-cell
@@ -822,6 +822,20 @@
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
+	 
+		
+		
+	{BEGIN bienesinmuebles_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$bienesinmuebles_link_attrs} data-short-details="bienesinmuebles"
+		class="{$bienesinmuebles_dlink_class}" 
+		title="{$caption BienesInmuebles }"			>
+								
+			</a>
+	</span>
+	{END bienesinmuebles_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -863,14 +877,14 @@
 	>
 
 	 
-					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="propiedades1,propiedades3,propiedades"
-			data-details-propiedades1			data-details-propiedades3			data-details-propiedades	>
-		<span data-details-inside data-short-table="propiedades1">
+					<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="bienesmuebles,bienesinmuebles,productos_bancarios"
+			data-details-bienesmuebles			data-details-bienesinmuebles			data-details-productos_bancarios	>
+		<span data-details-inside data-short-table="bienesmuebles">
 			</span>
-		<span data-details-inside data-short-table="propiedades3">
+		<span data-details-inside data-short-table="bienesinmuebles">
 			</span>
-		<span data-details-inside data-short-table="propiedades">
+		<span data-details-inside data-short-table="productos_bancarios">
 			</span>
 		<div data-details-preview>
 	</div>

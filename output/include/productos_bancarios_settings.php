@@ -49,6 +49,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsproductos_bancarios["Spanish"]["PropiedadId"] = "Propiedad Id";
 	$fieldToolTipsproductos_bancarios["Spanish"]["PropiedadId"] = "";
 	$placeHoldersproductos_bancarios["Spanish"]["PropiedadId"] = "";
+	$pageTitlesproductos_bancarios["Spanish"]["list"] = "Efectivo";
 	if (count($fieldToolTipsproductos_bancarios["Spanish"]))
 		$tdataproductos_bancarios[".isUseToolTips"] = true;
 }
@@ -146,8 +147,8 @@ $tdataproductos_bancarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
-					
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
+																	
 
 $tdataproductos_bancarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -159,7 +160,7 @@ $tdataproductos_bancarios[".addPageEvents"] = true;
 $tdataproductos_bancarios[".isUseTimeForSearch"] = false;
 
 
-$tdataproductos_bancarios[".badgeColor"] = "8FBC8B";
+$tdataproductos_bancarios[".badgeColor"] = "8fbc8b";
 
 
 $tdataproductos_bancarios[".allSearchFields"] = array();
@@ -1470,6 +1471,24 @@ $masterTablesData["Productos Bancarios"] = array();
 	$masterTablesData["Productos Bancarios"][0]["masterKeys"][]="SancionadoId";
 				$masterTablesData["Productos Bancarios"][0]["detailKeys"] = array();
 	$masterTablesData["Productos Bancarios"][0]["detailKeys"][]="SancionadoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Solidarios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.Solidarios";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "solidarios";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["Productos Bancarios"][1] = $masterParams;
+				$masterTablesData["Productos Bancarios"][1]["masterKeys"] = array();
+	$masterTablesData["Productos Bancarios"][1]["masterKeys"][]="SancionadoId";
+				$masterTablesData["Productos Bancarios"][1]["detailKeys"] = array();
+	$masterTablesData["Productos Bancarios"][1]["detailKeys"][]="SancionadoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

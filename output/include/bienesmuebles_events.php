@@ -16,6 +16,8 @@
 
 		$this->events["BeforeAdd"]=true;
 
+		$this->events["BeforeEdit"]=true;
+
 
 	}
 
@@ -134,6 +136,87 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record updated
+function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
+{
+
+		$valor = $values["Avalúo"];
+// Elimina los puntos
+$valor_sin_puntos = str_replace('.', '', $valor);
+$values["Avalúo"] = $valor_sin_puntos;
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeEdit
+
 		
 		
 		

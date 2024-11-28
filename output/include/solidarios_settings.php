@@ -131,13 +131,14 @@ $tdatasolidarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+								
 
 $tdatasolidarios[".ajaxCodeSnippetAdded"] = false;
 
-$tdatasolidarios[".buttonsAdded"] = false;
+$tdatasolidarios[".buttonsAdded"] = true;
 
-$tdatasolidarios[".addPageEvents"] = false;
+$tdatasolidarios[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatasolidarios[".isUseTimeForSearch"] = false;
@@ -616,7 +617,10 @@ $tdatasolidarios[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "SancionadoId_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
@@ -648,7 +652,8 @@ $tdatasolidarios[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -668,7 +673,8 @@ $tdatasolidarios[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -731,21 +737,21 @@ changeTextControlsToDate( "dbo.Solidarios" );
 //if !@TABLE.bReportCrossTab
 
 $detailsTablesData["dbo.Solidarios"] = array();
-//	dbo.Propiedades1
+//	BienesInmuebles
 	
 	
 
 		$dIndex = 0;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Propiedades1";
+	$detailsParam["dDataSourceTable"]="BienesInmuebles";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "propiedades1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades1");
+	$detailsParam["dShortTable"] = "bienesinmuebles";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BienesInmuebles");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -761,21 +767,21 @@ $detailsTablesData["dbo.Solidarios"] = array();
 				$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Propiedades3
+//	BienesMuebles
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Propiedades3";
+	$detailsParam["dDataSourceTable"]="BienesMuebles";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "propiedades3";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades3");
+	$detailsParam["dShortTable"] = "bienesmuebles";
+	$detailsParam["dCaptionTable"] = GetTableCaption("BienesMuebles");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -791,21 +797,21 @@ $detailsTablesData["dbo.Solidarios"] = array();
 				$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Solidarios"][$dIndex]["detailKeys"][]="SancionadoId";
-//	dbo.Propiedades
+//	Productos Bancarios
 	
 	
 
 		$dIndex = 2;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Propiedades";
+	$detailsParam["dDataSourceTable"]="Productos Bancarios";
 		$detailsParam["dOriginalTable"] = "dbo.Propiedades";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "propiedades";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Propiedades");
+	$detailsParam["dShortTable"] = "productos_bancarios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("Productos_Bancarios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -1020,6 +1026,7 @@ $tdatasolidarios[".sqlquery"] = $queryData_solidarios;
 
 
 
-$tdatasolidarios[".hasEvents"] = false;
+include_once(getabspath("include/solidarios_events.php"));
+$tdatasolidarios[".hasEvents"] = true;
 
 ?>

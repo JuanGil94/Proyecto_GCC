@@ -581,23 +581,32 @@ function BeforeDelete($where, &$deleted_values, &$message, $pageObject)
 {
 
 		
-    /*$data = $pageObject->getMasterRecord();
-    
-    if ($data) {
-        // Obtiene el ID del sancionado
-        $usuario = $data["UserName"];
-        
-    }*/
-
 		$username = $deleted_values['UserName'];
 
-		//$sqlInsert = "INSERT INTO otra_tabla (campo1, campo2) VALUES ('$campo1', '$campo2')";
 		$sqlInsert = "DELETE FROM [UsuGCC-_users] where username = '$username'";
+
+		$sql = "select UserId from UserProfile  where UserName = '$username'";
+		
+		// Ejecutar la consulta
+		$result = DB::Query($sql);
+
+		// Obtener el resultado
+		$row = $result->fetchAssoc();
+		$id = $row['UserId'];
+		
+		//Query para borrar usuarios-id de tablas  [UsuGCC-ugmembers] ,UsuariosCarteraTipos y UsuariosSeccionales
+		$sqlDeleteugmembers = "DELETE FROM [UsuGCC-ugmembers] where UserName = '$username'";
+		$sqlDeleteUsuariosCarteraTipos = "DELETE FROM UsuariosCarteraTipos where UserId = '$id'";
+		$sqlDeleteUsuariosSeccionales = "DELETE FROM UsuariosSeccionales where UserId = '$id'";
 
  // Enviar un mensaje personalizado al cliente
     
     try {
-        CustomQuery($sqlInsert);
+        
+					CustomQuery($sqlDeleteugmembers);
+					CustomQuery($sqlDeleteUsuariosCarteraTipos);
+					CustomQuery($sqlDeleteUsuariosSeccionales);
+					CustomQuery($sqlInsert);
         LogInfo("Inserción exitosa: " . $sqlInsert);
     } catch (Exception $e) {
         LogInfo("Error en la inserción: " . $e->getMessage());
