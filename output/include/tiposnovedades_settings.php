@@ -128,7 +128,7 @@ $tdatatiposnovedades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																			
 
 $tdatatiposnovedades[".ajaxCodeSnippetAdded"] = false;
 

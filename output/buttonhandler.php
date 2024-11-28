@@ -2,6 +2,17 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1142,6 +1153,12 @@ if( $eventId == 'Avaluo_Mascara' && "dbo.PropiedadesMedidas" == $table )
 	require_once("include/propiedadesmedidas_variables.php");
 	$cipherer = new RunnerCipherer("dbo.PropiedadesMedidas");
 	fieldEventHandler_Avaluo_Mascara( $params );
+}
+if( $eventId == 'SancionadoId_event' && "dbo.Solidarios" == $table )
+{
+	require_once("include/solidarios_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Solidarios");
+	fieldEventHandler_SancionadoId_event( $params );
 }
 
 
@@ -9577,6 +9594,61 @@ function fieldEventHandler_Avaluo_Mascara( $params )
 	
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$result["upper"] = $params["value"];;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_SancionadoId_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	$sancionadoId = $params["value"];
+
+//echo $sancionadoId;
+// Verifica si el ID no está vacío
+if (is_numeric($sancionadoId)) {
+    // Construir la consulta SQL
+    $sql = "SELECT * FROM Sancionados WHERE SancionadoId = '$sancionadoId'";
+
+    // Ejecutar la consulta
+    $result1 = DB::Query($sql);
+
+    // Verificar si se obtuvieron resultados
+    if (!empty($result1)) {
+        // Recorrer los resultados y mostrarlos
+        while ($row = $result1->fetchAssoc()) {
+            //print_r($row);
+						 // Sample:
+						 $result["upper"] = strtoupper( $params["value"] );
+        }
+    } else {
+
+			//return false;
+
+    }
+} else {
+    //echo "El ID proporcionado está vacío.";
+			//return false;
+}
+
+;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

@@ -457,6 +457,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -528,19 +531,19 @@ pdfDocument = {
 			"stack": [
 		
 				
-			 {BEGIN details_propiedades1}
-			{$displayDetailTable_propiedades1 }
-		{END details_propiedades1},
+			 {BEGIN details_bienesmuebles}
+			{$displayDetailTable_bienesmuebles }
+		{END details_bienesmuebles},
 				
 				
-			 {BEGIN details_propiedades3}
-			{$displayDetailTable_propiedades3 }
-		{END details_propiedades3},
+			 {BEGIN details_bienesinmuebles}
+			{$displayDetailTable_bienesinmuebles }
+		{END details_bienesinmuebles},
 				
 				
-			 {BEGIN details_propiedades}
-			{$displayDetailTable_propiedades }
-		{END details_propiedades},
+			 {BEGIN details_productos_bancarios}
+			{$displayDetailTable_productos_bancarios }
+		{END details_productos_bancarios},
 				
 		  ],
   "border": [ true, true, true, true ],

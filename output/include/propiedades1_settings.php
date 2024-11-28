@@ -144,7 +144,7 @@ $tdatapropiedades1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																			
 
 $tdatapropiedades1[".ajaxCodeSnippetAdded"] = false;
 
@@ -1274,24 +1274,6 @@ $masterTablesData["dbo.Propiedades1"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Solidarios";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Solidarios";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "solidarios";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Propiedades1"][0] = $masterParams;
-				$masterTablesData["dbo.Propiedades1"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Propiedades1"][0]["masterKeys"][]="SancionadoId";
-				$masterTablesData["dbo.Propiedades1"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Propiedades1"][0]["detailKeys"][]="SancionadoId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

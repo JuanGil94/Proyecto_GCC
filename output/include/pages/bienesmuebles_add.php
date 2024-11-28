@@ -1,5 +1,6 @@
 <?php
-			$optionsArray = array( 'master' => array( 'dbo.Sancionados' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'dbo.Sancionados' => array( 'preview' => false ),
+'dbo.Solidarios' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'CiudadId',
 'Descripción del Bien Inmueble',

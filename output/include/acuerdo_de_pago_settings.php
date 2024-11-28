@@ -174,7 +174,7 @@ $tdataacuerdo_de_pago[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																			
 
 $tdataacuerdo_de_pago[".ajaxCodeSnippetAdded"] = false;
 

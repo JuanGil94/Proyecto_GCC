@@ -157,7 +157,7 @@ $tdatausugcc__users[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdatausugcc__users[".ajaxCodeSnippetAdded"] = false;
 
@@ -2168,6 +2168,7 @@ $tdatausugcc__users[".sqlquery"] = $queryData_usugcc__users;
 
 
 
-$tdatausugcc__users[".hasEvents"] = false;
+include_once(getabspath("include/usugcc__users_events.php"));
+$tdatausugcc__users[".hasEvents"] = true;
 
 ?>

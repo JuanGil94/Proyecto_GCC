@@ -144,7 +144,7 @@ $tdatapropiedades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																															
 		
 				
 
@@ -1279,24 +1279,6 @@ $masterTablesData["dbo.Propiedades"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Solidarios";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Solidarios";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "solidarios";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Propiedades"][0] = $masterParams;
-				$masterTablesData["dbo.Propiedades"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Propiedades"][0]["masterKeys"][]="SancionadoId";
-				$masterTablesData["dbo.Propiedades"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Propiedades"][0]["detailKeys"][]="SancionadoId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

@@ -1,10 +1,10 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'details' => array( 'dbo.Propiedades1' => array( 'displayPreview' => 2,
+'details' => array( 'BienesInmuebles' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'dbo.Propiedades3' => array( 'displayPreview' => 2,
+'BienesMuebles' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'dbo.Propiedades' => array( 'displayPreview' => 2,
+'Productos Bancarios' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
 'dbo.ProcesosReasignar' => array( 'preview' => false ) ),
