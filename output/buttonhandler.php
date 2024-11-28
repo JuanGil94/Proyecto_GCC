@@ -2,17 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -8362,7 +8351,7 @@ $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId
 						$numero=$date["Numero"];
 						$obligacionInicial=$date["ObligacionInicial"];
         }
-$obligacionInicial=number_format($obligacionInicial,2);
+$obligacionInicial=number_format($obligacionInicial, 0, ',', '.');
 $result["Numero"]=$numero;
 $result["obligacionInicial"]=$obligacionInicial;
 $result["procesoId"]=$params["ProcesoId"];
@@ -8420,9 +8409,17 @@ function buttonHandler_Nov_Intereses($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$intereses=$date["Intereses"];
+        }
+$intereses=number_format($intereses,0, ',', '.');
+$result["Numero"]=$numero;
+$result["Intereses"]=$intereses;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -8532,9 +8529,32 @@ function buttonHandler_Nov_Incum_Acuerdo_Pago($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$incumplimiento=$date["Incumplimiento"];
+						$ejecutoria=$date["Ejecutoria"];
+        }
+if (empty($incumplimiento)){
+	$incumplimiento=1;
+}
+else{
+	$incumplimiento= new DateTime($Incumplimiento);
+	$incumplimiento=$incumplimiento->format('Y-m-d');
+}
+
+$fechaEjecutoria= new DateTime($ejecutoria);
+$ejecutoria=$fechaEjecutoria->format('Y-m-d');
+$dateActual=date('Y-m-d');
+
+$result["fechaActual"]=$dateActual;
+$result["Numero"]=$numero;
+$result["Incumplimiento"]=$incumplimiento;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];
+$result["Ejecutoria"]=$ejecutoria;
+$result["Actual"]=$dateActual;;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -8588,9 +8608,17 @@ function buttonHandler_Nov_Obligaci_n($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$obligacion=$date["Obligacion"];
+        }
+$obligacion=number_format($obligacion,0, ',', '.');
+$result["Numero"]=$numero;
+$result["Obligacion"]=$obligacion;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -8644,9 +8672,21 @@ function buttonHandler_Nov_Despacho($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$despachoId=$date["DespachoId"];
+						$numero=$date["Numero"];
+        }
+$result["Numero"]=$numero;
+$consulta=DB::Query("SELECT * FROM Despachos WHERE DespachoId=".$despachoId);
+        while( $date = $consulta->fetchAssoc() ){
+						$despacho=$date["Despacho"];
+						$codigo=$date["Codigo"];
+        }
+$result["SancDoc"]=$despacho.' - '.$codigo;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];
+//$result["sancionadoId"]=$sancionadoId;;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -8812,9 +8852,17 @@ function buttonHandler_Nov_Origen($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$radicado=$date["Radicado"];
+        }
+$intereses=number_format($intereses,0, ',', '.');
+$result["Numero"]=$numero;
+$result["Radicado"]=$radicado;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

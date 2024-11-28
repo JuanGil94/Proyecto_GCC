@@ -3211,6 +3211,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Procesos"]["novedades.ProcesoId"] = array();
 		}
 		$lookupTableLinks["dbo.Procesos"]["novedades.ProcesoId"]["edit"] = array("table" => "dbo.Novedades", "field" => "ProcesoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.tiposNovedades"] ) ) {
+			$lookupTableLinks["dbo.tiposNovedades"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.tiposNovedades"]["novedades.Tipo"] )) {
+			$lookupTableLinks["dbo.tiposNovedades"]["novedades.Tipo"] = array();
+		}
+		$lookupTableLinks["dbo.tiposNovedades"]["novedades.Tipo"]["edit"] = array("table" => "dbo.Novedades", "field" => "Tipo", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
 			$lookupTableLinks["dbo.UserProfile"] = array();
 		}

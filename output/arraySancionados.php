@@ -9,7 +9,7 @@ if (isset($_POST['consulta'])) {
  
     // Conexión a la base de datos ya establecida en PHPRunner
     // La función DB::Query() se usa aquí para realizar la consulta
-    $rs = DB::Query("SELECT TOP(10) SancionadoId, Sancionado, Documento FROM Sancionados WHERE CONCAT(Sancionado, ' - ', Documento) LIKE '%$consulta%'");
+    $rs = DB::Query("SELECT TOP(100) SancionadoId, Sancionado, Documento FROM Sancionados WHERE CONCAT(Sancionado, ' - ', Documento) LIKE '%$consulta%'");
  
     $sugerencias = array();
  

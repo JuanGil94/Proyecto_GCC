@@ -3956,6 +3956,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "codificadoresdespacho" ] = "dbo.codificadoresDespacho";
 	$projectEntities[ "dbo.Seccional_ProcesosView1" ] = array( "url" => "dbo_seccional_procesosview1", "type" => 1 );
 	$projectEntitiesReverse[ "dbo_seccional_procesosview1" ] = "dbo.Seccional_ProcesosView1";
+	$projectEntities[ "dbo.tiposNovedades" ] = array( "url" => "tiposnovedades", "type" => 0 );
+	$projectEntitiesReverse[ "tiposnovedades" ] = "dbo.tiposNovedades";
 }
 
 function findTable( $table ) {

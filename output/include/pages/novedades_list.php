@@ -707,7 +707,8 @@ array( 'cell' => 'footcell_field5' ) ) ) ),
 'required' => false ),
 'search_panel_field7' => array( 'field' => 'Tipo',
 'type' => 'search_panel_field',
-'required' => false ),
+'required' => false,
+'alwaysOnPanel' => false ),
 'search_panel_field8' => array( 'field' => 'UserId',
 'type' => 'search_panel_field',
 'required' => false ),
@@ -742,7 +743,10 @@ array( 'cell' => 'footcell_field5' ) ) ) ),
 '-3' => array( 'type' => '-' ),
 'simple_grid_field' => array( 'type' => 'grid_field_label',
 'field' => 'Tipo',
-'clickSort' => true ),
+'clickSort' => true,
+'label' => array( 'field' => 'Tipo',
+'table' => 'dbo.Novedades',
+'type' => 3 ) ),
 'simple_grid_field1' => array( 'field' => 'Fecha',
 'type' => 'grid_field',
 'inlineAdd' => false,
@@ -772,17 +776,26 @@ array( 'cell' => 'footcell_field5' ) ) ) ),
 'inlineEdit' => false ),
 'simple_grid_field8' => array( 'type' => 'grid_field_label',
 'field' => 'Anterior',
-'clickSort' => true ),
+'clickSort' => true,
+'label' => array( 'field' => 'Anterior',
+'table' => 'dbo.Novedades',
+'type' => 3 ) ),
 'master_info' => array( 'type' => 'master_info',
 'tables' => array( 'dbo.Procesos' => 'true',
 'dbo.UserProfile' => 'true',
 'dbo.ProcesosCorrespondencias' => 'true' ) ),
 'simple_grid_field9' => array( 'type' => 'grid_field_label',
 'field' => 'Nuevo',
-'clickSort' => true ),
+'clickSort' => true,
+'label' => array( 'field' => 'Nuevo',
+'table' => 'dbo.Novedades',
+'type' => 3 ) ),
 'simple_grid_field10' => array( 'type' => 'grid_field_label',
 'field' => 'UserId',
-'clickSort' => true ),
+'clickSort' => true,
+'label' => array( 'field' => 'UserId',
+'table' => 'dbo.Novedades',
+'type' => 3 ) ),
 'simple_grid_field11' => array( 'type' => 'grid_field_label',
 'field' => 'Observaciones',
 'clickSort' => true ),
@@ -861,5 +874,27 @@ array( 'cell' => 'footcell_field5' ) ) ) ),
 'imageItem' => array( 'type' => 'page_image' ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
-'imagePosition' => 'right' );
+'imagePosition' => 'right',
+'pageCSS' => '/* Put  your custom CSS code here */
+#sugerencias {
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+ 
+#sugerencias li {
+    padding: 8px;
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+ 
+#sugerencias li:hover {
+    background-color: #f0f0f0; /* Cambia el fondo al pasar el mouse */
+}
+' );
 		?>
