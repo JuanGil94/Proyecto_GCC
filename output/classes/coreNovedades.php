@@ -205,8 +205,6 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
      }
 //Novedad cambio de Notificación Tipo 9
 if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["newNotificacion"]) && isset($_POST["observaciones"])){
-    //echo "Ingreso";
-       //echo "Entrooo";
        $procesoId=$_POST["procesoId"];
        $userName=$_POST["userName"];
        $notificacionNew=$_POST["newNotificacion"];
@@ -513,7 +511,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["obl
             echo $error;
             return;
     }
-    $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",4,'".$obligacionAnt."','".$obligacionNew."',".$userName.",'".$observaciones."')");
+    $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",11,'".$obligacionAnt."','".$obligacionNew."',".$userName.",'".$observaciones."')");
     if ($rs2) {
                 $resultado=DB::Exec("UPDATE Procesos set Obligacion=".$obligacionNew." where ProcesoId=".$procesoId);
                 //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
@@ -533,7 +531,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["obl
     }
 
 }
-//Novedad cambio de Obligación Tipo 13
+//Novedad cambio de Despacho Tipo 13
 if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["despachoNew"]) && isset($_POST["observaciones"])) {
     $procesoId=$_POST["procesoId"];
     $userName=$_POST["userName"];
@@ -563,7 +561,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["des
          return;
      }
      $despachocNew=$nuevo.' - '.$codigoNew;
-     $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",1,'".$anterior."','".$despachocNew."',".$userName.",'".$observaciones."')");
+     $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",13,'".$anterior."','".$despachocNew."',".$userName.",'".$observaciones."')");
          if ($rs2) {
              $resultado=DB::Exec("UPDATE Procesos set DespachoId=".$despachoNew." where ProcesoId=".$procesoId);
                      //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
@@ -605,7 +603,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["rad
             echo $error;
             return;
         }
-        $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",4,'".$radicadoAnt."','".$radicadoNew."',".$userName.",'".$observaciones."')");
+        $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",40,'".$radicadoAnt."','".$radicadoNew."',".$userName.",'".$observaciones."')");
         if ($rs2) {
                     $resultado=DB::Exec("UPDATE Procesos set Radicado=".$radicadoNew." where ProcesoId=".$procesoId);
                     //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);

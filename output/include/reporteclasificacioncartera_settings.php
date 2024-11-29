@@ -185,7 +185,7 @@ $tdatareporteclasificacioncartera[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																						
 
 $tdatareporteclasificacioncartera[".ajaxCodeSnippetAdded"] = false;
 
