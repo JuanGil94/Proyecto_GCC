@@ -648,6 +648,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
+				
+			{"text":""},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
