@@ -45,7 +45,7 @@ class reliquidacion extends CalendarioAnual{
             //$this->obligacionInicial=$date["Obligacion"];
             $this->obligacionInicial=$date["ObligacionInicial"];
             $this->obligacionSaldo=$date["Obligacion"];
-            $this->costas=$date["Costas"];
+            //$this->costas=$date["Costas"];
             //echo "valorrrr".
             if (!$date["Plazo"]){
                 $date["Plazo"]=$date["Ejecutoria"]; 
@@ -278,12 +278,13 @@ class reliquidacion extends CalendarioAnual{
         foreach($infoProceso as $date){
             //$params["Numero"]=$date["Numero"];
             $naturaleza=$date["Naturaleza"];
-            $costas=$date["Costa"];
+            //$costas=$date["Costa"];
             $concepto=$date["Concepto"];
             $obligacion=$date["Obligacion"];
             $fechaP=$date["Plazo"];
         }
         $recaudos=$this->recaudo($numero);
+        $novCostas=$this->novedadCostas($numero);
         //print_r($recaudos);
         $this->fechaEjecutoria=$fechaP;
         //$this->fechaActual=date('Y-m-d');
@@ -350,6 +351,18 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
+                        foreach($novCostas as $novedad){
+                            if($novedad["Fecha"]==$fechaCom) {
+                                $costas=$novedad["Nuevo"];
+                                // Eliminar la coma como separador de miles
+                                $sinComas = str_replace(',', '', $costas);
+
+                                // Convertir a número entero
+                                $costas = (int)$sinComas;
+                                $this->costas=$costas;
+                                echo "Value Costas=".$costas;
+                            }
+                        }
                         //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
@@ -428,6 +441,18 @@ class reliquidacion extends CalendarioAnual{
                     //echo "Valor : $sumaTotalDiaria";
                     $elementos=range(1,$numDiasMesAct);
                     foreach($elementos as $dia){
+                        foreach($novCostas as $novedad){
+                            if($novedad["Fecha"]==$fechaCom) {
+                                $costas=$novedad["Nuevo"];
+                                // Eliminar la coma como separador de miles
+                                $sinComas = str_replace(',', '', $costas);
+
+                                // Convertir a número entero
+                                $costas = (int)$sinComas;
+                                $this->costas=$costas;
+                                echo "Value Costas=".$costas;
+                            }
+                        }
                         //echo "Ing<br>";
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                         $sumaTotalDiaria+=$valorDiario;
@@ -498,6 +523,18 @@ class reliquidacion extends CalendarioAnual{
                         //$dia=$dia+1;
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
+                        foreach($novCostas as $novedad){
+                            if($novedad["Fecha"]==$fechaCom) {
+                                $costas=$novedad["Nuevo"];
+                                // Eliminar la coma como separador de miles
+                                $sinComas = str_replace(',', '', $costas);
+
+                                // Convertir a número entero
+                                $costas = (int)$sinComas;
+                                $this->costas=$costas;
+                                echo "Value Costas=".$costas;
+                            }
+                        }
                         //echo "<br>FECHAAAAAAAA".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
@@ -565,6 +602,18 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
+                        foreach($novCostas as $novedad){
+                            if($novedad["Fecha"]==$fechaCom) {
+                                $costas=$novedad["Nuevo"];
+                                // Eliminar la coma como separador de miles
+                                $sinComas = str_replace(',', '', $costas);
+
+                                // Convertir a número entero
+                                $costas = (int)$sinComas;
+                                $this->costas=$costas;
+                                echo "Value Costas=".$costas;
+                            }
+                        }
                         //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
@@ -633,6 +682,18 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
+                        foreach($novCostas as $novedad){
+                            if($novedad["Fecha"]==$fechaCom) {
+                                $costas=$novedad["Nuevo"];
+                                // Eliminar la coma como separador de miles
+                                $sinComas = str_replace(',', '', $costas);
+
+                                // Convertir a número entero
+                                $costas = (int)$sinComas;
+                                $this->costas=$costas;
+                                echo "Value Costas=".$costas;
+                            }
+                        }
                         ///echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
@@ -710,6 +771,18 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
+                        foreach($novCostas as $novedad){
+                            if($novedad["Fecha"]==$fechaCom) {
+                                $costas=$novedad["Nuevo"];
+                                // Eliminar la coma como separador de miles
+                                $sinComas = str_replace(',', '', $costas);
+
+                                // Convertir a número entero
+                                $costas = (int)$sinComas;
+                                $this->costas=$costas;
+                                echo "Value Costas=".$costas;
+                            }
+                        }
                         //echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             //echo "fecha del recaudo".$fecha["Fecha"];
@@ -882,5 +955,38 @@ class reliquidacion extends CalendarioAnual{
             "fechaActual" => $fechaActual
         );
         return ($resultado);
+    }
+    public function novedadCostas ($procesoId){
+        $consultaR=DB::Query("SELECT * FROM Novedades WHERE Tipo=3 and ProcesoId=".$procesoId);
+            //echo "la consulta da como resultado: ".$consultaR;
+        while($date=$consultaR->fetchAssoc() ){
+            $fechasR []= array(
+                "Fecha"=> date("Y-m-d", strtotime($date['Fecha'])),
+                "Nuevo" => $date['Nuevo'],
+            );
+        };
+        /*
+        $sumaPorFecha = array();
+            foreach($fechasR as $dato){
+                $fecha = $dato['Fecha'];
+                $valor = $dato['Pago'];
+                $PagoObli = $dato['PagoObli'];
+                $PagoCost = $dato['PagoCost'];
+                $PagoInt = $dato['PagoInt'];
+                $pagoId = $dato['PagoId'];
+            if (array_key_exists($fecha,$sumaPorFecha)){
+                $sumaPorFecha[$fecha]['Pago']+=$valor;
+                $sumaPorFecha[$fecha]['PagoObli']+=$PagoObli;
+                $sumaPorFecha[$fecha]['PagoCost']+=$PagoCost;
+                $sumaPorFecha[$fecha]['PagoInt']+=$PagoInt;
+                $sumaPorFecha[$fecha]['PagoId']=$pagoId; //reemplazo el PagoId por el ultimo registro del mismo dia
+            }
+            else{
+                $sumaPorFecha[$fecha]=array('Fecha'=>$fecha,'Pago'=>$valor,'PagoId'=>$pagoId,'PagoObli'=>$pagoId,'PagoCost'=>$pagoId,'PagoInt'=>$pagoId);
+            }
+            }
+            */
+            //print_r($sumaPorFecha);
+            return $fechasR;
     }
 }

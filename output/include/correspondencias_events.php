@@ -143,7 +143,7 @@ $response=DB::Query("SELECT Salario FROM Salarios WHERE (Ano=YEAR('".$hasta."'))
 					$minimoMnesual=$date["Salario"];
 				}
 
-$response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as EstadoId, ISNULL(MotivoId,0) as MotivoId,(CASE
+$response=DB::Query("SELECT Intereses,ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as EstadoId, ISNULL(MotivoId,0) as MotivoId,(CASE
                                WHEN EstadoId = 6
                                     AND MotivoId = 1
                                THEN 1
@@ -156,6 +156,7 @@ $response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as 
 					$estadoId=$date["EstadoId"];
 					$motivoId=$date["MotivoId"];
 					$terminacionPago=$date["TermPago"];
+					$flagIntereses=$date["Intereses"];
 				}
 $consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=(SELECT AbogadoId from Procesos where ProcesoId=".$values["ProcesoId"].")");
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
@@ -362,7 +363,7 @@ if (($estadoAct==5 || $estadoAct==4) && $sancionadoId!=292340){
 if ($flagSigob==0){
 	$_SESSION["Radicado"]='';
 	$_SESSION["token"]='';
-	$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
+	$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId,$flagIntereses);
 				$response=$oficio->process();
 				if ($response==true){
 					//echo '<script>alert("Response Oficio->Process true")</script>';
@@ -607,7 +608,7 @@ $xml = new SimpleXMLElement($response);
     // Comparar con "=="
     if ($ultimosCaracteres === "==") {
 				curl_close($curl);
-				$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId);
+				$oficio=new coreOficios($actuacionId,$values["ProcesoId"],$values["Fecha"],$values["Resolucion"],$values["Radicado"],$values["Observaciones"],$values["UserId"],$etapaId,$estadoId,$motivoId,$flagIntereses);
 				$response=$oficio->process();
 				if ($response==true){
 					//echo '<script>alert("Response Oficio->Process true")</script>';

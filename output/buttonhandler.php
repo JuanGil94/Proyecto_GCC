@@ -8489,9 +8489,16 @@ function buttonHandler_Nov_Costas($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$intereses=$date["Intereses"];
+        }
+$costas=number_format($costas,0, ',', '.');
+$result["Numero"]=$numero;
+$result["Costas"]=$costas;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
