@@ -724,21 +724,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
-									{BEGIN cellblock_grid_headcell_details}
-	<th
-	
-	{$cell_grid_headcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_details}
 									{BEGIN cellblock_grid_headcell_field1}
 	<th
 	
@@ -894,72 +879,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_details}
-	<td
-	
-	{$cell_grid_cell_details}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="carteratipos_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN importaciones_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$importaciones_link_attrs} data-short-details="importaciones"
-		class="{$importaciones_dlink_class}" 
-		title="{$caption dbo_Importaciones }"			>
-								
-									{BEGIN importaciones_childcount}
-				<span class="details-badge badge importaciones_badge" {$importaciones_childnumber_attr}>
-					{$importaciones_childnumber}				
-				</span>
-				{END importaciones_childcount}
-						</a>
-	</span>
-	{END importaciones_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN usuarioscarteratipos_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$usuarioscarteratipos_link_attrs} data-short-details="usuarioscarteratipos"
-		class="{$usuarioscarteratipos_dlink_class}" 
-		title="{$caption dbo_UsuariosCarteraTipos }"			>
-								
-									{BEGIN usuarioscarteratipos_childcount}
-				<span class="details-badge badge usuarioscarteratipos_badge" {$usuarioscarteratipos_childnumber_attr}>
-					{$usuarioscarteratipos_childnumber}				
-				</span>
-				{END usuarioscarteratipos_childcount}
-						</a>
-	</span>
-	{END usuarioscarteratipos_dtable_link}
-
-
-	
-	</td>
-	{END cellblock_grid_cell_details}
 									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
@@ -1092,21 +1011,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
-									{BEGIN cellblock_grid_footcell_details}
-	<td
-	
-	{$cell_grid_footcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_details}
 									{BEGIN cellblock_grid_footcell_field1}
 	<td
 	
