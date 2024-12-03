@@ -4,8 +4,8 @@ include_once (getabspath("../include/dbcommon.php"));
 //require_once("../include/dbcommon.php");
 class coreOficios {
     public $actuacionId,$procesoId,$intereses,$fechaLiqui,$fechaAct,$fecha,
-    $resolucion,$radicado,$observaciones,$oficioId,$etapaId,$estadoId,$motivoId,$interesesDiferencial,$formattedDate;
-    public function __construct($actuacionId,$procesoId,$fecha,$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId){
+    $resolucion,$radicado,$observaciones,$oficioId,$etapaId,$estadoId,$motivoId,$interesesDiferencial,$formattedDate,$flagIntereses;
+    public function __construct($actuacionId,$procesoId,$fecha,$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId,$flagIntereses){
         $this->actuacionId=$actuacionId;
         $this->procesoId=$procesoId;
         $this->fechaLiqui=date("d-m-Y");
@@ -18,6 +18,7 @@ class coreOficios {
         $this->etapaId=$etapaId;
         $this->estadoId=$estadoId;
         $this->motivoId=$motivoId;
+        $this->flagIntereses=$flagIntereses;
         /*
         $date = new DateTime($this->fecha);
         // Convertir al formato deseado
@@ -34,6 +35,9 @@ class coreOficios {
                 echo "Ocurrio un error debido al insertar en la tabla Fechas: ".DB::LastError(); 
                 return false;
             } 
+        }
+        if ($this->flagIntereses==1){
+            //$this->calcularIntereses();
         }
         switch ($this->actuacionId) {
                 case "0":
@@ -562,6 +566,8 @@ class coreOficios {
             );
         }
         return $infoP;
+    }
+    function calcularIntereses(){
     }
 }
 

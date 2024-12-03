@@ -623,6 +623,58 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["rad
         }
 
 }
+//Novedad cambio de Costas Tipo 3
+if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["costasNew"]) && isset($_POST["observaciones"])){
+    //echo "Valor al ingresar: ".$_POST["interesesNew"];
+    //exit();
+   $procesoId=$_POST["procesoId"];
+   $userName=$_POST["userName"];
+   $costasNew=$_POST["costasNew"];
+   $costasNew = str_replace('.', '', $costasNew);
+   $costasNew = intval($costasNew);
+   $observaciones=$_POST["observaciones"];
+   $consulta=DB::Query("SELECT ISNULL(Plazo, Ejecutoria) as fechaPlazo ,* FROM Procesos WHERE ProcesoId=".$procesoId);
+        while( $date = $consulta->fetchAssoc() )
+        {
+            $estado=$date["EstadoId"];
+            $costasAnt=$date["Costas"];
+        }
+        $fechaActual=date('Y-m-d');
+       //echo $fechaPlazo;
+       //exit();
+    if ($estado==4 || $estado==6){
+        $error='No se puede realizar la novedad porque el proceso esta terminado o suspendido';
+        echo $error;
+        return;
+    }
+    $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",3,'".$costasAnt."','".$costasNew."',".$userName.",'".$observaciones."')");
+    if ($rs2) {
+                $resultado=DB::Exec("UPDATE Procesos set Costas=".$costasNew." where ProcesoId=".$procesoId);
+                //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                if (!$resultado){
+                    echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
+                    return;
+                }
+                //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                /*
+                if (!$resultado){
+                    echo "Ocurrio un error en el Update Procesos Dias debido a: ".DB::LastError(); 
+                    return;
+                }
+                */
+                //echo "La consulta se realizó correctamente.";""
+                $ok="OK";
+                echo $ok;
+                return;
+    } 
+    else {
+         // Hubo un error en la ejecución de la consulta
+         $error="Error al ejecutar la Inserción: " . DB::LastError();
+         echo $error;
+         return;
+    }
+
+}
 //DEBO CAMBIAR LA ALERTA CUABNDO ES MENOR A 23 DIGITOS
      /*
 class coreNovedades{
