@@ -124,7 +124,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -147,7 +147,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -191,7 +191,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -215,7 +215,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -260,7 +260,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -286,7 +286,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -330,7 +330,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
@@ -356,7 +356,7 @@ class AcuerdoPago{
                         $intPlazo=round($valorCuota-($obliF+$intCostF+$costas),2);
                         if ($noCuotas==1){
                             $intPlazo=0;
-                            $valorCuota=$obliF+$intCostF;
+                            $valorCuota=$obliF+$intCostF+$costas;
                         }
                         $cuota=1;
                         $this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);

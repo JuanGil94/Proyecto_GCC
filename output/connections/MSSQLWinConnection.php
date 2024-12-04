@@ -92,7 +92,7 @@ class MSSQLWinConnection extends Connection
 					$this->mssql_dmy = "dmy";
 
 				$_SESSION["MSSQLConnString"] = $connStr;
-				$this->conn->CommandTimeout = 600;
+				$this->conn->CommandTimeout = 120;
 				return $this->conn;
 			}
 			catch(com_exception $e)

@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3917_1732885430";
+$projectBuildKey = "3928_1732885430";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3917";
+$projectBuildNumber = "3928";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -853,7 +853,6 @@ $tableCaptions["Spanish"]["dbo_Carceles"] = "Carceles";
 $tableCaptions["Spanish"]["dbo_Alertas"] = "Alertas";
 $tableCaptions["Spanish"]["dbo_tipoCobro"] = "Tipo Cobro";
 $tableCaptions["Spanish"]["dbo_Oficios1"] = "Oficios1";
-$tableCaptions["Spanish"]["dbo_OperacionTipo"] = "Operacion Tipo";
 $tableCaptions["Spanish"]["dbo_Ciudades1"] = "Ciudades1";
 $tableCaptions["Spanish"]["dbo_Autorizaciones"] = "Autorizaciones";
 $tableCaptions["Spanish"]["dbo_Liquidaciones"] = "Liquidaciones";

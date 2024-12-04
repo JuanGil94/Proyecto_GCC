@@ -647,14 +647,19 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["cos
         echo $error;
         return;
     }
+    $costasAnt = number_format($costasAnt, 2, '.', ',');
+    $costasUpdate=$costasNew;
+    $costasNew = number_format($costasNew, 2, '.', ',');
     $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",3,'".$costasAnt."','".$costasNew."',".$userName.",'".$observaciones."')");
     if ($rs2) {
-                $resultado=DB::Exec("UPDATE Procesos set Costas=".$costasNew." where ProcesoId=".$procesoId);
+                $resultado=DB::Exec("UPDATE Procesos set Costas=".$costasUpdate." where ProcesoId=".$procesoId);
                 //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
                 if (!$resultado){
                     echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
                     return;
                 }
+                $recalcular=new reliquidacion($procesoId);
+                $meses = $recalcular->Calcular(date('Y-m-d'));
                 //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
                 /*
                 if (!$resultado){
@@ -675,6 +680,254 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["cos
     }
 
 }
+//Novedad cambio de Fecha Plazo Tipo 12
+if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["newPlazo"]) && isset($_POST["observaciones"])) {
+       $procesoId=$_POST["procesoId"];
+       $userName=$_POST["userName"];
+       $newPlazo=$_POST["newPlazo"];
+       $observaciones=$_POST["observaciones"];
+       $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);
+            while( $date = $consulta->fetchAssoc() )
+            {
+                $estado=$date["EstadoId"];
+                $antPlazo=$date["Plazo"];
+                $incumplimiento=$date["Incumplimiento"];
+                $acuerdo=$date["Acuerdo"];
+                $ejecutoria=$date["Ejecutoria"];
+                $obligacionAnt=$date["Obligacion"];
+                $obligacionInicialAnt=$date["ObligacionIncial"];
+                $interesesAnt=$date["Intereses"];
+                $costas=$date["Costas"];
+            }
+            $fechaActual=date('Y-m-d');
+            $antPlazo= new DateTime($antPlazo);
+            $antPlazo=$antPlazo->format('Y-m-d');
+           //echo $fechaPlazo;
+           //exit();
+        if ($estado==4 || $estado==6){
+            $error='No se puede realizar la novedad porque el proceso esta terminado o suspendido';
+            echo $error;
+            return;
+        }
+        if ($estado==2 && $acuerdo !='NULL' && $incumplimiento=='NULL'){
+            $error='No se puede realizar la novedad porque el proceso está en ACUERDO DE PAGO';
+            echo $error;
+            return;
+        }
+        $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",12,'".$antPlazo."','".$newPlazo."',".$userName.",'".$observaciones."')");
+        if ($rs2) {
+                    $resultado=DB::Exec("UPDATE Procesos set Plazo='".$newPlazo."' where ProcesoId=".$procesoId);
+                    //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                    if (!$resultado){
+                        echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
+                        return;
+                    }
+                    $recalcular=new reliquidacion($procesoId);
+                    $meses = $recalcular->Calcular($fechaActual);
+                    $result["total"]=$recalcular->getSuma();
+                    $interesesNov=$recalcular->getInteresesSuma();
+                    $costasSaldo=$recalcular->getCostas();
+                    $consulta=DB::Query("SELECT Sum(Intereses) sumIntereses FROM Reliquidaciones where ProcesoId=".$procesoId);
+                    while( $date = $consulta->fetchAssoc() ){
+                        $interesesNew=$date["sumIntereses"];
+                    }
+                    $consulta=DB::Query("SELECT Sum(Intereses) sumInteresesI FROM Intereses where ProcesoId=".$procesoId);
+                    while( $date = $consulta->fetchAssoc() ){
+                        $interesesAnt=$date["sumInteresesI"];
+                    }
+                    $interesesDif=$interesesNew-$interesesAnt;
+                    if ($interesesDif!=0){ 
+                        $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$procesoId.",GETDATE(),".$interesesDif.",0,0,0)");
+                        if (!$resultado2["response"]){
+                            echo "Ocurrio un error en el Insert Intereses debido a: ".DB::LastError(); 
+                            return false;
+                        }
+                    }
+                    $consulta=DB::Query("SELECT top 1 * FROM Reliquidaciones where procesoId=".$procesoId." order by ReliquidacionId desc");
+                    while( $date = $consulta->fetchAssoc() ){
+                        $obligacionSaldo=$date["ObliSald"];
+                    }
+                    $resultado=DB::Exec("UPDATE Procesos set InteresesInicial=".$interesesNew.",Intereses=".$interesesNov.",Obligacion=".$obligacionSaldo.",Costas=".$costasSaldo." where ProcesoId=".$procesoId);
+                    //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                    if (!$resultado){
+                        echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
+                        return;
+                    }
+                    //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                    /*
+                    if (!$resultado){
+                        echo "Ocurrio un error en el Update Procesos Dias debido a: ".DB::LastError(); 
+                        return;
+                    }
+                    */
+                    //echo "La consulta se realizó correctamente.";""
+                    $ok="OK";
+                    echo $ok;
+                    return;
+        } 
+        else {
+             // Hubo un error en la ejecución de la consulta
+             $error="Error al ejecutar la Inserción: " . DB::LastError();
+             echo $error;
+             return;
+        }
+
+}
+//Novedad cambio de Naturaleza Tipo 20
+if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["newNaturalezaId"]) && isset($_POST["observaciones"])) {
+    //echo "Ingreso";
+    $procesoId=$_POST["procesoId"];
+    $userName=$_POST["userName"];
+    $newNaturalezaId=$_POST["newNaturalezaId"];
+    $newNaturalezaId=intval($newNaturalezaId);
+    $observaciones=$_POST["observaciones"];
+    $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);
+         while( $date = $consulta->fetchAssoc() )
+         {
+             $estado=$date["EstadoId"];
+             $antNaturalezaId=$date["NaturalezaId"];
+             $incumplimiento=$date["Incumplimiento"];
+             $acuerdo=$date["Acuerdo"];
+         }
+         $consulta=DB::Query("SELECT * FROM Naturalezas WHERE NaturalezaId=".$antNaturalezaId);
+         while( $date = $consulta->fetchAssoc() )
+         {
+             $anteriorNat=$date["Naturaleza"];
+         }
+         $consulta=DB::Query("SELECT * FROM Naturalezas WHERE NaturalezaId=".$newNaturalezaId);
+         while( $date = $consulta->fetchAssoc() )
+         {
+             $nuevaNat=$date["Naturaleza"];
+         }
+     if ($estado==4 || $estado==6){
+         $error='No se puede realizar la novedad porque el proceso esta terminado o suspendido';
+         echo $error;
+         return;
+     }
+     if ($estado==2 && $acuerdo !='NULL' && $incumplimiento=='NULL'){
+         $error='No se puede realizar la novedad porque el proceso está en ACUERDO DE PAGO';
+         echo $error;
+         return;
+     }
+     $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",20,'".$anteriorNat."','".$nuevaNat."',".$userName.",'".$observaciones."')");
+         if ($rs2) {
+             $resultado=DB::Exec("UPDATE Procesos set NaturalezaId=".$newNaturalezaId." where ProcesoId=".$procesoId);
+                     //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                     if (!$resultado){
+                         echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
+                         return;
+                     }
+                $fechaActual=date('Y-m-d');
+                $recalcular=new reliquidacion($procesoId);
+                $meses = $recalcular->Calcular($fechaActual);
+                $result["total"]=$recalcular->getSuma();
+                $interesesNov=$recalcular->getInteresesSuma();
+                $costasSaldo=$recalcular->getCostas();
+                $consulta=DB::Query("SELECT Sum(Intereses) sumIntereses FROM Reliquidaciones where ProcesoId=".$procesoId);
+                while( $date = $consulta->fetchAssoc() ){
+                    $interesesNew=$date["sumIntereses"];
+                }
+                $consulta=DB::Query("SELECT Sum(Intereses) sumInteresesI FROM Intereses where ProcesoId=".$procesoId);
+                while( $date = $consulta->fetchAssoc() ){
+                    $interesesAnt=$date["sumInteresesI"];
+                }
+                $interesesDif=$interesesNew-$interesesAnt;
+                if ($interesesDif!=0){ 
+                    $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$procesoId.",GETDATE(),".$interesesDif.",0,0,0)");
+                    if (!$resultado2["response"]){
+                        echo "Ocurrio un error en el Insert Intereses debido a: ".DB::LastError(); 
+                        return false;
+                    }
+                }
+                $consulta=DB::Query("SELECT top 1 * FROM Reliquidaciones where procesoId=".$procesoId." order by ReliquidacionId desc");
+                while( $date = $consulta->fetchAssoc() ){
+                    $obligacionSaldo=$date["ObliSald"];
+                }
+                //echo "Valor Interesesnew:".$interesesNew." Valor Intereses Nov:".$interesesNov." Valor ObligacionSaldo:".$obligacionSaldo." Valor costasSaldo:".$costasSaldo;
+                $resultado=DB::Exec("UPDATE Procesos set InteresesInicial=".$interesesNew.",Intereses=".$interesesNov.",Obligacion=".$obligacionSaldo.",Costas=".$costasSaldo." where ProcesoId=".$procesoId);
+                //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                if (!$resultado){
+                    echo "Ocurrio un error en el Update Procesos debido aaaaaa: ".DB::LastError(); 
+                    return;
+                }
+              $ok="OK";
+              echo $ok;
+              return;
+         } 
+         else {
+              // Hubo un error en la ejecución de la consulta
+              $error="Error al ejecutar la Inserción: " . DB::LastError();
+              echo $error;
+              return;
+         }
+}
+//Novedad cambio de Fecha de Suspension Tipo 14
+if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["newSuspension"]) && isset($_POST["observaciones"])) {
+    //echo "Entrooo";
+    $procesoId=$_POST["procesoId"];
+    $userName=$_POST["userName"];
+    $newSuspension=$_POST["newSuspension"];
+    $observaciones=$_POST["observaciones"];
+    $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);
+         while( $date = $consulta->fetchAssoc() )
+         {
+             $estado=$date["EstadoId"];
+             $incumplimiento=$date["Incumplimiento"];
+             $acuerdo=$date["Acuerdo"];
+             $providenciaAnt=$date["Providencia"];
+             $ejecutoria=$date["Ejecutoria"];
+         }
+    $consulta=DB::Query("SELECT CONVERT(VARCHAR, Suspension, 103) suspension FROM ProcesosView1 WHERE ProcesoId=".$procesoId);
+    while( $date = $consulta->fetchAssoc() )
+    {
+        $antSuspension=$date["suspension"];
+    }
+    $consulta=DB::Query("SELECT top 1 InterrupcionId
+				FROM     Interrupciones where ProcesoId =".$procesoId."order by InterrupcionId desc");
+    while( $date = $consulta->fetchAssoc() )
+    {
+        $InterrupcionId=$date["InterrupcionId"];
+    }
+        $ejecutoria= new DateTime($ejecutoria);
+        $ejecutoria=$ejecutoria->format('Y-m-d');
+     if($ejecutoria>$newSuspension){
+        $error='No se puede realizar la novedad porque la fecha de suspensión es anterior a la fecha de la Ejecutoria';
+        echo $error;
+        return;
+     }
+     if ($estado==2 || $estado==7){
+         $error='No se puede realizar la novedad porque el proceso no esta SUSPENDIDO';
+         echo $error;
+         return;
+     }
+     if ($estado==2 && $acuerdo !='NULL' && $incumplimiento=='NULL'){
+         $error='No se puede realizar la novedad porque el proceso está en ACUERDO DE PAGO';
+         echo $error;
+         return;
+     }
+     $rs2=DB::Exec("INSERT INTO Novedades (Fecha,ProcesoId,Tipo,Anterior,Nuevo,UserId,Observaciones) VALUES (GETDATE(),".$procesoId.",14,'".$antSuspension."','".$newSuspension."',".$userName.",'".$observaciones."')");
+         if ($rs2) {
+             $resultado=DB::Exec("UPDATE Interrupciones set Inicio='".$newSuspension."' where ProcesoId=".$procesoId);
+                     //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                     if (!$resultado){
+                         echo "Ocurrio un error en el Update Interrupciones Procesos debido a: ".DB::LastError(); 
+                         return;
+                     }
+              //echo "La consulta se realizó correctamente.";""
+              $ok="OK";
+              echo $ok;
+              return;
+         } 
+         else {
+              // Hubo un error en la ejecución de la consulta
+              $error="Error al ejecutar la Inserción: " . DB::LastError();
+              echo $error;
+              return;
+         }
+}
+
+//echo "NO ENTRO A NACAS";
+
 //DEBO CAMBIAR LA ALERTA CUABNDO ES MENOR A 23 DIGITOS
      /*
 class coreNovedades{

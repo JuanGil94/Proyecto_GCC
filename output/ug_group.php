@@ -95,7 +95,6 @@ $nonAdminTablesArr[] = "dbo.Carceles";
 $nonAdminTablesArr[] = "dbo.Alertas";
 $nonAdminTablesArr[] = "dbo.tipoCobro";
 $nonAdminTablesArr[] = "dbo.Oficios1";
-$nonAdminTablesArr[] = "dbo.OperacionTipo";
 $nonAdminTablesArr[] = "dbo.Ciudades1";
 $nonAdminTablesArr[] = "dbo.Autorizaciones";
 $nonAdminTablesArr[] = "dbo.Liquidaciones";

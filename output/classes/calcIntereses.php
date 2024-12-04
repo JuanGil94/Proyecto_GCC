@@ -63,6 +63,7 @@ class reliquidacion extends CalendarioAnual{
 		}
     }
     public function tasa($nat,$conc,$a,$m){
+        //echo "Conce:".$conc." Natura:".$nat;
         ///echo "Mes ingresado: $m";
         /*
         tasa de USURA es igual a (Tipo 1)/diasaño/100 
@@ -360,7 +361,7 @@ class reliquidacion extends CalendarioAnual{
                                 // Convertir a número entero
                                 $costas = (int)$sinComas;
                                 $this->costas=$costas;
-                                echo "Value Costas=".$costas;
+                                //echo "Value Costas=".$costas;
                             }
                         }
                         //echo "<br>".$fechaCom;
@@ -450,7 +451,7 @@ class reliquidacion extends CalendarioAnual{
                                 // Convertir a número entero
                                 $costas = (int)$sinComas;
                                 $this->costas=$costas;
-                                echo "Value Costas=".$costas;
+                                //echo "Value Costas=".$costas;
                             }
                         }
                         //echo "Ing<br>";
@@ -532,7 +533,7 @@ class reliquidacion extends CalendarioAnual{
                                 // Convertir a número entero
                                 $costas = (int)$sinComas;
                                 $this->costas=$costas;
-                                echo "Value Costas=".$costas;
+                                //echo "Value Costas=".$costas;
                             }
                         }
                         //echo "<br>FECHAAAAAAAA".$fechaCom;
@@ -611,7 +612,7 @@ class reliquidacion extends CalendarioAnual{
                                 // Convertir a número entero
                                 $costas = (int)$sinComas;
                                 $this->costas=$costas;
-                                echo "Value Costas=".$costas;
+                                //echo "Value Costas=".$costas;
                             }
                         }
                         //echo "<br>".$fechaCom;
@@ -669,6 +670,7 @@ class reliquidacion extends CalendarioAnual{
                     $this->insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald); 
                 }
                 else if($annoEje=='2023' && $mes=='09'){
+                    $diaRecaudo=0;
                     $diaSuspe=7;
                     $numDiasMesAct=$dias-$diaSuspe;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
@@ -691,14 +693,15 @@ class reliquidacion extends CalendarioAnual{
                                 // Convertir a número entero
                                 $costas = (int)$sinComas;
                                 $this->costas=$costas;
-                                echo "Value Costas=".$costas;
+                                //echo "Value Costas=".$costas;
                             }
                         }
                         ///echo "<br>".$fechaCom;
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
+                                $diaRecaudo=$dia;
                                 $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                echo "La fecha es igual al recaudo 5";
+                                //echo "La fecha es igual al recaudo 5";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
                                 ///echo "<br>COSTAoriginal: ".$costas;
@@ -738,8 +741,10 @@ class reliquidacion extends CalendarioAnual{
                     $costReca=$costPor;
                     $costas=$costas-$costReca;
                     $costSald=$costas;
+                    $numDiasMesAct=$numDiasMesAct-$diaRecaudo+1; //se restan los dias si se realizo recuado para calcular los ineterese del cierre de mes
                     //$obligacion=$obligacion-$obliPor;
-                    $sumaTotal=$sumaTotalDiaria-$inteReca;
+                    //$sumaTotal=$sumaTotalDiaria-$inteReca;
+                    $sumaTotalDiaria=$sumaTotalDiaria-$inteReca;
                     //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;
                     //$obligacion=$obligacion-$obliPor;
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),4);
@@ -780,7 +785,7 @@ class reliquidacion extends CalendarioAnual{
                                 // Convertir a número entero
                                 $costas = (int)$sinComas;
                                 $this->costas=$costas;
-                                echo "Value Costas=".$costas;
+                                //echo "Value Costas=".$costas;
                             }
                         }
                         //echo "<br>".$fechaCom;
