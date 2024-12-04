@@ -517,7 +517,7 @@ $tdataprocesosreasignar[".orderindexes"] = array();
 
 $tdataprocesosreasignar[".sqlHead"] = "SELECT ProcesoId AS ProcesoId,  SeccionalId,  AbogadoId,  Fecha,  Numero,  DespachoId,  SancionadoId,  Providencia,  Ejecutoria,  ConceptoId,  EstadoId,  EtapaId,  Folios,  Tipo,  Cantidad,  Obligacion,  Costas,  Liquidacion,  Dias,  Intereses,  Recaudo,  CalificacionId,  Terminacion,  MotivoId,  Observaciones,  Cuotas,  Abono,  Inicio,  VlrCuota,  VlrIntereses,  Garantia,  Radicado,  Remisorio,  Acuerdo,  Incumplimiento,  Notificacion,  Suspension,  Traslado,  Error,  CarteraTipoId,  ConceptoAbogado,  Origen,  Carpeta,  ImportacionId,  ActuacionId,  ObligacionInicial,  CostasInicial,  InteresesInicial,  MinJusticia,  Revocatoria,  Mayor,  NotificacionValidada,  Validado,  Seleccionado,  CompetenciaId,  MinjusticiaId,  SeleccionadoPor,  Subsanar,  NumeroMinjusticia,  ProcesoIdOrigen,  SeleccionadoFecha,  InteresesIniciales,  InteresesCalculados,  ProcesoIdDestino,  RecaudoMinjusticia,  RecaudoTerminado,  Persuasivo,  ObligacionCreacion,  InteresesCreacion,  CostasCreacion,  Plazo,  NaturalezaId,  TrasladoCartera,  CarteraTipoIdOrigen,  TrasladoConcepto,  ConceptoIdOrigen,  AutorizadoPlazo,  AutorizadoFecha,  AutorizadoPor,  Reliquidacion,  ChequeoId,  VlrCostas,  VlrInteresesPlazo,  Dias AS Prescripcion";
 $tdataprocesosreasignar[".sqlFrom"] = "FROM dbo.Procesos";
-$tdataprocesosreasignar[".sqlWhereExpr"] = "(SeccionalId in (:session.SeccionalUser))";
+$tdataprocesosreasignar[".sqlWhereExpr"] = "(SeccionalId in (:session.SeccionalesWhere))";
 $tdataprocesosreasignar[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -13079,13 +13079,13 @@ $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "ProcesoId AS ProcesoId,  SeccionalId,  AbogadoId,  Fecha,  Numero,  DespachoId,  SancionadoId,  Providencia,  Ejecutoria,  ConceptoId,  EstadoId,  EtapaId,  Folios,  Tipo,  Cantidad,  Obligacion,  Costas,  Liquidacion,  Dias,  Intereses,  Recaudo,  CalificacionId,  Terminacion,  MotivoId,  Observaciones,  Cuotas,  Abono,  Inicio,  VlrCuota,  VlrIntereses,  Garantia,  Radicado,  Remisorio,  Acuerdo,  Incumplimiento,  Notificacion,  Suspension,  Traslado,  Error,  CarteraTipoId,  ConceptoAbogado,  Origen,  Carpeta,  ImportacionId,  ActuacionId,  ObligacionInicial,  CostasInicial,  InteresesInicial,  MinJusticia,  Revocatoria,  Mayor,  NotificacionValidada,  Validado,  Seleccionado,  CompetenciaId,  MinjusticiaId,  SeleccionadoPor,  Subsanar,  NumeroMinjusticia,  ProcesoIdOrigen,  SeleccionadoFecha,  InteresesIniciales,  InteresesCalculados,  ProcesoIdDestino,  RecaudoMinjusticia,  RecaudoTerminado,  Persuasivo,  ObligacionCreacion,  InteresesCreacion,  CostasCreacion,  Plazo,  NaturalezaId,  TrasladoCartera,  CarteraTipoIdOrigen,  TrasladoConcepto,  ConceptoIdOrigen,  AutorizadoPlazo,  AutorizadoFecha,  AutorizadoPor,  Reliquidacion,  ChequeoId,  VlrCostas,  VlrInteresesPlazo,  Dias AS Prescripcion";
 $proto0["m_strFrom"] = "FROM dbo.Procesos";
-$proto0["m_strWhere"] = "(SeccionalId in (:session.SeccionalUser))";
+$proto0["m_strWhere"] = "(SeccionalId in (:session.SeccionalesWhere))";
 $proto0["m_strOrderBy"] = "ORDER BY Fecha DESC";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "SeccionalId in (:session.SeccionalUser)";
+$proto2["m_sql"] = "SeccionalId in (:session.SeccionalesWhere)";
 $proto2["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "SeccionalId",
@@ -13095,7 +13095,7 @@ $proto2["m_uniontype"] = "SQLL_UNKNOWN";
 
 $proto2["m_column"]=$obj;
 $proto2["m_contained"] = array();
-$proto2["m_strCase"] = "in (:session.SeccionalUser)";
+$proto2["m_strCase"] = "in (:session.SeccionalesWhere)";
 $proto2["m_havingmode"] = false;
 $proto2["m_inBrackets"] = false;
 $proto2["m_useAlias"] = false;

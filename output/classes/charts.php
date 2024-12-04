@@ -538,8 +538,6 @@ class Chart
 			return true;
 		if("dbo.Oficios" == $this->chrt_array['tables'][0])
 			return true;
-		if("dbo.OperacionTipo" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.Ciudades" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Chequeos" == $this->chrt_array['tables'][0])

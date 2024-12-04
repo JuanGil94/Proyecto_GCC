@@ -728,10 +728,6 @@ class AuditTrailTable
 		{
 			return true;
 		}
-		if($table=="dbo.OperacionTipo")
-		{
-			return false;
-		}
 		if($table=="dbo.Ciudades1")
 		{
 			return true;
@@ -1933,10 +1929,6 @@ class AuditTrailFile
 		if($table=="dbo.Oficios1")
 		{
 			return true;
-		}
-		if($table=="dbo.OperacionTipo")
-		{
-			return false;
 		}
 		if($table=="dbo.Ciudades1")
 		{

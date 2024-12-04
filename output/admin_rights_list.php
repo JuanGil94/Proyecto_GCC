@@ -1322,23 +1322,6 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 
 $pageMask[$table] = $mask;
 $tables[$table] = array("oficios1", " " . "Oficios1");
-$table = "dbo.OperacionTipo";
-$mask="";
-if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
-	$mask .= "A";
-if( pageEnabled($table, 'edit') || pageEnabled($table, 'inline_edit') )
-	$mask .= "E";
-if( pageEnabled($table, 'delete') )
-	$mask .= "D";
-if( pageEnabled($table, 'import') )
-	$mask .= "I";
-if( pageEnabled($table, 'view') || pageEnabled($table, 'list') || pageEnabled($table, 'chart') || pageEnabled($table, 'report') || pageEnabled($table, 'dashboard') )
-	$mask .= "S";
-if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled($table, 'export')  )
-	$mask .= "P";
-
-$pageMask[$table] = $mask;
-$tables[$table] = array("operaciontipo", " " . "Operacion Tipo");
 $table = "dbo.Ciudades1";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )

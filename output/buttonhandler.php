@@ -2,17 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -8503,9 +8492,10 @@ function buttonHandler_Nov_Costas($params)
 	$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
         while( $date = $consulta->fetchAssoc() ){
 						$numero=$date["Numero"];
-						$intereses=$date["Intereses"];
+						$costas=$date["Costas"];
         }
 $costas=number_format($costas,0, ',', '.');
+//echo "Value Costas".$costas;
 $result["Numero"]=$numero;
 $result["Costas"]=$costas;
 $result["procesoId"]=$params["ProcesoId"];
@@ -8774,9 +8764,26 @@ function buttonHandler_Nov_Plazo($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	    //$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+						$plazo=$date["Plazo"];
+						$ejecutoria=$date["Ejecutoria"];
+						$providencia=$date["Providencia"];
+        }
+$fechaProvidencia= new DateTime($providencia);
+$providencia=$fechaProvidencia->format('Y-m-d');
+$fechaPlazo= new DateTime($plazo);
+$plazo=$fechaPlazo->format('Y-m-d');
+$fechaEjecutoria= new DateTime($ejecutoria);
+$ejecutoria=$fechaEjecutoria->format('Y-m-d');
+
+$result["Numero"]=$numero;
+$result["Plazo"]=$plazo;
+$result["Ejecutoria"]=$ejecutoria;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -8830,8 +8837,32 @@ function buttonHandler_Nov_Naturaleza($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
+	$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$naturalezaId=$date["NaturalezaId"];
+						$numero=$date["Numero"];
+						$conceptoId=$date["ConceptoId"];
+        }
+$consulta=DB::Query("SELECT * FROM Naturalezas WHERE NaturalezaId=".$naturalezaId);
+        while( $date = $consulta->fetchAssoc() ){
+						$naturaleza=$date["Naturaleza"];
+}
+$result["Naturaleza"]=$naturaleza;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];
+$result["Numero"]=$numero;
+
+
+$str= "<select id='naturalezaId'; style='width: 450px; display: inline-block;' class='form-control'>";
+    //select values from the database
+    $strSQL = "select * from Naturalezas WHERE ConceptoId=".$conceptoId;
+    $rs = db_query($strSQL);
+    while ($data = db_fetch_array($rs)){
+    $str.="<option value='".$data['NaturalezaId']."'>".$data['Naturaleza']."</option>";
+    }
+    $str.="</select>";
+$result["str"]=$str;
+
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -8950,9 +8981,15 @@ function buttonHandler_Nov_Suspensi_n($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	// Put your code here.
-$result["txt"] = $params["txt"]." world!";
-;
+	//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+        while( $date = $consulta->fetchAssoc() ){
+						$numero=$date["Numero"];
+        }
+$result["Numero"]=$numero;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];
+$result["Actual"]=date('Y-m-d');;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

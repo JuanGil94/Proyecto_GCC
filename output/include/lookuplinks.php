@@ -264,13 +264,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["operaciones.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["operaciones.CarteraTipoId"]["edit"] = array("table" => "dbo.Operaciones", "field" => "CarteraTipoId", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.OperacionTipo"] ) ) {
-			$lookupTableLinks["dbo.OperacionTipo"] = array();
+		if( !isset( $lookupTableLinks[""] ) ) {
+			$lookupTableLinks[""] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.OperacionTipo"]["operaciones.Tipo"] )) {
-			$lookupTableLinks["dbo.OperacionTipo"]["operaciones.Tipo"] = array();
+		if( !isset( $lookupTableLinks[""]["operaciones.Tipo"] )) {
+			$lookupTableLinks[""]["operaciones.Tipo"] = array();
 		}
-		$lookupTableLinks["dbo.OperacionTipo"]["operaciones.Tipo"]["edit"] = array("table" => "dbo.Operaciones", "field" => "Tipo", "page" => "edit");
+		$lookupTableLinks[""]["operaciones.Tipo"]["edit"] = array("table" => "dbo.Operaciones", "field" => "Tipo", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
 			$lookupTableLinks["dbo.Abogados"] = array();
 		}

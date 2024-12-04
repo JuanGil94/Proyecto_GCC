@@ -363,8 +363,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("oficios1" == $shortTName )
 		return true;
-	if ("operaciontipo" == $shortTName )
-		return true;
 	if ("ciudades1" == $shortTName )
 		return true;
 	if ("autorizaciones" == $shortTName )
@@ -1394,15 +1392,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.Oficios1";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("dbo.OperacionTipo");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="dbo.OperacionTipo";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -2663,7 +2652,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Alertas";
 	$arr[]="dbo.tipoCobro";
 	$arr[]="dbo.Oficios1";
-	$arr[]="dbo.OperacionTipo";
 	$arr[]="dbo.Ciudades1";
 	$arr[]="dbo.Autorizaciones";
 	$arr[]="dbo.Liquidaciones";
@@ -3829,11 +3817,6 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Oficios1" )
-	{
-//	default permissions
-		return "ADESPI".$extraPerm;
-	}
-	if( $table=="dbo.OperacionTipo" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;
