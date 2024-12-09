@@ -6,11 +6,11 @@ $tdataprocesosview1[".OwnerID"] = "";
 $tdataprocesosview1[".OriginalTable"] = "dbo.ProcesosView1";
 
 
-$tdataprocesosview1[".pagesByType"] = my_json_decode( "{}" );
+$tdataprocesosview1[".pagesByType"] = my_json_decode( "{\"search\":[\"search\"]}" );
 $tdataprocesosview1[".originalPagesByType"] = $tdataprocesosview1[".pagesByType"];
-$tdataprocesosview1[".pages"] = types2pages( my_json_decode( "{}" ) );
+$tdataprocesosview1[".pages"] = types2pages( my_json_decode( "{\"search\":[\"search\"]}" ) );
 $tdataprocesosview1[".originalPages"] = $tdataprocesosview1[".pages"];
-$tdataprocesosview1[".defaultPages"] = my_json_decode( "{}" );
+$tdataprocesosview1[".defaultPages"] = my_json_decode( "{\"search\":\"search\"}" );
 $tdataprocesosview1[".originalDefaultPages"] = $tdataprocesosview1[".defaultPages"];
 
 //	field labels
@@ -361,6 +361,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsprocesosview1["Spanish"]["VlrInteresesPlazo"] = "Vlr Intereses Plazo";
 	$fieldToolTipsprocesosview1["Spanish"]["VlrInteresesPlazo"] = "";
 	$placeHoldersprocesosview1["Spanish"]["VlrInteresesPlazo"] = "";
+	$fieldLabelsprocesosview1["Spanish"]["AbogadoDocumento"] = "Abogado Documento";
+	$fieldToolTipsprocesosview1["Spanish"]["AbogadoDocumento"] = "";
+	$placeHoldersprocesosview1["Spanish"]["AbogadoDocumento"] = "";
 	if (count($fieldToolTipsprocesosview1["Spanish"]))
 		$tdataprocesosview1[".isUseToolTips"] = true;
 }
@@ -458,7 +461,7 @@ $tdataprocesosview1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																						
+																																																																																																																																																																																																																																																																																																																																																									
 
 $tdataprocesosview1[".ajaxCodeSnippetAdded"] = false;
 
@@ -590,6 +593,7 @@ $tdataprocesosview1[".googleLikeFields"][] = "ConceptoOrigen";
 $tdataprocesosview1[".googleLikeFields"][] = "ChequeoId";
 $tdataprocesosview1[".googleLikeFields"][] = "VlrCostas";
 $tdataprocesosview1[".googleLikeFields"][] = "VlrInteresesPlazo";
+$tdataprocesosview1[".googleLikeFields"][] = "AbogadoDocumento";
 
 
 
@@ -623,7 +627,7 @@ $tdataprocesosview1[".strOrderBy"] = $tstrOrderBy;
 $tdataprocesosview1[".orderindexes"] = array();
 
 
-$tdataprocesosview1[".sqlHead"] = "SELECT ProcesoId,  	Fecha,  	Numero,  	Obligacion,  	Costas,  	Intereses,  	Folios,  	Observaciones,  	Seccional,  	Ciudad,  	Abogado,  	Masculino,  	Despacho,  	Concepto,  	Motivo,  	Estado,  	Calificacion,  	PiePagina,  	CiudadDepartamento,  	Sigobius,  	Cuotas,  	Abono,  	Inicio,  	VlrCuota,  	VlrIntereses,  	Garantia,  	Recaudo,  	Sancionado,  	SancionadoDocumento,  	SancionadoTipoDocumento,  	SancionadoCiudad,  	DespachoCiudad,  	Providencia,  	Ejecutoria,  	Radicado,  	Terminacion,  	Liquidacion,  	Dias,  	Tipo,  	Cantidad,  	SancionadoMasculino,  	SeccionalCorreo,  	SeccionalDireccion,  	SeccionalTelefonos,  	Fallecimiento,  	Notificacion,  	SeccionalNit,  	SeccionalId,  	AbogadoId,  	DespachoId,  	SancionadoId,  	ConceptoId,  	NaturalezaId,  	EstadoId,  	EtapaId,  	CalificacionId,  	MotivoId,  	ProcesoObservaciones,  	Remisorio,  	Acuerdo,  	Incumplimiento,  	Suspension,  	Traslado,  	Error,  	Actuacion,  	TipoDocumentoId,  	Juridica,  	SancionadoEmail,  	SancionadoCelular,  	CarteraTipoId,  	ConceptoAbogado,  	LiquidaIntereses,  	Saldo,  	Prescripcion,  	FechaPrescripcion,  	ObligacionInicial,  	CostasInicial,  	InteresesInicial,  	Minjusticia_Def,  	MinJusticia,  	ActuacionId,  	NotificacionValidada,  	Validado,  	Documento,  	Seleccionado,  	CompetenciaId,  	SeleccionadoPor,  	RadicadoNumero,  	MinjusticiaId,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Etapa,  	Persuasivo,  	Plazo,  	Mayor,  	Revocatoria,  	RecaudoTerminado,  	Naturaleza,  	TasaTipo,  	CarteraTipo,  	Prescrita,  	TrasladoCartera,  	CarteraTipoIdOrigen,  	TrasladoConcepto,  	ConceptoIdOrigen,  	CarteraTipoOrigen,  	ConceptoOrigen,  	ChequeoId,  	VlrCostas,  	VlrInteresesPlazo";
+$tdataprocesosview1[".sqlHead"] = "SELECT ProcesoId,  	Fecha,  	Numero,  	Obligacion,  	Costas,  	Intereses,  	Folios,  	Observaciones,  	Seccional,  	Ciudad,  	Abogado,  	Masculino,  	Despacho,  	Concepto,  	Motivo,  	Estado,  	Calificacion,  	PiePagina,  	CiudadDepartamento,  	Sigobius,  	Cuotas,  	Abono,  	Inicio,  	VlrCuota,  	VlrIntereses,  	Garantia,  	Recaudo,  	Sancionado,  	SancionadoDocumento,  	SancionadoTipoDocumento,  	SancionadoCiudad,  	DespachoCiudad,  	Providencia,  	Ejecutoria,  	Radicado,  	Terminacion,  	Liquidacion,  	Dias,  	Tipo,  	Cantidad,  	SancionadoMasculino,  	SeccionalCorreo,  	SeccionalDireccion,  	SeccionalTelefonos,  	Fallecimiento,  	Notificacion,  	SeccionalNit,  	SeccionalId,  	AbogadoId,  	DespachoId,  	SancionadoId,  	ConceptoId,  	NaturalezaId,  	EstadoId,  	EtapaId,  	CalificacionId,  	MotivoId,  	ProcesoObservaciones,  	Remisorio,  	Acuerdo,  	Incumplimiento,  	Suspension,  	Traslado,  	Error,  	Actuacion,  	TipoDocumentoId,  	Juridica,  	SancionadoEmail,  	SancionadoCelular,  	CarteraTipoId,  	ConceptoAbogado,  	LiquidaIntereses,  	Saldo,  	Prescripcion,  	FechaPrescripcion,  	ObligacionInicial,  	CostasInicial,  	InteresesInicial,  	Minjusticia_Def,  	MinJusticia,  	ActuacionId,  	NotificacionValidada,  	Validado,  	Documento,  	Seleccionado,  	CompetenciaId,  	SeleccionadoPor,  	RadicadoNumero,  	MinjusticiaId,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Etapa,  	Persuasivo,  	Plazo,  	Mayor,  	Revocatoria,  	RecaudoTerminado,  	Naturaleza,  	TasaTipo,  	CarteraTipo,  	Prescrita,  	TrasladoCartera,  	CarteraTipoIdOrigen,  	TrasladoConcepto,  	ConceptoIdOrigen,  	CarteraTipoOrigen,  	ConceptoOrigen,  	ChequeoId,  	VlrCostas,  	VlrInteresesPlazo,  	AbogadoDocumento";
 $tdataprocesosview1[".sqlFrom"] = "FROM dbo.ProcesosView1";
 $tdataprocesosview1[".sqlWhereExpr"] = "";
 $tdataprocesosview1[".sqlTail"] = "";
@@ -16144,6 +16148,144 @@ $tdataprocesosview1[".hideMobileList"] = array();
 
 	$tdataprocesosview1["VlrInteresesPlazo"] = $fdata;
 		$tdataprocesosview1[".searchableFields"][] = "VlrInteresesPlazo";
+//	AbogadoDocumento
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 113;
+	$fdata["strName"] = "AbogadoDocumento";
+	$fdata["GoodName"] = "AbogadoDocumento";
+	$fdata["ownerTable"] = "dbo.ProcesosView1";
+	$fdata["Label"] = GetFieldLabel("dbo_ProcesosView1","AbogadoDocumento");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "AbogadoDocumento";
+
+		$fdata["sourceSingle"] = "AbogadoDocumento";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "AbogadoDocumento";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=15";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataprocesosview1["AbogadoDocumento"] = $fdata;
+		$tdataprocesosview1[".searchableFields"][] = "AbogadoDocumento";
 
 
 $tables_data["dbo.ProcesosView1"]=&$tdataprocesosview1;
@@ -16188,7 +16330,7 @@ function createSqlQuery_procesosview1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "ProcesoId,  	Fecha,  	Numero,  	Obligacion,  	Costas,  	Intereses,  	Folios,  	Observaciones,  	Seccional,  	Ciudad,  	Abogado,  	Masculino,  	Despacho,  	Concepto,  	Motivo,  	Estado,  	Calificacion,  	PiePagina,  	CiudadDepartamento,  	Sigobius,  	Cuotas,  	Abono,  	Inicio,  	VlrCuota,  	VlrIntereses,  	Garantia,  	Recaudo,  	Sancionado,  	SancionadoDocumento,  	SancionadoTipoDocumento,  	SancionadoCiudad,  	DespachoCiudad,  	Providencia,  	Ejecutoria,  	Radicado,  	Terminacion,  	Liquidacion,  	Dias,  	Tipo,  	Cantidad,  	SancionadoMasculino,  	SeccionalCorreo,  	SeccionalDireccion,  	SeccionalTelefonos,  	Fallecimiento,  	Notificacion,  	SeccionalNit,  	SeccionalId,  	AbogadoId,  	DespachoId,  	SancionadoId,  	ConceptoId,  	NaturalezaId,  	EstadoId,  	EtapaId,  	CalificacionId,  	MotivoId,  	ProcesoObservaciones,  	Remisorio,  	Acuerdo,  	Incumplimiento,  	Suspension,  	Traslado,  	Error,  	Actuacion,  	TipoDocumentoId,  	Juridica,  	SancionadoEmail,  	SancionadoCelular,  	CarteraTipoId,  	ConceptoAbogado,  	LiquidaIntereses,  	Saldo,  	Prescripcion,  	FechaPrescripcion,  	ObligacionInicial,  	CostasInicial,  	InteresesInicial,  	Minjusticia_Def,  	MinJusticia,  	ActuacionId,  	NotificacionValidada,  	Validado,  	Documento,  	Seleccionado,  	CompetenciaId,  	SeleccionadoPor,  	RadicadoNumero,  	MinjusticiaId,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Etapa,  	Persuasivo,  	Plazo,  	Mayor,  	Revocatoria,  	RecaudoTerminado,  	Naturaleza,  	TasaTipo,  	CarteraTipo,  	Prescrita,  	TrasladoCartera,  	CarteraTipoIdOrigen,  	TrasladoConcepto,  	ConceptoIdOrigen,  	CarteraTipoOrigen,  	ConceptoOrigen,  	ChequeoId,  	VlrCostas,  	VlrInteresesPlazo";
+$proto0["m_strFieldList"] = "ProcesoId,  	Fecha,  	Numero,  	Obligacion,  	Costas,  	Intereses,  	Folios,  	Observaciones,  	Seccional,  	Ciudad,  	Abogado,  	Masculino,  	Despacho,  	Concepto,  	Motivo,  	Estado,  	Calificacion,  	PiePagina,  	CiudadDepartamento,  	Sigobius,  	Cuotas,  	Abono,  	Inicio,  	VlrCuota,  	VlrIntereses,  	Garantia,  	Recaudo,  	Sancionado,  	SancionadoDocumento,  	SancionadoTipoDocumento,  	SancionadoCiudad,  	DespachoCiudad,  	Providencia,  	Ejecutoria,  	Radicado,  	Terminacion,  	Liquidacion,  	Dias,  	Tipo,  	Cantidad,  	SancionadoMasculino,  	SeccionalCorreo,  	SeccionalDireccion,  	SeccionalTelefonos,  	Fallecimiento,  	Notificacion,  	SeccionalNit,  	SeccionalId,  	AbogadoId,  	DespachoId,  	SancionadoId,  	ConceptoId,  	NaturalezaId,  	EstadoId,  	EtapaId,  	CalificacionId,  	MotivoId,  	ProcesoObservaciones,  	Remisorio,  	Acuerdo,  	Incumplimiento,  	Suspension,  	Traslado,  	Error,  	Actuacion,  	TipoDocumentoId,  	Juridica,  	SancionadoEmail,  	SancionadoCelular,  	CarteraTipoId,  	ConceptoAbogado,  	LiquidaIntereses,  	Saldo,  	Prescripcion,  	FechaPrescripcion,  	ObligacionInicial,  	CostasInicial,  	InteresesInicial,  	Minjusticia_Def,  	MinJusticia,  	ActuacionId,  	NotificacionValidada,  	Validado,  	Documento,  	Seleccionado,  	CompetenciaId,  	SeleccionadoPor,  	RadicadoNumero,  	MinjusticiaId,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Etapa,  	Persuasivo,  	Plazo,  	Mayor,  	Revocatoria,  	RecaudoTerminado,  	Naturaleza,  	TasaTipo,  	CarteraTipo,  	Prescrita,  	TrasladoCartera,  	CarteraTipoIdOrigen,  	TrasladoConcepto,  	ConceptoIdOrigen,  	CarteraTipoOrigen,  	ConceptoOrigen,  	ChequeoId,  	VlrCostas,  	VlrInteresesPlazo,  	AbogadoDocumento";
 $proto0["m_strFrom"] = "FROM dbo.ProcesosView1";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -17796,148 +17938,163 @@ $proto228["m_alias"] = "";
 $obj = new SQLFieldListItem($proto228);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto230=array();
-$proto230["m_link"] = "SQLL_MAIN";
-			$proto231=array();
-$proto231["m_strName"] = "dbo.ProcesosView1";
-$proto231["m_srcTableName"] = "dbo.ProcesosView1";
-$proto231["m_columns"] = array();
-$proto231["m_columns"][] = "ProcesoId";
-$proto231["m_columns"][] = "Fecha";
-$proto231["m_columns"][] = "Numero";
-$proto231["m_columns"][] = "Obligacion";
-$proto231["m_columns"][] = "Costas";
-$proto231["m_columns"][] = "Intereses";
-$proto231["m_columns"][] = "Folios";
-$proto231["m_columns"][] = "Observaciones";
-$proto231["m_columns"][] = "Seccional";
-$proto231["m_columns"][] = "Ciudad";
-$proto231["m_columns"][] = "Abogado";
-$proto231["m_columns"][] = "Masculino";
-$proto231["m_columns"][] = "Despacho";
-$proto231["m_columns"][] = "Concepto";
-$proto231["m_columns"][] = "Motivo";
-$proto231["m_columns"][] = "Estado";
-$proto231["m_columns"][] = "Calificacion";
-$proto231["m_columns"][] = "PiePagina";
-$proto231["m_columns"][] = "CiudadDepartamento";
-$proto231["m_columns"][] = "Sigobius";
-$proto231["m_columns"][] = "Cuotas";
-$proto231["m_columns"][] = "Abono";
-$proto231["m_columns"][] = "Inicio";
-$proto231["m_columns"][] = "VlrCuota";
-$proto231["m_columns"][] = "VlrIntereses";
-$proto231["m_columns"][] = "Garantia";
-$proto231["m_columns"][] = "Recaudo";
-$proto231["m_columns"][] = "Sancionado";
-$proto231["m_columns"][] = "SancionadoDocumento";
-$proto231["m_columns"][] = "SancionadoTipoDocumento";
-$proto231["m_columns"][] = "SancionadoCiudad";
-$proto231["m_columns"][] = "DespachoCiudad";
-$proto231["m_columns"][] = "Providencia";
-$proto231["m_columns"][] = "Ejecutoria";
-$proto231["m_columns"][] = "Radicado";
-$proto231["m_columns"][] = "Terminacion";
-$proto231["m_columns"][] = "Liquidacion";
-$proto231["m_columns"][] = "Dias";
-$proto231["m_columns"][] = "Tipo";
-$proto231["m_columns"][] = "Cantidad";
-$proto231["m_columns"][] = "SancionadoMasculino";
-$proto231["m_columns"][] = "SeccionalCorreo";
-$proto231["m_columns"][] = "SeccionalDireccion";
-$proto231["m_columns"][] = "SeccionalTelefonos";
-$proto231["m_columns"][] = "Fallecimiento";
-$proto231["m_columns"][] = "Notificacion";
-$proto231["m_columns"][] = "SeccionalNit";
-$proto231["m_columns"][] = "SeccionalId";
-$proto231["m_columns"][] = "AbogadoId";
-$proto231["m_columns"][] = "DespachoId";
-$proto231["m_columns"][] = "SancionadoId";
-$proto231["m_columns"][] = "ConceptoId";
-$proto231["m_columns"][] = "NaturalezaId";
-$proto231["m_columns"][] = "EstadoId";
-$proto231["m_columns"][] = "EtapaId";
-$proto231["m_columns"][] = "CalificacionId";
-$proto231["m_columns"][] = "MotivoId";
-$proto231["m_columns"][] = "ProcesoObservaciones";
-$proto231["m_columns"][] = "Remisorio";
-$proto231["m_columns"][] = "Acuerdo";
-$proto231["m_columns"][] = "Incumplimiento";
-$proto231["m_columns"][] = "Suspension";
-$proto231["m_columns"][] = "Traslado";
-$proto231["m_columns"][] = "Error";
-$proto231["m_columns"][] = "Actuacion";
-$proto231["m_columns"][] = "TipoDocumentoId";
-$proto231["m_columns"][] = "Juridica";
-$proto231["m_columns"][] = "SancionadoEmail";
-$proto231["m_columns"][] = "SancionadoCelular";
-$proto231["m_columns"][] = "CarteraTipoId";
-$proto231["m_columns"][] = "ConceptoAbogado";
-$proto231["m_columns"][] = "LiquidaIntereses";
-$proto231["m_columns"][] = "Saldo";
-$proto231["m_columns"][] = "Prescripcion";
-$proto231["m_columns"][] = "FechaPrescripcion";
-$proto231["m_columns"][] = "ObligacionInicial";
-$proto231["m_columns"][] = "CostasInicial";
-$proto231["m_columns"][] = "InteresesInicial";
-$proto231["m_columns"][] = "Minjusticia_Def";
-$proto231["m_columns"][] = "MinJusticia";
-$proto231["m_columns"][] = "ActuacionId";
-$proto231["m_columns"][] = "NotificacionValidada";
-$proto231["m_columns"][] = "Validado";
-$proto231["m_columns"][] = "Documento";
-$proto231["m_columns"][] = "Seleccionado";
-$proto231["m_columns"][] = "CompetenciaId";
-$proto231["m_columns"][] = "SeleccionadoPor";
-$proto231["m_columns"][] = "RadicadoNumero";
-$proto231["m_columns"][] = "MinjusticiaId";
-$proto231["m_columns"][] = "Contador";
-$proto231["m_columns"][] = "ContadorCargo";
-$proto231["m_columns"][] = "Director";
-$proto231["m_columns"][] = "DirectorCargo";
-$proto231["m_columns"][] = "Etapa";
-$proto231["m_columns"][] = "Persuasivo";
-$proto231["m_columns"][] = "Plazo";
-$proto231["m_columns"][] = "Mayor";
-$proto231["m_columns"][] = "Revocatoria";
-$proto231["m_columns"][] = "RecaudoTerminado";
-$proto231["m_columns"][] = "Naturaleza";
-$proto231["m_columns"][] = "TasaTipo";
-$proto231["m_columns"][] = "CarteraTipo";
-$proto231["m_columns"][] = "Prescrita";
-$proto231["m_columns"][] = "TrasladoCartera";
-$proto231["m_columns"][] = "CarteraTipoIdOrigen";
-$proto231["m_columns"][] = "TrasladoConcepto";
-$proto231["m_columns"][] = "ConceptoIdOrigen";
-$proto231["m_columns"][] = "CarteraTipoOrigen";
-$proto231["m_columns"][] = "ConceptoOrigen";
-$proto231["m_columns"][] = "ChequeoId";
-$proto231["m_columns"][] = "VlrCostas";
-$proto231["m_columns"][] = "VlrInteresesPlazo";
-$obj = new SQLTable($proto231);
+						$proto230=array();
+			$obj = new SQLField(array(
+	"m_strName" => "AbogadoDocumento",
+	"m_strTable" => "dbo.ProcesosView1",
+	"m_srcTableName" => "dbo.ProcesosView1"
+));
 
-$proto230["m_table"] = $obj;
-$proto230["m_sql"] = "dbo.ProcesosView1";
-$proto230["m_alias"] = "";
+$proto230["m_sql"] = "AbogadoDocumento";
 $proto230["m_srcTableName"] = "dbo.ProcesosView1";
-$proto232=array();
-$proto232["m_sql"] = "";
-$proto232["m_uniontype"] = "SQLL_UNKNOWN";
+$proto230["m_expr"]=$obj;
+$proto230["m_alias"] = "";
+$obj = new SQLFieldListItem($proto230);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto232=array();
+$proto232["m_link"] = "SQLL_MAIN";
+			$proto233=array();
+$proto233["m_strName"] = "dbo.ProcesosView1";
+$proto233["m_srcTableName"] = "dbo.ProcesosView1";
+$proto233["m_columns"] = array();
+$proto233["m_columns"][] = "ProcesoId";
+$proto233["m_columns"][] = "Fecha";
+$proto233["m_columns"][] = "Numero";
+$proto233["m_columns"][] = "Obligacion";
+$proto233["m_columns"][] = "Costas";
+$proto233["m_columns"][] = "Intereses";
+$proto233["m_columns"][] = "Folios";
+$proto233["m_columns"][] = "Observaciones";
+$proto233["m_columns"][] = "Seccional";
+$proto233["m_columns"][] = "Ciudad";
+$proto233["m_columns"][] = "Abogado";
+$proto233["m_columns"][] = "Masculino";
+$proto233["m_columns"][] = "Despacho";
+$proto233["m_columns"][] = "Concepto";
+$proto233["m_columns"][] = "Motivo";
+$proto233["m_columns"][] = "Estado";
+$proto233["m_columns"][] = "Calificacion";
+$proto233["m_columns"][] = "PiePagina";
+$proto233["m_columns"][] = "CiudadDepartamento";
+$proto233["m_columns"][] = "Sigobius";
+$proto233["m_columns"][] = "Cuotas";
+$proto233["m_columns"][] = "Abono";
+$proto233["m_columns"][] = "Inicio";
+$proto233["m_columns"][] = "VlrCuota";
+$proto233["m_columns"][] = "VlrIntereses";
+$proto233["m_columns"][] = "Garantia";
+$proto233["m_columns"][] = "Recaudo";
+$proto233["m_columns"][] = "Sancionado";
+$proto233["m_columns"][] = "SancionadoDocumento";
+$proto233["m_columns"][] = "SancionadoTipoDocumento";
+$proto233["m_columns"][] = "SancionadoCiudad";
+$proto233["m_columns"][] = "DespachoCiudad";
+$proto233["m_columns"][] = "Providencia";
+$proto233["m_columns"][] = "Ejecutoria";
+$proto233["m_columns"][] = "Radicado";
+$proto233["m_columns"][] = "Terminacion";
+$proto233["m_columns"][] = "Liquidacion";
+$proto233["m_columns"][] = "Dias";
+$proto233["m_columns"][] = "Tipo";
+$proto233["m_columns"][] = "Cantidad";
+$proto233["m_columns"][] = "SancionadoMasculino";
+$proto233["m_columns"][] = "SeccionalCorreo";
+$proto233["m_columns"][] = "SeccionalDireccion";
+$proto233["m_columns"][] = "SeccionalTelefonos";
+$proto233["m_columns"][] = "Fallecimiento";
+$proto233["m_columns"][] = "Notificacion";
+$proto233["m_columns"][] = "SeccionalNit";
+$proto233["m_columns"][] = "SeccionalId";
+$proto233["m_columns"][] = "AbogadoId";
+$proto233["m_columns"][] = "DespachoId";
+$proto233["m_columns"][] = "SancionadoId";
+$proto233["m_columns"][] = "ConceptoId";
+$proto233["m_columns"][] = "NaturalezaId";
+$proto233["m_columns"][] = "EstadoId";
+$proto233["m_columns"][] = "EtapaId";
+$proto233["m_columns"][] = "CalificacionId";
+$proto233["m_columns"][] = "MotivoId";
+$proto233["m_columns"][] = "ProcesoObservaciones";
+$proto233["m_columns"][] = "Remisorio";
+$proto233["m_columns"][] = "Acuerdo";
+$proto233["m_columns"][] = "Incumplimiento";
+$proto233["m_columns"][] = "Suspension";
+$proto233["m_columns"][] = "Traslado";
+$proto233["m_columns"][] = "Error";
+$proto233["m_columns"][] = "Actuacion";
+$proto233["m_columns"][] = "TipoDocumentoId";
+$proto233["m_columns"][] = "Juridica";
+$proto233["m_columns"][] = "SancionadoEmail";
+$proto233["m_columns"][] = "SancionadoCelular";
+$proto233["m_columns"][] = "CarteraTipoId";
+$proto233["m_columns"][] = "ConceptoAbogado";
+$proto233["m_columns"][] = "LiquidaIntereses";
+$proto233["m_columns"][] = "Saldo";
+$proto233["m_columns"][] = "Prescripcion";
+$proto233["m_columns"][] = "FechaPrescripcion";
+$proto233["m_columns"][] = "ObligacionInicial";
+$proto233["m_columns"][] = "CostasInicial";
+$proto233["m_columns"][] = "InteresesInicial";
+$proto233["m_columns"][] = "Minjusticia_Def";
+$proto233["m_columns"][] = "MinJusticia";
+$proto233["m_columns"][] = "ActuacionId";
+$proto233["m_columns"][] = "NotificacionValidada";
+$proto233["m_columns"][] = "Validado";
+$proto233["m_columns"][] = "Documento";
+$proto233["m_columns"][] = "Seleccionado";
+$proto233["m_columns"][] = "CompetenciaId";
+$proto233["m_columns"][] = "SeleccionadoPor";
+$proto233["m_columns"][] = "RadicadoNumero";
+$proto233["m_columns"][] = "MinjusticiaId";
+$proto233["m_columns"][] = "Contador";
+$proto233["m_columns"][] = "ContadorCargo";
+$proto233["m_columns"][] = "Director";
+$proto233["m_columns"][] = "DirectorCargo";
+$proto233["m_columns"][] = "Etapa";
+$proto233["m_columns"][] = "Persuasivo";
+$proto233["m_columns"][] = "Plazo";
+$proto233["m_columns"][] = "Mayor";
+$proto233["m_columns"][] = "Revocatoria";
+$proto233["m_columns"][] = "RecaudoTerminado";
+$proto233["m_columns"][] = "Naturaleza";
+$proto233["m_columns"][] = "TasaTipo";
+$proto233["m_columns"][] = "CarteraTipo";
+$proto233["m_columns"][] = "Prescrita";
+$proto233["m_columns"][] = "TrasladoCartera";
+$proto233["m_columns"][] = "CarteraTipoIdOrigen";
+$proto233["m_columns"][] = "TrasladoConcepto";
+$proto233["m_columns"][] = "ConceptoIdOrigen";
+$proto233["m_columns"][] = "CarteraTipoOrigen";
+$proto233["m_columns"][] = "ConceptoOrigen";
+$proto233["m_columns"][] = "ChequeoId";
+$proto233["m_columns"][] = "VlrCostas";
+$proto233["m_columns"][] = "VlrInteresesPlazo";
+$proto233["m_columns"][] = "AbogadoDocumento";
+$obj = new SQLTable($proto233);
+
+$proto232["m_table"] = $obj;
+$proto232["m_sql"] = "dbo.ProcesosView1";
+$proto232["m_alias"] = "";
+$proto232["m_srcTableName"] = "dbo.ProcesosView1";
+$proto234=array();
+$proto234["m_sql"] = "";
+$proto234["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto232["m_column"]=$obj;
-$proto232["m_contained"] = array();
-$proto232["m_strCase"] = "";
-$proto232["m_havingmode"] = false;
-$proto232["m_inBrackets"] = false;
-$proto232["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto232);
+$proto234["m_column"]=$obj;
+$proto234["m_contained"] = array();
+$proto234["m_strCase"] = "";
+$proto234["m_havingmode"] = false;
+$proto234["m_inBrackets"] = false;
+$proto234["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto234);
 
-$proto230["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto230);
+$proto232["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto232);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -17953,7 +18110,7 @@ $queryData_procesosview1 = createSqlQuery_procesosview1();
 	
 		;
 
-																																																																																																																
+																																																																																																																	
 
 $tdataprocesosview1[".sqlquery"] = $queryData_procesosview1;
 

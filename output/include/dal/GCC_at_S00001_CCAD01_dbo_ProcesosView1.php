@@ -112,6 +112,7 @@ $dalTableProcesosView1["ConceptoOrigen"] = array("type"=>200,"varname"=>"Concept
 $dalTableProcesosView1["ChequeoId"] = array("type"=>3,"varname"=>"ChequeoId", "name" => "ChequeoId", "autoInc" => "0");
 $dalTableProcesosView1["VlrCostas"] = array("type"=>6,"varname"=>"VlrCostas", "name" => "VlrCostas", "autoInc" => "0");
 $dalTableProcesosView1["VlrInteresesPlazo"] = array("type"=>6,"varname"=>"VlrInteresesPlazo", "name" => "VlrInteresesPlazo", "autoInc" => "0");
+$dalTableProcesosView1["AbogadoDocumento"] = array("type"=>200,"varname"=>"AbogadoDocumento", "name" => "AbogadoDocumento", "autoInc" => "0");
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_ProcesosView1"] = &$dalTableProcesosView1;
 ?>

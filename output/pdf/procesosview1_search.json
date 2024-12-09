@@ -1,0 +1,581 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel dbo_ProcesosView1 search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+				{BEGIN row_grid_0}
+				[
+																{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"stack": [
+		
+				
+			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
+				
+			{"text":{$Costas_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$Intereses_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
+				
+				
+			{"text":{$Folios_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$Observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$Ciudad_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
+				
+			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
+				
+				
+			{"text":{$Despacho_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
+				
+				
+			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
+				
+				
+			{"text":{$Motivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
+				
+				
+			{"text":{$Estado_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
+				
+				
+			{"text":{$Calificacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
+				
+				
+			{"text":{$PiePagina_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$CiudadDepartamento_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$Sigobius_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
+				
+				
+			{"text":{$Cuotas_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
+				
+				
+			{"text":{$Abono_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
+				
+				
+			{"text":{$Inicio_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
+				
+				
+			{"text":{$VlrCuota_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
+				
+				
+			{"text":{$VlrIntereses_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
+				
+				
+			{"text":{$Garantia_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
+				
+				
+			{"text":{$Recaudo_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
+				
+				
+			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
+				
+				
+			{"text":{$SancionadoDocumento_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
+				
+				
+			{"text":{$SancionadoTipoDocumento_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},
+				
+				
+			{"text":{$SancionadoCiudad_pdfvalue},"hidden":"{$item_hide_integrated_search_field30}"},
+				
+				
+			{"text":{$DespachoCiudad_pdfvalue},"hidden":"{$item_hide_integrated_search_field31}"},
+				
+				
+			{"text":{$Providencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field32}"},
+				
+				
+			{"text":{$Ejecutoria_pdfvalue},"hidden":"{$item_hide_integrated_search_field33}"},
+				
+				
+			{"text":{$Radicado_pdfvalue},"hidden":"{$item_hide_integrated_search_field34}"},
+				
+				
+			{"text":{$Terminacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field35}"},
+				
+				
+			{"text":{$Liquidacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field36}"},
+				
+				
+			{"text":{$Dias_pdfvalue},"hidden":"{$item_hide_integrated_search_field37}"},
+				
+				
+			{"text":{$Tipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field38}"},
+				
+				
+			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_integrated_search_field39}"},
+				
+				
+			{"text":{$SancionadoMasculino_pdfvalue},"hidden":"{$item_hide_integrated_search_field40}"},
+				
+				
+			{"text":{$SeccionalCorreo_pdfvalue},"hidden":"{$item_hide_integrated_search_field41}"},
+				
+				
+			{"text":{$SeccionalDireccion_pdfvalue},"hidden":"{$item_hide_integrated_search_field42}"},
+				
+				
+			{"text":{$SeccionalTelefonos_pdfvalue},"hidden":"{$item_hide_integrated_search_field43}"},
+				
+				
+			{"text":{$Fallecimiento_pdfvalue},"hidden":"{$item_hide_integrated_search_field44}"},
+				
+				
+			{"text":{$Notificacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field45}"},
+				
+				
+			{"text":{$SeccionalNit_pdfvalue},"hidden":"{$item_hide_integrated_search_field46}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field47}"},
+				
+				
+			{"text":{$AbogadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field48}"},
+				
+				
+			{"text":{$DespachoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field49}"},
+				
+				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field50}"},
+				
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field51}"},
+				
+				
+			{"text":{$NaturalezaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field52}"},
+				
+				
+			{"text":{$EstadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field53}"},
+				
+				
+			{"text":{$EtapaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field54}"},
+				
+				
+			{"text":{$CalificacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field55}"},
+				
+				
+			{"text":{$MotivoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field56}"},
+				
+				
+			{"text":{$ProcesoObservaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field57}"},
+				
+				
+			{"text":{$Remisorio_pdfvalue},"hidden":"{$item_hide_integrated_search_field58}"},
+				
+				
+			{"text":{$Acuerdo_pdfvalue},"hidden":"{$item_hide_integrated_search_field59}"},
+				
+				
+			{"text":{$Incumplimiento_pdfvalue},"hidden":"{$item_hide_integrated_search_field60}"},
+				
+				
+			{"text":{$Suspension_pdfvalue},"hidden":"{$item_hide_integrated_search_field61}"},
+				
+				
+			{"text":{$Traslado_pdfvalue},"hidden":"{$item_hide_integrated_search_field62}"},
+				
+				
+			{"text":{$Error_pdfvalue},"hidden":"{$item_hide_integrated_search_field63}"},
+				
+				
+			{"text":{$Actuacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field64}"},
+				
+				
+			{"text":{$TipoDocumentoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field65}"},
+				
+				
+			{"text":{$Juridica_pdfvalue},"hidden":"{$item_hide_integrated_search_field66}"},
+				
+				
+			{"text":{$SancionadoEmail_pdfvalue},"hidden":"{$item_hide_integrated_search_field67}"},
+				
+				
+			{"text":{$SancionadoCelular_pdfvalue},"hidden":"{$item_hide_integrated_search_field68}"},
+				
+				
+			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field69}"},
+				
+				
+			{"text":{$ConceptoAbogado_pdfvalue},"hidden":"{$item_hide_integrated_search_field70}"},
+				
+				
+			{"text":{$LiquidaIntereses_pdfvalue},"hidden":"{$item_hide_integrated_search_field71}"},
+				
+				
+			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_integrated_search_field72}"},
+				
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field73}"},
+				
+				
+			{"text":{$FechaPrescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field74}"},
+				
+				
+			{"text":{$ObligacionInicial_pdfvalue},"hidden":"{$item_hide_integrated_search_field75}"},
+				
+				
+			{"text":{$CostasInicial_pdfvalue},"hidden":"{$item_hide_integrated_search_field76}"},
+				
+				
+			{"text":{$InteresesInicial_pdfvalue},"hidden":"{$item_hide_integrated_search_field77}"},
+				
+				
+			{"text":{$Minjusticia_Def_pdfvalue},"hidden":"{$item_hide_integrated_search_field78}"},
+				
+				
+			{"text":{$MinJusticia_pdfvalue},"hidden":"{$item_hide_integrated_search_field79}"},
+				
+				
+			{"text":{$ActuacionId_pdfvalue},"hidden":"{$item_hide_integrated_search_field80}"},
+				
+				
+			{"text":{$NotificacionValidada_pdfvalue},"hidden":"{$item_hide_integrated_search_field81}"},
+				
+				
+			{"text":{$Validado_pdfvalue},"hidden":"{$item_hide_integrated_search_field82}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_integrated_search_field83}"},
+				
+				
+			{"text":{$Seleccionado_pdfvalue},"hidden":"{$item_hide_integrated_search_field84}"},
+				
+				
+			{"text":{$CompetenciaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field85}"},
+				
+				
+			{"text":{$SeleccionadoPor_pdfvalue},"hidden":"{$item_hide_integrated_search_field86}"},
+				
+				
+			{"text":{$RadicadoNumero_pdfvalue},"hidden":"{$item_hide_integrated_search_field87}"},
+				
+				
+			{"text":{$MinjusticiaId_pdfvalue},"hidden":"{$item_hide_integrated_search_field88}"},
+				
+				
+			{"text":{$Contador_pdfvalue},"hidden":"{$item_hide_integrated_search_field89}"},
+				
+				
+			{"text":{$ContadorCargo_pdfvalue},"hidden":"{$item_hide_integrated_search_field90}"},
+				
+				
+			{"text":{$Director_pdfvalue},"hidden":"{$item_hide_integrated_search_field91}"},
+				
+				
+			{"text":{$DirectorCargo_pdfvalue},"hidden":"{$item_hide_integrated_search_field92}"},
+				
+				
+			{"text":{$Etapa_pdfvalue},"hidden":"{$item_hide_integrated_search_field93}"},
+				
+				
+			{"text":{$Persuasivo_pdfvalue},"hidden":"{$item_hide_integrated_search_field94}"},
+				
+				
+			{"text":{$Plazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field95}"},
+				
+				
+			{"text":{$Mayor_pdfvalue},"hidden":"{$item_hide_integrated_search_field96}"},
+				
+				
+			{"text":{$Revocatoria_pdfvalue},"hidden":"{$item_hide_integrated_search_field97}"},
+				
+				
+			{"text":{$RecaudoTerminado_pdfvalue},"hidden":"{$item_hide_integrated_search_field98}"},
+				
+				
+			{"text":{$Naturaleza_pdfvalue},"hidden":"{$item_hide_integrated_search_field99}"},
+				
+				
+			{"text":{$TasaTipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field100}"},
+				
+				
+			{"text":{$CarteraTipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field101}"},
+				
+				
+			{"text":{$Prescrita_pdfvalue},"hidden":"{$item_hide_integrated_search_field102}"},
+				
+				
+			{"text":{$TrasladoCartera_pdfvalue},"hidden":"{$item_hide_integrated_search_field103}"},
+				
+				
+			{"text":{$CarteraTipoIdOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field104}"},
+				
+				
+			{"text":{$TrasladoConcepto_pdfvalue},"hidden":"{$item_hide_integrated_search_field105}"},
+				
+				
+			{"text":{$ConceptoIdOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field106}"},
+				
+				
+			{"text":{$CarteraTipoOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field107}"},
+				
+				
+			{"text":{$ConceptoOrigen_pdfvalue},"hidden":"{$item_hide_integrated_search_field108}"},
+				
+				
+			{"text":{$ChequeoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field109}"},
+				
+				
+			{"text":{$VlrCostas_pdfvalue},"hidden":"{$item_hide_integrated_search_field110}"},
+				
+				
+			{"text":{$VlrInteresesPlazo_pdfvalue},"hidden":"{$item_hide_integrated_search_field111}"},
+				
+				
+			{"text":{$AbogadoDocumento_pdfvalue},"hidden":"{$item_hide_integrated_search_field112}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+		
+		]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+			]
+};
+
+pdfFonts = {$pdfFonts};
+  

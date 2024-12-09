@@ -83,29 +83,29 @@ class reliquidacion extends CalendarioAnual{
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
             while($date=$consulta->fetchAssoc()){
             //echo $date."<br>";
-            $tasaUsura=round($date["Tasa"],4);
+            $tasaUsura=round($date["Tasa"],12); //4
             //echo "La tasa de Usura es: ".$tasaUsura."<br>";
-            $tasaUsuraDiaria=round(($tasaUsura/$diasTotales/100),20);
+            $tasaUsuraDiaria=round(($tasaUsura/$diasTotales/100),12); //20
             //echo "La tasa de Usura diaria es: ".$tasaUsuraDiaria."<br>";
         }
         $tasaDian=$tasaUsura-0.02;
         //echo "La tasa DIAN es: ".$tasaDian."<br>";
-        $tasaDianDiaria=round(($tasaDian/$diasTotales/100),11);
+        $tasaDianDiaria=round(($tasaDian/$diasTotales/100),12);
         //echo "La tasa DIAN diaria es: ".$tasaDianDiaria."<br>";
             $consulta=DB::Query("SELECT * from Empresas where EmpresaId=1");
             while($date=$consulta->fetchAssoc()){
             //echo $date."<br>";
-            $tasaDTN=round($date["TasaDTN"],4);
+            $tasaDTN=round($date["TasaDTN"],12);
             //echo "La tasa DTN es: ".$tasaDTN."<br>";
-            $tasaDtnDiaria=round(($tasaDTN/$diasTotales/100),11);
+            $tasaDtnDiaria=round(($tasaDTN/$diasTotales/100),12);
             //echo "La tasa DTN diaria es: ".$tasaDtnDiaria."<br>";
         }
             $consulta=DB::Query("SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=3");
             while($date=$consulta->fetchAssoc()){
             //echo $date."<br>";
-            $tasaCorriente=round($date["Tasa"],4);
+            $tasaCorriente=round($date["Tasa"],12);
             //echo "La tasa CORRIENTE es: ".$tasaCorriente."<br>";
-            $tasaCorrienteDiaria=round(($tasaCorriente/$diasTotales/100),11);
+           $tasaCorrienteDiaria=round(($tasaCorriente/$diasTotales/100),12);
             //echo "La tasa CORRIENTE diaria es: ".$tasaCorrienteDiaria."<br>";
         }
         //echo "Opcion seleccionada: ".$conc;
@@ -215,6 +215,13 @@ class reliquidacion extends CalendarioAnual{
     }
     public function insertRe($procesoId,$fecha,$dias,$tasa,$intereses,$obliReca,$obliNove,$obliSald,$inteReca,$inteNove,$inteSald,$costReca,$costNove,$costSald){
         try{
+            // Dividir en partes: año, mes y día
+            //echo $fecha;
+            list($anio, $mes, $dia) = explode('-', $fecha);
+            if ($dia==00){
+                $fecha='2018-08-01';
+                $intereses=0;$obliReca=0;$obliNove=0;$inteReca=0;$inteNove=0;$costReca=0;$costNove=0;
+            } 
             $tasa=floatval($tasa*100);
             //var_dump($fecha);
                     //var_dump($procesoId);var_dump($fecha);var_dump($dias);var_dump($tasa);var_dump($intereses);var_dump($obliReca);var_dump($obliNove);var_dump($obliSald);var_dump($inteReca);var_dump($inteNove);var_dump($inteSald);var_dump($costReca);var_dump($costNove);var_dump($costSald);
@@ -460,10 +467,11 @@ class reliquidacion extends CalendarioAnual{
                         //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
                                 $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                 $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                 $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
                                 $diaCorte=$dia-1;
                                 $valorCorte=$valorDiario*$diaCorte;
                                 $diaCorte=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
@@ -700,7 +708,7 @@ class reliquidacion extends CalendarioAnual{
                         foreach ($recaudos as $fecha) {
                             if($fecha["Fecha"]==$fechaCom) {
                                 $diaRecaudo=$dia;
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
                                 //echo "La fecha es igual al recaudo 5";
                                 ///echo "<br>Obligacion ".$obligacion;
                                 ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
@@ -709,6 +717,7 @@ class reliquidacion extends CalendarioAnual{
                                 $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                 $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                 $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
                                 ///echo "<br>Obligacion Porcentual ".$obliPor;
                                 ///echo "<br>Interes Porcentual ".$intePor;
                                 $diaCorte=$dia-1;
@@ -792,11 +801,12 @@ class reliquidacion extends CalendarioAnual{
                         foreach ($recaudos as $fecha) {
                             //echo "fecha del recaudo".$fecha["Fecha"];
                             if($fecha["Fecha"]==$fechaCom) {
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
                                 //echo "La fecha es igual al recaudo 6";
                                 $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                 $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                 $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
                                 //echo "<br>Obligacion Porcentual ".$obliPor;
                                 //echo "<br>Interes Porcentual ".$intePor;
                                 //echo "<br>Costas Porcentual ".$costPor;
