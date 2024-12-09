@@ -209,7 +209,7 @@ $beforePath = $scheme . $host . $port;
 //SE GUARDA LA URL 
 $_SESSION['BeforePath'] = $beforePath;
 
-
+$_SESSION["PruebaSeccional"]=2;
 //echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
 //phpinfo();
 $arraySeccionales=array();
@@ -727,7 +727,7 @@ echo "Your message";
 	{
 	$str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
 //select values from the database
-$strSQL = "select * from Abogados WHERE SeccionalId=".$_SESSION["SeccionalUser"]."  ORDER BY Abogado ASC";
+$strSQL = "select * from Abogados WHERE SeccionalId=".$_SESSION["PruebaSeccional"]."  ORDER BY Abogado ASC";
 $rs = db_query($strSQL);
 while ($data = db_fetch_array($rs)){
 $str.="<option value='".$data['AbogadoId']."'>".$data['Abogado']."</option>";

@@ -1159,6 +1159,12 @@ if( $eventId == 'SancionadoId_event' && "dbo.Solidarios" == $table )
 	$cipherer = new RunnerCipherer("dbo.Solidarios");
 	fieldEventHandler_SancionadoId_event( $params );
 }
+if( $eventId == 'SeccionalId_event' && "dbo.ProcesosReasignar" == $table )
+{
+	require_once("include/procesosreasignar_variables.php");
+	$cipherer = new RunnerCipherer("dbo.ProcesosReasignar");
+	fieldEventHandler_SeccionalId_event( $params );
+}
 
 
 
@@ -9438,7 +9444,7 @@ function fieldEventHandler_calcular_diasPlazo( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
 //echo "Fecha Ejecutoria: ".$fechaEje;
-$rs=DB::Query("SET DATEFIRST 7;SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
+$rs=DB::Query("SET DATEFIRST 1;SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
 /*
 $rs=DB::Query("declare @p2 date
 set @p2=''
@@ -9498,7 +9504,7 @@ function fieldEventHandler_Ejecutoria_event( $params )
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
 	$fechaEje=$params["valAnnoEj"]."-".$params["valMesEj"]."-".$params["valDiaEj"];
 //echo "Fecha Ejecutoria: ".$fechaEje;
-$rs=DB::Query("SET DATEFIRST 7;SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
+$rs=DB::Query("SET DATEFIRST 1;SELECT dbo.CalCDiasHabilesF ('".$fechaEje."', ".$params["value"].") AS fechaPlazo;");
 /*
 $rs=DB::Query("declare @p2 date
 set @p2=''
@@ -9758,6 +9764,37 @@ if (is_numeric($sancionadoId)) {
 			//return false;
 }
 
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_SeccionalId_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+//$result["upper"] = strtoupper( $params["value"] );
+$_SESSION["PruebaSeccional"]=$params["value"];
+$result["Value"]=$params["value"];
 ;
 	RunnerContext::pop();
 	

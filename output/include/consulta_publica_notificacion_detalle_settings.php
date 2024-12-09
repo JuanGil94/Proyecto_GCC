@@ -156,7 +156,7 @@ $tdataconsulta_publica_notificacion_detalle[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdataconsulta_publica_notificacion_detalle[".ajaxCodeSnippetAdded"] = false;
 
