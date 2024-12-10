@@ -6,11 +6,11 @@ $tdatamandamientos_de_pago_automaticos[".OwnerID"] = "";
 $tdatamandamientos_de_pago_automaticos[".OriginalTable"] = "Mandamientos de pago Automaticos";
 
 
-$tdatamandamientos_de_pago_automaticos[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatamandamientos_de_pago_automaticos[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatamandamientos_de_pago_automaticos[".originalPagesByType"] = $tdatamandamientos_de_pago_automaticos[".pagesByType"];
-$tdatamandamientos_de_pago_automaticos[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatamandamientos_de_pago_automaticos[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatamandamientos_de_pago_automaticos[".originalPages"] = $tdatamandamientos_de_pago_automaticos[".pages"];
-$tdatamandamientos_de_pago_automaticos[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatamandamientos_de_pago_automaticos[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatamandamientos_de_pago_automaticos[".originalDefaultPages"] = $tdatamandamientos_de_pago_automaticos[".defaultPages"];
 
 //	field labels

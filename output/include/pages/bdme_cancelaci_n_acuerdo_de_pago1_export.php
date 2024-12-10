@@ -113,14 +113,14 @@
 'delimiter' => ',',
 'selectDelimiter' => false,
 'exportFileTypes' => array( 'excel' => true,
-'word' => true,
+'word' => false,
 'csv' => true,
 'xml' => false ) ) );
 			$pageArray = array( 'id' => 'export',
 'type' => 'export',
 'layoutId' => 'first',
 'disabled' => 0,
-'default' => 0,
+'default' => 1,
 'forms' => array( 'supertop' => array( 'modelId' => 'panel-top',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ) ),
 'section' => '' ) ),
@@ -197,5 +197,9 @@ array( 'cell' => 'c2' ) ),
 'exportFormat' => 2,
 'exportDelimiter' => ',',
 'exportSelectDelimiter' => false,
-'exportSelectFields' => false );
+'exportSelectFields' => false,
+'fileTypes' => array( 'excel' => true,
+'word' => false,
+'csv' => true,
+'xml' => false ) );
 		?>

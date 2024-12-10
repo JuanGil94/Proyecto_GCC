@@ -6,11 +6,11 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".OwnerID"] = "";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".OriginalTable"] = "BDME Incumplimiento Acuerdo de Pago Semestral";
 
 
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".originalPagesByType"] = $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".pagesByType"];
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".originalPages"] = $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".pages"];
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".originalDefaultPages"] = $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".defaultPages"];
 
 //	field labels

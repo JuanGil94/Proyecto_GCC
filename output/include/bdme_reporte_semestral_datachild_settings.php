@@ -6,11 +6,11 @@ $tdatabdme_reporte_semestral_datachild[".OwnerID"] = "";
 $tdatabdme_reporte_semestral_datachild[".OriginalTable"] = "BDME Reporte Semestral Datachild";
 
 
-$tdatabdme_reporte_semestral_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_reporte_semestral_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_reporte_semestral_datachild[".originalPagesByType"] = $tdatabdme_reporte_semestral_datachild[".pagesByType"];
-$tdatabdme_reporte_semestral_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_reporte_semestral_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_reporte_semestral_datachild[".originalPages"] = $tdatabdme_reporte_semestral_datachild[".pages"];
-$tdatabdme_reporte_semestral_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_reporte_semestral_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_reporte_semestral_datachild[".originalDefaultPages"] = $tdatabdme_reporte_semestral_datachild[".defaultPages"];
 
 //	field labels

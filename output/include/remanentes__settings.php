@@ -6,11 +6,11 @@ $tdataremanentes_[".OwnerID"] = "";
 $tdataremanentes_[".OriginalTable"] = "Remanentes-";
 
 
-$tdataremanentes_[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataremanentes_[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataremanentes_[".originalPagesByType"] = $tdataremanentes_[".pagesByType"];
-$tdataremanentes_[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataremanentes_[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataremanentes_[".originalPages"] = $tdataremanentes_[".pages"];
-$tdataremanentes_[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataremanentes_[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataremanentes_[".originalDefaultPages"] = $tdataremanentes_[".defaultPages"];
 
 //	field labels

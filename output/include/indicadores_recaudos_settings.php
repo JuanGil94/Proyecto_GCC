@@ -6,11 +6,11 @@ $tdataindicadores_recaudos[".OwnerID"] = "";
 $tdataindicadores_recaudos[".OriginalTable"] = "Indicadores Recaudos";
 
 
-$tdataindicadores_recaudos[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"search\":[\"search\"]}" );
+$tdataindicadores_recaudos[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"search\":[\"search\"]}" );
 $tdataindicadores_recaudos[".originalPagesByType"] = $tdataindicadores_recaudos[".pagesByType"];
-$tdataindicadores_recaudos[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"search\":[\"search\"]}" ) );
+$tdataindicadores_recaudos[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"search\":[\"search\"]}" ) );
 $tdataindicadores_recaudos[".originalPages"] = $tdataindicadores_recaudos[".pages"];
-$tdataindicadores_recaudos[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"search\":\"search\"}" );
+$tdataindicadores_recaudos[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"search\":\"search\"}" );
 $tdataindicadores_recaudos[".originalDefaultPages"] = $tdataindicadores_recaudos[".defaultPages"];
 
 //	field labels

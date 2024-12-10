@@ -6,11 +6,11 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".OwnerID"] = "";
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".OriginalTable"] = "BDME Cancelación Acuerdo de Pago DataChild";
 
 
-$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".originalPagesByType"] = $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pagesByType"];
-$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".originalPages"] = $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".pages"];
-$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".originalDefaultPages"] = $tdatabdme_cancelaci_n_acuerdo_de_pago_datachild[".defaultPages"];
 
 //	field labels

@@ -108,22 +108,6 @@
 							 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown ">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-										<span class="glyphicon glyphicon-cog"></span>
-												<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-							{BEGIN export_link}
-	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportlink_attrs}  title="" >
-				
-		Exportar resultados		
-		</a>
-	</li>
-{END export_link}
-					</ul>
-	</span>
 </span>
 			</span>
 		 
@@ -281,6 +265,15 @@
 					<span class="glyphicon glyphicon-search"></span>
 										</a>
 </span>
+	 
+		{BEGIN export_link}
+<span data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$exportlink_attrs} >
+					<img src="{$file_url images/menuicons/Excel2.png}" />
+							Exportar			</a>
+</span>
+{END export_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 

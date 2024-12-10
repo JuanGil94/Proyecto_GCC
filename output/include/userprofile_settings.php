@@ -792,6 +792,9 @@ $tdatauserprofile[".hideMobileList"] = array();
 	
 	
 	
+				//dependent dropdowns @deprecated data ?
+	$edata["DependentLookups"] = array();
+	$edata["DependentLookups"][] = "AbogadoId";
 
 	
 	
@@ -951,10 +954,13 @@ $tdatauserprofile[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Abogado";
 
 	
-	
+		$edata["UseCategory"] = true;
+	$edata["categoryFields"] = array();
+	$edata["categoryFields"][] = array( "main" => "SeccionalId", "lookup" => "SeccionalId" );
+
 	
 	
 

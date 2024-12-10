@@ -6,11 +6,11 @@ $tdatabdme_excluidos_datachild[".OwnerID"] = "";
 $tdatabdme_excluidos_datachild[".OriginalTable"] = "BDME Excluidos DataChild";
 
 
-$tdatabdme_excluidos_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_excluidos_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_excluidos_datachild[".originalPagesByType"] = $tdatabdme_excluidos_datachild[".pagesByType"];
-$tdatabdme_excluidos_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_excluidos_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_excluidos_datachild[".originalPages"] = $tdatabdme_excluidos_datachild[".pages"];
-$tdatabdme_excluidos_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_excluidos_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_excluidos_datachild[".originalDefaultPages"] = $tdatabdme_excluidos_datachild[".defaultPages"];
 
 //	field labels

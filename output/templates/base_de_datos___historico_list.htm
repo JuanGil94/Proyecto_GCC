@@ -457,23 +457,7 @@
 		</a>
 	</li>
 {END searchPanelTopButtons}
-							<li role="separator" class="divider"></li>							{BEGIN export_link}
-	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportlink_attrs}  title="" >
-				
-		Exportar resultados		
-		</a>
-	</li>
-{END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="base_de_datos___historico_import.php{$stateLink_full}"  title="" >
-				
-		Importar		
-		</a>
-	</li>
-{END import_link}
-					</ul>
+							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
 			</span>
@@ -758,6 +742,15 @@
 					<span class="glyphicon glyphicon-repeat"></span>
 										</a>
 </span>
+	 
+		{BEGIN export_link}
+<span data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$exportlink_attrs} >
+					<img src="{$file_url images/menuicons/Excel2.png}" />
+							Exportar			</a>
+</span>
+{END export_link}
 		</div>					</div>
 			</div>		
 {END above-grid_block}

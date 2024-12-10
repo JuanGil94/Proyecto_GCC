@@ -187,7 +187,7 @@ $tdatadbo_seccional_procesosview1[".strOrderBy"] = $tstrOrderBy;
 $tdatadbo_seccional_procesosview1[".orderindexes"] = array();
 
 
-$tdatadbo_seccional_procesosview1[".sqlHead"] = "SELECT ' ' AS Seccional,      ' ' AS SeccionalId,      ' ' AS Seccional1  UNION ALL  SELECT      LOWER(          CASE               WHEN Seccional = 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACIÓN JUDICIAL'              ELSE 'DIRECCIÓN SECCIONAL DE ' + Seccional          END      ) AS Seccional1,      SeccionalId AS SeccionalId1,      Seccional AS Seccional11";
+$tdatadbo_seccional_procesosview1[".sqlHead"] = "SELECT ' ' AS Seccional,      ' ' AS SeccionalId,      ' ' AS Seccional1  UNION ALL  SELECT      CASE           WHEN Seccional = 'DEAJ' THEN 'Dirección Ejecutiva de Administración Judicial'          ELSE 'Dirección Seccional de ' + Seccional      END AS Seccional1,      SeccionalId AS SeccionalId1,      Seccional AS Seccional11";
 $tdatadbo_seccional_procesosview1[".sqlFrom"] = "FROM dbo.Seccionales";
 $tdatadbo_seccional_procesosview1[".sqlWhereExpr"] = "";
 $tdatadbo_seccional_procesosview1[".sqlTail"] = "";
@@ -687,7 +687,7 @@ function createSqlQuery_dbo_seccional_procesosview1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "' ' AS Seccional,      ' ' AS SeccionalId,      ' ' AS Seccional1  UNION ALL  SELECT      LOWER(          CASE               WHEN Seccional = 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACIÓN JUDICIAL'              ELSE 'DIRECCIÓN SECCIONAL DE ' + Seccional          END      ) AS Seccional1,      SeccionalId AS SeccionalId1,      Seccional AS Seccional11";
+$proto0["m_strFieldList"] = "' ' AS Seccional,      ' ' AS SeccionalId,      ' ' AS Seccional1  UNION ALL  SELECT      CASE           WHEN Seccional = 'DEAJ' THEN 'Dirección Ejecutiva de Administración Judicial'          ELSE 'Dirección Seccional de ' + Seccional      END AS Seccional1,      SeccionalId AS SeccionalId1,      Seccional AS Seccional11";
 $proto0["m_strFrom"] = "FROM dbo.Seccionales";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -753,10 +753,10 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLNonParsed(array(
-	"m_sql" => "' ' AS Seccional1  UNION ALL  SELECT      LOWER(          CASE               WHEN Seccional = 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACIÓN JUDICIAL'              ELSE 'DIRECCIÓN SECCIONAL DE ' + Seccional          END      )"
+	"m_sql" => "' ' AS Seccional1  UNION ALL  SELECT      CASE           WHEN Seccional = 'DEAJ' THEN 'Dirección Ejecutiva de Administración Judicial'          ELSE 'Dirección Seccional de ' + Seccional      END"
 ));
 
-$proto10["m_sql"] = "' ' AS Seccional1  UNION ALL  SELECT      LOWER(          CASE               WHEN Seccional = 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACIÓN JUDICIAL'              ELSE 'DIRECCIÓN SECCIONAL DE ' + Seccional          END      )";
+$proto10["m_sql"] = "' ' AS Seccional1  UNION ALL  SELECT      CASE           WHEN Seccional = 'DEAJ' THEN 'Dirección Ejecutiva de Administración Judicial'          ELSE 'Dirección Seccional de ' + Seccional      END";
 $proto10["m_srcTableName"] = "dbo.Seccional_ProcesosView1";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "Seccional1";

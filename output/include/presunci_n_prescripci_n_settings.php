@@ -6,11 +6,11 @@ $tdatapresunci_n_prescripci_n[".OwnerID"] = "";
 $tdatapresunci_n_prescripci_n[".OriginalTable"] = "Presunción Prescripción";
 
 
-$tdatapresunci_n_prescripci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatapresunci_n_prescripci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatapresunci_n_prescripci_n[".originalPagesByType"] = $tdatapresunci_n_prescripci_n[".pagesByType"];
-$tdatapresunci_n_prescripci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatapresunci_n_prescripci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatapresunci_n_prescripci_n[".originalPages"] = $tdatapresunci_n_prescripci_n[".pages"];
-$tdatapresunci_n_prescripci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatapresunci_n_prescripci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatapresunci_n_prescripci_n[".originalDefaultPages"] = $tdatapresunci_n_prescripci_n[".defaultPages"];
 
 //	field labels

@@ -148,7 +148,7 @@ if( pageEnabled($table, 'print') || pageEnabled($table, 'rprint') || pageEnabled
 	$mask .= "P";
 
 $pageMask[$table] = $mask;
-$tables[$table] = array("empresas", " " . "Empresas");
+$tables[$table] = array("empresas", " " . "Parámetros");
 $table = "dbo.Entidades";
 $mask="";
 if( pageEnabled($table, 'add') || pageEnabled($table, 'inline_add') )
