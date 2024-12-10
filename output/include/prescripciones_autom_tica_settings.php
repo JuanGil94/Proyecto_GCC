@@ -6,11 +6,11 @@ $tdataprescripciones_autom_tica[".OwnerID"] = "";
 $tdataprescripciones_autom_tica[".OriginalTable"] = "Prescripciones Automática";
 
 
-$tdataprescripciones_autom_tica[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataprescripciones_autom_tica[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataprescripciones_autom_tica[".originalPagesByType"] = $tdataprescripciones_autom_tica[".pagesByType"];
-$tdataprescripciones_autom_tica[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataprescripciones_autom_tica[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataprescripciones_autom_tica[".originalPages"] = $tdataprescripciones_autom_tica[".pages"];
-$tdataprescripciones_autom_tica[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataprescripciones_autom_tica[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataprescripciones_autom_tica[".originalDefaultPages"] = $tdataprescripciones_autom_tica[".defaultPages"];
 
 //	field labels

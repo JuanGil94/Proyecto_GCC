@@ -6,11 +6,11 @@ $tdatabdme_gu_a_del_deudor_moroso1[".OwnerID"] = "";
 $tdatabdme_gu_a_del_deudor_moroso1[".OriginalTable"] = "BDME Guía del Deudor Moroso";
 
 
-$tdatabdme_gu_a_del_deudor_moroso1[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_gu_a_del_deudor_moroso1[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_gu_a_del_deudor_moroso1[".originalPagesByType"] = $tdatabdme_gu_a_del_deudor_moroso1[".pagesByType"];
-$tdatabdme_gu_a_del_deudor_moroso1[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_gu_a_del_deudor_moroso1[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_gu_a_del_deudor_moroso1[".originalPages"] = $tdatabdme_gu_a_del_deudor_moroso1[".pages"];
-$tdatabdme_gu_a_del_deudor_moroso1[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_gu_a_del_deudor_moroso1[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_gu_a_del_deudor_moroso1[".originalDefaultPages"] = $tdatabdme_gu_a_del_deudor_moroso1[".defaultPages"];
 
 //	field labels

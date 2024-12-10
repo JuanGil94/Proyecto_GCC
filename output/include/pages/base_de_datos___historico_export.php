@@ -141,7 +141,7 @@
 'delimiter' => ',',
 'selectDelimiter' => false,
 'exportFileTypes' => array( 'excel' => true,
-'word' => true,
+'word' => false,
 'csv' => true,
 'xml' => false ) ) );
 			$pageArray = array( 'id' => 'export',
@@ -237,5 +237,9 @@ array( 'cell' => 'c2' ) ),
 'exportFormat' => 2,
 'exportDelimiter' => ',',
 'exportSelectDelimiter' => false,
-'exportSelectFields' => false );
+'exportSelectFields' => false,
+'fileTypes' => array( 'excel' => true,
+'word' => false,
+'csv' => true,
+'xml' => false ) );
 		?>

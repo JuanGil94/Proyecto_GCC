@@ -6,11 +6,11 @@ $tdatalistado_medidas_cautelares[".OwnerID"] = "";
 $tdatalistado_medidas_cautelares[".OriginalTable"] = "Listado Medidas Cautelares";
 
 
-$tdatalistado_medidas_cautelares[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatalistado_medidas_cautelares[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatalistado_medidas_cautelares[".originalPagesByType"] = $tdatalistado_medidas_cautelares[".pagesByType"];
-$tdatalistado_medidas_cautelares[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatalistado_medidas_cautelares[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatalistado_medidas_cautelares[".originalPages"] = $tdatalistado_medidas_cautelares[".pages"];
-$tdatalistado_medidas_cautelares[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatalistado_medidas_cautelares[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatalistado_medidas_cautelares[".originalDefaultPages"] = $tdatalistado_medidas_cautelares[".defaultPages"];
 
 //	field labels

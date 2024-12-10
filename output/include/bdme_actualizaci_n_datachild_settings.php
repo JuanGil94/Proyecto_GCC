@@ -6,11 +6,11 @@ $tdatabdme_actualizaci_n_datachild[".OwnerID"] = "";
 $tdatabdme_actualizaci_n_datachild[".OriginalTable"] = "BDME Actualización DataChild";
 
 
-$tdatabdme_actualizaci_n_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_actualizaci_n_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_actualizaci_n_datachild[".originalPagesByType"] = $tdatabdme_actualizaci_n_datachild[".pagesByType"];
-$tdatabdme_actualizaci_n_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_actualizaci_n_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_actualizaci_n_datachild[".originalPages"] = $tdatabdme_actualizaci_n_datachild[".pages"];
-$tdatabdme_actualizaci_n_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_actualizaci_n_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_actualizaci_n_datachild[".originalDefaultPages"] = $tdatabdme_actualizaci_n_datachild[".defaultPages"];
 
 //	field labels

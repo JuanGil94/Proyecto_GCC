@@ -6,11 +6,11 @@ $tdatabase_de_datos___historico[".OwnerID"] = "";
 $tdatabase_de_datos___historico[".OriginalTable"] = "Base de Datos - Historico";
 
 
-$tdatabase_de_datos___historico[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabase_de_datos___historico[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabase_de_datos___historico[".originalPagesByType"] = $tdatabase_de_datos___historico[".pagesByType"];
-$tdatabase_de_datos___historico[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabase_de_datos___historico[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabase_de_datos___historico[".originalPages"] = $tdatabase_de_datos___historico[".pages"];
-$tdatabase_de_datos___historico[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabase_de_datos___historico[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabase_de_datos___historico[".originalDefaultPages"] = $tdatabase_de_datos___historico[".defaultPages"];
 
 //	field labels

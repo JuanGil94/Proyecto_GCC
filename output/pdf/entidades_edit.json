@@ -212,9 +212,6 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_edit_save}"},
 				
 				
-			{"text":"","hidden":"{$item_hide_edit_back_list}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_edit_close}"},
 				
 		  ],
@@ -237,10 +234,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":""},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      

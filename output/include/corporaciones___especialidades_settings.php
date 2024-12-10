@@ -6,11 +6,11 @@ $tdatacorporaciones___especialidades[".OwnerID"] = "";
 $tdatacorporaciones___especialidades[".OriginalTable"] = "Corporaciones - Especialidades";
 
 
-$tdatacorporaciones___especialidades[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatacorporaciones___especialidades[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatacorporaciones___especialidades[".originalPagesByType"] = $tdatacorporaciones___especialidades[".pagesByType"];
-$tdatacorporaciones___especialidades[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatacorporaciones___especialidades[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatacorporaciones___especialidades[".originalPages"] = $tdatacorporaciones___especialidades[".pages"];
-$tdatacorporaciones___especialidades[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatacorporaciones___especialidades[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatacorporaciones___especialidades[".originalDefaultPages"] = $tdatacorporaciones___especialidades[".defaultPages"];
 
 //	field labels

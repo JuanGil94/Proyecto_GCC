@@ -6,11 +6,11 @@ $tdataprocesos_sin_notificaci_n[".OwnerID"] = "";
 $tdataprocesos_sin_notificaci_n[".OriginalTable"] = "Procesos Sin Notificación";
 
 
-$tdataprocesos_sin_notificaci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataprocesos_sin_notificaci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataprocesos_sin_notificaci_n[".originalPagesByType"] = $tdataprocesos_sin_notificaci_n[".pagesByType"];
-$tdataprocesos_sin_notificaci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataprocesos_sin_notificaci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataprocesos_sin_notificaci_n[".originalPages"] = $tdataprocesos_sin_notificaci_n[".pages"];
-$tdataprocesos_sin_notificaci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataprocesos_sin_notificaci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataprocesos_sin_notificaci_n[".originalDefaultPages"] = $tdataprocesos_sin_notificaci_n[".defaultPages"];
 
 //	field labels

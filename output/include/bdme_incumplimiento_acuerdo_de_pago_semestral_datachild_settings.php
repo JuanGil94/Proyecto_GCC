@@ -6,11 +6,11 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".OwnerID"] = "";
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".OriginalTable"] = "BDME Incumplimiento Acuerdo de Pago Semestral DataChild";
 
 
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".originalPagesByType"] = $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pagesByType"];
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".originalPages"] = $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".pages"];
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".originalDefaultPages"] = $tdatabdme_incumplimiento_acuerdo_de_pago_semestral_datachild[".defaultPages"];
 
 //	field labels

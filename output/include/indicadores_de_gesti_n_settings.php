@@ -6,11 +6,11 @@ $tdataindicadores_de_gesti_n[".OwnerID"] = "";
 $tdataindicadores_de_gesti_n[".OriginalTable"] = "Indicadores de Gestión";
 
 
-$tdataindicadores_de_gesti_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataindicadores_de_gesti_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataindicadores_de_gesti_n[".originalPagesByType"] = $tdataindicadores_de_gesti_n[".pagesByType"];
-$tdataindicadores_de_gesti_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataindicadores_de_gesti_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataindicadores_de_gesti_n[".originalPages"] = $tdataindicadores_de_gesti_n[".pages"];
-$tdataindicadores_de_gesti_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataindicadores_de_gesti_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataindicadores_de_gesti_n[".originalDefaultPages"] = $tdataindicadores_de_gesti_n[".defaultPages"];
 
 //	field labels

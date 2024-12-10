@@ -2,6 +2,17 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -9794,7 +9805,8 @@ function fieldEventHandler_SeccionalId_event( $params )
 // Sample:
 //$result["upper"] = strtoupper( $params["value"] );
 $_SESSION["PruebaSeccional"]=$params["value"];
-$result["Value"]=$params["value"];
+$result["Value"]=$_SESSION["PruebaSeccional"];
+echo $result["Value"];
 ;
 	RunnerContext::pop();
 	

@@ -6,11 +6,11 @@ $tdataintereses_por_proceso[".OwnerID"] = "";
 $tdataintereses_por_proceso[".OriginalTable"] = "Intereses por Proceso";
 
 
-$tdataintereses_por_proceso[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataintereses_por_proceso[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataintereses_por_proceso[".originalPagesByType"] = $tdataintereses_por_proceso[".pagesByType"];
-$tdataintereses_por_proceso[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataintereses_por_proceso[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataintereses_por_proceso[".originalPages"] = $tdataintereses_por_proceso[".pages"];
-$tdataintereses_por_proceso[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataintereses_por_proceso[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataintereses_por_proceso[".originalDefaultPages"] = $tdataintereses_por_proceso[".defaultPages"];
 
 //	field labels

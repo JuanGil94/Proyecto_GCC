@@ -6,11 +6,11 @@ $tdataprivados_de_la_libertad[".OwnerID"] = "";
 $tdataprivados_de_la_libertad[".OriginalTable"] = "Privados de la Libertad";
 
 
-$tdataprivados_de_la_libertad[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataprivados_de_la_libertad[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataprivados_de_la_libertad[".originalPagesByType"] = $tdataprivados_de_la_libertad[".pagesByType"];
-$tdataprivados_de_la_libertad[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataprivados_de_la_libertad[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataprivados_de_la_libertad[".originalPages"] = $tdataprivados_de_la_libertad[".pages"];
-$tdataprivados_de_la_libertad[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataprivados_de_la_libertad[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataprivados_de_la_libertad[".originalDefaultPages"] = $tdataprivados_de_la_libertad[".defaultPages"];
 
 //	field labels

@@ -263,6 +263,9 @@ pdfDocument = {
 				
 			{"text":"{$event MOVIMIENTO_MENSUAL_DE_COBRO_COACTIVO_Tipo}","hidden":"{$item_hide_snippet2}","isHtml":true},
 				
+				
+			{"text":"","hidden":"{$item_hide_export}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

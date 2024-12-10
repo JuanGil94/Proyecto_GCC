@@ -725,10 +725,32 @@ echo "Your message";
 }
 	function event_dbo_Correspondencias_snippet(&$params)
 	{
-	$str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
+	// Obtener el parámetro 'f' de la URL
+$filtro = $_GET['f'];
+
+// Comprobar si contiene el valor esperado
+if (!empty($filtro)) {
+    // Decodificar el filtro
+    $filtroDecodificado = urldecode($filtro);
+
+    // Buscar el valor de SeccionalId
+    if (preg_match('/SeccionalId~equals~(\d+)/', $filtroDecodificado, $matches)) {
+        $seccionalId = $matches[1]; // Extraer el ID
+    } else {
+        $seccionalId = 0; 
+    }
+} else {
+    $seccionalId = 0;
+}
+
+
+$str= "<select id='abogaId'; style='width: 450px; display: inline-block;' class='form-control'>";
 //select values from the database
-$strSQL = "select * from Abogados WHERE SeccionalId=".$_SESSION["PruebaSeccional"]."  ORDER BY Abogado ASC";
+$strSQL = "select * from Abogados WHERE SeccionalId=".$seccionalId."  ORDER BY Abogado ASC";
 $rs = db_query($strSQL);
+if($seccionalId == 0){
+$str.="<option value='0'>Por favor escoja la seccional en el panel izquierdo</option>";
+}
 while ($data = db_fetch_array($rs)){
 $str.="<option value='".$data['AbogadoId']."'>".$data['Abogado']."</option>";
 }

@@ -65,4 +65,23 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-cellid="grid_cell_field1"][data-page="recaudos_por_a_os_list"][data-cellid="grid_cell_field1"][data-page="recaudos_por_a_os_list"][data-cellid="grid_cell_field1"][data-page="recaudos_por_a_os_list"] {
+  color: red;
+   text-transform: uppercase;
+   
+}
+
+
+  .uppercase {
+    text-transform: uppercase;
+  }/* Put  your custom CSS code here */
+
+[data-page="recaudos_por_a_os_list"][data-itemid="simple_grid_field5"] {
+  color: red;
+  text-transform: uppercase;
+}
+  .uppercase {
+    text-transform: uppercase;
+  }

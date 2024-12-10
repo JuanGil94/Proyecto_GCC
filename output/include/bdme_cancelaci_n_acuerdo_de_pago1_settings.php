@@ -6,11 +6,11 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".OwnerID"] = "";
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".OriginalTable"] = "BDME Cancelación Acuerdo de Pago";
 
 
-$tdatabdme_cancelaci_n_acuerdo_de_pago1[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_cancelaci_n_acuerdo_de_pago1[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".originalPagesByType"] = $tdatabdme_cancelaci_n_acuerdo_de_pago1[".pagesByType"];
-$tdatabdme_cancelaci_n_acuerdo_de_pago1[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_cancelaci_n_acuerdo_de_pago1[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".originalPages"] = $tdatabdme_cancelaci_n_acuerdo_de_pago1[".pages"];
-$tdatabdme_cancelaci_n_acuerdo_de_pago1[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_cancelaci_n_acuerdo_de_pago1[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".originalDefaultPages"] = $tdatabdme_cancelaci_n_acuerdo_de_pago1[".defaultPages"];
 
 //	field labels

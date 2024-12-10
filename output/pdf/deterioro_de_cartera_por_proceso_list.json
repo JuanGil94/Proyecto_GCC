@@ -243,6 +243,9 @@ pdfDocument = {
 				
 			{"text":""},
 				
+				
+			{"text":"","hidden":"{$item_hide_export}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -1549,6 +1552,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Concepto',
 				style: 'footcell',
 		
 		
@@ -1564,7 +1568,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Concepto_align}',
      
       
       },
@@ -1575,6 +1579,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Monto',
 				style: 'footcell',
 		
 		
@@ -1590,7 +1595,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Monto_align}',
      
       
       },
@@ -1601,6 +1606,7 @@ pdfDocument = {
 	cellId: 'footcell_field3',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Antiguedad',
 				style: 'footcell',
 		
 		
@@ -1616,7 +1622,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Antiguedad_align}',
      
       
       },
@@ -1627,6 +1633,7 @@ pdfDocument = {
 	cellId: 'footcell_field4',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Notificacion',
 				style: 'footcell',
 		
 		
@@ -1642,7 +1649,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Notificacion_align}',
      
       
       },
@@ -1653,6 +1660,7 @@ pdfDocument = {
 	cellId: 'footcell_field5',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Ubicacion',
 				style: 'footcell',
 		
 		
@@ -1668,7 +1676,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Ubicacion_align}',
      
       
       },
@@ -1679,6 +1687,7 @@ pdfDocument = {
 	cellId: 'footcell_field6',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Libertad',
 				style: 'footcell',
 		
 		
@@ -1694,7 +1703,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Libertad_align}',
      
       
       },
@@ -1705,6 +1714,7 @@ pdfDocument = {
 	cellId: 'footcell_field7',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Solidarios',
 				style: 'footcell',
 		
 		
@@ -1720,7 +1730,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Solidarios_align}',
      
       
       },
@@ -1731,6 +1741,7 @@ pdfDocument = {
 	cellId: 'footcell_field8',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Cautelares',
 				style: 'footcell',
 		
 		
@@ -1746,7 +1757,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Cautelares_align}',
      
       
       },
@@ -1757,6 +1768,7 @@ pdfDocument = {
 	cellId: 'footcell_field9',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Concepto',
 				style: 'footcell',
 		
 		
@@ -1772,7 +1784,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Concepto_align}',
      
       
       },
@@ -1783,6 +1795,7 @@ pdfDocument = {
 	cellId: 'footcell_field10',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Especialidad',
 				style: 'footcell',
 		
 		
@@ -1798,7 +1811,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Especialidad_align}',
      
       
       },
@@ -1809,6 +1822,7 @@ pdfDocument = {
 	cellId: 'footcell_field11',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Porcentaje',
 				style: 'footcell',
 		
 		
@@ -1824,7 +1838,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Porcentaje_align}',
      
       
       },
@@ -1903,6 +1917,7 @@ pdfDocument = {
 	cellId: 'footcell_field14',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Meses',
 				style: 'footcell',
 		
 		
@@ -1918,7 +1933,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Meses_align}',
      
       
       },
@@ -1929,6 +1944,7 @@ pdfDocument = {
 	cellId: 'footcell_field15',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Alicuotas',
 				style: 'footcell',
 		
 		
@@ -1944,7 +1960,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Alicuotas_align}',
      
       
       },
@@ -1955,6 +1971,7 @@ pdfDocument = {
 	cellId: 'footcell_field16',
 	col:0,
 	row:0,
+			fieldName: 'Rel_Tasa',
 				style: 'footcell',
 		
 		
@@ -1970,7 +1987,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Rel_Tasa_align}',
      
       
       },

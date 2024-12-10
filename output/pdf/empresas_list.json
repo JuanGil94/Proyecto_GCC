@@ -100,9 +100,6 @@ pdfDocument = {
 										{BEGIN col_grid_11}
 					"%",
 					{END col_grid_11}
-										{BEGIN col_grid_12}
-					"%",
-					{END col_grid_12}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -294,7 +291,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Empresa_align}',
+              "alignment": 'center',
      
       
       },
@@ -323,7 +320,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$EmailAprobador_align}',
+              "alignment": 'center',
      
       
       },
@@ -352,7 +349,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$MaximoPesos_align}',
+              "alignment": 'center',
      
       
       },
@@ -381,7 +378,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$MaximoSalarios_align}',
+              "alignment": 'center',
      
       
       },
@@ -390,32 +387,6 @@ pdfDocument = {
 																							{BEGIN cellblock_grid_headcell_field4}
 {
 	cellId: 'headcell_field4',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
-{
-	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'MaximoUvt',
@@ -436,7 +407,36 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$MaximoUvt_align}',
+              "alignment": 'center',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'MaximoUvb',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Empresas MaximoUvb }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'center',
      
       
       },
@@ -465,7 +465,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Cierre_align}',
+              "alignment": 'center',
      
       
       },
@@ -494,7 +494,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Tope_align}',
+              "alignment": 'center',
      
       
       },
@@ -523,7 +523,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$DiasPersuasivo_align}',
+              "alignment": 'center',
      
       
       },
@@ -552,41 +552,12 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$InteresesPlazo_align}',
+              "alignment": 'center',
      
       
       },
 
 {END cellblock_grid_headcell_field9}
-																							{BEGIN cellblock_grid_headcell_field10}
-{
-	cellId: 'headcell_field10',
-	col:0,
-	row:0,
-			fieldName: 'MaximoUvb',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel dbo_Empresas MaximoUvb }","hidden":"{$item_hide_grid_field_label}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MaximoUvb_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field10}
 											],
 				{END row_grid_0}
 		
@@ -729,6 +700,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
 			{"text":{$MaximoPesos_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
 				
 		  ],
@@ -758,6 +732,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text1}","isHtml":true},
+				
+				
 			{"text":{$MaximoSalarios_pdfvalue},"hidden":"{$item_hide_simple_grid_field5}"},
 				
 		  ],
@@ -768,35 +745,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field3}
-																							{BEGIN cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_headcell_field11}
 {
-	cellId: 'cell_field4',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
-{
-	cellId: 'cell_field5',
+	cellId: 'headcell_field11',
 	col:0,
 	row:0,
 			fieldName: 'MaximoUvt',
@@ -813,11 +764,46 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text2}","isHtml":true},
+				
+				
 			{"text":{$MaximoUvt_pdfvalue},"hidden":"{$item_hide_simple_grid_field6}"},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$MaximoUvt_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'MaximoUvb',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"$","hidden":"{$item_hide_text3}","isHtml":true},
+				
+				
+			{"text":{$MaximoUvb_pdfvalue},"hidden":"{$item_hide_grid_field}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$MaximoUvb_align}',
      
       
       },
@@ -870,6 +856,9 @@ pdfDocument = {
 	
 			"text": [
 		
+				
+			{"text":"$","hidden":"{$item_hide_text4}","isHtml":true},
+				
 				
 			{"text":{$Tope_pdfvalue},"hidden":"{$item_hide_simple_grid_field8}"},
 				
@@ -939,35 +928,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field9}
-																							{BEGIN cellblock_grid_cell_field10}
-{
-	cellId: 'cell_field10',
-	col:0,
-	row:0,
-			fieldName: 'MaximoUvb',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$MaximoUvb_pdfvalue},"hidden":"{$item_hide_grid_field}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$MaximoUvb_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field10}
 											],
 				{END row_grid_1}
 		
@@ -1133,9 +1093,9 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field3}
-																							{BEGIN cellblock_grid_footcell_field4}
+																							{BEGIN cellblock_grid_headcell_field12}
 {
-	cellId: 'footcell_field4',
+	cellId: 'headcell_field12',
 	col:0,
 	row:0,
 				style: 'footcell',
@@ -1158,7 +1118,7 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_footcell_field4}
+{END cellblock_grid_headcell_field12}
 																							{BEGIN cellblock_grid_footcell_field5}
 {
 	cellId: 'footcell_field5',
@@ -1289,32 +1249,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field9}
-																							{BEGIN cellblock_grid_footcell_field10}
-{
-	cellId: 'footcell_field10',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_field10}
 											],
 				{END row_grid_2}
 		

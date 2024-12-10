@@ -6,11 +6,11 @@ $tdatadeterioro_de_cartera_por_proceso[".OwnerID"] = "";
 $tdatadeterioro_de_cartera_por_proceso[".OriginalTable"] = "Deterioro de Cartera por Proceso";
 
 
-$tdatadeterioro_de_cartera_por_proceso[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatadeterioro_de_cartera_por_proceso[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatadeterioro_de_cartera_por_proceso[".originalPagesByType"] = $tdatadeterioro_de_cartera_por_proceso[".pagesByType"];
-$tdatadeterioro_de_cartera_por_proceso[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatadeterioro_de_cartera_por_proceso[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatadeterioro_de_cartera_por_proceso[".originalPages"] = $tdatadeterioro_de_cartera_por_proceso[".pages"];
-$tdatadeterioro_de_cartera_por_proceso[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatadeterioro_de_cartera_por_proceso[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatadeterioro_de_cartera_por_proceso[".originalDefaultPages"] = $tdatadeterioro_de_cartera_por_proceso[".defaultPages"];
 
 //	field labels

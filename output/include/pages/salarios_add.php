@@ -67,7 +67,7 @@
 'type' => 'add',
 'layoutId' => 'nomenu',
 'disabled' => 0,
-'default' => 0,
+'default' => 1,
 'forms' => array( 'above-grid' => array( 'modelId' => 'add-above-grid',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c1' ) ),
 'section' => '' ) ),

@@ -6,11 +6,11 @@ $tdataacuerdo_de_pago[".OwnerID"] = "";
 $tdataacuerdo_de_pago[".OriginalTable"] = "Acuerdo de Pago";
 
 
-$tdataacuerdo_de_pago[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataacuerdo_de_pago[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataacuerdo_de_pago[".originalPagesByType"] = $tdataacuerdo_de_pago[".pagesByType"];
-$tdataacuerdo_de_pago[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataacuerdo_de_pago[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataacuerdo_de_pago[".originalPages"] = $tdataacuerdo_de_pago[".pages"];
-$tdataacuerdo_de_pago[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataacuerdo_de_pago[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataacuerdo_de_pago[".originalDefaultPages"] = $tdataacuerdo_de_pago[".defaultPages"];
 
 //	field labels

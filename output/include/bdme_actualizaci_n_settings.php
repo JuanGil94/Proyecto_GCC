@@ -6,11 +6,11 @@ $tdatabdme_actualizaci_n[".OwnerID"] = "";
 $tdatabdme_actualizaci_n[".OriginalTable"] = "BDME Actualización";
 
 
-$tdatabdme_actualizaci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_actualizaci_n[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_actualizaci_n[".originalPagesByType"] = $tdatabdme_actualizaci_n[".pagesByType"];
-$tdatabdme_actualizaci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_actualizaci_n[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_actualizaci_n[".originalPages"] = $tdatabdme_actualizaci_n[".pages"];
-$tdatabdme_actualizaci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_actualizaci_n[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_actualizaci_n[".originalDefaultPages"] = $tdatabdme_actualizaci_n[".defaultPages"];
 
 //	field labels

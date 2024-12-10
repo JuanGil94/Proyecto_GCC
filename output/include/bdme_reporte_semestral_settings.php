@@ -6,11 +6,11 @@ $tdatabdme_reporte_semestral[".OwnerID"] = "";
 $tdatabdme_reporte_semestral[".OriginalTable"] = "BDME Reporte Semestral";
 
 
-$tdatabdme_reporte_semestral[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_reporte_semestral[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_reporte_semestral[".originalPagesByType"] = $tdatabdme_reporte_semestral[".pagesByType"];
-$tdatabdme_reporte_semestral[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_reporte_semestral[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_reporte_semestral[".originalPages"] = $tdatabdme_reporte_semestral[".pages"];
-$tdatabdme_reporte_semestral[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_reporte_semestral[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_reporte_semestral[".originalDefaultPages"] = $tdatabdme_reporte_semestral[".defaultPages"];
 
 //	field labels

@@ -6,11 +6,11 @@ $tdataobligaciones_de_dificil_recaudo[".OwnerID"] = "";
 $tdataobligaciones_de_dificil_recaudo[".OriginalTable"] = "Obligaciones de Dificil Recaudo";
 
 
-$tdataobligaciones_de_dificil_recaudo[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataobligaciones_de_dificil_recaudo[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataobligaciones_de_dificil_recaudo[".originalPagesByType"] = $tdataobligaciones_de_dificil_recaudo[".pagesByType"];
-$tdataobligaciones_de_dificil_recaudo[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataobligaciones_de_dificil_recaudo[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataobligaciones_de_dificil_recaudo[".originalPages"] = $tdataobligaciones_de_dificil_recaudo[".pages"];
-$tdataobligaciones_de_dificil_recaudo[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataobligaciones_de_dificil_recaudo[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataobligaciones_de_dificil_recaudo[".originalDefaultPages"] = $tdataobligaciones_de_dificil_recaudo[".defaultPages"];
 
 //	field labels

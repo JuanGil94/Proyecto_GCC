@@ -155,6 +155,9 @@ pdfDocument = {
 				
 			{"text":""},
 				
+				
+			{"text":"","hidden":"{$item_hide_export}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -794,6 +797,7 @@ pdfDocument = {
 	cellId: 'footcell_field',
 	col:0,
 	row:0,
+			fieldName: 'Seccional',
 				style: 'footcell',
 		
 		
@@ -809,7 +813,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Seccional_align}',
      
       
       },
@@ -820,6 +824,7 @@ pdfDocument = {
 	cellId: 'footcell_field1',
 	col:0,
 	row:0,
+			fieldName: 'Juzgados',
 				style: 'footcell',
 		
 		
@@ -835,7 +840,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Juzgados_align}',
      
       
       },
@@ -846,6 +851,7 @@ pdfDocument = {
 	cellId: 'footcell_field2',
 	col:0,
 	row:0,
+			fieldName: 'Mes',
 				style: 'footcell',
 		
 		
@@ -861,7 +867,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Mes_align}',
      
       
       },
@@ -1038,6 +1044,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox2',
 	col:0,
 	row:0,
+			fieldName: 'Seccional',
 				style: 'footcell',
 		
 		
@@ -1053,7 +1060,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Seccional_align}',
      
       
       },
@@ -1064,6 +1071,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox3',
 	col:0,
 	row:0,
+			fieldName: 'Juzgados',
 				style: 'footcell',
 		
 		
@@ -1079,7 +1087,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Juzgados_align}',
      
       
       },
@@ -1090,6 +1098,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox4',
 	col:0,
 	row:0,
+			fieldName: 'Mes',
 				style: 'footcell',
 		
 		
@@ -1105,7 +1114,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Mes_align}',
      
       
       },
@@ -1116,6 +1125,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox5',
 	col:0,
 	row:0,
+			fieldName: 'Procesos',
 				style: 'footcell',
 		
 		
@@ -1133,7 +1143,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Procesos_align}',
      
       
       },
@@ -1144,6 +1154,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox6',
 	col:0,
 	row:0,
+			fieldName: 'Valor',
 				style: 'footcell',
 		
 		
@@ -1159,7 +1170,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Valor_align}',
      
       
       },
@@ -1170,6 +1181,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox7',
 	col:0,
 	row:0,
+			fieldName: 'Recaudo',
 				style: 'footcell',
 		
 		
@@ -1185,7 +1197,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Recaudo_align}',
      
       
       },
@@ -1196,6 +1208,7 @@ pdfDocument = {
 	cellId: 'footcell_checkbox8',
 	col:0,
 	row:0,
+			fieldName: 'Saldo',
 				style: 'footcell',
 		
 		
@@ -1211,7 +1224,7 @@ pdfDocument = {
 				'',
 	  ],
   "border": [ true, true, true, true ],
-              "alignment": 'left',
+              "alignment": '{$Saldo_align}',
      
       
       },

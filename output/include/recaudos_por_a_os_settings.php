@@ -6,11 +6,11 @@ $tdatarecaudos_por_a_os[".OwnerID"] = "";
 $tdatarecaudos_por_a_os[".OriginalTable"] = "Recaudos por Años";
 
 
-$tdatarecaudos_por_a_os[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatarecaudos_por_a_os[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatarecaudos_por_a_os[".originalPagesByType"] = $tdatarecaudos_por_a_os[".pagesByType"];
-$tdatarecaudos_por_a_os[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatarecaudos_por_a_os[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatarecaudos_por_a_os[".originalPages"] = $tdatarecaudos_por_a_os[".pages"];
-$tdatarecaudos_por_a_os[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatarecaudos_por_a_os[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatarecaudos_por_a_os[".originalDefaultPages"] = $tdatarecaudos_por_a_os[".defaultPages"];
 
 //	field labels

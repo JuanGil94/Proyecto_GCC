@@ -6,11 +6,11 @@ $tdatabdme_retiros_datachild[".OwnerID"] = "";
 $tdatabdme_retiros_datachild[".OriginalTable"] = "BDME Retiros DataChild";
 
 
-$tdatabdme_retiros_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabdme_retiros_datachild[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabdme_retiros_datachild[".originalPagesByType"] = $tdatabdme_retiros_datachild[".pagesByType"];
-$tdatabdme_retiros_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabdme_retiros_datachild[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabdme_retiros_datachild[".originalPages"] = $tdatabdme_retiros_datachild[".pages"];
-$tdatabdme_retiros_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabdme_retiros_datachild[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabdme_retiros_datachild[".originalDefaultPages"] = $tdatabdme_retiros_datachild[".defaultPages"];
 
 //	field labels
