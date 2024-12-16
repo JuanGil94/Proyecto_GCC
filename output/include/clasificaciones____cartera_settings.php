@@ -31,9 +31,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsclasificaciones____cartera["Spanish"]["CarteraTipoId"] = "Cartera Tipo";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["CarteraTipoId"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["CarteraTipoId"] = "";
-	$fieldLabelsclasificaciones____cartera["Spanish"]["Seccional"] = "Seccional";
-	$fieldToolTipsclasificaciones____cartera["Spanish"]["Seccional"] = "";
-	$placeHoldersclasificaciones____cartera["Spanish"]["Seccional"] = "";
 	$fieldLabelsclasificaciones____cartera["Spanish"]["Fecha"] = "Fecha";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["Fecha"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["Fecha"] = "";
@@ -46,12 +43,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsclasificaciones____cartera["Spanish"]["Numero"] = "Numero";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["Numero"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["Numero"] = "";
-	$fieldLabelsclasificaciones____cartera["Spanish"]["Sancionado"] = "Sancionado";
-	$fieldToolTipsclasificaciones____cartera["Spanish"]["Sancionado"] = "";
-	$placeHoldersclasificaciones____cartera["Spanish"]["Sancionado"] = "";
-	$fieldLabelsclasificaciones____cartera["Spanish"]["SancionadoDocumento"] = "Sancionado Documento";
-	$fieldToolTipsclasificaciones____cartera["Spanish"]["SancionadoDocumento"] = "";
-	$placeHoldersclasificaciones____cartera["Spanish"]["SancionadoDocumento"] = "";
 	$fieldLabelsclasificaciones____cartera["Spanish"]["Obligacion"] = "Obligacion";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["Obligacion"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["Obligacion"] = "";
@@ -82,12 +73,21 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsclasificaciones____cartera["Spanish"]["Positivo"] = "Positivo";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["Positivo"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["Positivo"] = "";
-	$fieldLabelsclasificaciones____cartera["Spanish"]["Antiguedad"] = "Antiguedad";
-	$fieldToolTipsclasificaciones____cartera["Spanish"]["Antiguedad"] = "";
-	$placeHoldersclasificaciones____cartera["Spanish"]["Antiguedad"] = "";
 	$fieldLabelsclasificaciones____cartera["Spanish"]["Clasificacion"] = "Clasificacion";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["Clasificacion"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["Clasificacion"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["SeccionalId"] = "Seccional";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["SeccionalId"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["SeccionalId"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["SancionadoId"] = "Sancionado";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["SancionadoId"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["SancionadoId"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["Documento"] = "Documento";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["Documento"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["Documento"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["Prescripcion"] = "Prescripcion";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["Prescripcion"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["Prescripcion"] = "";
 	if (count($fieldToolTipsclasificaciones____cartera["Spanish"]))
 		$tdataclasificaciones____cartera[".isUseToolTips"] = true;
 }
@@ -186,7 +186,7 @@ $tdataclasificaciones____cartera[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdataclasificaciones____cartera[".ajaxCodeSnippetAdded"] = false;
 
@@ -208,13 +208,13 @@ $tdataclasificaciones____cartera[".requiredSearchFields"] = array();
 $tdataclasificaciones____cartera[".googleLikeFields"] = array();
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "ProcesoId";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "CarteraTipoId";
-$tdataclasificaciones____cartera[".googleLikeFields"][] = "Seccional";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "SeccionalId";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Fecha";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "ConceptoId";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "NaturalezaId";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Numero";
-$tdataclasificaciones____cartera[".googleLikeFields"][] = "Sancionado";
-$tdataclasificaciones____cartera[".googleLikeFields"][] = "SancionadoDocumento";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "SancionadoId";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "Documento";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Obligacion";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Intereses";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Costas";
@@ -223,7 +223,7 @@ $tdataclasificaciones____cartera[".googleLikeFields"][] = "Saldo";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Uvts";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Nivel";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Busquedas";
-$tdataclasificaciones____cartera[".googleLikeFields"][] = "Antiguedad";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "Prescripcion";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Clasificacion";
 
 
@@ -606,25 +606,25 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 	$tdataclasificaciones____cartera["CarteraTipoId"] = $fdata;
 		$tdataclasificaciones____cartera[".searchableFields"][] = "CarteraTipoId";
-//	Seccional
+//	SeccionalId
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
-	$fdata["strName"] = "Seccional";
-	$fdata["GoodName"] = "Seccional";
+	$fdata["strName"] = "SeccionalId";
+	$fdata["GoodName"] = "SeccionalId";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Seccional");
-	$fdata["FieldType"] = 200;
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","SeccionalId");
+	$fdata["FieldType"] = 3;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Seccional";
+		$fdata["strField"] = "SeccionalId";
 
 	
-		$fdata["FullName"] = "Seccional";
+		$fdata["FullName"] = "SeccionalId";
 
 	
 	
@@ -656,168 +656,11 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["list"] = $vdata;
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["print"] = $vdata;
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["add"] = $edata;
 	$edata = array("EditFormat" => "Lookup wizard");
 
 	
@@ -830,15 +673,14 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "Clasificaciones -- Cartera";
+	$edata["LookupTable"] = "dbo.Seccionales";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
 
 	
-			$edata["LookupUnique"] = true;
-
-	$edata["LinkField"] = "Seccional";
+		
+	$edata["LinkField"] = "SeccionalId";
 	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "Seccional";
 
@@ -859,7 +701,8 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -879,7 +722,8 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -888,11 +732,11 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	
 	
 	
-	$fdata["EditFormats"]["search"] = $edata;
+	$fdata["EditFormats"]["edit"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = true;
+	$fdata["isSeparate"] = false;
 
 
 
@@ -923,8 +767,8 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataclasificaciones____cartera["Seccional"] = $fdata;
-		$tdataclasificaciones____cartera[".searchableFields"][] = "Seccional";
+	$tdataclasificaciones____cartera["SeccionalId"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "SeccionalId";
 //	Fecha
 //	Custom field settings
 	$fdata = array();
@@ -1523,25 +1367,25 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 	$tdataclasificaciones____cartera["Numero"] = $fdata;
 		$tdataclasificaciones____cartera[".searchableFields"][] = "Numero";
-//	Sancionado
+//	SancionadoId
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 8;
-	$fdata["strName"] = "Sancionado";
-	$fdata["GoodName"] = "Sancionado";
+	$fdata["strName"] = "SancionadoId";
+	$fdata["GoodName"] = "SancionadoId";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Sancionado");
-	$fdata["FieldType"] = 200;
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","SancionadoId");
+	$fdata["FieldType"] = 3;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "Sancionado";
+		$fdata["strField"] = "SancionadoId";
 
 	
-		$fdata["FullName"] = "Sancionado";
+		$fdata["FullName"] = "SancionadoId";
 
 	
 	
@@ -1578,7 +1422,7 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1588,9 +1432,37 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	
 	
 
-
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Sancionados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
 
 	
+		
+	$edata["LinkField"] = "SancionadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Sancionado";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1602,17 +1474,16 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1631,7 +1502,7 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1656,27 +1527,27 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataclasificaciones____cartera["Sancionado"] = $fdata;
-		$tdataclasificaciones____cartera[".searchableFields"][] = "Sancionado";
-//	SancionadoDocumento
+	$tdataclasificaciones____cartera["SancionadoId"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "SancionadoId";
+//	Documento
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 9;
-	$fdata["strName"] = "SancionadoDocumento";
-	$fdata["GoodName"] = "SancionadoDocumento";
+	$fdata["strName"] = "Documento";
+	$fdata["GoodName"] = "Documento";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","SancionadoDocumento");
-	$fdata["FieldType"] = 200;
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Documento");
+	$fdata["FieldType"] = 3;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "SancionadoDocumento";
+		$fdata["strField"] = "Documento";
 
 	
-		$fdata["FullName"] = "SancionadoDocumento";
+		$fdata["FullName"] = "Documento";
 
 	
 	
@@ -1713,7 +1584,7 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1723,9 +1594,37 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	
 	
 
-
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Sancionados";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
 
 	
+		
+	$edata["LinkField"] = "SancionadoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Documento";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1737,17 +1636,16 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 //	End validation
 
@@ -1766,7 +1664,7 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1791,8 +1689,8 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataclasificaciones____cartera["SancionadoDocumento"] = $fdata;
-		$tdataclasificaciones____cartera[".searchableFields"][] = "SancionadoDocumento";
+	$tdataclasificaciones____cartera["Documento"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "Documento";
 //	Obligacion
 //	Custom field settings
 	$fdata = array();
@@ -3159,14 +3057,14 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 	$tdataclasificaciones____cartera["Positivo"] = $fdata;
 		$tdataclasificaciones____cartera[".searchableFields"][] = "Positivo";
-//	Antiguedad
+//	Prescripcion
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 20;
-	$fdata["strName"] = "Antiguedad";
-	$fdata["GoodName"] = "Antiguedad";
+	$fdata["strName"] = "Prescripcion";
+	$fdata["GoodName"] = "Prescripcion";
 	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Antiguedad");
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Prescripcion");
 	$fdata["FieldType"] = 3;
 
 
@@ -3174,10 +3072,10 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "Antiguedad";
+		$fdata["strField"] = "Prescripcion";
 
 	
-		$fdata["FullName"] = "Antiguedad";
+		$fdata["FullName"] = "Prescripcion";
 
 	
 	
@@ -3295,8 +3193,8 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataclasificaciones____cartera["Antiguedad"] = $fdata;
-		$tdataclasificaciones____cartera[".searchableFields"][] = "Antiguedad";
+	$tdataclasificaciones____cartera["Prescripcion"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "Prescripcion";
 //	Clasificacion
 //	Custom field settings
 	$fdata = array();

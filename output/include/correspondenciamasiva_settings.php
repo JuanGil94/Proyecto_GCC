@@ -146,7 +146,7 @@ $tdatacorrespondenciamasiva[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdatacorrespondenciamasiva[".ajaxCodeSnippetAdded"] = false;
 
@@ -406,7 +406,7 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 	$fdata["GoodName"] = "fecha";
 	$fdata["ownerTable"] = "dbo.CorrespondenciaMasiva";
 	$fdata["Label"] = GetFieldLabel("dbo_CorrespondenciaMasiva","fecha");
-	$fdata["FieldType"] = 7;
+	$fdata["FieldType"] = 135;
 
 
 	

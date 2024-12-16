@@ -137,13 +137,14 @@ $tdatapresupuestos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+					
 
 $tdatapresupuestos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapresupuestos[".buttonsAdded"] = false;
+$tdatapresupuestos[".buttonsAdded"] = true;
 
-$tdatapresupuestos[".addPageEvents"] = false;
+$tdatapresupuestos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatapresupuestos[".isUseTimeForSearch"] = false;
@@ -533,7 +534,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -580,7 +584,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -934,7 +941,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

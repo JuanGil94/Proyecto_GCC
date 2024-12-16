@@ -137,13 +137,14 @@ $tdatareportes[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																	
+		
 
 $tdatareportes[".ajaxCodeSnippetAdded"] = false;
 
-$tdatareportes[".buttonsAdded"] = false;
+$tdatareportes[".buttonsAdded"] = true;
 
-$tdatareportes[".addPageEvents"] = false;
+$tdatareportes[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatareportes[".isUseTimeForSearch"] = false;
@@ -752,7 +753,10 @@ $tdatareportes[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

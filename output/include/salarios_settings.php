@@ -131,13 +131,14 @@ $tdatasalarios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																	
+		
 
 $tdatasalarios[".ajaxCodeSnippetAdded"] = false;
 
-$tdatasalarios[".buttonsAdded"] = false;
+$tdatasalarios[".buttonsAdded"] = true;
 
-$tdatasalarios[".addPageEvents"] = false;
+$tdatasalarios[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatasalarios[".isUseTimeForSearch"] = false;
@@ -444,7 +445,10 @@ $tdatasalarios[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -582,7 +586,10 @@ $tdatasalarios[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

@@ -115,19 +115,58 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Clasificacion}</span>
 						</div>
 		{END searchCtrlBlock_Clasificacion}
-																{BEGIN searchCtrlBlock_Antiguedad}
+																{BEGIN searchCtrlBlock_Prescripcion}
 
 
-		<div class="form-group srchPanelRow {$filterRow_class_Antiguedad}" {$filterRow_attrs_Antiguedad}>
-			<label>{$label Clasificaciones____Cartera Antiguedad }</label>
+		<div class="form-group srchPanelRow {$filterRow_class_Prescripcion}" {$filterRow_attrs_Prescripcion}>
+			<label>{$label Clasificaciones____Cartera Prescripcion }</label>
 
 							{$delCtrlButt}
 			
-								<span class="rnr-searchtype">{$searchtype_Antiguedad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Antiguedad}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Antiguedad}</span>
+								<span class="rnr-searchtype">{$searchtype_Prescripcion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Prescripcion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Prescripcion}</span>
 						</div>
-		{END searchCtrlBlock_Antiguedad}
+		{END searchCtrlBlock_Prescripcion}
+																{BEGIN searchCtrlBlock_Documento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Documento}" {$filterRow_attrs_Documento}>
+			<label>{$label Clasificaciones____Cartera Documento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Documento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Documento}</span>
+						</div>
+		{END searchCtrlBlock_Documento}
+																{BEGIN searchCtrlBlock_SancionadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
+			<label>{$label Clasificaciones____Cartera SancionadoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
+						</div>
+		{END searchCtrlBlock_SancionadoId}
+																{BEGIN searchCtrlBlock_SeccionalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
+			<label>{$label Clasificaciones____Cartera SeccionalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
+						</div>
+		{END searchCtrlBlock_SeccionalId}
 																{BEGIN searchCtrlBlock_Busquedas}
 
 
@@ -232,32 +271,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
 						</div>
 		{END searchCtrlBlock_Obligacion}
-																{BEGIN searchCtrlBlock_SancionadoDocumento}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SancionadoDocumento}" {$filterRow_attrs_SancionadoDocumento}>
-			<label>{$label Clasificaciones____Cartera SancionadoDocumento }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SancionadoDocumento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoDocumento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoDocumento}</span>
-						</div>
-		{END searchCtrlBlock_SancionadoDocumento}
-																{BEGIN searchCtrlBlock_Sancionado}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Sancionado}" {$filterRow_attrs_Sancionado}>
-			<label>{$label Clasificaciones____Cartera Sancionado }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Sancionado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Sancionado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Sancionado}</span>
-						</div>
-		{END searchCtrlBlock_Sancionado}
 																{BEGIN searchCtrlBlock_Numero}
 
 
@@ -310,19 +323,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
 						</div>
 		{END searchCtrlBlock_Fecha}
-																{BEGIN searchCtrlBlock_Seccional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
-			<label>{$label Clasificaciones____Cartera Seccional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
-						</div>
-		{END searchCtrlBlock_Seccional}
 																{BEGIN searchCtrlBlock_CarteraTipoId}
 
 
@@ -723,8 +723,8 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CarteraTipoId"]:before {
 		content: "{$label Clasificaciones____Cartera CarteraTipoId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
-		content: "{$label Clasificaciones____Cartera Seccional}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalId"]:before {
+		content: "{$label Clasificaciones____Cartera SeccionalId}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Fecha"]:before {
 		content: "{$label Clasificaciones____Cartera Fecha}";
@@ -738,11 +738,11 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Numero"]:before {
 		content: "{$label Clasificaciones____Cartera Numero}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Sancionado"]:before {
-		content: "{$label Clasificaciones____Cartera Sancionado}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
+		content: "{$label Clasificaciones____Cartera SancionadoId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoDocumento"]:before {
-		content: "{$label Clasificaciones____Cartera SancionadoDocumento}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Documento"]:before {
+		content: "{$label Clasificaciones____Cartera Documento}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Obligacion"]:before {
 		content: "{$label Clasificaciones____Cartera Obligacion}";
@@ -768,8 +768,8 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Busquedas"]:before {
 		content: "{$label Clasificaciones____Cartera Busquedas}";
 	}
-					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Antiguedad"]:before {
-		content: "{$label Clasificaciones____Cartera Antiguedad}";
+					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Prescripcion"]:before {
+		content: "{$label Clasificaciones____Cartera Prescripcion}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Clasificacion"]:before {
 		content: "{$label Clasificaciones____Cartera Clasificacion}";
@@ -835,31 +835,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field}
-									{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Seccional_class}	"
-
-			data-field="Seccional"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Seccional_fieldheadercolumn}
-	{BEGIN Seccional_fieldheader}
-	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
-	{$label Clasificaciones____Cartera Seccional }	{$arrow_icon_Seccional}
-	</SPAN>
-	{END Seccional_fieldheader}
-{END Seccional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
 									{BEGIN cellblock_grid_headcell_field2}
 	<th
 	
@@ -960,56 +935,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Sancionado_class}	"
-
-			data-field="Sancionado"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Sancionado_fieldheadercolumn}
-	{BEGIN Sancionado_fieldheader}
-	<SPAN {$Sancionado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado">
-	{$label Clasificaciones____Cartera Sancionado }	{$arrow_icon_Sancionado}
-	</SPAN>
-	{END Sancionado_fieldheader}
-{END Sancionado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoDocumento_class}	"
-
-			data-field="SancionadoDocumento"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoDocumento_fieldheadercolumn}
-	{BEGIN SancionadoDocumento_fieldheader}
-	<SPAN {$SancionadoDocumento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoDocumento" data-fieldname="SancionadoDocumento">
-	{$label Clasificaciones____Cartera SancionadoDocumento }	{$arrow_icon_SancionadoDocumento}
-	</SPAN>
-	{END SancionadoDocumento_fieldheader}
-{END SancionadoDocumento_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
 									{BEGIN cellblock_grid_headcell_field8}
 	<th
 	
@@ -1210,31 +1135,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field15}
-									{BEGIN cellblock_grid_headcell_field16}
-	<th
-	
-	{$cell_grid_headcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Antiguedad_class}	"
-
-			data-field="Antiguedad"
-	
-	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Antiguedad_fieldheadercolumn}
-	{BEGIN Antiguedad_fieldheader}
-	<SPAN {$Antiguedad_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Antiguedad" data-fieldname="Antiguedad">
-	{$label Clasificaciones____Cartera Antiguedad }	{$arrow_icon_Antiguedad}
-	</SPAN>
-	{END Antiguedad_fieldheader}
-{END Antiguedad_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field16}
 									{BEGIN cellblock_grid_headcell_field17}
 	<th
 	
@@ -1260,6 +1160,106 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldheadercolumn}
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label Clasificaciones____Cartera SeccionalId }	{$arrow_icon_SeccionalId}
+	</SPAN>
+	{END SeccionalId_fieldheader}
+{END SeccionalId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+									{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoId_class}	"
+
+			data-field="SancionadoId"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SancionadoId_fieldheadercolumn}
+	{BEGIN SancionadoId_fieldheader}
+	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
+	{$label Clasificaciones____Cartera SancionadoId }	{$arrow_icon_SancionadoId}
+	</SPAN>
+	{END SancionadoId_fieldheader}
+{END SancionadoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_fieldheadercolumn}
+	{BEGIN Documento_fieldheader}
+	<SPAN {$Documento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento">
+	{$label Clasificaciones____Cartera Documento }	{$arrow_icon_Documento}
+	</SPAN>
+	{END Documento_fieldheader}
+{END Documento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+									{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+			data-field="Prescripcion"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prescripcion_fieldheadercolumn}
+	{BEGIN Prescripcion_fieldheader}
+	<SPAN {$Prescripcion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label3" {$item_grid_field_label3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion">
+	{$label Clasificaciones____Cartera Prescripcion }	{$arrow_icon_Prescripcion}
+	</SPAN>
+	{END Prescripcion_fieldheader}
+{END Prescripcion_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
 							</tr>
 															
 					{END grid_header}
@@ -1316,27 +1316,6 @@
 {END CarteraTipoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Seccional_class}	"
-
-			data-field="Seccional"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Seccional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
-{$Seccional_value}
-</span>
-{END Seccional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
 									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
@@ -1421,48 +1400,6 @@
 {END Numero_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Sancionado_class}	"
-
-			data-field="Sancionado"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Sancionado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Sancionado" data-fieldname="Sancionado" data-default-width >
-{$Sancionado_value}
-</span>
-{END Sancionado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoDocumento_class}	"
-
-			data-field="SancionadoDocumento"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoDocumento_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoDocumento" data-fieldname="SancionadoDocumento" data-default-width >
-{$SancionadoDocumento_value}
-</span>
-{END SancionadoDocumento_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
 									{BEGIN cellblock_grid_cell_field8}
 	<td
 	
@@ -1631,27 +1568,6 @@
 {END Busquedas_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field15}
-									{BEGIN cellblock_grid_cell_field16}
-	<td
-	
-	{$cell_grid_cell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Antiguedad_class}	"
-
-			data-field="Antiguedad"
-	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Antiguedad_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Antiguedad" data-fieldname="Antiguedad" data-default-width >
-{$Antiguedad_value}
-</span>
-{END Antiguedad_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field16}
 									{BEGIN cellblock_grid_cell_field17}
 	<td
 	
@@ -1673,6 +1589,90 @@
 {END Clasificacion_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
+{$SeccionalId_value}
+</span>
+{END SeccionalId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoId_class}	"
+
+			data-field="SancionadoId"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SancionadoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
+{$SancionadoId_value}
+</span>
+{END SancionadoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+			data-field="Documento"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Documento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Documento" data-fieldname="Documento" data-default-width >
+{$Documento_value}
+</span>
+{END Documento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+									{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+			data-field="Prescripcion"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prescripcion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field3" {$item_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prescripcion" data-fieldname="Prescripcion" data-default-width >
+{$Prescripcion_value}
+</span>
+{END Prescripcion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
 							</tr>
 										
 											{END grid_row}
@@ -1714,21 +1714,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field}
-									{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Seccional_class}	"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
 									{BEGIN cellblock_grid_footcell_field2}
 	<td
 	
@@ -1789,36 +1774,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Sancionado_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoDocumento_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 									{BEGIN cellblock_grid_footcell_field8}
 	<td
 	
@@ -1939,21 +1894,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field15}
-									{BEGIN cellblock_grid_footcell_field16}
-	<td
-	
-	{$cell_grid_footcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Antiguedad_class}	"
-
-	
-	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field16}
 									{BEGIN cellblock_grid_footcell_field17}
 	<td
 	
@@ -1969,6 +1909,66 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+									{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SancionadoId_class}	"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Documento_class}	"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+									{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Prescripcion_class}	"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="clasificaciones____cartera_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
 							</tr>
 					
 					</tfoot>

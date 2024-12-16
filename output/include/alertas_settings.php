@@ -140,13 +140,14 @@ $tdataalertas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															
+								
 
 $tdataalertas[".ajaxCodeSnippetAdded"] = false;
 
-$tdataalertas[".buttonsAdded"] = false;
+$tdataalertas[".buttonsAdded"] = true;
 
-$tdataalertas[".addPageEvents"] = false;
+$tdataalertas[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataalertas[".isUseTimeForSearch"] = false;
@@ -616,7 +617,10 @@ $tdataalertas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

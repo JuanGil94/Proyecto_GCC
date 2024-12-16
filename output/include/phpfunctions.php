@@ -1068,12 +1068,22 @@ $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Nu
 $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
-				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="view")
+				if($table=="BDME Actualización" && $field=="Numero")
 	{
 		;
 		return $value;
 	}
-				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="list")
+				if($table=="BDME Retiros" && $field=="Numero")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Reporte Semestral" && $field=="Numero")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Cancelación Acuerdo de Pago" && $field=="Numero")
 	{
 		$numero = $value;
 $beforePath = $_SESSION['BeforePath'];
@@ -1081,6 +1091,16 @@ $beforePath = $_SESSION['BeforePath'];
 // Generar el hipervínculo en HTML
 $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
 ;
+		return $value;
+	}
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="list")
+	{
+		;
 		return $value;
 	}
 				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="print")

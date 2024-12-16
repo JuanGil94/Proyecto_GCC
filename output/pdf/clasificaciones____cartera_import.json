@@ -109,9 +109,6 @@ pdfDocument = {
 			{"text":{$CarteraTipoId_pdfvalue},"hidden":"{$item_hide_import_field1}"},
 				
 				
-			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_import_field2}"},
-				
-				
 			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_import_field3}"},
 				
 				
@@ -122,12 +119,6 @@ pdfDocument = {
 				
 				
 			{"text":{$Numero_pdfvalue},"hidden":"{$item_hide_import_field6}"},
-				
-				
-			{"text":{$Sancionado_pdfvalue},"hidden":"{$item_hide_import_field7}"},
-				
-				
-			{"text":{$SancionadoDocumento_pdfvalue},"hidden":"{$item_hide_import_field8}"},
 				
 				
 			{"text":{$Obligacion_pdfvalue},"hidden":"{$item_hide_import_field9}"},
@@ -154,10 +145,19 @@ pdfDocument = {
 			{"text":{$Busquedas_pdfvalue},"hidden":"{$item_hide_import_field16}"},
 				
 				
-			{"text":{$Antiguedad_pdfvalue},"hidden":"{$item_hide_import_field19}"},
-				
-				
 			{"text":{$Clasificacion_pdfvalue},"hidden":"{$item_hide_import_field20}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_import_field8}"},
 				
 		  ],
   "border": [ false, false, false, false ],

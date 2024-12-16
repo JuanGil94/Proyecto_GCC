@@ -131,13 +131,14 @@ $tdatadepartamentos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																	
+		
 
 $tdatadepartamentos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatadepartamentos[".buttonsAdded"] = false;
+$tdatadepartamentos[".buttonsAdded"] = true;
 
-$tdatadepartamentos[".addPageEvents"] = false;
+$tdatadepartamentos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatadepartamentos[".isUseTimeForSearch"] = false;
@@ -441,7 +442,10 @@ $tdatadepartamentos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

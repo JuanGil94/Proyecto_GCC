@@ -156,7 +156,7 @@ $tdatabdme_actualizaci_n[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdatabdme_actualizaci_n[".ajaxCodeSnippetAdded"] = false;
 
@@ -698,7 +698,7 @@ $tdatabdme_actualizaci_n[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -714,8 +714,7 @@ $tdatabdme_actualizaci_n[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

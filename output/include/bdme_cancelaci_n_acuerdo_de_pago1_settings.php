@@ -156,7 +156,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".ajaxCodeSnippetAdded"] = false;
 
@@ -698,7 +698,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -714,8 +714,7 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

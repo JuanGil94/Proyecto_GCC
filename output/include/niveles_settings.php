@@ -143,13 +143,14 @@ $tdataniveles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																	
+		
 
 $tdataniveles[".ajaxCodeSnippetAdded"] = false;
 
-$tdataniveles[".buttonsAdded"] = false;
+$tdataniveles[".buttonsAdded"] = true;
 
-$tdataniveles[".addPageEvents"] = false;
+$tdataniveles[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataniveles[".isUseTimeForSearch"] = false;
@@ -622,7 +623,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -762,7 +766,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -902,7 +909,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1042,7 +1052,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

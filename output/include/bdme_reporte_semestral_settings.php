@@ -153,7 +153,7 @@ $tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdatabdme_reporte_semestral[".ajaxCodeSnippetAdded"] = false;
 
@@ -1256,7 +1256,7 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1272,8 +1272,7 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

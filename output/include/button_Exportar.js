@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Exportar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Exportar';if(!pageObj.buttonEventBefore['Exportar']){pageObj.buttonEventBefore['Exportar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['Exportar']){pageObj.buttonEventAfter['Exportar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var contenido=document.getElementById('miContenedor').innerHTML;var nuevaVentana=window.open('','_blank','width=800,height=600');nuevaVentana.document.write('<html><head><title>rama judicial</title>');nuevaVentana.document.write('<style>body { font-size: 16px; }</style>');nuevaVentana.document.write('</head><body>');nuevaVentana.document.write(contenido);nuevaVentana.document.write('</body></html>');nuevaVentana.document.close();nuevaVentana.print();}}
+$('a[id="Exportar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Exportar"+"_"+Runner.genId();var button_Exportar=new Runner.form.Button({id:this.id,btnName:"Exportar"});button_Exportar.init({args:[pageObj,proxy,pageid]});});};

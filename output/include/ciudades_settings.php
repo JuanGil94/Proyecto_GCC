@@ -134,13 +134,14 @@ $tdataciudades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+					
 
 $tdataciudades[".ajaxCodeSnippetAdded"] = false;
 
-$tdataciudades[".buttonsAdded"] = false;
+$tdataciudades[".buttonsAdded"] = true;
 
-$tdataciudades[".addPageEvents"] = false;
+$tdataciudades[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataciudades[".isUseTimeForSearch"] = false;
@@ -445,7 +446,10 @@ $tdataciudades[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

@@ -24,24 +24,21 @@ function BeforeProcessList($pageObject)
 {
 
 		
-
 		 $U_user = $_SESSION["UserNameF"];
 		 $recaudos_desde = 	$_SESSION['indicadores_recaudo_desde'];// Fecha en formato YYYY-MM-DD
-		 $recaudos_hasta = 	$_SESSION['indicadores_recaudo_hasta'];// Fecha en formato YYYY-MM-DD
-
 		 // Separar la fecha en año, mes y día
 		//list($ano, $mes, $dia) = explode('-', $cons_mes);
 
 
 		// Crear un objeto DateTime a partir del año y mes
 		$dateDesde = new DateTime($recaudos_desde);
-		$dateHasta = new DateTime($recaudos_hasta);
+		//$dateHasta = new DateTime($recaudos_hasta);
 
 		// Generar el primer día del mes
 		$primer_dia = $dateDesde->modify('first day of this month')->format('d-m-Y');
 
 		// Generar el último día del mes
-		$ultimo_dia = $dateHasta->modify('last day of this month')->format('d-m-Y');
+		$ultimo_dia = $dateDesde->modify('last day of this month')->format('d-m-Y');
 
 		// Definir un array con los nombres de las carteras
 		$cartera = [
@@ -60,151 +57,151 @@ function BeforeProcessList($pageObject)
 
 
   		$sql = "	DECLARE	@Desde DATE = '$recaudos_desde';
-			DECLARE  @Hasta DATE = '$recaudos_hasta';
-     SET @Hasta = EOMONTH(@Hasta);
-     WITH a
-          AS (
-          -- 1 Inicial
-          SELECT SeccionalId, 
-                 COUNT(*) AS ProcInic1, 
-                 0 ProcInic4, 
-                 0 ProcInic5, 
-                 0 ProcFina1, 
-                 0 RecaFina1, 
-                 0 ProcFina4, 
-                 0 RecaFina4, 
-                 0 ProcFina5, 
-                 0 RecaFina5
-          FROM Historicos
-          WHERE(EstadoId <> 6)
-               AND Hasta = @Hasta
-               AND CarteraTipoId = 1
-          GROUP BY SeccionalId
+								  DECLARE @Hasta DATE = EOMONTH(@Desde);
+								 SET @Desde = CAST(CAST(YEAR(@Hasta) AS VARCHAR(4)) + '-01-01' AS DATETIME);
+								  WITH a
+										 AS (
+										 -- 1 Inicial
+										 SELECT SeccionalId, 
+												  COUNT(*) AS ProcInic1, 
+												  0 ProcInic4, 
+												  0 ProcInic5, 
+												  0 ProcFina1, 
+												  0 RecaFina1, 
+												  0 ProcFina4, 
+												  0 RecaFina4, 
+												  0 ProcFina5, 
+												  0 RecaFina5
+										 FROM Historicos
+										 WHERE(EstadoId <> 6)
+												AND Hasta = @Hasta
+												AND CarteraTipoId = 1
+										 GROUP BY SeccionalId
 
-          UNION ALL -- 4 Inicial
+										 UNION ALL -- 4 Inicial
 
-          SELECT SeccionalId, 
-                 0 ProcInic1, 
-                 COUNT(*) AS ProcInic4, 
-                 0 ProcInic5, 
-                 0 ProcFina1, 
-                 0 RecaFina1, 
-                 0 ProcFina4, 
-                 0 RecaFina4, 
-                 0 ProcFina5, 
-                 0 RecaFina5
-          FROM Historicos
-          WHERE(EstadoId <> 6)
-               AND Hasta = @Hasta
-               AND CarteraTipoId = 4
-          GROUP BY SeccionalId
+										 SELECT SeccionalId, 
+												  0 ProcInic1, 
+												  COUNT(*) AS ProcInic4, 
+												  0 ProcInic5, 
+												  0 ProcFina1, 
+												  0 RecaFina1, 
+												  0 ProcFina4, 
+												  0 RecaFina4, 
+												  0 ProcFina5, 
+												  0 RecaFina5
+										 FROM Historicos
+										 WHERE(EstadoId <> 6)
+												AND Hasta = @Hasta
+												AND CarteraTipoId = 4
+										 GROUP BY SeccionalId
 
-          UNION ALL -- 5 Inicial
+										 UNION ALL -- 5 Inicial
 
-          SELECT SeccionalId, 
-                 0 ProcInic1, 
-                 0 ProcInic4, 
-                 COUNT(*) AS ProcInic5, 
-                 0 ProcFina1, 
-                 0 RecaFina1, 
-                 0 ProcFina4, 
-                 0 RecaFina4, 
-                 0 ProcFina5, 
-                 0 RecaFina5
-          FROM Historicos
-          WHERE(EstadoId <> 6)
-               AND Hasta = @Hasta
-               AND CarteraTipoId = 5
-          GROUP BY SeccionalId
+										 SELECT SeccionalId, 
+												  0 ProcInic1, 
+												  0 ProcInic4, 
+												  COUNT(*) AS ProcInic5, 
+												  0 ProcFina1, 
+												  0 RecaFina1, 
+												  0 ProcFina4, 
+												  0 RecaFina4, 
+												  0 ProcFina5, 
+												  0 RecaFina5
+										 FROM Historicos
+										 WHERE(EstadoId <> 6)
+												AND Hasta = @Hasta
+												AND CarteraTipoId = 5
+										 GROUP BY SeccionalId
 
-          UNION ALL -- 1 Final
+										 UNION ALL -- 1 Final
 
-          SELECT Procesos.SeccionalId, 
-                 0 AS ProcInic1, 
-                 0 AS ProcInic4, 
-                 0 AS ProcInic5, 
-                 COUNT(distinct Procesos.ProcesoId) AS ProcFina1, 
-                 SUM(Pagos1.Pago) AS RecaFina1, 
-                 0 AS ProcFina4, 
-                 0 AS RecaFina4, 
-                 0 AS ProcFina5, 
-                 0 AS RecaFina5
-          FROM Procesos
-               INNER JOIN Pagos1SumaProcesoView AS Pagos1 ON Procesos.ProcesoId = Pagos1.ProcesoId
-          WHERE exists (select * from pagos1 where (pagos1.ProcesoId = Procesos.ProcesoId) and ((CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta)
-               AND (Procesos.CarteraTipoId = 1)
-               OR   ((CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta)
-               AND (Procesos.CarteraTipoId = 5)
-               AND (YEAR(@Hasta) <= 2019))))
-          GROUP BY Procesos.SeccionalId
-          UNION ALL -- 4
+										 SELECT Procesos.SeccionalId, 
+												  0 AS ProcInic1, 
+												  0 AS ProcInic4, 
+												  0 AS ProcInic5, 
+												  COUNT(distinct Procesos.ProcesoId) AS ProcFina1, 
+												  SUM(Pagos1.Pago) AS RecaFina1, 
+												  0 AS ProcFina4, 
+												  0 AS RecaFina4, 
+												  0 AS ProcFina5, 
+												  0 AS RecaFina5
+										 FROM Procesos
+												INNER JOIN Pagos1SumaProcesoView AS Pagos1 ON Procesos.ProcesoId = Pagos1.ProcesoId
+										 WHERE exists (select * from pagos1 where (pagos1.ProcesoId = Procesos.ProcesoId) and ((CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta)
+												AND (Procesos.CarteraTipoId = 1)
+												OR   ((CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta)
+												AND (Procesos.CarteraTipoId = 5)
+												AND (YEAR(@Hasta) <= 2019))))
+										 GROUP BY Procesos.SeccionalId
+										 UNION ALL -- 4
 
-          SELECT SeccionalId, 
-                 0 ProcInic1, 
-                 0 ProcInic4, 
-                 0 ProcInic5, 
-                 0 ProcFina1, 
-                 0 RecaFina1, 
-                 COUNT(distinct Procesos.ProcesoId) AS ProcFina4, 
-                 SUM(Pago) AS RecaFina4, 
-                 0 ProcFina5, 
-                 0 RecaFina5
-          FROM Procesos
-               INNER JOIN Pagos1SumaProcesoView Pagos1 ON Procesos.ProcesoId = Pagos1.ProcesoId
-          WHERE exists (select * from pagos1 where (pagos1.ProcesoId = Procesos.ProcesoId) and (CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta
-                AND CarteraTipoId = 4))
-          GROUP BY SeccionalId
-          UNION ALL -- 5 Final
+										 SELECT SeccionalId, 
+												  0 ProcInic1, 
+												  0 ProcInic4, 
+												  0 ProcInic5, 
+												  0 ProcFina1, 
+												  0 RecaFina1, 
+												  COUNT(distinct Procesos.ProcesoId) AS ProcFina4, 
+												  SUM(Pago) AS RecaFina4, 
+												  0 ProcFina5, 
+												  0 RecaFina5
+										 FROM Procesos
+												INNER JOIN Pagos1SumaProcesoView Pagos1 ON Procesos.ProcesoId = Pagos1.ProcesoId
+										 WHERE exists (select * from pagos1 where (pagos1.ProcesoId = Procesos.ProcesoId) and (CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta
+												 AND CarteraTipoId = 4))
+										 GROUP BY SeccionalId
+										 UNION ALL -- 5 Final
 
-          SELECT Procesos.SeccionalId, 
-                 0 AS ProcInic1, 
-                 0 AS ProcInic4, 
-                 0 AS ProcInic5, 
-                 0 AS ProcFina1, 
-                 0 AS RecaFina1, 
-                 0 AS ProcFina4, 
-                 0 AS RecaFina4, 
-                 COUNT(distinct Procesos.ProcesoId) AS ProcFina5, 
-                 SUM(Pagos1.Pago) AS RecaFina5
-          FROM Procesos
-               INNER JOIN Pagos1SumaProcesoView Pagos1 ON Procesos.ProcesoId = Pagos1.ProcesoId
-          WHERE exists (select * from pagos1 where (pagos1.ProcesoId = Procesos.ProcesoId) and (CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta
-               AND (Procesos.CarteraTipoId = 5)
-               AND (YEAR(@Hasta) > 2019)))
-          GROUP BY Procesos.SeccionalId)
-          SELECT Seccional, 
-                 SUM(a.ProcInic1) ProcInic1, 
-                 SUM(a.ProcInic4) ProcInic4, 
-                 SUM(a.ProcInic5) ProcInic5, 
-                 SUM(a.ProcInic1) + SUM(a.ProcInic4) + SUM(a.ProcInic5) ProcInicTota, 
-                 SUM(a.ProcFina1) ProcFina1, 
-                 SUM(a.RecaFina1) RecaFina1, 
-                 SUM(a.ProcFina4) ProcFina4, 
-                 SUM(a.RecaFina4) RecaFina4, 
-                 SUM(a.ProcFina5) ProcFina5, 
-                 SUM(a.RecaFina5) RecaFina5, 
-                 SUM(a.ProcFina1) + SUM(a.ProcFina4) + SUM(a.ProcFina5) ProcFinaTota, 
-                 SUM(a.RecaFina1) + SUM(a.RecaFina4) + SUM(a.RecaFina5) RecaFinaTota,
-                 CASE
-                     WHEN SUM(a.ProcInic1) = 0
-                     THEN 0
-                     ELSE CONVERT(DECIMAL, (SUM(a.ProcFina1))) / CONVERT(DECIMAL, (SUM(a.ProcInic1)))
-                 END ProcIndi1,
-                 CASE
-                     WHEN SUM(a.ProcInic4) = 0
-                     THEN 0
-                     ELSE CONVERT(DECIMAL, (SUM(a.ProcFina4))) / CONVERT(DECIMAL, (SUM(a.ProcInic4)))
-                 END ProcIndi4,
-                 CASE
-                     WHEN SUM(a.ProcInic5) = 0
-                     THEN 0
-                     ELSE CONVERT(DECIMAL, (SUM(a.ProcFina5))) / CONVERT(DECIMAL, (SUM(a.ProcInic5)))
-                 END ProcIndi5, 
-                 CONVERT(DECIMAL, (SUM(a.ProcFina1) + SUM(a.ProcFina4) + SUM(a.ProcFina5))) / CONVERT(DECIMAL, (SUM(a.ProcInic1) + SUM(a.ProcInic4) + SUM(a.ProcInic5))) ProcIndiTota
-          FROM a
-               INNER JOIN Seccionales ON Seccionales.SeccionalId = a.SeccionalId
-          GROUP BY Seccional
-          ORDER BY 1;";
+										 SELECT Procesos.SeccionalId, 
+												  0 AS ProcInic1, 
+												  0 AS ProcInic4, 
+												  0 AS ProcInic5, 
+												  0 AS ProcFina1, 
+												  0 AS RecaFina1, 
+												  0 AS ProcFina4, 
+												  0 AS RecaFina4, 
+												  COUNT(distinct Procesos.ProcesoId) AS ProcFina5, 
+												  SUM(Pagos1.Pago) AS RecaFina5
+										 FROM Procesos
+												INNER JOIN Pagos1SumaProcesoView Pagos1 ON Procesos.ProcesoId = Pagos1.ProcesoId
+										 WHERE exists (select * from pagos1 where (pagos1.ProcesoId = Procesos.ProcesoId) and (CONVERT(DATE, Pagos1.Registro) BETWEEN @Desde AND @Hasta
+												AND (Procesos.CarteraTipoId = 5)
+												AND (YEAR(@Hasta) > 2019)))
+										 GROUP BY Procesos.SeccionalId)
+										 SELECT Seccional, 
+												  SUM(a.ProcInic1) ProcInic1, 
+												  SUM(a.ProcInic4) ProcInic4, 
+												  SUM(a.ProcInic5) ProcInic5, 
+												  SUM(a.ProcInic1) + SUM(a.ProcInic4) + SUM(a.ProcInic5) ProcInicTota, 
+												  SUM(a.ProcFina1) ProcFina1, 
+												  SUM(a.RecaFina1) RecaFina1, 
+												  SUM(a.ProcFina4) ProcFina4, 
+												  SUM(a.RecaFina4) RecaFina4, 
+												  SUM(a.ProcFina5) ProcFina5, 
+												  SUM(a.RecaFina5) RecaFina5, 
+												  SUM(a.ProcFina1) + SUM(a.ProcFina4) + SUM(a.ProcFina5) ProcFinaTota, 
+												  SUM(a.RecaFina1) + SUM(a.RecaFina4) + SUM(a.RecaFina5) RecaFinaTota,
+												  CASE
+														WHEN SUM(a.ProcInic1) = 0
+														THEN 0
+														ELSE CONVERT(DECIMAL, (SUM(a.ProcFina1))) / CONVERT(DECIMAL, (SUM(a.ProcInic1)))
+												  END ProcIndi1,
+												  CASE
+														WHEN SUM(a.ProcInic4) = 0
+														THEN 0
+														ELSE CONVERT(DECIMAL, (SUM(a.ProcFina4))) / CONVERT(DECIMAL, (SUM(a.ProcInic4)))
+												  END ProcIndi4,
+												  CASE
+														WHEN SUM(a.ProcInic5) = 0
+														THEN 0
+														ELSE CONVERT(DECIMAL, (SUM(a.ProcFina5))) / CONVERT(DECIMAL, (SUM(a.ProcInic5)))
+												  END ProcIndi5, 
+												  CONVERT(DECIMAL, (SUM(a.ProcFina1) + SUM(a.ProcFina4) + SUM(a.ProcFina5))) / CONVERT(DECIMAL, (SUM(a.ProcInic1) + SUM(a.ProcInic4) + SUM(a.ProcInic5))) ProcIndiTota
+										 FROM a
+												INNER JOIN Seccionales ON Seccionales.SeccionalId = a.SeccionalId
+										 GROUP BY Seccional
+										 ORDER BY 1;";
 		    // Define tu consulta SQL
 
     // Ejecuta la consulta

@@ -162,7 +162,8 @@ $tdataabogados[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
-																																																					
+																																																																			
+					
 
 $tdataabogados[".ajaxCodeSnippetAdded"] = false;
 
@@ -622,7 +623,10 @@ $tdataabogados[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -760,7 +764,10 @@ $tdataabogados[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Documento_event", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
