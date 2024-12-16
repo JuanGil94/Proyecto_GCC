@@ -137,11 +137,11 @@ $tdatalistado_de_chequeo_motivo_devolucion_datachild[".allowShowHideFields"] = t
 $tdatalistado_de_chequeo_motivo_devolucion_datachild[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatalistado_de_chequeo_motivo_devolucion_datachild[".isUseAjaxSuggest"] = false;
+$tdatalistado_de_chequeo_motivo_devolucion_datachild[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatalistado_de_chequeo_motivo_devolucion_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -179,6 +179,7 @@ $tdatalistado_de_chequeo_motivo_devolucion_datachild[".geocodingEnabled"] = fals
 
 
 
+$tdatalistado_de_chequeo_motivo_devolucion_datachild[".isDisplayLoading"] = true;
 
 
 
@@ -215,11 +216,8 @@ $tdatalistado_de_chequeo_motivo_devolucion_datachild[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatalistado_de_chequeo_motivo_devolucion_datachild[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

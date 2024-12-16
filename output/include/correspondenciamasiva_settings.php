@@ -146,7 +146,7 @@ $tdatacorrespondenciamasiva[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatacorrespondenciamasiva[".ajaxCodeSnippetAdded"] = false;
 
@@ -189,7 +189,9 @@ $tdatacorrespondenciamasiva[".geocodingEnabled"] = false;
 
 
 
+$tdatacorrespondenciamasiva[".isDisplayLoading"] = true;
 
+$tdatacorrespondenciamasiva[".isResizeColumns"] = true;
 
 
 
@@ -227,11 +229,8 @@ $tdatacorrespondenciamasiva[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatacorrespondenciamasiva[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields
@@ -427,7 +426,7 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Short Date");
+	$vdata = array("ViewFormat" => "");
 
 	
 	
@@ -565,7 +564,7 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -581,8 +580,7 @@ $tdatacorrespondenciamasiva[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

@@ -168,7 +168,7 @@ $tdataempresas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataempresas[".ajaxCodeSnippetAdded"] = false;
 
@@ -213,6 +213,7 @@ $tdataempresas[".geocodingEnabled"] = false;
 
 
 
+$tdataempresas[".isDisplayLoading"] = true;
 
 $tdataempresas[".isResizeColumns"] = true;
 
@@ -250,11 +251,8 @@ $tdataempresas[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataempresas[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

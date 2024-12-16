@@ -127,11 +127,11 @@ $tdataprueba_archivo_plano[".allowShowHideFields"] = true; // temp fix #13449
 $tdataprueba_archivo_plano[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataprueba_archivo_plano[".isUseAjaxSuggest"] = false;
+$tdataprueba_archivo_plano[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprueba_archivo_plano[".ajaxCodeSnippetAdded"] = false;
 
@@ -168,6 +168,7 @@ $tdataprueba_archivo_plano[".geocodingEnabled"] = false;
 
 
 
+$tdataprueba_archivo_plano[".isDisplayLoading"] = true;
 
 
 
@@ -204,11 +205,8 @@ $tdataprueba_archivo_plano[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataprueba_archivo_plano[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

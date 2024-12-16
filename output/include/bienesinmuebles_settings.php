@@ -148,7 +148,7 @@ $tdatabienesinmuebles[".isUseAjaxSuggest"] = true;
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
 		
-																																		
+																																											
 
 $tdatabienesinmuebles[".ajaxCodeSnippetAdded"] = false;
 
@@ -191,6 +191,7 @@ $tdatabienesinmuebles[".geocodingEnabled"] = false;
 
 
 
+$tdatabienesinmuebles[".isDisplayLoading"] = true;
 
 $tdatabienesinmuebles[".isResizeColumns"] = true;
 
@@ -239,11 +240,8 @@ $tdatabienesinmuebles[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabienesinmuebles[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

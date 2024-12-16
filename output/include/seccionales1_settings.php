@@ -131,7 +131,7 @@ $tdataseccionales1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataseccionales1[".ajaxCodeSnippetAdded"] = false;
 
@@ -169,6 +169,7 @@ $tdataseccionales1[".geocodingEnabled"] = false;
 
 
 
+$tdataseccionales1[".isDisplayLoading"] = true;
 
 $tdataseccionales1[".isResizeColumns"] = true;
 
@@ -206,11 +207,8 @@ $tdataseccionales1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataseccionales1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

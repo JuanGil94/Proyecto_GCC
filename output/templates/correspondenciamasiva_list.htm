@@ -265,6 +265,12 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
+				{$simpleSearchFieldCombo}			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_option" {$item_simple_search_option} data-topcell-item-type="simple_search_option" >
+				{$simpleSearchTypeCombo}			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
 				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
 
@@ -305,14 +311,6 @@
 		</a>
 	</li>
 {END exportselected_link}
-							{BEGIN deleteselected_link}
-	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-				
-		Borrar articulos seleccionados		
-		</a>
-	</li>
-{END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="correspondenciamasiva_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
@@ -589,6 +587,85 @@
 															</ul>
 </span>
 {END print_friendly}
+	 
+		<div id="fildhidepanel{$id}" class="bs-fildhidepanel 
+	 showHide	 reorder	keep-open btn-group"
+	data-itemtype="columns_control" data-itemid="columns_control" {$item_columns_control} data-pageid="{$pageid}"	title="Ver/Ocultar columnas"
+	>
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_fecha" checked="checked" value="1" data-field="fecha" data-fieldname="fecha">
+					<span>{$label dbo_CorrespondenciaMasiva fecha }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_proceso" checked="checked" value="1" data-field="proceso" data-fieldname="proceso">
+					<span>{$label dbo_CorrespondenciaMasiva proceso }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_correspondencia" checked="checked" value="1" data-field="correspondencia" data-fieldname="correspondencia">
+					<span>{$label dbo_CorrespondenciaMasiva correspondencia }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_usuario" checked="checked" value="1" data-field="usuario" data-fieldname="usuario">
+					<span>{$label dbo_CorrespondenciaMasiva usuario }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_enviado" checked="checked" value="1" data-field="enviado" data-fieldname="enviado">
+					<span>{$label dbo_CorrespondenciaMasiva enviado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_radicado" checked="checked" value="1" data-field="radicado" data-fieldname="radicado">
+					<span>{$label dbo_CorrespondenciaMasiva radicado }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_observaciones" checked="checked" value="1" data-field="observaciones" data-fieldname="observaciones">
+					<span>{$label dbo_CorrespondenciaMasiva observaciones }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+			</ul>
+</div>
 		</div>					</div>
 			</div>		
 {END above-grid_block}

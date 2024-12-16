@@ -131,11 +131,11 @@ $tdataconsulta_publica_generacion_desprendible[".allowShowHideFields"] = true; /
 $tdataconsulta_publica_generacion_desprendible[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataconsulta_publica_generacion_desprendible[".isUseAjaxSuggest"] = false;
+$tdataconsulta_publica_generacion_desprendible[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataconsulta_publica_generacion_desprendible[".ajaxCodeSnippetAdded"] = false;
 
@@ -209,11 +209,8 @@ $tdataconsulta_publica_generacion_desprendible[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataconsulta_publica_generacion_desprendible[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -146,11 +146,11 @@ $tdatabdme_excluidos1[".allowShowHideFields"] = true; // temp fix #13449
 $tdatabdme_excluidos1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_excluidos1[".isUseAjaxSuggest"] = false;
+$tdatabdme_excluidos1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabdme_excluidos1[".ajaxCodeSnippetAdded"] = false;
 
@@ -229,11 +229,8 @@ $tdatabdme_excluidos1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_excluidos1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

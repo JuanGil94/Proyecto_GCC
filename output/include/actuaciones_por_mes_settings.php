@@ -125,11 +125,11 @@ $tdataactuaciones_por_mes[".allowShowHideFields"] = true; // temp fix #13449
 $tdataactuaciones_por_mes[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataactuaciones_por_mes[".isUseAjaxSuggest"] = false;
+$tdataactuaciones_por_mes[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataactuaciones_por_mes[".ajaxCodeSnippetAdded"] = false;
 
@@ -169,6 +169,7 @@ $tdataactuaciones_por_mes[".geocodingEnabled"] = false;
 $tdataactuaciones_por_mes[".chartType"] = "2DColumn";
 // end of chart settings
 
+$tdataactuaciones_por_mes[".isDisplayLoading"] = true;
 
 
 
@@ -200,11 +201,8 @@ $tdataactuaciones_por_mes[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataactuaciones_por_mes[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -128,7 +128,7 @@ $tdataciudades1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataciudades1[".ajaxCodeSnippetAdded"] = false;
 
@@ -165,6 +165,7 @@ $tdataciudades1[".geocodingEnabled"] = false;
 
 
 
+$tdataciudades1[".isDisplayLoading"] = true;
 
 $tdataciudades1[".isResizeColumns"] = true;
 
@@ -202,11 +203,8 @@ $tdataciudades1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataciudades1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

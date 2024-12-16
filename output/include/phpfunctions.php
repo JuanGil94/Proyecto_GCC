@@ -1068,6 +1068,12 @@ $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Nu
 $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
+				if($table=="dbo.ProcesosReasignar" && $field=="Numero")
+	{
+		$numero=$value;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+		return $value;
+	}
 				if($table=="BDME Excluidos" && $field=="Numero" && $ptype=="view")
 	{
 		;
@@ -1432,6 +1438,12 @@ $beforePath = $_SESSION['BeforePath'];
 // Generar el hipervínculo en HTML
 $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
 ;
+		return $value;
+	}
+				if($table=="dbo.CorrespondenciaMasiva" && $field=="proceso")
+	{
+		$numero=$value;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
 	return $value;

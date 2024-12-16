@@ -158,7 +158,7 @@ $tdataprescritos_report[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprescritos_report[".ajaxCodeSnippetAdded"] = false;
 
@@ -214,10 +214,10 @@ $tdataprescritos_report[".pageSizeRecords"] = 20;
 
 
 
+$tdataprescritos_report[".isDisplayLoading"] = true;
 
 
 
-$tdataprescritos_report[".noRecordsFirstPage"] = true;
 
 
 
@@ -257,11 +257,8 @@ $tdataprescritos_report[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataprescritos_report[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

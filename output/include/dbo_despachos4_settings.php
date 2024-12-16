@@ -137,7 +137,7 @@ $tdatadbo_despachos4[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatadbo_despachos4[".ajaxCodeSnippetAdded"] = false;
 
@@ -177,6 +177,7 @@ $tdatadbo_despachos4[".geocodingEnabled"] = false;
 
 
 
+$tdatadbo_despachos4[".isDisplayLoading"] = true;
 
 $tdatadbo_despachos4[".isResizeColumns"] = true;
 
@@ -214,11 +215,8 @@ $tdatadbo_despachos4[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatadbo_despachos4[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

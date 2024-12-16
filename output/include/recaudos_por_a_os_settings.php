@@ -182,11 +182,11 @@ $tdatarecaudos_por_a_os[".allowShowHideFields"] = true; // temp fix #13449
 $tdatarecaudos_por_a_os[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatarecaudos_por_a_os[".isUseAjaxSuggest"] = false;
+$tdatarecaudos_por_a_os[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatarecaudos_por_a_os[".ajaxCodeSnippetAdded"] = false;
 
@@ -277,11 +277,8 @@ $tdatarecaudos_por_a_os[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatarecaudos_por_a_os[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

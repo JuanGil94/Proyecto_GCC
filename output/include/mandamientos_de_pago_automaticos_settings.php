@@ -152,11 +152,11 @@ $tdatamandamientos_de_pago_automaticos[".allowShowHideFields"] = true; // temp f
 $tdatamandamientos_de_pago_automaticos[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatamandamientos_de_pago_automaticos[".isUseAjaxSuggest"] = false;
+$tdatamandamientos_de_pago_automaticos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatamandamientos_de_pago_automaticos[".ajaxCodeSnippetAdded"] = false;
 
@@ -238,11 +238,8 @@ $tdatamandamientos_de_pago_automaticos[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatamandamientos_de_pago_automaticos[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

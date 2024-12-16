@@ -177,7 +177,7 @@ $tdataprocesoscorrespondencias[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprocesoscorrespondencias[".ajaxCodeSnippetAdded"] = false;
 
@@ -254,7 +254,7 @@ $tdataprocesoscorrespondencias[".orderindexes"] = array();
 
 $tdataprocesoscorrespondencias[".sqlHead"] = "SELECT P.NumeroMinjusticia AS [N.Minjusticia],  S.Sancionado AS Deudor,  ' ' AS Solidario,  TD.TipoDocumento AS [T.Documento],  S.Documento AS Documento,  C.Concepto AS Concepto,  P.Numero AS Numero,  P.Radicado AS [No.Radicado Origen],  SE.Seccional AS Competencia,  P.Fecha AS [F.Creación],  P.Providencia AS [F.Providencia],  P.Ejecutoria AS [F.Ejecutoria],  P.Obligacion AS Obligacion,  P.Costas AS Costas,  P.Intereses AS Intereses,  P.Acuerdo AS [F.Acuerdo Pago],  E.Estado AS Estado,  A.Abogado AS Abogado";
 $tdataprocesoscorrespondencias[".sqlFrom"] = "FROM dbo.Procesos AS P  INNER JOIN dbo.Sancionados AS S ON P.SancionadoId = S.SancionadoId  INNER JOIN dbo.TiposDocumentos AS TD ON S.TipoDocumentoId = TD.TipoDocumentoId  INNER JOIN dbo.Conceptos AS C ON P.ConceptoId = C.ConceptoId  INNER JOIN dbo.Estados AS E ON P.EstadoId = E.EstadoId  INNER JOIN dbo.Abogados AS A ON P.AbogadoId = A.AbogadoId  INNER JOIN dbo.Seccionales AS SE ON P.SeccionalId = SE.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON P.CarteraTipoId = CA.CarteraTipoId";
-$tdataprocesoscorrespondencias[".sqlWhereExpr"] = "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId=2 OR P.EstadoId=2)AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))";
+$tdataprocesoscorrespondencias[".sqlWhereExpr"] = "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId =2 OR P.EstadoId =2) AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))";
 $tdataprocesoscorrespondencias[".sqlTail"] = "";
 
 //fill array of tabs for list page
@@ -281,9 +281,9 @@ $tdataprocesoscorrespondencias[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
+$arrRPP[] = 200;
 $arrRPP[] = 500;
 $arrRPP[] = -1;
 $tdataprocesoscorrespondencias[".arrRecsPerPage"] = $arrRPP;
@@ -2835,16 +2835,16 @@ $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "P.NumeroMinjusticia AS [N.Minjusticia],  S.Sancionado AS Deudor,  ' ' AS Solidario,  TD.TipoDocumento AS [T.Documento],  S.Documento AS Documento,  C.Concepto AS Concepto,  P.Numero AS Numero,  P.Radicado AS [No.Radicado Origen],  SE.Seccional AS Competencia,  P.Fecha AS [F.Creación],  P.Providencia AS [F.Providencia],  P.Ejecutoria AS [F.Ejecutoria],  P.Obligacion AS Obligacion,  P.Costas AS Costas,  P.Intereses AS Intereses,  P.Acuerdo AS [F.Acuerdo Pago],  E.Estado AS Estado,  A.Abogado AS Abogado";
 $proto0["m_strFrom"] = "FROM dbo.Procesos AS P  INNER JOIN dbo.Sancionados AS S ON P.SancionadoId = S.SancionadoId  INNER JOIN dbo.TiposDocumentos AS TD ON S.TipoDocumentoId = TD.TipoDocumentoId  INNER JOIN dbo.Conceptos AS C ON P.ConceptoId = C.ConceptoId  INNER JOIN dbo.Estados AS E ON P.EstadoId = E.EstadoId  INNER JOIN dbo.Abogados AS A ON P.AbogadoId = A.AbogadoId  INNER JOIN dbo.Seccionales AS SE ON P.SeccionalId = SE.SeccionalId  INNER JOIN dbo.CarteraTipos AS CA ON P.CarteraTipoId = CA.CarteraTipoId";
-$proto0["m_strWhere"] = "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId=2 OR P.EstadoId=2)AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))";
+$proto0["m_strWhere"] = "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId =2 OR P.EstadoId =2) AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))";
 $proto0["m_strOrderBy"] = "ORDER BY P.Numero";
 	
 		;
 			$proto0["cipherer"] = null;
 $proto2=array();
-$proto2["m_sql"] = "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId=2 OR P.EstadoId=2)AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))";
+$proto2["m_sql"] = "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId =2 OR P.EstadoId =2) AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))";
 $proto2["m_uniontype"] = "SQLL_AND";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId=2 OR P.EstadoId=2)AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))"
+	"m_sql" => "(NOT ((6 = P.EstadoId) AND (P.EstadoId IS NOT NULL))) AND (P.EstadoId =2 OR P.EstadoId =2) AND (P.CarteraTipoId = 1) AND ((P.SeccionalId = :session.SeccionalUser) OR ((P.SeccionalId IS NULL) AND (:session.SeccionalUser IS NULL))) AND ((P.SeleccionadoPor = ':session.UserNameF') OR ((P.SeleccionadoPor IS NULL) AND (':session.UserNameF' IS NULL)) OR (P.SeleccionadoPor IS NULL))"
 ));
 
 $proto2["m_column"]=$obj;
@@ -2866,16 +2866,16 @@ $obj = new SQLLogicalExpr($proto4);
 
 			$proto2["m_contained"][]=$obj;
 						$proto6=array();
-$proto6["m_sql"] = "P.EstadoId=2 OR P.EstadoId=2";
+$proto6["m_sql"] = "P.EstadoId =2 OR P.EstadoId =2";
 $proto6["m_uniontype"] = "SQLL_OR";
 	$obj = new SQLNonParsed(array(
-	"m_sql" => "P.EstadoId=2 OR P.EstadoId=2"
+	"m_sql" => "P.EstadoId =2 OR P.EstadoId =2"
 ));
 
 $proto6["m_column"]=$obj;
 $proto6["m_contained"] = array();
 						$proto8=array();
-$proto8["m_sql"] = "P.EstadoId=2";
+$proto8["m_sql"] = "P.EstadoId =2";
 $proto8["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "EstadoId",
@@ -2893,7 +2893,7 @@ $obj = new SQLLogicalExpr($proto8);
 
 			$proto6["m_contained"][]=$obj;
 						$proto10=array();
-$proto10["m_sql"] = "P.EstadoId=2";
+$proto10["m_sql"] = "P.EstadoId =2";
 $proto10["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
 	"m_strName" => "EstadoId",

@@ -155,7 +155,7 @@ $tdatareportecorporaci_nespecialidad[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatareportecorporaci_nespecialidad[".ajaxCodeSnippetAdded"] = false;
 
@@ -211,6 +211,7 @@ $tdatareportecorporaci_nespecialidad[".pageSizeRecords"] = 20;
 
 
 
+$tdatareportecorporaci_nespecialidad[".isDisplayLoading"] = true;
 
 
 
@@ -261,11 +262,8 @@ $tdatareportecorporaci_nespecialidad[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatareportecorporaci_nespecialidad[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -161,11 +161,11 @@ $tdataremanentes_[".allowShowHideFields"] = true; // temp fix #13449
 $tdataremanentes_[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataremanentes_[".isUseAjaxSuggest"] = false;
+$tdataremanentes_[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataremanentes_[".ajaxCodeSnippetAdded"] = false;
 
@@ -250,11 +250,8 @@ $tdataremanentes_[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataremanentes_[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

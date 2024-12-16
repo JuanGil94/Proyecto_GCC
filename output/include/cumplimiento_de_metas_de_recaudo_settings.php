@@ -140,11 +140,11 @@ $tdatacumplimiento_de_metas_de_recaudo[".allowShowHideFields"] = true; // temp f
 $tdatacumplimiento_de_metas_de_recaudo[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatacumplimiento_de_metas_de_recaudo[".isUseAjaxSuggest"] = false;
+$tdatacumplimiento_de_metas_de_recaudo[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatacumplimiento_de_metas_de_recaudo[".ajaxCodeSnippetAdded"] = false;
 
@@ -220,7 +220,10 @@ $tdatacumplimiento_de_metas_de_recaudo[".sqlTail"] = "";
 
 //fill array of records per page for list and report without group fields
 $arrRPP = array();
-$arrRPP[] = 1;
+$arrRPP[] = 10;
+$arrRPP[] = 20;
+$arrRPP[] = 50;
+$arrRPP[] = 100;
 $tdatacumplimiento_de_metas_de_recaudo[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

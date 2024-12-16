@@ -232,11 +232,11 @@ $tdatacertificado_del_resumen_mensual[".allowShowHideFields"] = true; // temp fi
 $tdatacertificado_del_resumen_mensual[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatacertificado_del_resumen_mensual[".isUseAjaxSuggest"] = false;
+$tdatacertificado_del_resumen_mensual[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatacertificado_del_resumen_mensual[".ajaxCodeSnippetAdded"] = false;
 
@@ -308,6 +308,7 @@ $tdatacertificado_del_resumen_mensual[".geocodingEnabled"] = false;
 
 
 
+$tdatacertificado_del_resumen_mensual[".isDisplayLoading"] = true;
 
 
 
@@ -344,11 +345,8 @@ $tdatacertificado_del_resumen_mensual[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatacertificado_del_resumen_mensual[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

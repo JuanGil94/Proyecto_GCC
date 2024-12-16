@@ -149,11 +149,11 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".allowShowHideFields"] = t
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".isUseAjaxSuggest"] = false;
+$tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".ajaxCodeSnippetAdded"] = false;
 
@@ -233,11 +233,8 @@ $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_incumplimiento_acuerdo_de_pago_semestral1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

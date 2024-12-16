@@ -131,7 +131,7 @@ $tdatamotivosdevoluciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatamotivosdevoluciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -168,6 +168,7 @@ $tdatamotivosdevoluciones[".geocodingEnabled"] = false;
 
 
 
+$tdatamotivosdevoluciones[".isDisplayLoading"] = true;
 
 $tdatamotivosdevoluciones[".isResizeColumns"] = true;
 
@@ -205,11 +206,8 @@ $tdatamotivosdevoluciones[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatamotivosdevoluciones[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

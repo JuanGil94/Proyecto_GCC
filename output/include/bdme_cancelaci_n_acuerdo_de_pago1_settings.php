@@ -152,11 +152,11 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".allowShowHideFields"] = true; // temp 
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_cancelaci_n_acuerdo_de_pago1[".isUseAjaxSuggest"] = false;
+$tdatabdme_cancelaci_n_acuerdo_de_pago1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".ajaxCodeSnippetAdded"] = false;
 
@@ -237,11 +237,8 @@ $tdatabdme_cancelaci_n_acuerdo_de_pago1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_cancelaci_n_acuerdo_de_pago1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

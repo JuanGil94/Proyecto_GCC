@@ -137,7 +137,7 @@ $tdatanaturalezas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatanaturalezas[".ajaxCodeSnippetAdded"] = false;
 
@@ -177,6 +177,7 @@ $tdatanaturalezas[".geocodingEnabled"] = false;
 
 
 
+$tdatanaturalezas[".isDisplayLoading"] = true;
 
 $tdatanaturalezas[".isResizeColumns"] = true;
 
@@ -214,11 +215,8 @@ $tdatanaturalezas[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatanaturalezas[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

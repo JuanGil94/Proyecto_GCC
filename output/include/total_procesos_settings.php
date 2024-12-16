@@ -131,11 +131,11 @@ $tdatatotal_procesos[".allowShowHideFields"] = true; // temp fix #13449
 $tdatatotal_procesos[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatatotal_procesos[".isUseAjaxSuggest"] = false;
+$tdatatotal_procesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatotal_procesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -209,11 +209,8 @@ $tdatatotal_procesos[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatotal_procesos[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

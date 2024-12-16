@@ -128,7 +128,7 @@ $tdatapagos2[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatapagos2[".ajaxCodeSnippetAdded"] = false;
 
@@ -165,6 +165,7 @@ $tdatapagos2[".geocodingEnabled"] = false;
 
 
 
+$tdatapagos2[".isDisplayLoading"] = true;
 
 $tdatapagos2[".isResizeColumns"] = true;
 
@@ -204,11 +205,8 @@ $tdatapagos2[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatapagos2[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

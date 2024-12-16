@@ -157,7 +157,7 @@ $tdatausugcc__users[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatausugcc__users[".ajaxCodeSnippetAdded"] = false;
 
@@ -201,6 +201,7 @@ $tdatausugcc__users[".geocodingEnabled"] = false;
 
 
 
+$tdatausugcc__users[".isDisplayLoading"] = true;
 
 $tdatausugcc__users[".isResizeColumns"] = true;
 
@@ -249,11 +250,8 @@ $tdatausugcc__users[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatausugcc__users[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

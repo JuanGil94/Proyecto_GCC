@@ -152,11 +152,11 @@ $tdatabdme_retiros1[".allowShowHideFields"] = true; // temp fix #13449
 $tdatabdme_retiros1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_retiros1[".isUseAjaxSuggest"] = false;
+$tdatabdme_retiros1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabdme_retiros1[".ajaxCodeSnippetAdded"] = false;
 
@@ -237,11 +237,8 @@ $tdatabdme_retiros1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_retiros1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

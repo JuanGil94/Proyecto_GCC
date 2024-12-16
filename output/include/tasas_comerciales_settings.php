@@ -137,7 +137,7 @@ $tdatatasas_comerciales[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatasas_comerciales[".ajaxCodeSnippetAdded"] = false;
 
@@ -177,6 +177,7 @@ $tdatatasas_comerciales[".geocodingEnabled"] = false;
 
 
 
+$tdatatasas_comerciales[".isDisplayLoading"] = true;
 
 $tdatatasas_comerciales[".isResizeColumns"] = true;
 
@@ -225,11 +226,8 @@ $tdatatasas_comerciales[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatasas_comerciales[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

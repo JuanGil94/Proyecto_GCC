@@ -275,7 +275,7 @@ $tdataminjusticia2[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdataminjusticia2[".ajaxCodeSnippetAdded"] = false;
 
@@ -361,6 +361,7 @@ $tdataminjusticia2[".geocodingEnabled"] = false;
 
 
 
+$tdataminjusticia2[".isDisplayLoading"] = true;
 
 $tdataminjusticia2[".isResizeColumns"] = true;
 
@@ -398,11 +399,8 @@ $tdataminjusticia2[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataminjusticia2[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

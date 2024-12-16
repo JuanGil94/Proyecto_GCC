@@ -143,7 +143,7 @@ $tdatachequeosoficios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatachequeosoficios[".ajaxCodeSnippetAdded"] = false;
 
@@ -185,6 +185,7 @@ $tdatachequeosoficios[".geocodingEnabled"] = false;
 
 
 
+$tdatachequeosoficios[".isDisplayLoading"] = true;
 
 $tdatachequeosoficios[".isResizeColumns"] = true;
 
@@ -222,11 +223,8 @@ $tdatachequeosoficios[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatachequeosoficios[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

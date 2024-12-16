@@ -200,11 +200,11 @@ $tdatalistado_medidas_cautelares[".allowShowHideFields"] = true; // temp fix #13
 $tdatalistado_medidas_cautelares[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatalistado_medidas_cautelares[".isUseAjaxSuggest"] = false;
+$tdatalistado_medidas_cautelares[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatalistado_medidas_cautelares[".ajaxCodeSnippetAdded"] = false;
 
@@ -302,11 +302,8 @@ $tdatalistado_medidas_cautelares[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatalistado_medidas_cautelares[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

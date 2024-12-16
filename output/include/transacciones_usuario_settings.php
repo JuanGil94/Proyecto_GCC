@@ -134,11 +134,11 @@ $tdatatransacciones_usuario[".allowShowHideFields"] = true; // temp fix #13449
 $tdatatransacciones_usuario[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatatransacciones_usuario[".isUseAjaxSuggest"] = false;
+$tdatatransacciones_usuario[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatransacciones_usuario[".ajaxCodeSnippetAdded"] = false;
 
@@ -213,11 +213,8 @@ $tdatatransacciones_usuario[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatransacciones_usuario[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

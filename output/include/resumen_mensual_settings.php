@@ -262,11 +262,11 @@ $tdataresumen_mensual[".allowShowHideFields"] = true; // temp fix #13449
 $tdataresumen_mensual[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataresumen_mensual[".isUseAjaxSuggest"] = false;
+$tdataresumen_mensual[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataresumen_mensual[".ajaxCodeSnippetAdded"] = false;
 
@@ -348,6 +348,7 @@ $tdataresumen_mensual[".geocodingEnabled"] = false;
 
 
 
+$tdataresumen_mensual[".isDisplayLoading"] = true;
 
 
 
@@ -384,11 +385,8 @@ $tdataresumen_mensual[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataresumen_mensual[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields
