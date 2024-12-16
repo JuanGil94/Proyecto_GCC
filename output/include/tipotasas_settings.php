@@ -128,7 +128,7 @@ $tdatatipotasas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatipotasas[".ajaxCodeSnippetAdded"] = false;
 
@@ -165,6 +165,7 @@ $tdatatipotasas[".geocodingEnabled"] = false;
 
 
 
+$tdatatipotasas[".isDisplayLoading"] = true;
 
 
 
@@ -201,11 +202,8 @@ $tdatatipotasas[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatipotasas[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -130,11 +130,11 @@ $tdatatablero_de_control_total_procesos[".allowShowHideFields"] = true; // temp 
 $tdatatablero_de_control_total_procesos[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatatablero_de_control_total_procesos[".isUseAjaxSuggest"] = false;
+$tdatatablero_de_control_total_procesos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatablero_de_control_total_procesos[".ajaxCodeSnippetAdded"] = false;
 
@@ -209,11 +209,8 @@ $tdatatablero_de_control_total_procesos[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatablero_de_control_total_procesos[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

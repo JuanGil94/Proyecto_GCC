@@ -461,7 +461,7 @@ $tdataprocesosview1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprocesosview1[".ajaxCodeSnippetAdded"] = false;
 
@@ -609,6 +609,7 @@ $tdataprocesosview1[".geocodingEnabled"] = false;
 
 
 
+$tdataprocesosview1[".isDisplayLoading"] = true;
 
 
 
@@ -645,11 +646,8 @@ $tdataprocesosview1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataprocesosview1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

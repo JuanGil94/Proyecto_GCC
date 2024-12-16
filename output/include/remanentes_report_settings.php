@@ -158,7 +158,7 @@ $tdataremanentes_report[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataremanentes_report[".ajaxCodeSnippetAdded"] = false;
 
@@ -214,6 +214,7 @@ $tdataremanentes_report[".pageSizeRecords"] = 20;
 
 
 
+$tdataremanentes_report[".isDisplayLoading"] = true;
 
 
 
@@ -245,11 +246,8 @@ $tdataremanentes_report[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataremanentes_report[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

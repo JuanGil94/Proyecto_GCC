@@ -150,7 +150,7 @@ $tdatauserprofile[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatauserprofile[".ajaxCodeSnippetAdded"] = false;
 
@@ -194,6 +194,7 @@ $tdatauserprofile[".geocodingEnabled"] = false;
 
 
 
+$tdatauserprofile[".isDisplayLoading"] = true;
 
 $tdatauserprofile[".isResizeColumns"] = true;
 
@@ -231,11 +232,8 @@ $tdatauserprofile[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatauserprofile[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

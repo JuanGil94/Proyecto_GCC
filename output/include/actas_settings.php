@@ -149,7 +149,7 @@ $tdataactas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataactas[".ajaxCodeSnippetAdded"] = false;
 
@@ -193,6 +193,7 @@ $tdataactas[".geocodingEnabled"] = false;
 
 
 
+$tdataactas[".isDisplayLoading"] = true;
 
 $tdataactas[".isResizeColumns"] = true;
 
@@ -230,11 +231,8 @@ $tdataactas[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataactas[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

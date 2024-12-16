@@ -152,7 +152,7 @@ $tdataautorizaciones[".isUseAjaxSuggest"] = true;
 					
 				
 				
-																																																																																																																																																																																																																																																																																																																																															
+																																																																																																																																																																																																																																																																																																																																																		
 
 $tdataautorizaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -196,6 +196,7 @@ $tdataautorizaciones[".geocodingEnabled"] = false;
 
 
 
+$tdataautorizaciones[".isDisplayLoading"] = true;
 
 $tdataautorizaciones[".isResizeColumns"] = true;
 
@@ -244,11 +245,8 @@ $tdataautorizaciones[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataautorizaciones[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

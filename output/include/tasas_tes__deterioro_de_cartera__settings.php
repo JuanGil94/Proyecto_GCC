@@ -137,7 +137,7 @@ $tdatatasas_tes__deterioro_de_cartera_[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatasas_tes__deterioro_de_cartera_[".ajaxCodeSnippetAdded"] = false;
 
@@ -177,6 +177,7 @@ $tdatatasas_tes__deterioro_de_cartera_[".geocodingEnabled"] = false;
 
 
 
+$tdatatasas_tes__deterioro_de_cartera_[".isDisplayLoading"] = true;
 
 $tdatatasas_tes__deterioro_de_cartera_[".isResizeColumns"] = true;
 
@@ -225,11 +226,8 @@ $tdatatasas_tes__deterioro_de_cartera_[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatasas_tes__deterioro_de_cartera_[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -137,11 +137,11 @@ $tdatatest_de_deterioro__resumen_[".allowShowHideFields"] = true; // temp fix #1
 $tdatatest_de_deterioro__resumen_[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatatest_de_deterioro__resumen_[".isUseAjaxSuggest"] = false;
+$tdatatest_de_deterioro__resumen_[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatest_de_deterioro__resumen_[".ajaxCodeSnippetAdded"] = false;
 
@@ -216,7 +216,10 @@ $tdatatest_de_deterioro__resumen_[".sqlTail"] = "";
 
 //fill array of records per page for list and report without group fields
 $arrRPP = array();
-$arrRPP[] = 1;
+$arrRPP[] = 10;
+$arrRPP[] = 20;
+$arrRPP[] = 50;
+$arrRPP[] = 100;
 $tdatatest_de_deterioro__resumen_[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

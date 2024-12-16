@@ -180,7 +180,7 @@ $tdatamedidas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatamedidas[".ajaxCodeSnippetAdded"] = false;
 
@@ -234,6 +234,7 @@ $tdatamedidas[".geocodingEnabled"] = false;
 
 
 
+$tdatamedidas[".isDisplayLoading"] = true;
 
 $tdatamedidas[".isResizeColumns"] = true;
 
@@ -271,11 +272,8 @@ $tdatamedidas[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatamedidas[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

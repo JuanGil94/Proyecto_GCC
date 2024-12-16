@@ -148,7 +148,7 @@ $tdataproductos_bancarios[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
-																																			
+																																												
 
 $tdataproductos_bancarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -191,6 +191,7 @@ $tdataproductos_bancarios[".geocodingEnabled"] = false;
 
 
 
+$tdataproductos_bancarios[".isDisplayLoading"] = true;
 
 $tdataproductos_bancarios[".isResizeColumns"] = true;
 
@@ -239,11 +240,8 @@ $tdataproductos_bancarios[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataproductos_bancarios[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

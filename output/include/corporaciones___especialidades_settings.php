@@ -140,11 +140,11 @@ $tdatacorporaciones___especialidades[".allowShowHideFields"] = true; // temp fix
 $tdatacorporaciones___especialidades[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatacorporaciones___especialidades[".isUseAjaxSuggest"] = false;
+$tdatacorporaciones___especialidades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatacorporaciones___especialidades[".ajaxCodeSnippetAdded"] = false;
 
@@ -222,11 +222,8 @@ $tdatacorporaciones___especialidades[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatacorporaciones___especialidades[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

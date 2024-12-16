@@ -43,6 +43,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsalertas["Spanish"]["Publicar"] = "Publicar";
 	$fieldToolTipsalertas["Spanish"]["Publicar"] = "";
 	$placeHoldersalertas["Spanish"]["Publicar"] = "";
+	$pageTitlesalertas["Spanish"]["edit"] = "Alertas";
 	if (count($fieldToolTipsalertas["Spanish"]))
 		$tdataalertas[".isUseToolTips"] = true;
 }
@@ -140,7 +141,7 @@ $tdataalertas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdataalertas[".ajaxCodeSnippetAdded"] = false;
 
@@ -180,6 +181,7 @@ $tdataalertas[".geocodingEnabled"] = false;
 
 
 
+$tdataalertas[".isDisplayLoading"] = true;
 
 $tdataalertas[".isResizeColumns"] = true;
 
@@ -217,11 +219,8 @@ $tdataalertas[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataalertas[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

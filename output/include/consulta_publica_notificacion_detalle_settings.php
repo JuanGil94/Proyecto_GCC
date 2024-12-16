@@ -152,11 +152,11 @@ $tdataconsulta_publica_notificacion_detalle[".allowShowHideFields"] = true; // t
 $tdataconsulta_publica_notificacion_detalle[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataconsulta_publica_notificacion_detalle[".isUseAjaxSuggest"] = false;
+$tdataconsulta_publica_notificacion_detalle[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataconsulta_publica_notificacion_detalle[".ajaxCodeSnippetAdded"] = false;
 
@@ -233,11 +233,8 @@ $tdataconsulta_publica_notificacion_detalle[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataconsulta_publica_notificacion_detalle[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

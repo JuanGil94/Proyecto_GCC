@@ -2,17 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1037,6 +1026,16 @@ if($buttId=='Replace_Templates')
 	}
 	buttonHandler_Replace_Templates($params);
 }
+if($buttId=='Enviar_Correo')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Enviar_Correo($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -1633,16 +1632,42 @@ $response=DB::Query("SELECT * FROM Procesos WHERE Numero='".$numProceso."'");
 					$procesoId=$date["ProcesoId"];
 					$abogadoId=$date["AbogadoId"];
 				}
+$response=DB::Query("SELECT * FROM Oficios WHERE OficioId='".$oficioId."'");
+		while( $date = $response->fetchAssoc() )
+				{
+					$nameCorrespondencia=$date["Oficio"];
+				}
+$fechaAc=date('Y-m-d');
+$response2=DB::Query("SELECT * FROM CorrespondenciaMasiva WHERE proceso=".$procesoId." AND enviado=1 AND correspondencia=".$oficioId." AND CAST(fecha AS DATE) ='".$fechaAc."'");
+		while( $date = $response2->fetchAssoc() )
+				{
+					$idCorres=$date["id"];
+					//$abogadoId=$date["AbogadoId"];
+				}
+if (!empty($idCorres)) {
+				 $result["Err"]=1;
+				 $result["numProceso"]=$numProceso;
+				 $result["nameCorrespondencia"]=$nameCorrespondencia;
+        //echo "Saltando el número 3\n";
+				 //echo "<script>alert('El proceso".$numProceso." ya registro el Oficio: ".$nameCorrespondencia."el dia de hoy')</script>";
+        //$contData1++; // Incrementar manualmente para evitar bucle infinito
+        continue;
+				echo "Entro:".$contData1;
+}
+else{
+//echo "Value Fecha:".$fechaAc." Value Response2:".$idCorres."<br>";
+
 $rs2=DB::Exec("INSERT INTO CorrespondenciaMasiva(fecha,proceso,correspondencia,usuario,enviado,observaciones,radicado) VALUES (GETDATE(),".$procesoId.",".$oficioId.",'".$userId."',0,'".$observaciones."','')");
 				if ($rs2) {
 					 //echo "La consulta se realizó correctamente.";
 				} 
 				else {
 					 // Hubo un error en la ejecución de la consulta
-					 echo "Error al ejecutar el insertoi into a correspondenciasMasivas: " . DB::LastError();
+					 echo "Error al ejecutar el insert into a correspondenciasMasivas " . DB::LastError();
 					 exit();
 				}
 $contData1++;
+}
 }
 //echo "Numero de Registros:".count($params["keys"]);
 //while ( $data = $button->getNextSelectedRecord() ) {
@@ -1658,6 +1683,22 @@ $response=DB::Query("SELECT * FROM Procesos WHERE Numero='".$numProceso."'");
 					$procesoId=$date["ProcesoId"];
 					$abogadoId=$date["AbogadoId"];
 				}
+$fechaAc=date('Y-m-d');
+$response2=DB::Query("SELECT * FROM CorrespondenciaMasiva WHERE proceso=".$procesoId." AND enviado=1 AND CAST(fecha AS DATE) ='".$fechaAc."'");
+		while( $date = $response2->fetchAssoc() )
+				{
+				 $idCorres=$date["id"];
+					//$abogadoId=$date["AbogadoId"];
+				}
+if (!empty($idCorres)) {
+				 $result["Err"]=1;
+				 $result["numProceso"]=$numProceso;
+				 $result["nameCorrespondencia"]=$nameCorrespondencia;
+        //echo "Saltando el número 3\n";
+        $contData1++; // Incrementar manualmente para evitar bucle infinito
+        //continue;
+}
+else{
 //echo "El AbogadoId del proceso es: ".$data["AbogadoId"];
 $response=DB::Query("SELECT ISNULL(ActuacionId,0) AS ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
 		while( $date = $response->fetchAssoc() )
@@ -1684,7 +1725,7 @@ $response=DB::Query("SELECT Salario FROM Salarios WHERE (Ano=YEAR('".$hasta."'))
 					$minimoMnesual=$date["Salario"];
 				}
 
-$response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as EstadoId, ISNULL(MotivoId,0) as MotivoId,(CASE
+$response=DB::Query("SELECT Intereses,ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as EstadoId, ISNULL(MotivoId,0) as MotivoId,(CASE
                                WHEN EstadoId = 6
                                     AND MotivoId = 1
                                THEN 1
@@ -1697,6 +1738,7 @@ $response=DB::Query("SELECT ISNULL(EtapaId,0) as EtapaId, ISNULL(EstadoId,0) as 
 					$estadoId=$date["EstadoId"];
 					$motivoId=$date["MotivoId"];
 					$terminacionPago=$date["TermPago"];
+					$flagIntereses=$date["Intereses"];
 				}
 $consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=".$abogadoActual);
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
@@ -1903,7 +1945,7 @@ if (($estadoAct==5 || $estadoAct==4) && $sancionadoId!=292340){
 if ($flagSigob==0){
 	$_SESSION["Radicado"]='';
 	$_SESSION["token"]='';
-	$oficio=new coreOficios($actuacionId,$procesoId,now(),$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId);
+	$oficio=new coreOficios($actuacionId,$procesoId,now(),$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId,$flagIntereses);
 				$response=$oficio->process();
 				if ($response==true){
 					$rs2=DB::Exec("INSERT INTO Correspondencias(ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicado."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
@@ -2102,7 +2144,7 @@ $xml = new SimpleXMLElement($response);
     // Comparar con "=="
     if ($ultimosCaracteres === "==") {
 				curl_close($curl);
-				$oficio=new coreOficios($actuacionId,$procesoId,now(),$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId);
+				$oficio=new coreOficios($actuacionId,$procesoId,now(),$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId,$flagIntereses);
 				$response=$oficio->process();
 				if ($response==true){
 					//echo '<script>alert("Response Oficio->Process true")</script>';
@@ -2151,6 +2193,7 @@ $contSigob++;
 //echo "Valor contador Antes:".$contData."Contador Sigob".$contSigob;
 $contData++;
 //echo "Valor contador i:".$contData;
+}
 }
 $result["response"]="OK";;
 	RunnerContext::pop();
@@ -9238,6 +9281,70 @@ function buttonHandler_Replace_Templates($params)
 	$data = $button->getCurrentRecord();
 $result["OficioId"]=$data["OficioId"];
 $result["Oficio"]=$data["Oficio"];;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Enviar_Correo($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	$email="juansgil@deaj.ramajudicial.gov.co";
+$message="Hello there\n<b>Best regards</b>";
+$subject="Sample subject";
+$arr = runner_mail(array('to' => $email, 'subject' => $subject,
+'htmlbody' => $message, 'charset' => 'UTF-8'));
+// if error happened print a message on the web page
+if (!$arr["mailed"])
+{
+echo "Error happened: <br>";
+echo $arr["message"];
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

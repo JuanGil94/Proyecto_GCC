@@ -132,7 +132,7 @@ $tdatasolidarios[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
-																										
+																																			
 
 $tdatasolidarios[".ajaxCodeSnippetAdded"] = false;
 
@@ -170,6 +170,7 @@ $tdatasolidarios[".geocodingEnabled"] = false;
 
 
 
+$tdatasolidarios[".isDisplayLoading"] = true;
 
 $tdatasolidarios[".isResizeColumns"] = true;
 
@@ -218,11 +219,8 @@ $tdatasolidarios[".arrGridTabs"] = $arrGridTabs;
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatasolidarios[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

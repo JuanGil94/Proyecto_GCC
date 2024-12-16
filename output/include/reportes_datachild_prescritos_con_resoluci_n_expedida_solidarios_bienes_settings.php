@@ -142,11 +142,11 @@ $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".
 $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".isUseAjaxSuggest"] = false;
+$tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".ajaxCodeSnippetAdded"] = false;
 
@@ -225,11 +225,8 @@ $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatareportes_datachild_prescritos_con_resoluci_n_expedida_solidarios_bienes[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

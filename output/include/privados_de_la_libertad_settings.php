@@ -161,11 +161,11 @@ $tdataprivados_de_la_libertad[".allowShowHideFields"] = true; // temp fix #13449
 $tdataprivados_de_la_libertad[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataprivados_de_la_libertad[".isUseAjaxSuggest"] = false;
+$tdataprivados_de_la_libertad[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprivados_de_la_libertad[".ajaxCodeSnippetAdded"] = false;
 
@@ -247,11 +247,8 @@ $tdataprivados_de_la_libertad[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataprivados_de_la_libertad[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

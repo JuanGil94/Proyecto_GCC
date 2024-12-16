@@ -185,11 +185,11 @@ $tdatabdme_excluidos_datachild[".allowShowHideFields"] = true; // temp fix #1344
 $tdatabdme_excluidos_datachild[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_excluidos_datachild[".isUseAjaxSuggest"] = false;
+$tdatabdme_excluidos_datachild[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_excluidos_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -271,11 +271,8 @@ $tdatabdme_excluidos_datachild[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_excluidos_datachild[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

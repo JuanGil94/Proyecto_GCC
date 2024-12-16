@@ -128,11 +128,11 @@ $tdataconsulta_publica[".allowShowHideFields"] = true; // temp fix #13449
 $tdataconsulta_publica[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataconsulta_publica[".isUseAjaxSuggest"] = false;
+$tdataconsulta_publica[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataconsulta_publica[".ajaxCodeSnippetAdded"] = false;
 
@@ -205,11 +205,8 @@ $tdataconsulta_publica[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataconsulta_publica[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

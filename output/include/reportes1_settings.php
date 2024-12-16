@@ -209,11 +209,11 @@ $tdatareportes1[".allowShowHideFields"] = true; // temp fix #13449
 $tdatareportes1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatareportes1[".isUseAjaxSuggest"] = false;
+$tdatareportes1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatareportes1[".ajaxCodeSnippetAdded"] = false;
 
@@ -305,11 +305,8 @@ $tdatareportes1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatareportes1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

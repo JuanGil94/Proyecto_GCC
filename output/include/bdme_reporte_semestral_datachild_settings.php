@@ -185,11 +185,11 @@ $tdatabdme_reporte_semestral_datachild[".allowShowHideFields"] = true; // temp f
 $tdatabdme_reporte_semestral_datachild[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_reporte_semestral_datachild[".isUseAjaxSuggest"] = false;
+$tdatabdme_reporte_semestral_datachild[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_reporte_semestral_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -278,11 +278,8 @@ $tdatabdme_reporte_semestral_datachild[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_reporte_semestral_datachild[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

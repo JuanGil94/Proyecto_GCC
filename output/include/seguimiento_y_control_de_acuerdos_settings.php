@@ -179,7 +179,7 @@ $tdataseguimiento_y_control_de_acuerdos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataseguimiento_y_control_de_acuerdos[".ajaxCodeSnippetAdded"] = false;
 
@@ -243,6 +243,7 @@ $tdataseguimiento_y_control_de_acuerdos[".pageSizeRecords"] = 20;
 
 
 
+$tdataseguimiento_y_control_de_acuerdos[".isDisplayLoading"] = true;
 
 
 
@@ -274,11 +275,8 @@ $tdataseguimiento_y_control_de_acuerdos[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataseguimiento_y_control_de_acuerdos[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

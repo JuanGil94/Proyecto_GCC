@@ -167,11 +167,11 @@ $tdatamovimiento_mensual[".allowShowHideFields"] = true; // temp fix #13449
 $tdatamovimiento_mensual[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatamovimiento_mensual[".isUseAjaxSuggest"] = false;
+$tdatamovimiento_mensual[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatamovimiento_mensual[".ajaxCodeSnippetAdded"] = false;
 
@@ -221,6 +221,7 @@ $tdatamovimiento_mensual[".geocodingEnabled"] = false;
 
 
 
+$tdatamovimiento_mensual[".isDisplayLoading"] = true;
 
 
 
@@ -255,7 +256,10 @@ $tdatamovimiento_mensual[".sqlTail"] = "";
 
 //fill array of records per page for list and report without group fields
 $arrRPP = array();
-$arrRPP[] = 1;
+$arrRPP[] = 10;
+$arrRPP[] = 20;
+$arrRPP[] = 50;
+$arrRPP[] = 100;
 $tdatamovimiento_mensual[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

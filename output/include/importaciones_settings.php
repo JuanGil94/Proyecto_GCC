@@ -188,7 +188,7 @@ $tdataimportaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
 
 $tdataimportaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -245,6 +245,7 @@ $tdataimportaciones[".geocodingEnabled"] = false;
 
 
 
+$tdataimportaciones[".isDisplayLoading"] = true;
 
 $tdataimportaciones[".isResizeColumns"] = true;
 
@@ -282,11 +283,8 @@ $tdataimportaciones[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataimportaciones[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

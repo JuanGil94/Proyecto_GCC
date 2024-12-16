@@ -188,11 +188,11 @@ $tdatabdme_retiros_datachild[".allowShowHideFields"] = true; // temp fix #13449
 $tdatabdme_retiros_datachild[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_retiros_datachild[".isUseAjaxSuggest"] = false;
+$tdatabdme_retiros_datachild[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatabdme_retiros_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -286,11 +286,8 @@ $tdatabdme_retiros_datachild[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_retiros_datachild[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

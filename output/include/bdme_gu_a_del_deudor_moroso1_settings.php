@@ -146,11 +146,11 @@ $tdatabdme_gu_a_del_deudor_moroso1[".allowShowHideFields"] = true; // temp fix #
 $tdatabdme_gu_a_del_deudor_moroso1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_gu_a_del_deudor_moroso1[".isUseAjaxSuggest"] = false;
+$tdatabdme_gu_a_del_deudor_moroso1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabdme_gu_a_del_deudor_moroso1[".ajaxCodeSnippetAdded"] = false;
 
@@ -230,11 +230,8 @@ $tdatabdme_gu_a_del_deudor_moroso1[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_gu_a_del_deudor_moroso1[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

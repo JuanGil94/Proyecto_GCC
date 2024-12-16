@@ -209,7 +209,7 @@ $beforePath = $scheme . $host . $port;
 //SE GUARDA LA URL 
 $_SESSION['BeforePath'] = $beforePath;
 
-$_SESSION["PruebaSeccional"]=2;
+//$_SESSION["PruebaSeccional"]=2;
 //echo "<script>alert('HOLAAAAAA, HOLAASAAAAA');</script>";
 //phpinfo();
 $arraySeccionales=array();

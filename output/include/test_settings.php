@@ -137,7 +137,7 @@ $tdatatest[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatatest[".ajaxCodeSnippetAdded"] = false;
 
@@ -176,6 +176,7 @@ $tdatatest[".geocodingEnabled"] = false;
 
 
 
+$tdatatest[".isDisplayLoading"] = true;
 
 $tdatatest[".isResizeColumns"] = true;
 
@@ -213,11 +214,8 @@ $tdatatest[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatatest[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -131,7 +131,7 @@ $tdatabancos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabancos[".ajaxCodeSnippetAdded"] = false;
 
@@ -168,6 +168,7 @@ $tdatabancos[".geocodingEnabled"] = false;
 
 
 
+$tdatabancos[".isDisplayLoading"] = true;
 
 $tdatabancos[".isResizeColumns"] = true;
 
@@ -205,11 +206,8 @@ $tdatabancos[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabancos[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -584,11 +584,11 @@ $globalSettings["useBuiltInMailer"] = false;
 
 $globalSettings["useCustomSMTPSettings"] = true;
 
-$globalSettings["strSMTPUser"] = "soporteGCC@deaj.ramajudicial.gov.co";
+$globalSettings["strSMTPUser"] = "soportecobrocoactivo@deaj.ramajudicial.gov.co";
 $globalSettings["strSMTPServer"] = "smtp.office365.com";
 $globalSettings["strSMTPPort"] = "587";
-$globalSettings["strSMTPPassword"] = "Huestes*7";
-$globalSettings["strFromEmail"] = "soporteGCC@deaj.ramajudicial.gov.co";
+$globalSettings["strSMTPPassword"] = "Coactivo\$1124";
+$globalSettings["strFromEmail"] = "soportecobrocoactivo@deaj.ramajudicial.gov.co";
 
 $globalSettings["SMTPSecure"] = "tls";
 //
@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "3983_1733763168";
+$projectBuildKey = "4020_1734019569";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "3983";
+$projectBuildNumber = "4020";
 
 $mlang_messages = array();
 $mlang_charsets = array();

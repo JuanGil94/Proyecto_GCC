@@ -128,11 +128,11 @@ $tdataprocesos___mes[".allowShowHideFields"] = true; // temp fix #13449
 $tdataprocesos___mes[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataprocesos___mes[".isUseAjaxSuggest"] = false;
+$tdataprocesos___mes[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataprocesos___mes[".ajaxCodeSnippetAdded"] = false;
 
@@ -173,6 +173,7 @@ $tdataprocesos___mes[".geocodingEnabled"] = false;
 $tdataprocesos___mes[".chartType"] = "Line";
 // end of chart settings
 
+$tdataprocesos___mes[".isDisplayLoading"] = true;
 
 
 
@@ -204,11 +205,8 @@ $tdataprocesos___mes[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataprocesos___mes[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

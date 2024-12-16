@@ -219,7 +219,14 @@ class reliquidacion extends CalendarioAnual{
             //echo $fecha;
             list($anio, $mes, $dia) = explode('-', $fecha);
             if ($dia==00){
-                $fecha='2018-08-01';
+                $dia=01;
+                $fecha=$anio.'-'.$mes.'-'.$dia;
+                $date = new DateTime($fecha);
+                // Restar un día
+                $date->modify('-1 day');
+                // Mostrar el resultado
+                $date->format('Y-m-d');
+                $fecha=$date->format('Y-m-d');
                 $intereses=0;$obliReca=0;$obliNove=0;$inteReca=0;$inteNove=0;$costReca=0;$costNove=0;
             } 
             $tasa=floatval($tasa*100);
@@ -240,7 +247,6 @@ class reliquidacion extends CalendarioAnual{
         catch (PDOException $e) {
             echo "Error de PDO: " . $e->getMessage();
         }
-
     }
     public function deleteRe($procesoId){
         //echo "Ingreso<br>";

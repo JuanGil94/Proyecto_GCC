@@ -158,11 +158,11 @@ $tdataindicadores_de_b_squeda[".allowShowHideFields"] = true; // temp fix #13449
 $tdataindicadores_de_b_squeda[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataindicadores_de_b_squeda[".isUseAjaxSuggest"] = false;
+$tdataindicadores_de_b_squeda[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataindicadores_de_b_squeda[".ajaxCodeSnippetAdded"] = false;
 
@@ -244,7 +244,10 @@ $tdataindicadores_de_b_squeda[".sqlTail"] = "";
 
 //fill array of records per page for list and report without group fields
 $arrRPP = array();
-$arrRPP[] = 1;
+$arrRPP[] = 10;
+$arrRPP[] = 20;
+$arrRPP[] = 50;
+$arrRPP[] = 100;
 $tdataindicadores_de_b_squeda[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

@@ -140,11 +140,11 @@ $tdatalistado_de_chequeo_sancionado_datachild[".allowShowHideFields"] = true; //
 $tdatalistado_de_chequeo_sancionado_datachild[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatalistado_de_chequeo_sancionado_datachild[".isUseAjaxSuggest"] = false;
+$tdatalistado_de_chequeo_sancionado_datachild[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatalistado_de_chequeo_sancionado_datachild[".ajaxCodeSnippetAdded"] = false;
 
@@ -183,6 +183,7 @@ $tdatalistado_de_chequeo_sancionado_datachild[".geocodingEnabled"] = false;
 
 
 
+$tdatalistado_de_chequeo_sancionado_datachild[".isDisplayLoading"] = true;
 
 
 
@@ -219,11 +220,8 @@ $tdatalistado_de_chequeo_sancionado_datachild[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatalistado_de_chequeo_sancionado_datachild[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

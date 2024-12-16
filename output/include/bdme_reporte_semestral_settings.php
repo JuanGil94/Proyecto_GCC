@@ -149,11 +149,11 @@ $tdatabdme_reporte_semestral[".allowShowHideFields"] = true; // temp fix #13449
 $tdatabdme_reporte_semestral[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = false;
+$tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdatabdme_reporte_semestral[".ajaxCodeSnippetAdded"] = false;
 
@@ -233,11 +233,8 @@ $tdatabdme_reporte_semestral[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdatabdme_reporte_semestral[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

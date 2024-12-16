@@ -140,11 +140,11 @@ $tdataconsolidado_por_conceptos[".allowShowHideFields"] = true; // temp fix #134
 $tdataconsolidado_por_conceptos[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataconsolidado_por_conceptos[".isUseAjaxSuggest"] = false;
+$tdataconsolidado_por_conceptos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataconsolidado_por_conceptos[".ajaxCodeSnippetAdded"] = false;
 
@@ -220,7 +220,10 @@ $tdataconsolidado_por_conceptos[".sqlTail"] = "";
 
 //fill array of records per page for list and report without group fields
 $arrRPP = array();
-$arrRPP[] = 1;
+$arrRPP[] = 10;
+$arrRPP[] = 20;
+$arrRPP[] = 50;
+$arrRPP[] = 100;
 $tdataconsolidado_por_conceptos[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

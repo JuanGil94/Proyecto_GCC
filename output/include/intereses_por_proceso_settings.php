@@ -174,7 +174,7 @@ $tdataintereses_por_proceso[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																												
 
 $tdataintereses_por_proceso[".ajaxCodeSnippetAdded"] = false;
 
@@ -259,11 +259,8 @@ $tdataintereses_por_proceso[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataintereses_por_proceso[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields
