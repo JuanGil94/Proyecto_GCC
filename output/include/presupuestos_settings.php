@@ -6,11 +6,11 @@ $tdatapresupuestos[".OwnerID"] = "";
 $tdatapresupuestos[".OriginalTable"] = "dbo.Presupuestos";
 
 
-$tdatapresupuestos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatapresupuestos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatapresupuestos[".originalPagesByType"] = $tdatapresupuestos[".pagesByType"];
-$tdatapresupuestos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatapresupuestos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatapresupuestos[".originalPages"] = $tdatapresupuestos[".pages"];
-$tdatapresupuestos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatapresupuestos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatapresupuestos[".originalDefaultPages"] = $tdatapresupuestos[".defaultPages"];
 
 //	field labels
@@ -137,13 +137,14 @@ $tdatapresupuestos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
+											
 
 $tdatapresupuestos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatapresupuestos[".buttonsAdded"] = false;
+$tdatapresupuestos[".buttonsAdded"] = true;
 
-$tdatapresupuestos[".addPageEvents"] = false;
+$tdatapresupuestos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatapresupuestos[".isUseTimeForSearch"] = false;
@@ -531,7 +532,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -578,7 +582,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -932,7 +939,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1072,7 +1082,10 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

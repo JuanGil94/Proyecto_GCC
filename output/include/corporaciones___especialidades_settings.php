@@ -34,18 +34,18 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscorporaciones___especialidades["Spanish"]["Especialidad"] = "Especialidad";
 	$fieldToolTipscorporaciones___especialidades["Spanish"]["Especialidad"] = "";
 	$placeHolderscorporaciones___especialidades["Spanish"]["Especialidad"] = "";
-	$fieldLabelscorporaciones___especialidades["Spanish"]["Seccional"] = "Seccional";
-	$fieldToolTipscorporaciones___especialidades["Spanish"]["Seccional"] = "";
-	$placeHolderscorporaciones___especialidades["Spanish"]["Seccional"] = "";
-	$fieldLabelscorporaciones___especialidades["Spanish"]["Concepto"] = "Concepto";
-	$fieldToolTipscorporaciones___especialidades["Spanish"]["Concepto"] = "";
-	$placeHolderscorporaciones___especialidades["Spanish"]["Concepto"] = "";
 	$fieldLabelscorporaciones___especialidades["Spanish"]["Procesos"] = "Procesos";
 	$fieldToolTipscorporaciones___especialidades["Spanish"]["Procesos"] = "";
 	$placeHolderscorporaciones___especialidades["Spanish"]["Procesos"] = "";
 	$fieldLabelscorporaciones___especialidades["Spanish"]["Saldo"] = "Saldo";
 	$fieldToolTipscorporaciones___especialidades["Spanish"]["Saldo"] = "";
 	$placeHolderscorporaciones___especialidades["Spanish"]["Saldo"] = "";
+	$fieldLabelscorporaciones___especialidades["Spanish"]["SeccionalId"] = "Seccional";
+	$fieldToolTipscorporaciones___especialidades["Spanish"]["SeccionalId"] = "";
+	$placeHolderscorporaciones___especialidades["Spanish"]["SeccionalId"] = "";
+	$fieldLabelscorporaciones___especialidades["Spanish"]["ConceptoId"] = "Concepto";
+	$fieldToolTipscorporaciones___especialidades["Spanish"]["ConceptoId"] = "";
+	$placeHolderscorporaciones___especialidades["Spanish"]["ConceptoId"] = "";
 	if (count($fieldToolTipscorporaciones___especialidades["Spanish"]))
 		$tdatacorporaciones___especialidades[".isUseToolTips"] = true;
 }
@@ -144,7 +144,7 @@ $tdatacorporaciones___especialidades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatacorporaciones___especialidades[".ajaxCodeSnippetAdded"] = false;
 
@@ -167,10 +167,10 @@ $tdatacorporaciones___especialidades[".googleLikeFields"] = array();
 $tdatacorporaciones___especialidades[".googleLikeFields"][] = "CarteraTipoId";
 $tdatacorporaciones___especialidades[".googleLikeFields"][] = "Corporacion";
 $tdatacorporaciones___especialidades[".googleLikeFields"][] = "Especialidad";
-$tdatacorporaciones___especialidades[".googleLikeFields"][] = "Seccional";
-$tdatacorporaciones___especialidades[".googleLikeFields"][] = "Concepto";
 $tdatacorporaciones___especialidades[".googleLikeFields"][] = "Procesos";
 $tdatacorporaciones___especialidades[".googleLikeFields"][] = "Saldo";
+$tdatacorporaciones___especialidades[".googleLikeFields"][] = "SeccionalId";
+$tdatacorporaciones___especialidades[".googleLikeFields"][] = "ConceptoId";
 
 
 
@@ -681,280 +681,10 @@ $tdatacorporaciones___especialidades[".hideMobileList"] = array();
 
 	$tdatacorporaciones___especialidades["Especialidad"] = $fdata;
 		$tdatacorporaciones___especialidades[".searchableFields"][] = "Especialidad";
-//	Seccional
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 4;
-	$fdata["strName"] = "Seccional";
-	$fdata["GoodName"] = "Seccional";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Corporaciones___Especialidades","Seccional");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Seccional";
-
-	
-		$fdata["FullName"] = "Seccional";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacorporaciones___especialidades["Seccional"] = $fdata;
-		$tdatacorporaciones___especialidades[".searchableFields"][] = "Seccional";
-//	Concepto
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 5;
-	$fdata["strName"] = "Concepto";
-	$fdata["GoodName"] = "Concepto";
-	$fdata["ownerTable"] = "";
-	$fdata["Label"] = GetFieldLabel("Corporaciones___Especialidades","Concepto");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "Concepto";
-
-	
-		$fdata["FullName"] = "Concepto";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacorporaciones___especialidades["Concepto"] = $fdata;
-		$tdatacorporaciones___especialidades[".searchableFields"][] = "Concepto";
 //	Procesos
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "Procesos";
 	$fdata["GoodName"] = "Procesos";
 	$fdata["ownerTable"] = "";
@@ -1092,7 +822,7 @@ $tdatacorporaciones___especialidades[".hideMobileList"] = array();
 //	Saldo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "Saldo";
 	$fdata["GoodName"] = "Saldo";
 	$fdata["ownerTable"] = "";
@@ -1228,6 +958,332 @@ $tdatacorporaciones___especialidades[".hideMobileList"] = array();
 
 	$tdatacorporaciones___especialidades["Saldo"] = $fdata;
 		$tdatacorporaciones___especialidades[".searchableFields"][] = "Saldo";
+//	SeccionalId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "SeccionalId";
+	$fdata["GoodName"] = "SeccionalId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Corporaciones___Especialidades","SeccionalId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "SeccionalId";
+
+	
+		$fdata["FullName"] = "SeccionalId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Seccional_ProcesosView1";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "SeccionalId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Seccional";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Seccional";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacorporaciones___especialidades["SeccionalId"] = $fdata;
+		$tdatacorporaciones___especialidades[".searchableFields"][] = "SeccionalId";
+//	ConceptoId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "ConceptoId";
+	$fdata["GoodName"] = "ConceptoId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Corporaciones___Especialidades","ConceptoId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "ConceptoId";
+
+	
+		$fdata["FullName"] = "ConceptoId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Conceptos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "ConceptoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Concepto";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacorporaciones___especialidades["ConceptoId"] = $fdata;
+		$tdatacorporaciones___especialidades[".searchableFields"][] = "ConceptoId";
 
 
 $tables_data["Corporaciones - Especialidades"]=&$tdatacorporaciones___especialidades;

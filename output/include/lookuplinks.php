@@ -3036,6 +3036,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.CarteraTipos"]["corporaciones___especialidades.CarteraTipoId"] = array();
 		}
 		$lookupTableLinks["dbo.CarteraTipos"]["corporaciones___especialidades.CarteraTipoId"]["edit"] = array("table" => "Corporaciones - Especialidades", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"] ) ) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccional_ProcesosView1"]["corporaciones___especialidades.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccional_ProcesosView1"]["corporaciones___especialidades.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccional_ProcesosView1"]["corporaciones___especialidades.SeccionalId"]["edit"] = array("table" => "Corporaciones - Especialidades", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["corporaciones___especialidades.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["corporaciones___especialidades.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["corporaciones___especialidades.ConceptoId"]["edit"] = array("table" => "Corporaciones - Especialidades", "field" => "ConceptoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
 			$lookupTableLinks["dbo.CarteraTipos"] = array();
 		}

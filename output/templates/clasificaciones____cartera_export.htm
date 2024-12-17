@@ -101,24 +101,9 @@
 				Formato mostrado			</div>
 		</div>
 		<div class="col-md-8 col-sm-8">
-			
-			<div class="radio">
-					{BEGIN groupExcel}
+						<div class="radio">
 			  <label>
-				<input TYPE="radio" NAME="type" VALUE="excel2007" CHECKED {$excelradio_attrs}>
-				<span> <img src="images/excel.gif" align="absmiddle" alt=" ">&nbsp;Excel 2007</span>
-			  </label>
-			{END groupExcel}
-					</div>
-					<div class="radio">
-			  <label>
-				<input TYPE="radio" NAME="type" VALUE="word"  {$wordradio_attrs}>
-				<span> <img src="images/word.gif" align="absmiddle" alt=" ">&nbsp;Word</span>
-			  </label>
-			</div>
-					<div class="radio">
-			  <label>
-				<input TYPE="radio" NAME="type" VALUE="csv"  {$csvradio_attrs}>
+				<input TYPE="radio" NAME="type" VALUE="csv" checked {$csvradio_attrs}>
 				<span> <img src="images/csv.gif" align="absmiddle" alt=" ">&nbsp;Valores separados por coma</span>
 			  </label>
 			</div>

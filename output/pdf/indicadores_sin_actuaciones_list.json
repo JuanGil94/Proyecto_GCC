@@ -154,13 +154,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
-				
-				
-			{"text":"","hidden":"{$item_hide_page_size}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      

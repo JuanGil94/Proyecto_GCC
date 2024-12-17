@@ -171,6 +171,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Sum_Costas_Acuerdos"] = true;
 		$this->events["dbo_Acuerdos_snippet2"] = true;
 		$this->events["dbo_Acuerdos_snippet3"] = true;
+		$this->events["Recaudo_Por_Seccional"] = true;
 
 
 
@@ -1073,6 +1074,7 @@ echo "<label value='".$_SESSION["fechaIn"]."' style='margin-right: 20px;'>Selecc
 	// Obtener el último día del mes anterior
 $ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
 
+echo "<label for='BDME_Actualiza_desdeId' style='margin-right: 20px;'>Desde: </label><br>";
 // Mostrar el input con el valor calculado
 echo "<input type='date' id='BDME_Actualiza_desdeId' name='desde' value='" . date('Y-m-d', strtotime($ultimo_dia_mes_anterior)) . "' required><br>";
 
@@ -1118,9 +1120,10 @@ echo "<input type='text' id='BDME_Actualiza_SancionadoId' value=''>";
 	{
 	// Obtener el último día del mes anterior
 $ultimo_dia_mes_anterior = date('Y-m-t', strtotime('last day of previous month'));
-
+echo "<label for='BDME_Cancelacion_desdeId' style='margin-right: 20px;'>Desde: </label><br>";
 // Mostrar el input con el valor calculado
-echo "<input type='date' id='BDME_Cancelacion_desdeId' name='desde' value='" . date('Y-m-d', strtotime($ultimo_dia_mes_anterior)) . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+echo "<input type='date' id='BDME_Cancelacion_desdeId' name='desde' value='" . date('Y-m-d') . "' pattern='\\d{4}-\\d{2}-\\d{2}'  required><br>";
+
 
   
 	;
@@ -5452,6 +5455,12 @@ $consulta=DB::Query("SELECT FORMAT(SUM(Total), 'C', 'es-CO') sumTotal FROM Acuer
             $sumTotal=$date["sumTotal"];
         }
 echo "<strong>".$sumTotal."</strong>";
+	;
+}
+	function event_Recaudo_Por_Seccional(&$params)
+	{
+	echo "<label for='Recaudo_seccional_Busqueda_MesId' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Recaudo_seccional_Busqueda_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
 	;
 }
 

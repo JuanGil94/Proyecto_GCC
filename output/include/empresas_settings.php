@@ -6,11 +6,11 @@ $tdataempresas[".OwnerID"] = "";
 $tdataempresas[".OriginalTable"] = "dbo.Empresas";
 
 
-$tdataempresas[".pagesByType"] = my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataempresas[".pagesByType"] = my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataempresas[".originalPagesByType"] = $tdataempresas[".pagesByType"];
-$tdataempresas[".pages"] = types2pages( my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataempresas[".pages"] = types2pages( my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataempresas[".originalPages"] = $tdataempresas[".pages"];
-$tdataempresas[".defaultPages"] = my_json_decode( "{\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataempresas[".defaultPages"] = my_json_decode( "{\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataempresas[".originalDefaultPages"] = $tdataempresas[".defaultPages"];
 
 //	field labels
@@ -168,13 +168,15 @@ $tdataempresas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																				
+				
+		
 
 $tdataempresas[".ajaxCodeSnippetAdded"] = false;
 
-$tdataempresas[".buttonsAdded"] = false;
+$tdataempresas[".buttonsAdded"] = true;
 
-$tdataempresas[".addPageEvents"] = false;
+$tdataempresas[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataempresas[".isUseTimeForSearch"] = false;
@@ -903,7 +905,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "MaximoPesos_decimales_con_coma", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1044,7 +1049,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "MaximoPesos_decimales_con_coma", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1185,7 +1193,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "MaximoPesos_decimales_con_coma", "type" => "click" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1467,7 +1478,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "MaximoPesos_decimales_con_coma", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1607,7 +1621,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1887,7 +1904,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "MaximoPesos_decimales_con_coma", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -2028,7 +2048,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "MaximoPesos_decimales_con_coma", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -2301,7 +2324,10 @@ $tdataempresas[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

@@ -24,9 +24,19 @@ function BeforeProcessList($pageObject)
 {
 
 		
-set_time_limit(0); // Elimina la restricción de timeout
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+
+		//Obtener el primer día del mes actual: 
+		$fecha1 = new DateTime();
+		$fecha1->modify('first day of this month');
+		//echo $fecha1->format('d/m/Y'); // imprime por ejemplo: 01/12/2012
+
+		if(empty($_SESSION['mes_report_Semestral'])){
+				$_SESSION['mes_report_Semestral'] = $fecha1->format('d/m/Y');
+		}
+
+		set_time_limit(0); // Elimina la restricción de timeout
+		// Place event code here.
+		// Use "Add Action" button to add code snippets.
 
         // Obtener la URL completa de la página actual
     $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -40,7 +50,7 @@ set_time_limit(0); // Elimina la restricción de timeout
 
    if ($_SESSION['ventanaWebpath'] != $path) {
     $_SESSION['ventanaWebpath'] = $path;
-    unset($_SESSION['mes_report_Semestral']);
+    //unset($_SESSION['mes_report_Semestral']);
 		}
 
 ;

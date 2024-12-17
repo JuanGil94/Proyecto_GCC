@@ -2,6 +2,17 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1036,6 +1047,26 @@ if($buttId=='Enviar_Correo')
 	}
 	buttonHandler_Enviar_Correo($params);
 }
+if($buttId=='Buscar_Recaudo_Seccional')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Buscar_Recaudo_Seccional($params);
+}
+if($buttId=='PDF_Print')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_PDF_Print($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -1174,6 +1205,84 @@ if( $eventId == 'SeccionalId_event' && "dbo.ProcesosReasignar" == $table )
 	require_once("include/procesosreasignar_variables.php");
 	$cipherer = new RunnerCipherer("dbo.ProcesosReasignar");
 	fieldEventHandler_SeccionalId_event( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Abogados" == $table )
+{
+	require_once("include/abogados_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Abogados");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Ciudades" == $table )
+{
+	require_once("include/ciudades_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Ciudades");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Departamentos" == $table )
+{
+	require_once("include/departamentos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Departamentos");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Despachos" == $table )
+{
+	require_once("include/despachos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Despachos");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Empresas" == $table )
+{
+	require_once("include/empresas_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Empresas");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Niveles" == $table )
+{
+	require_once("include/niveles_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Niveles");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Presupuestos" == $table )
+{
+	require_once("include/presupuestos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Presupuestos");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Salarios" == $table )
+{
+	require_once("include/salarios_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Salarios");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Uvts" == $table )
+{
+	require_once("include/uvts_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Uvts");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Bancos" == $table )
+{
+	require_once("include/bancos_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Bancos");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Alertas" == $table )
+{
+	require_once("include/alertas_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Alertas");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'Validar_numeros_No_negativos' && "dbo.Uvbs" == $table )
+{
+	require_once("include/uvbs_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Uvbs");
+	fieldEventHandler_Validar_numeros_No_negativos( $params );
+}
+if( $eventId == 'MaximoPesos_decimales_con_coma' && "dbo.Empresas" == $table )
+{
+	require_once("include/empresas_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Empresas");
+	fieldEventHandler_MaximoPesos_decimales_con_coma( $params );
 }
 
 
@@ -5682,7 +5791,19 @@ function buttonHandler_Buscar9($params)
         $defaultHasta = $currentDate->format('Y-m-d'); // Formato YYYY-MM-DD
 				 $_SESSION['tablero_control_hastaid'] = $defaultHasta;
     }else{
-				$_SESSION['tablero_control_hastaid'] = $params['tablero_control_hasta'].'-01';
+				$date = $params['tablero_gestion_hasta'].'-01';
+				// Crear un objeto DateTime a partir de la fecha
+				$dateTime = new DateTime($date);
+
+				// Modificar la fecha para que sea el último día del mes
+				$dateTime->modify('last day of this month');
+
+				// Convertir el objeto DateTime a formato Y-m-d
+				$lastDayOfMonth = $dateTime->format('Y-m-d');
+
+				// Obtener el último día del mes
+				$params['tablero_gestion_hasta'] = $lastDayOfMonth;
+				$_SESSION['tablero_control_hastaid'] = $params['tablero_gestion_hasta'];
 		 }
 
 		
@@ -5766,7 +5887,20 @@ $username = $_SESSION["UserNameF"];
         $defaultHasta = $currentDate->format('Y-m-d'); // Formato YYYY-MM-DD
 				 $_SESSION['tablero_control_hastaid'] = $defaultHasta;
     } else {
-				$_SESSION['tablero_control_hastaid'] = $params['tablero_gestion_hasta'].'-01';
+				
+				$date = $params['tablero_gestion_hasta'].'-01';
+				// Crear un objeto DateTime a partir de la fecha
+				$dateTime = new DateTime($date);
+
+				// Modificar la fecha para que sea el último día del mes
+				$dateTime->modify('last day of this month');
+
+				// Convertir el objeto DateTime a formato Y-m-d
+				$lastDayOfMonth = $dateTime->format('Y-m-d');
+
+				// Obtener el último día del mes
+				$params['tablero_gestion_hasta'] = $lastDayOfMonth;
+				$_SESSION['tablero_control_hastaid'] = $params['tablero_gestion_hasta'];
     }
 		
 
@@ -5808,6 +5942,7 @@ $seccional = $row['SeccionalId'];
 $_SESSION['tablero_control_cartera'] = $cartera;
 $_SESSION['tablero_control_seccionalid'] = $seccional;
 }
+
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -7730,34 +7865,26 @@ function buttonHandler_Buscar23($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-		// Put your code here.
- 
-	$dateDesde = new DateTime($params['indicadores_recaudo_desde'].'-01');
-	$dateHasta = new DateTime($params['indicadores_recaudo_hasta'].'-01');
+	
 
-		// Obtener el mes y el año actual
-		$mesActual = date('m');
-		$anioActual = date('Y');
+$fechaactual = date("Y-m-d");
+$fecha = $params['indicadores_recaudo_desde'].'-01';
 
-		// Generar el primer día del mes
-		$primer_dia = $dateDesde->modify('first day of this month')->format('d-m-Y');
+$fechaactualComoEntero = strtotime($fechaactual);
+$fechaComoEntero = strtotime($fecha);
 
-		// Generar el último día del mes
-		$ultimo_dia = $dateHasta->modify('last day of this month')->format('d-m-Y');
+$fechaactualmes = date("m", $fechaactualComoEntero);
+$fechames = date("m", $fechaComoEntero);
 
-		
-		if ($dateDesde->format('Y') <= $anioActual && $dateDesde->format('m') < $mesActual &&
-			 $dateHasta->format('Y') <= $anioActual && $dateHasta->format('m') < $mesActual && $dateHasta->format('m') >= $dateDesde->format('m')) {
-	 
-			 $dateDesde = new DateTime('first day of last month');
-			 $_SESSION['indicadores_recaudo_desde'] = $primer_dia;
+if($fechames < $fechaactualmes){
 
-			 $dateHasta = new DateTime('last day of last month');
-			 $_SESSION['indicadores_recaudo_hasta'] = $ultimo_dia;
-		}
+  $_SESSION['indicadores_recaudo_desde'] = $params['indicadores_recaudo_desde'].'-01';
 
-
-
+}
+else{
+	
+	echo 'alert("El mes no puede ser mayor o igual al actual");';
+}
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -9356,6 +9483,115 @@ echo $arr["message"];
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
 }
+function buttonHandler_Buscar_Recaudo_Seccional($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$_SESSION['recaudo_seccional_busqueda_mes'] = $params['recaudo_seccional_busqueda_mes'].'-01';;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_PDF_Print($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
 
 
 		
@@ -9921,6 +10157,64 @@ function fieldEventHandler_SeccionalId_event( $params )
 $_SESSION["PruebaSeccional"]=$params["value"];
 $result["Value"]=$_SESSION["PruebaSeccional"];
 echo $result["Value"];
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Validar_numeros_No_negativos( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+$result["upper"] = strtoupper( $params["value"] );
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_MaximoPesos_decimales_con_coma( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+$result["upper"] = strtoupper( $params["value"] );
 ;
 	RunnerContext::pop();
 	

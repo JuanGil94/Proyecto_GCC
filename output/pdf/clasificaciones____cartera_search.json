@@ -222,6 +222,18 @@ pdfDocument = {
 				
 			{"text":{$Clasificacion_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
 				
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
+				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

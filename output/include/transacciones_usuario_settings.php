@@ -138,7 +138,7 @@ $tdatatransacciones_usuario[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatatransacciones_usuario[".ajaxCodeSnippetAdded"] = false;
 

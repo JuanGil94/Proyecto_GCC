@@ -99,7 +99,19 @@ function BeforeQueryList(&$strSQL, &$strWhereClause, &$strOrderBy, $pageObject)
 function BeforeProcessList($pageObject)
 {
 
-			set_time_limit(0); // Elimina la restricción de timeout
+		
+
+		//Obtener fecha  actual: 
+		$fecha1 = date('d/m/Y');
+
+	if(empty($_SESSION['mesExcluidos'])){
+		$_SESSION['mesExcluidos'] = date('d/m/Y');
+
+		//echo $_SESSION['mesExcluidos'];
+	}
+
+
+	set_time_limit(0); // Elimina la restricción de timeout
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
@@ -115,7 +127,7 @@ function BeforeProcessList($pageObject)
 
 		if ($_SESSION['ventanaWebpath'] != $path) {
     $_SESSION['ventanaWebpath'] = $path;
-		 unset($_SESSION['mesExcluidos']);
+		 //unset($_SESSION['mesExcluidos']);
 		}
 ;
 } // function BeforeProcessList

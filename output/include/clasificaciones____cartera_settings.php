@@ -6,11 +6,11 @@ $tdataclasificaciones____cartera[".OwnerID"] = "";
 $tdataclasificaciones____cartera[".OriginalTable"] = "Clasificaciones -- Cartera";
 
 
-$tdataclasificaciones____cartera[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataclasificaciones____cartera[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataclasificaciones____cartera[".originalPagesByType"] = $tdataclasificaciones____cartera[".pagesByType"];
-$tdataclasificaciones____cartera[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataclasificaciones____cartera[".pages"] = types2pages( my_json_decode( "{\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataclasificaciones____cartera[".originalPages"] = $tdataclasificaciones____cartera[".pages"];
-$tdataclasificaciones____cartera[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataclasificaciones____cartera[".defaultPages"] = my_json_decode( "{\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataclasificaciones____cartera[".originalDefaultPages"] = $tdataclasificaciones____cartera[".defaultPages"];
 
 //	field labels
@@ -88,6 +88,18 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsclasificaciones____cartera["Spanish"]["Clasificacion"] = "Clasificacion";
 	$fieldToolTipsclasificaciones____cartera["Spanish"]["Clasificacion"] = "";
 	$placeHoldersclasificaciones____cartera["Spanish"]["Clasificacion"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["Prescripcion"] = "Prescripcion";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["Prescripcion"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["Prescripcion"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["SancionadoId"] = "Sancionado Id";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["SancionadoId"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["SancionadoId"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["Documento"] = "Documento";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["Documento"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["Documento"] = "";
+	$fieldLabelsclasificaciones____cartera["Spanish"]["SeccionalId"] = "Seccional Id";
+	$fieldToolTipsclasificaciones____cartera["Spanish"]["SeccionalId"] = "";
+	$placeHoldersclasificaciones____cartera["Spanish"]["SeccionalId"] = "";
 	if (count($fieldToolTipsclasificaciones____cartera["Spanish"]))
 		$tdataclasificaciones____cartera[".isUseToolTips"] = true;
 }
@@ -186,7 +198,7 @@ $tdataclasificaciones____cartera[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataclasificaciones____cartera[".ajaxCodeSnippetAdded"] = false;
 
@@ -225,6 +237,10 @@ $tdataclasificaciones____cartera[".googleLikeFields"][] = "Nivel";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Busquedas";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Antiguedad";
 $tdataclasificaciones____cartera[".googleLikeFields"][] = "Clasificacion";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "Prescripcion";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "SancionadoId";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "Documento";
+$tdataclasificaciones____cartera[".googleLikeFields"][] = "SeccionalId";
 
 
 
@@ -3429,6 +3445,558 @@ $tdataclasificaciones____cartera[".hideMobileList"] = array();
 
 	$tdataclasificaciones____cartera["Clasificacion"] = $fdata;
 		$tdataclasificaciones____cartera[".searchableFields"][] = "Clasificacion";
+//	Prescripcion
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 22;
+	$fdata["strName"] = "Prescripcion";
+	$fdata["GoodName"] = "Prescripcion";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Prescripcion");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Prescripcion";
+
+	
+		$fdata["FullName"] = "Prescripcion";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataclasificaciones____cartera["Prescripcion"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "Prescripcion";
+//	SancionadoId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 23;
+	$fdata["strName"] = "SancionadoId";
+	$fdata["GoodName"] = "SancionadoId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","SancionadoId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "SancionadoId";
+
+	
+		$fdata["FullName"] = "SancionadoId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataclasificaciones____cartera["SancionadoId"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "SancionadoId";
+//	Documento
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 24;
+	$fdata["strName"] = "Documento";
+	$fdata["GoodName"] = "Documento";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","Documento");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Documento";
+
+	
+		$fdata["FullName"] = "Documento";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataclasificaciones____cartera["Documento"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "Documento";
+//	SeccionalId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 25;
+	$fdata["strName"] = "SeccionalId";
+	$fdata["GoodName"] = "SeccionalId";
+	$fdata["ownerTable"] = "";
+	$fdata["Label"] = GetFieldLabel("Clasificaciones____Cartera","SeccionalId");
+	$fdata["FieldType"] = 3;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "SeccionalId";
+
+	
+		$fdata["FullName"] = "SeccionalId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataclasificaciones____cartera["SeccionalId"] = $fdata;
+		$tdataclasificaciones____cartera[".searchableFields"][] = "SeccionalId";
 
 
 $tables_data["Clasificaciones -- Cartera"]=&$tdataclasificaciones____cartera;
@@ -3463,7 +4031,7 @@ require_once( getabspath( "include/clasificaciones____cartera_ops.php" ) );
 	
 		;
 
-																					
+																									
 
 $tdataclasificaciones____cartera[".sqlquery"] = $queryData_clasificaciones____cartera;
 

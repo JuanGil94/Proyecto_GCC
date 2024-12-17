@@ -159,6 +159,18 @@ pdfDocument = {
 				
 			{"text":{$Clasificacion_pdfvalue},"hidden":"{$item_hide_export_field20}"},
 				
+				
+			{"text":{$Prescripcion_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$SancionadoId_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field21}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
