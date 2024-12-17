@@ -1620,18 +1620,21 @@ $radicado=$params['radicado'];
 $observaciones=$params['observaciones'];
 $contData=0;
 $contData1=0;
+$arrayProcesos = [];
 while ($contData1<count($params["keys"])){
 global $pageObject;
+$idCorres=0;
 //echo "Valor de i al ingresar".$contData;
 //$data = $pageObject->getMasterRecord();
 $numProceso=$params["keys"][$contData1]["Numero"];
-//echo "Numero de Procesos: ".$numProceso;
+//echo "Numero de Proceso al ingresar en el while: ".$numProceso;
 $response=DB::Query("SELECT * FROM Procesos WHERE Numero='".$numProceso."'");
 		while( $date = $response->fetchAssoc() )
 				{
 					$procesoId=$date["ProcesoId"];
 					$abogadoId=$date["AbogadoId"];
 				}
+				//echo "Numero del ProcesoId=".$procesoId;
 $response=DB::Query("SELECT * FROM Oficios WHERE OficioId='".$oficioId."'");
 		while( $date = $response->fetchAssoc() )
 				{
@@ -1644,19 +1647,23 @@ $response2=DB::Query("SELECT * FROM CorrespondenciaMasiva WHERE proceso=".$proce
 					$idCorres=$date["id"];
 					//$abogadoId=$date["AbogadoId"];
 				}
+				//echo "Value Proceso: ".$numProceso."valor del Id:".$idCorres;
 if (!empty($idCorres)) {
+	//echo "Ingreso";
 				 $result["Err"]=1;
 				 $result["numProceso"]=$numProceso;
 				 $result["nameCorrespondencia"]=$nameCorrespondencia;
+				 $arrayProcesos[]=$numProceso;
         //echo "Saltando el número 3\n";
 				 //echo "<script>alert('El proceso".$numProceso." ya registro el Oficio: ".$nameCorrespondencia."el dia de hoy')</script>";
         //$contData1++; // Incrementar manualmente para evitar bucle infinito
-        continue;
-				echo "Entro:".$contData1;
+        //continue;
+				//echo "Entro porque ya se envio:".$contData1;
+				$contData1++;
+				continue;
 }
-else{
 //echo "Value Fecha:".$fechaAc." Value Response2:".$idCorres."<br>";
-
+//echo "Entro porque no se realizo el envio:".$contData1;
 $rs2=DB::Exec("INSERT INTO CorrespondenciaMasiva(fecha,proceso,correspondencia,usuario,enviado,observaciones,radicado) VALUES (GETDATE(),".$procesoId.",".$oficioId.",'".$userId."',0,'".$observaciones."','')");
 				if ($rs2) {
 					 //echo "La consulta se realizó correctamente.";
@@ -1668,11 +1675,13 @@ $rs2=DB::Exec("INSERT INTO CorrespondenciaMasiva(fecha,proceso,correspondencia,u
 				}
 $contData1++;
 }
-}
+//print_r($result["arrayProcesos"]);
+$result["arrayProcesos"]=$arrayProcesos;
 //echo "Numero de Registros:".count($params["keys"]);
 //while ( $data = $button->getNextSelectedRecord() ) {
 while ($contData<count($params["keys"])){//SE OBTIENEN LA VARIABLES PARA CONUSMIR LOS METODOS DE LA API SIGOBIUS Y VARIABLES PARA TRAMITAR LAS VALIDACIONES, INSERT Y UPDATE
 global $pageObject;
+$idCorres=0;
 //echo "Valor de i al ingresar".$contData;
 //$data = $pageObject->getMasterRecord();
 $numProceso=$params["keys"][$contData]["Numero"];
@@ -1684,21 +1693,20 @@ $response=DB::Query("SELECT * FROM Procesos WHERE Numero='".$numProceso."'");
 					$abogadoId=$date["AbogadoId"];
 				}
 $fechaAc=date('Y-m-d');
-$response2=DB::Query("SELECT * FROM CorrespondenciaMasiva WHERE proceso=".$procesoId." AND enviado=1 AND CAST(fecha AS DATE) ='".$fechaAc."'");
+$response2=DB::Query("SELECT * FROM CorrespondenciaMasiva WHERE proceso=".$procesoId." AND enviado=1 AND correspondencia=".$oficioId." AND CAST(fecha AS DATE) ='".$fechaAc."'");
 		while( $date = $response2->fetchAssoc() )
 				{
 				 $idCorres=$date["id"];
 					//$abogadoId=$date["AbogadoId"];
 				}
 if (!empty($idCorres)) {
-				 $result["Err"]=1;
-				 $result["numProceso"]=$numProceso;
-				 $result["nameCorrespondencia"]=$nameCorrespondencia;
+				 //$result["Err"]=1;
+				 //$result["numProceso"]=$numProceso;
+				 //$result["nameCorrespondencia"]=$nameCorrespondencia;
         //echo "Saltando el número 3\n";
-        $contData1++; // Incrementar manualmente para evitar bucle infinito
-        //continue;
+        $contData++; // Incrementar manualmente para evitar bucle infinito
+        continue;
 }
-else{
 //echo "El AbogadoId del proceso es: ".$data["AbogadoId"];
 $response=DB::Query("SELECT ISNULL(ActuacionId,0) AS ActuacionId FROM Oficios WHERE OficioId=".$oficioId);
 		while( $date = $response->fetchAssoc() )
@@ -2193,7 +2201,6 @@ $contSigob++;
 //echo "Valor contador Antes:".$contData."Contador Sigob".$contSigob;
 $contData++;
 //echo "Valor contador i:".$contData;
-}
 }
 $result["response"]="OK";;
 	RunnerContext::pop();
