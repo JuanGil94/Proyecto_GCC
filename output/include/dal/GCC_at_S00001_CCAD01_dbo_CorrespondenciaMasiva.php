@@ -1,7 +1,7 @@
 <?php
 $dalTableCorrespondenciaMasiva = array();
 $dalTableCorrespondenciaMasiva["id"] = array("type"=>3,"varname"=>"id", "name" => "id", "autoInc" => "1");
-$dalTableCorrespondenciaMasiva["fecha"] = array("type"=>7,"varname"=>"fecha", "name" => "fecha", "autoInc" => "0");
+$dalTableCorrespondenciaMasiva["fecha"] = array("type"=>135,"varname"=>"fecha", "name" => "fecha", "autoInc" => "0");
 $dalTableCorrespondenciaMasiva["proceso"] = array("type"=>3,"varname"=>"proceso", "name" => "proceso", "autoInc" => "0");
 $dalTableCorrespondenciaMasiva["correspondencia"] = array("type"=>3,"varname"=>"correspondencia", "name" => "correspondencia", "autoInc" => "0");
 $dalTableCorrespondenciaMasiva["usuario"] = array("type"=>200,"varname"=>"usuario", "name" => "usuario", "autoInc" => "0");
