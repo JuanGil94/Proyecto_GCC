@@ -12,7 +12,7 @@ VALUES
 	);
 				$topsindicadores_recaudos["selectList"] = array(
 		"subtype" => "sql",
-		"sql" => "exec dbo.Indicador_Recaudos @Desde=':session.indicadores_recaudo_desde',@Hasta=':session.indicadores_recaudo_hasta'"
+		"sql" => "exec dbo.Indicador_Recaudos @Desde=':session.indicadores_recaudo_desde'"
 	);
 		$tables_data["Indicadores Recaudos"][".operations"] = &$topsindicadores_recaudos;
 ?>

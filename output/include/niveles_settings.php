@@ -6,11 +6,11 @@ $tdataniveles[".OwnerID"] = "";
 $tdataniveles[".OriginalTable"] = "dbo.Niveles";
 
 
-$tdataniveles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataniveles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataniveles[".originalPagesByType"] = $tdataniveles[".pagesByType"];
-$tdataniveles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataniveles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataniveles[".originalPages"] = $tdataniveles[".pages"];
-$tdataniveles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataniveles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataniveles[".originalDefaultPages"] = $tdataniveles[".defaultPages"];
 
 //	field labels
@@ -143,13 +143,14 @@ $tdataniveles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																				
+					
 
 $tdataniveles[".ajaxCodeSnippetAdded"] = false;
 
-$tdataniveles[".buttonsAdded"] = false;
+$tdataniveles[".buttonsAdded"] = true;
 
-$tdataniveles[".addPageEvents"] = false;
+$tdataniveles[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataniveles[".isUseTimeForSearch"] = false;
@@ -620,7 +621,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -760,7 +764,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -900,7 +907,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -1040,7 +1050,10 @@ $tdataniveles[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

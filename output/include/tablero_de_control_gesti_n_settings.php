@@ -134,7 +134,7 @@ $tdatatablero_de_control_gesti_n[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatatablero_de_control_gesti_n[".ajaxCodeSnippetAdded"] = false;
 

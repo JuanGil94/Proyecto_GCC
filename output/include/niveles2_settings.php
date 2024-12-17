@@ -6,11 +6,11 @@ $tdataniveles2[".OwnerID"] = "";
 $tdataniveles2[".OriginalTable"] = "dbo.Niveles";
 
 
-$tdataniveles2[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataniveles2[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataniveles2[".originalPagesByType"] = $tdataniveles2[".pagesByType"];
-$tdataniveles2[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataniveles2[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataniveles2[".originalPages"] = $tdataniveles2[".pages"];
-$tdataniveles2[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataniveles2[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataniveles2[".originalDefaultPages"] = $tdataniveles2[".defaultPages"];
 
 //	field labels
@@ -125,7 +125,7 @@ $tdataniveles2[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataniveles2[".ajaxCodeSnippetAdded"] = false;
 

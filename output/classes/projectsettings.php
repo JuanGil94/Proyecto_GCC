@@ -3956,6 +3956,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "dbo_seccional_procesosview1" ] = "dbo.Seccional_ProcesosView1";
 	$projectEntities[ "dbo.tiposNovedades" ] = array( "url" => "tiposnovedades", "type" => 0 );
 	$projectEntitiesReverse[ "tiposnovedades" ] = "dbo.tiposNovedades";
+	$projectEntities[ "Recaudo Por Seccional" ] = array( "url" => "recaudo_por_seccional", "type" => 6 );
+	$projectEntitiesReverse[ "recaudo_por_seccional" ] = "Recaudo Por Seccional";
 }
 
 function findTable( $table ) {

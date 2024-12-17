@@ -23,10 +23,28 @@
 function BeforeProcessList($pageObject)
 {
 
+				
+		//Obtener el primer día del mes actual: 
+		$fecha1 = new DateTime();
+		$fecha1->modify('first day of this month');
+		//echo $fecha1->format('d/m/Y'); // imprime por ejemplo: 01/12/2012
+
+		//$fecha2 = date("Y-m-d");
+		
+		if(empty(	$_SESSION['retiros_desde'])){
+				$_SESSION['retiros_desde'] = $fecha1->format('d/m/Y');
+				$_SESSION['retiros_hasta'] = date('d/m/Y');
+				
+				//echo $_SESSION['retiros_desde'];
+				//echo $_SESSION['retiros_hasta'];
+
+		}
+
+
 		set_time_limit(0); // Elimina la restricción de timeout
 
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+		// Place event code here.
+		// Use "Add Action" button to add code snippets.
 
 	      // Obtener la URL completa de la página actual
     $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -40,8 +58,8 @@ function BeforeProcessList($pageObject)
 
 		if ($_SESSION['ventanaWebpath'] != $path) {
     $_SESSION['ventanaWebpath'] = $path;
-			unset($_SESSION['retiros_desde']);
-			unset($_SESSION['retiros_hasta']);
+			//unset($_SESSION['retiros_desde']);
+			//unset($_SESSION['retiros_hasta']);
 		}
 ;
 } // function BeforeProcessList

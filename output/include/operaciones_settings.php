@@ -6,11 +6,11 @@ $tdataoperaciones[".OwnerID"] = "";
 $tdataoperaciones[".OriginalTable"] = "dbo.Operaciones";
 
 
-$tdataoperaciones[".pagesByType"] = my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataoperaciones[".pagesByType"] = my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataoperaciones[".originalPagesByType"] = $tdataoperaciones[".pagesByType"];
-$tdataoperaciones[".pages"] = types2pages( my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataoperaciones[".pages"] = types2pages( my_json_decode( "{\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataoperaciones[".originalPages"] = $tdataoperaciones[".pages"];
-$tdataoperaciones[".defaultPages"] = my_json_decode( "{\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataoperaciones[".defaultPages"] = my_json_decode( "{\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataoperaciones[".originalDefaultPages"] = $tdataoperaciones[".defaultPages"];
 
 //	field labels
@@ -167,7 +167,7 @@ $tdataoperaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataoperaciones[".ajaxCodeSnippetAdded"] = false;
 

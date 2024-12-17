@@ -6,11 +6,11 @@ $tdatadepartamentos[".OwnerID"] = "";
 $tdatadepartamentos[".OriginalTable"] = "dbo.Departamentos";
 
 
-$tdatadepartamentos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatadepartamentos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatadepartamentos[".originalPagesByType"] = $tdatadepartamentos[".pagesByType"];
-$tdatadepartamentos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatadepartamentos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatadepartamentos[".originalPages"] = $tdatadepartamentos[".pages"];
-$tdatadepartamentos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatadepartamentos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatadepartamentos[".originalDefaultPages"] = $tdatadepartamentos[".defaultPages"];
 
 //	field labels
@@ -131,13 +131,14 @@ $tdatadepartamentos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																				
+					
 
 $tdatadepartamentos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatadepartamentos[".buttonsAdded"] = false;
+$tdatadepartamentos[".buttonsAdded"] = true;
 
-$tdatadepartamentos[".addPageEvents"] = false;
+$tdatadepartamentos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatadepartamentos[".isUseTimeForSearch"] = false;
@@ -439,7 +440,10 @@ $tdatadepartamentos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

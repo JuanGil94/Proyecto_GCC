@@ -131,13 +131,14 @@ $tdatabancos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																				
+					
 
 $tdatabancos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatabancos[".buttonsAdded"] = false;
+$tdatabancos[".buttonsAdded"] = true;
 
-$tdatabancos[".addPageEvents"] = false;
+$tdatabancos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatabancos[".isUseTimeForSearch"] = false;
@@ -439,7 +440,10 @@ $tdatabancos[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

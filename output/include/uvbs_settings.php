@@ -131,13 +131,14 @@ $tdatauvbs[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																				
+					
 
 $tdatauvbs[".ajaxCodeSnippetAdded"] = false;
 
-$tdatauvbs[".buttonsAdded"] = false;
+$tdatauvbs[".buttonsAdded"] = true;
 
-$tdatauvbs[".addPageEvents"] = false;
+$tdatauvbs[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatauvbs[".isUseTimeForSearch"] = false;
@@ -442,7 +443,10 @@ $tdatauvbs[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 
@@ -581,7 +585,10 @@ $tdatauvbs[".hideMobileList"] = array();
 
 
 	
-	
+		$eventsData = array();
+	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$edata["fieldEvents"] = $eventsData;
+
 
 
 

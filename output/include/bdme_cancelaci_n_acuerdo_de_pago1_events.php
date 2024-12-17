@@ -23,7 +23,23 @@
 function BeforeProcessList($pageObject)
 {
 
-		  
+						//Obtener el primer día del mes actual: 
+		$fecha1 = new DateTime();
+		$fecha1->modify('first day of this month');
+		//echo $fecha1->format('d/m/Y'); // imprime por ejemplo: 01/12/2012
+
+		//Obtener el último día del mes actual: 
+		$fecha2 = new DateTime();
+		$fecha2->modify('last day of this month');
+		//echo $fecha2->format('d/m/Y'); // imprime por ejemplo: 31/12/2012
+		
+
+    if(empty($_SESSION['Cancelacion_desde']) && empty($_SESSION['Cancelacion_hasta'])){
+		
+			$_SESSION['Cancelacion_desde'] = $fecha1->format('d/m/Y');
+			$_SESSION['Cancelacion_hasta'] = $fecha2->format('d/m/Y');
+		}
+
       // Obtener la URL completa de la página actual
     $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 

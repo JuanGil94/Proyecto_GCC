@@ -23,10 +23,24 @@
 function BeforeProcessList($pageObject)
 {
 
-		
+			
+//Obtener el primer día del mes actual: 
+$fecha1 = new DateTime();
+$fecha1->modify('first day of this month');
+//echo $fecha1->format('d/m/Y'); // imprime por ejemplo: 01/12/2012
 
-// Place event code here.
-// Use "Add Action" button to add code snippets.
+//Obtener el último día del mes actual: 
+$fecha2 = new DateTime();
+$fecha2->modify('last day of this month');
+//echo $fecha2->format('d/m/Y'); // imprime por ejemplo: 31/12/2012
+	
+	    if(empty($_SESSION['desde']) && empty($_SESSION['hasta'])){
+					  $_SESSION['desde'] = $fecha1->format('d/m/Y');
+						$_SESSION['hasta'] = $fecha2->format('d/m/Y');
+			}
+	
+			// Place event code here.
+			// Use "Add Action" button to add code snippets.
 
 	    // Obtener la URL completa de la página actual
     $currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
