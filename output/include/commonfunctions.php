@@ -625,6 +625,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("recaudo_por_seccional" == $shortTName )
 		return true;
+	if ("prescripcionautomatica" == $shortTName )
+		return true;
+	if ("mandamientoautomatico" == $shortTName )
+		return true;
+	if ("alertasoficios" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2574,6 +2580,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Recaudo Por Seccional";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("PrescripcionAutomatica");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="PrescripcionAutomatica";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("MandamientoAutomatico");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="MandamientoAutomatico";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.AlertasOficios");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.AlertasOficios";
+	}
 	return $arr;
 }
 
@@ -2794,6 +2827,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="dbo.Seccional_ProcesosView1";
 	$arr[]="dbo.tiposNovedades";
 	$arr[]="Recaudo Por Seccional";
+	$arr[]="PrescripcionAutomatica";
+	$arr[]="MandamientoAutomatico";
+	$arr[]="dbo.AlertasOficios";
 	return $arr;
 }
 
@@ -4484,6 +4520,21 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Recaudo Por Seccional" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="PrescripcionAutomatica" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="MandamientoAutomatico" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.AlertasOficios" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

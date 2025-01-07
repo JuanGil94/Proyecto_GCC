@@ -957,6 +957,11 @@ pdfDocument = {
 			{$displayDetailTable_aplazamientos }
 		{END details_aplazamientos},
 				
+				
+			 {BEGIN details_alertasoficios}
+			{$displayDetailTable_alertasoficios }
+		{END details_alertasoficios},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

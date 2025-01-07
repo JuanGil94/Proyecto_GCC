@@ -1,6 +1,8 @@
 <?php
 			$optionsArray = array( 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
-'dbo.ProcesosReasignar' => array( 'preview' => false ) ),
+'dbo.ProcesosReasignar' => array( 'preview' => false ),
+'PrescripcionAutomatica' => array( 'preview' => false ),
+'MandamientoAutomatico' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Fecha',
 'Intereses' ),

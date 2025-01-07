@@ -134,7 +134,7 @@ $tdatacarteratipos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatacarteratipos[".ajaxCodeSnippetAdded"] = false;
 
@@ -938,6 +938,36 @@ $detailsTablesData["dbo.CarteraTipos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "usuarioscarteratipos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuariosCarteraTipos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["masterKeys"][]="CarteraTipoId";
+
+				$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.CarteraTipos"][$dIndex]["detailKeys"][]="CarteraTipoId";
+//	dbo.AlertasOficios
+	
+	
+
+		$dIndex = 5;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.AlertasOficios";
+		$detailsParam["dOriginalTable"] = "dbo.AlertasOficios";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "alertasoficios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_AlertasOficios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

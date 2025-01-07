@@ -132,7 +132,7 @@ $tdataconsulta_publica[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdataconsulta_publica[".ajaxCodeSnippetAdded"] = false;
 

@@ -142,7 +142,7 @@ $tdataalertas[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
-																	
+																																																					
 
 $tdataalertas[".ajaxCodeSnippetAdded"] = false;
 
@@ -1151,6 +1151,36 @@ $detailsTablesData["dbo.Alertas"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "aplazamientos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Aplazamientos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Alertas"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Alertas"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Alertas"][$dIndex]["masterKeys"][]="AlertaId";
+
+				$detailsTablesData["dbo.Alertas"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Alertas"][$dIndex]["detailKeys"][]="AlertaId";
+//	dbo.AlertasOficios
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.AlertasOficios";
+		$detailsParam["dOriginalTable"] = "dbo.AlertasOficios";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "alertasoficios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_AlertasOficios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

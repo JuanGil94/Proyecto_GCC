@@ -6,6 +6,8 @@
 'dbo.Correspondencias' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Aplazamientos' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.AlertasOficios' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'master' => array( 'dbo.Actuaciones' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),

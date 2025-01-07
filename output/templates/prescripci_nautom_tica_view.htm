@@ -1,0 +1,355 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel Prescripci_nAutom_tica view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" data-fieldname="SeccionalId" data-signal-error-for="SeccionalId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_SeccionalId}">
+		
+		{BEGIN SeccionalId_label}{$label Prescripci_nAutom_tica SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$SeccionalId_value}	</div>
+
+		
+</div>
+
+
+{END SeccionalId_fieldblock}
+											
+{BEGIN ProcesoId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ProcesoId}  r-vertical-field" data-fieldname="ProcesoId" data-signal-error-for="ProcesoId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="ProcesoId" data-fieldname="ProcesoId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ProcesoId}">
+		
+		{BEGIN ProcesoId_label}{$label Prescripci_nAutom_tica ProcesoId }{END ProcesoId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ProcesoId_value}	</div>
+
+		
+</div>
+
+
+{END ProcesoId_fieldblock}
+											
+{BEGIN Despacho_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Despacho}  r-vertical-field" data-fieldname="Despacho" data-signal-error-for="Despacho{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Despacho" data-fieldname="Despacho" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Despacho}">
+		
+		{BEGIN Despacho_label}{$label Prescripci_nAutom_tica Despacho }{END Despacho_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Despacho_value}	</div>
+
+		
+</div>
+
+
+{END Despacho_fieldblock}
+											
+{BEGIN Codificador_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Codificador}  r-vertical-field" data-fieldname="Codificador" data-signal-error-for="Codificador{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Codificador" data-fieldname="Codificador" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Codificador}">
+		
+		{BEGIN Codificador_label}{$label Prescripci_nAutom_tica Codificador }{END Codificador_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Codificador_value}	</div>
+
+		
+</div>
+
+
+{END Codificador_fieldblock}
+											
+{BEGIN Sancionado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sancionado}  r-vertical-field" data-fieldname="Sancionado" data-signal-error-for="Sancionado{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Sancionado" data-fieldname="Sancionado" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Sancionado}">
+		
+		{BEGIN Sancionado_label}{$label Prescripci_nAutom_tica Sancionado }{END Sancionado_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Sancionado_value}	</div>
+
+		
+</div>
+
+
+{END Sancionado_fieldblock}
+											
+{BEGIN SancionadoDocumento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SancionadoDocumento}  r-vertical-field" data-fieldname="SancionadoDocumento" data-signal-error-for="SancionadoDocumento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="SancionadoDocumento" data-fieldname="SancionadoDocumento" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_SancionadoDocumento}">
+		
+		{BEGIN SancionadoDocumento_label}{$label Prescripci_nAutom_tica SancionadoDocumento }{END SancionadoDocumento_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$SancionadoDocumento_value}	</div>
+
+		
+</div>
+
+
+{END SancionadoDocumento_fieldblock}
+											
+{BEGIN Masculino_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Masculino}  r-vertical-field" data-fieldname="Masculino" data-signal-error-for="Masculino{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Masculino" data-fieldname="Masculino" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Masculino}">
+		
+		{BEGIN Masculino_label}{$label Prescripci_nAutom_tica Masculino }{END Masculino_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Masculino_value}	</div>
+
+		
+</div>
+
+
+{END Masculino_fieldblock}
+											
+{BEGIN OficioId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_OficioId}  r-vertical-field" data-fieldname="OficioId" data-signal-error-for="OficioId{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="OficioId" data-fieldname="OficioId" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_OficioId}">
+		
+		{BEGIN OficioId_label}{$label Prescripci_nAutom_tica OficioId }{END OficioId_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$OficioId_value}	</div>
+
+		
+</div>
+
+
+{END OficioId_fieldblock}
+											
+{BEGIN AlertaTipo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_AlertaTipo}  r-vertical-field" data-fieldname="AlertaTipo" data-signal-error-for="AlertaTipo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="AlertaTipo" data-fieldname="AlertaTipo" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_AlertaTipo}">
+		
+		{BEGIN AlertaTipo_label}{$label Prescripci_nAutom_tica AlertaTipo }{END AlertaTipo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$AlertaTipo_value}	</div>
+
+		
+</div>
+
+
+{END AlertaTipo_fieldblock}
+											
+{BEGIN Oficio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Oficio}  r-vertical-field" data-fieldname="Oficio" data-signal-error-for="Oficio{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Oficio" data-fieldname="Oficio" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Oficio}">
+		
+		{BEGIN Oficio_label}{$label Prescripci_nAutom_tica Oficio }{END Oficio_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Oficio_value}	</div>
+
+		
+</div>
+
+
+{END Oficio_fieldblock}
+											
+{BEGIN Sigobius_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sigobius}  r-vertical-field" data-fieldname="Sigobius" data-signal-error-for="Sigobius{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Sigobius" data-fieldname="Sigobius" data-compact >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Sigobius}">
+		
+		{BEGIN Sigobius_label}{$label Prescripci_nAutom_tica Sigobius }{END Sigobius_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Sigobius_value}	</div>
+
+		
+</div>
+
+
+{END Sigobius_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Volver a la lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Cerrar ventana			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

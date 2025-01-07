@@ -144,8 +144,8 @@ $tdatapagos1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
-																																																																	
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																			
 
 $tdatapagos1[".ajaxCodeSnippetAdded"] = false;
 
@@ -1340,6 +1340,42 @@ $masterTablesData["dbo.Pagos1"] = array();
 	$masterTablesData["dbo.Pagos1"][0]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Pagos1"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.Pagos1"][0]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="PrescripcionAutomatica";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "prescripcionautomatica";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Pagos1"][1] = $masterParams;
+				$masterTablesData["dbo.Pagos1"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.Pagos1"][1]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Pagos1"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.Pagos1"][1]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MandamientoAutomatico";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mandamientoautomatico";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Pagos1"][2] = $masterParams;
+				$masterTablesData["dbo.Pagos1"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Pagos1"][2]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Pagos1"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Pagos1"][2]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

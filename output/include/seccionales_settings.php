@@ -191,7 +191,7 @@ $tdataseccionales[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataseccionales[".ajaxCodeSnippetAdded"] = false;
 
@@ -3842,6 +3842,36 @@ $detailsTablesData["dbo.Seccionales"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "usuariosseccionales";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuariosSeccionales");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Seccionales"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"][]="SeccionalId";
+
+				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
+//	PrescripcionAutomatica
+	
+	
+
+		$dIndex = 11;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="PrescripcionAutomatica";
+		$detailsParam["dOriginalTable"] = "dbo.Procesos";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "prescripcionautomatica";
+	$detailsParam["dCaptionTable"] = GetTableCaption("PrescripcionAutomatica");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

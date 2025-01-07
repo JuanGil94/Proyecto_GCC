@@ -3958,6 +3958,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "tiposnovedades" ] = "dbo.tiposNovedades";
 	$projectEntities[ "Recaudo Por Seccional" ] = array( "url" => "recaudo_por_seccional", "type" => 6 );
 	$projectEntitiesReverse[ "recaudo_por_seccional" ] = "Recaudo Por Seccional";
+	$projectEntities[ "PrescripcionAutomatica" ] = array( "url" => "prescripcionautomatica", "type" => 1 );
+	$projectEntitiesReverse[ "prescripcionautomatica" ] = "PrescripcionAutomatica";
+	$projectEntities[ "MandamientoAutomatico" ] = array( "url" => "mandamientoautomatico", "type" => 1 );
+	$projectEntitiesReverse[ "mandamientoautomatico" ] = "MandamientoAutomatico";
+	$projectEntities[ "dbo.AlertasOficios" ] = array( "url" => "alertasoficios", "type" => 0 );
+	$projectEntitiesReverse[ "alertasoficios" ] = "dbo.AlertasOficios";
 }
 
 function findTable( $table ) {

@@ -676,6 +676,13 @@
 					Aplazamientos				</label>
 			</div>
 			{END print_details_aplazamientos}
+														{BEGIN print_details_alertasoficios}
+			<div>
+				<label for="printDetailsalertasoficios{$id}">
+					<input type="checkbox" value="alertasoficios" id="printDetailsalertasoficios{$id}" checked>
+					Alertas Oficios				</label>
+			</div>
+			{END print_details_alertasoficios}
 						</div>
 </div>
 {END print_details}
@@ -1352,6 +1359,25 @@
 	{END aplazamientos_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN alertasoficios_dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$alertasoficios_link_attrs} data-short-details="alertasoficios"
+		class="{$alertasoficios_dlink_class}" 
+		title="{$caption dbo_AlertasOficios }"			>
+								
+									{BEGIN alertasoficios_childcount}
+				<span class="details-badge badge alertasoficios_badge" {$alertasoficios_childnumber_attr}>
+					{$alertasoficios_childnumber}				
+				</span>
+				{END alertasoficios_childcount}
+						</a>
+	</span>
+	{END alertasoficios_dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -1603,9 +1629,9 @@
 	>
 
 	 
-							<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="chequeosoficios,suspensiones,suspensiones1,correspondencias,aplazamientos"
-			data-details-chequeosoficios			data-details-suspensiones			data-details-suspensiones1			data-details-correspondencias			data-details-aplazamientos	>
+								<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="chequeosoficios,suspensiones,suspensiones1,correspondencias,aplazamientos,alertasoficios"
+			data-details-chequeosoficios			data-details-suspensiones			data-details-suspensiones1			data-details-correspondencias			data-details-aplazamientos			data-details-alertasoficios	>
 		<span data-details-inside data-short-table="chequeosoficios">
 			</span>
 		<span data-details-inside data-short-table="suspensiones">
@@ -1616,10 +1642,13 @@
 			</span>
 		<span data-details-inside data-short-table="aplazamientos">
 			</span>
+		<span data-details-inside data-short-table="alertasoficios">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

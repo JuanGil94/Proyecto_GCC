@@ -213,7 +213,7 @@ $tdatareportes1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatareportes1[".ajaxCodeSnippetAdded"] = false;
 

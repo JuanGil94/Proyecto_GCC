@@ -1,7 +1,9 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'master' => array( 'dbo.Procesos' => array( 'preview' => false ),
-'dbo.ProcesosReasignar' => array( 'preview' => false ) ),
+'dbo.ProcesosReasignar' => array( 'preview' => false ),
+'PrescripcionAutomatica' => array( 'preview' => false ),
+'MandamientoAutomatico' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'MedidaId',
 'PropiedadId',
 'EmbargoFecha',

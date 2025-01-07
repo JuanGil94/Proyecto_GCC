@@ -155,7 +155,7 @@ $tdatacorrespondencias[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
 
 $tdatacorrespondencias[".ajaxCodeSnippetAdded"] = false;
 
@@ -1980,6 +1980,42 @@ $masterTablesData["dbo.Correspondencias"] = array();
 	$masterTablesData["dbo.Correspondencias"][4]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Correspondencias"][4]["detailKeys"] = array();
 	$masterTablesData["dbo.Correspondencias"][4]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="PrescripcionAutomatica";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "prescripcionautomatica";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Correspondencias"][5] = $masterParams;
+				$masterTablesData["dbo.Correspondencias"][5]["masterKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][5]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Correspondencias"][5]["detailKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][5]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MandamientoAutomatico";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mandamientoautomatico";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Correspondencias"][6] = $masterParams;
+				$masterTablesData["dbo.Correspondencias"][6]["masterKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][6]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Correspondencias"][6]["detailKeys"] = array();
+	$masterTablesData["dbo.Correspondencias"][6]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

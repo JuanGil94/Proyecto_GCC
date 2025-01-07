@@ -149,7 +149,7 @@ $tdatanovedades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatanovedades[".ajaxCodeSnippetAdded"] = false;
 
@@ -1636,6 +1636,42 @@ $masterTablesData["dbo.Novedades"] = array();
 	$masterTablesData["dbo.Novedades"][1]["masterKeys"][]="UserId";
 				$masterTablesData["dbo.Novedades"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Novedades"][1]["detailKeys"][]="UserId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="PrescripcionAutomatica";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "prescripcionautomatica";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Novedades"][2] = $masterParams;
+				$masterTablesData["dbo.Novedades"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Novedades"][2]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Novedades"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Novedades"][2]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MandamientoAutomatico";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mandamientoautomatico";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Novedades"][3] = $masterParams;
+				$masterTablesData["dbo.Novedades"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Novedades"][3]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Novedades"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Novedades"][3]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

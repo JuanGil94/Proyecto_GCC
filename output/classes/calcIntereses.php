@@ -282,9 +282,7 @@ class reliquidacion extends CalendarioAnual{
         //$this->sumaTotalDiaria;
         return $sumaF;
     }
-    public function Calcular($fechaInicio){
-        //echo "Value: ".$fechaInicio;
-        //exit();
+    public function Calcular($fechaInicio,$flagInsertPago){
         $numero=$this->procesoId;
         $this->deleteRe($numero);
         $numero=intval($numero);
@@ -378,36 +376,71 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         //echo "<br>".$fechaCom;
-                        foreach ($recaudos as $fecha) {
-                            if($fecha["Fecha"]==$fechaCom) {
-                                $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
-                                ///echo "<br>Obligacion Porcentual ".$obliPor;
-                                ///echo "<br>Interes Porcentual ".$intePor;
-                                $diaCorte=$dia-1;
-                                $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
-                                //$obligacion=$obligacion-$obliPor;
-                                //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                $fechaIns=$annoEje."-".$mes."-".$diaCorte;
-                                ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
-                                //$saldoInteresCorte=$sumaTotalDiaria;
-                                $this->insertRe($numero,$fechaIns,$diasS,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
-                                $pagoId=$this->getpagoId();
-                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
-                                //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
-                                /*
-                                if ($pagoId==$fecha["PagoId"]){
-                                    $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                        if ($flagInsertPago==1){
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    ///echo "<br>Obligacion Porcentual ".$obliPor;
+                                    ///echo "<br>Interes Porcentual ".$intePor;
+                                    $diaCorte=$dia-1;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    //$saldoInteresCorte=$sumaTotalDiaria;
+                                    $this->insertRe($numero,$fechaIns,$diasS,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $pagoId=$this->getpagoId();
+                                    $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
+                                    //$costas=$costas-$costPor;
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$intePor;
                                 }
-                                */
-                                //$costas=$costas-$costPor;
-                                //$obligacion=$obligacion-$obliPor;
-                                //$sumaTotalDiaria=$sumaTotalDiaria-$intePor;
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
-                            //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
+                        else{
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    ///echo "<br>Obligacion Porcentual ".$obliPor;
+                                    ///echo "<br>Interes Porcentual ".$intePor;
+                                    $diaCorte=$dia-1;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    //$saldoInteresCorte=$sumaTotalDiaria;
+                                    $this->insertRe($numero,$fechaIns,$diasS,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    //$pagoId=$this->getpagoId();
+                                    //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
+                                    //$costas=$costas-$costPor;
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$intePor;
+                                }
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                            }
+                        }
+                        
                     }
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
                     $obliReca=$obliPor;
@@ -471,36 +504,71 @@ class reliquidacion extends CalendarioAnual{
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                         $sumaTotalDiaria+=$valorDiario;
                         //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
-                        foreach ($recaudos as $fecha) {
-                            if($fecha["Fecha"]==$fechaCom) {
-                                //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                $diaCorte=$dia-1;
-                                $valorCorte=$valorDiario*$diaCorte;
-                                $diaCorte=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
-                                //$obligacion=$obligacion-$obliPor;
-                                //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                $fechaIns=$annoEje."-".$mes."-".$diaCorte;
-                                ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
-                                //$saldoInteresCorte=$sumaTotalDiaria;
-                                $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
-                                $obligacion=$obligacion-$obliPor;
-                                $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
-                                $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
-                                $pagoId=$this->getpagoId();
-                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
-                                //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
-                                /*
-                                if ($pagoId==$fecha["PagoId"]){
-                                    $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                        if ($flagInsertPago==1){
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    $diaCorte=$dia-1;
+                                    $valorCorte=$valorDiario*$diaCorte;
+                                    $diaCorte=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    //$saldoInteresCorte=$sumaTotalDiaria;
+                                    $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    $pagoId=$this->getpagoId();
+                                    $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
                                 }
-                                */
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
-                            //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                        }
+                        else{
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    $diaCorte=$dia-1;
+                                    $valorCorte=$valorDiario*$diaCorte;
+                                    $diaCorte=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    //$saldoInteresCorte=$sumaTotalDiaria;
+                                    $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    //$pagoId=$this->getpagoId();
+                                    //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
+                                }
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                            }
                         }   
                     }
                     $dia=$dia-$diaCorte;
@@ -529,6 +597,8 @@ class reliquidacion extends CalendarioAnual{
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mesEje);
                     $fechaIns=$annoEje."-".$mes."-".$dias;
                     $this->deleteRe($numero);
+                    $diaPla=$diaEje;
+                    $diaPla=$diaPla+1; // Se suma un dia mas para comparar fecha de recaudos un dia despues de la fecha plazo
                     //insertRe($numero,$fechaIns,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
                     //$procesoId,$fecha,$dias,$tasa,$intereses,$obliReca,$obliNove,$obliSald,$inteReca,$inteNove,$inteSald,$costReca,$costNove,$costSald
                     for($dia=1;$dia<=$numDiasMesAct;$dia++){ 
@@ -537,9 +607,11 @@ class reliquidacion extends CalendarioAnual{
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         //$dia=$dia+1;
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                        //SE CAMBIA LA FECHA POR LA REAL (SOLO APLICA PARA EL MES DE LA FECHA PLAZO)
+                        $fechaComP=$annoEje."-".$mes."-".$diaPla;
                         $fechaCom=$annoEje."-".$mes."-".$dia;
                         foreach($novCostas as $novedad){
-                            if($novedad["Fecha"]==$fechaCom) {
+                            if($novedad["Fecha"]==$fechaComP) {
                                 $costas=$novedad["Nuevo"];
                                 // Eliminar la coma como separador de miles
                                 $sinComas = str_replace(',', '', $costas);
@@ -551,53 +623,133 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         //echo "<br>FECHAAAAAAAA".$fechaCom;
-                        foreach ($recaudos as $fecha) {
-                            if($fecha["Fecha"]==$fechaCom) {
-                                $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
-                                $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
-                                $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
-                                //$obliPor=($$obligacion/($$obligacion+$costas+$inteAcu));
-                                //$intePor=($inteAcu/($obliInicial+$costas+$inteAcu));
-                                //echo "La fecha es igual al recaudo 3";
-                                $diaCorte=$dia-1;
-                                $valorCorte=$valorDiario*$diaCorte;
-                                $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
-                                $fechaCom=$annoEje."-".$mes."-".$diaCorte;
-                                                            //echo "Fechaloooooo: ".$fechaCom;
-                                                            //var_dump($fechaCom);
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                //$obligacion=$obligacion-$obliPor;
-                                $this->insertRe($numero,$fechaCom,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
-                                $obligacion=$obligacion-$obliPor;
-                                $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
-                                $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
-                                $pagoId=$this->getpagoId();
-                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
-                                //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
-                                /*
-                                if ($pagoId==$fecha["PagoId"]){
-                                    $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
-                                }
-                                */  
+                        if ($flagInsertPago==1){
+                            foreach ($recaudos as $fecha) {
+                                    //echo "Ingresa";
+                                    //echo $fecha["Fecha"]." - ".$fechaComP."<br>";
+                                    if($fecha["Fecha"]==$fechaComP) {
+                                        //echo "Detecta Recaudo";
+                                        //echo $fecha["Fecha"]." - ".$fechaComP."<br>";
+                                        $flagRecaudo=1;
+                                        $fechaMayor=$fecha["Fecha"];
+                                        $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                        $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                        $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                        //$obliPor=($$obligacion/($$obligacion+$costas+$inteAcu));
+                                        //$intePor=($inteAcu/($obliInicial+$costas+$inteAcu));
+                                        //echo "La fecha es gual al recaudo 3";
+                                        $diaInsertRe=$diaPla-$diaEje-1;
+
+                                        $diaCorte=$diaPla-1; // se resta al dos al haber sumado uno arriba y el dai antes del recaudo para calcular los valores a fecha.
+                                        //$valorCorte=$valorDiario*$diaCorte;
+                                        $valorCorte=$valorDiario*$diaInsertRe;
+                                        $costPorR=0;
+                                        $obliPorR=0;
+                                        $intePorR=0;
+                                        $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                        $fechaCom=$annoEje."-".$mes."-".$diaCorte;
+                                                                    //echo "Fechaloooooo: ".$fechaCom;
+                                                                    //var_dump($fechaCom);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                        //$obligacion=$obligacion-$obliPor;
+                                        $this->insertRe($numero,$fechaCom,$diaInsertRe,$tasaDiaraT,$valorCorte,$obliPorR,$obliNove,$obligacion,$intePorR,$inteNove,$sumaTotalDiaria,$costPorR,$costNove,$costSald);
+                                        $obligacion=$obligacion-$obliPor;
+                                        $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                        $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                        $pagoId=$this->getpagoId();
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                        //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                        /*
+                                        if ($pagoId==$fecha["PagoId"]){
+                                            $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                        }
+                                        */  
+                                    }
+                                    //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
-                            //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                         }
+                    else{
+                            foreach ($recaudos as $fecha) {
+                                //echo "Ingresa";
+                                //echo $fecha["Fecha"]." - ".$fechaComP."<br>";
+                                if($fecha["Fecha"]==$fechaComP) {
+                                    //echo "Detecta Recaudo";
+                                    //echo $fecha["Fecha"]." - ".$fechaComP."<br>";
+                                    $flagRecaudo=1;
+                                    $fechaMayor=$fecha["Fecha"];
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    //$obliPor=($$obligacion/($$obligacion+$costas+$inteAcu));
+                                    //$intePor=($inteAcu/($obliInicial+$costas+$inteAcu));
+                                    //echo "La fecha es gual al recaudo 3";
+                                    $diaInsertRe=$diaPla-$diaEje-1;
+
+                                    $diaCorte=$diaPla-1; // se resta al dos al haber sumado uno arriba y el dai antes del recaudo para calcular los valores a fecha.
+                                    //$valorCorte=$valorDiario*$diaCorte;
+                                    $valorCorte=$valorDiario*$diaInsertRe;
+                                    $costPorR=0;
+                                    $obliPorR=0;
+                                    $intePorR=0;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    $fechaCom=$annoEje."-".$mes."-".$diaCorte;
+                                                                //echo "Fechaloooooo: ".$fechaCom;
+                                                                //var_dump($fechaCom);
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    //$obligacion=$obligacion-$obliPor;
+                                    $this->insertRe($numero,$fechaCom,$diaInsertRe,$tasaDiaraT,$valorCorte,$obliPorR,$obliNove,$obligacion,$intePorR,$inteNove,$sumaTotalDiaria,$costPorR,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    //$pagoId=$this->getpagoId();
+                                    //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */  
+                                }
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                            }
+                        }
+                        $diaPla=$diaPla+1;
+                        //echo "Valor Sumando ".$diaPla=$diaPla+1;
                     }
-                    $numDiasMesAct=$numDiasMesAct-$diaCorte;
-                    $obliReca=$obliPor;
-                    $inteReca=$intePor;
-                    $costReca=$costPor;
-                    $costas=$costas-$costReca;
-                    $costSald=$costas;
-                    $obligacion=$obligacion-$obliPor;
-                    $sumaTotal=$sumaTotalDiaria-$inteReca;
-                    //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;
-                    //$obligacion=$obligacion-$obliPor;
-                    $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),4);
-                    ///echo "<br><strong> El año esll: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
-                    if ($numDiasMesAct>0){
+                    if ($flagRecaudo==1){
+                        $numDiasMesAct=$dias-$diaEje;
+                        $obliReca=$obliPor;
+                        $inteReca=$intePor;
+                        $costReca=$costPor;
+                        $costas=$costas-$costReca;
+                        $costSald=$costas;
+                        $obligacion=$obligacion-$obliPor;
+                        //$sumaTotal=$sumaTotalDiaria-$inteReca;
+                        //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;
+                        //$obligacion=$obligacion-$obliPor;
+                        $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),4);
+                        $sumaTotal=$valorDias-$inteReca;
+                        ///echo "<br><strong> El año esll: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
                         $this->insertRe($numero,$fechaBase,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
                     }
+                    else{
+                        $numDiasMesAct=$numDiasMesAct-$diaCorte;
+                        $obliReca=$obliPor;
+                        $inteReca=$intePor;
+                        $costReca=$costPor;
+                        $costas=$costas-$costReca;
+                        $costSald=$costas;
+                        $obligacion=$obligacion-$obliPor;
+                        $sumaTotal=$sumaTotalDiaria-$inteReca;
+                        //$sumaTotal=$sumaTotalDiaria+$valorDias-$inteReca;
+                        //$obligacion=$obligacion-$obliPor;
+                        $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct*100),4);
+                        ///echo "<br><strong> El año esll: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."</strong>";
+                        if ($numDiasMesAct>0){
+                            $this->insertRe($numero,$fechaBase,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
+                        }
+                    }
+
                 }
                 else if ($mesEje>$mes && $annobase==$annoEje){
                     //echo "Este mes: $mes con dias $dias no aplica<br>";
@@ -630,37 +782,73 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         //echo "<br>".$fechaCom;
-                        foreach ($recaudos as $fecha) {
-                            if($fecha["Fecha"]==$fechaCom) {
-                                //echo "La fecha es igual al recaudo 4";
-                                $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
-                                $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
-                                $diaCorte=$dia-1;
-                                $valorCorte=$valorDiario*$diaCorte;
-                                $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                //$obligacion=$obligacion-$obliPor;
-                                //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                //$fechaIns=$annoEje."-".$mes."-".$dia;
-                                $fechaIns=$annoEje."-".$mes."-".$diaCorte;
-                                //echo $fechaIns;
-                                //echo "Obligacion".$obligacion;
-                                //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
-                                $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
-                                $obligacion=$obligacion-$obliPor;
-                                $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
-                                $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
-                                $pagoId=$this->getpagoId();
-                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
-                                //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
-                                /*
-                                if ($pagoId==$fecha["PagoId"]){
-                                    $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                        if ($flagInsertPago==1){
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    //echo "La fecha es igual al recaudo 4";
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                    $diaCorte=$dia-1;
+                                    $valorCorte=$valorDiario*$diaCorte;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$fechaIns=$annoEje."-".$mes."-".$dia;
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    //echo $fechaIns;
+                                    //echo "Obligacion".$obligacion;
+                                    //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    $pagoId=$this->getpagoId();
+                                    $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
                                 }
-                                */
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
-                            //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                        }
+                        else{
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    //echo "La fecha es igual al recaudo 4";
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"]);
+                                    $diaCorte=$dia-1;
+                                    $valorCorte=$valorDiario*$diaCorte;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$fechaIns=$annoEje."-".$mes."-".$dia;
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    //echo $fechaIns;
+                                    //echo "Obligacion".$obligacion;
+                                    //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    //$pagoId=$this->getpagoId();
+                                    //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
+                                }
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                            }
                         }
                     }
                     $obliReca=$obliPor;
@@ -711,44 +899,87 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         ///echo "<br>".$fechaCom;
-                        foreach ($recaudos as $fecha) {
-                            if($fecha["Fecha"]==$fechaCom) {
-                                $diaRecaudo=$dia;
-                                //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                //echo "La fecha es igual al recaudo 5";
-                                ///echo "<br>Obligacion ".$obligacion;
-                                ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
-                                ///echo "<br>COSTAoriginal: ".$costas;
-                                ///echo "<br>Recaudo: ".$fecha["Pago"];
-                                $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                ///echo "<br>Obligacion Porcentual ".$obliPor;
-                                ///echo "<br>Interes Porcentual ".$intePor;
-                                $diaCorte=$dia-1;
-                                $valorCorte=$valorDiario*$diaCorte;
-                                $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
-                                //$obligacion=$obligacion-$obliPor;
-                                //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                $fechaIns=$annoEje."-".$mes."-".$diaCorte;
-                                ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
-                                //$saldoInteresCorte=$sumaTotalDiaria;
-                                $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
-                                $obligacion=$obligacion-$obliPor;
-                                $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
-                                $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
-                                $pagoId=$this->getpagoId();
-                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
-                                //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
-                                /*
-                                if ($pagoId==$fecha["PagoId"]){
-                                    $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                        if ($flagInsertPago==1){
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    $diaRecaudo=$dia;
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    //echo "La fecha es igual al recaudo 5";
+                                    ///echo "<br>Obligacion ".$obligacion;
+                                    ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
+                                    ///echo "<br>COSTAoriginal: ".$costas;
+                                    ///echo "<br>Recaudo: ".$fecha["Pago"];
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    ///echo "<br>Obligacion Porcentual ".$obliPor;
+                                    ///echo "<br>Interes Porcentual ".$intePor;
+                                    $diaCorte=$dia-1;
+                                    $valorCorte=$valorDiario*$diaCorte;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    //$saldoInteresCorte=$sumaTotalDiaria;
+                                    $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    $pagoId=$this->getpagoId();
+                                    $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
                                 }
-                                */
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
-                            //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                        }
+                        else{
+                            foreach ($recaudos as $fecha) {
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    $diaRecaudo=$dia;
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    //echo "La fecha es igual al recaudo 5";
+                                    ///echo "<br>Obligacion ".$obligacion;
+                                    ///echo "<br> SumaIntereses: ".$sumaTotalDiaria;
+                                    ///echo "<br>COSTAoriginal: ".$costas;
+                                    ///echo "<br>Recaudo: ".$fecha["Pago"];
+                                    $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                    $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                    $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    ///echo "<br>Obligacion Porcentual ".$obliPor;
+                                    ///echo "<br>Interes Porcentual ".$intePor;
+                                    $diaCorte=$dia-1;
+                                    $valorCorte=$valorDiario*$diaCorte;
+                                    $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    //$obligacion=$obligacion-$obliPor;
+                                    //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                    $fechaIns=$annoEje."-".$mes."-".$diaCorte;
+                                    ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria." y la obligacionporcentual es: ".$obliPor." y su intesre porcentual es de:".$intePor."</strong>";
+                                    //$saldoInteresCorte=$sumaTotalDiaria;
+                                    $this->insertRe($numero,$fechaIns,$diaCorte,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                    $obligacion=$obligacion-$obliPor;
+                                    $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                    $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//$dia=$dia+2;
+                                    //$pagoId=$this->getpagoId();
+                                    //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                    /*
+                                    if ($pagoId==$fecha["PagoId"]){
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                    }
+                                    */
+                                }
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                            }
                         }
                     }
                     $obliReca=$obliPor;
@@ -788,6 +1019,7 @@ class reliquidacion extends CalendarioAnual{
                     foreach($elementos as $dia){ 
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
                         $sumaTotalDiaria+=$valorDiario;
+                        //echo "el valor de la obligacion es: ".$obligacion." en la fecha".$fechaCom."<br>";
                         ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." el dia es ".$dia." su valor de interes es ".$valorDiario."y la suma de intereses es: ".$sumaTotalDiaria."</strong>";
                         $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                         $fechaCom=$annoEje."-".$mes."-".$dia;
@@ -804,45 +1036,196 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         //echo "<br>".$fechaCom;
-                        foreach ($recaudos as $fecha) {
-                            //echo "fecha del recaudo".$fecha["Fecha"];
-                            if($fecha["Fecha"]==$fechaCom) {
-                                //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                //echo "La fecha es igual al recaudo 6";
-                                $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
-                                $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
-                                $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
-                                //echo "<br>Obligacion Porcentual ".$obliPor;
-                                //echo "<br>Interes Porcentual ".$intePor;
-                                //echo "<br>Costas Porcentual ".$costPor;
-                                $dia=$dia-1;
-                                $diaCorte=$dia;
-                                $valorCorte=$valorDiario*$dia;
-                                $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
-                                //$obligacion=$obligacion-$obliPor;
-                                //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
-                                $fechaIns=$annoEje."-".$mes."-".$dia;
-                                //var_dump($fechaIns);
-                                //$fechaObjeto = DateTime::createFromFormat('Y-m-d', $fechaIns);
-                                $this->insertRe($numero,$fechaIns,$dia,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
-                                $obligacion=$obligacion-$obliPor;
-                                $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
-                                $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//se suma el interes del dia del recaudo bsado en la nueva obligacion;
-                                //$pagoId=$this->getpagoId();
-                                //echo "Valor del PagoId: ".$fecha["PagoId"];
-                                //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
-                                $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
-                                /*
-                                if ($pagoId==$fecha["PagoId"]){
-                                    $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                        if($flagInsertPago==1){
+                            foreach ($recaudos as $fecha) {
+                                
+                                //echo "fecha del recaudo".$fecha["Fecha"];
+                                //echo $fecha["Fecha"]." - ".$fechaCom."<br>";
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    if ($contRecaudo>0){
+                                        //echo $fecha["Fecha"]." - ".$this->procesoId;
+                                        $consulta=DB::Query("SELECT TOP 1 * from Pagos1 where Fecha<'".$fecha["Fecha"]."' and ProcesoId=".$this->procesoId." order by Fecha desc");
+                                        while($date=$consulta->fetchAssoc()){
+                                                $pagoObli=$date["PagoObli"];
+                                                $pagoInte=$date["PagoInte"];
+                                                $pagoCost=$date["PagoCost"];
+                                                $fechaAPgoAnt=$date["Fecha"];
+                                        }
+                                        $fechaAPgoAnt = new DateTime($fechaAPgoAnt);
+                                        //echo "Valores HAsta: ";
+                                        $annoPagoAnt = $fechaAPgoAnt->format('Y');  // Año Hasta Suspension Id=1
+                                        $mesPagoAnt = $fechaAPgoAnt->format('m');   // Mes Hasta Suspension Id=1
+                                        $diaPagoAnt= $fechaAPgoAnt->format('d');    // Dia Hasta Suspension Id=1
+                                        //echo "Existe Recaudo";
+                                        //echo "Valor Obligacion:".$obligacion," Valor Suma Intereses: ".$sumaTotalDiaria."<br>";
+                                        $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                        //echo "<br>Obligacion Porcentual ".$obliPor;
+                                        //echo "<br>Interes Porcentual ".$intePor;
+                                        //echo "<br>Costas Porcentual ".$costPor;
+                                        //echo "Valor de dia:".$dia."Valor de Dia Pago Ante:".$diaPagoAnt."<br>";
+                                        $diaIns=$dia-1;
+                                        $dia=$dia-$diaPagoAnt;
+                                        $valorCorte=$valorDiario*$dia;
+                                        $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                        //$obligacion=$obligacion-$obliPor;
+                                        //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        $diaCorte=$diaIns;
+                                        //$fechaIns=$annoEje."-".$mes."-".$dia;
+                                        $fechaIns=$annoEje."-".$mes."-".$diaIns;
+                                        //var_dump($fechaIns);
+                                        //$fechaObjeto = DateTime::createFromFormat('Y-m-d', $fechaIns);
+                                        //echo "La suma Intereses es:".$sumaTotalDiaria;
+                                        //$sumaTotalDiaria=$sumaTotalDiaria-$pagoInte;
+                                        $this->insertRe($numero,$fechaIns,$dia,$tasaDiaraT,$valorCorte,$pagoObli,$obliNove,$obligacion,$pagoInte,$inteNove,$sumaTotalDiaria,$pagoCost,$costNove,$costSald);
+                                        $obligacion=$obligacion-$obliPor;
+                                        $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                        $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//se suma el interes del dia del recaudo bsado en la nueva obligacion;
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                    }
+                                    else{
+                                        
+                                        //echo "Existe Recaudo";
+                                        $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                        //echo "<br>Obligacion Porcentual ".$obliPor;
+                                        //echo "<br>Interes Porcentual ".$intePor;
+                                        //echo "<br>Costas Porcentual ".$costPor;
+                                        $dia=$dia-1;
+                                        $diaCorte=$dia;
+                                        $valorCorte=$valorDiario*$dia;
+                                        $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                        //$obligacion=$obligacion-$obliPor;
+                                        //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        $fechaIns=$annoEje."-".$mes."-".$dia;
+                                        //var_dump($fechaIns);
+                                        //$fechaObjeto = DateTime::createFromFormat('Y-m-d', $fechaIns);
+                                        $this->insertRe($numero,$fechaIns,$dia,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                        $obligacion=$obligacion-$obliPor;
+                                        $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$intePor; // se le resta la proporcionalidad hallada para El interes
+                                        $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//se suma el interes del dia del recaudo bsado en la nueva obligacion;
+                                        $this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                        //$pagoId=$this->getpagoId();
+                                        //echo "Valor del PagoId: ".$fecha["PagoId"];
+                                        //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                        //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                        /*
+                                        if ($pagoId==$fecha["PagoId"]){
+                                            $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                        }
+                                        */
+                                        //variables para guardar si hay segundo recaudo
+                                        $costPor2=$costPor;
+                                        $obliPor2=$obliPor;
+                                        $intePor2=$intePor;
+                                        $contRecaudo=$contRecaudo+1;
+                                    }
                                 }
-                                */
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
-                            //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                        }
+                        else{
+                            foreach ($recaudos as $fecha) {
+                                //echo "fecha del recaudo".$fecha["Fecha"];
+                                //echo $fecha["Fecha"]." - ".$fechaCom."<br>";
+                                if($fecha["Fecha"]==$fechaCom) {
+                                    //$sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                    if ($contRecaudo>0){
+                                        //echo $fecha["Fecha"]." - ".$this->procesoId;
+                                        $consulta=DB::Query("SELECT TOP 1 * from Pagos1 where Fecha<'".$fecha["Fecha"]."' and ProcesoId=".$this->procesoId." order by Fecha desc");
+                                        while($date=$consulta->fetchAssoc()){
+                                                $pagoObli=$date["PagoObli"];
+                                                $pagoInte=$date["PagoInte"];
+                                                $pagoCost=$date["PagoCost"];
+                                                $fechaAPgoAnt=$date["Fecha"];
+                                        }
+                                        $fechaAPgoAnt = new DateTime($fechaAPgoAnt);
+                                        //echo "Valores HAsta: ";
+                                        $annoPagoAnt = $fechaAPgoAnt->format('Y');  // Año Hasta Suspension Id=1
+                                        $mesPagoAnt = $fechaAPgoAnt->format('m');   // Mes Hasta Suspension Id=1
+                                        $diaPagoAnt= $fechaAPgoAnt->format('d');    // Dia Hasta Suspension Id=1
+                                        //echo "Existe Recaudo";
+                                        //echo "Valor Obligacion:".$obligacion," Valor Suma Intereses: ".$sumaTotalDiaria."<br>";
+                                        $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                        //echo "<br>Obligacion Porcentual ".$obliPor;
+                                        //echo "<br>Interes Porcentual ".$intePor;
+                                        //echo "<br>Costas Porcentual ".$costPor;
+                                        //echo "Valor de dia:".$dia."Valor de Dia Pago Ante:".$diaPagoAnt."<br>";
+                                        $diaIns=$dia-1;
+                                        $dia=$dia-$diaPagoAnt;
+                                        $valorCorte=$valorDiario*$dia;
+                                        $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                        //$obligacion=$obligacion-$obliPor;
+                                        //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        $diaCorte=$diaIns;
+                                        //$fechaIns=$annoEje."-".$mes."-".$dia;
+                                        $fechaIns=$annoEje."-".$mes."-".$diaIns;
+                                        //var_dump($fechaIns);
+                                        //$fechaObjeto = DateTime::createFromFormat('Y-m-d', $fechaIns);
+                                        //echo "La suma Intereses es:".$sumaTotalDiaria;
+                                        //$sumaTotalDiaria=$sumaTotalDiaria-$pagoInte;
+                                        $this->insertRe($numero,$fechaIns,$dia,$tasaDiaraT,$valorCorte,$pagoObli,$obliNove,$obligacion,$pagoInte,$inteNove,$sumaTotalDiaria,$pagoCost,$costNove,$costSald);
+                                        $obligacion=$obligacion-$obliPor;
+                                        $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                        $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//se suma el interes del dia del recaudo bsado en la nueva obligacion;
+                                    }
+                                    else{
+                                        
+                                        //echo "Existe Recaudo";
+                                        $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
+                                        $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$valorDiario;
+                                        //echo "<br>Obligacion Porcentual ".$obliPor;
+                                        //echo "<br>Interes Porcentual ".$intePor;
+                                        //echo "<br>Costas Porcentual ".$costPor;
+                                        $dia=$dia-1;
+                                        $diaCorte=$dia;
+                                        $valorCorte=$valorDiario*$dia;
+                                        $dia=str_pad($dia, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                        //$obligacion=$obligacion-$obliPor;
+                                        //$obliPor=($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        //$intePor=($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"];
+                                        $fechaIns=$annoEje."-".$mes."-".$dia;
+                                        //var_dump($fechaIns);
+                                        //$fechaObjeto = DateTime::createFromFormat('Y-m-d', $fechaIns);
+                                        $this->insertRe($numero,$fechaIns,$dia,$tasaDiaraT,$valorCorte,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                                        $obligacion=$obligacion-$obliPor;
+                                        $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
+                                        $sumaTotalDiaria=$sumaTotalDiaria-$intePor; // se le resta la proporcionalidad hallada para El interes
+                                        $sumaTotalDiaria=$sumaTotalDiaria+$valorDiario;//se suma el interes del dia del recaudo bsado en la nueva obligacion;
+                                        //$pagoId=$this->getpagoId();
+                                        //echo "Valor del PagoId: ".$fecha["PagoId"];
+                                        //echo 'valor de FechaPago: '.$fecha["PagoId"]." y el valor pagoId: ".$pagoId;
+                                        //$this->updatePagoId($costPor,$obliPor,$intePor,$fecha["PagoId"]);
+                                        /*
+                                        if ($pagoId==$fecha["PagoId"]){
+                                            $this->updatePagoId($costPor,$obliPor,$intePor,$pagoId);
+                                        }
+                                        */
+                                        //variables para guardar si hay segundo recaudo
+                                        $costPor2=$costPor;
+                                        $obliPor2=$obliPor;
+                                        $intePor2=$intePor;
+                                        $contRecaudo=$contRecaudo+1;
+                                    }
+                                }
+                                //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
+                            }
                         }
                     }
+                    //echo "Dia Corte:".$diaCorte;
                     $dia=$dia-$diaCorte;
                         if ($dia==0){
                             $dia=1;
@@ -857,8 +1240,12 @@ class reliquidacion extends CalendarioAnual{
                     //$obligacion=$obligacion-$obliPor;
                     $valorDias=round(($tasaDiaraT*$obligacion*$dia*100),4);
                     $sumaTotalDiaria=$sumaTotalDiaria-$inteReca;
+
+
+                    //echo "Value Obligacion: ".$obligacion." y Valor de Intereses:".$sumaTotalDiaria;
                     ///echo "<br>valor de la suma de Intereses:".$sumaTotalDiaria;
                     ///echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$dia." y su valor a liquidar es: ".$valorDias." dando la suma de: ".$sumaTotalDiaria."</strong>";
+                    //echo "Hacer Inster cuando sale del recaudo";
                     $this->insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
                 }
                 //echo "<br>$mes tiene " . $dias . " días.";

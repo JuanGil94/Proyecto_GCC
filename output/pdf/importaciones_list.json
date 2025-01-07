@@ -1159,6 +1159,12 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link13}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link14}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link15}"},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -1898,6 +1904,16 @@ pdfDocument = {
 			 {BEGIN details_procesoscorrespondencias}
 			{$displayDetailTable_procesoscorrespondencias }
 		{END details_procesoscorrespondencias},
+				
+				
+			 {BEGIN details_prescripcionautomatica}
+			{$displayDetailTable_prescripcionautomatica }
+		{END details_prescripcionautomatica},
+				
+				
+			 {BEGIN details_mandamientoautomatico}
+			{$displayDetailTable_mandamientoautomatico }
+		{END details_mandamientoautomatico},
 				
 		  ],
   "border": [ true, true, true, true ],

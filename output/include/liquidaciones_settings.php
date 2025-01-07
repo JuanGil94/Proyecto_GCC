@@ -150,7 +150,7 @@ $tdataliquidaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdataliquidaciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -1592,6 +1592,42 @@ $masterTablesData["dbo.Liquidaciones"] = array();
 	$masterTablesData["dbo.Liquidaciones"][1]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Liquidaciones"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Liquidaciones"][1]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="PrescripcionAutomatica";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "prescripcionautomatica";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Liquidaciones"][2] = $masterParams;
+				$masterTablesData["dbo.Liquidaciones"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Liquidaciones"][2]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Liquidaciones"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Liquidaciones"][2]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MandamientoAutomatico";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mandamientoautomatico";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Liquidaciones"][3] = $masterParams;
+				$masterTablesData["dbo.Liquidaciones"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Liquidaciones"][3]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Liquidaciones"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Liquidaciones"][3]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

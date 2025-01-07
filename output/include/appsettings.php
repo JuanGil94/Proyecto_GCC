@@ -748,9 +748,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4049_1734395096";
+$projectBuildKey = "4099_1736271173";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4049";
+$projectBuildNumber = "4099";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -982,8 +982,11 @@ $tableCaptions["Spanish"]["dbo_despachosSigob"] = "Despachos Sigob";
 $tableCaptions["Spanish"]["dbo_codificadoresDespacho"] = "Codificadores Despacho";
 $tableCaptions["Spanish"]["dbo_Seccional_ProcesosView1"] = "Seccional ProcesosView1";
 $tableCaptions["Spanish"]["dbo_tiposNovedades"] = "Tipos Novedades";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["Recaudo_Por_Seccional"] = "Recaudo Por Seccional";
+$tableCaptions["Spanish"]["PrescripcionAutomatica"] = "Prescripcion Automatica";
+$tableCaptions["Spanish"]["MandamientoAutomatico"] = "Mandamiento Automatico";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
+$tableCaptions["Spanish"]["dbo_AlertasOficios"] = "Alertas Oficios";
 
 
 $globalEvents = new class_GlobalEvents;

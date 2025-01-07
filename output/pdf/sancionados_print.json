@@ -1027,6 +1027,16 @@ pdfDocument = {
 			{$displayDetailTable_procesoscorrespondencias }
 		{END details_procesoscorrespondencias},
 				
+				
+			 {BEGIN details_prescripcionautomatica}
+			{$displayDetailTable_prescripcionautomatica }
+		{END details_prescripcionautomatica},
+				
+				
+			 {BEGIN details_mandamientoautomatico}
+			{$displayDetailTable_mandamientoautomatico }
+		{END details_mandamientoautomatico},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

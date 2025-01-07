@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["New_Button18"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='New_Button18';if(!pageObj.buttonEventBefore['New_Button18']){pageObj.buttonEventBefore['New_Button18']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["txt"]="Hello";ajax.setMessage("Sending request to server...");}}
+if(!pageObj.buttonEventAfter['New_Button18']){pageObj.buttonEventAfter['New_Button18']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+$('a[id="New_Button18"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="New_Button18"+"_"+Runner.genId();var button_New_Button18=new Runner.form.Button({id:this.id,btnName:"New_Button18"});button_New_Button18.init({args:[pageObj,proxy,pageid]});});};

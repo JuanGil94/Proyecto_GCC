@@ -137,7 +137,7 @@ $tdatainterrupciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatainterrupciones[".ajaxCodeSnippetAdded"] = false;
 
@@ -1012,6 +1012,42 @@ $masterTablesData["dbo.Interrupciones"] = array();
 	$masterTablesData["dbo.Interrupciones"][1]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Interrupciones"][1]["detailKeys"] = array();
 	$masterTablesData["dbo.Interrupciones"][1]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="PrescripcionAutomatica";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "prescripcionautomatica";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Interrupciones"][2] = $masterParams;
+				$masterTablesData["dbo.Interrupciones"][2]["masterKeys"] = array();
+	$masterTablesData["dbo.Interrupciones"][2]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Interrupciones"][2]["detailKeys"] = array();
+	$masterTablesData["dbo.Interrupciones"][2]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MandamientoAutomatico";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mandamientoautomatico";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Interrupciones"][3] = $masterParams;
+				$masterTablesData["dbo.Interrupciones"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Interrupciones"][3]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Interrupciones"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Interrupciones"][3]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

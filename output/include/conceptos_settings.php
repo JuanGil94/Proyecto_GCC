@@ -134,7 +134,7 @@ $tdataconceptos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdataconceptos[".ajaxCodeSnippetAdded"] = false;
 
@@ -1117,6 +1117,36 @@ $detailsTablesData["dbo.Conceptos"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "procesosreasignar";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_ProcesosReasignar");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Conceptos"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Conceptos"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Conceptos"][$dIndex]["masterKeys"][]="ConceptoId";
+
+				$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Conceptos"][$dIndex]["detailKeys"][]="ConceptoId";
+//	dbo.AlertasOficios
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.AlertasOficios";
+		$detailsParam["dOriginalTable"] = "dbo.AlertasOficios";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "alertasoficios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_AlertasOficios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
