@@ -155,7 +155,7 @@ $tdataoficios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdataoficios[".ajaxCodeSnippetAdded"] = false;
 
@@ -1900,6 +1900,36 @@ $detailsTablesData["dbo.Oficios"] = array();
 		$detailsParam["dType"]=PAGE_LIST;
 	$detailsParam["dShortTable"] = "aplazamientos";
 	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Aplazamientos");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.Oficios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.Oficios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios"][$dIndex]["masterKeys"][]="OficioId";
+
+				$detailsTablesData["dbo.Oficios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.Oficios"][$dIndex]["detailKeys"][]="OficioId";
+//	dbo.AlertasOficios
+	
+	
+
+		$dIndex = 4;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.AlertasOficios";
+		$detailsParam["dOriginalTable"] = "dbo.AlertasOficios";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "alertasoficios";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_AlertasOficios");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 

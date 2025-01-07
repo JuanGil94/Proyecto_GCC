@@ -1252,6 +1252,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="PrescripcionAutomatica")
+		{
+			return true;
+		}
+		if($table=="MandamientoAutomatico")
+		{
+			return true;
+		}
+		if($table=="dbo.AlertasOficios")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2455,6 +2467,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Recaudo Por Seccional")
+		{
+			return false;
+		}
+		if($table=="PrescripcionAutomatica")
+		{
+			return true;
+		}
+		if($table=="MandamientoAutomatico")
+		{
+			return true;
+		}
+		if($table=="dbo.AlertasOficios")
 		{
 			return false;
 		}

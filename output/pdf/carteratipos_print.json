@@ -436,6 +436,11 @@ pdfDocument = {
 			{$displayDetailTable_usuarioscarteratipos }
 		{END details_usuarioscarteratipos},
 				
+				
+			 {BEGIN details_alertasoficios}
+			{$displayDetailTable_alertasoficios }
+		{END details_alertasoficios},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

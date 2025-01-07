@@ -141,7 +141,7 @@ $tdatafechas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 
 $tdatafechas[".ajaxCodeSnippetAdded"] = false;
 
@@ -1208,6 +1208,42 @@ $masterTablesData["dbo.Fechas"] = array();
 	$masterTablesData["dbo.Fechas"][2]["masterKeys"][]="ProcesoId";
 				$masterTablesData["dbo.Fechas"][2]["detailKeys"] = array();
 	$masterTablesData["dbo.Fechas"][2]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="PrescripcionAutomatica";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "prescripcionautomatica";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Fechas"][3] = $masterParams;
+				$masterTablesData["dbo.Fechas"][3]["masterKeys"] = array();
+	$masterTablesData["dbo.Fechas"][3]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Fechas"][3]["detailKeys"] = array();
+	$masterTablesData["dbo.Fechas"][3]["detailKeys"][]="ProcesoId";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.Procesos";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="MandamientoAutomatico";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "mandamientoautomatico";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.Fechas"][4] = $masterParams;
+				$masterTablesData["dbo.Fechas"][4]["masterKeys"] = array();
+	$masterTablesData["dbo.Fechas"][4]["masterKeys"][]="ProcesoId";
+				$masterTablesData["dbo.Fechas"][4]["detailKeys"] = array();
+	$masterTablesData["dbo.Fechas"][4]["detailKeys"][]="ProcesoId";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

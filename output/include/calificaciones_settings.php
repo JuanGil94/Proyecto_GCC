@@ -128,7 +128,7 @@ $tdatacalificaciones[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatacalificaciones[".ajaxCodeSnippetAdded"] = false;
 

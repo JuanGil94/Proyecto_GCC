@@ -409,7 +409,15 @@ class diccionario {
         //print_r($direcciones);
         //echo "Numero de Direcciones: ".count($direcciones);
         //exit();
+        if (count($direcciones)<1 && ($oficioId=4343 ||$oficioId=4328)){
+            //Si no tiene direccion se debe poner por default SIN DIRECCION FISICA
+            $direcciones[0]["Direccion"]='SIN DIRECCION FISICA';
+            $direcciones[0]['Ciudad']='SIN DIRECCION FISICA';
+            $direcciones[0]['Barrio']='SIN DIRECCION FISICA';
+            $direcciones[0]['Telefonos']='SIN DIRECCION FISICA';
+        }
         if (count($direcciones)<1){
+            //Si no tiene direccion se debe poner por default SIN DIRECCION FISICA
             echo "<script>var aceptar=confirm ('El sancionado debe contener por lo menos una direccion');if(aceptar){location.reload();}</script>";
             exit();
         }

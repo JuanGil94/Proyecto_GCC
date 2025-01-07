@@ -172,6 +172,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["dbo_Acuerdos_snippet2"] = true;
 		$this->events["dbo_Acuerdos_snippet3"] = true;
 		$this->events["Recaudo_Por_Seccional"] = true;
+		$this->events["OficioPrescripcion"] = true;
+		$this->events["MandamientoAutomatico_snippet"] = true;
 
 
 
@@ -218,7 +220,8 @@ $arrayCiudades=array();
 $username=$_SESSION["UserData"]["username"];
 //variables para informes:
 $_SESSION["UserNameF"]=$username;
-$_SESSION["fechaIn"]='2024-04-01';
+$_SESSION["fechaIn"]='2024-04-01'; //se pone fecha estandar
+$_SESSION["fechaMandamientoA"]='1900-01-01';//se pone fecha estandar para el mandamiento automatico
 //buscar el UserId
 $consulta=DB::Query("SELECT * from UserProfile where UserName='".$username."'");
 while( $date = $consulta->fetchAssoc() )
@@ -5461,6 +5464,38 @@ echo "<strong>".$sumTotal."</strong>";
 	{
 	echo "<label for='Recaudo_seccional_Busqueda_MesId' style='margin-right: 20px;'>Mes: </label>";
 echo "<input type='month' id='Recaudo_seccional_Busqueda_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_OficioPrescripcion(&$params)
+	{
+	// Put your code here.
+$str= "<select id='oficioId'; style='width: 300px; display: inline-block; margin: 3px; ' class='form-control'>";
+//$str2="<label style='margin: 3px;'>Resolución: </label><input id='resolucion' style='margin: 3px;'></input><br><label style='margin: 3px;'>Radicado: </label><input id='radicado' style='margin: 3px;'></input><label style='margin: 3px;'>Observaciones: </label><input id='observaciones' style='margin: 3px;'></input>";
+//select values from the database
+$strSQL = "SELECT * FROM Oficios WHERE Activo=1 and OficioId=4343";
+$rs = db_query($strSQL);
+while ($data = db_fetch_array($rs)){
+$str.="<option value='".$data['OficioId']."'>".$data['Oficio']."</option>";
+}
+$str.="</select>";
+echo $str;
+	;
+}
+	function event_MandamientoAutomatico_snippet(&$params)
+	{
+	// Put your code here.
+$str= "<select id='oficioId'; style='width: 300px; display: inline-block; margin: 3px; ' class='form-control'>";
+//$str2="<label style='margin: 3px;'>Resolución: </label><input id='resolucion' style='margin: 3px;'></input><br><label style='margin: 3px;'>Radicado: </label><input id='radicado' style='margin: 3px;'></input><label style='margin: 3px;'>Observaciones: </label><input id='observaciones' style='margin: 3px;'></input>";
+//select values from the database
+$strSQL = "SELECT * FROM Oficios WHERE Activo=1 and OficioId=4328";
+$rs = db_query($strSQL);
+while ($data = db_fetch_array($rs)){
+$str.="<option value='".$data['OficioId']."'>".$data['Oficio']."</option>";
+}
+$str.="</select>";
+$str.="<br><span>Fecha:</span><input type='date' id='newFechaMand' style='width: 200px;'></input>";
+//<br><input type='date' id='newFechaMand' style='width: 100px;'></input>";
+echo $str;
 	;
 }
 

@@ -208,7 +208,7 @@ $valor_sin_puntos = str_replace('.', '', $valor);
 $values["Pago"] = $valor_sin_puntos;
 
 $recalcular=new reliquidacion($values["ProcesoId"]);
-$recalcular->Calcular(date('Y-m-d'));
+$recalcular->Calcular(date('Y-m-d'),0);
 $arrayFechas=$recalcular->getFechas();
 //print_r($arrayFechas);
 foreach($arrayFechas as $dato=>$valor){
@@ -310,7 +310,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
 //echo "El valor del PagoId es:".$values["PagoId"]; 
-$recalcular->Calcular(date('Y-m-d'));
+$recalcular->Calcular(date('Y-m-d'),1);
 //$proxy["saved"]=true;
 //echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
 /*

@@ -171,7 +171,7 @@ $tdatamovimiento_mensual[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatamovimiento_mensual[".ajaxCodeSnippetAdded"] = false;
 

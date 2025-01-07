@@ -225,6 +225,9 @@ $nonAdminTablesArr[] = "dbo.codificadoresDespacho";
 $nonAdminTablesArr[] = "dbo.Seccional_ProcesosView1";
 $nonAdminTablesArr[] = "dbo.tiposNovedades";
 $nonAdminTablesArr[] = "Recaudo Por Seccional";
+$nonAdminTablesArr[] = "PrescripcionAutomatica";
+$nonAdminTablesArr[] = "MandamientoAutomatico";
+$nonAdminTablesArr[] = "dbo.AlertasOficios";
 
 $ug_connection = $cman->getForUserGroups();
 

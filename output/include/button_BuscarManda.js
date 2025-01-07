@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["BuscarManda"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='BuscarManda';if(!pageObj.buttonEventBefore['BuscarManda']){pageObj.buttonEventBefore['BuscarManda']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["fechaMandamiento"]=document.getElementById("newFechaMand").value;ajax.setMessage("Buscando los procesos según la fecha... por favor espere.");}}
+if(!pageObj.buttonEventAfter['BuscarManda']){pageObj.buttonEventAfter['BuscarManda']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;location.reload();}}
+$('a[id="BuscarManda"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="BuscarManda"+"_"+Runner.genId();var button_BuscarManda=new Runner.form.Button({id:this.id,btnName:"BuscarManda"});button_BuscarManda.init({args:[pageObj,proxy,pageid]});});};

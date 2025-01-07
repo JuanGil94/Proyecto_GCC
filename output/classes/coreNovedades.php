@@ -189,7 +189,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
                     }
                     //Se recalculan los intereses y se llena la tabla de reliquidaciones
                     $recalcular=new reliquidacion($procesoId);
-                    $meses = $recalcular->Calcular($fechaPlazo);
+                    $meses = $recalcular->Calcular($fechaPlazo,0);
                     $result["total"]=$recalcular->getSuma();
                     //echo "La consulta se realizó correctamente.";""
                     $ok="OK";
@@ -313,7 +313,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
                         return;
                     }
                     $recalcular=new reliquidacion($procesoId);
-                    $meses = $recalcular->Calcular($fechaActual);
+                    $meses = $recalcular->Calcular($fechaActual,0);
                     $result["total"]=$recalcular->getSuma();
                     $interesesNov=$recalcular->getInteresesSuma();
                     $costasSaldo=$recalcular->getCostas();
@@ -659,7 +659,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["cos
                     return;
                 }
                 $recalcular=new reliquidacion($procesoId);
-                $meses = $recalcular->Calcular(date('Y-m-d'));
+                $meses = $recalcular->Calcular(date('Y-m-d'),0);
                 //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
                 /*
                 if (!$resultado){
@@ -723,7 +723,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
                         return;
                     }
                     $recalcular=new reliquidacion($procesoId);
-                    $meses = $recalcular->Calcular($fechaActual);
+                    $meses = $recalcular->Calcular($fechaActual,0);
                     $result["total"]=$recalcular->getSuma();
                     $interesesNov=$recalcular->getInteresesSuma();
                     $costasSaldo=$recalcular->getCostas();
@@ -819,7 +819,7 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
                      }
                 $fechaActual=date('Y-m-d');
                 $recalcular=new reliquidacion($procesoId);
-                $meses = $recalcular->Calcular($fechaActual);
+                $meses = $recalcular->Calcular($fechaActual,0);
                 $result["total"]=$recalcular->getSuma();
                 $interesesNov=$recalcular->getInteresesSuma();
                 $costasSaldo=$recalcular->getCostas();
