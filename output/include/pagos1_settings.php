@@ -47,6 +47,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipspagos1["Spanish"]["ProcesoId"] = "";
 	$placeHolderspagos1["Spanish"]["ProcesoId"] = "";
 	$pageTitlespagos1["Spanish"]["list"] = "Recaudos";
+	$pageTitlespagos1["Spanish"]["add"] = "Pagos1";
 	if (count($fieldToolTipspagos1["Spanish"]))
 		$tdatapagos1[".isUseToolTips"] = true;
 }

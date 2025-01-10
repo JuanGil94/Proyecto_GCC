@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsestados["Spanish"]["Tipo"] = "Tipo";
 	$fieldToolTipsestados["Spanish"]["Tipo"] = "";
 	$placeHoldersestados["Spanish"]["Tipo"] = "";
+	$pageTitlesestados["Spanish"]["add"] = "Estados";
+	$pageTitlesestados["Spanish"]["edit"] = "Estados";
 	if (count($fieldToolTipsestados["Spanish"]))
 		$tdataestados[".isUseToolTips"] = true;
 }

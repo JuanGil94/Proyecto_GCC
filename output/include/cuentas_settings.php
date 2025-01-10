@@ -49,6 +49,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscuentas["Spanish"]["NaturalezaId"] = "Naturaleza";
 	$fieldToolTipscuentas["Spanish"]["NaturalezaId"] = "";
 	$placeHolderscuentas["Spanish"]["NaturalezaId"] = "";
+	$pageTitlescuentas["Spanish"]["add"] = "Cuentas";
+	$pageTitlescuentas["Spanish"]["edit"] = "Cuentas";
 	if (count($fieldToolTipscuentas["Spanish"]))
 		$tdatacuentas[".isUseToolTips"] = true;
 }

@@ -37,6 +37,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc_uggroups["Spanish"]["Comment"] = "Comment";
 	$fieldToolTipsusugcc_uggroups["Spanish"]["Comment"] = "";
 	$placeHoldersusugcc_uggroups["Spanish"]["Comment"] = "";
+	$pageTitlesusugcc_uggroups["Spanish"]["add"] = "Usu GCC-uggroups";
 	if (count($fieldToolTipsusugcc_uggroups["Spanish"]))
 		$tdatausugcc_uggroups[".isUseToolTips"] = true;
 }

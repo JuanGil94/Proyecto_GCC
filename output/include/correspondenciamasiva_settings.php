@@ -49,6 +49,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscorrespondenciamasiva["Spanish"]["radicado"] = "Radicado";
 	$fieldToolTipscorrespondenciamasiva["Spanish"]["radicado"] = "";
 	$placeHolderscorrespondenciamasiva["Spanish"]["radicado"] = "";
+	$pageTitlescorrespondenciamasiva["Spanish"]["add"] = "Correspondencia Masiva";
+	$pageTitlescorrespondenciamasiva["Spanish"]["edit"] = "Correspondencia Masiva";
 	if (count($fieldToolTipscorrespondenciamasiva["Spanish"]))
 		$tdatacorrespondenciamasiva[".isUseToolTips"] = true;
 }

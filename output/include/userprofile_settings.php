@@ -53,6 +53,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsuserprofile["Spanish"]["Nombre"] = "";
 	$placeHoldersuserprofile["Spanish"]["Nombre"] = "";
 	$pageTitlesuserprofile["Spanish"]["add"] = "Crear Usuario";
+	$pageTitlesuserprofile["Spanish"]["edit"] = "User Profile";
 	if (count($fieldToolTipsuserprofile["Spanish"]))
 		$tdatauserprofile[".isUseToolTips"] = true;
 }

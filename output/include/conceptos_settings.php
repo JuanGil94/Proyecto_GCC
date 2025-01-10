@@ -37,6 +37,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsconceptos["Spanish"]["Cuenta"] = "Numero de Cuenta";
 	$fieldToolTipsconceptos["Spanish"]["Cuenta"] = "";
 	$placeHoldersconceptos["Spanish"]["Cuenta"] = "";
+	$pageTitlesconceptos["Spanish"]["add"] = "Conceptos";
+	$pageTitlesconceptos["Spanish"]["edit"] = "Conceptos";
 	if (count($fieldToolTipsconceptos["Spanish"]))
 		$tdataconceptos[".isUseToolTips"] = true;
 }

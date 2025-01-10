@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssolidarios["Spanish"]["SancionadoId"] = "Deudor";
 	$fieldToolTipssolidarios["Spanish"]["SancionadoId"] = "";
 	$placeHolderssolidarios["Spanish"]["SancionadoId"] = "";
+	$pageTitlessolidarios["Spanish"]["add"] = "Solidarios";
+	$pageTitlessolidarios["Spanish"]["edit"] = "Solidarios";
 	if (count($fieldToolTipssolidarios["Spanish"]))
 		$tdatasolidarios[".isUseToolTips"] = true;
 }

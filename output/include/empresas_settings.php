@@ -70,7 +70,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsempresas["Spanish"]["MaximoUvb"] = "Maximo Uvb";
 	$fieldToolTipsempresas["Spanish"]["MaximoUvb"] = "";
 	$placeHoldersempresas["Spanish"]["MaximoUvb"] = "";
-	$pageTitlesempresas["Spanish"]["edit"] = "Editar [{%EmpresaId}]";
+	$pageTitlesempresas["Spanish"]["edit"] = "Editar";
 	if (count($fieldToolTipsempresas["Spanish"]))
 		$tdataempresas[".isUseToolTips"] = true;
 }

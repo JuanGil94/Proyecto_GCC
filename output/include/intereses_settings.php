@@ -46,6 +46,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsintereses["Spanish"]["PagoId"] = "Pago Id";
 	$fieldToolTipsintereses["Spanish"]["PagoId"] = "";
 	$placeHoldersintereses["Spanish"]["PagoId"] = "";
+	$pageTitlesintereses["Spanish"]["add"] = "Intereses";
+	$pageTitlesintereses["Spanish"]["edit"] = "Intereses";
 	if (count($fieldToolTipsintereses["Spanish"]))
 		$tdataintereses[".isUseToolTips"] = true;
 }

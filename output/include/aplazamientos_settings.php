@@ -40,6 +40,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsaplazamientos["Spanish"]["OficioId"] = "Oficio";
 	$fieldToolTipsaplazamientos["Spanish"]["OficioId"] = "";
 	$placeHoldersaplazamientos["Spanish"]["OficioId"] = "";
+	$pageTitlesaplazamientos["Spanish"]["add"] = "Aplazamientos";
+	$pageTitlesaplazamientos["Spanish"]["edit"] = "Aplazamientos";
 	if (count($fieldToolTipsaplazamientos["Spanish"]))
 		$tdataaplazamientos[".isUseToolTips"] = true;
 }

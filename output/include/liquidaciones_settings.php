@@ -53,6 +53,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsliquidaciones["Spanish"]["InteresesPlazo"] = "";
 	$placeHoldersliquidaciones["Spanish"]["InteresesPlazo"] = "";
 	$pageTitlesliquidaciones["Spanish"]["list"] = "Liquidaciones para Acuerdo de Pago";
+	$pageTitlesliquidaciones["Spanish"]["add"] = "Liquidaciones";
 	if (count($fieldToolTipsliquidaciones["Spanish"]))
 		$tdataliquidaciones[".isUseToolTips"] = true;
 }

@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsalertastipos["Spanish"]["AlertaTipo"] = "Alerta Tipo";
 	$fieldToolTipsalertastipos["Spanish"]["AlertaTipo"] = "";
 	$placeHoldersalertastipos["Spanish"]["AlertaTipo"] = "";
+	$pageTitlesalertastipos["Spanish"]["add"] = "Alertas Tipos";
+	$pageTitlesalertastipos["Spanish"]["edit"] = "Alertas Tipos";
 	if (count($fieldToolTipsalertastipos["Spanish"]))
 		$tdataalertastipos[".isUseToolTips"] = true;
 }

@@ -64,6 +64,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsabogados["Spanish"]["Codificador"] = "Codificador";
 	$fieldToolTipsabogados["Spanish"]["Codificador"] = "";
 	$placeHoldersabogados["Spanish"]["Codificador"] = "";
+	$pageTitlesabogados["Spanish"]["add"] = "Abogados";
+	$pageTitlesabogados["Spanish"]["edit"] = "Abogados";
 	if (count($fieldToolTipsabogados["Spanish"]))
 		$tdataabogados[".isUseToolTips"] = true;
 }

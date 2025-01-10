@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstiposnovedades["Spanish"]["NombreNovedad"] = "Nombre Novedad";
 	$fieldToolTipstiposnovedades["Spanish"]["NombreNovedad"] = "";
 	$placeHolderstiposnovedades["Spanish"]["NombreNovedad"] = "";
+	$pageTitlestiposnovedades["Spanish"]["add"] = "Tipos Novedades";
+	$pageTitlestiposnovedades["Spanish"]["edit"] = "Tipos Novedades";
 	if (count($fieldToolTipstiposnovedades["Spanish"]))
 		$tdatatiposnovedades[".isUseToolTips"] = true;
 }

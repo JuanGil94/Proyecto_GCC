@@ -94,6 +94,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["Subserie"] = "Subserie";
 	$fieldToolTipsseccionales["Spanish"]["Subserie"] = "";
 	$placeHoldersseccionales["Spanish"]["Subserie"] = "";
+	$pageTitlesseccionales["Spanish"]["add"] = "Seccionales";
+	$pageTitlesseccionales["Spanish"]["edit"] = "Seccionales";
 	if (count($fieldToolTipsseccionales["Spanish"]))
 		$tdataseccionales[".isUseToolTips"] = true;
 }

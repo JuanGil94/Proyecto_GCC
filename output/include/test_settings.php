@@ -40,6 +40,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstest["Spanish"]["Porcentaje"] = "Porcentaje";
 	$fieldToolTipstest["Spanish"]["Porcentaje"] = "";
 	$placeHolderstest["Spanish"]["Porcentaje"] = "";
+	$pageTitlestest["Spanish"]["add"] = "Test";
+	$pageTitlestest["Spanish"]["edit"] = "Test";
 	if (count($fieldToolTipstest["Spanish"]))
 		$tdatatest[".isUseToolTips"] = true;
 }

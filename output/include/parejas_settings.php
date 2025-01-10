@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsparejas["Spanish"]["AbogadoMinjusticia"] = "Abogado Minjusticia";
 	$fieldToolTipsparejas["Spanish"]["AbogadoMinjusticia"] = "";
 	$placeHoldersparejas["Spanish"]["AbogadoMinjusticia"] = "";
+	$pageTitlesparejas["Spanish"]["add"] = "Parejas";
+	$pageTitlesparejas["Spanish"]["edit"] = "Parejas";
 	if (count($fieldToolTipsparejas["Spanish"]))
 		$tdataparejas[".isUseToolTips"] = true;
 }

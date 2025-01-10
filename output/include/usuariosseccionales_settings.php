@@ -35,6 +35,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsusuariosseccionales["Spanish"]["SeccionalId"] = "";
 	$placeHoldersusuariosseccionales["Spanish"]["SeccionalId"] = "";
 	$pageTitlesusuariosseccionales["Spanish"]["list"] = "Usuario Seccionales";
+	$pageTitlesusuariosseccionales["Spanish"]["add"] = "Usuarios Seccionales";
+	$pageTitlesusuariosseccionales["Spanish"]["edit"] = "Usuarios Seccionales";
 	if (count($fieldToolTipsusuariosseccionales["Spanish"]))
 		$tdatausuariosseccionales[".isUseToolTips"] = true;
 }

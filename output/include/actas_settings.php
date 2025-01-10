@@ -52,6 +52,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsactas["Spanish"]["AbogadoMinjusticia"] = "Abogado Minjusticia";
 	$fieldToolTipsactas["Spanish"]["AbogadoMinjusticia"] = "";
 	$placeHoldersactas["Spanish"]["AbogadoMinjusticia"] = "";
+	$pageTitlesactas["Spanish"]["add"] = "Actas";
+	$pageTitlesactas["Spanish"]["edit"] = "Actas";
 	if (count($fieldToolTipsactas["Spanish"]))
 		$tdataactas[".isUseToolTips"] = true;
 }

@@ -61,6 +61,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsindeterminados["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipsindeterminados["Spanish"]["Observaciones"] = "";
 	$placeHoldersindeterminados["Spanish"]["Observaciones"] = "";
+	$pageTitlesindeterminados["Spanish"]["add"] = "Indeterminados";
+	$pageTitlesindeterminados["Spanish"]["edit"] = "Indeterminados";
 	if (count($fieldToolTipsindeterminados["Spanish"]))
 		$tdataindeterminados[".isUseToolTips"] = true;
 }

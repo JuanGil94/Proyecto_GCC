@@ -31,6 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspagos2["Spanish"]["Mes"] = "Mes";
 	$fieldToolTipspagos2["Spanish"]["Mes"] = "";
 	$placeHolderspagos2["Spanish"]["Mes"] = "";
+	$pageTitlespagos2["Spanish"]["add"] = "Pagos2";
 	if (count($fieldToolTipspagos2["Spanish"]))
 		$tdatapagos2[".isUseToolTips"] = true;
 }

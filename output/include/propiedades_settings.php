@@ -47,6 +47,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipspropiedades["Spanish"]["SancionadoId"] = "";
 	$placeHolderspropiedades["Spanish"]["SancionadoId"] = "";
 	$pageTitlespropiedades["Spanish"]["list"] = "Bienes Muebles";
+	$pageTitlespropiedades["Spanish"]["add"] = "Propiedades";
 	if (count($fieldToolTipspropiedades["Spanish"]))
 		$tdatapropiedades[".isUseToolTips"] = true;
 }

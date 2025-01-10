@@ -91,6 +91,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsimportaciones["Spanish"]["Aprobada"] = "Aprobada";
 	$fieldToolTipsimportaciones["Spanish"]["Aprobada"] = "";
 	$placeHoldersimportaciones["Spanish"]["Aprobada"] = "";
+	$pageTitlesimportaciones["Spanish"]["add"] = "Importaciones";
+	$pageTitlesimportaciones["Spanish"]["edit"] = "Importaciones";
 	if (count($fieldToolTipsimportaciones["Spanish"]))
 		$tdataimportaciones[".isUseToolTips"] = true;
 }

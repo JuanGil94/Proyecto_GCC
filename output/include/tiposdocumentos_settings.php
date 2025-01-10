@@ -37,6 +37,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstiposdocumentos["Spanish"]["Juridica"] = "Juridica";
 	$fieldToolTipstiposdocumentos["Spanish"]["Juridica"] = "";
 	$placeHolderstiposdocumentos["Spanish"]["Juridica"] = "";
+	$pageTitlestiposdocumentos["Spanish"]["add"] = "Tipos Documentos";
+	$pageTitlestiposdocumentos["Spanish"]["edit"] = "Tipos Documentos";
 	if (count($fieldToolTipstiposdocumentos["Spanish"]))
 		$tdatatiposdocumentos[".isUseToolTips"] = true;
 }

@@ -40,6 +40,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstasas_tes__deterioro_de_cartera_["Spanish"]["Tipo_de_Tasas"] = "Tipo de Tasas";
 	$fieldToolTipstasas_tes__deterioro_de_cartera_["Spanish"]["Tipo_de_Tasas"] = "";
 	$placeHolderstasas_tes__deterioro_de_cartera_["Spanish"]["Tipo_de_Tasas"] = "";
+	$pageTitlestasas_tes__deterioro_de_cartera_["Spanish"]["add"] = "Tasas TES (Deterioro de Cartera)";
 	if (count($fieldToolTipstasas_tes__deterioro_de_cartera_["Spanish"]))
 		$tdatatasas_tes__deterioro_de_cartera_[".isUseToolTips"] = true;
 }

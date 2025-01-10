@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsipsrestringidas["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipsipsrestringidas["Spanish"]["Observaciones"] = "";
 	$placeHoldersipsrestringidas["Spanish"]["Observaciones"] = "";
+	$pageTitlesipsrestringidas["Spanish"]["add"] = "IPs Restringidas";
+	$pageTitlesipsrestringidas["Spanish"]["edit"] = "IPs Restringidas";
 	if (count($fieldToolTipsipsrestringidas["Spanish"]))
 		$tdataipsrestringidas[".isUseToolTips"] = true;
 }

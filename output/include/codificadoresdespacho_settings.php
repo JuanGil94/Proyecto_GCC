@@ -37,6 +37,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscodificadoresdespacho["Spanish"]["despacho"] = "Despacho";
 	$fieldToolTipscodificadoresdespacho["Spanish"]["despacho"] = "";
 	$placeHolderscodificadoresdespacho["Spanish"]["despacho"] = "";
+	$pageTitlescodificadoresdespacho["Spanish"]["add"] = "Codificadores Despacho";
+	$pageTitlescodificadoresdespacho["Spanish"]["edit"] = "Codificadores Despacho";
 	if (count($fieldToolTipscodificadoresdespacho["Spanish"]))
 		$tdatacodificadoresdespacho[".isUseToolTips"] = true;
 }

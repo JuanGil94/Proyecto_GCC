@@ -61,6 +61,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelshorarios["Spanish"]["Hasta"] = "Hasta";
 	$fieldToolTipshorarios["Spanish"]["Hasta"] = "";
 	$placeHoldershorarios["Spanish"]["Hasta"] = "";
+	$pageTitleshorarios["Spanish"]["add"] = "Horarios";
+	$pageTitleshorarios["Spanish"]["edit"] = "Horarios";
 	if (count($fieldToolTipshorarios["Spanish"]))
 		$tdatahorarios[".isUseToolTips"] = true;
 }

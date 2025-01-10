@@ -46,6 +46,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeosoficios["Spanish"]["ChequeoId"] = "Chequeo Id";
 	$fieldToolTipschequeosoficios["Spanish"]["ChequeoId"] = "";
 	$placeHolderschequeosoficios["Spanish"]["ChequeoId"] = "";
+	$pageTitleschequeosoficios["Spanish"]["add"] = "Chequeos Oficios";
 	if (count($fieldToolTipschequeosoficios["Spanish"]))
 		$tdatachequeosoficios[".isUseToolTips"] = true;
 }

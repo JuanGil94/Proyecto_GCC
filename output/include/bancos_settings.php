@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbancos["Spanish"]["Banco"] = "Banco";
 	$fieldToolTipsbancos["Spanish"]["Banco"] = "";
 	$placeHoldersbancos["Spanish"]["Banco"] = "";
+	$pageTitlesbancos["Spanish"]["add"] = "Bancos";
+	$pageTitlesbancos["Spanish"]["edit"] = "Bancos";
 	if (count($fieldToolTipsbancos["Spanish"]))
 		$tdatabancos[".isUseToolTips"] = true;
 }

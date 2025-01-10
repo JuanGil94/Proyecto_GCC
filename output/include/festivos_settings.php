@@ -34,6 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsfestivos["Spanish"]["Fecha"] = "Fecha";
 	$fieldToolTipsfestivos["Spanish"]["Fecha"] = "";
 	$placeHoldersfestivos["Spanish"]["Fecha"] = "";
+	$pageTitlesfestivos["Spanish"]["add"] = "Festivos";
 	if (count($fieldToolTipsfestivos["Spanish"]))
 		$tdatafestivos[".isUseToolTips"] = true;
 }

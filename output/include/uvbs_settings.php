@@ -34,6 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsuvbs["Spanish"]["Uvb"] = "Uvb";
 	$fieldToolTipsuvbs["Spanish"]["Uvb"] = "";
 	$placeHoldersuvbs["Spanish"]["Uvb"] = "";
+	$pageTitlesuvbs["Spanish"]["add"] = "Uvbs";
 	if (count($fieldToolTipsuvbs["Spanish"]))
 		$tdatauvbs[".isUseToolTips"] = true;
 }

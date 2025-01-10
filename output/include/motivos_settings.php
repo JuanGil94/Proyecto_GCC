@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsmotivos["Spanish"]["Motivo"] = "Motivo";
 	$fieldToolTipsmotivos["Spanish"]["Motivo"] = "";
 	$placeHoldersmotivos["Spanish"]["Motivo"] = "";
+	$pageTitlesmotivos["Spanish"]["add"] = "Motivos";
+	$pageTitlesmotivos["Spanish"]["edit"] = "Motivos";
 	if (count($fieldToolTipsmotivos["Spanish"]))
 		$tdatamotivos[".isUseToolTips"] = true;
 }

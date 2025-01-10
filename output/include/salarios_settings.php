@@ -34,6 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssalarios["Spanish"]["Salario"] = "Salario";
 	$fieldToolTipssalarios["Spanish"]["Salario"] = "";
 	$placeHolderssalarios["Spanish"]["Salario"] = "";
+	$pageTitlessalarios["Spanish"]["add"] = "Salarios";
 	if (count($fieldToolTipssalarios["Spanish"]))
 		$tdatasalarios[".isUseToolTips"] = true;
 }

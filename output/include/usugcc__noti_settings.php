@@ -58,6 +58,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc__noti["Spanish"]["group"] = "Group";
 	$fieldToolTipsusugcc__noti["Spanish"]["group"] = "";
 	$placeHoldersusugcc__noti["Spanish"]["group"] = "";
+	$pageTitlesusugcc__noti["Spanish"]["add"] = "Usugcc  Noti";
+	$pageTitlesusugcc__noti["Spanish"]["edit"] = "Usugcc  Noti";
 	if (count($fieldToolTipsusugcc__noti["Spanish"]))
 		$tdatausugcc__noti[".isUseToolTips"] = true;
 }

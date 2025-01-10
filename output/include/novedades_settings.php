@@ -52,6 +52,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsnovedades["Spanish"]["MinJusticia"] = "Min Justicia";
 	$fieldToolTipsnovedades["Spanish"]["MinJusticia"] = "";
 	$placeHoldersnovedades["Spanish"]["MinJusticia"] = "";
+	$pageTitlesnovedades["Spanish"]["add"] = "Novedades";
 	if (count($fieldToolTipsnovedades["Spanish"]))
 		$tdatanovedades[".isUseToolTips"] = true;
 }

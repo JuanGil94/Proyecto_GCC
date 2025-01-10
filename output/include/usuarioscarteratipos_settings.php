@@ -35,6 +35,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsusuarioscarteratipos["Spanish"]["CarteraTipoId"] = "";
 	$placeHoldersusuarioscarteratipos["Spanish"]["CarteraTipoId"] = "";
 	$pageTitlesusuarioscarteratipos["Spanish"]["list"] = "Usuario Carteras";
+	$pageTitlesusuarioscarteratipos["Spanish"]["add"] = "Usuarios Cartera Tipos";
+	$pageTitlesusuarioscarteratipos["Spanish"]["edit"] = "Usuarios Cartera Tipos";
 	if (count($fieldToolTipsusuarioscarteratipos["Spanish"]))
 		$tdatausuarioscarteratipos[".isUseToolTips"] = true;
 }

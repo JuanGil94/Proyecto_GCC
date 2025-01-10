@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsayudas["Spanish"]["Visitas"] = "Visitas";
 	$fieldToolTipsayudas["Spanish"]["Visitas"] = "";
 	$placeHoldersayudas["Spanish"]["Visitas"] = "";
+	$pageTitlesayudas["Spanish"]["add"] = "Ayudas";
+	$pageTitlesayudas["Spanish"]["edit"] = "Ayudas";
 	if (count($fieldToolTipsayudas["Spanish"]))
 		$tdataayudas[".isUseToolTips"] = true;
 }

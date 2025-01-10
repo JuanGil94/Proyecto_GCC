@@ -58,6 +58,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsoficios_sigobius["Spanish"]["Devolucion"] = "Devolucion";
 	$fieldToolTipsoficios_sigobius["Spanish"]["Devolucion"] = "";
 	$placeHoldersoficios_sigobius["Spanish"]["Devolucion"] = "";
+	$pageTitlesoficios_sigobius["Spanish"]["add"] = "Oficios Sigobius";
+	$pageTitlesoficios_sigobius["Spanish"]["edit"] = "Oficios Sigobius";
 	if (count($fieldToolTipsoficios_sigobius["Spanish"]))
 		$tdataoficios_sigobius[".isUseToolTips"] = true;
 }
