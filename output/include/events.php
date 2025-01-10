@@ -34,6 +34,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["BeforeChangePassword"]=true;
 
 
+
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
 		$this->events["dbo_Correspondencias_snippet"] = true;
@@ -704,6 +705,35 @@ return true;
 ;
 } // function BeforeChangePassword
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
