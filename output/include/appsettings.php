@@ -612,6 +612,7 @@ $adNestedPermissions = false;
 
 $ajaxSearchStartsWith = true;
 
+$globalSettings["staticGuestLogin"] = true;
 
 
 $globalSettings["LandingPageType"] = 0;
@@ -631,7 +632,7 @@ $globalSettings["htmlEmailTemplates"] = array();
 
 
 $globalSettings["createLoginPage"] = true;
-$globalSettings["userGroupCount"] = 1;
+$globalSettings["userGroupCount"] = 2;
 
 
 $globalSettings["apiGoogleMapsCode"] = "";
@@ -748,9 +749,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4099_1736271173";
+$projectBuildKey = "4101_1736271173";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4099";
+$projectBuildNumber = "4101";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -773,10 +774,7 @@ $menuTreelikeFlags["secondary"] = 1;
 $tableCaptions = array();
 $tableCaptions["Spanish"] = array();
 $tableCaptions["Spanish"][""] = "";
-$tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
-$tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["dbo_UsuGCC__users"] = "UsuGCC- Users";
-$tableCaptions["Spanish"]["admin_users"] = "Admin Users";
 $tableCaptions["Spanish"]["dbo_Abogados"] = "Abogados";
 $tableCaptions["Spanish"]["dbo_Actuaciones"] = "Actuaciones";
 $tableCaptions["Spanish"]["dbo_Ciudades"] = "Ciudades";

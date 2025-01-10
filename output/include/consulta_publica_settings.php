@@ -2,7 +2,7 @@
 $tdataconsulta_publica = array();
 $tdataconsulta_publica[".searchableFields"] = array();
 $tdataconsulta_publica[".ShortName"] = "consulta_publica";
-$tdataconsulta_publica[".OwnerID"] = "";
+$tdataconsulta_publica[".OwnerID"] = "SancionadoId";
 $tdataconsulta_publica[".OriginalTable"] = "Consulta Publica";
 
 
@@ -47,7 +47,7 @@ if(mlang_getcurrentlang()=="Spanish")
 $tdataconsulta_publica[".shortTableName"] = "consulta_publica";
 $tdataconsulta_publica[".nSecOptions"] = 0;
 
-$tdataconsulta_publica[".mainTableOwnerID"] = "";
+$tdataconsulta_publica[".mainTableOwnerID"] = "SancionadoId";
 $tdataconsulta_publica[".entityType"] = 6;
 $tdataconsulta_publica[".connId"] = "GCC_at_S00001_CCAD01";
 

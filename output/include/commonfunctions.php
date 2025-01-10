@@ -203,13 +203,7 @@ function checkTableName($shortTName )
 	if (!$shortTName)
 		return false;
 
-	if ("admin_rights" == $shortTName )
-		return true;
-	if ("admin_members" == $shortTName )
-		return true;
 	if ("usugcc__users" == $shortTName )
-		return true;
-	if ("admin_users" == $shortTName )
 		return true;
 	if ("abogados" == $shortTName )
 		return true;
@@ -683,39 +677,12 @@ function GetTablesList($pdfMode = false)
 	$checkPermissions = Security::permissionsAvailable();
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_rights");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_rights";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_members");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_members";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("dbo.UsuGCC-_users");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
 		$arr[]="dbo.UsuGCC-_users";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("admin_users");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="admin_users";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -2616,10 +2583,7 @@ function GetTablesList($pdfMode = false)
 function GetTablesListWithoutSecurity()
 {
 	$arr = array();
-	$arr[]="admin_rights";
-	$arr[]="admin_members";
 	$arr[]="dbo.UsuGCC-_users";
-	$arr[]="admin_users";
 	$arr[]="dbo.Abogados";
 	$arr[]="dbo.Actuaciones";
 	$arr[]="dbo.Ciudades";
@@ -3444,12 +3408,6 @@ function GetUserPermissionsDynamic( $table )
 	global $gPermissionsRefreshTime,$gPermissionsRead;
 	if( Security::isAdmin() )
 	{
-		if($table=="admin_rights")
-			return "ADESPIM";
-		if($table=="admin_members")
-			return "ADESPIM";
-		if($table=="admin_users")
-			return "ADESPIM";
 		if($table=="admin_admembers")
 			return "ADESPIM";
 	}
@@ -3469,1073 +3427,1902 @@ function GetUserPermissionsStatic( $table )
 
 	$sUserGroup = storageGet( "GroupID" );
 	$extraPerm = "";
-	if( $table=="admin_rights" )
-	{
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="admin_members" )
-	{
-//	default permissions
-		return "".$extraPerm;
-	}
 	if( $table=="dbo.UsuGCC-_users" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="admin_users" )
-	{
-//	default permissions
-		return "".$extraPerm;
+		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Abogados" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Actuaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Conceptos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Departamentos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Despachos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Empresas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Entidades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Especialidades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Estados" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Etapas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Festivos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.MotivosDevoluciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Naturalezas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Niveles" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Oficios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Operaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Parejas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Presupuestos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Reportes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Salarios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Seccionales" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Test" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Uvts" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.CarteraTipos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Chequeos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ChequeosOficios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ChequeosSancionados" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Devoluciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Horarios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UsuGCC-uggroups" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.IPsRestringidas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.TiposDocumentos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Tramites" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Conceptos1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Procesos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Solidarios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Llamadas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Medidas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Acuerdos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Pagos1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Cuentas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Intereses" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Reasignaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Suspensiones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Suspensiones1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Interrupciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Reliquidaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ayudas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Temas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Correspondencias" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.usugcc-_audit" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Importaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Indeterminados" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UserProfile" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Auditorias" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Menus" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Minjusticia" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Minjusticia2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Minjusticia3" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Actas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.AlertasTipos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Direcciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Propiedades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Propiedades1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Propiedades3" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Bancos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Motivos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Oficios Sigobius" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tasas Tributarias" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tasas Comerciales" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tasas TES (Deterioro de Cartera)" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Carceles" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Alertas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.tipoCobro" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Oficios1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Autorizaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Liquidaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.usugcc__noti" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Sancionados" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Seguimiento y control de Acuerdos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.Despachos4" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Despachos1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Remanentes Report" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosPrescritos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Prescritos Report" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.AlertMandPago" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertNotMandPago" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertIncAcuPago" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertSinPersuasivo" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertBusqBienes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertSegAdelante" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="AlertIntSusp" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ReporteMandamientos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ListaChequeosReporte" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ReporteClasificacionCartera" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosSinNotificaReport" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.ReporteCorporaciónEspecialidad" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "SP".$extraPerm;
 	}
 	if( $table=="dbo.CorporacionesView" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Fechas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.AuditoriasProcesosView" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosReasignar" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Genero" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="admin_admembers" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades4" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades5" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Ciudades3" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Uvbs" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Resumen_Mensual" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.tipoRecaudo" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Despachos2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Despachos5" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Actualización" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Guía del Deudor Moroso" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Incumplimiento Acuerdo de Pago Semestral" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Retiros" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Reporte Semestral" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Cancelación Acuerdo de Pago" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Excluidos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Base de Datos - Historico" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Deterioro de Cartera por Proceso" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Intereses por Proceso" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Listado Medidas Cautelares" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Presunción Prescripción" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Certificado del Resumen Mensual" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Certificado del Resumen por Periodo" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Actualización DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Cancelación Acuerdo de Pago DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Excluidos DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Incumplimiento Acuerdo de Pago Semestral DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Reporte Semestral Datachild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BDME Retiros DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.BusquedasPropiedades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosView1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Obligaciones de Dificil Recaudo" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Privados de la Libertad" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Recaudos por Años" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Reportes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Reportes DataChild prescritos con resolución expedida_Solidarios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Transacciones Usuario" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Indicadores de Gestión" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tablero de Control General" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tablero de Control Total Procesos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Tableros_RecaudoSeccional" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Total Procesos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "S".$extraPerm;
 	}
 	if( $table=="Total Recaudado" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "S".$extraPerm;
 	}
 	if( $table=="Procesos - Mes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "S".$extraPerm;
 	}
 	if( $table=="Recaudo - Mes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "S".$extraPerm;
 	}
 	if( $table=="Tablero de Control Gestión" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Actuaciones Por Mes" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "S".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosSancionados" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BienesInmuebles" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="BienesMuebles" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Productos Bancarios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.tipoTasas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Acuerdo de Pago" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Listado de Chequeos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Listado de Chequeo Sancionado DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Listado de Chequeo Oficios DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Listado de Chequeo Motivo devolucion DataChild" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Clasificaciones -- Cartera" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Corporaciones - Especialidades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Mandamientos de pago Automaticos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Prescripciones Automática" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Procesos Sin Notificación" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Remanentes-" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Prueba Archivo Plano" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Consulta Publica" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Consulta Publica Notificacion Detalle" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Consulta Publica Generacion Desprendible" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Pagos2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Propiedades2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Motivos1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Etapas1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Estados1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Aplazamientos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Seccionales1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Naturalezas1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Calificaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Niveles1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Niveles2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Conceptos2" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
-		return "".$extraPerm;
+		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.PropiedadesMedidas" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Consolidado por Conceptos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Movimiento Mensual" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Informe ejecutivo de Gestión" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Cumplimiento de metas de Recaudo" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Indicadores de búsqueda" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Indicadores Recaudos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Indicadores Sin Actuaciones" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Test de Deterioro (Resumen)" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Novedades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.ProcesosCorrespondencias" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.CorrespondenciaMasiva" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UsuariosSeccionales" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UsuariosCarteraTipos" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.webpages_Roles" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.webpages_UsersInRoles" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.UsuGCC-ugmembers" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.despachosSigob" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.codificadoresDespacho" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Seccional_ProcesosView1" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.tiposNovedades" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="Recaudo Por Seccional" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="PrescripcionAutomatica" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="MandamientoAutomatico" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.AlertasOficios" )
 	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "".$extraPerm;
+		}
 //	default permissions
 		return "ADESPI".$extraPerm;
 	}
