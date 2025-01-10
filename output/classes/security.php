@@ -1017,6 +1017,2147 @@ class Security
 
 	public static function _staticRestrictedPages( $table ) {
 		$group = Security::getUserGroup();
+		if( $group == "<Guest>" )	{
+			if( $table == "Actuaciones Por Mes" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Acuerdo de Pago" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "AlertBusqBienes" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "AlertIncAcuPago" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "AlertIntSusp" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "AlertNotMandPago" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "AlertSegAdelante" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "AlertSinPersuasivo" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Actualización" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Actualización DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Cancelación Acuerdo de Pago" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Cancelación Acuerdo de Pago DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Excluidos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Excluidos DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Guía del Deudor Moroso" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Incumplimiento Acuerdo de Pago Semestral" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Incumplimiento Acuerdo de Pago Semestral DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Reporte Semestral" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Reporte Semestral Datachild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Retiros" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BDME Retiros DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Base de Datos - Historico" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BienesInmuebles" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "BienesMuebles" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Certificado del Resumen Mensual" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Certificado del Resumen por Periodo" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Clasificaciones -- Cartera" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Consolidado por Conceptos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Consulta Publica" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "print" ] = true;
+				return $ret;
+			}
+			if( $table == "Consulta Publica Generacion Desprendible" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "print" ] = true;
+				return $ret;
+			}
+			if( $table == "Consulta Publica Notificacion Detalle" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "print" ] = true;
+				return $ret;
+			}
+			if( $table == "Corporaciones - Especialidades" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Cumplimiento de metas de Recaudo" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Deterioro de Cartera por Proceso" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Indicadores Recaudos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Indicadores Sin Actuaciones" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Indicadores de Gestión" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Indicadores de búsqueda" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Informe ejecutivo de Gestión" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Intereses por Proceso" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Listado Medidas Cautelares" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Listado de Chequeo Motivo devolucion DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Listado de Chequeo Oficios DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Listado de Chequeo Sancionado DataChild" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Listado de Chequeos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "MandamientoAutomatico" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "Mandamientos de pago Automaticos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Movimiento Mensual" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Obligaciones de Dificil Recaudo" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "PrescripcionAutomatica" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "Prescripciones Automática" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Presunción Prescripción" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Privados de la Libertad" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Procesos - Mes" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Procesos Sin Notificación" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Productos Bancarios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Prueba Archivo Plano" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Recaudo - Mes" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Recaudo Por Seccional" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Recaudos por Años" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Remanentes-" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Reportes" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Reportes DataChild prescritos con resolución expedida_Solidarios" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Reportes DataChild prescritos con resolución expedida_Solidarios_Bienes" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Resumen_Mensual" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tablero de Control General" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tablero de Control Gestión" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tablero de Control Total Procesos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tableros_RecaudoSeccional" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tasas Comerciales" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tasas TES (Deterioro de Cartera)" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Tasas Tributarias" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Test de Deterioro (Resumen)" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "Total Procesos" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Total Recaudado" )
+			{
+				$ret = array();
+				$ret[ "chart" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "Transacciones Usuario" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "admin_admembers" )
+			{
+				$ret = array();
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Abogados" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Actas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Actuaciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Acuerdos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.AlertMandPago" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Alertas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.AlertasOficios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.AlertasTipos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Aplazamientos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Auditorias" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.AuditoriasProcesosView" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Autorizaciones" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ayudas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Bancos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Calificaciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Carceles" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.CarteraTipos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Chequeos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ChequeosOficios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ChequeosSancionados" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ciudades" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ciudades1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ciudades2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ciudades3" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ciudades4" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Ciudades5" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Conceptos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Conceptos1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Conceptos2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.CorrespondenciaMasiva" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Correspondencias" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Cuentas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Departamentos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Despachos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Despachos1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Despachos2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Despachos4" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Despachos5" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Devoluciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Direcciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Empresas" )
+			{
+				$ret = array();
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Entidades" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Especialidades" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Estados" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Estados1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Etapas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Etapas1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Fechas" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Festivos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Horarios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.IPsRestringidas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Importaciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Indeterminados" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Intereses" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Interrupciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Liquidaciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ListaChequeosReporte" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Llamadas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Medidas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Menus" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Minjusticia" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Minjusticia2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Minjusticia3" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Motivos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Motivos1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.MotivosDevoluciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Naturalezas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Naturalezas1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Niveles" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Niveles1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Niveles2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Novedades" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Oficios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Oficios Sigobius" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Oficios1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Operaciones" )
+			{
+				$ret = array();
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Pagos1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Pagos2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Parejas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Prescritos Report" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Presupuestos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Procesos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ProcesosCorrespondencias" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ProcesosPrescritos" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ProcesosReasignar" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ProcesosSancionados" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ProcesosSinNotificaReport" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ProcesosView1" )
+			{
+				$ret = array();
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Propiedades" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Propiedades1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "list1" ] = true;
+				$ret[ "list2" ] = true;
+				$ret[ "list3" ] = true;
+				$ret[ "list4" ] = true;
+				$ret[ "list5" ] = true;
+				$ret[ "list6" ] = true;
+				$ret[ "list7" ] = true;
+				$ret[ "list8" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Propiedades2" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Propiedades3" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.PropiedadesMedidas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Reasignaciones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Reliquidaciones" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Remanentes Report" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ReporteClasificacionCartera" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ReporteCorporaciónEspecialidad" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.ReporteMandamientos" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Reportes" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Salarios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Sancionados" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Seccional_ProcesosView1" )
+			{
+				$ret = array();
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Seccionales" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Seccionales1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Seguimiento y control de Acuerdos" )
+			{
+				$ret = array();
+				$ret[ "report" ] = true;
+				$ret[ "rprint" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Solidarios" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Suspensiones" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Suspensiones1" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Temas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Test" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.TiposDocumentos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.UserProfile" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.UsuGCC-_users" )
+			{
+				$ret = array();
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.UsuGCC-uggroups" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "list" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.UsuGCC-ugmembers" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.UsuariosCarteraTipos" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.UsuariosSeccionales" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Uvbs" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.Uvts" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.codificadoresDespacho" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.despachosSigob" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.tipoTasas" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.tiposNovedades" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.usugcc-_audit" )
+			{
+				$ret = array();
+				$ret[ "list" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.usugcc__noti" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.webpages_Roles" )
+			{
+				$ret = array();
+				$ret[ "add" ] = true;
+				$ret[ "edit" ] = true;
+				$ret[ "export" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			if( $table == "dbo.webpages_UsersInRoles" )
+			{
+				$ret = array();
+				$ret[ "export" ] = true;
+				$ret[ "import" ] = true;
+				$ret[ "list" ] = true;
+				$ret[ "print" ] = true;
+				$ret[ "search" ] = true;
+				$ret[ "view" ] = true;
+				return $ret;
+			}
+			return array();
+		}
 		//	default permissions
 		return array();
 	}
@@ -1717,7 +3858,10 @@ class Security
 	}
 
 	public static function guestHasStaticPermissions() {
-		return false;
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				return true;
+								return true;
+								return true;
+																																																																																																																																																						return false;
 	}
 
 	public static function guestHasDynamicPermissions() {

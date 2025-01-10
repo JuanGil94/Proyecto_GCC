@@ -408,19 +408,7 @@ class AuditTrailTable
 
 	function logValueEnable($table)
 	{
-		if($table=="admin_rights")
-		{
-			return true;
-		}
-		if($table=="admin_members")
-		{
-			return true;
-		}
 		if($table=="dbo.UsuGCC-_users")
-		{
-			return true;
-		}
-		if($table=="admin_users")
 		{
 			return true;
 		}
@@ -1626,19 +1614,7 @@ class AuditTrailFile
 
 	function logValueEnable($table)
 	{
-		if($table=="admin_rights")
-		{
-			return true;
-		}
-		if($table=="admin_members")
-		{
-			return true;
-		}
 		if($table=="dbo.UsuGCC-_users")
-		{
-			return true;
-		}
-		if($table=="admin_users")
 		{
 			return true;
 		}

@@ -243,10 +243,7 @@ class ConnectionManager_Base
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["admin_rights"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["admin_members"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.UsuGCC-_users"] = "GCC_at_S00001_CCAD01";
-		$connectionsIds["admin_users"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Abogados"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Actuaciones"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Ciudades"] = "GCC_at_S00001_CCAD01";

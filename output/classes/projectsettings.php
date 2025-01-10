@@ -3536,14 +3536,8 @@ function fillProjectEntites()
 	global $projectEntities, $projectEntitiesReverse, $tablesByGoodName, $tablesByUpperCase, $tablesByUpperGoodname;
 	if( count( $projectEntities ) )
 		return;
-	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
-	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
-	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
-	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
 	$projectEntities[ "dbo.UsuGCC-_users" ] = array( "url" => "usugcc__users", "type" => 0 );
 	$projectEntitiesReverse[ "usugcc__users" ] = "dbo.UsuGCC-_users";
-	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
-	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "dbo.Abogados" ] = array( "url" => "abogados", "type" => 0 );
 	$projectEntitiesReverse[ "abogados" ] = "dbo.Abogados";
 	$projectEntities[ "dbo.Actuaciones" ] = array( "url" => "actuaciones", "type" => 0 );

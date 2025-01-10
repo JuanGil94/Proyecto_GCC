@@ -378,12 +378,6 @@ class Chart
 		if( !$this->webchart )
 			return true;
 
-		if("dbo.UsuGCC-ugrights" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.UsuGCC-ugmembers" == $this->chrt_array['tables'][0])
-			return true;
-		if("dbo.UsuGCC-_users" == $this->chrt_array['tables'][0])
-			return true;
 		if("dbo.UsuGCC-_users" == $this->chrt_array['tables'][0])
 			return true;
 		if("dbo.Abogados" == $this->chrt_array['tables'][0])
