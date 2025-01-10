@@ -115,16 +115,16 @@ pdfDocument = {
 			{"text":{$Especialidad_pdfvalue},"hidden":"{$item_hide_export_field2}"},
 				
 				
-			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_export_field3}"},
-				
-				
-			{"text":{$Concepto_pdfvalue},"hidden":"{$item_hide_export_field4}"},
-				
-				
 			{"text":{$Procesos_pdfvalue},"hidden":"{$item_hide_export_field5}"},
 				
 				
 			{"text":{$Saldo_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$ConceptoId_pdfvalue},"hidden":"{$item_hide_export_field8}"},
 				
 		  ],
   "border": [ false, false, false, false ],

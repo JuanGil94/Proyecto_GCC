@@ -128,7 +128,7 @@ $tdataalertastipos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdataalertastipos[".ajaxCodeSnippetAdded"] = false;
 

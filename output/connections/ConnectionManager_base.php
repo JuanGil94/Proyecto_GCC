@@ -453,6 +453,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.codificadoresDespacho"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.Seccional_ProcesosView1"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.tiposNovedades"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["Recaudo por seccional"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

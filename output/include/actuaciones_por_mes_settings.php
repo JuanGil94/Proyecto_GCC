@@ -129,7 +129,7 @@ $tdataactuaciones_por_mes[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																		
 
 $tdataactuaciones_por_mes[".ajaxCodeSnippetAdded"] = false;
 
@@ -529,7 +529,7 @@ $tdataactuaciones_por_mes[".chartSeries"][] = array(
 
 
 	$tdataactuaciones_por_mes[".chartXml"] .= '<attr value="head">'.xmlencode("Actuaciones Por Mes").'</attr>
-<attr value="foot">'.xmlencode("Legend Title").'</attr>
+<attr value="foot">'.xmlencode("Actuaciones").'</attr>
 <attr value="y_axis_label">'.xmlencode("").'</attr>
 
 

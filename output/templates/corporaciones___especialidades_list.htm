@@ -115,6 +115,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
 						</div>
 		{END searchCtrlBlock_CarteraTipoId}
+																{BEGIN searchCtrlBlock_ConceptoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ConceptoId}" {$filterRow_attrs_ConceptoId}>
+			<label>{$label Corporaciones___Especialidades ConceptoId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ConceptoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ConceptoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
+						</div>
+		{END searchCtrlBlock_ConceptoId}
+																{BEGIN searchCtrlBlock_SeccionalId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
+			<label>{$label Corporaciones___Especialidades SeccionalId }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
+						</div>
+		{END searchCtrlBlock_SeccionalId}
 																{BEGIN searchCtrlBlock_Saldo}
 
 
@@ -141,32 +167,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Procesos}</span>
 						</div>
 		{END searchCtrlBlock_Procesos}
-																{BEGIN searchCtrlBlock_Concepto}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Concepto}" {$filterRow_attrs_Concepto}>
-			<label>{$label Corporaciones___Especialidades Concepto }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Concepto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Concepto}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Concepto}</span>
-						</div>
-		{END searchCtrlBlock_Concepto}
-																{BEGIN searchCtrlBlock_Seccional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Seccional}" {$filterRow_attrs_Seccional}>
-			<label>{$label Corporaciones___Especialidades Seccional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Seccional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Seccional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Seccional}</span>
-						</div>
-		{END searchCtrlBlock_Seccional}
 																{BEGIN searchCtrlBlock_Especialidad}
 
 
@@ -205,6 +205,20 @@
 </div>
 <!-- End Search panel content -->
 			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
+				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}" 
+			>
+	<!-- Begin Filter panel content -->
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div>			</div>
 		
     {END left_block}
 </div>				</div>
@@ -579,17 +593,17 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Especialidad"]:before {
 		content: "{$label Corporaciones___Especialidades Especialidad}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Seccional"]:before {
-		content: "{$label Corporaciones___Especialidades Seccional}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Concepto"]:before {
-		content: "{$label Corporaciones___Especialidades Concepto}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Procesos"]:before {
 		content: "{$label Corporaciones___Especialidades Procesos}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Saldo"]:before {
 		content: "{$label Corporaciones___Especialidades Saldo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SeccionalId"]:before {
+		content: "{$label Corporaciones___Especialidades SeccionalId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ConceptoId"]:before {
+		content: "{$label Corporaciones___Especialidades ConceptoId}";
 	}
 	}
 </style>
@@ -702,56 +716,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field2}
-									{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Seccional_class}	"
-
-			data-field="Seccional"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Seccional_fieldheadercolumn}
-	{BEGIN Seccional_fieldheader}
-	<SPAN {$Seccional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional">
-	{$label Corporaciones___Especialidades Seccional }	{$arrow_icon_Seccional}
-	</SPAN>
-	{END Seccional_fieldheader}
-{END Seccional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-									{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Concepto_class}	"
-
-			data-field="Concepto"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Concepto_fieldheadercolumn}
-	{BEGIN Concepto_fieldheader}
-	<SPAN {$Concepto_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto">
-	{$label Corporaciones___Especialidades Concepto }	{$arrow_icon_Concepto}
-	</SPAN>
-	{END Concepto_fieldheader}
-{END Concepto_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
 									{BEGIN cellblock_grid_headcell_field5}
 	<th
 	
@@ -802,6 +766,56 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field6}
+									{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldheadercolumn}
+	{BEGIN SeccionalId_fieldheader}
+	<SPAN {$SeccionalId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId">
+	{$label Corporaciones___Especialidades SeccionalId }	{$arrow_icon_SeccionalId}
+	</SPAN>
+	{END SeccionalId_fieldheader}
+{END SeccionalId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+									{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConceptoId_class}	"
+
+			data-field="ConceptoId"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ConceptoId_fieldheadercolumn}
+	{BEGIN ConceptoId_fieldheader}
+	<SPAN {$ConceptoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId">
+	{$label Corporaciones___Especialidades ConceptoId }	{$arrow_icon_ConceptoId}
+	</SPAN>
+	{END ConceptoId_fieldheader}
+{END ConceptoId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
 							</tr>
 															
 					{END grid_header}
@@ -900,48 +914,6 @@
 {END Especialidad_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Seccional_class}	"
-
-			data-field="Seccional"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Seccional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Seccional" data-fieldname="Seccional" data-default-width >
-{$Seccional_value}
-</span>
-{END Seccional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Concepto_class}	"
-
-			data-field="Concepto"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Concepto_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Concepto" data-fieldname="Concepto" data-default-width >
-{$Concepto_value}
-</span>
-{END Concepto_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
 									{BEGIN cellblock_grid_cell_field5}
 	<td
 	
@@ -984,6 +956,48 @@
 {END Saldo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field6}
+									{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+			data-field="SeccionalId"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN SeccionalId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SeccionalId" data-fieldname="SeccionalId" data-default-width >
+{$SeccionalId_value}
+</span>
+{END SeccionalId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConceptoId_class}	"
+
+			data-field="ConceptoId"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ConceptoId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ConceptoId" data-fieldname="ConceptoId" data-default-width >
+{$ConceptoId_value}
+</span>
+{END ConceptoId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
 							</tr>
 										
 											{END grid_row}
@@ -1059,38 +1073,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field2}
-									{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Seccional_class}	"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="corporaciones___especialidades_list"		data-control-cell
-	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
-									{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Concepto_class}	"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="corporaciones___especialidades_list"		data-control-cell
-	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
 									{BEGIN cellblock_grid_footcell_field5}
 	<td
 	
@@ -1141,6 +1123,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field6}
+									{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$SeccionalId_class}	"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="corporaciones___especialidades_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$ConceptoId_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="corporaciones___especialidades_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
 							</tr>
 					
 					</tfoot>

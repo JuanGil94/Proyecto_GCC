@@ -144,7 +144,7 @@ $tdatalistado_de_chequeo_sancionado_datachild[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
 
 $tdatalistado_de_chequeo_sancionado_datachild[".ajaxCodeSnippetAdded"] = false;
 

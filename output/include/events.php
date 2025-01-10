@@ -171,6 +171,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Sum_Costas_Acuerdos"] = true;
 		$this->events["dbo_Acuerdos_snippet2"] = true;
 		$this->events["dbo_Acuerdos_snippet3"] = true;
+		$this->events["Recaudo_por_seccional"] = true;
 
 
 
@@ -5341,7 +5342,7 @@ echo "<input type='month' id='Indicadores_Busqueda_MesId' name='mes' value='" . 
 }
 	function event_Indicadores_Recaudos_desde(&$params)
 	{
-	echo "<label for='Indicadores_Recaudo_MesId_desde' style='margin-right: 20px;'>Desde: </label>";
+	echo "<label for='Indicadores_Recaudo_MesId_desde' style='margin-right: 20px;'>Mes </label>";
 echo "<input type='month' id='Indicadores_Recaudo_MesId_desde' name='mes' value='" . date('Y-m') . "' required><br>";
 	;
 }
@@ -5452,6 +5453,12 @@ $consulta=DB::Query("SELECT FORMAT(SUM(Total), 'C', 'es-CO') sumTotal FROM Acuer
             $sumTotal=$date["sumTotal"];
         }
 echo "<strong>".$sumTotal."</strong>";
+	;
+}
+	function event_Recaudo_por_seccional(&$params)
+	{
+	echo "<label for='Recaudo_seccional_Busqueda_MesId' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Recaudo_seccional_Busqueda_MesId' name='mes' value='" . date('Y-m') . "' required><br>";
 	;
 }
 

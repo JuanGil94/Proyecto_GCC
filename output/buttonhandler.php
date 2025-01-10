@@ -1037,6 +1037,26 @@ if($buttId=='Replace_Templates')
 	}
 	buttonHandler_Replace_Templates($params);
 }
+if($buttId=='Busqueda_recaudo_Seccional')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Busqueda_recaudo_Seccional($params);
+}
+if($buttId=='Print_recaudo_seccional')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Print_recaudo_seccional($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -1175,6 +1195,12 @@ if( $eventId == 'SeccionalId_event' && "dbo.ProcesosReasignar" == $table )
 	require_once("include/procesosreasignar_variables.php");
 	$cipherer = new RunnerCipherer("dbo.ProcesosReasignar");
 	fieldEventHandler_SeccionalId_event( $params );
+}
+if( $eventId == 'Documento_event' && "dbo.Abogados" == $table )
+{
+	require_once("include/abogados_variables.php");
+	$cipherer = new RunnerCipherer("dbo.Abogados");
+	fieldEventHandler_Documento_event( $params );
 }
 
 
@@ -5632,7 +5658,19 @@ function buttonHandler_Buscar9($params)
         $defaultHasta = $currentDate->format('Y-m-d'); // Formato YYYY-MM-DD
 				 $_SESSION['tablero_control_hastaid'] = $defaultHasta;
     }else{
-				$_SESSION['tablero_control_hastaid'] = $params['tablero_control_hasta'].'-01';
+				$date = $params['tablero_gestion_hasta'].'-01';
+				// Crear un objeto DateTime a partir de la fecha
+				$dateTime = new DateTime($date);
+
+				// Modificar la fecha para que sea el último día del mes
+				$dateTime->modify('last day of this month');
+
+				// Convertir el objeto DateTime a formato Y-m-d
+				$lastDayOfMonth = $dateTime->format('Y-m-d');
+
+				// Obtener el último día del mes
+				$params['tablero_gestion_hasta'] = $lastDayOfMonth;
+				$_SESSION['tablero_control_hastaid'] = $params['tablero_gestion_hasta'];
 		 }
 
 		
@@ -5716,7 +5754,20 @@ $username = $_SESSION["UserNameF"];
         $defaultHasta = $currentDate->format('Y-m-d'); // Formato YYYY-MM-DD
 				 $_SESSION['tablero_control_hastaid'] = $defaultHasta;
     } else {
-				$_SESSION['tablero_control_hastaid'] = $params['tablero_gestion_hasta'].'-01';
+				
+				$date = $params['tablero_gestion_hasta'].'-01';
+				// Crear un objeto DateTime a partir de la fecha
+				$dateTime = new DateTime($date);
+
+				// Modificar la fecha para que sea el último día del mes
+				$dateTime->modify('last day of this month');
+
+				// Convertir el objeto DateTime a formato Y-m-d
+				$lastDayOfMonth = $dateTime->format('Y-m-d');
+
+				// Obtener el último día del mes
+				$params['tablero_gestion_hasta'] = $lastDayOfMonth;
+				$_SESSION['tablero_control_hastaid'] = $params['tablero_gestion_hasta'];
     }
 		
 
@@ -7680,34 +7731,7 @@ function buttonHandler_Buscar23($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-		// Put your code here.
- 
-	$dateDesde = new DateTime($params['indicadores_recaudo_desde'].'-01');
-	$dateHasta = new DateTime($params['indicadores_recaudo_hasta'].'-01');
-
-		// Obtener el mes y el año actual
-		$mesActual = date('m');
-		$anioActual = date('Y');
-
-		// Generar el primer día del mes
-		$primer_dia = $dateDesde->modify('first day of this month')->format('d-m-Y');
-
-		// Generar el último día del mes
-		$ultimo_dia = $dateHasta->modify('last day of this month')->format('d-m-Y');
-
-		
-		if ($dateDesde->format('Y') <= $anioActual && $dateDesde->format('m') < $mesActual &&
-			 $dateHasta->format('Y') <= $anioActual && $dateHasta->format('m') < $mesActual && $dateHasta->format('m') >= $dateDesde->format('m')) {
-	 
-			 $dateDesde = new DateTime('first day of last month');
-			 $_SESSION['indicadores_recaudo_desde'] = $primer_dia;
-
-			 $dateHasta = new DateTime('last day of last month');
-			 $_SESSION['indicadores_recaudo_hasta'] = $ultimo_dia;
-		}
-
-
-
+	$_SESSION['indicadores_recaudo_desde'] = $params['indicadores_recaudo_desde'].'-01';
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
@@ -9242,6 +9266,115 @@ $result["Oficio"]=$data["Oficio"];;
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
 }
+function buttonHandler_Busqueda_recaudo_Seccional($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$_SESSION['recaudo_seccional_busqueda_mes'] = $params['recaudo_seccional_busqueda_mes'].'-01';;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Print_recaudo_seccional($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
 
 
 		
@@ -9807,6 +9940,35 @@ function fieldEventHandler_SeccionalId_event( $params )
 $_SESSION["PruebaSeccional"]=$params["value"];
 $result["Value"]=$_SESSION["PruebaSeccional"];
 echo $result["Value"];
+;
+	RunnerContext::pop();
+	
+	echo my_json_encode( $result );
+	$button->deleteTempFiles();
+}
+function fieldEventHandler_Documento_event( $params )
+{
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = false;
+	$params["location"] = postvalue('pageType');
+	
+	$button = new Button($params);
+	$keys = $button->getKeys();
+	$ajax = $button; // for examle from HELP
+	$result = array();
+	
+	$pageType = postvalue("pageType");
+	$fieldsData = my_json_decode( postvalue("fieldsData") );
+	
+	$contextParams = array(
+		"data" => $fieldsData,
+		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
+	);
+	
+	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
+	
+// Sample:
+$result["upper"] = strtoupper( $params["value"] );
 ;
 	RunnerContext::pop();
 	
