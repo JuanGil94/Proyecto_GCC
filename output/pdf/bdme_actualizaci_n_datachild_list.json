@@ -1118,6 +1118,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
 			{"text":{$C6_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
 				
 		  ],

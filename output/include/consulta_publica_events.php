@@ -24,6 +24,8 @@ function BeforeProcessList($pageObject)
 {
 
 		
+$pageObject->hideItem("logo");
+
 		set_time_limit(0); // Elimina la restricción de timeout
 
  	    // Obtener la URL completa de la página actual

@@ -45,34 +45,14 @@
 				</button>				
 			</span>
 		 
+				<span class="navbar-form r-align-left navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="image1" {$item_image1} data-topcell-item-type="image" >
+				<img src="{$file_url images/logo.png}" data-itemtype="image" data-itemid="image1" {$item_image1} data-pageid="{$pageid}" />
+			</span>
+		 
 				<span data-cellId="supertop_c1" data-pageid="{$pageid}" class="r-align-left navbar-collapse" data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main horizontal}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
-				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
-
-<div  class="input-group">
-{BEGIN searchform_text}
-	<input type="search" class="form-control" {$searchfor_attrs} size="25">
-{END searchform_text}
-	<span class="input-group-btn">
-	{BEGIN searchform_showall}
-				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
-			<span class="glyphicon glyphicon-remove"></span>
-		</button>
-	{END searchform_showall}
-
-	{BEGIN searchform_search}
-	<button {$searchbutton_attrs} class="btn btn-primary" >
-		<span class="glyphicon glyphicon-search"></span>
-	</button>
-	{END searchform_search}
-	</span>
-</div>
-		
-</span>			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
@@ -92,80 +72,6 @@
 							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
-			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="notifications" {$item_notifications} data-topcell-item-type="notifications" >
-				<div class="dropdown" data-itemtype="notifications" data-itemid="notifications" {$item_notifications} data-pageid="{$pageid}" id="notifications{$id}">
-	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
-		<i class="fa fa-bell"></i>
-		<span class="badge badge-warning" ></span>
-	</button>
-	<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-		<div class="r-noti-header">
-			<span class="r-noti-h-text">
-				Notificaciones			</span>
-			<!--
-			<a class="r-noti-all">
-				see all
-			</a>
-			-->
-			<a class="r-noti-close" href="#">
-				<i class="fa fa-times"></i>
-			</a>
-		</div>
-		<div class="r-noti-messages">
-		</div>
-	</div>
-	
-<script type="text/x-tmpl" id="noti-message">
-	<a draggable="false" class="r-noti-message" 
-		{% if (o.url ) { %} 
-			href="{%=o.url%}" 
-		{% } %}
-		>
-		<span class="r-noti-img">
-			{% if (o.iconType == 'fa') { %}
-			<span class="fa {%=o.icon%}"></span>
-			{% } else if (o.iconType == 'bs') { %}
-			<span class="glyphicon {%=o.icon%}"></span>
-			{% } else if (o.icon) { %}
-			<img src="{%=o.icon%}">
-			{% } %}
-		</span>
-		<span class="r-noti-text">
-			<span class="r-noti-title">
-				{% if (o.title) { %}
-					<span class="r-noti-title-text">
-						{%=o.title%}
-					</span>
-				{% } %}
-				<span class="r-noti-when">
-					{%=o.time%}
-				</span>
-			</span>
-			<span class="r-noti-body">
-				{%=o.message%}
-			</span>
-		</span>
-		{% if (o.new) { %}
-		<span class="r-noti-new">
-			<span class="fa fa-circle"></span>
-		</span>
-		{% } %}
-	</a>
-</script>	
-
-</div>
-			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
-				{BEGIN guestloginbutton}
-<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" href="#" {$guestloginlink_attrs} >
-							Conectar			</a>
-</span>
-{END guestloginbutton}
 			</span>
 		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
@@ -332,7 +238,14 @@
 		<input type="checkbox" id="printDetailsToggler{$id}">
 		Detalles de impresión	</label>
 	<div  id="printdetailstables{$id}" style="display:none;">
-											</div>
+																			{BEGIN print_details_consulta_publica_notificacion_detalle}
+			<div>
+				<label for="printDetailsconsulta_publica_notificacion_detalle{$id}">
+					<input type="checkbox" value="consulta_publica_notificacion_detalle" id="printDetailsconsulta_publica_notificacion_detalle{$id}" checked>
+					Consulta Publica Notificacion Detalle				</label>
+			</div>
+			{END print_details_consulta_publica_notificacion_detalle}
+						</div>
 </div>
 {END print_details}
 				 
@@ -366,6 +279,21 @@
 </span>
 {END print_friendly}
 		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c5" data-pageid="{$pageid}"	{$cell_above-grid_c5}
+	class=" r-ori-vert			col-md-6
+	
+">
+			</div>			 
+				<div 
+	data-cellId="above-grid_c6" data-pageid="{$pageid}"	{$cell_above-grid_c6}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 			 
 				<div class="row">
 			 
@@ -544,24 +472,17 @@
 </span>	
 {END checkbox_column}
 	 
-			 
-		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$_link_attrs} 
-			class="{$dtables_link_class} details-badge badge _badge" 
-			title="Mostrar detalles"
-						
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$_cntspan_class}" {$_childnumber_attr}>
-				{$_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
-
+		{BEGIN dtables_link}
+	<a 
+		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
+		{$dtables_link_attrs} 
+		class="{$dtables_link_class}" 
+		title="Mostrar detalles"
+				
+	>
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				Ver Detalle	</a>
+{END dtables_link}
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -625,9 +546,9 @@
 
 	 
 			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders=""
-			data-details-	>
-		<span data-details-inside data-short-table="">
+	data-orders="consulta_publica_notificacion_detalle"
+			data-details-consulta_publica_notificacion_detalle	>
+		<span data-details-inside data-short-table="consulta_publica_notificacion_detalle">
 			</span>
 		<div data-details-preview>
 	</div>

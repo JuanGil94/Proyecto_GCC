@@ -355,6 +355,11 @@ pdfDocument = {
 			{$displayDetailTable_undefined }
 		{END details_undefined},
 				
+				
+			 {BEGIN details_consulta_publica_notificacion_detalle}
+			{$displayDetailTable_consulta_publica_notificacion_detalle }
+		{END details_consulta_publica_notificacion_detalle},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

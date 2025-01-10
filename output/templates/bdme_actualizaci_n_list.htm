@@ -1194,13 +1194,16 @@
 	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Deuda_class}	"
+				 {$Deuda_class}	"
 
 			data-field="Deuda"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bdme_actualizaci_n_list"	
 	>
 
+	 
+		<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-record-id="{$recId}" data-small > 
+	$</span>
 	 
 		{BEGIN Deuda_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Deuda" data-fieldname="Deuda" data-default-width >

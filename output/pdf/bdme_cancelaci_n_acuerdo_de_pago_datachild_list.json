@@ -1121,6 +1121,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
 			{"text":{$C6_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
 				
 		  ],
@@ -1728,7 +1731,7 @@ pdfDocument = {
 				
 			{BEGIN C6_fieldfootercolumn}
 			{BEGIN C6_showtotal}
-				{ text: 'Total: $ ' },
+				{ text: '$ ' },
 				{"text":{$C6_total},"hidden":"{$item_hide_simple_grid_field26}"}
 			{END C6_showtotal}
 		{END C6_fieldfootercolumn},
