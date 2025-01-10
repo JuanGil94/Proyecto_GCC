@@ -190,7 +190,7 @@
 	{$cell_grid_cell_dpreview}
 	{$recordattrs}
 	class="
-		 r-ori-vert			"
+					"
 
 	
 	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
@@ -200,6 +200,10 @@
 		{BEGIN details_}
 {$displayDetailTable_}
 {END details_}
+	 
+		{BEGIN details_consulta_publica_notificacion_detalle}
+{$displayDetailTable_consulta_publica_notificacion_detalle}
+{END details_consulta_publica_notificacion_detalle}
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}

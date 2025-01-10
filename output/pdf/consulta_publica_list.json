@@ -216,6 +216,50 @@ pdfDocument = {
 											],
 						[
 																{
+	cellId: 'c5',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c6',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+						[
+																{
 	cellId: 'c',
 	col:0,
 	row:0,
@@ -444,9 +488,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -538,9 +579,9 @@ pdfDocument = {
 			"stack": [
 		
 				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
+			 {BEGIN details_consulta_publica_notificacion_detalle}
+			{$displayDetailTable_consulta_publica_notificacion_detalle }
+		{END details_consulta_publica_notificacion_detalle},
 				
 		  ],
   "border": [ true, true, true, true ],

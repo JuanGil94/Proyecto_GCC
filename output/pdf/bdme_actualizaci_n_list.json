@@ -865,6 +865,9 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":"$","hidden":"{$item_hide_text1}","isHtml":true},
+				
+				
 			{"text":{$Deuda_pdfvalue},"hidden":"{$item_hide_simple_grid_field7}"},
 				
 		  ],

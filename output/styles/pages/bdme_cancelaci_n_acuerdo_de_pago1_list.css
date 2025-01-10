@@ -38,4 +38,9 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-cellid="grid_cell_field7"][data-page="bdme_cancelaci_n_acuerdo_de_pago1_list"][data-cellid="grid_cell_field7"][data-page="bdme_cancelaci_n_acuerdo_de_pago1_list"][data-cellid="grid_cell_field7"][data-page="bdme_cancelaci_n_acuerdo_de_pago1_list"] {
+    color: black;
+    white-space: nowrap;
+}

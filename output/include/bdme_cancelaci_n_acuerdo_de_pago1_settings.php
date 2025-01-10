@@ -49,10 +49,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Deuda"] = "Deuda";
 	$fieldToolTipsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Deuda"] = "";
 	$placeHoldersbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Deuda"] = "";
-	$fieldLabelsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Causal"] = "Causal";
+	$fieldLabelsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Causal"] = "Causal de Retiro";
 	$fieldToolTipsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Causal"] = "";
 	$placeHoldersbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Causal"] = "";
-	$fieldLabelsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Estado"] = "Estado";
+	$fieldLabelsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Estado"] = "Estado de la Deuda";
 	$fieldToolTipsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Estado"] = "";
 	$placeHoldersbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["Estado"] = "";
 	$fieldLabelsbdme_cancelaci_n_acuerdo_de_pago1["Spanish"]["SancionadoId"] = "Sancionado Id";

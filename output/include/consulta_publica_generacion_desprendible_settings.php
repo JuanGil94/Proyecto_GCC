@@ -818,6 +818,7 @@ $tdataconsulta_publica_generacion_desprendible[".sqlquery"] = $queryData_consult
 
 
 
-$tdataconsulta_publica_generacion_desprendible[".hasEvents"] = false;
+include_once(getabspath("include/consulta_publica_generacion_desprendible_events.php"));
+$tdataconsulta_publica_generacion_desprendible[".hasEvents"] = true;
 
 ?>

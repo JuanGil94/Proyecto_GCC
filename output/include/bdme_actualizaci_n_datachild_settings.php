@@ -85,7 +85,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbdme_actualizaci_n_datachild["Spanish"]["Radicado"] = "Radicado";
 	$fieldToolTipsbdme_actualizaci_n_datachild["Spanish"]["Radicado"] = "";
 	$placeHoldersbdme_actualizaci_n_datachild["Spanish"]["Radicado"] = "";
-	$fieldLabelsbdme_actualizaci_n_datachild["Spanish"]["Origen"] = "Origen";
+	$fieldLabelsbdme_actualizaci_n_datachild["Spanish"]["Origen"] = "Despacho";
 	$fieldToolTipsbdme_actualizaci_n_datachild["Spanish"]["Origen"] = "";
 	$placeHoldersbdme_actualizaci_n_datachild["Spanish"]["Origen"] = "";
 	$fieldLabelsbdme_actualizaci_n_datachild["Spanish"]["Incumplimiento"] = "Incumplimiento";

@@ -68,4 +68,9 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-cellid="grid_cell_field5"][data-page="bdme_actualizaci_n_datachild_list"][data-cellid="grid_cell_field5"][data-page="bdme_actualizaci_n_datachild_list"][data-cellid="grid_cell_field5"][data-page="bdme_actualizaci_n_datachild_list"] {
+    color: black;
+    white-space: nowrap;
+}

@@ -58,6 +58,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsconsulta_publica_notificacion_detalle["Spanish"]["Seccional"] = "Seccional";
 	$fieldToolTipsconsulta_publica_notificacion_detalle["Spanish"]["Seccional"] = "";
 	$placeHoldersconsulta_publica_notificacion_detalle["Spanish"]["Seccional"] = "";
+	$pageTitlesconsulta_publica_notificacion_detalle["Spanish"]["list"] = "Notificacion Detalle";
 	if (count($fieldToolTipsconsulta_publica_notificacion_detalle["Spanish"]))
 		$tdataconsulta_publica_notificacion_detalle[".isUseToolTips"] = true;
 }
