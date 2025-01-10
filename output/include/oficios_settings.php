@@ -58,6 +58,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsoficios["Spanish"]["Devolucion"] = "Devolucion";
 	$fieldToolTipsoficios["Spanish"]["Devolucion"] = "";
 	$placeHoldersoficios["Spanish"]["Devolucion"] = "";
+	$pageTitlesoficios["Spanish"]["add"] = "Oficios";
+	$pageTitlesoficios["Spanish"]["edit"] = "Oficios";
 	if (count($fieldToolTipsoficios["Spanish"]))
 		$tdataoficios[".isUseToolTips"] = true;
 }

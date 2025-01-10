@@ -49,6 +49,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbienesmuebles["Spanish"]["PropiedadId"] = "Propiedad Id";
 	$fieldToolTipsbienesmuebles["Spanish"]["PropiedadId"] = "";
 	$placeHoldersbienesmuebles["Spanish"]["PropiedadId"] = "";
+	$pageTitlesbienesmuebles["Spanish"]["add"] = "Bienes Muebles";
+	$pageTitlesbienesmuebles["Spanish"]["edit"] = "Bienes Muebles";
 	if (count($fieldToolTipsbienesmuebles["Spanish"]))
 		$tdatabienesmuebles[".isUseToolTips"] = true;
 }

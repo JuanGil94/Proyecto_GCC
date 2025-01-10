@@ -70,6 +70,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsoperaciones["Spanish"]["Tipo"] = "Tipo Operacion";
 	$fieldToolTipsoperaciones["Spanish"]["Tipo"] = "";
 	$placeHoldersoperaciones["Spanish"]["Tipo"] = "";
+	$pageTitlesoperaciones["Spanish"]["edit"] = "Operaciones";
 	if (count($fieldToolTipsoperaciones["Spanish"]))
 		$tdataoperaciones[".isUseToolTips"] = true;
 }

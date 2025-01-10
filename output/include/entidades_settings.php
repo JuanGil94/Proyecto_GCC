@@ -31,6 +31,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsentidades["Spanish"]["Entidad"] = "Entidad";
 	$fieldToolTipsentidades["Spanish"]["Entidad"] = "";
 	$placeHoldersentidades["Spanish"]["Entidad"] = "";
+	$pageTitlesentidades["Spanish"]["add"] = "Entidades";
 	if (count($fieldToolTipsentidades["Spanish"]))
 		$tdataentidades[".isUseToolTips"] = true;
 }

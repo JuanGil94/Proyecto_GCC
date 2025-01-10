@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdevoluciones["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipsdevoluciones["Spanish"]["Observaciones"] = "";
 	$placeHoldersdevoluciones["Spanish"]["Observaciones"] = "";
+	$pageTitlesdevoluciones["Spanish"]["add"] = "Devoluciones";
+	$pageTitlesdevoluciones["Spanish"]["edit"] = "Devoluciones";
 	if (count($fieldToolTipsdevoluciones["Spanish"]))
 		$tdatadevoluciones[".isUseToolTips"] = true;
 }

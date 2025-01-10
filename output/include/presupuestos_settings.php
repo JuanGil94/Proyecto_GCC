@@ -40,6 +40,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspresupuestos["Spanish"]["Procesos"] = "Can. Procesos";
 	$fieldToolTipspresupuestos["Spanish"]["Procesos"] = "";
 	$placeHolderspresupuestos["Spanish"]["Procesos"] = "";
+	$pageTitlespresupuestos["Spanish"]["add"] = "Presupuestos";
+	$pageTitlespresupuestos["Spanish"]["edit"] = "Presupuestos";
 	if (count($fieldToolTipspresupuestos["Spanish"]))
 		$tdatapresupuestos[".isUseToolTips"] = true;
 }

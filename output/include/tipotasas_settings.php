@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstipotasas["Spanish"]["TipoTasas"] = "Tipo Tasas";
 	$fieldToolTipstipotasas["Spanish"]["TipoTasas"] = "";
 	$placeHolderstipotasas["Spanish"]["TipoTasas"] = "";
+	$pageTitlestipotasas["Spanish"]["add"] = "Tipo Tasas";
+	$pageTitlestipotasas["Spanish"]["edit"] = "Tipo Tasas";
 	if (count($fieldToolTipstipotasas["Spanish"]))
 		$tdatatipotasas[".isUseToolTips"] = true;
 }

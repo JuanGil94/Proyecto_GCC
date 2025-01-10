@@ -62,6 +62,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipschequeossancionados["Spanish"]["Observaciones"] = "";
 	$placeHolderschequeossancionados["Spanish"]["Observaciones"] = "";
 	$pageTitleschequeossancionados["Spanish"]["list"] = "Agregar Sancionado";
+	$pageTitleschequeossancionados["Spanish"]["add"] = "Chequeos Sancionados";
+	$pageTitleschequeossancionados["Spanish"]["edit"] = "Chequeos Sancionados";
 	if (count($fieldToolTipschequeossancionados["Spanish"]))
 		$tdatachequeossancionados[".isUseToolTips"] = true;
 }

@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssuspensiones["Spanish"]["Hasta"] = "Hasta";
 	$fieldToolTipssuspensiones["Spanish"]["Hasta"] = "";
 	$placeHolderssuspensiones["Spanish"]["Hasta"] = "";
+	$pageTitlessuspensiones["Spanish"]["add"] = "Suspensiones";
+	$pageTitlessuspensiones["Spanish"]["edit"] = "Suspensiones";
 	if (count($fieldToolTipssuspensiones["Spanish"]))
 		$tdatasuspensiones[".isUseToolTips"] = true;
 }

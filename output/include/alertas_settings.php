@@ -44,6 +44,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsalertas["Spanish"]["Publicar"] = "";
 	$placeHoldersalertas["Spanish"]["Publicar"] = "";
 	$pageTitlesalertas["Spanish"]["edit"] = "Alertas";
+	$pageTitlesalertas["Spanish"]["add"] = "Alertas";
 	if (count($fieldToolTipsalertas["Spanish"]))
 		$tdataalertas[".isUseToolTips"] = true;
 }

@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsllamadas["Spanish"]["Mensaje"] = "Mensaje";
 	$fieldToolTipsllamadas["Spanish"]["Mensaje"] = "";
 	$placeHoldersllamadas["Spanish"]["Mensaje"] = "";
+	$pageTitlesllamadas["Spanish"]["add"] = "Llamadas";
+	$pageTitlesllamadas["Spanish"]["edit"] = "Llamadas";
 	if (count($fieldToolTipsllamadas["Spanish"]))
 		$tdatallamadas[".isUseToolTips"] = true;
 }

@@ -40,6 +40,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsnaturalezas["Spanish"]["Activa"] = "Activa";
 	$fieldToolTipsnaturalezas["Spanish"]["Activa"] = "";
 	$placeHoldersnaturalezas["Spanish"]["Activa"] = "";
+	$pageTitlesnaturalezas["Spanish"]["add"] = "Naturalezas";
+	$pageTitlesnaturalezas["Spanish"]["edit"] = "Naturalezas";
 	if (count($fieldToolTipsnaturalezas["Spanish"]))
 		$tdatanaturalezas[".isUseToolTips"] = true;
 }

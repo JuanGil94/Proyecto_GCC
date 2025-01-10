@@ -58,6 +58,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Direccion"] = "Direccion";
 	$fieldToolTipsdespachos["Spanish"]["Direccion"] = "";
 	$placeHoldersdespachos["Spanish"]["Direccion"] = "";
+	$pageTitlesdespachos["Spanish"]["add"] = "Despachos";
+	$pageTitlesdespachos["Spanish"]["edit"] = "Despachos";
 	if (count($fieldToolTipsdespachos["Spanish"]))
 		$tdatadespachos[".isUseToolTips"] = true;
 }

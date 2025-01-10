@@ -83,6 +83,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsmedidas["Spanish"]["Entrega"] = "";
 	$placeHoldersmedidas["Spanish"]["Entrega"] = "";
 	$pageTitlesmedidas["Spanish"]["list"] = "Medidas Cautelares";
+	$pageTitlesmedidas["Spanish"]["add"] = "Medidas";
+	$pageTitlesmedidas["Spanish"]["edit"] = "Medidas";
 	if (count($fieldToolTipsmedidas["Spanish"]))
 		$tdatamedidas[".isUseToolTips"] = true;
 }

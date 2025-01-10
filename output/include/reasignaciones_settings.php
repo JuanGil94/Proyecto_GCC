@@ -35,6 +35,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsreasignaciones["Spanish"]["ProcesoId"] = "";
 	$placeHoldersreasignaciones["Spanish"]["ProcesoId"] = "";
 	$pageTitlesreasignaciones["Spanish"]["list"] = "Asignaciones";
+	$pageTitlesreasignaciones["Spanish"]["add"] = "Reasignaciones";
 	if (count($fieldToolTipsreasignaciones["Spanish"]))
 		$tdatareasignaciones[".isUseToolTips"] = true;
 }

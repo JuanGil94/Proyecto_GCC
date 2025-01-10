@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscarceles["Spanish"]["Email"] = "E-mail";
 	$fieldToolTipscarceles["Spanish"]["Email"] = "";
 	$placeHolderscarceles["Spanish"]["Email"] = "";
+	$pageTitlescarceles["Spanish"]["edit"] = "Carceles";
+	$pageTitlescarceles["Spanish"]["add"] = "Carceles";
 	if (count($fieldToolTipscarceles["Spanish"]))
 		$tdatacarceles[".isUseToolTips"] = true;
 }
@@ -854,7 +856,8 @@ $tdatacarceles[".hideMobileList"] = array();
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Carceles";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
+			$edata["freeInput"] = true;
+	$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 1;
 
@@ -926,7 +929,8 @@ $tdatacarceles[".hideMobileList"] = array();
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
 	$edata["LookupTable"] = "dbo.Carceles";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
+			$edata["freeInput"] = true;
+	$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 1;
 

@@ -58,6 +58,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelssancionados["Spanish"]["Carcel"] = "Carcel";
 	$fieldToolTipssancionados["Spanish"]["Carcel"] = "";
 	$placeHolderssancionados["Spanish"]["Carcel"] = "";
+	$pageTitlessancionados["Spanish"]["add"] = "Sancionados";
+	$pageTitlessancionados["Spanish"]["edit"] = "Sancionados";
 	if (count($fieldToolTipssancionados["Spanish"]))
 		$tdatasancionados[".isUseToolTips"] = true;
 }

@@ -49,6 +49,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachossigob["Spanish"]["institucion"] = "Institucion";
 	$fieldToolTipsdespachossigob["Spanish"]["institucion"] = "";
 	$placeHoldersdespachossigob["Spanish"]["institucion"] = "";
+	$pageTitlesdespachossigob["Spanish"]["add"] = "Despachos Sigob";
+	$pageTitlesdespachossigob["Spanish"]["edit"] = "Despachos Sigob";
 	if (count($fieldToolTipsdespachossigob["Spanish"]))
 		$tdatadespachossigob[".isUseToolTips"] = true;
 }

@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdepartamentos["Spanish"]["Departamento"] = "Departamento";
 	$fieldToolTipsdepartamentos["Spanish"]["Departamento"] = "";
 	$placeHoldersdepartamentos["Spanish"]["Departamento"] = "";
+	$pageTitlesdepartamentos["Spanish"]["add"] = "Departamentos";
+	$pageTitlesdepartamentos["Spanish"]["edit"] = "Departamentos";
 	if (count($fieldToolTipsdepartamentos["Spanish"]))
 		$tdatadepartamentos[".isUseToolTips"] = true;
 }

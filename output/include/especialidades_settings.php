@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsespecialidades["Spanish"]["Especialidad"] = "Especialidad";
 	$fieldToolTipsespecialidades["Spanish"]["Especialidad"] = "";
 	$placeHoldersespecialidades["Spanish"]["Especialidad"] = "";
+	$pageTitlesespecialidades["Spanish"]["add"] = "Especialidades";
+	$pageTitlesespecialidades["Spanish"]["edit"] = "Especialidades";
 	if (count($fieldToolTipsespecialidades["Spanish"]))
 		$tdataespecialidades[".isUseToolTips"] = true;
 }

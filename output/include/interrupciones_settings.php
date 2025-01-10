@@ -40,6 +40,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsinterrupciones["Spanish"]["Suspension"] = "Suspension";
 	$fieldToolTipsinterrupciones["Spanish"]["Suspension"] = "";
 	$placeHoldersinterrupciones["Spanish"]["Suspension"] = "";
+	$pageTitlesinterrupciones["Spanish"]["add"] = "Interrupciones";
+	$pageTitlesinterrupciones["Spanish"]["edit"] = "Interrupciones";
 	if (count($fieldToolTipsinterrupciones["Spanish"]))
 		$tdatainterrupciones[".isUseToolTips"] = true;
 }

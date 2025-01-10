@@ -46,6 +46,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsauditorias["Spanish"]["PrimaryKey"] = "Primary Key";
 	$fieldToolTipsauditorias["Spanish"]["PrimaryKey"] = "";
 	$placeHoldersauditorias["Spanish"]["PrimaryKey"] = "";
+	$pageTitlesauditorias["Spanish"]["add"] = "Auditorias";
+	$pageTitlesauditorias["Spanish"]["edit"] = "Auditorias";
 	if (count($fieldToolTipsauditorias["Spanish"]))
 		$tdataauditorias[".isUseToolTips"] = true;
 }

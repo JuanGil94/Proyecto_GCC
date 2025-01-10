@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsactuaciones["Spanish"]["EtapaId"] = "Etapa";
 	$fieldToolTipsactuaciones["Spanish"]["EtapaId"] = "";
 	$placeHoldersactuaciones["Spanish"]["EtapaId"] = "";
+	$pageTitlesactuaciones["Spanish"]["add"] = "Actuaciones";
+	$pageTitlesactuaciones["Spanish"]["edit"] = "Actuaciones";
 	if (count($fieldToolTipsactuaciones["Spanish"]))
 		$tdataactuaciones[".isUseToolTips"] = true;
 }

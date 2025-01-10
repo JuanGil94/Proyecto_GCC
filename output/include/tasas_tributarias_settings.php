@@ -40,6 +40,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstasas_tributarias["Spanish"]["Tipo_de_Tasas"] = "Tipo de Tasas";
 	$fieldToolTipstasas_tributarias["Spanish"]["Tipo_de_Tasas"] = "";
 	$placeHolderstasas_tributarias["Spanish"]["Tipo_de_Tasas"] = "";
+	$pageTitlestasas_tributarias["Spanish"]["add"] = "Tasas Tributarias";
 	if (count($fieldToolTipstasas_tributarias["Spanish"]))
 		$tdatatasas_tributarias[".isUseToolTips"] = true;
 }

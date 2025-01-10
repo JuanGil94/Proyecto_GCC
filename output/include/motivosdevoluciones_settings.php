@@ -34,6 +34,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsmotivosdevoluciones["Spanish"]["Activo"] = "Activo";
 	$fieldToolTipsmotivosdevoluciones["Spanish"]["Activo"] = "";
 	$placeHoldersmotivosdevoluciones["Spanish"]["Activo"] = "";
+	$pageTitlesmotivosdevoluciones["Spanish"]["add"] = "Motivos Devoluciones";
+	$pageTitlesmotivosdevoluciones["Spanish"]["edit"] = "Motivos Devoluciones";
 	if (count($fieldToolTipsmotivosdevoluciones["Spanish"]))
 		$tdatamotivosdevoluciones[".isUseToolTips"] = true;
 }

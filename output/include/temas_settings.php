@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstemas["Spanish"]["Tema"] = "Tema";
 	$fieldToolTipstemas["Spanish"]["Tema"] = "";
 	$placeHolderstemas["Spanish"]["Tema"] = "";
+	$pageTitlestemas["Spanish"]["add"] = "Temas";
+	$pageTitlestemas["Spanish"]["edit"] = "Temas";
 	if (count($fieldToolTipstemas["Spanish"]))
 		$tdatatemas[".isUseToolTips"] = true;
 }

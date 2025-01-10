@@ -34,6 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsuvts["Spanish"]["Uvt"] = "Uvt";
 	$fieldToolTipsuvts["Spanish"]["Uvt"] = "";
 	$placeHoldersuvts["Spanish"]["Uvt"] = "";
+	$pageTitlesuvts["Spanish"]["add"] = "Uvts";
 	if (count($fieldToolTipsuvts["Spanish"]))
 		$tdatauvts[".isUseToolTips"] = true;
 }

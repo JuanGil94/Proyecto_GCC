@@ -35,6 +35,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsusugcc_ugmembers["Spanish"]["Provider"] = "";
 	$placeHoldersusugcc_ugmembers["Spanish"]["Provider"] = "";
 	$pageTitlesusugcc_ugmembers["Spanish"]["list"] = "Roles del Usuario";
+	$pageTitlesusugcc_ugmembers["Spanish"]["add"] = "Usu GCC-ugmembers";
+	$pageTitlesusugcc_ugmembers["Spanish"]["edit"] = "Usu GCC-ugmembers";
 	if (count($fieldToolTipsusugcc_ugmembers["Spanish"]))
 		$tdatausugcc_ugmembers[".isUseToolTips"] = true;
 }

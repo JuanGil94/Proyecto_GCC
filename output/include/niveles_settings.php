@@ -46,6 +46,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsniveles["Spanish"]["Clasificacion"] = "Clasificacion";
 	$fieldToolTipsniveles["Spanish"]["Clasificacion"] = "";
 	$placeHoldersniveles["Spanish"]["Clasificacion"] = "";
+	$pageTitlesniveles["Spanish"]["add"] = "Niveles";
 	if (count($fieldToolTipsniveles["Spanish"]))
 		$tdataniveles[".isUseToolTips"] = true;
 }

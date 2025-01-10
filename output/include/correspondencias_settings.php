@@ -58,6 +58,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscorrespondencias["Spanish"]["CorrespondenciaId"] = "Correspondencia Id";
 	$fieldToolTipscorrespondencias["Spanish"]["CorrespondenciaId"] = "";
 	$placeHolderscorrespondencias["Spanish"]["CorrespondenciaId"] = "";
+	$pageTitlescorrespondencias["Spanish"]["add"] = "Correspondencias";
 	if (count($fieldToolTipscorrespondencias["Spanish"]))
 		$tdatacorrespondencias[".isUseToolTips"] = true;
 }

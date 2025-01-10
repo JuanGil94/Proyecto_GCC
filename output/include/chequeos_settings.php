@@ -160,6 +160,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelschequeos["Spanish"]["FechaPago"] = "Fecha Pago";
 	$fieldToolTipschequeos["Spanish"]["FechaPago"] = "";
 	$placeHolderschequeos["Spanish"]["FechaPago"] = "";
+	$pageTitleschequeos["Spanish"]["add"] = "Chequeos";
+	$pageTitleschequeos["Spanish"]["edit"] = "Chequeos";
 	if (count($fieldToolTipschequeos["Spanish"]))
 		$tdatachequeos[".isUseToolTips"] = true;
 }

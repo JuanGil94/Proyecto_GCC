@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscalificaciones["Spanish"]["Calificacion"] = "Calificacion";
 	$fieldToolTipscalificaciones["Spanish"]["Calificacion"] = "";
 	$placeHolderscalificaciones["Spanish"]["Calificacion"] = "";
+	$pageTitlescalificaciones["Spanish"]["add"] = "Calificaciones";
+	$pageTitlescalificaciones["Spanish"]["edit"] = "Calificaciones";
 	if (count($fieldToolTipscalificaciones["Spanish"]))
 		$tdatacalificaciones[".isUseToolTips"] = true;
 }

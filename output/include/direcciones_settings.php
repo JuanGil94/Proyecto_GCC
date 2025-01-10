@@ -49,6 +49,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdirecciones["Spanish"]["Activa"] = "Activa";
 	$fieldToolTipsdirecciones["Spanish"]["Activa"] = "";
 	$placeHoldersdirecciones["Spanish"]["Activa"] = "";
+	$pageTitlesdirecciones["Spanish"]["add"] = "Direcciones";
+	$pageTitlesdirecciones["Spanish"]["edit"] = "Direcciones";
 	if (count($fieldToolTipsdirecciones["Spanish"]))
 		$tdatadirecciones[".isUseToolTips"] = true;
 }

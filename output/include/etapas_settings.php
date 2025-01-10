@@ -31,6 +31,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsetapas["Spanish"]["Etapa"] = "Etapa";
 	$fieldToolTipsetapas["Spanish"]["Etapa"] = "";
 	$placeHoldersetapas["Spanish"]["Etapa"] = "";
+	$pageTitlesetapas["Spanish"]["add"] = "Etapas";
+	$pageTitlesetapas["Spanish"]["edit"] = "Etapas";
 	if (count($fieldToolTipsetapas["Spanish"]))
 		$tdataetapas[".isUseToolTips"] = true;
 }
