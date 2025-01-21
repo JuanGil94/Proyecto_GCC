@@ -160,25 +160,19 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_AlertasOficios AlertaId }","bold":true},{"text":{$AlertaId_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_AlertasOficios CarteraTipoId }","bold":true},{"text":{$CarteraTipoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_AlertasOficios OficioId }","bold":true},{"text":{$OficioId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_AlertasOficios Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_AlertasOficios ConceptoId }","bold":true},{"text":{$ConceptoId_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel dbo_AlertasOficios Carcel }","bold":true},{"text":{$Carcel_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_AlertasOficios Carcel }","bold":true},{"text":{$Carcel_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel dbo_AlertasOficios SinDireccion }","bold":true},{"text":{$SinDireccion_pdfvalue}}],"margin":[0,0,0,15]},
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_AlertasOficios Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

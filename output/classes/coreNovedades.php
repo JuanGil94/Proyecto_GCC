@@ -336,8 +336,10 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
                     $consulta=DB::Query("SELECT top 1 * FROM Reliquidaciones where procesoId=".$procesoId." order by ReliquidacionId desc");
                     while( $date = $consulta->fetchAssoc() ){
                         $obligacionSaldo=$date["ObliSald"];
+                        $costasSaldo=$date["CostSald"];
                     }
-                    $resultado=DB::Exec("UPDATE Procesos set InteresesInicial=".$interesesNew.",Intereses=".$interesesNov.",Obligacion=".$obligacionSaldo.",Costas=".$costasSaldo." where ProcesoId=".$procesoId);
+                    //echo "Valor InteresesNew: $interesesNew Valor InteresesSaldo= $interesesNov Valor Obligacion: $obligacionSaldo Valor Costas: $costasSaldo <br>";
+                    $resultado=DB::Exec("UPDATE Procesos set ObligacionInicial=".$newobligacionInicial.",InteresesInicial=".$interesesNew.",Intereses=".$interesesNov.",Obligacion=".$obligacionSaldo.",Costas=".$costasSaldo." where ProcesoId=".$procesoId);
                     //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
                     if (!$resultado){
                         echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 

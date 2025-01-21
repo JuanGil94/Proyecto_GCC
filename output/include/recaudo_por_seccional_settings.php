@@ -137,7 +137,7 @@ $tdatarecaudo_por_seccional[".isUseAjaxSuggest"] = false;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																							
 
 $tdatarecaudo_por_seccional[".ajaxCodeSnippetAdded"] = false;
 

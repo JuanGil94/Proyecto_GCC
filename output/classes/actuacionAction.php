@@ -563,6 +563,7 @@ class coreOficios {
                 "EstadoIdP"=>$date["EstadoId"],
                 "Terminacion"=>$date["Terminacion"],
                 "CompetenciaId"=>$date["CompetenciaId"],
+                "ConceptoId"=>$date["ConceptoId"],
             );
         }
         return $infoP;

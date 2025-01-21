@@ -139,7 +139,7 @@ $tdataaplazamientos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					
 
 $tdataaplazamientos[".ajaxCodeSnippetAdded"] = false;
 
@@ -196,7 +196,7 @@ $tdataaplazamientos[".strOrderBy"] = $tstrOrderBy;
 $tdataaplazamientos[".orderindexes"] = array();
 
 
-$tdataaplazamientos[".sqlHead"] = "SELECT AplazamientoId,  	AlertaId,  	Aplazamiento,  	Dias,  	OficioId";
+$tdataaplazamientos[".sqlHead"] = "SELECT *";
 $tdataaplazamientos[".sqlFrom"] = "FROM dbo.Aplazamientos";
 $tdataaplazamientos[".sqlWhereExpr"] = "";
 $tdataaplazamientos[".sqlTail"] = "";
@@ -247,7 +247,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "AplazamientoId";
 	$fdata["GoodName"] = "AplazamientoId";
-	$fdata["ownerTable"] = "dbo.Aplazamientos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Aplazamientos","AplazamientoId");
 	$fdata["FieldType"] = 3;
 
@@ -261,8 +261,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "AplazamientoId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "AplazamientoId";
+		$fdata["FullName"] = "AplazamientoId";
 
 	
 	
@@ -388,7 +387,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "AlertaId";
 	$fdata["GoodName"] = "AlertaId";
-	$fdata["ownerTable"] = "dbo.Aplazamientos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Aplazamientos","AlertaId");
 	$fdata["FieldType"] = 3;
 
@@ -401,8 +400,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "AlertaId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "AlertaId";
+		$fdata["FullName"] = "AlertaId";
 
 	
 	
@@ -551,7 +549,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Aplazamiento";
 	$fdata["GoodName"] = "Aplazamiento";
-	$fdata["ownerTable"] = "dbo.Aplazamientos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Aplazamientos","Aplazamiento");
 	$fdata["FieldType"] = 200;
 
@@ -564,8 +562,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Aplazamiento";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Aplazamiento";
+		$fdata["FullName"] = "Aplazamiento";
 
 	
 	
@@ -689,7 +686,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "Dias";
 	$fdata["GoodName"] = "Dias";
-	$fdata["ownerTable"] = "dbo.Aplazamientos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Aplazamientos","Dias");
 	$fdata["FieldType"] = 3;
 
@@ -702,8 +699,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Dias";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Dias";
+		$fdata["FullName"] = "Dias";
 
 	
 	
@@ -990,7 +986,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "OficioId";
 	$fdata["GoodName"] = "OficioId";
-	$fdata["ownerTable"] = "dbo.Aplazamientos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Aplazamientos","OficioId");
 	$fdata["FieldType"] = 3;
 
@@ -1003,8 +999,7 @@ $tdataaplazamientos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "OficioId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "OficioId";
+		$fdata["FullName"] = "OficioId";
 
 	
 	
@@ -1442,7 +1437,7 @@ function createSqlQuery_aplazamientos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "AplazamientoId,  	AlertaId,  	Aplazamiento,  	Dias,  	OficioId";
+$proto0["m_strFieldList"] = "*";
 $proto0["m_strFrom"] = "FROM dbo.Aplazamientos";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1483,110 +1478,52 @@ $obj = new SQLLogicalExpr($proto4);
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
-			$obj = new SQLField(array(
-	"m_strName" => "AplazamientoId",
-	"m_strTable" => "dbo.Aplazamientos",
-	"m_srcTableName" => "dbo.Aplazamientos"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "*"
 ));
 
-$proto6["m_sql"] = "AplazamientoId";
+$proto6["m_sql"] = "*";
 $proto6["m_srcTableName"] = "dbo.Aplazamientos";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto8=array();
-			$obj = new SQLField(array(
-	"m_strName" => "AlertaId",
-	"m_strTable" => "dbo.Aplazamientos",
-	"m_srcTableName" => "dbo.Aplazamientos"
-));
-
-$proto8["m_sql"] = "AlertaId";
-$proto8["m_srcTableName"] = "dbo.Aplazamientos";
-$proto8["m_expr"]=$obj;
-$proto8["m_alias"] = "";
-$obj = new SQLFieldListItem($proto8);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Aplazamiento",
-	"m_strTable" => "dbo.Aplazamientos",
-	"m_srcTableName" => "dbo.Aplazamientos"
-));
-
-$proto10["m_sql"] = "Aplazamiento";
-$proto10["m_srcTableName"] = "dbo.Aplazamientos";
-$proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
-$obj = new SQLFieldListItem($proto10);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto12=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Dias",
-	"m_strTable" => "dbo.Aplazamientos",
-	"m_srcTableName" => "dbo.Aplazamientos"
-));
-
-$proto12["m_sql"] = "Dias";
-$proto12["m_srcTableName"] = "dbo.Aplazamientos";
-$proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "";
-$obj = new SQLFieldListItem($proto12);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto14=array();
-			$obj = new SQLField(array(
-	"m_strName" => "OficioId",
-	"m_strTable" => "dbo.Aplazamientos",
-	"m_srcTableName" => "dbo.Aplazamientos"
-));
-
-$proto14["m_sql"] = "OficioId";
-$proto14["m_srcTableName"] = "dbo.Aplazamientos";
-$proto14["m_expr"]=$obj;
-$proto14["m_alias"] = "";
-$obj = new SQLFieldListItem($proto14);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto16=array();
-$proto16["m_link"] = "SQLL_MAIN";
-			$proto17=array();
-$proto17["m_strName"] = "dbo.Aplazamientos";
-$proto17["m_srcTableName"] = "dbo.Aplazamientos";
-$proto17["m_columns"] = array();
-$proto17["m_columns"][] = "AplazamientoId";
-$proto17["m_columns"][] = "AlertaId";
-$proto17["m_columns"][] = "Aplazamiento";
-$proto17["m_columns"][] = "Dias";
-$proto17["m_columns"][] = "OficioId";
-$obj = new SQLTable($proto17);
+												$proto8=array();
+$proto8["m_link"] = "SQLL_MAIN";
+			$proto9=array();
+$proto9["m_strName"] = "dbo.Aplazamientos";
+$proto9["m_srcTableName"] = "dbo.Aplazamientos";
+$proto9["m_columns"] = array();
+$proto9["m_columns"][] = "AplazamientoId";
+$proto9["m_columns"][] = "AlertaId";
+$proto9["m_columns"][] = "Aplazamiento";
+$proto9["m_columns"][] = "Dias";
+$proto9["m_columns"][] = "OficioId";
+$obj = new SQLTable($proto9);
 
-$proto16["m_table"] = $obj;
-$proto16["m_sql"] = "dbo.Aplazamientos";
-$proto16["m_alias"] = "";
-$proto16["m_srcTableName"] = "dbo.Aplazamientos";
-$proto18=array();
-$proto18["m_sql"] = "";
-$proto18["m_uniontype"] = "SQLL_UNKNOWN";
+$proto8["m_table"] = $obj;
+$proto8["m_sql"] = "dbo.Aplazamientos";
+$proto8["m_alias"] = "";
+$proto8["m_srcTableName"] = "dbo.Aplazamientos";
+$proto10=array();
+$proto10["m_sql"] = "";
+$proto10["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto18["m_column"]=$obj;
-$proto18["m_contained"] = array();
-$proto18["m_strCase"] = "";
-$proto18["m_havingmode"] = false;
-$proto18["m_inBrackets"] = false;
-$proto18["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto18);
+$proto10["m_column"]=$obj;
+$proto10["m_contained"] = array();
+$proto10["m_strCase"] = "";
+$proto10["m_havingmode"] = false;
+$proto10["m_inBrackets"] = false;
+$proto10["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto10);
 
-$proto16["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto16);
+$proto8["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto8);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

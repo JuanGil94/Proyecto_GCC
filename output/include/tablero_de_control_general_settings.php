@@ -146,7 +146,7 @@ $tdatatablero_de_control_general[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																							
 
 $tdatatablero_de_control_general[".ajaxCodeSnippetAdded"] = false;
 

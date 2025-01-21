@@ -31,24 +31,25 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsalertasoficios["Spanish"]["AlertaId"] = "Alerta Id";
 	$fieldToolTipsalertasoficios["Spanish"]["AlertaId"] = "";
 	$placeHoldersalertasoficios["Spanish"]["AlertaId"] = "";
-	$fieldLabelsalertasoficios["Spanish"]["CarteraTipoId"] = "Cartera Tipo Id";
+	$fieldLabelsalertasoficios["Spanish"]["CarteraTipoId"] = "Tipo de Cartera";
 	$fieldToolTipsalertasoficios["Spanish"]["CarteraTipoId"] = "";
 	$placeHoldersalertasoficios["Spanish"]["CarteraTipoId"] = "";
-	$fieldLabelsalertasoficios["Spanish"]["OficioId"] = "Oficio Id";
+	$fieldLabelsalertasoficios["Spanish"]["OficioId"] = "Oficio";
 	$fieldToolTipsalertasoficios["Spanish"]["OficioId"] = "";
 	$placeHoldersalertasoficios["Spanish"]["OficioId"] = "";
 	$fieldLabelsalertasoficios["Spanish"]["Activo"] = "Activo";
 	$fieldToolTipsalertasoficios["Spanish"]["Activo"] = "";
 	$placeHoldersalertasoficios["Spanish"]["Activo"] = "";
-	$fieldLabelsalertasoficios["Spanish"]["ConceptoId"] = "Concepto Id";
+	$fieldLabelsalertasoficios["Spanish"]["ConceptoId"] = "Concepto";
 	$fieldToolTipsalertasoficios["Spanish"]["ConceptoId"] = "";
 	$placeHoldersalertasoficios["Spanish"]["ConceptoId"] = "";
-	$fieldLabelsalertasoficios["Spanish"]["Carcel"] = "Carcel";
+	$fieldLabelsalertasoficios["Spanish"]["Carcel"] = "Privado Libertad";
 	$fieldToolTipsalertasoficios["Spanish"]["Carcel"] = "";
 	$placeHoldersalertasoficios["Spanish"]["Carcel"] = "";
 	$fieldLabelsalertasoficios["Spanish"]["SinDireccion"] = "Sin Direccion";
 	$fieldToolTipsalertasoficios["Spanish"]["SinDireccion"] = "";
 	$placeHoldersalertasoficios["Spanish"]["SinDireccion"] = "";
+	$pageTitlesalertasoficios["Spanish"]["add"] = "Alertas Oficios";
 	if (count($fieldToolTipsalertasoficios["Spanish"]))
 		$tdataalertasoficios[".isUseToolTips"] = true;
 }
@@ -146,7 +147,7 @@ $tdataalertasoficios[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			
 
 $tdataalertasoficios[".ajaxCodeSnippetAdded"] = false;
 
@@ -1153,7 +1154,7 @@ $tdataalertasoficios[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
