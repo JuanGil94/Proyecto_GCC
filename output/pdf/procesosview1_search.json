@@ -504,6 +504,18 @@ pdfDocument = {
 				
 			{"text":{$AbogadoDocumento_pdfvalue},"hidden":"{$item_hide_integrated_search_field112}"},
 				
+				
+			{"text":{$DespachoCorreo_pdfvalue},"hidden":"{$item_hide_integrated_search_field113}"},
+				
+				
+			{"text":{$DespachoDireccion_pdfvalue},"hidden":"{$item_hide_integrated_search_field114}"},
+				
+				
+			{"text":{$DespachoJuez_pdfvalue},"hidden":"{$item_hide_integrated_search_field115}"},
+				
+				
+			{"text":{$DespachoTelefonos_pdfvalue},"hidden":"{$item_hide_integrated_search_field116}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

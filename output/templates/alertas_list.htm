@@ -971,7 +971,7 @@
 	{$cell_grid_cell_details}
 	{$recordattrs}
 	class="
-					"
+		 r-ori-vert			"
 
 	
 	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="alertas_list"		data-control-cell
@@ -990,44 +990,6 @@
 					<span class="glyphicon glyphicon-th-list"></span>
 					</a>
 {END dtables_link}
-	 
-		
-		
-	{BEGIN aplazamientos_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$aplazamientos_link_attrs} data-short-details="aplazamientos"
-		class="{$aplazamientos_dlink_class}" 
-		title="{$caption dbo_Aplazamientos }"			>
-								
-									{BEGIN aplazamientos_childcount}
-				<span class="details-badge badge aplazamientos_badge" {$aplazamientos_childnumber_attr}>
-					{$aplazamientos_childnumber}				
-				</span>
-				{END aplazamientos_childcount}
-						</a>
-	</span>
-	{END aplazamientos_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN alertasoficios_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$alertasoficios_link_attrs} data-short-details="alertasoficios"
-		class="{$alertasoficios_dlink_class}" 
-		title="{$caption dbo_AlertasOficios }"			>
-								
-									{BEGIN alertasoficios_childcount}
-				<span class="details-badge badge alertasoficios_badge" {$alertasoficios_childnumber_attr}>
-					{$alertasoficios_childnumber}				
-				</span>
-				{END alertasoficios_childcount}
-						</a>
-	</span>
-	{END alertasoficios_dtable_link}
-
-
 	
 	</td>
 	{END cellblock_grid_cell_details}

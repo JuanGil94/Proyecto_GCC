@@ -162,7 +162,7 @@ $tdataprescripcionautomatica[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdataprescripcionautomatica[".ajaxCodeSnippetAdded"] = false;
 
@@ -2874,6 +2874,10 @@ $proto37["m_columns"][] = "ChequeoId";
 $proto37["m_columns"][] = "VlrCostas";
 $proto37["m_columns"][] = "VlrInteresesPlazo";
 $proto37["m_columns"][] = "AbogadoDocumento";
+$proto37["m_columns"][] = "DespachoCorreo";
+$proto37["m_columns"][] = "DespachoDireccion";
+$proto37["m_columns"][] = "DespachoJuez";
+$proto37["m_columns"][] = "DespachoTelefonos";
 $obj = new SQLTable($proto37);
 
 $proto36["m_table"] = $obj;

@@ -584,10 +584,10 @@ $globalSettings["useBuiltInMailer"] = false;
 
 $globalSettings["useCustomSMTPSettings"] = true;
 
-$globalSettings["strSMTPUser"] = "soportecobrocoactivo@deaj.ramajudicial.gov.co";
+$globalSettings["strSMTPUser"] = "appcobrocoactivo@deaj.ramajudicial.gov.co";
 $globalSettings["strSMTPServer"] = "smtp.office365.com";
 $globalSettings["strSMTPPort"] = "587";
-$globalSettings["strSMTPPassword"] = "Coactivo\$1124";
+$globalSettings["strSMTPPassword"] = "C1av3C06r0*";
 $globalSettings["strFromEmail"] = "soportecobrocoactivo@deaj.ramajudicial.gov.co";
 
 $globalSettings["SMTPSecure"] = "tls";
@@ -749,9 +749,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4116_1736271173";
+$projectBuildKey = "4155_1736950393";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4116";
+$projectBuildNumber = "4155";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -983,8 +983,8 @@ $tableCaptions["Spanish"]["dbo_tiposNovedades"] = "Tipos Novedades";
 $tableCaptions["Spanish"]["Recaudo_Por_Seccional"] = "Recaudo Por Seccional";
 $tableCaptions["Spanish"]["PrescripcionAutomatica"] = "Prescripcion Automatica";
 $tableCaptions["Spanish"]["MandamientoAutomatico"] = "Mandamiento Automatico";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["dbo_AlertasOficios"] = "Alertas Oficios";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 
 
 $globalEvents = new class_GlobalEvents;

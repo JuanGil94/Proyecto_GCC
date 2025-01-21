@@ -492,6 +492,46 @@ $values["CarteraTipoId"]=1;
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
+
+
+unset($values["ObligacionLetras"]); //Se borran los campos que no existen en la tabla Chequeos
+unset($values["CantidadLetras"]);
+//unset($values["Dias"]);
+unset($values["FechaPago"]);
+$values["Fecha"]=now();
+$values["CarteraTipoId"]=1;
+//$values['CarteraTipoId']=1; //se quema ya que la cartera siempre es Corriente=1
+$consulta=DB::Query("SELECT * FROM Empresas");
+        while( $date = $consulta->fetchAssoc() ){
+						$maxSal=$date["MaximoSalarios"];
+						$maxUvts=$date["MaximoUvt"];
+						$maxPesos=$date["MaximoPesos"];
+						$maxUbvs=$date["MaximoUvb"];
+        }
+
+if ($values["Tipo"]==1){
+	if ($values['Obligacion']>$maxPesos){
+		$values["Aprobado"]=0;
+	}
+}
+else if ($values["Tipo"]==2){
+	if ($values["Cantidad"]>$maxSal||$values['Obligacion']>$maxPesos){
+		$values["Aprobado"]=0;
+	}
+}
+else if ($values["Tipo"]==3){
+	if ($values["Cantidad"]>$maxUvts||$values['Obligacion']>$maxPesos){
+		$values["Aprobado"]=0;
+	}
+}
+
+else if ($values["Tipo"]==4){
+	if ($values["Cantidad"]>$maxUbvs||$values['Obligacion']>$maxPesos){
+		$values["Aprobado"]=0;
+	}
+}
+return true;
+
 return true;
 ;
 } // function CustomEdit
@@ -637,6 +677,14 @@ $fecha = new DateTime($ejecutoria);
 
 $fechaActual = new DateTime();
 $fechaActual = $fechaActual->format('Y-m-d');
+if($values['Cantidad']<0){
+	echo "<script>alert('La cantidad no puede ser negativa')</script>";
+	return false;
+}
+if($values['Folios']<0){
+	echo "<script>alert('La cantidad de folios no puede ser negativa')</script>";
+	return false;
+}
 if ($values["ConceptoId"]!=5){
 	$fecha->modify('+5 years');
 	if ($fecha->format('Y-m-d')<$fechaActual){
@@ -985,6 +1033,14 @@ $fecha = new DateTime($ejecutoria);
 
 $fechaActual = new DateTime();
 $fechaActual = $fechaActual->format('Y-m-d');
+if($values['Cantidad']<0){
+	echo "<script>alert('La cantidad no puede ser negativa')</script>";
+	return false;
+}
+if($values['Folios']<0){
+	echo "<script>alert('La cantidad de folios no puede ser negativa')</script>";
+	return false;
+}
 if ($values["ConceptoId"]!=5){
 	$fecha->modify('+5 years');
 	if ($fecha->format('Y-m-d')<$fechaActual){

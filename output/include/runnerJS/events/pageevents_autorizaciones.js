@@ -63,7 +63,7 @@ else if(result["upper"]==4){$("#value_CantidadLetras_"+pageid+"").val(NumeroALet
 $.post(Runner.getPageUrl("buttonhandler"),reqParams,function(result){var _result;try{_result=JSON.parse(result);}catch(e){Runner.displayGenericAjaxError(result);}
 after.call(ctrl,_result);}).fail(function(jqXHR,textStatus,errorThrown){Runner.displayGenericAjaxError(jqXHR.responseText||textStatus+' '+errorThrown);});submit=function(){};};ajax.submitHandler=submit;ajax.submit=submit;ret=before.call(this);if(ret===false){return;}
 submit();};Runner.pages.fieldsEvents["Tipo_event1"]=function(pageObj,pageid,row){if(row){row=new Runner.AjaxRow(pageObj,row);}
-var ret,reqParams,ctrl=this,fieldsData={},params={},ajax=new Runner.form.Button({id:'Tipo_event1',btnName:'Tipo_event1'}),before=function(){console.log("valor"+pageid);params["cantidad"]=this.getValue();params["valorAnno"]=$("#yearvalue_FechaSancion_"+pageid+"").val();params["tipo"]=$("#value_Tipo_"+pageid+"").val();},after=function(result){function Unidades(num){switch(num)
+var ret,reqParams,ctrl=this,fieldsData={},params={},ajax=new Runner.form.Button({id:'Tipo_event1',btnName:'Tipo_event1'}),before=function(){params["cantidad"]=this.getValue();params["valorAnno"]=$("#yearvalue_FechaSancion_"+pageid+"").val();params["tipo"]=$("#value_Tipo_"+pageid+"").val();},after=function(result){function Unidades(num){switch(num)
 {case 1:return"UN";case 2:return"DOS";case 3:return"TRES";case 4:return"CUATRO";case 5:return"CINCO";case 6:return"SEIS";case 7:return"SIETE";case 8:return"OCHO";case 9:return"NUEVE";}
 return"";}
 function Decenas(num){decena=Math.floor(num/10);unidad=num-(decena*10);switch(decena)

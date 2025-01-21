@@ -133,7 +133,7 @@ $tdataespecialidades[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																							
 
 $tdataespecialidades[".ajaxCodeSnippetAdded"] = false;
 

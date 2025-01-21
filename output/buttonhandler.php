@@ -2,21 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1110,6 +1095,16 @@ if($buttId=='BuscarManda')
 		$cipherer = new RunnerCipherer( $table );
 	}
 	buttonHandler_BuscarManda($params);
+}
+if($buttId=='Calc2')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Calc2($params);
 }
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
@@ -3550,7 +3545,7 @@ function buttonHandler_New_Button10($params)
 //$objeto=new plantillas($params["ProcesoId"]);
 //echo "Value ".$params["OficioId"];
 $objeto=new diccionario;
-$objeto->process(1,1);
+$objeto->process(1,1,1,1,1);
 $dic=$objeto->getVariables();
 //print_r($dic);
 foreach($dic as $param=>$date){
@@ -4192,7 +4187,7 @@ function buttonHandler_diccionarioDevoluciones($params)
 //$objeto=new plantillas($params["ProcesoId"]);
 //echo "Value ".$params["OficioId"];
 $objeto=new diccionarioChequeo;
-$objeto->process(1,1);
+$objeto->process(1,1,1,1,1);
 $dic=$objeto->getVariables();
 //print_r($dic);
 foreach($dic as $param=>$date){
@@ -9512,11 +9507,27 @@ function buttonHandler_Enviar_Correo($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	$email="juansgil@deaj.ramajudicial.gov.co";
-$message="Hello there\n<b>Best regards</b>";
-$subject="Sample subject";
+	global $dal;
+while ( $data = $button->getNextSelectedRecord() ) {
+		 $rs = DB::Query("SELECT * FROM Chequeos WHERE ChequeoId=".$data["ChequeoId"]);
+        while( $info = $rs->fetchAssoc() ){
+						$abogadoId=$info["AbogadoId"];
+				}
+			$rs = DB::Query("SELECT * FROM Abogados WHERE AbogadoId=".$abogadoId);
+        while( $info = $rs->fetchAssoc() ){
+						$nombreAbogado=$info["Abogado"];
+						$seccionalAbogado=$info["SeccionalId"];
+				}
+			$rs = DB::Query("SELECT * FROM Seccionales WHERE SeccionalId=".$seccionalAbogado);
+        while( $info = $rs->fetchAssoc() ){
+						$seccional=$info["Seccional"];
+				}
+$email="juansgil@deaj.ramajudicial.gov.co";
+$subject="Solicitud Autorización";
+$body="El abogador ".$nombreAbogado." de la seccional ".$seccional." solicita la autorización de la Etapa Preliminar No.".$data["ChequeoId"]." para la creación de un proceso por valor de $".$data['Obligacion'];
+}
 $arr = runner_mail(array('to' => $email, 'subject' => $subject,
-'htmlbody' => $message, 'charset' => 'UTF-8'));
+'body' => $body));
 // if error happened print a message on the web page
 if (!$arr["mailed"])
 {
@@ -11187,6 +11198,64 @@ $_SESSION["fechaMandamientoA"]=$params["fechaMandamiento"];
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
 }
+function buttonHandler_Calc2($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	include_once (getabspath("classes/calcIntereses.php"));
+$recalcular=new reliquidacion($params["ProcesoId"]);
+$meses = $recalcular->Calcular2(date('Y-m-d'),0);
+//exit();
+$result["total"]=$recalcular->getSuma();;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
 
 
 		
@@ -11273,7 +11342,7 @@ function fieldEventHandler_Tipo_event1( $params )
 	);
 	
 	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
-	
+	$result["Value"]=$params["cantidad"];
 $result["upper"] = strtoupper( $params["cantidad"] );
 $result["tipo"] = $params["tipo"];
 if ($params["tipo"]==1){

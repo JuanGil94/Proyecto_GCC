@@ -1,0 +1,6 @@
+
+Runner.buttonEvents["Calc2"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Calc2';if(!pageObj.buttonEventBefore['Calc2']){pageObj.buttonEventBefore['Calc2']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["ProcesoId"]=row.getFieldValue("ProcesoId");params["Numero"]=row.getFieldValue("Numero");}}
+if(!pageObj.buttonEventAfter['Calc2']){pageObj.buttonEventAfter['Calc2']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;function formatCurrency(number){return new Intl.NumberFormat('es-ES',{style:'currency',currency:'COP',minimumFractionDigits:2}).format(number);}
+numero=result["total"];resultado=formatCurrency(numero);console.log(resultado);swal({icon:"info",text:"El saldo actual del Proceso Numero: "+params["Numero"]+" es: "+resultado+" y se realiza su reliquidacion pertinente"}).then(function(value){switch(value){default:location.reload();break;}});}}
+$('a[id="Calc2"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Calc2"+"_"+Runner.genId();var button_Calc2=new Runner.form.Button({id:this.id,btnName:"Calc2"});button_Calc2.init({args:[pageObj,proxy,pageid]});});};

@@ -1,4 +1,5 @@
 	// Execute code, then prompt the user to stay
+	 /*
 	window.onbeforeunload = function() {
   // This will happen before leaving the page
   //return 'Are you sure you want to leave?';
@@ -64,6 +65,7 @@
     // Mostrar el overlay y el spinner
     document.getElementById("spinner").style.display = "block";
 }
+*/
  
 
 // Place event code here.

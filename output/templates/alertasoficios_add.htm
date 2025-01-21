@@ -260,27 +260,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN AlertaId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_AlertaId}  r-vertical-field" 
-	data-signal-error-for="AlertaId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="AlertaId" data-fieldname="AlertaId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_AlertaId}">
-		{BEGIN AlertaId_label}{$label dbo_AlertasOficios AlertaId }{END AlertaId_label}
-	</label>
-	<div class="r-edit-field">
-		{$AlertaId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="AlertaId" {$tooltipAttr dbo_AlertasOficios AlertaId } >
-		<div class="text-muted" >
-		{$tooltip dbo_AlertasOficios AlertaId }		</div>
-	</div>
-</div>
-
-
-{END AlertaId_fieldblock}
-											
 {BEGIN CarteraTipoId_fieldblock}
 
 
@@ -323,27 +302,6 @@
 
 {END OficioId_fieldblock}
 											
-{BEGIN Activo_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-vertical-field" 
-	data-signal-error-for="Activo{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Activo}">
-		{BEGIN Activo_label}{$label dbo_AlertasOficios Activo }{END Activo_label}
-	</label>
-	<div class="r-edit-field">
-		{$Activo_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Activo" {$tooltipAttr dbo_AlertasOficios Activo } >
-		<div class="text-muted" >
-		{$tooltip dbo_AlertasOficios Activo }		</div>
-	</div>
-</div>
-
-
-{END Activo_fieldblock}
-											
 {BEGIN ConceptoId_fieldblock}
 
 
@@ -370,7 +328,7 @@
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_Carcel}  r-vertical-field" 
 	data-signal-error-for="Carcel{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Carcel" data-fieldname="Carcel" >
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Carcel" data-fieldname="Carcel" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_Carcel}">
 		{BEGIN Carcel_label}{$label dbo_AlertasOficios Carcel }{END Carcel_label}
@@ -386,26 +344,26 @@
 
 {END Carcel_fieldblock}
 											
-{BEGIN SinDireccion_fieldblock}
+{BEGIN Activo_fieldblock}
 
 
-<div class="r-integrated-field form-group clearfix {$fielddispclass_SinDireccion}  r-vertical-field" 
-	data-signal-error-for="SinDireccion{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="SinDireccion" data-fieldname="SinDireccion" >
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Activo}  r-vertical-field" 
+	data-signal-error-for="Activo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Activo" data-fieldname="Activo" >
 
-	<label class="r-edit-label control-label" for="{$labelfor_SinDireccion}">
-		{BEGIN SinDireccion_label}{$label dbo_AlertasOficios SinDireccion }{END SinDireccion_label}
+	<label class="r-edit-label control-label" for="{$labelfor_Activo}">
+		{BEGIN Activo_label}{$label dbo_AlertasOficios Activo }{END Activo_label}
 	</label>
 	<div class="r-edit-field">
-		{$SinDireccion_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="SinDireccion" {$tooltipAttr dbo_AlertasOficios SinDireccion } >
+		{$Activo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Activo" {$tooltipAttr dbo_AlertasOficios Activo } >
 		<div class="text-muted" >
-		{$tooltip dbo_AlertasOficios SinDireccion }		</div>
+		{$tooltip dbo_AlertasOficios Activo }		</div>
 	</div>
 </div>
 
 
-{END SinDireccion_fieldblock}
+{END Activo_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

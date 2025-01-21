@@ -159,7 +159,7 @@ $tdatamandamientoautomatico[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																							
 
 $tdatamandamientoautomatico[".ajaxCodeSnippetAdded"] = false;
 
@@ -2675,6 +2675,10 @@ $proto35["m_columns"][] = "ChequeoId";
 $proto35["m_columns"][] = "VlrCostas";
 $proto35["m_columns"][] = "VlrInteresesPlazo";
 $proto35["m_columns"][] = "AbogadoDocumento";
+$proto35["m_columns"][] = "DespachoCorreo";
+$proto35["m_columns"][] = "DespachoDireccion";
+$proto35["m_columns"][] = "DespachoJuez";
+$proto35["m_columns"][] = "DespachoTelefonos";
 $obj = new SQLTable($proto35);
 
 $proto34["m_table"] = $obj;

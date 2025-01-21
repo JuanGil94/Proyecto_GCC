@@ -1,5 +1,5 @@
 
-Runner.buttonEvents["Enviar_Correo"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Enviar_Correo';if(!pageObj.buttonEventBefore['Enviar_Correo']){pageObj.buttonEventBefore['Enviar_Correo']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
-if(!pageObj.buttonEventAfter['Enviar_Correo']){pageObj.buttonEventAfter['Enviar_Correo']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message=result["txt"]+" !!!";ajax.setMessage(message);}}
+Runner.buttonEvents["Enviar_Correo"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Enviar_Correo';if(!pageObj.buttonEventBefore['Enviar_Correo']){pageObj.buttonEventBefore['Enviar_Correo']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var message="Enviando Correoo";ajax.setMessage(message);}}
+if(!pageObj.buttonEventAfter['Enviar_Correo']){pageObj.buttonEventAfter['Enviar_Correo']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;var message="Correo enviado";ajax.setMessage(message);}}
 $('a[id="Enviar_Correo"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
 this.id="Enviar_Correo"+"_"+Runner.genId();var button_Enviar_Correo=new Runner.form.Button({id:this.id,btnName:"Enviar_Correo"});button_Enviar_Correo.init({args:[pageObj,proxy,pageid]});});};
