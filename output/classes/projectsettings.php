@@ -3958,6 +3958,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "mandamientoautomatico" ] = "MandamientoAutomatico";
 	$projectEntities[ "dbo.AlertasOficios" ] = array( "url" => "alertasoficios", "type" => 0 );
 	$projectEntitiesReverse[ "alertasoficios" ] = "dbo.AlertasOficios";
+	$projectEntities[ "admin_rights" ] = array( "url" => "admin_rights", "type" => 1 );
+	$projectEntitiesReverse[ "admin_rights" ] = "admin_rights";
+	$projectEntities[ "admin_members" ] = array( "url" => "admin_members", "type" => 1 );
+	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
+	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
+	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "PersuasivosAutomaticos" ] = array( "url" => "persuasivosautomaticos", "type" => 6 );
+	$projectEntitiesReverse[ "persuasivosautomaticos" ] = "PersuasivosAutomaticos";
 }
 
 function findTable( $table ) {

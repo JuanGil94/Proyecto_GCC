@@ -1446,6 +1446,12 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
+				if($table=="PersuasivosAutomaticos" && $field=="Numero")
+	{
+		$numero=$value;
+$value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
+		return $value;
+	}
 	return $value;
 }
 

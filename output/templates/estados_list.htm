@@ -359,6 +359,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		Area Admin		
+		</a>
+	</li>
+{END adminarea_link}
 							{BEGIN changepwd_link}
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
 				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
@@ -582,7 +590,7 @@
 					Mandamiento Automatico				</label>
 			</div>
 			{END print_details_mandamientoautomatico}
-						</div>
+														</div>
 </div>
 {END print_details}
 				 
@@ -888,6 +896,25 @@
 	{END mandamientoautomatico_dtable_link}
 
 
+	 
+		
+		
+	{BEGIN _dtable_link}
+	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
+	<a  {$_link_attrs} data-short-details=""
+		class="{$_dlink_class}" 
+		title="{$caption dbo_PersuasivoAutomatico }"			>
+								
+									{BEGIN _childcount}
+				<span class="details-badge badge _badge" {$_childnumber_attr}>
+					{$_childnumber}				
+				</span>
+				{END _childcount}
+						</a>
+	</span>
+	{END _dtable_link}
+
+
 	
 	</td>
 	{END cellblock_grid_cell_details}
@@ -929,9 +956,9 @@
 	>
 
 	 
-									<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="reporteclasificacioncartera,reportecorporaci_nespecialidad,procesosreasignar,,procesoscorrespondencias,prescripcionautomatica,mandamientoautomatico"
-			data-details-reporteclasificacioncartera			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar			data-details-			data-details-procesoscorrespondencias			data-details-prescripcionautomatica			data-details-mandamientoautomatico	>
+										<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="reporteclasificacioncartera,reportecorporaci_nespecialidad,procesosreasignar,,procesoscorrespondencias,prescripcionautomatica,mandamientoautomatico,"
+			data-details-reporteclasificacioncartera			data-details-reportecorporaci_nespecialidad			data-details-procesosreasignar			data-details-			data-details-procesoscorrespondencias			data-details-prescripcionautomatica			data-details-mandamientoautomatico			data-details-	>
 		<span data-details-inside data-short-table="reporteclasificacioncartera">
 			</span>
 		<span data-details-inside data-short-table="reportecorporaci_nespecialidad">
@@ -946,10 +973,13 @@
 			</span>
 		<span data-details-inside data-short-table="mandamientoautomatico">
 			</span>
+		<span data-details-inside data-short-table="">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			 
 			 

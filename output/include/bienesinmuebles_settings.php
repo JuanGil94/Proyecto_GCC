@@ -150,7 +150,7 @@ $tdatabienesinmuebles[".isUseAjaxSuggest"] = true;
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
 		
-																																																																																																																												
+																																																																																																																																					
 
 $tdatabienesinmuebles[".ajaxCodeSnippetAdded"] = false;
 

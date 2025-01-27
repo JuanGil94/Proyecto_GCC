@@ -189,6 +189,15 @@ pdfDocument = {
 				
 			{"text":{$ext_security_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
+				
+			{"text":{$reset_token_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
+				
+				
+			{"text":{$reset_date_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
+				
+				
+			{"text":{$apikey_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

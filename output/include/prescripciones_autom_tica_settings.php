@@ -156,7 +156,7 @@ $tdataprescripciones_autom_tica[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																							
+																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdataprescripciones_autom_tica[".ajaxCodeSnippetAdded"] = false;
 

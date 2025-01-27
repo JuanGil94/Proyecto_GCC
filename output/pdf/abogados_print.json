@@ -1093,6 +1093,11 @@ pdfDocument = {
 			{$displayDetailTable_mandamientoautomatico }
 		{END details_mandamientoautomatico},
 				
+				
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

@@ -3861,7 +3861,11 @@ class Security
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				return true;
 								return true;
 								return true;
-																																																																																																																																																						return false;
+																																																																																																																																																												return true;
+								return true;
+								return true;
+								return true;
+		return false;
 	}
 
 	public static function guestHasDynamicPermissions() {
