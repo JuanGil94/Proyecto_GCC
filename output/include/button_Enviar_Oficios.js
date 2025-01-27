@@ -1,0 +1,6 @@
+
+Runner.buttonEvents["Enviar_Oficios"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Enviar_Oficios';if(!pageObj.buttonEventBefore['Enviar_Oficios']){pageObj.buttonEventBefore['Enviar_Oficios']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["keys"]=pageObj.getSelectedRecordKeys();ajax.setMessage("Enviando la Correspondencia Masiva, por favor espere...");}}
+if(!pageObj.buttonEventAfter['Enviar_Oficios']){pageObj.buttonEventAfter['Enviar_Oficios']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;if(result["Err"]===1){string=result["arrayProcesos"].join(',');swal({icon:"success",text:"En los procesos "+string+" ya se les creo el Oficio: "+result['nameCorrespondencia']+" el dia de hoy"}).then(function(value){switch(value){default:location.reload();break;}});}
+else if(result["response"]=='OK'){swal({icon:"success",text:"Se realiza el envio Correctamente de la Correspondencia"}).then(function(value){switch(value){default:location.reload();break;}});}}}
+$('a[id="Enviar_Oficios"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Enviar_Oficios"+"_"+Runner.genId();var button_Enviar_Oficios=new Runner.form.Button({id:this.id,btnName:"Enviar_Oficios"});button_Enviar_Oficios.init({args:[pageObj,proxy,pageid]});});};

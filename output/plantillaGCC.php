@@ -126,6 +126,7 @@ class diccionario {
             $info["RespetadoSenor"]=$date["RespetadoSenor"];
             $info["Senor"]=$date["Senor"];
             $info["TipoDocumento"]=$date["TipoDocumento"];
+            $info["tipodocumento"]=$date["TipoDocumento"];
             $info["documento"]=$date["documento"];
             $info["SancionadoEmail"]=$date["SancionadoEmail"];
             $info["Sancionado"]=$date["Sancionado"];
@@ -567,7 +568,6 @@ class plantillas extends diccionario{
         $templateProcessor->setValue('CuotaLiquida',$info['CuotaLiquida']);
         $templateProcessor->setValue('Senor',$info['Senor']);
         $templateProcessor->setValue('deudor',$info['Sancionado']);
-        $templateProcessor->setValue('tipodocumento',$info['tipodocumento']);
         $templateProcessor->setValue('documento',$info['documento']);
         $templateProcessor->setValue('Deudor',$info['Sancionado']);
         $templateProcessor->setValue('SeccionalTelefono',$info['SeccionalTelefono']);

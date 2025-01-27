@@ -454,6 +454,10 @@ class ConnectionManager_Base
 		$connectionsIds["PrescripcionAutomatica"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["MandamientoAutomatico"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["dbo.AlertasOficios"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["admin_rights"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["admin_members"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["admin_users"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["PersuasivosAutomaticos"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

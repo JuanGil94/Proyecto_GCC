@@ -1252,6 +1252,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="admin_rights")
+		{
+			return false;
+		}
+		if($table=="admin_members")
+		{
+			return false;
+		}
+		if($table=="admin_users")
+		{
+			return false;
+		}
+		if($table=="PersuasivosAutomaticos")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2455,6 +2471,22 @@ class AuditTrailFile
 			return true;
 		}
 		if($table=="dbo.AlertasOficios")
+		{
+			return false;
+		}
+		if($table=="admin_rights")
+		{
+			return false;
+		}
+		if($table=="admin_members")
+		{
+			return false;
+		}
+		if($table=="admin_users")
+		{
+			return false;
+		}
+		if($table=="PersuasivosAutomaticos")
 		{
 			return false;
 		}

@@ -67,7 +67,7 @@ $tdataadmin_members[".listAjax"] = false;
 //	temporary
 //$tdataadmin_members[".listAjax"] = false;
 
-	$tdataadmin_members[".audit"] = true;
+	$tdataadmin_members[".audit"] = false;
 
 	$tdataadmin_members[".locking"] = false;
 
@@ -131,7 +131,7 @@ $tdataadmin_members[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																																																																																																																																										
 
 $tdataadmin_members[".ajaxCodeSnippetAdded"] = false;
 
@@ -143,7 +143,7 @@ $tdataadmin_members[".addPageEvents"] = false;
 $tdataadmin_members[".isUseTimeForSearch"] = false;
 
 
-$tdataadmin_members[".badgeColor"] = "3CB371";
+$tdataadmin_members[".badgeColor"] = "2F4F4F";
 
 
 $tdataadmin_members[".allSearchFields"] = array();
@@ -169,7 +169,6 @@ $tdataadmin_members[".geocodingEnabled"] = false;
 
 
 
-$tdataadmin_members[".isDisplayLoading"] = true;
 
 
 
@@ -206,8 +205,11 @@ $tdataadmin_members[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
+$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
+$arrRPP[] = 500;
+$arrRPP[] = -1;
 $tdataadmin_members[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields

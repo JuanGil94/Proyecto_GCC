@@ -625,6 +625,14 @@ function checkTableName($shortTName )
 		return true;
 	if ("alertasoficios" == $shortTName )
 		return true;
+	if ("admin_rights" == $shortTName )
+		return true;
+	if ("admin_members" == $shortTName )
+		return true;
+	if ("admin_users" == $shortTName )
+		return true;
+	if ("persuasivosautomaticos" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2574,6 +2582,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.AlertasOficios";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_rights");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_rights";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_members");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_members";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("admin_users");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="admin_users";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("PersuasivosAutomaticos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="PersuasivosAutomaticos";
+	}
 	return $arr;
 }
 
@@ -2794,6 +2838,10 @@ function GetTablesListWithoutSecurity()
 	$arr[]="PrescripcionAutomatica";
 	$arr[]="MandamientoAutomatico";
 	$arr[]="dbo.AlertasOficios";
+	$arr[]="admin_rights";
+	$arr[]="admin_members";
+	$arr[]="admin_users";
+	$arr[]="PersuasivosAutomaticos";
 	return $arr;
 }
 
@@ -3409,6 +3457,12 @@ function GetUserPermissionsDynamic( $table )
 	if( Security::isAdmin() )
 	{
 		if($table=="admin_admembers")
+			return "ADESPIM";
+		if($table=="admin_rights")
+			return "ADESPIM";
+		if($table=="admin_members")
+			return "ADESPIM";
+		if($table=="admin_users")
 			return "ADESPIM";
 	}
 
@@ -5322,6 +5376,42 @@ function GetUserPermissionsStatic( $table )
 		if( $sUserGroup=="<Guest>" )
 		{
 						return "".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_rights" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_members" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="admin_users" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="PersuasivosAutomaticos" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
 		}
 //	default permissions
 		return "ADESPI".$extraPerm;

@@ -800,6 +800,14 @@ class Chart
 			return true;
 		if("dbo.AlertasOficios" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.UsuGCC-ugrights" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.UsuGCC-ugmembers" == $this->chrt_array['tables'][0])
+			return true;
+		if("dbo.UsuGCC-_users" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 
