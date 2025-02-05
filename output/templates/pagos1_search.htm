@@ -247,6 +247,50 @@
 </div>
 
 {END ProcesoId_fieldblock}
+											
+{BEGIN Registro_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Registro}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Registro{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Registro" data-fieldname="Registro" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Registro}">
+		{$label dbo_Pagos1 Registro }	</label>
+	<div class="r-search-option">
+		{$searchtype_Registro}
+	</div>
+	<div class="r-search-field">
+		{$Registro_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Registro_editcontrol1}
+	</div>
+	
+</div>
+
+{END Registro_fieldblock}
+											
+{BEGIN PagoId_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PagoId}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="PagoId{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="PagoId" data-fieldname="PagoId" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_PagoId}">
+		{$label dbo_Pagos1 PagoId }	</label>
+	<div class="r-search-option">
+		{$searchtype_PagoId}
+	</div>
+	<div class="r-search-field">
+		{$PagoId_editcontrol}	</div>
+	<div class="r-search-field">
+		{$PagoId_editcontrol1}
+	</div>
+	
+</div>
+
+{END PagoId_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}

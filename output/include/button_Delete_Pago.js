@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["Delete_Pago"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Delete_Pago';if(!pageObj.buttonEventBefore['Delete_Pago']){pageObj.buttonEventBefore['Delete_Pago']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['Delete_Pago']){pageObj.buttonEventAfter['Delete_Pago']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;if(result["total"]){swal({icon:"success",text:"Se elimina el recaudo y el nuevo saldo es:"+result["total"]}).then(function(value){switch(value){default:location.reload();break;}});}}}
+$('a[id="Delete_Pago"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Delete_Pago"+"_"+Runner.genId();var button_Delete_Pago=new Runner.form.Button({id:this.id,btnName:"Delete_Pago"});button_Delete_Pago.init({args:[pageObj,proxy,pageid]});});};

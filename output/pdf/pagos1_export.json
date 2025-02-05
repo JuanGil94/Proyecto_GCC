@@ -126,6 +126,12 @@ pdfDocument = {
 				
 			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
+				
+			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

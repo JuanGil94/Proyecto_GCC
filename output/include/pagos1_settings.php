@@ -40,12 +40,18 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelspagos1["Spanish"]["Observaciones"] = "Observaciones";
 	$fieldToolTipspagos1["Spanish"]["Observaciones"] = "";
 	$placeHolderspagos1["Spanish"]["Observaciones"] = "";
-	$fieldLabelspagos1["Spanish"]["TipoRecaudoId"] = "Tipo Recaudo Id";
+	$fieldLabelspagos1["Spanish"]["TipoRecaudoId"] = "Tipo Recaudo";
 	$fieldToolTipspagos1["Spanish"]["TipoRecaudoId"] = "";
 	$placeHolderspagos1["Spanish"]["TipoRecaudoId"] = "";
 	$fieldLabelspagos1["Spanish"]["ProcesoId"] = "No.Proceso";
 	$fieldToolTipspagos1["Spanish"]["ProcesoId"] = "";
 	$placeHolderspagos1["Spanish"]["ProcesoId"] = "";
+	$fieldLabelspagos1["Spanish"]["Registro"] = "Registro";
+	$fieldToolTipspagos1["Spanish"]["Registro"] = "";
+	$placeHolderspagos1["Spanish"]["Registro"] = "";
+	$fieldLabelspagos1["Spanish"]["PagoId"] = "Pago";
+	$fieldToolTipspagos1["Spanish"]["PagoId"] = "";
+	$placeHolderspagos1["Spanish"]["PagoId"] = "";
 	$pageTitlespagos1["Spanish"]["list"] = "Recaudos";
 	$pageTitlespagos1["Spanish"]["add"] = "Pagos1";
 	if (count($fieldToolTipspagos1["Spanish"]))
@@ -146,7 +152,7 @@ $tdatapagos1[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
-																																																																																																																																																																																																											
+																																																																																																																																																																																																																																			
 
 $tdatapagos1[".ajaxCodeSnippetAdded"] = false;
 
@@ -166,6 +172,7 @@ $tdatapagos1[".filterFields"] = array();
 $tdatapagos1[".requiredSearchFields"] = array();
 
 $tdatapagos1[".googleLikeFields"] = array();
+$tdatapagos1[".googleLikeFields"][] = "PagoId";
 $tdatapagos1[".googleLikeFields"][] = "CuentaId";
 $tdatapagos1[".googleLikeFields"][] = "Fecha";
 $tdatapagos1[".googleLikeFields"][] = "Numero";
@@ -173,6 +180,7 @@ $tdatapagos1[".googleLikeFields"][] = "Pago";
 $tdatapagos1[".googleLikeFields"][] = "Observaciones";
 $tdatapagos1[".googleLikeFields"][] = "TipoRecaudoId";
 $tdatapagos1[".googleLikeFields"][] = "ProcesoId";
+$tdatapagos1[".googleLikeFields"][] = "Registro";
 
 
 
@@ -206,11 +214,11 @@ $tstrOrderBy = "ORDER BY Fecha DESC";
 $tdatapagos1[".strOrderBy"] = $tstrOrderBy;
 
 $tdatapagos1[".orderindexes"] = array();
-	$tdatapagos1[".orderindexes"][] = array(2, (0 ? "ASC" : "DESC"), "Fecha");
+	$tdatapagos1[".orderindexes"][] = array(3, (0 ? "ASC" : "DESC"), "Fecha");
 
 
 
-$tdatapagos1[".sqlHead"] = "SELECT CuentaId,Fecha,Numero,FORMAT(Pago, 'C', 'es-CO') AS Pago,Observaciones,TipoRecaudoId,ProcesoId";
+$tdatapagos1[".sqlHead"] = "SELECT PagoId,CuentaId,Fecha,Numero,FORMAT(Pago, 'C', 'es-CO') AS Pago,Observaciones,TipoRecaudoId,ProcesoId,Registro";
 $tdatapagos1[".sqlFrom"] = "FROM dbo.Pagos1";
 $tdatapagos1[".sqlWhereExpr"] = "";
 $tdatapagos1[".sqlTail"] = "";
@@ -246,6 +254,7 @@ $tdatapagos1[".arrGroupsPerPage"] = $arrGPP;
 $tdatapagos1[".highlightSearchResults"] = true;
 
 $tableKeyspagos1 = array();
+$tableKeyspagos1[] = "PagoId";
 $tdatapagos1[".Keys"] = $tableKeyspagos1;
 
 
@@ -254,10 +263,176 @@ $tdatapagos1[".hideMobileList"] = array();
 
 
 
-//	CuentaId
+//	PagoId
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
+	$fdata["strName"] = "PagoId";
+	$fdata["GoodName"] = "PagoId";
+	$fdata["ownerTable"] = "dbo.Pagos1";
+	$fdata["Label"] = GetFieldLabel("dbo_Pagos1","PagoId");
+	$fdata["FieldType"] = 3;
+
+
+		$fdata["AutoInc"] = true;
+
+	
+			
+
+		$fdata["strField"] = "PagoId";
+
+		$fdata["sourceSingle"] = "PagoId";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "PagoId";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "dbo.Pagos1";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "PagoId";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Pago";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatapagos1["PagoId"] = $fdata;
+		$tdatapagos1[".searchableFields"][] = "PagoId";
+//	CuentaId
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "CuentaId";
 	$fdata["GoodName"] = "CuentaId";
 	$fdata["ownerTable"] = "dbo.Pagos1";
@@ -422,7 +597,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //	Fecha
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 2;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "Fecha";
 	$fdata["GoodName"] = "Fecha";
 	$fdata["ownerTable"] = "dbo.Pagos1";
@@ -560,7 +735,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //	Numero
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "Numero";
 	$fdata["GoodName"] = "Numero";
 	$fdata["ownerTable"] = "dbo.Pagos1";
@@ -698,7 +873,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //	Pago
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "Pago";
 	$fdata["GoodName"] = "Pago";
 	$fdata["ownerTable"] = "";
@@ -838,7 +1013,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //	Observaciones
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
+	$fdata["Index"] = 6;
 	$fdata["strName"] = "Observaciones";
 	$fdata["GoodName"] = "Observaciones";
 	$fdata["ownerTable"] = "dbo.Pagos1";
@@ -978,7 +1153,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //	TipoRecaudoId
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "TipoRecaudoId";
 	$fdata["GoodName"] = "TipoRecaudoId";
 	$fdata["ownerTable"] = "dbo.Pagos1";
@@ -1141,7 +1316,7 @@ $tdatapagos1[".hideMobileList"] = array();
 //	ProcesoId
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "ProcesoId";
 	$fdata["GoodName"] = "ProcesoId";
 	$fdata["ownerTable"] = "dbo.Pagos1";
@@ -1301,6 +1476,144 @@ $tdatapagos1[".hideMobileList"] = array();
 
 	$tdatapagos1["ProcesoId"] = $fdata;
 		$tdatapagos1[".searchableFields"][] = "ProcesoId";
+//	Registro
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 9;
+	$fdata["strName"] = "Registro";
+	$fdata["GoodName"] = "Registro";
+	$fdata["ownerTable"] = "dbo.Pagos1";
+	$fdata["Label"] = GetFieldLabel("dbo_Pagos1","Registro");
+	$fdata["FieldType"] = 135;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "Registro";
+
+		$fdata["sourceSingle"] = "Registro";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "Registro";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Short Date");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Date");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+		$edata["DateEditType"] = 13;
+	$edata["InitialYearFactor"] = 24;
+	$edata["LastYearFactor"] = 0;
+
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatapagos1["Registro"] = $fdata;
+		$tdatapagos1[".searchableFields"][] = "Registro";
 
 
 $tables_data["dbo.Pagos1"]=&$tdatapagos1;
@@ -1399,7 +1712,7 @@ function createSqlQuery_pagos1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "CuentaId,Fecha,Numero,FORMAT(Pago, 'C', 'es-CO') AS Pago,Observaciones,TipoRecaudoId,ProcesoId";
+$proto0["m_strFieldList"] = "PagoId,CuentaId,Fecha,Numero,FORMAT(Pago, 'C', 'es-CO') AS Pago,Observaciones,TipoRecaudoId,ProcesoId,Registro";
 $proto0["m_strFrom"] = "FROM dbo.Pagos1";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY Fecha DESC";
@@ -1441,12 +1754,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "CuentaId",
+	"m_strName" => "PagoId",
 	"m_strTable" => "dbo.Pagos1",
 	"m_srcTableName" => "dbo.Pagos1"
 ));
 
-$proto6["m_sql"] = "CuentaId";
+$proto6["m_sql"] = "PagoId";
 $proto6["m_srcTableName"] = "dbo.Pagos1";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1455,12 +1768,12 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Fecha",
+	"m_strName" => "CuentaId",
 	"m_strTable" => "dbo.Pagos1",
 	"m_srcTableName" => "dbo.Pagos1"
 ));
 
-$proto8["m_sql"] = "Fecha";
+$proto8["m_sql"] = "CuentaId";
 $proto8["m_srcTableName"] = "dbo.Pagos1";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1469,12 +1782,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "Numero",
+	"m_strName" => "Fecha",
 	"m_strTable" => "dbo.Pagos1",
 	"m_srcTableName" => "dbo.Pagos1"
 ));
 
-$proto10["m_sql"] = "Numero";
+$proto10["m_sql"] = "Fecha";
 $proto10["m_srcTableName"] = "dbo.Pagos1";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1482,56 +1795,56 @@ $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
-			$proto13=array();
-$proto13["m_functiontype"] = "SQLF_CUSTOM";
-$proto13["m_arguments"] = array();
+			$obj = new SQLField(array(
+	"m_strName" => "Numero",
+	"m_strTable" => "dbo.Pagos1",
+	"m_srcTableName" => "dbo.Pagos1"
+));
+
+$proto12["m_sql"] = "Numero";
+$proto12["m_srcTableName"] = "dbo.Pagos1";
+$proto12["m_expr"]=$obj;
+$proto12["m_alias"] = "";
+$obj = new SQLFieldListItem($proto12);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto14=array();
+			$proto15=array();
+$proto15["m_functiontype"] = "SQLF_CUSTOM";
+$proto15["m_arguments"] = array();
 						$obj = new SQLNonParsed(array(
 	"m_sql" => "Pago"
 ));
 
-$proto13["m_arguments"][]=$obj;
+$proto15["m_arguments"][]=$obj;
 						$obj = new SQLNonParsed(array(
 	"m_sql" => "'C'"
 ));
 
-$proto13["m_arguments"][]=$obj;
+$proto15["m_arguments"][]=$obj;
 						$obj = new SQLNonParsed(array(
 	"m_sql" => "'es-CO'"
 ));
 
-$proto13["m_arguments"][]=$obj;
-$proto13["m_strFunctionName"] = "FORMAT";
-$obj = new SQLFunctionCall($proto13);
+$proto15["m_arguments"][]=$obj;
+$proto15["m_strFunctionName"] = "FORMAT";
+$obj = new SQLFunctionCall($proto15);
 
-$proto12["m_sql"] = "FORMAT(Pago, 'C', 'es-CO')";
-$proto12["m_srcTableName"] = "dbo.Pagos1";
-$proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "Pago";
-$obj = new SQLFieldListItem($proto12);
+$proto14["m_sql"] = "FORMAT(Pago, 'C', 'es-CO')";
+$proto14["m_srcTableName"] = "dbo.Pagos1";
+$proto14["m_expr"]=$obj;
+$proto14["m_alias"] = "Pago";
+$obj = new SQLFieldListItem($proto14);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto17=array();
+						$proto19=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Observaciones",
 	"m_strTable" => "dbo.Pagos1",
 	"m_srcTableName" => "dbo.Pagos1"
 ));
 
-$proto17["m_sql"] = "Observaciones";
-$proto17["m_srcTableName"] = "dbo.Pagos1";
-$proto17["m_expr"]=$obj;
-$proto17["m_alias"] = "";
-$obj = new SQLFieldListItem($proto17);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto19=array();
-			$obj = new SQLField(array(
-	"m_strName" => "TipoRecaudoId",
-	"m_strTable" => "dbo.Pagos1",
-	"m_srcTableName" => "dbo.Pagos1"
-));
-
-$proto19["m_sql"] = "TipoRecaudoId";
+$proto19["m_sql"] = "Observaciones";
 $proto19["m_srcTableName"] = "dbo.Pagos1";
 $proto19["m_expr"]=$obj;
 $proto19["m_alias"] = "";
@@ -1540,78 +1853,106 @@ $obj = new SQLFieldListItem($proto19);
 $proto0["m_fieldlist"][]=$obj;
 						$proto21=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ProcesoId",
+	"m_strName" => "TipoRecaudoId",
 	"m_strTable" => "dbo.Pagos1",
 	"m_srcTableName" => "dbo.Pagos1"
 ));
 
-$proto21["m_sql"] = "ProcesoId";
+$proto21["m_sql"] = "TipoRecaudoId";
 $proto21["m_srcTableName"] = "dbo.Pagos1";
 $proto21["m_expr"]=$obj;
 $proto21["m_alias"] = "";
 $obj = new SQLFieldListItem($proto21);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto23=array();
-$proto23["m_link"] = "SQLL_MAIN";
-			$proto24=array();
-$proto24["m_strName"] = "dbo.Pagos1";
-$proto24["m_srcTableName"] = "dbo.Pagos1";
-$proto24["m_columns"] = array();
-$proto24["m_columns"][] = "PagoId";
-$proto24["m_columns"][] = "ProcesoId";
-$proto24["m_columns"][] = "CuentaId";
-$proto24["m_columns"][] = "Fecha";
-$proto24["m_columns"][] = "Numero";
-$proto24["m_columns"][] = "Pago";
-$proto24["m_columns"][] = "Observaciones";
-$proto24["m_columns"][] = "Registro";
-$proto24["m_columns"][] = "PagoObli";
-$proto24["m_columns"][] = "PagoCost";
-$proto24["m_columns"][] = "PagoInte";
-$proto24["m_columns"][] = "PagoMayo";
-$proto24["m_columns"][] = "PagoTerm";
-$proto24["m_columns"][] = "PagoIdOrig";
-$proto24["m_columns"][] = "TipoRecaudoId";
-$obj = new SQLTable($proto24);
+						$proto23=array();
+			$obj = new SQLField(array(
+	"m_strName" => "ProcesoId",
+	"m_strTable" => "dbo.Pagos1",
+	"m_srcTableName" => "dbo.Pagos1"
+));
 
-$proto23["m_table"] = $obj;
-$proto23["m_sql"] = "dbo.Pagos1";
-$proto23["m_alias"] = "";
+$proto23["m_sql"] = "ProcesoId";
 $proto23["m_srcTableName"] = "dbo.Pagos1";
-$proto25=array();
-$proto25["m_sql"] = "";
-$proto25["m_uniontype"] = "SQLL_UNKNOWN";
+$proto23["m_expr"]=$obj;
+$proto23["m_alias"] = "";
+$obj = new SQLFieldListItem($proto23);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto25=array();
+			$obj = new SQLField(array(
+	"m_strName" => "Registro",
+	"m_strTable" => "dbo.Pagos1",
+	"m_srcTableName" => "dbo.Pagos1"
+));
+
+$proto25["m_sql"] = "Registro";
+$proto25["m_srcTableName"] = "dbo.Pagos1";
+$proto25["m_expr"]=$obj;
+$proto25["m_alias"] = "";
+$obj = new SQLFieldListItem($proto25);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto27=array();
+$proto27["m_link"] = "SQLL_MAIN";
+			$proto28=array();
+$proto28["m_strName"] = "dbo.Pagos1";
+$proto28["m_srcTableName"] = "dbo.Pagos1";
+$proto28["m_columns"] = array();
+$proto28["m_columns"][] = "PagoId";
+$proto28["m_columns"][] = "ProcesoId";
+$proto28["m_columns"][] = "CuentaId";
+$proto28["m_columns"][] = "Fecha";
+$proto28["m_columns"][] = "Numero";
+$proto28["m_columns"][] = "Pago";
+$proto28["m_columns"][] = "Observaciones";
+$proto28["m_columns"][] = "Registro";
+$proto28["m_columns"][] = "PagoObli";
+$proto28["m_columns"][] = "PagoCost";
+$proto28["m_columns"][] = "PagoInte";
+$proto28["m_columns"][] = "PagoMayo";
+$proto28["m_columns"][] = "PagoTerm";
+$proto28["m_columns"][] = "PagoIdOrig";
+$proto28["m_columns"][] = "TipoRecaudoId";
+$obj = new SQLTable($proto28);
+
+$proto27["m_table"] = $obj;
+$proto27["m_sql"] = "dbo.Pagos1";
+$proto27["m_alias"] = "";
+$proto27["m_srcTableName"] = "dbo.Pagos1";
+$proto29=array();
+$proto29["m_sql"] = "";
+$proto29["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto25["m_column"]=$obj;
-$proto25["m_contained"] = array();
-$proto25["m_strCase"] = "";
-$proto25["m_havingmode"] = false;
-$proto25["m_inBrackets"] = false;
-$proto25["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto25);
+$proto29["m_column"]=$obj;
+$proto29["m_contained"] = array();
+$proto29["m_strCase"] = "";
+$proto29["m_havingmode"] = false;
+$proto29["m_inBrackets"] = false;
+$proto29["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto29);
 
-$proto23["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto23);
+$proto27["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto27);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto27=array();
+												$proto31=array();
 						$obj = new SQLField(array(
 	"m_strName" => "Fecha",
 	"m_strTable" => "dbo.Pagos1",
 	"m_srcTableName" => "dbo.Pagos1"
 ));
 
-$proto27["m_column"]=$obj;
-$proto27["m_bAsc"] = 0;
-$proto27["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto27);
+$proto31["m_column"]=$obj;
+$proto31["m_bAsc"] = 0;
+$proto31["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto31);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Pagos1";		
@@ -1625,7 +1966,7 @@ $queryData_pagos1 = createSqlQuery_pagos1();
 	
 		;
 
-							
+									
 
 $tdatapagos1[".sqlquery"] = $queryData_pagos1;
 

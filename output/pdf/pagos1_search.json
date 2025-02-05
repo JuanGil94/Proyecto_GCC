@@ -186,6 +186,12 @@ pdfDocument = {
 				
 			{"text":{$ProcesoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
+				
+			{"text":{$Registro_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$PagoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
