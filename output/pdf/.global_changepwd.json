@@ -110,6 +110,56 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"Cambio de contraseña","color":"#ff3535","hidden":"{$item_hide_text}","fontSize":20,"isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"La contraseña ha cambiado","color":"#727272","hidden":"{$item_hide_ConfirmarCambio}","fontSize":30,"isHtml":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -181,7 +231,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_oldpass}"},
+			{"text":"{$event oldpass__snippet}","hidden":"{$item_hide_snippet_oldpass}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -229,7 +279,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_newpass}"},
+			{"text":"{$event newpassl__snippet}","hidden":"{$item_hide_snippet_newpass}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -277,7 +327,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_confirm}"},
+			{"text":"{$event confirmnew_pass__snippet}","hidden":"{$item_hide_snippet_confirmpass}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
