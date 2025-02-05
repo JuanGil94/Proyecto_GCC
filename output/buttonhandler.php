@@ -1116,6 +1116,26 @@ if($buttId=='Enviar_Oficios')
 	}
 	buttonHandler_Enviar_Oficios($params);
 }
+if($buttId=='Edit_Pago')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Edit_Pago($params);
+}
+if($buttId=='Delete_Pago')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Delete_Pago($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -11956,6 +11976,165 @@ $contData++;
 //echo "Valor contador i:".$contData;
 }
 $result["response"]="OK";;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Edit_Pago($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	$data = $button->getCurrentRecord();
+//print_r($data);
+$params["PagoId"]=$data["PagoId"];
+$pagoId=$data["PagoId"];
+
+//$masterData["ProcesoId"];
+$consulta=DB::Query("SELECT * FROM Pagos1 WHERE PagoId=".$pagoId);
+        while( $date = $consulta->fetchAssoc() ){
+						$pago=$date["Pago"];
+        }
+$pago=number_format($pago, 0, ',', '.');
+$result["pago"]=$pago;
+$result["procesoId"]=$params["ProcesoId"];
+$result["userName"]=$_SESSION["UserId"];;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Delete_Pago($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	include_once (getabspath("classes/calcIntereses.php"));
+
+$data = $button->getCurrentRecord();
+//print_r($data);
+$params["PagoId"]=$data["PagoId"];
+$pagoId=$data["PagoId"];
+$procesoId=$data["ProcesoId"];
+$rs5 = DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);
+while( $date = $rs5->fetchAssoc() )
+{
+	$obligacionAnt=$date["Obligacion"];
+	$interesesAnt=$date["Intereses"];
+	$costasAnt=$date["Costas"];
+	$recaudoAnt=$date["Recaudo"];
+}
+$rs5 = DB::Query("SELECT * FROM Pagos1 WHERE PagoId=".$pagoId);
+while( $date = $rs5->fetchAssoc() )
+{
+	$pagoObli=$date["PagoObli"];
+	$pagoInte=$date["PagoInte"];
+	$pagoCost=$date["PagoCost"];
+	$pago=$date["Pago"];
+}
+
+$updatePro=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoAnt-$pago."Obligacion=".$obligacionAnt+$pagoObli.",Intereses=".$interesesAnt+$pagoInte.",Costas=".$costas+$pagoCost." where ProcesoId=".$this->procesoId);
+	//$this->resultUpdate=$resultado["response"];
+if ($updatePro){
+
+}
+else{
+	echo "Error en el update, relacionado con el pago en procesos".DB::LastError();
+	exit();
+}
+DB::Delete("Pagos1", "PagoId=".$pagoId."" );
+
+$recalcular=new reliquidacion($procesoId);
+$recalcular->Calcular(date('Y-m-d'),0);
+$result["total"]=$recalcular->getSuma();
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

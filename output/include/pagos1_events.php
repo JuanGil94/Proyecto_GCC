@@ -21,6 +21,8 @@
 		$this->events["AfterAdd"]=true;
 
 
+		$this->events["BeforeMoveNextList"]=true;
+
 
 	}
 
@@ -44,7 +46,7 @@
 function CustomAdd(&$values, &$keys, &$error, $inline, $pageObject)
 {
 
-		//$values["Fecha"]=now();
+		$values["Registro"]=now();
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -310,7 +312,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
 //echo "El valor del PagoId es:".$values["PagoId"]; 
-$recalcular->Calcular(date('Y-m-d'),1);
+$recalcular->Calcular(date('Y-m-d'),0);
 //$proxy["saved"]=true;
 //echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
 /*
@@ -407,6 +409,90 @@ echo '<script>if (confirm("Registro de recaudos realizado.")) {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// List page: After record processed
+function BeforeMoveNextList(&$data, &$row, &$record, $recordId, $pageObject)
+{
+
+		//$fechaActual = new DateTime();
+$primerDia = new DateTime(); 
+$primerDia->modify('first day of this month');
+$fechaRegistro= new DateTime($data["Registro"]);
+//echo $primerDia->format('Y-m-d')." - ".$fechaRegistro->format('Y-m-d')."<br>";
+//echo $fechaActual . " - ".$primerDia."<br>";
+if ($fechaRegistro<$primerDia){ 
+	//echo "Entro";
+  //$record["ChequeoId_css"].='background:yellow';
+	$pageObject->hideItem("custom_button2", $recordId);
+}
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeMoveNextList
+
 		
 		
 		

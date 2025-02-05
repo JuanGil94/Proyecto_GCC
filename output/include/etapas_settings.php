@@ -130,7 +130,7 @@ $tdataetapas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																										
+																																																																																																																																																																																																																																																																																																																																																																																																
 
 $tdataetapas[".ajaxCodeSnippetAdded"] = false;
 
