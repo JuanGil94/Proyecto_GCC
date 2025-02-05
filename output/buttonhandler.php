@@ -2,6 +2,21 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1135,6 +1150,16 @@ if($buttId=='Delete_Pago')
 		$cipherer = new RunnerCipherer( $table );
 	}
 	buttonHandler_Delete_Pago($params);
+}
+if($buttId=='Confirmar_Cambio_Contrasena')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Confirmar_Cambio_Contrasena($params);
 }
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
@@ -12135,6 +12160,162 @@ $recalcular=new reliquidacion($procesoId);
 $recalcular->Calcular(date('Y-m-d'),0);
 $result["total"]=$recalcular->getSuma();
 ;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Confirmar_Cambio_Contrasena($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+				 // Capturar el valor enviado desde el formulario (si es un campo personalizado)
+
+			$tokenpasword = $_SESSION["resettoken"];
+			 if($tokenpasword == ''){
+				$password = $params["password"];
+			 }else{
+				$password = $tokenpasword;
+			 }
+			 
+			 $newpassword =  $params["newpassword"];
+			 $confirmnewpass = $params["confirmnewpass"];
+
+			 // Obtener el nombre de usuario desde la sesión actual
+			 $username = $_SESSION["UserNameF"];
+
+			 // Consultar la contraseña almacenada en la base de datos
+			 $sql = "SELECT password FROM [UsuGCC-_users] WHERE username = '$username'";
+			 $rs = CustomQuery($sql);
+
+			 if ($data = db_fetch_array($rs)) {
+				  $hashFromDB = $data['password']; // Hash almacenado en la base de datos
+				
+				  // Verifica si la contraseña proporcionada coincide con el hash almacenado
+				  if (password_verify($password, $hashFromDB) || $password == $tokenpasword) {
+							
+						// Contraseña válida, asigna a $oldpassword
+						//$oldpassword = $password;
+						//echo "Contraseña actual verificada correctamente.";
+						//return true; // Permite el cambio de contraseña
+						if($newpassword == $confirmnewpass){
+							$result["txt"] = 'vedadero';
+							$result["diferente"] = 'falso';
+							
+							$hashedPassword = password_hash($newpassword, PASSWORD_BCRYPT); // Puedes reemplazar PASSWORD_BCRYPT
+							//$sqlInsert = "INSERT INTO [UsuGCC-_users] (username,email,fullname,active,password) VALUES ('$username','$email','$fullname',1,'$hashedPassword')";
+							$table = "[UsuGCC-_users]"; // Nombre de la tabla
+							$data = array("password" => $hashedPassword); // Datos a actualizar
+							$where = "username = '".$username."'"; // Condición
+
+							DB::Update($table, $data, $where);
+							
+							$result["cambioExitoso"] = 'hecho';
+							$fechactual = date('Y-m-d');
+							/*$fechactual->modify("+7 day");
+							$fechactual->format("Y-m-d");*/
+							//$fechactual = "2024-02-03"; // Ejemplo de fecha en formato string
+							$fechactual = new DateTime($fechactual);
+							$fechactual->modify("+60 days");
+							$fecha_modificada = $fechactual->format("Y-m-d"); 
+							//echo $fechactual->format("Y-m-d");
+
+							
+							$data2 = array();
+							$data2["reset_date"] = $fecha_modificada; // Formato correcto para la BD
+							$where2 = "username = '".$username."'";
+
+							// Ejecutar la actualización y capturar el resultado
+							$success = DB::Update("[UsuGCC-_users]", $data2, $where2);
+
+							unset($_SESSION["resettoken"]);
+							unset($_SESSION["UserNameF"]);
+							session_destroy(); // Destruye la sesión actual
+
+							if (!$success) {
+								 echo "Error al actualizar reset_date. El valor enviado es: " . json_encode($data2);
+							} else {
+								 //echo "Fecha de reinicio actualizada correctamente. La fecha es: ".$fecha_modificada;
+							}
+
+							$data3 = array();
+							$data3["reset_token"] = ''; // Formato correcto para la BD
+							$where3 = "username = '".$username."'";
+							
+							// Ejecutar la actualización y capturar el resultado
+							$success3 = DB::Update("[UsuGCC-_users]", $data3, $where3);
+
+							if (!$success3) {
+								 echo "Error al actualizar token. El valor enviado es: " . json_encode($data3);
+							} else {
+								 //echo "TOKEN actualizada correctamente.";
+							}
+
+							//echo "Se realiza cambio satisfactoriamente";
+							
+			
+						}else{
+							$result["txt"] = 'vedadero';
+							$result["diferente"] = 'verdadero';
+							//echo "Contraseña Nueva es diferente a Confirmar Contraseña valor nueva".$newpassword."valor confirmar  ".$confirmnewpass;
+						}
+
+				  } else{
+						// Contraseña no válida
+						//echo "La contraseña ingresada no coincide con la almacenada.";
+						$result["txt"] = 'falso';
+						
+						//return false; // Bloquea el cambio de contraseña
+				  }
+			 } else {
+				  // Usuario no encontrado en la base de datos
+				  echo "Usuario no encontrado.";
+				  //return false;
+			 };
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

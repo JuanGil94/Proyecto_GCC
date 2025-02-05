@@ -57,7 +57,7 @@
 'type' => 'login',
 'layoutId' => 'pretty1',
 'disabled' => 0,
-'default' => 0,
+'default' => 2,
 'forms' => array( 'above-grid' => array( 'modelId' => 'login-above-grid',
 'grid' => array( array( 'cells' => array( array( 'cell' => 'c2' ) ),
 'section' => '' ),

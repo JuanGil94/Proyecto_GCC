@@ -34,6 +34,14 @@ class class_GlobalEvents extends eventsBase
 		$this->events["BeforeChangePassword"]=true;
 
 
+		$this->events["BeforeShowLogin"]=true;
+
+
+		$this->events["BeforeShowChangePwd"]=true;
+
+
+		$this->events["BeforeShowMenu"]=true;
+
 
 //	onscreen events
 		$this->events["dbo_Chequeos_snippet"] = true;
@@ -175,6 +183,9 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Recaudo_Por_Seccional"] = true;
 		$this->events["OficioPrescripcion"] = true;
 		$this->events["MandamientoAutomatico_snippet"] = true;
+		$this->events["oldpass__snippet"] = true;
+		$this->events["newpassl__snippet"] = true;
+		$this->events["confirmnew_pass__snippet"] = true;
 
 
 
@@ -581,6 +592,19 @@ function BeforeProcessMenu($pageObject)
    
 		}
 
+		// Extraer el esquema (http/https)
+		$scheme = isset($parsedUrl['scheme']) ? $parsedUrl['scheme'] : 'http';
+
+		// Extraer el host (localhost, dominio, etc.)
+		$host = $parsedUrl['host'];
+
+		// Extraer el puerto si existe
+		$port = isset($parsedUrl['port']) ? ":" . $parsedUrl['port'] : "";
+
+		// Construir la nueva URL con el path reemplazado
+		$newUrl = $scheme . "://" . $host . $port . "/changepwd.php";
+
+
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;
@@ -740,6 +764,307 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowLogin(&$xt, &$templatefile, $pageObject)
+{
+
+		
+		// Obtener la URL completa de la página actual
+		$currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")
+			 . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+		// Analizar la URL y obtener el path
+		$parsedUrl = parse_url($currentUrl);
+		$path = $parsedUrl['path'];
+
+		// Verificar si el path actual es diferente del almacenado en la sesión
+		if (!isset($_SESSION['ventanaWebpath']) || $_SESSION['ventanaWebpath'] != $path) {
+			 $_SESSION['ventanaWebpath'] = $path;
+		}
+
+		// Extraer el esquema (http/https)
+		$scheme = isset($parsedUrl['scheme']) ? $parsedUrl['scheme'] : 'http';
+
+		// Extraer el host (localhost, dominio, etc.)
+		$host = $parsedUrl['host'];
+
+		// Extraer el puerto si existe y no es el puerto por defecto
+		$port = isset($parsedUrl['port']) && !in_array($parsedUrl['port'], [80, 443]) ? ":" . $parsedUrl['port'] : "";
+
+		// Construir la nueva URL de manera dinámica
+		$newUrl = $scheme . "://" . $host . $port . "/changepwd.php";
+		$newUrl2 = $scheme . "://" . $host . $port . "/remind.php";
+
+		// Generar el HTML del modal
+		$modalHTML = "
+			 <p>
+				  <a
+						href='$newUrl2'
+						title='Si olvidó su contraseña ingrese a este vínculo'
+				  >Olvidó Contraseña</a>.
+			 </p>
+		";
+		
+		 // Asignar el modal al template
+    $xt->assign("modalCambioPwd", $modalHTML);
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowLogin
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowChangePwd(&$xt, &$templatefile, $pageObject)
+{
+
+		
+	           $username = $_SESSION["UserNameF"];
+	            //echo "eltoken es: ".$_SESSION["resettoken"];
+	
+									// Verificar si el token está presente en la URL
+							if (isset($_GET['token'])) {
+								 $token = $_GET['token'];
+
+								 // Validar o procesar el token según tus necesidades
+								 if (!empty($token)) {
+									  // Por ejemplo, guardar el token en una variable de sesión
+									  $_SESSION['user_token'] = $token;
+										//echo "El token es ".$_SESSION['user_token'];
+										$token = $_SESSION['user_token'];
+										$sql = "SELECT username, reset_token, password FROM [UsuGCC-_users] WHERE reset_token = '$token'";
+
+										$rs = CustomQuery($sql);
+					
+										        // Extraer el resultado del QueryResult
+									  if ($data = db_fetch_array($rs)) {
+											//echo "El usuario es: " . $data['username'];
+											$_SESSION["UserNameF"] = $data['username'];
+											$_SESSION["resettoken"] = $data['password'];
+											//echo "eltoken es: ".$_SESSION["resettoken"];
+									  } else {
+											//echo "Token no válido o no se encontró un usuario con este token.";
+									  }
+										
+									  // También puedes asignar el token a un campo en la página
+									  $xt->assign("token_value", htmlspecialchars($token));
+								 } else {
+									  // Manejar el caso donde el token está vacío
+									  //echo "Token vacío. Revisa la URL.";
+								 }
+							} else {
+								 // Manejar el caso donde no se encuentra el token en la URL
+								 //echo "No se encontró el token en la URL.";
+							}
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowChangePwd
+
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before display
+function BeforeShowMenu(&$xt, &$templatefile, $pageObject)
+{
+
+		
+
+			$username = $_SESSION["UserNameF"];
+			global $xt;
+			$fechActual = date('Y-m-d');
+
+			$sql = "SELECT reset_date FROM [UsuGCC-_users] WHERE username = '$username'";
+			$resultado = CustomQuery($sql);
+
+			// Obtener el valor de reset_date
+			if ($data = db_fetch_array($resultado)) {
+				 $reset_date = $data["reset_date"];
+			} else {
+				 $reset_date = null; // Asegurarse de que tenga un valor nulo en caso de error
+			}
+
+			// Validar si la fecha es válida antes de usar strtotime()
+			if (!empty($reset_date) && $reset_date != "0000-00-00 00:00:00") {
+				 $fechaCorta = date('Y-m-d', strtotime($reset_date));
+			} else {
+				 $fechaCorta = "Fecha inválida"; // Manejo de error si la fecha es NULL o incorrecta
+			}
+
+			if ($fechActual > $fechaCorta) {
+		 //echo "Se debe cambiar la contraseña";
+					 // HTML del modal
+		 $modalHTML = '
+		 <div id="modalCambioPwd" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+			  background: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center;
+			  z-index: 9999; display: none;">
+			  <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+					<h2>Cambio de Contraseña</h2>
+					<p>Es necesario actualizar su contraseña.</p>
+					<button onclick="window.location.href=\'changepwd.php\'" style="padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px;">Cambiar Contraseña</button>
+			  </div>
+		 </div>
+
+		 <script>
+			  document.addEventListener("DOMContentLoaded", function() {
+					document.getElementById("modalCambioPwd").style.display = "flex";
+			  });
+		 </script>';
+
+		 // Asignar el modal al template
+		 $xt->assign("modalCambioPwd", $modalHTML);
+				
+
+			} elseif ($fechActual < $fechaCorta) {
+		 //echo "No se debe cambiar aún";
+			} else {
+		 //echo "Ambas fechas son iguales";
+			}
+	// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function BeforeShowMenu
+
 		
 		
 		
@@ -5526,6 +5851,66 @@ $str.="</select>";
 $str.="<br><span>Fecha:</span><input type='date' id='newFechaMand' style='width: 200px;'></input>";
 //<br><input type='date' id='newFechaMand' style='width: 100px;'></input>";
 echo $str;
+	;
+}
+	function event_oldpass__snippet(&$params)
+	{
+	
+// Contenido HTML
+echo '<div class="password-container">
+    <input type="password" id="password" name="password" class="password-input" placeholder="Contraseña Anterior" required>
+    <span class="toggle-password" onclick="TogglePassword()">
+      👁️
+    </span>
+		<div id="password-alert_pass" style="color: red; display: none;">La contraseña anterior es incorrecta.</div>
+		<div id="password-alert-null" style="color: red; display: none;">El campo no puede estar vacio</div>
+</div>';
+
+// Insertar JavaScript en la página
+echo '<script>
+  function TogglePassword() {
+    const passwordInput = document.getElementById("password");  
+    const isPassword = passwordInput.type === "password";  // Comprueba si el campo está oculto
+    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre mostrar/ocultar
+  }
+</script>';
+
+	;
+}
+	function event_newpassl__snippet(&$params)
+	{
+	// Contenido HTML
+echo '<div class="new-password-container">
+      <input type="password" id="newpassword" name="newpassword" class="new-password-input" placeholder="Nueva Contraseña" onkeyup="validatePassword()">
+      <span class="new-toggle-password" onclick="newtogglePassword()">👁️</span>
+      <div id="password-alert" style="color: red; display: none;">La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial.</div>
+			 <div id="confirm-password-alert" style="color: red; display: none;">La contraseña nueva no puede ser igual a la anterior. </div>
+    </div>';
+
+echo '<script>
+  function newtogglePassword() {
+    const passwordInput = document.getElementById("newpassword");
+    const isPassword = passwordInput.type === "password";  // Compara si el campo es de tipo "password"
+    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre "text" o "password"
+  }</script>';
+	;
+}
+	function event_confirmnew_pass__snippet(&$params)
+	{
+	// Contenido HTML
+echo '<div class="confirm-new-password-container">
+      <input type="password" id="confirmnewpass" name="confirmnewpass" class="confirm-new-password-input" placeholder="Confirmar Contraseña" onkeyup="validatePassword()">
+      <span class="confirm-new-toggle-password" onclick="confirmtogglePassword()">👁️</span>
+			<div id="password-alert-confirmar" style="color: red; display: none;">La contraseña nueva no coincide con confirmar contraseña.</div>
+    </div>';
+
+echo '<script>
+  function confirmtogglePassword() {
+    const passwordInput = document.getElementById("confirmnewpass");
+    const isPassword = passwordInput.type === "password";  // Compara si el campo es de tipo "password"
+    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre "text" o "password"
+  }</script>';
+
 	;
 }
 

@@ -1,5 +1,102 @@
+[data-page=".global_changepwd"][data-itemid="text"] {
+  color: #ff3535;
+  font-size: 20px;
+}
+[data-page=".global_changepwd"][data-itemid="ConfirmarCambio"] {
+  color: #727272;
+  font-size: 30px;
+}
+[data-page=".global_changepwd"][data-itemid="custom_confirmar_button"] > .btn {
+  background-color: #3395ea;
+  background-image: none;
+  text-shadow: none;
+  color: #ffffff;
+}
 [data-page=".global_changepwd"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
 
+[data-page=".global_changepwd"][data-itemid="snippet_oldpass"] {
+  color: black;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.password-input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* Espacio para el ícono */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page=".global_changepwd"][data-itemid="snippet_newpass"] {
+  color: black;
+}
+
+.new-password-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.new-password-input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* Espacio para el ícono */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.new-toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+/* Put  your custom CSS code here */
+
+[data-page=".global_changepwd"][data-itemid="snippet_confirmpass"] {
+  color: black;
+}
+.confirm-new-password-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.confirm-new-password-input {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* Espacio para el ícono */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.confirm-new-toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}

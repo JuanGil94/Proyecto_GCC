@@ -152,7 +152,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"Teclee usuario o e-mail","hidden":"{$item_hide_username_email_label}","isHtml":true},
+			{"text":"Ingrese usuario o e-mail","hidden":"{$item_hide_username_email_label}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

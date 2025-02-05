@@ -33,6 +33,17 @@
 	class="r-align-center r-ori-vert			col-md-12
 	
 ">
+		 
+		<img src="{$file_url images/LogoCSJ.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="supertop_c" data-pageid="{$pageid}"	{$cell_supertop_c}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
 			</div>					</div>
 			</div>		
 {END supertop_block}
@@ -71,6 +82,30 @@
 </div>
 {END message_block}			{END firstAboveGridCell}	
 	</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page=".global_changepwd" data-small > 
+	Cambio de contraseña</span>
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		<span data-itemtype="text" data-itemid="ConfirmarCambio" {$item_ConfirmarCambio} data-pageid="{$pageid}" data-page=".global_changepwd" data-small > 
+	La contraseña ha cambiado</span>
+		</div>					</div>
 			</div>		
 {END above-grid_block}
 											{BEGIN grid_block}
@@ -98,9 +133,9 @@
 			
 									data-cellId="grid_c2" data-pageid="{$pageid}"		>
 			<div edit-form-cell class="clearfix">
-								<div class="r-edit-field" data-itemtype="oldpass" data-itemid="oldpass" {$item_oldpass} data-pageid="{$pageid}" >
-	{$oldpass_editcontrol}
-</div>					</div>
+								<span data-itemtype="snippet" data-itemid="snippet_oldpass" {$item_snippet_oldpass} data-pageid="{$pageid}" data-page=".global_changepwd" >
+{$event oldpass__snippet}
+</span>					</div>
 		</td>
 				<td class="col-md-2"></td>
 		</tr>
@@ -126,9 +161,9 @@
 			
 									data-cellId="grid_c4" data-pageid="{$pageid}"		>
 			<div edit-form-cell class="clearfix">
-								<div class="r-edit-field" data-itemtype="newpass" data-itemid="newpass" {$item_newpass} data-pageid="{$pageid}" >
-	{$newpass_editcontrol}
-</div>					</div>
+								<span data-itemtype="snippet" data-itemid="snippet_newpass" {$item_snippet_newpass} data-pageid="{$pageid}" data-page=".global_changepwd" >
+{$event newpassl__snippet}
+</span>					</div>
 		</td>
 				<td class="col-md-2"></td>
 		</tr>
@@ -154,9 +189,9 @@
 			
 									data-cellId="grid_c6" data-pageid="{$pageid}"		>
 			<div edit-form-cell class="clearfix">
-								<div class="r-edit-field" data-itemtype="confirm" data-itemid="confirm" {$item_confirm} data-pageid="{$pageid}" >
-	{$confirm_editcontrol}
-</div>					</div>
+								<span data-itemtype="snippet" data-itemid="snippet_confirmpass" {$item_snippet_confirmpass} data-pageid="{$pageid}" data-page=".global_changepwd" >
+{$event confirmnew_pass__snippet}
+</span>					</div>
 		</td>
 				<td class="col-md-2"></td>
 		</tr>
@@ -170,20 +205,26 @@
 			 
 				<div 
 	data-cellId="footer_c1" data-pageid="{$pageid}"	{$cell_footer_c1}
-	class="r-align-center			col-md-12
+	class="r-align-center r-ori-vert			col-md-6
 	
 ">
 		 
-		<span data-itemtype="changepwd_button" data-itemid="changepwd_button" {$item_changepwd_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$submit_attrs} >
-							Enviar			</a>
-</span>
-	 
 		<span data-itemtype="changepwd_back" data-itemid="changepwd_back" {$item_changepwd_back} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-link   
 	" {$backlink_attrs} >
-							Regresar			</a>
+							Cerrar			</a>
+</span>
+		</div>			 
+				<div 
+	data-cellId="footer_c" data-pageid="{$pageid}"	{$cell_footer_c}
+	class="r-align-center r-ori-vert			col-md-6
+	
+">
+		 
+		<span data-itemtype="custom_button" data-itemid="custom_confirmar_button" {$item_custom_confirmar_button} data-pageid="{$pageid}" data-page=".global_changepwd" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Confirmar_Cambio_Contrasena" href="javascript:void(0)" typeid="ib" >
+							Confirmar Cambio Contrasena			</a>
 </span>
 		</div>					</div>
 			</div>		

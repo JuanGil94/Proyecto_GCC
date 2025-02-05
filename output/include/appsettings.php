@@ -629,6 +629,8 @@ $globalSettings["CookieBanner"] = array();
 $globalSettings["useCookieBanner"] = 0 != 0;
 
 $globalSettings["htmlEmailTemplates"] = array();
+$globalSettings["htmlEmailTemplates"]["Spanish"] = array();
+$globalSettings["htmlEmailTemplates"]["Spanish"]["resetpassword"] = true;
 
 
 $globalSettings["createLoginPage"] = true;
@@ -749,9 +751,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4212_1736950393";
+$projectBuildKey = "4218_1736950393";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4212";
+$projectBuildNumber = "4218";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -1067,6 +1069,8 @@ $mediaType = $mediaType ? $mediaType : 0;
 $page_titles[GLOBAL_PAGES_SHORT] = array();
 if(mlang_getcurrentlang()=="Spanish")
 {
+				$page_titles[GLOBAL_PAGES_SHORT]["Spanish"] = array();
+	$page_titles[GLOBAL_PAGES_SHORT]["Spanish"]["login1"] = "Portal Coactivo";
 }
 
 $globalSettings["showDetailedError"] = true;
