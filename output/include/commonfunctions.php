@@ -633,6 +633,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("persuasivosautomaticos" == $shortTName )
 		return true;
+	if ("bdme_publica" == $shortTName )
+		return true;
+	if ("seccionales2" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2618,6 +2622,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="PersuasivosAutomaticos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("BDME Publica");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="BDME Publica";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Seccionales2");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Seccionales2";
+	}
 	return $arr;
 }
 
@@ -2842,6 +2864,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="admin_members";
 	$arr[]="admin_users";
 	$arr[]="PersuasivosAutomaticos";
+	$arr[]="BDME Publica";
+	$arr[]="dbo.Seccionales2";
 	return $arr;
 }
 
@@ -5408,6 +5432,24 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="PersuasivosAutomaticos" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="BDME Publica" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Seccionales2" )
 	{
 		if( $sUserGroup=="<Guest>" )
 		{

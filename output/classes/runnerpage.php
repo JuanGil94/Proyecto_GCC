@@ -2624,6 +2624,11 @@ class RunnerPage
 				return $this->menuNodes[$name];
 			}
 
+			if($name == 'BDME_Publica')
+			{
+				getMenuNodes_BDME_Publica($menuNodesObject);
+				return $this->menuNodes[$name];
+			}
 			if($name == 'secondary')
 			{
 				getMenuNodes_secondary($menuNodesObject);

@@ -1268,6 +1268,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="BDME Publica")
+		{
+			return false;
+		}
+		if($table=="dbo.Seccionales2")
+		{
+			return true;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2489,6 +2497,14 @@ class AuditTrailFile
 		if($table=="PersuasivosAutomaticos")
 		{
 			return false;
+		}
+		if($table=="BDME Publica")
+		{
+			return false;
+		}
+		if($table=="dbo.Seccionales2")
+		{
+			return true;
 		}
 	}
 

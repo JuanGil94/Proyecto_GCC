@@ -153,7 +153,7 @@ $tdatabdme_reporte_semestral[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdatabdme_reporte_semestral[".ajaxCodeSnippetAdded"] = false;
 
@@ -581,7 +581,7 @@ $tdatabdme_reporte_semestral[".hideMobileList"] = array();
 
 // Begin Lookup settings
 				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Seccionales";
+	$edata["LookupTable"] = "dbo.Seccionales2";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;

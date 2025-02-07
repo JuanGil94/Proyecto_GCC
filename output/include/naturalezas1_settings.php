@@ -132,7 +132,7 @@ $tdatanaturalezas1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdatanaturalezas1[".ajaxCodeSnippetAdded"] = false;
 

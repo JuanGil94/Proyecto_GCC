@@ -1626,6 +1626,36 @@ pdfDocument = {
 			{$displayDetailTable_alertintsusp }
 		{END details_alertintsusp},
 				
+				
+			 {BEGIN details_procesosreasignar}
+			{$displayDetailTable_procesosreasignar }
+		{END details_procesosreasignar},
+				
+				
+			 {BEGIN details_procesoscorrespondencias}
+			{$displayDetailTable_procesoscorrespondencias }
+		{END details_procesoscorrespondencias},
+				
+				
+			 {BEGIN details_usuariosseccionales}
+			{$displayDetailTable_usuariosseccionales }
+		{END details_usuariosseccionales},
+				
+				
+			 {BEGIN details_prescripcionautomatica}
+			{$displayDetailTable_prescripcionautomatica }
+		{END details_prescripcionautomatica},
+				
+				
+			 {BEGIN details_mandamientoautomatico}
+			{$displayDetailTable_mandamientoautomatico }
+		{END details_mandamientoautomatico},
+				
+				
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

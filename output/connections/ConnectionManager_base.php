@@ -458,6 +458,8 @@ class ConnectionManager_Base
 		$connectionsIds["admin_members"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["admin_users"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["PersuasivosAutomaticos"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["BDME Publica"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.Seccionales2"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

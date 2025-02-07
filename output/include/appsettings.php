@@ -751,9 +751,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4218_1736950393";
+$projectBuildKey = "4226_1736950393";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4218";
+$projectBuildNumber = "4226";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -761,6 +761,7 @@ $mlang_charsets = array();
 
 $projectMenus = array();
 $projectMenus[] = "main";
+$projectMenus[] = "BDME_Publica";
 $projectMenus[] = "secondary";
 
 
@@ -768,6 +769,7 @@ $menuTreelikeFlags = array();
 $menuTreelikeFlags["main"] = 1;
 
 
+$menuTreelikeFlags["BDME_Publica"] = 1;
 $menuTreelikeFlags["secondary"] = 1;
 
 
@@ -991,6 +993,8 @@ $tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["admin_users"] = "Admin Users";
 $tableCaptions["Spanish"]["PersuasivosAutomaticos"] = "Persuasivos Automaticos";
+$tableCaptions["Spanish"]["BDME_Publica"] = "BDME Publica";
+$tableCaptions["Spanish"]["dbo_Seccionales2"] = "Seccionales2";
 
 
 $globalEvents = new class_GlobalEvents;
