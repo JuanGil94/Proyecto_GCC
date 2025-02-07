@@ -57,6 +57,9 @@ pdfDocument = {
 				
 			{"text":"<h2 class=\"ql-align-center\">BIENVENIDO AL PORTAL COACTIVO</h2>","hidden":"{$item_hide_text}","isHtml":true},
 				
+				
+			{"text":"{$modalCambioPwd}","hidden":"{$item_hide_text1}","isHtml":true},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'center',
@@ -105,8 +108,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","background":"#EDCA00","hidden":"{$item_hide_welcome_item}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

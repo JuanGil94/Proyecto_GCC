@@ -186,6 +186,7 @@ class class_GlobalEvents extends eventsBase
 		$this->events["oldpass__snippet"] = true;
 		$this->events["newpassl__snippet"] = true;
 		$this->events["confirmnew_pass__snippet"] = true;
+		$this->events["BDME_Publica_Documento"] = true;
 
 
 
@@ -5910,6 +5911,13 @@ echo '<script>
     const isPassword = passwordInput.type === "password";  // Compara si el campo es de tipo "password"
     passwordInput.type = isPassword ? "text" : "password";  // Alterna entre "text" o "password"
   }</script>';
+
+	;
+}
+	function event_BDME_Publica_Documento(&$params)
+	{
+	echo "<label value='' style='margin-right: 20px;'>Documento de identidad: </label><br>
+<input type='number' id='BDME_Consulta_Doc_SancionadoId' required oninput='this.setCustomValidity(\"\"); if (!/^\d+$/.test(this.value)) { this.setCustomValidity(\"Solo se permiten números.\"); }'></input>";
 
 	;
 }

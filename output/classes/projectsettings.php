@@ -3966,6 +3966,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
 	$projectEntities[ "PersuasivosAutomaticos" ] = array( "url" => "persuasivosautomaticos", "type" => 6 );
 	$projectEntitiesReverse[ "persuasivosautomaticos" ] = "PersuasivosAutomaticos";
+	$projectEntities[ "BDME Publica" ] = array( "url" => "bdme_publica", "type" => 6 );
+	$projectEntitiesReverse[ "bdme_publica" ] = "BDME Publica";
+	$projectEntities[ "dbo.Seccionales2" ] = array( "url" => "seccionales2", "type" => 1 );
+	$projectEntitiesReverse[ "seccionales2" ] = "dbo.Seccionales2";
 }
 
 function findTable( $table ) {

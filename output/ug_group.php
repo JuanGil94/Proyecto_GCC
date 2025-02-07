@@ -229,6 +229,8 @@ $nonAdminTablesArr[] = "PrescripcionAutomatica";
 $nonAdminTablesArr[] = "MandamientoAutomatico";
 $nonAdminTablesArr[] = "dbo.AlertasOficios";
 $nonAdminTablesArr[] = "PersuasivosAutomaticos";
+$nonAdminTablesArr[] = "BDME Publica";
+$nonAdminTablesArr[] = "dbo.Seccionales2";
 
 $ug_connection = $cman->getForUserGroups();
 

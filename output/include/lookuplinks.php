@@ -1454,13 +1454,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral.Seccional"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral.Seccional"]["add"] = array("table" => "BDME Reporte Semestral", "field" => "Seccional", "page" => "add");
-		if( !isset( $lookupTableLinks["dbo.Seccionales"] ) ) {
-			$lookupTableLinks["dbo.Seccionales"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccionales2"] ) ) {
+			$lookupTableLinks["dbo.Seccionales2"] = array();
 		}
-		if( !isset( $lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral.Seccional"] )) {
-			$lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral.Seccional"] = array();
+		if( !isset( $lookupTableLinks["dbo.Seccionales2"]["bdme_reporte_semestral.Seccional"] )) {
+			$lookupTableLinks["dbo.Seccionales2"]["bdme_reporte_semestral.Seccional"] = array();
 		}
-		$lookupTableLinks["dbo.Seccionales"]["bdme_reporte_semestral.Seccional"]["search"] = array("table" => "BDME Reporte Semestral", "field" => "Seccional", "page" => "search");
+		$lookupTableLinks["dbo.Seccionales2"]["bdme_reporte_semestral.Seccional"]["search"] = array("table" => "BDME Reporte Semestral", "field" => "Seccional", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}
@@ -3351,6 +3351,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Conceptos"]["alertasoficios.ConceptoId"] = array();
 		}
 		$lookupTableLinks["dbo.Conceptos"]["alertasoficios.ConceptoId"]["edit"] = array("table" => "dbo.AlertasOficios", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
+			$lookupTableLinks["dbo.Ciudades1"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Ciudades1"]["seccionales2.CiudadId"] )) {
+			$lookupTableLinks["dbo.Ciudades1"]["seccionales2.CiudadId"] = array();
+		}
+		$lookupTableLinks["dbo.Ciudades1"]["seccionales2.CiudadId"]["edit"] = array("table" => "dbo.Seccionales2", "field" => "CiudadId", "page" => "edit");
 }
 
 ?>

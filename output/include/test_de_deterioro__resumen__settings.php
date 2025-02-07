@@ -141,7 +141,7 @@ $tdatatest_de_deterioro__resumen_[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdatatest_de_deterioro__resumen_[".ajaxCodeSnippetAdded"] = false;
 

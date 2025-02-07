@@ -6,11 +6,11 @@ $tdataseccionales2[".OwnerID"] = "";
 $tdataseccionales2[".OriginalTable"] = "dbo.Seccionales";
 
 
-$tdataseccionales2[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdataseccionales2[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdataseccionales2[".originalPagesByType"] = $tdataseccionales2[".pagesByType"];
-$tdataseccionales2[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdataseccionales2[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdataseccionales2[".originalPages"] = $tdataseccionales2[".pages"];
-$tdataseccionales2[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdataseccionales2[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdataseccionales2[".originalDefaultPages"] = $tdataseccionales2[".defaultPages"];
 
 //	field labels
@@ -191,7 +191,7 @@ $tdataseccionales2[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																					
+																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdataseccionales2[".ajaxCodeSnippetAdded"] = false;
 
@@ -203,7 +203,7 @@ $tdataseccionales2[".addPageEvents"] = false;
 $tdataseccionales2[".isUseTimeForSearch"] = false;
 
 
-$tdataseccionales2[".badgeColor"] = "008B8B";
+$tdataseccionales2[".badgeColor"] = "EDCA00";
 
 
 $tdataseccionales2[".allSearchFields"] = array();
@@ -249,6 +249,7 @@ $tdataseccionales2[".geocodingEnabled"] = false;
 
 
 
+$tdataseccionales2[".isDisplayLoading"] = true;
 
 $tdataseccionales2[".isResizeColumns"] = true;
 
@@ -262,15 +263,13 @@ $tdataseccionales2[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "ORDER BY Seccional ASC";
+$tstrOrderBy = "";
 $tdataseccionales2[".strOrderBy"] = $tstrOrderBy;
 
 $tdataseccionales2[".orderindexes"] = array();
-	$tdataseccionales2[".orderindexes"][] = array(3, (1 ? "ASC" : "DESC"), "Seccional");
 
 
-
-$tdataseccionales2[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$tdataseccionales2[".sqlHead"] = "SELECT SeccionalId,  	Codigo,  	Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
 $tdataseccionales2[".sqlFrom"] = "FROM dbo.Seccionales";
 $tdataseccionales2[".sqlWhereExpr"] = "";
 $tdataseccionales2[".sqlTail"] = "";
@@ -288,11 +287,8 @@ $tdataseccionales2[".sqlTail"] = "";
 $arrRPP = array();
 $arrRPP[] = 10;
 $arrRPP[] = 20;
-$arrRPP[] = 30;
 $arrRPP[] = 50;
 $arrRPP[] = 100;
-$arrRPP[] = 500;
-$arrRPP[] = -1;
 $tdataseccionales2[".arrRecsPerPage"] = $arrRPP;
 
 //fill array of groups per page for report with group fields
@@ -603,7 +599,7 @@ $tdataseccionales2[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Seccional";
 	$fdata["GoodName"] = "Seccional";
-	$fdata["ownerTable"] = "";
+	$fdata["ownerTable"] = "dbo.Seccionales";
 	$fdata["Label"] = GetFieldLabel("dbo_Seccionales2","Seccional");
 	$fdata["FieldType"] = 200;
 
@@ -617,7 +613,7 @@ $tdataseccionales2[".hideMobileList"] = array();
 		$fdata["sourceSingle"] = "Seccional";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
+	$fdata["FullName"] = "Seccional";
 
 	
 	
@@ -3558,10 +3554,10 @@ function createSqlQuery_seccionales2()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end  	as Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
+$proto0["m_strFieldList"] = "SeccionalId,  	Codigo,  	Seccional,  	NIT,  	CiudadId,  	PiePagina,  	Sigobius,  	Email,  	Direccion,  	Telefonos,  	PCI,  	Contador,  	ContadorCargo,  	Director,  	DirectorCargo,  	Abogado,  	AbogadoCargo,  	Formato,  	Corporacion,  	Unidad,  	Oficina,  	Serie,  	Subserie";
 $proto0["m_strFrom"] = "FROM dbo.Seccionales";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY Seccional ASC";
+$proto0["m_strOrderBy"] = "";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -3627,14 +3623,16 @@ $obj = new SQLFieldListItem($proto8);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
-			$obj = new SQLNonParsed(array(
-	"m_sql" => "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end"
+			$obj = new SQLField(array(
+	"m_strName" => "Seccional",
+	"m_strTable" => "dbo.Seccionales",
+	"m_srcTableName" => "dbo.Seccionales2"
 ));
 
-$proto10["m_sql"] = "case Seccional  	when 'DEAJ' THEN 'DIRECCIÓN EJECUTIVA DE ADMINISTRACION JUDICIAL'  	else Seccional  	end";
+$proto10["m_sql"] = "Seccional";
 $proto10["m_srcTableName"] = "dbo.Seccionales2";
 $proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "Seccional";
+$proto10["m_alias"] = "";
 $obj = new SQLFieldListItem($proto10);
 
 $proto0["m_fieldlist"][]=$obj;
@@ -3975,19 +3973,6 @@ $obj = new SQLFromListItem($proto52);
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto56=array();
-						$obj = new SQLField(array(
-	"m_strName" => "Seccional",
-	"m_strTable" => "dbo.Seccionales",
-	"m_srcTableName" => "dbo.Seccionales2"
-));
-
-$proto56["m_column"]=$obj;
-$proto56["m_bAsc"] = 1;
-$proto56["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto56);
-
-$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="dbo.Seccionales2";		
 $obj = new SQLQuery($proto0);
 

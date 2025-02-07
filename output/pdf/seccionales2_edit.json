@@ -297,10 +297,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":""},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
      
