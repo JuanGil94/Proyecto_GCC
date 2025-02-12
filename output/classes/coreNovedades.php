@@ -927,6 +927,54 @@ if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["new
               return;
          }
 }
+//Novedad cambio de Recaudo
+if (isset($_POST["procesoId"]) && isset($_POST["userName"]) && isset($_POST["recaudoNew"]) && isset($_POST["observaciones"]) && isset($_POST["pagoId"])){
+    $pagoNew=$_POST["recaudoNew"];
+    $pagoId=$_POST["pagoId"];
+    $procesoId=$_POST["procesoId"];
+    $consulta=DB::Query("SELECT * FROM Pagos1 WHERE PagoId=".$pagoId);
+         while( $date = $consulta->fetchAssoc() )
+         {
+             $pago=$date["Pago"];
+             $cuentaId=$date["CuentaId"];
+             $tipoRecaudoId=$date["TipoRecaudoId"];
+             $fecha=$date["Fecha"];
+         }
+    $pagoDif=$pago-$pagoNew;
+    $resultado2["response"]=DB::Exec("INSERT INTO Pagos1 (ProcesoId,CuentaId,Fecha,Pago,Registro,PagoIdOrig,TipoRecaudoId) values (".$procesoId.",".$cuentaId.",'".$fecha."',".$pagoNew.",GETDATE(),".$pagoId.",".$tipoRecaudoId.")");
+    if (!$resultado2["response"]){
+        echo "Ocurrio un error en el Insert Pagos debido a: ".DB::LastError(); 
+        return false;
+    }
+    DB::Delete("Pagos1", "PagoId=".$pagoId."" );
+    $consulta=DB::Query("SELECT * FROM Pagos1 WHERE PagoId=".$pagoId." ORDER BY PagoId DESC");
+    while( $date = $consulta->fetchAssoc() )
+    {
+        $pagoIdNew=$date["PagoId"];
+    }
+    $recalcular=new reliquidacion($procesoId);
+    $recalcular->pagoId($pagoIdNew);
+    //echo "El valor del PagoId es:".$values["PagoId"]; 
+    $recalcular->Calcular(date('Y-m-d'),1);
+    $consulta=DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);
+    while( $date = $consulta->fetchAssoc() )
+    {
+        $recaudoAnt=$date["Recaudo"];
+    }
+    $recaudoNew=$recaudoAnt-$pagoDif-$pagoNew;
+
+    $resultado=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoNew." where ProcesoId=".$procesoId);
+    //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+    if (!$resultado){
+        echo "Ocurrio un error en el Update Procesos debido aaaaaa: ".DB::LastError(); 
+        return;
+    }
+    $ok="OK";
+    echo $ok;
+    return;
+}
+echo "No ingreso a ninguna novedad";
+return;
 
 //echo "NO ENTRO A NACAS";
 
