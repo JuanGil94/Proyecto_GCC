@@ -2,21 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -12073,11 +12058,13 @@ $pagoId=$data["PagoId"];
 $consulta=DB::Query("SELECT * FROM Pagos1 WHERE PagoId=".$pagoId);
         while( $date = $consulta->fetchAssoc() ){
 						$pago=$date["Pago"];
+						$procesoId=$date["ProcesoId"];
         }
 $pago=number_format($pago, 0, ',', '.');
 $result["pago"]=$pago;
-$result["procesoId"]=$params["ProcesoId"];
-$result["userName"]=$_SESSION["UserId"];;
+$result["procesoId"]=$procesoId;
+$result["userName"]=$_SESSION["UserId"];
+$result["pagoId"]=$pagoId;;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -12154,8 +12141,27 @@ while( $date = $rs5->fetchAssoc() )
 	$pagoCost=$date["PagoCost"];
 	$pago=$date["Pago"];
 }
+$recaudoNew=$recaudoAnt-$pago;
+$obliNew=$obligacionAnt+$pagoObli;
+$inteNew=$interesesAnt+$pagoInte;
+$costasNew=$costas+$pagoCost;
 
-$updatePro=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoAnt-$pago."Obligacion=".$obligacionAnt+$pagoObli.",Intereses=".$interesesAnt+$pagoInte.",Costas=".$costas+$pagoCost." where ProcesoId=".$this->procesoId);
+//echo "Value: ".$recaudoNew." --- ".$obliNew." --- ".$inteNew."------".$costasNew
+DB::Delete("Pagos1", "PagoId=".$pagoId."" );
+
+$recalcular=new reliquidacion($procesoId);
+$recalcular->Calcular(date('Y-m-d'),0);
+$result["total"]=$recalcular->getSuma();
+$interesesNew=$recalcular->getInteresesSuma();
+$interesesDif=$interesesAnt-$interesesNew;
+        if ($interesesDif!=0){ 
+            $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$procesoId.",GETDATE(),".$interesesDif.",NULL,0,".$pagoId.")");
+            if (!$resultado2["response"]){
+                echo "Ocurrio un error en el Insert Intereses debido a: ".DB::LastError(); 
+                return false;
+            }
+        }
+$updatePro=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoNew.",Obligacion=".$obliNew.",Intereses=".$interesesNew.",Costas=".$costasNew." where ProcesoId=".$procesoId);
 	//$this->resultUpdate=$resultado["response"];
 if ($updatePro){
 
@@ -12163,13 +12169,7 @@ if ($updatePro){
 else{
 	echo "Error en el update, relacionado con el pago en procesos".DB::LastError();
 	exit();
-}
-DB::Delete("Pagos1", "PagoId=".$pagoId."" );
-
-$recalcular=new reliquidacion($procesoId);
-$recalcular->Calcular(date('Y-m-d'),0);
-$result["total"]=$recalcular->getSuma();
-;
+};
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

@@ -312,7 +312,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 $recalcular=new reliquidacion($values["ProcesoId"]);
 $recalcular->pagoId($values["PagoId"]);
 //echo "El valor del PagoId es:".$values["PagoId"]; 
-$recalcular->Calcular(date('Y-m-d'),0);
+$recalcular->Calcular(date('Y-m-d'),1);
 //$proxy["saved"]=true;
 //echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
 /*
