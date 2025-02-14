@@ -34,6 +34,13 @@ function BeforeProcessAdd($pageObject)
         $sancionadoId = $data["SancionadoId"];
         // Almacena el ID en la sesión
         $_SESSION['SancionadoId'] = $sancionadoId;
+				$procesoId=$data["ProcesoId"];
+				$rs5 = DB::Query("SELECT * FROM Solidarios WHERE ProcesoId=".$procesoId);
+                while( $date = $rs5->fetchAssoc() )
+                {
+                    $deudorSold[]=intval($date["SancionadoId"]);
+                }
+			$_SESSION['SancionadosSoli']=$deudorSold;
     }
 
 // Place event code here.

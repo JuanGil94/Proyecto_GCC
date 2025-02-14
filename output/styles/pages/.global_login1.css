@@ -8,4 +8,7 @@
   width: 400px;
 }
 
-
+#spanIdEye {
+            cursor: pointer;
+            color: red;
+        }

@@ -383,6 +383,15 @@ class AcuerdoPago{
                     //var_dump($procesoId);var_dump($fecha);var_dump($dias);var_dump($tasa);var_dump($intereses);var_dump($obliReca);var_dump($obliNove);var_dump($obliSald);var_dump($inteReca);var_dump($inteNove);var_dump($inteSald);var_dump($costReca);var_dump($costNove);var_dump($costSald);
             //echo "Valores: ".$procesoId."-".$fecha."-".$dias."-".$tasa."-".$intereses."-".$obliReca."-".$obliNove."-".$obliSald."-".$inteReca."-".$inteNove."-".$inteSald."-".$costReca."-".$costNove."-".$costSald;
             //$this->insertLiqui($cuota,$fecha->format('d-m-Y'),$obliF,$intCostF,$costas,$intPlazo,$valorCuota);
+            $rs5 = DB::Query("SELECT * FROM Empresas WHERE EmpresaId=1");
+            while( $date = $rs5->fetchAssoc() )
+            {
+                $intresesPlazo=$date["InteresesPlazo"];
+            }
+            if ($intresesPlazo==0){
+                $valorCuota=$valorCuota-$intresesPlazo;
+                $intPlazo=0;
+            }
             $consulta2=DB::Exec("INSERT INTO Liquidaciones (ProcesoId,Cuota,Fecha,Capital,Intereses,Total,Costas,InteresesPlazo) VALUES (".$this->procesoId.",".$cuota.",'".$fecha."',".$obliF.",".$intCostF.",".$valorCuota.",".$costas.",".$intPlazo.")");
                     if ($consulta2) {
                 //echo "La consulta se realizó correctamente.";
@@ -423,10 +432,37 @@ class AcuerdoPagoFinal extends AcuerdoPago{
         SELECT ProcesoId,Fecha,Total,Capital,Intereses,Cuota,Costas,InteresesPlazo
         FROM Liquidaciones
         where ProcesoId=".$procesoId);
-                    if ($consulta2) {
+            if ($consulta2) {
                 //echo "La consulta se realizó correctamente.";
+                $rs5 = DB::Query("SELECT sum(InteresesPlazo)+sum(Intereses) as interesesTotal FROM Liquidaciones WHERE ProcesoId=".$procesoId);
+                while( $date = $rs5->fetchAssoc() )
+                {
+                    $interesesTotal=$date["interesesTotal"];
+                }
+                $rs5 = DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$procesoId);
+                while( $date = $rs5->fetchAssoc() )
+                {
+                    $interesesAnt=$date["Intereses"];
+                }
+                $interesesDif=$interesesTotal-$interesesAnt;
+                //ECHO "Value: ".$interesesDif;
+                if ($interesesDif!=0){
+                    $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$procesoId.",GETDATE(),".$interesesDif.",NULL,0,NULL)");
+                    if (!$resultado2["response"]){
+                        echo "Ocurrio un error en el Insert Intereses debido a: ".DB::LastError(); 
+                        return false;
+                    }
+                }
+                $resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".$interesesTotal."',InteresesInicial='".$interesesTotal."' where ProcesoId=".$procesoId);
+                //$resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."' where ProcesoId=".$this->procesoId);
+                if (!$resultado["response"]){
+                    echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
+                    return false;
+                }
+                else{
+                    return true;
+                }
 
-                        return true;
                     } 
                     else {
                 // Hubo un error en la ejecución de la consulta

@@ -166,20 +166,13 @@ array( 'cell' => 'c2' ) ),
 'image' => array( 'image' => 'LogoCSJ.png',
 'source' => 2 ) ),
 'text' => array( 'type' => 'text',
-'label' => array( 'text' => '
-    <span class="toggle-password" onclick="TogglePassword()">
-      👁️
-    </span>
-
-<script>
-  function TogglePassword() {
-    const passwordInput = document.getElementById("password");  
-    const isPassword = passwordInput.type === "password";  // Comprueba si el campo está oculto
-    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre mostrar/ocultar
-  }
-</script>',
-'type' => 0 ),
-'editedByRte' => false ),
+'label' => array( 'type' => 0,
+'text' => '    <span class="toggle-password" id="spanIdEye" onclick="TogglePassword()">      👁️    </span><script>  function TogglePassword() {    const passwordInput = document.getElementById("password");      const isPassword = passwordInput.type === "password";  // Comprueba si el campo está oculto    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre mostrar/ocultar  }</script>' ),
+'editedByRte' => false,
+'customCSS' => '#spanIdEye {
+            cursor: pointer;
+            color: red;
+        }' ),
 'text1' => array( 'type' => 'text',
 'label' => array( 'text' => '{$modalCambioPwd}',
 'type' => 0 ),

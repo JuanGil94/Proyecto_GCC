@@ -137,7 +137,7 @@ $tdatamenus[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																						
+																																																																																																																																																																																																																																																																																																																																																																																																									
 
 $tdatamenus[".ajaxCodeSnippetAdded"] = false;
 

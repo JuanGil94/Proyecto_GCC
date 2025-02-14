@@ -1156,6 +1156,16 @@ if($buttId=='Consulta_BDME')
 	}
 	buttonHandler_Consulta_BDME($params);
 }
+if($buttId=='Calc')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Calc($params);
+}
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
 {
@@ -3155,7 +3165,7 @@ else{
 					$estadoId=$date["EstadoId"];
 					$motivoId=$date["MotivoId"];
 				}
-	$oficio=new coreOficios($actuacionId,$params["ProcesoId"],now(),'','','','',$etapaId,$estadoId,$motivoId);
+	$oficio=new coreOficios($actuacionId,$params["ProcesoId"],now(),'','','','',$etapaId,$estadoId,$motivoId,0);
 				$result["Total"]=$oficio->process();
 				//echo "despues del CoreOficios".$result["Total"]."<br>";
 				if ($result["Total"]){
@@ -12151,17 +12161,8 @@ DB::Delete("Pagos1", "PagoId=".$pagoId."" );
 
 $recalcular=new reliquidacion($procesoId);
 $recalcular->Calcular(date('Y-m-d'),0);
-$result["total"]=$recalcular->getSuma();
-$interesesNew=$recalcular->getInteresesSuma();
-$interesesDif=$interesesAnt-$interesesNew;
-        if ($interesesDif!=0){ 
-            $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$procesoId.",GETDATE(),".$interesesDif.",NULL,0,".$pagoId.")");
-            if (!$resultado2["response"]){
-                echo "Ocurrio un error en el Insert Intereses debido a: ".DB::LastError(); 
-                return false;
-            }
-        }
-$updatePro=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoNew.",Obligacion=".$obliNew.",Intereses=".$interesesNew.",Costas=".$costasNew." where ProcesoId=".$procesoId);
+
+$updatePro=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoNew." where ProcesoId=".$procesoId);
 	//$this->resultUpdate=$resultado["response"];
 if ($updatePro){
 
@@ -12169,7 +12170,8 @@ if ($updatePro){
 else{
 	echo "Error en el update, relacionado con el pago en procesos".DB::LastError();
 	exit();
-};
+}
+$result["total"]=$updatePro;;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -12381,6 +12383,63 @@ function buttonHandler_Consulta_BDME($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	$_SESSION['BDME_doc_sancionado_consulta'] = $params['BDME_doc_sancionado_consulta'];
 ;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Calc($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	include_once (getabspath("classes/calcIntereses.php"));
+$recalcular=new reliquidacion($params["ProcesoId"]);
+$meses = $recalcular->Calcular3(date('Y-m-d'),0);
+//exit();;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

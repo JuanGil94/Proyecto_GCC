@@ -130,7 +130,7 @@ $tdatawebpages_roles[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																						
+																																																																																																																																																																																																																																																																																																																																																																																																									
 
 $tdatawebpages_roles[".ajaxCodeSnippetAdded"] = false;
 

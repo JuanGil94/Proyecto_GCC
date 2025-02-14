@@ -205,24 +205,18 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 		include_once (getabspath("classes/calcIntereses.php"));
 
 $valor = $values["Pago"];
+$procesoId=$values['ProcesoId'];
 // Elimina los puntos
 $valor_sin_puntos = str_replace('.', '', $valor);
 $values["Pago"] = $valor_sin_puntos;
-
-$recalcular=new reliquidacion($values["ProcesoId"]);
-$recalcular->Calcular(date('Y-m-d'),0);
-$arrayFechas=$recalcular->getFechas();
-//print_r($arrayFechas);
-foreach($arrayFechas as $dato=>$valor){
-	if ($dato=="fechaEjecutoria"){
-		$date["fechaEjecutoria"]=$valor;
-	}
-	else if ($dato=="fechaActual"){
-		$date["fechaActual"]=$valor;
-	}
+$rs5 = DB::Query("SELECT GETDATE() AS fechaActual,* FROM Procesos WHERE ProcesoId=".$procesoId);
+while( $date = $rs5->fetchAssoc() )
+{
+	$fechaActual=$date["fechaActual"];
+	$fechaPlazo=$date["Plazo"];
 }
-	$timestampE = strtotime($date["fechaEjecutoria"]);
-	$timestampA = strtotime($date["fechaActual"]);
+	$timestampE = strtotime($fechaPlazo);
+	$timestampA = strtotime($fechaActual);
 	$timestampR = strtotime($values["Fecha"]);
 		if ($timestampR<$timestampE or $timestampR>$timestampA){
 				echo "<script>alert('La fecha de recaudo no puede ser menor a la fecha Plazo y tampoco mayor a la fecha actual')</script>";
@@ -487,6 +481,9 @@ if ($fechaRegistro<$primerDia){
 	//echo "Entro";
   //$record["ChequeoId_css"].='background:yellow';
 	$pageObject->hideItem("custom_button2", $recordId);
+}
+else{
+	$pageObject->hideItem("custom_button1", $recordId);
 }
 // Place event code here.
 // Use "Add Action" button to add code snippets.
