@@ -1158,7 +1158,7 @@ $data = $pageObject->getMasterRecord();
 //$data["ProcesoId"];
 echo '<input for="miInput" id="procesoId" value="'.$data["ProcesoId"].'" style="display: none;" readonly></input>';
 echo '<label for="miInput">Abono Inicial: </label>
-<input type="number" id="abono" name="" style="width: 100px;" value=0>
+<input type="number" id="abono" name="" style="width: 100px;" value=0 min="0">
 <label for="miLista">Periodo: </label>
 <select id="periodo" name="">
     <option value="1">MENSUAL</option>
@@ -1167,10 +1167,20 @@ echo '<label for="miInput">Abono Inicial: </label>
     <option value="4">SEMESTRAL</option>
 </select>
 <label for="miInput">No. Cuotas: </label>
-<input type="number" id="noCuotas" name="" style="width: 60px;" value=1>
+<input type="number" id="noCuotas" name="" style="width: 60px;" value=1 min="0">
 <label for="fechaSeleccionada">Fecha Inicial:</label>
 <input type="date" id="fechaInicial" name="fecha">
 <script>
+	    document.getElementById("abono").addEventListener("input", function() {
+        if (this.value < 0) {
+            this.value = 0;
+        }
+    });
+			document.getElementById("noCuotas").addEventListener("input", function() {
+					  if (this.value < 0) {
+							this.value = 0;
+					  }
+				 });
         // Obtener la fecha actual en el formato YYYY-MM-DD
         function obtenerFechaActual() {
             const hoy = new Date();

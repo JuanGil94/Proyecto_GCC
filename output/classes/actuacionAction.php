@@ -60,6 +60,7 @@ class coreOficios {
                         echo "Ocurrio un error en el Update Procesos debido a: ".DB::LastError(); 
                         return false;
                     }
+                    /*
                     if ($interesesDif!=0){ 
                         $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$this->procesoId.",'".$this->fecha."',".$interesesDif.",NULL,0,NULL)");
                         if (!$resultado2["response"]){
@@ -67,6 +68,7 @@ class coreOficios {
                             return false;
                         }
                     }
+                    */
                     return true;
                 break;
                 case "5":
@@ -136,6 +138,7 @@ class coreOficios {
                             $InteresesInicial=$date["InteresesInicial"];
                         }
                         $interesesDif=$this->intereses-$interesesAnt;
+                        /*
                         if ($interesesDif!=0){ 
                             $resultado2["response"]=DB::Exec("INSERT INTO Intereses (ProcesoId,Fecha,Intereses,SeccionalId,Liquidacion,PagoId) values (".$this->procesoId.",'".$this->fecha."',".$interesesDif.",NULL,0,NULL)");
                             if (!$resultado2["response"]){
@@ -143,6 +146,7 @@ class coreOficios {
                                 return false;
                             }
                         } 
+                        */
                         $resultado["response"]=DB::Exec("UPDATE Procesos set Intereses='".($interesesDif+$interesesAnt)."',InteresesInicial='".($InteresesInicial+$interesesDif)."',Liquidacion='".$this->fechaLiqui."', Incumplimiento='".$this->fechaLiqui."',ActuacionId=".$this->actuacionId." where ProcesoId=".$this->procesoId);
                         if (!$resultado["response"]){
                             echo "Ocurrio un error en el Update debido a: ".DB::LastError(); 
