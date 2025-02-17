@@ -114,15 +114,7 @@
 												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-							<li role="separator" class="divider"></li>							{BEGIN export_link}
-	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportlink_attrs}  title="" >
-				
-		Exportar resultados		
-		</a>
-	</li>
-{END export_link}
-							<li role="separator" class="divider"></li>					</ul>
+							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
 			</span>
@@ -303,6 +295,15 @@
 					<span class="glyphicon glyphicon-search"></span>
 										</a>
 </span>
+	 
+		{BEGIN export_link}
+<span data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$exportlink_attrs} >
+					<img src="{$file_url images/menuicons/Excel2.png}" />
+							Exportar			</a>
+</span>
+{END export_link}
 		</div>					</div>
 			</div>		
 {END above-grid_block}
