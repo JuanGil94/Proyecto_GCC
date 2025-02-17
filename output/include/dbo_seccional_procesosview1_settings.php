@@ -131,7 +131,7 @@ $tdatadbo_seccional_procesosview1[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																																																																															
 
 $tdatadbo_seccional_procesosview1[".ajaxCodeSnippetAdded"] = false;
 

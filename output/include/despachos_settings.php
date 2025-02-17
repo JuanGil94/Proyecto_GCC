@@ -157,8 +157,8 @@ $tdatadespachos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																				
-																																						
+																																																																																																																																																																																																																																																																																																																																																																																																											
+					
 
 $tdatadespachos[".ajaxCodeSnippetAdded"] = false;
 
@@ -579,7 +579,7 @@ $tdatadespachos[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -588,37 +588,10 @@ $tdatadespachos[".hideMobileList"] = array();
 
 	
 		$eventsData = array();
-	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$eventsData[] = array( "name" => "Codigo_Validar_juzgado", "type" => "change" );
 	$edata["fieldEvents"] = $eventsData;
 
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Despachos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 1;
-
-	
-		
-	$edata["LinkField"] = "Codigo";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Codigo";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-	
-// End Lookup Settings
 
 
 	
@@ -633,8 +606,11 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=12";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -651,7 +627,7 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
-	$edata = array("EditFormat" => "Lookup wizard");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -660,37 +636,10 @@ $tdatadespachos[".hideMobileList"] = array();
 
 	
 		$eventsData = array();
-	$eventsData[] = array( "name" => "Validar_numeros_No_negativos", "type" => "change" );
+	$eventsData[] = array( "name" => "Codigo_Validar_juzgado", "type" => "change" );
 	$edata["fieldEvents"] = $eventsData;
 
 
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "dbo.Despachos";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 1;
-
-	
-		
-	$edata["LinkField"] = "Codigo";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "Codigo";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "";
-
-	
-	
-	
-	
-
-	
-	
-	
-// End Lookup Settings
 
 
 	
@@ -705,8 +654,11 @@ $tdatadespachos[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=12";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation

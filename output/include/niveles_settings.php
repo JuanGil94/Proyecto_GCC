@@ -47,6 +47,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsniveles["Spanish"]["Clasificacion"] = "";
 	$placeHoldersniveles["Spanish"]["Clasificacion"] = "";
 	$pageTitlesniveles["Spanish"]["add"] = "Niveles";
+	$pageTitlesniveles["Spanish"]["edit"] = "Editar";
 	if (count($fieldToolTipsniveles["Spanish"]))
 		$tdataniveles[".isUseToolTips"] = true;
 }
@@ -145,7 +146,7 @@ $tdataniveles[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																				
-																																						
+																																												
 
 $tdataniveles[".ajaxCodeSnippetAdded"] = false;
 

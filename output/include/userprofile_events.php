@@ -26,6 +26,8 @@
 
 		$this->events["BeforeDelete"]=true;
 
+		$this->events["AfterEdit"]=true;
+
 
 	}
 
@@ -59,10 +61,11 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 		$valorPersonalizado = $values['miCampoOculto'];
 		$email = $values['Email'];
 		$fullname = $values['Nombre'];
+		$fechaReset = date('d.m.Y',strtotime("-1 days"));
 		
 		
-		//$sqlInsert = "INSERT INTO otra_tabla (campo1, campo2) VALUES ('$campo1', '$campo2')";
-		$sqlInsert = "INSERT INTO [UsuGCC-_users] (username,email,fullname,active,password) VALUES ('$username','$email','$fullname',1,'$hashedPassword')";
+
+		$sqlInsert = "INSERT INTO [UsuGCC-_users] (username,email,fullname,active,password,reset_date) VALUES ('$username','$email','$fullname',1,'$hashedPassword','$fechaReset')";
 
  // Enviar un mensaje personalizado al cliente
     
@@ -623,6 +626,99 @@ return true;
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record updated
+function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
+{
+
+			$username = $values['UserName'];
+	$Nombre = $values['Nombre'];
+
+		$sql = "UPDATE [UsuGCC-_users] set fullname = '$Nombre' WHERE username = '$username'";
+		
+		// Enviar un mensaje personalizado al cliente
+    
+    try {
+        CustomQuery($sql);
+        LogInfo("Actualización exitosa: " . $sql);
+				    // Devuelve un script para recargar la página
+					 if (!$inline) {
+						  $pageObject->setProxyValue("customJS", "window.location.reload();");
+					 }
+						return true;
+    } catch (Exception $e) {
+        LogInfo("Error en la Actualización: " . $e->getMessage());
+    }
+
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;
+} // function AfterEdit
+
 		
 		
 		

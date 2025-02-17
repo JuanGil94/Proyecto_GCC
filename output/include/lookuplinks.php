@@ -158,20 +158,6 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] )) {
 			$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] = array();
 		}
-		$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"]["edit"] = array("table" => "dbo.Despachos", "field" => "Codigo", "page" => "edit");
-		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
-			$lookupTableLinks["dbo.Despachos"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] )) {
-			$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] = array();
-		}
-		$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"]["add"] = array("table" => "dbo.Despachos", "field" => "Codigo", "page" => "add");
-		if( !isset( $lookupTableLinks["dbo.Despachos"] ) ) {
-			$lookupTableLinks["dbo.Despachos"] = array();
-		}
-		if( !isset( $lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] )) {
-			$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"] = array();
-		}
 		$lookupTableLinks["dbo.Despachos"]["despachos.Codigo"]["search"] = array("table" => "dbo.Despachos", "field" => "Codigo", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Ciudades1"] ) ) {
 			$lookupTableLinks["dbo.Ciudades1"] = array();
@@ -586,6 +572,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales1"]["cuentas.SeccionalId"]["search"] = array("table" => "dbo.Cuentas", "field" => "SeccionalId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["cuentas.ConceptoId"]["edit"] = array("table" => "dbo.Cuentas", "field" => "ConceptoId", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
 			$lookupTableLinks["dbo.Conceptos"] = array();
 		}

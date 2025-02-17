@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeOut"]=true;
+
 
 	}
 
@@ -84,6 +86,91 @@ function BeforeProcessList($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before Export Record
+function BeforeOut(&$data, &$values, $pageObject)
+{
+
+		
+$values["Proceso"] = strip_tags($values["Proceso"]); // Elimina etiquetas HTML (deja solo el texto)
+
+    // Ajustar ancho de columnas en la exportación de Excel
+    if (isset($pageObject->phpspreadsheet)) {
+        $sheet = $pageObject->phpspreadsheet->getActiveSheet();
+        $sheet->getColumnDimension('A')->setWidth(20);
+        $sheet->getColumnDimension('B')->setWidth(30);
+        $sheet->getColumnDimension('C')->setWidth(15);
+    }
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeOut
+
 		
 		
 		

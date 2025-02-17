@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc__users["Spanish"]["ID"] = "ID";
 	$fieldToolTipsusugcc__users["Spanish"]["ID"] = "";
 	$placeHoldersusugcc__users["Spanish"]["ID"] = "";
-	$fieldLabelsusugcc__users["Spanish"]["username"] = "Username";
+	$fieldLabelsusugcc__users["Spanish"]["username"] = "Nombre de Usuario";
 	$fieldToolTipsusugcc__users["Spanish"]["username"] = "";
 	$placeHoldersusugcc__users["Spanish"]["username"] = "";
 	$fieldLabelsusugcc__users["Spanish"]["password"] = "Password";
@@ -37,13 +37,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc__users["Spanish"]["email"] = "Email";
 	$fieldToolTipsusugcc__users["Spanish"]["email"] = "";
 	$placeHoldersusugcc__users["Spanish"]["email"] = "";
-	$fieldLabelsusugcc__users["Spanish"]["fullname"] = "Fullname";
+	$fieldLabelsusugcc__users["Spanish"]["fullname"] = "Nombre";
 	$fieldToolTipsusugcc__users["Spanish"]["fullname"] = "";
 	$placeHoldersusugcc__users["Spanish"]["fullname"] = "";
 	$fieldLabelsusugcc__users["Spanish"]["groupid"] = "Groupid";
 	$fieldToolTipsusugcc__users["Spanish"]["groupid"] = "";
 	$placeHoldersusugcc__users["Spanish"]["groupid"] = "";
-	$fieldLabelsusugcc__users["Spanish"]["active"] = "Active";
+	$fieldLabelsusugcc__users["Spanish"]["active"] = "Activo";
 	$fieldToolTipsusugcc__users["Spanish"]["active"] = "";
 	$placeHoldersusugcc__users["Spanish"]["active"] = "";
 	$fieldLabelsusugcc__users["Spanish"]["ext_security_id"] = "Ext Security Id";
@@ -157,7 +157,7 @@ $tdatausugcc__users[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdatausugcc__users[".ajaxCodeSnippetAdded"] = false;
 

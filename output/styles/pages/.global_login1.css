@@ -8,7 +8,7 @@
   width: 400px;
 }
 
-#spanIdEye {
-            cursor: pointer;
-            color: red;
-        }
+[data-page=".global_login1"][data-itemid="text"] {
+  color: red;
+}
+
