@@ -28,13 +28,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["Seccional"] = "Seccional";
 	$fieldToolTipstest_de_deterioro__resumen_["Spanish"]["Seccional"] = "";
 	$placeHolderstest_de_deterioro__resumen_["Spanish"]["Seccional"] = "";
-	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["Saldo"] = "Saldo";
+	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["Saldo"] = "Saldo de Cartera";
 	$fieldToolTipstest_de_deterioro__resumen_["Spanish"]["Saldo"] = "";
 	$placeHolderstest_de_deterioro__resumen_["Spanish"]["Saldo"] = "";
-	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["VPN"] = "VPN";
+	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["VPN"] = "VPN de Flujos Esperados";
 	$fieldToolTipstest_de_deterioro__resumen_["Spanish"]["VPN"] = "";
 	$placeHolderstest_de_deterioro__resumen_["Spanish"]["VPN"] = "";
-	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["Deterioro"] = "Deterioro";
+	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["Deterioro"] = "Deterioro Multas";
 	$fieldToolTipstest_de_deterioro__resumen_["Spanish"]["Deterioro"] = "";
 	$placeHolderstest_de_deterioro__resumen_["Spanish"]["Deterioro"] = "";
 	$fieldLabelstest_de_deterioro__resumen_["Spanish"]["DeterioroOtros"] = "Deterioro Otros";
@@ -271,6 +271,72 @@ $tdatatest_de_deterioro__resumen_[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
+	$vdata = array("ViewFormat" => "Custom");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "Custom");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "Custom");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
 	$vdata = array("ViewFormat" => "");
 
 	
@@ -293,7 +359,7 @@ $tdatatest_de_deterioro__resumen_[".hideMobileList"] = array();
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
 
-	$fdata["ViewFormats"]["view"] = $vdata;
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -343,10 +409,98 @@ $tdatatest_de_deterioro__resumen_[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
@@ -962,7 +1116,7 @@ $tdatatest_de_deterioro__resumen_[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -971,16 +1125,14 @@ $tdatatest_de_deterioro__resumen_[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

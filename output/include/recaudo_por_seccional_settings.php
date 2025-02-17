@@ -25,19 +25,19 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsrecaudo_por_seccional["Spanish"] = array();
 	$placeHoldersrecaudo_por_seccional["Spanish"] = array();
 	$pageTitlesrecaudo_por_seccional["Spanish"] = array();
-	$fieldLabelsrecaudo_por_seccional["Spanish"]["Seccional"] = "Seccional";
+	$fieldLabelsrecaudo_por_seccional["Spanish"]["Seccional"] = "DIRECCION SECCIONAL";
 	$fieldToolTipsrecaudo_por_seccional["Spanish"]["Seccional"] = "";
 	$placeHoldersrecaudo_por_seccional["Spanish"]["Seccional"] = "";
-	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaCorr"] = "Reca Corr";
+	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaCorr"] = "CARTERA CORRIENTE";
 	$fieldToolTipsrecaudo_por_seccional["Spanish"]["RecaCorr"] = "";
 	$placeHoldersrecaudo_por_seccional["Spanish"]["RecaCorr"] = "";
-	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaEjem"] = "Reca Ejem";
+	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaEjem"] = "	CARTERA EJEMPLARIZANTE";
 	$fieldToolTipsrecaudo_por_seccional["Spanish"]["RecaEjem"] = "";
 	$placeHoldersrecaudo_por_seccional["Spanish"]["RecaEjem"] = "";
-	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaMinj"] = "Reca Minj";
+	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaMinj"] = "CARTERA MINJUSTICIA";
 	$fieldToolTipsrecaudo_por_seccional["Spanish"]["RecaMinj"] = "";
 	$placeHoldersrecaudo_por_seccional["Spanish"]["RecaMinj"] = "";
-	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaTota"] = "Reca Tota";
+	$fieldLabelsrecaudo_por_seccional["Spanish"]["RecaTota"] = "RECAUDO TOTAL";
 	$fieldToolTipsrecaudo_por_seccional["Spanish"]["RecaTota"] = "";
 	$placeHoldersrecaudo_por_seccional["Spanish"]["RecaTota"] = "";
 	if (count($fieldToolTipsrecaudo_por_seccional["Spanish"]))

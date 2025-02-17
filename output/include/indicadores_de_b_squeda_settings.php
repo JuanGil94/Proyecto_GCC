@@ -25,43 +25,43 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"] = array();
 	$placeHoldersindicadores_de_b_squeda["Spanish"] = array();
 	$pageTitlesindicadores_de_b_squeda["Spanish"] = array();
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["Seccional"] = "Seccional";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["Seccional"] = "DIRECCION SECCIONAL";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["Seccional"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["Seccional"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInic1"] = "Proc Inic1";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInic1"] = "CARTERA CORRIENTE Procesos activos";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcInic1"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcInic1"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFina1"] = "Proc Fina1";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFina1"] = "CARTERA CORRIENTE Procesos sin búsqueda de bienes";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcFina1"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcFina1"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndi1"] = "Proc Indi1";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndi1"] = "CARTERA CORRIENTE Indicadores de gestión búsquedas";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcIndi1"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcIndi1"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInic4"] = "Proc Inic4";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInic4"] = "CARTERA MINJUSTICIA Procesos activos	";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcInic4"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcInic4"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFina4"] = "Proc Fina4";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFina4"] = "CARTERA MINJUSTICIA Procesos sin búsqueda de bienes";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcFina4"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcFina4"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndi4"] = "Proc Indi4";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndi4"] = "CARTERA MINJUSTICIA Indicadores de gestión búsquedas";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcIndi4"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcIndi4"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInic5"] = "Proc Inic5";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInic5"] = "CARTERA EJEMPLARIZANTE Procesos activos";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcInic5"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcInic5"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFina5"] = "Proc Fina5";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFina5"] = "CARTERA EJEMPLARIZANTE Procesos sin búsqueda de bienes";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcFina5"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcFina5"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndi5"] = "Proc Indi5";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndi5"] = "CARTERA EJEMPLARIZANTE Indicadores de gestión búsquedas";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcIndi5"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcIndi5"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInicTota"] = "Proc Inic Tota";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcInicTota"] = "TOTAL Procesos activos";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcInicTota"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcInicTota"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFinaTota"] = "Proc Fina Tota";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcFinaTota"] = "TOTAL  Procesos sin búsqueda de bienes";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcFinaTota"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcFinaTota"] = "";
-	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndiTota"] = "Proc Indi Tota";
+	$fieldLabelsindicadores_de_b_squeda["Spanish"]["ProcIndiTota"] = "TOTAL  Indicadores de gestión búsquedas";
 	$fieldToolTipsindicadores_de_b_squeda["Spanish"]["ProcIndiTota"] = "";
 	$placeHoldersindicadores_de_b_squeda["Spanish"]["ProcIndiTota"] = "";
 	if (count($fieldToolTipsindicadores_de_b_squeda["Spanish"]))
@@ -710,7 +710,7 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -719,16 +719,14 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1125,7 +1123,7 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1134,16 +1132,14 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1540,7 +1536,7 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1549,16 +1545,14 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1955,7 +1949,7 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1964,16 +1958,14 @@ $tdataindicadores_de_b_squeda[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

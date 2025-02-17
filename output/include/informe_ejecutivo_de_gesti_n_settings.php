@@ -25,31 +25,31 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"] = array();
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"] = array();
 	$pageTitlesinforme_ejecutivo_de_gesti_n["Spanish"] = array();
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["Seccional"] = "Seccional";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["Seccional"] = "DIRECCION SECCIONAL";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["Seccional"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["Seccional"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcActi"] = "Proc Acti";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcActi"] = "PROCESOS ACTIVOS AL CORTE DEL PERÍODO No. Proc.";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcActi"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ProcActi"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoActi"] = "Valo Acti";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoActi"] = "PROCESOS ACTIVOS AL CORTE DEL PERÍODO Valor";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoActi"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ValoActi"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPendPres"] = "Proc Pend Pres";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPendPres"] = "PROCESOS PENDIENTES POR PRESCRIBIR AL CORTE DEL PERÍODO No. Proc.";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPendPres"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPendPres"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPendPres"] = "Valo Pend Pres";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPendPres"] = "PROCESOS PENDIENTES POR PRESCRIBIR AL CORTE DEL PERÍODO Valor	";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPendPres"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPendPres"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPresMes"] = "Proc Pres Mes";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPresMes"] = "PROCESOS PRESCRITOS EN EL PERÍODO No. Proc.";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPresMes"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ProcPresMes"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPresMes"] = "Valo Pres Mes";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPresMes"] = "PROCESOS PRESCRITOS EN EL PERÍDO Valor";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPresMes"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ValoPresMes"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcAnal"] = "Proc Anal";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcAnal"] = "ANÁLISIS % AL CORTE DEL PERÍODO No. Proc.";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ProcAnal"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ProcAnal"] = "";
-	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoAnal"] = "Valo Anal";
+	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoAnal"] = "ANÁLISIS % AL CORTE DEL PERÍODO Valor";
 	$fieldToolTipsinforme_ejecutivo_de_gesti_n["Spanish"]["ValoAnal"] = "";
 	$placeHoldersinforme_ejecutivo_de_gesti_n["Spanish"]["ValoAnal"] = "";
 	$fieldLabelsinforme_ejecutivo_de_gesti_n["Spanish"]["CarteraTipo"] = "Cartera Tipo";
@@ -1261,7 +1261,7 @@ $tdatainforme_ejecutivo_de_gesti_n[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1270,16 +1270,14 @@ $tdatainforme_ejecutivo_de_gesti_n[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1400,7 +1398,7 @@ $tdatainforme_ejecutivo_de_gesti_n[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Number");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -1409,16 +1407,14 @@ $tdatainforme_ejecutivo_de_gesti_n[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
-
 	
 	
 	
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;

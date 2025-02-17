@@ -14,6 +14,8 @@
 	// fill list of events
 		$this->events["BeforeProcessList"]=true;
 
+		$this->events["BeforeOut"]=true;
+
 
 	}
 
@@ -278,6 +280,106 @@ function BeforeProcessList($pageObject)
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before Export Record
+function BeforeOut(&$data, &$values, $pageObject)
+{
+
+		
+static $contador = 0; // Variable estática para contar registros
+    $contador++; 
+
+    // Guardamos el total en sesión para usarlo en la última fila
+    $_SESSION["total_export"] = $contador;
+
+    // Agregamos el contador en cada fila
+    $values["Total_Registros"] = $contador;
+    
+    // Si es el último registro, agregamos una fila extra con el total
+    if ($pageObject->numRows == $contador) {
+        return true; // Exportamos normalmente
+    } 
+    
+    // Si es el último registro, agregamos una fila extra con el total
+    if ($pageObject->numRows == $contador) {
+        $values["Seccional"] = "TOTAL";
+        $values["Juzgados"] = "";
+        $values["Mes"] = "";
+        $values["Total_Registros"] = $_SESSION["total_export"];
+        
+        //unset($_SESSION["total_export"]); // Limpiar variable de sesión
+    }
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeOut
+
 		
 		
 		

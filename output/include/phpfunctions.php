@@ -1440,6 +1440,60 @@ $value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f
 ;
 		return $value;
 	}
+				if($table=="Informe ejecutivo de Gestión" && $field=="ProcAnal")
+	{
+		
+
+$value = $value * 100;;
+		return $value;
+	}
+				if($table=="Informe ejecutivo de Gestión" && $field=="ValoAnal")
+	{
+		$value = $value * 100;;
+		return $value;
+	}
+				if($table=="Indicadores de búsqueda" && $field=="ProcIndi1")
+	{
+		$value = $value  * 100;;
+		return $value;
+	}
+				if($table=="Indicadores de búsqueda" && $field=="ProcIndi4")
+	{
+		$value = $value  * 100;;
+		return $value;
+	}
+				if($table=="Indicadores de búsqueda" && $field=="ProcIndi5")
+	{
+		$value = $value  * 100;;
+		return $value;
+	}
+				if($table=="Indicadores de búsqueda" && $field=="ProcIndiTota")
+	{
+		$value = $value  * 100;;
+		return $value;
+	}
+				if($table=="Test de Deterioro (Resumen)" && $field=="Seccional" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="Test de Deterioro (Resumen)" && $field=="Seccional" && $ptype=="list")
+	{
+		$value = strtoupper($value);;
+		return $value;
+	}
+				if($table=="Test de Deterioro (Resumen)" && $field=="Seccional" && $ptype=="print")
+	{
+		$value = strtoupper($value);;
+		return $value;
+	}
+				if($table=="Test de Deterioro (Resumen)" && $field=="Porcentaje")
+	{
+		$value = $value * 100;
+$value = number_format($value, 2, '.', '');
+;
+		return $value;
+	}
 				if($table=="dbo.CorrespondenciaMasiva" && $field=="proceso")
 	{
 		$numero=$value;
