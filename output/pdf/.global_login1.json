@@ -286,7 +286,7 @@ pdfDocument = {
 			{"text":"","hidden":"{$item_hide_password}"},
 				
 				
-			{"text":"    <span class=\"toggle-password\" id=\"spanIdEye\" onclick=\"TogglePassword()\">      👁️    </span><script>  function TogglePassword() {    const passwordInput = document.getElementById(\"password\");      const isPassword = passwordInput.type === \"password\";  // Comprueba si el campo está oculto    passwordInput.type = isPassword ? \"text\" : \"password\";  // Alterna entre mostrar/ocultar  }</script>","hidden":"{$item_hide_text}","isHtml":true},
+			{"text":"<style>\n  .toggle-password {\n    cursor: pointer; /* Cambia el cursor a una mano */\n  }\n</style>\n<span class=\"toggle-password\" onclick=\"TogglePassword()\">\n      👁️\n    </span>\n\n<script>\n  function TogglePassword() {\n    const passwordInput = document.getElementById(\"password\");  \n    const isPassword = passwordInput.type === \"password\";  // Comprueba si el campo está oculto\n    passwordInput.type = isPassword ? \"text\" : \"password\";  // Alterna entre mostrar/ocultar\n  }\n</script>","hidden":"{$item_hide_text}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

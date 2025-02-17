@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc_uggroups["Spanish"]["GroupID"] = "Group ID";
 	$fieldToolTipsusugcc_uggroups["Spanish"]["GroupID"] = "";
 	$placeHoldersusugcc_uggroups["Spanish"]["GroupID"] = "";
-	$fieldLabelsusugcc_uggroups["Spanish"]["Label"] = "Label";
+	$fieldLabelsusugcc_uggroups["Spanish"]["Label"] = "Rol";
 	$fieldToolTipsusugcc_uggroups["Spanish"]["Label"] = "";
 	$placeHoldersusugcc_uggroups["Spanish"]["Label"] = "";
 	$fieldLabelsusugcc_uggroups["Spanish"]["Provider"] = "Provider";
@@ -37,7 +37,8 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsusugcc_uggroups["Spanish"]["Comment"] = "Comment";
 	$fieldToolTipsusugcc_uggroups["Spanish"]["Comment"] = "";
 	$placeHoldersusugcc_uggroups["Spanish"]["Comment"] = "";
-	$pageTitlesusugcc_uggroups["Spanish"]["add"] = "Usu GCC-uggroups";
+	$pageTitlesusugcc_uggroups["Spanish"]["add"] = "Agregar";
+	$pageTitlesusugcc_uggroups["Spanish"]["edit"] = "Editar";
 	if (count($fieldToolTipsusugcc_uggroups["Spanish"]))
 		$tdatausugcc_uggroups[".isUseToolTips"] = true;
 }
@@ -135,7 +136,7 @@ $tdatausugcc_uggroups[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdatausugcc_uggroups[".ajaxCodeSnippetAdded"] = false;
 

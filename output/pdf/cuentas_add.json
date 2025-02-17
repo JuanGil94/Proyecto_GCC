@@ -228,9 +228,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_add_back_list}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_add_cancel}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

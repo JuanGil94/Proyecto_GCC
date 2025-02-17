@@ -36,7 +36,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$placeHoldersusugcc_ugmembers["Spanish"]["Provider"] = "";
 	$pageTitlesusugcc_ugmembers["Spanish"]["list"] = "Roles del Usuario";
 	$pageTitlesusugcc_ugmembers["Spanish"]["add"] = "Rol";
-	$pageTitlesusugcc_ugmembers["Spanish"]["edit"] = "Usu GCC-ugmembers";
+	$pageTitlesusugcc_ugmembers["Spanish"]["edit"] = "Editar Usuario";
 	if (count($fieldToolTipsusugcc_ugmembers["Spanish"]))
 		$tdatausugcc_ugmembers[".isUseToolTips"] = true;
 }
@@ -134,7 +134,7 @@ $tdatausugcc_ugmembers[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdatausugcc_ugmembers[".ajaxCodeSnippetAdded"] = false;
 

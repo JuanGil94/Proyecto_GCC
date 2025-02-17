@@ -169,7 +169,22 @@
 								<div class="r-edit-field" data-itemtype="password" data-itemid="password" {$item_password} data-pageid="{$pageid}" >
 	<input type="password" class="form-control" name="password" {$password_attrs} id="password">
 </div>								<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page=".global_login1" data-small > 
-	    <span class="toggle-password" id="spanIdEye" onclick="TogglePassword()">      👁️    </span><script>  function TogglePassword() {    const passwordInput = document.getElementById("password");      const isPassword = passwordInput.type === "password";  // Comprueba si el campo está oculto    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre mostrar/ocultar  }</script></span>
+	<style>
+  .toggle-password {
+    cursor: pointer; /* Cambia el cursor a una mano */
+  }
+</style>
+<span class="toggle-password" onclick="TogglePassword()">
+      👁️
+    </span>
+
+<script>
+  function TogglePassword() {
+    const passwordInput = document.getElementById("password");  
+    const isPassword = passwordInput.type === "password";  // Comprueba si el campo está oculto
+    passwordInput.type = isPassword ? "text" : "password";  // Alterna entre mostrar/ocultar
+  }
+</script></span>
 					</div>
 		</td>
 			</tr>
