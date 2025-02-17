@@ -55,6 +55,9 @@
 [data-cellid="grid_headcell_checkbox"][data-page="procesoscorrespondencias_list"][data-cellid="grid_headcell_checkbox"][data-page="procesoscorrespondencias_list"][data-cellid="grid_headcell_checkbox"][data-page="procesoscorrespondencias_list"] {
   width: 30px;
 }
+[data-cellid="grid_footcell_field18"][data-page="procesoscorrespondencias_list"][data-cellid="grid_footcell_field18"][data-page="procesoscorrespondencias_list"][data-cellid="grid_footcell_field18"][data-page="procesoscorrespondencias_list"] {
+  white-space: nowrap;
+}
 [data-page="procesoscorrespondencias_list"][data-itemid="page_image_ash8f23hr"] {
   width: 400px;
 }

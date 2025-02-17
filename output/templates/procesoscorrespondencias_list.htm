@@ -129,6 +129,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
 						</div>
 		{END searchCtrlBlock_Costas}
+																{BEGIN searchCtrlBlock_Cartera}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Cartera}" {$filterRow_attrs_Cartera}>
+			<label>{$label dbo_ProcesosCorrespondencias Cartera }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Cartera}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Cartera}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Cartera}</span>
+						</div>
+		{END searchCtrlBlock_Cartera}
 																{BEGIN searchCtrlBlock_Abogado}
 
 
@@ -1057,6 +1070,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_Cartera" checked="checked" value="1" data-field="Cartera" data-fieldname="Cartera">
+					<span>{$label dbo_ProcesosCorrespondencias Cartera }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -1142,6 +1165,9 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Abogado"]:before {
 		content: "{$label dbo_ProcesosCorrespondencias Abogado}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Cartera"]:before {
+		content: "{$label dbo_ProcesosCorrespondencias Cartera}";
 	}
 	}
 </style>
@@ -1629,6 +1655,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field17}
+									{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cartera_class}	"
+
+			data-field="Cartera"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cartera_fieldheadercolumn}
+	{BEGIN Cartera_fieldheader}
+	<SPAN {$Cartera_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cartera" data-fieldname="Cartera">
+	{$label dbo_ProcesosCorrespondencias Cartera }	{$arrow_icon_Cartera}
+	</SPAN>
+	{END Cartera_fieldheader}
+{END Cartera_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
 							</tr>
 															
 					{END grid_header}
@@ -2042,6 +2093,27 @@
 {END Abogado_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field17}
+									{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cartera_class}	"
+
+			data-field="Cartera"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cartera_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field32" {$item_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cartera" data-fieldname="Cartera" data-default-width >
+{$Cartera_value}
+</span>
+{END Cartera_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
 							</tr>
 										
 											{END grid_row}
@@ -2338,6 +2410,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field17}
+									{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Cartera_class}	"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesoscorrespondencias_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
 							</tr>
 					
 					</tfoot>

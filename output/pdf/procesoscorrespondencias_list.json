@@ -121,6 +121,9 @@ pdfDocument = {
 										{BEGIN col_grid_18}
 					"%",
 					{END col_grid_18}
+										{BEGIN col_grid_19}
+					"%",
+					{END col_grid_19}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -878,6 +881,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field17}
+																							{BEGIN cellblock_grid_headcell_field18}
+{
+	cellId: 'headcell_field18',
+	col:0,
+	row:0,
+			fieldName: 'Cartera',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Cartera }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Cartera_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field18}
 											],
 				{END row_grid_0}
 		
@@ -1437,6 +1469,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field17}
+																							{BEGIN cellblock_grid_cell_field18}
+{
+	cellId: 'cell_field18',
+	col:0,
+	row:0,
+			fieldName: 'Cartera',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Cartera_pdfvalue},"hidden":"{$item_hide_grid_field32}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Cartera_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field18}
 											],
 				{END row_grid_1}
 		
@@ -1940,6 +2001,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field17}
+																							{BEGIN cellblock_grid_footcell_field18}
+{
+	cellId: 'footcell_field18',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field18}
 											],
 				{END row_grid_2}
 		

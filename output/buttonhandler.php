@@ -2,21 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1761,7 +1746,8 @@ function buttonHandler_Generar($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	global $dal;
+	
+global $dal;
 include_once (getabspath("classes/actuacionAction.php"));
 include_once (getabspath("classes/calcIntereses.php"));
 include_once (getabspath("plantillaGCC.php"));
@@ -1971,7 +1957,7 @@ $response=DB::Query("SELECT Intereses,ISNULL(EtapaId,0) as EtapaId, ISNULL(Estad
 					$terminacionPago=$date["TermPago"];
 					$flagIntereses=$date["Intereses"];
 				}
-$consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=".$abogadoActual);
+$consulta = DB::Query("SELECT Despacho,Codificador FROM Abogados where AbogadoId=".$abogadoId);
         //$consulta="SELECT * from Tasas where Desde like '%".$a."-".$m."%' and Tipo=1";
             while($date=$consulta->fetchAssoc()){
             $despacho=$date["Despacho"];
@@ -2207,218 +2193,227 @@ if ($flagSigob==0){
 }
 else{
 //echo "Abogado Actual: ".$abogadoActual.", Abogado de Proceso:".$abogadoId;
-//exit();
-  //CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
-//la url de la conexion a Sigob
-$url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
-//$url = 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
-//Parametro a enviar para consumir el metodo
-$data = array(
-    'Despacho' => $despacho,
-    'Codificador' => $codificador,
-    'SoloEditorExterno' => '1',
-    'Contrasena' => '448B8890'
-    // ... Agrega más parámetros según sea necesario
-);
-
-// Convertir los datos a formato de cadena
-$postData = http_build_query($data);
-
-// Configurar opciones de cURL
-$options = array(
-    CURLOPT_URL            => $url,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST           => true,
-    CURLOPT_POSTFIELDS     => $postData,
-);
-
-// Inicializar cURL y configurar opciones
-$curl = curl_init();
-curl_setopt_array($curl, $options);
-
-//NO VALIDAR SI REQUIERE SSL
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-
-// Realizar la solicitud cURL y obtener la respuesta
-$response2 = curl_exec($curl);
-// Verificar errores
-if (curl_errno($curl)) {
-    echo 'Error al realizar la solicitud: ' . curl_error($curl);
-		return false;
-}
-else{
-
-// Imprimir la respuesta del servicio web
-//echo "<br>Valor del metodo NuevaCorrespondencia: ".$response2."<br>";
-$xml = new SimpleXMLElement($response2);
-$radicadoF=strval($xml[0]);
-$_SESSION["Radicado"]=$radicadoF;
-////////
-//CONSUMINOS EL METODO DE ActualizarCorrespondencia de la API SOAP
-$curl = curl_init();
-//SE LLAMA LA FUNCION LA CUAL TOMA LA PLANTILLA Y REEMPLAZA SUS VARIABLES, CREANDO UN NUEVO .DOCX
- $objeto=new plantillas($procesoId,$oficioId,$obligacion,$obligacionTotal,$radicadoF);
- $objeto->funcGlobal();
-//$rutaArchivo = 'Plantilla_1097.docx';
-$noDirecciones=$objeto->getNoDirecciones();
-if ($noDirecciones>1){
-  //echo "Numero de direcciones: ".$noDirecciones.var_dump($noDirecciones);
-$noDirecciones=$noDirecciones-1;//porque las plantillas son XXX_0
-//$docxFiles = array();
-$docxFiles=[];
-for ($i=0;$i<=$noDirecciones;$i++){
-	$docxFiles []='templates_GCC/Archivo_'.$procesoId.'_'.$oficioId.'_'.strval($i).'.docx';
-	//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_'.strval($i).'.docx';
-}
-//print_r($docxFiles);
-//$docxFiles = array('templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx','templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx');
-$salida = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx';
-mergeDocx($docxFiles, $salida);
-}
-else{
-  $rutaArchivo = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx'; 
-}
-$rutaArchivo = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx';
-$bytesDocumento = file_get_contents($rutaArchivo);
-$base64 = base64_encode($bytesDocumento);
-//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx';
-//$rutaArchivo2 = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx';
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
-	//CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
-<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-  <soap12:Body>
-    <ActualizarCorrespondencia xmlns="http://tempuri.org/">
-      <CodigoRegistro>'.$radicadoF.'</CodigoRegistro>
-      <Asunto>'.$asunto.'</Asunto>
-      <Tipo>2</Tipo>
-      <GradoReserva>0</GradoReserva>
-      <Prioridad>0</Prioridad>
-      <MedioEnvio>0</MedioEnvio>
-      <EsperaRespuesta>N</EsperaRespuesta>
-      <FechaEstimadaRespuesta>'.now().'</FechaEstimadaRespuesta>
-      <ResultadoGestion>-1</ResultadoGestion>
-      <Objetivos>11</Objetivos>
-      <FormatoDocumento>1</FormatoDocumento>
-      <Documento>'.$base64.'</Documento>
-      <NombreDocumento>Prueba wsAPICorrespondencia.docx</NombreDocumento>
-      <DocumentoTexto>Texto sin formato del documento</DocumentoTexto>
-      <Firmante>'.$despacho.'</Firmante>
-      <Estado>0</Estado>
-      <DespachoDestino></DespachoDestino>
-      <Vocativo>-1</Vocativo>
-      <Apellido>'.$sancionado.'</Apellido>
-      <Nombre>'.$despachoJuez.'</Nombre>
-      <NumeroDocumento>12345</NumeroDocumento>
-      <Sexo>0</Sexo>
-      <FechaNacimiento>1977/01/01</FechaNacimiento>
-      <Institucion>-1</Institucion>
-      <Cargo>-1</Cargo>
-      <Departamento>-1</Departamento>
-      <Telefono>09811111231</Telefono>
-      <CorreoElectronico>alelamonaca@gmail.com</CorreoElectronico>
-      <Calle>Mi calle</Calle>
-      <Ciudad>Asunción</Ciudad>
-      <ProvinciaDepartamento>Central</ProvinciaDepartamento>
-      <Pais>Paraguay</Pais>
-      <TipoDireccion>1</TipoDireccion>
-      <CodigoRegistroPrecedente></CodigoRegistroPrecedente>
-      <EsRespuesta>0</EsRespuesta>
-      <Contrasena>448B8890</Contrasena>
-    </ActualizarCorrespondencia>
-  </soap12:Body>
-</soap12:Envelope>',
-  CURLOPT_HTTPHEADER => array(
-    'Content-Type: text/xml',
-    'Cookie: ASP.NET_SessionId=4uvpkyerhy21mcwghvyqfuw0'
-  ),
-));
-
-//NO VERIFICAR CERTICADO SSL
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-
-$response = curl_exec($curl);
-if ($response == false) {
-    echo 'Error en la solicitud cURL: ' . curl_error($curl);
-		return false;
-} else {
-//echo '<br>Respuesta de la API Metodo Actualizar Correspondencia: ' . $response;
-$xml = new SimpleXMLElement($response);
-    // Definir el namespace
-    $namespaces = $xml->getNamespaces(true);
-    $soapNamespace = $namespaces['soap'];
-
-    // Acceder al cuerpo del SOAP
-    $body = $xml->children($soapNamespace)->Body;
-
-    // Acceder al namespace específico del cuerpo
-    $responseNamespace = $namespaces[''];
-    $token = $body->children($responseNamespace)->ActualizarCorrespondenciaResponse->ActualizarCorrespondenciaResult;
-		$token=strval($token);
-		$_SESSION["token"]=$token;
-    // Mostrar el resultado
-    //echo "Resultado: " .$token;
-		//var_dump($token);
-		//echo "Result: ".$token ;
-		$ultimosCaracteres = substr($token, -2);
-    //echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y el valor del metodo ActualizarCorrespondencia es: ".$token."')</script>";
-    // Comparar con "=="
-    if ($ultimosCaracteres === "==") {
-				curl_close($curl);
-				$oficio=new coreOficios($actuacionId,$procesoId,now(),$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId,$flagIntereses);
-				$response=$oficio->process();
-				if ($response==true){
-					//echo '<script>alert("Response Oficio->Process true")</script>';
-					$rs2=DB::Exec("INSERT INTO Correspondencias (ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicadoF."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
-				if ($rs2) {
-								$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1,radicado='".$radicadoF."' WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
-						if ($rs2) {
-							 //echo "La consulta se realizó correctamente.";
-						} 
-						else {
-							 // Hubo un error en la ejecución de la consulta
-							 echo "Error al ejecutar el Update en enviado Oficio Sigobius: " . DB::LastError();
-							 exit();
-						}
-					 //echo "La consulta se realizó correctamente.".$rs2;
-				} 
-				else {
-					 // Hubo un error en la ejecución de la consulta
-					 echo "Error al ejecutar la consulta 1: " . DB::LastError();
-					 exit();
-				}
-					//return true;
-				}
-				else{
-					echo '<script>alert("El proceso Numero: '.$numProceso.' presento un problema con el envio de Correspondencias: "'.$response.')</script>';
-					return false;
-				}
-    } elseif($ultimosCaracteres=='') {
-					echo "<script>alert('Error con el Proceso Numero: ".$numProceso.". El codigo obtenido es el: ".$radicadoF." pero no se logro conectividad, intentelo de nuevo')</script>";
-					return false;
-				}
-				else{
-				 echo "<script>alert('Error con el Proceso Numero: ".$numProceso.".El codigo obtenido es el: ".$radicadoF." y se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
-        return false;
-    }
-}
-}
-/*
-else{
-	echo "<script>alert('El Despacho resgistrador no esta autorizado a indicar como firmante al despacho firmante')</script>";
+if ($abogadoActual!=$abogadoId){
+echo "<script>if (confirm('En el proceso ".$numProceso." no se puede enviar la correspondencia Sigobius al no pertenecer al mismo abogado que ejecuta el proceso de envio')) {
+            location.reload(); // Recargar la página si el usuario hace clic en Aceptar
+        }</script>";
+	//echo '<script>alert("En el proceso'.$numProceso.' no se puede enviar la correspondencia Sigobius al no pertenecer al mismo abogado que ejecuat el proceso de envio");</script>';
 	return false;
-}	
-*/
+}
+else{
+	//exit();
+	//CONSUMINOS EL METODO DE NuevaCorrespondencia de la API SOAP
+	//la url de la conexion a Sigob
+	$url = 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
+	//$url = 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx/NuevaCorrespondencia';
+	//Parametro a enviar para consumir el metodo
+	$data = array(
+		'Despacho' => $despacho,
+		'Codificador' => $codificador,
+		'SoloEditorExterno' => '1',
+		'Contrasena' => '448B8890'
+		// ... Agrega más parámetros según sea necesario
+	);
+
+	// Convertir los datos a formato de cadena
+	$postData = http_build_query($data);
+
+	// Configurar opciones de cURL
+	$options = array(
+		CURLOPT_URL            => $url,
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_POST           => true,
+		CURLOPT_POSTFIELDS     => $postData,
+	);
+
+	// Inicializar cURL y configurar opciones
+	$curl = curl_init();
+	curl_setopt_array($curl, $options);
+
+	//NO VALIDAR SI REQUIERE SSL
+	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+	// Realizar la solicitud cURL y obtener la respuesta
+	$response2 = curl_exec($curl);
+	// Verificar errores
+	if (curl_errno($curl)) {
+		echo 'Error al realizar la solicitud: ' . curl_error($curl);
+			return false;
+	}
+	else{
+
+	// Imprimir la respuesta del servicio web
+	//echo "<br>Valor del metodo NuevaCorrespondencia: ".$response2."<br>";
+	$xml = new SimpleXMLElement($response2);
+	$radicadoF=strval($xml[0]);
+	$_SESSION["Radicado"]=$radicadoF;
+	////////
+	//CONSUMINOS EL METODO DE ActualizarCorrespondencia de la API SOAP
+	$curl = curl_init();
+	//SE LLAMA LA FUNCION LA CUAL TOMA LA PLANTILLA Y REEMPLAZA SUS VARIABLES, CREANDO UN NUEVO .DOCX
+	$objeto=new plantillas($procesoId,$oficioId,$obligacion,$obligacionTotal,$radicadoF);
+	$objeto->funcGlobal();
+	//$rutaArchivo = 'Plantilla_1097.docx';
+	$noDirecciones=$objeto->getNoDirecciones();
+	if ($noDirecciones>1){
+	//echo "Numero de direcciones: ".$noDirecciones.var_dump($noDirecciones);
+	$noDirecciones=$noDirecciones-1;//porque las plantillas son XXX_0
+	//$docxFiles = array();
+	$docxFiles=[];
+	for ($i=0;$i<=$noDirecciones;$i++){
+		$docxFiles []='templates_GCC/Archivo_'.$procesoId.'_'.$oficioId.'_'.strval($i).'.docx';
+		//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_'.strval($i).'.docx';
+	}
+	//print_r($docxFiles);
+	//$docxFiles = array('templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx','templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx');
+	$salida = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx';
+	mergeDocx($docxFiles, $salida);
+	}
+	else{
+	$rutaArchivo = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx'; 
+	}
+	$rutaArchivo = 'templates_GCC/ArchivoF_'.$procesoId.'_'.$oficioId.'.docx';
+	$bytesDocumento = file_get_contents($rutaArchivo);
+	$base64 = base64_encode($bytesDocumento);
+	//$rutaArchivo = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_0.docx';
+	//$rutaArchivo2 = 'templates_GCC/Archivo_'.$values["ProcesoId"].'_'.$values["OficioId"].'_1.docx';
+	curl_setopt_array($curl, array(
+	CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/TEST/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
+		//CURLOPT_URL => 'https://sigobwebcsj.ramajudicial.gov.co/wsAPICorrespondencia/srvAPICorrespondencia.asmx',
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_ENCODING => '',
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 0,
+	CURLOPT_FOLLOWLOCATION => true,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_CUSTOMREQUEST => 'POST',
+	CURLOPT_POSTFIELDS =>'<?xml version="1.0" encoding="utf-8"?>
+	<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+	<soap12:Body>
+		<ActualizarCorrespondencia xmlns="http://tempuri.org/">
+		<CodigoRegistro>'.$radicadoF.'</CodigoRegistro>
+		<Asunto>'.$asunto.'</Asunto>
+		<Tipo>2</Tipo>
+		<GradoReserva>0</GradoReserva>
+		<Prioridad>0</Prioridad>
+		<MedioEnvio>0</MedioEnvio>
+		<EsperaRespuesta>N</EsperaRespuesta>
+		<FechaEstimadaRespuesta>'.now().'</FechaEstimadaRespuesta>
+		<ResultadoGestion>-1</ResultadoGestion>
+		<Objetivos>11</Objetivos>
+		<FormatoDocumento>1</FormatoDocumento>
+		<Documento>'.$base64.'</Documento>
+		<NombreDocumento>Prueba wsAPICorrespondencia.docx</NombreDocumento>
+		<DocumentoTexto>Texto sin formato del documento</DocumentoTexto>
+		<Firmante>'.$despacho.'</Firmante>
+		<Estado>0</Estado>
+		<DespachoDestino></DespachoDestino>
+		<Vocativo>-1</Vocativo>
+		<Apellido>'.$sancionado.'</Apellido>
+		<Nombre>'.$despachoJuez.'</Nombre>
+		<NumeroDocumento>12345</NumeroDocumento>
+		<Sexo>0</Sexo>
+		<FechaNacimiento>1977/01/01</FechaNacimiento>
+		<Institucion>-1</Institucion>
+		<Cargo>-1</Cargo>
+		<Departamento>-1</Departamento>
+		<Telefono>09811111231</Telefono>
+		<CorreoElectronico>alelamonaca@gmail.com</CorreoElectronico>
+		<Calle>Mi calle</Calle>
+		<Ciudad>Asunción</Ciudad>
+		<ProvinciaDepartamento>Central</ProvinciaDepartamento>
+		<Pais>Paraguay</Pais>
+		<TipoDireccion>1</TipoDireccion>
+		<CodigoRegistroPrecedente></CodigoRegistroPrecedente>
+		<EsRespuesta>0</EsRespuesta>
+		<Contrasena>448B8890</Contrasena>
+		</ActualizarCorrespondencia>
+	</soap12:Body>
+	</soap12:Envelope>',
+	CURLOPT_HTTPHEADER => array(
+		'Content-Type: text/xml',
+		'Cookie: ASP.NET_SessionId=4uvpkyerhy21mcwghvyqfuw0'
+	),
+	));
+
+	//NO VERIFICAR CERTICADO SSL
+	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+
+	$response = curl_exec($curl);
+	if ($response == false) {
+		echo 'Error en la solicitud cURL: ' . curl_error($curl);
+			return false;
+	} else {
+	//echo '<br>Respuesta de la API Metodo Actualizar Correspondencia: ' . $response;
+	$xml = new SimpleXMLElement($response);
+		// Definir el namespace
+		$namespaces = $xml->getNamespaces(true);
+		$soapNamespace = $namespaces['soap'];
+
+		// Acceder al cuerpo del SOAP
+		$body = $xml->children($soapNamespace)->Body;
+
+		// Acceder al namespace específico del cuerpo
+		$responseNamespace = $namespaces[''];
+		$token = $body->children($responseNamespace)->ActualizarCorrespondenciaResponse->ActualizarCorrespondenciaResult;
+			$token=strval($token);
+			$_SESSION["token"]=$token;
+		// Mostrar el resultado
+		//echo "Resultado: " .$token;
+			//var_dump($token);
+			//echo "Result: ".$token ;
+			$ultimosCaracteres = substr($token, -2);
+		//echo "<script>alert('El codigo obtenido es el: ".$radicadoF." y el valor del metodo ActualizarCorrespondencia es: ".$token."')</script>";
+		// Comparar con "=="
+		if ($ultimosCaracteres === "==") {
+					curl_close($curl);
+					$oficio=new coreOficios($actuacionId,$procesoId,now(),$resolucion,$radicado,$observaciones,$userId,$etapaId,$estadoId,$motivoId,$flagIntereses);
+					$response=$oficio->process();
+					if ($response==true){
+						//echo '<script>alert("Response Oficio->Process true")</script>';
+						$rs2=DB::Exec("INSERT INTO Correspondencias (ProcesoId,OficioId,Fecha,Sigobius,Observaciones,Resolucion,Codigo,Radicado,UserId,AbogadoId) VALUES (".$procesoId.",".$oficioId.",GETDATE(),".$contSigob.",'".$observaciones."','".$resolucion."','".$token."','".$radicadoF."','".$_SESSION["UserId"]."','".$_SESSION["AbogadoId"]."')");
+					if ($rs2) {
+									$rs2=DB::Exec("UPDATE CorrespondenciaMasiva SET enviado=1,radicado='".$radicadoF."' WHERE proceso=".$procesoId." and correspondencia=".$oficioId." and enviado=0 and usuario='".$userId."' and CAST(fecha AS DATE) = CAST(GETDATE() AS DATE)");
+							if ($rs2) {
+								//echo "La consulta se realizó correctamente.";
+							} 
+							else {
+								// Hubo un error en la ejecución de la consulta
+								echo "Error al ejecutar el Update en enviado Oficio Sigobius: " . DB::LastError();
+								exit();
+							}
+						//echo "La consulta se realizó correctamente.".$rs2;
+					} 
+					else {
+						// Hubo un error en la ejecución de la consulta
+						echo "Error al ejecutar la consulta 1: " . DB::LastError();
+						exit();
+					}
+						//return true;
+					}
+					else{
+						echo '<script>alert("El proceso Numero: '.$numProceso.' presento un problema con el envio de Correspondencias: "'.$response.')</script>';
+						return false;
+					}
+		} elseif($ultimosCaracteres=='') {
+						echo "<script>alert('Error con el Proceso Numero: ".$numProceso.". El codigo obtenido es el: ".$radicadoF." pero no se logro conectividad, intentelo de nuevo')</script>";
+						return false;
+					}
+					else{
+					echo "<script>alert('Error con el Proceso Numero: ".$numProceso.".El codigo obtenido es el: ".$radicadoF." y se presento un error: ".$token.", solucionarlo o de no ser solucionable, intentelo mas tarde')</script>";
+			return false;
+		}
+	}
+	}
+	/*
+	else{
+		echo "<script>alert('El Despacho resgistrador no esta autorizado a indicar como firmante al despacho firmante')</script>";
+		return false;
+	}	
+	*/
+	}
 }
 $contSigob++;
 //echo "Valor contador Antes:".$contData."Contador Sigob".$contSigob;

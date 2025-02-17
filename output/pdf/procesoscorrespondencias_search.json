@@ -219,6 +219,9 @@ pdfDocument = {
 				
 			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
 				
+				
+			{"text":{$Cartera_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
