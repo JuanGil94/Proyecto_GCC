@@ -166,13 +166,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$fecha_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
-				
-				
-			{"text":{$proceso_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
 			{"text":{$correspondencia_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
@@ -182,9 +176,6 @@ pdfDocument = {
 				
 				
 			{"text":{$enviado_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
-				
-				
-			{"text":{$observaciones_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
 			{"text":{$radicado_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},

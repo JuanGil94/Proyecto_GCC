@@ -115,6 +115,9 @@ pdfDocument = {
 										{BEGIN col_grid_16}
 					"%",
 					{END col_grid_16}
+										{BEGIN col_grid_17}
+					"%",
+					{END col_grid_17}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -350,7 +353,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Numero }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Numero }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -379,7 +382,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias N_Minjusticia }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias N_Minjusticia }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -408,7 +411,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Deudor }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Deudor }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -437,7 +440,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Solidario }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Solidario }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -466,7 +469,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias T_Documento }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias T_Documento }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -495,7 +498,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Documento }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Documento }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -524,7 +527,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Concepto }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Concepto }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -553,7 +556,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias No_Radicado_Origen }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias No_Radicado_Origen }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -582,7 +585,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Competencia }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Competencia }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -611,7 +614,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Creaci_n }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Creaci_n }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -640,7 +643,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Providencia }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Providencia }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -669,7 +672,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Ejecutoria }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Ejecutoria }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -698,7 +701,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Acuerdo_Pago }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias F_Acuerdo_Pago }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -727,7 +730,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Estado }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Estado }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -756,7 +759,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_ProcesosCorrespondencias Abogado }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Abogado }","hidden":"{$item_hide_simple_grid_field34}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -766,6 +769,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field16}
+																							{BEGIN cellblock_grid_headcell_field17}
+{
+	cellId: 'headcell_field17',
+	col:0,
+	row:0,
+			fieldName: 'Cartera',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_ProcesosCorrespondencias Cartera }","hidden":"{$item_hide_simple_grid_field35}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Cartera_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field17}
 											],
 				{END row_grid_0}
 		
@@ -1268,6 +1300,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field16}
+																							{BEGIN cellblock_grid_cell_field17}
+{
+	cellId: 'cell_field17',
+	col:0,
+	row:0,
+			fieldName: 'Cartera',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Cartera_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Cartera_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field17}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -1469,6 +1530,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  16,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  17,
 				text: ''
 			},
 							],
@@ -1922,6 +1989,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field16}
+																							{BEGIN cellblock_grid_footcell_field17}
+{
+	cellId: 'footcell_field17',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field17}
 											],
 				{END row_grid_3}
 		
