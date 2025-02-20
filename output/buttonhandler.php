@@ -2,6 +2,21 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1165,6 +1180,46 @@ if($buttId=='Calc')
 		$cipherer = new RunnerCipherer( $table );
 	}
 	buttonHandler_Calc($params);
+}
+if($buttId=='Gestion_imprimir')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Gestion_imprimir($params);
+}
+if($buttId=='Buscar_gestion_medidas')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Buscar_gestion_medidas($params);
+}
+if($buttId=='Buscar_Procesos_Sin_Medidas')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Buscar_Procesos_Sin_Medidas($params);
+}
+if($buttId=='Clean')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Clean($params);
 }
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
@@ -5691,7 +5746,22 @@ function buttonHandler_Buscar6($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 		
-	$_SESSION['transacciones_ano_mes'] = $params['transacciones_ano_mes'].'-01';;
+		
+	$_SESSION['transacciones_ano_mes'] = $params['transacciones_ano_mes'].'-01';
+	$username = $_SESSION["UserNameF"];
+
+	$sql = "select UserId from UserProfile where UserName = '$username'";
+	
+	$resultado = CustomQuery($sql);
+
+			// Obtener el valor de reset_date
+			if ($data = db_fetch_array($resultado)) {
+				 $UserId = $data["UserId"];
+			} else {
+				 $UserId = null; // Asegurarse de que tenga un valor nulo en caso de error
+			}
+
+	$_SESSION['UserId'] = $UserId;;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -12450,6 +12520,286 @@ function buttonHandler_Calc($params)
 $recalcular=new reliquidacion($params["ProcesoId"]);
 $meses = $recalcular->Calcular3(date('Y-m-d'),0);
 //exit();;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Gestion_imprimir($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$result["txt"] = $params["txt"]." world!";
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Buscar_gestion_medidas($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	$_SESSION['Gestion_medidas'] = $params['Gestion_medidas'].'-01';// Put your code here.
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Buscar_Procesos_Sin_Medidas($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+$username = $_SESSION["UserNameF"];
+
+$carterasSeleccionadas = $params["selectedCarteras"];
+
+if (!empty($carterasSeleccionadas)) {
+    foreach ($carterasSeleccionadas as $index => $carteraId) {
+        if ($index < 5) { // Limitar a las primeras 5 carteras
+            $_SESSION["cartera" . ($index + 1)] = $carteraId; // Almacenar en variables de sesión
+            echo "Cartera seleccionada: " . htmlspecialchars($carteraId) . "<br>";
+        }
+    }
+} else {
+    //echo "No se seleccionó ninguna cartera.";
+}
+
+$seccionalesSeleccionados = $params["selectedSeccionales"];
+
+if (!empty($seccionalesSeleccionados)) {
+    foreach ($seccionalesSeleccionados as $index2 => $seccionalId) {
+        if ($index2 < 25) { // Limitar a las primeras 5 carteras
+            $_SESSION["seccional" . ($index2 + 1)] = $seccionalId; // Almacenar en variables de sesión
+            echo "Seccional seleccionado: " . htmlspecialchars($seccionalId) . "<br>";
+        }
+    }
+} else {
+    //echo "No se seleccionó ninguna Seccional.";
+}
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Clean($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	// Put your code here.
+				unset($_SESSION['cartera_id_report']);
+				unset($_SESSION['seccional_id_report']);
+				unset($_SESSION['cartera1']);
+			unset($_SESSION['cartera2']);
+			unset($_SESSION['cartera3']); 
+			unset($_SESSION['cartera4']);
+			unset($_SESSION['cartera5']);
+			unset($_SESSION['seccional1']);
+			unset($_SESSION['seccional2']);
+			unset($_SESSION['seccional3']); 
+			unset($_SESSION['seccional4']);
+			unset($_SESSION['seccional5']);
+			unset($_SESSION['seccional6']);
+			unset($_SESSION['seccional7']);
+			unset($_SESSION['seccional8']); 
+			unset($_SESSION['seccional9']);
+			unset($_SESSION['seccional10']);
+			unset($_SESSION['seccional11']);
+			unset($_SESSION['seccional12']);
+			unset($_SESSION['seccional13']); 
+			unset($_SESSION['seccional14']);
+			unset($_SESSION['seccional15']);
+			unset($_SESSION['seccional16']);
+			unset($_SESSION['seccional17']);
+			unset($_SESSION['seccional18']); 
+			unset($_SESSION['seccional19']);
+			unset($_SESSION['seccional20']);
+			unset($_SESSION['seccional21']);
+			unset($_SESSION['seccional22']);
+			unset($_SESSION['seccional23']); 
+			unset($_SESSION['seccional24']);
+			unset($_SESSION['seccional25']);
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

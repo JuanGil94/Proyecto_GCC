@@ -5,11 +5,13 @@ $topstransacciones_usuario = array();
 		"sql" => "DECLARE @Fecha DATE = ':session.transacciones_ano_mes'
 DECLARE @Ano INT = YEAR(@Fecha)
 DECLARE @Mes INT = MONTH(@Fecha)
-
-SELECT CarteraTipo,Oficio,COUNT(*) AS OficioCount,Nombre,Seccional
+ 
+ 
+SELECT CarteraTipo,Oficio,COUNT(*) AS OficioCount,Nombre,Seccional,SeccionalId
 FROM (
     SELECT CarteraTipos.CarteraTipo, 
            Seccionales.Seccional, 
+		   UsuariosSeccionales.SeccionalId,
            UserProfile.Nombre, 
            YEAR(CONVERT(DATE, Auditorias.Fecha)) AS Ano, 
            MONTH(CONVERT(DATE, Auditorias.Fecha)) AS Mes, 
@@ -21,17 +23,19 @@ FROM (
          INNER JOIN Procesos ON Correspondencias.ProcesoId = Procesos.ProcesoId
          INNER JOIN CarteraTipos ON Procesos.CarteraTipoId = CarteraTipos.CarteraTipoId
          INNER JOIN Seccionales ON Procesos.SeccionalId = Seccionales.SeccionalId
+		 INNER JOIN UsuariosSeccionales on Seccionales.SeccionalId = UsuariosSeccionales.SeccionalId
          INNER JOIN UserProfile ON Auditorias.UserId = UserProfile.UserId
     WHERE Auditorias.Tabla IN ('Correspondencias')
           AND AuditoriasDetalle.Campo = 'Oficio'
           AND YEAR(CONVERT(DATE, Auditorias.Fecha)) = @Ano
           AND MONTH(CONVERT(DATE, Auditorias.Fecha)) = @Mes
-          --AND UserProfile.Nombre = 'Christian Hernan Obando Saavedra'
-
+          AND UsuariosSeccionales.UserId =  ':session.UserId'
+ 
     UNION ALL
-
+ 
     SELECT CarteraTipos.CarteraTipo, 
            Seccionales.Seccional, 
+		   UsuariosSeccionales.SeccionalId,
            UserProfile.Nombre, 
            YEAR(CONVERT(DATE, Auditorias.Fecha)) AS Ano, 
            MONTH(CONVERT(DATE, Auditorias.Fecha)) AS Mes, 
@@ -40,6 +44,7 @@ FROM (
     FROM CarteraTipos
          INNER JOIN Chequeos ON CarteraTipos.CarteraTipoId = Chequeos.CarteraTipoId
          INNER JOIN Seccionales ON Chequeos.SeccionalId = Seccionales.SeccionalId
+		 INNER JOIN UsuariosSeccionales on Seccionales.SeccionalId = UsuariosSeccionales.SeccionalId
          INNER JOIN UserProfile 
          INNER JOIN Auditorias ON UserProfile.UserId = Auditorias.UserId
          INNER JOIN AuditoriasDetalle ON Auditorias.AuditoriaId = AuditoriasDetalle.AuditoriaId
@@ -48,8 +53,9 @@ FROM (
           AND AuditoriasDetalle.Campo = 'Oficio'
           AND YEAR(CONVERT(DATE, Auditorias.Fecha)) = @Ano
           AND MONTH(CONVERT(DATE, Auditorias.Fecha)) = @Mes
+		  AND UsuariosSeccionales.UserId =  ':session.UserId'
 ) AS SubQuery
-GROUP BY Nombre,Oficio,CarteraTipo,Seccional;"
+GROUP BY Nombre,Oficio,CarteraTipo,Seccional,SeccionalId;"
 	);
 		$tables_data["Transacciones Usuario"][".operations"] = &$topstransacciones_usuario;
 ?>

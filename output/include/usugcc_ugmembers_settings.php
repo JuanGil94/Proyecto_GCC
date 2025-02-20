@@ -134,7 +134,7 @@ $tdatausugcc_ugmembers[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	
 
 $tdatausugcc_ugmembers[".ajaxCodeSnippetAdded"] = false;
 
@@ -749,6 +749,24 @@ $masterTablesData["dbo.UsuGCC-ugmembers"] = array();
 	$masterTablesData["dbo.UsuGCC-ugmembers"][0]["masterKeys"][]="username";
 				$masterTablesData["dbo.UsuGCC-ugmembers"][0]["detailKeys"] = array();
 	$masterTablesData["dbo.UsuGCC-ugmembers"][0]["detailKeys"][]="UserName";
+		
+	//endif
+	
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="dbo.UserProfile";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="dbo.UserProfile";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "userprofile";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["dbo.UsuGCC-ugmembers"][1] = $masterParams;
+				$masterTablesData["dbo.UsuGCC-ugmembers"][1]["masterKeys"] = array();
+	$masterTablesData["dbo.UsuGCC-ugmembers"][1]["masterKeys"][]="UserName";
+				$masterTablesData["dbo.UsuGCC-ugmembers"][1]["detailKeys"] = array();
+	$masterTablesData["dbo.UsuGCC-ugmembers"][1]["detailKeys"][]="UserName";
 		
 	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//

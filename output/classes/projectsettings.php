@@ -3970,6 +3970,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "bdme_publica" ] = "BDME Publica";
 	$projectEntities[ "dbo.Seccionales2" ] = array( "url" => "seccionales2", "type" => 1 );
 	$projectEntitiesReverse[ "seccionales2" ] = "dbo.Seccionales2";
+	$projectEntities[ "Gestión Medidas Cautelares" ] = array( "url" => "gesti_n_medidas_cautelares", "type" => 6 );
+	$projectEntitiesReverse[ "gesti_n_medidas_cautelares" ] = "Gestión Medidas Cautelares";
+	$projectEntities[ "Procesos Sin Medidas Cautelares" ] = array( "url" => "procesos_sin_medidas_cautelares", "type" => 6 );
+	$projectEntitiesReverse[ "procesos_sin_medidas_cautelares" ] = "Procesos Sin Medidas Cautelares";
 }
 
 function findTable( $table ) {

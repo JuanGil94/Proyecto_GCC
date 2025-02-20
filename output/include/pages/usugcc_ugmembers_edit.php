@@ -1,7 +1,8 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.UsuGCC-uggroups' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
-'master' => array( 'dbo.UsuGCC-_users' => array( 'preview' => false ) ),
+'master' => array( 'dbo.UsuGCC-_users' => array( 'preview' => false ),
+'dbo.UserProfile' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'UserName',
 'GroupID' ),

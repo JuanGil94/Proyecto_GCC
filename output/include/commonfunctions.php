@@ -637,6 +637,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("seccionales2" == $shortTName )
 		return true;
+	if ("gesti_n_medidas_cautelares" == $shortTName )
+		return true;
+	if ("procesos_sin_medidas_cautelares" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2640,6 +2644,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.Seccionales2";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Gestión Medidas Cautelares");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Gestión Medidas Cautelares";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Procesos Sin Medidas Cautelares");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Procesos Sin Medidas Cautelares";
+	}
 	return $arr;
 }
 
@@ -2866,6 +2888,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="PersuasivosAutomaticos";
 	$arr[]="BDME Publica";
 	$arr[]="dbo.Seccionales2";
+	$arr[]="Gestión Medidas Cautelares";
+	$arr[]="Procesos Sin Medidas Cautelares";
 	return $arr;
 }
 
@@ -5450,6 +5474,24 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.Seccionales2" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Gestión Medidas Cautelares" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Procesos Sin Medidas Cautelares" )
 	{
 		if( $sUserGroup=="<Guest>" )
 		{

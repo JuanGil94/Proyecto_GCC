@@ -162,7 +162,7 @@ $tdataprescripcionautomatica[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdataprescripcionautomatica[".ajaxCodeSnippetAdded"] = false;
 

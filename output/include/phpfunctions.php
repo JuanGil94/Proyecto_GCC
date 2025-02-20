@@ -1506,6 +1506,40 @@ $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Nu
 $value='<a href="'.$_SESSION["BeforePath"].'/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';;
 		return $value;
 	}
+				if($table=="Gestión Medidas Cautelares" && $field=="ProcIndi1")
+	{
+		$value = number_format($value * 100, 2, '.', '');
+;
+		return $value;
+	}
+				if($table=="Gestión Medidas Cautelares" && $field=="ProcIndi4")
+	{
+		$value = number_format($value * 100, 2, '.', '');
+;
+		return $value;
+	}
+				if($table=="Gestión Medidas Cautelares" && $field=="ProcIndi5")
+	{
+		$value = number_format($value * 100, 2, '.', '');
+;
+		return $value;
+	}
+				if($table=="Gestión Medidas Cautelares" && $field=="ProcIndiTota")
+	{
+		$value = number_format($value * 100, 2, '.', '');
+;
+		return $value;
+	}
+				if($table=="Procesos Sin Medidas Cautelares" && $field=="Numero")
+	{
+		$numero = $value;
+$beforePath = $_SESSION['BeforePath'];
+
+// Generar el hipervínculo en HTML
+$value = '<a href="' . $beforePath . '/procesos_list.php?qs='.$numero.'~Numero&f=all" target="_blank">'.$numero.'</a>';
+;
+		return $value;
+	}
 	return $value;
 }
 

@@ -138,7 +138,7 @@ $tdatatransacciones_usuario[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																															
+																																																																																																																																																																																																																																																																																																																																																																																																																											
 
 $tdatatransacciones_usuario[".ajaxCodeSnippetAdded"] = false;
 
@@ -1660,6 +1660,7 @@ $tdatatransacciones_usuario[".sqlquery"] = $queryData_transacciones_usuario;
 
 
 
-$tdatatransacciones_usuario[".hasEvents"] = false;
+include_once(getabspath("include/transacciones_usuario_events.php"));
+$tdatatransacciones_usuario[".hasEvents"] = true;
 
 ?>

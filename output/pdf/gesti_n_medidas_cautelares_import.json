@@ -1,0 +1,177 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Gesti_n_Medidas_Cautelares import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				
+			{"text":{$Seccional_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$ProcInic1_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$ProcInic120_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$ProcFina1_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$ProcIndi1_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$ProcInic4_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$ProcInic420_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$ProcFina4_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$ProcIndi4_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$ProcInic5_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$ProcInic520_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$ProcFina5_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$ProcIndi5_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$ProcInicTota_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$ProcInicTota20_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$ProcFinaTota_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$ProcIndiTota_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+};
+
+pdfFonts = {$pdfFonts};
+  

@@ -158,7 +158,7 @@ $tdataremanentes_report[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																															
+																																																																																																																																																																																																																																																																																																																																																																																																																											
 
 $tdataremanentes_report[".ajaxCodeSnippetAdded"] = false;
 

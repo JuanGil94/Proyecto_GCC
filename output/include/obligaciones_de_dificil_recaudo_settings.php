@@ -168,7 +168,7 @@ $tdataobligaciones_de_dificil_recaudo[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																															
+																																																																																																																																																																																																																																																																																																																																																																																																																											
 
 $tdataobligaciones_de_dificil_recaudo[".ajaxCodeSnippetAdded"] = false;
 

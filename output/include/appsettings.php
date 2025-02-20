@@ -751,9 +751,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4319_1736950393";
+$projectBuildKey = "4382_1736950393";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4319";
+$projectBuildNumber = "4382";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -995,6 +995,8 @@ $tableCaptions["Spanish"]["admin_users"] = "Admin Users";
 $tableCaptions["Spanish"]["PersuasivosAutomaticos"] = "Persuasivos Automaticos";
 $tableCaptions["Spanish"]["BDME_Publica"] = "BDME Publica";
 $tableCaptions["Spanish"]["dbo_Seccionales2"] = "Seccionales2";
+$tableCaptions["Spanish"]["Gesti_n_Medidas_Cautelares"] = "Gestión Medidas Cautelares";
+$tableCaptions["Spanish"]["Procesos_Sin_Medidas_Cautelares"] = "Procesos Sin Medidas Cautelares";
 
 
 $globalEvents = new class_GlobalEvents;

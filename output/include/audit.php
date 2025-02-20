@@ -1276,6 +1276,14 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="Gestión Medidas Cautelares")
+		{
+			return false;
+		}
+		if($table=="Procesos Sin Medidas Cautelares")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2505,6 +2513,14 @@ class AuditTrailFile
 		if($table=="dbo.Seccionales2")
 		{
 			return true;
+		}
+		if($table=="Gestión Medidas Cautelares")
+		{
+			return false;
+		}
+		if($table=="Procesos Sin Medidas Cautelares")
+		{
+			return false;
 		}
 	}
 

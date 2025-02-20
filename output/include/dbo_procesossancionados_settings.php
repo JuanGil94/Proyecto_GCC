@@ -180,7 +180,7 @@ $tdatadbo_procesossancionados[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
 
 $tdatadbo_procesossancionados[".ajaxCodeSnippetAdded"] = false;
 
