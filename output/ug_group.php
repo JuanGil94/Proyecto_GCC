@@ -231,6 +231,8 @@ $nonAdminTablesArr[] = "dbo.AlertasOficios";
 $nonAdminTablesArr[] = "PersuasivosAutomaticos";
 $nonAdminTablesArr[] = "BDME Publica";
 $nonAdminTablesArr[] = "dbo.Seccionales2";
+$nonAdminTablesArr[] = "Gestión Medidas Cautelares";
+$nonAdminTablesArr[] = "Procesos Sin Medidas Cautelares";
 
 $ug_connection = $cman->getForUserGroups();
 

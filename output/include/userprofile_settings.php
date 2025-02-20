@@ -151,7 +151,7 @@ $tdatauserprofile[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																															
+																																																																																																																																																																																																																																																																																																																																																																																																																											
 
 $tdatauserprofile[".ajaxCodeSnippetAdded"] = false;
 
@@ -1786,6 +1786,36 @@ $detailsTablesData["dbo.UserProfile"] = array();
 				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="username";
+//	dbo.UsuGCC-ugmembers
+	
+	
+
+		$dIndex = 6;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="dbo.UsuGCC-ugmembers";
+		$detailsParam["dOriginalTable"] = "dbo.UsuGCC-ugmembers";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usugcc_ugmembers";
+	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_UsuGCC_ugmembers");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["dbo.UserProfile"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["masterKeys"][]="UserName";
+
+				$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["dbo.UserProfile"][$dIndex]["detailKeys"][]="UserName";
 //endif
 
 // tables which are master tables for current table (detail)

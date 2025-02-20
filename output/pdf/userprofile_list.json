@@ -767,6 +767,11 @@ pdfDocument = {
 			{$displayDetailTable_usugcc__users }
 		{END details_usugcc__users},
 				
+				
+			 {BEGIN details_usugcc_ugmembers}
+			{$displayDetailTable_usugcc_ugmembers }
+		{END details_usugcc_ugmembers},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

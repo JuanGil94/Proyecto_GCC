@@ -187,6 +187,9 @@ class class_GlobalEvents extends eventsBase
 		$this->events["newpassl__snippet"] = true;
 		$this->events["confirmnew_pass__snippet"] = true;
 		$this->events["BDME_Publica_Documento"] = true;
+		$this->events["Gesti_n_Medidas_Cautelares_mes"] = true;
+		$this->events["Procesos_Sin_Medidas_Cautelares_cartera"] = true;
+		$this->events["Procesos_Sin_Medidas_Cautelares_Seccional"] = true;
 
 
 
@@ -5929,6 +5932,113 @@ echo '<script>
 	echo "<label value='' style='margin-right: 20px;'>Documento de identidad: </label><br>
 <input type='number' id='BDME_Consulta_Doc_SancionadoId' required oninput='this.setCustomValidity(\"\"); if (!/^\d+$/.test(this.value)) { this.setCustomValidity(\"Solo se permiten números.\"); }'></input>";
 
+	;
+}
+	function event_Gesti_n_Medidas_Cautelares_mes(&$params)
+	{
+	echo "<label for='Gestion_medidas' style='margin-right: 20px;'>Mes: </label>";
+echo "<input type='month' id='Gestion_medidas' name='mes' value='" . date('Y-m') . "' required><br>";
+	;
+}
+	function event_Procesos_Sin_Medidas_Cautelares_cartera(&$params)
+	{
+	// Put your code here.
+$U_user = $_SESSION["UserNameF"];
+
+// Ejecutar la consulta
+echo "<label for='' style='margin-right: 40px;'>Seleccione Cartera: </label><br>";
+echo '<button id="toggle-checkboxes">Mostrar Carteras</button>';
+
+
+
+$sql1 = "select UC.CarteraTipoId AS CarteraTipoId, CT.CarteraTipo AS CarteraTipo
+from UsuariosCarteraTipos UC 
+inner join UserProfile UP ON UP.UserId = UC.UserId
+inner join CarteraTipos CT on UC.CarteraTipoId = CT.CarteraTipoId
+where UP.UserName = '$U_user'
+GROUP BY  CT.CarteraTipo,UP.UserName, UC.CarteraTipoId ORDER BY CarteraTipo ASC";
+
+$result1 = DB::Query($sql1);
+
+echo '<div id="checkbox-container" class="checkbox-container" style="display: none;">';
+if ($result1) {
+    // Fetch each row as an associative array
+    while ($row1 = $result1->fetchAssoc()) {
+        $carteraId = $row1['CarteraTipoId'];
+        $cartera = $row1['CarteraTipo'];
+        
+        // Genera el checkbox en lugar de un option
+        echo "<div class='checkbox-item'>";
+        echo "<input type='checkbox' id='cartera_$carteraId' name='cartera[]' value='$carteraId'>";
+        echo "<label for='cartera_$carteraId'>$cartera</label>";
+        echo "</div>";
+    }
+} else {
+    echo "<div>Error en la consulta</div>";
+}
+echo '</div>';
+
+
+echo "<script>document.getElementById('toggle-checkboxes').addEventListener('click', function() {
+    var container = document.getElementById('checkbox-container');
+    
+    // Alterna la visibilidad del contenedor
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'flex'; // Mostrar el contenedor
+        this.textContent = 'Ocultar Carteras'; // Cambiar el texto del botón
+    } else {
+        container.style.display = 'none'; // Ocultar el contenedor
+        this.textContent = 'Mostrar Carteras'; // Cambiar el texto del botón
+    }
+});
+ </script>";
+	;
+}
+	function event_Procesos_Sin_Medidas_Cautelares_Seccional(&$params)
+	{
+	$U_user = $_SESSION["UserNameF"];
+
+$sql = "Select US.SeccionalId as SeccionalId, S.Seccional as Seccional from UserProfile UP inner join UsuariosSeccionales US ON US.UserId = UP.UserId 
+inner join Seccionales S on S.SeccionalId = US.SeccionalId 
+WHERE UP.UserName = '$U_user'
+GROUP BY  S.Seccional,UP.UserName, US.SeccionalId ORDER BY Seccional ASC";
+
+$result = DB::Query($sql);
+// Verificar si el resultado es válido
+
+echo "<label for='' style='margin-right: 20px;'>Seccional: </label><br>";
+echo '<button id="toggle-checkboxes_seccional">Mostrar Seccionales</button>';
+echo '<div id="checkbox-container_seccional" class="checkbox-container" style="display: none;">';
+if ($result) {
+    // Fetch each row as an associative array
+    while ($row1 = $result->fetchAssoc()) {
+        $seccionalId = $row1['SeccionalId'];
+        $seccional = $row1['Seccional'];
+        
+        // Genera el checkbox en lugar de un option
+        echo "<div class='checkbox-item'>";
+        echo "<input type='checkbox' id='seccional_$seccionalId' name='seccional[]' value='$seccionalId'>";
+        echo "<label for='seccional_$seccionalId'>$seccional</label>";
+        echo "</div>";
+    }
+} else {
+    echo "<div>Error en la consulta</div>";
+}
+echo '</div>';
+
+echo "<script>document.getElementById('toggle-checkboxes_seccional').addEventListener('click', function() {
+    var container = document.getElementById('checkbox-container_seccional');
+    
+    // Alterna la visibilidad del contenedor
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'flex'; // Mostrar el contenedor
+        this.textContent = 'Ocultar Seccionales'; // Cambiar el texto del botón
+    } else {
+        container.style.display = 'none'; // Ocultar el contenedor
+        this.textContent = 'Mostrar Seccionales'; // Cambiar el texto del botón
+    }
+});
+ </script>";
 	;
 }
 

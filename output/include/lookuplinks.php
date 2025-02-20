@@ -3351,6 +3351,34 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades1"]["seccionales2.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades1"]["seccionales2.CiudadId"]["edit"] = array("table" => "dbo.Seccionales2", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"] ) ) {
+			$lookupTableLinks["dbo.CarteraTipos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.CarteraTipos"]["procesos_sin_medidas_cautelares.CarteraTipoId"] )) {
+			$lookupTableLinks["dbo.CarteraTipos"]["procesos_sin_medidas_cautelares.CarteraTipoId"] = array();
+		}
+		$lookupTableLinks["dbo.CarteraTipos"]["procesos_sin_medidas_cautelares.CarteraTipoId"]["edit"] = array("table" => "Procesos Sin Medidas Cautelares", "field" => "CarteraTipoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Seccionales2"] ) ) {
+			$lookupTableLinks["dbo.Seccionales2"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Seccionales2"]["procesos_sin_medidas_cautelares.SeccionalId"] )) {
+			$lookupTableLinks["dbo.Seccionales2"]["procesos_sin_medidas_cautelares.SeccionalId"] = array();
+		}
+		$lookupTableLinks["dbo.Seccionales2"]["procesos_sin_medidas_cautelares.SeccionalId"]["edit"] = array("table" => "Procesos Sin Medidas Cautelares", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Conceptos"] ) ) {
+			$lookupTableLinks["dbo.Conceptos"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Conceptos"]["procesos_sin_medidas_cautelares.ConceptoId"] )) {
+			$lookupTableLinks["dbo.Conceptos"]["procesos_sin_medidas_cautelares.ConceptoId"] = array();
+		}
+		$lookupTableLinks["dbo.Conceptos"]["procesos_sin_medidas_cautelares.ConceptoId"]["edit"] = array("table" => "Procesos Sin Medidas Cautelares", "field" => "ConceptoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Estados"] ) ) {
+			$lookupTableLinks["dbo.Estados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Estados"]["procesos_sin_medidas_cautelares.EstadoId"] )) {
+			$lookupTableLinks["dbo.Estados"]["procesos_sin_medidas_cautelares.EstadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Estados"]["procesos_sin_medidas_cautelares.EstadoId"]["edit"] = array("table" => "Procesos Sin Medidas Cautelares", "field" => "EstadoId", "page" => "edit");
 }
 
 ?>

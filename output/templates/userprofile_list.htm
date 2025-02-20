@@ -345,6 +345,13 @@
 					UsuGCC- Users				</label>
 			</div>
 			{END print_details_usugcc__users}
+														{BEGIN print_details_usugcc_ugmembers}
+			<div>
+				<label for="printDetailsusugcc_ugmembers{$id}">
+					<input type="checkbox" value="usugcc_ugmembers" id="printDetailsusugcc_ugmembers{$id}" checked>
+					Usu GCC-ugmembers				</label>
+			</div>
+			{END print_details_usugcc_ugmembers}
 						</div>
 </div>
 {END print_details}
@@ -836,19 +843,22 @@
 	>
 
 	 
-					<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders="usuariosseccionales,usuarioscarteratipos,usugcc__users"
-			data-details-usuariosseccionales			data-details-usuarioscarteratipos			data-details-usugcc__users	>
+						<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="usuariosseccionales,usuarioscarteratipos,usugcc__users,usugcc_ugmembers"
+			data-details-usuariosseccionales			data-details-usuarioscarteratipos			data-details-usugcc__users			data-details-usugcc_ugmembers	>
 		<span data-details-inside data-short-table="usuariosseccionales">
 			</span>
 		<span data-details-inside data-short-table="usuarioscarteratipos">
 			</span>
 		<span data-details-inside data-short-table="usugcc__users">
 			</span>
+		<span data-details-inside data-short-table="usugcc_ugmembers">
+			</span>
 		<div data-details-preview>
 	</div>
 </div>
 	 
+			 
 			 
 			
 	</td>

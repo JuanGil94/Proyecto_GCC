@@ -10,6 +10,8 @@
 'dbo.webpages_UsersInRoles' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.UsuGCC-_users' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'dbo.UsuGCC-ugmembers' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'SeccionalId',
