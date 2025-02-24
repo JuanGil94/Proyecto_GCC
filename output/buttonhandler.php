@@ -2,21 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -4597,7 +4582,7 @@ function buttonHandler_Resumen_Mensual1($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("plantillaGCC.php"));
-$reportDate=$params["reportDate"]+'-01';
+$reportDate=$params["reportDate"].'-01';
 $objeto=new certificadoMensual($reportDate,$_SESSION["UserNameF"]);
 $objeto->reporteMensual();
 $comando = '"C:\Program Files\LibreOffice\program\soffice.bin" --convert-to pdf --outdir "templates_GCC\caratulas" "templates_GCC\Resumen_Mensual_Final.docx"';

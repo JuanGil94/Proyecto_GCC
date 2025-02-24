@@ -1444,15 +1444,16 @@ class certificadoMensual{
             $info[$ciudad]["spe"]=$info[$ciudad]["pe"]+$info[$ciudad]["pe1"]+$info[$ciudad]["pe2"];
             $info[$ciudad]["sumCasB4"]=$info[$ciudad]["oe"]+$info[$ciudad]["ie"]+$info[$ciudad]["ce"]+$info[$ciudad]["oe1"]+$info[$ciudad]["ie1"]+$info[$ciudad]["ce1"]+$info[$ciudad]["oe2"]+$info["ie2"]+$info[$ciudad]["ce2"];
             $info[$ciudad]["spf"]=$info[$ciudad]["pf"]+$info[$ciudad]["pf1"]+$info[$ciudad]["pf2"];
-            $info[$ciudad]["sumtotA"]=$info[$ciudad]["sumCasB"]+$info[$ciudad]["sumCasB1"]-$info[$ciudad]["sumCasB2"]+$info[$ciudad]["sumCasB3"]-$info[$ciudad]["sumCasB4"]+$info[$ciudad]["sumNovR"];
-            $info[$ciudad]["sumtotB"]=$info[$ciudad]["sumTT"]+$info[$ciudad]["sumTT1"]-$info[$ciudad]["sumTT2"]+0-$info[$ciudad]["sumCol1R"]+$info[$ciudad]["sumNovR"];
+            $info[$ciudad]["sumCasB5"]=$info[$ciudad]["of"]+$info[$ciudad]["if"]+$info[$ciudad]["cf"]+$info[$ciudad]["of1"]+$info[$ciudad]["if1"]+$info[$ciudad]["cf1"]+$info[$ciudad]["of2"]+$info[$ciudad]["if2"]+$info[$ciudad]["cf2"];
+            $info[$ciudad]["sumtotA"]=$info[$ciudad]["sumCasB"]+$info[$ciudad]["sumCasB1"]-$info[$ciudad]["sumCasB2"]+$info[$ciudad]["sumCasB3"]-$info[$ciudad]["sumCasB4"]+$info[$ciudad]["sumNovR"]+$info[$ciudad]["sumCasB5"];
+            $info[$ciudad]["sumtotB"]=$info[$ciudad]["sumTT"]+$info[$ciudad]["sumTT1"]-$info[$ciudad]["sumTT2"]+0-$info[$ciudad]["sumCol1R"]+$info[$ciudad]["sumNovR"]+$info[$ciudad]["sumCasB5"];
         }
         //print_r($info);
         //echo "<pre>";
         //print_r($arrayAgrupado);
         //echo "</pre>";
         //MULTAS
-        echo "Seccional".$array[0]["Seccional"];
+        //echo "Seccional".$array[0]["Seccional"];
         $info["RESUMEN"]=array(
             "Seccional"=>$array[0]["Seccional"],
             "Desde"=>$array[0]["Desde"],
@@ -1585,8 +1586,9 @@ class certificadoMensual{
         $info["RESUMEN"]["spe"]=$info["RESUMEN"]["pe"]+$info["RESUMEN"]["pe1"]+$info["RESUMEN"]["pe2"];
         $info["RESUMEN"]["sumCasB4"]=$info["RESUMEN"]["oe"]+$info["RESUMEN"]["ie"]+$info["RESUMEN"]["ce"]+$info["RESUMEN"]["oe1"]+$info["RESUMEN"]["ie1"]+$info["RESUMEN"]["ce1"]+$info["RESUMEN"]["oe2"]+$info["RESUMEN"]["ie2"]+$info["RESUMEN"]["ce2"];
         $info["RESUMEN"]["spf"]=$info["RESUMEN"]["pf"]+$info["RESUMEN"]["pf1"]+$info["RESUMEN"]["pf2"];
-        $info["RESUMEN"]["sumtotA"]=$info["RESUMEN"]["sumCasB"]+$info["RESUMEN"]["sumCasB1"]-$info["RESUMEN"]["sumCasB2"]+$info["RESUMEN"]["sumCasB3"]-$info["RESUMEN"]["sumCasB4"]+$info["RESUMEN"]["sumNovR"];
-        $info["RESUMEN"]["sumtotB"]=$info["RESUMEN"]["sumTT"]+$info["RESUMEN"]["sumTT1"]-$info["RESUMEN"]["sumTT2"]+0-$info["RESUMEN"]["sumCol1R"]+$info["RESUMEN"]["sumNovR"];
+        $info["RESUMEN"]["sumCasB5"]=$info[$ciudad]["of"]+$info[$ciudad]["if"]+$info[$ciudad]["cf"]+$info[$ciudad]["of1"]+$info[$ciudad]["if1"]+$info[$ciudad]["cf1"]+$info[$ciudad]["of2"]+$info[$ciudad]["if2"]+$info[$ciudad]["cf2"];
+        $info["RESUMEN"]["sumtotA"]=$info["RESUMEN"]["sumCasB"]+$info["RESUMEN"]["sumCasB1"]-$info["RESUMEN"]["sumCasB2"]+$info["RESUMEN"]["sumCasB3"]-$info["RESUMEN"]["sumCasB4"]+$info["RESUMEN"]["sumNovR"]+$info["RESUMEN"]["sumCasB5"];
+        $info["RESUMEN"]["sumtotB"]=$info["RESUMEN"]["sumTT"]+$info["RESUMEN"]["sumTT1"]-$info["RESUMEN"]["sumTT2"]+0-$info["RESUMEN"]["sumCol1R"]+$info["RESUMEN"]["sumNovR"]+$info["RESUMEN"]["sumCasB5"];
         //count($array)
         //print_r($array[1]);
         //echo "Numero de arrays: ".count($array);
