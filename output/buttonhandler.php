@@ -3786,9 +3786,9 @@ function buttonHandler_CierreMes($params)
 	include_once (getabspath("classes/calcIntereses.php"));
 ini_set('max_execution_time', 0); //quitar el timeout de ejecucion de script
 $consulta=DB::Query("SELECT Cierre FROM Empresas WHERE EmpresaId = 1");
-        while($date=$consulta->fetchAssoc()){
-                $fechaCierre=$date["Cierre"];
-        }
+while($date=$consulta->fetchAssoc()){
+    $fechaCierre=$date["Cierre"];
+}
 // Convertimos la cadena de fecha a un objeto DateTime
 $fechaObj= new DateTime($fechaCierre);
 $fechaCierre=$fechaObj->format('Y-m-d');
@@ -3799,169 +3799,180 @@ $fechaDesde=$fechaObj->format('Y-m-d');
 $fechaHasta=$fechaObj->format('Y-m-t');
 $anoActual=$fechaObj->format('Y');
 $mesActual=$fechaObj->format('m');
-echo "values: ".$fechaCierre.",".$fechaDesde.",".$fechaHasta;
+//echo "values: ".$fechaCierre.",".$fechaDesde.",".$fechaHasta;
+//exit();
 //1.1 Se obtienen los procesos a calcular los intereses.
+DB::Exec("BEGIN TRANSACTION;");
 $consulta=DB::Query("SELECT TOP 3 Procesos.ProcesoId, '".$fechaHasta."' AS Fecha, 10000 AS Intereses, Procesos.SeccionalId, 1 AS Liquidacion
-			   FROM Procesos
-					INNER JOIN
-					CarteraTipos
-					ON Procesos.CarteraTipoId = CarteraTipos.CarteraTipoId
-			   WHERE( Procesos.Acuerdo IS NULL OR 
-					  NOT Procesos.Incumplimiento IS NULL
-					) AND 
-					((Procesos.EstadoId <> 6)) AND 
-					((Procesos.EstadoId <> 7)) AND 
-					--(Procesos.EtapaId = 2) AND 
-					(Procesos.Fecha <= '2024-04-30') AND 
-					--(dbo.Intereses_GetBy_ProcesoId( Procesos.ProcesoId, @Hasta ) > 0) AND 
-					(CarteraTipos.Prescrita = 0)
-					AND DATEADD(day, 1, ISNULL(Plazo, Ejecutoria)) <= '".$fechaHasta."'");
-        while($date=$consulta->fetchAssoc()){
-//1.2 Se calculan los intereses de cada uno de los procesos
-						$recalcular=new reliquidacion($date["ProcesoId"]);
-						$valueIntereses=$recalcular->calInteresesCierre($anoActual,$mesActual);
-           //$procesosId[$date["ProcesoId"]]=$valueIntereses;
-						$fechaHasta=strval($fechaHasta);
-//1.3 Se insertan los intereses calculados en la tabla Intereses.
-						$consulta2=DB::Exec("INSERT INTO Intereses( ProcesoId, Fecha, Intereses, SeccionalId, Liquidacion ) values (".$date["ProcesoId"].",'".$fechaHasta."',".$valueIntereses.",".$date["SeccionalId"].",1)");
-            if ($consulta2) {
-                echo "La consulta se realizó correctamente.";
-                    } 
-             else {
-								  // Hubo un error en la ejecución de la consulta
-								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
-								  //exit();
-                   }
-        }
-//1.4 Se eliminan los intereses que sean igual a 0.
-$consulta=DB::Exec("DELETE FROM Intereses WHERE Fecha = '".$fechaHasta."' and Intereses = 0 and Liquidacion=1");
-            if ($consulta2) {
-                echo "Se eliminan los intereses que sean igual a 0 de la fecha cierre.";
-                    } 
-             else {
-								  // Hubo un error en la ejecución de la consulta
-								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
-								  //exit();
-                   }
-//2. Se Generan los reportes de Movimientos.
-$consulta=DB::Exec("dbo.Empresas_Cerrar_Reportes '".$fechaHasta."'");
-if ($consulta){
-echo "El SP dbo.Empresas_Cerrar_Reportes se ejecuto correctamente";
+FROM Procesos
+INNER JOIN
+CarteraTipos
+ON Procesos.CarteraTipoId = CarteraTipos.CarteraTipoId
+WHERE( Procesos.Acuerdo IS NULL OR 
+NOT Procesos.Incumplimiento IS NULL
+) AND 
+((Procesos.EstadoId <> 6)) AND 
+((Procesos.EstadoId <> 7)) AND 
+--(Procesos.EtapaId = 2) AND 
+(Procesos.Fecha <= '2024-04-30') AND 
+--(dbo.Intereses_GetBy_ProcesoId( Procesos.ProcesoId, @Hasta ) > 0) AND 
+(CarteraTipos.Prescrita = 0)
+AND DATEADD(day, 1, ISNULL(Plazo, Ejecutoria)) <= '".$fechaHasta."'");
+while($date=$consulta->fetchAssoc()){
+    //1.2 Se calculan los intereses de cada uno de los procesos
+    $recalcular=new reliquidacion($date["ProcesoId"]);
+    $valueIntereses=$recalcular->calInteresesCierre($anoActual,$mesActual,$fechaDesde,$fechaHasta);
+    //$procesosId[$date["ProcesoId"]]=$valueIntereses;
+    $fechaHasta=strval($fechaHasta);
+    //1.3 Se insertan los intereses calculados en la tabla Intereses.
+    $consulta2=DB::Exec("INSERT INTO Intereses( ProcesoId, Fecha, Intereses, SeccionalId, Liquidacion ) values (".$date["ProcesoId"].",'".$fechaHasta."',".$valueIntereses.",".$date["SeccionalId"].",1)");
+if ($consulta2) {
+    //echo "La insercion de Intereses se realizó correctamente.";
 }
-else{
-echo "El SP dbo.Empresas_Cerrar_Reportes no se pudo ejecutar debido a: ".DB::LastError();
-}
-
-//3 Se realiza el update de los intereses a cada Proceso en la tabla Proceso.
-$consulta2=DB::Exec("UPDATE Procesos
-		  SET Liquidacion = Intereses.Fecha, Intereses = Procesos.Intereses + Intereses.Intereses, InteresesInicial = Procesos.InteresesInicial + Intereses.Intereses
-		FROM Procesos
-			 INNER JOIN
-			 Intereses
-			 ON Procesos.ProcesoId = Intereses.ProcesoId
-		WHERE(Intereses.Fecha = '".$fechaHasta."') AND 
-			 (Intereses.Liquidacion = 1) AND 
-			 (Intereses.Intereses > 0)");
-            if ($consulta2) {
-                echo "La actualizacion de los intereses se realizo correctamente en todos los procesos.";
-                    } 
-             else {
-								  // Hubo un error en la ejecución de la consulta
-								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
-								  //exit();
-                   }
-//4. Genera los Historicos 
-$consulta=DB::Exec("INSERT INTO Historicos
-     (Hasta, 
-      ProcesoId, 
-      ConceptoId, 
-      Numero, 
-      Fecha, 
-      Ejecutoria, 
-      Notificacion, 
-      Sancionado, 
-      SancionadoTipoDocumento, 
-      SancionadoDocumento, 
-      Obligacion, 
-      Costas, 
-      Intereses, 
-      Saldo, 
-      CarteraTipoId, 
-      SeccionalId, 
-      Recaudo, 
-      EstadoId, 
-      Prescripcion, 
-      Acuerdo, 
-      Incumplimiento, 
-      Persuasivo, AbogadoId
-     )SELECT DISTINCT TOP 3
-                   '".$fechaHasta."' AS Hasta, 
-                   ProcesoId, 
-                   ConceptoId, 
-                   Numero, 
-                   Fecha, 
-                   Ejecutoria, 
-                   Notificacion, 
-                   Sancionados.Sancionado, 
-                   TiposDocumentos.TipoDocumento, 
-                   Sancionados.Documento, 
-                   Obligacion, 
-                   Costas, 
-                   Intereses, 
-                   (Obligacion+Costas+Intereses) as Saldo, 
-                   CarteraTipoId, 
-                   SeccionalId, 
-                   Recaudo,
-                   CASE
-                       WHEN EstadoId = 6
-                       THEN 2
-                       ELSE EstadoId
-                   END, 
-                   isnull(Dias,0), 
-                   Acuerdo, 
-                   Incumplimiento, 
-                   Persuasivo, AbogadoId
+else {
+    DB::exec("ROLLBACK TRANSACTION;");
+    $error="Error en la insercion de Intereses: " . DB::LastError();
+		$result["Error"]=$error;
+    }
+} 
+    //1.4 Se eliminan los intereses que sean igual a 0.
+    $consulta=DB::Exec("DELETE FROM Intereses WHERE Fecha = '".$fechaHasta."' and Intereses = 0 and Liquidacion=1");
+    if ($consulta2) {
+        //echo "Se eliminan los intereses que sean igual a 0 de la fecha cierre.";
+        //2. Se Generan los reportes de Movimientos.
+        $consulta=DB::Exec("dbo.Empresas_Cerrar_Reportes '".$fechaHasta."'");
+        if ($consulta){
+            //echo "El SP dbo.Empresas_Cerrar_Reportes se ejecuto correctamente";
+            //3 Se realiza el update de los intereses a cada Proceso en la tabla Proceso.
+            $consulta2=DB::Exec("UPDATE Procesos
+            SET Liquidacion = Intereses.Fecha, Intereses = Procesos.Intereses + Intereses.Intereses, InteresesInicial = Procesos.InteresesInicial + Intereses.Intereses
             FROM Procesos
-			INNER JOIN Sancionados ON Procesos.SancionadoId=Sancionados.SancionadoId
-			INNER JOIN TiposDocumentos ON TiposDocumentos.TipoDocumentoId=Sancionados.TipoDocumentoId
-            WHERE(Fecha <= '".$fechaHasta."')
-                 AND ((EstadoId <> 6)
-                      OR (EstadoId = 6
-                          AND Terminacion > '".$fechaHasta."'));");
-            if ($consulta) {
-                echo "Se insertan los historicos correctamente.";
-                    } 
-             else {
-								  // Hubo un error en la ejecución de la consulta
-								  echo "Error al ejecutar la consultaaaaa: " . DB::LastError();
-								  //exit();
-                   }
-//5. Genera los indicadores
-$consulta=DB::Exec("dbo.Empresas_Cerrar_Indicadores '".$fechaHasta."'");
-if ($consulta){
-echo "El SP dbo.Empresas_Cerrar_Indicadores se ejecuto correctamente";
-}
-else{
-echo "El SP dbo.Empresas_Cerrar_Indicadores no se pudo ejecutar debido a: ".DB::LastError();
-}
-//-- 7. Cierra el mes
-$consulta=DB::Exec("UPDATE Empresas
-		  SET Cierre = '".$fechaHasta."'
-		WHERE EmpresaId = 1");
-if ($consulta){
-echo "Se actualiza el cierre";
-}
-else{
-echo "No se actualizo el cierre debido a: ".DB::LastError();
-}
-//--9. Empresas_Cerrar_Deterioro
-$consulta=DB::Exec("dbo.Empresas_Cerrar_Deterioro");
-if ($consulta){
-echo "El SP dbo.Empresas_Cerrar_Deterioro se ejecuto correctamente";
-}
-else{
-echo "El SP dbo.Empresas_Cerrar_Deterioro no se pudo ejecutar debido a: ".DB::LastError();
-};
+            INNER JOIN
+            Intereses
+            ON Procesos.ProcesoId = Intereses.ProcesoId
+            WHERE(Intereses.Fecha = '".$fechaHasta."') AND 
+            (Intereses.Liquidacion = 1) AND 
+            (Intereses.Intereses > 0)");
+            if ($consulta2) {
+                //echo "La actualizacion de los intereses se realizo correctamente en todos los procesos.";
+                //4. Genera los Historicos 
+                $consulta=DB::Exec("INSERT INTO Historicos
+                (Hasta, 
+                ProcesoId, 
+                ConceptoId, 
+                Numero, 
+                Fecha, 
+                Ejecutoria, 
+                Notificacion, 
+                Sancionado, 
+                SancionadoTipoDocumento, 
+                SancionadoDocumento, 
+                Obligacion, 
+                Costas, 
+                Intereses, 
+                Saldo, 
+                CarteraTipoId, 
+                SeccionalId, 
+                Recaudo, 
+                EstadoId, 
+                Prescripcion, 
+                Acuerdo, 
+                Incumplimiento, 
+                Persuasivo, AbogadoId
+                )SELECT DISTINCT TOP 3
+                '".$fechaHasta."' AS Hasta, 
+                ProcesoId, 
+                ConceptoId, 
+                Numero, 
+                Fecha, 
+                Ejecutoria, 
+                Notificacion, 
+                Sancionados.Sancionado, 
+                TiposDocumentos.TipoDocumento, 
+                Sancionados.Documento, 
+                Obligacion, 
+                Costas, 
+                Intereses, 
+                (Obligacion+Costas+Intereses) as Saldo, 
+                CarteraTipoId, 
+                SeccionalId, 
+                Recaudo,
+                CASE
+                WHEN EstadoId = 6
+                THEN 2
+                ELSE EstadoId
+                END, 
+                isnull(Dias,0), 
+                Acuerdo, 
+                Incumplimiento, 
+                Persuasivo, AbogadoId
+                FROM Procesos
+                INNER JOIN Sancionados ON Procesos.SancionadoId=Sancionados.SancionadoId
+                INNER JOIN TiposDocumentos ON TiposDocumentos.TipoDocumentoId=Sancionados.TipoDocumentoId
+                WHERE(Fecha <= '".$fechaHasta."')
+                AND ((EstadoId <> 6)
+                OR (EstadoId = 6
+                AND Terminacion > '".$fechaHasta."'));");
+                if ($consulta) {
+                    //echo "Se insertan los historicos correctamente.";
+                    //5. Genera los indicadores
+                $consulta=DB::Exec("dbo.Empresas_Cerrar_Indicadores '".$fechaHasta."'");
+                if ($consulta){
+                    //echo "El SP dbo.Empresas_Cerrar_Indicadores se ejecuto correctamente";
+                    //-- 7. Cierra el mes
+                    $consulta=DB::Exec("UPDATE Empresas
+                    SET Cierre = '".$fechaHasta."'
+                    WHERE EmpresaId = 1");
+                    if ($consulta){
+                        //echo "Se actualiza el cierre";
+                        //--9. Empresas_Cerrar_Deterioro
+                        $consulta=DB::Exec("dbo.Empresas_Cerrar_Deterioro");
+                        if ($consulta){
+                            //echo "El SP dbo.Empresas_Cerrar_Deterioro se ejecuto correctamente";
+															DB::Exec("COMMIT TRANSACTION;");
+															$result["OK"]=1;
+                        }
+                        else{
+															DB::exec("ROLLBACK TRANSACTION;");
+                            $error="El SP dbo.Empresas_Cerrar_Deterioro no se pudo ejecutar debido a: ".DB::LastError();
+															$result["Error"]=$error;
+                        }
+                    }
+                    else{
+													DB::exec("ROLLBACK TRANSACTION;");
+                        $error="No se actualizo el cierre debido a: ".DB::LastError();
+													$result["Error"]=$error;
+                    }
+                }
+                else{
+                    DB::exec("ROLLBACK TRANSACTION;");
+                    $error= "El SP dbo.Empresas_Cerrar_Indicadores no se pudo ejecutar debido a: ".DB::LastError();
+										 $result["Error"]=$error;
+                }
+                } 
+                else {
+                    DB::exec("ROLLBACK TRANSACTION;");
+                    $error= "Error al ejecutar al hacer el insert en Historicos: " . DB::LastError();
+										 $result["Error"]=$error;
+                }
+            } 
+            else {
+                DB::exec("ROLLBACK TRANSACTION;");
+                $error= "Error al hacer el update en procesos: " . DB::LastError();
+								 $result["Error"]=$error;
+            }
+        }
+        else{
+            DB::exec("ROLLBACK TRANSACTION;");
+            $error="El SP dbo.Empresas_Cerrar_Reportes no se pudo ejecutar debido a: ".DB::LastError();
+						 $result["Error"]=$error;
+        }
+    } 
+    else {
+        DB::exec("ROLLBACK TRANSACTION;");
+        $error="Error al borrar los Intereses: " . DB::LastError();
+				$result["Error"]=$error;
+    };
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
