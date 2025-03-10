@@ -43,7 +43,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsprocesos["Spanish"]["DespachoId"] = "Despacho/Juzgado";
 	$fieldToolTipsprocesos["Spanish"]["DespachoId"] = "";
 	$placeHoldersprocesos["Spanish"]["DespachoId"] = "";
-	$fieldLabelsprocesos["Spanish"]["SancionadoId"] = "Deudor";
+	$fieldLabelsprocesos["Spanish"]["SancionadoId"] = "Deudor/Documento";
 	$fieldToolTipsprocesos["Spanish"]["SancionadoId"] = "";
 	$placeHoldersprocesos["Spanish"]["SancionadoId"] = "";
 	$fieldLabelsprocesos["Spanish"]["Providencia"] = "F. Providencia";
@@ -395,17 +395,8 @@ $tdataprocesos[".filterFields"] = array();
 $tdataprocesos[".requiredSearchFields"] = array();
 
 $tdataprocesos[".googleLikeFields"] = array();
-$tdataprocesos[".googleLikeFields"][] = "ProcesoId";
-$tdataprocesos[".googleLikeFields"][] = "SeccionalId";
-$tdataprocesos[".googleLikeFields"][] = "AbogadoId";
-$tdataprocesos[".googleLikeFields"][] = "Fecha";
 $tdataprocesos[".googleLikeFields"][] = "Numero";
-$tdataprocesos[".googleLikeFields"][] = "DespachoId";
 $tdataprocesos[".googleLikeFields"][] = "SancionadoId";
-$tdataprocesos[".googleLikeFields"][] = "Providencia";
-$tdataprocesos[".googleLikeFields"][] = "Ejecutoria";
-$tdataprocesos[".googleLikeFields"][] = "ConceptoId";
-$tdataprocesos[".googleLikeFields"][] = "EstadoId";
 $tdataprocesos[".googleLikeFields"][] = "EtapaId";
 $tdataprocesos[".googleLikeFields"][] = "Folios";
 $tdataprocesos[".googleLikeFields"][] = "Tipo";
@@ -1557,7 +1548,7 @@ $tdataprocesos[".hideMobileList"] = array();
 	$edata["LookupTable"] = "dbo.Sancionados";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 1;
 
 	
 		
@@ -1578,8 +1569,7 @@ $tdataprocesos[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
@@ -1633,7 +1623,8 @@ $tdataprocesos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
+		$fdata["filterTotalFields"] = "ProcesoId";
+		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -3087,10 +3078,11 @@ $tdataprocesos[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Equals";
 // the end of search options settings
 
 

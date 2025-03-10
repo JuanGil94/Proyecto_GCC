@@ -57,6 +57,49 @@
      
          
 
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+																		{BEGIN searchCtrlBlock_Numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
+			<label>{$label dbo_Procesos Numero }</label>
+
+			
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_Numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
+						</div>
+		{END searchCtrlBlock_Numero}
+																{BEGIN searchCtrlBlock_SancionadoId}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
+			<label>{$label dbo_Procesos SancionadoId }</label>
+
+			
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_SancionadoId}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
+						</div>
+		{END searchCtrlBlock_SancionadoId}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+ 
+
 			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
 				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
 	<div class="filterPanelContainer {$filterPanelStateClass}" 
@@ -158,542 +201,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}"	 >
-
-	<div class="panel-heading">
-		<div class="btn-group r-sp-addfield" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Búsqueda			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group r-sp-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>cualquier condición</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_AbogadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_AbogadoId}" {$filterRow_attrs_AbogadoId}>
-			<label>{$label dbo_Procesos AbogadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_AbogadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_AbogadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_AbogadoId}</span>
-						</div>
-		{END searchCtrlBlock_AbogadoId}
-																{BEGIN searchCtrlBlock_SaldoFinal}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SaldoFinal}" {$filterRow_attrs_SaldoFinal}>
-			<label>{$label dbo_Procesos SaldoFinal }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SaldoFinal}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SaldoFinal}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SaldoFinal}</span>
-						</div>
-		{END searchCtrlBlock_SaldoFinal}
-																{BEGIN searchCtrlBlock_Traslado}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Traslado}" {$filterRow_attrs_Traslado}>
-			<label>{$label dbo_Procesos Traslado }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Traslado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Traslado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Traslado}</span>
-						</div>
-		{END searchCtrlBlock_Traslado}
-																{BEGIN searchCtrlBlock_Liquidacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Liquidacion}" {$filterRow_attrs_Liquidacion}>
-			<label>{$label dbo_Procesos Liquidacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Liquidacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Liquidacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Liquidacion}</span>
-						</div>
-		{END searchCtrlBlock_Liquidacion}
-																{BEGIN searchCtrlBlock_ProcesoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ProcesoId}" {$filterRow_attrs_ProcesoId}>
-			<label>{$label dbo_Procesos ProcesoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ProcesoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ProcesoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ProcesoId}</span>
-						</div>
-		{END searchCtrlBlock_ProcesoId}
-																{BEGIN searchCtrlBlock_Fecha}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Fecha}" {$filterRow_attrs_Fecha}>
-			<label>{$label dbo_Procesos Fecha }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Fecha}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Fecha}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Fecha}</span>
-						</div>
-		{END searchCtrlBlock_Fecha}
-																{BEGIN searchCtrlBlock_Dias}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Dias}" {$filterRow_attrs_Dias}>
-			<label>{$label dbo_Procesos Dias }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Dias}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Dias}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Dias}</span>
-						</div>
-		{END searchCtrlBlock_Dias}
-																{BEGIN searchCtrlBlock_ActuacionId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ActuacionId}" {$filterRow_attrs_ActuacionId}>
-			<label>{$label dbo_Procesos ActuacionId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ActuacionId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ActuacionId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ActuacionId}</span>
-						</div>
-		{END searchCtrlBlock_ActuacionId}
-																{BEGIN searchCtrlBlock_ObligacionCreacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ObligacionCreacion}" {$filterRow_attrs_ObligacionCreacion}>
-			<label>{$label dbo_Procesos ObligacionCreacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ObligacionCreacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ObligacionCreacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ObligacionCreacion}</span>
-						</div>
-		{END searchCtrlBlock_ObligacionCreacion}
-																{BEGIN searchCtrlBlock_InteresesCalculados}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_InteresesCalculados}" {$filterRow_attrs_InteresesCalculados}>
-			<label>{$label dbo_Procesos InteresesCalculados }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_InteresesCalculados}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_InteresesCalculados}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_InteresesCalculados}</span>
-						</div>
-		{END searchCtrlBlock_InteresesCalculados}
-																{BEGIN searchCtrlBlock_Costas}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Costas}" {$filterRow_attrs_Costas}>
-			<label>{$label dbo_Procesos Costas }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Costas}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Costas}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Costas}</span>
-						</div>
-		{END searchCtrlBlock_Costas}
-																{BEGIN searchCtrlBlock_Obligacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Obligacion}" {$filterRow_attrs_Obligacion}>
-			<label>{$label dbo_Procesos Obligacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Obligacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Obligacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Obligacion}</span>
-						</div>
-		{END searchCtrlBlock_Obligacion}
-																{BEGIN searchCtrlBlock_DespachoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_DespachoId}" {$filterRow_attrs_DespachoId}>
-			<label>{$label dbo_Procesos DespachoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_DespachoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_DespachoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_DespachoId}</span>
-						</div>
-		{END searchCtrlBlock_DespachoId}
-																{BEGIN searchCtrlBlock_InteresesInicial}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_InteresesInicial}" {$filterRow_attrs_InteresesInicial}>
-			<label>{$label dbo_Procesos InteresesInicial }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_InteresesInicial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_InteresesInicial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_InteresesInicial}</span>
-						</div>
-		{END searchCtrlBlock_InteresesInicial}
-																{BEGIN searchCtrlBlock_CostasInicial}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_CostasInicial}" {$filterRow_attrs_CostasInicial}>
-			<label>{$label dbo_Procesos CostasInicial }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_CostasInicial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_CostasInicial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_CostasInicial}</span>
-						</div>
-		{END searchCtrlBlock_CostasInicial}
-																{BEGIN searchCtrlBlock_ObligacionInicial}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ObligacionInicial}" {$filterRow_attrs_ObligacionInicial}>
-			<label>{$label dbo_Procesos ObligacionInicial }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ObligacionInicial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ObligacionInicial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ObligacionInicial}</span>
-						</div>
-		{END searchCtrlBlock_ObligacionInicial}
-																{BEGIN searchCtrlBlock_Incumplimiento}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Incumplimiento}" {$filterRow_attrs_Incumplimiento}>
-			<label>{$label dbo_Procesos Incumplimiento }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Incumplimiento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Incumplimiento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Incumplimiento}</span>
-						</div>
-		{END searchCtrlBlock_Incumplimiento}
-																{BEGIN searchCtrlBlock_Terminacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Terminacion}" {$filterRow_attrs_Terminacion}>
-			<label>{$label dbo_Procesos Terminacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Terminacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Terminacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Terminacion}</span>
-						</div>
-		{END searchCtrlBlock_Terminacion}
-																{BEGIN searchCtrlBlock_Plazo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Plazo}" {$filterRow_attrs_Plazo}>
-			<label>{$label dbo_Procesos Plazo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Plazo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Plazo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Plazo}</span>
-						</div>
-		{END searchCtrlBlock_Plazo}
-																{BEGIN searchCtrlBlock_Notificacion}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Notificacion}" {$filterRow_attrs_Notificacion}>
-			<label>{$label dbo_Procesos Notificacion }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Notificacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Notificacion}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Notificacion}</span>
-						</div>
-		{END searchCtrlBlock_Notificacion}
-																{BEGIN searchCtrlBlock_Acuerdo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Acuerdo}" {$filterRow_attrs_Acuerdo}>
-			<label>{$label dbo_Procesos Acuerdo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Acuerdo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Acuerdo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Acuerdo}</span>
-						</div>
-		{END searchCtrlBlock_Acuerdo}
-																{BEGIN searchCtrlBlock_SeccionalId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SeccionalId}" {$filterRow_attrs_SeccionalId}>
-			<label>{$label dbo_Procesos SeccionalId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SeccionalId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SeccionalId}</span>
-						</div>
-		{END searchCtrlBlock_SeccionalId}
-																{BEGIN searchCtrlBlock_SancionadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_SancionadoId}" {$filterRow_attrs_SancionadoId}>
-			<label>{$label dbo_Procesos SancionadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_SancionadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_SancionadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
-						</div>
-		{END searchCtrlBlock_SancionadoId}
-																{BEGIN searchCtrlBlock_Recaudo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Recaudo}" {$filterRow_attrs_Recaudo}>
-			<label>{$label dbo_Procesos Recaudo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Recaudo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Recaudo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Recaudo}</span>
-						</div>
-		{END searchCtrlBlock_Recaudo}
-																{BEGIN searchCtrlBlock_Providencia}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Providencia}" {$filterRow_attrs_Providencia}>
-			<label>{$label dbo_Procesos Providencia }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Providencia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Providencia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Providencia}</span>
-						</div>
-		{END searchCtrlBlock_Providencia}
-																{BEGIN searchCtrlBlock_Origen}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Origen}" {$filterRow_attrs_Origen}>
-			<label>{$label dbo_Procesos Origen }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Origen}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Origen}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Origen}</span>
-						</div>
-		{END searchCtrlBlock_Origen}
-																{BEGIN searchCtrlBlock_Numero}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Numero}" {$filterRow_attrs_Numero}>
-			<label>{$label dbo_Procesos Numero }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Numero}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Numero}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Numero}</span>
-						</div>
-		{END searchCtrlBlock_Numero}
-																{BEGIN searchCtrlBlock_NaturalezaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_NaturalezaId}" {$filterRow_attrs_NaturalezaId}>
-			<label>{$label dbo_Procesos NaturalezaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_NaturalezaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_NaturalezaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_NaturalezaId}</span>
-						</div>
-		{END searchCtrlBlock_NaturalezaId}
-																{BEGIN searchCtrlBlock_MotivoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_MotivoId}" {$filterRow_attrs_MotivoId}>
-			<label>{$label dbo_Procesos MotivoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_MotivoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_MotivoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_MotivoId}</span>
-						</div>
-		{END searchCtrlBlock_MotivoId}
-																{BEGIN searchCtrlBlock_MinjusticiaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_MinjusticiaId}" {$filterRow_attrs_MinjusticiaId}>
-			<label>{$label dbo_Procesos MinjusticiaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_MinjusticiaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_MinjusticiaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_MinjusticiaId}</span>
-						</div>
-		{END searchCtrlBlock_MinjusticiaId}
-																{BEGIN searchCtrlBlock_MinJusticia}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_MinJusticia}" {$filterRow_attrs_MinJusticia}>
-			<label>{$label dbo_Procesos MinJusticia }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_MinJusticia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_MinJusticia}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_MinJusticia}</span>
-						</div>
-		{END searchCtrlBlock_MinJusticia}
-																{BEGIN searchCtrlBlock_Folios}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Folios}" {$filterRow_attrs_Folios}>
-			<label>{$label dbo_Procesos Folios }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Folios}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Folios}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Folios}</span>
-						</div>
-		{END searchCtrlBlock_Folios}
-																{BEGIN searchCtrlBlock_EtapaId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_EtapaId}" {$filterRow_attrs_EtapaId}>
-			<label>{$label dbo_Procesos EtapaId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_EtapaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_EtapaId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_EtapaId}</span>
-						</div>
-		{END searchCtrlBlock_EtapaId}
-																{BEGIN searchCtrlBlock_EstadoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_EstadoId}" {$filterRow_attrs_EstadoId}>
-			<label>{$label dbo_Procesos EstadoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_EstadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_EstadoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_EstadoId}</span>
-						</div>
-		{END searchCtrlBlock_EstadoId}
-																{BEGIN searchCtrlBlock_Ejecutoria}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Ejecutoria}" {$filterRow_attrs_Ejecutoria}>
-			<label>{$label dbo_Procesos Ejecutoria }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Ejecutoria}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Ejecutoria}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Ejecutoria}</span>
-						</div>
-		{END searchCtrlBlock_Ejecutoria}
-																{BEGIN searchCtrlBlock_ConceptoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ConceptoId}" {$filterRow_attrs_ConceptoId}>
-			<label>{$label dbo_Procesos ConceptoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ConceptoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ConceptoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ConceptoId}</span>
-						</div>
-		{END searchCtrlBlock_ConceptoId}
-																{BEGIN searchCtrlBlock_CarteraTipoId}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_CarteraTipoId}" {$filterRow_attrs_CarteraTipoId}>
-			<label>{$label dbo_Procesos CarteraTipoId }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_CarteraTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_CarteraTipoId}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_CarteraTipoId}</span>
-						</div>
-		{END searchCtrlBlock_CarteraTipoId}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
-
-				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -740,6 +247,14 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="procesos_search.php{$stateLink_full}" {$advsearchlink_attrs} >
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search_field" {$item_simple_search_field} data-topcell-item-type="simple_search_field" >
 				{$simpleSearchFieldCombo}			</span>
 		 
@@ -786,13 +301,7 @@
 		</a>
 	</li>
 {END exportselected_link}
-							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="procesos_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Búsqueda avanzada		
-		</a>
-	</li>
-							{BEGIN searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN searchPanelTopButtons}
 	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
 				<a  id="showOptPanel{$id}"  title="" >
 				
@@ -1568,6 +1077,16 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_CalificacionId" checked="checked" value="1" data-field="CalificacionId" data-fieldname="CalificacionId">
+					<span>{$label dbo_Procesos CalificacionId }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -1660,7 +1179,10 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Recaudo"]:before {
 		content: "{$label dbo_Procesos Recaudo}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Terminacion"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CalificacionId"]:before {
+		content: "{$label dbo_Procesos CalificacionId}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Terminacion"]:before {
 		content: "{$label dbo_Procesos Terminacion}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MotivoId"]:before {
@@ -2626,6 +2148,31 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field34}
+									{BEGIN cellblock_grid_headcell_field35}
+	<th
+	
+	{$cell_grid_headcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CalificacionId_class}	"
+
+			data-field="CalificacionId"
+	
+	data-cellId="grid_headcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CalificacionId_fieldheadercolumn}
+	{BEGIN CalificacionId_fieldheader}
+	<SPAN {$CalificacionId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label" {$item_grid_field_label} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CalificacionId" data-fieldname="CalificacionId">
+	{$label dbo_Procesos CalificacionId }	{$arrow_icon_CalificacionId}
+	</SPAN>
+	{END CalificacionId_fieldheader}
+{END CalificacionId_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field35}
 							</tr>
 																				
 					{END grid_header}
@@ -3464,6 +3011,27 @@
 {END ProcesoId_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field34}
+									{BEGIN cellblock_grid_cell_field35}
+	<td
+	
+	{$cell_grid_cell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CalificacionId_class}	"
+
+			data-field="CalificacionId"
+	
+	data-cellId="grid_cell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CalificacionId_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field6" {$item_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CalificacionId" data-fieldname="CalificacionId" data-default-width >
+{$CalificacionId_value}
+</span>
+{END CalificacionId_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field35}
 							</tr>
 											<tr {$rowattrs} {$row_grid_2} class="{$rowclass}
 				
@@ -4100,6 +3668,21 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field34}
+									{BEGIN cellblock_grid_footcell_field35}
+	<td
+	
+	{$cell_grid_footcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$CalificacionId_class}	"
+
+	
+	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="procesos_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field35}
 							</tr>
 					
 					</tfoot>
