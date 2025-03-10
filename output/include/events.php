@@ -5198,17 +5198,79 @@ echo "<strong>". $totalProcesos . "</strong>";
 }
 	function event_dbo_Correspondencias1_snippet(&$params)
 	{
-	// Put your code here.
-$str= "<select id='oficioId'; style='width: 320px; display: inline-block; margin: 3px; ' class='form-control'>";
-$str2="<label style='margin: 3px;'>Resolución: </label><input id='resolucion' style='margin: 3px;'></input><br><label style='margin: 3px;'>Radicado: </label><input id='radicado' style='margin: 3px;'></input><label style='margin: 3px;'>Observaciones: </label><input id='observaciones' style='margin: 3px;'></input>";
-//select values from the database
-$strSQL = "SELECT * FROM Oficios WHERE Activo=1";
-$rs = db_query($strSQL);
-while ($data = db_fetch_array($rs)){
-$str.="<option value='".$data['OficioId']."'>".$data['Oficio']."</option>";
-}
-$str.="</select>";
-echo $str.$str2;
+	echo '<label style="margin: 3px;">Oficio: </label><input style="margin: 3px;width:400px" type="text" id="editBoxId" placeholder="Escribe para buscar..."><ul id="sugerencias" style="display:none; position:absolute; list-style-type:none; background-color: #fff; border: 1px solid #ccc; padding: 0; margin: 0; max-height: 200px; overflow-y: auto;"></ul> <!-- Este contenedor mostrará las sugerencias --><input type="hidden" id="oficioId"> <!-- Input oculto para almacenar el OficioId --><br><label style="margin: 3px;">Resolución: </label><input id="resolucion" style="margin: 3px;"></input><br><label style="margin: 3px;">Radicado: </label><input id="radicado" style="margin: 3px;"></input><label style="margin: 3px;">Observaciones: </label><input id="observaciones" style="margin: 3px;"></input>
+<style>
+    li {
+        padding: 5px; /* Añade algo de espacio */
+        transition: background-color 0.3s ease; /* Suaviza la animación */
+    }
+    
+    li:hover {
+        background-color: #2FA4E7;
+        color: white; /* Para que el texto se vea bien */
+        cursor: pointer;
+    }
+</style>
+<script>$(document).ready(function() {
+document.getElementById("editBoxId").addEventListener("input", function() {
+            var input = this.value;
+ 
+ // Verificar que el campo no esté vacío
+ if (input.length > 0) {
+     // Realizar la llamada AJAX
+     var xhr = new XMLHttpRequest();
+     xhr.open("POST", "arrayCorrespondencias.php", true);
+     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+     xhr.onreadystatechange = function() {
+         if (xhr.readyState === 4 && xhr.status === 200) {
+             var sugerencias = JSON.parse(xhr.responseText);
+             var listaSugerencias = document.getElementById("sugerencias");
+             listaSugerencias.innerHTML = ""; // Limpiar sugerencias anteriores
+
+             // Mostrar el contenedor de sugerencias
+             if (sugerencias.length > 0) {
+                 listaSugerencias.style.display = "block"; // Mostrar sugerencias
+
+                 sugerencias.forEach(function(sugerencia) {
+                     var li = document.createElement("li");
+                     li.textContent = sugerencia.text; // Usar el texto de la sugerencia
+                     li.dataset.id = sugerencia.id; // Almacenar el SancionadoId en un atributo data-id
+
+                     // Agregar evento de clic para seleccionar la sugerencia
+                     li.addEventListener("click", function() {
+                         document.getElementById("editBoxId").value = sugerencia.text; // Completar el input con el texto
+                         document.getElementById("oficioId").value = sugerencia.id; // Guardar SancionadoId en un input oculto
+                         listaSugerencias.innerHTML = ""; // Limpiar la lista de sugerencias
+                         listaSugerencias.style.display = "none"; // Ocultar sugerencias
+                     });
+
+                     listaSugerencias.appendChild(li);
+                 });
+             } else {
+                 listaSugerencias.innerHTML = "<li>No se encontraron resultados</li>";
+                 listaSugerencias.style.display = "block"; // Mostrar sugerencias
+             }
+         } else if (xhr.readyState === 4) {
+             alert("Error al obtener las sugerencias: " + xhr.status);
+         }
+     };
+     xhr.send("consulta=" + encodeURIComponent(input));
+ } else {
+     document.getElementById("sugerencias").innerHTML = ""; // Limpiar sugerencias si el input está vacío
+     document.getElementById("sugerencias").style.display = "none"; // Ocultar el contenedor de sugerencias
+ }
+});
+// Esto evita que el contenedor de sugerencias se cierre cuando el usuario hace clic fuera
+document.addEventListener("click", function(event) {
+ var listaSugerencias = document.getElementById("sugerencias");
+ var input = document.getElementById("editBoxId");
+
+ // Verificar si el clic es fuera del input y el contenedor de sugerencias
+ if (!input.contains(event.target) && !listaSugerencias.contains(event.target)) {
+     listaSugerencias.style.display = "none"; // Ocultar sugerencias si se hace clic fuera
+ }
+});
+});</script>'
 	;
 }
 	function event_Acuerdos_de_Pago_Mes(&$params)

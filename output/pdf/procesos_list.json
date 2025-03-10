@@ -175,6 +175,9 @@ pdfDocument = {
 										{BEGIN col_grid_36}
 					"%",
 					{END col_grid_36}
+										{BEGIN col_grid_37}
+					"%",
+					{END col_grid_37}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -1452,6 +1455,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field34}
+																							{BEGIN cellblock_grid_headcell_field35}
+{
+	cellId: 'headcell_field35',
+	col:0,
+	row:0,
+			fieldName: 'CalificacionId',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Procesos CalificacionId }","hidden":"{$item_hide_grid_field_label}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$CalificacionId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field35}
 											],
 				{END row_grid_0}
 		
@@ -2550,6 +2582,35 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field34}
+																							{BEGIN cellblock_grid_cell_field35}
+{
+	cellId: 'cell_field35',
+	col:0,
+	row:0,
+			fieldName: 'CalificacionId',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$CalificacionId_pdfvalue},"hidden":"{$item_hide_grid_field6}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$CalificacionId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field35}
 											],
 				{END row_grid_1}
 						{BEGIN row_grid_2}
@@ -2871,6 +2932,12 @@ pdfDocument = {
 				cellId: 'cell_dpreview',
 				row:  0,
 				col:  36,
+				text: ''
+			},
+														{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  37,
 				text: ''
 			},
 							],
@@ -3844,6 +3911,32 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field34}
+																							{BEGIN cellblock_grid_footcell_field35}
+{
+	cellId: 'footcell_field35',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field35}
 											],
 				{END row_grid_3}
 		
