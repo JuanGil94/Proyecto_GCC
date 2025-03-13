@@ -1340,14 +1340,14 @@ class certificadoMensual{
                 "of"=>floatval($array[$id[0]]["ObliNove"]),
                 "cf"=>floatval($array[$id[0]]["CostNove"]),
                 "if"=>floatval($array[$id[0]]["InteNove"]),
-                "pg"=>floatval($array[$id[0]]["ProcMayo"]),
-                "og"=>floatval($array[$id[0]]["ObliMayo"]),
-                "cg"=>floatval($array[$id[0]]["CostMayo"]),
-                "ig"=>floatval($array[$id[0]]["InteMayo"]),
-                "ProcTota"=>floatval($array[$id[0]]["ProcTota"]),
-                "ObliTota"=>floatval($array[$id[0]]["ObliTota"]),
-                "CostTota"=>floatval($array[$id[0]]["CostTota"]),
-                "InteTota"=>floatval($array[$id[0]]["InteTota"]),
+                "pg"=>floatval($array[$id[0]]["ProcTota"]),
+                "og"=>floatval($array[$id[0]]["ObliTota"]),
+                "cg"=>floatval($array[$id[0]]["CostTota"]),
+                "ig"=>floatval($array[$id[0]]["InteTota"]),
+                //"ProcTota"=>floatval($array[$id[0]]["ProcTota"]),
+                //"ObliTota"=>floatval($array[$id[0]]["ObliTota"]),
+                //"CostTota"=>floatval($array[$id[0]]["CostTota"]),
+                //"InteTota"=>floatval($array[$id[0]]["InteTota"]),
                 "DeteAnte"=>floatval($array[$id[0]]["DeteAnte"]),
                 "DeteTota"=>floatval($array[$id[0]]["DeteTota"]),
                 "DeteActu"=>floatval($array[$id[0]]["DeteActu"]),
@@ -1390,10 +1390,10 @@ class certificadoMensual{
             $info[$ciudad]["of1"]=floatval($array[$id[1]]["ObliNove"]);
             $info[$ciudad]["cf1"]=floatval($array[$id[1]]["CostNove"]);
             $info[$ciudad]["if1"]=floatval($array[$id[1]]["InteNove"]);
-            $info[$ciudad]["pg1"]=floatval($array[$id[1]]["ProcMayo"]);
-            $info[$ciudad]["og1"]=floatval($array[$id[1]]["ObliMayo"]);
-            $info[$ciudad]["cg1"]=floatval($array[$id[1]]["CostMayo"]);
-            $info[$ciudad]["ig1"]=floatval($array[$id[1]]["InteMayo"]);
+            $info[$ciudad]["pg1"]=floatval($array[$id[1]]["ProcTota"]);
+            $info[$ciudad]["og1"]=floatval($array[$id[1]]["ObliTota"]);
+            $info[$ciudad]["cg1"]=floatval($array[$id[1]]["CostTota"]);
+            $info[$ciudad]["ig1"]=floatval($array[$id[1]]["InteTota"]);
             $info[$ciudad]["DeteAnteR"]=floatval($array[$id[1]]["DeteAnte"]);
             $info[$ciudad]["DeteActuR"]=floatval($array[$id[1]]["DeteActu"]);
             $info[$ciudad]["sumRecR"]=0;
@@ -1423,10 +1423,10 @@ class certificadoMensual{
             $info[$ciudad]["of2"]=floatval($array[$id[2]]["ObliNove"]);
             $info[$ciudad]["cf2"]=floatval($array[$id[2]]["CostNove"]);
             $info[$ciudad]["if2"]=floatval($array[$id[2]]["InteNove"]);
-            $info[$ciudad]["pg2"]=floatval($array[$id[2]]["ProcMayo"]);
-            $info[$ciudad]["og2"]=floatval($array[$id[2]]["ObliMayo"]);
-            $info[$ciudad]["cg2"]=floatval($array[$id[2]]["CostMayo"]);
-            $info[$ciudad]["ig2"]=floatval($array[$id[2]]["InteMayo"]);
+            $info[$ciudad]["pg2"]=floatval($array[$id[2]]["ProcTota"]);
+            $info[$ciudad]["og2"]=floatval($array[$id[2]]["ObliTota"]);
+            $info[$ciudad]["cg2"]=floatval($array[$id[2]]["CostTota"]);
+            $info[$ciudad]["ig2"]=floatval($array[$id[2]]["InteTota"]);
             $info[$ciudad]["sumColR"]=$info[$ciudad]["od1"]+$info[$ciudad]["id1"]+$info[$ciudad]["cd1"]+$info[$ciudad]["od2"]+$info[$ciudad]["id2"]+$info[$ciudad]["cd2"];
             $info[$ciudad]["sumCol1R"]=$info[$ciudad]["oe1"]+$info[$ciudad]["ie1"]+$info[$ciudad]["ce1"]+$info[$ciudad]["oe2"]+$info[$ciudad]["ie2"]+$info[$ciudad]["ce2"];
             $info[$ciudad]["sumtotR"]=$info[$ciudad]["DeteAnteR"]+$info[$ciudad]["DeteActuR"]-$info[$ciudad]["sumRecR"]+$info[$ciudad]["sumColR"]-$info[$ciudad]["sumCol1R"]+$info[$ciudad]["sumNovR"];
@@ -1437,7 +1437,7 @@ class certificadoMensual{
             $info[$ciudad]["sumCasB1"]=$info[$ciudad]["ob"]+$info[$ciudad]["ib"]+$info[$ciudad]["cb"]+$info[$ciudad]["ob1"]+$info[$ciudad]["ib1"]+$info[$ciudad]["cb1"]+$info[$ciudad]["ob2"]+$info[$ciudad]["ib2"]+$info[$ciudad]["cb2"];
             $info[$ciudad]["sumTT1"]=$info[$ciudad]["sumCasB1"]-$info[$ciudad]["DeteActu"]-$info[$ciudad]["DeteActuR"];
             $info[$ciudad]["spc"]=$info[$ciudad]["pc"]+$info[$ciudad]["pc1"]+$info[$ciudad]["pc2"];
-            $info[$ciudad]["sumCasB2"]=0;
+            $info[$ciudad]["sumCasB2"]=$info[$ciudad]["oc"]+$info[$ciudad]["ic"]+$info[$ciudad]["cc"]+$info[$ciudad]["oc1"]+$info[$ciudad]["ic1"]+$info[$ciudad]["cc1"]+$info[$ciudad]["oc2"]+$info[$ciudad]["ic2"]+$info[$ciudad]["cc2"];
             $info[$ciudad]["spd"]=$info[$ciudad]["pd"]+$info[$ciudad]["pd1"]+$info[$ciudad]["pd2"];
             $info[$ciudad]["sumTT2"]=$info[$ciudad]["sumCasB2"]-$info[$ciudad]["sumRecR"]-$info[$ciudad]["sumRec"];
             $info[$ciudad]["sumCasB3"]=$info[$ciudad]["od"]+$info[$ciudad]["id"]+$info[$ciudad]["cd"]+$info[$ciudad]["od1"]+$info[$ciudad]["id1"]+$info[$ciudad]["cd1"]+$info[$ciudad]["od2"]+$info[$ciudad]["id2"]+$info[$ciudad]["cd2"];
@@ -1482,14 +1482,14 @@ class certificadoMensual{
             "of"=>floatval($array[0]["ObliNove"]),
             "cf"=>floatval($array[0]["CostNove"]),
             "if"=>floatval($array[0]["InteNove"]),
-            "pg"=>floatval($array[0]["ProcMayo"]),
-            "og"=>floatval($array[0]["ObliMayo"]),
-            "cg"=>floatval($array[0]["CostMayo"]),
-            "ig"=>floatval($array[0]["InteMayo"]),
-            "ProcTota"=>floatval($array[0]["ProcTota"]),
-            "ObliTota"=>floatval($array[0]["ObliTota"]),
-            "CostTota"=>floatval($array[0]["CostTota"]),
-            "InteTota"=>floatval($array[0]["InteTota"]),
+            "pg"=>floatval($array[0]["ProcTota"]),
+            "og"=>floatval($array[0]["ObliTota"]),
+            "cg"=>floatval($array[0]["CostTota"]),
+            "ig"=>floatval($array[0]["InteTota"]),
+            //"ProcTota"=>floatval($array[0]["ProcTota"]),
+            //"ObliTota"=>floatval($array[0]["ObliTota"]),
+            //"CostTota"=>floatval($array[0]["CostTota"]),
+            //"InteTota"=>floatval($array[0]["InteTota"]),
             "DeteAnte"=>floatval($array[0]["DeteAnte"]),
             "DeteTota"=>floatval($array[0]["DeteTota"]),
             "DeteActu"=>floatval($array[0]["DeteActu"]),
@@ -1532,10 +1532,10 @@ class certificadoMensual{
         $info["RESUMEN"]["of1"]=floatval($array[1]["ObliNove"]);
         $info["RESUMEN"]["cf1"]=floatval($array[1]["CostNove"]);
         $info["RESUMEN"]["if1"]=floatval($array[1]["InteNove"]);
-        $info["RESUMEN"]["pg1"]=floatval($array[1]["ProcMayo"]);
-        $info["RESUMEN"]["og1"]=floatval($array[1]["ObliMayo"]);
-        $info["RESUMEN"]["cg1"]=floatval($array[1]["CostMayo"]);
-        $info["RESUMEN"]["ig1"]=floatval($array[1]["InteMayo"]);
+        $info["RESUMEN"]["pg1"]=floatval($array[1]["ProcTota"]);
+        $info["RESUMEN"]["og1"]=floatval($array[1]["ObliTota"]);
+        $info["RESUMEN"]["cg1"]=floatval($array[1]["CostTota"]);
+        $info["RESUMEN"]["ig1"]=floatval($array[1]["InteTota"]);
         $info["RESUMEN"]["DeteAnteR"]=floatval($array[1]["DeteAnte"]);
         $info["RESUMEN"]["DeteActuR"]=floatval($array[1]["DeteActu"]);
         $info["RESUMEN"]["sumRecR"]=0;
@@ -1565,10 +1565,10 @@ class certificadoMensual{
         $info["RESUMEN"]["of2"]=floatval($array[2]["ObliNove"]);
         $info["RESUMEN"]["cf2"]=floatval($array[2]["CostNove"]);
         $info["RESUMEN"]["if2"]=floatval($array[2]["InteNove"]);
-        $info["RESUMEN"]["pg2"]=floatval($array[2]["ProcMayo"]);
-        $info["RESUMEN"]["og2"]=floatval($array[2]["ObliMayo"]);
-        $info["RESUMEN"]["cg2"]=floatval($array[2]["CostMayo"]);
-        $info["RESUMEN"]["ig2"]=floatval($array[2]["InteMayo"]);
+        $info["RESUMEN"]["pg2"]=floatval($array[2]["ProcTota"]);
+        $info["RESUMEN"]["og2"]=floatval($array[2]["ObliTota"]);
+        $info["RESUMEN"]["cg2"]=floatval($array[2]["CostTota"]);
+        $info["RESUMEN"]["ig2"]=floatval($array[2]["InteTota"]);
         $info["RESUMEN"]["sumColR"]=$info["RESUMEN"]["od1"]+$info["RESUMEN"]["id1"]+$info["RESUMEN"]["cd1"]+$info["RESUMEN"]["od2"]+$info["RESUMEN"]["id2"]+$info["RESUMEN"]["cd2"];
         $info["RESUMEN"]["sumCol1R"]=$info["RESUMEN"]["oe1"]+$info["RESUMEN"]["ie1"]+$info["RESUMEN"]["ce1"]+$info["RESUMEN"]["oe2"]+$info["RESUMEN"]["ie2"]+$info["RESUMEN"]["ce2"];
         $info["RESUMEN"]["sumtotR"]=$info["RESUMEN"]["DeteAnteR"]+$info["RESUMEN"]["DeteActuR"]-$info["RESUMEN"]["sumRecR"]+$info["RESUMEN"]["sumColR"]-$info["RESUMEN"]["sumCol1R"]+$info["RESUMEN"]["sumNovR"];
@@ -1579,7 +1579,7 @@ class certificadoMensual{
         $info["RESUMEN"]["sumCasB1"]=$info["RESUMEN"]["ob"]+$info["RESUMEN"]["ib"]+$info["RESUMEN"]["cb"]+$info["RESUMEN"]["ob1"]+$info["RESUMEN"]["ib1"]+$info["RESUMEN"]["cb1"]+$info["RESUMEN"]["ob2"]+$info["RESUMEN"]["ib2"]+$info["RESUMEN"]["cb2"];
         $info["RESUMEN"]["sumTT1"]=$info["RESUMEN"]["sumCasB1"]-$info["RESUMEN"]["DeteActu"]-$info["RESUMEN"]["DeteActuR"];
         $info["RESUMEN"]["spc"]=$info["RESUMEN"]["pc"]+$info["RESUMEN"]["pc1"]+$info["RESUMEN"]["pc2"];
-        $info["RESUMEN"]["sumCasB2"]=0;
+        $info["RESUMEN"]["sumCasB2"]=$info["RESUMEN"]["oc"]+$info["RESUMEN"]["ic"]+$info["RESUMEN"]["cc"]+$info["RESUMEN"]["oc1"]+$info["RESUMEN"]["ic1"]+$info["RESUMEN"]["cc1"]+$info["RESUMEN"]["oc2"]+$info["RESUMEN"]["ic2"]+$info["RESUMEN"]["cc2"];
         $info["RESUMEN"]["spd"]=$info["RESUMEN"]["pd"]+$info["RESUMEN"]["pd1"]+$info["RESUMEN"]["pd2"];
         $info["RESUMEN"]["sumTT2"]=$info["RESUMEN"]["sumCasB2"]-$info["RESUMEN"]["sumRecR"]-$info["RESUMEN"]["sumRec"];
         $info["RESUMEN"]["sumCasB3"]=$info["RESUMEN"]["od"]+$info["RESUMEN"]["id"]+$info["RESUMEN"]["cd"]+$info["RESUMEN"]["od1"]+$info["RESUMEN"]["id1"]+$info["RESUMEN"]["cd1"]+$info["RESUMEN"]["od2"]+$info["RESUMEN"]["id2"]+$info["RESUMEN"]["cd2"];
@@ -1682,8 +1682,8 @@ class certificadoMensual{
             $templateProcessor->setValue('Director',trim($data["Director"]));
             //se relaiza el siguiente paso con el fin de detecatr las variables XML (Cuestion anormal ya que no deberia tomar la variabel XML)
             foreach($variables as $variable){
-                //echo "La variable es:".$variable." y la reemplazo por: ".$info[$variable]."<br>";
-                $templateProcessor->setValue($variable,round(floatval($data[$variable])));
+                //echo "La variable es:".$variable." y la reemplazo por: ".$data[$variable]."<br>";
+                $templateProcessor->setValue($variable,number_format($data[$variable],0,',','.'));
                 preg_match_all('/<w:t>(.*?)<\/w:t>/', $variable, $matches);
                 //print_r($matches);
                 $resultados = $matches[1];
@@ -1692,7 +1692,7 @@ class certificadoMensual{
                 for($i=0;$i<count($resultados);$i++){
                     $resultadoF.=$resultados[$i];
                 }
-                $templateProcessor->setValue($resultadoF,round(floatval($data[$resultadoF])));
+                $templateProcessor->setValue($resultadoF,number_format($data[$resultadoF],0,',','.'));
                 //echo "La variable es:".$resultadoF." y la reemplazo por: ".$info[$resultadoF]."<br>";
                  //echo "La variable es:".$variable." y la reemplazo por: ".$variable."<br>";
                 //echo "Value: ".$resultadoF."<br>";
