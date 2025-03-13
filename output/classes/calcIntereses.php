@@ -812,6 +812,7 @@ class reliquidacion extends CalendarioAnual{
                     $this->deleteRe($numero);
                     $diaPla=$diaEje;
                     $diaPla=$diaPla+1; // Se suma un dia mas para comparar fecha de recaudos un dia despues de la fecha plazo
+                    $diaPla=str_pad($diaPla, 2, '0', STR_PAD_LEFT);
                     //insertRe($numero,$fechaIns,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
                     //$procesoId,$fecha,$dias,$tasa,$intereses,$obliReca,$obliNove,$obliSald,$inteReca,$inteNove,$inteSald,$costReca,$costNove,$costSald
                     for($dia=1;$dia<=$numDiasMesAct;$dia++){ 
@@ -834,9 +835,10 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         //echo "<br>FECHAAAAAAAA".$fechaCom;
+                        //print_r($recaudos);
                             foreach ($recaudos as $fecha) {
                                 //echo "Ingresa";
-                                //echo $fecha["Fecha"]." - ".$fechaComP."<br>";
+                                //echo $fecha["Fecha"]." - ".$fechaComP."- ".$fechaCom."<br>";
                                 if($fecha["Fecha"]==$fechaComP) {
                                     $pagoId=$fecha["PagoId"];
                                     $fechaRegistro=new DateTime ($fecha["Registro"]);
@@ -845,8 +847,9 @@ class reliquidacion extends CalendarioAnual{
                                     $fechaActualR=$fechaActualR->format('Y-m-d');
                                     //SI SE DETECTA QUE E SUNA INSERCIÓN DE RECAUDO
                                     //echo "Valor FEcha Registro: $fechaRegistro Valor Fecha Actual: $fechaActualR <br>";
+                                    //echo "Valor fechaComP: $fechaComP Valor recaudoFecha: $recaudoFecha <br>";
                                     if ($fechaRegistro==$fechaActualR && $flagInsertPago==1 && $fechaComP==$recaudoFecha){
-                                        //echo "Entro <br>";
+                                        echo "Entro <br>";
                                         $obliPor=round(($obligacion/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                         $intePor=round(($sumaTotalDiaria/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],2);
                                         $costPor=round(($costas/($obligacion+$costas+$sumaTotalDiaria))*$fecha["Pago"],4);
@@ -873,6 +876,7 @@ class reliquidacion extends CalendarioAnual{
                                     $obliPorR=0;
                                     $intePorR=0;
                                     $diaCorte=str_pad($diaCorte, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
+                                    $diaInsertRe=str_pad($diaInsertRe, 2, '0', STR_PAD_LEFT); //pasar de 1 a 01
                                     $fechaCom=$annoEje."-".$mes."-".$diaCorte;
                                                                 //echo "Fechaloooooo: ".$fechaCom;
                                                                 //var_dump($fechaCom);
@@ -896,6 +900,7 @@ class reliquidacion extends CalendarioAnual{
                                 //echo "La Fecha del recaudo fue: ".$fecha["Fecha"]." y el valor fue de: ".$fecha["Pago"]."<br>";
                             }
                         $diaPla=$diaPla+1;
+                        $diaPla=str_pad($diaPla, 2, '0', STR_PAD_LEFT);
                         //echo "Valor Sumando ".$diaPla=$diaPla+1;
                     }
                         $numDiasMesAct=$numDiasMesAct-$diaInsertRe;
@@ -916,6 +921,7 @@ class reliquidacion extends CalendarioAnual{
                     //return 1;
                 }
                 else if ($annoEje==date("Y") && $mes==date("m")){
+                    //echo "Entro";
                     $numDiasMesAct1=date("d");
                     $numDiasMesAct1;
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
@@ -941,6 +947,7 @@ class reliquidacion extends CalendarioAnual{
                             }
                         }
                         //echo "<br>".$fechaCom;
+                        //print_r($recaudos);
                             foreach ($recaudos as $fecha) {
                                 if($fecha["Fecha"]==$fechaCom) {
                                     $pagoId=$fecha["PagoId"];
