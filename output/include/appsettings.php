@@ -751,9 +751,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4444_1736950393";
+$projectBuildKey = "4510_1741977921";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4444";
+$projectBuildNumber = "4510";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -988,7 +988,6 @@ $tableCaptions["Spanish"]["Recaudo_Por_Seccional"] = "Recaudo Por Seccional";
 $tableCaptions["Spanish"]["PrescripcionAutomatica"] = "Prescripcion Automatica";
 $tableCaptions["Spanish"]["MandamientoAutomatico"] = "Mandamiento Automatico";
 $tableCaptions["Spanish"]["dbo_AlertasOficios"] = "Alertas Oficios";
-$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 $tableCaptions["Spanish"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Spanish"]["admin_members"] = "Admin Members";
 $tableCaptions["Spanish"]["admin_users"] = "Admin Users";
@@ -997,6 +996,8 @@ $tableCaptions["Spanish"]["BDME_Publica"] = "BDME Publica";
 $tableCaptions["Spanish"]["dbo_Seccionales2"] = "Seccionales2";
 $tableCaptions["Spanish"]["Gesti_n_Medidas_Cautelares"] = "Gestión Medidas Cautelares";
 $tableCaptions["Spanish"]["Procesos_Sin_Medidas_Cautelares"] = "Procesos Sin Medidas Cautelares";
+$tableCaptions["Spanish"]["dbo_LiquidacionesHistorico"] = "Liquidaciones Historico";
+$tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
 
 
 $globalEvents = new class_GlobalEvents;

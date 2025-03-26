@@ -2666,6 +2666,11 @@ pdfDocument = {
 		{END details_liquidaciones},
 				
 				
+			 {BEGIN details_liquidacioneshistorico}
+			{$displayDetailTable_liquidacioneshistorico }
+		{END details_liquidacioneshistorico},
+				
+				
 			 {BEGIN details_acuerdos}
 			{$displayDetailTable_acuerdos }
 		{END details_acuerdos},

@@ -1284,6 +1284,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.LiquidacionesHistorico")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2519,6 +2523,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Procesos Sin Medidas Cautelares")
+		{
+			return false;
+		}
+		if($table=="dbo.LiquidacionesHistorico")
 		{
 			return false;
 		}

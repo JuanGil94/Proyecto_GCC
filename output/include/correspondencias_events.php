@@ -861,11 +861,22 @@ function BeforeProcessAdd($pageObject)
 function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
-		$resultado["response"]=DB::Exec("UPDATE Correspondencias set Radicado='".$_SESSION["Radicado"]."',Codigo='".$_SESSION["token"]."' where CorrespondenciaId=".$values['CorrespondenciaId']."");
+		$consulta=DB::Query("SELECT * FROM Oficios where OficioId=".$values['OficioId']);
+            while( $date = $consulta->fetchAssoc() )
+            {
+							$flagSigob=$date["Sigobius"];
+            }
+if($flagSigob==1){
+	$resultado["response"]=DB::Exec("UPDATE Correspondencias set Radicado='".$_SESSION["Radicado"]."',Codigo='".$_SESSION["token"]."' where CorrespondenciaId=".$values['CorrespondenciaId']."");
                     if (!$resultado["response"]){
                         echo "Ocurrio un error debido a: ".DB::LastError(); 
                         return false;
                     }
+}
+else{
+	return true;
+
+}
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

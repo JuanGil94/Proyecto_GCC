@@ -511,7 +511,7 @@ class reliquidacion extends CalendarioAnual{
         }
         $this->suma=$sumaTotalDiaria+$obligacion+$costSald;
     }
-    public function Calcular($fechaInicio,$flagInsertPago){
+    public function Calcular($fechaInicio,$flagInsertPago,$alterProceso){
         //echo "Entro a calcular Value: $flagInsertPago<br>";
         $numero=$this->procesoId;
         $this->deleteRe($numero);
@@ -801,10 +801,10 @@ class reliquidacion extends CalendarioAnual{
                     //echo "Holaaaa";
                     //echo "El valor de la sumaTotalDiaria= $sumaTotalDiaria";
                     //exit();
-                    $numDiasMesAct=$dias-$diaEje;
-                    if ($annoAct==$annoEje && $mesAct==$mes){
-                        $numDiasMesAct=$diaAct-$diaEje;
-                    }
+                        $numDiasMesAct=$dias-$diaEje;
+                        if ($annoAct==$annoEje && $mesAct==$mes){
+                            $numDiasMesAct=$diaAct-$diaEje;
+                        }
                     //echo $numDiasMesAct;
                     //echo "valor de los dias restantes es: ".$numDiasMesAct."<br>";
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mesEje);
@@ -903,6 +903,15 @@ class reliquidacion extends CalendarioAnual{
                         $diaPla=str_pad($diaPla, 2, '0', STR_PAD_LEFT);
                         //echo "Valor Sumando ".$diaPla=$diaPla+1;
                     }
+                    $fecha_objeto2=  new DateTime(now());
+                    $fCommp=$fecha_objeto->modify('first day of this month');
+                    $fCommp2=$fecha_objeto2->modify('first day of this month');
+                    //echo $fCommp->format('Y-m-d')."------".$fCommp2->format('Y-m-d');
+                    if ($fCommp->format('Y-m-d')==$fCommp2->format('Y-m-d')){ //Se compara fechas a ver si la fecha plazo es del mismo mes de la fecha actual
+                        //echo "Entoruuu";
+                        $fechaBase=new DateTime(now());
+                        $fechaBase=$fechaBase->format('Y-m-d');
+                    }
                         $numDiasMesAct=$numDiasMesAct-$diaInsertRe;
                         $obliReca=$obliPor;
                         $inteReca=$intePor;
@@ -922,14 +931,29 @@ class reliquidacion extends CalendarioAnual{
                 }
                 else if ($annoEje==date("Y") && $mes==date("m")){
                     //echo "Entro";
-                    $numDiasMesAct1=date("d");
-                    $numDiasMesAct1;
+                    $diaPres=str_pad(date("d"), 2, '0', STR_PAD_LEFT);
+                    $diaAct=str_pad($diaAct, 2, '0', STR_PAD_LEFT);
+                    $mesAct=str_pad($mesAct, 2, '0', STR_PAD_LEFT);
+                    if ($mes<$mesAct){
+                        $numDiasMesAct1=$dias;
+                        $fechaBase=$annoEje."-".$mes."-".$dias;
+                    }
+                    elseif ($diaPres<$diaAct){
+                        $numDiasMesAct1=$diaAct;
+                        $fechaBase=$annoEje."-".$mes."-".$diaAct;
+                    }
+                    else{
+                        $numDiasMesAct1=date("d");
+                        $fechaBase=new DateTime(now());
+                        $fechaBase=$fechaBase->format('Y-m-d');
+                    }
+
                     $tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
                     $valorDias=round(($tasaDiaraT*$obligacion*$numDiasMesAct1*100),2);
                     $sumaTotal+=$valorDias;
                     $elementos=range(1,$numDiasMesAct1);
                     //echo "<br><strong> El año es: ".$annoEje.". El mes es el ".$mes." y los dias a liquidar son ".$numDiasMesAct1." y su valor a liquidar es: ".$valorDias." dando la suma de:".$sumaTotal."<br></strong>";
-                    $fechaIns=$annoEje."-".$mes."-".$dias;
+                    //$fechaIns=$annoEje."-".$mes."-".$dias;
                     //insertRe($numero,$fechaIns,$numDiasMesAct1,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotal,$costReca,$costNove,$costSald);
                     foreach($elementos as $dia){   
                         $valorDiario=round(($tasaDiaraT*$obligacion*100),2);
@@ -1146,7 +1170,28 @@ class reliquidacion extends CalendarioAnual{
                     $this->insertRe($numero,$fechaBase,$dia,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald); 
                 }
                 else if($annoEje==date("Y")&&$mes>date("m")){
-                    //echo "Este mes: $mes con dias $dias no aplica<br>";
+                    $mesAct=str_pad($mesAct,2,'0',STR_PAD_LEFT);
+                    $diaAct=str_pad($diaAct,2,'0',STR_PAD_LEFT);
+                    //echo "Este mes: $mes año $annoEje con dias $dias no aplica<br>";
+                    //defino la tasa delk mes anterior para calcular los intereses a futuro
+                    //$mesT=str_pad(($mes-1),2,'0',STR_PAD_LEFT);
+                    //$tasaDiaraT=$this->tasa($naturaleza,$concepto,$annoEje,$mes);
+                        if ($mesAct==$mes){
+                            $obliPor=0;
+                            $intePor=0;
+                            $diaCorte=0;
+                            $costPor=0;
+                            
+                            $obliReca=0;
+                            $inteReca=0;
+                            $costReca=0;
+                            $numDiasMesAct=$diaAct;
+                            $sumaTotalDiaria=$sumaTotalDiaria+($tasaDiaraT*$obligacion*$numDiasMesAct*100);
+                            $valorDias=($tasaDiaraT*$obligacion*$numDiasMesAct*100);
+                            $fechaBase=$annoEje."-".$mes."-".$numDiasMesAct;
+                            $this->insertRe($numero,$fechaBase,$numDiasMesAct,$tasaDiaraT,$valorDias,$obliReca,$obliNove,$obligacion,$inteReca,$inteNove,$sumaTotalDiaria,$costReca,$costNove,$costSald);
+                        }
+
                                 //echo "La suma total es:".$sumaTotalDiaria;
                                 //echo "<script>alert('Holaaaa'+$sumaTotalDiaria);</script>";
                                 /*
@@ -1316,6 +1361,7 @@ class reliquidacion extends CalendarioAnual{
             }
             $annoEje++; 
         }
+        if ($alterProceso==1){
             $result["total"]=round($sumaTotalDiaria+$obligacion+$costSald,2);
             $this->suma=$result["total"];
             $this->sumaTotalDiaria=$sumaTotalDiaria;
@@ -1347,6 +1393,17 @@ class reliquidacion extends CalendarioAnual{
                 echo "Error en el update, relacionado con el pago en procesos".DB::LastError();
                 exit();
             }
+        }
+        else{
+            $result["total"]=round($sumaTotalDiaria+$obligacion+$costSald,2);
+            $this->suma=$result["total"];
+            $this->sumaTotalDiaria=$sumaTotalDiaria;
+            $this->obligacion=$obligacion;
+            $this->costas=$costSald;
+            $interesesNew=$this->sumaTotalDiaria;
+            $obligacionNew=$this->obligacion=$obligacion;
+            $costasNew=$this->costas;
+        }
     }
     public function calInteresesCierre($anoActual,$mesActual,$fechaDesde,$fechaHasta){
         //$count=0;
@@ -1529,5 +1586,75 @@ class reliquidacion extends CalendarioAnual{
                 };
                     //print_r($sumaPorFecha);
                     return $suspensiones; 
+    }
+    function recaudoAcuerdo($valor){
+        $rs5 = DB::Query("SELECT top 1 * FROM Acuerdos WHERE ProcesoId=".$this->procesoId."ORDER BY AcuerdoId DESC");
+        while( $date = $rs5->fetchAssoc() )
+		{
+            $valorCuota=$date["Total"];
+            $interesPlazo=$date["InteresPlazo"];
+            $interesMora=$date["Intereses"];
+            $costas=$date["Costas"];
+            $obligacion=$date["Capital"];
+        }
+        $valorPago=$valor;
+        $rs5 = DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$this->procesoId);
+        while( $date = $rs5->fetchAssoc() )
+        {
+            $obligacionAct=$date["Obligacion"];
+            $interesesAct=$date["Intereses"];
+            $costasAct=$date["Costas"];
+            $recaudo=$date["Recaudo"];
+        }
+        //Obtengo los porcentajes a los que equivale cada variable en la cuaot (Obligacion, Interses y costas)
+        $sumIntereses=$interesPlazo+$interesMora;
+        $porcentajeIntereses=$sumIntereses*100/$valorCuota;
+        $porcentajeObligacion=$obligacion*100/$valorCuota;
+        $porcentajeCostas=$costas*100/$valorCuota;
+
+        $pagoObli=($porcentajeObligacion*$valorPago/100);
+        $pagoInte=($porcentajeIntereses*$valorPago/100);
+        $pagoCost=($porcentajeCostas*$valorPago/100);
+        $resultado["response"]=DB::Exec("UPDATE Pagos1 set PagoObli=".$pagoObli.",PagoInte=".$pagoInte.",PagoCost=".$pagoCost." where PagoId=".$this->pagoId);
+        if ($resultado["response"]){
+        }
+        else {
+            // Hubo un error en la ejecución de la consulta
+            echo "<script>alert('No se pudo realizar el update a Pagos1 en recaudo Acuerdo de Pago ')</script>Error al ejecutar la consulta: " . DB::LastError();
+            exit();
+        }
+
+        if ($valorCuota==$valorPago){
+            $recaudoDif=$recaudo+$valorPago;
+            $obligacionDif=$obligacionAct-$obligacion;
+            $interesesDif=$interesesAct-($interesPlazo+$interesMora);
+            $costasDif=$costasAct-$costas;
+            $resultado["response"]=DB::Exec("UPDATE Procesos set Obligacion=".$obligacionDif.",Intereses=".$interesesDif.",Costas=".$costasDif.",Recaudo=".$recaudoDif." where ProcesoId=".$this->procesoId);
+            if ($resultado["response"]){
+            }
+            else {
+                // Hubo un error en la ejecución de la consulta
+                echo "<script>alert('No se pudo realizar el update a Procesos en recaudo Acuerdo de Pago ')</script>Error al ejecutar la consulta: " . DB::LastError();
+                exit();
+            }
+
+        }
+        else{
+            //obtengo los valores a descontar al proceso en Obligacion, Intereses y Costas
+            $obligacionDif=$obligacionAct-($porcentajeObligacion*$valorPago/100);
+            $interesesDif=$interesesAct-($porcentajeIntereses*$valorPago/100);
+            $costasDif=$costasAct-($porcentajeCostas*$valorPago/100);
+            $recaudoDif=$recaudo+$valorPago;
+            $resultado["response"]=DB::Exec("UPDATE Procesos set Obligacion=".$obligacionDif.",Intereses=".$interesesDif.",Costas=".$costasDif.",Recaudo=".$recaudoDif." where ProcesoId=".$this->procesoId);
+            if ($resultado["response"]){
+            }
+            else {
+                // Hubo un error en la ejecución de la consulta
+                echo "<script>alert('No se pudo realizar el update a Procesos en recaudo Acuerdo de Pago cuota Mayor o Menor')</script>Error al ejecutar la consulta: " . DB::LastError();
+                exit();
+            }
+        }
+
+
     }
 }
