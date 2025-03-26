@@ -3974,6 +3974,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "gesti_n_medidas_cautelares" ] = "Gestión Medidas Cautelares";
 	$projectEntities[ "Procesos Sin Medidas Cautelares" ] = array( "url" => "procesos_sin_medidas_cautelares", "type" => 6 );
 	$projectEntitiesReverse[ "procesos_sin_medidas_cautelares" ] = "Procesos Sin Medidas Cautelares";
+	$projectEntities[ "dbo.LiquidacionesHistorico" ] = array( "url" => "liquidacioneshistorico", "type" => 0 );
+	$projectEntitiesReverse[ "liquidacioneshistorico" ] = "dbo.LiquidacionesHistorico";
 }
 
 function findTable( $table ) {

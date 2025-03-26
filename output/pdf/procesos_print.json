@@ -2532,6 +2532,11 @@ pdfDocument = {
 			{$displayDetailTable_novedades }
 		{END details_novedades},
 				
+				
+			 {BEGIN details_liquidacioneshistorico}
+			{$displayDetailTable_liquidacioneshistorico }
+		{END details_liquidacioneshistorico},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',

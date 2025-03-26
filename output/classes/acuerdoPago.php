@@ -401,6 +401,27 @@ class AcuerdoPago{
                             echo "Error al ejecutar la consulta: " . DB::LastError();
                             exit();
                             }
+            $rs5 = DB::Query("SELECT TOP 1 * FROM LiquidacionesHistorico WHERE ProcesoId=".$this->procesoId." ORDER BY LiquidacionHistoricoId DESC");
+            while( $date = $rs5->fetchAssoc() )
+            {
+                $noLiqui=$date["No_Liqui"];
+            }
+            //echo "No. Liquidacion: ".$noLiqui;
+            if (empty($noLiqui)){
+                $noLiqui=0;
+            }
+            if ($cuota==1){
+                $noLiqui=$noLiqui+1;
+            }
+            $consulta2=DB::Exec("INSERT INTO LiquidacionesHistorico (ProcesoId,Cuota,Fecha,Capital,Intereses,Total,Costas,InteresesPlazo,FechaLiquidacion,No_Liqui) VALUES (".$this->procesoId.",".$cuota.",'".$fecha."',".$obliF.",".$intCostF.",".$valorCuota.",".$costas.",".$intPlazo.",GETDATE(),".$noLiqui.")");
+            if ($consulta2) {
+            //echo "La consulta se realizó correctamente.";
+            } 
+            else {
+            // Hubo un error en la ejecución de la consulta
+            echo "Error al ejecutar el insert en LiquidacionesHistorico: " . DB::LastError();
+            exit();
+            }
         }
         catch (PDOException $e) {
             echo "Error de PDO: " . $e->getMessage();

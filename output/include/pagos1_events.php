@@ -304,18 +304,30 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 
 		include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($values["ProcesoId"]);
-$recalcular->pagoId($values["PagoId"]);
-//echo "El valor del PagoId es:".$values["PagoId"]; 
-$recalcular->Calcular(date('Y-m-d'),1);
-//$proxy["saved"]=true;
-//echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
-/*
-echo '<script>if (confirm("Registro de recaudos realizado.")) {
-    location.reload();
-} else {
-    // Aquí puedes agregar un código adicional si el usuario hace clic en "Cancelar"
-}</script>'
-*/
+$rs5 = DB::Query("SELECT count(*) contar FROM Acuerdos where ProcesoId=".$values["ProcesoId"]);
+while( $date = $rs5->fetchAssoc() )
+{
+	$countAcuerdo=$date["contar"];
+}
+if ($countAcuerdo>0){
+	$recalcular->pagoId($values["PagoId"]);
+	$recalcular->recaudoAcuerdo($values['Pago']);
+}
+else{
+	$recalcular->pagoId($values["PagoId"]);
+	//echo "El valor del PagoId es:".$values["PagoId"]; 
+	$recalcular->Calcular(date('Y-m-d'),1,1);
+	//$proxy["saved"]=true;
+	//echo '<script>alert("Se ingresa el recaudo con exito y se reliquida el proceso")</script>'
+	/*
+	echo '<script>if (confirm("Registro de recaudos realizado.")) {
+		 location.reload();
+	} else {
+		 // Aquí puedes agregar un código adicional si el usuario hace clic en "Cancelar"
+	}</script>'
+	*/
+
+}
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

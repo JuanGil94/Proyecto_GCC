@@ -462,6 +462,7 @@ class ConnectionManager_Base
 		$connectionsIds["dbo.Seccionales2"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Gestión Medidas Cautelares"] = "GCC_at_S00001_CCAD01";
 		$connectionsIds["Procesos Sin Medidas Cautelares"] = "GCC_at_S00001_CCAD01";
+		$connectionsIds["dbo.LiquidacionesHistorico"] = "GCC_at_S00001_CCAD01";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

@@ -2516,7 +2516,7 @@ function buttonHandler_New_Button1($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
-$meses = $recalcular->Calcular(date('Y-m-d'),0);
+$meses = $recalcular->Calcular(date('Y-m-d'),0,0);
 //exit();
 $result["total"]=$recalcular->getSuma();;
 	RunnerContext::pop();
@@ -3057,7 +3057,7 @@ $recalcular=new reliquidacion($params["ProcesoId"]);
 //$result["record"] = $data;
 //print_r($data);
 //$recalcular->CalcularAcuerdo($params["fechaInicial"]);
-$recalcular->Calcular($params["fechaInicial"],0);
+$recalcular->Calcular($params["fechaInicial"],0,0);
 //$recalcular->Calcular();
 //$obligacionInicial=$recalcular->obligacionInicial;
 $obligacionInicial=$recalcular->obligacionSaldo;
@@ -3179,8 +3179,28 @@ function buttonHandler_Generar_Acuerdo_de_Pago($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("classes/acuerdoPago.php"));
 include_once (getabspath("classes/actuacionAction.php"));
-
-$response=DB::Query("SELECT count(*) countAcuerdo FROM Acuerdos where ProcesoId=".$params["ProcesoId"]);
+$response=DB::Query("SELECT count(*) countLiqui FROM Liquidaciones where ProcesoId=".$params["ProcesoId"]);
+		//print_r($actuacionId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$countLiqui=$date["countLiqui"];
+				}
+//echo "Value".$countLiqui;
+if($countLiqui>0){
+	$response=DB::Query("SELECT top 1 * FROM [LiquidacionesHistorico] where ProcesoId=".$params["ProcesoId"]." order by LiquidacionHistoricoId desc");
+		//print_r($actuacionId);
+		while( $date = $response->fetchAssoc() )
+				{
+					$fechaCuota1=$date["FechaLiquidacion"];
+				}
+$fecha_objeto=new DateTime(now());
+$fecha_objeto2=new DateTime($fechaCuota1);
+$fCommp=$fecha_objeto->modify('first day of this month');
+$fCommp2=$fecha_objeto2->modify('first day of this month');
+//echo $fCommp2 ."-".$fCommp;
+//exit();
+if ($fCommp->format('Y-m-d')==$fCommp2->format('Y-m-d')){
+	$response=DB::Query("SELECT count(*) countAcuerdo FROM Acuerdos where ProcesoId=".$params["ProcesoId"]);
 		//print_r($actuacionId);
 		while( $date = $response->fetchAssoc() )
 				{
@@ -3189,7 +3209,7 @@ $response=DB::Query("SELECT count(*) countAcuerdo FROM Acuerdos where ProcesoId=
 if ($countAcuerdo>0){
 	//echo "<script>alert('Actualmente ya se tiene un acuerdo de Pago')</script>";
 	//return false;
-	$result["Total"]=false;
+	$result["Err"]=2;
 	//$result["Acuerdo"]=true;
 }
 else{
@@ -3222,10 +3242,20 @@ else{
 					//echo '<script>alert("Response True")</script>';
 				}
 				else{
-					echo '<script>alert("Response false")</script>';
+					echo '<script>alert("Response false, no se ejecuto CoreOficios")</script>';
 					return false;
 				}
-};
+}
+}
+else{
+		$result["Err"]=1;
+}
+}
+else{
+	$result["Err"]=3;
+}
+
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -12236,7 +12266,7 @@ $costasNew=$costas+$pagoCost;
 DB::Delete("Pagos1", "PagoId=".$pagoId."" );
 
 $recalcular=new reliquidacion($procesoId);
-$recalcular->Calcular(date('Y-m-d'),0);
+$recalcular->Calcular(date('Y-m-d'),0,1);
 
 $updatePro=DB::Exec("UPDATE Procesos set Recaudo=".$recaudoNew." where ProcesoId=".$procesoId);
 	//$this->resultUpdate=$resultado["response"];
