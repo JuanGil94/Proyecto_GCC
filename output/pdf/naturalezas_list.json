@@ -79,9 +79,6 @@ pdfDocument = {
 										{BEGIN col_grid_4}
 					"%",
 					{END col_grid_4}
-										{BEGIN col_grid_5}
-					"%",
-					{END col_grid_5}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -225,9 +222,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_print_panel}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_columns_control}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
@@ -305,32 +299,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_checkbox}
-																							{BEGIN cellblock_grid_headcell_details}
-{
-	cellId: 'headcell_details',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_details}
 																							{BEGIN cellblock_grid_headcell_field1}
 {
 	cellId: 'headcell_field1',
@@ -486,46 +454,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_checkbox}
-																							{BEGIN cellblock_grid_cell_details}
-{
-	cellId: 'cell_details',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_details}
 																							{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
@@ -689,12 +617,6 @@ pdfDocument = {
 				col:  4,
 				text: ''
 			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  5,
-				text: ''
-			},
 							],
 				{END row_grid_2}
 		
@@ -756,32 +678,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_checkbox}
-																							{BEGIN cellblock_grid_footcell_details}
-{
-	cellId: 'footcell_details',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_details}
 																							{BEGIN cellblock_grid_footcell_field1}
 {
 	cellId: 'footcell_field1',

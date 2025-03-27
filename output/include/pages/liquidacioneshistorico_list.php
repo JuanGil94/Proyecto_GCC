@@ -853,11 +853,5 @@ array( 'cell' => 'footcell_field8' ) ) ) ),
 'imageBgColor' => '#f2f2f2',
 'controlsBgColor' => 'white',
 'imagePosition' => 'right',
-'pageCSS' => '/* Put  your custom CSS code here */
-table {
-    max-width: 200px;  /* Máximo ancho */
-    min-width: 100px;  /* Mínimo ancho */
-    width: auto;        /* Se adapta */
-}
-' );
+'pageCSS' => '' );
 		?>

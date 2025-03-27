@@ -155,6 +155,9 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_add}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_export}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

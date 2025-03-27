@@ -28,6 +28,8 @@
 
 		$this->events["AfterEdit"]=true;
 
+		$this->events["BeforeEdit"]=true;
+
 
 	}
 
@@ -697,28 +699,139 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 			$username = $values['UserName'];
 	$Nombre = $values['Nombre'];
 
-		$sql = "UPDATE [UsuGCC-_users] set fullname = '$Nombre' WHERE username = '$username'";
+	$userEdit = $_SESSION["username_edit"];
 		
+
 		// Enviar un mensaje personalizado al cliente
-    
+		$sql2 = "SELECT ID FROM [UsuGCC-_users] WHERE username = '$userEdit'";
+		$resultado = CustomQuery($sql2);
+
+		// Verificar si la consulta devolvió resultados
+		if ($resultado) {
+			 if ($fila = db_fetch_array($resultado)) {
+				  $userid = $fila['ID'];
+			 } else {
+				  echo("No se encontró un usuario con username: $username");
+			 }
+		} else {
+			 //echo("Error en la consulta SQL: $sql2");
+		}
+
+		$sql = "UPDATE [UsuGCC-_users] SET fullname = '$Nombre', username = '$username' WHERE ID = '$userid'";
+		$sql3 = "UPDATE [UsuGCC-ugmembers] SET UserName = '$username' WHERE UserName = '$userEdit'";
+
     try {
         CustomQuery($sql);
-        LogInfo("Actualización exitosa: " . $sql);
-				    // Devuelve un script para recargar la página
-					 if (!$inline) {
-						  $pageObject->setProxyValue("customJS", "window.location.reload();");
-					 }
-						return true;
+				 CustomQuery($sql3);
+        LogInfo("Inserción exitosa: " . $sql);
+				 unset($_SESSION["username_edit"]); // Elimina la variable de sesión
     } catch (Exception $e) {
-        LogInfo("Error en la Actualización: " . $e->getMessage());
+        LogInfo("Error en la inserción: " . $e->getMessage());
     }
-
+		
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 ;
 } // function AfterEdit
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// Before record updated
+function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, $pageObject)
+{
+
+		
+ //echo $values['UserId'];
+
+		//$userid = $values['UserId'];
+		$userid = $keys["UserId"];
+		// Enviar un mensaje personalizado al cliente
+		$sql2 = "SELECT username FROM UserProfile WHERE UserId = '$userid'";
+		$resultado = CustomQuery($sql2);
+
+		// Verificar si la consulta devolvió resultados
+		if ($resultado) {
+			 if ($fila = db_fetch_array($resultado)) {
+				  $username = $fila['username'];
+					//echo $username;
+					 $_SESSION["username_edit"] = $username; // Guardar en sesión
+			 } else {
+				  echo("No se encontró un usuario con username: $username");
+			 }
+		} else {
+			 //echo("Error en la consulta SQL: $sql2");
+		}
+
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+
+return true;
+;
+} // function BeforeEdit
+
+		
+		
 		
 		
 		

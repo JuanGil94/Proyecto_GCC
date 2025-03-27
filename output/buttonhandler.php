@@ -2,6 +2,21 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
+use Dompdf\Dompdf;
+
+use Dompdf\Options;
+
+use PhpOffice\PhpWord\PhpWord;
+
+use PhpOffice\PhpWord\IOFactory;
+
+use PhpOffice\PhpWord\Shared\Html;
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1416,12 +1431,6 @@ if( $eventId == 'MaximoPesos_decimales_con_coma' && "dbo.Empresas" == $table )
 	require_once("include/empresas_variables.php");
 	$cipherer = new RunnerCipherer("dbo.Empresas");
 	fieldEventHandler_MaximoPesos_decimales_con_coma( $params );
-}
-if( $eventId == 'Codigo_Validar_juzgado' && "dbo.Despachos" == $table )
-{
-	require_once("include/despachos_variables.php");
-	$cipherer = new RunnerCipherer("dbo.Despachos");
-	fieldEventHandler_Codigo_Validar_juzgado( $params );
 }
 
 
@@ -13454,58 +13463,6 @@ function fieldEventHandler_MaximoPesos_decimales_con_coma( $params )
 // Sample:
 $result["upper"] = strtoupper( $params["value"] );
 ;
-	RunnerContext::pop();
-	
-	echo my_json_encode( $result );
-	$button->deleteTempFiles();
-}
-function fieldEventHandler_Codigo_Validar_juzgado( $params )
-{
-	$params["keys"] = (array)my_json_decode(postvalue('keys'));
-	$params["isManyKeys"] = false;
-	$params["location"] = postvalue('pageType');
-	
-	$button = new Button($params);
-	$keys = $button->getKeys();
-	$ajax = $button; // for examle from HELP
-	$result = array();
-	
-	$pageType = postvalue("pageType");
-	$fieldsData = my_json_decode( postvalue("fieldsData") );
-	
-	$contextParams = array(
-		"data" => $fieldsData,
-		"masterData" => $_SESSION[ $masterTable . "_masterRecordData" ]
-	);
-	
-	RunnerContext::push( new RunnerContextItem( CONTEXT_ROW, $contextParams ) );
-	
-	
-// Sample:
-//$result["upper"] = strtoupper( $params["value"] );
-
-	$codigo = $params["value"];
-	
-	$sql = "select Codigo from Despachos where Codigo = '$codigo'";
-	
-	$rs = CustomQuery($sql);
-	
-										        // Extraer el resultado del QueryResult
-									  if ($data = db_fetch_array($rs)) {
-											//echo "El usuario es: " . $data['username'];
-											$result["upper"] = $data['Codigo'];
-											$result["Novalido"] = 'No_valido';
-											//echo "no válido. el codigo existe";
-											
-									  } else {
-											$result["Valido"] = 'Valido';
-											$result["upper"] = "";
-											//echo "el codigo no. existe";
-									  }
-
-	
-	
-	;
 	RunnerContext::pop();
 	
 	echo my_json_encode( $result );

@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsciudades["Spanish"]["CiudadId"] = "Ciudad Id";
 	$fieldToolTipsciudades["Spanish"]["CiudadId"] = "";
 	$placeHoldersciudades["Spanish"]["CiudadId"] = "";
-	$fieldLabelsciudades["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsciudades["Spanish"]["Codigo"] = "Código";
 	$fieldToolTipsciudades["Spanish"]["Codigo"] = "";
 	$placeHoldersciudades["Spanish"]["Codigo"] = "";
 	$fieldLabelsciudades["Spanish"]["Ciudad"] = "Ciudad";

@@ -142,7 +142,7 @@ $tdatatiposdocumentos[".ajaxCodeSnippetAdded"] = false;
 
 $tdatatiposdocumentos[".buttonsAdded"] = false;
 
-$tdatatiposdocumentos[".addPageEvents"] = false;
+$tdatatiposdocumentos[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatatiposdocumentos[".isUseTimeForSearch"] = false;
@@ -606,7 +606,7 @@ $tdatatiposdocumentos[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=30";
+			$edata["EditParams"].= " maxlength=50";
 
 		$edata["controlWidth"] = 200;
 
@@ -1108,6 +1108,7 @@ $tdatatiposdocumentos[".sqlquery"] = $queryData_tiposdocumentos;
 
 
 
-$tdatatiposdocumentos[".hasEvents"] = false;
+include_once(getabspath("include/tiposdocumentos_events.php"));
+$tdatatiposdocumentos[".hasEvents"] = true;
 
 ?>

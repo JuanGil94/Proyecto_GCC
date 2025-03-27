@@ -814,21 +814,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_checkbox}
-									{BEGIN cellblock_grid_headcell_details}
-	<th
-	
-	{$cell_grid_headcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_details}
 									{BEGIN cellblock_grid_headcell_field}
 	<th
 	
@@ -1025,110 +1010,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_checkbox}
-									{BEGIN cellblock_grid_cell_details}
-	<td
-	
-	{$cell_grid_cell_details}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="actuaciones_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN dtables_link}
-	<a 
-		data-itemtype="grid_alldetails_link" data-itemid="grid_alldetails_link" {$item_grid_alldetails_link} data-pageid="{$pageid}" data-record-id="{$recId}" 
-		{$dtables_link_attrs} 
-		class="{$dtables_link_class}" 
-		title="Mostrar detalles"
-				
-	>
-					<span class="glyphicon glyphicon-th-list"></span>
-					</a>
-{END dtables_link}
-	 
-		
-		
-	{BEGIN oficios_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$oficios_link_attrs} data-short-details="oficios"
-		class="{$oficios_dlink_class}" 
-		title="{$caption dbo_Oficios }"			>
-								
-									{BEGIN oficios_childcount}
-				<span class="details-badge badge oficios_badge" {$oficios_childnumber_attr}>
-					{$oficios_childnumber}				
-				</span>
-				{END oficios_childcount}
-						</a>
-	</span>
-	{END oficios_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN prescripcionautomatica_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$prescripcionautomatica_link_attrs} data-short-details="prescripcionautomatica"
-		class="{$prescripcionautomatica_dlink_class}" 
-		title="{$caption PrescripcionAutomatica }"			>
-								
-									{BEGIN prescripcionautomatica_childcount}
-				<span class="details-badge badge prescripcionautomatica_badge" {$prescripcionautomatica_childnumber_attr}>
-					{$prescripcionautomatica_childnumber}				
-				</span>
-				{END prescripcionautomatica_childcount}
-						</a>
-	</span>
-	{END prescripcionautomatica_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN mandamientoautomatico_dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link2" {$item_grid_details_link2} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$mandamientoautomatico_link_attrs} data-short-details="mandamientoautomatico"
-		class="{$mandamientoautomatico_dlink_class}" 
-		title="{$caption MandamientoAutomatico }"			>
-								
-									{BEGIN mandamientoautomatico_childcount}
-				<span class="details-badge badge mandamientoautomatico_badge" {$mandamientoautomatico_childnumber_attr}>
-					{$mandamientoautomatico_childnumber}				
-				</span>
-				{END mandamientoautomatico_childcount}
-						</a>
-	</span>
-	{END mandamientoautomatico_dtable_link}
-
-
-	 
-		
-		
-	{BEGIN _dtable_link}
-	<span data-itemtype="grid_details_link" data-itemid="grid_details_link3" {$item_grid_details_link3} data-pageid="{$pageid}" data-record-id="{$recId}">
-	<a  {$_link_attrs} data-short-details=""
-		class="{$_dlink_class}" 
-		title="{$caption dbo_PersuasivoAutomatico }"			>
-								
-									{BEGIN _childcount}
-				<span class="details-badge badge _badge" {$_childnumber_attr}>
-					{$_childnumber}				
-				</span>
-				{END _childcount}
-						</a>
-	</span>
-	{END _dtable_link}
-
-
-	
-	</td>
-	{END cellblock_grid_cell_details}
 									{BEGIN cellblock_grid_cell_field}
 	<td
 	
@@ -1330,21 +1211,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_checkbox}
-									{BEGIN cellblock_grid_footcell_details}
-	<td
-	
-	{$cell_grid_footcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_details}
 									{BEGIN cellblock_grid_footcell_field}
 	<td
 	

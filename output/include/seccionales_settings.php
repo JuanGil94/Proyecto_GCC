@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["SeccionalId"] = "Seccional Id";
 	$fieldToolTipsseccionales["Spanish"]["SeccionalId"] = "";
 	$placeHoldersseccionales["Spanish"]["SeccionalId"] = "";
-	$fieldLabelsseccionales["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsseccionales["Spanish"]["Codigo"] = "Código";
 	$fieldToolTipsseccionales["Spanish"]["Codigo"] = "";
 	$placeHoldersseccionales["Spanish"]["Codigo"] = "";
 	$fieldLabelsseccionales["Spanish"]["Seccional"] = "Seccional";
@@ -40,7 +40,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["CiudadId"] = "Ciudad";
 	$fieldToolTipsseccionales["Spanish"]["CiudadId"] = "";
 	$placeHoldersseccionales["Spanish"]["CiudadId"] = "";
-	$fieldLabelsseccionales["Spanish"]["PiePagina"] = "Pie Pagina";
+	$fieldLabelsseccionales["Spanish"]["PiePagina"] = "Pie Página";
 	$fieldToolTipsseccionales["Spanish"]["PiePagina"] = "";
 	$placeHoldersseccionales["Spanish"]["PiePagina"] = "";
 	$fieldLabelsseccionales["Spanish"]["Sigobius"] = "Sigobius";
@@ -49,10 +49,10 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["Email"] = "Email";
 	$fieldToolTipsseccionales["Spanish"]["Email"] = "";
 	$placeHoldersseccionales["Spanish"]["Email"] = "";
-	$fieldLabelsseccionales["Spanish"]["Direccion"] = "Direccion";
+	$fieldLabelsseccionales["Spanish"]["Direccion"] = "Dirección";
 	$fieldToolTipsseccionales["Spanish"]["Direccion"] = "";
 	$placeHoldersseccionales["Spanish"]["Direccion"] = "";
-	$fieldLabelsseccionales["Spanish"]["Telefonos"] = "Telefonos";
+	$fieldLabelsseccionales["Spanish"]["Telefonos"] = "Teléfonos";
 	$fieldToolTipsseccionales["Spanish"]["Telefonos"] = "";
 	$placeHoldersseccionales["Spanish"]["Telefonos"] = "";
 	$fieldLabelsseccionales["Spanish"]["PCI"] = "PCI";
@@ -3559,41 +3559,11 @@ $detailsTablesData["dbo.Seccionales"] = array();
 				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
-//	dbo.Presupuestos
-	
-	
-
-		$dIndex = 1;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="dbo.Presupuestos";
-		$detailsParam["dOriginalTable"] = "dbo.Presupuestos";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "presupuestos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("dbo_Presupuestos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["dbo.Seccionales"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["dbo.Seccionales"][$dIndex]["masterKeys"][]="SeccionalId";
-
-				$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["dbo.Seccionales"][$dIndex]["detailKeys"][]="SeccionalId";
 //	dbo.Chequeos
 	
 	
 
-		$dIndex = 2;
+		$dIndex = 1;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Chequeos";
 		$detailsParam["dOriginalTable"] = "dbo.Chequeos";
@@ -3623,7 +3593,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 3;
+		$dIndex = 2;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Procesos";
 		$detailsParam["dOriginalTable"] = "dbo.Procesos";
@@ -3653,7 +3623,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 4;
+		$dIndex = 3;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Importaciones";
 		$detailsParam["dOriginalTable"] = "dbo.Importaciones";
@@ -3683,7 +3653,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 5;
+		$dIndex = 4;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Indeterminados";
 		$detailsParam["dOriginalTable"] = "dbo.Indeterminados";
@@ -3713,7 +3683,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 6;
+		$dIndex = 5;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia";
@@ -3743,7 +3713,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 7;
+		$dIndex = 6;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia2";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia2";
@@ -3773,7 +3743,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 8;
+		$dIndex = 7;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.Minjusticia3";
 		$detailsParam["dOriginalTable"] = "dbo.Minjusticia3";
@@ -3803,7 +3773,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 9;
+		$dIndex = 8;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.ProcesosReasignar";
 		$detailsParam["dOriginalTable"] = "dbo.Procesos";
@@ -3833,7 +3803,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 10;
+		$dIndex = 9;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="dbo.UsuariosSeccionales";
 		$detailsParam["dOriginalTable"] = "dbo.UsuariosSeccionales";
@@ -3863,7 +3833,7 @@ $detailsTablesData["dbo.Seccionales"] = array();
 	
 	
 
-		$dIndex = 11;
+		$dIndex = 10;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="PrescripcionAutomatica";
 		$detailsParam["dOriginalTable"] = "dbo.Procesos";

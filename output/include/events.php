@@ -190,6 +190,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Gesti_n_Medidas_Cautelares_mes"] = true;
 		$this->events["Procesos_Sin_Medidas_Cautelares_cartera"] = true;
 		$this->events["Procesos_Sin_Medidas_Cautelares_Seccional"] = true;
+		$this->events["dbo_Carceles_snippet"] = true;
+		$this->events["dbo_Carceles_snippet1"] = true;
 
 
 
@@ -6101,6 +6103,18 @@ echo "<script>document.getElementById('toggle-checkboxes_seccional').addEventLis
     }
 });
  </script>";
+	;
+}
+	function event_dbo_Carceles_snippet(&$params)
+	{
+	// Put your code here.
+echo '<script src="include/direccion.js"></script>';
+	;
+}
+	function event_dbo_Carceles_snippet1(&$params)
+	{
+	// Put your code here.
+echo '<script src="include/direccion.js"></script>';
 	;
 }
 

@@ -2,4 +2,17 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
+
+[data-page="carceles_add"][data-itemid="text2"] {
+  
+}
+
+
+/* Put  your custom CSS code here */
+
+[data-page="carceles_add"][data-itemid="Direccion"] {
+  color: red;
+  display : none;
+}
 

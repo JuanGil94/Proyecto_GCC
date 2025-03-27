@@ -111,27 +111,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN SeccionalId_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
-	data-signal-error-for="SeccionalId{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
-		{BEGIN SeccionalId_label}{$label dbo_Presupuestos SeccionalId }{END SeccionalId_label}
-	</label>
-	<div class="r-edit-field">
-		{$SeccionalId_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Presupuestos SeccionalId } >
-		<div class="text-muted" >
-		{$tooltip dbo_Presupuestos SeccionalId }		</div>
-	</div>
-</div>
-
-
-{END SeccionalId_fieldblock}
-											
 {BEGIN Ano_fieldblock}
 
 
@@ -152,6 +131,27 @@
 
 
 {END Ano_fieldblock}
+											
+{BEGIN SeccionalId_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_SeccionalId}  r-vertical-field" 
+	data-signal-error-for="SeccionalId{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="SeccionalId" data-fieldname="SeccionalId" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_SeccionalId}">
+		{BEGIN SeccionalId_label}{$label dbo_Presupuestos SeccionalId }{END SeccionalId_label}
+	</label>
+	<div class="r-edit-field">
+		{$SeccionalId_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="SeccionalId" {$tooltipAttr dbo_Presupuestos SeccionalId } >
+		<div class="text-muted" >
+		{$tooltip dbo_Presupuestos SeccionalId }		</div>
+	</div>
+</div>
+
+
+{END SeccionalId_fieldblock}
 											
 {BEGIN Meta_fieldblock}
 

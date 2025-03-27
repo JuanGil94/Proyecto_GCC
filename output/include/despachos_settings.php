@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["DespachoId"] = "Despacho Id";
 	$fieldToolTipsdespachos["Spanish"]["DespachoId"] = "";
 	$placeHoldersdespachos["Spanish"]["DespachoId"] = "";
-	$fieldLabelsdespachos["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsdespachos["Spanish"]["Codigo"] = "Código";
 	$fieldToolTipsdespachos["Spanish"]["Codigo"] = "";
 	$placeHoldersdespachos["Spanish"]["Codigo"] = "";
 	$fieldLabelsdespachos["Spanish"]["Despacho"] = "Despacho/Juzgado";
@@ -49,13 +49,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdespachos["Spanish"]["Juez"] = "Juez";
 	$fieldToolTipsdespachos["Spanish"]["Juez"] = "";
 	$placeHoldersdespachos["Spanish"]["Juez"] = "";
-	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo Electronico";
+	$fieldLabelsdespachos["Spanish"]["Correo"] = "Correo Electrónico";
 	$fieldToolTipsdespachos["Spanish"]["Correo"] = "";
 	$placeHoldersdespachos["Spanish"]["Correo"] = "";
-	$fieldLabelsdespachos["Spanish"]["Telefonos"] = "Telefonos";
+	$fieldLabelsdespachos["Spanish"]["Telefonos"] = "Teléfonos";
 	$fieldToolTipsdespachos["Spanish"]["Telefonos"] = "";
 	$placeHoldersdespachos["Spanish"]["Telefonos"] = "";
-	$fieldLabelsdespachos["Spanish"]["Direccion"] = "Direccion";
+	$fieldLabelsdespachos["Spanish"]["Direccion"] = "Dirección";
 	$fieldToolTipsdespachos["Spanish"]["Direccion"] = "";
 	$placeHoldersdespachos["Spanish"]["Direccion"] = "";
 	$pageTitlesdespachos["Spanish"]["add"] = "Despachos";
@@ -157,14 +157,13 @@ $tdatadespachos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																											
-																	
+																																																																																																																																																																																																																																																																																																																																																																																																																											
 
 $tdatadespachos[".ajaxCodeSnippetAdded"] = false;
 
-$tdatadespachos[".buttonsAdded"] = true;
+$tdatadespachos[".buttonsAdded"] = false;
 
-$tdatadespachos[".addPageEvents"] = true;
+$tdatadespachos[".addPageEvents"] = false;
 
 // use timepicker for search panel
 $tdatadespachos[".isUseTimeForSearch"] = false;
@@ -587,14 +586,12 @@ $tdatadespachos[".hideMobileList"] = array();
 
 
 	
-		$eventsData = array();
-	$eventsData[] = array( "name" => "Codigo_Validar_juzgado", "type" => "change" );
-	$edata["fieldEvents"] = $eventsData;
-
-
-
-
 	
+
+
+
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -617,14 +614,18 @@ $tdatadespachos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			$edata["validateAs"]["basicValidate"][] = "DenyDuplicated";
+	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "El código %value% ya existe", "messageType" => "Text");
+
 	
 //	End validation
 
 	
 			
 	
-	
+		$edata["denyDuplicates"] = true;
+
 	
 	$fdata["EditFormats"]["edit"] = $edata;
 	$edata = array("EditFormat" => "Text field");
@@ -635,14 +636,12 @@ $tdatadespachos[".hideMobileList"] = array();
 
 
 	
-		$eventsData = array();
-	$eventsData[] = array( "name" => "Codigo_Validar_juzgado", "type" => "change" );
-	$edata["fieldEvents"] = $eventsData;
-
-
-
-
 	
+
+
+
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -665,14 +664,18 @@ $tdatadespachos[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			$edata["validateAs"]["basicValidate"][] = "DenyDuplicated";
+	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "El código %value% ya existe", "messageType" => "Text");
+
 	
 //	End validation
 
 	
 			
 	
-	
+		$edata["denyDuplicates"] = true;
+
 	
 	$fdata["EditFormats"]["add"] = $edata;
 	$edata = array("EditFormat" => "Lookup wizard");

@@ -1,0 +1,162 @@
+</select>
+ </li>
+
+    <!--<tr  id="ocultar-direccion">
+      <td  height="9" colspan="3" > <div align="center"><font size="1" face="Arial, Helvetica, sans-serif"><strong>Dirección
+          con codificación</strong></font><strong>:</strong>
+          <input name="puente" id="puente" type="text" value="" size="85" readonly="readonly" class="campo1B"  style="max-width: 600px; width: 65%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+        </div></td>
+    </tr>-->
+
+    <!--<tr id="ocultar-direccion-traducida">
+      <td  height="9" colspan="3" > <div align="center"><font size="1" face="Arial, Helvetica, sans-serif"><strong>Dirección
+          con codificación</strong></font><strong>:</strong>
+          <input name="direccion_traducida" id="direccion_traducida" type="text" value="" size="85" readonly="readonly" class="campo1B"  style="max-width: 600px; width: 65%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+        </div></td>
+    </tr>-->
+
+
+    
+</ul>
+
+<tr>
+  <td colspan="2" class="campo17">
+    <div id="COMPLEMENTOCALLE" style="display:none; text-align: center; color: red;">
+      <input name="nombreComplementoCalle" id="nombreComplementoCalle" type="text" size="30" class="campo173" readonly>
+      <select name="complementoCalleSN" id="complementoCalleSN" class="campo1A"
+        onChange="ocultaComplementoCalle();
+                  if (this.value === 'Si')
+                    muestraComplemento(document.getElementById('auxiliar').value);
+                  else 
+                    document.getElementById('complementoActivo').value = '0';
+                  this.selectedIndex = 0;"
+        onFocus="this.style.backgroundColor='#ffefce'">
+        <option value="" selected>Seleccione...</option>
+        <option value="Si">Sí</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+<p>
+    <div id="COMPLEMENTOS" style="display:none; text-align: center;">
+      <input name="anterior" id="anterior" type="hidden">
+      <input name="auxiliar" id="auxiliar" type="hidden">
+      <input name="nombreComplemento" id="nombreComplemento" type="text" size="38" class="campo173" readonly>
+      <input name="complemento" id="complemento" type="text" size="40" maxlength="40" class="campo1A"
+        onFocus="this.style.backgroundColor='#ffefce'"
+        onChange="borraCaracteresEspeciales(this, this.value);
+                  borraEspaciosDerecha(this.value, 'complemento');
+                  borraEspaciosInternos(this.value, 'complemento');
+                  if (validaComplemento()) {
+                    concatenaString(document.getElementById('puente').value, this.value, 'puente');
+                    concatenaString(document.getElementById('direccion').value, this.value, 'direccion');
+                    document.getElementById('auxiliar').value = '';
+                  }">
+    </div>
+  </td>
+</tr>
+<p>
+<tr>
+  <td colspan="3" style="text-align: center; margin: 20px 0;">
+    <strong>Dirección:</strong>
+    <input name="puente" id="puente" type="hidden" size="85" readonly class="campo1B">
+   <button onclick="LimpiaElementosLista()">Limpiar Lista</button>  
+
+<button id="btnBorrarUltima" onclick="        borraUltComponenteDireccion(document.getElementById('direccion').value, 'direccion');
+    if (document.getElementById('complementoActivo').value !== '3') { 
+        borraUltComponenteDireccion(document.getElementById('puente').value, 'puente');
+
+        document.getElementById('puente2').selectedIndex = document.getElementById('puente2').length - 1;
+        document.getElementById('puente3').selectedIndex = document.getElementById('puente2').selectedIndex;
+        borraElemento('puente2');
+        borraElemento('puente3');
+    } else {
+        enComplemento();
+    }
+">
+    Borrar Última
+</button>
+<p>
+<p>
+  </td>
+</tr>
+
+    <tr id="ocultar-direccion-traducida" style="display: none;">
+      <td  height="9" colspan="3" > <div align="center"><font size="1" face="Arial, Helvetica, sans-serif"><strong>Dirección
+          con codificación</strong></font><strong>:</strong>
+          <input name="direccion_traducida" id="direccion_traducida" type="text" value="" size="85" readonly="readonly" class="campo1B"  style="max-width: 600px; width: 65%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+        </div></td>
+    </tr>
+
+
+<div id="MANEJO" style="display:none; text-align: center;">
+
+  <table width="14%" border="0" align="center" id="Ocultar" hidden>
+    <tr>
+      <td width="25%" rowspan="4">
+        <select name="puente2" size="10" multiple id="puente2" class="campo1"></select>
+      </td>
+      <td width="32%" rowspan="4">
+        <select name="puente3" size="10" multiple id="puente3" class="campo1" readonly disabled></select>
+      </td>
+      <td width="43%" class="campo18B">
+        <button type="button" onclick="if(document.getElementById('complementoActivo').value === '0') {
+                                      puente3.selectedIndex = puente2.selectedIndex;
+                                      bajaElemento('puente2');
+                                      pasaElementosAString('puente2','puente');
+                                      bajaElemento('puente3');
+                                      pasaElementosAString('puente3','direccion');
+                                    } else enComplemento();">
+          <!--Bajar-->
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="campo18B">
+        <button type="button" onclick="if(document.getElementById('complementoActivo').value === '0') {
+                                      puente3.selectedIndex = puente2.selectedIndex;
+                                      subeElemento('puente2');
+                                      pasaElementosAString('puente2','puente');
+                                      subeElemento('puente3');
+                                      pasaElementosAString('puente3','direccion');
+                                    } else enComplemento();">
+          <!--Subir-->
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="campo18B">
+        <button type="button" onclick="if(document.getElementById('complementoActivo').value === '0') {
+                                      puente3.selectedIndex = puente2.selectedIndex;
+                                      borraElemento('puente2');
+                                      pasaElementosAString('puente2','puente');
+                                      borraElemento('puente3');
+                                      pasaElementosAString('puente3','direccion');
+                                    } else enComplemento();">
+          <!--Borrar-->
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="campo18B">
+        <input name="complementoActivo" id="complementoActivo" type="hidden" size="33" value="0">
+      </td>
+    </tr>
+
+
+
+
+</div>
+
+
+
+<input name="retorno" id="retorno" value="null" type="hidden">
+<input name="controlaLetras" id="controlaLetras" value="0" type="hidden">

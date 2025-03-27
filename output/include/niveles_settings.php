@@ -37,13 +37,13 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsniveles["Spanish"]["Hasta"] = "Hasta";
 	$fieldToolTipsniveles["Spanish"]["Hasta"] = "";
 	$placeHoldersniveles["Spanish"]["Hasta"] = "";
-	$fieldLabelsniveles["Spanish"]["Busqueda"] = "Busqueda";
+	$fieldLabelsniveles["Spanish"]["Busqueda"] = "Búsqueda";
 	$fieldToolTipsniveles["Spanish"]["Busqueda"] = "";
 	$placeHoldersniveles["Spanish"]["Busqueda"] = "";
-	$fieldLabelsniveles["Spanish"]["Antiguedad"] = "Antiguedad";
+	$fieldLabelsniveles["Spanish"]["Antiguedad"] = "Antigüedad";
 	$fieldToolTipsniveles["Spanish"]["Antiguedad"] = "";
 	$placeHoldersniveles["Spanish"]["Antiguedad"] = "";
-	$fieldLabelsniveles["Spanish"]["Clasificacion"] = "Clasificacion";
+	$fieldLabelsniveles["Spanish"]["Clasificacion"] = "Clasificación";
 	$fieldToolTipsniveles["Spanish"]["Clasificacion"] = "";
 	$placeHoldersniveles["Spanish"]["Clasificacion"] = "";
 	$pageTitlesniveles["Spanish"]["add"] = "Niveles";

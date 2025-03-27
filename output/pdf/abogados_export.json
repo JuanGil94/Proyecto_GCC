@@ -106,10 +106,16 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
 			{"text":{$Abogado_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
 			{"text":{$Documento_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_export_field9}"},
 				
 				
 			{"text":{$Tarjeta_pdfvalue},"hidden":"{$item_hide_export_field3}"},
@@ -127,19 +133,13 @@ pdfDocument = {
 			{"text":{$Email_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field8}"},
-				
-				
-			{"text":{$Masculino_pdfvalue},"hidden":"{$item_hide_export_field9}"},
-				
-				
-			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_export_field10}"},
-				
-				
 			{"text":{$Despacho_pdfvalue},"hidden":"{$item_hide_export_field11}"},
 				
 				
 			{"text":{$Codificador_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Activo_pdfvalue},"hidden":"{$item_hide_export_field10}"},
 				
 		  ],
   "border": [ false, false, false, false ],

@@ -6,11 +6,11 @@ $tdatapresupuestos[".OwnerID"] = "";
 $tdatapresupuestos[".OriginalTable"] = "dbo.Presupuestos";
 
 
-$tdatapresupuestos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatapresupuestos[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatapresupuestos[".originalPagesByType"] = $tdatapresupuestos[".pagesByType"];
-$tdatapresupuestos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatapresupuestos[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"export\":[\"export\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatapresupuestos[".originalPages"] = $tdatapresupuestos[".pages"];
-$tdatapresupuestos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatapresupuestos[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"export\":\"export\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatapresupuestos[".originalDefaultPages"] = $tdatapresupuestos[".defaultPages"];
 
 //	field labels
@@ -25,23 +25,22 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldToolTipspresupuestos["Spanish"] = array();
 	$placeHolderspresupuestos["Spanish"] = array();
 	$pageTitlespresupuestos["Spanish"] = array();
-	$fieldLabelspresupuestos["Spanish"]["PresupuestoId"] = "Presupuesto Id";
-	$fieldToolTipspresupuestos["Spanish"]["PresupuestoId"] = "";
-	$placeHolderspresupuestos["Spanish"]["PresupuestoId"] = "";
 	$fieldLabelspresupuestos["Spanish"]["Ano"] = "Año";
 	$fieldToolTipspresupuestos["Spanish"]["Ano"] = "";
 	$placeHolderspresupuestos["Spanish"]["Ano"] = "";
-	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional";
-	$fieldToolTipspresupuestos["Spanish"]["SeccionalId"] = "";
-	$placeHolderspresupuestos["Spanish"]["SeccionalId"] = "";
 	$fieldLabelspresupuestos["Spanish"]["Meta"] = "Meta";
 	$fieldToolTipspresupuestos["Spanish"]["Meta"] = "";
 	$placeHolderspresupuestos["Spanish"]["Meta"] = "";
 	$fieldLabelspresupuestos["Spanish"]["Procesos"] = "Can. Procesos";
 	$fieldToolTipspresupuestos["Spanish"]["Procesos"] = "";
 	$placeHolderspresupuestos["Spanish"]["Procesos"] = "";
+	$fieldLabelspresupuestos["Spanish"]["SeccionalId"] = "Seccional";
+	$fieldToolTipspresupuestos["Spanish"]["SeccionalId"] = "";
+	$placeHolderspresupuestos["Spanish"]["SeccionalId"] = "";
+	$fieldLabelspresupuestos["Spanish"]["PresupuestoId"] = "Presupuesto Id";
+	$fieldToolTipspresupuestos["Spanish"]["PresupuestoId"] = "";
+	$placeHolderspresupuestos["Spanish"]["PresupuestoId"] = "";
 	$pageTitlespresupuestos["Spanish"]["add"] = "Presupuestos";
-	$pageTitlespresupuestos["Spanish"]["edit"] = "Presupuestos";
 	if (count($fieldToolTipspresupuestos["Spanish"]))
 		$tdatapresupuestos[".isUseToolTips"] = true;
 }
@@ -139,8 +138,8 @@ $tdatapresupuestos[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						
-																																																																																																																	
+																																																																																																																																																																																																																																																																																																																																																																				
+																																																								
 
 $tdatapresupuestos[".ajaxCodeSnippetAdded"] = false;
 
@@ -160,6 +159,7 @@ $tdatapresupuestos[".filterFields"] = array();
 $tdatapresupuestos[".requiredSearchFields"] = array();
 
 $tdatapresupuestos[".googleLikeFields"] = array();
+$tdatapresupuestos[".googleLikeFields"][] = "PresupuestoId";
 $tdatapresupuestos[".googleLikeFields"][] = "Ano";
 $tdatapresupuestos[".googleLikeFields"][] = "SeccionalId";
 $tdatapresupuestos[".googleLikeFields"][] = "Meta";
@@ -199,8 +199,8 @@ $tdatapresupuestos[".strOrderBy"] = $tstrOrderBy;
 $tdatapresupuestos[".orderindexes"] = array();
 
 
-$tdatapresupuestos[".sqlHead"] = "SELECT PresupuestoId,  	Ano,  	SeccionalId,  	Meta,  	Procesos";
-$tdatapresupuestos[".sqlFrom"] = "FROM dbo.Presupuestos";
+$tdatapresupuestos[".sqlHead"] = "select *";
+$tdatapresupuestos[".sqlFrom"] = "from presupuestos";
 $tdatapresupuestos[".sqlWhereExpr"] = "";
 $tdatapresupuestos[".sqlTail"] = "";
 
@@ -246,7 +246,6 @@ $tdatapresupuestos[".arrGroupsPerPage"] = $arrGPP;
 $tdatapresupuestos[".highlightSearchResults"] = true;
 
 $tableKeyspresupuestos = array();
-$tableKeyspresupuestos[] = "PresupuestoId";
 $tdatapresupuestos[".Keys"] = $tableKeyspresupuestos;
 
 
@@ -261,7 +260,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "PresupuestoId";
 	$fdata["GoodName"] = "PresupuestoId";
-	$fdata["ownerTable"] = "dbo.Presupuestos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Presupuestos","PresupuestoId");
 	$fdata["FieldType"] = 3;
 
@@ -275,8 +274,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "PresupuestoId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "PresupuestoId";
+		$fdata["FullName"] = "PresupuestoId";
 
 	
 	
@@ -402,7 +400,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "Ano";
 	$fdata["GoodName"] = "Ano";
-	$fdata["ownerTable"] = "dbo.Presupuestos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Presupuestos","Ano");
 	$fdata["FieldType"] = 3;
 
@@ -415,8 +413,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Ano";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Ano";
+		$fdata["FullName"] = "Ano";
 
 	
 	
@@ -692,11 +689,11 @@ $tdatapresupuestos[".hideMobileList"] = array();
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-		$fdata["filterTotalFields"] = "PresupuestoId";
+		$fdata["filterTotalFields"] = "Ano";
 		$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
-		$fdata["sortValueType"] = 0;
+		$fdata["sortValueType"] = 1;
 		$fdata["numberOfVisibleItems"] = 10;
 
 		$fdata["filterBy"] = 0;
@@ -716,7 +713,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "SeccionalId";
 	$fdata["GoodName"] = "SeccionalId";
-	$fdata["ownerTable"] = "dbo.Presupuestos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Presupuestos","SeccionalId");
 	$fdata["FieldType"] = 3;
 
@@ -729,8 +726,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "SeccionalId";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "SeccionalId";
+		$fdata["FullName"] = "SeccionalId";
 
 	
 	
@@ -793,7 +789,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	
 
 	
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "Seccional";
 
 	
 	
@@ -881,7 +877,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "Meta";
 	$fdata["GoodName"] = "Meta";
-	$fdata["ownerTable"] = "dbo.Presupuestos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Presupuestos","Meta");
 	$fdata["FieldType"] = 6;
 
@@ -894,8 +890,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Meta";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Meta";
+		$fdata["FullName"] = "Meta";
 
 	
 	
@@ -1025,7 +1020,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "Procesos";
 	$fdata["GoodName"] = "Procesos";
-	$fdata["ownerTable"] = "dbo.Presupuestos";
+	$fdata["ownerTable"] = "";
 	$fdata["Label"] = GetFieldLabel("dbo_Presupuestos","Procesos");
 	$fdata["FieldType"] = 3;
 
@@ -1038,8 +1033,7 @@ $tdatapresupuestos[".hideMobileList"] = array();
 
 		$fdata["sourceSingle"] = "Procesos";
 
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "Procesos";
+		$fdata["FullName"] = "Procesos";
 
 	
 	
@@ -1186,24 +1180,6 @@ $masterTablesData["dbo.Presupuestos"] = array();
 
 
 
-	
-	//if !@t.bReportCrossTab
-			$strOriginalDetailsTable="dbo.Seccionales";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="dbo.Seccionales";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "seccionales";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["dbo.Presupuestos"][0] = $masterParams;
-				$masterTablesData["dbo.Presupuestos"][0]["masterKeys"] = array();
-	$masterTablesData["dbo.Presupuestos"][0]["masterKeys"][]="SeccionalId";
-				$masterTablesData["dbo.Presupuestos"][0]["detailKeys"] = array();
-	$masterTablesData["dbo.Presupuestos"][0]["detailKeys"][]="SeccionalId";
-		
-	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -1223,9 +1199,9 @@ require_once(getabspath("classes/sql.php"));
 function createSqlQuery_presupuestos()
 {
 $proto0=array();
-$proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "PresupuestoId,  	Ano,  	SeccionalId,  	Meta,  	Procesos";
-$proto0["m_strFrom"] = "FROM dbo.Presupuestos";
+$proto0["m_strHead"] = "select";
+$proto0["m_strFieldList"] = "*";
+$proto0["m_strFrom"] = "from presupuestos";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1265,110 +1241,52 @@ $obj = new SQLLogicalExpr($proto4);
 $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
-			$obj = new SQLField(array(
-	"m_strName" => "PresupuestoId",
-	"m_strTable" => "dbo.Presupuestos",
-	"m_srcTableName" => "dbo.Presupuestos"
+			$obj = new SQLNonParsed(array(
+	"m_sql" => "*"
 ));
 
-$proto6["m_sql"] = "PresupuestoId";
+$proto6["m_sql"] = "*";
 $proto6["m_srcTableName"] = "dbo.Presupuestos";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
 $obj = new SQLFieldListItem($proto6);
 
 $proto0["m_fieldlist"][]=$obj;
-						$proto8=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Ano",
-	"m_strTable" => "dbo.Presupuestos",
-	"m_srcTableName" => "dbo.Presupuestos"
-));
-
-$proto8["m_sql"] = "Ano";
-$proto8["m_srcTableName"] = "dbo.Presupuestos";
-$proto8["m_expr"]=$obj;
-$proto8["m_alias"] = "";
-$obj = new SQLFieldListItem($proto8);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto10=array();
-			$obj = new SQLField(array(
-	"m_strName" => "SeccionalId",
-	"m_strTable" => "dbo.Presupuestos",
-	"m_srcTableName" => "dbo.Presupuestos"
-));
-
-$proto10["m_sql"] = "SeccionalId";
-$proto10["m_srcTableName"] = "dbo.Presupuestos";
-$proto10["m_expr"]=$obj;
-$proto10["m_alias"] = "";
-$obj = new SQLFieldListItem($proto10);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto12=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Meta",
-	"m_strTable" => "dbo.Presupuestos",
-	"m_srcTableName" => "dbo.Presupuestos"
-));
-
-$proto12["m_sql"] = "Meta";
-$proto12["m_srcTableName"] = "dbo.Presupuestos";
-$proto12["m_expr"]=$obj;
-$proto12["m_alias"] = "";
-$obj = new SQLFieldListItem($proto12);
-
-$proto0["m_fieldlist"][]=$obj;
-						$proto14=array();
-			$obj = new SQLField(array(
-	"m_strName" => "Procesos",
-	"m_strTable" => "dbo.Presupuestos",
-	"m_srcTableName" => "dbo.Presupuestos"
-));
-
-$proto14["m_sql"] = "Procesos";
-$proto14["m_srcTableName"] = "dbo.Presupuestos";
-$proto14["m_expr"]=$obj;
-$proto14["m_alias"] = "";
-$obj = new SQLFieldListItem($proto14);
-
-$proto0["m_fieldlist"][]=$obj;
 $proto0["m_fromlist"] = array();
-												$proto16=array();
-$proto16["m_link"] = "SQLL_MAIN";
-			$proto17=array();
-$proto17["m_strName"] = "dbo.Presupuestos";
-$proto17["m_srcTableName"] = "dbo.Presupuestos";
-$proto17["m_columns"] = array();
-$proto17["m_columns"][] = "PresupuestoId";
-$proto17["m_columns"][] = "Ano";
-$proto17["m_columns"][] = "SeccionalId";
-$proto17["m_columns"][] = "Meta";
-$proto17["m_columns"][] = "Procesos";
-$obj = new SQLTable($proto17);
+												$proto8=array();
+$proto8["m_link"] = "SQLL_MAIN";
+			$proto9=array();
+$proto9["m_strName"] = "dbo.Presupuestos";
+$proto9["m_srcTableName"] = "dbo.Presupuestos";
+$proto9["m_columns"] = array();
+$proto9["m_columns"][] = "PresupuestoId";
+$proto9["m_columns"][] = "Ano";
+$proto9["m_columns"][] = "SeccionalId";
+$proto9["m_columns"][] = "Meta";
+$proto9["m_columns"][] = "Procesos";
+$obj = new SQLTable($proto9);
 
-$proto16["m_table"] = $obj;
-$proto16["m_sql"] = "dbo.Presupuestos";
-$proto16["m_alias"] = "";
-$proto16["m_srcTableName"] = "dbo.Presupuestos";
-$proto18=array();
-$proto18["m_sql"] = "";
-$proto18["m_uniontype"] = "SQLL_UNKNOWN";
+$proto8["m_table"] = $obj;
+$proto8["m_sql"] = "presupuestos";
+$proto8["m_alias"] = "";
+$proto8["m_srcTableName"] = "dbo.Presupuestos";
+$proto10=array();
+$proto10["m_sql"] = "";
+$proto10["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto18["m_column"]=$obj;
-$proto18["m_contained"] = array();
-$proto18["m_strCase"] = "";
-$proto18["m_havingmode"] = false;
-$proto18["m_inBrackets"] = false;
-$proto18["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto18);
+$proto10["m_column"]=$obj;
+$proto10["m_contained"] = array();
+$proto10["m_strCase"] = "";
+$proto10["m_havingmode"] = false;
+$proto10["m_inBrackets"] = false;
+$proto10["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto10);
 
-$proto16["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto16);
+$proto8["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto8);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();

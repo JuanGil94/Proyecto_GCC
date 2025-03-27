@@ -130,8 +130,33 @@
 		
 </span>			</span>
 		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="advsearch_link" {$item_advsearch_link} data-topcell-item-type="advsearch_link" >
+				<span data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	"  href="userprofile_search.php{$stateLink_full}" {$advsearchlink_attrs} data-popup >
+					<span class="glyphicon glyphicon-plus"></span>
+							Búsqueda avanzada			</a>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
 				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		Exportar seleccionados		
+		</a>
+	</li>
+{END exportselected_link}
+							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>					</ul>
+	</span>
 </span>
 			</span>
 		 
@@ -275,7 +300,7 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
@@ -287,6 +312,15 @@
 							Añadir nuevo			</a>
 </span>
 {END add_link}
+	 
+		{BEGIN export_link}
+<span data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$exportlink_attrs} >
+					<img src="{$file_url images/menuicons/Excel2.png}" />
+							Exportar			</a>
+</span>
+{END export_link}
 			{END firstAboveGridCell}	
 	</div>			 
 				<div 
