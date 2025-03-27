@@ -169,13 +169,16 @@ pdfDocument = {
 			{"text":{$Ano_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
-				
-				
 			{"text":{$Meta_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
 			{"text":{$Procesos_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
+				
+				
+			{"text":{$PresupuestoId_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

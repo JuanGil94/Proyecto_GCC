@@ -2,4 +2,21 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
+
+[data-page="carceles_edit"][data-itemid="integrated_edit_field2"] {
+  display: none;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="carceles_edit"][data-itemid="text2"] {
+  
+}
+
+#ocultar-direccion{
+    
+    display: none;
+}
+/* Put  your custom CSS code here */
 

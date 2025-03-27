@@ -76,6 +76,14 @@
 </div>
 </div>
 {END message_block}	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
 	</div>		
 {END above-grid_block}
 									{BEGIN grid_block}
@@ -153,27 +161,6 @@
 
 {END CiudadId_fieldblock}
 											
-{BEGIN Direccion_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-vertical-field" 
-	data-signal-error-for="Direccion{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Direccion" data-fieldname="Direccion" >
-
-	<label class="r-edit-label control-label" for="{$labelfor_Direccion}">
-		{BEGIN Direccion_label}{$label dbo_Carceles Direccion }{END Direccion_label}
-	</label>
-	<div class="r-edit-field">
-		{$Direccion_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="Direccion" {$tooltipAttr dbo_Carceles Direccion } >
-		<div class="text-muted" >
-		{$tooltip dbo_Carceles Direccion }		</div>
-	</div>
-</div>
-
-
-{END Direccion_fieldblock}
-											
 {BEGIN Telefono_fieldblock}
 
 
@@ -215,6 +202,85 @@
 
 
 {END Email_fieldblock}
+											
+{BEGIN Direccion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Direccion}  r-vertical-field" 
+	data-signal-error-for="Direccion{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="Direccion" {$item_Direccion} data-pageid="{$pageid}" data-page="carceles_add" data-field="Direccion" data-fieldname="Direccion" data-before-same-field >
+
+	<label class="r-edit-label control-label" for="{$labelfor_Direccion}">
+		{BEGIN Direccion_label}{$label dbo_Carceles Direccion }{END Direccion_label}
+	</label>
+	<div class="r-edit-field">
+		{$Direccion_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Direccion" {$tooltipAttr dbo_Carceles Direccion } >
+		<div class="text-muted" >
+		{$tooltip dbo_Carceles Direccion }		</div>
+	</div>
+</div>
+
+
+{END Direccion_fieldblock}
+											<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-small > 
+	{$direccion_form}</span>
+											<span data-itemtype="text" data-itemid="text1" {$item_text1} data-pageid="{$pageid}" data-small > 
+	 {$nomenclaturas_options}</span>
+											<span data-itemtype="text" data-itemid="text2" {$item_text2} data-pageid="{$pageid}" data-page="carceles_add" data-small > 
+	{$direccion_form2}</span>
+											<span data-itemtype="text" data-itemid="text3" {$item_text3} data-pageid="{$pageid}" data-small > 
+	<style>
+  .calculadora-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .calculadora {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 150px; /* Ajuste para que encajen los botones */
+  }
+
+  .calculadora-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .calculadora button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .calculadora button:hover {
+    background: #ddd;
+  }
+
+  #numeroSeleccionado {
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+</style>
+</span>
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -256,7 +322,10 @@
 							Cancelar			</a>
 </span>
 {END cancel_button}
-	</div>					</div>
+	 
+		<span data-itemtype="snippet" data-itemid="snippet" {$item_snippet} data-pageid="{$pageid}" >
+{$event dbo_Carceles_snippet}
+</span>	</div>					</div>
 	</div>		
 {END below-grid_block}
 			</div>

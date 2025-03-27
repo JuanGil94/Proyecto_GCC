@@ -1,7 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
 'details' => array( 'dbo.Abogados' => array( 'displayPreview' => 1 ),
-'dbo.Presupuestos' => array( 'displayPreview' => 1 ),
 'dbo.Chequeos' => array( 'displayPreview' => 1 ),
 'dbo.Procesos' => array( 'displayPreview' => 1 ),
 'dbo.Importaciones' => array( 'displayPreview' => 1 ),
@@ -902,8 +901,7 @@
 'customButtons' => array(  ),
 'hasNotifications' => false ),
 'misc' => array( 'type' => 'print',
-'breadcrumb' => false,
-'listColumnsOrderOnPrint' => true ),
+'breadcrumb' => false ),
 'events' => array( 'maps' => array(  ),
 'mapsData' => array(  ),
 'buttons' => array(  ) ),

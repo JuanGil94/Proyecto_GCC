@@ -1,8 +1,6 @@
 <?php
 			$optionsArray = array( 'details' => array( 'dbo.Abogados' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
-'dbo.Presupuestos' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
 'dbo.Chequeos' => array( 'displayPreview' => 2,
 'previewPageId' => '' ),
 'dbo.Procesos' => array( 'displayPreview' => 2,

@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelscarceles["Spanish"]["CiudadId"] = "Ciudad";
 	$fieldToolTipscarceles["Spanish"]["CiudadId"] = "";
 	$placeHolderscarceles["Spanish"]["CiudadId"] = "";
-	$fieldLabelscarceles["Spanish"]["Direccion"] = "Direccion";
+	$fieldLabelscarceles["Spanish"]["Direccion"] = "Dirección";
 	$fieldToolTipscarceles["Spanish"]["Direccion"] = "";
 	$placeHolderscarceles["Spanish"]["Direccion"] = "";
 	$fieldLabelscarceles["Spanish"]["Telefono"] = "Teléfono";
@@ -148,7 +148,7 @@ $tdatacarceles[".ajaxCodeSnippetAdded"] = false;
 
 $tdatacarceles[".buttonsAdded"] = false;
 
-$tdatacarceles[".addPageEvents"] = false;
+$tdatacarceles[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatacarceles[".isUseTimeForSearch"] = false;
@@ -2652,6 +2652,7 @@ $tdatacarceles[".sqlquery"] = $queryData_carceles;
 
 
 
-$tdatacarceles[".hasEvents"] = false;
+include_once(getabspath("include/carceles_events.php"));
+$tdatacarceles[".hasEvents"] = true;
 
 ?>

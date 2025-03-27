@@ -36,9 +36,3 @@
 }
 
 
-/* Put  your custom CSS code here */
-table {
-    max-width: 200px;  /* Máximo ancho */
-    min-width: 100px;  /* Mínimo ancho */
-    width: auto;        /* Se adapta */
-}

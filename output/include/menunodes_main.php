@@ -527,7 +527,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "21";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Penitenciarias/Cárceles";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.Carceles";
@@ -546,7 +546,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Carceles";
+	$menuNode["title"] = "Penitenciarias/Cárceles";
 
 
 
@@ -1047,7 +1047,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "41";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Metas de Recaudo";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "dbo.Presupuestos";
@@ -1066,7 +1066,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Presupuestos";
+	$menuNode["title"] = "Metas de Recaudo";
 
 
 

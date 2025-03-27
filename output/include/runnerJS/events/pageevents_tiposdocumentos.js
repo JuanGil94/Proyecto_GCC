@@ -1,0 +1,3 @@
+
+Runner.pages.PageSettings.addPageEvent('dbo.TiposDocumentos',Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){var urlParams=new URLSearchParams(window.location.search);if(urlParams.get("error")==="1"){swal("Alerta","El tipo de documento contiene sancionados registrados desde la etapa preliminar, no es posible eliminar.","warning");}
+if(urlParams.get("succes")==="1"){swal("Hecho","El tipo de documento ha sido eliminado.","success");}});

@@ -1,0 +1,335 @@
+
+
+
+
+
+<table>
+
+      <div align="left">
+        <font size="2" face="Arial, Helvetica, sans-serif"><strong>Dirección:</strong></font>
+        <input name="direccion" id="direccion" type="text" class="campo1B" value="" size="50" readonly = "readonly"
+          style="display: block; max-width: 800px; width: 65%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;" oninput="traducirDireccion()">
+          
+  
+                 <div id="sugerencias" style="position: absolute; background: white; border: 1px solid #ccc; display: none;"></div>
+      </div>
+      
+  
+</table>
+
+<p>
+  
+<ul>
+    <li>
+<label for="select"><strong>Nomenclaturas frecuentes</strong></label>
+
+<select name="select1" id="select1" 
+    onchange="if(document.getElementById('complementoActivo').value=='0') {
+        concatenaString(document.getElementById('puente').value,this.value,'puente');
+        if(this.options[this.selectedIndex].text !== 'OTRA NOMENCLATURA') {
+            concatenaString(document.getElementById('direccion').value, this.options[this.selectedIndex].text,'direccion');
+        }
+        verificaComplemento(this.options[this.selectedIndex].text);
+        this.selectedIndex = 0;
+    } else {
+        enComplemento();
+        this.selectedIndex = 0;
+    }"  style="display: block; max-width: 600px; width: 50%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+    <option value="">Seleccione...</option>
+    <option value="AP">APARTAMENTO</option>
+    <option value="AV">AVENIDA</option>
+    <option value="AUT">AUTOPISTA</option>
+    <option value="BRR">BARRIO</option>
+    <option value="CL">CALLE</option>
+    <option value="CR">CARRERA</option>
+    <option value="DG">DIAGONAL</option>
+    <option value="ED">EDIFICIO</option>
+    <option value="NORTE">NORTE</option>
+    <option value="SUR">SUR</option>
+    <option value="TV">TRANSVERSAL</option>
+
+</select>
+</li>
+
+<p>
+
+      
+    <li>
+      <label for="numeroSeleccionado">
+        <strong>Letra</strong>
+      </label>
+    <select id="letras" style="display: block; max-width: 600px; width: 50%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+        <option value="">Seleccione...</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="H">H</option>
+        <option value="I">I</option>
+        <option value="J">J</option>
+        <option value="K">K</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+        <option value="N">N</option>
+        <option value="O">O</option>
+        <option value="P">P</option>
+        <option value="Q">Q</option>
+        <option value="R">R</option>
+        <option value="S">S</option>
+        <option value="T">T</option>
+        <option value="U">U</option>
+        <option value="V">V</option>
+        <option value="W">W</option>
+        <option value="X">X</option>
+        <option value="Y">Y</option>
+        <option value="Z">Z</option>
+        <option value="BIS">BIS</option>
+    </select>
+</li>
+    <p>  
+<li>
+  <label for="numeroSeleccionado"><strong>Dígito o "#,-":</strong></label>
+  <div class="calculadora-container">
+    <input type="text" id="numeroSeleccionado" readonly onclick="toggleCalculadora()">
+    <div class="calculadora" id="calculadora">
+      <div class="calculadora-grid">
+        <button onclick="seleccionarValor('1')">1</button>
+        <button onclick="seleccionarValor('2')">2</button>
+        <button onclick="seleccionarValor('3')">3</button>
+        <button onclick="seleccionarValor('4')">4</button>
+        <button onclick="seleccionarValor('5')">5</button>
+        <button onclick="seleccionarValor('6')">6</button>
+        <button onclick="seleccionarValor('7')">7</button>
+        <button onclick="seleccionarValor('8')">8</button>
+        <button onclick="seleccionarValor('9')">9</button>
+        <button width="88"  align="center"  class="campo172A" onClick="if(document.getElementById('complementoActivo').value=='0') {concatenaString(document.getElementById('puente').value,' ','puente');
+                         concatenaString(document.getElementById('direccion').value, '#','direccion');
+                          } else enComplemento();">
+                <label align="center" > <strong>#</strong> </label></button>
+
+        <button onclick="seleccionarValor('0')">0</button>
+        <button width="5" align="center" class="campo172A" onClick="if(document.getElementById('complementoActivo').value=='0') {concatenaString(document.getElementById('puente').value,' ','puente');
+                         concatenaString(document.getElementById('direccion').value, '-','direccion');
+                         } else enComplemento();">
+                <label align="center"> <strong>-</strong></label></button>
+      </div>
+    </div>
+  </div>
+</li>
+<p>
+    <li>
+      <label for="numeroSeleccionado">
+        <strong>Todas las nomenclaturas</strong>
+      </label>
+
+<select name="select" id="select" 
+    onchange="if(document.getElementById('complementoActivo').value=='0') {
+        concatenaString(document.getElementById('puente').value,this.value,'puente');
+        if(this.options[this.selectedIndex].text !== 'OTRA NOMENCLATURA') {
+            concatenaString(document.getElementById('direccion').value, this.options[this.selectedIndex].text,'direccion');
+        }
+        verificaComplemento(this.options[this.selectedIndex].text);
+        this.selectedIndex = 0;
+    } else {
+        enComplemento();
+        this.selectedIndex = 0;
+    }"  style="display: block; max-width: 600px; width: 50%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+
+<!--<select name="select2" id="select2" 
+          onChange="if(document.getElementById('complementoActivo').value=='0') {
+                       concatenaString(document.getElementById('puente').value,this.value,'puente');
+                 if(this.options[this.selectedIndex].text != 'OTRA NOMENCLATURA')
+                              concatenaString(document.getElementById('direccion').value, this.options[this.selectedIndex].text,'direccion');
+                 verificaComplemento(this.options[this.selectedIndex].text);
+                 this.selectedIndex = 0;
+              } else enComplemento();this.selectedIndex = 0;" style="display: block; max-width: 600px; width: 50%; height: 38px; padding: 8px 12px; font-size: 14px;
+                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+          <option value='' >Seleccione...</option>
+                                  <option value='ADL' >ADELANTE</option>
+          <option value='AD' >ADMINISTRACION</option>
+          <option value='AER' >AEROPUERTO</option>
+          <option value='AG' >AGENCIA</option>
+                                  <option value='AGP' >AGRUPACION</option>
+          <option value='ALD' >AL LADO</option>
+          <option value='ALM' >ALMACEN</option>
+          <option value='AL' >ALTILLO</option>
+          <option value='APTDO' >APARTADO</option>
+          <option value='AP' >APARTAMENTO</option>
+          <option value='ATR' >ATRÁS</option>
+          <option value='AUT' >AUTOPISTA</option>
+          <option value='AV' >AVENIDA</option>
+          <option value='AC' >AVENIDA CALLE</option>
+          <option value='AK' >AVENIDA CARRERA</option>
+                                  <option value='BRR' >BARRIO</option>
+                                  <option value='BL' >BLOQUE</option>
+                                  <option value='BG' >BODEGA</option>
+                                  <option value='BLV' >BOULEVAR</option>
+                                  <option value='CL' >CALLE</option>
+                                  <option value='CN' >CAMINO</option>
+                                  <option value='CR' >CARRERA</option>
+                                  <option value='CRT' >CARRETERA</option>
+                                  <option value='CA' >CASA</option>
+                                  <option value='CAS' >CASERIO</option>
+          <option value='CEL' >CELULA</option>
+                                  <option value='CEN' >CENTRO</option>
+                                  <option value='CC' >CENTRO COMERCIAL</option>
+                                  <option value='CIR' >CIRCULAR</option>
+                                  <option value='CRV' >CIRCUNVALAR</option>
+                                  <option value='CD' >CIUDADELA</option>
+                                  <option value='CONJ' >CONJUNTO</option>
+          <option value='CON' >CONJUNTO RESIDENCIAL</option>
+                                  <option value='CS' >CONSULTORIO</option>
+                                  <option value='CRR' >CORREGIMIENTO</option>
+                                  <option value='DPTO' >DEPARTAMENTO</option>
+                                  <option value='DP' >DEPOSITO</option>
+                                  <option value='DS' >DEPOSITO SOTANO</option>
+                                  <option value='DG' >DIAGONAL</option>
+                                  <option value='ED' >EDIFICIO</option>
+                                  <option value='EN' >ENTRADA</option>
+                                  <option value='ESC' >ESCALERA</option>
+                                  <option value='ESQ' >ESQUINA</option>
+                                  <option value='ESTE' >ESTE</option>
+                                  <option value='ET' >ETAPA</option>
+                                  <option value='EX' >EXTERIOR</option>
+                                  <option value='FCA' >FINCA</option>
+                                  <option value='GJ' >GARAJE</option>
+                                  <option value='GS' >GARAJE SOTANO</option>
+                                  <option value='GT' >GLORIETA</option>
+                                  <option value='HC' >HACIENDA</option>
+                                  <option value='HG' >HANGAR</option>
+                                  <option value='IP' >INSPECCION DE POLICIA</option>
+                                  <option value='IPD' >INSPECCION DEPARTAMENTAL</option>
+                                  <option value='IPM' >INSPECCION MUNICIPAL</option>
+                                  <option value='IN' >INTERIOR</option>
+                                  <option value='KM' >KILOMETRO</option>
+                                  <option value='LC' >LOCAL</option>
+                                  <option value='LM' >LOCAL MEZZANINE</option>
+                                  <option value='LT' >LOTE</option>
+                                  <option value='MZ' >MANZANA</option>
+                                  <option value='MN' >MEZZANINE</option>
+                                  <option value='MD' >MODULO</option>
+                                  <option value='MJ' >MOJON</option>
+          <option value='MLL' >MUELLE</option>
+                                  <option value='MCP' >MUNICIPIO</option>
+                                  <option value='NORTE' >NORTE</option>
+                                  <option value='OCC' >OCCIDENTE</option>
+                                  <option value='OESTE' >OESTE</option>
+                                  <option value='OF' >OFICINA</option>
+                                  <option value='O' >ORIENTE</option>
+                                  <option value='(!)' >OTRA NOMENCLATURA</option>
+                                  <option value='PRJ' >PARAJE</option>
+                                  <option value='PA' >PARCELA</option>
+                                  <option value='PW' >PARK WAY</option>
+                                  <option value='PAR' >PARQUE</option>
+                                  <option value='PQ' >PARQUEADERO</option>
+                                  <option value='PJ' >PASAJE</option>
+                                  <option value='PS' >PASEO</option>
+                                  <option value='PH' >PENTHOUSE</option>
+                                  <option value='P' >PISO</option>
+                                  <option value='PL' >PLANTA</option>
+                                  <option value='POR' >PORTERIA</option>
+                                  <option value='POS' >POSTE</option>
+          <option value='PM' >PLAZA DE MERCADO</option>
+          <option value='PD' >PREDIO</option>
+          <option value='PN' >PUENTE</option>
+          <option value='PT' >PUESTO</option>
+          <option value='RP' >ROUND POINT</option>
+          <option value='SA' >SALON</option>
+                                  <option value='SC' >SALON COMUNAL</option>
+                                  <option value='SEC' >SECTOR</option>
+                                  <option value='SS' >SEMISOTANO</option>
+                                  <option value='SL' >SOLAR</option>
+                                  <option value='ST' >SOTANO</option>
+                                  <option value='SU' >SUITE</option>
+                                  <option value='SM' >SUPERMANZANA</option>
+                                  <option value='SUR' >SUR</option>
+                                  <option value='TER' >TERMINAL</option>
+                                  <option value='TZ' >TERRAZA</option>
+                                  <option value='TO' >TORRE</option>
+                                  <option value='TV' >TRANSVERSAL</option>
+                                  <option value='UN' >UNIDAD</option>
+                                  <option value='UR' >UNIDAD RESIDENCIAL</option>
+                                  <option value='URB' >URBANIZACION</option>
+                                  <option value='VTE' >VARIANTE</option>
+                                  <option value='VDA' >VEREDA</option>
+                                  <option value='VIA' >VIA</option>
+                                  <option value='NOMBRE DE LA VIA' >VIAS DE NOMBRE COMUN</option>
+                                  <option value='ZN' >ZONA</option>
+                                  <option value='ZF' >ZONA FRANCA</option>
+                                </select>
+    </li>
+-->
+      
+
+
+<!--<script>
+document.getElementById("direccion").addEventListener("input", function () {
+    let inputText = this.value.toLowerCase().trim();
+    let divSugerencias = document.getElementById("sugerencias");
+
+    // Limpiar sugerencias anteriores
+    divSugerencias.innerHTML = "";
+    divSugerencias.style.display = "none";
+
+    if (inputText.length < 2) return; // Solo busca si hay 2+ letras
+
+    let select = document.getElementById("select");
+    let opciones = Array.from(select.options).map(opt => opt.text).slice(1); // Ignorar "-Seleccione-"
+    
+    let palabrasInput = inputText.split(" ");
+    let palabrasExistentes = new Set(palabrasInput); // Evitar duplicados
+    
+    let coincidencias = opciones.filter(opcion => {
+        let palabra = opcion.toLowerCase();
+        return palabra.startsWith(palabrasInput[palabrasInput.length - 1]) && !palabrasExistentes.has(opcion);
+    });
+
+    if (coincidencias.length > 0) {
+        divSugerencias.style.display = "block";
+        divSugerencias.style.position = "absolute";
+        divSugerencias.style.width = this.offsetWidth + "px";
+
+        coincidencias.forEach(opcion => {
+            let div = document.createElement("div");
+            div.textContent = opcion;
+            div.style.padding = "5px";
+            div.style.cursor = "pointer";
+            div.style.borderBottom = "1px solid #ddd";
+            div.style.background = "#fff";
+
+            div.onclick = function () {
+                let palabrasActuales = document.getElementById("direccion").value.split(" ");
+                palabrasActuales[palabrasActuales.length - 1] = opcion; // Reemplazar la palabra actual con la sugerida
+                document.getElementById("direccion").value = palabrasActuales.join(" ") + " ";
+                divSugerencias.style.display = "none";
+            };
+            divSugerencias.appendChild(div);
+        });
+    }
+});
+
+// Ocultar sugerencias si el usuario hace clic fuera
+document.addEventListener("click", function (e) {
+    if (!document.getElementById("sugerencias").contains(e.target) &&
+        e.target.id !== "direccion") {
+        document.getElementById("sugerencias").style.display = "none";
+    }
+});
+</script>-->

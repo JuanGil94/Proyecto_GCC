@@ -71,6 +71,14 @@
 </div>
 </div>
 	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
 	</div>		
 {END above-grid_block}
 									{BEGIN grid_block}
@@ -106,6 +114,27 @@
 >
 	<div edit-form-cell class="clearfix">
 				
+{BEGIN UserName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_UserName}  r-vertical-field" 
+	data-signal-error-for="UserName{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="UserName" data-fieldname="UserName" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_UserName}">
+		{BEGIN UserName_label}{$label dbo_UserProfile UserName }{END UserName_label}
+	</label>
+	<div class="r-edit-field">
+		{$UserName_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="UserName" {$tooltipAttr dbo_UserProfile UserName } >
+		<div class="text-muted" >
+		{$tooltip dbo_UserProfile UserName }		</div>
+	</div>
+</div>
+
+
+{END UserName_fieldblock}
+											
 {BEGIN Nombre_fieldblock}
 
 

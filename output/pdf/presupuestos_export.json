@@ -109,13 +109,16 @@ pdfDocument = {
 			{"text":{$Ano_pdfvalue},"hidden":"{$item_hide_export_field1}"},
 				
 				
-			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
-				
-				
 			{"text":{$Meta_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
 			{"text":{$Procesos_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$SeccionalId_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$PresupuestoId_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],

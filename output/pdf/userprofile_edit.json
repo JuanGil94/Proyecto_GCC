@@ -110,6 +110,29 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -159,6 +182,9 @@ pdfDocument = {
 	
 			"stack": [
 		
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_UserProfile UserName }","bold":true},{"text":{$UserName_pdfvalue}}],"margin":[0,0,0,15]},
+				
 				
 			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel dbo_UserProfile Nombre }","bold":true},{"text":{$Nombre_pdfvalue}}],"margin":[0,0,0,15]},
 				

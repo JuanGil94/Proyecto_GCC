@@ -85,9 +85,6 @@ pdfDocument = {
 										{BEGIN col_grid_6}
 					"%",
 					{END col_grid_6}
-										{BEGIN col_grid_7}
-					"%",
-					{END col_grid_7}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -308,32 +305,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_checkbox}
-																							{BEGIN cellblock_grid_headcell_details}
-{
-	cellId: 'headcell_details',
-	col:0,
-	row:0,
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_headcell_details}
 																							{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
@@ -547,46 +518,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_checkbox}
-																							{BEGIN cellblock_grid_cell_details}
-{
-	cellId: 'cell_details',
-	col:0,
-	row:0,
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link3}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_cell_details}
 																							{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
@@ -850,12 +781,6 @@ pdfDocument = {
 				col:  6,
 				text: ''
 			},
-														{ 
-				cellId: 'cell_dpreview',
-				row:  0,
-				col:  7,
-				text: ''
-			},
 							],
 				{END row_grid_2}
 		
@@ -917,32 +842,6 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_checkbox}
-																							{BEGIN cellblock_grid_footcell_details}
-{
-	cellId: 'footcell_details',
-	col:0,
-	row:0,
-				style: 'footcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				'',
-	  ],
-  "border": [ true, true, true, true ],
-              "alignment": 'left',
-     
-      
-      },
-
-{END cellblock_grid_footcell_details}
 																							{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',

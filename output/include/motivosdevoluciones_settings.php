@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsmotivosdevoluciones["Spanish"]["MotivoDevolucionId"] = "Motivo Devolucion Id";
 	$fieldToolTipsmotivosdevoluciones["Spanish"]["MotivoDevolucionId"] = "";
 	$placeHoldersmotivosdevoluciones["Spanish"]["MotivoDevolucionId"] = "";
-	$fieldLabelsmotivosdevoluciones["Spanish"]["MotivoDevolucion"] = "Motivo Devolucion";
+	$fieldLabelsmotivosdevoluciones["Spanish"]["MotivoDevolucion"] = "Motivo Devolución";
 	$fieldToolTipsmotivosdevoluciones["Spanish"]["MotivoDevolucion"] = "";
 	$placeHoldersmotivosdevoluciones["Spanish"]["MotivoDevolucion"] = "";
 	$fieldLabelsmotivosdevoluciones["Spanish"]["Activo"] = "Activo";

@@ -28,7 +28,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsdepartamentos["Spanish"]["DepartamentoId"] = "Departamento Id";
 	$fieldToolTipsdepartamentos["Spanish"]["DepartamentoId"] = "";
 	$placeHoldersdepartamentos["Spanish"]["DepartamentoId"] = "";
-	$fieldLabelsdepartamentos["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsdepartamentos["Spanish"]["Codigo"] = "Código";
 	$fieldToolTipsdepartamentos["Spanish"]["Codigo"] = "";
 	$placeHoldersdepartamentos["Spanish"]["Codigo"] = "";
 	$fieldLabelsdepartamentos["Spanish"]["Departamento"] = "Departamento";

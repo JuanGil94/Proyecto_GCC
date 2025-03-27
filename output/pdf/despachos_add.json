@@ -163,9 +163,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel dbo_Despachos Codigo }","bold":true},{"text":{$Codigo_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"text":"<div id=\"codigo-alert\" style=\"color: red; display: none;\">No se puede agregar un codigo existente.</div>","hidden":"{$item_hide_text}","isHtml":true},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel dbo_Despachos Despacho }","bold":true},{"text":{$Despacho_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

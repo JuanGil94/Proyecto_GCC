@@ -68,6 +68,20 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] = array();
 		}
 		$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"]["edit"] = array("table" => "dbo.Abogados", "field" => "Codificador", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.codificadoresDespacho"] ) ) {
+			$lookupTableLinks["dbo.codificadoresDespacho"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] )) {
+			$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] = array();
+		}
+		$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"]["add"] = array("table" => "dbo.Abogados", "field" => "Codificador", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.codificadoresDespacho"] ) ) {
+			$lookupTableLinks["dbo.codificadoresDespacho"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] )) {
+			$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"] = array();
+		}
+		$lookupTableLinks["dbo.codificadoresDespacho"]["abogados.Codificador"]["search"] = array("table" => "dbo.Abogados", "field" => "Codificador", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Estados1"] ) ) {
 			$lookupTableLinks["dbo.Estados1"] = array();
 		}
@@ -712,6 +726,27 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Seccionales"]["indeterminados.SeccionalId"] = array();
 		}
 		$lookupTableLinks["dbo.Seccionales"]["indeterminados.SeccionalId"]["edit"] = array("table" => "dbo.Indeterminados", "field" => "SeccionalId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"]["edit"] = array("table" => "dbo.UserProfile", "field" => "UserName", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"]["add"] = array("table" => "dbo.UserProfile", "field" => "UserName", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["userprofile.UserName"]["search"] = array("table" => "dbo.UserProfile", "field" => "UserName", "page" => "search");
 		if( !isset( $lookupTableLinks["dbo.Horarios"] ) ) {
 			$lookupTableLinks["dbo.Horarios"] = array();
 		}
@@ -733,6 +768,27 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] = array();
 		}
 		$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"]["edit"] = array("table" => "dbo.UserProfile", "field" => "AbogadoId", "page" => "edit");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"]["add"] = array("table" => "dbo.UserProfile", "field" => "AbogadoId", "page" => "add");
+		if( !isset( $lookupTableLinks["dbo.Abogados"] ) ) {
+			$lookupTableLinks["dbo.Abogados"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] )) {
+			$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"] = array();
+		}
+		$lookupTableLinks["dbo.Abogados"]["userprofile.AbogadoId"]["search"] = array("table" => "dbo.UserProfile", "field" => "AbogadoId", "page" => "search");
+		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
+			$lookupTableLinks["dbo.UserProfile"] = array();
+		}
+		if( !isset( $lookupTableLinks["dbo.UserProfile"]["userprofile.Nombre"] )) {
+			$lookupTableLinks["dbo.UserProfile"]["userprofile.Nombre"] = array();
+		}
+		$lookupTableLinks["dbo.UserProfile"]["userprofile.Nombre"]["edit"] = array("table" => "dbo.UserProfile", "field" => "Nombre", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.UserProfile"] ) ) {
 			$lookupTableLinks["dbo.UserProfile"] = array();
 		}
