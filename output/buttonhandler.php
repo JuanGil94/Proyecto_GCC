@@ -2,21 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -3822,7 +3807,9 @@ function buttonHandler_CierreMes($params)
 	}
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
-	include_once (getabspath("classes/calcIntereses.php"));
+	//print_r($params);
+//exit();
+include_once (getabspath("classes/calcIntereses.php"));
 ini_set('max_execution_time', 0); //quitar el timeout de ejecucion de script
 $consulta=DB::Query("SELECT Cierre FROM Empresas WHERE EmpresaId = 1");
 while($date=$consulta->fetchAssoc()){
@@ -3840,9 +3827,11 @@ $anoActual=$fechaObj->format('Y');
 $mesActual=$fechaObj->format('m');
 //echo "values: ".$fechaCierre.",".$fechaDesde.",".$fechaHasta;
 //exit();
+//echo "Fecha Hasta".$fechaHasta;
+//exit();
 //1.1 Se obtienen los procesos a calcular los intereses.
 DB::Exec("BEGIN TRANSACTION;");
-$consulta=DB::Query("SELECT TOP 3 Procesos.ProcesoId, '".$fechaHasta."' AS Fecha, 10000 AS Intereses, Procesos.SeccionalId, 1 AS Liquidacion
+$consulta=DB::Query("SELECT TOP 100 Procesos.ProcesoId, '".$fechaHasta."' AS Fecha, 10000 AS Intereses, Procesos.SeccionalId, 1 AS Liquidacion
 FROM Procesos
 INNER JOIN
 CarteraTipos
@@ -3853,7 +3842,7 @@ NOT Procesos.Incumplimiento IS NULL
 ((Procesos.EstadoId <> 6)) AND 
 ((Procesos.EstadoId <> 7)) AND 
 --(Procesos.EtapaId = 2) AND 
-(Procesos.Fecha <= '2024-04-30') AND 
+(Procesos.Fecha <= '".$fechaHasta."') AND 
 --(dbo.Intereses_GetBy_ProcesoId( Procesos.ProcesoId, @Hasta ) > 0) AND 
 (CarteraTipos.Prescrita = 0)
 AND DATEADD(day, 1, ISNULL(Plazo, Ejecutoria)) <= '".$fechaHasta."'");
@@ -3918,7 +3907,7 @@ else {
                 Acuerdo, 
                 Incumplimiento, 
                 Persuasivo, AbogadoId
-                )SELECT DISTINCT TOP 3
+                )SELECT DISTINCT TOP 100
                 '".$fechaHasta."' AS Hasta, 
                 ProcesoId, 
                 ConceptoId, 

@@ -160,7 +160,7 @@ class AcuerdoPago{
                     }
                 }
                 else{
-                    echo "<script>alert('El numero de Cuotas ".$noCuotas." no puede ser mayor a 60 al ser periodo Mensual')</script>";
+                    echo "<script>var aceptar=confirm ('El numero de Cuotas ".$noCuotas." no puede ser mayor a 60 al ser periodo Mensual');if(aceptar){location.reload();}</script>";
                 }
                 break;
             case 2:
@@ -228,7 +228,8 @@ class AcuerdoPago{
                 }
                 }
                 else{
-                    echo "<script>alert('El numero de Cuotas ".$noCuotas." no puede ser mayor a 30 al ser periodo Bimestral')</script>";
+                    echo "<script>var aceptar=confirm ('El numero de Cuotas ".$noCuotas." no puede ser mayor a 30 al ser periodo Bimestral');if(aceptar){location.reload();}</script>";
+                    //echo "<script>alert('El numero de Cuotas ".$noCuotas." no puede ser mayor a 30 al ser periodo Bimestral')</script>";
                 }
                 break;
             case 3:
@@ -299,7 +300,8 @@ class AcuerdoPago{
                 }
                 }
                 else{
-                    echo "<script>alert('El numero de Cuotas ".$noCuotas." no puede ser mayor a 20 al ser periodo Trimestral')</script>";
+                    echo "<script>var aceptar=confirm ('El numero de Cuotas ".$noCuotas." no puede ser mayor a 20 al ser periodo Trimestral');if(aceptar){location.reload();}</script>";
+                    //echo "<script>alert('El numero de Cuotas ".$noCuotas." no puede ser mayor a 20 al ser periodo Trimestral')</script>";
                 }
                 break;
             case 4:
@@ -369,7 +371,7 @@ class AcuerdoPago{
                 }
                 }
                 else{
-                    echo "<script>alert('El numero de Cuotas ".$noCuotas." no puede ser mayor a 10 al ser periodo Semestral')</script>";
+                    echo "<script>var aceptar=confirm ('El numero de Cuotas ".$noCuotas." no puede ser mayor a 10 al ser periodo Semestral');if(aceptar){location.reload();}</script>";
                 }
                 break;
             default:
