@@ -643,6 +643,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("liquidacioneshistorico" == $shortTName )
 		return true;
+	if ("nomenclaturas" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -2673,6 +2675,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="dbo.LiquidacionesHistorico";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("dbo.Nomenclaturas");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="dbo.Nomenclaturas";
+	}
 	return $arr;
 }
 
@@ -2902,6 +2913,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Gestión Medidas Cautelares";
 	$arr[]="Procesos Sin Medidas Cautelares";
 	$arr[]="dbo.LiquidacionesHistorico";
+	$arr[]="dbo.Nomenclaturas";
 	return $arr;
 }
 
@@ -5513,6 +5525,15 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="dbo.LiquidacionesHistorico" )
+	{
+		if( $sUserGroup=="<Guest>" )
+		{
+						return "S".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="dbo.Nomenclaturas" )
 	{
 		if( $sUserGroup=="<Guest>" )
 		{

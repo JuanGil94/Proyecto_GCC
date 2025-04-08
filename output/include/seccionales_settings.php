@@ -79,7 +79,7 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsseccionales["Spanish"]["Formato"] = "Imprimir Formato";
 	$fieldToolTipsseccionales["Spanish"]["Formato"] = "";
 	$placeHoldersseccionales["Spanish"]["Formato"] = "";
-	$fieldLabelsseccionales["Spanish"]["Corporacion"] = "Corporacion";
+	$fieldLabelsseccionales["Spanish"]["Corporacion"] = "Corporación";
 	$fieldToolTipsseccionales["Spanish"]["Corporacion"] = "";
 	$placeHoldersseccionales["Spanish"]["Corporacion"] = "";
 	$fieldLabelsseccionales["Spanish"]["Unidad"] = "Unidad Administrativa";

@@ -818,6 +818,8 @@ class Chart
 			return true;
 		if("dbo.LiquidacionesHistorico" == $this->chrt_array['tables'][0])
 			return true;
+		if("dbo.Nomenclaturas" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

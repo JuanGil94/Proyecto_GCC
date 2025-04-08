@@ -1288,6 +1288,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="dbo.Nomenclaturas")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -2527,6 +2531,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="dbo.LiquidacionesHistorico")
+		{
+			return false;
+		}
+		if($table=="dbo.Nomenclaturas")
 		{
 			return false;
 		}

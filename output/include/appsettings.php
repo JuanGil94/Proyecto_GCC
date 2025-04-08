@@ -751,9 +751,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "4572_1741977921";
+$projectBuildKey = "4575_1741977921";
 $wizardBuildKey = "39925";
-$projectBuildNumber = "4572";
+$projectBuildNumber = "4575";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -998,6 +998,7 @@ $tableCaptions["Spanish"]["Gesti_n_Medidas_Cautelares"] = "Gestión Medidas Caut
 $tableCaptions["Spanish"]["Procesos_Sin_Medidas_Cautelares"] = "Procesos Sin Medidas Cautelares";
 $tableCaptions["Spanish"]["dbo_LiquidacionesHistorico"] = "Liquidaciones Historico";
 $tableCaptions["Spanish"]["dbo_Ciudades2"] = "Ciudades2";
+$tableCaptions["Spanish"]["dbo_Nomenclaturas"] = "Nomenclaturas";
 
 
 $globalEvents = new class_GlobalEvents;
