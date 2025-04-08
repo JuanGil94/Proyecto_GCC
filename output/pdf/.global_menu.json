@@ -108,8 +108,10 @@ pdfDocument = {
 	
 			"text": [
 		
-				'',
-	  ],
+				
+			{"text":"","background":"#1E90FF","hidden":"{$item_hide_welcome_item}"},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
      

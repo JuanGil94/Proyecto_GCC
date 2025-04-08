@@ -234,6 +234,7 @@ $nonAdminTablesArr[] = "dbo.Seccionales2";
 $nonAdminTablesArr[] = "Gestión Medidas Cautelares";
 $nonAdminTablesArr[] = "Procesos Sin Medidas Cautelares";
 $nonAdminTablesArr[] = "dbo.LiquidacionesHistorico";
+$nonAdminTablesArr[] = "dbo.Nomenclaturas";
 
 $ug_connection = $cman->getForUserGroups();
 
