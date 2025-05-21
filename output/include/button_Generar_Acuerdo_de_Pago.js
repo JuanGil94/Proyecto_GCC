@@ -1,7 +1,7 @@
 
 Runner.buttonEvents["Generar_Acuerdo_de_Pago"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Generar_Acuerdo_de_Pago';if(!pageObj.buttonEventBefore['Generar_Acuerdo_de_Pago']){pageObj.buttonEventBefore['Generar_Acuerdo_de_Pago']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["ProcesoId"]=document.getElementById("procesoId").value;if(confirm("¿Estás seguro de realizar el Acuerdo de Pago")){return true;}else{return false;}}}
 if(!pageObj.buttonEventAfter['Generar_Acuerdo_de_Pago']){pageObj.buttonEventAfter['Generar_Acuerdo_de_Pago']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;if(result['Total']){swal({icon:"success",text:"Se registra el Acuerdo de Pago Correctamente"}).then(function(value){switch(value){default:location.reload();break;}});}
-else if(result["Err"]===1){swal("error","No se puede realizar el acuerdo de pago debido a que la liquidación se realizo el mes anterior. Se debe volver a realizar la liquidación del acuerdo.","error");}
+else if(result["Err"]===1){swal("error","No se puede realizar el acuerdo de pago debido a que la liquidación se realizo un mes anterior. Se debe volver a realizar la liquidación del acuerdo.","error");}
 else if(result["Err"]===2){swal("Warning","Actualmente ya existe un acuerdo de Pago","warning");}
 else if(result["Err"]===3){swal("Warning","No ha generado ninguna liquidación","warning");}}}
 $('a[id="Generar_Acuerdo_de_Pago"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}

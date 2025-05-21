@@ -1,6 +1,6 @@
 
 Runner.buttonEvents["Liquidar"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Liquidar';if(!pageObj.buttonEventBefore['Liquidar']){pageObj.buttonEventBefore['Liquidar']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;params["ProcesoId"]=document.getElementById("procesoId").value;params["abono"]=document.getElementById("abono").value;params["periodo"]=document.getElementById("periodo").value;params["noCuotas"]=document.getElementById("noCuotas").value;params["fechaInicial"]=document.getElementById("fechaInicial").value;if(confirm("¿Estás seguro de realizar la Liquidación?")){return true;}else{return false;}}}
 if(!pageObj.buttonEventAfter['Liquidar']){pageObj.buttonEventAfter['Liquidar']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;if(result["total"]){swal({icon:"success",text:"Se realiza el calculo del Acuerdo de Pago exitosamente"}).then(function(value){switch(value){default:location.reload();break;}});}
-else{swal("Warning","El Proceso debe contener un Sancionado!","warning");}}}
+else{swal("Warning","Presento un error en calcular la simulaciónde acuerdo de pago","warning");}}}
 $('a[id="Liquidar"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
 this.id="Liquidar"+"_"+Runner.genId();var button_Liquidar=new Runner.form.Button({id:this.id,btnName:"Liquidar"});button_Liquidar.init({args:[pageObj,proxy,pageid]});});};

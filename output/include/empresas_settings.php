@@ -70,6 +70,12 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsempresas["Spanish"]["MaximoUvb"] = "Máximo Uvb";
 	$fieldToolTipsempresas["Spanish"]["MaximoUvb"] = "";
 	$placeHoldersempresas["Spanish"]["MaximoUvb"] = "";
+	$fieldLabelsempresas["Spanish"]["EjecutarCierre"] = "Ejecutar Cierre";
+	$fieldToolTipsempresas["Spanish"]["EjecutarCierre"] = "";
+	$placeHoldersempresas["Spanish"]["EjecutarCierre"] = "";
+	$fieldLabelsempresas["Spanish"]["EstadoCierre"] = "Estado Cierre";
+	$fieldToolTipsempresas["Spanish"]["EstadoCierre"] = "";
+	$placeHoldersempresas["Spanish"]["EstadoCierre"] = "";
 	$pageTitlesempresas["Spanish"]["edit"] = "Editar";
 	if (count($fieldToolTipsempresas["Spanish"]))
 		$tdataempresas[".isUseToolTips"] = true;
@@ -170,7 +176,7 @@ $tdataempresas[".isUseAjaxSuggest"] = true;
 
 																																																																																																																																																																																																																																																																																																																																																																				
 				
-																																																					
+																																																								
 
 $tdataempresas[".ajaxCodeSnippetAdded"] = false;
 
@@ -200,6 +206,8 @@ $tdataempresas[".googleLikeFields"][] = "Tope";
 $tdataempresas[".googleLikeFields"][] = "DiasPersuasivo";
 $tdataempresas[".googleLikeFields"][] = "InteresesPlazo";
 $tdataempresas[".googleLikeFields"][] = "MaximoUvb";
+$tdataempresas[".googleLikeFields"][] = "EjecutarCierre";
+$tdataempresas[".googleLikeFields"][] = "EstadoCierre";
 
 
 
@@ -235,7 +243,7 @@ $tdataempresas[".strOrderBy"] = $tstrOrderBy;
 $tdataempresas[".orderindexes"] = array();
 
 
-$tdataempresas[".sqlHead"] = "SELECT EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo,  	MaximoUvb";
+$tdataempresas[".sqlHead"] = "SELECT EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo,  	MaximoUvb,  	EjecutarCierre,  	EstadoCierre";
 $tdataempresas[".sqlFrom"] = "FROM dbo.Empresas";
 $tdataempresas[".sqlWhereExpr"] = "";
 $tdataempresas[".sqlTail"] = "";
@@ -2402,6 +2410,282 @@ $tdataempresas[".hideMobileList"] = array();
 
 	$tdataempresas["MaximoUvb"] = $fdata;
 		$tdataempresas[".searchableFields"][] = "MaximoUvb";
+//	EjecutarCierre
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "EjecutarCierre";
+	$fdata["GoodName"] = "EjecutarCierre";
+	$fdata["ownerTable"] = "dbo.Empresas";
+	$fdata["Label"] = GetFieldLabel("dbo_Empresas","EjecutarCierre");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "EjecutarCierre";
+
+		$fdata["sourceSingle"] = "EjecutarCierre";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "EjecutarCierre";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataempresas["EjecutarCierre"] = $fdata;
+		$tdataempresas[".searchableFields"][] = "EjecutarCierre";
+//	EstadoCierre
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "EstadoCierre";
+	$fdata["GoodName"] = "EstadoCierre";
+	$fdata["ownerTable"] = "dbo.Empresas";
+	$fdata["Label"] = GetFieldLabel("dbo_Empresas","EstadoCierre");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "EstadoCierre";
+
+		$fdata["sourceSingle"] = "EstadoCierre";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "EstadoCierre";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataempresas["EstadoCierre"] = $fdata;
+		$tdataempresas[".searchableFields"][] = "EstadoCierre";
 
 
 $tables_data["dbo.Empresas"]=&$tdataempresas;
@@ -2446,7 +2730,7 @@ function createSqlQuery_empresas()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo,  	MaximoUvb";
+$proto0["m_strFieldList"] = "EmpresaId,  	Empresa,  	Cierre,  	ValorMaximo,  	MaximoPesos,  	MaximoSalarios,  	MaximoUvt,  	EmailAprobador,  	Tope,  	DiasPersuasivo,  	CarteraEspecialUvt,  	TasaDTN,  	TasaCivil,  	InteresesPlazo,  	MaximoUvb,  	EjecutarCierre,  	EstadoCierre";
 $proto0["m_strFrom"] = "FROM dbo.Empresas";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2696,51 +2980,81 @@ $proto34["m_alias"] = "";
 $obj = new SQLFieldListItem($proto34);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto36=array();
-$proto36["m_link"] = "SQLL_MAIN";
-			$proto37=array();
-$proto37["m_strName"] = "dbo.Empresas";
-$proto37["m_srcTableName"] = "dbo.Empresas";
-$proto37["m_columns"] = array();
-$proto37["m_columns"][] = "EmpresaId";
-$proto37["m_columns"][] = "Empresa";
-$proto37["m_columns"][] = "Cierre";
-$proto37["m_columns"][] = "ValorMaximo";
-$proto37["m_columns"][] = "MaximoPesos";
-$proto37["m_columns"][] = "MaximoSalarios";
-$proto37["m_columns"][] = "MaximoUvt";
-$proto37["m_columns"][] = "EmailAprobador";
-$proto37["m_columns"][] = "Tope";
-$proto37["m_columns"][] = "DiasPersuasivo";
-$proto37["m_columns"][] = "CarteraEspecialUvt";
-$proto37["m_columns"][] = "TasaDTN";
-$proto37["m_columns"][] = "TasaCivil";
-$proto37["m_columns"][] = "InteresesPlazo";
-$proto37["m_columns"][] = "MaximoUvb";
-$obj = new SQLTable($proto37);
+						$proto36=array();
+			$obj = new SQLField(array(
+	"m_strName" => "EjecutarCierre",
+	"m_strTable" => "dbo.Empresas",
+	"m_srcTableName" => "dbo.Empresas"
+));
 
-$proto36["m_table"] = $obj;
-$proto36["m_sql"] = "dbo.Empresas";
-$proto36["m_alias"] = "";
+$proto36["m_sql"] = "EjecutarCierre";
 $proto36["m_srcTableName"] = "dbo.Empresas";
-$proto38=array();
-$proto38["m_sql"] = "";
-$proto38["m_uniontype"] = "SQLL_UNKNOWN";
+$proto36["m_expr"]=$obj;
+$proto36["m_alias"] = "";
+$obj = new SQLFieldListItem($proto36);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto38=array();
+			$obj = new SQLField(array(
+	"m_strName" => "EstadoCierre",
+	"m_strTable" => "dbo.Empresas",
+	"m_srcTableName" => "dbo.Empresas"
+));
+
+$proto38["m_sql"] = "EstadoCierre";
+$proto38["m_srcTableName"] = "dbo.Empresas";
+$proto38["m_expr"]=$obj;
+$proto38["m_alias"] = "";
+$obj = new SQLFieldListItem($proto38);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto40=array();
+$proto40["m_link"] = "SQLL_MAIN";
+			$proto41=array();
+$proto41["m_strName"] = "dbo.Empresas";
+$proto41["m_srcTableName"] = "dbo.Empresas";
+$proto41["m_columns"] = array();
+$proto41["m_columns"][] = "EmpresaId";
+$proto41["m_columns"][] = "Empresa";
+$proto41["m_columns"][] = "Cierre";
+$proto41["m_columns"][] = "ValorMaximo";
+$proto41["m_columns"][] = "MaximoPesos";
+$proto41["m_columns"][] = "MaximoSalarios";
+$proto41["m_columns"][] = "MaximoUvt";
+$proto41["m_columns"][] = "EmailAprobador";
+$proto41["m_columns"][] = "Tope";
+$proto41["m_columns"][] = "DiasPersuasivo";
+$proto41["m_columns"][] = "CarteraEspecialUvt";
+$proto41["m_columns"][] = "TasaDTN";
+$proto41["m_columns"][] = "TasaCivil";
+$proto41["m_columns"][] = "InteresesPlazo";
+$proto41["m_columns"][] = "MaximoUvb";
+$proto41["m_columns"][] = "EjecutarCierre";
+$proto41["m_columns"][] = "EstadoCierre";
+$obj = new SQLTable($proto41);
+
+$proto40["m_table"] = $obj;
+$proto40["m_sql"] = "dbo.Empresas";
+$proto40["m_alias"] = "";
+$proto40["m_srcTableName"] = "dbo.Empresas";
+$proto42=array();
+$proto42["m_sql"] = "";
+$proto42["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto38["m_column"]=$obj;
-$proto38["m_contained"] = array();
-$proto38["m_strCase"] = "";
-$proto38["m_havingmode"] = false;
-$proto38["m_inBrackets"] = false;
-$proto38["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto38);
+$proto42["m_column"]=$obj;
+$proto42["m_contained"] = array();
+$proto42["m_strCase"] = "";
+$proto42["m_havingmode"] = false;
+$proto42["m_inBrackets"] = false;
+$proto42["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto42);
 
-$proto36["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto36);
+$proto40["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto40);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2756,7 +3070,7 @@ $queryData_empresas = createSqlQuery_empresas();
 	
 		;
 
-															
+																	
 
 $tdataempresas[".sqlquery"] = $queryData_empresas;
 

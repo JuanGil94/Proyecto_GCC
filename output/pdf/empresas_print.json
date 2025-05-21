@@ -94,6 +94,12 @@ pdfDocument = {
 										{BEGIN col_grid_9}
 					"%",
 					{END col_grid_9}
+										{BEGIN col_grid_10}
+					"%",
+					{END col_grid_10}
+										{BEGIN col_grid_11}
+					"%",
+					{END col_grid_11}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -241,7 +247,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas Empresa }","hidden":"{$item_hide_simple_grid_field3}","bold":true},
+			{"text":"{$jslabel dbo_Empresas Empresa }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -270,7 +276,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas Cierre }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
+			{"text":"{$jslabel dbo_Empresas Cierre }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -299,7 +305,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas MaximoPesos }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel dbo_Empresas MaximoPesos }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -328,7 +334,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas MaximoSalarios }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel dbo_Empresas MaximoSalarios }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -357,7 +363,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas MaximoUvt }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel dbo_Empresas MaximoUvt }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -386,7 +392,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas EmailAprobador }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel dbo_Empresas EmailAprobador }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -415,7 +421,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas Tope }","hidden":"{$item_hide_simple_grid_field16}","bold":true},
+			{"text":"{$jslabel dbo_Empresas Tope }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -444,7 +450,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas DiasPersuasivo }","hidden":"{$item_hide_simple_grid_field17}","bold":true},
+			{"text":"{$jslabel dbo_Empresas DiasPersuasivo }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -473,7 +479,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas InteresesPlazo }","hidden":"{$item_hide_simple_grid_field18}","bold":true},
+			{"text":"{$jslabel dbo_Empresas InteresesPlazo }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -502,7 +508,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel dbo_Empresas MaximoUvb }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+			{"text":"{$jslabel dbo_Empresas MaximoUvb }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -512,6 +518,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'EjecutarCierre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Empresas EjecutarCierre }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EjecutarCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field11}
+{
+	cellId: 'headcell_field11',
+	col:0,
+	row:0,
+			fieldName: 'EstadoCierre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Empresas EstadoCierre }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field11}
 											],
 				{END row_grid_0}
 		
@@ -811,6 +875,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'EjecutarCierre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EjecutarCierre_pdfvalue},"hidden":"{$item_hide_simple_grid_field3}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EjecutarCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field10}
+																							{BEGIN cellblock_grid_cell_field11}
+{
+	cellId: 'cell_field11',
+	col:0,
+	row:0,
+			fieldName: 'EstadoCierre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EstadoCierre_pdfvalue},"hidden":"{$item_hide_simple_grid_field10}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field11}
 											],
 				{END row_grid_1}
 		
@@ -1080,6 +1202,58 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field9}
+																							{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field10}
+																							{BEGIN cellblock_grid_footcell_field11}
+{
+	cellId: 'footcell_field11',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field11}
 											],
 				{END row_grid_2}
 		

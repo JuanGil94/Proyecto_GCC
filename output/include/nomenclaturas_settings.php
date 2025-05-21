@@ -28,12 +28,14 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsnomenclaturas["Spanish"]["IdNomenclatura"] = "Id Nomenclatura";
 	$fieldToolTipsnomenclaturas["Spanish"]["IdNomenclatura"] = "";
 	$placeHoldersnomenclaturas["Spanish"]["IdNomenclatura"] = "";
-	$fieldLabelsnomenclaturas["Spanish"]["Codigo"] = "Codigo";
+	$fieldLabelsnomenclaturas["Spanish"]["Codigo"] = "Código";
 	$fieldToolTipsnomenclaturas["Spanish"]["Codigo"] = "";
 	$placeHoldersnomenclaturas["Spanish"]["Codigo"] = "";
 	$fieldLabelsnomenclaturas["Spanish"]["Nomenclatura"] = "Nomenclatura";
 	$fieldToolTipsnomenclaturas["Spanish"]["Nomenclatura"] = "";
 	$placeHoldersnomenclaturas["Spanish"]["Nomenclatura"] = "";
+	$pageTitlesnomenclaturas["Spanish"]["add"] = "Añadir";
+	$pageTitlesnomenclaturas["Spanish"]["edit"] = "Editar";
 	if (count($fieldToolTipsnomenclaturas["Spanish"]))
 		$tdatanomenclaturas[".isUseToolTips"] = true;
 }
@@ -131,7 +133,7 @@ $tdatanomenclaturas[".isUseAjaxSuggest"] = true;
 
 
 
-																																																																																																																																																																																																																																																																																																																																																																																																																											
+																																																																																																																																																																																																																																																																																																																																																																																																																														
 
 $tdatanomenclaturas[".ajaxCodeSnippetAdded"] = false;
 

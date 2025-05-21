@@ -133,7 +133,7 @@ $tdatasalarios[".isUseAjaxSuggest"] = true;
 
 
 																																																																																																																																																																																																																																																																																																																																																																				
-																																																								
+																																																											
 
 $tdatasalarios[".ajaxCodeSnippetAdded"] = false;
 

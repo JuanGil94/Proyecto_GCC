@@ -2,21 +2,6 @@
 @ini_set("display_errors","1");
 @ini_set("display_startup_errors","1");
 
-use Dompdf\Dompdf;
-
-use Dompdf\Options;
-
-use PhpOffice\PhpWord\PhpWord;
-
-use PhpOffice\PhpWord\IOFactory;
-
-use PhpOffice\PhpWord\Shared\Html;
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-require '../vendor/autoload.php'; // Requerir el autoload.php desde vendor
 require_once("include/dbcommon.php");
 require_once("classes/button.php");
 
@@ -1220,6 +1205,16 @@ if($buttId=='Clean')
 		$cipherer = new RunnerCipherer( $table );
 	}
 	buttonHandler_Clean($params);
+}
+if($buttId=='Cierre_SPF')
+{
+	//  for login page users table can be turned off
+	if( $table != GLOBAL_PAGES )
+	{
+		require_once("include/". GetTableURL( $table ) ."_variables.php");
+		$cipherer = new RunnerCipherer( $table );
+	}
+	buttonHandler_Cierre_SPF($params);
 }
 
 if( $eventId == 'Tipo_event' && "dbo.Chequeos" == $table )
@@ -2525,9 +2520,22 @@ function buttonHandler_New_Button1($params)
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	include_once (getabspath("classes/calcIntereses.php"));
 $recalcular=new reliquidacion($params["ProcesoId"]);
-$meses = $recalcular->Calcular(date('Y-m-d'),0,0);
-//exit();
-$result["total"]=$recalcular->getSuma();;
+$rs5 = DB::Query("SELECT * FROM Procesos WHERE ProcesoId=".$params["ProcesoId"]);
+while( $date = $rs5->fetchAssoc() )
+{
+	$estadoId=$date["EstadoId"];
+	$obliSald=$date["Obligacion"];
+	$inteSald=$date["Intereses"];
+	$costSald=$date["Costas"];
+}
+if ($estadoId==3){
+	$result["total"]=$obliSald+$inteSald+$costSald;
+}
+else{
+	$meses = $recalcular->Calcular(date('Y-m-d'),0,0);
+	$result["total"]=$recalcular->getSuma();
+}
+;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();
@@ -3196,19 +3204,20 @@ $response=DB::Query("SELECT count(*) countLiqui FROM Liquidaciones where Proceso
 				}
 //echo "Value".$countLiqui;
 if($countLiqui>0){
-	$response=DB::Query("SELECT top 1 * FROM [LiquidacionesHistorico] where ProcesoId=".$params["ProcesoId"]." order by LiquidacionHistoricoId desc");
+	$response=DB::Query("SELECT TOP 1 * FROM Liquidaciones WHERE cuota IN (0, 1) and ProcesoId=".$params["ProcesoId"]." ORDER BY cuota ASC; ");
 		//print_r($actuacionId);
 		while( $date = $response->fetchAssoc() )
 				{
-					$fechaCuota1=$date["FechaLiquidacion"];
+					$fechaCuota1=$date["Fecha"];
 				}
-$fecha_objeto=new DateTime(now());
+$fecha_objeto=new DateTime();
 $fecha_objeto2=new DateTime($fechaCuota1);
 $fCommp=$fecha_objeto->modify('first day of this month');
 $fCommp2=$fecha_objeto2->modify('first day of this month');
-//echo $fCommp2 ."-".$fCommp;
+//echo $fCommp->format('Y-m-d')."<=".$fCommp2->format('Y-m-d');
 //exit();
-if ($fCommp->format('Y-m-d')==$fCommp2->format('Y-m-d')){
+if ($fCommp->format('Y-m-d')<=$fCommp2->format('Y-m-d')){
+//if ($fCommp->format('Y-m-d')<=$fCommp2->format('Y-m-d')){
 	$response=DB::Query("SELECT count(*) countAcuerdo FROM Acuerdos where ProcesoId=".$params["ProcesoId"]);
 		//print_r($actuacionId);
 		while( $date = $response->fetchAssoc() )
@@ -3226,7 +3235,7 @@ else{
 	$result["Total"]=$acuerdoP->insertAcuerdo();
 	//echo "antes del proceso".$result["Total"]."<br>";
 	$actuacionId=20;
-		$rs2=DB::Exec("INSERT INTO Correspondencias VALUES (".$params["ProcesoId"].",4567,'".now()."',0,NULL,NULL,NULL,NULL,NULL,NULL)");
+		$rs2=DB::Exec("INSERT INTO Correspondencias VALUES (".$params["ProcesoId"].",4567,'".now()."',0,NULL,NULL,NULL,NULL,NULL,NULL,'FIRMEZA ACUERDO DE PAGO')");
 		if (!$rs2) {
 			 echo "Error al ejecutar la consulta de Insert Correspondencia: " . DB::LastError();
 			 return false;
@@ -12838,6 +12847,68 @@ function buttonHandler_Clean($params)
 			unset($_SESSION['seccional23']); 
 			unset($_SESSION['seccional24']);
 			unset($_SESSION['seccional25']);
+;
+	RunnerContext::pop();
+	echo my_json_encode($result);
+	$button->deleteTempFiles();
+}
+function buttonHandler_Cierre_SPF($params)
+{
+	global $strTableName;
+	$result = array();
+
+	// create new button object for get record data
+	$params["keys"] = (array)my_json_decode(postvalue('keys'));
+	$params["isManyKeys"] = postvalue('isManyKeys');
+	$params["location"] = postvalue('location');
+
+	$button = new Button($params);
+	$ajax = $button; // for examle from HELP
+	$keys = $button->getKeys();
+
+	$masterData = false;
+	if ( isset($params['masterData']) && count($params['masterData']) > 0 )
+	{
+		$masterData = $params['masterData'];
+	}
+	else if ( isset($params["masterTable"]) )
+	{
+		$masterData = $button->getMasterData($params["masterTable"]);
+	}
+	
+	$contextParams = array();
+	if ( $params["location"] == PAGE_VIEW )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == PAGE_EDIT )
+	{
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else if ( $params["location"] == "grid" )
+	{	
+		$params["location"] = "list";
+		$contextParams["data"] = $button->getRecordData();
+		$contextParams["newData"] = $params['fieldsData'];
+		$contextParams["masterData"] = $masterData;
+	}
+	else 
+	{
+		$contextParams["masterData"] = $masterData;
+	}
+
+	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
+	$consulta2=DB::Exec("msdb.dbo.sp_start_job Prueba_Ejecutar_Cierre ");
+            if ($consulta2) {
+									$result["Vald"]='OK';
+							}
+						else{
+								$result["Vald"]='error:'.DB::LastError();
+							}
+
 ;
 	RunnerContext::pop();
 	echo my_json_encode($result);
