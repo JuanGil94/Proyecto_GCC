@@ -100,6 +100,12 @@ pdfDocument = {
 										{BEGIN col_grid_11}
 					"%",
 					{END col_grid_11}
+										{BEGIN col_grid_12}
+					"%",
+					{END col_grid_12}
+										{BEGIN col_grid_13}
+					"%",
+					{END col_grid_13}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -558,6 +564,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_headcell_field9}
+																							{BEGIN cellblock_grid_headcell_field10}
+{
+	cellId: 'headcell_field10',
+	col:0,
+	row:0,
+			fieldName: 'EjecutarCierre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Empresas EjecutarCierre }","hidden":"{$item_hide_grid_field_label1}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EjecutarCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field10}
+																							{BEGIN cellblock_grid_headcell_field13}
+{
+	cellId: 'headcell_field13',
+	col:0,
+	row:0,
+			fieldName: 'EstadoCierre',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel dbo_Empresas EstadoCierre }","hidden":"{$item_hide_grid_field_label2}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field13}
 											],
 				{END row_grid_0}
 		
@@ -928,6 +992,64 @@ pdfDocument = {
       },
 
 {END cellblock_grid_cell_field9}
+																							{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			fieldName: 'EjecutarCierre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EjecutarCierre_pdfvalue},"hidden":"{$item_hide_grid_field1}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EjecutarCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field10}
+{
+	cellId: 'cell_field10',
+	col:0,
+	row:0,
+			fieldName: 'EstadoCierre',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$EstadoCierre_pdfvalue},"hidden":"{$item_hide_grid_field2}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$EstadoCierre_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field10}
 											],
 				{END row_grid_1}
 		
@@ -1249,6 +1371,58 @@ pdfDocument = {
       },
 
 {END cellblock_grid_footcell_field9}
+																							{BEGIN cellblock_grid_footcell_field4}
+{
+	cellId: 'footcell_field4',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field4}
+																							{BEGIN cellblock_grid_footcell_field10}
+{
+	cellId: 'footcell_field10',
+	col:0,
+	row:0,
+				style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+     
+      
+      },
+
+{END cellblock_grid_footcell_field10}
 											],
 				{END row_grid_2}
 		

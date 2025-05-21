@@ -70,6 +70,9 @@ $record['Intereses_css'].='background:#e0f7fa';
 //$data['SaldoFinal']
 $record['SaldoFinal_css'].='background:#ffe0e0';
 
+$pageObject->hideItem("custom_button6", $recordId);
+$pageObject->hideItem("custom_button3", $recordId);
+
 
 //$record["hovercss"]='background:yellow;';
 //addNotification( "It's time to check your mail", "Mail check", "glyphicon-envelope", "https://mail.google.com", null, null, true );

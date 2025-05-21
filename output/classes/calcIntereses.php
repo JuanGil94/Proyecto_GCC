@@ -799,6 +799,7 @@ class reliquidacion extends CalendarioAnual{
                 }
                 else if($mesEje==$mes && $annobase==$annoEje){
                     //echo "Holaaaa";
+                    //exit();
                     //echo "El valor de la sumaTotalDiaria= $sumaTotalDiaria";
                     //exit();
                         $numDiasMesAct=$dias-$diaEje;
@@ -909,7 +910,7 @@ class reliquidacion extends CalendarioAnual{
                     //echo $fCommp->format('Y-m-d')."------".$fCommp2->format('Y-m-d');
                     if ($fCommp->format('Y-m-d')==$fCommp2->format('Y-m-d')){ //Se compara fechas a ver si la fecha plazo es del mismo mes de la fecha actual
                         //echo "Entoruuu";
-                        $fechaBase=new DateTime(now());
+                        $fechaBase=new DateTime();
                         $fechaBase=$fechaBase->format('Y-m-d');
                     }
                         $numDiasMesAct=$numDiasMesAct-$diaInsertRe;

@@ -195,6 +195,12 @@ pdfDocument = {
 				
 			{"text":{$MaximoUvb_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
 				
+				
+			{"text":{$EjecutarCierre_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$EstadoCierre_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

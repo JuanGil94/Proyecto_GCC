@@ -15,6 +15,8 @@ $dalTableEmpresas["TasaDTN"] = array("type"=>6,"varname"=>"TasaDTN", "name" => "
 $dalTableEmpresas["TasaCivil"] = array("type"=>6,"varname"=>"TasaCivil", "name" => "TasaCivil", "autoInc" => "0");
 $dalTableEmpresas["InteresesPlazo"] = array("type"=>11,"varname"=>"InteresesPlazo", "name" => "InteresesPlazo", "autoInc" => "0");
 $dalTableEmpresas["MaximoUvb"] = array("type"=>6,"varname"=>"MaximoUvb", "name" => "MaximoUvb", "autoInc" => "0");
+$dalTableEmpresas["EjecutarCierre"] = array("type"=>200,"varname"=>"EjecutarCierre", "name" => "EjecutarCierre", "autoInc" => "0");
+$dalTableEmpresas["EstadoCierre"] = array("type"=>200,"varname"=>"EstadoCierre", "name" => "EstadoCierre", "autoInc" => "0");
 $dalTableEmpresas["EmpresaId"]["key"]=true;
 
 $dal_info["GCC_at_S00001_CCAD01_dbo_Empresas"] = &$dalTableEmpresas;

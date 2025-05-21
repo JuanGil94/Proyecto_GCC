@@ -1,0 +1,6 @@
+
+Runner.buttonEvents["Cierre_SPF"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Cierre_SPF';if(!pageObj.buttonEventBefore['Cierre_SPF']){pageObj.buttonEventBefore['Cierre_SPF']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;}}
+if(!pageObj.buttonEventAfter['Cierre_SPF']){pageObj.buttonEventAfter['Cierre_SPF']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;if(result["Vald"]==="OK"){ajax.setMessage("Ejecutando el cierre por favor espere...");intervalID=setInterval(function(){fetch("classes/validarEstadoCierre.php").then(response=>response.json()).then(data=>{ajax.setMessage("Estado: "+data.EjecutarCierre+"<br>"+data.EstadoCierre);if(data.EjecutarCierre==="FINALIZADO"||data.EjecutarCierre==="ERROR"){clearInterval(intervalID);}});},10000);}
+else{swal({icon:"warning",text:"Se presento un Error: "+result["Vald"]+""}).then(function(value){switch(value){default:location.reload();break;}});}}}
+$('a[id="Cierre_SPF"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="Cierre_SPF"+"_"+Runner.genId();var button_Cierre_SPF=new Runner.form.Button({id:this.id,btnName:"Cierre_SPF"});button_Cierre_SPF.init({args:[pageObj,proxy,pageid]});});};

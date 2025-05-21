@@ -115,6 +115,32 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Tope}</span>
 						</div>
 		{END searchCtrlBlock_Tope}
+																{BEGIN searchCtrlBlock_EstadoCierre}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_EstadoCierre}" {$filterRow_attrs_EstadoCierre}>
+			<label>{$label dbo_Empresas EstadoCierre }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_EstadoCierre}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_EstadoCierre}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_EstadoCierre}</span>
+						</div>
+		{END searchCtrlBlock_EstadoCierre}
+																{BEGIN searchCtrlBlock_EjecutarCierre}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_EjecutarCierre}" {$filterRow_attrs_EjecutarCierre}>
+			<label>{$label dbo_Empresas EjecutarCierre }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_EjecutarCierre}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_EjecutarCierre}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_EjecutarCierre}</span>
+						</div>
+		{END searchCtrlBlock_EjecutarCierre}
 																{BEGIN searchCtrlBlock_MaximoUvb}
 
 
@@ -709,6 +735,26 @@
 			</div>
 					</a>
 		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EjecutarCierre" checked="checked" value="1" data-field="EjecutarCierre" data-fieldname="EjecutarCierre">
+					<span>{$label dbo_Empresas EjecutarCierre }</span>
+				</label>
+			</div>
+					</a>
+		</li>
+							<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_EstadoCierre" checked="checked" value="1" data-field="EstadoCierre" data-fieldname="EstadoCierre">
+					<span>{$label dbo_Empresas EstadoCierre }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 			</ul>
 </div>
 		</div>					</div>
@@ -755,6 +801,12 @@
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="MaximoUvb"]:before {
 		content: "{$label dbo_Empresas MaximoUvb}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EjecutarCierre"]:before {
+		content: "{$label dbo_Empresas EjecutarCierre}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="EstadoCierre"]:before {
+		content: "{$label dbo_Empresas EstadoCierre}";
 	}
 	}
 </style>
@@ -1058,6 +1110,56 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field9}
+									{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EjecutarCierre_class}	"
+
+			data-field="EjecutarCierre"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EjecutarCierre_fieldheadercolumn}
+	{BEGIN EjecutarCierre_fieldheader}
+	<SPAN {$EjecutarCierre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label1" {$item_grid_field_label1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EjecutarCierre" data-fieldname="EjecutarCierre">
+	{$label dbo_Empresas EjecutarCierre }	{$arrow_icon_EjecutarCierre}
+	</SPAN>
+	{END EjecutarCierre_fieldheader}
+{END EjecutarCierre_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+									{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EstadoCierre_class}	"
+
+			data-field="EstadoCierre"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EstadoCierre_fieldheadercolumn}
+	{BEGIN EstadoCierre_fieldheader}
+	<SPAN {$EstadoCierre_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="grid_field_label2" {$item_grid_field_label2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoCierre" data-fieldname="EstadoCierre">
+	{$label dbo_Empresas EstadoCierre }	{$arrow_icon_EstadoCierre}
+	</SPAN>
+	{END EstadoCierre_fieldheader}
+{END EstadoCierre_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
 							</tr>
 															
 					{END grid_header}
@@ -1345,6 +1447,48 @@
 {END InteresesPlazo_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field9}
+									{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EjecutarCierre_class}	"
+
+			data-field="EjecutarCierre"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EjecutarCierre_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EjecutarCierre" data-fieldname="EjecutarCierre" data-default-width >
+{$EjecutarCierre_value}
+</span>
+{END EjecutarCierre_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EstadoCierre_class}	"
+
+			data-field="EstadoCierre"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EstadoCierre_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field2" {$item_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EstadoCierre" data-fieldname="EstadoCierre" data-default-width >
+{$EstadoCierre_value}
+</span>
+{END EstadoCierre_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
 							</tr>
 										
 											{END grid_row}
@@ -1536,6 +1680,36 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field9}
+									{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EjecutarCierre_class}	"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="empresas_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+									{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$EstadoCierre_class}	"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="empresas_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
 							</tr>
 					
 					</tfoot>
