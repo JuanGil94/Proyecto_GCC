@@ -370,35 +370,6 @@ pdfDocument = {
 	cellId: 'headcell_field4',
 	col:0,
 	row:0,
-			fieldName: 'Direcci_n',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel BienesMuebles Direcci_n }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Direcci_n_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
-{
-	cellId: 'headcell_field5',
-	col:0,
-	row:0,
 			fieldName: 'SancionadoId',
 				style: 'headcell',
 		
@@ -413,7 +384,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BienesMuebles SancionadoId }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
+			{"text":"{$jslabel BienesMuebles SancionadoId }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -422,10 +393,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field5}
-																							{BEGIN cellblock_grid_headcell_field6}
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
 {
-	cellId: 'headcell_field6',
+	cellId: 'headcell_field5',
 	col:0,
 	row:0,
 			fieldName: 'CiudadId',
@@ -442,7 +413,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BienesMuebles CiudadId }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel BienesMuebles CiudadId }","hidden":"{$item_hide_simple_grid_field13}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -451,10 +422,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_headcell_field6}
-																							{BEGIN cellblock_grid_headcell_field7}
+{END cellblock_grid_headcell_field5}
+																							{BEGIN cellblock_grid_headcell_field6}
 {
-	cellId: 'headcell_field7',
+	cellId: 'headcell_field6',
 	col:0,
 	row:0,
 			fieldName: 'PropiedadId',
@@ -471,11 +442,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BienesMuebles PropiedadId }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+			{"text":"{$jslabel BienesMuebles PropiedadId }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$PropiedadId_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field6}
+																							{BEGIN cellblock_grid_headcell_field7}
+{
+	cellId: 'headcell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Direccion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel BienesMuebles Direccion }","hidden":"{$item_hide_simple_grid_field15}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Direccion_align}',
      
       
       },
@@ -611,35 +611,6 @@ pdfDocument = {
 	cellId: 'cell_field4',
 	col:0,
 	row:0,
-			fieldName: 'Direcci_n',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Direcci_n_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Direcci_n_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
-{
-	cellId: 'cell_field5',
-	col:0,
-	row:0,
 			fieldName: 'SancionadoId',
 				style: 'bodycell',
 		
@@ -663,10 +634,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field5}
-																							{BEGIN cellblock_grid_cell_field6}
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
 {
-	cellId: 'cell_field6',
+	cellId: 'cell_field5',
 	col:0,
 	row:0,
 			fieldName: 'CiudadId',
@@ -692,10 +663,10 @@ pdfDocument = {
       
       },
 
-{END cellblock_grid_cell_field6}
-																							{BEGIN cellblock_grid_cell_field7}
+{END cellblock_grid_cell_field5}
+																							{BEGIN cellblock_grid_cell_field6}
 {
-	cellId: 'cell_field7',
+	cellId: 'cell_field6',
 	col:0,
 	row:0,
 			fieldName: 'PropiedadId',
@@ -717,6 +688,35 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$PropiedadId_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field6}
+																							{BEGIN cellblock_grid_cell_field7}
+{
+	cellId: 'cell_field7',
+	col:0,
+	row:0,
+			fieldName: 'Direccion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Direccion_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Direccion_align}',
      
       
       },

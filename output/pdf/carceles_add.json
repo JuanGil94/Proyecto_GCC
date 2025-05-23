@@ -201,7 +201,7 @@ pdfDocument = {
 			{"text":"{$direccion_form}","hidden":"{$item_hide_text}","isHtml":true},
 				
 				
-			{"text":" {$nomenclaturas_options}","hidden":"{$item_hide_text1}","isHtml":true},
+			{"text":"{$event Nomenclaturas_list}","hidden":"{$item_hide_snippet1}","isHtml":true},
 				
 				
 			{"text":"{$direccion_form2}","hidden":"{$item_hide_text2}","isHtml":true},

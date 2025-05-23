@@ -110,6 +110,29 @@ pdfDocument = {
       },
 
 											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+			
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
 		
 		]
 	}
@@ -172,9 +195,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel dbo_Abogados Tarjeta }","bold":true},{"text":{$Tarjeta_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel dbo_Abogados Direccion }","bold":true},{"text":{$Direccion_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel dbo_Abogados Telefonos }","bold":true},{"text":{$Telefonos_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -194,6 +214,21 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel dbo_Abogados Activo }","bold":true},{"text":{$Activo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_Direccion}","stack":[{"text":"{$jslabel dbo_Abogados Direccion }","bold":true},{"text":{$Direccion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"text":"{$direccion_form}","hidden":"{$item_hide_text}","isHtml":true},
+				
+				
+			{"text":"{$event Nomenclaturas_list}","hidden":"{$item_hide_snippet}","isHtml":true},
+				
+				
+			{"text":"{$direccion_form2}","hidden":"{$item_hide_text1}","isHtml":true},
+				
+				
+			{"text":"<style>\n  .calculadora-container {\n    position: relative;\n    display: inline-block;\n  }\n\n  .calculadora {\n    display: none;\n    position: absolute;\n    top: 40px;\n    left: 0;\n    background: white;\n    border: 1px solid #ccc;\n    padding: 10px;\n    border-radius: 5px;\n    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);\n    z-index: 1000;\n    width: 150px; /* Ajuste para que encajen los botones */\n  }\n\n  .calculadora-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 5px;\n  }\n\n  .calculadora button {\n    width: 45px;\n    height: 45px;\n    font-size: 18px;\n    cursor: pointer;\n    border: 1px solid #ccc;\n    background: #f4f4f4;\n    border-radius: 5px;\n    text-align: center;\n  }\n\n  .calculadora button:hover {\n    background: #ddd;\n  }\n\n  #numeroSeleccionado {\n    width: 100px;\n    text-align: center;\n    font-size: 16px;\n    padding: 5px;\n    border: 1px solid #ccc;\n    cursor: pointer;\n  }\n</style>\n","hidden":"{$item_hide_text2}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -249,6 +284,9 @@ pdfDocument = {
 				
 				
 			{"text":"","hidden":"{$item_hide_edit_close}"},
+				
+				
+			{"text":"{$event Direcciones_snippet_JS}","hidden":"{$item_hide_snippet1}","isHtml":true},
 				
 		  ],
   "border": [ false, false, false, false ],

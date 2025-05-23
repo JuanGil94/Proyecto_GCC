@@ -2,4 +2,9 @@
   width: 400px;
 }
 
+/* Put  your custom CSS code here */
+
+[data-page="bienesinmuebles_add"][data-itemid="Direccion"] {
+  display : none;
+}
 

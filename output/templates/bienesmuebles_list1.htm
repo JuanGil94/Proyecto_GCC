@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_PropiedadId}</span>
 						</div>
 		{END searchCtrlBlock_PropiedadId}
+																{BEGIN searchCtrlBlock_Direccion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Direccion}" {$filterRow_attrs_Direccion}>
+			<label>{$label BienesMuebles Direccion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Direccion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Direccion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Direccion}</span>
+						</div>
+		{END searchCtrlBlock_Direccion}
 																{BEGIN searchCtrlBlock_Observaciones}
 
 
@@ -128,19 +141,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
 						</div>
 		{END searchCtrlBlock_Observaciones}
-																{BEGIN searchCtrlBlock_Direcci_n}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Direcci_n}" {$filterRow_attrs_Direcci_n}>
-			<label>{$label BienesMuebles Direcci_n }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Direcci_n}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Direcci_n}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Direcci_n}</span>
-						</div>
-		{END searchCtrlBlock_Direcci_n}
 																{BEGIN searchCtrlBlock_CiudadId}
 
 
@@ -608,26 +608,6 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_PropiedadId" checked="checked" value="1" data-field="PropiedadId" data-fieldname="PropiedadId">
-					<span>{$label BienesMuebles PropiedadId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
-					<input type="checkbox" id="hide_SancionadoId" checked="checked" value="1" data-field="SancionadoId" data-fieldname="SancionadoId">
-					<span>{$label BienesMuebles SancionadoId }</span>
-				</label>
-			</div>
-					</a>
-		</li>
-							<li>
-		<a>
-					  	<div class="checkbox">
-				<label>
 					<input type="checkbox" id="hide_Descripci_n_del_Bien_Inmueble" checked="checked" value="1" data-field="Descripci_n_del_Bien_Inmueble" data-fieldname="Descripción del Bien Inmueble">
 					<span>{$label BienesMuebles Descripci_n_del_Bien_Inmueble }</span>
 				</label>
@@ -668,8 +648,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Direcci_n" checked="checked" value="1" data-field="Direcci_n" data-fieldname="Dirección">
-					<span>{$label BienesMuebles Direcci_n }</span>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label BienesMuebles Observaciones }</span>
 				</label>
 			</div>
 					</a>
@@ -678,8 +658,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
-					<span>{$label BienesMuebles Observaciones }</span>
+					<input type="checkbox" id="hide_Direccion" checked="checked" value="1" data-field="Direccion" data-fieldname="Direccion">
+					<span>{$label BienesMuebles Direccion }</span>
 				</label>
 			</div>
 					</a>
@@ -701,13 +681,7 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="PropiedadId"]:before {
-		content: "{$label BienesMuebles PropiedadId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="SancionadoId"]:before {
-		content: "{$label BienesMuebles SancionadoId}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Descripci_n_del_Bien_Inmueble"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Descripci_n_del_Bien_Inmueble"]:before {
 		content: "{$label BienesMuebles Descripci_n_del_Bien_Inmueble}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Matr_cula_Inmobiliaria"]:before {
@@ -719,8 +693,8 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CiudadId"]:before {
 		content: "{$label BienesMuebles CiudadId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Direcci_n"]:before {
-		content: "{$label BienesMuebles Direcci_n}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Direccion"]:before {
+		content: "{$label BienesMuebles Direccion}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Observaciones"]:before {
 		content: "{$label BienesMuebles Observaciones}";
@@ -783,21 +757,21 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PropiedadId_class}	"
+		 r-ori-vert		 {$Descripci_n_del_Bien_Inmueble_class}	"
 
-			data-field="PropiedadId"
+			data-field="Descripci_n_del_Bien_Inmueble"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN PropiedadId_fieldheadercolumn}
-	{BEGIN PropiedadId_fieldheader}
-	<SPAN {$PropiedadId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PropiedadId" data-fieldname="PropiedadId">
-	{$label BienesMuebles PropiedadId }	{$arrow_icon_PropiedadId}
+		{BEGIN Descripci_n_del_Bien_Inmueble_fieldheadercolumn}
+	{BEGIN Descripci_n_del_Bien_Inmueble_fieldheader}
+	<SPAN {$Descripci_n_del_Bien_Inmueble_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Descripci_n_del_Bien_Inmueble" data-fieldname="Descripción del Bien Inmueble">
+	{$label BienesMuebles Descripci_n_del_Bien_Inmueble }	{$arrow_icon_Descripci_n_del_Bien_Inmueble}
 	</SPAN>
-	{END PropiedadId_fieldheader}
-{END PropiedadId_fieldheadercolumn}
+	{END Descripci_n_del_Bien_Inmueble_fieldheader}
+{END Descripci_n_del_Bien_Inmueble_fieldheadercolumn}
 
 	
 	</th>
@@ -808,21 +782,21 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Matr_cula_Inmobiliaria_class}	"
 
-			data-field="SancionadoId"
+			data-field="Matr_cula_Inmobiliaria"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN SancionadoId_fieldheadercolumn}
-	{BEGIN SancionadoId_fieldheader}
-	<SPAN {$SancionadoId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId">
-	{$label BienesMuebles SancionadoId }	{$arrow_icon_SancionadoId}
+		{BEGIN Matr_cula_Inmobiliaria_fieldheadercolumn}
+	{BEGIN Matr_cula_Inmobiliaria_fieldheader}
+	<SPAN {$Matr_cula_Inmobiliaria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Matr_cula_Inmobiliaria" data-fieldname="Matrícula Inmobiliaria">
+	{$label BienesMuebles Matr_cula_Inmobiliaria }	{$arrow_icon_Matr_cula_Inmobiliaria}
 	</SPAN>
-	{END SancionadoId_fieldheader}
-{END SancionadoId_fieldheadercolumn}
+	{END Matr_cula_Inmobiliaria_fieldheader}
+{END Matr_cula_Inmobiliaria_fieldheadercolumn}
 
 	
 	</th>
@@ -833,21 +807,21 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Descripci_n_del_Bien_Inmueble_class}	"
+		 r-ori-vert		 {$Aval_o_class}	"
 
-			data-field="Descripci_n_del_Bien_Inmueble"
+			data-field="Aval_o"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Descripci_n_del_Bien_Inmueble_fieldheadercolumn}
-	{BEGIN Descripci_n_del_Bien_Inmueble_fieldheader}
-	<SPAN {$Descripci_n_del_Bien_Inmueble_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Descripci_n_del_Bien_Inmueble" data-fieldname="Descripción del Bien Inmueble">
-	{$label BienesMuebles Descripci_n_del_Bien_Inmueble }	{$arrow_icon_Descripci_n_del_Bien_Inmueble}
+		{BEGIN Aval_o_fieldheadercolumn}
+	{BEGIN Aval_o_fieldheader}
+	<SPAN {$Aval_o_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Aval_o" data-fieldname="Avalúo">
+	{$label BienesMuebles Aval_o }	{$arrow_icon_Aval_o}
 	</SPAN>
-	{END Descripci_n_del_Bien_Inmueble_fieldheader}
-{END Descripci_n_del_Bien_Inmueble_fieldheadercolumn}
+	{END Aval_o_fieldheader}
+{END Aval_o_fieldheadercolumn}
 
 	
 	</th>
@@ -858,21 +832,21 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Matr_cula_Inmobiliaria_class}	"
+		 r-ori-vert		 {$CiudadId_class}	"
 
-			data-field="Matr_cula_Inmobiliaria"
+			data-field="CiudadId"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Matr_cula_Inmobiliaria_fieldheadercolumn}
-	{BEGIN Matr_cula_Inmobiliaria_fieldheader}
-	<SPAN {$Matr_cula_Inmobiliaria_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Matr_cula_Inmobiliaria" data-fieldname="Matrícula Inmobiliaria">
-	{$label BienesMuebles Matr_cula_Inmobiliaria }	{$arrow_icon_Matr_cula_Inmobiliaria}
+		{BEGIN CiudadId_fieldheadercolumn}
+	{BEGIN CiudadId_fieldheader}
+	<SPAN {$CiudadId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CiudadId" data-fieldname="CiudadId">
+	{$label BienesMuebles CiudadId }	{$arrow_icon_CiudadId}
 	</SPAN>
-	{END Matr_cula_Inmobiliaria_fieldheader}
-{END Matr_cula_Inmobiliaria_fieldheadercolumn}
+	{END CiudadId_fieldheader}
+{END CiudadId_fieldheadercolumn}
 
 	
 	</th>
@@ -883,21 +857,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Aval_o_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
-			data-field="Aval_o"
+			data-field="Observaciones"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Aval_o_fieldheadercolumn}
-	{BEGIN Aval_o_fieldheader}
-	<SPAN {$Aval_o_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Aval_o" data-fieldname="Avalúo">
-	{$label BienesMuebles Aval_o }	{$arrow_icon_Aval_o}
+		{BEGIN Observaciones_fieldheadercolumn}
+	{BEGIN Observaciones_fieldheader}
+	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
+	{$label BienesMuebles Observaciones }	{$arrow_icon_Observaciones}
 	</SPAN>
-	{END Aval_o_fieldheader}
-{END Aval_o_fieldheadercolumn}
+	{END Observaciones_fieldheader}
+{END Observaciones_fieldheadercolumn}
 
 	
 	</th>
@@ -908,75 +882,25 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CiudadId_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
-			data-field="CiudadId"
+			data-field="Direccion"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN CiudadId_fieldheadercolumn}
-	{BEGIN CiudadId_fieldheader}
-	<SPAN {$CiudadId_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CiudadId" data-fieldname="CiudadId">
-	{$label BienesMuebles CiudadId }	{$arrow_icon_CiudadId}
+		{BEGIN Direccion_fieldheadercolumn}
+	{BEGIN Direccion_fieldheader}
+	<SPAN {$Direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion">
+	{$label BienesMuebles Direccion }	{$arrow_icon_Direccion}
 	</SPAN>
-	{END CiudadId_fieldheader}
-{END CiudadId_fieldheadercolumn}
+	{END Direccion_fieldheader}
+{END Direccion_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field5}
-									{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Direcci_n_class}	"
-
-			data-field="Direcci_n"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Direcci_n_fieldheadercolumn}
-	{BEGIN Direcci_n_fieldheader}
-	<SPAN {$Direcci_n_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcci_n" data-fieldname="Dirección">
-	{$label BienesMuebles Direcci_n }	{$arrow_icon_Direcci_n}
-	</SPAN>
-	{END Direcci_n_fieldheader}
-{END Direcci_n_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-									{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Observaciones_class}	"
-
-			data-field="Observaciones"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Observaciones_fieldheadercolumn}
-	{BEGIN Observaciones_fieldheader}
-	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
-	{$label BienesMuebles Observaciones }	{$arrow_icon_Observaciones}
-	</SPAN>
-	{END Observaciones_fieldheader}
-{END Observaciones_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
 							</tr>
 															
 					{END grid_header}
@@ -1054,53 +978,11 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PropiedadId_class}	"
-
-			data-field="PropiedadId"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN PropiedadId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PropiedadId" data-fieldname="PropiedadId" data-default-width >
-{$PropiedadId_value}
-</span>
-{END PropiedadId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-									{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
-
-			data-field="SancionadoId"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN SancionadoId_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="SancionadoId" data-fieldname="SancionadoId" data-default-width >
-{$SancionadoId_value}
-</span>
-{END SancionadoId_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-									{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Descripci_n_del_Bien_Inmueble_class}	"
 
 			data-field="Descripci_n_del_Bien_Inmueble"
 	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1110,18 +992,18 @@
 </span>
 {END Descripci_n_del_Bien_Inmueble_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field2}
-									{BEGIN cellblock_grid_cell_field3}
+	{END cellblock_grid_cell_field}
+									{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field3}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Matr_cula_Inmobiliaria_class}	"
 
 			data-field="Matr_cula_Inmobiliaria"
 	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1131,18 +1013,18 @@
 </span>
 {END Matr_cula_Inmobiliaria_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field3}
-									{BEGIN cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field1}
+									{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field4}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Aval_o_class}	"
 
 			data-field="Aval_o"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1152,18 +1034,18 @@
 </span>
 {END Aval_o_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field2}
+									{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$CiudadId_class}	"
 
 			data-field="CiudadId"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1173,39 +1055,18 @@
 </span>
 {END CiudadId_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
-									{BEGIN cellblock_grid_cell_field6}
+	{END cellblock_grid_cell_field3}
+									{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Direcci_n_class}	"
-
-			data-field="Direcci_n"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Direcci_n_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcci_n" data-fieldname="Dirección" data-default-width >
-{$Direcci_n_value}
-</span>
-{END Direcci_n_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-									{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert		 {$Observaciones_class}	"
 
 			data-field="Observaciones"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1215,7 +1076,28 @@
 </span>
 {END Observaciones_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Direccion_class}	"
+
+			data-field="Direccion"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Direccion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion" data-default-width >
+{$Direccion_value}
+</span>
+{END Direccion_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
 							</tr>
 										
 											{END grid_row}
@@ -1263,7 +1145,7 @@
 	{$cell_grid_footcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$PropiedadId_class}	"
+		 r-ori-vert		 {$Descripci_n_del_Bien_Inmueble_class}	"
 
 	
 	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
@@ -1278,7 +1160,7 @@
 	{$cell_grid_footcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$SancionadoId_class}	"
+		 r-ori-vert		 {$Matr_cula_Inmobiliaria_class}	"
 
 	
 	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
@@ -1293,7 +1175,7 @@
 	{$cell_grid_footcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Descripci_n_del_Bien_Inmueble_class}	"
+		 r-ori-vert		 {$Aval_o_class}	"
 
 	
 	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
@@ -1308,7 +1190,7 @@
 	{$cell_grid_footcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Matr_cula_Inmobiliaria_class}	"
+		 r-ori-vert		 {$CiudadId_class}	"
 
 	
 	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
@@ -1323,7 +1205,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Aval_o_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
@@ -1338,7 +1220,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$CiudadId_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
@@ -1347,36 +1229,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field5}
-									{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Direcci_n_class}	"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-									{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert		 {$Observaciones_class}	"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list1"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
 							</tr>
 					
 					</tfoot>

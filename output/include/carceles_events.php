@@ -89,8 +89,8 @@ exit(); // Detiene la ejecución para ver la salida*/
 	 $xt->assign("direccion_form", file_get_contents("templates/fragmento_direccion.html"));
 	 $xt->assign("direccion_form2", file_get_contents("templates/fragmento_direccion2.html"));
 
-	 $xt->assign("nomenclaturas_options", $options);
-
+	 //$xt->assign("direccion_form", file_get_contents(getabspath("custom_files/fragmento_direccion.html")));
+   //$xt->assign("direccion_form2", file_get_contents(getabspath("custom_files/fragmento_direccion2.html")));
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -247,7 +247,7 @@ while ($row = db_fetch_array($qResult)) {
 	 $xt->assign("direccion_form", file_get_contents("templates/fragmento_direccion.html"));
 	 $xt->assign("direccion_form2", file_get_contents("templates/fragmento_direccion2.html"));
 
-	 $xt->assign("nomenclaturas_options", $options);
+	 //$xt->assign("nomenclaturas_options", $options);
 
 
 // Place event code here.

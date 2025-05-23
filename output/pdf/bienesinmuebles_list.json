@@ -429,35 +429,6 @@ pdfDocument = {
 	cellId: 'headcell_field4',
 	col:0,
 	row:0,
-			fieldName: 'Direcci_n',
-				style: 'headcell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":"{$jslabel BienesInmuebles Direcci_n }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Direcci_n_align}',
-     
-      
-      },
-
-{END cellblock_grid_headcell_field4}
-																							{BEGIN cellblock_grid_headcell_field5}
-{
-	cellId: 'headcell_field5',
-	col:0,
-	row:0,
 			fieldName: 'Observaciones',
 				style: 'headcell',
 		
@@ -472,11 +443,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel BienesInmuebles Observaciones }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+			{"text":"{$jslabel BienesInmuebles Observaciones }","hidden":"{$item_hide_simple_grid_field10}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Observaciones_align}',
+     
+      
+      },
+
+{END cellblock_grid_headcell_field4}
+																							{BEGIN cellblock_grid_headcell_field5}
+{
+	cellId: 'headcell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Direccion',
+				style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel BienesInmuebles Direccion }","hidden":"{$item_hide_simple_grid_field11}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Direccion_align}',
      
       
       },
@@ -671,35 +671,6 @@ pdfDocument = {
 	cellId: 'cell_field4',
 	col:0,
 	row:0,
-			fieldName: 'Direcci_n',
-				style: 'bodycell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-		
-	
-			
-	
-			"text": [
-		
-				
-			{"text":{$Direcci_n_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
-				
-		  ],
-  "border": [ true, true, true, true ],
-              "alignment": '{$Direcci_n_align}',
-     
-      
-      },
-
-{END cellblock_grid_cell_field4}
-																							{BEGIN cellblock_grid_cell_field5}
-{
-	cellId: 'cell_field5',
-	col:0,
-	row:0,
 			fieldName: 'Observaciones',
 				style: 'bodycell',
 		
@@ -719,6 +690,35 @@ pdfDocument = {
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$Observaciones_align}',
+     
+      
+      },
+
+{END cellblock_grid_cell_field4}
+																							{BEGIN cellblock_grid_cell_field5}
+{
+	cellId: 'cell_field5',
+	col:0,
+	row:0,
+			fieldName: 'Direccion',
+				style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+		
+	
+			
+	
+			"text": [
+		
+				
+			{"text":{$Direccion_pdfvalue},"hidden":"{$item_hide_simple_grid_field4}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$Direccion_align}',
      
       
       },
