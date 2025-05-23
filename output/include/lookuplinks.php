@@ -2924,6 +2924,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades3"]["bienesinmuebles.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades3"]["bienesinmuebles.CiudadId"]["edit"] = array("table" => "BienesInmuebles", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["BienesInmuebles"] ) ) {
+			$lookupTableLinks["BienesInmuebles"] = array();
+		}
+		if( !isset( $lookupTableLinks["BienesInmuebles"]["bienesinmuebles.Direccion"] )) {
+			$lookupTableLinks["BienesInmuebles"]["bienesinmuebles.Direccion"] = array();
+		}
+		$lookupTableLinks["BienesInmuebles"]["bienesinmuebles.Direccion"]["edit"] = array("table" => "BienesInmuebles", "field" => "Direccion", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
 			$lookupTableLinks["dbo.Sancionados"] = array();
 		}
@@ -2938,6 +2945,13 @@ function InitLookupLinks()
 			$lookupTableLinks["dbo.Ciudades3"]["bienesmuebles.CiudadId"] = array();
 		}
 		$lookupTableLinks["dbo.Ciudades3"]["bienesmuebles.CiudadId"]["edit"] = array("table" => "BienesMuebles", "field" => "CiudadId", "page" => "edit");
+		if( !isset( $lookupTableLinks["BienesMuebles"] ) ) {
+			$lookupTableLinks["BienesMuebles"] = array();
+		}
+		if( !isset( $lookupTableLinks["BienesMuebles"]["bienesmuebles.Direccion"] )) {
+			$lookupTableLinks["BienesMuebles"]["bienesmuebles.Direccion"] = array();
+		}
+		$lookupTableLinks["BienesMuebles"]["bienesmuebles.Direccion"]["edit"] = array("table" => "BienesMuebles", "field" => "Direccion", "page" => "edit");
 		if( !isset( $lookupTableLinks["dbo.Sancionados"] ) ) {
 			$lookupTableLinks["dbo.Sancionados"] = array();
 		}

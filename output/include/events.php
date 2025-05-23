@@ -192,6 +192,8 @@ class class_GlobalEvents extends eventsBase
 		$this->events["Procesos_Sin_Medidas_Cautelares_Seccional"] = true;
 		$this->events["dbo_Carceles_snippet"] = true;
 		$this->events["dbo_Carceles_snippet1"] = true;
+		$this->events["Nomenclaturas_list"] = true;
+		$this->events["Direcciones_snippet_JS"] = true;
 
 
 
@@ -6112,6 +6114,27 @@ echo '<script src="include/direccion.js"></script>';
 	;
 }
 	function event_dbo_Carceles_snippet1(&$params)
+	{
+	// Put your code here.
+echo '<script src="include/direccion.js"></script>';
+	;
+}
+	function event_Nomenclaturas_list(&$params)
+	{
+	    $rs = DB::Select("Nomenclaturas", array(), array(array("Nomenclatura", "a")));
+    
+    echo '<option value="">Seleccione...</option>';
+    while ($data = $rs->fetchAssoc()) {
+        echo '<option value="' . htmlspecialchars($data["Codigo"]) . '">'
+    . strtoupper(htmlspecialchars($data["Nomenclatura"])) 
+    . '</option>';
+
+    }
+
+
+	;
+}
+	function event_Direcciones_snippet_JS(&$params)
 	{
 	// Put your code here.
 echo '<script src="include/direccion.js"></script>';

@@ -57,7 +57,7 @@ class MSSQLSrvConnection extends Connection
 	 */
 	public function connect()
 	{
-		$connectionInfo = array("Database" => $this->dbname, "PWD" => $this->pwd, "UID" => $this->user,"QueryTimeout"=>600);
+		$connectionInfo = array("Database" => $this->dbname, "PWD" => $this->pwd, "UID" => $this->user);
 		if( $this->options == "SSPI" )
 			$connectionInfo = array("Database" => $this->dbname );
 		$this->conn = sqlsrv_connect($this->host, $connectionInfo);

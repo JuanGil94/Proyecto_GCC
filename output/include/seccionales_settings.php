@@ -199,7 +199,7 @@ $tdataseccionales[".ajaxCodeSnippetAdded"] = false;
 
 $tdataseccionales[".buttonsAdded"] = false;
 
-$tdataseccionales[".addPageEvents"] = false;
+$tdataseccionales[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdataseccionales[".isUseTimeForSearch"] = false;
@@ -4338,6 +4338,7 @@ $tdataseccionales[".sqlquery"] = $queryData_seccionales;
 
 
 
-$tdataseccionales[".hasEvents"] = false;
+include_once(getabspath("include/seccionales_events.php"));
+$tdataseccionales[".hasEvents"] = true;
 
 ?>

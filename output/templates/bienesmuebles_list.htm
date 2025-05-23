@@ -115,6 +115,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_Observaciones}</span>
 						</div>
 		{END searchCtrlBlock_Observaciones}
+																{BEGIN searchCtrlBlock_Direccion}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Direccion}" {$filterRow_attrs_Direccion}>
+			<label>{$label BienesMuebles Direccion }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Direccion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Direccion}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Direccion}</span>
+						</div>
+		{END searchCtrlBlock_Direccion}
 																{BEGIN searchCtrlBlock_PropiedadId}
 
 
@@ -154,19 +167,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_SancionadoId}</span>
 						</div>
 		{END searchCtrlBlock_SancionadoId}
-																{BEGIN searchCtrlBlock_Direcci_n}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Direcci_n}" {$filterRow_attrs_Direcci_n}>
-			<label>{$label BienesMuebles Direcci_n }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Direcci_n}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Direcci_n}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Direcci_n}</span>
-						</div>
-		{END searchCtrlBlock_Direcci_n}
 																{BEGIN searchCtrlBlock_Aval_o}
 
 
@@ -678,8 +678,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Direcci_n" checked="checked" value="1" data-field="Direcci_n" data-fieldname="Dirección">
-					<span>{$label BienesMuebles Direcci_n }</span>
+					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
+					<span>{$label BienesMuebles Observaciones }</span>
 				</label>
 			</div>
 					</a>
@@ -688,8 +688,8 @@
 		<a>
 					  	<div class="checkbox">
 				<label>
-					<input type="checkbox" id="hide_Observaciones" checked="checked" value="1" data-field="Observaciones" data-fieldname="Observaciones">
-					<span>{$label BienesMuebles Observaciones }</span>
+					<input type="checkbox" id="hide_Direccion" checked="checked" value="1" data-field="Direccion" data-fieldname="Direccion">
+					<span>{$label BienesMuebles Direccion }</span>
 				</label>
 			</div>
 					</a>
@@ -723,8 +723,8 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="CiudadId"]:before {
 		content: "{$label BienesMuebles CiudadId}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Direcci_n"]:before {
-		content: "{$label BienesMuebles Direcci_n}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Direccion"]:before {
+		content: "{$label BienesMuebles Direccion}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Observaciones"]:before {
 		content: "{$label BienesMuebles Observaciones}";
@@ -887,21 +887,21 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direcci_n_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
-			data-field="Direcci_n"
+			data-field="Observaciones"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Direcci_n_fieldheadercolumn}
-	{BEGIN Direcci_n_fieldheader}
-	<SPAN {$Direcci_n_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcci_n" data-fieldname="Dirección">
-	{$label BienesMuebles Direcci_n }	{$arrow_icon_Direcci_n}
+		{BEGIN Observaciones_fieldheadercolumn}
+	{BEGIN Observaciones_fieldheader}
+	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
+	{$label BienesMuebles Observaciones }	{$arrow_icon_Observaciones}
 	</SPAN>
-	{END Direcci_n_fieldheader}
-{END Direcci_n_fieldheadercolumn}
+	{END Observaciones_fieldheader}
+{END Observaciones_fieldheadercolumn}
 
 	
 	</th>
@@ -912,21 +912,21 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Observaciones_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
-			data-field="Observaciones"
+			data-field="Direccion"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Observaciones_fieldheadercolumn}
-	{BEGIN Observaciones_fieldheader}
-	<SPAN {$Observaciones_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Observaciones" data-fieldname="Observaciones">
-	{$label BienesMuebles Observaciones }	{$arrow_icon_Observaciones}
+		{BEGIN Direccion_fieldheadercolumn}
+	{BEGIN Direccion_fieldheader}
+	<SPAN {$Direccion_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion">
+	{$label BienesMuebles Direccion }	{$arrow_icon_Direccion}
 	</SPAN>
-	{END Observaciones_fieldheader}
-{END Observaciones_fieldheadercolumn}
+	{END Direccion_fieldheader}
+{END Direccion_fieldheadercolumn}
 
 	
 	</th>
@@ -1092,32 +1092,11 @@
 	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direcci_n_class}	"
-
-			data-field="Direcci_n"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Direcci_n_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direcci_n" data-fieldname="Dirección" data-default-width >
-{$Direcci_n_value}
-</span>
-{END Direcci_n_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-									{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
 		 r-ori-vert		 {$Observaciones_class}	"
 
 			data-field="Observaciones"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1126,6 +1105,27 @@
 {$Observaciones_value}
 </span>
 {END Observaciones_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+									{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert		 {$Direccion_class}	"
+
+			data-field="Direccion"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Direccion_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Direccion" data-fieldname="Direccion" data-default-width >
+{$Direccion_value}
+</span>
+{END Direccion_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field5}
 							</tr>
@@ -1235,7 +1235,7 @@
 	{$cell_grid_footcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Direcci_n_class}	"
+		 r-ori-vert		 {$Observaciones_class}	"
 
 	
 	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list"	
@@ -1250,7 +1250,7 @@
 	{$cell_grid_footcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert		 {$Observaciones_class}	"
+		 r-ori-vert		 {$Direccion_class}	"
 
 	
 	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="bienesmuebles_list"	

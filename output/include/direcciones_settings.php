@@ -154,7 +154,7 @@ $tdatadirecciones[".ajaxCodeSnippetAdded"] = false;
 
 $tdatadirecciones[".buttonsAdded"] = false;
 
-$tdatadirecciones[".addPageEvents"] = false;
+$tdatadirecciones[".addPageEvents"] = true;
 
 // use timepicker for search panel
 $tdatadirecciones[".isUseTimeForSearch"] = false;
@@ -1741,6 +1741,7 @@ $tdatadirecciones[".sqlquery"] = $queryData_direcciones;
 
 
 
-$tdatadirecciones[".hasEvents"] = false;
+include_once(getabspath("include/direcciones_events.php"));
+$tdatadirecciones[".hasEvents"] = true;
 
 ?>

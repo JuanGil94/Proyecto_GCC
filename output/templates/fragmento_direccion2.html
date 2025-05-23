@@ -1,31 +1,52 @@
 </select>
  </li>
 
-    <!--<tr  id="ocultar-direccion">
-      <td  height="9" colspan="3" > <div align="center"><font size="1" face="Arial, Helvetica, sans-serif"><strong>Dirección
-          con codificación</strong></font><strong>:</strong>
-          <input name="puente" id="puente" type="text" value="" size="85" readonly="readonly" class="campo1B"  style="max-width: 600px; width: 65%; height: 38px; padding: 8px 12px; font-size: 14px;
-                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
-                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
-                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
-        </div></td>
-    </tr>-->
+<li>
+  <label for="complementocalle"><strong>Complemento</strong></label>
+  <input type="text" id="complementocalle" name="complementocalle" 
+         style="display: block; max-width: 600px; width: 50%; height: 38px; padding: 8px 12px; font-size: 14px;
+                line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
+                border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+                transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
+  <br><br>
+</li>
 
-    <!--<tr id="ocultar-direccion-traducida">
-      <td  height="9" colspan="3" > <div align="center"><font size="1" face="Arial, Helvetica, sans-serif"><strong>Dirección
-          con codificación</strong></font><strong>:</strong>
-          <input name="direccion_traducida" id="direccion_traducida" type="text" value="" size="85" readonly="readonly" class="campo1B"  style="max-width: 600px; width: 65%; height: 38px; padding: 8px 12px; font-size: 14px;
-                 line-height: 1.42857143; color: #555555; background-color: #fff; border: 1px solid #ccc; 
-                 border-radius: 4px; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
-                 transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;">
-        </div></td>
-    </tr>-->
+<script>
+document.getElementById("complementocalle").addEventListener("change", function () {
+    const input = this;
+    const complemento = input.value.trim();
 
+    if (complemento !== "") {
+        const complementoActivo = document.getElementById('complementoActivo')?.value;
+        const puente = document.getElementById('puente')?.value || "";
+        const direccion = document.getElementById('direccion')?.value || "";
+
+        if (complementoActivo === '0') {
+            if (typeof concatenaString === 'function') {
+                concatenaString(puente, complemento, 'puente');
+                concatenaString(direccion, complemento, 'direccion');
+            } else {
+                console.warn("La función concatenaString no está definida.");
+            }
+        } else {
+            if (typeof enComplemento === 'function') {
+                enComplemento();
+            } else {
+                console.warn("La función enComplemento no está definida.");
+            }
+        }
+
+        setTimeout(() => {
+            input.value = "";
+        }, 200);
+    }
+});
+</script>
 
     
 </ul>
 
-<tr>
+<!--<tr>
   <td colspan="2" class="campo17">
     <div id="COMPLEMENTOCALLE" style="display:none; text-align: center; color: red;">
       <input name="nombreComplementoCalle" id="nombreComplementoCalle" type="text" size="30" class="campo173" readonly>
@@ -59,7 +80,7 @@
                   }">
     </div>
   </td>
-</tr>
+</tr>-->
 <p>
 <tr>
   <td colspan="3" style="text-align: center; margin: 20px 0;">
@@ -150,13 +171,7 @@
         <input name="complementoActivo" id="complementoActivo" type="hidden" size="33" value="0">
       </td>
     </tr>
-
-
-
-
 </div>
-
-
 
 <input name="retorno" id="retorno" value="null" type="hidden">
 <input name="controlaLetras" id="controlaLetras" value="0" type="hidden">

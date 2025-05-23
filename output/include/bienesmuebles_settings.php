@@ -6,11 +6,11 @@ $tdatabienesmuebles[".OwnerID"] = "";
 $tdatabienesmuebles[".OriginalTable"] = "dbo.Propiedades";
 
 
-$tdatabienesmuebles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
+$tdatabienesmuebles[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\",\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
 $tdatabienesmuebles[".originalPagesByType"] = $tdatabienesmuebles[".pagesByType"];
-$tdatabienesmuebles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\",\"list1\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
+$tdatabienesmuebles[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list1\",\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" ) );
 $tdatabienesmuebles[".originalPages"] = $tdatabienesmuebles[".pages"];
-$tdatabienesmuebles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\"}" );
+$tdatabienesmuebles[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list1\",\"print\":\"print\",\"search\":\"search\"}" );
 $tdatabienesmuebles[".originalDefaultPages"] = $tdatabienesmuebles[".defaultPages"];
 
 //	field labels
@@ -37,9 +37,6 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbienesmuebles["Spanish"]["Aval_o"] = "Avalúo";
 	$fieldToolTipsbienesmuebles["Spanish"]["Aval_o"] = "";
 	$placeHoldersbienesmuebles["Spanish"]["Aval_o"] = "";
-	$fieldLabelsbienesmuebles["Spanish"]["Direcci_n"] = "Dirección";
-	$fieldToolTipsbienesmuebles["Spanish"]["Direcci_n"] = "";
-	$placeHoldersbienesmuebles["Spanish"]["Direcci_n"] = "";
 	$fieldLabelsbienesmuebles["Spanish"]["SancionadoId"] = "Sancionado Id";
 	$fieldToolTipsbienesmuebles["Spanish"]["SancionadoId"] = "";
 	$placeHoldersbienesmuebles["Spanish"]["SancionadoId"] = "";
@@ -49,6 +46,9 @@ if(mlang_getcurrentlang()=="Spanish")
 	$fieldLabelsbienesmuebles["Spanish"]["PropiedadId"] = "Propiedad Id";
 	$fieldToolTipsbienesmuebles["Spanish"]["PropiedadId"] = "";
 	$placeHoldersbienesmuebles["Spanish"]["PropiedadId"] = "";
+	$fieldLabelsbienesmuebles["Spanish"]["Direccion"] = "Dirección";
+	$fieldToolTipsbienesmuebles["Spanish"]["Direccion"] = "";
+	$placeHoldersbienesmuebles["Spanish"]["Direccion"] = "";
 	$pageTitlesbienesmuebles["Spanish"]["add"] = "Bienes Muebles";
 	$pageTitlesbienesmuebles["Spanish"]["edit"] = "Bienes Muebles";
 	if (count($fieldToolTipsbienesmuebles["Spanish"]))
@@ -175,7 +175,7 @@ $tdatabienesmuebles[".googleLikeFields"][] = "Descripción del Bien Inmueble";
 $tdatabienesmuebles[".googleLikeFields"][] = "Matrícula Inmobiliaria";
 $tdatabienesmuebles[".googleLikeFields"][] = "Avalúo";
 $tdatabienesmuebles[".googleLikeFields"][] = "CiudadId";
-$tdatabienesmuebles[".googleLikeFields"][] = "Dirección";
+$tdatabienesmuebles[".googleLikeFields"][] = "Direccion";
 $tdatabienesmuebles[".googleLikeFields"][] = "Observaciones";
 
 
@@ -212,7 +212,7 @@ $tdatabienesmuebles[".strOrderBy"] = $tstrOrderBy;
 $tdatabienesmuebles[".orderindexes"] = array();
 
 
-$tdatabienesmuebles[".sqlHead"] = "select dbo.Propiedades.PropiedadId,  Propiedades.SancionadoId,  Propiedades.Propiedad AS [Descripción del Bien Inmueble],  Propiedades.Matricula AS [Matrícula Inmobiliaria],  FORMAT(Propiedades.Avaluo, 'C2', 'es-CO') AS [Avalúo],  C.CiudadId,  Propiedades.Direccion AS [Dirección],  Propiedades.Observaciones AS Observaciones";
+$tdatabienesmuebles[".sqlHead"] = "select dbo.Propiedades.PropiedadId,  Propiedades.SancionadoId,  Propiedades.Propiedad AS [Descripción del Bien Inmueble],  Propiedades.Matricula AS [Matrícula Inmobiliaria],  FORMAT(Propiedades.Avaluo, 'C2', 'es-CO') AS [Avalúo],  C.CiudadId,  Propiedades.Direccion AS Direccion,  Propiedades.Observaciones AS Observaciones";
 $tdatabienesmuebles[".sqlFrom"] = "FROM Propiedades  INNER JOIN dbo.Sancionados AS S ON Propiedades.SancionadoId = S.SancionadoId  INNER JOIN dbo.Ciudades AS C ON Propiedades.CiudadId = C.CiudadId  INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
 $tdatabienesmuebles[".sqlWhereExpr"] = "(Propiedades.TipoPropiedad =1)";
 $tdatabienesmuebles[".sqlTail"] = "";
@@ -326,7 +326,7 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -338,8 +338,7 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -351,19 +350,15 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+							
 	
 //	End validation
 
@@ -1154,14 +1149,14 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 
 	$tdatabienesmuebles["CiudadId"] = $fdata;
 		$tdatabienesmuebles[".searchableFields"][] = "CiudadId";
-//	Dirección
+//	Direccion
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 7;
-	$fdata["strName"] = "Dirección";
-	$fdata["GoodName"] = "Direcci_n";
+	$fdata["strName"] = "Direccion";
+	$fdata["GoodName"] = "Direccion";
 	$fdata["ownerTable"] = "dbo.Propiedades";
-	$fdata["Label"] = GetFieldLabel("BienesMuebles","Direcci_n");
+	$fdata["Label"] = GetFieldLabel("BienesMuebles","Direccion");
 	$fdata["FieldType"] = 200;
 
 
@@ -1171,7 +1166,8 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 
 		$fdata["strField"] = "Direccion";
 
-	
+		$fdata["sourceSingle"] = "Direccion";
+
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "Propiedades.Direccion";
 
@@ -1210,7 +1206,7 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1220,6 +1216,35 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "BienesMuebles";
+			$edata["freeInput"] = true;
+	$edata["autoCompleteFieldsOnEdit"] = 1;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 1;
+
+	
+		
+	$edata["LinkField"] = "Direccion";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Direccion";
+
+				$edata["LookupWhere"] = "PropiedadId = 1";
+
+
+	
+	$edata["LookupOrderBy"] = "Direccion";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -1234,10 +1259,8 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1263,7 +1286,7 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1288,8 +1311,8 @@ $tdatabienesmuebles[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatabienesmuebles["Dirección"] = $fdata;
-		$tdatabienesmuebles[".searchableFields"][] = "Dirección";
+	$tdatabienesmuebles["Direccion"] = $fdata;
+		$tdatabienesmuebles[".searchableFields"][] = "Direccion";
 //	Observaciones
 //	Custom field settings
 	$fdata = array();
@@ -1510,7 +1533,7 @@ function createSqlQuery_bienesmuebles()
 {
 $proto0=array();
 $proto0["m_strHead"] = "select";
-$proto0["m_strFieldList"] = "dbo.Propiedades.PropiedadId,  Propiedades.SancionadoId,  Propiedades.Propiedad AS [Descripción del Bien Inmueble],  Propiedades.Matricula AS [Matrícula Inmobiliaria],  FORMAT(Propiedades.Avaluo, 'C2', 'es-CO') AS [Avalúo],  C.CiudadId,  Propiedades.Direccion AS [Dirección],  Propiedades.Observaciones AS Observaciones";
+$proto0["m_strFieldList"] = "dbo.Propiedades.PropiedadId,  Propiedades.SancionadoId,  Propiedades.Propiedad AS [Descripción del Bien Inmueble],  Propiedades.Matricula AS [Matrícula Inmobiliaria],  FORMAT(Propiedades.Avaluo, 'C2', 'es-CO') AS [Avalúo],  C.CiudadId,  Propiedades.Direccion AS Direccion,  Propiedades.Observaciones AS Observaciones";
 $proto0["m_strFrom"] = "FROM Propiedades  INNER JOIN dbo.Sancionados AS S ON Propiedades.SancionadoId = S.SancionadoId  INNER JOIN dbo.Ciudades AS C ON Propiedades.CiudadId = C.CiudadId  INNER JOIN dbo.Departamentos AS D ON C.DepartamentoId = D.DepartamentoId";
 $proto0["m_strWhere"] = "(Propiedades.TipoPropiedad =1)";
 $proto0["m_strOrderBy"] = "";
@@ -1661,7 +1684,7 @@ $proto0["m_fieldlist"][]=$obj;
 $proto21["m_sql"] = "Propiedades.Direccion";
 $proto21["m_srcTableName"] = "BienesMuebles";
 $proto21["m_expr"]=$obj;
-$proto21["m_alias"] = "Dirección";
+$proto21["m_alias"] = "Direccion";
 $obj = new SQLFieldListItem($proto21);
 
 $proto0["m_fieldlist"][]=$obj;

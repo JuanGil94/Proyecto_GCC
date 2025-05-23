@@ -207,6 +207,17 @@ $tdatacarceles[".sqlFrom"] = "FROM dbo.Carceles";
 $tdatacarceles[".sqlWhereExpr"] = "";
 $tdatacarceles[".sqlTail"] = "";
 
+//fill array of tabs for list page
+$arrGridTabs = array();
+$arrGridTabs[] = array(
+	'tabId' => "",
+	'name' => "All data",
+	'nameType' => 'Text',
+	'where' => "",
+	'showRowCount' => 0,
+	'hideEmpty' => 0,
+);
+$tdatacarceles[".arrGridTabs"] = $arrGridTabs;
 
 
 
